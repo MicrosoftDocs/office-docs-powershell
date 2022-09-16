@@ -1,20 +1,17 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-tenantallowblocklistitems
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX
 ---
 
 # Get-TenantAllowBlockListItems
 
 ## SYNOPSIS
-**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the Get-TenantAllowBlockListItems cmdlet to view entries in the Tenant Allow/Block List in the Microsoft 365 Defender portal.
@@ -77,13 +74,14 @@ This example returns information for all allowed third-party phishing simulation
 The ListType parameter specifies the list to view. Valid values are:
 
 - FileHash
+- Sender
 - Url
 
 ```yaml
 Type: ListType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -95,14 +93,17 @@ Accept wildcard characters: False
 ### -Entry
 The Entry parameter filters the results based on the ListType parameter value. Valid values are:
 
-- Url: The exact URL entry value.
-- File: The exact SHA256 file hash value.
+- FileHash: The exact SHA256 file hash value.
+- Sender: The exact domain or email address value.
+- Url: The exact URL value.
+
+This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -118,7 +119,7 @@ The NoExpiration switch filters the results by entries that are set to never exp
 Type: SwitchParameter
 Parameter Sets: NoExpiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -150,7 +151,7 @@ The Block switch filters the results for block entries. You don't need to specif
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -171,7 +172,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: DateTime
 Parameter Sets: Expiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -208,7 +209,7 @@ You use this switch to prevent the command from halting on the first entry that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

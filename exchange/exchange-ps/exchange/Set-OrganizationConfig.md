@@ -33,15 +33,23 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
+ [-BlockMoveMessagesForGroupFolders <Boolean>]
  [-BookingsAddressEntryRestricted <Boolean>]
  [-BookingsAuthEnabled <Boolean>]
  [-BookingsCreationOfCustomQuestionsRestricted <Boolean>]
  [-BookingsEnabled <Boolean>]
  [-BookingsExposureOfStaffDetailsRestricted <Boolean>]
  [-BookingsMembershipApprovalRequired <Boolean>]
+ [-BookingsNamingPolicyEnabled <Boolean>]
+ [-BookingsNamingPolicyPrefix <String>]
+ [-BookingsNamingPolicyPrefixEnabled <Boolean>]
+ [-BookingsNamingPolicySuffix <String>]
+ [-BookingsNamingPolicySuffixEnabled <Boolean>]
  [-BookingsNotesEntryRestricted <Boolean>]
  [-BookingsPaymentsEnabled <Boolean>]
  [-BookingsPhoneNumberEntryRestricted <Boolean>]
+ [-BookingsSearchEngineIndexDisabled <Boolean>]
+ [-BookingsSmsMicrosoftEnabled <Boolean>]
  [-BookingsSocialSharingRestricted <Boolean>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-CalendarVersionStoreEnabled <Boolean>]
@@ -90,6 +98,8 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-IPListBlocked <MultiValuedProperty>]
  [-IsAgendaMailEnabled <Boolean>]
+ [-IsGroupFoldersAndRulesEnabled <Boolean>]
+ [-IsGroupMemberAllowedToEditContent <Boolean>]
  [-LeanPopoutEnabled <Boolean>]
  [-LinkPreviewEnabled <Boolean>]
  [-MailTipsAllTipsEnabled <Boolean>]
@@ -116,6 +126,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
  [-PublicFolderShowClientControl <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
+ [-RecallReadMessagesEnabled <System.Boolean>]
  [-RefreshSessionEnabled <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
@@ -750,6 +761,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockMoveMessagesForGroupFolders
+This parameter is available only in the cloud-based service.
+
+{{ Fill BlockMoveMessagesForGroupFolders Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BookingsAddressEntryRestricted
 This parameter is available only in the cloud-based service.
 
@@ -778,6 +807,24 @@ The BookingsAuthEnabled parameter specifies whether to enforce authentication to
 
 - $true: All new and existing Bookings pages are forced to authenticate users before they can book the appointment.
 - $false: All bookings pages are not forced to authenticate users.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsBlockedWordsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsBlockedWordsEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -878,6 +925,96 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BookingsNamingPolicyEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicyEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicyPrefix
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicyPrefix Description }}
+
+```yaml
+Type: String
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicyPrefixEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicyPrefixEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicySuffix
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicySuffix Description }}
+
+```yaml
+Type: String
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicySuffixEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicySuffixEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BookingsNotesEntryRestricted
 This parameter is available only in the cloud-based service.
 
@@ -927,6 +1064,42 @@ The BookingsPhoneNumberEntryRestricted parameter specifies whether phone numbers
 
 - $true: Appointment notes can't be collected from Bookings customers.
 - $false: Appointment notes can be collected from Bookings customers.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsSearchEngineIndexDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsSearchEngineIndexDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsSmsMicrosoftEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsSmsMicrosoftEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -2194,6 +2367,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsGroupFoldersAndRulesEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsGroupFoldersAndRulesEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsGroupMemberAllowedToEditContent
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsGroupMemberAllowedToEditContent Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LeanPopoutEnabled
 The LeanPopoutEnabled parameter specifies whether to enable faster loading of pop-out messages in Outlook on the web for Internet Explorer and Microsoft Edge. Valid values are:
 
@@ -3017,6 +3226,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecallReadMessagesEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill RecallReadMessagesEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RefreshSessionEnabled
 This parameter is reserved for internal Microsoft use.
 
@@ -3363,16 +3590,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Set-OrganizationConfig](https://docs.microsoft.com/powershell/module/exchange/set-organizationconfig)

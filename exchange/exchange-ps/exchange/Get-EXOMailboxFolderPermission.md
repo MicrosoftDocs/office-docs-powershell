@@ -7,7 +7,7 @@ title: Get-EXOMailboxFolderPermission
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
-ms.reviewer: navgupta
+ms.reviewer:
 ---
 
 # Get-EXOMailboxFolderPermission

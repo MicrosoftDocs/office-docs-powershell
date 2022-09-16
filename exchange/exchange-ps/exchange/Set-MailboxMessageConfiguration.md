@@ -542,6 +542,8 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalReadingPanePosition
+This parameter is functional only in Exchange 2016 or later. It doesn't work in Exchange Online.
+
 The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
 
 - Off
@@ -1115,7 +1117,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureHtml
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your organization. Currently, the only way to make this parameter work again is to open a support ticket and ask to have Outlook roaming signatures disabled in your organization.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Currently, the only way to make this parameter work again is to open a support ticket and ask to have Outlook roaming signatures disabled in your organization.
 
 The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
 
@@ -1262,6 +1264,7 @@ Accept wildcard characters: False
 
 ### -WebSuggestedRepliesEnabledForUser
 This parameter is available only in the cloud-based service.
+
 {{ Fill WebSuggestedRepliesEnabledForUser Description }}
 
 ```yaml
@@ -1298,12 +1301,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

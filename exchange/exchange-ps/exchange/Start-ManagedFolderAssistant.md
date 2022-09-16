@@ -22,11 +22,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCleanup]
  [-AggMailboxCleanup]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-HoldCleanup]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -57,6 +56,28 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHo
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
  [-AdaptiveScope]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ElcB2DumpsterArchiverAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2DumpsterArchiver]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ElcB2IPMArchiverAssistant
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2IPMArchiver]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -176,6 +197,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StopHoldCleanup
+This parameter is available only in the cloud-based service.
+
+The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
+
+A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: StopHoldCleanup
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AdaptiveScope
 This parameter is available only in the cloud-based service.
 
@@ -202,6 +243,42 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -B2DumpsterArchiver
+This parameter is available only in the cloud-based service.
+
+{{ Fill B2DumpsterArchiver Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ElcB2DumpsterArchiverAssistant
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -B2IPMArchiver
+This parameter is available only in the cloud-based service.
+
+{{ Fill B2IPMArchiver Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ElcB2IPMArchiverAssistant
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -312,31 +389,11 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, ElcB2DumpsterArchiverAssistant, ElcB2IPMArchiverAssistant, HoldCleanup, StopHoldCleanup
 Aliases:
 Applicable: Exchange Online
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StopHoldCleanup
-This parameter is available only in the cloud-based service.
-
-The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
-
-A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: StopHoldCleanup
-Aliases:
-Applicable: Exchange Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -364,12 +421,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

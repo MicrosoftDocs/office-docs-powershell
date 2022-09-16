@@ -321,6 +321,8 @@ The GeoCoordinates parameter specifies the contact's location in latitude, longi
 - Latitude and longitude: For example, "47.644125;-122.122411"
 - Latitude, longitude, and altitude: For example, "47.644125;-122.122411;161.432"
 
+**Note**: If period separators don't work for you, use commas instead.
+
 ```yaml
 Type: GeoCoordinates
 Parameter Sets: (All)
@@ -823,12 +825,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

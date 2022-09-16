@@ -44,6 +44,15 @@ Get-HostedContentFilterPolicy Default | Format-List
 
 This example retrieves details about the spam filter policy named Default.
 
+### Example 3
+```powershell
+$x = Get-HostedContentFilterPolicy
+
+$x | foreach {write-host ("`r`n"*3)$_.Name,`r`n,("="*79),`r`n,"Allowed Senders"`r`n,("-"*79),`r`n,$_.AllowedSenders,("`r`n"*2),"Allowed Sender Domains",`r`n,("-"*79),`r`n,$_.AllowedSenderDomains,("`r`n"*2),"Blocked Senders"`r`n,("-"*79),`r`n,$_.BlockedSenders,("`r`n"*2),"Blocked Sender Domains",`r`n,("-"*79),`r`n,$_.BlockedSenderDomains}
+```
+
+This example shows the allowed and blocked senders and domains in all spam filter policies.
+
 ## PARAMETERS
 
 ### -Identity
@@ -71,12 +80,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

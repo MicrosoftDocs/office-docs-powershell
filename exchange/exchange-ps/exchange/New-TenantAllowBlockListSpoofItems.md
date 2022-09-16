@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-tenantallowblocklistspoofitems
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: New-TenantAllowBlockListSpoofItems
 schema: 2.0.0
 author: chrisda
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-TenantAllowBlockListSpoofItems cmdlet to create spoof entries in the Tenant Allow/Block List.
+Use the New-TenantAllowBlockListSpoofItems cmdlet to create spoofed sender entries in the Tenant Allow/Block List.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,10 +37,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-TenantAllowBlockListSpoofItems -SendingInfrastructure contoso.com -SpoofedUser spoofedDomain.com -SpoofType External -Action Allow -Identity Default
+New-TenantAllowBlockListSpoofItems -Identity Default -Action Allow -SendingInfrastructure contoso.com -SpoofedUser bob@contoso.com -SpoofType External
 ```
 
-This example creates a new spoof pair and generates an Identity for the pair (a random GUID) which can be used as an Id parameter while updating or deleting the spoof pair through Set-TenantAllowBlockListSpoofItems and Remove-TenantAllowBlockListSpoofItems.
+This example creates an allow entry for the sender bob@contoso.com from the source contoso.com.
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ The Identity parameter uses the value Default.
 Type: HostedConnectionFilterPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -71,7 +71,7 @@ The SendingInfrastructure parameter specifies the source of the messages sent by
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -81,7 +81,7 @@ Accept wildcard characters: True
 ```
 
 ### -SpoofedUser
-The SpoofedUser parameter specifies the spoofed sender's email address or domain for the spoof entry.
+The SpoofedUser parameter specifies the email address or domain for the spoofed sender entry.
 
 - For domains outside your organization (cross-org), use the domain of the email address that appears in the From field of the message.
 - For domains inside your organization (intra-org), use the full email address that appears in the From field of the message.
@@ -90,7 +90,7 @@ The SpoofedUser parameter specifies the spoofed sender's email address or domain
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ Accept wildcard characters: True
 ```
 
 ### -SpoofType
-The SpoofType parameter specifies whether this is an internal or external spoof entry. Valid values are:
+The SpoofType parameter specifies whether this is an internal or external spoofed sender entry. Valid values are:
 
 - External
 - Internal
@@ -109,7 +109,7 @@ The SpoofType parameter specifies whether this is an internal or external spoof 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-The Action parameter specifies whether is an allowed or blocked spoof entry. Valid values are:
+The Action parameter specifies whether is an allowed or blocked spoofed sender entry. Valid values are:
 
 - Allow
 - Block
@@ -128,7 +128,7 @@ The Action parameter specifies whether is an allowed or blocked spoof entry. Val
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -147,7 +147,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

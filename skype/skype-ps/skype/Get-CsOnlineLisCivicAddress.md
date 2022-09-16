@@ -1,51 +1,46 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineliscivicaddress
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: serdarsoysal
-ms.author: serdars
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Get-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the Get-CsOnlineLisCivicAddress cmdlet to retrieve information about existing emergency civic addresses defined in the Location Information Service (LIS.)
+Use the Get-CsOnlineLisCivicAddress cmdlet to retrieve information about existing emergency civic addresses defined in the Location Information Service (LIS).
 
 ## SYNTAX
 
 ```
-Get-CsOnlineLisCivicAddress [-CivicAddressId <Guid>] [-LocationId <Guid>]
- [-PopulateNumberOfVoiceUsers] [-PopulateNumberOfTelephoneNumbers] [-AssignmentStatus <String>]
- [-City <String>] [-CountryOrRegion <String>] [-Description <String>] [-ValidationStatus <String>]
- [-ResultSize <Int32>] [-NumberOfResultsToSkip <Int32>] [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force]
- [<CommonParameters>]
+Get-CsOnlineLisCivicAddress [-AssignmentStatus <string>] [-City <string>] [-CivicAddressId <guid>] [-CountryOrRegion <string>]
+[-Description <string>] [-Force] [-LocationId <guid>] [-NumberOfResultsToSkip <int>] [-PopulateNumberOfTelephoneNumbers] [-PopulateNumberOfVoiceUsers]
+[-ResultSize <long>] [-ValidationStatus <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
+Returns one or more emergency civic addresses.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+###  Example 1
+```powershell
 Get-CsOnlineLisCivicAddress -CivicAddressId 235678321ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 ```
 
 This example returns the civic address with the specified identification.
 
-
-
-### -------------------------- Example 2 --------------------------
-```
+###  Example 2
+```powershell
 Get-CsOnlineLisCivicAddress -City Seattle
 ```
 
 This example returns all the civic addresses in the city of Seattle.
-
 
 ## PARAMETERS
 
@@ -60,7 +55,7 @@ Valid inputs are "Assigned", or "Unassigned".
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -76,7 +71,7 @@ Specifies the city of the target civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -86,13 +81,13 @@ Accept wildcard characters: False
 ```
 
 ### -CivicAddressId
-Specifies the identification number of the civic address to return.
+Specifies the identity of the civic address to return.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -108,7 +103,7 @@ Specifies the country or region of the target civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -124,22 +119,7 @@ Specifies the administrator defined description of the target civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -157,7 +137,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -173,7 +153,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -197,11 +177,27 @@ For example the command below will return civic addresses 26-50 for Seattle.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PopulateNumberOfTelephoneNumbers
+If present, the PopulateNumberOfTelephoneNumbers switch causes the cmdlet to provide the number of phone numbers at the returned addresses.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -213,7 +209,7 @@ If present, the PopulateNumberOfVoiceUsers switch causes the cmdlet to provide t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -229,23 +225,7 @@ Specifies the maximum number of results to return.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -262,27 +242,11 @@ Valid inputs are: Valid, Invalid, and Notvalidated.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PopulateNumberOfTelephoneNumbers
-{{Fill PopulateNumberOfTelephoneNumbers Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -292,16 +256,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
-
 ## OUTPUTS
-
-### One or more instances of civic address objects.
-
 
 ## NOTES
 
-
 ## RELATED LINKS
+[Set-CsOnlineLisCivicAddress](set-csonlineliscivicaddress.md)
 
+[New-CsOnlineLisCivicAddress](new-csonlineliscivicaddress.md)
+
+[Remove-CsOnlineLisCivicAddress](remove-csonlineliscivicaddress.md)

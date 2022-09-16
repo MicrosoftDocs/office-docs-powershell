@@ -50,6 +50,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $prompt = Export-UMPrompt -PromptFileName "customgreeting.mp3" -UMDialPlan MyUMDialPlan
+
 [System.IO.File]::WriteAllBytes('D:\DialPlanPrompts\welcomegreeting.mp3', $prompt.AudioData)
 ```
 
@@ -58,6 +59,7 @@ This example exports the welcome greeting for the UM dial plan MyUMDialPlan and 
 ### Example 2
 ```powershell
 $prompt = Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant
+
 [System.IO.File]::WriteAllBytes('E:\UMPromptsBackup\welcomegreetingbackup.mp3', $prompt.AudioData)
 ```
 
@@ -169,12 +171,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

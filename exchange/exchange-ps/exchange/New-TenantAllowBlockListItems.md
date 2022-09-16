@@ -1,20 +1,17 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/new-tenantallowblocklistitems
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: New-TenantAllowBlockListItems
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX
 ---
 
 # New-TenantAllowBlockListItems
 
 ## SYNOPSIS
-**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the New-TenantAllowBlockListItems cmdlet to add entries to the Tenant Allow/Block List in the Microsoft 365 Defender portal.
@@ -68,7 +65,7 @@ This example adds a file block entry for the specified files that never expires.
 
 ### Example 3
 ```powershell
-New-TenantAllowBlockListItems -ListType Url -Allow -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
+New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
 ```
 
 This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
@@ -76,22 +73,23 @@ This example adds a URL allow entry for the specified third-party phishing simul
 ## PARAMETERS
 
 ### -Entries
-The Entries parameter specifies the URL or files that you want to add to the Tenant Allow/Block List based on the value of the ListType parameter:
+The Entries parameter specifies the values that you want to add to the Tenant Allow/Block List based on the ListType parameter value:
 
-- URLs: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://docs.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list#url-syntax-for-the-tenant-allowedblocked-list).
-- Files: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
+- FileHash: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
+- Sender: A domain or email address value. For example, `contoso.com` or `michelle@contoso.com`.
+- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://docs.microsoft.com/microsoft-365/security/office-365-security/allow-block-urls#url-syntax-for-the-tenant-allowblock-list).
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-You can't mix URL and file values or allow and block actions in the same command.
+You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
 
-You can't modify the URL or file values after you create the entry.
+In most cases, you can't modify the URL, file, or sender values after you create the entry. The only exception is allow URL entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -114,7 +112,7 @@ You can't use this parameter with the NoExpiration switch.
 Type: DateTime
 Parameter Sets: Expiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -127,13 +125,14 @@ Accept wildcard characters: False
 The ListType parameter specifies the type of entry to add. Valid values are:
 
 - FileHash
+- Sender
 - Url
 
 ```yaml
 Type: ListType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -145,13 +144,18 @@ Accept wildcard characters: False
 ### -NoExpiration
 The NoExpiration switch specifies that the entry should never expire. You don't need to specify a value with this switch.
 
+This switch is available to use in the following scenarios:
+
+- With the Block switch.
+- With the Allow switch where the ListType parameter value is URL and the ListSubType parameter value is AdvancedDelivery.
+
 You can't use this switch with the ExpirationDate parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NoExpiration
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -161,7 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -Allow
-The Allow switch specifies that this is an allow entry for advanced delivery (third-party phishing simulation URLs). You don't need to specify a value with this switch.
+The Allow switch specifies that you're creating an allow entry. You don't need to specify a value with this switch.
+
+You can't use this switch with the Block switch.
 
 ```yaml
 Type: SwitchParameter
@@ -177,13 +183,15 @@ Accept wildcard characters: False
 ```
 
 ### -Block
-The Block switch specifies that this is a block entry. You don't need to specify a value with this switch.
+The Allow switch specifies that you're creating a block entry. You don't need to specify a value with this switch.
+
+You can't use this switch with the Allow switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -195,7 +203,7 @@ Accept wildcard characters: False
 ### -ListSubType
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
-- AdvancedDelivery
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
 - Tenant: This is the default value.
 
 ```yaml
@@ -218,7 +226,7 @@ The Notes parameters specifies additional information about the object. If the v
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -236,7 +244,7 @@ You use this switch to prevent the command from halting on the first entry that 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

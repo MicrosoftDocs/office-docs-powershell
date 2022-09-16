@@ -48,6 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $SN = Export-RecipientDataProperty -Identity tonys@contoso.com -SpokenName
+
 [System.IO.File]::WriteAllBytes('C:\tonysmith.wma', $SN.FileData)
 ```
 
@@ -56,6 +57,7 @@ This example exports Tony Smith's spoken name audio file and saves it to the loc
 ### Example 2
 ```powershell
 $Pic = Export-RecipientDataProperty -Identity "Ayla Kol" -Picture
+
 [System.IO.File]::WriteAllBytes('C:\Data\aylakol.jpg', $Pic.FileData)
 ```
 
@@ -182,12 +184,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

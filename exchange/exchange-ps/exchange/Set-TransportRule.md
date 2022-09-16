@@ -2373,9 +2373,9 @@ The ExceptIfMessageTypeMatches parameter specifies an exception that looks for m
 
 - OOF: Auto-reply messages configured by the user.
 - AutoForward: Messages automatically forwarded to an alternative recipient.
-- Encrypted: Encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
+- Encrypted: S/MIME encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
-- PermissionControlled: Messages that have specific permissions configured.
+- PermissionControlled: Messages that have specific permissions configured using Office 365 Message Encryption (OME), Rights Management, and sensitivity labels (with encryption).
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
 - Signed: Digitally signed messages.
 - ApprovalRequest: Moderation request messages sent to moderators.
@@ -3583,9 +3583,9 @@ The MessageTypeMatches parameter specifies a condition that looks for messages o
 
 - OOF: Auto-reply messages configured by the user.
 - AutoForward: Messages automatically forwarded to an alternative recipient.
-- Encrypted: Encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
+- Encrypted: S/MIME encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
-- PermissionControlled: Messages that have specific permissions configured.
+- PermissionControlled: Messages that have specific permissions configured using Office 365 Message Encryption (OME), Rights Management, and sensitivity labels (with encryption).
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
 - Signed: Digitally signed messages.
 - ApprovalRequest: Moderation request messages sent to moderators.
@@ -4887,12 +4887,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-VivaInsightsSettings -Identity <String>
+ [-Feature <String>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -41,7 +42,7 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-PS C:\> Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
+Get-VivaInsightsSettings -Identity roy@contoso.onmicrosoft.com
 
 UserId : roy@contoso.onmicrosoft.com
 IsInsightsHeadspaceEnabled : True
@@ -61,6 +62,25 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Feature
+The Feature parameter filters the results by the specified Microsoft Viva Insights feature. Valid values are:
+
+- Headspace: Represents all features of Headspace.
+- MeetingEffectivenessSurvey: This value is available only in version 2.0.6-Preview2 of the module as part of a Private Preview.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

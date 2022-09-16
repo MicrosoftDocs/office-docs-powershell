@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-ActionForUnknownFileAndMIMETypes <AttachmentBlockingActions>]
  [-ActiveSyncIntegrationEnabled <Boolean>]
+ [-AdditionalAccountsEnabled <System.Boolean>]
  [-AdditionalStorageProvidersAvailable <Boolean>]
  [-AllAddressListsEnabled <Boolean>]
  [-AllowCopyContactsToDeviceAddressBook <Boolean>]
@@ -36,6 +37,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-BoxAttachmentsEnabled <Boolean>]
  [-CalendarEnabled <Boolean>]
  [-ChangePasswordEnabled <Boolean>]
+ [-ChangeSettingsAccountEnabled <System.Boolean>]
  [-ClassicAttachmentsEnabled <Boolean>]
  [-ConditionalAccessPolicy <PolicyEnum>]
  [-Confirm]
@@ -70,6 +72,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-InternalSPMySiteHostURL <String>]
  [-IRMEnabled <Boolean>]
  [-IsDefault]
+ [-ItemsToOtherAccountsEnabled <System.Boolean>]
  [-JournalEnabled <Boolean>]
  [-JunkEmailEnabled <Boolean>]
  [-LinkedInEnabled <Boolean>]
@@ -88,6 +91,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
+ [-PersonalAccountsEnabled <System.Boolean>]
  [-PhoneticSupportEnabled <Boolean>]
  [-PlacesEnabled <Boolean>]
  [-PremiumClientEnabled <Boolean>]
@@ -253,6 +257,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdditionalAccountsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill AdditionalAccountsEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -511,6 +533,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeSettingsAccountEnabled
+This parameter is functional only in the cloud-based service.
+
+{{ Fill ChangeSettingsAccountEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1221,6 +1261,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ItemsToOtherAccountsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ItemsToOtherAccountsEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -JournalEnabled
 The JournalEnabled parameter specifies whether the Journal folder is available in Outlook on the web. Valid values are:
 
@@ -1538,6 +1596,24 @@ The PersonalAccountCalendarsEnabled parameter specifies whether to allow users t
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PersonalAccountsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill PersonalAccountsEnabled Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -2595,12 +2671,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

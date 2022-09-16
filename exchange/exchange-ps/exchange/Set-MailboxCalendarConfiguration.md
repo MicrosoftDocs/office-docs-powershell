@@ -20,6 +20,33 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
+```
+Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
+ [-AgendaMailEnabled <Boolean>]
+ [-Confirm]
+ [-ConversationalSchedulingEnabled <Boolean>]
+ [-DailyAgendaMailSchedule <AgendaMailSchedule>]
+ [-DefaultMeetingDuration <Int32>]
+ [-DefaultReminderTime <TimeSpan>]
+ [-DomainController <Fqdn>]
+ [-FirstWeekOfYear <FirstWeekRules>]
+ [-RemindersEnabled <Boolean>]
+ [-ReminderSoundEnabled <Boolean>]
+ [-ShowWeekNumbers <Boolean>]
+ [-SkipAgendaMailOnFreeDays <Boolean>]
+ [-TimeIncrement <HourIncrement>]
+ [-UseBrightCalendarColorThemeInOwa <Boolean>]
+ [-WeekStartDay <DayOfWeek>]
+ [-WhatIf]
+ [-WorkDays <DaysOfWeek>]
+ [-WorkingHoursEndTime <TimeSpan>]
+ [-WorkingHoursStartTime <TimeSpan>]
+ [-WorkingHoursTimeZone <ExTimeZoneValue>]
+ [<CommonParameters>]
+```
+
+### Identity
 ```
 Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-AddOnlineMeetingToAllEvents <Boolean>]
@@ -37,24 +64,23 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
  [-DiningEventsFromEmailEnabled <Boolean>]
- [-DomainController <Fqdn>]
  [-EntertainmentEventsFromEmailEnabled <Boolean>]
  [-EventsFromEmailEnabled <Boolean>]
  [-FirstWeekOfYear <FirstWeekRules>]
  [-FlightEventsFromEmailEnabled <Boolean>]
  [-HotelEventsFromEmailEnabled <Boolean>]
  [-InvoiceEventsFromEmailEnabled <Boolean>]
- [-OnlineMeetingsByDefaultEnabled <Boolean>]
+ [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
- [-ReminderSoundEnabled <Boolean>]
  [-RemindersEnabled <Boolean>]
+ [-ReminderSoundEnabled <Boolean>]
  [-RentalCarEventsFromEmailEnabled <Boolean>]
  [-ServiceAppointmentEventsFromEmailEnabled <Boolean>]
  [-ShowWeekNumbers <Boolean>]
  [-SkipAgendaMailOnFreeDays <Boolean>]
  [-TimeIncrement <HourIncrement>]
  [-UseBrightCalendarColorThemeInOwa <Boolean>]
- [-WeatherEnabled <Boolean>]
+ [-WeatherEnabled <WeatherEnabledStatus>]
  [-WeatherLocationBookmark <Int32>]
  [-WeatherLocations <MultiValuedProperty>]
  [-WeatherUnit <WeatherTemperatureUnit>]
@@ -64,7 +90,55 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-WorkingHoursEndTime <TimeSpan>]
  [-WorkingHoursStartTime <TimeSpan>]
  [-WorkingHoursTimeZone <ExTimeZoneValue>]
- [-WorkspaceUserEnabled <Boolean>]
+ [-WorkspaceUserEnabled <System.Boolean>]
+ [<CommonParameters>]
+```
+
+### MailboxLocation
+```
+Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
+ [-AddOnlineMeetingToAllEvents <Boolean>]
+ [-AgendaMailEnabled <Boolean>]
+ [-AgendaMailIntroductionEnabled <Boolean>]
+ [-AgendaPaneEnabled <Boolean>]
+ [-CalendarFeedsPreferredLanguage <String>]
+ [-CalendarFeedsPreferredRegion <String>]
+ [-CalendarFeedsRootPageId <String>]
+ [-Confirm]
+ [-ConversationalSchedulingEnabled <Boolean>]
+ [-CreateEventsFromEmailAsPrivate <Boolean>]
+ [-DailyAgendaMailSchedule <AgendaMailSchedule>]
+ [-DefaultMeetingDuration <Int32>]
+ [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
+ [-DefaultReminderTime <TimeSpan>]
+ [-DiningEventsFromEmailEnabled <Boolean>]
+ [-EntertainmentEventsFromEmailEnabled <Boolean>]
+ [-EventsFromEmailEnabled <Boolean>]
+ [-FirstWeekOfYear <FirstWeekRules>]
+ [-FlightEventsFromEmailEnabled <Boolean>]
+ [-HotelEventsFromEmailEnabled <Boolean>]
+ [-InvoiceEventsFromEmailEnabled <Boolean>]
+ [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
+ [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
+ [-RemindersEnabled <Boolean>]
+ [-ReminderSoundEnabled <Boolean>]
+ [-RentalCarEventsFromEmailEnabled <Boolean>]
+ [-ServiceAppointmentEventsFromEmailEnabled <Boolean>]
+ [-ShowWeekNumbers <Boolean>]
+ [-SkipAgendaMailOnFreeDays <Boolean>]
+ [-TimeIncrement <HourIncrement>]
+ [-UseBrightCalendarColorThemeInOwa <Boolean>]
+ [-WeatherEnabled <WeatherEnabledStatus>]
+ [-WeatherLocationBookmark <Int32>]
+ [-WeatherLocations <MultiValuedProperty>]
+ [-WeatherUnit <WeatherTemperatureUnit>]
+ [-WeekStartDay <DayOfWeek>]
+ [-WhatIf]
+ [-WorkDays <DaysOfWeek>]
+ [-WorkingHoursEndTime <TimeSpan>]
+ [-WorkingHoursStartTime <TimeSpan>]
+ [-WorkingHoursTimeZone <ExTimeZoneValue>]
+ [-WorkspaceUserEnabled <System.Boolean>]
  [<CommonParameters>]
 ```
 
@@ -114,7 +188,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -132,7 +206,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -166,7 +240,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -184,7 +258,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -202,7 +276,7 @@ The CalendarFeedsPreferredLanguage parameter specifies the preferred language fo
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -222,7 +296,7 @@ A reference for two-letter country codes is available at [Country Codes List](ht
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -240,7 +314,7 @@ The CalendarFeedsRootPageId parameter specifies the root page ID for calendar fe
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -299,7 +373,7 @@ The CreateEventsFromEmailAsPrivate parameter specifies whether to create events 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -341,6 +415,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -DefaultOnlineMeetingProvider
 This parameter is available only in the cloud-based service.
 
@@ -365,7 +440,7 @@ The DefaultOnlineMeetingProvider parameter specifies the default provider for on
 
 ```yaml
 Type: OnlineMeetingProviderType
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -427,7 +502,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -445,7 +520,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -468,7 +543,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -498,36 +573,13 @@ When this setting is enabled, you can enable or disable creating specific types 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FlightEventsFromEmailEnabled
-This parameter is available only in the cloud-based service.
-
-The FlightEventsFromEmailEnabled parameter specifies whether to create flight reservation events from email messages. Valid values are:
-
-- $true: Create flight reservation events from email messages. This is the default value.
-- $false: Don't create flight reservation events from email messages.
-
-This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -555,6 +607,29 @@ Accept pipeline input: false
 Accept wildcard characters: False
 ```
 
+### -FlightEventsFromEmailEnabled
+This parameter is available only in the cloud-based service.
+
+The FlightEventsFromEmailEnabled parameter specifies whether to create flight reservation events from email messages. Valid values are:
+
+- $true: Create flight reservation events from email messages. This is the default value.
+- $false: Don't create flight reservation events from email messages.
+
+This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HotelEventsFromEmailEnabled
 This parameter is available only in the cloud-based service.
 
@@ -567,7 +642,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -588,7 +663,25 @@ The InvoiceEventsFromEmailEnabled parameter specifies whether to allow creating 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxLocation
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxLocation Description }}
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -614,7 +707,7 @@ Setting this parameter enables the display of the **Add online meeting to all me
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -637,7 +730,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -702,7 +795,7 @@ This parameter is meaningful only when the EventsFromEmailEnabled parameter is s
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -720,7 +813,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -804,30 +897,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WeekStartDay
-The WeekStartDay parameter specifies the first day of the week. Valid values are:
-
-- Sunday (This is the default value)
-- Monday
-- Tuesday
-- Wednesday
-- Thursday
-- Friday
-- Saturday
-
-```yaml
-Type: DayOfWeek
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WeatherEnabled
 This parameter is available only in the cloud-based service.
 
@@ -839,7 +908,7 @@ The WeatherEnabled specifies whether weather is displayed in the calendar in Out
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -859,7 +928,7 @@ A valid value for this parameter depends on the number of weather locations that
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -887,7 +956,7 @@ You can configure a maximum of 5 weather locations.
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -909,9 +978,33 @@ The WeatherUnit parameter specifies the temperature scale that's used to display
 
 ```yaml
 Type: WeatherTemperatureUnit
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WeekStartDay
+The WeekStartDay parameter specifies the first day of the week. Valid values are:
+
+- Sunday (This is the default value)
+- Monday
+- Tuesday
+- Wednesday
+- Thursday
+- Friday
+- Saturday
+
+```yaml
+Type: DayOfWeek
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1035,7 +1128,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 
@@ -1051,12 +1144,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

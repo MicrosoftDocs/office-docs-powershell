@@ -36,6 +36,7 @@ Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
 ### IdentityCloud
 ```
 Get-MoveRequestStatistics [-Identity] <MoveRequestIdParameter>
+ [-Analysis]
  [-DiagnosticInfo <String>]
  [-DiagnosticOnly]
  [-IncludeReport]
@@ -172,6 +173,24 @@ Aliases:
 Applicable: Exchange Server 2010
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Analysis
+This parameter is available only in the cloud-based service.
+
+{{ Fill Analysis Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: IdentityCloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -360,12 +379,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
