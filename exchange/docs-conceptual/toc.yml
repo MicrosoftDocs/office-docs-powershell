@@ -40,6 +40,8 @@
           href: exchange-cmdlet-syntax.md
         - name: Find the permissions required to run any Exchange cmdlet
           href: find-exchange-cmdlet-permissions.md
+        - name: What's new in the Exchange Online PowerShell module
+          href: whats-new-in-the-exo-module.md  
         - name: Recipient filters in Exchange PowerShell commands
           href: recipient-filters.md
           items:
