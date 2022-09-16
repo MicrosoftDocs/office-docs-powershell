@@ -102,7 +102,7 @@ Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ### Example 5: Connect to MicrosoftTeams using Application-based Access Tokens
 This example demonstrates how to authenticate with an application using Access Tokens. Access Tokens can be retrieved via the login.microsoftonline.com endpoint. It requires two Access Tokens – “MS Graph” and “Skype and Teams Tenant Admin API” resources.
 
-Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
 ```powershell
 $ClientSecret   = "…"
@@ -172,9 +172,9 @@ user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxx
 ### AccessTokens
 Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" resources. Both the tokens used should be of the same type.
 
-(a) Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+- Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
-(b) Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
+- Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
 
 Steps to configure the AAD application. 
 1. Go to Azure portal and go to App Registrations. 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ### -ApplicationId
 Specifies the application ID of the service principal that is used in application-based authentication. 
 
-This parameter has been reintroduced in preview with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication). 
+This parameter has been reintroduced in preview with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication). 
 
 ```yaml
 Type: String
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ### -CertificateThumbprint
 Specifies the certificate thumbprint of a digital public key X.509 certificate of an application that has permission to perform this action.
 
-This parameter has been reintroduced in preview with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+This parameter has been reintroduced in preview with version 4.7.1-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
 ```yaml
 Type: String
