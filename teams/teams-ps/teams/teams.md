@@ -68,6 +68,9 @@ Returns information about the Teams Media Logging policy.
 ### [Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
 {{Manually Enter Get-TeamTargetingHierarchyStatus Description Here}}
 
+### [Get-CsCloudCallDataConnection](Get-CsCloudCallDataConnection.md)
+This cmdlet retrieves an already existing online call data connection.
+
 ### [Grant-CsTeamsEventsPolicy](Grant-CsTeamsEventsPolicy.md)
 Assigns Teams Events policy to a user, group of users, or the entire tenant. Note that this policy is currently still in preview.
 
@@ -97,6 +100,9 @@ Use this cmdlet to create a new Teams enhanced encryption policy.
 
 ### [New-TeamsShiftsPolicy](New-TeamsShiftsPolicy.md)
 {{Manually Enter New-TeamsShiftsPolicy Description Here}}
+
+### [New-CsCloudCallDataConnection](New-CsCloudCallDataConnection.md)
+This cmdlet creates an online call data connection.
 
 ### [Remove-CsTeamsEventsPolicy](Remove-CsTeamsEventsPolicy)
 Removes a previously created TeamsEventsPolicy. Note that this policy is currently still in preview.

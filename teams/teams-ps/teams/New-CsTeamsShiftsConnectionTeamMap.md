@@ -32,9 +32,9 @@ This cmdlet connects a Microsoft Teams team and a WFM team to allow for synchron
 PS C:\> New-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId "WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b" -TeamId 30b625bd-f0f7-4d5c-8793-9ccef5a63119 -TimeZone "America/Los_Angeles" -WfmTeamId "1000107"
 ```
 ```output
-TeamId                               TeamName WfmTeamId WfmTeamName
-------                               -------- --------- -----------
-30b625bd-f0f7-4d5c-8793-9ccef5a6311          1000107
+TeamId                               TeamName TimeZone            WfmTeamId WfmTeamName
+------                               -------- --------            --------- -----------
+30b625bd-f0f7-4d5c-8793-9ccef5a6311           America/Los_Angeles 1000107
 ```
 
 Maps the Teams team with ID `30b625bd-f0f7-4d5c-8793-9ccef5a63119` and WFM team with ID `1000107` in the instance with ID `WCI-4c231dd2-4451-45bd-8eea-bd68b40bab8b`.

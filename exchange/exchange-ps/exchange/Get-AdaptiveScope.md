@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://docs.microsoft.com/powershell/module/exchange/get-adaptivescope
-applicable: Security & Compliance
+applicable: Exchange Online, Security & Compliance
 title: Get-AdaptiveScope
 schema: 2.0.0
 author: chrisda
@@ -55,7 +55,7 @@ The Identity parameter specifies the adaptive scope that you want to view. You c
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: 0

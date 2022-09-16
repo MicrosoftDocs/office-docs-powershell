@@ -41,6 +41,9 @@ Set-ProtectionAlert [-Identity] <ComplianceRuleIdParameter>
  [-NotifyUserThrottleThreshold <Int32>]
  [-NotifyUserThrottleWindow <Int32>]
  [-Operation <MultiValuedProperty>]
+ [-PrivacyManagementScopedSensitiveInformationTypes <MultiValuedProperty>]
+ [-PrivacyManagementScopedSensitiveInformationTypesForCounting <MultiValuedProperty>]
+ [-PrivacyManagementScopedSensitiveInformationTypesThreshold <System.UInt64>]
  [-Severity <RuleSeverity>]
  [-Threshold <Int32>]
  [-TimeWindow <Int32>]
@@ -447,6 +450,54 @@ You can only use this parameter when the ThreatType parameter has the value Acti
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivacyManagementScopedSensitiveInformationTypes
+{{ Fill PrivacyManagementScopedSensitiveInformationTypes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivacyManagementScopedSensitiveInformationTypesForCounting
+{{ Fill PrivacyManagementScopedSensitiveInformationTypesForCounting Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrivacyManagementScopedSensitiveInformationTypesThreshold
+{{ Fill PrivacyManagementScopedSensitiveInformationTypesThreshold Description }}
+
+```yaml
+Type: System.UInt64
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

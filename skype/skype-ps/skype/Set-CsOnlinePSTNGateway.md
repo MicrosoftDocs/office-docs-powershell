@@ -234,7 +234,6 @@ Accept wildcard characters: False
 ```
 
 ### -MediaRelayRoutingLocationOverride
-This parameter is reserved for use with managed carriers.
 
 Allows selecting path for media manually. Direct Routing assigns a datacenter for media path based on the public IP of the SBC. We always select closest to the SBC datacenter. However, in some cases a public IP from for example a US range can be assigned to an SBC located in Europe. In this case we will be using not optimal media path. We only recommend setting this parameter if the call logs clearly indicate that automatic assignment of the datacenter for media path does not assign the closest to the SBC datacenter.
 

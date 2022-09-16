@@ -84,9 +84,10 @@ Accept wildcard characters: False
 ```
 
 ### -Feature
-The Feature parameter specifies feature of Microsoft Viva Insights in Microsoft Teams for the user. Current valid values are:
+The Feature parameter specifies the feature of Microsoft Viva Insights in Microsoft Teams for the user. Valid values are:
 
-- headspace: Represents all features of Headspace.
+- Headspace: Represents all features of Headspace.
+- MeetingEffectivenessSurvey: This value is available only in version 2.0.6-Preview2 of the module as part of a Private Preview.
 
 ```yaml
 Type: String
