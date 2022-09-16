@@ -176,19 +176,19 @@ Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" re
 
 - Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
 
-Steps to configure the AAD application. 
-1. Go to Azure portal and go to App Registrations. 
-2. Create or select the existing application.
-3. Add the following permission to this Application. 
-4. Click API permissions. 
-5. Click Add a permission. 
-6. Click on the Microsoft MS Graph, and then select Delegated Permission.
-7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
-8. Next, we need to add "Skype and Teams Tenant Admin API" resource permission. Click Add a permission.
-9. Navigate to "APIs my organization uses" 
-10. Search for "Skype and Teams Tenant Admin API".
-11. Add all the listed permissions. 
-12. Grant admin consent to both MS Graph and "Skype and Teams Tenant Admin API" name.
+   Steps to configure the AAD application. 
+   1. Go to Azure portal and go to App Registrations. 
+   2. Create or select the existing application.
+   3. Add the following permission to this Application. 
+   4. Click API permissions. 
+   5. Click Add a permission. 
+   6. Click on the Microsoft MS Graph, and then select Delegated Permission.
+   7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
+   8. Next, we need to add "Skype and Teams Tenant Admin API" resource permission. Click Add a permission.
+   9. Navigate to "APIs my organization uses" 
+   10. Search for "Skype and Teams Tenant Admin API".
+   11. Add all the listed permissions. 
+   12. Grant admin consent to both MS Graph and "Skype and Teams Tenant Admin API" name.
 
 ```yaml
 Type: String[]
