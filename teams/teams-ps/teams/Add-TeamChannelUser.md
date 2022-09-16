@@ -17,8 +17,7 @@ To turn an existing Member into an Owner,  first Add-TeamChannelUser -User foo t
 ## SYNTAX
 
 ```
-Add-TeamChannelUser -GroupId <String> -DisplayName <String> -User <String> [-Role <String>]
- [<CommonParameters>]
+Add-TeamChannelUser -GroupId <String> -DisplayName <String> -User <String> [-Role <String>] [-TenantId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
