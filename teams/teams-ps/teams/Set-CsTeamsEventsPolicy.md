@@ -34,8 +34,9 @@ The command shown in Example 1 sets the value of the Default (Global) Events Pol
 ### -AllowWebinars
 This setting governs if a user can create webinars using Teams Events.
 Possible values are:
- - **Enabled**, Enables creating webinars
- - **Disabled**, Disables creating webinars
+ - **Enabled**: Enables creating webinars.
+ - **Disabled**: Disables creating webinars.
+
 
 ```yaml
 Type: String
