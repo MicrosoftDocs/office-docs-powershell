@@ -163,10 +163,10 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+[Add-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission)
 
-[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+[Set-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/set-mailboxfolderpermission)
 
-[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+[Remove-MailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission)
 
-[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)
+[Get-EXOMailboxFolderPermission](https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)

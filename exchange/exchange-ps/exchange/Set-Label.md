@@ -12,7 +12,6 @@ ms.reviewer:
 # Set-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity labels in your organization.
 
@@ -136,6 +135,8 @@ Supported settings for built-in labeling:
 - **DefaultSharingScope**: Specifies the default sharing link type for a site when the label scope includes **Groups & sites**, and the default sharing link type for a document when the label scope includes **Files & emails**. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
 - **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+
+- **DefaultShareLinkToExistingAcces**: Specifies whether to override *DefaultSharingScope* and *DefaultShareLinkPermission* to instead set the default sharing link type to people with existing access with their existing permissions. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkToExistingAccess="True"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
 - **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `Set-Label -Identity General -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
 
@@ -1232,4 +1233,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-Label](New-Label.md)
+
+[New-Label](https://docs.microsoft.com/powershell/module/exchange/new-label)

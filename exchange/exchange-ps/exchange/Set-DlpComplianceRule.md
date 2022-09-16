@@ -2358,6 +2358,7 @@ The NotifyUserType parameter specifies the type of notification that's used for 
 - NotSet
 - Email
 - PolicyTip
+- Email,PolicyTip
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.NotifyUserType
