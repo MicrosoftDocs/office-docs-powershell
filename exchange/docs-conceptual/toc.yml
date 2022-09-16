@@ -41,7 +41,7 @@
         - name: Find the permissions required to run any Exchange cmdlet
           href: find-exchange-cmdlet-permissions.md
         - name: What's new in the Exchange Online PowerShell module
-          href: whats-new-in-the-exo-module.md  
+          href: whats-new-in-the-exo-module.md
         - name: Recipient filters in Exchange PowerShell commands
           href: recipient-filters.md
           items:
@@ -66,6 +66,8 @@
           href: app-only-auth-powershell-v2.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
+        - name: What's new in the Exchange Online PowerShell module
+          href: whats-new-in-the-exo-module.md
         - name: V1 module - Connect to Security & Compliance PowerShell
           href: v1-module-mfa-connect-to-scc-powershell.md
         - name: Basic auth - Connect to Exchange Online Protection PowerShell
@@ -77,5 +79,7 @@
           href: connect-to-exchange-online-protection-powershell.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
+        - name: What's new in the Exchange Online PowerShell module
+          href: whats-new-in-the-exo-module.md
         - name: Basic auth - Connect to Exchange Online Protection PowerShell
           href: basic-auth-connect-to-eop-powershell.md
