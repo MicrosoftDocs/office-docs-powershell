@@ -63,7 +63,8 @@ This setting governs which users can access the event registration page or the e
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
 
- - **EveryoneInCompanyExcludingGuests**, Enables creating events to allow only in tenant users to register and join the event
+ - **EveryoneInCompanyExcludingGuests**: Enables creating events to allow only in-tenant users to register and join the event.
+
 
 ```yaml
 Type: String
