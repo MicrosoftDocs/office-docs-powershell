@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ServicePrincipal [[-Identity] <ServicePrincipalIdParameter>]
- [-DomainController <Fqdn>]
  [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
@@ -71,22 +70,6 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

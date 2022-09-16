@@ -39,6 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $file = Export-JournalRuleCollection
+
 [System.IO.File]::WriteAllBytes('C:\MyDocs\JournalRules.xml', $file.FileData)
 ```
 
@@ -47,6 +48,7 @@ This example exports journal rules in a two-step process. In the first step, the
 ### Example 2
 ```powershell
 $file = Export-JournalRuleCollection -ExportLegacyRules
+
 [System.IO.File]::WriteAllBytes('C:\MyDocs\LegacyJournalRules.xml', $file.FileData)
 ```
 

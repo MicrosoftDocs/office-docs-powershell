@@ -18,8 +18,9 @@ Changes a treatment for how calls to an unassigned number range should be routed
   
 ## SYNTAX
 
-```powershell
-Set-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [-Pattern <string>] [-TargetType <User | ResourceAccount | Announcement>] [-Target <GUID>] [-TreatmentPriority <integer>] [-Description <string>] [-Force] [-Instance <Object>] [-WhatIf]  [-Confirm] <CommonParameters>]
+```
+Set-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [-Description <string>] [-Pattern <string>] [-Target <string>] [-TargetType <string>]
+ [-TreatmentPriority <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +42,6 @@ Set-CsTeamsUnassignedNumberTreatment -Identity User2PSTN -TargetType User -Targe
 ```
 This example changes the treatment User2PSTN to route the calls to the user user2@contoso.com.
 
-
 ## PARAMETERS
 
 ### -Description
@@ -61,13 +61,13 @@ Accept wildcard characters: False
 ### -Identity
 The Id of the specific treatment.
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -126,21 +126,6 @@ Aliases:
 
 Required: False
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

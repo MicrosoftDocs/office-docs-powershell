@@ -6,7 +6,7 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsTeamsMediaLoggingPolicy
 author: LeoKuhorev
 ms.author: leokukharau
-manager: saurk
+manager: shalages
 schema: 2.0.0
 ---
 
@@ -21,14 +21,13 @@ Returns information about the Teams Media Logging policy.
 ### Identity (Default)
 
 ```
-Get-CsTeamsMediaLoggingPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
- [<CommonParameters>]
+Get-CsTeamsMediaLoggingPolicy [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ### Filter
 
 ```
-Get-CsTeamsMediaLoggingPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>] [<CommonParameters>]
+Get-CsTeamsMediaLoggingPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,24 +76,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -MsftInternalProcessingMode
-
-Internal Microsoft use only.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Filter
 
 Enables using wildcards when specifying the policy (or policies) to be retrieved.
@@ -127,4 +108,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmedialoggingpolicy](https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsmedialoggingpolicy)
+[Grant-CsTeamsMediaLoggingPolicy](/powershell/module/teams/grant-csteamsmedialoggingpolicy)

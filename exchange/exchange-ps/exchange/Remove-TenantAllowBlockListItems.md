@@ -7,14 +7,11 @@ schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
-ROBOTS: NOINDEX
 ---
 
 # Remove-TenantAllowBlockListItems
 
 ## SYNOPSIS
-**Note**: The features described in this topic are in Preview, are subject to change, and are not available in all organizations.
-
 This cmdlet is available only in the cloud-based service.
 
 Use the Remove-TenantAllowBlockListItems cmdlet to remove entries from the Tenant Allow/Block List in the Microsoft 365 Defender portal.
@@ -63,12 +60,13 @@ This example removes the URL allow entry for the specified third-party phishing 
 ### -Entries
 The Entries parameter specifies the entries that you want to remove based on the ListType parameter value. Valid values are:
 
-- Url: The exact URL entry value.
-- File: The exact SHA256 file hash value.
+- FileHash: The exact SHA256 file hash value.
+- Sender domains and email addresses: The exact domain or email address value.
+- Url: The exact URL value.
 
-To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
+This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
-You can't mix URL and file values or allow and block actions in the same command.
+You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
 
 You can't use this parameter with the Ids parameter.
 
@@ -86,11 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Ids
-The Ids parameter specifies the entries that you want to modify. To find this value, use the Get-TenantAllowBlockListItems cmdlet and the Identity property value (a URL or a file hash).
+The Ids parameter specifies the entries that you want to remove. This value is shown in the Identity property in the output of the Get-TenantAllowBlockListItems cmdlet.
 
 An example value for this parameter is `RgAAAAAI8gSyI_NmQqzeh-HXJBywBwCqfQNJY8hBTbdlKFkv6BcUAAAl_QCZAACqfQNJY8hBTbdlKFkv6BcUAAAl_oSPAAAA0`.
-
-To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the Entries parameter.
 
@@ -108,9 +104,10 @@ Accept wildcard characters: False
 ```
 
 ### -ListType
-The ListType parameter specifies the type of entry to remove. Valid values are:
+The ListType parameter specifies the type of entry that you want to remove. Valid values are:
 
 - FileHash
+- Sender
 - Url
 
 ```yaml
@@ -127,9 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -ListSubType
-The ListSubType specifies the subtype of this entry. Valid values are:
+The ListSubType specifies further specifies the type of entry that you want to remove. Valid values are:
 
-- AdvancedDelivery
+- AdvancedDelivery: Use this value for phishing simulation URLs.
 - Tenant: This is the default value.
 
 ```yaml

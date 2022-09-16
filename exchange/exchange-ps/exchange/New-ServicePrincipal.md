@@ -56,6 +56,7 @@ To find the AppId value of the Azure AD service principal, use the Get-AzADAppli
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -65,14 +66,17 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceId
-The ServiceId parameter specifies the unique ServiceID GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
+The ServiceId parameter specifies the unique object ID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
 To find the ServiceId value of the Azure AD service principal, use the Get-AzADApplication cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps).
+
+The ServiceId value can also be found in the Azure AD portal at Enterprise applications \> Object ID. 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -91,6 +95,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -106,6 +111,7 @@ The DisplayName parameter specifies the friendly name of the service principal. 
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -121,6 +127,7 @@ This parameter is reserved for internal Microsoft use.
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -136,6 +143,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Exchange Online
 
 Required: False
 Position: Named

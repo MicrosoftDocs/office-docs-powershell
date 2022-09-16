@@ -18,9 +18,14 @@ Displays a specific or all treatments for how calls to an unassigned number rang
   
 ## SYNTAX
 
-```powershell
-Get-CsTeamsUnassignedNumberTreatment [-LocalStore] [[-Identity] <String>] [-Filter <String>] [<CommonParameters>]
+### Identity (Default)
+```
+Get-CsTeamsUnassignedNumberTreatment [[-Identity] <string>] [<CommonParameters>]
+```
 
+### Filter
+```
+Get-CsTeamsUnassignedNumberTreatment [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,8 +51,6 @@ Get-CsTeamsUnassignedNumberTreatment -Filter Ann*
 ```
 This example displays all configured treatments with an Identity starting with Ann.
 
-
-
 ## PARAMETERS
 
 ### -Filter
@@ -55,7 +58,7 @@ Enables you to limit the returned data by filtering on the Identity attribute.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: (Filter)
 Aliases: 
 Applicable: Microsoft Teams
 
@@ -64,29 +67,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Identity
 The Id of the specific treatment to show.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: (Identity)
 Aliases:
 
 Required: False
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -105,7 +96,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 The cmdlet is available in Teams PS module 2.5.1 or later.
-
 
 ## RELATED LINKS
 [Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)

@@ -102,6 +102,12 @@ Get-CsOnlineUser -Filter {LineURI -eq "1234"}
 ```
 Example 5 returns information for user accounts that have been assigned a designated phone number. 
 
+### -------------------------- Example 6 --------------------------
+```
+Get-CsOnlineUser -AccountType ResourceAccount
+```
+Example 6 returns information for user accounts that are categorized as resource accounts. 
+
 ## PARAMETERS
 
 ### -AccountType
@@ -110,6 +116,20 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
 - `Unknown` - to query for a user type that is not known.
+
+
+```yaml
+Type: UserIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
