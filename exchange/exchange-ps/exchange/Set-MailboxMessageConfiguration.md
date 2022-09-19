@@ -542,6 +542,8 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalReadingPanePosition
+This parameter is functional only in Exchange 2016 or later. It doesn't work in Exchange Online.
+
 The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
 
 - Off
