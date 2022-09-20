@@ -450,12 +450,12 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.ADConnect
 
 ## RELATED LINKS
 
-[Move users between on-premises and cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud)
+[Move users between on-premises and cloud](https://learn.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud)
 
-[Skype for Business Hybrid Solutions](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/skype-for-business-hybrid-solutions)
+[Skype for Business Hybrid Solutions](https://learn.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/skype-for-business-hybrid-solutions)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
-[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+[Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Guidance for Organizations with on-premises deployments of Skype for Business Server](https://learn.microsoft.com/en-us/microsoftteams/skype-for-business-online-retirement#guidance-for-organizations-with-on-premises-deployments-of-skype-for-business-server)
+[Guidance for Organizations with on-premises deployments of Skype for Business Server](https://learn.microsoft.com/microsoftteams/skype-for-business-online-retirement#guidance-for-organizations-with-on-premises-deployments-of-skype-for-business-server)
