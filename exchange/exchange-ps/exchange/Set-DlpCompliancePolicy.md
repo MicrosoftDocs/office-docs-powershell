@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryDistribution
-The RetryDistribution switch redistributes the policy to all OneDrive for Business and SharePoint Online locations. You don't need to specify a value with this switch.
+The RetryDistribution switch redistributes the policy to all Excahnge,OneDrive for Business and SharePoint Online locations. You don't need to specify a value with this switch.
 
 Locations whose initial distributions succeeded aren't included in the retry. Policy distribution errors are reported if you used this switch.
 
