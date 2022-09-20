@@ -37,7 +37,8 @@ and a Message string parameter with additional details of the failure.
 
 **Note**: In Teams PowerShell Module 4.2.1-preview and later we are changing how the cmdlet reports errors. Instead of using a result object, we will be generating an
 exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also now support the -ErrorAction parameter to
-control the execution after an error has occured.
+control the execution after an error has occurred.
+
 
 **Note**: Macau region is currently not supported for phone number assignment or Enterprise Voice.
 
