@@ -13,9 +13,9 @@ ms.reviewer:
 # Disconnect-ExchangeOnline
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell V2 module to disconnect from remote PowerShell sessions that you opened using the Connect-ExchangeOnline or Connect-IPPSSession cmdlets.
+Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to disconnect the connections that you created using the Connect-ExchangeOnline or Connect-IPPSSession cmdlets.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,9 +28,9 @@ Disconnect-ExchangeOnline [-Confirm]
 ```
 
 ## DESCRIPTION
-The Connect-ExchangeOnline cmdlet establishes a connection to the Exchange Online organization of the logged-in admin user. This cmdlet is the counterpart to Connect-ExchangeOnline.
+This cmdlet is the counterpart to the Connect-ExchangeOnline and Connect-IPPSSession cmdlets.
 
-Disconnect-ExchangeOnline closes any active session and clears the cache. After a successful disconnect, you can't run any of the V2 cmdlets or older remote PowerShell cmdlets.
+This cmdlet disconnects any connections and clears the cache. After a successful disconnect, you can't successfully run any cmdlets for your organization.
 
 ## EXAMPLES
 
@@ -39,21 +39,14 @@ Disconnect-ExchangeOnline closes any active session and clears the cache. After 
 Disconnect-ExchangeOnline
 ```
 
-This example asks for confirmation before disconnecting the current Exchange Online PowerShell session.
+This example asks for confirmation before disconnecting from Exchange Online PowerShell or Security & Compliance PowerShell.
 
 ### Example 2
 ```powershell
 Disconnect-ExchangeOnline -Confirm:$false
 ```
 
-This example disconnects the current Exchange Online PowerShell session without a confirmation prompt. Note that the following notification text is still displayed: `Removed the PSSession <ConnectionName> connected to outlook.office365.com Disconnected successfully !`.
-
-### Example 3
-```powershell
-Disconnect-ExchangeOnline -Confirm:$false -InformationAction Ignore -ErrorAction SilentlyContinue
-```
-
-This example silently disconnects the current Exchange Online PowerShell session, without a confirmation prompt or any notification text.
+This example silently disconnects from Exchange Online PowerShell or Security & Compliance PowerShell without a confirmation prompt or any notification text.
 
 ## PARAMETERS
 
