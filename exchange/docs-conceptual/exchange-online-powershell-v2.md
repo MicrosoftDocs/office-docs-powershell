@@ -114,6 +114,9 @@ For information about switching from the older Exchange Online Remote PowerShell
 
 ## Report bugs and issues for the Exchange Online PowerShell module
 
+> [!NOTE]
+> For GA versions of the module, open a support ticket for any problems that you're having. For Preview versions of the module, use the email address as described in this section.
+
 When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
 ```powershell
@@ -220,7 +223,7 @@ The module is officially supported in the following distributions of Linux:
 - Ubuntu 18.04 LTS
 - Ubuntu 20.04 LTS
 
-If you have trouble using the module on other distributions of Linux, send email to the following address: `exocmdletpreview[at]service[dot]microsoft[dot]com`. The email address is purposefully obfuscated to avoid spam.
+If you have trouble using the module in other distributions of Linux, [report any issues](#report-bugs-and-issues-for-the-exchange-online-powershell-module).
 
 For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1&preserve-view=true).
 
