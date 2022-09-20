@@ -455,6 +455,8 @@ The ExcludedDomains parameter specifies an exception for impersonation protectio
 
 The maximum number of entries is approximately 1000.
 
+**Note**: Domain entries don't include subdomains of the specified domain. You need to add an entry for each subdomain.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
