@@ -29,9 +29,9 @@ Set-CsTeamsAcsFederationConfiguration
 
 ## DESCRIPTION
 
-Federation between Teams and Azure Communication Services (ACS) allows custom applications built with ACS to connect and communicate with Teams users over voice, video, and chat. These custom applications may be used by end users or by bots, and there is no differentiation in how they appear to Teams users unless the developer of the application explicitly indicates this as part of the communication. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
+Federation between Teams and Azure Communication Services (ACS) allows external users from ACS connect and communicate with Teams users over voice, video, and chat. These custom applications may be used by end users or by bots, and there is no differentiation in how they appear to Teams users unless the developer of the application explicitly indicates this as part of the communication. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
 
-This cmdlet is used to enable or disable Teams and ACS federation for a Teams tenant, and to specify which ACS resources can connect to Teams. All ACS resources can be allowed, with possible exclusions, or just selected ACS resources can be allowed (recommended).
+This cmdlet is used to enable or disable Teams and ACS federation for a Teams tenant, and to specify which ACS resources can connect to Teams. Only listed ACS resources can be allowed.
 
 You must be a Teams service admin, a Teams communication admin, or Global Administrator for your organization to run the cmdlet.
 
@@ -70,9 +70,9 @@ Accept wildcard characters: False
 
 ### -AllowedAcsResources
 
-The list of the ACS resources (at least one) for which federation is enabled, when AllowAllAcsResources is set to false. If AllowAllAcsResources is set to true, then this list is ignored and should be null/empty.
+The list of the ACS resources (at least one) for which federation is enabled, when EnableAcsUsers is set to true. If EnableAcsUsers is set to false, then this list is ignored and should be null/empty.
 
-The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal. A resource cannot be listed in both AllowedAcsResources and BlockedAcsResource.
+The ACS resources are listed using their immutable resource id, which is a guid that can be found on the Azure portal.
 
 ```yaml
 Type: String[]
