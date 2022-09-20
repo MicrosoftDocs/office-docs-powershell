@@ -45,7 +45,7 @@ Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX ve
   - **More reliable**: REST API cmdlets handle transient failures with built-in retries, so failures or delays are minimized. For example:
     - Failures due to network delays.
     - Delays due to large queries that take a long time to complete.
-  - **Better performance**: The connection avoids setting up a PowerShell runspace in Exchange Online PowerShell and downloading the format table data XMLs.
+  - **Better performance**: The connection avoids setting up a PowerShell runspace in Exchange Online PowerShell.
 
   The benefits of REST API cmdlets in Exchange Online PowerShell are described in the following table:
 
@@ -61,7 +61,7 @@ Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX ve
 
   - REST API cmdlets in Exchange Online PowerShell have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
 
-  - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API. Some cmdlets might temporarily appear or disappear from availability using the REST API as we find and fix issues.
+  - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API.
 
 - The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets in Exchange Online PowerShell:
   - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) on your client computer.
