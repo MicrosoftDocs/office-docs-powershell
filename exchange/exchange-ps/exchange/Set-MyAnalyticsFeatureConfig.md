@@ -12,7 +12,7 @@ ms.author: chrisda
 # Set-MyAnalyticsFeatureConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Set-MyAnalyticsFeatureConfig cmdlet to configure the availability and features of MyAnalytics for the specified user.
 
