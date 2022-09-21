@@ -115,7 +115,7 @@ For information about switching from the older Exchange Online Remote PowerShell
 ## Report bugs and issues for the Exchange Online PowerShell module
 
 > [!NOTE]
-> For GA versions of the module, open a support ticket for any problems that you're having. For Preview versions of the module, use the email address as described in this section.
+> For GA versions of the module, open a support ticket for any problems that you're having. For Preview versions of the module, use the email address as described in this section. You can also use the email address for feedback and suggestions for both GA and Preview versions of the module.
 
 When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
@@ -128,7 +128,7 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 ## Cmdlets in the Exchange Online PowerShell module
 
-All versions of the module contain nine exclusive **Get-EXO\*** cmdlets for Exchange Online PowerShell that are optimized for speed in bulk data retrieval scenarios (think: thousands and thousands of objects). These **Get-EXO\*** cmdlets are meant to replace their older, less efficient equivalents in remote PowerShell, but the equivalent cmdlets are still available.
+All versions of the module contain nine exclusive **Get-EXO\*** cmdlets for Exchange Online PowerShell that are optimized for speed in bulk data retrieval scenarios (thousands and thousands of objects). The older related remote PowerShell cmdlets are still available.
 
 The improved Exchange Online PowerShell cmdlets that are available only in the module are listed in the following table:
 
@@ -255,15 +255,15 @@ Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.1
 
 Windows PowerShell requirements and module support **in older versions of Windows** are described in the following list:
 
-- Windows 8.1<sup>4</sup>
-- Windows Server 2012 or Windows Server 2012 R2<sup>4</sup>
-- Windows 7 Service Pack 1 (SP1)<sup>1,</sup><sup>2,</sup><sup>3</sup>
-- Windows Server 2008 R2 SP1<sup>1,</sup><sup>2,</sup><sup>3</sup>
+- Windows 8.1<sup>1</sup>
+- Windows Server 2012 or Windows Server 2012 R2<sup>1</sup>
+- Windows 7 Service Pack 1 (SP1)<sup>2,</sup><sup>3,</sup><sup>4</sup>
+- Windows Server 2008 R2 SP1<sup>2,</sup><sup>3,</sup><sup>4</sup>
 
-- <sup>1</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
-- <sup>2</sup> This version of Windows supports only v2.0.3 or earlier versions of the module.
-- <sup>3</sup> Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
-- <sup>4</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
+- <sup>1</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
+- <sup>2</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
+- <sup>3</sup> This version of Windows supports only v2.0.3 or earlier versions of the module.
+- <sup>4</sup> Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 ### Prerequisites for the Exchange Online PowerShell module
 
@@ -337,7 +337,7 @@ To install the module for the first time, complete the following steps:
 
 2. Close and re-open the Windows PowerShell window.
 
-3. Now you can use the **Install-Module** cmdlet to install the module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install a Preview version if are any available.
+3. Now you can use the **Install-Module** cmdlet to install the module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install a Preview version if any are available.
 
    - To install **the latest public version** of the module, run **one** of the the following commands:
 
@@ -353,7 +353,27 @@ To install the module for the first time, complete the following steps:
        Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser
        ```
 
-   - To install **a Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands:
+   - To see **the available Preview versions** of the module, run the following command:
+
+     ```powershell
+     Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease
+     ```
+
+   - To install **the latest available Preview version** of the module, run **one** of the following commands:
+
+     - In an elevated PowerShell window (all users):
+
+       ```powershell
+       Install-Module -Name ExchangeOnlineManagement -AllowPrerelease
+       ```
+
+     - Only for the current user account:
+
+       ```powershell
+       Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser -AllowPrerelease
+       ```
+
+   - To install **a specific Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands:
 
      - In an elevated PowerShell window (all users):
 
@@ -373,17 +393,19 @@ For detailed syntax and parameter information, see [Install-Module](/powershell/
 
 ### Update the Exchange Online PowerShell module
 
-If the module is already installed on your computer, you can run the following commands to see the version that's currently installed and update it to the latest version from the PowerShell Gallery:
+If the module is already installed on your computer, you can use the procedures in this section to update the module.
 
-1. To see the version of the module that's currently installed, run the following commands:
+1. To see the version of the module that's currently installed and where it's installed, run the following command:
 
    ```powershell
-   Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
+   Get-InstalledModule ExchangeOnlineManagement | Format-List Name,Version,InstalledLocation
    ```
+
+   If the module is installed in C:\Program Files\WindowsPowerShell\Modules\, it's installed for all users. If the module is installed in your Documents folder, it's installed only for the current user account.
 
 2. You can use the **Update-Module** cmdlet to update the module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also upgrade to a Preview version if any are available.
 
-   - To upgrade to **the latest public version** of the module, run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
+   - To upgrade to **the latest public version** of the module, run **one** of the following commands based on how you originally installed the module (all users vs. only for the current user account):
 
      - In an elevated PowerShell window (all users):
 
@@ -397,21 +419,41 @@ If the module is already installed on your computer, you can run the following c
        Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser
        ```
 
-   - To upgrade to **a Preview version** of the module, you can upgrade to the latest available Preview version, or you can use the _RequiredVersion_ parameter to upgrade to a specific Preview version. To see the available Preview versions, run the command: `Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease`.
+   - To upgrade to **a Preview version** of the module, you can upgrade to the latest available Preview version, or you can use the _RequiredVersion_ parameter to upgrade to a specific Preview version.
 
-     Run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `-Scope CurrentUser`):
-
-     - In an elevated PowerShell window (all users):
+     - To see **the available Preview versions** of the module, run the following command:
 
        ```powershell
-       Update-Module -Name ExchangeOnlineManagement -AllowPrerelease [-RequiredVersion <PreviewVersion>]
+       Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease
        ```
 
-     - Only for the current user account:
+     - To upgrade to **the latest available Preview version** of the module, run **one** of the following commands:
 
-       ```powershell
-       Update-Module -Name ExchangeOnlineManagement -AllowPrerelease -Scope CurrentUser [-RequiredVersion <PreviewVersion>]
-       ```
+       - In an elevated PowerShell window (all users):
+
+         ```powershell
+         Update-Module -Name ExchangeOnlineManagement -AllowPrerelease
+         ```
+
+       - Only for the current user account:
+
+         ```powershell
+         Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser -AllowPrerelease
+         ```
+
+     - To upgrade to **a specific Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands:
+
+       - In an elevated PowerShell window (all users):
+
+         ```powershell
+         Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
+         ```
+
+       - Only for the current user account:
+
+         ```powershell
+         Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser -RequiredVersion <PreviewVersion> -AllowPrerelease
+         ```
 
    When you're finished, enter **Y** to accept the license agreement.
 
@@ -443,7 +485,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
   [Net.ServicePointManager]::SecurityProtocol
   ```
 
-  As described in the PowerShell Gallery TLS Support article, to *temporarily* change the security protocol to TLS 1.2 to install the PowerShellGet or ExchangeOnlineManagement modules, run the following command in Windows PowerShell *before* you install the module:
+  As described in the PowerShell Gallery TLS Support article, to _temporarily_ change the security protocol to TLS 1.2 to install the PowerShellGet or ExchangeOnlineManagement modules, run the following command in Windows PowerShell _before_ you install the module:
 
   ```powershell
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 
@@ -477,7 +519,15 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 
 ### Uninstall the Exchange Online PowerShell module
 
-To uninstall the module, run **one** of the following commands based on how you originally installed the module (in an elevated PowerShell window vs. `Scope CurrentUser`):
+To see the version of the module that's currently installed and where it's installed, run the following command:
+
+   ```powershell
+   Get-InstalledModule ExchangeOnlineManagement | Format-List Name,Version,InstalledLocation
+   ```
+
+   If the module is installed in C:\Program Files\WindowsPowerShell\Modules\, it was installed for all users. If the module is installed in your Documents folder, it was installed only for the current user account.
+
+To uninstall the module, run **one** of the following commands based on how you originally installed the module (all users vs. only for the current user account):
 
 - In an elevated PowerShell window (all users):
 
