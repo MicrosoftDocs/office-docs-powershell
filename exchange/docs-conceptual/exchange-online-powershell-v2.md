@@ -115,7 +115,7 @@ For information about switching from the older Exchange Online Remote PowerShell
 ## Report bugs and issues for the Exchange Online PowerShell module
 
 > [!NOTE]
-> For GA versions of the module, open a support ticket for any problems that you're having. For Preview versions of the module, use the email address as described in this section.
+> For GA versions of the module, open a support ticket for any problems that you're having. For Preview versions of the module, use the email address as described in this section. You can also use the email address for feedback and suggestions for both GA and Preview versions of the module.
 
 When you report an issue at `exocmdletpreview[at]service[dot]microsoft[dot]com`, be sure to include the log files in your email message. To generate the log files, replace \<Path to store log file\> with the output folder you want, and run the following command:
 
