@@ -26,14 +26,14 @@ The New-CsTeamsAudioConferencingPolicy cmdlet enables administrators to control 
 PS C:\> New-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $False
 ```
 
-The command shown in Example 1 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity “EMEA users”. This policy will use all the default values for a meeting policy except one: AllowTollFreeDialin; in this example, meetings created by users with this policy cannot include Toll Free phone numbers.
+The command shown in Example 1 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity "EMEA users". This policy will use all the default values for a meeting policy except one: AllowTollFreeDialin; in this example, meetings created by users with this policy cannot include Toll Free phone numbers.
 
 ### EXAMPLE 2
 ```
-PS C:\> New-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $True -MeetingInvitePhoneNumbers “+49695095XXXXX”,”+353156YYYYY”,”+1800856ZZZZZ”
+PS C:\> New-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $True -MeetingInvitePhoneNumbers "+49695095XXXXX","+353156YYYYY","+1800856ZZZZZ"
 ```
 
-The command shown in Example 2 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity “EMEA users”. This policy will use all the default values for a meeting policy except one: MeetingInvitePhoneNumbers; in this example, meetings created by users with this policy will include the following toll and toll free phone numbers “+49695095XXXXX”,”+353156YYYYY”,”+1800856ZZZZZ”.
+The command shown in Example 2 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity "EMEA users". This policy will use all the default values for a meeting policy except one: MeetingInvitePhoneNumbers; in this example, meetings created by users with this policy will include the following toll and toll free phone numbers "+49695095XXXXX","+353156YYYYY","+1800856ZZZZZ".
 
 ## PARAMETERS
 
@@ -83,8 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-<cmdlet>.
-Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-.
+Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 ```yaml
 Type: SwitchParameter
