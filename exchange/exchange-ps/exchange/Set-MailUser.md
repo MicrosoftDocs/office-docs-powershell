@@ -2821,7 +2821,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCertificate
-This parameter is reserved for internal Microsoft use.
+The UserCertificate parameter specifies the digital certificate used to sign a user's email messages.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2855,7 +2855,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSMimeCertificate
-This parameter is reserved for internal Microsoft use.
+The UserSMimeCertificate parameter specifies the S/MIME certificate that's used to sign a user's email messages.
 
 ```yaml
 Type: MultiValuedProperty

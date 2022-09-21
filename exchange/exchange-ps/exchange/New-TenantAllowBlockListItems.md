@@ -165,6 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -Allow
+This parameter is available only in Exchange Online PowerShell.
+
 The Allow switch specifies that you're creating an allow entry. You don't need to specify a value with this switch.
 
 You can't use this switch with the Block switch.
@@ -201,6 +203,8 @@ Accept wildcard characters: False
 ```
 
 ### -ListSubType
+This parameter is available only in Exchange Online PowerShell.
+
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
 - AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
@@ -254,6 +258,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubmissionID
+This parameter is available only in Exchange Online PowerShell.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
