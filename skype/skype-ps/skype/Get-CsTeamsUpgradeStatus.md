@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsupgradestatus
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsupgradestatus
 applicable: Skype for Business Online
 title: Get-CsTeamsUpgradeStatus
 schema: 2.0.0
@@ -30,7 +30,7 @@ Get-CsTeamsUpgradeStatus [-Tenant <Guid>] [-WhatIf] [-Confirm] [<CommonParameter
 ## DESCRIPTION
 TeamsUpgradeStatus is used to check the status of customers eligible for Microsoft-driven automated upgrade of Skype for Business Online to Teams.
 
-You can also find more guidance here: [Getting started with your Microsoft Teams upgrade](https://docs.microsoft.com/MicrosoftTeams/upgrade-start-here).
+You can also find more guidance here: [Getting started with your Microsoft Teams upgrade](https://learn.microsoft.com/MicrosoftTeams/upgrade-start-here).
 
 ## EXAMPLES
 
@@ -137,10 +137,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
 [Skype for Business Online retirement on July 31, 2021](https://support.microsoft.com/help/4511540/retirement-of-skype-for-business-online)
 
-[Upgrade Basic guidance](https://docs.microsoft.com/MicrosoftTeams/upgrade-basic)
+[Upgrade Basic guidance](https://learn.microsoft.com/MicrosoftTeams/upgrade-basic)
 
 [Transitioning from Skype for Business to Microsoft Teams via FastTrack](https://www.microsoft.com/fasttrack/skype-for-business-transition-to-teams?rtc=1)
