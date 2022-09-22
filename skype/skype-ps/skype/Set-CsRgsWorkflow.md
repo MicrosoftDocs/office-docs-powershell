@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csrgsworkflow
+online version: https://learn.microsoft.com/powershell/module/skype/set-csrgsworkflow
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsRgsWorkflow
 schema: 2.0.0
@@ -204,4 +204,3 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Rgs.Managem
 [New-CsRgsWorkflow](New-CsRgsWorkflow.md)
 
 [Remove-CsRgsWorkflow](Remove-CsRgsWorkflow.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csuserdatabasestate
+online version: https://learn.microsoft.com/powershell/module/skype/set-csuserdatabasestate
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUserDatabaseState
 schema: 2.0.0
@@ -207,4 +207,3 @@ Instead, the `Set-CsUserDatabaseState` cmdlet modifies existing instances of the
 [Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
 
 [Update-CsUserDatabase](Update-CsUserDatabase.md)
-

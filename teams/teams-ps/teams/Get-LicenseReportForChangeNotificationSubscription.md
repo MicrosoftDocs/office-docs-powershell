@@ -5,7 +5,7 @@ title: Get-LicenseReportForChangeNotificationSubscription
 author: anandab-msft
 ms.author: anandab
 manager: alagra
-online version: https://docs.microsoft.com/powershell/module/teams/get-licensereportforchangenotificationsubscription 
+online version: https://learn.microsoft.com/powershell/module/teams/get-licensereportforchangenotificationsubscription 
 schema: 2.0.0
 ---
 

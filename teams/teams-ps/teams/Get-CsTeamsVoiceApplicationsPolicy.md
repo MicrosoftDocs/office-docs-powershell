@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsvoiceapplicationspolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsvoiceapplicationspolicy
 schema: 2.0.0
 ---
 
@@ -115,4 +115,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTeamsVoiceApplicationsPolicy](Remove-CsTeamsVoiceApplicationsPolicy.md)
 
 [New-CsTeamsVoiceApplicationsPolicy](New-CsTeamsVoiceApplicationsPolicy.md)
-

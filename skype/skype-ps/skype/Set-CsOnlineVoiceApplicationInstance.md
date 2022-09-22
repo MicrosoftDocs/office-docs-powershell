@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceapplicationinstance
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceapplicationinstance
 applicable: Skype for Business Online 
 title: Set-CsOnlineVoiceApplicationInstance
 ms.reviewer: 
@@ -163,4 +163,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-CsOnlineApplicationInstance](https://docs.microsoft.com/powershell/module/skype/new-csonlineapplicationinstance)
+[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/skype/new-csonlineapplicationinstance)
