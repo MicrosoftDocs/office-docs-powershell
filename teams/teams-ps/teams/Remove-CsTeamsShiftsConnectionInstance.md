@@ -5,7 +5,7 @@ title: Remove-CsTeamsShiftsConnectionInstance
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 
