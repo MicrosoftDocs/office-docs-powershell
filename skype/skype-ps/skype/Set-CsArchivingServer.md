@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csarchivingserver
+online version: https://learn.microsoft.com/powershell/module/skype/set-csarchivingserver
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsArchivingServer
 schema: 2.0.0
@@ -156,4 +156,3 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.Xds.Displ
 ## RELATED LINKS
 
 [Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)
-

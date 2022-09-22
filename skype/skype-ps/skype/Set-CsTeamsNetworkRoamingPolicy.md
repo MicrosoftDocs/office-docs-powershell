@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsnetworkroamingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsnetworkroamingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsNetworkRoamingPolicy
 author: TristanChen-msft
@@ -28,7 +28,7 @@ Updates or creates new Teams Network Roaming Policies configured for use in your
 
 The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific settings from the TeamsMeetingPolicy to be rendered dynamically based upon the location of the Teams client. The TeamsNetworkRoamingPolicy cannot be granted to a user but instead can be assigned to a network site.  The settings from the TeamsMeetingPolicy included are AllowIPVideo and MediaBitRateKb. When a Teams client is connected to a network site where a CsTeamRoamingPolicy is assigned, these two settings from the TeamsRoamingPolicy will be used instead of the settings from the TeamsMeetingPolicy.
 
-More on the impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/microsoftteams/prepare-network).
+More on the impact of bit rate setting on bandwidth can be found [here](https://learn.microsoft.com/microsoftteams/prepare-network).
 
 To enable the network roaming policy for users who are not Enterprise Voice enabled, you must also enable the AllowNetworkConfigurationSettingsLookup setting in TeamsMeetingPolicy. This setting is off by default. See Set-TeamsMeetingPolicy for more information on how to enable AllowNetworkConfigurationSettingsLookup for users who are not Enterprise Voice enabled. 
 

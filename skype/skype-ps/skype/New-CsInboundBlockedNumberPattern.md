@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/new-csinboundblockednumberpattern
+online version: https://learn.microsoft.com/powershell/module/skype/new-csinboundblockednumberpattern
 applicable: Microsoft Teams, Skype for Business Online 
 title: New-CsInboundBlockedNumberPattern
 author: jenstrier

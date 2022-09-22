@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csbandwidthpolicyserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csbandwidthpolicyserviceconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsBandwidthPolicyServiceConfiguration
 schema: 2.0.0
@@ -237,4 +237,3 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.B
 [Remove-CsBandwidthPolicyServiceConfiguration](Remove-CsBandwidthPolicyServiceConfiguration.md)
 
 [Get-CsBandwidthPolicyServiceConfiguration](Get-CsBandwidthPolicyServiceConfiguration.md)
-

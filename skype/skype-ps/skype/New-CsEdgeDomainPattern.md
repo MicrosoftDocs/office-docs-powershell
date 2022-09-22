@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/new-csedgedomainpattern
+online version: https://learn.microsoft.com/powershell/module/skype/new-csedgedomainpattern
 applicable: Skype for Business Online
 title: New-CsEdgeDomainPattern
 schema: 2.0.0
@@ -102,4 +102,3 @@ The New-CsEdgeDomainPattern cmdlet creates new instances of the Microsoft.Rtc.Ma
 ## RELATED LINKS
 
 [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cshostedvoicemailpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-cshostedvoicemailpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsHostedVoicemailPolicy
 schema: 2.0.0
@@ -39,7 +39,7 @@ Policies created at the site scope will be automatically assigned to the users h
 Policies created at the per-user scope must be assigned to users or contact objects with the Grant-CsHostedVoicemailPolicy cmdlet.
 
 > [!NOTE]
-> Cloud Voicemail takes the place of Exchange Unified Messaging (UM) in providing voice messaging functionality for Skype for Business 2019 voice users who have mailboxes on Exchange Server 2019 or Exchange Online, and for Skype for Business Online voice users. For more information please check [Plan Cloud Voicemail service](https://docs.microsoft.com/skypeforbusiness/hybrid/plan-cloud-voicemail) and [Retiring Unified Messaging in Exchange Online](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Retiring-Unified-Messaging-in-Exchange-Online/ba-p/608991).
+> Cloud Voicemail takes the place of Exchange Unified Messaging (UM) in providing voice messaging functionality for Skype for Business 2019 voice users who have mailboxes on Exchange Server 2019 or Exchange Online, and for Skype for Business Online voice users. For more information please check [Plan Cloud Voicemail service](https://learn.microsoft.com/skypeforbusiness/hybrid/plan-cloud-voicemail) and [Retiring Unified Messaging in Exchange Online](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/Retiring-Unified-Messaging-in-Exchange-Online/ba-p/608991).
 
 
 ## EXAMPLES
@@ -269,5 +269,3 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 [Get-CsHostedVoicemailPolicy](Get-CsHostedVoicemailPolicy.md)
 
 [Grant-CsHostedVoicemailPolicy](Grant-CsHostedVoicemailPolicy.md)
-
-

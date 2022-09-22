@@ -5,7 +5,7 @@ title: Get-CsTeamsShiftsConnectionOperation
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionoperation
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionoperation
 schema: 2.0.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cspersistentchatconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchatconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatConfiguration
 schema: 2.0.0
@@ -276,4 +276,3 @@ Instead, the `Set-CsPersistentChatConfiguration` cmdlet modifies existing instan
 [New-CsPersistentChatConfiguration](New-CsPersistentChatConfiguration.md)
 
 [Remove-CsPersistentChatConfiguration](Remove-CsPersistentChatConfiguration.md)
-

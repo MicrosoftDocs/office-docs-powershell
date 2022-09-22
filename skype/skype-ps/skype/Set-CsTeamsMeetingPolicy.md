@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmeetingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -83,7 +83,7 @@ This policy will use all the existing values except one: AllowNetworkConfigurati
 ### -AllowAnonymousUsersToJoinMeeting
 
 > [!NOTE]
-> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check <https://docs.microsoft.com/microsoftteams/meeting-settings-in-teams> for details.
+> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check <https://learn.microsoft.com/microsoftteams/meeting-settings-in-teams> for details.
 
 Determines whether anonymous users can join the meetings that impacted users organize. Set this to TRUE to allow anonymous users to join a meeting. Set this to FALSE to prohibit them from joining a meeting.
 
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 Determines the background effects that a user can configure in the Teams client. Possible values are:
 
 - NoFilters: No filters are available.
-- BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://docs.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
+- BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://learn.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
 - BlurAndDefaultBackgrounds: Background blur and a list of pre-selected images are available.
 - AllFilters: All filters are available, including custom images.
 

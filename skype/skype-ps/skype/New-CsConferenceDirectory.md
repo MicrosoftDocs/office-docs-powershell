@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csconferencedirectory
+online version: https://learn.microsoft.com/powershell/module/skype/new-csconferencedirectory
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 schema: 2.0.0
 manager: rogupta
@@ -158,6 +158,3 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Ps
 [Move-CsConferenceDirectory](Move-CsConferenceDirectory.md)
 
 [Remove-CsConferenceDirectory](Remove-CsConferenceDirectory.md)
-
-
-

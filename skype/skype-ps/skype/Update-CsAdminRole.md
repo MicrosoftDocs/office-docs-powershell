@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/update-csadminrole
+online version: https://learn.microsoft.com/powershell/module/skype/update-csadminrole
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Update-CsAdminRole
 schema: 2.0.0
@@ -108,4 +108,3 @@ The Update-CsAdminRole cmdlet does not return any data or objects.
 ## NOTES
 
 ## RELATED LINKS
-

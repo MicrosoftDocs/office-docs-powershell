@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-ipallowlistentry
+online version: https://learn.microsoft.com/powershell/module/exchange/get-ipallowlistentry
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-IPAllowListEntry
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Get-IPAllowListEntry cmdlet to view the IP address entries in the IP Allow list that's used by the Connection Filtering agent on Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-caseholdpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/set-caseholdpolicy
 applicable: Security & Compliance
 title: Set-CaseHoldPolicy
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-CaseHoldPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-CaseHoldPolicy cmdlet to modify existing case hold policies in the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,7 +47,7 @@ Set-CaseHoldPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-CaseHoldPolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_}`.
 
@@ -117,7 +117,7 @@ To specify a mailbox or distribution group, you can use the following values:
 
 - Name
 - SMTP address. To specify an inactive mailbox, precede the address with a period (.).
-- Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
+- Azure AD ObjectId (You can use the [Get-AzureADUser](https://learn.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -252,7 +252,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 
 - Name
 - SMTP address. To specify an inactive mailbox, precede the address with a period (.).
-- Azure AD ObjectId (You can use the [Get-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
+- Azure AD ObjectId (You can use the [Get-AzureADUser](https://learn.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

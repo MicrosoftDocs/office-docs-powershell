@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-exomailboxfolderstatistics
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exomailboxfolderstatistics
 applicable: Exchange Online
 title: Get-EXOMailboxFolderStatistics
 schema: 2.0.0
@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Get-EXOMailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

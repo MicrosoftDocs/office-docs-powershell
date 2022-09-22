@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy
 applicable: Skype for Business Online
 title: Get-CsExternalUserCommunicationPolicy
 schema: 2.0.0
@@ -142,10 +142,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[New-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy?view=skype-ps)
+[New-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Set-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
+[Set-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Remove-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
+[Remove-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps)
 
-[Grant-CsExternalUserCommunicationPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)
+[Grant-CsExternalUserCommunicationPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps)

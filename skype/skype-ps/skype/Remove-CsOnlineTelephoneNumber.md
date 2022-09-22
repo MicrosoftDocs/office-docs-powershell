@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinetelephonenumber
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinetelephonenumber
 applicable: Skype for Business Online, Microsoft Teams
 title: Remove-CsOnlineTelephoneNumber
 schema: 2.0.0

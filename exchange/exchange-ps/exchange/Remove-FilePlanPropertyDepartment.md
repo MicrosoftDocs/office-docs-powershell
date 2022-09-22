@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-fileplanpropertydepartment
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-fileplanpropertydepartment
 applicable: Security & Compliance
 title: Remove-FilePlanPropertyDepartment
 schema: 2.0.0
@@ -9,11 +9,11 @@ schema: 2.0.0
 # Remove-FilePlanPropertyDepartment
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Removet-FilePlanPropertyDepartment cmdlet to remove file plan property departments.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

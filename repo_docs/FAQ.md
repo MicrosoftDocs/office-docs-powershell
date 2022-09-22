@@ -11,12 +11,12 @@ To learn more about this concept, see https://rhodesmill.org/brandon/2012/one-se
 When you submit a Pull Request it goes through a validation check and the results are shown on the Pull Request page in GitHub.
 Once the checks are completed, and there are no errors or warnings, and the appropriate sign off has been completed by the product team, a GitHub maintainer will merged the Pull Request into the Master branch on GitHub.
 
-A site located at review.docs.microsoft.com shows a mirror of the docs.microsoft.com and pulls from the Master branch.
+A site located at review.learn.microsoft.com shows a mirror of the learn.microsoft.com and pulls from the Master branch.
 Unfortunately the review site requires a Microsoft login at this time.
 This review site provides an opportunity for Microsoft product teams, support, and other internal stakeholders to review any changes before they are pushed to the live site.
 
 The next step is for a GitHub maintainer to merge the Master branch into the Live branch. 
-Once this is complete the changes in the Pull Request will show up on docs.microsoft.com (docs.microsoft.com pulls its content from the Live branch).
+Once this is complete the changes in the Pull Request will show up on learn.microsoft.com (learn.microsoft.com pulls its content from the Live branch).
 There is not a set schedule for this to happen but the maintainers are good about doing this fairly quickly.
 
 ## When does the GitHub content show up in the products with Get-Help?
@@ -47,12 +47,12 @@ ms.reviewer:
 manager:
 schema: 2.0.0
 ```
-The *external help file* tag is for the docs.microsoft.com infrastructure. 
+The *external help file* tag is for the learn.microsoft.com infrastructure. 
 It can be empty but without it the build will fail.
 
 The *applicable* tag is so that when PlatyPS is run to generate the XML that goes in the product it can only pull help content for specific product versions.
 Every applicable tag is located in the [Applicable Tags](https://github.com/MicrosoftDocs/office-docs-powershell/wiki/Applicable-Tags) wiki page.
-These tags have to be added to the docs.microsoft.com infrastructure. 
+These tags have to be added to the learn.microsoft.com infrastructure. 
 If you try to include a tag that has not been added then the build will fail.
 
 The *title* tag is for metrics. More information about metrics coming.
@@ -82,8 +82,8 @@ Some examples are:
 
 Every folder must have this TOC file.
 When you browse the list of cmdlets in the Reference folder this is the file you see.
-For example, https://docs.microsoft.com/powershell/module/skype/?view=skype-ps.
-Note that docs.microsoft.com automatically strips out the note about manually entering a description.
+For example, https://learn.microsoft.com/powershell/module/skype/?view=skype-ps.
+Note that learn.microsoft.com automatically strips out the note about manually entering a description.
 It ONLY strips this out if it is in the exact format given. 
 Any slight deviation from the format and it won't strip it out and you will see that "manually enter description" text.
 
@@ -95,7 +95,7 @@ For example, you might need a Windows cmdlet, then an Azure cmdlet, then a Share
 
 The best way to find cmdlets is to use the PowerShell Browser and search. 
 The PowerShell Browser searches across all products and platforms.
-You can find the PowerShell Browser here: https://docs.microsoft.com/powershell/module
+You can find the PowerShell Browser here: https://learn.microsoft.com/powershell/module
 
 ## I am a Microsoft employee but new to GitHub, what should I do?
 
@@ -147,7 +147,7 @@ The system was designed to be as simple as possible in order to achieve three pr
     
 1. Central location for content that feeds multiple surfacing mechanisms.
 
-    The first two places the PowerShell reference content is surfaces is Get-Help in PowerShell itself and the docs.microsoft.com website.
+    The first two places the PowerShell reference content is surfaces is Get-Help in PowerShell itself and the learn.microsoft.com website.
     In the future the content can also be surfaced in an iOS app, Android app, Windows Universal app, and other mechanisms. 
     With a simple, centralized, system for the source of truth, in GitHub, it becomes much easier to surface content using multiple mechanisms since GitHub is not tailored for once specific location, such as Get-Help. 
     If the GitHub repo focused on one specific site or mechanism then surfacing from other mechanisms could become too complex or could exponentially expound the effort required.
@@ -158,5 +158,3 @@ The system was designed to be as simple as possible in order to achieve three pr
     The system was designed so that the process can be automated, perhaps with a GitHub webhook that triggers on any merge.
     The idea is that in the past the Get-Help content was immediately outdated once a product shipped.
     With the new system the content in Get-Help will always be up-to-date by running an Update-Help, or equivalent, command in PowerSHell.
-
-

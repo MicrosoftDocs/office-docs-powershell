@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsmessagingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmessagingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsMessagingPolicy
 schema: 2.0.0
@@ -68,7 +68,7 @@ All other policy properties will be left as previously assigned.
 
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
-Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
+Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
 
 ```yaml
 Type: Boolean
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 ### -AllowUrlPreviews
 Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
-Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
+Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean
@@ -465,4 +465,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

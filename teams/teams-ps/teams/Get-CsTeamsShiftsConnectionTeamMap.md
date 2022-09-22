@@ -5,7 +5,7 @@ title: Get-CsTeamsShiftsConnectionTeamMap
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap
 schema: 2.0.0
 ---
 

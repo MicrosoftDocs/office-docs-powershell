@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 title: Set-CsTeamsAcsFederationConfiguration
 author: tomkau
 ms.author: tomkau
-online version: https://docs.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsacsfederationconfiguration
 schema: 2.0.0
 ---
 

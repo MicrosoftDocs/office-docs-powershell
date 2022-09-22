@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/install-unifiedcomplianceprerequisite
+online version: https://learn.microsoft.com/powershell/module/exchange/install-unifiedcomplianceprerequisite
 applicable: Security & Compliance
 title: Install-UnifiedCompliancePrerequisite
 schema: 2.0.0
@@ -12,13 +12,13 @@ ms.reviewer:
 # Install-UnifiedCompliancePrerequisite
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Install-UnifiedCompliancePrerequisite cmdlet to view, create, or configure the Compliance Policy Center in Microsoft SharePoint Online. The Compliance Policy Center is a site collection that's used by the Microsoft Purview compliance portal to store preservation policies that act on content in SharePoint Online sites.
 
 Typically, you don't need to run this cmdlet. You use this cmdlet for troubleshooting and diagnostics.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ This cmdlet returns the following information about the Compliance Policy Center
 - SharepointSuccessInitializedUtc: The time that the Compliance Policy Center was last initialized in coordinated universal time (UTC).
 - SharepointPolicyCenterSiteUrl: This value is typically `https://<domain>.sharepoint.com/sites/compliancepolicycenter`.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
