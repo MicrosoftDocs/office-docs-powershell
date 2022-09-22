@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/enable-umserver
+online version: https://learn.microsoft.com/powershell/module/exchange/enable-umserver
 applicable: Exchange Server 2010
 title: Enable-UMServer
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Enable-UMServer cmdlet to set the status of a Unified Messaging (UM) server to enabled. This enables the Unified Messaging server to process UM calls.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ The Enable-UMServer cmdlet sets the status of a Unified Messaging server. A UM s
 
 After this task is completed, the Unified Messaging server is available to answer incoming calls.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

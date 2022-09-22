@@ -1,7 +1,7 @@
 ---
 external help file: ExchangeOnlineManagement-help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/connect-exchangeonline
+online version: https://learn.microsoft.com/powershell/module/exchange/connect-exchangeonline
 applicable: Exchange Online
 title: Connect-ExchangeOnline
 schema: 2.0.0
@@ -17,9 +17,9 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
 
-To connect to other PowerShell environments (for example, Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell), use the [Connect-IPPSSession](https://docs.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
+To connect to other PowerShell environments (for example, Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell), use the [Connect-IPPSSession](https://learn.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
 
 `$Options = New-PSSessionOption <Settings>`
 

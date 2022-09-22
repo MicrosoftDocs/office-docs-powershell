@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exomobiledevicestatistics
 applicable: Exchange Online
 title: Get-EXOMobileDeviceStatistics
 schema: 2.0.0
@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Get-EXOMobileDeviceStatistics cmdlet to retrieve the list of mobile devices configured to synchronize with a specified user's mailbox and return a list of statistics about the mobile devices.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

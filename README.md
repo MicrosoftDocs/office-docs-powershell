@@ -24,10 +24,10 @@ This brief video also covers how to contribute:
 ### Quickly update an article using GitHub.com
 
 1. Make sure you're signed in to GitHub.com with your GitHub account.
-2. Go to the page you want to edit on docs.microsoft.com.
+2. Go to the page you want to edit on learn.microsoft.com.
 3. On the right-hand side of the page, click **Edit** (pencil icon).
 
-   ![Edit button on docs.microsoft.com.](images/quick-update-edit.png)
+   ![Edit button on learn.microsoft.com.](images/quick-update-edit.png)
 
 4. The corresponding topic file on GitHub opens, where you need to click the **Edit this file** pencil icon.
 

@@ -1,7 +1,7 @@
 ---
 external help file: ExchangeOnlineManagement-help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/disconnect-exchangeonline
+online version: https://learn.microsoft.com/powershell/module/exchange/disconnect-exchangeonline
 applicable: Exchange Online
 title: Disconnect-ExchangeOnline
 schema: 2.0.0
@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to disconnect the connections that you created using the Connect-ExchangeOnline or Connect-IPPSSession cmdlets.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

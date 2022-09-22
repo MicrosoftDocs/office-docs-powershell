@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-customnudge
+online version: https://learn.microsoft.com/powershell/module/exchange/get-customnudge
 applicable: Exchange Online
 title: Get-CustomNudge
 schema: 2.0.0
@@ -19,7 +19,7 @@ This cmdlet is available only in the Exchange Online PowerShell module v2.0.6-Pr
 
 Use the Get-CustomNudge cmdlet to view Custom Nudges that are displayed in user Briefing email messages.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 - Exchange Administrator
 - Insights Administrator
 
-To learn more about administrator role permissions in Azure Active Directory, see [Azure AD built-in roles](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference).
+To learn more about administrator role permissions in Azure Active Directory, see [Azure AD built-in roles](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference).
 
 ## EXAMPLES
 
@@ -101,4 +101,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin)
+[Configure Briefing email](https://learn.microsoft.com/Briefing/be-admin)
