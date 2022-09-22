@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-antiphishpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-antiphishpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: New-AntiPhishPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-AntiPhishPolicy cmdlet to create antiphish policies in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -68,7 +68,7 @@ Phishing messages contain fraudulent links or spoofed domains in an effort to ge
 
 New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the AntiPhishPolicy parameter on the New-AntiPhishRule or Set-AntiPhishRule cmdlets to associate the policy with a rule.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -382,8 +382,8 @@ The EnableUnauthenticatedSender parameter enables or disables unauthenticated se
 
 To prevent these identifiers from being added to messages from specific senders, you have the following options:
 
-- Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
-- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
+- Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
 
 ```yaml
 Type: Boolean
@@ -429,8 +429,8 @@ The EnableViaTag parameter enables or disables adding the via tag to the From ad
 
 To prevent the via tag from being added to messages from specific senders, you have the following options:
 
-- Allow the sender to spoof. For instructions, see [Configure spoof intelligence in Microsoft 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
-- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://docs.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
+- Allow the sender to spoof. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
 
 ```yaml
 Type: Boolean
@@ -638,7 +638,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedPolicyType
-The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
 
 ```yaml
 Type: RecommendedPolicyType
