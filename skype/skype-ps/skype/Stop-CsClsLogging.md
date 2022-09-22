@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/stop-csclslogging
+online version: https://learn.microsoft.com/powershell/module/skype/stop-csclslogging
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Stop-CsClsLogging
 schema: 2.0.0
@@ -174,4 +174,3 @@ The `Stop-CsClsLogging` cmdlet does not return objects.
 [Sync-CsClsLogging](Sync-CsClsLogging.md)
 
 [Update-CsClsLogging](Update-CsClsLogging.md)
-

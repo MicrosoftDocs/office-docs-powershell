@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cstrunkconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cstrunkconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsTrunkConfiguration
 schema: 2.0.0
@@ -765,4 +765,3 @@ This cmdlet does not return a value; it modifies an object of type Microsoft.Rtc
 [New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
 [Set-CsOutboundTranslationRule](Set-CsOutboundTranslationRule.md)
-

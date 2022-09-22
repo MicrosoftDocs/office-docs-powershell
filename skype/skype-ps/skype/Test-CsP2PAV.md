@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csp2pav
+online version: https://learn.microsoft.com/powershell/module/skype/test-csp2pav
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsP2PAV
 schema: 2.0.0
@@ -388,4 +388,3 @@ The `Test-CsP2PAV` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTran
 ## RELATED LINKS
 
 [Test-CsAVConference](Test-CsAVConference.md)
-

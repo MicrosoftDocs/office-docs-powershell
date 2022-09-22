@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cspersistentchatroom
+online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchatroom
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatRoom
 schema: 2.0.0
@@ -485,4 +485,3 @@ Instead, the `Set-CsPersistentChatRoom` cmdlet modifies existing instances of th
 [New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)
 
 [Remove-CsPersistentChatRoom](Remove-CsPersistentChatRoom.md)
-
