@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-casmailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/set-casmailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-CASMailbox
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-CASMailbox cmdlet to configure client access settings on a mailbox. For example, you can configure settings for Exchange ActiveSync, Outlook, Outlook on the web, POP3, and IMAP4.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -80,7 +80,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -203,7 +203,7 @@ The ActiveSyncEnabled parameter enables or disables access to the mailbox using 
 - $true: Access to the mailbox using ActiveSync is enabled. This is the default value.
 - $false. Access to the mailbox using ActiveSync is disabled. Other ActiveSync settings in this cmdlet are ignored.
 
-For more information, see [Enable or disable Exchange ActiveSync for a mailbox in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync), or [Enable or disable Exchange ActiveSync access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/exchange-activesync/activesync-mailbox-access).
+For more information, see [Enable or disable Exchange ActiveSync for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync), or [Enable or disable Exchange ActiveSync access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/exchange-activesync/activesync-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 ### -EmailAddresses
 This parameter is available only in on-premises Exchange.
 
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
 Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
 
@@ -567,7 +567,7 @@ The ImapEnabled parameter enables or disables access to the mailbox using IMAP4 
 - $true: Access to the mailbox using IMAP4 is enabled. This is the default value.
 - $fale: Access to the mailbox using IMAP4 is disabled. The other IMAP4 settings in this cmdlet are ignored.
 
-For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
+For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -836,7 +836,7 @@ The MAPIEnabled parameter enables or disables access to the mailbox using MAPI c
 - $true: Access to the mailbox using MAPI clients is enabled. This is the default value.
 - $false: Access to the mailbox using MAPI clients is disabled. The other MAPI settings in this cmdlet are ignored.
 
-For more information, see[Enable or disable MAPI for a mailbox in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi), or [Enable or disable MAPI access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/mapi-mailbox-access).
+For more information, see[Enable or disable MAPI for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-mapi), or [Enable or disable MAPI access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/mapi-mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -940,7 +940,7 @@ The OWAEnabled parameter enables or disables access to the mailbox using Outlook
 - $true: Access to the mailbox using Outlook on the web is enabled. This is the default value.
 - $false: Access to the mailbox using Outlook on the web is disabled. The other Outlook on the web settings in this cmdlet are ignored.
 
-For more information, see [Enable or disable Outlook on the web for a mailbox in Exchange Online](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
+For more information, see [Enable or disable Outlook on the web for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
 
 ```yaml
 Type: Boolean
@@ -1002,7 +1002,7 @@ The PopEnabled parameter enables or disables access to the mailbox using POP3 cl
 - $true: Access to the mailbox using POP3 clients is enabled. This is the default value.
 - $false: Access to the mailbox using POP3 clients is disabled. The other POP3 settings in this cmdlet are ignored.
 
-For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://docs.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
+For more information, see [Enable or Disable POP3 or IMAP4 access for a user in Exchange Online](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access), or [Enable or disable POP3 or IMAP4 access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/pop3-and-imap4/configure-mailbox-access).
 
 ```yaml
 Type: Boolean

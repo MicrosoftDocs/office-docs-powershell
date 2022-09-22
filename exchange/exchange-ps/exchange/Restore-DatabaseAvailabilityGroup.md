@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/restore-databaseavailabilitygroup
+online version: https://learn.microsoft.com/powershell/module/exchange/restore-databaseavailabilitygroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Restore-DatabaseAvailabilityGroup
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Restore-DatabaseAvailabilityGroup cmdlet as part of a datacenter switchover of a database availability group (DAG).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ Restore-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParame
 ## DESCRIPTION
 You can also use this cmdlet for disaster recovery purposes to restore functionality to a DAG that has lost quorum due to one or more DAG members being offline for an extended period. Before running this cmdlet, you must first run the Stop-DatabaseAvailabilityGroup cmdlet.
 
-The Restore-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode parameter value of DagOnly. For more information about the DatacenterActivationMode parameter, see [Datacenter Activation Coordination mode](https://docs.microsoft.com/Exchange/high-availability/database-availability-groups/dac-mode).
+The Restore-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode parameter value of DagOnly. For more information about the DatacenterActivationMode parameter, see [Datacenter Activation Coordination mode](https://learn.microsoft.com/Exchange/high-availability/database-availability-groups/dac-mode).
 
 You can use the Set-DatabaseAvailabilityGroup cmdlet to configure the value for the DatacenterActivationMode parameter.
 
@@ -44,7 +44,7 @@ The Restore-DatabaseAvailabilityGroup cmdlet performs several operations that af
 - Forcibly evicts the servers listed on the StoppedMailboxServers list from the DAG's cluster, thereby reestablishing quorum for the cluster enabling the surviving DAG members to start and provide service.
 - Configures the DAG to use the alternate witness server if there is an even number of surviving DAG members, or a single surviving DAG member.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
