@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-eopprotectionpolicyrule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-eopprotectionpolicyrule
 applicable: Exchange Online, Exchange Online Protection
 title: New-EOPProtectionPolicyRule
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the New-EOPProtectionPolicyRule cmdlet to create rules for Exchange Online P
 
 **Note**: Unless you manually removed a rule using the Remove-EOPProtectionPolicyRule cmdlet, we don't recommend using this cmdlet to create rules. To create the rule, you need to specify the existing individual security policies that are associated with the preset security policy. We never recommend creating these required individual security policies manually. Turning on the preset security policy for the first time in the Microsoft 365 Defender portal automatically creates the required individual security policies, but also creates the associated rules using this cmdlet. So, if the rules already exist, you don't need to use this cmdlet to create them.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,12 +38,12 @@ New-EOPProtectionPolicyRule [-Name] <String> [-Priority <Int32>] -AntiPhishPolic
 ```
 
 ## DESCRIPTION
-For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
 
 > [!IMPORTANT]
-> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#profiles-in-preset-security-policies).
+> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#profiles-in-preset-security-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

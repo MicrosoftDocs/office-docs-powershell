@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-activesyncmailboxpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-activesyncmailboxpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-ActiveSyncMailboxPolicy
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Remove-ActiveSyncMailboxPolicy cmdlet to remove mobile device mailbox po
 
 **Note**: In Exchange 2013 or later, use the Remove-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use Remove-ActiveSyncMailboxPolicy, update them to use Remove-MobileDeviceMailboxPolicy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Remove-ActiveSyncMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ## DESCRIPTION
 A mobile device mailbox policy is a group of settings that specifies how mobile phones connect to Exchange. Exchange supports multiple mobile device mailbox policies. If any users are assigned to the policy when you attempt to remove it, the command fails.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

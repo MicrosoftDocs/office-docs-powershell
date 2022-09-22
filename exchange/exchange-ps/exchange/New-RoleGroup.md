@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-rolegroup
+online version: https://learn.microsoft.com/powershell/module/exchange/new-rolegroup
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
 title: New-RoleGroup
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-RoleGroup cmdlet to create management role groups.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -66,9 +66,9 @@ You don't have to add members or assign management roles to the role group when 
 
 When you create a role group, you can create the group and add members to it directly, or you can create a linked role group. A linked role group links the role group to a universal security group (USG) in another forest. Creating a linked role group is useful if your servers running Exchange reside in a resource forest and your users and administrators reside in a separate user forest. If you create a linked role group, you can't add members directly to it. You must add the members to the USG in the foreign forest.
 
-For more information about role groups, see [Understanding management role groups](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
+For more information about role groups, see [Understanding management role groups](https://learn.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -113,7 +113,7 @@ This example takes an existing role group and copies the roles from that role gr
 
 The first command stores the existing role group in a variable, and the second command creates the custom role group.
 
-This example uses variables to store information. For more information about variables, see [About Variables](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables).
+This example uses variables to store information. For more information about variables, see [About Variables](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_variables).
 
 ### Example 6
 ```powershell
@@ -332,7 +332,7 @@ This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies the username and password that's used to access the domain controller specified by the LinkedDomainController parameter.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -406,7 +406,7 @@ Accept wildcard characters: False
 ### -Roles
 The Roles parameter specifies the management roles to assign to the role group when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
 
-For a list of built-in management roles that you can assign to a role group, see [Built-in management roles](https://docs.microsoft.com/exchange/built-in-management-roles-exchange-2013-help).
+For a list of built-in management roles that you can assign to a role group, see [Built-in management roles](https://learn.microsoft.com/exchange/built-in-management-roles-exchange-2013-help).
 
 ```yaml
 Type: RoleIdParameter[]
