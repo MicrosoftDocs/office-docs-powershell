@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig
 applicable: Exchange Online
 title: Get-MyAnalyticsFeatureConfig
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Get-MyAnalyticsFeatureConfig cmdlet to view the availability and feature
 
 **Note**: This cmdlet replaces the Get-UserAnalyticsConfig cmdlet.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 - Exchange Administrator
 - Insights Administrator
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 

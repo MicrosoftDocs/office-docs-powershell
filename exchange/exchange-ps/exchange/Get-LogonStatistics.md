@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-logonstatistics
+online version: https://learn.microsoft.com/powershell/module/exchange/get-logonstatistics
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-LogonStatistics
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is functional only in Exchange Server 2010.
 
 The Get-LogonStatistics cmdlet has been deprecated and is no longer used.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
