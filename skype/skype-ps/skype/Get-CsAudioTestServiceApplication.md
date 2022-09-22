@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csaudiotestserviceapplication
+online version: https://learn.microsoft.com/powershell/module/skype/get-csaudiotestserviceapplication
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAudioTestServiceApplication
 schema: 2.0.0
@@ -205,4 +205,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CsAudioTestServiceApplication](Set-CsAudioTestServiceApplication.md)
-

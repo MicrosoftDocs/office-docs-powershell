@@ -8,10 +8,10 @@ title: exchange
 ## Description
 Exchange PowerShell is built on Windows PowerShell technology and provides a powerful command-line interface that enables automation of administrative tasks. The following PowerShell environments are available in Exchange:
 
-- [Exchange Server PowerShell (Exchange Management Shell)](https://docs.microsoft.com/powershell/exchange/exchange-management-shell)
-- [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
-- [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
-- [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
+- [Exchange Server PowerShell (Exchange Management Shell)](https://learn.microsoft.com/powershell/exchange/exchange-management-shell)
+- [Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell)
+- [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell)
+- [Exchange Online Protection PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
 
 > [!NOTE]
 > For Exchange Online, Security & Compliance, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell module](../../docs-conceptual/exchange-online-powershell-v2.md).
