@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams
+online version: https://learn.microsoft.com/powershell/module/teams/connect-microsoftteams
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -67,4 +67,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Get-TeamTargetingHierarchyStatus](https://docs.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus)
+[Get-TeamTargetingHierarchyStatus](https://learn.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus)
