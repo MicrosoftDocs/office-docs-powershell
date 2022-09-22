@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/disable-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/skype/disable-csonlinesipdomain
 applicable: Skype for Business Online
 title: Disable-CsOnlineSipDomain
 schema: 2.0.0
@@ -23,7 +23,7 @@ Disable-CsOnlineSipDomain -Domain <String> [-Force] [-Confirm] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Note: Only one Skype for Business forest can be in hybrid mode at a given time. For full details on this scenario, including step-by-step instructions, see [Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation).
+Note: Only one Skype for Business forest can be in hybrid mode at a given time. For full details on this scenario, including step-by-step instructions, see [Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation).
 
 This cmdlet enables organizations with *multiple on-premises deployments of Skype for Business Server (or Lync Server)* to safely synchronize users from multiple forests into a single Office 365 tenant. When an online SIP domain is disabled in Skype for Business Online, provisioning is blocked for users in this SIP domain. This ensures routing for any on-premises users in this SIP domain continues to function properly.
 
@@ -131,4 +131,4 @@ This cmdlet is for advanced scenarios only. Organizations that are pure online o
 
 [Get-CsOnlineSipDomain](Get-CsOnlineSipDomain.md)
 
-[Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)
+[Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)
