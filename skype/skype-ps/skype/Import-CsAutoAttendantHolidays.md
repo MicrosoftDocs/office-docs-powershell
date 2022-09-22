@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csautoattendantholidays
+online version: https://learn.microsoft.com/powershell/module/skype/import-csautoattendantholidays
 applicable: Skype for Business Online
 title: Import-CsAutoAttendantHolidays
 schema: 2.0.0
@@ -132,4 +132,3 @@ The Import-CsAutoAttendantHolidays cmdlet accepts a string as the Identity param
 [Export-CsAutoAttendantHolidays](Export-CsAutoAttendantHolidays.md)
 
 [Get-CsAutoAttendantHolidays](Get-CsAutoAttendantHolidays.md)
-

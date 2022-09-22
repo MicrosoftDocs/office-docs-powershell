@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/import-csconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsConfiguration
 schema: 2.0.0
@@ -185,5 +185,3 @@ The Import-CsConfiguration cmdlet does not return any values or objects.
 ## RELATED LINKS
 
 [Export-CsConfiguration](Export-CsConfiguration.md)
-
-

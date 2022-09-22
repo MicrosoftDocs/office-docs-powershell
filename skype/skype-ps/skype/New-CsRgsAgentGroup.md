@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csrgsagentgroup
+online version: https://learn.microsoft.com/powershell/module/skype/new-csrgsagentgroup
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsAgentGroup
 schema: 2.0.0
@@ -342,4 +342,3 @@ New-CsRgsAgentGroup creates new instances of the Microsoft.Rtc.Rgs.Management.Wr
 [Remove-CsRgsAgentGroup](Remove-CsRgsAgentGroup.md)
 
 [Set-CsRgsAgentGroup](Set-CsRgsAgentGroup.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csrgsaudiofile
+online version: https://learn.microsoft.com/powershell/module/skype/import-csrgsaudiofile
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsRgsAudioFile
 schema: 2.0.0
@@ -191,5 +191,3 @@ Creates new instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.Audio
 [New-CsRgsWorkflow](New-CsRgsWorkflow.md)
 
 [Set-CsRgsWorkflow](Set-CsRgsWorkflow.md)
-
-

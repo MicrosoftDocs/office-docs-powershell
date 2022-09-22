@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-cslisconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/import-cslisconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsLisConfiguration
 schema: 2.0.0
@@ -172,4 +172,3 @@ This cmdlet does not return a value.
 [Debug-CsLisConfiguration](Debug-CsLisConfiguration.md)
 
 [Test-CsLisConfiguration](Test-CsLisConfiguration.md)
-

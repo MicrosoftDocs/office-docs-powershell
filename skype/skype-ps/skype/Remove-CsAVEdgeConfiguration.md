@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csavedgeconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csavedgeconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAVEdgeConfiguration
 schema: 2.0.0
@@ -165,4 +165,3 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 [New-CsAVEdgeConfiguration](New-CsAVEdgeConfiguration.md)
 
 [Set-CsAVEdgeConfiguration](Set-CsAVEdgeConfiguration.md)
-

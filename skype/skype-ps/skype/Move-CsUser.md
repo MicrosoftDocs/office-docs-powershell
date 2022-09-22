@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/move-csuser
+online version: https://learn.microsoft.com/powershell/module/skype/move-csuser
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsUser
 schema: 2.0.0
@@ -41,7 +41,7 @@ The Move-CsUser cmdlet affects only the user's Skype for Business Server account
 
 When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the reverse):
 
-- Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
+- Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://learn.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
 - To move a user to Microsoft 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments, there will be variants of this address. For more details, see [Move users between on-premises and cloud](/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
 - When migrating from on-premises to the cloud, users are automatically assigned Teams Only mode and their meetings from on-premises are automatically converted to Teams meetings. This conversion happens regardless of which on-premises version of Skype for Business Server or Lync Server was being used. You no longer need to specify the `-MoveToTeams` switch. In fact, specifying that switch no longer has any impact. Teams Only users can still *join* meetings hosted in Skype for Business (for example, they're invited to a meeting by a Skype For Business user). However, beginning in October 2022, users moved from on-premises to Teams Only will no longer be provisioned with the Skype for Business Online infrastructure. At this point, Teams Only users can join Skype for Business meetings, but only anonymously. For more information, see [Skype for Business Online retirement](/microsoftteams/skype-for-business-online-retirement).
 - When migrating from on-premises to the cloud, contacts from Skype for Business Server are migrated to the cloud (unless you use the `-Force` switch in the Move-CsUser command) and become available in Teams after the move is complte and the user logs on to Teams. To ensure these contacts are migrated to Teams, the migrated user must sign in to Teams within 30 days of being moved from on-premises to Teams Only. For details, see [Guidance for Organizations with on-premises deployments of Skype for Business Server](/microsoftteams/skype-for-business-online-retirement#guidance-for-organizations-with-on-premises-deployments-of-skype-for-business-server).
