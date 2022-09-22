@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/remove-csteamsaudioconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsaudioconferencingpolicy
 schema: 2.0.0
 ---
 

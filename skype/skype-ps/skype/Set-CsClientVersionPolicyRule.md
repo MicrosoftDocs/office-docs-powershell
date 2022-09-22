@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csclientversionpolicyrule
+online version: https://learn.microsoft.com/powershell/module/skype/set-csclientversionpolicyrule
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsClientVersionPolicyRule
 schema: 2.0.0
@@ -485,4 +485,3 @@ Instead, the `Set-CsClientVersionPolicyRule` cmdlet modifies instances of the Mi
 [New-CsClientVersionPolicyRule](New-CsClientVersionPolicyRule.md)
 
 [Set-CsClientVersionPolicyRule](Set-CsClientVersionPolicyRule.md)
-
