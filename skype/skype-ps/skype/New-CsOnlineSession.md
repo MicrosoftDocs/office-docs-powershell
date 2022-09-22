@@ -1,7 +1,7 @@
 ---
 external help file: SkypeOnlineConnectorStartup-help.xml
 applicable: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinesession
+online version: https://learn.microsoft.com/powershell/module/skype/new-csonlinesession
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
@@ -54,7 +54,7 @@ $sfbSession = New-CsOnlineSession
 Import-PSSession $sfbSession
 ```
 
-Establishes a Skype for Business Online Remote PowerShell session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
+Establishes a Skype for Business Online Remote PowerShell session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://learn.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
 
 ## PARAMETERS
 

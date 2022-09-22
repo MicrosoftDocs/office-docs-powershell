@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/move-csthirdpartyvideosystem
+online version: https://learn.microsoft.com/powershell/module/skype/move-csthirdpartyvideosystem
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsThirdPartyVideoSystem
 schema: 2.0.0
@@ -290,4 +290,3 @@ However, if you include the PassThru parameter you can instances of the Microsof
 [Remove-CsThirdPartyVideoSystem](Remove-CsThirdPartyVideoSystem.md)
 
 [Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)
-
