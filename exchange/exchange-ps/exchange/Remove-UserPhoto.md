@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-userphoto
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-userphoto
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-UserPhoto
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-UserPhoto cmdlet to delete the photo associated with a user's account. The user photo feature allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web (formerly known as Outlook Web App or OWA), Lync, Skype for Business and SharePoint.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -50,9 +50,9 @@ In on-premises Exchange, it also removes the user's photo from their Active Dire
 **Notes**:
 
 - Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
-- **Note**: In Microsoft Graph, the [Remove-MgUserPhoto](https://docs.microsoft.com/powershell/module/microsoft.graph.users/remove-mguserphoto) and [Update-MgUserPhoto](https://docs.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) cmdlets are also available.
+- **Note**: In Microsoft Graph, the [Remove-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/remove-mguserphoto) and [Update-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) cmdlets are also available.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

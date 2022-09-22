@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-roleassignmentpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-roleassignmentpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-RoleAssignmentPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-RoleAssignmentPolicy cmdlet to remove existing management role assignment policies from your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,9 +35,9 @@ The assignment policy you want to remove can't be assigned to any mailboxes or m
 - If the assignment policy is the default assignment policy, use the Set-RoleAssignmentPolicy cmdlet to select a new default assignment policy. You don't need to do this if you're removing the last assignment policy.
 - Use the Remove-ManagementRoleAssignment cmdlet to remove any management role assignments assigned to the policy.
 
-For more information about assignment policies, see [Understanding management role assignment policies](https://docs.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
+For more information about assignment policies, see [Understanding management role assignment policies](https://learn.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -59,7 +59,7 @@ Remove all management role assignments that are assigned to the End User policy.
 
 Remove the End User role assignment policy.
 
-For more information about the Where cmdlet and pipelining, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help) and [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines).
+For more information about the Where cmdlet and pipelining, see [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help) and [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines).
 
 ## PARAMETERS
 
