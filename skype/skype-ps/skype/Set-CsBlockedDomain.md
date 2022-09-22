@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csblockeddomain
+online version: https://learn.microsoft.com/powershell/module/skype/set-csblockeddomain
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsBlockedDomain
 schema: 2.0.0
@@ -207,4 +207,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [Remove-CsBlockedDomain](Remove-CsBlockedDomain.md)
 
 [Set-CsAccessEdgeConfiguration](Set-CsAccessEdgeConfiguration.md)
-

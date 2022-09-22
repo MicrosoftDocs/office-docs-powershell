@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csexumcontact
+online version: https://learn.microsoft.com/powershell/module/skype/set-csexumcontact
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsExUmContact
 schema: 2.0.0
@@ -315,4 +315,3 @@ When the PassThru parameter is used, it also returns an object of this type.
 [Get-CsExUmContact](Get-CsExUmContact.md)
 
 [Move-CsExUmContact](Move-CsExUmContact.md)
-

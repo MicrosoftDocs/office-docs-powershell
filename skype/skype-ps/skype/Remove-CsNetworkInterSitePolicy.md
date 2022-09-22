@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csnetworkintersitepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csnetworkintersitepolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsNetworkInterSitePolicy
 schema: 2.0.0
@@ -141,4 +141,3 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 [Set-CsNetworkInterSitePolicy](Set-CsNetworkInterSitePolicy.md)
 
 [Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)
-
