@@ -15,9 +15,6 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet will assign a phone number to a user or a resource account (online application instance).
 
-**Note**: The cmdlet is currently not supported for customers and tenants that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These
-customers should continue to use the Set-CsUser, Set-CsOnlineVoiceUser, Set-CsOnlineApplicationInstance, or Set-CsOnlineVoiceApplicationInstance cmdlets.
-
 ## SYNTAX
 
 ### Assignment (Default)
@@ -39,13 +36,11 @@ If the cmdlet executes successfully, no result object will be returned. If the c
 and a Message string parameter with additional details of the failure.
 
 **Note**: In Teams PowerShell Module 4.2.1-preview and later we are changing how the cmdlet reports errors. Instead of using a result object, we will be generating an
+exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also now support the -ErrorAction parameter to
+control the execution after an error has occurred.
 
-exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also
-now support the -ErrorAction parameter to control the execution after an error has occured.
 
 **Note**: Macau region is currently not supported for phone number assignment or Enterprise Voice.
-
-
 
 ## EXAMPLES
 
