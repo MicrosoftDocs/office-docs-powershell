@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csmeetingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsMeetingConfiguration
 schema: 2.0.0
@@ -190,4 +190,3 @@ Instead, the `Remove-CsMeetingConfiguration` cmdlet deletes existing instances o
 [New-CsMeetingConfiguration](New-CsMeetingConfiguration.md)
 
 [Set-CsMeetingConfiguration](Set-CsMeetingConfiguration.md)
-

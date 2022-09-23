@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-receiveconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/new-receiveconnector
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-ReceiveConnector
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-ReceiveConnector cmdlet to create Receive connectors on Mailbox servers and Edge Transport servers. Receive connectors listen for inbound SMTP connections on the Exchange server.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -381,9 +381,9 @@ New-ReceiveConnector [-Name] <String> -Usage <UsageType>
 ## DESCRIPTION
 On Mailbox servers, you can create Receive connectors in the Front End Transport service, and the Transport (Hub) service. On Edge Transport servers, you can create Receive connectors in the Transport service.
 
-For more information about Receive connector usage types, permission groups, and authentication methods, see [Receive connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors).
+For more information about Receive connector usage types, permission groups, and authentication methods, see [Receive connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/receive-connectors).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -1456,7 +1456,7 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see [Receive connector permission groups](https://docs.microsoft.com/Exchange/mail-flow/connectors/receive-connectors#receive-connector-permission-groups).
+For more information about the default permissions and security principals for permission groups, see [Receive connector permission groups](https://learn.microsoft.com/Exchange/mail-flow/connectors/receive-connectors#receive-connector-permission-groups).
 
 ```yaml
 Type: PermissionGroups
@@ -1498,7 +1498,7 @@ The ProtocolLoggingLevel parameter specifies whether to enable or disable protoc
 - None: Protocol logging is disabled on the Receive connector. This is the default value.
 - Verbose: Protocol logging is enabled on the Receive connector.
 
-For more information about protocol logging, see [Protocol logging](https://docs.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
+For more information about protocol logging, see [Protocol logging](https://learn.microsoft.com/Exchange/mail-flow/connectors/protocol-logging).
 
 ```yaml
 Type: ProtocolLoggingLevel

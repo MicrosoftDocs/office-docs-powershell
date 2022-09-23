@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csusercallingdelegate
+online version: https://learn.microsoft.com/powershell/module/teams/new-csusercallingdelegate
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: jenstr

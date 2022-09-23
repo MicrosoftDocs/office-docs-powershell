@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csvideotrunkconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-csvideotrunkconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVideoTrunkConfiguration
 schema: 2.0.0
@@ -264,4 +264,3 @@ The `New-CsVideoTrunkConfiguration` cmdlet creates new instances of the Microsof
 [Set-CsVideoTrunkConfiguration](Set-CsVideoTrunkConfiguration.md)
 
 [Remove-CsVideoTrunkConfiguration](Remove-CsVideoTrunkConfiguration.md)
-

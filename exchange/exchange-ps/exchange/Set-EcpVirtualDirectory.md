@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-ecpvirtualdirectory
+online version: https://learn.microsoft.com/powershell/module/exchange/set-ecpvirtualdirectory
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-EcpVirtualDirectory
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Set-EcpVirtualDirectory cmdlet to modify Exchange Control Panel (ECP) vi
 
 The ECP web management interface was introduced in Exchange Server 2010. In Exchange Server 2013 and Exchange Server 2016, the EAC virtual directories and the corresponding management cmdlets still use ECP in the name. You can use these cmdlets to manage ECP virtual directories on Exchange 2010, Exchange 2013, and Exchange 2016 servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -45,7 +45,7 @@ Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminEnabled
-The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see [Turn off access to the Exchange admin center](https://docs.microsoft.com/Exchange/architecture/client-access/disable-exchange-admin-center-access). This parameter accepts $true or $false.
+The AdminEnabled parameter specifies that the EAC isn't able to be accessed through the Internet. For more information, see [Turn off access to the Exchange admin center](https://learn.microsoft.com/Exchange/architecture/client-access/disable-exchange-admin-center-access). This parameter accepts $true or $false.
 
 ```yaml
 Type: Boolean

@@ -5,7 +5,7 @@ title: Test-CsTeamsShiftsConnectionValidate
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate
+online version: https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate
 schema: 2.0.0
 ---
 

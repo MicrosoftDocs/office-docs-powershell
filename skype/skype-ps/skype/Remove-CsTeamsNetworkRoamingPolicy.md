@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamsnetworkroamingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsnetworkroamingpolicy
 applicable: Skype for Business Online
 title: Remove-CsTeamsNetworkRoamingPolicy
 author: TristanChen-msft
@@ -28,7 +28,7 @@ Deletes the Teams Network Roaming Policies configured for use in your organizati
 
 The TeamsNetworkRoamingPolicy cmdlets enable administrators to provide specific settings from the TeamsMeetingPolicy to be rendered dynamically based upon the location of the Teams client.  The TeamsNetworkRoamingPolicy cannot be granted to a user but instead can be assigned to a network site.  The settings from the TeamsMeetingPolicy included are AllowIPVideo and MediaBitRateKb. When a Teams client is connected to a network site where a CsTeamRoamingPolicy is assigned, these two settings from the TeamsRoamingPolicy will be used instead of the settings from the TeamsMeetingPolicy.
 
-More on the impact of bit rate setting on bandwidth can be found [here](https://docs.microsoft.com/microsoftteams/prepare-network).
+More on the impact of bit rate setting on bandwidth can be found [here](https://learn.microsoft.com/microsoftteams/prepare-network).
 
 ## EXAMPLES
 

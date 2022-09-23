@@ -23,11 +23,20 @@ The following cmdlet references are for Microsoft Teams.
 ### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
 {{Manually Enter Disconnect-MicrosoftTeams Description Here}}
 
-### [Get-CsTeamsEventsPolicy](Get-CsTeamsEventsPolicy.md)
-Returns information about the Teams Events policy. Note that this policy is currently still in preview.
+### [Get-AssociatedTeam](Get-AssociatedTeam.md)
+{{Manually Enter Get-AssociatedTeam Description Here}}
+
+### [Get-SharedWithTeam](Get-SharedWithTeam.md)
+{{Manually Enter Get-SharedWithTeam Description Here}}
+
+### [Get-SharedWithTeamUser](Get-SharedWithTeamUser.md)
+{{Manually Enter Get-SharedWithTeamUser Description Here}}
 
 ### [Get-Team](Get-Team.md)
 {{Manually Enter Get-Team Description Here}}
+
+### [Get-TeamAllChannel](Get-TeamAllChannel.md)
+{{Manually Enter Get-TeamAllChannel Description Here}}
 
 ### [Get-TeamChannel](Get-TeamChannel.md)
 {{Manually Enter Get-TeamChannel Description Here}}
@@ -43,6 +52,9 @@ Returns information about the Teams Events policy. Note that this policy is curr
 
 ### [Get-TeamHelp](Get-TeamHelp.md)
 {{Manually Enter Get-TeamHelp Description Here}}
+
+### [Get-TeamIncomingChannel](Get-TeamIncomingChannel.md)
+{{Manually Enter Get-TeamIncomingChannel Description Here}}
 
 ### [Get-TeamMemberSettings](Get-TeamMemberSettings.md)
 {{Manually Enter Get-TeamMemberSettings Description Here}}
@@ -106,6 +118,9 @@ This cmdlet creates an online call data connection.
 
 ### [Remove-CsTeamsEventsPolicy](Remove-CsTeamsEventsPolicy)
 Removes a previously created TeamsEventsPolicy. Note that this policy is currently still in preview.
+
+### [Remove-SharedWithTeam](Remove-SharedWithTeam.md)
+{{Manually Enter Remove-SharedWithTeam Description Here}}
 
 ### [Remove-Team](Remove-Team.md)
 {{Manually Enter Remove-Team Description Here}}

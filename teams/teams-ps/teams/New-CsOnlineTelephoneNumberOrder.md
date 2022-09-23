@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder
+online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder
 Module Name: MicrosoftTeams
 title: New-CsOnlineTelephoneNumberOrder
 schema: 2.0.0

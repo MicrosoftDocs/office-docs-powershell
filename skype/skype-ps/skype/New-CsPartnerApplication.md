@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cspartnerapplication
+online version: https://learn.microsoft.com/powershell/module/skype/new-cspartnerapplication
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsPartnerApplication
 schema: 2.0.0
@@ -414,4 +414,3 @@ The New-CsPartnerApplication cmdlet creates new instances of the Microsoft.Rtc.M
 [Remove-CsPartnerApplication](Remove-CsPartnerApplication.md)
 
 [Set-CsPartnerApplication](Set-CsPartnerApplication.md)
-

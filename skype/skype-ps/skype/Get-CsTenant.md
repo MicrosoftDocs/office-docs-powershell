@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstenant
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstenant
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsTenant
 schema: 2.0.0
@@ -215,4 +215,3 @@ The `Get-CsTenant` cmdlet accepts pipelined instances of the Microsoft.Rtc.Manag
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csserverapplication
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csserverapplication
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsServerApplication
 schema: 2.0.0
@@ -155,4 +155,3 @@ The `Remove-CsServerApplication` cmdlet deletes existing instances of the Micros
 [New-CsServerApplication](New-CsServerApplication.md)
 
 [Set-CsServerApplication](Set-CsServerApplication.md)
-

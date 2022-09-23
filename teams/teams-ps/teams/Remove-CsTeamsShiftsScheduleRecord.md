@@ -5,7 +5,7 @@ title: Remove-CsTeamsShiftsScheduleRecord
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamsshiftsschedulerecord
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsschedulerecord
 schema: 2.0.0
 ---
 
@@ -135,4 +135,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The parameters of start time, end time and designated actor ID are optional only when removing the schedule record of a linked team.
 
 ## RELATED LINKS
-

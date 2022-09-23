@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
@@ -231,4 +231,3 @@ For more information, see [About CommonParameters](https://go.microsoft.com/fwli
 [Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
 
 [Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)
-

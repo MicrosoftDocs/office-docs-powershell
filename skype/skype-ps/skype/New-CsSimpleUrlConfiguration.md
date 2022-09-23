@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cssimpleurlconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-cssimpleurlconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSimpleUrlConfiguration
 schema: 2.0.0
@@ -267,5 +267,3 @@ The New-CsSimpleUrlConfiguration cmdlet creates new instances of the Microsoft.R
 [Remove-CsSimpleUrlConfiguration](Remove-CsSimpleUrlConfiguration.md)
 
 [Set-CsSimpleUrlConfiguration](Set-CsSimpleUrlConfiguration.md)
-
-

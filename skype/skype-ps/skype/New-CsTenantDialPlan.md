@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstenantdialplan
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantdialplan
 applicable: Skype for Business Online
 title: New-CsTenantDialPlan
 schema: 2.0.0
@@ -29,7 +29,7 @@ Tenant dial plans provide required information to let Enterprise Voice users mak
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://docs.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet.
+You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet.
 
 ## EXAMPLES
 
@@ -267,4 +267,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

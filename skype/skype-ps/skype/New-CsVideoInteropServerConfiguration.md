@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csvideointeropserverconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-csvideointeropserverconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVideoInteropServerConfiguration
 schema: 2.0.0
@@ -185,4 +185,3 @@ The `New-CsVideoInteropServerConfiguration` cmdlet creates new instances of the 
 [Remove-CsVideoInteropServerConfiguration](Remove-CsVideoInteropServerConfiguration.md)
 
 [Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)
-

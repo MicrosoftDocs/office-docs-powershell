@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/reset-cspoolregistrarstate
+online version: https://learn.microsoft.com/powershell/module/skype/reset-cspoolregistrarstate
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Reset-CsPoolRegistrarState
 schema: 2.0.0
@@ -289,4 +289,3 @@ The `Reset-CsPoolRegistrarState` cmdlet does not return objects.
 ## RELATED LINKS
 
 [Get-CsPoolFabricState](Get-CsPoolFabricState.md)
-

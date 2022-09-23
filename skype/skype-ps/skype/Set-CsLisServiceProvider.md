@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cslisserviceprovider
+online version: https://learn.microsoft.com/powershell/module/skype/set-cslisserviceprovider
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsLisServiceProvider
 schema: 2.0.0
@@ -181,4 +181,3 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 [Remove-CsLisServiceProvider](Remove-CsLisServiceProvider.md)
 
 [Get-CsLisServiceProvider](Get-CsLisServiceProvider.md)
-
