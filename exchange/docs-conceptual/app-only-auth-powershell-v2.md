@@ -49,53 +49,56 @@ Certificate based authentication (CBA) or app-only authentication as described i
 The following examples show how to use the Exchange Online PowerShell module with app-only authentication:
 
 > [!IMPORTANT]
-> In the **Connect-** commands, be sure to use an `.onmicrosoft.com` domain for the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+> In the following **Connect-** commands, be sure to use an `.onmicrosoft.com` domain for the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
 
-- Connect using a local certificate:
+- **Connect using a certificate thumbprint**:
 
-  - **Exchange Online PowerShell**:
+  The certificate needs to be installed on the computer where you're running the command. The certificate should be installed in the user certificate store.
 
-    ```powershell
-    Connect-ExchangeOnline -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
-    ```
-
-  - **Security & Compliance PowerShell**:
-
-     ```powershell
-    Connect-IPPSSession -CertificateFilePath "C:\Users\johndoe\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<MyPassword>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
-    ```
-
-- Connect using a certificate thumbprint:
-
-  - **Exchange Online PowerShell**:
+  - <u>Exchange Online PowerShell</u>:
 
     ```powershell
     Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-  - **Security & Compliance PowerShell**:
+  - <u>Security & Compliance PowerShell</u>:
 
     ```powershell
     Connect-IPPSSession -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-  When you use the _CertificateThumbPrint_ parameter, the certificate needs to be installed on the computer where you are running the command. The certificate should be installed in the user certificate store.
+- **Connect using a certificate object**:
 
-- Connect using a certificate object:
+  The certificate does not need to be installed on the computer where you're running the command. You can store the certificate object remotely. The certificate is fetched when the script is run.
 
-  - **Exchange Online PowerShell**:
+  - <u>Exchange Online PowerShell</u>:
 
     ```powershell
     Connect-ExchangeOnline -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-  - **Security & Compliance PowerShell**:
+  - <u>Security & Compliance PowerShell</u>:
 
     ```powershell
     Connect-IPPSSession -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-  When you use the _Certificate_ parameter, the certificate does not need to be installed on the computer where you are running the command. This parameter is applicable for scenarios where the certificate object is stored remotely and fetched at runtime during script execution.
+- **Connect using a local certificate**:
+
+  > [!NOTE]
+  > Using a **ConvertTo-SecureString** command to store the password of the certificate locally defeats the purpose of a secure connection method for automation scenarios. Using a **Get-Credential** command to prompt you for the password of the certificate securely isn't ideal for automation scenarios. In other words, there's really no automated _and_ secure way to connect using a local certificate.
+
+  - <u>Exchange Online PowerShell</u>:
+
+    ```powershell
+    Connect-ExchangeOnline -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (Get-Credential).password -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
+
+  - <u>Security & Compliance PowerShell</u>:
+
+     ```powershell
+    Connect-IPPSSession -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (Get-Credential).password -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
 
 > [!TIP]
 > App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
@@ -233,7 +236,7 @@ Create a self-signed x.509 certificate using one of the following methods:
   $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\CurrentUser\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
 
   # Export certificate to .pfx file
-  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password $(ConvertTo-SecureString -String "P@ssw0Rd1234" -AsPlainText -Force)
+  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password (Get-Credential).password
 
   # Export certificate to .cer file
   $mycert | Export-Certificate -FilePath mycert.cer
