@@ -83,14 +83,20 @@ Returns information about the Teams Media Logging policy.
 ### [Get-CsCloudCallDataConnection](Get-CsCloudCallDataConnection.md)
 This cmdlet retrieves an already existing online call data connection.
 
+### [Grant-CsTeamsEventsPolicy](Grant-CsTeamsEventsPolicy.md)
+Assigns Teams Events policy to a user, group of users, or the entire tenant. Note that this policy is currently still in preview.
+
 ### [Grant-TeamsEnhancedEncryptionPolicy](Grant-TeamsEnhancedEncryptionPolicy.md)
-Cmdlet to assign a specific Teams enhanced encryption Policy to a user.
+Cmdlet to assign a specific Teams enhanced encryption policy to a user.
 
 ### [Grant-CsTeamsMediaLoggingPolicy](Grant-CsTeamsMediaLoggingPolicy.md)
 Assigns Teams Media Logging policy to a user, group of users or the entire tenant.
 
 ### [Grant-TeamsShiftsPolicy](Grant-TeamsShiftsPolicy.md)
 {{Manually Enter Grant-TeamsShiftsPolicy Description Here}}
+
+### [New-CsTeamsEventsPolicy](New-CsTeamsEventsPolicy.md)
+This cmdlet allows you to create a new TeamsEventsPolicy instance and set it's properties. Note that this policy is currently still in preview.
 
 ### [New-Team](New-Team.md)
 {{Manually Enter New-Team Description Here}}
@@ -109,6 +115,9 @@ Use this cmdlet to create a new Teams enhanced encryption policy.
 
 ### [New-CsCloudCallDataConnection](New-CsCloudCallDataConnection.md)
 This cmdlet creates an online call data connection.
+
+### [Remove-CsTeamsEventsPolicy](Remove-CsTeamsEventsPolicy)
+Removes a previously created TeamsEventsPolicy. Note that this policy is currently still in preview.
 
 ### [Remove-SharedWithTeam](Remove-SharedWithTeam.md)
 {{Manually Enter Remove-SharedWithTeam Description Here}}
@@ -136,6 +145,9 @@ Use this cmdlet to remove an existing Teams enhanced encryption policy.
 
 ### [Remove-TeamTargetingHierarchy](Remove-TeamTargetingHierarchy.md)
 {{Manually Enter Remove-TeamTargetingHierarchy Description Here}}
+
+### [Set-CsTeamsEventsPolicy](Set-CsTeamsEventsPolicy.md)
+Allows you to configure options for customizing Teams Events experiences. Note that this policy is currently still in preview.
 
 ### [Set-Team](Set-Team.md)
 {{Manually Enter Set-Team Description Here}}
