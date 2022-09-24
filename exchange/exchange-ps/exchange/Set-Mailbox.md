@@ -3794,7 +3794,10 @@ Accept wildcard characters: False
 ### -MessageCopyForSMTPClientSubmissionEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill MessageCopyForSMTPClientSubmissionEnabled Description }}
+The MessageCopyForSMTPClientSubmissionEnabled parameter specifies whether to store copies of messages in the mailbox that are submitted via SMTP. Valid values are:
+
+- $true: When a message is submitted for the mailbox by using SMTP, a copy of the message is stored in the mailbox. This is the default value.
+- $false: When a message is submitted for the mailbox by using SMTP, a copy of the message isn't stored in the mailbox.
 
 ```yaml
 Type: Boolean
