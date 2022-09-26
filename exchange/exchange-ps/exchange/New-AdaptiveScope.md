@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-adaptivescope
+online version: https://learn.microsoft.com/powershell/module/exchange/new-adaptivescope
 applicable: Security & Compliance
 title: New-AdaptiveScope
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # New-AdaptiveScope
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-AdaptiveScope cmdlet to create adaptive scopes in your organization. Adaptive scopes (or static scopes) are used in retention policies and retention label policies.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,9 +35,9 @@ New-AdaptiveScope -Name <String> -LocationType <DynamicBoundaryLocationType> -Ra
 ```
 
 ## DESCRIPTION
-For more information about the properties to use in adaptive scopes, see [Configuration information for adaptive scopes](https://docs.microsoft.com/microsoft-365/compliance/retention-settings#configuration-information-for-adaptive-scopes).
+For more information about the properties to use in adaptive scopes, see [Configuration information for adaptive scopes](https://learn.microsoft.com/microsoft-365/compliance/retention-settings#configuration-information-for-adaptive-scopes).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

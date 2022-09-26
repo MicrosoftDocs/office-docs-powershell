@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsupgradepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsupgradepolicy
 applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
 title: Get-CsTeamsUpgradePolicy
 schema: 2.0.0
@@ -39,7 +39,7 @@ NOTES:
   - If you are using Skype for Business Server, there are no built-in instances and you'll need to create one. Also, only the NotifySfBUsers property is available. Mode is not present.
   - Using TeamsUpgradePolicy in an on-premises environmention requires Skype for Business Server 2015 with CU8 or later.
 
-You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
+You can also find more guidance here: [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/microsoftteams/migration-interop-guidance-for-teams-with-skype).
 
 ## EXAMPLES
 
@@ -197,5 +197,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
-
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)

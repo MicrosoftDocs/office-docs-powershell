@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-publicfoldermigrationrequest
+online version: https://learn.microsoft.com/powershell/module/exchange/new-publicfoldermigrationrequest
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-PublicFolderMigrationRequest
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the New-PublicFolderMigrationRequest cmdlet to start a serial public folder 
 
 **Note**: Support for serial migration of public folders ended in Exchange 2013 Cumulative Update 8 (CU8), and the cmdlets are no longer available in Exchange Online. Instead, use the corresponding **\*-MigrationBatch** and **\*-PublicFolderMailboxMigration\*** cmdlets.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,9 +47,9 @@ New-PublicFolderMigrationRequest [[-Name] <String>] -SourceDatabase <DatabaseIdP
 ```
 
 ## DESCRIPTION
-Migrating public folders is a multi-step process. For more information before you attempt a public folder migration, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
+Migrating public folders is a multi-step process. For more information before you attempt a public folder migration, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://learn.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -58,7 +58,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-PublicFolderMigrationRequest -SourceDatabase PFDB01 -CSVData ([System.IO.File]::ReadAllBytes('C:\PFMigration\CSVData.csv'))
 ```
 
-This example creates a public folder migration request from the Exchange 2010 source public folder database PFDB01 and uses the CSVData.csv file that was created using the Export-PublicFolderStatistics.ps1 script. For more information, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
+This example creates a public folder migration request from the Exchange 2010 source public folder database PFDB01 and uses the CSVData.csv file that was created using the Export-PublicFolderStatistics.ps1 script. For more information, see [Use serial migration to migrate public folders to Exchange 2013 from previous versions](https://learn.microsoft.com/previous-versions/exchange-server/exchange-150/jj150486(v=exchg.150)).
 
 ## PARAMETERS
 
@@ -260,8 +260,8 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
+- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 

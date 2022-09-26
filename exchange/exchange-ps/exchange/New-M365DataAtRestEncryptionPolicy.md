@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-m365dataatrestencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-m365dataatrestencryptionpolicy
 applicable: Exchange Online
 title: New-M365DataAtRestEncryptionPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,9 +31,9 @@ New-M365DataAtRestEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedPro
 ```
 
 ## DESCRIPTION
-Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy for multi-workload usage. For more information, see [Overview of M365 Customer Key  at the tenant level](https://docs.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details) and [Create a DEP for use with multiple workloads for all tenant users](https://docs.microsoft.com/microsoft-365/compliance/customer-key-manage#create-a-dep-for-use-with-multiple-workloads-for-all-tenant-users).
+Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy for multi-workload usage. For more information, see [Overview of M365 Customer Key  at the tenant level](https://learn.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details) and [Create a DEP for use with multiple workloads for all tenant users](https://learn.microsoft.com/microsoft-365/compliance/customer-key-manage#create-a-dep-for-use-with-multiple-workloads-for-all-tenant-users).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

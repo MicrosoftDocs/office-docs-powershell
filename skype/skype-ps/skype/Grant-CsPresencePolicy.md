@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-cspresencepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-cspresencepolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsPresencePolicy
 schema: 2.0.0
@@ -240,4 +240,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsPresencePolicy](Remove-CsPresencePolicy.md)
 
 [Set-CsPresencePolicy](Set-CsPresencePolicy.md)
-

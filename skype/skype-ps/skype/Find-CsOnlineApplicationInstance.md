@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/find-csonlineapplicationinstance
+online version: https://learn.microsoft.com/powershell/module/skype/find-csonlineapplicationinstance
 applicable: Skype for Business Online
 title: Find-CsOnlineApplicationInstance
 schema: 2.0.0

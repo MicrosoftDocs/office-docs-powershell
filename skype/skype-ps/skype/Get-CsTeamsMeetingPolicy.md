@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -71,7 +71,7 @@ NewMeetingRecordingExpirationDays : 60
 ```
 
 The above command returns expiration date setting currently applied on TMR. For more details, see:
-[Auto-expiration of Teams meeting recordings](https://docs.microsoft.com/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings).
+[Auto-expiration of Teams meeting recordings](https://learn.microsoft.com/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings).
 
 
 ## PARAMETERS
@@ -147,4 +147,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

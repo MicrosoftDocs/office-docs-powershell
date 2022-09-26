@@ -5,7 +5,7 @@ title: Get-CsTeamsShiftsConnectionInstance
 author: lespina
 ms.author: lespina
 manager: valk
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 

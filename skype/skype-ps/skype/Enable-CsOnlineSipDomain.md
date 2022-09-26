@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/skype/enable-csonlinesipdomain
 applicable: Skype for Business Online
 title: Enable-CsOnlineSipDomain
 schema: 2.0.0
@@ -34,7 +34,7 @@ This cmdlet enables online provisioning of users in the specified SIP domain. In
 
 - Organizations must fully migrate (e.g move all users to the cloud) each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment. 
 
-Before running this cmdlet for any SIP domain in a Skype for Business Server deployment, you must complete migration of any other existing hybrid SfB deployment that is in progress. All users in an existing hybrid deployment must be moved to the cloud, and that existing hybrid deployment must be detached from Office 365, as described in this article: [Disable hybrid to complete migration to the cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid).
+Before running this cmdlet for any SIP domain in a Skype for Business Server deployment, you must complete migration of any other existing hybrid SfB deployment that is in progress. All users in an existing hybrid deployment must be moved to the cloud, and that existing hybrid deployment must be detached from Office 365, as described in this article: [Disable hybrid to complete migration to the cloud](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation-disabling-hybrid).
 
 Important: If you have more than one on-premises deployment of Skype for Business Server, you *must* ensure SharedSipAddressSpace is disabled in all other Skype for Business Server deployments except the deployment containing the SIP domain that is being enabled. 
 

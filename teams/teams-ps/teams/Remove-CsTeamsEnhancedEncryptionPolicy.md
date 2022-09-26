@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy
 title: Remove-CsTeamsEnhancedEncryptionPolicy
 author: xinawang
 ms.author: xinawang
@@ -128,5 +128,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CsTeamsEnhancedEncryptionPolicy](Set-CsTeamsEnhancedEncryptionPolicy.md)
 
 [Grant-CsTeamsEnhancedEncryptionPolicy](Grant-CsTeamsEnhancedEncryptionPolicy.md)
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/New-OMEConfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/New-OMEConfiguration
 applicable: Exchange Online
 title: New-OMEConfiguration
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-OMEConfiguration cmdlet to create a Microsoft Purview Message Encryption configuration.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -75,7 +75,7 @@ The BackgroundColor parameter specifies the background color. Valid values are:
 - An available text value (for example, `yellow` is 0x00FFFF00).
 - $null (blank). This is the default value.
 
-For more information, see [Add your organization's brand to your encrypted messages](https://docs.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
+For more information, see [Add your organization's brand to your encrypted messages](https://learn.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
 
 ```yaml
 Type: String

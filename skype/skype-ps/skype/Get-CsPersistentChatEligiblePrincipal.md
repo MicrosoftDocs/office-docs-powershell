@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cspersistentchateligibleprincipal
+online version: https://learn.microsoft.com/powershell/module/skype/get-cspersistentchateligibleprincipal
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPersistentChatEligiblePrincipal
 schema: 2.0.0
@@ -213,4 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)
 
 [New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)
-

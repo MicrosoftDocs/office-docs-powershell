@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscallqueue
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscallqueue
 applicable: Skype for Business Online
 title: Set-CsCallQueue
 schema: 2.0.0
@@ -27,7 +27,7 @@ Set-CsCallQueue cmdlet provides a way for you to modify the properties of an exi
 
 The Set-CsCallQueue cmdlet may suggest additional steps required to complete the Call Queue setup.
 
-Note that this cmdlet is in the Skype for Business Online PowerShell module and also affects Teams. The reason the "Applies To:" is stated as Skype for Business Online is because it must match the actual module name of the cmdlet. To learn how this cmdlet is used with Skype for Business Online and Teams, see https://docs.microsoft.com/microsoftteams/create-a-phone-system-call-queue.
+Note that this cmdlet is in the Skype for Business Online PowerShell module and also affects Teams. The reason the "Applies To:" is stated as Skype for Business Online is because it must match the actual module name of the cmdlet. To learn how this cmdlet is used with Skype for Business Online and Teams, see https://learn.microsoft.com/microsoftteams/create-a-phone-system-call-queue.
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ This example updates the Call Queue with identity e7e00636-47da-449c-a36b-1b3d6e
 Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId $audioFile.Id
 ```
 
-This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
+This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](https://learn.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
 
 ## PARAMETERS
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csvoiceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csvoiceconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVoiceConfiguration
 schema: 2.0.0
@@ -136,4 +136,3 @@ This cmdlet removes (resets) an object of type Microsoft.Rtc.Management.Writable
 [Remove-CsVoiceTestConfiguration](Remove-CsVoiceTestConfiguration.md)
 
 [Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingtenantconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingtenantconfiguration
 applicable: Skype for Business Online
 title: Get-CsOnlineDialinConferencingTenantConfiguration
 schema: 2.0.0
@@ -132,4 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-

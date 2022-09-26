@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csuserreplicatorconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csuserreplicatorconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsUserReplicatorConfiguration
 schema: 2.0.0
@@ -290,4 +290,3 @@ Instead, the cmdlet modifies the global instance (the only such instance) of the
 [New-CsUserReplicatorConfiguration](New-CsUserReplicatorConfiguration.md)
 
 [Remove-CsUserReplicatorConfiguration](Remove-CsUserReplicatorConfiguration.md)
-
