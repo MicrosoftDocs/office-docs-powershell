@@ -3794,7 +3794,10 @@ Accept wildcard characters: False
 ### -MessageCopyForSMTPClientSubmissionEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill MessageCopyForSMTPClientSubmissionEnabled Description }}
+The MessageCopyForSMTPClientSubmissionEnabled parameter specifies whether to copy the sender for messages that are sent using SMTP client submission (SMTP AUTH). Valid values are:
+
+- $true: When the user's account sends messages using SMTP AUTH, a copy of the message is sent to the users's mailbox. This is the default value.
+- $false: When the user's account sends messages using SMTP AUTH, a copy of the message isn't sent to the users's mailbox.
 
 ```yaml
 Type: Boolean
