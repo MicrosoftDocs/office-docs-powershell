@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ### -ServiceId
 The ServiceId parameter specifies the unique object ID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
-To find the ServiceId value of the Azure AD service principal, use the Get-AzADApplication cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://learn.microsoft.com/powershell/azure/install-az-ps).
+To find the ServiceId value of the Azure AD service principal, use the Get-AzureADServicePrincipal cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://learn.microsoft.com/powershell/azure/install-az-ps).
 
 The ServiceId value can also be found in the Azure AD portal at Enterprise applications \> Object ID. 
 
