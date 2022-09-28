@@ -1355,9 +1355,7 @@ To search only last name, first name, and display name you would construct this 
 After the binary value has been constructed, it must then be converted to a decimal value before being assigned to SearchPrefixFlags.
 To convert a binary number to a decimal number, you can use the a Windows PowerShell command similar to this:
 
-`\[Convert\]::ToInt32("1110111", 2)`
-
-
+`[Convert]::ToInt32("1110111", 2)`
 
 ```yaml
 Type: UInt16
