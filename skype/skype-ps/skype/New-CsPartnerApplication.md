@@ -163,9 +163,9 @@ Accept wildcard characters: False
 Certificate (in Base64 encoded format) that can be assigned to the partner application.
 To read raw data from a certificate and then convert that data to the required format, use commands similar to these:
 
-`$x = Get-Content "C:\Certificates\PartnerApplication.cer" -Encoding Byte`
+`$x = [System.IO.File]::ReadAllBytes('C:\Certificates\PartnerApplication.cer')`
 
-`$y = \[Convert\]::ToBase64String($x)`
+`$y = [Convert]::ToBase64String($x)`
 
 You can then use this syntax to assign the certificate data stored in the variable $y:
 

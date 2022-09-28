@@ -90,7 +90,7 @@ Client version policies enforced in your organization do not override the client
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 
-$x = \[guid\]::NewGuid()
+$x = [guid]::NewGuid()
 
 New-CsClientVersionPolicyRule -Parent "site:Redmond" -RuleId $x -MajorVersion 4 -UserAgent InHouse
 ```
@@ -108,7 +108,7 @@ In this case, the UserAgent parameter represents an in-house client application.
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 
-$x = \[guid\]::NewGuid()
+$x = [guid]::NewGuid()
 
 $z = New-CsClientVersionPolicyRule -Parent "site:Redmond" -RuleId $x -InMemory
 
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) for the rule.
 In Windows PowerShell, you can create a GUID by using the following command:
 
-`$x = \[guid\]::NewGuid()`
+`$x = [guid]::NewGuid()`
 
 ```yaml
 Type: String

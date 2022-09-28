@@ -66,7 +66,7 @@ In turn, those computers are piped to the `ForEach-Object` cmdlet.
 
 ### -------------------------- Example 3 ------------------------
 ```
-$x = Import-CsRgsAudioFile -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -FileName "WhileYouWait.wav" -Content (Get-Content C:\Media\WhileYouWait.wav -Encoding byte -ReadCount 0)
+$x = Import-CsRgsAudioFile -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -FileName "WhileYouWait.wav" -Content ([System.IO.File]::ReadAllBytes('C:\Media\WhileYouWait.wav'))
 
 Set-CsRgsConfiguration -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -DefaultMusicOnHoldFile $x
 ```
@@ -76,12 +76,10 @@ To perform this task, the first command uses `Import-CsRgsAudioFile` to import t
 In addition to the Identity parameter (which specifies the service location), the FileName parameter is used to specify the file name of the file being imported.
 
 Equally important, the Content parameter is used to import the audio file.
-File importing is carried out by calling the `Get-Content` cmdlet followed by the path to the file being imported.
-`Get-Content` also requires you to set the encoding type to byte and the ReadCount to 0.
-(Setting the ReadCount to 0 ensures that the entire file is read in a single operation). The imported file is then stored in a variable named $x.
+File importing is carried out by using the `[System.IO.File]::ReadAllBytes` command with the path to the file being imported.
+The imported file is then stored in a variable named $x.
 
 After the file has been imported, `Set-CsRgsConfiguration` is called in order to set the DefaultMusicOnHoldFile property to the audio file stored in $x.
-
 
 ## PARAMETERS
 

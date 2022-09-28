@@ -87,7 +87,7 @@ It does this by checking the StartsWith property of the NumberRangeStart object 
 
 ### -------------------------- Example 6 --------------------------
 ```
-Get-CsCallParkOrbit | Where-Object {\[Char\]::IsDigit($_.NumberRangeStart\[0\])}
+Get-CsCallParkOrbit | Where-Object {[Char]::IsDigit($_.NumberRangeStart[0])}
 ```
 
 The command in this example returns all call park orbit ranges where no prefix has been assigned to the numbers in the range.
