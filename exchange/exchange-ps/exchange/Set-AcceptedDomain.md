@@ -151,10 +151,10 @@ Accept wildcard characters: False
 The DomainType parameter specifies the accepted domain type. Valid values are:
 
 - Authoritative: This is the default value. Your organization is completely responsible for delivering email to recipients in the domain, and for generating non-delivery reports (also known as an NDRs, delivery system notifications, DSNs, or bounce messages) for unresolved recipients.
-- InternalRelay: This is a type of non-authoritative domain. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external messaging system that's under your control. The external messaging system is responsible for generating NDRs for unresolved recipients. Use this value to treat messages that are sent to the domain as internal messages.
-- ExternalRelay: This is a type of non-authoritative domain that's available only in on-premises Exchange organizations. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external messaging system that's completely outside of your control. The external messaging system is responsible for generating NDRs for unresolved recipients.
+- InternalRelay: This is a type of non-authoritative domain. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external email system that's under your control. The external email system is responsible for generating NDRs for unresolved recipients. Use this value to treat messages that are sent to the domain as internal messages.
+- ExternalRelay: This is a type of non-authoritative domain that's available only in on-premises Exchange organizations. Your organization receives email that's sent to recipients in the domain, but the messages are relayed to an external email system that's completely outside of your control. The external email system is responsible for generating NDRs for unresolved recipients.
 
-**Note**: For the value InternalRelay or ExternalRelay, you typically use mail users or mail contacts to relay the messages to the external messaging system. Address rewriting is also available on Edge Transport servers in on-premises Exchange organizations.
+**Note**: For the value InternalRelay or ExternalRelay, you typically use mail users or mail contacts to relay the messages to the external email system. Address rewriting is also available on Edge Transport servers in on-premises Exchange organizations.
 
 ```yaml
 Type: AcceptedDomainType
