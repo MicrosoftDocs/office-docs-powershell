@@ -81,8 +81,10 @@ Accept wildcard characters: False
 ### -AllAcceptedDomains
 The AllAcceptedDomains parameter specifies whether the Outbound connector is used in hybrid organizations where message recipients are in accepted domains of the cloud-based organization. Valid values are:
 
-- $true: The Outbound connector is used in hybrid organizations when message recipients are in an accepted domain of the cloud-based organization. You can only use this value when the ConnectorType parameter value is OnPremises.
+- $true: The Outbound connector is used in hybrid organizations when message recipients are in an accepted domain of the cloud-based organization. This setting requires OnPremises for the ConnectorType value.
 - $false: The Outbound connector isn't used in hybrid organizations. This is the default value.
+
+This parameter is effective only for OnPremises connectors.
 
 ```yaml
 Type: Boolean
@@ -269,10 +271,12 @@ Accept wildcard characters: False
 ```
 
 ### -RouteAllMessagesViaOnPremises
-The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced by this connector are first routed through the on-premises messaging system in hybrid organizations. Valid values are:
+The RouteAllMessagesViaOnPremises parameter specifies that all messages serviced by this connector are first routed through the on-premises email system in hybrid organizations. Valid values are:
 
-- $true: Messages are routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
-- $false: Messages aren't routed through the on-premises messaging system. This is the default value.
+- $true: Messages are routed through the on-premises email system. This setting requires OnPremises for the ConnectorType value.
+- $false: Messages aren't routed through the on-premises email system. This is the default value.
+
+This parameter is effective only for OnPremises connectors.
 
 ```yaml
 Type: Boolean
@@ -288,10 +292,12 @@ Accept wildcard characters: False
 ```
 
 ### -SenderRewritingEnabled
-The SenderRewritingEnabled parameter specifies that all messages that normally qualify for SRS rewritting are rewritten for traffic to on-premises. This parameter is only effective for OnPremises connectors as Partner connectors already have SRS rewritting enabled. Valid values are:
+The SenderRewritingEnabled parameter specifies that all messages that normally qualify for SRS rewriting are rewritten for routing through the on-premises email system. Valid values are:
 
-- $true: Messages are rewritten by SRS if they need to be before being routed through the on-premises messaging system. This setting requires you to set the ConnectorType parameter to the value OnPremises in the same command.
-- $false: Messages aren't rewritten by SRS before being routed through the on-premises messaging system. This is the default value.
+- $true: Messages are rewritten by SRS as needed before being routed through the on-premises email system. This setting requires OnPremises for the ConnectorType value.
+- $false: Messages aren't rewritten by SRS before being routed through the on-premises email system. This is the default value.
+
+This parameter is effective only for OnPremises connectors.
 
 ```yaml
 Type: Boolean
@@ -310,7 +316,7 @@ Accept wildcard characters: False
 The SmartHosts parameter specifies the smart host that the Outbound connector uses to route mail. Valid values are:
 
 - FQDN of a smart host server, a mail exchange (MX) record, or an address (A) record: For example, mail.contoso.com.
-- Single IP address: For example, 10.10.1.1
+- Single IP address: For example, 10.10.1.1.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify multiple value separated by commas: `"Value1","Value2",..."ValueN"`.
@@ -350,7 +356,11 @@ Accept wildcard characters: False
 ```
 
 ### -TlsDomain
-The TlsDomain parameter specifies the domain name that the Outbound connector uses to verify the FQDN of the target certificate when establishing a TLS secured connection. This parameter is only used if the TlsSettings parameter is set to DomainValidation. Valid input for the TlsDomain parameter is an SMTP domain. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com. However, you can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com
+The TlsDomain parameter specifies the domain name that the Outbound connector uses to verify the FQDN of the target certificate when establishing a TLS secured connection. A valid value for this parameter is an SMTP domain.
+
+Wildcards are supported to specify all subdomains of a domain (for example, \*.contoso.com), but you can't embed the wildcard character within the domain (for example, domain.\*.contoso.com).
+
+This parameter meaningful only when the TlsSettings value is DomainValidation.
 
 ```yaml
 Type: SmtpDomainWithSubdomains
@@ -390,7 +400,7 @@ Accept wildcard characters: False
 The UseMXRecord parameter enables or disables DNS routing for the connector. Valid values are:
 
 - $true: The connector uses DNS routing (MX records in DNS) to deliver email. This is the default value.
-- $false: The connector delivers email to one or more smart hosts. When you use this value, you also need to specify the smart hosts by using the SmartHosts parameter in the same command.
+- $false: The connector delivers email to one or more smart hosts. This setting requires one or more smart hosts for the SmartHosts value.
 
 ```yaml
 Type: Boolean
