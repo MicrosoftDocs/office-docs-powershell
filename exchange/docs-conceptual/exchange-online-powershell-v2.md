@@ -611,7 +611,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - PowerShell 7 is officially supported in Windows, Linux, and Apple macOS as described in the [Prerequisites for the Exchange Online PowerShell module](#prerequisites-for-the-exchange-online-powershell-module) section in this article.
 
-- The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 log in experiences](connect-to-exchange-online-powershell.md#powershell-7-log-in-experiences).
+- The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 exclusive connection methods](connect-to-exchange-online-powershell.md#powershell-7-exclusive-connection-methods).
 
 - The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets have been replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**.Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
 
