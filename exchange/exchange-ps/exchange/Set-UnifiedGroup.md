@@ -1171,7 +1171,9 @@ Accept wildcard characters: False
 ### -SensitivityLabelId
 This parameter is available only in the cloud-based service.
 
-{{ Fill SensitivityLabelId Description }}
+The SensitivityLabelId parameter specifies the GUID value of the sensitivity label that's assigned to the Microsoft 365 Group.
+
+**Note**: In the output of the Get-UnifiedGroup cmdlet, this property is named SensitivityLabel, not SensitivityLabelId.
 
 ```yaml
 Type: System.Guid
