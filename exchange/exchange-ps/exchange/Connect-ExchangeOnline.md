@@ -427,9 +427,11 @@ Accept wildcard characters: False
 ### -Device
 **Note**: This parameter is available in version 2.0.4 or later of the module, and only in PowerShell 7.
 
-The Device switch specifies whether to authenticate interactively computers that don't have web browsers to support single sign-on (SSO). You don't need to specify a value with this switch.
+The Device switch is typically used on computers without web browsers. You don't need to specify a value with this switch.
 
-The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
+Using this switch results in an on-screen message that contains the URL <https://microsoft.com/devicelogin> and a unique code. On any other device with a web browser and internet access, open the URL, enter the unique code, and enter your credentials in the subsequent pages.
+
+If your login was successful, the PowerShell connection continues.
 
 ```yaml
 Type: SwitchParameter
