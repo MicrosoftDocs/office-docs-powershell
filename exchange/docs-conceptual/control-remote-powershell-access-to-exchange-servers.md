@@ -87,7 +87,7 @@ $<VariableName> = Get-Content <text file>
 ```
 
 ```powershell
-$<VariableName> | ForEach-Object {Set-User $_ -RemotePowerShellEnabled $false}
+$<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their user principal name (UPN). The text file must contain one UPN on each line like this:

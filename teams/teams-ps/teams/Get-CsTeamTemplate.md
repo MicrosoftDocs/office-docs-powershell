@@ -48,7 +48,7 @@ This cmdlet supports retrieving details of a team template available to your ten
 PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Get-CsTeamTemplate -OdataId $_.OdataId}
 ```
 
-Within the universe of templates the admin’s tenant has access to, returns a template definition object (displayed as a JSON by default) for every custom and every Microsoft en-US template which names include ‘test’.
+Within the universe of templates the admin's tenant has access to, returns a template definition object (displayed as a JSON by default) for every custom and every Microsoft en-US template which names include 'test'.
 
 ### EXAMPLE 2
 
