@@ -65,7 +65,7 @@ $<VariableName> = <Get-Mailbox | Get-User> -ResultSize Unlimited -Filter <Filter
 ```
 
 ```powershell
-$<VariableName> | ForEach-Object {Set-User $_ -RemotePowerShellEnabled $false}
+$<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 This example removes access to remote PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
@@ -75,7 +75,7 @@ $DSA = Get-User -ResultSize Unlimited -Filter "(RecipientType -eq 'UserMailbox')
 ```
 
 ```powershell
-$DSA | ForEach-Object {Set-User $_ -RemotePowerShellEnabled $false}
+$DSA | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 ### Use a list of specific users
@@ -101,7 +101,7 @@ $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
 ```
 
 ```powershell
-$NPS | ForEach-Object {Set-User $_ -RemotePowerShellEnabled $false}
+$NPS | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 ## View the remote PowerShell access for users
