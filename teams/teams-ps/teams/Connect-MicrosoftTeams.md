@@ -66,7 +66,7 @@ This example connects to an Azure account. You must provide a Microsoft account 
 
 ```powershell
 Connect-MicrosoftTeams
-Account                 Environment 	Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId                         
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
@@ -77,7 +77,7 @@ The first command prompts for user credentials and stores them in the $Credentia
 ```powershell
 $credential = Get-Credential
 Connect-MicrosoftTeams -Credential $credential
-Account                 Environment 	Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId                         
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
@@ -87,7 +87,7 @@ This example connects to an Azure account in a specific environment. You must pr
 
 ```powershell
 Connect-MicrosoftTeams -TeamsEnvironmentName TeamsGCCH
-Account                 Environment 	Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId                         
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        TeamsGCCH   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
@@ -100,12 +100,12 @@ Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ### Example 5: Connect to MicrosoftTeams using Application-based Access Tokens
-This example demonstrates how to authenticate with an application using Access Tokens. Access Tokens can be retrieved via the login.microsoftonline.com endpoint. It requires two Access Tokens – “MS Graph” and “Skype and Teams Tenant Admin API” resources.
+This example demonstrates how to authenticate with an application using Access Tokens. Access Tokens can be retrieved via the login.microsoftonline.com endpoint. It requires two Access Tokens: "MS Graph" and "Skype and Teams Tenant Admin API" resources.
 
 Application-based authentication has been reintroduced in preview with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
 ```powershell
-$ClientSecret   = "…"
+$ClientSecret   = "..."
 $ApplicationID = "00000000-0000-0000-0000-000000000000"
 $TenantID = "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
 
@@ -162,7 +162,7 @@ $GraphToken = (Invoke-RestMethod @RequestParameters -Body "$Body&scope=https://g
 $TeamsToken = (Invoke-RestMethod @RequestParameters -Body "$Body&scope=48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default").access_token
 Connect-MicrosoftTeams -AccessTokens @($GraphToken, $TeamsToken)
 
-Account                 Environment 	Tenant                                TenantId                         
+Account                 Environment    Tenant                                TenantId                         
 -------                 -----------  ------------------------------------  ------------------------------------
 user@contoso.com        AzureCloud   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```

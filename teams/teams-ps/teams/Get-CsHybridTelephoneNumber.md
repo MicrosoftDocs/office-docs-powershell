@@ -36,7 +36,7 @@ Get-CsHybridTelephoneNumber -TelephoneNumber 14025551234
 ```output
 Id              O365Region SourceType TargetType TelephoneNumber UserId
 --              ---------- ---------- ---------- --------------- ------
-14025551234 	NOAM       Hybrid                14025551234 	 00000000-0000-0000-0000-000000000000
+14025551234    NOAM       Hybrid                14025551234     00000000-0000-0000-0000-000000000000
 ```
 This example displays information about the phone number +1 (402) 555-1234.
 
