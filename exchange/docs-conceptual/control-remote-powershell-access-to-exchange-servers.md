@@ -61,7 +61,7 @@ To prevent remote PowerShell access for a specific group of existing users, you 
 To disable access to remote PowerShell for any number of users based on an existing attribute, use the following syntax:
 
 ```powershell
-$<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter>
+$<VariableName> = <Get-Mailbox | Get-User> -ResultSize Unlimited -Filter <Filter>
 ```
 
 ```powershell
@@ -71,7 +71,7 @@ $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false
 This example removes access to remote PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
 ```powershell
-$DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
+$DSA = Get-User -ResultSize Unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
 ```
 
 ```powershell
@@ -87,7 +87,7 @@ $<VariableName> = Get-Content <text file>
 ```
 
 ```powershell
-$<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false
+$<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
 This example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their user principal name (UPN). The text file must contain one UPN on each line like this:
@@ -121,17 +121,17 @@ Get-User -Identity "Sarah Jones" | Format-List RemotePowerShellEnabled
 To display the remote PowerShell access status for all users, run the following command:
 
 ```powershell
-Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePowerShellEnabled
+Get-User -ResultSize Unlimited | Format-Table Name,DisplayName,RemotePowerShellEnabled -AutoSize
 ```
 
 To display only those users who don't have access to remote PowerShell, run the following command:
 
 ```powershell
-Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
+Get-User -ResultSize Unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
 To display only those users who have access to remote PowerShell, run the following command:
 
 ```powershell
-Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
+Get-User -ResultSize Unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```
