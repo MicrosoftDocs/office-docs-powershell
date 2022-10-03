@@ -43,7 +43,7 @@ Get a list of available team templates
 PS C:> Get-CsTeamTemplateList
 ```
 
-Returns all en-US templates within the universe of templates the admin’s tenant has access to.
+Returns all en-US templates within the universe of templates the admin's tenant has access to.
 
 Note: All 1P Microsoft templates will always be returned in the specified locale. If the locale is not specified, en-US will be used.
 
@@ -53,7 +53,7 @@ Note: All 1P Microsoft templates will always be returned in the specified locale
 PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
 ```
 
-Returns all en-US templates that have 3 channels within the universe of templates the admin’s tenant has access to.
+Returns all en-US templates that have 3 channels within the universe of templates the admin's tenant has access to.
 
 ## PARAMETERS
 

@@ -78,7 +78,7 @@ PS C:> New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-S
 ```
 
 Step 1: Create new template from copy of existing template. Gets the template JSON file of Template with specified OData ID, creates a JSON file user can make edits in.
-Step 2: Create a new template from the JSON file named “input”.
+Step 2: Create a new template from the JSON file named "input".
 
 ### EXAMPLE 2
 

@@ -50,7 +50,7 @@ Removes template with OData Id '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-
 PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Remove-CsTeamTemplate -OdataId $_.OdataId}
 ```
 
-Removes template that meets the following specifications: 1) Locale set to en-US. 2) Name contains ‘test’.
+Removes template that meets the following specifications: 1) Locale set to en-US. 2) Name contains 'test'.
 
 ## PARAMETERS
 
