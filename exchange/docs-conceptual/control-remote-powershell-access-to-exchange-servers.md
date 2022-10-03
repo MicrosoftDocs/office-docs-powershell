@@ -62,9 +62,7 @@ To disable access to remote PowerShell for any number of users based on an exist
 
 ```powershell
 $<VariableName> = <Get-Mailbox | Get-User> -ResultSize Unlimited -Filter <Filter>
-```
 
-```powershell
 $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
@@ -72,9 +70,7 @@ This example removes access to remote PowerShell for all users whose **Title** a
 
 ```powershell
 $DSA = Get-User -ResultSize Unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
-```
 
-```powershell
 $DSA | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
@@ -84,9 +80,7 @@ To disable access to remote PowerShell for a list of specific users, use the fol
 
 ```powershell
 $<VariableName> = Get-Content <text file>
-```
 
-```powershell
 $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
@@ -98,9 +92,7 @@ After you populate the text file with the user accounts you want to update, run 
 
 ```powershell
 $NPS = Get-Content "C:\My Documents\NoPowerShell.txt"
-```
 
-```powershell
 $NPS | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
 
