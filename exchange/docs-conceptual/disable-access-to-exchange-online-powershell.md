@@ -24,6 +24,11 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 
 - Microsoft 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this article to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](/exchange/permissions-exo/feature-permissions).
 
+  > [!IMPORTANT]
+  > Don't run commands like `Get-User | Set-User -RemotePowerShellEnabled $false` to universally remove remote PowerShell access without considering admin accounts. Use the procedures in this article to selectively remove remote PowerShell access, or preserve admin access for at least one account by using the following syntax in your removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin@contoso.onmicrosoft.com'} | Set-User -RemotePowerShellEnabled $false`.
+  >
+  > If you accidentally lock yourself out of remote PowerShell access, create a new admin user account, and then use that account to give yourself remote PowerShell access.
+
 - You can only use Exchange Online PowerShell to perform this procedure. To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 - For detailed information about OPath filter syntax in Exchange Online, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
