@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-sendconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/new-sendconnector
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-SendConnector
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-SendConnector cmdlet to create a new Send connector.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -105,7 +105,7 @@ New-SendConnector [-Name] <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -172,7 +172,7 @@ If you specify a non-SMTP address space type on a Send connector configured in t
 - The SmartHosts parameter must be set to a value that specifies a smart host.
 - The DNSRoutingEnabled parameter must be set to $false.
 
-Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://docs.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
+Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://learn.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ### -AuthenticationCredential
 The AuthenticationCredential parameter specifies the username and password that's required to use the connector.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServicesMailEnabled
-**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
+**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://learn.microsoft.com/exchange/hybrid-configuration-wizard).
 
 The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
@@ -312,7 +312,7 @@ The usage type specifies the permissions and authentication methods assigned to 
 - Partner
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -529,7 +529,7 @@ The usage type specifies the permissions and authentication methods assigned to 
 - Partner
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -554,7 +554,7 @@ The usage type specifies the permissions and authentication methods assigned to 
 - Partner
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -672,7 +672,7 @@ The usage type specifies the permissions and authentication methods assigned to 
 - Internet
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -906,7 +906,7 @@ If you use the Usage parameter, you can't use any of the following parameters:
 - Internet
 - Partner
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: UsageType

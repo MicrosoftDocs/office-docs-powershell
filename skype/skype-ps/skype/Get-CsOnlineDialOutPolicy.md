@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy
 applicable: Skype for Business Online
 title: Get-CsOnlineDialOutPolicy
 schema: 2.0.0
@@ -112,4 +112,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsDialoutPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csdialoutpolicy)
+[Grant-CsDialoutPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csdialoutpolicy)

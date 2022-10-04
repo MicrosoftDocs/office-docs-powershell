@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsapppermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsapppermissionpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsAppPermissionPolicy
 schema: 2.0.0
@@ -15,7 +15,7 @@ author: tomkau
 ## SYNOPSIS
 **NOTE**: You can use this cmdlet to assign a specific custom policy to a user. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
 
-As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the App Permission Policies: <https://docs.microsoft.com/microsoftteams/teams-app-permission-policies>.
+As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the App Permission Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Grant-CsTeamsAppPermissionPolicy [-PolicyName] <String> [-Tenant <System.Guid>] 
 ## DESCRIPTION
 **NOTE**: You can use this cmdlet to assign a specific custom policy to a user. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
 
-As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the App Permission Policies: <https://docs.microsoft.com/microsoftteams/teams-app-permission-policies>.
+As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the App Permission Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
 ## EXAMPLES
 

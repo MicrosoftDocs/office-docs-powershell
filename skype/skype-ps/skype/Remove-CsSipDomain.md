@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cssipdomain
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cssipdomain
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsSipDomain
 schema: 2.0.0
@@ -157,4 +157,3 @@ Instead, the `Remove-CsSipDomain` cmdlet deletes existing instance of the Micros
 [New-CsSipDomain](New-CsSipDomain.md)
 
 [Set-CsSipDomain](Set-CsSipDomain.md)
-

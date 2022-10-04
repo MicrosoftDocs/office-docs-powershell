@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mailuser
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailuser
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-MailUser
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailUser cmdlet to modify mail users. Mail users (also known as mail-enabled users) have email addresses and accounts in the Exchange organization, but they don't have Exchange mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -858,7 +858,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -1462,7 +1462,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
 Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
 
@@ -2163,7 +2163,7 @@ The Password parameter allows users to change their own password. You can use th
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-You can't use this parameter to change another user's password (the parameter is available only via the MyBaseOptions user role). To change another user's password, use the NewPassword parameter on the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://docs.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell).
+You can't use this parameter to change another user's password (the parameter is available only via the MyBaseOptions user role). To change another user's password, use the NewPassword parameter on the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell).
 
 ```yaml
 Type: SecureString
@@ -2620,7 +2620,7 @@ The ResetPasswordOnNextLogon parameter allows users to require themselves to cha
 - $true: The user is required to change their password then next time they successfully log on.
 - $false: The user isn't required to change their password then next time they successfully log on. This is the default value.
 
-You can't use this parameter to require another user to change their password (the parameter is available only via the MyBaseOptions user role). You need to use the ForceChangePasswordNextLogin parameter on the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://docs.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell).
+You can't use this parameter to require another user to change their password (the parameter is available only via the MyBaseOptions user role). You need to use the ForceChangePasswordNextLogin parameter on the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell).
 
 ```yaml
 Type: Boolean
@@ -2821,7 +2821,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCertificate
-This parameter is reserved for internal Microsoft use.
+The UserCertificate parameter specifies the digital certificate used to sign a user's email messages.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2855,7 +2855,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSMimeCertificate
-This parameter is reserved for internal Microsoft use.
+The UserSMimeCertificate parameter specifies the S/MIME certificate that's used to sign a user's email messages.
 
 ```yaml
 Type: MultiValuedProperty

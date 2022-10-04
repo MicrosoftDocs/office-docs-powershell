@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/move-csuser
+online version: https://learn.microsoft.com/powershell/module/skype/move-csuser
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsUser
 schema: 2.0.0
@@ -41,10 +41,10 @@ The Move-CsUser cmdlet affects only the user's Skype for Business Server account
 
 When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the reverse):
 
-- Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
+- Skype for Business hybrid must be configured. For more information, see [Deploy hybrid connectivity between Skype for Business Server and Skype for Business Online](https://learn.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/deploy-hybrid-connectivity/deploy-hybrid-connectivity).
 - To move a user to Microsoft 365, specify the ProxyFqdn of the hosting provider as the Target. In most cases, this is "sipfed.online.lync.com" but in specialized environments, there will be variants of this address. For more details, see [Move users between on-premises and cloud](/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud).
-- When migrating from on-premises to the cloud, users are automatically assigned TeamsOnly mode and their meetings from on-premises are automatically converted to Teams meetings. This happens regardless of which on-premises version of Skype for Business Server or Lync Server is used. It is no longer necessary to specify the `-MoveToTeams` switch, and specifying this switch no longer has any impact. Teams-only users can still *join* meetings hosted in Skype for Business (which may happen if they are invited to a meeting by a user that is using Skype For Business).
-- When migrating from on-premises to the cloud, contacts from Skype for Business Server are migrated to the cloud (unless -force switch is used in move-csuser) and become available in Teams after the user logs on to Teams after the move.
+- When migrating from on-premises to the cloud, users are automatically assigned Teams Only mode and their meetings from on-premises are automatically converted to Teams meetings. This conversion happens regardless of which on-premises version of Skype for Business Server or Lync Server was being used. You no longer need to specify the `-MoveToTeams` switch. In fact, specifying that switch no longer has any impact. Teams Only users can still *join* meetings hosted in Skype for Business (for example, they're invited to a meeting by a Skype For Business user). However, beginning in October 2022, users moved from on-premises to Teams Only will no longer be provisioned with the Skype for Business Online infrastructure. At this point, Teams Only users can join Skype for Business meetings, but only anonymously. For more information, see [Skype for Business Online retirement](/microsoftteams/skype-for-business-online-retirement).
+- When migrating from on-premises to the cloud, contacts from Skype for Business Server are migrated to the cloud (unless you use the `-Force` switch in the Move-CsUser command) and become available in Teams after the move is complte and the user logs on to Teams. To ensure these contacts are migrated to Teams, the migrated user must sign in to Teams within 30 days of being moved from on-premises to Teams Only. For details, see [Guidance for Organizations with on-premises deployments of Skype for Business Server](/microsoftteams/skype-for-business-online-retirement#guidance-for-organizations-with-on-premises-deployments-of-skype-for-business-server).
 - If you receive an error while running this cmdlet about multiple federated Edge pools, Skype for Business Federation can only be enabled for a single Edge pool. If you have multiple Edge pools, select one to use as the federating Edge pool.
 
 > [!NOTE]
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 ### -UseOAuth
 
-This switch is only relevant for Skype for Business Server 2015 with CU8 up to CU11.  When using those versions, this switch is now *required*. It ensures authentication between on-premises and the host migration service is based on OAuth protocol. In Skype for Business Server 2019 as well as Skype for Business Server 2015 CU12 and later, OAuth is always used hence the switch is not relevant on those versions.
+This switch is no longer relevant. Previously, this switch ensured authentication between on-premises and the cloud. This switch also ensured Skype for Business Server 2015 CU8 to CU11 used the OAuth protocol (supported in those versions, but not used by default). All currently supported versions for migration to Teams (see the list earlier in this article) automatcically use OAuth, so this switch is no longer required.
 
 ```yaml
 Type: SwitchParameter
@@ -450,10 +450,12 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.ADConnect
 
 ## RELATED LINKS
 
-[Move users between on-premises and cloud](https://docs.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud)
+[Move users between on-premises and cloud](https://learn.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud)
 
-[Skype for Business Hybrid Solutions](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/skype-for-business-hybrid-solutions)
+[Skype for Business Hybrid Solutions](https://learn.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/skype-for-business-hybrid-solutions)
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
-[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+[Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+
+[Guidance for Organizations with on-premises deployments of Skype for Business Server](https://learn.microsoft.com/microsoftteams/skype-for-business-online-retirement#guidance-for-organizations-with-on-premises-deployments-of-skype-for-business-server)

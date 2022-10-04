@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csoauthserver
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csoauthserver
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsOAuthServer
 schema: 2.0.0
@@ -174,4 +174,3 @@ Instead, the `Remove-CsOAuthServer` cmdlet deletes existing instances of the Mic
 [New-CsOAuthServer](New-CsOAuthServer.md)
 
 [Set-CsOAuthServer](Set-CsOAuthServer.md)
-

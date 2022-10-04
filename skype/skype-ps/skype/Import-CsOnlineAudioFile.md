@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile
+online version: https://learn.microsoft.com/powershell/module/skype/import-csonlineaudiofile
 applicable: Microsoft Teams
 title: Import-CsOnlineAudioFile
 schema: 2.0.0
@@ -28,36 +28,27 @@ The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Au
 
 ### Example 1
 ```powershell
-$content = Get-Content "C:\Media\Hello.wav" -Encoding byte -ReadCount 0
+$content = [System.IO.File]::ReadAllBytes('C:\Media\Hello.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](https://docs.microsoft.com/powershell/module/skype/new-csautoattendantprompt).
+This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/skype/new-csautoattendantprompt).
 
 ### Example 2
 ```powershell
-$content = Get-Content "C:\Media\MOH.wav" -Encoding byte -ReadCount 0
+$content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](https://docs.microsoft.com/powershell/module/skype/set-cscallqueue) to provide the audio file id. 
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](https://learn.microsoft.com/powershell/module/skype/set-cscallqueue) to provide the audio file id.
 
 ### Example 3
 ```powershell
-$content = Get-Content "C:\Media\MOH.wav" -Encoding byte -ReadCount 0
+$content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://docs.microsoft.com/powershell/module/skype/new-csteamscallholdpolicy) to provide the audio file id. 
-
-### Example 4
-```powershell
-$content = Get-Content "C:\Media\MOH.wav" -AsByteStream -ReadCount 0
-$audioFile = Import-CsOnlineAudioFile -ApplicationId 'TenantGlobal' -FileName 'MOH.wav' -Content $content
-```
-
-This example uses the `-AsByteStream` parameter instead of the `-Encoding byte` parameter. Requires PowerShell 6 and later versions, where `-Encoding byte` is no longer available. The example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md) to provide the audio file id. 
-
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/skype/new-csteamscallholdpolicy) to provide the audio file id.
 
 ## PARAMETERS
 

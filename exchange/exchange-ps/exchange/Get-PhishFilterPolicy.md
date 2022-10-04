@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-phishfilterpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/get-phishfilterpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Get-PhishFilterPolicy
 schema: 2.0.0
@@ -18,7 +18,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-PhishFilterPolicy cmdlet to view the spoof intelligence policy and detected spoofed sending activities in your cloud-based organization over the last 30 days.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -46,9 +46,9 @@ The Get-PhishFilterPolicy cmdlet returns the following information:
 - AllowedToSpoof: The three possible values are Yes (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), No (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server), and Partial (messages that contain some spoofed sender email addresses in your organization are allowed from the source email server).
 - SpoofType: Indicates whether the domain is internal to your organization or external.
 
-For more information about spoof intelligence, see [Configure spoof intelligence in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+For more information about spoof intelligence, see [Configure spoof intelligence in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -130,7 +130,7 @@ The Detailed switch specifies whether to return detailed information in the resu
 Specifically, this switch returns the following additional properties:
 
 - ConfidenceLevel: Level of signals indicated by spoof intelligence that these domains may be suspicious, based on historical sending patterns and the reputation score of the domains.
-- DomainPairsCountInCategory: The spoofed domains displayed are separated into two categories: suspicious domain pairs and non-suspicious domain pairs. For more information, see [this topic](https://docs.microsoft.com/microsoft-365/security/office-365-security/walkthrough-spoof-intelligence-insight).
+- DomainPairsCountInCategory: The spoofed domains displayed are separated into two categories: suspicious domain pairs and non-suspicious domain pairs. For more information, see [this topic](https://learn.microsoft.com/microsoft-365/security/office-365-security/walkthrough-spoof-intelligence-insight).
 
 ```yaml
 Type: SwitchParameter

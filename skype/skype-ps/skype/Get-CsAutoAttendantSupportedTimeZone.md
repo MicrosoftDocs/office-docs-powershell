@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csautoattendantsupportedtimezone
+online version: https://learn.microsoft.com/powershell/module/skype/get-csautoattendantsupportedtimezone
 applicable: Skype for Business Online
 title: Get-CsAutoAttendantSupportedTimeZone
 schema: 2.0.0
@@ -93,4 +93,3 @@ The Get-CsAutoAttendantSupportedTimeZone cmdlet accepts a string as the Identity
 
 
 ## RELATED LINKS
-

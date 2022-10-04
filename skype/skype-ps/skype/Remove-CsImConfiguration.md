@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csimconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csimconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsImConfiguration
 schema: 2.0.0
@@ -130,8 +130,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsImConfiguration](https://docs.microsoft.com/powershell/module/skype/get-csimconfiguration?view=skype-ps)
+[Get-CsImConfiguration](https://learn.microsoft.com/powershell/module/skype/get-csimconfiguration?view=skype-ps)
 
-[New-CsImConfiguration](https://docs.microsoft.com/powershell/module/skype/new-csimconfiguration?view=skype-ps)
+[New-CsImConfiguration](https://learn.microsoft.com/powershell/module/skype/new-csimconfiguration?view=skype-ps)
 
-[Set-CsImConfiguration](https://docs.microsoft.com/powershell/module/skype/set-csimconfiguration?view=skype-ps)
+[Set-CsImConfiguration](https://learn.microsoft.com/powershell/module/skype/set-csimconfiguration?view=skype-ps)

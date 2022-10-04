@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate
 title: New-CsTeamTemplate
 author: serdarsoysal
 ms.author: serdars
@@ -78,7 +78,7 @@ PS C:> New-CsTeamTemplate -Locale en-US -Body (Get-Content '.input.json' | Out-S
 ```
 
 Step 1: Create new template from copy of existing template. Gets the template JSON file of Template with specified OData ID, creates a JSON file user can make edits in.
-Step 2: Create a new template from the JSON file named “input”.
+Step 2: Create a new template from the JSON file named "input".
 
 ### EXAMPLE 2
 
@@ -801,8 +801,8 @@ MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features w
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+- [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+- [Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
+- [New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
+- [Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
+- [Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)

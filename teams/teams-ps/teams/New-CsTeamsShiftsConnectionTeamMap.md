@@ -5,7 +5,7 @@ title: New-CsTeamsShiftsConnectionTeamMap
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionteammap
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionteammap
 schema: 2.0.0
 ---
 

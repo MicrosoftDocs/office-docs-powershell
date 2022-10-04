@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendantmenu
+online version: https://learn.microsoft.com/powershell/module/skype/new-csautoattendantmenu
 applicable: Skype for Business Online
 title: New-CsAutoAttendantMenu
 schema: 2.0.0
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectorySearchMethod
-The DirectorySearchMethod parameter lets you define the type of Directory Search Method for the Auto Attendant menu, for more information, see [Set up a Cloud auto attendant](https://docs.microsoft.com/MicrosoftTeams/create-a-phone-system-auto-attendant?WT.mc_id=TeamsAdminCenterCSH)
+The DirectorySearchMethod parameter lets you define the type of Directory Search Method for the Auto Attendant menu, for more information, see [Set up a Cloud auto attendant](https://learn.microsoft.com/MicrosoftTeams/create-a-phone-system-auto-attendant?WT.mc_id=TeamsAdminCenterCSH)
 
 Possible values are
 
@@ -174,4 +174,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 [New-CsAutoAttendantMenuOption](New-CsAutoAttendantMenuOption.md)
 [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md)
-

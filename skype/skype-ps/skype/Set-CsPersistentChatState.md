@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cspersistentchatstate
+online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchatstate
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatState
 schema: 2.0.0
@@ -179,4 +179,3 @@ Instead, the `Set-CsPersistentChatState` cmdlet modifies existing instances of t
 [Get-CsPersistentChatState](Get-CsPersistentChatState.md)
 
 [Set-CsPersistentChatActiveServer](Set-CsPersistentChatActiveServer.md)
-

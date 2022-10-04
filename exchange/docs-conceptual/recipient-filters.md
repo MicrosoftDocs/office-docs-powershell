@@ -241,4 +241,4 @@ The following table contains links to articles that will help you learn more abo
 |---|---|
 |[Filterable properties for the RecipientFilter parameter on Exchange cmdlets](recipientfilter-properties.md)|Learn more about the filterable properties that are available for the _RecipientFilter_ parameter.|
 |[Filterable properties for the Filter parameter on Exchange cmdlets](filter-properties.md) |Learn more about the filterable properties that are available for the _Filter_ parameter.|
-|[Filters in the EXO V2 module](filters-v2.md)|Learn about the considerations for filters when you connect to Exchange Online PowerShell using the Exchange Online PowerShell V2 module.|
+|[Filters in the Exchange Online PowerShell module](filters-v2.md)|Learn about the considerations for filters in the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module.|

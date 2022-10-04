@@ -5,7 +5,7 @@ title: Get-CsTeamsShiftsConnectionErrorReport
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionerrorreport
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionerrorreport
 schema: 2.0.0
 ---
 

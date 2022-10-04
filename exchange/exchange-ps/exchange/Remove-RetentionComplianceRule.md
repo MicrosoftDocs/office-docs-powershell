@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-retentioncompliancerule
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-retentioncompliancerule
 applicable: Security & Compliance
 title: Remove-RetentionComplianceRule
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Remove-RetentionComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-RetentionComplianceRule cmdlet to remove retention rules from the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Remove-RetentionComplianceRule [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 Removing a retention rule causes the release of all Exchange mailbox and SharePoint site retentions that are associated with the rule. Removing a retention rule also causes the corresponding retention policy to become invalid, so you should remove it by using the Remove-RetentionCompliancePolicy cmdlet.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-exorecipientpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exorecipientpermission
 applicable: Exchange Online
 title: Get-EXORecipientPermission
 schema: 2.0.0
@@ -13,11 +13,11 @@ ms.reviewer:
 # Get-EXORecipientPermission
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-EXORecipientPermission cmdlet to view information about SendAs permissions that are configured for users in a cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -183,7 +183,7 @@ You need to use this parameter with the Identity, PrimarySmtpAddress, UserPrinci
 
 ```yaml
 Type: String
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
