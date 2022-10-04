@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
-**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. To specify the calender items to analyze, use the CalendarLogs parameter.
+**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. To specify the calendar items to analyze, use the CalendarLogs parameter.
 
 This parameter is functional only in Exchange 2013.
 
