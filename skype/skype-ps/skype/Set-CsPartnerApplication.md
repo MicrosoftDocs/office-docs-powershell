@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cspartnerapplication
+online version: https://learn.microsoft.com/powershell/module/skype/set-cspartnerapplication
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsPartnerApplication
 schema: 2.0.0
@@ -131,9 +131,9 @@ Accept wildcard characters: False
 Certificate (in Base64 encoded format) that can be assigned to the partner application.
 To read raw data from a certificate and then convert that data to the required format, use commands similar to these:
 
-`$x = Get-Content "C:\Certificates\PartnerApplication.cer" -Encoding Byte`
+`$x = [System.IO.File]::ReadAllBytes('C:\Certificates\PartnerApplication.cer')`
 
-`$y = \[Convert\]::ToBase64String($x)`
+`$y = [Convert]::ToBase64String($x)`
 
 You can then use this syntax to assign the certificate data stored in the variable $y:
 
@@ -375,4 +375,3 @@ Instead, the `Set-CsPartnerApplication` cmdlet modifies existing instances of th
 [New-CsPartnerApplication](New-CsPartnerApplication.md)
 
 [Remove-CsPartnerApplication](Remove-CsPartnerApplication.md)
-

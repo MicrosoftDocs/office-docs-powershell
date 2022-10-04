@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cstestusercredential
+online version: https://learn.microsoft.com/powershell/module/skype/set-cstestusercredential
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsTestUserCredential
 schema: 2.0.0
@@ -230,4 +230,3 @@ Instead, the `Set-CsTestUserCredential` cmdlet modifies existing instances of th
 [Get-CsTestUserCredential](Get-CsTestUserCredential.md)
 
 [Remove-CsTestUserCredential](Remove-CsTestUserCredential.md)
-

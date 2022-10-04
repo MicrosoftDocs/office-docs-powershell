@@ -5,7 +5,7 @@ title: Remove-CsCustomPolicyPackage
 author: sunguchuan
 ms.author: gucsun
 manager: dasosby
-online version: https://docs.microsoft.com/powershell/module/teams/remove-cscustompolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage
 schema: 2.0.0
 ---
 

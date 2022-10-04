@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineuser
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineuser
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
@@ -625,7 +625,6 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 ## INPUTS
 
 ## NOTES
-- The changes mentioned under the "-Identity" and "-Filter" sections are not applicable to customers and tenants that are or have previously been enabled for Regionally Hosted Meetings for Skype for Business Online. 
 - These changes are currently only rolled out in commercial environments and are **not** applicable to government environments.
 
 ## RELATED LINKS

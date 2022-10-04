@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-hostedcontentfilterrule
+online version: https://learn.microsoft.com/powershell/module/exchange/set-hostedcontentfilterrule
 applicable: Exchange Online, Exchange Online Protection
 title: Set-HostedContentFilterRule
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-HostedContentFilterRule cmdlet to modify spam filter rules (content filter rules) in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,9 +39,9 @@ Set-HostedContentFilterRule [-Identity] <RuleIdParameter>
 
 ## DESCRIPTION
 > [!IMPORTANT]
-> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Use the Microsoft 365 Defender portal to create anti-spam policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies).
+> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Use the Microsoft 365 Defender portal to create anti-spam policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/configure-your-spam-filter-policies#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

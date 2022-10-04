@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-csphonenumberassignment
+online version: https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: jenstr
@@ -19,11 +19,7 @@ This cmdlet displays information about one or more phone numbers.
 
 ### Assignment (Default)
 ```powershell
-Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-CapabilitiesContain <string>]
-	[-CivicAddressId <string>] [-IsoCountryCode <string>] [-LocationId <string>] [-NumberType <string>]
-	[-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>] [-TelephoneNumberContain <string>]
-	[-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>] [-TelephoneNumberStartsWith <string>] [-Top <int>]
-	[<CommonParameters>]
+Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-IsoCountryCode <string>] [-LocationId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>] [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>] [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

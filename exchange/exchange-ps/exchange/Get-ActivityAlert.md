@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-activityalert
+online version: https://learn.microsoft.com/powershell/module/exchange/get-activityalert
 applicable: Security & Compliance
 title: Get-ActivityAlert
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Get-ActivityAlert
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-ActivityAlert cmdlet to view activity alerts in the Microsoft 365 Defender portal or the Microsoft Purview compliance portal. Activity alerts send you email notifications when users perform specific activities in Microsoft 365.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Get-ActivityAlert [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) or [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

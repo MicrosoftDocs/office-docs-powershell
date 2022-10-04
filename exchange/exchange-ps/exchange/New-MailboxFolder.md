@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-mailboxfolder
+online version: https://learn.microsoft.com/powershell/module/exchange/new-mailboxfolder
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxFolder
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxFolder cmdlet to create folders in your own mailbox. Administrators can't use this cmdlet to create folders in other mailboxes (the cmdlet is available only from the MyBaseOptions user role).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ New-MailboxFolder [-Name] <String> -Parent <MailboxFolderIdParameter>
 ## DESCRIPTION
 If no parent folder is specified, the cmdlet creates a mail folder in the root folder hierarchy of the mailbox. If the mailbox isn't specified, the cmdlet creates the folder in the mailbox of the user currently running the task. When run, the cmdlet returns the new folder name and the folder path as the output.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions). .
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions). .
 
 ## EXAMPLES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cstrustedapplication
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cstrustedapplication
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsTrustedApplication
 schema: 2.0.0
@@ -150,4 +150,3 @@ It removes an object of type Microsoft.Rtc.Management.Xds.DisplayTrustedApplicat
 [Set-CsTrustedApplication](Set-CsTrustedApplication.md)
 
 [Get-CsTrustedApplication](Get-CsTrustedApplication.md)
-

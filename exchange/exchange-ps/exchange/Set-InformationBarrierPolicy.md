@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-informationbarrierpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/set-informationbarrierpolicy
 applicable: Security & Compliance
 title: Set-InformationBarrierPolicy
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-InformationBarrierPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-InformationBarrierPolicy cmdlet to modify information barrier policies in the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -59,12 +59,12 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
 ## DESCRIPTION
 Information barrier policies are not in effect until you set them to active status, and then apply the policies:
 
-- (If needed): [Define a policy to block communications between segments](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies#scenario-1-block-communications-between-segments).
-- After all of your policies are defined: [Apply information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
+- (If needed): [Define a policy to block communications between segments](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies#scenario-1-block-communications-between-segments).
+- After all of your policies are defined: [Apply information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
 
-For more information, see [Information barrier policies](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies).
+For more information, see [Information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -250,6 +250,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Define policies for information barriers](https://docs.microsoft.com/microsoft-365/compliance/information-barriers-policies)
+[Define policies for information barriers](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies)
 
-[New-InformationBarrierPolicy](https://docs.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)
+[New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csadprincipal
+online version: https://learn.microsoft.com/powershell/module/skype/get-csadprincipal
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAdPrincipal
 schema: 2.0.0
@@ -258,4 +258,3 @@ For example, this syntax returns Active Directory principal information for the 
 [New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
 [Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)
-

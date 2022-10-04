@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/start-mailboxsearch
+online version: https://learn.microsoft.com/powershell/module/exchange/start-mailboxsearch
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Start-MailboxSearch
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Start-MailboxSearch cmdlet to restart or resume a mailbox search that's been stopped.
 
-**Note**: As of October 2020, the \*-MailboxSearch cmdlets are retired in Exchange Online PowerShell. Use the \*-ComplianceSearch cmdlets in Security & Compliance PowerShell instead. For more information, see [Retirement of legacy eDiscovery tools](https://docs.microsoft.com/microsoft-365/compliance/legacy-ediscovery-retirement).
+**Note**: As of October 2020, the \*-MailboxSearch cmdlets are retired in Exchange Online PowerShell. Use the \*-ComplianceSearch cmdlets in Security & Compliance PowerShell instead. For more information, see [Retirement of legacy eDiscovery tools](https://learn.microsoft.com/microsoft-365/compliance/legacy-ediscovery-retirement).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -40,9 +40,9 @@ When restarting a search, any previous results returned by the same search and c
 
 In Exchange 2013 or later, mailbox searches are also used for In-Place Hold. However, you can't start or stop In-Place Hold using the Start-MailboxSearch and Stop-MailboxSearch cmdlets.
 
-For more details, see [In-Place Hold and Litigation Hold in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/holds/holds) and [In-Place eDiscovery in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
+For more details, see [In-Place Hold and Litigation Hold in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/holds/holds) and [In-Place eDiscovery in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/ediscovery/ediscovery).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

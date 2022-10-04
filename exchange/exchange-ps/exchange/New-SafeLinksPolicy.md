@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-safelinkspolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-safelinkspolicy
 applicable: Exchange Online, Exchange Online Protection
 title: New-SafeLinksPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-SafeLinksPolicy cmdlet to create Safe Links policies in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ Safe Links is a feature in Microsoft Defender for Office 365 that checks links t
 
 New policies that you create using this cmdlet aren't applied to users and aren't visible in admin centers. You need to use the SafeLinksPolicy parameter on the New-SafeLinksRule or Set-SafeLinksRule cmdlets to associate the policy with a rule.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -196,7 +196,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
+For details about the entry syntax, see [Entry syntax for the "Do not rewrite the following URLs" list](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ### -EnableOrganizationBranding
 The EnableOrganizationBranding parameter specifies whether your organization's logo is displayed on Safe Links warning and notification pages. Valid values are:
 
-- $true: Organization branding is displayed on Safe Links warning and notification pages. Before you configure this value, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://docs.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.
+- $true: Organization branding is displayed on Safe Links warning and notification pages. Before you configure this value, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://learn.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.
 - $false: Organization branding is not displayed on Safe Links warning and notification pages.
 
 ```yaml
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedPolicyType
-The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
 
 ```yaml
 Type: RecommendedPolicyType

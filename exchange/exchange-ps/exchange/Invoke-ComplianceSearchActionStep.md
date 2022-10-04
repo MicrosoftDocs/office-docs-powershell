@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
+online version: https://learn.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 title: Invoke-ComplianceSearchActionStep
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 This cmdlet is reserved for internal Microsoft use.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

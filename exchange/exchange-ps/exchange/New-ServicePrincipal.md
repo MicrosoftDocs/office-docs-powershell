@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-serviceprincipal
+online version: https://learn.microsoft.com/powershell/module/exchange/new-serviceprincipal
 applicable: Exchange Online
 title: New-ServicePrincipal
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-ServicePrincipal cmdlet to create service principals in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,9 +32,9 @@ New-ServicePrincipal -AppId <String> -ServiceId <String>
 ## DESCRIPTION
 Service principals exist in Azure Active Directory to define what apps can do, who can access the apps, and what resources the apps can access. In Exchange Online, service principals are references to the service principals in Azure AD. To assign Exchange Online role-based access control (RBAC) roles to service principals in Azure AD, you use the service principal references in Exchange Online. The **\*-ServicePrincipal** cmdlets in Exchange Online PowerShell let you view, create, and remove these service principal references.
 
-For more information, see [Application and service principal objects in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+For more information, see [Application and service principal objects in Azure Active Directory](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ This example create a new service principal in Exchange Online with the specifie
 ### -AppId
 The AppId parameter specifies the unique AppID GUID value for the service principal. For example, ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1.
 
-To find the AppId value of the Azure AD service principal, use the Get-AzADApplication cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps).
+To find the AppId value of the Azure AD service principal, use the Get-AzADApplication cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://learn.microsoft.com/powershell/azure/install-az-ps).
 
 ```yaml
 Type: String
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ### -ServiceId
 The ServiceId parameter specifies the unique object ID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
-To find the ServiceId value of the Azure AD service principal, use the Get-AzADApplication cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps).
+To find the ServiceId value of the Azure AD service principal, use the Get-AzureADServicePrincipal cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://learn.microsoft.com/powershell/azure/install-az-ps).
 
 The ServiceId value can also be found in the Azure AD portal at Enterprise applications \> Object ID. 
 

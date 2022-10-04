@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csexstorageconnectivity
+online version: https://learn.microsoft.com/powershell/module/skype/test-csexstorageconnectivity
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsExStorageConnectivity
 schema: 2.0.0
@@ -209,4 +209,3 @@ The `Test-CsExStorageConnectivity` cmdlet returns instances of the Microsoft.Rtc
 ## RELATED LINKS
 
 [Test-CsExStorageNotification](Test-CsExStorageNotification.md)
-

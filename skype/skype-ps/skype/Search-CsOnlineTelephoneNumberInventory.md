@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/search-csonlinetelephonenumberinventory
+online version: https://learn.microsoft.com/powershell/module/skype/search-csonlinetelephonenumberinventory
 applicable: Skype for Business Online
 title: Search-CsOnlineTelephoneNumberInventory
 schema: 2.0.0
@@ -17,7 +17,7 @@ Use the `Search-CsOnlineTelephoneNumberInventory` cmdlet to reserve a telephone 
 
 **Note**:
 
-As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no longer be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://docs.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
+As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no longer be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
 
 ## SYNTAX
 
@@ -248,4 +248,3 @@ This cmdlets returns an Microsoft.Rtc.Management.Hosted.Bvd.Types.NumberReservat
 ## NOTES
 
 ## RELATED LINKS
-

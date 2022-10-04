@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype
+online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype
 applicable: Exchange Online, Security & Compliance
 title: Get-DlpSensitiveInformationType
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Get-DlpSensitiveInformationType
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-DlpSensitiveInformationType cmdlet to list the sensitive information types that are defined for your organization in the Microsoft Purview compliance portal. Sensitive information types are used by data loss prevention (DLP) rules to check for sensitive information such as social security, passport, or credit card numbers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParamete
 ## DESCRIPTION
 The RecommendedConfidence property of the returned objects contains a value that represents the default (or recommended) confidence level that should be used with the corresponding sensitive information type.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

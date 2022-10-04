@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-serverhealth
+online version: https://learn.microsoft.com/powershell/module/exchange/get-serverhealth
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-ServerHealth
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ServerHealth cmdlet to return health information related to the server you specify.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -28,9 +28,9 @@ Get-ServerHealth [-Identity] <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-The cmdlet returns health values that you can use to determine the state of the server. See [Server health and performance in Exchange Server](https://docs.microsoft.com/Exchange/server-health/server-health) for related information.
+The cmdlet returns health values that you can use to determine the state of the server. See [Server health and performance in Exchange Server](https://learn.microsoft.com/Exchange/server-health/server-health) for related information.
 
 The cmdlet also returns an alert value that provides the specific state of your server. The following values may be returned:
 

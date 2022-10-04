@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsclientconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsclientconfiguration
 applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Set-CsTeamsClientConfiguration
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGuestUser
-Designates whether or not guest users in your organization will have access to the Teams client.  If $true, guests in your tenant will be able to access the Teams client.  Note that this setting has a core dependency on Guest Access being enabled in your Office 365 tenant.  For more information on this topic, read Authorize Guest Access in Microsoft Teams: https://docs.microsoft.com/microsoftteams/teams-dependencies
+Designates whether or not guest users in your organization will have access to the Teams client.  If $true, guests in your tenant will be able to access the Teams client.  Note that this setting has a core dependency on Guest Access being enabled in your Office 365 tenant.  For more information on this topic, read Authorize Guest Access in Microsoft Teams: https://learn.microsoft.com/microsoftteams/teams-dependencies
 
 ```yaml
 Type: Boolean

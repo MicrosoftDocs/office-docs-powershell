@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cssladelegates
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cssladelegates
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsSlaDelegates
 schema: 2.0.0
@@ -141,4 +141,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Add-CsSlaDelegates](https://docs.microsoft.com/powershell/module/skype/add-cssladelegates?view=skype-ps)
+[Add-CsSlaDelegates](https://learn.microsoft.com/powershell/module/skype/add-cssladelegates?view=skype-ps)

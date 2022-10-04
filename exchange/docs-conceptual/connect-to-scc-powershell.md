@@ -1,5 +1,5 @@
 ---
-title: Connect to Security & Compliance PowerShell using the EXO V2 module
+title: Connect to Security & Compliance PowerShell
 author: chrisda
 manager: dansimp
 ms.date:
@@ -13,25 +13,30 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell V2 module to connect to Security & Compliance PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V2 module and V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
 # Connect to Security & Compliance PowerShell
 
-The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the EXO V2 module, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
+The Exchange Online PowerShell module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
-This article contains instructions for how to connect to Security & Compliance PowerShell using the EXO V2 module with or without MFA.
+> [!NOTE]
+> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Security & Compliance PowerShell](basic-auth-connect-to-scc-powershell.md).
+This article contains instructions for how to connect to Security & Compliance PowerShell using the Exchange Online PowerShell module with or without MFA.
+
+To connect to Security & Compliance PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
+
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437), see [Basic auth - Connect to Security & Compliance PowerShell](basic-auth-connect-to-scc-powershell.md).
 
 To use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance PowerShell using MFA, see [V1 module - Connect to Security & Compliance PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md). Note that this older version of the module will eventually be retired.
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module). The rest of the instructions in the article assume that you've already installed the module.
+- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). The rest of the instructions in the article assume that you've already installed the module.
 
   > [!NOTE]
-  > Security & Compliance PowerShell still requires Basic authentication in WinRM as described [Prerequisites for the EXO V2 module](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm). REST API cmdlets that allow you to turn off Basic authentication in WinRM are not yet available for the **Connect-IPPSSession** cmdlet. For more information, see [Updates for version 2.0.6](exchange-online-powershell-v2.md#updates-for-version-206).
+  > Security & Compliance PowerShell still requires Basic authentication in WinRM as described [Prerequisites for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm). REST API cmdlets that allow you to turn off Basic authentication in WinRM are not yet available for the **Connect-IPPSSession** cmdlet. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/permissions-microsoft-365-security-center) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -39,16 +44,13 @@ To use the older Exchange Online Remote PowerShell Module to connect to Security
 
 These connection instructions use modern authentication and work with or without multi-factor authentication (MFA).
 
-1. In a Windows PowerShell window, load the EXO V2 module by running the following command:
+1. After you've [installed the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command<sup>\*</sup>:
 
    ```powershell
    Import-Module ExchangeOnlineManagement
    ```
 
-   **Notes**:
-
-   - If you've already [installed the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module), the previous command will work as written.
-   - You might be able to skip this step and run **Connect-IPPSSession** without loading the module first.
+   <sup>\*</sup> In modern versions of PowerShell, you can typically skip this step and run **Connect-IPPSSession** without loading the module first.
 
 2. The command that you need to run uses the following syntax:
 
@@ -96,7 +98,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 Disconnect-ExchangeOnline
 ```
 
-## How do you know this worked?
+## How do you know you've connected successfully?
 
 The Security & Compliance PowerShell cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run a Security & Compliance PowerShell cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
 

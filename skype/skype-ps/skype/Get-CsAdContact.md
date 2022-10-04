@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csadcontact
+online version: https://learn.microsoft.com/powershell/module/skype/get-csadcontact
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAdContact
 schema: 2.0.0
@@ -252,4 +252,3 @@ The Get-CsAdContact cmdlet accepts a pipelined string value representing the Ide
 [Get-CsAdUser](Get-CsAdUser.md)
 
 [Get-CsUser](Get-CsUser.md)
-

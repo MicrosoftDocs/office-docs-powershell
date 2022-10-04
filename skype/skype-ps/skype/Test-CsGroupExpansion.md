@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csgroupexpansion
+online version: https://learn.microsoft.com/powershell/module/skype/test-csgroupexpansion
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsGroupExpansion
 schema: 2.0.0
@@ -396,4 +396,3 @@ The `Test-CsGroupExpansion` cmdlet returns an instance of the Microsoft.Rtc.Synt
 [Test-CsAddressBookService](Test-CsAddressBookService.md)
 
 [Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)
-

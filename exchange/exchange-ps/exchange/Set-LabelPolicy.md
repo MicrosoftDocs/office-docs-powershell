@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-labelpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/set-labelpolicy
 applicable: Security & Compliance
 title: Set-LabelPolicy
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-LabelPolicy
 
 ## SYNOPSIS
-This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity label policies in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -87,7 +87,7 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-LabelPolicy -Identity "Global Policy" -RemoveExchangeLocation $_ }`.
 
@@ -363,23 +363,25 @@ Accept wildcard characters: False
 ### -AdvancedSettings
 The AdvancedSettings parameter enables client-specific features and capabilities for the sensitivity label policy.
 
-Specify this parameter with the identity (name or GUID) of the policy, with key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
+Specify this parameter with the identity (name or GUID) of the policy, with key/value pairs in a [hash table](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
 
-Most of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+Most of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps that support built-in labeling. For instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://learn.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
 
 Supported settings for built-in labeling:
 
-- **OutlookDefaultLabel**: Outlook apps that support this setting apply a default label, or no label. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+- **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: ` Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
-- **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: ` Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
+- **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (version 2201+), macOS (version 16.57+), iOS (version 2.57+), and Android (version 16.0.14827+); Outlook on Windows (version 2201+), Outlook on the web, and rolling out to macOS, iOS, and Android. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}`.
 
-- **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (version 2201+), macOS (version 16.57+), iOS (version 2.57+), and Android (version 16.0.14827+), and also Outlook on Windows (version 2201+). Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}`.
+- **HideBarByDefault**: For Office apps that support the sensitivity bar, don't display the sensitivity label name on the window bar title so that there's more space to display long file names. Just the label icon and color (if configured) will be displayed. Users can't revert this setting in the app. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
+
+- **OutlookDefaultLabel**: Outlook apps that support this setting apply a default label, or no label. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
 Additionally, for Power BI:
 
-- **powerbimandatory**: Mandatory labeling for Power BI. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbimandatory="true"}`. For more information about this configuration choice, see [Mandatory label policy for Power BI](https://docs.microsoft.com/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
+- **powerbimandatory**: Mandatory labeling for Power BI. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbimandatory="true"}`. For more information about this configuration choice, see [Mandatory label policy for Power BI](https://learn.microsoft.com/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).
 
-- **powerbidefaultlabelid**: Default label for Power BI content. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbidefaultlabelid="General"}`. For more information about this configuration choice, see [Default label policy for Power BI](https://docs.microsoft.com/power-bi/admin/service-security-sensitivity-label-default-label-policy).
+- **powerbidefaultlabelid**: Default label for Power BI content. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbidefaultlabelid="General"}`. For more information about this configuration choice, see [Default label policy for Power BI](https://learn.microsoft.com/power-bi/admin/service-security-sensitivity-label-default-label-policy).
 
 ```yaml
 Type: PswsHashtable

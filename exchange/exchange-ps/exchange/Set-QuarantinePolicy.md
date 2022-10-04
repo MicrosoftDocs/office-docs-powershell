@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-quarantinepolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/set-quarantinepolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Set-QuarantinePolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-QuarantinePolicy cmdlet to modify custom quarantine policies in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ Set-QuarantineTag [-Identity] <QuarantineTagIdParameter>
 ## DESCRIPTION
 You can't modify built-in quarantine policies with names that start with "Default".
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -395,7 +395,7 @@ Accept wildcard characters: False
 ### -OrganizationBrandingEnabled
 The OrganizationBrandingEnabled parameter enables or disables organization branding in the end-user quarantine notification messages. Valid values are:
 
-- $true: Organization branding is enabled. The default Microsoft logo that's used in quarantine notifications is replaced by your custom logo. Before you do this, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://docs.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
+- $true: Organization branding is enabled. The default Microsoft logo that's used in quarantine notifications is replaced by your custom logo. Before you do this, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://learn.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 - $false: Organization branding is disabled. The default Microsoft logo is used in quarantine notifications. This is the default value.
 
 This setting is available only in the built-in quarantine policy named GlobalDefaultTag that controls global settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.

@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/remove-csteamsaudioconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsaudioconferencingpolicy
 schema: 2.0.0
 ---
 
@@ -24,10 +24,10 @@ Deletes a previously created TeamsAudioConferencingPolicy. Any users with no exp
 
 ### EXAMPLE 1
 ```
-PS C:\> Remove-CsTeamsAudioCOnferencingPolicy -Identity “Emea Users”
+PS C:\> Remove-CsTeamsAudioCOnferencingPolicy -Identity "Emea Users"
 ```
 
-In the example shown above, the command will delete the “Emea Users” audio conferencing policy from the organization's list of policies.
+In the example shown above, the command will delete the "Emea Users" audio conferencing policy from the organization's list of policies.
 
 ## PARAMETERS
 
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier for the TeamsAudioConferencingPolicy to be removed. To remove global policy, use this syntax: -Identity global. (Note that the global policy cannot be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: -Identity <policy name>.
+Unique identifier for the TeamsAudioConferencingPolicy to be removed. To remove global policy, use this syntax: -Identity global. (Note that the global policy cannot be removed. Instead, all the policy properties will be reset to their default values.) To remove a custom policy, use this syntax: `-Identity "<policy name>"`.
 
 ```yaml
 Type: String

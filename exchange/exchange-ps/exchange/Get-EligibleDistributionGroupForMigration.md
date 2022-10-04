@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-eligibledistributiongroupformigration
+online version: https://learn.microsoft.com/powershell/module/exchange/get-eligibledistributiongroupformigration
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-EligibleDistributionGroupForMigration
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is functional only in the cloud-based service.
 
 Use the Get-EligibleDistributionGroupForMigration cmdlet to identify distribution groups that can be upgraded to Microsoft 365 Groups. You can't upgrade mail-enabled security groups to Microsoft 365 Groups.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,7 +37,7 @@ Get-EligibleDistributionGroupForMigration [-ManagedBy <GeneralRecipientIdParamet
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

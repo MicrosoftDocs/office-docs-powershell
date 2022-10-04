@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-publicfolderdatabaserepairrequest
+online version: https://learn.microsoft.com/powershell/module/exchange/new-publicfolderdatabaserepairrequest
 applicable: Exchange Server 2010
 title: New-PublicFolderDatabaseRepairRequest
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the New-PublicFolderDatabaseRepairRequest cmdlet to detect and fix replication issues in the public folder database.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,9 +32,9 @@ New-PublicFolderDatabaseRepairRequest [-Database] <DatabaseIdParameter> -Corrupt
 ## DESCRIPTION
 Public folders on the public folder database can still be accessed while the request is running. However, access isn't available to the public folder currently being repaired.
 
-After you begin the repair request, it can't be stopped unless you dismount the database. For more information, see [Dismount a Database](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb123903(v=exchg.141)).
+After you begin the repair request, it can't be stopped unless you dismount the database. For more information, see [Dismount a Database](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb123903(v=exchg.141)).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/remove-teamsappinstallation
+online version: https://learn.microsoft.com/powershell/module/teams/remove-teamsappinstallation
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -30,7 +30,7 @@ Remove-TeamsAppInstallation [-AppInstallationId <String>] [-AppId <String>] -Use
 ## DESCRIPTION
 Removes a Teams App installed in Microsoft Teams.
 
-Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://docs.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://docs.microsoft.com/microsoftteams/teams-powershell-release-notes).
+Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://learn.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://learn.microsoft.com/microsoftteams/teams-powershell-release-notes).
 
 ## EXAMPLES
 

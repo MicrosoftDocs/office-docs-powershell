@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineenhancedemergencyservicedisclaimer
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineenhancedemergencyservicedisclaimer
 applicable: Skype for Business Online
 title: Get-CsOnlineEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
@@ -137,4 +137,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](https://docs.microsoft.com/powershell/module/skype/set-csonlineenhancedemergencyservicedisclaimer?view=skype-ps)
+[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/skype/set-csonlineenhancedemergencyservicedisclaimer?view=skype-ps)

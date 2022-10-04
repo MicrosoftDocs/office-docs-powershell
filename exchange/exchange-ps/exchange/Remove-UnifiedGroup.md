@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-unifiedgroup
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-unifiedgroup
 applicable: Exchange Online
 title: Remove-UnifiedGroup
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-UnifiedGroup cmdlet to remove Microsoft 365 Groups from your cloud-based organization.
 
-**Note**: You can't use this cmdlet to remove Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Delete group](https://docs.microsoft.com/graph/api/group-delete).
+**Note**: You can't use this cmdlet to remove Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Delete group](https://learn.microsoft.com/graph/api/group-delete).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Remove-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
 ## DESCRIPTION
 Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

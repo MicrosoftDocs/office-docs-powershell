@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
@@ -30,7 +30,7 @@ Once a group policy assignment is created, the policy assignment will be propaga
 
 > [!NOTE]
 > - Group policy assignment support is available only for the following policy types:
-TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
+CallingLineIdentity, TeamsAppSetupPolicy, TeamsAudioConferencingPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsShiftsPolicy, TeamsUpdateManagementPolicy, and TeamsVerticalPackagePolicy.
 > - A given policy type can be assigned to at most 64 groups, across policy instances for that type.
 > - Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups. 
 > - Direct user assignments of policy take precedence over any group policy assignments for a given policy type. Group PolicyPolicy assignments only take effect to a user if that user does not have a direct policy assignment. 
@@ -109,18 +109,20 @@ Accept wildcard characters: False
 ### -PolicyType
 The type of the policy to be assigned.
 Possible values:
+- CallingLineIdentity
 - TeamsAppSetupPolicy
+- TeamsAudioConferencingPolicy
 - TeamsCallingPolicy
 - TeamsCallParkPolicy
 - TeamsChannelsPolicy
 - TeamsComplianceRecordingPolicy
 - TenantDialPlan
-- TeamsEducationAssignmentsAppPolicy
 - TeamsMeetingBroadcastPolicy
 - TeamsMeetingPolicy
 - TeamsMessagingPolicy
 - TeamsShiftsPolicy
 - TeamsUpdateManagementPolicy
+- TeamsVerticalPackagePolicy
 
 ```yaml
 Type: String
@@ -228,7 +230,4 @@ For more information, see [About CommonParameters](https://go.microsoft.com/fwli
 
 [Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
 
-[Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
-
 [Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)
-

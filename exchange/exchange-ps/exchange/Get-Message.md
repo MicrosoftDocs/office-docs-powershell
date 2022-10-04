@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-message
+online version: https://learn.microsoft.com/powershell/module/exchange/get-message
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-Message
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-Message cmdlet to view the details of one or more messages in queues on Mailbox servers or Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -69,7 +69,7 @@ Get-Message [-Queue <QueueIdentity>]
 ## DESCRIPTION
 You can display messages by including the server name as part of the Identity parameter or the Queue parameter or by including the Server parameter with a filter query. The Identity parameter, Queue parameter, and Filter parameter settings are mutually exclusive.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -97,7 +97,7 @@ This example displays all messages queued on the server named Server01. The resu
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see [Message identity](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#message-identity).
+The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see [Message identity](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#message-identity).
 
 ```yaml
 Type: MessageIdentity
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://learn.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -Queue
-The Queue parameter specifies the identity of the queue that contains the messages that you want to display. Valid input for this parameter uses the syntax `<Server>\<Queue>` or `<Queue>`, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see the "Queue identity" section in [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/exchange/mail-flow/queues/queues-and-messages-in-powershell#queue-identity).
+The Queue parameter specifies the identity of the queue that contains the messages that you want to display. Valid input for this parameter uses the syntax `<Server>\<Queue>` or `<Queue>`, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see the "Queue identity" section in [Find queues and messages in queues in the Exchange Management Shell](https://learn.microsoft.com/exchange/mail-flow/queues/queues-and-messages-in-powershell#queue-identity).
 
 If you use the Queue parameter, you can't use the Identity, Filter or Server parameters.
 

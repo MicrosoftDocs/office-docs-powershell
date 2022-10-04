@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csclssecuritygroup
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csclssecuritygroup
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsClsSecurityGroup
 schema: 2.0.0
@@ -161,4 +161,3 @@ Instead, the `Remove-CsClsSecurityGroup` cmdlet deletes existing instances of th
 [New-CsClsSecurityGroup](New-CsClsSecurityGroup.md)
 
 [Set-CsClsSecurityGroup](Set-CsClsSecurityGroup.md)
-

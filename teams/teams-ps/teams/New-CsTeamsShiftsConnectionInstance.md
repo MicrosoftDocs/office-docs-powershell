@@ -5,7 +5,7 @@ title: New-CsTeamsShiftsConnectionInstance
 author: lespina
 ms.author: lespina
 manager: valk
-online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 
@@ -409,4 +409,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md)
 
 [Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
-

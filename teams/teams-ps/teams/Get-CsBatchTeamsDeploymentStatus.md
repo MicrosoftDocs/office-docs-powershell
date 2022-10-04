@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/Get-CsBatchTeamsDeploymentStatus
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsBatchTeamsDeploymentStatus
 schema: 2.0.0
 ---
 
@@ -21,7 +21,7 @@ Get-CsBatchTeamsDeploymentStatus -OrchestrationId <String> [-WhatIf] [-Confirm] 
 ## DESCRIPTION
 After deploying teams using New-CsBatchTeamsDeployment, an admin can check the status of the job/orchestration using Get-CsBatchTeamsDeploymentStatus. 
 
-To learn more, see [Deploy Teams at scale for frontline workers](https://docs.microsoft.com/microsoft-365/frontline/deploy-teams-at-scale).
+To learn more, see [Deploy Teams at scale for frontline workers](https://learn.microsoft.com/microsoft-365/frontline/deploy-teams-at-scale).
 
 ## EXAMPLES
 

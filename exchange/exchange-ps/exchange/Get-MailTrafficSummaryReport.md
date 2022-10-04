@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-mailtrafficsummaryreport
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailtrafficsummaryreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficSummaryReport
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficSummaryReport cmdlet to view summary information about message traffic in your organization for the last 90 days.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ This cmdlet has C1, C2 and C3 as header names and the meaning of them depends on
 - TopSpamRecipient, TopMailSender, TopMailRecipient and TopMalwareRecipient: C1 is the recipient or sender and C2 the quantity of email messages.
 - TopMalware: C1 is the malware name and C2 the quantity of appearances.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
