@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-unifiedgroup
+online version: https://learn.microsoft.com/powershell/module/exchange/set-unifiedgroup
 applicable: Exchange Online
 title: Set-UnifiedGroup
 schema: 2.0.0
@@ -18,9 +18,9 @@ Use the Set-UnifiedGroup cmdlet to modify Microsoft 365 Groups in your cloud-bas
 
 **Important**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the Microsoft 365 Group. There must be at least one MOERA address attached to a group. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357).
 
-**Note**: You can't use this cmdlet to modify Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Update group](https://docs.microsoft.com/graph/api/group-update).
+**Note**: You can't use this cmdlet to modify Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Update group](https://learn.microsoft.com/graph/api/group-update).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -89,7 +89,7 @@ Microsoft 365 Groups are group objects that are available across Microsoft 365 s
 
 The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
+The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://learn.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
 
 ```yaml
 Type: String
@@ -634,7 +634,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
 Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
 
@@ -898,7 +898,7 @@ Accept wildcard characters: False
 ### -Language
 The Language parameter specifies language preference for the Microsoft 365 Group.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -1171,7 +1171,9 @@ Accept wildcard characters: False
 ### -SensitivityLabelId
 This parameter is available only in the cloud-based service.
 
-{{ Fill SensitivityLabelId Description }}
+The SensitivityLabelId parameter specifies the GUID value of the sensitivity label that's assigned to the Microsoft 365 Group.
+
+**Note**: In the output of the Get-UnifiedGroup cmdlet, this property is named SensitivityLabel, not SensitivityLabelId.
 
 ```yaml
 Type: System.Guid

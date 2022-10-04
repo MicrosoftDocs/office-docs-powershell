@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-systemmessage
+online version: https://learn.microsoft.com/powershell/module/exchange/set-systemmessage
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-SystemMessage
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-SystemMessage cmdlet to modify custom system messages. System messages are delivery status notifications (also known as DSNs, non-delivery reports, NDRs or bounce messages) and quota messages.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Set-SystemMessage [-Identity] <SystemMessageIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ The identity value of a system message uses one of these formats:
 - System messages for enhanced status codes: `Language\<Internal | External>\DSNCode`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
 - System messages for quotas: `Language\QuotaMessageType`. For example, `En\ProhibitSendReceiveMailBox`.
 
-Language: For the list of supported language codes, see [Supported languages for NDRs](https://docs.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
+Language: For the list of supported language codes, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
 
 DSNCode: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command Get-SystemMessage. To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default DSNs.html"`.
 

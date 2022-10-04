@@ -13,27 +13,30 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V2 module or V3 module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
 # Connect to Exchange Online PowerShell
 
-The Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module) uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the EXO V2 module, see [About the Exchange Online PowerShell V2 module](exchange-online-powershell-v2.md).
+The Exchange Online PowerShell module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
-This article contains instructions for how to connect to Exchange Online PowerShell using the EXO V2 module with or without MFA.
+> [!NOTE]
+> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md).
+This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without MFA.
+
+To connect to Exchange Online PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
+
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437), see [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md).
 
 To use the older Exchange Online Remote PowerShell Module to connect to Exchange Online PowerShell using MFA, see [V1 module - Connect to Exchange Online PowerShell using MFA](v1-module-mfa-connect-to-exo-powershell.md). Note that this older version of the module will eventually be retired.
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the EXO V2 module are described in [Install and maintain the EXO V2 module](exchange-online-powershell-v2.md#install-and-maintain-the-exo-v2-module).
+- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > The rest of the instructions in the article assume that you've already installed the module.
-  >
-  > If you're using version 2.0.6 of the module, if you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access only to the available REST API cmdlets. For more information, see [Updates for version 2.0.6](exchange-online-powershell-v2.md#updates-for-version-206).
+  > If you're using the EXO V3 module (v3.0.0 or v2.0.6-PreviewX) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access only to REST API cmdlets. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
@@ -50,23 +53,22 @@ These connection instructions use modern authentication and work with or without
 
 For other sign in methods that are available in PowerShell 7, see the [PowerShell 7 log in experiences](#powershell-7-log-in-experiences) section later in this topic.
 
-1. In a PowerShell window, load the EXO V2 module by running the following command<sup>\*</sup>:
+1. After you've [installed the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command<sup>\*</sup>:
 
    ```powershell
    Import-Module ExchangeOnlineManagement
    ```
 
-   **Notes**:
-
-   <sup>\*</sup> You might be able to skip this step and run **Connect-ExchangeOnline** without loading the module first.
+   <sup>\*</sup> In modern versions of PowerShell, you can typically skip this step and run **Connect-ExchangeOnline** without loading the module first.
 
 2. The command that you need to run uses the following syntax:
 
    ```powershell
-   Connect-ExchangeOnline -UserPrincipalName <UPN> [-ShowBanner:$false] [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+   Connect-ExchangeOnline -UserPrincipalName <UPN> [-ShowBanner:$false] [-ExchangeEnvironmentName <Value>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions] [-UseRPSSession]
    ```
 
    - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
+   - With the EXO V3 module (v3.0.0 or v2.0.6-PreviewX), if you don't use the _UseRPSSession_ switch, you'll have access to REST API cmdlets. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
    - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
    - The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage as an authorized Microsoft Partner. For more information, see [Partners](/office365/servicedescriptions/office-365-platform-service-description/partners).
    - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
@@ -124,15 +126,15 @@ Disconnect-ExchangeOnline
 
 ## PowerShell 7 log in experiences
 
-This section describes the log in experiences that are available in version 2.0.4 or later of the EXO V2 module in PowerShell 7.
+This section describes the log in experiences that are available in version 2.0.4 or later of the module in PowerShell 7.
 
-For more information about the operating systems that are supported by the EXO V2 module in PowerShell 7, see [Supported operating systems for the EXO V2 module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exo-v2-module).
+For more information about the operating systems that are supported by the module in PowerShell 7, see [Supported operating systems for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exchange-online-powershell-module).
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
 
 ### Interactive scripting using browser-based single sign-on
 
-Browser-based single sign-on (SSO) is the default log in method in PowerShell 7. The **Connect-ExchangeOnline** command opens the Azure AD login page in the default browser. After you enter your credentials, older Exchange Online cmdlets and EXO V2 module cmdlets are available in the resulting PowerShell session.
+Browser-based single sign-on (SSO) is the default log in method in PowerShell 7. The **Connect-ExchangeOnline** command opens the Azure AD login page in the default browser. After you enter your credentials, older Exchange Online cmdlets and Exchange Online PowerShell module cmdlets are available in the resulting PowerShell session.
 
 If you use the _UserPrincipalName_ parameter in the command, the UPN value is used on the login page in the browser.
 
@@ -163,9 +165,9 @@ This method is an improvement on the _Credential_ parameter, because you don't n
   Connect-ExchangeOnline -InlineCredential
   ```
 
-## How do you know this worked?
+## How do you know you've connected successfully?
 
-The Exchange Online cmdlets are imported into your local PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-Mailbox**, and see the results.
+If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-Mailbox**, and see the results.
 
 If you receive errors, check the following requirements:
 

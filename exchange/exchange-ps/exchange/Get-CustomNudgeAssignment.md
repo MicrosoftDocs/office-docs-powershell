@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-customnudgeassignment
+online version: https://learn.microsoft.com/powershell/module/exchange/get-customnudgeassignment
 applicable: Exchange Online
 title: Get-CustomNudgeAssignment
 schema: 2.0.0
@@ -13,13 +13,13 @@ ms.reviewer: shusun
 # Get-CustomNudgeAssignment
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module v2.0.6-Preview5 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 **Note**: The features that are associated with this cmdlet are currently in Preview, are not available in all organizations, and are subject to change. Access to the cmdlet does not guarantee access to the feature.
 
 Use the Get-CustomNudgeAssignment to view the assignments of Custom Nudges to users. Custom Nudges are shown in the Briefing email.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 - Exchange Administrator
 - Insights Administrator
 
-To learn more about administrator role permissions in Azure Active Directory, see [Azure AD built-in roles](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference).
+To learn more about administrator role permissions in Azure Active Directory, see [Azure AD built-in roles](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference).
 
 ## EXAMPLES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-dlpedmschema
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dlpedmschema
 applicable: Security & Compliance
 title: New-DlpEdmSchema
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # New-DlpEdmSchema
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-DlpEdmSchema cmdlet to create exact data match (EDM)-based classification schemas in the Microsoft Purview compliance portal. Such schemas can be used with data loss prevention (DLP) policies.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -28,9 +28,9 @@ New-DlpEdmSchema [-FileData] <Byte[]>
 ```
 
 ## DESCRIPTION
-For an explanation and example of the EDM schema, see [Define the schema for your database of sensitive information](https://docs.microsoft.com/microsoft-365/compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification#define-the-schema-for-your-database-of-sensitive-information).
+For an explanation and example of the EDM schema, see [Define the schema for your database of sensitive information](https://learn.microsoft.com/microsoft-365/compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification#define-the-schema-for-your-database-of-sensitive-information).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/add-availabilityaddressspace
+online version: https://learn.microsoft.com/powershell/module/exchange/add-availabilityaddressspace
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Add-AvailabilityAddressSpace
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Add-AvailabilityAddressSpace cmdlet to create availability address space
 
 The maximum number off Availability address spaces returned by Active Directory to Exchange is 100. We recommend using 100 or fewer address spaces in order for Availability lookups to work properly.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,7 +37,7 @@ Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod> -ForestNam
 ## DESCRIPTION
 In Exchange Online, you need to run the New-AvailabilityConfig cmdlet before you run the Add-AvailabilityAddressSpace cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ### -Credentials
 The Credentials parameter specifies the username and password that's used to access the Availability services in the target forest.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -162,7 +162,7 @@ This parameter is available only in on-premises Exchange.
 
 The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy its free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the value of the AccessMethod parameter to InternalProxy.
 
-This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://docs.microsoft.com/powershell/module/exchange/new-federationtrust).
+This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://learn.microsoft.com/powershell/module/exchange/new-federationtrust).
 
 ```yaml
 Type: Uri

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csrgsworkflow
+online version: https://learn.microsoft.com/powershell/module/skype/set-csrgsworkflow
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsRgsWorkflow
 schema: 2.0.0
@@ -83,7 +83,9 @@ After the description has been changed, command 3 uses the `Set-CsRgsWorkflow` t
 
 ### -------------------------- Example 3 ------------------------
 ```
-$musicFile = Get-Content -ReadCount 0 -Encoding Byte C:\MediaFiles\Hold.wav | Import-CsRgsAudioFile -Identity Service:ApplicationServer:atl-cs-001.litwareinc.com -FileName "HelpDeskHoldMusic.wav"
+$musicFile = [System.IO.File]::ReadAllBytes('C:\MediaFiles\Hold.wav') | Import-CsRgsAudioFile -Identity Service:ApplicationServer:atl-cs-001.litwareinc.com -FileName "HelpDeskHoldMusic.wav"
+
+
 
 $y = Get-CsRgsWorkflow -Identity Service:ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk"
 
@@ -94,7 +96,7 @@ Set-CsRgsWorkflow -Instance $y
 
 The commands shown in Example 3 import a new Response Group audio file, then assign this audio file to an existing workflow.
 To do this, the first command in the example imports the new audio file.
-This is done by calling the `Get-Content` cmdlet in order to read in the audio file (C:\MediaFiles\Hold.wav) byte-by-byte; to ensure that the audio file is read in correctly, you must include the ReadCount parameter (set to 0) and the Encoding parameter (set to Byte).
+This is done by using the `[System.IO.File]::ReadAllBytes` command in order to read in the audio file (C:\MediaFiles\Hold.wav) byte-by-byte.
 After the audio file has been read in, the data is piped to `New-CsRgsAudioFile`, which creates a new file on ApplicationServer:atl-cs-001.litwareinc.com.
 An object reference to this file (which has the name HelpDeskHoldMusic.wav), is stored in a variable named $musicFile.
 
@@ -204,4 +206,3 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Rgs.Managem
 [New-CsRgsWorkflow](New-CsRgsWorkflow.md)
 
 [Remove-CsRgsWorkflow](Remove-CsRgsWorkflow.md)
-

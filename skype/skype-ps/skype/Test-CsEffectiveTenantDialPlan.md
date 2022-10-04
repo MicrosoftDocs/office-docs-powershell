@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/test-cseffectivetenantdialplan
+online version: https://learn.microsoft.com/powershell/module/skype/test-cseffectivetenantdialplan
 applicable: Skype for Business Online
 title: Test-CsEffectiveTenantDialPlan
 schema: 2.0.0
@@ -177,4 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-authserver
+online version: https://learn.microsoft.com/powershell/module/exchange/get-authserver
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-AuthServer
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-AuthServer cmdlet to view the settings of authorization servers in the Exchange organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Get-AuthServer [[-Identity] <AuthServerIdParameter>]
 ## DESCRIPTION
 An authorization server is a server or service that issues tokens trusted by Microsoft Exchange for access by partner applications.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

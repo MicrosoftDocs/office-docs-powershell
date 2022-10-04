@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-managementroleassignment
+online version: https://learn.microsoft.com/powershell/module/exchange/get-managementroleassignment
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-ManagementRoleAssignment
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ManagementRoleAssignment cmdlet to retrieve management role assignments.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -71,9 +71,9 @@ Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
 ## DESCRIPTION
 You can retrieve role assignments in a variety of ways including by assignment type, scope type, or name, and whether the assignment is enabled or disabled. You can also view a list of role assignments that provide access to a specified recipient, server, or database.
 
-For more information about management role assignments, see [Understanding management role assignments](https://docs.microsoft.com/exchange/understanding-management-role-assignments-exchange-2013-help).
+For more information about management role assignments, see [Understanding management role assignments](https://learn.microsoft.com/exchange/understanding-management-role-assignments-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
 ```
 
-This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
+This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ### Example 2
 ```powershell

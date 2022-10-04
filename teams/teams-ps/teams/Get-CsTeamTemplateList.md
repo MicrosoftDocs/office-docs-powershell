@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist
 title: Get-CsTeamTemplateList
 author: serdarsoysal
 ms.author: serdars
@@ -43,7 +43,7 @@ Get a list of available team templates
 PS C:> Get-CsTeamTemplateList
 ```
 
-Returns all en-US templates within the universe of templates the admin’s tenant has access to.
+Returns all en-US templates within the universe of templates the admin's tenant has access to.
 
 Note: All 1P Microsoft templates will always be returned in the specified locale. If the locale is not specified, en-US will be used.
 
@@ -53,7 +53,7 @@ Note: All 1P Microsoft templates will always be returned in the specified locale
 PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where ChannelCount -GT 3
 ```
 
-Returns all en-US templates that have 3 channels within the universe of templates the admin’s tenant has access to.
+Returns all en-US templates that have 3 channels within the universe of templates the admin's tenant has access to.
 
 ## PARAMETERS
 
@@ -136,12 +136,12 @@ Eventually UPN and SIP.
 
 ## RELATED LINKS
 
-[Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+[Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
 
-[Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
+[Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
 
-[New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
+[New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
 
-[Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
+[Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
 
-[Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+[Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)

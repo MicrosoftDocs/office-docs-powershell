@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/set-csteamsaudioconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsaudioconferencingpolicy
 schema: 2.0.0
 ---
 
@@ -39,10 +39,10 @@ In this example, AllowTollFreeDialin is set to false. All other policy propertie
 
 ### EXAMPLE 2
 ```
-PS C:\> Set-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $True -MeetingInvitePhoneNumbers “+49695095XXXXX”,”+353156YYYYY”,”+1800856ZZZZZ”
+PS C:\> Set-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $True -MeetingInvitePhoneNumbers "+49695095XXXXX","+353156YYYYY","+1800856ZZZZZ"
 ```
 
-In this example, two different property values are configured: AllowTollFreeDialIn is set to True and -MeetingInvitePhoneNumbers is set to include the following Toll and Toll free numbers - “+49695095XXXXX”,”+353156YYYYY”,”+1800856ZZZZZ” other policy properties will be left as previously assigned.
+In this example, two different property values are configured: AllowTollFreeDialIn is set to True and -MeetingInvitePhoneNumbers is set to include the following Toll and Toll free numbers - "+49695095XXXXX","+353156YYYYY","+1800856ZZZZZ" other policy properties will be left as previously assigned.
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier for the policy to be Set. To set the global policy, use this syntax: -Identity global. To set a per-user policy use syntax similar to this: -Identity “Emea Users”.
+Unique identifier for the policy to be Set. To set the global policy, use this syntax: -Identity global. To set a per-user policy use syntax similar to this: -Identity "Emea Users".
 If this parameter is not included, the Set-CsTeamsAudioConferencingPolicy cmdlet will modify the Global policy.
 
 ```yaml

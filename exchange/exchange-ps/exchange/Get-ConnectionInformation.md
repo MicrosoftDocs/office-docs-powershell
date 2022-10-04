@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.ExoPowershellGalleryModule.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-connectioninformation
+online version: https://learn.microsoft.com/powershell/module/exchange/get-connectioninformation
 applicable: Exchange Online
 title: Get-ConnectionInformation
 schema: 2.0.0
@@ -13,11 +13,11 @@ ms.reviewer:
 # Get-ConnectionInformation
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module v2.0.6-Preview7 or later. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module v2.0.6-Preview7 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-ConnectionInformation cmdlet to get information about all REST-based connections in the current PowerShell instance with Exchange Online.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Get-ConnectionInformation [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-ConnectionInformation cmdlet returns the information about all active REST-based connections with Exchange Online in the current PowerShell instance. This cmdlet is the counterpart to Get-PSSession used with Remote PowerShell Sessions. This cmdlet is available only in version 2.0.6-Preview7 or later.
+The Get-ConnectionInformation cmdlet returns the information about all active REST-based connections with Exchange Online in the current PowerShell instance. This cmdlet is equivalent to the Get-PSSession cmdlet that's used with remote PowerShell sessions.
 
 ## EXAMPLES
 

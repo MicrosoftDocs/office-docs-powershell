@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-dlpsensitiveinformationtype
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-dlpsensitiveinformationtype
 applicable: Security & Compliance
 title: Remove-DlpSensitiveInformationType
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Remove-DlpSensitiveInformationType
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-DlpSensitiveInformationType cmdlet to remove sensitive information type rules that use document fingerprints. You can't use this cmdlet to remove built-in sensitive information type rules.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Sensitive information type rule packages are used by data loss prevention (DLP) 
 
 **Note**: A "ManagementObjectNotFoundException" error means there was a synchronization problem between the Microsoft Purview compliance portal and Exchange Online. This happens when you try to remove data classifications that are being used in mail flow rules (also known as transport rules). You can remove the mail flow rule, wait for synchronization to finish, and then add the rule back.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

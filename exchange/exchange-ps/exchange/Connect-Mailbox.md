@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/connect-mailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/connect-mailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Connect-Mailbox
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Connect-Mailbox cmdlet to connect disconnected mailboxes to existing user accounts that don't already have mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -131,7 +131,7 @@ Use the Remove-Mailbox cmdlet to:
 - Keep the mailbox in the disabled state before it's permanently deleted, subject to the deleted mailbox retention period (except if you use the Permanent or StoreMailboxIdentity parameters, which immediately deletes the mailbox from the database).
 - Remove the user account.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -351,7 +351,7 @@ The AddressBookPolicy parameter specifies the address book policy that's applied
 - Distinguished name (DN)
 - GUID
 
-For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
+For more information about address book policies, see [Address book policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: AddressBookMailboxPolicyIdParameter
@@ -488,7 +488,7 @@ Accept wildcard characters: False
 ### -LinkedCredential
 The LinkedCredential parameter specifies the credentials used to access the domain controller that's specified by the LinkedDomainController parameter. This parameter is optional, even if you're connecting a linked mailbox.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential

@@ -40,16 +40,16 @@ If you're running an older version of Windows, you need to install Windows Power
 
 You probably know how to do this already, but the available workloads and connection methods are:
 
-- Microsoft Teams: [Install Microsoft Teams PowerShell](https://docs.microsoft.com/MicrosoftTeams/teams-powershell-install)
+- Microsoft Teams: [Install Microsoft Teams PowerShell](https://learn.microsoft.com/MicrosoftTeams/teams-powershell-install)
 
   > [!TIP]
   > Use `Upgrade-Module` and also `Uninstall-Module` depending on the module version you have installed.
 
 - Exchange:
-  - Exchange Online: [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
-  - Security & Compliance: [Connect to Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-scc-powershell)
-  - Exchange Online Protection: [Connect to Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-protection-powershell)
-  - Exchange Server: [Connect to Exchange servers using remote PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-servers-using-remote-powershell)
+  - Exchange Online: [Connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
+  - Security & Compliance: [Connect to Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-scc-powershell)
+  - Exchange Online Protection: [Connect to Exchange Online Protection PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-protection-powershell)
+  - Exchange Server: [Connect to Exchange servers using remote PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-servers-using-remote-powershell)
 
 **Notes**:
 
@@ -240,7 +240,7 @@ Every cmdlet reference topic needs (at a minimum) the following properties in th
 ```text
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
-online version: https://docs.microsoft.com/powershell/module/skype/add-cssladelegates
+online version: https://learn.microsoft.com/powershell/module/skype/add-cssladelegates
 applicable: Skype for Business Server 2015
 title: Add-CsSlaDelegates
 author:
@@ -383,13 +383,13 @@ After you're done editing the TOC files:
 
 ### Reference
 
-- <https://docs.microsoft.com/powershell/module/powershellget/install-module>
+- <https://learn.microsoft.com/powershell/module/powershellget/install-module>
 
-- <https://docs.microsoft.com/powershell/module/powershellget/update-module>
+- <https://learn.microsoft.com/powershell/module/powershellget/update-module>
 
 - <https://github.com/PowerShell/platyPS>
 
-- <https://docs.microsoft.com/powershell/module/microsoft.powershell.core/get-module>
+- <https://learn.microsoft.com/powershell/module/microsoft.powershell.core/get-module>
 
 ### Install platyPS on older versions of Windows (WMF 3.0 or 4.0)
 
@@ -398,7 +398,7 @@ After you're done editing the TOC files:
 
 To install platyPS on very old Windows clients or servers that are using PowerShell 3.0 or 4.0 and don't have access to the **Install-Module** cmdlet, do the steps in this section.
 
-1. Download and install PowerShellGet. The steps are described in [Installing PowerShellGet](https://docs.microsoft.com/powershell/scripting/gallery/installing-psget) and are summarized here as follows:
+1. Download and install PowerShellGet. The steps are described in [Installing PowerShellGet](https://learn.microsoft.com/powershell/scripting/gallery/installing-psget) and are summarized here as follows:
 
    a. **PowerShell 3.0 only**: Run the following command in an elevated Windows PowerShell window:
 

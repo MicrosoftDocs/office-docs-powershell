@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxrestorerequest
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxrestorerequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-MailboxRestoreRequest
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxRestoreRequest cmdlet to change restore request options after the request has been created. You can use this cmdlet to recover from failed restore requests.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -60,7 +60,7 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -234,8 +234,8 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
+- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csclsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csclsconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsClsConfiguration
 schema: 2.0.0
@@ -177,4 +177,3 @@ Instead, the `Remove-CsClsConfiguration` cmdlet deletes existing instances of th
 [New-CsClsConfiguration](New-CsClsConfiguration.md)
 
 [Set-CsClsConfiguration](Set-CsClsConfiguration.md)
-

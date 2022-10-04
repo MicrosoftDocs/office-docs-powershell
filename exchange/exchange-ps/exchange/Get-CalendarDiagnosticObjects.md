@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticobjects
+online version: https://learn.microsoft.com/powershell/module/exchange/get-calendardiagnosticobjects
 applicable: Exchange Online
 title: Get-CalendarDiagnosticObjects
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-CalendarDiagnosticObjects cmdlet to collect a range of calendar logs. The calendar diagnostic logs track important calendar-related event data for each mailbox, and can be used to troubleshoot calendar issues that occur in mailboxes. The logs track all calendar items and meeting messages.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -53,7 +53,7 @@ Some of the more interesting properties that are returned in the results are:
 - ResponseType: 0 = The organizer hasn't received a response, 1 = The organizer's copy of the meeting, 2 = Tentative, 3 = Accept, 4 = Decline, or 5 = The attendee hasn't responded.
 - ResponsibleUserName: The LegacyExchangeDN value of the user who made the change (for example, `/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=BN6PR11MB1587/cn=Microsoft System Attendant` or `/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=696eea97d3c449eab648920d03385efb-admin`).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomPropertyNames
-The CustomPropertyNames parameter returns the specified calendar item custom property in the results. For valid values, see [Values for the CustomPropertyNames parameter in Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/values-for-custompropertynames-parameter).
+The CustomPropertyNames parameter returns the specified calendar item custom property in the results. For valid values, see [Values for the CustomPropertyNames parameter in Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/values-for-custompropertynames-parameter).
 
 You can specify multiple values separated by commas.
 

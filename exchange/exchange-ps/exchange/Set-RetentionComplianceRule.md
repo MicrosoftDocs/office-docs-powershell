@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-retentioncompliancerule
+online version: https://learn.microsoft.com/powershell/module/exchange/set-retentioncompliancerule
 applicable: Security & Compliance
 title: Set-RetentionComplianceRule
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-RetentionComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-RetentionComplianceRule cmdlet to modify existing retention rules in the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Set-RetentionComplianceRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -134,7 +134,7 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://learn.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
 You can't use this parameter for Teams retention rules.
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://docs.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://learn.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
 
 You can't use this parameter for Teams retention rules.
 
@@ -219,7 +219,7 @@ The ExcludedItemClasses parameter specifies the types of messages to exclude fro
 - IPM.Note.Microsoft.Voicemail.UM
 - IPM.Note.Microsoft.Voicemail.UM.CA
 
-Additionally, you can specify [message classes for Exchange items](https://docs.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
+Additionally, you can specify [message classes for Exchange items](https://learn.microsoft.com/office/vba/outlook/concepts/forms/item-types-and-message-classes) and custom or third-party message classes. Note that the values you specify aren't validated, so the parameter accepts any text value.
 
 You can specify multiple item class values by using the following syntax: `"Value1","Value2",..."ValueN"`.
 

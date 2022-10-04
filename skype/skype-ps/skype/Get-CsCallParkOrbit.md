@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cscallparkorbit
+online version: https://learn.microsoft.com/powershell/module/skype/get-cscallparkorbit
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsCallParkOrbit
 schema: 2.0.0
@@ -87,7 +87,7 @@ It does this by checking the StartsWith property of the NumberRangeStart object 
 
 ### -------------------------- Example 6 --------------------------
 ```
-Get-CsCallParkOrbit | Where-Object {\[Char\]::IsDigit($_.NumberRangeStart\[0\])}
+Get-CsCallParkOrbit | Where-Object {[Char]::IsDigit($_.NumberRangeStart[0])}
 ```
 
 The command in this example returns all call park orbit ranges where no prefix has been assigned to the numbers in the range.
@@ -208,4 +208,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsCallParkOrbit](Remove-CsCallParkOrbit.md)
 
 [Set-CsCallParkOrbit](Set-CsCallParkOrbit.md)
-

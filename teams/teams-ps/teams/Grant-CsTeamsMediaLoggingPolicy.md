@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/grant-csteamsmedialoggingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsmedialoggingpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsMediaLoggingPolicy
 author: LeoKuhorev

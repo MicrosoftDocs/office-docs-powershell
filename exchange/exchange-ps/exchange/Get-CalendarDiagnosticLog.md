@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticlog
+online version: https://learn.microsoft.com/powershell/module/exchange/get-calendardiagnosticlog
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CalendarDiagnosticLog
 schema: 2.0.0
@@ -16,7 +16,7 @@ Although this cmdlet is available in on-premises Exchange and in the cloud-based
 
 Use the Get-CalendarDiagnosticLog cmdlet to collect a range of calendar logs. The Calendar Diagnostic logs track all calendar items and meeting requests in mailboxes. You can use this information to troubleshoot calendar issues that occur in mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -70,9 +70,9 @@ The output of this cmdlet contains the following information:
 - NormalizedSubject: The Subject field of the calendar item.
 - CleanGlobalObjectId: The identifier that's constant throughout the lifetime of the calendar item. For example, 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55.
 
-After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see [Get-CalendarDiagnosticAnalysis](https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticanalysis).
+After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see [Get-CalendarDiagnosticAnalysis](https://learn.microsoft.com/powershell/module/exchange/get-calendardiagnosticanalysis).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -247,7 +247,7 @@ This parameter is available only in on-premises Exchange.
 
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-rmstemplate
+online version: https://learn.microsoft.com/powershell/module/exchange/set-rmstemplate
 applicable: Exchange Online
 title: Set-RMSTemplate
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-RMSTemplate cmdlet to modify the properties of an existing Rights Management Services (RMS) template in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

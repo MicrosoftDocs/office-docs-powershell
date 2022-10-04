@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-mobiledevicemailboxpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-mobiledevicemailboxpolicy
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MobileDeviceMailboxPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-MobileDeviceMailboxPolicy cmdlet to remove mobile device mailbox policies from Exchange servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Remove-MobileDeviceMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ## DESCRIPTION
 A Mobile Device mailbox policy is a group of settings that specifies how mobile phones connect to Exchange. Exchange supports multiple mobile device mailbox policies. The Remove-MobileDeviceMailboxPolicy cmdlet removes a specific mobile device mailbox policy. If any users are assigned to the policy when you remove it, the Remove-MobileDeviceMailboxPolicy cmdlet fails.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-publicfolder
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-publicfolder
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-PublicFolder
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Remove-PublicFolder cmdlet to remove an existing public folder.
 
 The Remove-PublicFolder cmdlet removes the public folder data from all servers in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Remove-PublicFolder [-Identity] <PublicFolderIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

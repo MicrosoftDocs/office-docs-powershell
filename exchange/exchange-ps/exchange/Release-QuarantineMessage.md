@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/release-quarantinemessage
+online version: https://learn.microsoft.com/powershell/module/exchange/release-quarantinemessage
 applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Release-QuarantineMessage
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Release-QuarantineMessage cmdlet to release messages from quarantine in 
 
 For files that were quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, you can unblock the files in the respective team sites and document libraries by using the Release-QuarantineMessage cmdlet so users can access, share, and download the files.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -73,7 +73,7 @@ Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
 ## DESCRIPTION
 Consider the following scenario: john@gmail.com sends a message to faith@contoso.com and john@subsidiary.contoso.com. Gmail bifurcates this message into two copies that are both routed to quarantine as phishing in Microsoft. An admin releases both of these messages to admin@contoso.com. The first released message that reaches the admin mailbox is delivered. The second released message is identified as duplicate delivery and is skipped. Message are identified as duplicates if they have the same message ID and received time.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -104,7 +104,7 @@ $q = Get-QuarantineMessage -QuarantineTypes SPOMalware
 $q[-1] | Release-QuarantineMessage -ReleaseToAll
 ```
 
-This example releases a file that was quarantined as part of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. The first command stores all quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see [Accessing and Using Array Elements](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
+This example releases a file that was quarantined as part of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. The first command stores all quarantined files in the variable $q. The second command releases the last file in the list. For more information about elements in arrays and index numbers, see [Accessing and Using Array Elements](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_arrays#accessing-and-using-array-elements).
 
 ## PARAMETERS
 

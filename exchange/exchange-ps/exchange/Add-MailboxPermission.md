@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/add-mailboxpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/add-mailboxpermission
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Add-MailboxPermission
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Add-MailboxPermission cmdlet to add permissions to a mailbox or to an Exchange Server 2016, Exchange Server 2019, or Exchange Online mail user.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -66,7 +66,7 @@ Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePr
 > [!NOTE]
 > You can use this cmdlet to add a maximum of 500 permission entries (ACEs) to a mailbox. To grant permissions to more than 500 users, use security groups instead of individual users for the User parameter. Security groups contain many members, but only count as one entry.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -242,7 +242,7 @@ The User parameter specifies who gets the permissions on the mailbox. You can sp
 - Mail users
 - Security groups
 
-**Note**: When a security group is used to specify Full Access permissions, the auto-mapping feature won't automatically add the mailbox in Outlook for the group member. See the [Mailboxes to which your account has full access aren't automapped to Outlook profile](https://docs.microsoft.com/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile) article for more information.
+**Note**: When a security group is used to specify Full Access permissions, the auto-mapping feature won't automatically add the mailbox in Outlook for the group member. See the [Mailboxes to which your account has full access aren't automapped to Outlook profile](https://learn.microsoft.com/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile) article for more information.
 
 You can use any value that uniquely identifies the user or group. For example:
 

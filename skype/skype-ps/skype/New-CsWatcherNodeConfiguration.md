@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cswatchernodeconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-cswatchernodeconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsWatcherNodeConfiguration
 schema: 2.0.0
@@ -361,4 +361,3 @@ The `New-CsWatcherNodeConfiguration` cmdlet creates new instances of the Microso
 ## NOTES
 
 ## RELATED LINKS
-

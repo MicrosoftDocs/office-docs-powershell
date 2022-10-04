@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsfeedbackpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsfeedbackpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsFeedbackPolicy
 schema: 2.0.0
@@ -24,7 +24,7 @@ New-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <
 ```
 
 ## DESCRIPTION
-Use this cmdlet to control whether users in your organization can send feedback about Teams to Microsoft through Give feedback and whether they receive the survey. By default, all users in your organization are automatically assigned the global (Org-wide default) policy and the Give feedback feature and survey are enabled in the policy. The exception is Teams for Education, where the features are enabled for teachers and disabled for students. For more information, visit [Manage feedback policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/manage-feedback-policies-in-teams).
+Use this cmdlet to control whether users in your organization can send feedback about Teams to Microsoft through Give feedback and whether they receive the survey. By default, all users in your organization are automatically assigned the global (Org-wide default) policy and the Give feedback feature and survey are enabled in the policy. The exception is Teams for Education, where the features are enabled for teachers and disabled for students. For more information, visit [Manage feedback policies in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-feedback-policies-in-teams).
 
 ## EXAMPLES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscallinglineidentity
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscallinglineidentity
 applicable: Microsoft Teams, Skype for Business Online
 title: Set-CsCallingLineIdentity
 schema: 2.0.0
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceAccount
-This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://docs.microsoft.com/microsoftteams/manage-resource-accounts.
+This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://learn.microsoft.com/microsoftteams/manage-resource-accounts.
 
 ```yaml
 Type: Guid

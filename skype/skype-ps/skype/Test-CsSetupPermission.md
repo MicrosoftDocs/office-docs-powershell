@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-cssetuppermission
+online version: https://learn.microsoft.com/powershell/module/skype/test-cssetuppermission
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsSetupPermission
 schema: 2.0.0
@@ -172,4 +172,3 @@ The `Test-CsSetupPermission` cmdlet returns an instance of the Microsoft.Rtc.Syn
 [Grant-CsSetupPermission](Grant-CsSetupPermission.md)
 
 [Revoke-CsSetupPermission](Revoke-CsSetupPermission.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/grant-cscloudmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-cscloudmeetingpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsCloudMeetingPolicy
 schema: 2.0.0
@@ -175,5 +175,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-
-

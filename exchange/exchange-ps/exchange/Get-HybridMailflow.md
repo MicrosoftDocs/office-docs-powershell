@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-hybridmailflow
+online version: https://learn.microsoft.com/powershell/module/exchange/get-hybridmailflow
 applicable: Exchange Online
 title: Get-HybridMailflow
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 This cmdlet has been deprecated and is no longer used.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

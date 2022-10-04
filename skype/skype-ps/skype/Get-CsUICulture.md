@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csuiculture
+online version: https://learn.microsoft.com/powershell/module/skype/get-csuiculture
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsUICulture
 schema: 2.0.0
@@ -84,4 +84,3 @@ The Get-CsUICulture cmdlet returns instances of the System.Globalization.Culture
 ## RELATED LINKS
 
 [Set-CsUICulture](Set-CsUICulture.md)
-

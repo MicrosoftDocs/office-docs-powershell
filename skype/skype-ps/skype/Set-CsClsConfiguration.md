@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csclsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csclsconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsClsConfiguration
 schema: 2.0.0
@@ -620,4 +620,3 @@ Instead, the `Set-CsClsConfiguration` cmdlet modifies existing instances of the 
 [New-CsClsConfiguration](New-CsClsConfiguration.md)
 
 [Remove-CsClsConfiguration](Remove-CsClsConfiguration.md)
-

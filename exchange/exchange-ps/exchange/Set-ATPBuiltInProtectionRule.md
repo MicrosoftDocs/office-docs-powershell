@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-atpbuiltinprotectionrule
+online version: https://learn.microsoft.com/powershell/module/exchange/set-atpbuiltinprotectionrule
 applicable: Exchange Online, Exchange Online Protection
 title: Set-ATPBuiltInProtectionRule
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-ATPBuiltInProtectionRule cmdlet to modify the rule for the Built-in protection preset security policy that effectively provides default policies for Safe Links and Safe Attachments in Microsoft Defender for Office 365. The rule specifies exceptions to the policy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,12 +32,12 @@ Set-ATPBuiltInProtectionRule [-Identity] <DehydrateableRuleIdParameter>
 ```
 
 ## DESCRIPTION
-For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
+For more information about preset security policies in PowerShell, see [Preset security policies in Exchange Online PowerShell](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies#preset-security-policies-in-exchange-online-powershell).
 
 > [!IMPORTANT]
-> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policiesprofiles-in-preset-security-policies).
+> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Profiles in preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policiesprofiles-in-preset-security-policies).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

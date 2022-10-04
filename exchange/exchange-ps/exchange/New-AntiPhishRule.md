@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-antiphishrule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-antiphishrule
 applicable: Exchange Online, Exchange Online Protection
 title: New-AntiPhishRule
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-AntiPhishRule cmdlet to create antiphish rules in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -40,9 +40,9 @@ New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
 You need to add the antiphish rule to an existing policy by using the AntiPhishPolicy parameter. You create antiphish policies by using the New-AntiPhishPolicy cmdlet.
 
 > [!IMPORTANT]
-> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Common policy settings](https://docs.microsoft.com/microsoft-365/security/office-365-security/set-up-anti-phishing-policies#common-policy-settings).
+> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Common policy settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/set-up-anti-phishing-policies#common-policy-settings).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
