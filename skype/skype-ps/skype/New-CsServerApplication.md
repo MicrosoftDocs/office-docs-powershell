@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csserverapplication
+online version: https://learn.microsoft.com/powershell/module/skype/new-csserverapplication
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsServerApplication
 schema: 2.0.0
@@ -352,5 +352,3 @@ The New-CsServerApplication cmdlet creates new instances of the Microsoft.Rtc.Ma
 [Remove-CsServerApplication](Remove-CsServerApplication.md)
 
 [Set-CsServerApplication](Set-CsServerApplication.md)
-
-

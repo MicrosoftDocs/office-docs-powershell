@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csconferencingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csconferencingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingConfiguration
 schema: 2.0.0
@@ -685,4 +685,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [New-CsConferencingConfiguration](New-CsConferencingConfiguration.md)
 
 [Remove-CsConferencingConfiguration](Remove-CsConferencingConfiguration.md)
-

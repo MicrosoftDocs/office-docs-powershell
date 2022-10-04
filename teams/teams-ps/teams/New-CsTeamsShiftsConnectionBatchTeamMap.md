@@ -5,7 +5,7 @@ title: New-CsTeamsShiftsConnectionBatchTeamMap
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectionbatchteammap
 schema: 2.0.0
 ---
 

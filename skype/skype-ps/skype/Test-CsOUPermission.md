@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csoupermission
+online version: https://learn.microsoft.com/powershell/module/skype/test-csoupermission
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsOUPermission
 schema: 2.0.0
@@ -213,4 +213,3 @@ The `Test-CsOUPermission` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 [Grant-CsOUPermission](Grant-CsOUPermission.md)
 
 [Revoke-CsOUPermission](Revoke-CsOUPermission.md)
-

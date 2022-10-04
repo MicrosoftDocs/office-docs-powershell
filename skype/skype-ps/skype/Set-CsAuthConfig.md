@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csauthconfig
+online version: https://learn.microsoft.com/powershell/module/skype/set-csauthconfig
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAuthConfig
 schema: 2.0.0
@@ -138,6 +138,6 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## NOTES
 
-After changing CsAuthConfig, you must run [Enable-CsComputer](https://docs.microsoft.com/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
+After changing CsAuthConfig, you must run [Enable-CsComputer](https://learn.microsoft.com/powershell/module/skype/enable-cscomputer?view=skype-ps) on each Skype for Business Server machine before your changes take effect.
 
 ## RELATED LINKS

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cspersistentchatmessage
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cspersistentchatmessage
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Remove-CsPersistentChatMessage
 schema: 2.0.0
@@ -290,4 +290,3 @@ None.
 ## RELATED LINKS
 
 [Clear-CsPersistentChatRoom](Clear-CsPersistentChatRoom.md)
-

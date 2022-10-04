@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/disable-ummailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/disable-ummailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Disable-UMMailbox
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Disable-UMMailbox cmdlet to disable Unified Messaging (UM) for UM-enabled mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Disable-UMMailbox [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 After the mailbox is disabled for Unified Messaging, the user can no longer use the UM features that are included in Microsoft Exchange and the Microsoft Exchange Unified Messaging service no longer handle calls for the associated extension number. The mailbox continues to function normally for all other operations that are unrelated to Unified Messaging.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

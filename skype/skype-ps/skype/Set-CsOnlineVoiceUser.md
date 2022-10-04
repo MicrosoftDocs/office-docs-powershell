@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceuser
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceuser
 applicable: Skype for Business Online
 title: Set-CsOnlineVoiceUser
 schema: 2.0.0
@@ -17,8 +17,7 @@ Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like
 
 **Note**: This cmdlet will be deprecated and no longer supports the ability to add extensions to telephone numbers (for example, "tel:+61281234567;ext=5110"). Use the new
 [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and
-[Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead. The new cmdlets are currently not supported for customers and tenants that
-are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsOnlineVoiceUser.
+[Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
 
@@ -207,4 +206,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-

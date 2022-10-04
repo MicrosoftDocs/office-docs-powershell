@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csdeviceupdateconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csdeviceupdateconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsDeviceUpdateConfiguration
 schema: 2.0.0
@@ -178,4 +178,3 @@ Instead, the `Remove-CsDeviceUpdateConfiguration` cmdlet deletes instances of th
 [New-CsDeviceUpdateConfiguration](New-CsDeviceUpdateConfiguration.md)
 
 [Set-CsDeviceUpdateConfiguration](Set-CsDeviceUpdateConfiguration.md)
-

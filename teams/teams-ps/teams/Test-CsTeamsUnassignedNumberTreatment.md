@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.TeamsCmdlets.Powershell.Custom.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment
+online version: https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment
 Module Name: Microsoft Teams
 title: Test-CsTeamsUnassignedNumberTreatment
 author: firatakandere

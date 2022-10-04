@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
 applicable: Skype for Business Server 2019
 title: Set-CsCloudCallDataConnector
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamsemergencycallroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsemergencycallroutingpolicy
 applicable: Microsoft Teams
 title: Remove-CsTeamsEmergencyCallRoutingPolicy
 author: jenstrier

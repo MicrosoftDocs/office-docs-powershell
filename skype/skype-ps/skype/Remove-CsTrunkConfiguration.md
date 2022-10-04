@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cstrunkconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cstrunkconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsTrunkConfiguration
 schema: 2.0.0
@@ -144,4 +144,3 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Tr
 [Get-CsTrunkConfiguration](Get-CsTrunkConfiguration.md)
 
 [Test-CsTrunkConfiguration](Test-CsTrunkConfiguration.md)
-

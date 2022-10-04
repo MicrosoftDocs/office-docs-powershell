@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/skype/set-csautoattendant
 applicable: Skype for Business Online
 title: Set-CsAutoAttendant
 schema: 2.0.0
@@ -179,4 +179,3 @@ The modified instance of the `Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAtt
 [Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
 
 [Update-CsAutoAttendant](Update-CsAutoAttendant.md)
-
