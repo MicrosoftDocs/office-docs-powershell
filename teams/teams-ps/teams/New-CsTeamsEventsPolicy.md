@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csteamseventspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamseventspolicy
 schema: 2.0.0
 ---
 

@@ -41,6 +41,8 @@ description: "Learn about using the Exchange Online PowerShell V2 module and V3 
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following cmdlets:
 >   - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
 >   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
+>
+> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
 
 Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
 
@@ -49,15 +51,17 @@ Certificate based authentication (CBA) or app-only authentication as described i
 The following examples show how to use the Exchange Online PowerShell module with app-only authentication:
 
 > [!IMPORTANT]
-> In the following **Connect-** commands, be sure to use an `.onmicrosoft.com` domain for the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+> In the following connection commands, be sure to use an `.onmicrosoft.com` domain for the _Organization_ parameter value. Otherwise, you might encounter permission issues when you try to run commands in the app context.
 >
-> In Microsoft 365 GCC High or DoD environments, the connection commands require the following additional parameters and values:
+> The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
-> - **Connect-IPPSSession in GCC High**: `-ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+> - In Exchange Online PowerShell using the EXO V3 module, you can omit or include the _UseRPSSession_ switch to use REST API cmdlets or original remote PowerShell cmdlets. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
 >
-> - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
-> - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+> - Microsoft 365 GCC High or Microsoft 365 DoD environments require the following additional parameters and values:
+>   - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
+>   - **Connect-IPPSSession in GCC High**: `-ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+>   - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
+>   - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
 
 - **Connect using a certificate thumbprint**:
 
@@ -107,9 +111,6 @@ The following examples show how to use the Exchange Online PowerShell module wit
      ```powershell
     Connect-IPPSSession -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (Get-Credential).password -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
-
-> [!TIP]
-> App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
 
 ## How does it work?
 
