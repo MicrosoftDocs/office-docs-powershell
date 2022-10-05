@@ -62,7 +62,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Set-ProtectionAlert -Identity "Content search deleted" -Severity High
 ```
 
-This example sets the Severity of the detection to High.
+This example sets the Severity of the detection to High for the specified alert policy.
 
 ### Example 2
 ```powershell
