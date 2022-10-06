@@ -71,7 +71,7 @@ If you don't have the Exchange management tools installed on your local computer
 2. Replace `<ServerFQDN>` with the fully qualified domain name of your Exchange server (for example, `mailbox01.contoso.com`) and run the following command:
 
    ```powershell
-   $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://<ServerFQDN>/PowerShell/ -Authentication Kerberos -Credential $UserCredential
+   $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://<ServerFQDN>/PowerShell/ -Authentication Basic -Credential $UserCredential
    ```
 
       **Note**: The _ConnectionUri_ value is `http`, not `https`.
