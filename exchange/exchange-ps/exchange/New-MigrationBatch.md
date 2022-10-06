@@ -753,7 +753,7 @@ Accept wildcard characters: False
 ### -ContentFilter
 This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
 
-The ContentFilter parameter uses OPath filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+The ContentFilter parameter uses OPATH filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
 
 - `"Received -gt '8/23/2020'"`
 - `"Received -le '2019/01/01'"`

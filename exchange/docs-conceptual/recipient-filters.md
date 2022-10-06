@@ -165,42 +165,42 @@ For more information about the filterable properties that you can use with the _
 
 ## Additional OPATH syntax information
 
-When creating your own custom OPath filters, consider the following items:
+When creating your own custom OPATH filters, consider the following items:
 
 - Use the following syntax to identify the types of values that you're searching for:
 
-  - **Text values**: Enclose the text in single quotation marks (for example, `'Value'` or `'Value with spaces'`). Or, you can enclose a text value in double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
+  - **Text values**: Enclose the text in single quotation marks (for example, `'Value'` or `'Value with spaces'`). Or, you can enclose a text value in double quotation marks, but that limits the characters you can use to enclose the whole OPATH filter.
 
   - **Variables**: Enclose variables that need to be expanded in single quotation marks (for example, `'$User'`). If the variable value itself contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`.
 
-  - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
+  - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters you can use to enclose the whole OPATH filter.
 
-  - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`). To enclose the whole OPath filter in double quotation marks, you need to escape the dollar sign in system value (for example, `` `$true``).
+  - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`). To enclose the whole OPATH filter in double quotation marks, you need to escape the dollar sign in system value (for example, `` `$true``).
 
-- You need to enclose the whole OPath filter in double quotation marks " or " single quotation marks ' '. Although any OPath filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPath filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
+- You need to enclose the whole OPATH filter in double quotation marks " or " single quotation marks ' '. Although any OPATH filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPATH filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
 
   - **Text values**: Depends on how you enclosed the text to search for:
 
-    - **Text enclosed in single quotation marks**: Enclose the whole OPath filter in double quotation marks or braces.
-    - **Text enclosed in double quotation marks**: Enclose the whole OPath filter in braces.
+    - **Text enclosed in single quotation marks**: Enclose the whole OPATH filter in double quotation marks or braces.
+    - **Text enclosed in double quotation marks**: Enclose the whole OPATH filter in braces.
 
-  - **Variables**: Enclose the whole OPath filter in double quotation marks (for example, `"Name -eq '$User'"`).
+  - **Variables**: Enclose the whole OPATH filter in double quotation marks (for example, `"Name -eq '$User'"`).
 
   - **Integer values**: Depends on how you enclosed (or didn't enclose) the integer to search for:
 
-    - **Integer not enclosed**: Enclose the whole OPath filter in double quotation marks, single quotation marks, or braces (for example `"CountryCode -eq 840"`).
-    - **Integer enclosed in single quotation marks**: Enclose the whole OPath filter in double quotation marks or braces `"CountryCode -eq '840'"`.
-    - **Integer enclosed in double quotation marks**: Enclose the whole OPath filter in braces (for example `{CountryCode -eq "840"}`).
+    - **Integer not enclosed**: Enclose the whole OPATH filter in double quotation marks, single quotation marks, or braces (for example `"CountryCode -eq 840"`).
+    - **Integer enclosed in single quotation marks**: Enclose the whole OPATH filter in double quotation marks or braces `"CountryCode -eq '840'"`.
+    - **Integer enclosed in double quotation marks**: Enclose the whole OPATH filter in braces (for example `{CountryCode -eq "840"}`).
 
-  - **System values**: Enclose the whole OPath filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`). If you escape the dollar sign system value, you can also enclose the whole OPath filter in double quotation marks (for example, ``"HiddenFromAddressListsEnabled -eq `$true"``).
+  - **System values**: Enclose the whole OPATH filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`). If you escape the dollar sign system value, you can also enclose the whole OPATH filter in double quotation marks (for example, ``"HiddenFromAddressListsEnabled -eq `$true"``).
 
-  The compatibility of search criteria and the valid characters that you can use to enclose the whole OPath filter are summarized in the following table:
+  The compatibility of search criteria and the valid characters that you can use to enclose the whole OPATH filter are summarized in the following table:
 
   <br>
 
   ****
 
-  |Search value|OPath filter <br> enclosed in <br> double quotation marks|OPath filter <br> enclosed in <br> single quotation marks|OPath filter enclosed in <br> braces|
+  |Search value|OPATH filter <br> enclosed in <br> double quotation marks|OPATH filter <br> enclosed in <br> single quotation marks|OPATH filter enclosed in <br> braces|
   |---|:---:|:---:|:---:|
   |`'Text'`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |`"Text"`|||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|

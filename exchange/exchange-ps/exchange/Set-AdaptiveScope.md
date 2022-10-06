@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawQuery
-The RawQuery parameter switches the scope to advanced query mode. You use OPath filter syntax for advanced query mode.
+The RawQuery parameter switches the scope to advanced query mode. You use OPATH filter syntax for advanced query mode.
 
 You can't use this parameter with the FilterConditions parameter.
 
