@@ -18,6 +18,9 @@ description: "Admins can learn how to enable or disable access to Exchange Onlin
 
 Exchange Online PowerShell enables you to manage your Exchange Online organization from the command line. By default, all accounts you create in Microsoft 365 are allowed to use Exchange Online PowerShell. Administrators can use Exchange Online PowerShell to enable or disable a user's ability to connect to Exchange Online PowerShell. Note that access to Exchange Online PowerShell doesn't give users extra administrative powers in your organization. A user's capabilities in Exchange Online PowerShell are still defined by role based access control (RBAC) and the roles that are assigned to them.
 
+> [!NOTE]
+> You can also use Client Access Rules to block PowerShell access to Exchange Online. For details, see [Client Access Rules in Exchange Online](/Exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules).
+
 ## What do you need to know before you begin?
 
 - Estimated time to complete each procedure: less than 5 minutes
@@ -25,31 +28,29 @@ Exchange Online PowerShell enables you to manage your Exchange Online organizati
 - Microsoft 365 global admins have access to Exchange Online PowerShell, and can use the procedures in this article to configure Exchange Online PowerShell access for other users. For more information about permissions in Exchange Online, see [Feature Permissions in Exchange Online](/exchange/permissions-exo/feature-permissions).
 
   > [!IMPORTANT]
-  > Don't run commands like `Get-User | Set-User -RemotePowerShellEnabled $false` to universally remove remote PowerShell access without considering admin accounts. Use the procedures in this article to selectively remove remote PowerShell access, or preserve admin access for at least one account by using the following syntax in your removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin@contoso.onmicrosoft.com'} | Set-User -RemotePowerShellEnabled $false`.
+  > In your haste to quickly and globally disable remote PowerShell access in your organization, beware of commands like `Get-User | Set-User -RemotePowerShellEnabled $false` without considering admin accounts. Use the procedures in this article to selectively remove remote PowerShell access, or preserve admin access for some by using the following syntax in your global removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin1@contoso.onmicrosoft.com' -or $_.UserPrincipalName -ne 'admin2@contoso.onmicrosoft.com'...} | Set-User -RemotePowerShellEnabled $false`.
   >
-  > If you accidentally lock yourself out of remote PowerShell access, create a new admin user account, and then use that account to give yourself remote PowerShell access.
+  > If you accidentally lock yourself out of remote PowerShell access, create a new admin account in the Microsoft 365 admin center, and then use that account to give yourself remote PowerShell access using the procedures in this article.
 
 - You can only use Exchange Online PowerShell to perform this procedure. To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
 - For detailed information about OPATH filter syntax in Exchange Online, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
-
-- You can also use Client Access Rules to block PowerShell access to Exchange Online. For details, see [Client Access Rules in Exchange Online](/Exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules).
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
 ## Enable or disable access to Exchange Online PowerShell for a user
 
-This example disables access to Exchange Online PowerShell for the user david@contoso.com.
+This example disables access to Exchange Online PowerShell for the user david@contoso.onmicrosoft.com.
 
 ```powershell
-Set-User -Identity david@contoso.com -RemotePowerShellEnabled $false
+Set-User -Identity david@contoso.onmicrosoft.com -RemotePowerShellEnabled $false
 ```
 
-This example enables access to Exchange Online PowerShell for the user david@contoso.com.
+This example enables access to Exchange Online PowerShell for the user chris@contoso.onmicrosoft.com.
 
 ```powershell
-Set-User -Identity david@contoso.com -RemotePowerShellEnabled $true
+Set-User -Identity chris@contoso.onmicrosoft.com -RemotePowerShellEnabled $true
 ```
 
 ## Disable access to Exchange Online PowerShell for many users
@@ -90,7 +91,7 @@ $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false
 
 The following example uses the text file C:\My Documents\NoPowerShell.txt to identify the users by their accounts. The text file must contain one account on each line as follows:
 
-> akol@contoso.com <br> tjohnston@contoso.com <br> kakers@contoso.com
+> akol@contoso.onmicrosoft.com <br> tjohnston@contoso.onmicrosoft.com <br> kakers@contoso.onmicrosoft.com
 
 After you populate the text file with the user accounts you want to update, run the following commands:
 
@@ -102,16 +103,10 @@ $NPS | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 
 ## View the Exchange Online PowerShell access for users
 
-To view the Exchange Online PowerShell access status for a specific user, use the following syntax:
+To view the remote PowerShell access status for a specific user, replace \<UserIdentity\> with the name or user principal name (UPN) of the user, and then run the following command:
 
 ```powershell
-Get-User -Identity <UserIdentity> | Format-List RemotePowerShellEnabled
-```
-
-This example displays the Exchange Online PowerShell access status of the user named Sarah Jones.
-
-```powershell
-Get-User -Identity "Sarah Jones" | Format-List RemotePowerShellEnabled
+Get-User -Identity "<UserIdentity>" | Format-List RemotePowerShellEnabled
 ```
 
 To display the Exchange Online PowerShell access status for all users, run the following command:
@@ -120,13 +115,13 @@ To display the Exchange Online PowerShell access status for all users, run the f
 Get-User -ResultSize unlimited | Format-Table -Auto Name,DisplayName,RemotePowerShellEnabled
 ```
 
-To display only those users who don't have access to Exchange Online PowerShell, run the following command:
+To display all users who don't have access to Exchange Online PowerShell, run the following command:
 
 ```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
-To display only those users who have access to Exchange Online PowerShell, run the following command:
+To display all users who have access to Exchange Online PowerShell, run the following command:
 
 ```powershell
 Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'

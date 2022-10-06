@@ -23,9 +23,12 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
 - Estimated time to complete each procedure: less than 5 minutes
 
-- You can only use PowerShell to perform this procedure. To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
-
 - By default, all user accounts have access to remote PowerShell. However, to actually use remote PowerShell to connect to an Exchange server, the user needs to be a member of a management role group, or be directly assigned a management role that enables the user to run Exchange cmdlets. For more information about role groups and management roles, see [Exchange Server permissions](/Exchange/permissions/permissions).
+
+  > [!IMPORTANT]
+  > In your haste to quickly and globally disable remote PowerShell access in your organization, beware of commands like `Get-User | Set-User -RemotePowerShellEnabled $false` without considering administrator or service accounts that need remote PowerShell access. Use the procedures in this article to selectively remove remote PowerShell access, or preserve access for some by using the following syntax in your global removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin1@contoso.com' -or $_.UserPrincipalName -ne 'admin2@contoso.com'...} | Set-User -RemotePowerShellEnabled $false`.
+
+- You can only use PowerShell to perform this procedure. To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
 
 - For detailed information about OPATH filter syntax in Exchange, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
@@ -61,7 +64,7 @@ To prevent remote PowerShell access for a specific group of existing users, you 
 To disable access to remote PowerShell for any number of users based on an existing attribute, use the following syntax:
 
 ```powershell
-$<VariableName> = <Get-Mailbox | Get-User> -ResultSize Unlimited -Filter <Filter>
+$<VariableName> = <Get-Mailbox | Get-User> -ResultSize unlimited -Filter <Filter>
 
 $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
@@ -69,7 +72,7 @@ $<VariableName> | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false
 This example removes access to remote PowerShell for all users whose **Title** attribute contains the value "Sales Associate".
 
 ```powershell
-$DSA = Get-User -ResultSize Unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
+$DSA = Get-User -ResultSize unlimited -Filter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Sales Associate*')"
 
 $DSA | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 ```
@@ -98,32 +101,26 @@ $NPS | foreach {Set-User -Identity $_ -RemotePowerShellEnabled $false}
 
 ## View the remote PowerShell access for users
 
-To view the remote PowerShell access status for a specific user, use the following syntax:
+To view the remote PowerShell access status for a specific user, replace \<UserIdentity\> with the name or user principal name (UPN) of the user, and then run the following command:
 
 ```powershell
-Get-User -Identity <UserIdentity> | Format-List RemotePowerShellEnabled
-```
-
-This example displays the remote PowerShell access status of the user named Sarah Jones.
-
-```powershell
-Get-User -Identity "Sarah Jones" | Format-List RemotePowerShellEnabled
+Get-User -Identity "<UserIdentity>" | Format-List RemotePowerShellEnabled
 ```
 
 To display the remote PowerShell access status for all users, run the following command:
 
 ```powershell
-Get-User -ResultSize Unlimited | Format-Table Name,DisplayName,RemotePowerShellEnabled -AutoSize
+Get-User -ResultSize unlimited | Format-Table Name,DisplayName,RemotePowerShellEnabled -AutoSize
 ```
 
-To display only those users who don't have access to remote PowerShell, run the following command:
+To display all users who don't have access to remote PowerShell, run the following command:
 
 ```powershell
-Get-User -ResultSize Unlimited -Filter 'RemotePowerShellEnabled -eq $false'
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $false'
 ```
 
-To display only those users who have access to remote PowerShell, run the following command:
+To display all users who have access to remote PowerShell, run the following command:
 
 ```powershell
-Get-User -ResultSize Unlimited -Filter 'RemotePowerShellEnabled -eq $true'
+Get-User -ResultSize unlimited -Filter 'RemotePowerShellEnabled -eq $true'
 ```
