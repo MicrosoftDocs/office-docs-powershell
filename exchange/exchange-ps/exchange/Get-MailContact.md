@@ -73,6 +73,29 @@ This example retrieves detailed information for the mail contact named Arlene.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mail contact that you want to view. You can use any value that uniquely identifies the mail contact. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+```yaml
+Type: MailContactIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ANR
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
@@ -155,29 +178,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mail contact that you want to view. You can use any value that uniquely identifies the mail contact. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Email address
-- GUID
-
-```yaml
-Type: MailContactIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

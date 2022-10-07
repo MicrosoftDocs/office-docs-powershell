@@ -92,6 +92,31 @@ This example returns Microsoft 365 Groups that are created when a Microsoft Team
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the Microsoft 365 Group that you want to view. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+**Note**: You can use the DisplayName value to identify the Microsoft 365 Group, but the results aren't guaranteed to be unique. If you must return a singular and unique result, use a unique identifier for the Microsoft 365 Group.
+
+```yaml
+Type: UnifiedGroupIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Anr
 This parameter is reserved for internal Microsoft use.
 
@@ -130,31 +155,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the Microsoft 365 Group that you want to view. You can use any value that uniquely identifies the Microsoft 365 Group. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Email address
-- GUID
-
-**Note**: You can use the DisplayName value to identify the Microsoft 365 Group, but the results aren't guaranteed to be unique. If you must return a singular and unique result, use a unique identifier for the Microsoft 365 Group.
-
-```yaml
-Type: UnifiedGroupIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

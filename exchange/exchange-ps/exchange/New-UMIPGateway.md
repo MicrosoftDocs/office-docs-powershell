@@ -62,22 +62,6 @@ This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox serv
 
 ## PARAMETERS
 
-### -Address
-The Address parameter specifies the IP address configured on the IP gateway or SIP-enabled IP PBX.
-
-```yaml
-Type: UMSmartHost
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies the display name for the UM IP gateway. The name for the new UM IP gateway can contain up to 64 characters.
 
@@ -89,6 +73,22 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Address
+The Address parameter specifies the IP address configured on the IP gateway or SIP-enabled IP PBX.
+
+```yaml
+Type: UMSmartHost
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -93,6 +93,22 @@ This example retrieves more detailed information about any ongoing migration for
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the particular ongoing migration that you want to retrieve information about. The Identity parameter is usually represented as an email address.
+
+```yaml
+Type: MigrationUserIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -MailboxGuid
 The MailboxGuid parameter specifies the GUID of a mailbox for which you want to view the migration information.
 
@@ -140,22 +156,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the particular ongoing migration that you want to retrieve information about. The Identity parameter is usually represented as an email address.
-
-```yaml
-Type: MigrationUserIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

@@ -74,6 +74,24 @@ This example returns all mail-enabled public folders that begin with the word Ma
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
+
+You can omit the parameter label so that only the public folder name or GUID is supplied.
+
+```yaml
+Type: MailPublicFolderIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Anr
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
@@ -154,24 +172,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
-
-You can omit the parameter label so that only the public folder name or GUID is supplied.
-
-```yaml
-Type: MailPublicFolderIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

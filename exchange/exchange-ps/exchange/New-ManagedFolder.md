@@ -88,6 +88,24 @@ This example creates an instance of the default folder Inbox.
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a unique name for the managed folder object in Active Directory. The name can have up to 65 characters. Whereas the FolderName parameter specifies the folder name as displayed to users in  clients, the Name parameter is used by Exchange administration tools to represent the managed folder object.
+
+The Name parameter shouldn't be confused with the FolderName parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultFolderType
 The DefaultFolderType parameter specifies the type of default folder to create, such as Inbox or Deleted Items.
 
@@ -142,24 +160,6 @@ Applicable: Exchange Server 2010
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the managed folder object in Active Directory. The name can have up to 65 characters. Whereas the FolderName parameter specifies the folder name as displayed to users in  clients, the Name parameter is used by Exchange administration tools to represent the managed folder object.
-
-The Name parameter shouldn't be confused with the FolderName parameter.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
