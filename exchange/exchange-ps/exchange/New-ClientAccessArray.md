@@ -53,6 +53,24 @@ This example creates a Client Access array named China CAS Array with the FQDN v
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the descriptive name of the Client Access array. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks ("). If the value contains spaces, you can't use the Name value to identify the Client Access array for the Get-ClientAccessArray, Remove-ClientAccessArray, or Set-ClientAccessArray cmdlets.
+
+If you don't use this parameter, the default value is the host part of the Fqdn parameter value. For example, if the Fqdn value is casarray01.contoso.com, the default name value is casarray01.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Fqdn
 The Fqdn parameter specifies the fully qualified domain name of the Client Access array (for example, casarray01.contoso.com). This is the value that RPC over TCP clients use to connect to the Client Access servers in the array.
 
@@ -121,24 +139,6 @@ Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the descriptive name of the Client Access array. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks ("). If the value contains spaces, you can't use the Name value to identify the Client Access array for the Get-ClientAccessArray, Remove-ClientAccessArray, or Set-ClientAccessArray cmdlets.
-
-If you don't use this parameter, the default value is the host part of the Fqdn parameter value. For example, if the Fqdn value is casarray01.contoso.com, the default name value is casarray01.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

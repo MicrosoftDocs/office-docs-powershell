@@ -78,6 +78,27 @@ This example uses the Anr parameter to retrieve all mail-enabled contacts whose 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the contact that you want to view. You can use any value that uniquely identifies the contact. For example:
+
+- Name
+- Distinguished name (DN)
+- Canonical DN
+- GUID
+
+```yaml
+Type: ContactIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Anr
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
@@ -160,27 +181,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the contact that you want to view. You can use any value that uniquely identifies the contact. For example:
-
-- Name
-- Distinguished name (DN)
-- Canonical DN
-- GUID
-
-```yaml
-Type: ContactIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

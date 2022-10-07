@@ -73,6 +73,29 @@ This example returns detailed information for the mail user named Ed.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Email address
+- GUID
+
+```yaml
+Type: MailUserIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: false
+Accept wildcard characters: False
+```
+
 ### -Anr
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
@@ -153,29 +176,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: false
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mail user that you want to view. You can use any value that uniquely identifies the mail user. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Email address
-- GUID
-
-```yaml
-Type: MailUserIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 1
 Default value: None
 Accept pipeline input: false
 Accept wildcard characters: False

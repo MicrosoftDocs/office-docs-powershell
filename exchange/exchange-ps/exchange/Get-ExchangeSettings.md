@@ -59,6 +59,26 @@ This example returns a summary list of all Exchange setting objects.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the Exchange setting object. You can use any value that uniquely identifies the object. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: ExchangeSettingsIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ConfigName
 The ConfigName parameter filter the results by the specified property name. The value you specify is visible in the EffectiveSetting property.
 
@@ -213,26 +233,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the Exchange setting object. You can use any value that uniquely identifies the object. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-```yaml
-Type: ExchangeSettingsIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
