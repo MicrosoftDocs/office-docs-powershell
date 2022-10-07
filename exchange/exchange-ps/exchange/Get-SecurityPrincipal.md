@@ -69,6 +69,22 @@ This example retrieves well-known security principals and displays only the Name
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the security principal. When the security principal is explicitly specified by using this parameter, no additional security principals are returned.
+
+```yaml
+Type: ExtendedSecurityPrincipalIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -109,22 +125,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the security principal. When the security principal is explicitly specified by using this parameter, no additional security principals are returned.
-
-```yaml
-Type: ExtendedSecurityPrincipalIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

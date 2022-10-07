@@ -64,6 +64,31 @@ This example returns the status of in-progress and queued requests that are on t
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of the public folder move request. The default identity assigned to public folder move requests is \\PublicFolderMove.
+
+You can't use this parameter with the following parameters:
+
+- BatchName
+- HighPriority
+- Name
+- RequestQueue
+- Suspend
+- Status
+
+```yaml
+Type: PublicFolderMoveRequestIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -BatchName
 The BatchName parameter specifies the name that was given to a batch public folder move request.
 
@@ -116,31 +141,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the identity of the public folder move request. The default identity assigned to public folder move requests is \\PublicFolderMove.
-
-You can't use this parameter with the following parameters:
-
-- BatchName
-- HighPriority
-- Name
-- RequestQueue
-- Suspend
-- Status
-
-```yaml
-Type: PublicFolderMoveRequestIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

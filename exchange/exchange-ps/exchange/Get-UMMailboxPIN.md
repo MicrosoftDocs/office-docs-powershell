@@ -56,6 +56,33 @@ This example displays the UM mailbox PIN-related properties for tonysmith@contos
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Credential
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
@@ -87,33 +114,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

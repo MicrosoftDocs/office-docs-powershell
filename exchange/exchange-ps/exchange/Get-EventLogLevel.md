@@ -48,6 +48,24 @@ This example displays the event categories and log levels for the server Exchang
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter filters the results by the name of the event category. To see the available event categories, run the following command: Get-EventLogLevel.
+
+You can't use this parameter with the Server parameter.
+
+```yaml
+Type: ECIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Server
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -86,24 +104,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter filters the results by the name of the event category. To see the available event categories, run the following command: Get-EventLogLevel.
-
-You can't use this parameter with the Server parameter.
-
-```yaml
-Type: ECIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
