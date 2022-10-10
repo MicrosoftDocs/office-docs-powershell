@@ -247,7 +247,7 @@ If you receive errors, check the following requirements:
 
 - If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a non-federated account in Microsoft 365 to connect to Exchange Online PowerShell.
 
-## Appendix: A comparison of old and new connection methods
+## Appendix: Comparison of old and new connection methods
 
 This section attempts to compare older connection methods that have been replaced by the Exchange Online PowerShell module. The Basic authentication and OAuth token procedures are included for historical reference only and are no longer supported.
 
