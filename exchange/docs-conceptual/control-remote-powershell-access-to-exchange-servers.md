@@ -27,8 +27,8 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
   > [!IMPORTANT]
   > In your haste to quickly and globally disable remote PowerShell access in your organization, beware of commands like `Get-User | Set-User -RemotePowerShellEnabled $false` without considering administrator or service accounts that need remote PowerShell access. Use the procedures in this article to selectively remove remote PowerShell access, or preserve access for some by using the following syntax in your global removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin1@contoso.com' -or $_.UserPrincipalName -ne 'admin2@contoso.com'...} | Set-User -RemotePowerShellEnabled $false`. 
-    >
-    > Should you have done that, load the Exchange module in normal PowerShell to undo your work by using the following syntax: `add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn`.
+  >
+  > If you accidentally lock yourself out of remote PowerShell access, you'll need to use the otherwise highly discouraged method of directly loading the Exchange Management Shell snap-in (`Add-PSSnapIn Microsoft.Exchange.Management.PowerShell.SnapIn`) to give yourself access.
 
 - You can only use PowerShell to perform this procedure. To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
 
