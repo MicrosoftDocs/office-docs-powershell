@@ -246,3 +246,225 @@ If you receive errors, check the following requirements:
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
 - If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a non-federated account in Microsoft 365 to connect to Exchange Online PowerShell.
+
+## Appendix: A comparison of old and new connection methods
+
+This section attempts to compare older connection methods that have been replaced by the Exchange Online PowerShell module. The Basic authentication and OAuth token procedures are included for historical reference only and are no longer supported.
+
+### Connect without multi-factor authentication
+
+- **Exchange Online PowerShell module with interactive credential prompt**:
+
+  ```powershell
+  Connect-ExchangeOnline -UserPrincipalName admin@contoso.onmicrosoft.com
+  ```
+
+- **Exchange Online PowerShell module without interactive credential prompt**:
+
+  ```powershell
+  $secpasswd = ConvertTo-SecureString '<Password>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $secpasswd)
+
+  Connect-ExchangeOnline -Credential $o365cred
+  ```
+
+- **Basic authentication**:
+
+  ```powershell
+  $secpasswd = ConvertTo-SecureString '<Password>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $secpasswd)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/ -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+- **New-PSSession with OAuth token**:
+
+```powershell
+$oauthTokenAsPassword = ConvertTo-SecureString '<EncodedOAuthToken>' -AsPlainText -Force
+
+$o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $oauthTokenAsPassword)
+
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/?BasicAuthToOAuthConversion=true -Credential $o365cred -Authentication Basic -AllowRedirection
+
+Import-PSSession $Session
+```
+
+### Connect with multi-factor authentication
+
+- **Exchange Online PowerShell module with interactive credential prompt**:
+
+  ```powershell
+  Connect-ExchangeOnline -UserPrincipalName admin@contoso.onmicrosoft.com
+  ```
+
+- **Basic authentication**: Not available.
+
+- **New-PSSession with OAuth token**: Not available.
+
+### Connect to a customer organization with a CSP account
+
+- **Exchange Online PowerShell module**:
+
+  ```powershell
+  Connect-ExchangeOnline -UserPrincipalName admin@contoso.onmicrosoft.com -DelegatedOrganization delegated.onmicrosoft.com
+  ```
+
+- **Basic authentication**:
+
+  ```powershell
+  $secpasswd = ConvertTo-SecureString '<Password>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $secpasswd)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/?DelegatedOrg=delegated.onmicrosoft.com&email=SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}@delegated.onmicrosoft.com -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+- **New-PSSession with OAuth token**:
+
+  ```powershell
+  $oauthTokenAsPassword = ConvertTo-SecureString '<EncodedOAuthToken>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $oauthTokenAsPassword)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/? DelegatedOrg=delegated.onmicrosoft.com&BasicAuthToOAuthConversion=true&email=SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}@delegated.onmicrosoft.com -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+### Connect to a customer organization using GDAP
+
+- **Exchange Online PowerShell module**:
+
+  ```powershell
+  Connect-ExchangeOnline -UserPrincipalName admin@contoso.onmicrosoft.com -DelegatedOrganization delegated.onmicrosoft.com
+  ```
+
+- **Basic authentication**:
+
+  ```powershell
+  $secpasswd = ConvertTo-SecureString '<Password>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $secpasswd)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/?DelegatedOrg=delegated.onmicrosoft.com&email=SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}@delegated.onmicrosoft.com -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+- **New-PSSession with OAuth token**:
+
+  ```powershell
+  $oauthTokenAsPassword = ConvertTo-SecureString '<EncodedOAuthToken>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $oauthTokenAsPassword)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/? DelegatedOrg=delegated.onmicrosoft.com&BasicAuthToOAuthConversion=true&email=SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}@delegated.onmicrosoft.com -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+### Connect to a customer organization as a guest user
+
+- **Exchange Online PowerShell module**:
+
+  ```powershell
+  Connect-ExchangeOnline -UserPrincipalName admin@contoso.onmicrosoft.com -DelegatedOrganization delegated.onmicrosoft.com
+  ```
+
+- **Basic authentication**:
+
+  ```powershell
+  $secpasswd = ConvertTo-SecureString '<Password>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $secpasswd)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/?DelegatedOrg=delegated.onmicrosoft.com&email=SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}@delegated.onmicrosoft.com -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+- **New-PSSession with OAuth token**:
+
+  ```powershell
+  $oauthTokenAsPassword = ConvertTo-SecureString "<EncodedOAuthToken>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $oauthTokenAsPassword)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/?DelegatedOrg=delegated.onmicrosoft.com&BasicAuthToOAuthConversion=true&email=SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}@delegated.onmicrosoft.com -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+### Connect to run unattended scripts
+
+- **Exchange Online PowerShell module**:
+
+  - **Certificate thumbprint**:
+
+    ```powershell
+    Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contoso.onmicrosoft.com"
+    ```
+
+  - **Certificate object**:
+
+    ```powershell
+    Connect-ExchangeOnline -Certificate <%X509Certificate2Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contoso.onmicrosoft.com"
+    ```
+
+  - **Certificate file**:
+
+    ```powershell
+    Connect-ExchangeOnline -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<Password>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contoso.onmicrosoft.com"
+    ```
+
+  For more information, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
+
+- **Basic authentication**:
+
+  ```powershell
+  $secpasswd = ConvertTo-SecureString '<Password>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $secpasswd)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/ -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+- **New-PSSession with OAuth token**:
+
+  ```powershell
+  $oauthTokenAsPassword = ConvertTo-SecureString '<EncodedOAuthToken>' -AsPlainText -Force
+
+  $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $oauthTokenAsPassword)
+
+  $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/PowerShell-LiveID/?BasicAuthToOAuthConversion=true&email=SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}@contoso.onmicrosoft.com -Credential $o365cred -Authentication Basic -AllowRedirection
+
+  Import-PSSession $Session
+  ```
+
+### Connect using managed identity
+
+- **Exchange Online PowerShell module**:
+
+  - **System assigned**:
+
+    ```powershell
+    Connect-ExchangeOnline -ManagedIdentity -Organization "contoso.onmicrosoft.com"
+    ```
+
+  - **User assigned**:
+
+    ```powershell
+    Connect-ExchangeOnline -ManagedIdentity -Organization "contoso.onmicrosoft.com" -ManagedIdentityAccountId $ManagedIdentityAccountIdGuid
+    ```
+
+- **Basic authentication**: Not available.
+
+- **New-PSSession with OAuth token**: Not available.
