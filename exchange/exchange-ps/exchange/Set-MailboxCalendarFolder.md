@@ -294,7 +294,7 @@ To specify a date/time value for this parameter, use either of the following opt
 
 **Notes**:
 
-- You use this parameter on the shared calender's mailbox, not the delegate's mailbox.
+- You use this parameter on the shared calendar in delegate's mailbox. For example, `Set-MailboxCalendarFolder -Identity "delegate@contoso.com:\Name of shared calendar" -SharedCalendarSyncStartDate`.
 - Users need to have FullDetails, Editor, or Delegate access to the specified shared calendar.
 - Setting this parameter might cause events in the shared calendar to briefly disappear from view while the calendar is resynchronized.
 

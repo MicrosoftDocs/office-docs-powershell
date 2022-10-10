@@ -39,10 +39,10 @@ This example returns a summary list of all alert policies.
 
 ### Example 2
 ```powershell
-Get-ProtectionAlert -Identity "Malicious Email Campaign"
+Get-ProtectionAlert -Identity "Malware campaign detected after delivery"
 ```
 
-This example returns detailed information about the alert policy named Malicious Email Campaign.
+This example returns detailed information about the specified alert policy.
 
 ## PARAMETERS
 

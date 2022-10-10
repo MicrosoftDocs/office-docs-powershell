@@ -65,6 +65,22 @@ This example creates managed content settings CS-Exec-Calendar for the Calendar 
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a unique name for the managed content settings.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FolderName
 The FolderName parameter specifies the name or GUID of the managed folder to which the managed content settings apply.
 
@@ -118,22 +134,6 @@ Applicable: Exchange Server 2010
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the managed content settings.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -64,6 +64,29 @@ This example returns details about the custom English Policy Tip for the action 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the custom Policy Tip you want to view. You can use any value that uniquely identifies the custom Policy Tip. For example:
+
+- `Locale\Action`: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
+- The value Url
+- GUID
+- Distinguished name (DN)
+
+You can't use the Identity parameter with the Action, Locale or Original parameters.
+
+```yaml
+Type: PolicyTipConfigIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Action
 The Action parameter filters the Policy Tips by action. Valid values for this parameter are:
 
@@ -103,29 +126,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the custom Policy Tip you want to view. You can use any value that uniquely identifies the custom Policy Tip. For example:
-
-- `Locale\Action`: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
-- The value Url
-- GUID
-- Distinguished name (DN)
-
-You can't use the Identity parameter with the Action, Locale or Original parameters.
-
-```yaml
-Type: PolicyTipConfigIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

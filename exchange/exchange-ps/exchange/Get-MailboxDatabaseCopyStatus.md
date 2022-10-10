@@ -73,6 +73,22 @@ This example returns the status for the copy of database DB1 on the Mailbox serv
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of `<Database>\<Server>`. Specifying just `<Database>` returns information for all copies of the database. This parameter can't be combined with the Server parameter.
+
+```yaml
+Type: DatabaseCopyIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Server
 The Server parameter specifies that a Mailbox server returns status information for all of its mailbox database copies. This parameter can't be combined with the Identity parameter.
 
@@ -134,22 +150,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of `<Database>\<Server>`. Specifying just `<Database>` returns information for all copies of the database. This parameter can't be combined with the Server parameter.
-
-```yaml
-Type: DatabaseCopyIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
