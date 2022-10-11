@@ -59,6 +59,26 @@ This example returns detailed information about the GAL named GAL\_AgencyB.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the global address list that you want to view. You can use any value that uniquely identifies the GAL. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: GlobalAddressListIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DefaultOnly
 The DefaultOnly switch filters the results so only the default GAL is returned. You don't need to use a value with this switch.
 
@@ -90,26 +110,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the global address list that you want to view. You can use any value that uniquely identifies the GAL. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-```yaml
-Type: GlobalAddressListIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
