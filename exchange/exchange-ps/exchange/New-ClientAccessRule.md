@@ -58,7 +58,7 @@ Protocols that support authentication type filters:
 - POP3: BasicAuthentication and OAuthAuthentication.
 - RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
-Protcols that don't support authentication type filters:
+Protocols that don't support authentication type filters:
 
 - ExchangeWebServices
 - OfflineAddressBook
@@ -87,22 +87,6 @@ This example creates a new client access rule named Block ActiveSync that blocks
 
 ## PARAMETERS
 
-### -Action
-The Action parameter specifies the action for the client access rule. Valid values for this parameter are AllowAccess and DenyAccess.
-
-```yaml
-Type: ClientAccessRulesAction
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies a unique name for the client access rule.
 
@@ -114,6 +98,22 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Action
+The Action parameter specifies the action for the client access rule. Valid values for this parameter are AllowAccess and DenyAccess.
+
+```yaml
+Type: ClientAccessRulesAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

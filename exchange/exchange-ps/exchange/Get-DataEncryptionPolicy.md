@@ -53,6 +53,26 @@ The example returns detailed information for the data encryption policy named Eu
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the data encryption policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: DataEncryptionPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -85,26 +105,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the data encryption policy that you want to view. You can use any value that uniquely identifies the policy. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-```yaml
-Type: DataEncryptionPolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

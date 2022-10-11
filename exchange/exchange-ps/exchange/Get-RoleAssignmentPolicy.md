@@ -62,6 +62,22 @@ For more information about pipelining and the Format-List cmdlet, see [About Pip
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the assignment policy to view. If the name contains spaces, enclose the name in quotation marks (").
+
+```yaml
+Type: MailboxPolicyIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -79,22 +95,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the assignment policy to view. If the name contains spaces, enclose the name in quotation marks (").
-
-```yaml
-Type: MailboxPolicyIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
