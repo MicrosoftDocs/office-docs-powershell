@@ -133,6 +133,8 @@ When you use this switch, you'll get a warning that this retention policy will r
 - $null (blank): Changes to which retention policy is the default are continually reflected in new and existing mailboxes.
 - A retention policy is specified: Changes to which retention policy is the default are ignored. The retention policy specified in the mailbox plan is assigned to new mailboxes, and changing which policy is specified in the mailbox plan doesn't affect existing mailboxes. If you set the value back to blank, new mailboxes will use the default policy going forward. Existing mailboxes created during the time when a retention policy was specified in the mailbox plan will continue to use that policy, and are unaffected by changes to which retention policy is the default. Any existing mailboxes that you created during the last time when there was no retention policy specified in the mailbox plan will be continually affected by changes to which retention policy is the default.
 
+Changes to the default retention policy that affect existing mailboxes can potentially saturate the network if there are hundreds or thousands of mailboxes that require updates.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
