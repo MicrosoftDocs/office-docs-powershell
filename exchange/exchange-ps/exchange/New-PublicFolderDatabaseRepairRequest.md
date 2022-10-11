@@ -54,22 +54,6 @@ This example only detects and reports on replication issues on public folder dat
 
 ## PARAMETERS
 
-### -CorruptionType
-The CorruptionType parameter specifies the type of corruption that you want to detect and repair. The only available value is ReplState.
-
-```yaml
-Type: PublicFolderDatabaseCorruptionType[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Database
 The Database parameter specifies the public folder database that you want to repair. You can use any value that uniquely identifies the database. For example:
 
@@ -87,6 +71,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CorruptionType
+The CorruptionType parameter specifies the type of corruption that you want to detect and repair. The only available value is ReplState.
+
+```yaml
+Type: PublicFolderDatabaseCorruptionType[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -77,28 +77,6 @@ This example retrieves store usage statistics for database DB1 and sorts the out
 
 ## PARAMETERS
 
-### -Database
-The Database parameter specifies the name of the mailbox database to get usage statistics from (the top 25 largest mailboxes on the specified mailbox database). You can use any value that uniquely identifies the mailbox database. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-You can't use this parameter with the Identity or Server parameters.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox to get usage statistics from. You can use one of the following values to identify the mailbox:
 
@@ -122,6 +100,28 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Database
+The Database parameter specifies the name of the mailbox database to get usage statistics from (the top 25 largest mailboxes on the specified mailbox database). You can use any value that uniquely identifies the mailbox database. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+You can't use this parameter with the Identity or Server parameters.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

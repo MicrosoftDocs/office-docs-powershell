@@ -81,6 +81,24 @@ This example creates a new retention rule named SeptOneYear and adds it to the e
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a unique name for the retention rule. If the value contains spaces, enclose the value in quotation marks.
+
+You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag parameters.
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplyComplianceTag
 The ApplyComplianceTag parameter specifies the label that's applied to email messages or documents by the rule (which affects how long the content is retained). A valid value for this parameter is the name of an existing label. If the value contains spaces, enclose the value in quotation marks.
 
@@ -98,24 +116,6 @@ Applicable: Security & Compliance
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the retention rule. If the value contains spaces, enclose the value in quotation marks.
-
-You can't use this parameter with the ApplyComplianceTag or PublishComplianceTag parameters.
-
-```yaml
-Type: String
-Parameter Sets: Default
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
