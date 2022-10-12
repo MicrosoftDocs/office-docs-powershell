@@ -131,7 +131,7 @@ The QuotaMessageType parameter specifies the quota for the custom system message
 
 Mailbox size quotas:
 
-- ProhibitSendReceiveMailBox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
+- ProhibitSendReceiveMailbox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
 - ProhibitSendMailbox: A mailbox exceeds its ProhibitSendQuota limit.
 - WarningMailbox: A mailbox exceeds its IssueWarningQuota limit when it has a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
 - WarningMailboxUnlimitedSize: A mailbox exceeds its IssueWarningQuota limit when it doesn't have a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.

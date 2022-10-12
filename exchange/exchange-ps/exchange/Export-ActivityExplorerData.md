@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Export-ActivityExplorerData -EndTime <DateTime> -StartTime <DateTime>
+Export-ActivityExplorerData -EndTime <DateTime> -OutputFormat <String> -StartTime <DateTime>
  [-Filter1 <String[]>]
  [-Filter2 <String[]>]
  [-Filter3 <String[]>]
@@ -39,45 +39,45 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000
+Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json
 ```
 
-This example exports a maximum of 5000 records for the specified date range.
+This example exports a maximum of 5000 records for the specified date range in JSON format.
 
 ### Example 2
 ```powershell
-Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM"
+Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -OutputFormat Json
 ```
 
-This example exports up to 100 records for the specified date range. If more than 100 records are available, the value of the LastPage property in the command output will be False. Use the value of the Watermark property as the value of the PageCookie parameter in a new query to get the next set of records.
+This example exports up to 100 records for the specified date range in Json format. If more than 100 records are available, the value of the LastPage property in the command output will be False. Use the value of the Watermark property as the value of the PageCookie parameter in a new query to get the next set of records.
 
 ### Example 3
 ```powershell
-Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageCookie 'JZDRkpowAEV%2fZYfn6hIQCr4tCwEdoQWT4OalAyQVJEAKUtRO%2f31ZvM%2fnnjtz%2fyneTVb9HVUNV7bK91frVVM17cXaaputAV7eQuWbEmZFWbU8yham002jkqxqs0Y1V3xgq2lcqWA98eE6Dtq6EN3IMinX2WPs%2bbromllxLPpOiJ07990WAnraG8QvRV5Twfyoe3%2f7itOO00rCNvmJsfiDvOmKBbsyYNeFb7gUwzKsvYX0urPNHKpyLNNEdxxM4DUjyQWJ0mB%2bskMqdJ7KR3ojQ3pSuyk87VGcAoQacCUtxQWCQe6Rmk0LCLP9jsBWxETsKUkTF5%2fYiT3KmHvgB65hEAbFonxfyYPu0JoHSYhg0hUkGnJUlhG0jBRTk7el%2fgQPpe2H6YF8qDGgt%2bhBk7zxjNw9qxglkqCoi%2bOF7P0dl7CBAgOWRb74i5ubSC%2bJ%2bQG6eyxgE7XP7fAC6S9n3kjl7yOQPYb7KdYsIwJ2gC5n4%2bjZzvx2kA0lZ%2fHI%2b%2ft8uK5urM3Gtk1L%2bf8J'
+Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -OutputFormat Json -PageCookie 'JZDRkpowAEV%2fZYfn6hIQCr4tCwEdoQWT4OalAyQVJEAKUtRO%2f31ZvM%2fnnjtz%2fyneTVb9HVUNV7bK91frVVM17cXaaputAV7eQuWbEmZFWbU8yham002jkqxqs0Y1V3xgq2lcqWA98eE6Dtq6EN3IMinX2WPs%2bbromllxLPpOiJ07990WAnraG8QvRV5Twfyoe3%2f7itOO00rCNvmJsfiDvOmKBbsyYNeFb7gUwzKsvYX0urPNHKpyLNNEdxxM4DUjyQWJ0mB%2bskMqdJ7KR3ojQ3pSuyk87VGcAoQacCUtxQWCQe6Rmk0LCLP9jsBWxETsKUkTF5%2fYiT3KmHvgB65hEAbFonxfyYPu0JoHSYhg0hUkGnJUlhG0jBRTk7el%2fgQPpe2H6YF8qDGgt%2bhBk7zxjNw9qxglkqCoi%2bOF7P0dl7CBAgOWRb74i5ubSC%2bJ%2bQG6eyxgE7XP7fAC6S9n3kjl7yOQPYb7KdYsIwJ2gC5n4%2bjZzvx2kA0lZ%2fHI%2b%2ft8uK5urM3Gtk1L%2bf8J'
 ```
 
 This example is related to the previous example where more than 100 records were available (the value of the LastPage property from that command was False). We're using the same date range, but this time we're using the value of the Watermark property from the previous command for the PageCookie parameter in this command to get the remaining results.
 
 ### Example 4
 ```powershell
-Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived")
+Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived") -OutputFormat Csv
 ```
 
-This example exports up to 100 records for the specified date range, and filters the output by the Activity value FileArchived.
+This example exports up to 100 records for the specified date range in CSV format, and filters the output by the Activity value FileArchived.
 
 ### Example 5
 ```powershell
-Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated")
+Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated") -OutputFormat Json
 ```
 
-This example exports up to 100 records for the specified date range, and filters the output by the Activity value FileArchived or ArchiveCreated.
+This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Activity value FileArchived or ArchiveCreated.
 
 ### Example 6
 ```powershell
-Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated") -Filter2 @("Workload","Endpoint") 
+Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated") -Filter2 @("Workload","Endpoint") -OutputFormat Json
 ```
 
-This example exports up to 100 records for the specified date range, and filters the output by the Workload value Enpoint for FileArchived or ArchiveCreated activities.
+This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Workload value Enpoint for FileArchived or ArchiveCreated activities.
 
 ## PARAMETERS
 
@@ -90,6 +90,26 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutputFormat
+The OutputFormat parameter specifies the output format. Valid values are:
+
+- Csv
+- Json
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: csv, json
 Applicable: Exchange Online, Security & Compliance
 
 Required: True

@@ -124,6 +124,8 @@ When you use this switch, you'll get a warning that this retention policy will r
 
 Additionally, if a mailbox is assigned an Exchange retention policy that is not the default policy, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
 
+Changes to the default retention policy that affect existing mailboxes can potentially saturate the network if there are hundreds or thousands of mailboxes that require updates.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
