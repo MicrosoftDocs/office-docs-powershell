@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ### -Arbitration
 This parameter is available only in on-premises Exchange.
 
-The Arbitration switch is required to return arbitration mailboxes in the results. You don't need to specify a value with this switch.
+The Arbitration switch specifies whether to return only arbitration mailboxes in the results. You don't need to specify a value with this switch.
 
 Arbitration mailboxes are system mailboxes that are used for storing different types of system data and for managing messaging approval workflow.
 
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch filters the results by mailboxes that have an archive enabled (only mailboxes that have an archive mailbox are returned). You don't need to specify a value with this switch.
+The Archive switch specifies whether to return only mailboxes that have an archive enabled in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ### -AuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuditLog switch is required to return audit log mailboxes in the results. You don't need to specify a value with this switch.
+The AuditLog switch specifies whether to return only audit log mailboxes in the results. You don't need to specify a value with this switch.
 
 Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ### -AuxAuditLog
 This parameter is available only in on-premises Exchange.
 
-The AuxAuditLog switch is required to return auxiliary audit log mailboxes in the results. You don't need to specify a value with this switch.
+The AuxAuditLog switch specifies whether to return only auxiliary audit log mailboxes in the results. You don't need to specify a value with this switch.
 
 Audit log mailboxes are arbitration mailboxes that are used to store audit log settings.
 
@@ -411,7 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupMailbox
-The GroupMailbox switch is required to return Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
+The GroupMailbox switch specifies whether to return only Microsoft 365 Groups in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -522,7 +522,7 @@ Accept wildcard characters: False
 ```
 
 ### -Migration
-The Migration switch is required to return migration mailboxes in the results. You don't need to specify a value with this switch.
+The Migration switch specifies whether to return only migration mailboxes in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -540,7 +540,7 @@ Accept wildcard characters: False
 ### -Monitoring
 This parameter is available only in on-premises Exchange.
 
-The Monitoring switch is required to return monitoring mailboxes in the results. You don't need to specify a value with this switch.
+The Monitoring switch specifies whether to return only monitoring mailboxes in the results. You don't need to specify a value with this switch.
 
 Monitoring mailboxes are associated with managed availability and the Exchange Health Manager service, and have a RecipientTypeDetails property value of MonitoringMailbox.
 
@@ -579,7 +579,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-The PublicFolder switch is required to return public folder mailboxes in the results. You don't need to specify a value with this switch.
+The PublicFolder switch specifies whether to return only public folder mailboxes in the results. You don't need to specify a value with this switch.
 
 Public folder mailboxes are specially designed mailboxes that store the hierarchy and content of public folders.
 
@@ -651,7 +651,7 @@ Accept wildcard characters: False
 ### -RemoteArchive
 This parameter is available only in on-premises Exchange.
 
-The RemoteArchive switch is required to return remote archive mailboxes in the results. You don't need to specify a value with this switch.
+The RemoteArchive switch specifies whether to return only remote archive mailboxes in the results. You don't need to specify a value with this switch.
 
 Remote archive mailboxes are archive mailboxes in the cloud-based service that are associated with mailbox users in on-premises Exchange organizations.
 
@@ -716,7 +716,7 @@ Accept wildcard characters: False
 ### -SoftDeletedMailbox
 This parameter is available only in the cloud-based service.
 
-The SoftDeletedMailbox switch is required to return soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+The SoftDeletedMailbox switch specifies whether to return only soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
 
 Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
