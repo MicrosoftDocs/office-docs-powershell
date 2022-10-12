@@ -107,7 +107,7 @@ Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
 
 This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
 
-To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Microsoft 365 admin center or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
+To avoid journaling issues, we recommend that you set JournalingReportNdrTo to an external address. Like the journaling mailbox, the alternate journaling mailbox can't be an Exchange Online mailbox. In Exchange Online, you can configure this setting by using the Microsoft 365 admin center or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
 
 ## PARAMETERS
 
@@ -695,7 +695,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingReportNdrTo
-The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter.
+The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter. Like the journaling mailbox, the alternate journaling mailbox can't be an Exchange Online mailbox.
 
 ```yaml
 Type: SmtpAddress
