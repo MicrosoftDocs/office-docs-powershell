@@ -131,7 +131,7 @@ When you use this switch, you'll get a warning that this retention policy will r
 **Note**: Changing which retention policy is the default might or might not affect new and existing mailboxes based on the value of the RetentionPolicy parameter on all mailbox plans:
 
 - $null (blank): Changes to which retention policy is the default are continually reflected in new and existing mailboxes.
-- A retention policy is specified: The value of the RetentionPolicy parameter for all mailbox plans should either be $null (blank) or match the Exchange retention policy that is configured as default for the tenant otherwise the experience may be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses.  For more information see [Mailbox plans in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans/).
+- A retention policy is specified: The value of the RetentionPolicy parameter for all mailbox plans should either be $null (blank) or match the Exchange retention policy that is configured as default for the tenant otherwise the experience may be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses. For more information see [Mailbox plans in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans/).
 
 Additionally, if a mailbox is assigned an Exchange retention policy that is not default, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
 
