@@ -160,45 +160,6 @@ This example exports all messages from Kweku's Inbox to the .pst file InPlaceHol
 
 ## PARAMETERS
 
-### -ComplianceStorePath
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: MailboxComplianceExportRequest
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FilePath
-The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
-
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
-
-- To import PST files from the share: Read permission
-- To save exported PST files to the share: Read/Write permission.
-
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
-
-```yaml
-Type: LongPath
-Parameter Sets: Mailbox, MailboxExportRequest
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Mailbox
 The Mailbox parameter specifies the source mailbox where the contents are being exported from.
 
@@ -240,6 +201,45 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ComplianceStorePath
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: MailboxComplianceExportRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePath
+The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
+
+You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
+
+- To import PST files from the share: Read permission
+- To save exported PST files to the share: Read/Write permission.
+
+If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+
+```yaml
+Type: LongPath
+Parameter Sets: Mailbox, MailboxExportRequest
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
