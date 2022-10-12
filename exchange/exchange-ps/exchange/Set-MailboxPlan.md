@@ -348,7 +348,7 @@ If you don't set a value for this parameter, existing mailboxes are also updated
 
 **Note**: If the value of this parameter is not blank ($null) then it must match the Exchange retention policy that is configured as default for the tenant otherwise the experience may be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses.
 
-Additionally, if a mailbox is assigned an Exchange retention policy that is not default, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
+Additionally, if a mailbox is assigned an Exchange retention policy that is not the default policy, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
 
 For more information see [Mailbox plans in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans/).
 
