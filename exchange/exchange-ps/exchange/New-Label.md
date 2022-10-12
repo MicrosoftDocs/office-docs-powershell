@@ -164,7 +164,7 @@ Supported settings for built-in labeling:
 - **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `New-Label -DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
 
 - **SMimeEncrypt**: Specifies S/MIME encryption for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeEncrypt="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
- 
+
 - **SMimeSign**: Specifies S/MIME digital signature for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeSign="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
 
 ```yaml
