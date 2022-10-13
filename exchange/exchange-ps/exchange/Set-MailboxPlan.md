@@ -348,9 +348,11 @@ If you don't set a value for this parameter, existing mailboxes are also updated
 
 **Note**: Specifying a value for this parameter has the following potential issues:
 
-- The specified retention policy is applied only to new mailboxes. The retention policy that's applied to existing mailboxes is not changed when you specify a different retention policy in the mailbox plan.
-- Changes to which retention policy is the default are ignored on new and existing mailboxes.
-- If you change the value of this parameter from a specific retention policy back to blank ($null), changes to which retention policy is the default do not affect mailboxes created when the retention policy was specified. Changes to which retention policy is the default only affect new mailboxes and any existing mailboxes that were created when no retention policy was specified. In effect, mailboxes created when the retention policy was specified in the mailbox plan are stuck using that retention policy (the RetentionPolicy parameter on the Set-Mailbox cmdlet is not available in Exchange Online).
+- If the value of this parameter is not blank ($null), then the specified retention policy must be the default Exchange retention policy that's configured for the organization. Otherwise, the experience might be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses.
+- If a mailbox is assigned an Exchange retention policy that's not the default policy, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
+- Changes to the default retention policy that affect existing mailboxes can potentially saturate the network if there are hundreds or thousands of mailboxes that require updates.
+
+For more information, see [Mailbox plans in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans).
 
 ```yaml
 Type: MailboxPolicyIdParameter

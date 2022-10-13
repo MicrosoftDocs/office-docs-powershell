@@ -180,6 +180,34 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -ProbeIdentity
+The ProbeIdentity parameter specifies the probe to use. Valid values are:
+
+Outlook Anywhere (RPC over HTTP) probes:
+
+- `Outlook.Protocol\OutlookRpcSelfTestProbe`: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe`: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
+
+MAPI over HTTP probes:
+
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe`: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
+- `OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe`: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
+- `OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
+
+```yaml
+Type: String
+Parameter Sets: Probe
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GetDefaultsFromAutodiscover
 This parameter is available only in Exchange Server 2010.
 
@@ -402,34 +430,6 @@ Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProbeIdentity
-The ProbeIdentity parameter specifies the probe to use. Valid values are:
-
-Outlook Anywhere (RPC over HTTP) probes:
-
-- `Outlook.Protocol\OutlookRpcSelfTestProbe`: Validates that the RPC/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- `Outlook.Protocol\OutlookRpcDeepTestProbe`: Validates that the RPC/HTTP endpoint is working on the Mailbox server. It will attempt to connect to and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- `Outlook.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the RPC/HTTP endpoint is working on the Mailbox Server. It will attempt to connect to and log in to the mailbox in the specified mailbox database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
-
-MAPI over HTTP probes:
-
-- `OutlookMapiHttp.Protocol\OutlookMapiHttpSelfTestProbe`: Validates that the MAPI/HTTP endpoint is able to receive traffic on the Mailbox server. It does not attempt to log in to a mailbox. It is a high level check of connectivity.
-- `OutlookMapiHttp.Protocol\OutlookMapiHttpDeepTestProbe`: Validates that the MAPI/HTTP endpoint is working on the Mailbox server. It will attempt to connect and log in to the mailbox. Since no database is specified, it will attempt to connect to the first database returned by the Get-MailboxDatabase cmdlet.
-- `OutlookMapiHttp.Protocol\OutlookRpcDeepTestProbe\<Case-sensitive Mailbox Database Name>`: Validates that the MAPI/HTTP endpoint is working on the Mailbox Server. It will attempt to connect and log in to the mailbox in the specified database. If the mailbox database name contains spaces, enclose the entire value in quotation marks (for example, `"Outlook.Protocol\OutlookRpcDeepTestProbe\Mailbox Database 0352791530"`).
-
-```yaml
-Type: String
-Parameter Sets: Probe
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -67,6 +67,22 @@ This example retrieves a list of exclusive scopes.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the management scope to return. If the management scope name contains spaces, enclose it in quotation marks (").
+
+```yaml
+Type: ManagementScopeIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -98,22 +114,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the management scope to return. If the management scope name contains spaces, enclose it in quotation marks (").
-
-```yaml
-Type: ManagementScopeIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

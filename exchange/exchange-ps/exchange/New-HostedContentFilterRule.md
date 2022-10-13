@@ -53,6 +53,24 @@ This example creates a new spam filter rule named Contoso Recipients with the fo
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a unique name for the spam filter rule. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+Don't use the following characters in the name value: `\ % & * + / = ? { } | < > ( ) ; : [ ] , "`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HostedContentFilterPolicy
 The HostedContentFilterPolicy parameter specifies the spam filter policy (content filter policy) that's associated with the rule.
 
@@ -72,24 +90,6 @@ Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a unique name for the spam filter rule. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-Don't use the following characters in the name value: `\ % & * + / = ? { } | < > ( ) ; : [ ] , "`.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

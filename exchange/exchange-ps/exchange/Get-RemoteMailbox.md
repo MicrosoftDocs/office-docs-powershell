@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
-**Note**: Limitations on domain controllers might affect the number of results returned for the value unlimited. For more information, see [this article](/troubleshoot/windows-server/identity/domain-controller-returns-500-values-ldap-response).
+**Note**: Limitations on domain controllers might affect the number of results returned for the value unlimited. For more information, see [this article](https://learn.microsoft.com/troubleshoot/windows-server/identity/domain-controller-returns-500-values-ldap-response).
 
 ```yaml
 Type: Unlimited

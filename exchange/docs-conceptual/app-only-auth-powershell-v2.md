@@ -36,7 +36,7 @@ description: "Learn about using the Exchange Online PowerShell V2 module and V3 
 >   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
 >   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >
->   You can use Microsoft Graph instead. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
+>   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
 >
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following cmdlets:
 >   - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
@@ -160,9 +160,11 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 3. On the **Overview** page that opens, under **Manage**, select **App registrations**.
 
+   To go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>.
+
    ![Select App registrations.](media/exo-app-only-auth-select-app-registrations.png)
 
-4. On the **App registrations** page that opens, click **New registration**.
+4. On the **App registrations** page, click **New registration**.
 
    ![Select New registration on the App registrations page.](media/exo-app-only-auth-new-app-registration.png)
 
@@ -193,7 +195,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 47).
 
-   Modify the `resourceAppId`, `resourceAccess`, `id`, and `type` values as shown in the following code snippet:
+   Modify the `resourceAppId`, `resourceAccess id`, and `resourceAccess type` values as shown in the following code snippet:
 
    ```json
    "requiredResourceAccess": [
@@ -261,13 +263,9 @@ Create a self-signed x.509 certificate using one of the following methods:
 
 After you register the certificate with your application, you can use the private key (`.pfx` file) or the thumbprint for authentication.
 
-1. On the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
+1. On the **Owned applications** tab on the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
 
-   If you need to get back to **Apps registration** page, do the following steps:
-
-   1. Open the Azure AD portal at <https://portal.azure.com/>.
-   2. Under **Manage Azure Active Directory**, click **View**.
-   3. Under **Manage**, select **App registrations**.
+   If you need to get back to **Apps registration** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>, verify the **Owned applications** tab is selected, and then select your application.
 
    ![Apps registration page where you select your app.](media/exo-app-only-auth-app-registration-page.png)
 
@@ -295,16 +293,16 @@ After you register the certificate with your application, you can use the privat
 
 Azure AD has more than 50 admin roles available. The supported roles are described in the following table:
 
-|Role|Exchange Online PowerShell|Security & Compliance PowerShell|
+|Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
 |---|:---:|:---:|
-|Compliance Administrator|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Exchange Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)||
-|Global Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Global Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Helpdesk Administrator|![Check mark.](media/checkmark.png)||
-|Security Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Security Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Exchange Recipient Administrator|![Check mark.](media/checkmark.png)||
+|Compliance Administrator|✔|✔|
+|Exchange Administrator<sup>\*</sup>|✔||
+|Global Administrator<sup>\*</sup>|✔|✔|
+|Global Reader|✔|✔|
+|Helpdesk Administrator|✔||
+|Security Administrator<sup>\*</sup>|✔|✔|
+|Security Reader|✔|✔|
+|Exchange Recipient Administrator|✔||
 
 <sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
 

@@ -383,6 +383,50 @@ A Google Workspace migration batch is created that uses the CSV migration file g
 
 ## PARAMETERS
 
+### -UserIds
+The UserIds parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify a user by email address or by their Guid property value from the Get-MigrationUser cmdlet. You can specify multiple users separated by commas.
+
+The users that you specify for this parameter must be defined in an existing migration batch.
+
+To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: PreexistingUserIds
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Users
+The Users parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify the users by using the Get-MigrationUser cmdlet. For example:
+
+$Failed = Get-MigrationUser -Status Failed
+
+New-MigrationBatch -Name "Retry Failed Users" -Users $Failed
+
+The users that you specify for this parameter must be defined in an existing migration batch.
+
+To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Preexisting
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Name
 The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
 
@@ -469,50 +513,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserIds
-The UserIds parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify a user by email address or by their Guid property value from the Get-MigrationUser cmdlet. You can specify multiple users separated by commas.
-
-The users that you specify for this parameter must be defined in an existing migration batch.
-
-To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: PreexistingUserIds
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Users
-The Users parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify the users by using the Get-MigrationUser cmdlet. For example:
-
-$Failed = Get-MigrationUser -Status Failed
-
-New-MigrationBatch -Name "Retry Failed Users" -Users $Failed
-
-The users that you specify for this parameter must be defined in an existing migration batch.
-
-To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Preexisting
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

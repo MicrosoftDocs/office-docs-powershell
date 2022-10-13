@@ -48,22 +48,6 @@ This example creates an Intra-Organization connector named "MainCloudConnector" 
 
 ## PARAMETERS
 
-### -DiscoveryEndpoint
-The DiscoveryEndpoint parameter specifies the externally-accessible URL that's used for the Autodiscover service for the domain that's configured in the Intra-Organization connector.
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies a friendly name for the Intra-Organization connector. If the value contains spaces, enclose the value in double quotation marks.
 
@@ -75,6 +59,22 @@ Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiscoveryEndpoint
+The DiscoveryEndpoint parameter specifies the externally-accessible URL that's used for the Autodiscover service for the domain that's configured in the Intra-Organization connector.
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
