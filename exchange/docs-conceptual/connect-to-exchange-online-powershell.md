@@ -18,12 +18,12 @@ description: "Learn how to use the Exchange Online PowerShell V2 module or V3 mo
 
 # Connect to Exchange Online PowerShell
 
-The Exchange Online PowerShell module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without multi-factor authentication (MFA).
+
+The Exchange Online PowerShell module uses modern authentication for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
 > [!NOTE]
 > Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
-
-This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without MFA.
 
 To connect to Exchange Online PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
@@ -70,7 +70,7 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](/pow
 
 **Notes**:
 
-- _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
+- _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
 - With the EXO V3 module (v3.0.0 or v2.0.6-PreviewX), if you don't use the _UseRPSSession_ switch, you're using REST API cmdlets only. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
 
@@ -105,7 +105,7 @@ The connection examples in the following sections use modern authentication, and
    - **This example connects to Exchange Online PowerShell in a Microsoft 365 or Microsoft 365 GCC organization**:
 
      ```powershell
-     Connect-ExchangeOnline -UserPrincipalName navin@contoso.com
+     Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com
      ```
 
    - **This example connects to Exchange Online PowerShell in a Microsoft GCC High organization**:
@@ -144,7 +144,7 @@ The connection examples in the following sections use modern authentication, and
 - In PowerShell 7 for **accounts without MFA**, this example prompts for credentials within the PowerShell window:
 
   ```powershell
-  Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -InlineCredential
+  Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com -InlineCredential
   ```
 
 - In PowerShell 7 for accounts with or without MFA, this example uses another computer to authenticate and complete the connection. Typically, you use this method on computers that don't have web browsers (users are unable to enter their credentials in PowerShell 7):
@@ -179,7 +179,7 @@ For complete instructions, see [App-only authentication for unattended scripts i
 ```powershell
 $secpasswd = ConvertTo-SecureString -String '<YourPasswordHere>' -AsPlainText -Force 
 
-$o365cred = New-Object System.Management.Automation.PSCredential ("navin@contoso.com", $secpasswd) 
+$o365cred = New-Object System.Management.Automation.PSCredential ("navin@contoso.onmicrosoft.com", $secpasswd) 
 
 Connect-ExchangeOnline -Credential $o365cred
 ```
@@ -198,7 +198,7 @@ This example connects to customer organizations in the following scenarios:
 - Connect to a customer organization as a guest user.
 
   ```powershell
-  Connect-ExchangeOnline -UserPrincipalName navin@contoso.com -DelegatedOrganization adatum.onmicrosoft.com
+  Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com -DelegatedOrganization adatum.onmicrosoft.com
   ```
 
 ### Connect to Exchange Online PowerShell using managed identity
@@ -233,7 +233,7 @@ Disconnect-ExchangeOnline -Confirm:$false
 
 ## How do you know you've connected successfully?
 
-If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-AcceptedDomain**, and see the results.
+If you don't receive any errors, you've connected successfully. A quick test is to run an Exchange Online PowerShell cmdlet, for example, **Get-AcceptedDomain**, and see the results.
 
 If you receive errors, check the following requirements:
 
