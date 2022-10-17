@@ -131,7 +131,7 @@ The connection examples in the following sections use modern authentication, and
    ![Enter your password in the Sign in to your account window.](media/connect-exo-password-prompt.png)
 
    > [!NOTE]
-   > In PowerShell 7, browser-based single sign-on (SSO) is used by default, so the sign in prompt opens in your default web browser instead of a standalone dialog.
+   > In PowerShell 7, browser-based single sign-on (SSO) is used by default, so the sign-in prompt opens in your default web browser instead of a standalone dialog.
 
 3. **MFA only**: A verification code is generated and delivered based on the response option that's configured for your account (for example, a text message or the Microsoft Authenticator app on your device).
 
