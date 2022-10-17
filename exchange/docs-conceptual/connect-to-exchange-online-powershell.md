@@ -186,7 +186,7 @@ Connect-ExchangeOnline -Credential $o365cred
 
 ### Connect to Exchange Online PowerShell in customer organizations
 
-For more information, about partners and customer organizations, see the following topics:
+For more information about partners and customer organizations, see the following topics:
 
 - [What is the Cloud Solution Provider (CSP) program?](/partner-center/csp-overview).
 - [Introduction to granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction)
