@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ### -BlockUrls
 The BlockUrls parameter specifies the URLs that are always blocked by Safe Links in email messages and Safe Links for Office 365 apps.
 
-BlockURLs is being replaced by the Tenant Allow/Block List. Going forward all tenant blocks must be managed there. Only deletes to BlockURLs are supported.
+The BlockUrls parameter is being replaced by the Tenant Allow/Block List. Going forward, all tenant blocks must be managed from there. Only deletes to BlockUrls are supported.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
