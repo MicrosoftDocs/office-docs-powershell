@@ -19,6 +19,10 @@ description: "Learn about using the Exchange Online PowerShell V2 module and V3 
 
 # App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell
 
+Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
+
+Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and self-signed certificates.
+
 > [!NOTE]
 >
 > - The features and procedures described in this article require the following versions of the Exchange Online PowerShell module:
@@ -44,9 +48,11 @@ description: "Learn about using the Exchange Online PowerShell V2 module and V3 
 >
 > - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
 
-Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
+## How does it work?
 
-Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and self-signed certificates.
+The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
+
+## Connection examples
 
 The following examples show how to use the Exchange Online PowerShell module with app-only authentication:
 
@@ -112,10 +118,6 @@ The following examples show how to use the Exchange Online PowerShell module wit
     Connect-IPPSSession -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (Get-Credential).password -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-## How does it work?
-
-The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
-
 ## Set up app-only authentication
 
 An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
@@ -145,9 +147,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Azure AD, you can use any of the supported built-in roles.
 
-## Appendix
-
-## Step 1: Register the application in Azure AD
+### Step 1: Register the application in Azure AD
 
 > [!NOTE]
 > If you encounter problems, check the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
@@ -184,7 +184,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 5. Leave the app page that you return to open. You'll use it in the next step.
 
-## Step 2: Assign API permissions to the application
+### Step 2: Assign API permissions to the application
 
 > [!NOTE]
 > The procedures in this section replace any default permissions that were automatically configured for the new app. The app doesn't need the default permissions that were replaced.
@@ -236,7 +236,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You'll use it in an upcoming step.
 
-## Step 3: Generate a self-signed certificate
+### Step 3: Generate a self-signed certificate
 
 Create a self-signed x.509 certificate using one of the following methods:
 
@@ -259,7 +259,7 @@ Create a self-signed x.509 certificate using one of the following methods:
   .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
   ```
 
-## Step 4: Attach the certificate to the Azure AD application
+### Step 4: Attach the certificate to the Azure AD application
 
 After you register the certificate with your application, you can use the private key (`.pfx` file) or the thumbprint for authentication.
 
@@ -289,7 +289,7 @@ After you register the certificate with your application, you can use the privat
 
 4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
 
-## Step 5: Assign Azure AD roles to the application
+### Step 5: Assign Azure AD roles to the application
 
 Azure AD has more than 50 admin roles available. The supported roles are described in the following table:
 
