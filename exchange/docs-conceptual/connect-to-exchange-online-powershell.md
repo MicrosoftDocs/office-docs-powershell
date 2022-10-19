@@ -453,13 +453,13 @@ This section attempts to compare older connection methods that have been replace
 
 - **Exchange Online PowerShell module**:
 
-  - **System assigned**:
+  - **System-assigned**:
 
     ```powershell
     Connect-ExchangeOnline -ManagedIdentity -Organization "contoso.onmicrosoft.com"
     ```
 
-  - **User assigned**:
+  - **User-assigned**:
 
     ```powershell
     Connect-ExchangeOnline -ManagedIdentity -Organization "contoso.onmicrosoft.com" -ManagedIdentityAccountId $ManagedIdentityAccountIdGuid
