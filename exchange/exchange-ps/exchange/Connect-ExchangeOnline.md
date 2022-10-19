@@ -559,7 +559,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA or with the ManagedIdentity parameter. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+The Organization parameter specifies the organization that's used in CBA or with the ManagedIdentity parameter. You must use an .onmicrosoft.com domain for the parameter value.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
