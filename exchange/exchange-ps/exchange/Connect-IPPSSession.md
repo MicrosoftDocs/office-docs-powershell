@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA. You must use an .onmicrosoft.com domain for the parameter value.
+The Organization parameter specifies the organization that's used in CBA. You must use an .onmicrosoft.com domain for the value of this parameter.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
