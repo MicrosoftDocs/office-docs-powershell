@@ -45,10 +45,10 @@ The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alt
 | :------------| :------- |
 | Name | ```(Get-CsOnlineUser -Identity <Identity>).DisplayName``` |
 | Id | ```(Get-CsOnlineUser -Identity <Identity>).Identity```|
-| SipDomain | ```$u=(Get-CsOnlineUser -Identity <Identity>).SipAddress;$SipDomain = $u.Substring($u.IndexOf('@')+1)```|
-| DataCenter | ```$pool=(Get-CsOnlineUser -Identity <Identity>).RegistrarPool;$DataCenter=(($pool.SubString(0,$pool.IndexOf('.')).SubString("sippool".Length))).Substring(0,5)```|
+| SipDomain | ```$u=(Get-CsOnlineUser -Identity <Identity>).SipAddress;$SipDomain = $u.Substring($u.IndexOf('@')+1);$SipDomain```|
+| DataCenter | ```$pool=(Get-CsOnlineUser -Identity <Identity>).RegistrarPool;$DataCenter=(($pool.SubString(0,$pool.IndexOf('.')).SubString("sippool".Length))).Substring(0,5);$DataCenter```|
 | TenantId | ```(Get-CsOnlineUser -Identity <Identity>).TenantId```|
-| PstnConnectivity | ```if ((Get-CsOnlineUser -Identity <Identity>).FeatureTypes.Contains('CallingPlan')) {$PstnConnectivity = 'Online' } else {$PstnConnectivity = 'OnPremises'}```|
+| PstnConnectivity | ```if ((Get-CsOnlineUser -Identity <Identity>).FeatureTypes.Contains('CallingPlan')) {$PstnConnectivity = 'Online' } else {$PstnConnectivity = 'OnPremises'};$PstnConnectivity```|
 | UsageLocation | ```(Get-CsOnlineUser -Identity <Identity>).UsageLocation``` |
 | EnterpriseVoiceEnabled | ```(Get-CsOnlineUser -Identity <Identity>).EnterpriseVoiceEnabled``` |
 | Number | ```(Get-CsOnlineUser -Identity <Identity>).LineUri.Replace('tel:+','')``` |
