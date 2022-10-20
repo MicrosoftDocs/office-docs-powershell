@@ -154,17 +154,13 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 1. Open the Azure AD portal at <https://portal.azure.com/>.
 
-2. Under **Manage Azure Active Directory**, click **View**.
+2. In the **Search** box at the top of the page, start typing **App registrations**, and then select **App registrations** from the results in the **Services** section.
 
-   ![Click View in the Azure AD portal under Manage Azure Active Directory.](media/exo-app-only-auth-manage-ad-view.png)
+   ![App registrations in the Search results on the on the home page of the Azure portal.](media/exo-app-only-auth-find-app-registrations.png)
 
-3. On the **Overview** page that opens, under **Manage**, select **App registrations**.
+   Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>.
 
-   To go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>.
-
-   ![Select App registrations.](media/exo-app-only-auth-select-app-registrations.png)
-
-4. On the **App registrations** page, click **New registration**.
+3. On the **App registrations** page, click **New registration**.
 
    ![Select New registration on the App registrations page.](media/exo-app-only-auth-new-app-registration.png)
 
@@ -182,7 +178,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    When you're finished, click **Register**.
 
-5. Leave the app page that you return to open. You'll use it in the next step.
+4. Leave the app page that you return to open. You'll use it in the next step.
 
 ### Step 2: Assign API permissions to the application
 
@@ -316,25 +312,23 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 > [!NOTE]
 > The following steps are slightly different for Exchange Online PowerShell vs. Security & Compliance PowerShell. The steps for both environments are shown. To configure roles for both environments, repeat the steps in this section.
 
-1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
+1. In Azure AD portal at <https://portal.azure.com/>, start typing **roles and administrators** in the **Search** box at the top of the page, and then select **Azure AD roles and administrators** from the results in the **Services** section.
 
-   ![View in the Azure AD portal under Manage Azure Active Directory.](media/exo-app-only-auth-manage-ad-view.png)
+   ![Azure AD roles and administrators in the Search results on the on the home page of the Azure portal.](media/exo-app-only-auth-find-roles-and-administrators.png)
 
-2. On the **Overview** page that opens, under **Manage**, select **Roles and administrators**.
+   Or, to go directly to the **Azure AD roles and administrators** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/AllRolesBlade>.
 
-   ![Select Roles and administrators from the overview page.](media/exo-app-only-auth-select-roles-and-administrators.png)
+2. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
-3. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
-
-   - **Exchange Online PowerShell**:
+   - **Exchange Online PowerShell**: For example, find and select the **Exchange administrator** role.
 
      ![Find and select a supported Exchange Online PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
 
-   - **Security & Compliance PowerShell**:
+   - **Security & Compliance PowerShell**: For example, find and select the **Compliance Administrator** role.
 
      ![Find and select a supported Security & Compliance PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
-4. On the **Assignments** page that opens, click **Add assignments**.
+3. On the **Assignments** page that opens, click **Add assignments**.
 
    - **Exchange Online PowerShell**:
 
@@ -344,13 +338,13 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![Select Add assignments on the role assignments page for Security & Compliance PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments-scc.png)
 
-5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
+4. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
 
    ![Find and select your app on the Add assignments flyout.](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
    When you're finished, click **Add**.
 
-6. Back on the **Assignments** page, verify that the app has been assigned to the role.
+5. Back on the **Assignments** page, verify that the app has been assigned to the role.
 
    - **Exchange Online PowerShell**:
 
