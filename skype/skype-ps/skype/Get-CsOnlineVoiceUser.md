@@ -39,6 +39,14 @@ The table below lists the parameters to `Get-CsOnlineVoiceUser` and the alternat
 | NumberNotAssigned | Find users without a phone number assigned | ```Get-CsOnlineUser -Filter {LineUri -eq $Null -and AccountEnabled -eq $True} -AccountType User``` |
 | PSTNConnectivity | Find enabled users with PhoneSystem (OnPremises) or CallingPlan (Online) | ```Get-CsOnlineUser -Filter {FeatureTypes -Contains ‘CallingPlan’ -and AccountEnabled -eq $True} -AccountType User``` or ```Get-CsOnlineUser -Filter {FeatureTypes -NotContains ‘CallingPlan’ -and AccountEnabled -eq $True} -AccountType User```. Note: The filtering on FeatureTypes will be available later this year |
 
+The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alternative method of getting the same field using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment` and `Get-CsOnlineLisCivicAddress`
+
+| Output field | Alternative |
+| :------------| :------- |
+| Name | ```(Get-CsOnlineUser -Identity <Identity>).DisplayName``` |
+| Id | ```(Get-CsOnlineUser -Identity <Identity>).Identity```|
+| SipDomain | ```$u=(Get-CsOnlineUser -Identity user@contoso.com).SipAddress
+$SipDomain = $u.Substring($u.IndexOf('@')+1)```|
 
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
