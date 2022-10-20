@@ -23,6 +23,22 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ```
 
 ## DESCRIPTION
+
+**Note**: Using this cmdlet will be deprecated. Please see below for replacement cmdlets for getting the information provided by the cmdlet.
+
+The table below lists the parameters to `Get-CsOnlineVoiceUser` and the alternative method of getting the same data using a combination of Get-CsOnlineUser, Get-CsPhoneNumberAssignment and Get-CsOnlineLisCivicAddress
+
+| Parameter | Description | Alternative |
+| :------------| :------- | :------- |
+| CivicAddressId | Find users where assigned number matches CivicAddressId | Get-CsPhoneNumberAssignment -CivicAddressId <CivicAddressId> |
+| EnterpriseVoiceStatus | Find users matching EVEnabled | Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $True} |
+| ExpandLocation | Resolve the LocationId | Get-CsOnlineLisLocation after getting LocationId/CivicAddressId |
+| Identity | Point query for a user | Get-CsOnlineUser -Identity |
+| LocationId | Find users where assigned number matches LocationId | Get-CsPhoneNumberAssignment -LocationId <LocationId> |
+| NumberAssigned|NotAssigned | Find users with assigned/unassigned number | Get-CsOnlineUser -Filter {LineUri -ne $Null} or Get-CsOnlineUser -Filter {LineUri -eq $Null} |
+| PSTNConnectivity | Find users with PhoneSystem (OnPremises) or CallingPlan (Online) | Get-CsOnlineUser -Filter {FeatureTypes -Contains ‘CallingPlan’} or Get-CsOnlineUser -Filter {FeatureTypes -NotContains ‘CallingPlan’} |
+
+
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
 - The result size is not limited to 100 users anymore (the older cmdlet in version 2.6.0 and earlier limited the result size to 100).
