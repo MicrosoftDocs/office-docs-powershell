@@ -30,13 +30,15 @@ The table below lists the parameters to `Get-CsOnlineVoiceUser` and the alternat
 
 | Parameter | Description | Alternative |
 | :------------| :------- | :------- |
-| CivicAddressId | Find users where the assigned phone number is associcated to the CivicAddressId | ```Get-CsPhoneNumberAssignment -CivicAddressId <CivicAddressId>``` |
-| EnterpriseVoiceStatus | Find users based on EnterpriseVoiceEnabled | ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $True}``` or ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $False}```  |
+| CivicAddressId | Find phone number information where the assigned phone number is associcated to the CivicAddressId | ```Get-CsPhoneNumberAssignment -CivicAddressId <CivicAddressId>``` |
+| EnterpriseVoiceStatus | Find enabled users based on EnterpriseVoiceEnabled | ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $True -and AccountEnabled -eq $True} -AccountType User``` or ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $False -and AccountEnabled -eq $True} -AccountType User```  |
 | ExpandLocation | Show information about the LocationId | ```Get-CsOnlineLisLocation -LocationId <LocationId>``` |
 | Identity | Get information for a user | ```Get-CsOnlineUser -Identity <Identity>``` |
-| LocationId | Find users where the assigned phone number is associated to the LocationId | ```Get-CsPhoneNumberAssignment -LocationId <LocationId>``` |
-| NumberAssigned or NotAssigned | Find users with a phone number assigned or not assigned | ```Get-CsOnlineUser -Filter {LineUri -ne $Null}``` or ```Get-CsOnlineUser -Filter {LineUri -eq $Null}``` |
-| PSTNConnectivity | Find users with PhoneSystem (OnPremises) or CallingPlan (Online) | ```Get-CsOnlineUser -Filter {FeatureTypes -Contains ‘CallingPlan’}``` or ```Get-CsOnlineUser -Filter {FeatureTypes -NotContains ‘CallingPlan’}``` |
+| LocationId | Find phone number information where the assigned phone number is associated to the LocationId | ```Get-CsPhoneNumberAssignment -LocationId <LocationId>``` |
+| NumberAssigned | Find enabled users with a phone number assigned | ```Get-CsOnlineUser -Filter {LineUri -ne $Null -and AccountEnabled -eq $True} -AccountType User``` |
+| NumberNotAssigned | Find users without a phone number assigned | ```Get-CsOnlineUser -Filter {LineUri -eq $Null -and AccountEnabled -eq $True} -AccountType User``` |
+
+| PSTNConnectivity | Find enabled users with PhoneSystem (OnPremises) or CallingPlan (Online) | ```Get-CsOnlineUser -Filter {FeatureTypes -Contains ‘CallingPlan’ -and AccountEnabled -eq $True} -AccountType User``` or ```Get-CsOnlineUser -Filter {FeatureTypes -NotContains ‘CallingPlan’}``` |
 
 
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
