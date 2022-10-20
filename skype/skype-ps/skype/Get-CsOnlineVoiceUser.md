@@ -31,7 +31,7 @@ The table below lists the parameters to `Get-CsOnlineVoiceUser` and the alternat
 | Parameter | Description | Alternative |
 | :------------| :------- | :------- |
 | CivicAddressId | Find phone number information where the assigned phone number is associcated to the CivicAddressId | ```Get-CsPhoneNumberAssignment -CivicAddressId <CivicAddressId>``` |
-| EnterpriseVoiceStatus | Find enabled users based on EnterpriseVoiceEnabled | ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $True -and AccountEnabled -eq $True} -AccountType User``` or ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $False -and AccountEnabled -eq $True} -AccountType User```  |
+| EnterpriseVoiceStatus | Find enabled users based on EnterpriseVoiceEnabled | ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $True -and FeatureTypes -Contains 'PhoneSystem' -and AccountEnabled -eq $True} -AccountType User``` or ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $False -and FeatureTypes -Contains 'PhoneSystem' -and AccountEnabled -eq $True} -AccountType User```  |
 | ExpandLocation | Show information about the LocationId | ```Get-CsOnlineLisLocation -LocationId <LocationId>``` |
 | Identity | Get information for a user | ```Get-CsOnlineUser -Identity <Identity>``` |
 | LocationId | Find phone number information where the assigned phone number is associated to the LocationId | ```Get-CsPhoneNumberAssignment -LocationId <LocationId>``` |
