@@ -46,6 +46,13 @@ The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alt
 | Name | ```(Get-CsOnlineUser -Identity <Identity>).DisplayName``` |
 | Id | ```(Get-CsOnlineUser -Identity <Identity>).Identity```|
 | SipDomain | ```$u=(Get-CsOnlineUser -Identity <Identity>).SipAddress;$SipDomain = $u.Substring($u.IndexOf('@')+1)```|
+| DataCenter | ```$pool=(Get-CsOnlineUser -Identity <Identity>).RegistrarPool;$DataCenter=(($pool.SubString(0,$pool.IndexOf('.')).SubString("sippool".Length))).Substring(0,5)```|
+| TenantId | ```(Get-CsOnlineUser -Identity <Identity>).TenantId```|
+| PstnConnectivity | ```if ((Get-CsOnlineUser -Identity <Identity>).FeatureTypes.Contains('CallingPlan')) {$PstnConnectivity = 'Online' } else {$PstnConnectivity = 'OnPremises'}```|
+| UsageLocation | ```(Get-CsOnlineUser -Identity <Identity>).UsageLocation``` |
+| EnterpriseVoiceEnabled | ```(Get-CsOnlineUser -Identity <Identity>).EnterpriseVoiceEnabled``` |
+| Number | ```(Get-CsOnlineUser -Identity <Identity>).LineUri.Replace('tel:+','')``` |
+| Location | ```Get-CsOnlineLisLocation -LocationId (Get-CsPhoneNumberAssignment -AssignedPstnTargetId <Identity>).LocationId``` |
 
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
