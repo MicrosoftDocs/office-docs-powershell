@@ -30,12 +30,12 @@ The table below lists the parameters to `Get-CsOnlineVoiceUser` and the alternat
 
 | Parameter | Description | Alternative |
 | :------------| :------- | :------- |
-| CivicAddressId | Find users where the assigned phone number matches CivicAddressId | ```Get-CsPhoneNumberAssignment -CivicAddressId <CivicAddressId>``` |
-| EnterpriseVoiceStatus | Find users matching EVEnabled | ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $True}``` |
-| ExpandLocation | Resolve the LocationId | ```Get-CsOnlineLisLocation``` after getting LocationId/CivicAddressId |
-| Identity | Point query for a user | ```Get-CsOnlineUser -Identity <Identity>``` |
-| LocationId | Find users where assigned number matches LocationId | ```Get-CsPhoneNumberAssignment -LocationId <LocationId>``` |
-| NumberAssigned|NotAssigned | Find users with assigned/unassigned number | ```Get-CsOnlineUser -Filter {LineUri -ne $Null}``` or ```Get-CsOnlineUser -Filter {LineUri -eq $Null}``` |
+| CivicAddressId | Find users where the assigned phone number is associcated to the CivicAddressId | ```Get-CsPhoneNumberAssignment -CivicAddressId <CivicAddressId>``` |
+| EnterpriseVoiceStatus | Find users based on EnterpriseVoiceEnabled | ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $True}``` or ```Get-CsOnlineUser -Filter {EnterpriseVoiceEnabled -eq $False}```  |
+| ExpandLocation | Show information about the LocationId | ```Get-CsOnlineLisLocation -LocationId <LocationId>``` |
+| Identity | Get information for a user | ```Get-CsOnlineUser -Identity <Identity>``` |
+| LocationId | Find users where the assigned phone number is associated to the LocationId | ```Get-CsPhoneNumberAssignment -LocationId <LocationId>``` |
+| NumberAssigned or NotAssigned | Find users with a phone number assigned or not assigned | ```Get-CsOnlineUser -Filter {LineUri -ne $Null}``` or ```Get-CsOnlineUser -Filter {LineUri -eq $Null}``` |
 | PSTNConnectivity | Find users with PhoneSystem (OnPremises) or CallingPlan (Online) | ```Get-CsOnlineUser -Filter {FeatureTypes -Contains ‘CallingPlan’}``` or ```Get-CsOnlineUser -Filter {FeatureTypes -NotContains ‘CallingPlan’}``` |
 
 
