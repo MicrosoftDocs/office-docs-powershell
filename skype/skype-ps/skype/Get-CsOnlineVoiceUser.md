@@ -45,8 +45,7 @@ The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alt
 | :------------| :------- |
 | Name | ```(Get-CsOnlineUser -Identity <Identity>).DisplayName``` |
 | Id | ```(Get-CsOnlineUser -Identity <Identity>).Identity```|
-| SipDomain | ```$u=(Get-CsOnlineUser -Identity user@contoso.com).SipAddress
-$SipDomain = $u.Substring($u.IndexOf('@')+1)```|
+| SipDomain | ```$u=(Get-CsOnlineUser -Identity user@contoso.com).SipAddress;$SipDomain = $u.Substring($u.IndexOf('@')+1)```|
 
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
