@@ -48,13 +48,13 @@ The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alt
 | :---------------------------------| :--------------------------------- |
 | Name | DisplayName in the output from ```Get-CsOnlineUser``` |
 | Id | Identity in the output from ```Get-CsOnlineUser```|
-| SipDomain | ```$u=(Get-CsOnlineUser -Identity <Identity>).SipAddress;$SipDomain = $u.Substring($u.IndexOf('@')+1);$SipDomain```|
-| DataCenter | ```$pool=(Get-CsOnlineUser -Identity <Identity>).RegistrarPool;$DataCenter=(($pool.SubString(0,$pool.IndexOf('.')).SubString("sippool".Length))).Substring(0,5);$DataCenter```|
+| SipDomain | Extract SipDomain from the SipAddress in output from ```Get-CsOnlineUser``` |
+| DataCenter | Extract DatCenter from RegistrarPool in the output from ```Get-CsOnlineUser```|
 | TenantId | TenantId in the output from ```Get-CsOnlineUser```|
-| PstnConnectivity | ```if ((Get-CsOnlineUser -Identity <Identity>).FeatureTypes.Contains('CallingPlan')) {$PstnConnectivity = 'Online' } else {$PstnConnectivity = 'OnPremises'};$PstnConnectivity```|
+| PstnConnectivity | FeatureTypes in the output from ```Get-CsOnlineUser```. If FeatureTypes contains CallingPlan, PstnConnectivity is 'Online'. If FeatureTypes contains 'PhoneSystem' and does not contain 'CallingPlan', PstnConnectivity = 'OnPremises' |
 | UsageLocation | UsageLocation in the output from ```Get-CsOnlineUser``` |
 | EnterpriseVoiceEnabled | EnterpriseVoiceEnabled in the output from ```Get-CsOnlineUser``` |
-| Number | LineUri.Replace('tel:+','') in the output from ```Get-CsOnlineUser``` |
+| Number | LineUri in the output from ```Get-CsOnlineUser```. You can get same phone number format by doing LineUri.Replace('tel:+','')  |
 | Location | Use LocationId in the output from ```Get-CsPhoneNumberAssignment -AssignedPstnTargetId <Identity>``` as the input to ```Get-CsOnlineLisLocation -LocationId``` |
 
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
