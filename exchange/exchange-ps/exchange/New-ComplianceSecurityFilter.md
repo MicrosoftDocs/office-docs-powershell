@@ -46,60 +46,26 @@ This example allows the user annb to perform all compliance search actions only 
 
 ### Example 2
 ```powershell
-New-ComplianceSecurityFilter -FilterName MarketingFilter -Users donh,suzanf -Filters "Mailbox_CustomAttribute1 -eq 'Marketing'" -Action Search
-```
-
-This example allows the users donh and suzanf to search only the mailboxes that have the value Marketing for the CustomAttribute1 mailbox property.
-
-### Example 3
-```powershell
 New-ComplianceSecurityFilter -FilterName USDiscoveryManagers -Users "US Discovery Managers" -Filters "Mailbox_CountryCode -eq '840'" -Action All
 ```
 
 This example allows members of the US Discovery Managers role group to perform all compliance search actions only on mailboxes in the United States.
 
-### Example 4
-```powershell
-$DG = Get-DistributionGroup "Ottawa Users"
-New-ComplianceSecurityFilter -FilterName DGFilter -Users eDiscoveryManager -Filters "Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'" -Action Search
-```
-
-This example assigns allows members of the eDiscovery Manager role group to only search the mailboxes of members of the Ottawa Users distribution group.
-
-This example requires you to connect to Security & Compliance PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see [Configure permissions filtering for Compliance Search](https://learn.microsoft.com/microsoft-365/compliance/permissions-filtering-for-content-search).
-
-### Example 5
-```powershell
-$DG = Get-DistributionGroup "Executive Team"
-New-ComplianceSecurityFilter -FilterName NoExecutivesPreview -Users all -Filters "Mailbox_MemberOfGroup -ne '$($DG.DistinguishedName)'" -Action Purge
-```
-
-This example prevents any user from deleting content from the mailboxes of members of the Executive Team distribution group.
-
-This example requires you to connect to Security & Compliance PowerShell and Exchange Online PowerShell in the same remote PowerShell session. For instructions, see [Configure permissions filtering for Compliance Search](https://learn.microsoft.com/microsoft-365/compliance/permissions-filtering-for-content-search).
-
-### Example 6
+### Example 3
 ```powershell
 New-ComplianceSecurityFilter -FilterName EmailDateRestrictionFilter -Users donh@contoso.com -Filters "MailboxContent_Received -ge '01-01-2018' -and MailboxContent_Received -le '12-31-2018'" -Action All
 ```
 
 This example restricts the user to performing all compliance search actions only on email messages sent during the calendar year 2018.
 
-### Example 7
-```powershell
-New-ComplianceSecurityFilter -FilterName OneDriveOnly -Users "OneDrive eDiscovery Managers" -Filters "Site_Path -like 'https://contoso-my.sharepoint.com/personal*'" -Action Search
-```
-
-This example allows members of the OneDrive eDiscovery Managers custom role group to only search for content in OneDrive for Business locations in the organization.
-
-### Example 8
+### Example 4
 ```powershell
 New-ComplianceSecurityFilter -FilterName DocumentDateRestrictionFilter -Users donh@contoso.com -Filters "SiteContent_LastModifiedTime -ge '01-01-2018' -and SiteContent_LastModifiedTime -le '12-31-2018'" -Action All
 ```
 
 This example restricts the user to performing all compliance search actions on documents that were last changed sometime in the calendar year 2018.
 
-### Example 9
+### Example 5
 ```powershell
 New-ComplianceSecurityFilter -FilterName NoEXO -Users suzanf@contoso.com -Filters "Mailbox_Alias -notlike '*'" -Action All
 ```
@@ -111,10 +77,6 @@ This example prevents the user from performing any compliance search actions on 
 ### -Action
 The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
 
-- Export: The filter is applied when exporting search results, or preparing them for analysis in eDiscovery Premium.
-- Preview: The filter is applied when previewing search results.
-- Purge: The filter is applied when purging search results. How the items are deleted is controlled by the PurgeType parameter value on the New-ComplianceSearchAction cmdlet. The default value is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
-- Search: The filter is applied when running a search.
 - All: The filter is applied to all search actions.
 
 ```yaml
