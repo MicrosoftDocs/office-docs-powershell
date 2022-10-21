@@ -159,7 +159,7 @@ The EnableUserOverride switch gives Microsoft Teams users the option under Setti
 
 If CallingIDSubstitute is set to Anonymous, the EnableUserOverride has no effect, and the caller ID is always set to Anonymous.
 
-EnableUserOverride has precedence over other settings in the policy, unless substitution is set to Anonymous. For example, assume policy instance has substitution using a resource account and EnableUserOverride is set and enabled by the user. In this case, the outbound caller ID will be blocked and Anonymous will be used. If a policy instance has substitution set to Anonymous and EnableUserOverride is set, then the outbound caller ID will always be Anonymous, regardless of the end user setting.
+EnableUserOverride has precedence over other settings in the policy, unless substitution is set to Anonymous. For example, assume policy instance has substitution using a resource account and EnableUserOverride is set and enabled by the user. In this case, the outbound caller ID will be blocked and Anonymous will be used.
 
 ```yaml
 Type: Boolean
