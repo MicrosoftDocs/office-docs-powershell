@@ -44,18 +44,18 @@ Note: Get-CsOnlineUser filtering on FeatureTypes will be available later this ye
 
 The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alternative method of getting the same field using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment` and `Get-CsOnlineLisLocation`.
 
-| Output field from ```Get-CsOnlineVoiceUser -Identity <Identity>```| Alternative |
+| Output field | Alternative |
 | :---------------------------------| :--------------------------------- |
-| Name | ```(Get-CsOnlineUser -Identity <Identity>).DisplayName``` |
-| Id | ```(Get-CsOnlineUser -Identity <Identity>).Identity```|
+| Name | DisplayName in the output from ```Get-CsOnlineUser``` |
+| Id | Identity in the output from ```Get-CsOnlineUser```|
 | SipDomain | ```$u=(Get-CsOnlineUser -Identity <Identity>).SipAddress;$SipDomain = $u.Substring($u.IndexOf('@')+1);$SipDomain```|
 | DataCenter | ```$pool=(Get-CsOnlineUser -Identity <Identity>).RegistrarPool;$DataCenter=(($pool.SubString(0,$pool.IndexOf('.')).SubString("sippool".Length))).Substring(0,5);$DataCenter```|
-| TenantId | ```(Get-CsOnlineUser -Identity <Identity>).TenantId```|
+| TenantId | TenantId in the output from ```Get-CsOnlineUser```|
 | PstnConnectivity | ```if ((Get-CsOnlineUser -Identity <Identity>).FeatureTypes.Contains('CallingPlan')) {$PstnConnectivity = 'Online' } else {$PstnConnectivity = 'OnPremises'};$PstnConnectivity```|
-| UsageLocation | ```(Get-CsOnlineUser -Identity <Identity>).UsageLocation``` |
-| EnterpriseVoiceEnabled | ```(Get-CsOnlineUser -Identity <Identity>).EnterpriseVoiceEnabled``` |
-| Number | ```(Get-CsOnlineUser -Identity <Identity>).LineUri.Replace('tel:+','')``` |
-| Location | ```Get-CsOnlineLisLocation -LocationId (Get-CsPhoneNumberAssignment -AssignedPstnTargetId <Identity>).LocationId``` |
+| UsageLocation | UsageLocation in the output from ```Get-CsOnlineUser``` |
+| EnterpriseVoiceEnabled | EnterpriseVoiceEnabled in the output from ```Get-CsOnlineUser``` |
+| Number | LineUri.Replace('tel:+','') in the output from ```Get-CsOnlineUser``` |
+| Location | Use LocationId in the output from ```Get-CsPhoneNumberAssignment -AssignedPstnTargetId <Identity>``` as the input to ```Get-CsOnlineLisLocation -LocationId``` |
 
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
