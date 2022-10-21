@@ -49,9 +49,9 @@ The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alt
 | Name | DisplayName in the output from ```Get-CsOnlineUser``` |
 | Id | Identity in the output from ```Get-CsOnlineUser```|
 | SipDomain | Extract SipDomain from the SipAddress in output from ```Get-CsOnlineUser``` |
-| DataCenter | Extract DatCenter from RegistrarPool in the output from ```Get-CsOnlineUser```|
+| DataCenter | Extract DataCenter from RegistrarPool in the output from ```Get-CsOnlineUser```|
 | TenantId | TenantId in the output from ```Get-CsOnlineUser```|
-| PstnConnectivity | FeatureTypes in the output from ```Get-CsOnlineUser```. If FeatureTypes contains CallingPlan, PstnConnectivity is 'Online'. If FeatureTypes contains 'PhoneSystem' and does not contain 'CallingPlan', PstnConnectivity = 'OnPremises' |
+| PstnConnectivity | FeatureTypes in the output from ```Get-CsOnlineUser```. If FeatureTypes contains CallingPlan, PstnConnectivity is 'Online'. If FeatureTypes contains 'PhoneSystem' and does not contain 'CallingPlan', PstnConnectivity is 'OnPremises' |
 | UsageLocation | UsageLocation in the output from ```Get-CsOnlineUser``` |
 | EnterpriseVoiceEnabled | EnterpriseVoiceEnabled in the output from ```Get-CsOnlineUser``` |
 | Number | LineUri in the output from ```Get-CsOnlineUser```. You can get same phone number format by doing LineUri.Replace('tel:+','')  |
