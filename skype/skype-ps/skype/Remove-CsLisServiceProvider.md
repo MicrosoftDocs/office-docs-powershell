@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cslisserviceprovider
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cslisserviceprovider
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsLisServiceProvider
 schema: 2.0.0
@@ -95,4 +95,3 @@ It removes an object of type System.Management.Automation.PSCustomObject.
 [Set-CsLisServiceProvider](Set-CsLisServiceProvider.md)
 
 [Get-CsLisServiceProvider](Get-CsLisServiceProvider.md)
-

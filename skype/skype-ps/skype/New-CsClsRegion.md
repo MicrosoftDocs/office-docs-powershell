@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csclsregion
+online version: https://learn.microsoft.com/powershell/module/skype/new-csclsregion
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 schema: 2.0.0
 manager: rogupta
@@ -271,6 +271,3 @@ The New-CsClsRegion cmdlet creates new instances of the Microsoft.Rtc.Management
 [Remove-CsClsRegion](Remove-CsClsRegion.md)
 
 [Set-CsClsRegion](Set-CsClsRegion.md)
-
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstenantnetworksite
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantnetworksite
 applicable: Skype for Business Online
 title: New-CsTenantNetworkSite
 schema: 2.0.0
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyCallRoutingPolicy
-This parameter is used to assign a custom emergency call routing policy to a network site. For more information see [Assign a custom emergency call routing policy to a network site](https://docs.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
+This parameter is used to assign a custom emergency call routing policy to a network site. For more information see [Assign a custom emergency call routing policy to a network site](https://learn.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
 
 ```yaml
 Type: String
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyCallingPolicy
-This parameter is used to assign a custom emergency calling policy to a network site. For more information see [Assign a custom emergency calling policy to a network site](https://docs.microsoft.com/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
+This parameter is used to assign a custom emergency calling policy to a network site. For more information see [Assign a custom emergency calling policy to a network site](https://learn.microsoft.com/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
 
 ```yaml
 Type: String

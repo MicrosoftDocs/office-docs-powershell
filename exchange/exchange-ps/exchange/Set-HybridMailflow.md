@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-hybridmailflow
+online version: https://learn.microsoft.com/powershell/module/exchange/set-hybridmailflow
 applicable: Exchange Online
 title: Set-HybridMailflow
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Set-HybridMailflow cmdlet to configure the message transport settings fo
 
 The Set-HybridMailflow cmdlet is only used to support hybrid deployments configured with the Hybrid Configuration wizard offered in Microsoft Exchange Server 2010 Service Pack 2 (SP2).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,7 +37,7 @@ Set-HybridMailflow [-CentralizedTransportEnabled <Boolean>]
 ## DESCRIPTION
 The Set-HybridMailflow cmdlet supports the configuration of message transport settings for hybrid deployments created with the Hybrid Configuration wizard offered in Exchange 2010 SP2. This cmdlet isn't typically used by administrators; therefore, we strongly recommend that it only be used as part of the hybrid configuration process using the Hybrid Configuration wizard.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csvoicenormalizationrule
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csvoicenormalizationrule
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVoiceNormalizationRule
 schema: 2.0.0
@@ -170,4 +170,3 @@ This cmdlet deletes an object of type Microsoft.Rtc.Management.WritableConfig.Po
 [Remove-CsDialPlan](Remove-CsDialPlan.md)
 
 [Get-CsDialPlan](Get-CsDialPlan.md)
-

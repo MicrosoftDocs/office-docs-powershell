@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Module Name: SkypeForBusiness
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsupgradepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsupgradepolicy
 applicable: Skype for Business Server 2019
 title: New-CsTeamsUpgradePolicy
 schema: 2.0.0
@@ -118,7 +118,7 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://docs.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
+[Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
 [Grant-CsTeamsUpgradePolicy](Grant-CsTeamsUpgradePolicy.md)
 

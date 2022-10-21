@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-availabilityreportoutage
+online version: https://learn.microsoft.com/powershell/module/exchange/new-availabilityreportoutage
 applicable: Exchange Server 2010
 title: New-AvailabilityReportOutage
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the New-AvailabilityReportOutage cmdlet to create an outage to add unrecorded issues to availability reporting.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ New-AvailabilityReportOutage [-SiteName] <String> -Comment <String> -DowntimeMin
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -43,6 +43,22 @@ New-AvailabilityReportOutage -ReportDate:"2009-12-02" -Site:"Site1" -DowntimeMin
 This example creates a timed injected outage scoped to site Site1 on the selected date to record downtime not recorded by Microsoft System Center Operations Manager 2007.
 
 ## PARAMETERS
+
+### -SiteName
+The SiteName parameter specifies the name of the Active Directory site to associate the outage report with.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Comment
 The Comment parameter specifies why the outage was inserted.
@@ -87,22 +103,6 @@ Applicable: Exchange Server 2010
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SiteName
-The SiteName parameter specifies the name of the Active Directory site to associate the outage report with.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

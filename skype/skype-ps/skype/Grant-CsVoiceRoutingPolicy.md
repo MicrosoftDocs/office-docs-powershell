@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csvoiceroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csvoiceroutingpolicy
 applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsVoiceRoutingPolicy
 schema: 2.0.0
@@ -221,4 +221,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)
 
 [Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)
-

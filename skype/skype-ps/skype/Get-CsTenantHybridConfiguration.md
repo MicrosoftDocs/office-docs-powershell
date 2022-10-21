@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstenanthybridconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstenanthybridconfiguration
 applicable: Skype for Business Online
 title: Get-CsTenantHybridConfiguration
 schema: 2.0.0
@@ -174,4 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CsTenantHybridConfiguration](Set-CsTenantHybridConfiguration.md)
-

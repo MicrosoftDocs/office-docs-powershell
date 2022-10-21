@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-dlpcompliancerule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dlpcompliancerule
 applicable: Security & Compliance
 title: New-DlpComplianceRule
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # New-DlpComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-DlpComplianceRule to create data loss prevention (DLP) rules in the Microsoft Purview compliance portal. DLP rules define sensitive information to be protected and the actions to take on rule matches.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -25,6 +25,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AccessScope <AccessScope>]
  [-ActivationDate <DateTime>]
  [-AddRecipients <PswsHashtable>]
+ [-AdvancedRule <String>]
  [-AlertProperties <PswsHashtable>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -156,7 +157,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
 ## DESCRIPTION
 Each new rule must contain one condition filter or test, and one associated action.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -213,6 +214,72 @@ New-DLPComplianceRule -Name "Contoso Medical Information" -Policy "Contoso Medic
 ```
 
 This example create a new DLP compliance rule named "Contoso Medical Information" that is assigned to the "Contoso Medical Checks" policy. The rule uses advanced syntax to search for the specified content.
+
+### Example 3
+```powershell
+Contents of the file named C:\Data\Sensitive Type.txt:
+
+{
+"Version": "1.0",
+"Condition": {
+  "Operator": "And",
+  "SubConditions": [
+    {
+      "ConditionName": "ContentContainsSensitiveInformation",
+      "Value": [
+        {
+          "groups": [
+            {
+              "Operator": "Or",
+              "labels": [
+                {
+                  "name": "defa4170-0d19-0005-000a-bc88714345d2",
+                  "type": "Sensitivity"
+                }
+              ],
+                "name": "Default",
+                "sensitivetypes": [
+                  {
+                   "confidencelevel": "Low",
+                   "name": "Credit Card Number"
+                  }
+                ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Operator": "Not",
+      "SubConditions": [
+        {
+          "Operator": "OR",
+          "SubConditions": [
+            {
+              "ConditionName": "FromMemberOf",
+              "Value": [
+              "janesteam@contoso.com"
+              ]
+            },
+            {
+              "ConditionName": "SentTo",
+              "Value": [
+              "adele@contoso.com"
+              ]
+            }
+          ],
+        }
+      ]
+    }
+  ]
+ }
+}
+
+$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0
+New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $data -NotifyUer
+```
+
+This example uses the AdvancedRule parameter to read the following complex condition from a file: "Content contains sensitive information: "Credit card number OR Highly confidential" AND (NOT (Sender is a member of "Jane's Team" OR Recipient is "adele@contoso.com")).
 
 ## PARAMETERS
 
@@ -300,6 +367,26 @@ You can use this action in DLP policies that are scoped only to Exchange.
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdvancedRule
+The AdvancedRule parameter uses complex rule syntax that supports multiple AND, OR, and NOT operators and nested groups.
+
+This parameter uses JSON syntax that's similar to the traditional advanced syntax in Example 2, but read from a file that contains additional operators and combinations that aren't traditionally supported.
+
+For syntax details, see Example 3.
+
+```yaml
+Type: String
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance
 
@@ -489,7 +576,7 @@ The ContentContainsSensitiveInformation parameter specifies a condition for the 
 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://learn.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
 For an example of advanced syntax, see Example 2 in this topic.
 
@@ -810,7 +897,7 @@ When you use the values Block or Warn in this parameter, you also need to use th
 
 You can view and configure the available restrictions with the Get-PolicyConfig and Set-PolicyConfig cmdlets.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: PswsHashtable[]
@@ -914,7 +1001,7 @@ The ExceptIfContentContainsSensitiveInformation parameter specifies an exception
 
 This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
 
-Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://docs.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
+Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://learn.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
 ```yaml
 Type: PswsHashtable[]
@@ -2281,7 +2368,7 @@ Accept wildcard characters: False
 
 {{ Fill NotifyEndpointUser Description }}
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: PswsHashtable
@@ -2315,7 +2402,7 @@ Accept wildcard characters: False
 ### -NotifyPolicyTipCustomTextTranslations
 The NotifyPolicyTipCustomTextTranslations parameter specifies the localized policy tip text that's shown when the conditions of the rule are met based on the client settings. This parameter uses the syntax `CultureCode:Text`.
 
-Valid culture codes are supported values from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+Valid culture codes are supported values from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`. For example: `"en:PolicyTipInEnglish","zh:警告：这个文件含有非法内容","th:คำแนะนำนโยบายในไทย"`.
 
@@ -2361,6 +2448,7 @@ The NotifyUserType parameter specifies the type of notification that's used for 
 - NotSet
 - Email
 - PolicyTip
+- Email,PolicyTip
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.NotifyUserType

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-transportconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/set-transportconfig
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-TransportConfig
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-TransportConfig cmdlet to modify the transport configuration settings for the whole Exchange organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -89,7 +89,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -107,7 +107,7 @@ Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
 
 This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
 
-To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Microsoft 365 admin center or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
+To avoid journaling issues, we recommend that you set JournalingReportNdrTo to an external address. Like the journaling mailbox, the alternate journaling mailbox can't be an Exchange Online mailbox. In Exchange Online, you can configure this setting by using the Microsoft 365 admin center or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
 
 ## PARAMETERS
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ### -AddressBookPolicyRoutingEnabled
 The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolved in an organization that uses address book policies to create separate virtual organizations within the same Exchange organization. Specifically, the global address list (GAL) that's specified in the user's address book policy controls how recipients are resolved. When the value of this parameter is $true, users that are assigned different GALs appear as external recipients. When the value of this parameter is $false, users that are assigned different GALs appear as internal recipients.
 
-The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
+The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see [Address book policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: Boolean
@@ -307,10 +307,10 @@ Accept wildcard characters: False
 ```
 
 ### -DSNConversionMode
-The DSNConversionMode parameter controls how Exchange handles delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) that are generated by earlier versions of Exchange or other messaging systems. Valid values are:
+The DSNConversionMode parameter controls how Exchange handles delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) that are generated by earlier versions of Exchange or other email systems. Valid values are:
 
 - DoNotConvert: DSNs aren't modified. The DSN is delivered as a standard message.
-- PreserveDSNBody: DSNs are converted to the Exchange 2010 or later format, and the text in the body of the DSN message is retained. 
+- PreserveDSNBody: DSNs are converted to the Exchange 2010 or later format, and the text in the body of the DSN message is retained.
 - UseExchangeDSNs: DSNs are converted to the Exchange 2010 or later format. However, any customized text or attachments that were associated with the original DSN are overwritten.
 
 The default value in Exchange 2010 and Exchange 2013 is UseExchangeDSNs. Otherwise, the default value is PreserveDSNBody.
@@ -695,7 +695,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingReportNdrTo
-The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter.
+The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter. Like the journaling mailbox, the alternate journaling mailbox can't be an Exchange Online mailbox.
 
 ```yaml
 Type: SmtpAddress
@@ -868,7 +868,7 @@ The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipien
 
 In on-premises Exchange, the default value is 500. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message.
 
-In Exchange Online, the default value is Unlimited, which means the organizational limit of 1000 is used. You can enter a custom value up to 1000. For more information, see [Sending limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1) in the Microsoft 365 service description.
+In Exchange Online, the default value is Unlimited, which means the organizational limit of 1000 is used. You can enter a custom value up to 1000. For more information, see [Sending limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1) in the Microsoft 365 service description.
 
 ```yaml
 Type: Unlimited

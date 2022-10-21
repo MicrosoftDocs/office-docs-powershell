@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmeetingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -83,7 +83,7 @@ This policy will use all the existing values except one: AllowNetworkConfigurati
 ### -AllowAnonymousUsersToJoinMeeting
 
 > [!NOTE]
-> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check <https://docs.microsoft.com/microsoftteams/meeting-settings-in-teams> for details.
+> The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check <https://learn.microsoft.com/microsoftteams/meeting-settings-in-teams> for details.
 
 Determines whether anonymous users can join the meetings that impacted users organize. Set this to TRUE to allow anonymous users to join a meeting. Set this to FALSE to prohibit them from joining a meeting.
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedAnonymousJoinClientTypes
-A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](/azure/communication-services/concepts/join-teams-meeting.md). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
+A user can join a Teams meeting anonymously using a [Teams client](https://support.microsoft.com/office/join-a-meeting-without-a-teams-account-c6efc38f-4e03-4e79-b28f-e65a4c039508) or using a [custom application built using Azure Communication Services](/azure/communication-services/concepts/join-teams-meeting). When anonymous meeting join is enabled, both types of clients may be used by default. This optional parameter can be used to block one of the client types that can be used.
 
 The allowed values are ACS (to block the use of Azure Communication Services clients) or Teams (to block the use of Teams clients). Both can also be specified, separated by a comma, but this is equivalent to disabling anonymous join completely.
 
@@ -671,7 +671,7 @@ Accept wildcard characters: False
 Determines the background effects that a user can configure in the Teams client. Possible values are:
 
 - NoFilters: No filters are available.
-- BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://docs.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
+- BlurOnly: Background blur is the only option available (requires a processor with AVX2 support, see [Hardware requirements for Microsoft Teams](https://learn.microsoft.com/microsoftteams/hardware-requirements-for-the-teams-app) for more information).
 - BlurAndDefaultBackgrounds: Background blur and a list of pre-selected images are available.
 - AllFilters: All filters are available, including custom images.
 

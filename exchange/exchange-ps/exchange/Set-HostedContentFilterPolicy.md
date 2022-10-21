@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-hostedcontentfilterpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/set-hostedcontentfilterpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: Set-HostedContentFilterPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-HostedContentFilterPolicy cmdlet to modify spam filter policies (content filter policies) in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -82,9 +82,9 @@ Set-HostedContentFilterPolicy [-Identity] <HostedContentFilterPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-For more information about the limits for allowed and blocked senders, see [Exchange Online Protection Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
+For more information about the limits for allowed and blocked senders, see [Exchange Online Protection Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
 
 ## EXAMPLES
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ### -AllowedSenderDomains
 The AllowedSenderDomains parameter specifies trusted domains that aren't processed by the spam filter. Messages from senders in these domains are stamped with `SFV:SKA` in the `X-Forefront-Antispam-Report header` and receive a spam confidence level (SCL) of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP domains.
 
-**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ### -AllowedSenders
 The AllowedSenders parameter specifies a list of trusted senders that skip spam filtering. Messages from these senders are stamped with SFV:SKA in the X-Forefront-Antispam-Report header and receive an SCL of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP email addresses.
 
-**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ### -BlockedSenderDomains
 The BlockedSenderDomains parameter specifies domains that are always marked as spam sources. Messages from senders in these domains are stamped with `SFV:SKB` value in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP domains.
 
-**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
+**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ### -BlockedSenders
 The BlockedSenders parameter specifies senders that are always marked as spam sources. Messages from these senders are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP email addresses.
 
-**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
+**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -281,7 +281,7 @@ The BulkSpamAction parameter specifies the action to take on messages that are m
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header and deliver the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://learn.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - NoAction
 - Quarantine: Move the message to quarantine. By default, messages that are quarantined as bulk email are available to the intended recipients and admins. Or, you can use the BulkQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 ### -BulkThreshold
 The BulkThreshold parameter specifies the BCL on messages that triggers the action specified by the BulkSpamAction parameter (greater than or equal to the specified BCL value). A valid value is an integer from 1 to 9. The default value is 7, which means a BCL of 7, 8, or 9 on messages will trigger the action that's specified by the BulkSpamAction parameter.
 
-A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
+A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
 
 ```yaml
 Type: Int32
@@ -568,7 +568,7 @@ The HighConfidenceSpamAction parameter specifies the action to take on messages 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://learn.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - Quarantine: Move the message to quarantine. By default, messages that are quarantined as high confidence spam are available to the intended recipients and admins. Or, you can use the HighConfidenceSpamQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
@@ -1187,7 +1187,7 @@ The SpamAction parameter specifies the action to take on messages that are marke
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete : Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://learn.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
 - Quarantine: Move the message to quarantine. By default, messages that are quarantined as spam are available to the intended recipients and admins. Or, you can use the SpamQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
@@ -1324,4 +1324,4 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Safe sender and blocked sender lists in Exchange Online](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-sender-and-blocked-sender-lists-faq)
+[Safe sender and blocked sender lists in Exchange Online](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-sender-and-blocked-sender-lists-faq)

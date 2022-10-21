@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csvideotrunkconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csvideotrunkconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVideoTrunkConfiguration
 schema: 2.0.0
@@ -162,4 +162,3 @@ The `Remove-CsVideoTrunkConfiguration` cmdlet removes specified Microsoft.Rtc.Ma
 [New-CsVideoTrunkConfiguration](New-CsVideoTrunkConfiguration.md)
 
 [Set-CsVideoTrunkConfiguration](Set-CsVideoTrunkConfiguration.md)
-

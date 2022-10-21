@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/get-csteamsaudioconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsaudioconferencingpolicy
 schema: 2.0.0
 ---
 
@@ -40,7 +40,7 @@ The command shown in Example 1, Get-CsTeamsAudioConferencingPolicy is called wit
 PS C:\> Get-CsTeamsAudioConferencingPolicy -Identity "EMEA Users"
 ```
 
-The command shown in Example 2, Get-CsTeamsAudioConferencingPolicy is used to return the per-user audio conferencing policy that has an Identity “EMEA Users”. Because identities are unique, this command will never return more than one item.
+The command shown in Example 2, Get-CsTeamsAudioConferencingPolicy is used to return the per-user audio conferencing policy that has an Identity "EMEA Users". Because identities are unique, this command will never return more than one item.
 
 ## PARAMETERS
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier for the policy to be retrieved. To retrieve the global policy, use this syntax: -Identity global. To retrieve a per-user policy use syntax similar to this: -Identity “EMEA Users”.
+Unique identifier for the policy to be retrieved. To retrieve the global policy, use this syntax: -Identity global. To retrieve a per-user policy use syntax similar to this: -Identity "EMEA Users".
 If this parameter is not included, the Get-CsTeamsAudioConferencingPolicy cmdlet will return a collection of all the teams audio conferencing policies configured for use in your organization.
 
 ```yaml

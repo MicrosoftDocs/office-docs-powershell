@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/export-csarchivingdata
+online version: https://learn.microsoft.com/powershell/module/skype/export-csarchivingdata
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Export-CsArchivingData
 schema: 2.0.0
@@ -338,6 +338,4 @@ The Export-CsArchivingData cmdlet returns Archiving database records in EML form
 
 [Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)
 
-[Export archived data in Skype for Business Server](https://docs.microsoft.com/skypeforbusiness/manage/archiving/export-archived-data)
-
-
+[Export archived data in Skype for Business Server](https://learn.microsoft.com/skypeforbusiness/manage/archiving/export-archived-data)

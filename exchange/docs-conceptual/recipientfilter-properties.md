@@ -36,17 +36,17 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - Not all recipient properties have a corresponding Active Directory property. The LDAP display name value in the table is "n/a" for these properties, which indicates that the property is calculated (likely by Exchange).
 
-- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables. For more information, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
+- Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables. For more information, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
 - You typically use the object's name for properties that require a valid object value (for example, a mailbox, a distribution group, or an email address policy, but the property might also accept the object's distinguished name (DN) or globally unique identifier (GUID). To find the object's DN or GUID, use the **Get-** cmdlet that corresponds to the object's type (for example, `Get-EmailAddressPolicy | Format-List Name,DistinguishedName,GUID`).
 
 - Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`). In Exchange Online PowerShell, you can't use the wildcard as a prefix (for example, `"Property -like '*abc'"`) is not allowed).
 
-- The Value column in the table describes the acceptable values for the *filter*, not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
+- The Value column in the table describes the acceptable values for the _filter_, not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
 
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
-- For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
+- For filtering considerations for the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 - In Exchange Online, you can't use a wildcard character (*) as the first character in the search string.
 

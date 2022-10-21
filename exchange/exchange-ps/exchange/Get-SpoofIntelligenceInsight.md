@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-spoofintelligenceinsight
+online version: https://learn.microsoft.com/powershell/module/exchange/get-spoofintelligenceinsight
 applicable: Exchange Online, Exchange Online Protection
 title: Get-SpoofIntelligenceInsight
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-SpoofIntelligenceInsight cmdlet to view spoofed senders that were allowed or blocked by spoof intelligence during the last 7 days.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ The Get-SpoofIntelligenceInsight cmdlet returns the following information:
 - SpoofType: Indicates whether the domain is internal to your organization or external.
 - Action: The two possible values are Allow (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), and Block (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 

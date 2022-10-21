@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/set-csusercallingsettings
+online version: https://learn.microsoft.com/powershell/module/teams/set-csusercallingsettings
 applicable: Microsoft Teams
 author: jenstrier
 ms.author: jenstr
@@ -128,8 +128,8 @@ This example shows how to remove all members of the call group.
 ### Example 8
 ```powershell
 [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails[]]$gmd = @(
-	[Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user20@contoso.com';NotificationSetting='Banner'}
-	[Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user30@contoso.com';NotificationSetting='Mute'}
+   [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user20@contoso.com';NotificationSetting='Banner'}
+   [Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ICallGroupMembershipDetails]@{CallGroupOwnerId='sip:user30@contoso.com';NotificationSetting='Mute'}
 )
 Set-CsUserCallingSettings -Identity user10@contoso.com -GroupMembershipDetails $gmd
 ```

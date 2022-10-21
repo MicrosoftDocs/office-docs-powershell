@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cshybridpstnappliance
+online version: https://learn.microsoft.com/powershell/module/skype/get-cshybridpstnappliance
 applicable: Skype for Business Online
 title: Get-CsHybridPSTNAppliance
 schema: 2.0.0
@@ -181,8 +181,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsHybridPSTNAppliance](https://docs.microsoft.com/powershell/module/skype/set-cshybridpstnappliance?view=skype-ps)
+[Set-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skype/set-cshybridpstnappliance?view=skype-ps)
 
-[Register-CsHybridPSTNAppliance](https://docs.microsoft.com/powershell/module/skype/register-cshybridpstnappliance?view=skype-ps)
+[Register-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skype/register-cshybridpstnappliance?view=skype-ps)
 
-[Unregister-CsHybridPSTNAppliance](https://docs.microsoft.com/powershell/module/skype/unregister-cshybridpstnappliance?view=skype-ps)
+[Unregister-CsHybridPSTNAppliance](https://learn.microsoft.com/powershell/module/skype/unregister-cshybridpstnappliance?view=skype-ps)

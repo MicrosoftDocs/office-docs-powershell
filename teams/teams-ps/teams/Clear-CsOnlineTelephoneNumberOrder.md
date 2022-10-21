@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder
+online version: https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder
 Module Name: MicrosoftTeams
 title: Clear-CsOnlineTelephoneNumberOrder
 schema: 2.0.0

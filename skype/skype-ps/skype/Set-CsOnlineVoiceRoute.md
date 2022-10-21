@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroute
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceroute
 applicable: Microsoft Teams
 title: Set-CsOnlineVoiceRoute
 schema: 2.0.0
@@ -61,7 +61,7 @@ BridgeSourcePhoneNumber is an E.164 formatted Operator Connect Conferencing phon
 
 When using BridgeSourcePhoneNumber in an online voice route, the OnlinePstnUsages used in the online voice route should only be used in a corresponding OnlineAudioConferencingRoutingPolicy. The same OnlinePstnUsages should not be used in online voice routes that are not using BridgeSourcePhoneNumber.
 
-For more information about Operator Connect Conferencing, please see [Configure Operator Connect Conferencing](https://docs.microsoft.com/microsoftteams/operator-connect-conferencing-configure).
+For more information about Operator Connect Conferencing, please see [Configure Operator Connect Conferencing](https://learn.microsoft.com/microsoftteams/operator-connect-conferencing-configure).
 
 ```yaml
 Type: String

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cspersistentchatstate
+online version: https://learn.microsoft.com/powershell/module/skype/get-cspersistentchatstate
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Get-CsPersistentChatState
 schema: 2.0.0
@@ -152,4 +152,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CsPersistentChatState](Set-CsPersistentChatState.md)
-

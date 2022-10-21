@@ -51,13 +51,13 @@ The properties that have been _confirmed_ to work with the _Filter_ parameter in
 
 - Not all recipient properties have a corresponding Active Directory property. The LDAP display name value in the table is "n/a" for these properties, which indicates that the property is calculated (likely by Exchange).
 
-- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables. For more information, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
+- Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables. For more information, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
 - Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`).
 
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
 
-- For filtering considerations for connections using the Exchange Online PowerShell v2 module, see [Filters in the EXO V2 module](filters-v2.md).
+- For filtering considerations for the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
 |Property name|LDAP display name|Available on cmdlets|Value|Comments|
 |---|---|---|---|---|

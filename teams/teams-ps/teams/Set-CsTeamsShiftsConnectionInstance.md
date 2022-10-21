@@ -5,7 +5,7 @@ title: Set-CsTeamsShiftsConnectionInstance
 author: lespina
 ms.author: lespina
 manager: valk
-online version: https://docs.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance
 schema: 2.0.0
 ---
 
@@ -518,4 +518,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
 
 [Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
-

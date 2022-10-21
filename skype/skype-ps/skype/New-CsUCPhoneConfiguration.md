@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csucphoneconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-csucphoneconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsUCPhoneConfiguration
 schema: 2.0.0
@@ -354,4 +354,3 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Uc
 [Remove-CsUCPhoneConfiguration](Remove-CsUCPhoneConfiguration.md)
 
 [Set-CsUCPhoneConfiguration](Set-CsUCPhoneConfiguration.md)
-

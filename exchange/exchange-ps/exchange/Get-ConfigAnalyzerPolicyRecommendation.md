@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-configanalyzerpolicyrecommendation
+online version: https://learn.microsoft.com/powershell/module/exchange/get-configanalyzerpolicyrecommendation
 applicable: Exchange Online, Exchange Online Protection
 title: Get-ConfigAnalyzerPolicyRecommendation
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-ConfigAnalyzerPolicyRecommendation cmdlet to compare the settings in your existing security policies to the settings that are used in the Standard or Strict preset security policies. Settings that are below the recommend value are returned in the results.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Use the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,7 +28,7 @@ Get-ConfigAnalyzerPolicyRecommendation -RecommendedPolicyType <RecommendedPolicy
 ```
 
 ## DESCRIPTION
-For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Office 365 ATP security](https://docs.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp).
+For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Office 365 ATP security](https://learn.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp).
 
 The output of this cmdlet only returns settings that fall below the value that you've specified as a baseline (Standard or Strict).
 
@@ -50,7 +48,7 @@ If a setting is configured at or better than the Standard or Strict protection p
 
 This cmdlet returns the following output for each setting in each policy that falls below the recommended value.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -62,6 +60,22 @@ Get-ConfigAnalyzerPolicyRecommendation -RecommendedPolicyType Strict
 This example runs a comparison using the Strict preset security policy settings as a baseline.
 
 ## PARAMETERS
+
+### -Identity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: ConfigAnalyzerPolicyRecommendationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
 
 ### -RecommendedPolicyType
 The RecommendedPolicyType parameter specifies the preset security policy that you want to use as a baseline. Valid values are:
@@ -79,22 +93,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ConfigAnalyzerPolicyRecommendationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

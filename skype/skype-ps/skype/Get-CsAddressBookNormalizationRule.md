@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csaddressbooknormalizationrule
+online version: https://learn.microsoft.com/powershell/module/skype/get-csaddressbooknormalizationrule
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAddressBookNormalizationRule
 schema: 2.0.0
@@ -153,4 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsAddressBookNormalizationRule](Remove-CsAddressBookNormalizationRule.md)
 
 [Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)
-

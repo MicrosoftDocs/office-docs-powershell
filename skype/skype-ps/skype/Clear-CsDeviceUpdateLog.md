@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/clear-csdeviceupdatelog
+online version: https://learn.microsoft.com/powershell/module/skype/clear-csdeviceupdatelog
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Clear-CsDeviceUpdateLog
 schema: 2.0.0
@@ -154,4 +154,3 @@ The `Clear-CsDeviceUpdateLog` cmdlet does not return any values.
 [Clear-CsDeviceUpdateFile](Clear-CsDeviceUpdateFile.md)
 
 [Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)
-

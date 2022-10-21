@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csdeviceupdateconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csdeviceupdateconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsDeviceUpdateConfiguration
 schema: 2.0.0
@@ -375,4 +375,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [New-CsDeviceUpdateConfiguration](New-CsDeviceUpdateConfiguration.md)
 
 [Remove-CsDeviceUpdateConfiguration](Remove-CsDeviceUpdateConfiguration.md)
-

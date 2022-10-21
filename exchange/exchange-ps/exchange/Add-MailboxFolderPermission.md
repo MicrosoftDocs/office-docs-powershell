@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Add-MailboxFolderPermission
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Add-MailboxFolderPermission cmdlet to add folder-level permissions for users in mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Add-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights
 ## DESCRIPTION
 To modify the permissions that are assigned to the user on a mailbox folder, use the Set-MailboxFolderPermission cmdlet. To remove all permissions that are assigned to a user on a mailbox folder, use the Remove-MailboxFolderPermission cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -244,7 +244,7 @@ The SharingPermissionFlags parameter assigns calendar delegate permissions. This
 
 You can specify multiple values separated by commas.
 
-**Note**: You can't configure the **Deliver meeting requests addressed to me and responses to meeting requests where I am the organizer to** Outlook setting in PowerShell. But, you can configure the setting using Exchange Web Services (EWS). For more information, see [MeetingRequestsDeliveryScope Enum](https://docs.microsoft.com/dotnet/api/microsoft.exchange.webservices.data.meetingrequestsdeliveryscope).
+**Note**: You can't configure the **Deliver meeting requests addressed to me and responses to meeting requests where I am the organizer to** Outlook setting in PowerShell. But, you can configure the setting using Exchange Web Services (EWS). For more information, see [MeetingRequestsDeliveryScope Enum](https://learn.microsoft.com/dotnet/api/microsoft.exchange.webservices.data.meetingrequestsdeliveryscope).
 
 ```yaml
 Type: MailboxFolderPermissionFlags
@@ -292,10 +292,10 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+[Get-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)
 
-[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+[Set-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/set-mailboxfolderpermission)
 
-[Remove-MailboxFolderPermission](Remove-MailboxFolderPermission.md)
+[Remove-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission)
 
-[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)
+[Get-EXOMailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)

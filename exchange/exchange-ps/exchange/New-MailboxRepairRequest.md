@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-mailboxrepairrequest
+online version: https://learn.microsoft.com/powershell/module/exchange/new-mailboxrepairrequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxRepairRequest
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-MailboxRepairRequest cmdlet to detect and fix mailbox corruption issues.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -50,7 +50,7 @@ After you begin a repair request, you can't stop it unless you dismount the data
 
 To avoid performance problems, only one request can be active on a server for a database-level repair, or up to 100 requests can be active on a server for a mailbox-level repair.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -91,66 +91,6 @@ New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.Mail
 This example creates a variable that identifies Ann Beebe's mailbox and then uses the variable to specify the values for the Database and StoreMailbox parameters to create a request to detect and repair all corruption types.
 
 ## PARAMETERS
-
-### -CorruptionType
-The CorruptionType parameter specifies the type of corruption that you want to detect and repair. You can use the following values:
-
-- AbandonedMoveDestination\*: Exchange 2016 or later, but only with the Database parameter, not the Mailbox parameter.
-- AggregateCounts\*: Aggregate counts on folders that aren't reflecting correct values.
-- BigFunnelMissingPOIs\*: Exchange 2016.
-- BigFunnelPOI: Exchange 2019.
-- CleanupFilesFolder\*: Exchange 2016 or later.
-- CleanupGraphNodesWithPropertyError\*: Exchange 2016 or later.
-- CleanupOfficeGraphFolders\*: Exchange 2016 or later.
-- CleanupOfficeGraphSsc: Exchange 2016 or later.
-- CleanupOrphanedIndexes\*: Exchange 2016 or later.
-- CleanupTrendingAroundMe\*: Exchange 2016 or later.
-- CorruptJunkRule\*: Exchange 2013 or later.
-- CorruptSearchFolderCriteria\*: Exchange 2016 or later.
-- CorruptedPerUserData\*: Exchange 2016 or later.
-- DropAllLazyIndexes\*: Exchange 2013 or later.
-- EmptyFilesFolder\*: Exchange 2016 or later.
-- Extension1: Exchange 2013 or later, but reserved for internal Microsoft use.
-- Extension2: Exchange 2013 or later, but reserved for internal Microsoft use.
-- Extension3: Exchange 2013 or later, but reserved for internal Microsoft use.
-- Extension4: Exchange 2013 or later, but reserved for internal Microsoft use.
-- Extension5: Exchange 2013 or later, but reserved for internal Microsoft use.
-- FocusedInboxCleanup\*: Exchange 2016 or later.
-- FolderACL\*: Exchange 2013 or later.
-- FolderView\*: Views on folders that aren't returning correct contents.
-- ImapId\*: Exchange 2013 or later.
-- LockedMoveTarget\*: Exchange 2013 or later, but only if the mailbox is locked.
-- MessageId
-- MessagePtagCn
-- MissingSpecialFolders: Exchange 2013 or later.
-- OlcFolderCleanup: Exchange 2016 or later.
-- ProvisionedFolder: Provisioned folders that are incorrectly pointing into parent folders that aren't provisioned.
-- ReduceRedundantAI\*: Exchange 2016 or later.
-- RemovePICWFolder: Exchange 2016 or later, but reserved for internal Microsoft use.
-- ReplState: Exchange 2013 or later.
-- RestrictionFolder: Exchange 2013 or later.
-- RuleMessageClass: Exchange 2013 or later.
-- ScheduledCheck: Exchange 2013 or later.
-- SearchFolder: Search folder corruption.
-- SyncDefaultFolderLocalizationWithMailbox: Exchange 2016 or later.
-- UniqueMidIndex: Exchange 2013 or later.
-
-You can specify multiple values separated by commas.
-
-\* You can only use this value by itself.
-
-```yaml
-Type: MailboxStoreCorruptionType[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Database
 The Database parameter repairs or detects corruption in all mailboxes in the specified database. You can use any value that uniquely identifies the database. For example:
@@ -220,6 +160,66 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -CorruptionType
+The CorruptionType parameter specifies the type of corruption that you want to detect and repair. You can use the following values:
+
+- AbandonedMoveDestination\*: Exchange 2016 or later, but only with the Database parameter, not the Mailbox parameter.
+- AggregateCounts\*: Aggregate counts on folders that aren't reflecting correct values.
+- BigFunnelMissingPOIs\*: Exchange 2016.
+- BigFunnelPOI: Exchange 2019.
+- CleanupFilesFolder\*: Exchange 2016 or later.
+- CleanupGraphNodesWithPropertyError\*: Exchange 2016 or later.
+- CleanupOfficeGraphFolders\*: Exchange 2016 or later.
+- CleanupOfficeGraphSsc: Exchange 2016 or later.
+- CleanupOrphanedIndexes\*: Exchange 2016 or later.
+- CleanupTrendingAroundMe\*: Exchange 2016 or later.
+- CorruptJunkRule\*: Exchange 2013 or later.
+- CorruptSearchFolderCriteria\*: Exchange 2016 or later.
+- CorruptedPerUserData\*: Exchange 2016 or later.
+- DropAllLazyIndexes\*: Exchange 2013 or later.
+- EmptyFilesFolder\*: Exchange 2016 or later.
+- Extension1: Exchange 2013 or later, but reserved for internal Microsoft use.
+- Extension2: Exchange 2013 or later, but reserved for internal Microsoft use.
+- Extension3: Exchange 2013 or later, but reserved for internal Microsoft use.
+- Extension4: Exchange 2013 or later, but reserved for internal Microsoft use.
+- Extension5: Exchange 2013 or later, but reserved for internal Microsoft use.
+- FocusedInboxCleanup\*: Exchange 2016 or later.
+- FolderACL\*: Exchange 2013 or later.
+- FolderView\*: Views on folders that aren't returning correct contents.
+- ImapId\*: Exchange 2013 or later.
+- LockedMoveTarget\*: Exchange 2013 or later, but only if the mailbox is locked.
+- MessageId
+- MessagePtagCn
+- MissingSpecialFolders: Exchange 2013 or later.
+- OlcFolderCleanup: Exchange 2016 or later.
+- ProvisionedFolder: Provisioned folders that are incorrectly pointing into parent folders that aren't provisioned.
+- ReduceRedundantAI\*: Exchange 2016 or later.
+- RemovePICWFolder: Exchange 2016 or later, but reserved for internal Microsoft use.
+- ReplState: Exchange 2013 or later.
+- RestrictionFolder: Exchange 2013 or later.
+- RuleMessageClass: Exchange 2013 or later.
+- ScheduledCheck: Exchange 2013 or later.
+- SearchFolder: Search folder corruption.
+- SyncDefaultFolderLocalizationWithMailbox: Exchange 2016 or later.
+- UniqueMidIndex: Exchange 2013 or later.
+
+You can specify multiple values separated by commas.
+
+\* You can only use this value by itself.
+
+```yaml
+Type: MailboxStoreCorruptionType[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

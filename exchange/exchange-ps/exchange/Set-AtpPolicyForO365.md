@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-atppolicyforo365
+online version: https://learn.microsoft.com/powershell/module/exchange/set-atppolicyforo365
 applicable: Exchange Online, Exchange Online Protection
 title: Set-AtpPolicyForO365
 schema: 2.0.0
@@ -20,7 +20,7 @@ Use the Set-AtpPolicyForO365 cmdlet to modify the settings for the following fea
 - Safe Documents: Uses Microsoft Defender for Endpoint to scan documents and files that are opened in Protected View in Microsoft 365 apps for enterprise.
 - Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,13 +36,13 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
 ```
 
 ## DESCRIPTION
-Safe Links protection for Office 365 apps checks links in Office documents, not links in email messages. For more information, see [Safe Links settings for Office 365 apps](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#safe-links-settings-for-office-365-apps).
+Safe Links protection for Office 365 apps checks links in Office documents, not links in email messages. For more information, see [Safe Links settings for Office 365 apps](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#safe-links-settings-for-office-365-apps).
 
-Safe Documents scans documents and files that are opened in Protected View. For more information, see [Safe Documents in Microsoft 365 E5](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-docs).
+Safe Documents scans documents and files that are opened in Protected View. For more information, see [Safe Documents in Microsoft 365 E5](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-docs).
 
-Safe Attachments for SharePoint, OneDrive, and Microsoft Teams prevents users from opening and downloading files that are identified as malicious. For more information, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
+Safe Attachments for SharePoint, OneDrive, and Microsoft Teams prevents users from opening and downloading files that are identified as malicious. For more information, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -93,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
+**Note**: The functionality of this parameter is being replaced by the \*-TenantAllowBlockListItems cmdlets. This parameter now only supports the removal of blocked URLs. Use the \*-TenantAllowBlockListItems cmdlets to add and remove blocked URLs.
+
 The BlockUrls parameter specifies the URLs that are always blocked by Safe Links in email messages and Safe Links for Office 365 apps.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-block-the-following-urls-list).
+For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-block-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -136,7 +138,7 @@ Accept wildcard characters: False
 ### -EnableATPForSPOTeamsODB
 The EnableATPForSPOTeamsODB parameter enables or disables Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. Valid values are:
 
-- $true: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled. SharePoint Online admins can use the DisallowInfectedFileDownload parameter on the [Set-SPOTenant](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant) cmdlet to control whether users are allowed to download files that are found to be malicious.
+- $true: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled. SharePoint Online admins can use the DisallowInfectedFileDownload parameter on the [Set-SPOTenant](https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOTenant) cmdlet to control whether users are allowed to download files that are found to be malicious.
 - $false: Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is disabled. This is the default value.
 
 ```yaml
@@ -158,7 +160,7 @@ The EnableSafeDocs parameter enables or disables Safe Documents in organizations
 - $true: Safe Documents is enabled and will upload user files to Microsoft Defender for Endpoint for scanning and verification.
 - $false: Safe Documents is disabled. This is the default value.
 
-For more information about Safe Documents, see [Safe Documents in Microsoft 365 A5 or E5 Security](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-docs)
+For more information about Safe Documents, see [Safe Documents in Microsoft 365 A5 or E5 Security](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-docs)
 
 ```yaml
 Type: Boolean

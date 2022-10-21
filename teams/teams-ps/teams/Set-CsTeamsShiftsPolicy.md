@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/set-teamsshiftspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-teamsshiftspolicy
 schema: 2.0.0
 ---
 
@@ -86,7 +86,7 @@ The warning message is shown in the blocking dialog when a user access Teams off
 'Message3' - You won't be compensated for time using Teams. By accepting, you acknowledge that you understand the statement above.
 'Message4' - You're not authorized to use Teams while off shift. By accepting, you acknowledge your use of Teams is against your employer's policy.
 'Message5' - Access to Teams is turned off during non-working hours. You will be able to access the app when your next shift starts.
-'Message6' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. Access to corporate resources are only allowed during approved working hours and should be recorded as hours worked in your employer’s timekeeping system.
+'Message6' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. Access to corporate resources are only allowed during approved working hours and should be recorded as hours worked in your employer's timekeeping system.
 'Message7' - Your employer has turned off access to Teams during non-working hours. Refer to your employer's guidelines on using this app outside working hours.
 'DefaultMessage' - You aren't authorized to use Microsoft Teams during non-working hours and will only be compensated for using it during approved working hours.
 'CustomMessage'

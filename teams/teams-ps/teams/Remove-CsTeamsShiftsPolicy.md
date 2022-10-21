@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/remove-teamsshiftspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-teamsshiftspolicy
 schema: 2.0.0
 ---
 
@@ -9,9 +9,9 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Remove the TeamsShiftPolicy for a user.
+The `Remove-CsTeamsShiftsPolicy` cmdlet removes a previously created TeamsShiftsPolicy.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to an hour before changes are reflected.
+Note: A TeamsShiftsPolicy needs to be unassigned from all the users before it can be deleted.
 
 ## SYNTAX
 
@@ -23,15 +23,16 @@ Remove-CsTeamsShiftsPolicy [-Identity] <XdsIdentity> [<CommonParameters>]
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CsTeamsShiftsPolicy -Identity IsaiahL
+PS C:\> Remove-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage
 ```
 
-In this example, the TeamsShiftsPolicy assigned to the user "IsaiahL" is removed.
+In this example, the policy instance to be removed is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage". 
+
 
 ## PARAMETERS
 
 ### -Identity
-UserId or user's email id.
+Policy instance name.
 
 ```yaml
 Type: XdsIdentity
@@ -41,7 +42,7 @@ Applicable: Microsoft Teams
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

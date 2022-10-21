@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/en-us/powershell/module/skype/grant-csteamsaudioconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsaudioconferencingpolicy
 schema: 2.0.0
 ---
 
@@ -32,10 +32,10 @@ Granular control over which audio conferencing features your users can or cannot
 
 ### EXAMPLE 1
 ```
-PS C:\> Grant-CsTeamsAudioCOnferencingPolicy -identity "Ken Myer" -PolicyName “Emea Users”
+PS C:\> Grant-CsTeamsAudioCOnferencingPolicy -identity "Ken Myer" -PolicyName "Emea Users"
 ```
 
-In this example, a user with identity "Ken Myer" is being assigned the “Emea Users” policy.
+In this example, a user with identity "Ken Myer" is being assigned the "Emea Users" policy.
 
 
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceapplicationinstance
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceapplicationinstance
 applicable: Skype for Business Online 
 title: Set-CsOnlineVoiceApplicationInstance
 ms.reviewer: 
@@ -16,8 +16,7 @@ ms.author: jenstr
 The `Set-CsOnlineVoiceApplicationInstance` modifies an application instance in Azure Active Directory.
 
 **Note**: This cmdlet will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and 
-[Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead. The new cmdlets are currently not supported for customers and tenants
-that are or have been enabled for Regionally Hosted Meetings for Skype for Business Online. These customers should continue to use Set-CsOnlineVoiceApplicationInstance.
+[Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
 ```
@@ -163,4 +162,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-CsOnlineApplicationInstance](https://docs.microsoft.com/powershell/module/skype/new-csonlineapplicationinstance)
+[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/skype/new-csonlineapplicationinstance)

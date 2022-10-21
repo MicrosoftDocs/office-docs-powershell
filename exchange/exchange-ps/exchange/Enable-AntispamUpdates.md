@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/enable-antispamupdates
+online version: https://learn.microsoft.com/powershell/module/exchange/enable-antispamupdates
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-AntispamUpdates
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 The Enable-AntispamUpdates cmdlet was deprecated in Microsoft Exchange Server 2010 Service Pack 1 and is no longer used.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 

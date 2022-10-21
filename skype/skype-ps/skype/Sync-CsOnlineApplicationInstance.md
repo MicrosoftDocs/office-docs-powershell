@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/sync-csonlineapplicationinstance
+online version: https://learn.microsoft.com/powershell/module/skype/sync-csonlineapplicationinstance
 applicable: Microsoft Teams, Skype for Business Online
 title: Sync-CsOnlineApplicationInstance
 schema: 2.0.0
@@ -13,7 +13,7 @@ ms.reviewer:
 # Sync-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance from Azure Active Directory into Agent Provisioning Service.
+Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance from Azure Active Directory into Agent Provisioning Service. This is needed because the mapping between application instance and application needs to be stored in Agent Provisioning Service. If an application ID was provided at the creation of the application instance, you need not run this cmdlet. 
 
 ## SYNTAX
 
@@ -29,10 +29,19 @@ Use the Sync-CsOnlineApplicationInstance cmdlet to sync application instances fr
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Sync-CsOnlineApplicationInstance -ObjectId 00000000-0000-0000-0000-000000000000
+Sync-CsOnlineApplicationInstance -ObjectId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -ApplicationId yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
 ```
 
-This example sync application instance with object id "00000000-0000-0000-0000-000000000000" into Agent Provisioning Service.
+This example sync application instance with object ID "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" and application ID "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy" into Agent Provisioning Service.
+
+### -------------------------- Example 2 --------------------------
+```powershell
+Sync-CsOnlineApplicationInstance -ObjectId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -ApplicationId 00000000-0000-0000-0000-000000000000
+```
+This command is helpful when there's already a mapping in Agent Provisioning Service and you want to set a different app ID value. In this case, when running the cmdlet in example 1, you will see `Sync-CsOnlineApplicationInstance : An item with the same key has already been added.`.
+
+The command removes the mapping for application instance with object ID "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx". Run the example cmdlet again to create the mapping in Agent Provisioning Service.
+
 
 ## PARAMETERS
 

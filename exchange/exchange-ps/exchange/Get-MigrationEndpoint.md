@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-migrationendpoint
+online version: https://learn.microsoft.com/powershell/module/exchange/get-migrationendpoint
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MigrationEndpoint
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MigrationEndpoint cmdlet to retrieve migration endpoint settings for source or destination servers for cutover or staged Exchange migrations, IMAP migrations, and remote moves.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -63,10 +63,10 @@ The Get-MigrationEndpoint cmdlet retrieves settings for different types of migra
 
 For more information about the different move and migration scenarios, see:
 
-- [Mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/recipients/mailbox-moves)
-- [Manage on-premises mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/architecture/mailbox-servers/manage-mailbox-moves)
+- [Mailbox moves in Exchange Server](https://learn.microsoft.com/Exchange/recipients/mailbox-moves)
+- [Manage on-premises mailbox moves in Exchange Server](https://learn.microsoft.com/Exchange/architecture/mailbox-servers/manage-mailbox-moves)
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -78,6 +78,22 @@ Get-MigrationEndpoint -Identity OnboardingME01
 This example retrieves the settings for the migration endpoint, OnboardingME01.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name of the migration endpoint you want to retrieve settings for.
+
+```yaml
+Type: MigrationEndpointIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -ConnectionSettings
 This parameter is available only in on-premises Exchange.
@@ -188,22 +204,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the migration endpoint you want to retrieve settings for.
-
-```yaml
-Type: MigrationEndpointIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

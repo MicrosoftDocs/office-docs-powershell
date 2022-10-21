@@ -5,7 +5,7 @@ title: Get-CsTeamsShiftsConnectionConnector
 author: gucsun
 ms.author: gucsun
 manager: navinth
-online version: https://docs.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector
 schema: 2.0.0
 ---
 
@@ -34,7 +34,7 @@ PS C:\> Get-CsTeamsShiftsConnectionConnector
 ```
 Id                                   Name           SupportedScenario                                      Version         WfiSupportedScenario
 --                                   ----           -----------------                                      -------         --------------------
-6A51B888-FF44-4FEA-82E1-839401E9CD74 Contoso V1	  {Shift, SwapRequest, UserShiftPreferences, OpenShift...} 2020.3 - 2021.1 {SwapRequest, OpenShiftRequest, TimeOffRequest}
+6A51B888-FF44-4FEA-82E1-839401E9CD74 Contoso V1      {Shift, SwapRequest, UserShiftPreferences, OpenShift...} 2020.3 - 2021.1 {SwapRequest, OpenShiftRequest, TimeOffRequest}
 ```
 Get the list of Shifts Connectors available on the tenant.
 

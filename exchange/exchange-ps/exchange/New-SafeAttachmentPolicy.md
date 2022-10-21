@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-safeattachmentpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-safeattachmentpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: New-SafeAttachmentPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-SafeAttachmentPolicy cmdlet to create safe attachment policies in your cloud-based organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,13 +37,13 @@ New-SafeAttachmentPolicy [-Name] <String>
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
 
 New safe attachment policies that you create using this cmdlet aren't applied to users and aren't visible in the admin center. You need to use the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets to associate the policy with a rule to create a complete Safe Attachments policy that's visible in the admin center.
 
 A safe attachment policy can be assigned to only one safe attachment rule.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -82,8 +82,8 @@ The Action parameter specifies the action for the safe attachment policy. Valid 
 
 - Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the admin center.
 - Block: Block the email message that contains the malware attachment. This is the default value.
-- Replace: Deliver the email message, but remove the malware attachment and replace it with warning text.
-- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [How Dynamic Delivery works](https://docs.microsoft.com/microsoft-365/security/office-365-security/dynamic-delivery-and-previewing#how-dynamic-delivery-works).
+- Replace: Deliver the email message, but remove the malware attachment and replace it with warning text. This action will be deprecated. For more information, see [MC424901](https://admin.microsoft.com/AdminPortal/Home#/MessageCenter/:/messages/MC424901).
+- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [How Dynamic Delivery works](https://learn.microsoft.com/microsoft-365/security/office-365-security/dynamic-delivery-and-previewing#how-dynamic-delivery-works).
 
 The value of this parameter is meaningful only if the value of the Enable parameter is also $true (the default value is $false).
 
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecommendedPolicyType
-The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://docs.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
 
 ```yaml
 Type: RecommendedPolicyType
@@ -239,6 +239,8 @@ The Redirect parameter specifies whether to deliver messages that were identifie
 - $true: Messages that contain malware attachments are delivered to the email address specified by the RedirectAddress parameter. This value is required when the ActionOnError parameter value is $true. Otherwise, messages might be lost.
 - $false: Messages that contain malware attachments aren't delivered to another email address. This is the default value.
 
+**Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -254,6 +256,8 @@ Accept wildcard characters: False
 
 ### -RedirectAddress
 The RedirectAddress parameter specifies the email address to deliver messages that were identified by Safe Attachments as containing malware attachments when the Redirect parameter is set to the value $true.
+
+**Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
 
 ```yaml
 Type: SmtpAddress
