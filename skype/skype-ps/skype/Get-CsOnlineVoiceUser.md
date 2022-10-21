@@ -44,8 +44,8 @@ Note: Get-CsOnlineUser filtering on FeatureTypes will be available later this ye
 
 The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alternative method of getting the same field using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment` and `Get-CsOnlineLisLocation`.
 
-| Output field for Get-CsOnlineVoiceUser -Identity <Identity>| Alternative |
-| :------------| :------- |
+| Output field from ```Get-CsOnlineVoiceUser -Identity <Identity>```| Alternative |
+| :---------------------------------| :--------------------------------- |
 | Name | ```(Get-CsOnlineUser -Identity <Identity>).DisplayName``` |
 | Id | ```(Get-CsOnlineUser -Identity <Identity>).Identity```|
 | SipDomain | ```$u=(Get-CsOnlineUser -Identity <Identity>).SipAddress;$SipDomain = $u.Substring($u.IndexOf('@')+1);$SipDomain```|
