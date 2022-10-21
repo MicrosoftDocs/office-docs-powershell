@@ -34,21 +34,21 @@ Note:
  
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false
 ```
 
 This example creates a new Caller ID policy that sets the Caller ID to Anonymous.
 
-### -------------------------- Example 2 --------------------------
+###  Example 2
 ```
 New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose 
 ```
 
 This example creates a new Caller ID policy that sets the Caller ID to a specified service number.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
@@ -63,6 +63,12 @@ New-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -EnableUs
 
 This example creates a new Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
 
+### Example 5
+```
+New-CsCallingLineIdentity -Identity AllowAnonymousForUsers -EnableUserOverride $true
+```
+
+This example creates a new Caller ID policy that allows Teams user to make anonymous calls
 
 ## PARAMETERS
 
@@ -149,7 +155,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserOverride
-The EnableUserOverride switch lets the user override the Caller ID policy.
+The EnableUserOverride switch gives Microsoft Teams users the option under Settings and Calls to hide their phone number, when making outgoing calls. The CallerID will be Anonymous.
+
+If CallingIDSubstitute is set to Anonymous, the EnableUserOverride has no effect, and the caller ID is always set to Anonymous.
+
+EnableUserOverride has precedence over other settings in the policy, unless substitution is set to Anonymous. For example, assume policy instance has substitution using a resource account and EnableUserOverride is set and enabled by the user. In this case, the outbound caller ID will be blocked and Anonymous will be used. If a policy instance has substitution set to Anonymous and EnableUserOverride is set, then the outbound caller ID will always be Anonymous, regardless of the end user setting.
 
 ```yaml
 Type: Boolean
@@ -159,7 +169,7 @@ Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
