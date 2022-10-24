@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
+The Action parameter specifies that type of search action that the filter is applied to. A valid value for this parameter is All, which means the filter is applied to all search actions.
 
 - Export: The filter is applied when exporting search results, or preparing them for analysis in eDiscovery Premium.
 - Preview: The filter is applied when previewing search results.
