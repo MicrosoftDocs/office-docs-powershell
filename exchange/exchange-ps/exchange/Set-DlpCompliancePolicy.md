@@ -593,7 +593,7 @@ To enter multiple values, use the following syntax: `<value1>,<value2>,...<value
 
 To use this parameter, one of the following statements must be true:
 
-- The policy already includes email messages (in the output of Get-DlpCOmpliancePolicy, the ExchangeLocation property value is Al).
+- The policy already includes email messages (in the output of Get-DlpCOmpliancePolicy, the ExchangeLocation property value is All).
 - Use `-AddExchangeLocation All` in the same command with this parameter.
 
 You can't use this parameter with the ExchangeSenderMemberOf parameter.

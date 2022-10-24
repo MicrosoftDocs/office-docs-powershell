@@ -192,11 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. This parameter works only if you also use the UseRPSSession switch in the same command.
 
-`$Options = New-PSSessionOption <Settings>`
-
-And you use the variable name as the value for this parameter (for example, `$Options`).
+Store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$PSOptions = New-PSSessionOption <Settings>`), and use the variable name as the value for this parameter (for example, `$PSOptions`).
 
 ```yaml
 Type: PSSessionOption
@@ -521,7 +519,7 @@ Accept wildcard characters: False
 ### -ManagedIdentity
 **Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
 
-The ManagedIdentity switch connects to Exchange Online using a system-assigned or user-assigned managed identity. You don't need to specify a value with this switch.
+The ManagedIdentity switch connects to Exchange Online using managed identity (user-assigned or system-assigned). You don't need to specify a value with this switch.
 
 Managed identity is currently supported for Azure Virtual Machines, Virtual Machine Scale Sets and Azure Functions.
 
@@ -559,7 +557,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA or with the ManagedIdentity parameter. You must use an .onmicrosoft.com domain for the parameter value.
+The Organization parameter specifies the organization when you connect using CBA or managed identity (user-assigned or system-assigned). You must use an .onmicrosoft.com domain for the value of this parameter.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 

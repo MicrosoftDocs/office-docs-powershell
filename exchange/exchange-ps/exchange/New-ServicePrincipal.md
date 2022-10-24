@@ -48,9 +48,12 @@ This example create a new service principal in Exchange Online with the specifie
 ## PARAMETERS
 
 ### -AppId
-The AppId parameter specifies the unique AppID GUID value for the service principal. For example, ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1.
+The AppId parameter specifies the unique AppId GUID value for the service principal. For example, ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1.
 
-To find the AppId value of the Azure AD service principal, use the Get-AzADApplication cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://learn.microsoft.com/powershell/azure/install-az-ps).
+A valid value for this parameter is available in the following locations:
+
+- The AppId property in the output of the Get-AzureADApplication cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
+- The Application ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml
 Type: String
@@ -66,11 +69,10 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceId
-The ServiceId parameter specifies the unique object ID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
+The ServiceId parameter specifies the unique ServiceId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
-To find the ServiceId value of the Azure AD service principal, use the Get-AzureADServicePrincipal cmdlet in the Azure Az PowerShell module. For installation instructions, see [Install the Azure Az PowerShell module](https://learn.microsoft.com/powershell/azure/install-az-ps).
-
-The ServiceId value can also be found in the Azure AD portal at Enterprise applications \> Object ID.
+- The ObjectId property in the output of the Get-AzureADApplication cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
+- The Object ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml
 Type: String

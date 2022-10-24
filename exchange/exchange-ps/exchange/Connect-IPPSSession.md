@@ -161,11 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online.
 
-`$Options = New-PSSessionOption <Settings>`
-
-And you use the variable name as the value for this parameter (for example, `$Options`).
+Store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$PSOptions = New-PSSessionOption <Settings>`), and use the variable name as the value for this parameter (for example, `$PSOptions`).
 
 ```yaml
 Type: PSSessionOption
@@ -372,7 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA. You must use an .onmicrosoft.com domain for the parameter value.
+The Organization parameter specifies the organization that's used in CBA. You must use an .onmicrosoft.com domain for the value of this parameter.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
