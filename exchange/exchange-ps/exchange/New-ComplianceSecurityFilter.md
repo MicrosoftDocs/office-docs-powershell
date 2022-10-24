@@ -75,7 +75,7 @@ This example prevents the user from performing any compliance search actions on 
 ## PARAMETERS
 
 ### -Action
-The Action parameter specifies that type of search action that the filter is applied to. A valid value for this parameter is All, which means the fiter is applied to all search actions.
+The Action parameter specifies that type of search action that the filter is applied to. A valid value for this parameter is All, which means the filter is applied to all search actions.
 
 ```yaml
 Type: ComplianceSecurityFilterActionType
