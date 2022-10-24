@@ -260,7 +260,7 @@ The ApplyContentMarkingFooterMargin parameter specifies the size (in points) of 
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
-Note: In Word, the specified value is used as a bottom margin and left/right margin for left/right aligned content marks. A minimum value of 15 points is required and Word will also add a constant offset of 5 points to the left margin (for left aligned content marks) or right margin (for right aligned content marks).
+**Note**: In Word, the specified value is used as a bottom margin and left or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required and Word will also add a constant offset of 5 points to the left margin (for left-aligned content marks) or right margin (for right-aligned content marks).
 
 ```yaml
 Type: Int32
