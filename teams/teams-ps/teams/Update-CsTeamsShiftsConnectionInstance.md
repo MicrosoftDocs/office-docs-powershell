@@ -53,7 +53,7 @@ Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdent
 ```
 
 ## DESCRIPTION
-This cmdlet updates a Shifts connection instance. Simillarly to the Update-CsTeamsShiftsConnectionInstance cmdlet, it allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. The complete list of fields is not required allowing the user to update single fields of the instance.
+This cmdlet updates a Shifts connection instance. Similar to the Update-CsTeamsShiftsConnectionInstance cmdlet, it allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. The complete list of fields is not required allowing the user to update single fields of the instance.
 
 ## EXAMPLES
 
@@ -96,7 +96,7 @@ PS C:\> $result.ToJsonString()
 
 ```
 
-Updates the instance with the specified -ConnectorInstanceId with the given name and sync frequency. Returns the object of updated connector instance.
+Updates the instance with the specified -ConnectorInstanceId with the given name and sync frequency. Returns the object of the updated connector instance.
 
 ### Example 2
 ```powershell
@@ -136,13 +136,13 @@ PS C:\> $result.ToJsonString()
 }
 ```
 
-Updates the instance with the specified -ConnectorInstanceId with the new api url. Returns the object of updated connector instance.
+Updates the instance with the specified -ConnectorInstanceId with the new API URL. Returns the object of the updated connector instance.
 
-In case of error, we can capture the error response as following:
+In case of an error, we can capture the error response as follows:
 
 * Hold the cmdlet output in a variable: `$result=<CMDLET>`
 
-* To get the entire error message in Json: `$result.ToJsonString()`
+* To get the entire error message in JSON: `$result.ToJsonString()`
 
 * To get the error object and object details: `$result, $result.Detail`
 
@@ -150,7 +150,7 @@ In case of error, we can capture the error response as following:
 ## PARAMETERS
 
 ### -Body
-The request body 
+The request body.
 
 ```yaml
 Type: IUpdateConnectorInstanceFieldsRequest
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Break
-Wait for .NET debugger to attach
+Wait for the .NET debugger to attach.
 
 ```yaml
 Type: SwitchParameter
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorInstanceId
-The connector instance id
+The connector instance ID.
 
 ```yaml
 Type: String
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorSpecificSettings
-The connector specific settings
+The connector-specific settings.
 
 ```yaml
 Type: IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -DesignatedActorId
-The designated actor id that App acts as for Shifts Graph Api calls.
+The designated actor ID that App acts as for Shifts Graph API calls.
 
 ```yaml
 Type: String
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledConnectorScenario
-The connector enabled scenarios that are synced from WFM system to Shifts in MS Teams.
+The connector-enabled scenarios that are synced from the WFM system to Shifts in Microsoft Teams.
 
 ```yaml
 Type: String[]
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledWfiScenario
-The WFI enabled scenarios that are synced from Shifts in MS Teams to WFM system.
+The WFI-enabled scenarios that are synced from Shifts in Microsoft Teams to the WFM system.
 
 ```yaml
 Type: String[]
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelineAppend
-SendAsync Pipeline Steps to be appended to the front of the pipeline
+SendAsync Pipeline Steps to be appended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelinePrepend
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
+SendAsync Pipeline Steps to be prepended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -IfMatch
-The value of the etag field as returned by the cmdlets
+The value of the ETag field as returned by the cmdlets.
 
 ```yaml
 Type: String
@@ -360,7 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-The URI for the proxy server to use
+The URI for the proxy server to use.
 
 ```yaml
 Type: Uri
@@ -375,7 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Credentials for a proxy server to use for the remote call
+Credentials for a proxy server to use for the remote call.
 
 ```yaml
 Type: PSCredential
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUseDefaultCredentials
-Use the default credentials for the proxy
+Use the default credentials for the proxy.
 
 ```yaml
 Type: SwitchParameter
