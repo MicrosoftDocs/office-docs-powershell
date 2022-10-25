@@ -38,7 +38,7 @@ The table below lists the parameters to `Get-CsOnlineVoiceUser` and the alternat
 | LocationId | Find phone number information where the assigned phone number is associated to the LocationId | `Get-CsPhoneNumberAssignment -LocationId <LocationId>` |
 | NumberAssigned | Find enabled users with a phone number assigned | `Get-CsOnlineUser -Filter {(LineUri -ne $Null) -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
 | NumberNotAssigned | Find users without a phone number assigned | `Get-CsOnlineUser -Filter {(LineUri -eq $Null) -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
-| PSTNConnectivity | Find enabled users with PhoneSystem (OnPremises) or CallingPlan (Online) | Online: `Get-CsOnlineUser -Filter {(FeatureTypes -contains 'CallingPlan') -and (AccountEnabled -eq $True)} -AccountType User` OnPremises: `Get-CsOnlineUser -Filter { -not (FeatureTypes -contains 'CallingPlan') -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
+| PSTNConnectivity | Find enabled users with PhoneSystem (OnPremises) or CallingPlan (Online) | Online: `Get-CsOnlineUser -Filter {(FeatureTypes -contains 'CallingPlan') -and (AccountEnabled -eq $True)} -AccountType User` OnPremises: `Get-CsOnlineUser -Filter {-not (FeatureTypes -contains 'CallingPlan') -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
 
 Note: Get-CsOnlineUser filtering on FeatureTypes will be available later this year.
 
