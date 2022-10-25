@@ -560,7 +560,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOf
-The ExchangeSenderMemberOf parameter specifies the distribution groups or mail-enabled security groups to include in the policy (email of the group members is included in the policy). You identify the groups by email address.
+The ExchangeSenderMemberOf parameter specifies the distribution groups or security groups to include in the policy (email of the group members is included in the policy). You identify the groups by email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
@@ -587,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeSenderMemberOfException
-The ExchangeSenderMemberOfException parameter specifies the distribution groups or mail-enabled security groups to exclude from the policy (email of the group members is excluded from the policy). You identify the groups by email address.
+The ExchangeSenderMemberOfException parameter specifies the distribution groups or security groups to exclude from the policy (email of the group members is excluded from the policy). You identify the groups by email address.
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
