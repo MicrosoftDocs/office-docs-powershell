@@ -37,7 +37,6 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-OnPremisesWorkload <Workload>]
  [-ProcessingLimitExceededSeverity <RuleSeverity>]
  [-PurviewLabelConsent <Boolean>]
- [-ReservedForFutureUse <Boolean>]
  [-RetentionForwardCrawl <Boolean>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-SenderAddressLocation <PolicySenderAddressLocation>]
@@ -193,7 +192,16 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLabelCoauth
-{{ Fill EnableLabelCoauth Description }}
+Enable the setting to support co-authoring for Office desktop apps so that when documents are labeled and encrypted by sensitivity labels, multiple users can edit these documents at the same time.
+
+Note: After you enable the setting for co-authoring, labeling information for unencrypted files is no longer saved in custom properties. Do not enable this setting if you use any apps, services, scripts, or tools that reads or writes labeling metadata to the old location.
+
+If you disable this setting for your tenant:
+•	For apps and services that support the new labeling metadata, they now revert to the original metadata format and location when labels are read or saved.
+•	The new metadata format and location for Office documents that were used while the setting was enabled will not be copied to the original format and location. As a result, this labeling information for unencrypted Word, Excel, and PowerPoint files will be lost.
+•	Co-authoring and AutoSave no longer work in your tenant for labeled and encrypted documents.
+•	Sensitivity labels remain enabled for Office files in OneDrive and SharePoint.
+
 
 ```yaml
 Type: Boolean
@@ -207,9 +215,13 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+```
+Set-PolicyConfig -EnableLabelCoauth $true -EnableSpoAipMigration $true
+```
+
 
 ### -EnableSpoAipMigration
-{{ Fill EnableSpoAipMigration Description }}
+Enable built-in labeling for supported Office files in SharePoint and OneDrive so that users can apply your sensitivity labels in Office for the web. When this feature is enabled, users will see the Sensitivity button on the ribbon so they can apply labels, and see any applied label name on the status bar.
 
 ```yaml
 Type: Boolean
@@ -337,9 +349,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -ReservedForFutureUse
-{{ Fill ReservedForFutureUse Description }}
 
 ```yaml
 Type: Boolean
