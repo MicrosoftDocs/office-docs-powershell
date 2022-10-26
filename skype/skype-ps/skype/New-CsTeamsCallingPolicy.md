@@ -343,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -PopoutAppPathForIncomingPstnCalls
-Reserved for internal Microsoft use.
+Setting this parameter allows you to set PopoutForIncomingPstnCalls setting's URL path of the website to launch upon receiving incoming PSTN calls. This parameter accepts an https URL with less than 1024 characters. The URL can contain a `{phone}` placeholder that is replaced with the caller's PSTN number in E.164 format when launched.
 
 ```yaml
 Type: String
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -PopoutForIncomingPstnCalls
-Reserved for internal Microsoft use.
+Setting this parameter allows you to control the tenant users' ability to launch an external website URL automatically in the browser window upon incoming PSTN calls for specific users/user groups. Valid options are Enabled and Disabled.
 
 ```yaml
 Type: String
