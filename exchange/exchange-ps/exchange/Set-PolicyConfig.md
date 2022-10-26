@@ -192,16 +192,17 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLabelCoauth
-Enable the setting to support co-authoring for Office desktop apps so that when documents are labeled and encrypted by sensitivity labels, multiple users can edit these documents at the same time.
+The EnableLabelCoauth parameter enables or disables co-authoring support in Office desktop apps for the entire organization. Valid value are:
 
-Note: After you enable the setting for co-authoring, labeling information for unencrypted files is no longer saved in custom properties. Do not enable this setting if you use any apps, services, scripts, or tools that reads or writes labeling metadata to the old location.
+- $true: Co-authoring support in Office desktop apps is enabled. When documents are labeled and encrypted by sensitivity labels, multiple users can edit these documents at the same time. Labeling information for unencrypted files is no longer saved in custom properties. Don't enable co-authoring if you use any apps, services, scripts, or tools that read or write labeling metadata to the old location.
+- $false: Co-authoring support in Office desktop apps is disabled.
 
-If you disable this setting for your tenant:
-•	For apps and services that support the new labeling metadata, they now revert to the original metadata format and location when labels are read or saved.
-•	The new metadata format and location for Office documents that were used while the setting was enabled will not be copied to the original format and location. As a result, this labeling information for unencrypted Word, Excel, and PowerPoint files will be lost.
-•	Co-authoring and AutoSave no longer work in your tenant for labeled and encrypted documents.
-•	Sensitivity labels remain enabled for Office files in OneDrive and SharePoint.
+Disabling co-authoring support in Office desktop apps in the organization has the following consequences:
 
+- For apps and services that support the new labeling metadata, they now revert to the original metadata format and location when labels are read or saved.
+- The new metadata format and location for Office documents that was used while the setting was enabled will not be copied to the original format and location. As a result, this labeling information for unencrypted Word, Excel, and PowerPoint files will be lost.
+- Co-authoring and AutoSave no longer work in your organization for labeled and encrypted documents.
+- Sensitivity labels remain enabled for Office files in OneDrive and SharePoint.
 
 ```yaml
 Type: Boolean
@@ -215,13 +216,12 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-```
-Set-PolicyConfig -EnableLabelCoauth $true -EnableSpoAipMigration $true
-```
-
 
 ### -EnableSpoAipMigration
-Enable built-in labeling for supported Office files in SharePoint and OneDrive so that users can apply your sensitivity labels in Office for the web. When this feature is enabled, users will see the Sensitivity button on the ribbon so they can apply labels, and see any applied label name on the status bar.
+The EnableSpoAipMigration parameter enables or disables built-in labeling for supported Office files in SharePoint and OneDrive. Valid values are:
+
+- $true: Users can apply your sensitivity labels in Office for the web. Users will see the Sensitivity button on the ribbon so they can apply labels, and see any applied label name on the status bar.
+- $false: Users can't apply your sensitivity labels in Office for the web.
 
 ```yaml
 Type: Boolean
@@ -336,19 +336,6 @@ Accept wildcard characters: False
 
 ### -PurviewLabelConsent
 {{ Fill PurviewLabelConsent Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ```yaml
 Type: Boolean
