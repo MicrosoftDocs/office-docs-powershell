@@ -24,7 +24,7 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 
 ## DESCRIPTION
 
-**Note**: This cmdlet will be deprecated. Please start using replacement cmdlets as soon as possible as described below.
+**Note**: This cmdlet will be deprecated. You should start using the replacement cmdlets described here as soon as possible.
 
 The table below lists the parameters to `Get-CsOnlineVoiceUser` and the alternative method of getting the same data using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment`, `Get-CsOnlineLisLocation` and `Get-CsOnlineLisCivicAddress`
 
