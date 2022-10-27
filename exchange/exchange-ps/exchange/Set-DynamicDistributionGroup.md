@@ -1667,7 +1667,7 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
-If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but that means the email addresses of the mail user no longer automatically updated by email address policies.
+If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but the email addresses of the group are no longer automatically updated by email address policies.
 
 The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 

@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient.
 
-By default, the primary SMTP address is generated based on the default email address policy and the value of the Alias parameter or the Name property. If you use the PrimarySmtpAddress parameter to specify the primary email address, the EmailAddressPolicyEnabled property is set to the value False, which means the email addresses of this group won't be automatically updated by email address policies.
+By default, the primary SMTP address is generated based on the default email address policy and the value of the Alias parameter or the Name property. If you use the PrimarySmtpAddress parameter to specify the primary email address, the EmailAddressPolicyEnabled property is set to the value False, which means the email addresses of the group won't be automatically updated by email address policies.
 
 ```yaml
 Type: SmtpAddress
