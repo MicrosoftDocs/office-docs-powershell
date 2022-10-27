@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserOverride
-The EnableUserOverride switch gives Microsoft Teams users the option under Settings and Calls to hide their phone number, when making outgoing calls. The CallerID will be Anonymous.
+The EnableUserOverride parameter gives Microsoft Teams users the option under Settings and Calls to hide their phone number when making outgoing calls. The CallerID will be Anonymous.
 
 If CallingIDSubstitute is set to Anonymous, the EnableUserOverride has no effect, and the caller ID is always set to Anonymous.
 
