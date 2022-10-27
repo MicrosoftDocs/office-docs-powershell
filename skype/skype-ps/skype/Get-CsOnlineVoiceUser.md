@@ -42,7 +42,7 @@ The following table lists the parameters to `Get-CsOnlineVoiceUser` and the alte
 
 **Note**: `Get-CsOnlineUser` filtering on FeatureTypes will be available later this year.
 
-The table below lists the output fields from `Get-CsOnlineVoiceUser` and the alternative method of getting the same information using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment` and `Get-CsOnlineLisLocation`.
+The following table lists the output fields from `Get-CsOnlineVoiceUser` and the alternative method of getting the same information using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment`, and `Get-CsOnlineLisLocation`.
 
 | Output field | Alternative |
 | :---------------------------------| :--------------------------------- |
