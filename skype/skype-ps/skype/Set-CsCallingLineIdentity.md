@@ -71,7 +71,7 @@ This example modifies the Caller ID policy that sets the Caller ID to the phone 
 Set-CsCallingLineIdentity -Identity AllowAnonymousForUsers -EnableUserOverride $true
 ```
 
-This example modifies the Caller ID policy and allows Teams user to make anonymous calls
+This example modifies the Caller ID policy and allows Teams users to make anonymous calls.
 
 ## PARAMETERS
 
