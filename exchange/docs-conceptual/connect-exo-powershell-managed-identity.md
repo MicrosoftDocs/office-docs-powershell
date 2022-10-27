@@ -135,7 +135,7 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 3. Replace \<Automation Account GUID value\> with the GUID value you found in Step 3, and then run the following commands:
 
    ```powershell
-   $MISA = "<Automation Account GUID value>"
+   $MISA = "<Automation Account GUID value>"
 
    $ResourceID = (Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'").Id
 
@@ -209,7 +209,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 2. Use the following syntax:
 
    ```powershell
-   $MISA = "<Automation Account GUID value>"
+   $MISA = "<Automation Account GUID value>"
 
    $RoleID = "(Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq '<Role Display Name>'").Id"
    
