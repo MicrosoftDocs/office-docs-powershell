@@ -232,9 +232,9 @@ If you already have an existing user-assigned managed identity that you're going
 
 Otherwise, create the user-assigned managed identity by using the instructions at [Create a user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity).
 
-### Step 2: Create a resource with a user-assigned managed identity
+### Step 2: Create a resource with user-assigned managed identity
 
-If you're going to use an existing resource that's already configured with a user-assigned managed identity, you can skip to the next step. The following resource types are supported:
+If you're going to use an existing resource that's already configured with user-assigned managed identity, you can skip to the next step. The following resource types are supported:
 
 - Azure Automation accounts
 - Azure Virtual Machines
