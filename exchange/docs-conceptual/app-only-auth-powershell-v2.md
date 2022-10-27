@@ -291,21 +291,21 @@ Azure AD has more than 50 admin roles available. The supported roles are describ
 
 |Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
 |---|:---:|:---:|
-|Compliance Administrator|✔|✔|
-|Exchange Administrator<sup>\*</sup>|✔||
-|Global Administrator<sup>\*</sup>|✔|✔|
-|Global Reader|✔|✔|
-|Helpdesk Administrator|✔||
-|Security Administrator<sup>\*</sup>|✔|✔|
-|Security Reader|✔|✔|
-|Exchange Recipient Administrator|✔||
+|[Compliance Administrator](/azure/active-directory/roles/permissions-reference#compliance-administrator)|✔|✔|
+|[Exchange Administrator](/azure/active-directory/roles/permissions-reference#exchange-administrator)<sup>\*</sup>|✔||
+|[Exchange Recipient Administrator](/azure/active-directory/roles/permissions-reference#exchange-recipient-administrator)|✔||
+|[Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator)<sup>\*</sup>|✔|✔|
+|[Global Reader](/azure/active-directory/roles/permissions-reference#global-reader)|✔|✔|
+|[Helpdesk Administrator](/azure/active-directory/roles/permissions-reference#helpdesk-administrator)|✔||
+|[Security Administrator](/azure/active-directory/roles/permissions-reference#security-administrator)<sup>\*</sup>|✔|✔|
+|[Security Reader](/azure/active-directory/roles/permissions-reference#security-reader)|✔|✔|
 
-<sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
-
-- Recipient management.
-- Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
-
-The Security Administrator role does not have the necessary permissions for those same tasks.
+> <sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
+>
+> - Recipient management.
+> - Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
+>
+> The Security Administrator role does not have the necessary permissions for those same tasks.
 
 For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](/azure/active-directory/roles/manage-roles-portal).
 
@@ -344,7 +344,7 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
    When you're finished, click **Add**.
 
-5. Back on the **Assignments** page, verify that the app has been assigned to the role.
+5. Back on the **Assignments** page, verify that the role has been assigned to the app.
 
    - **Exchange Online PowerShell**:
 
