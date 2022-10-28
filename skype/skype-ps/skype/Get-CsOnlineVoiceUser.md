@@ -5,8 +5,8 @@ applicable: Skype for Business Online
 title: Get-CsOnlineVoiceUser
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -23,6 +23,42 @@ Get-CsOnlineVoiceUser [-CivicAddressId <XdsCivicAddressId>] [-DomainController <
 ```
 
 ## DESCRIPTION
+
+**Note**: This cmdlet will be deprecated. You should start using the replacement cmdlets described here as soon as possible.
+
+The following table lists the parameters to `Get-CsOnlineVoiceUser` and the alternative method of getting the same data using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment`, `Get-CsOnlineLisLocation`, and `Get-CsOnlineLisCivicAddress`.
+
+| Parameter | Description | Alternative |
+| :------------| :------- | :------- |
+| No parameters | Get information for all users | `Get-CsOnlineUser -Filter {(FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
+| CivicAddressId | Find phone number information where the assigned phone number is associated with the CivicAddressId | `Get-CsPhoneNumberAssignment -CivicAddressId <CivicAddressId>` |
+| EnterpriseVoiceStatus | Find enabled users based on EnterpriseVoiceEnabled | `Get-CsOnlineUser -Filter {(EnterpriseVoiceEnabled -eq $True) -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` or `Get-CsOnlineUser -Filter {(EnterpriseVoiceEnabled -eq $False) -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User`  |
+| ExpandLocation | Show information about the LocationId | `Get-CsOnlineLisLocation -LocationId <LocationId>` |
+| Identity | Get information for a user | `Get-CsOnlineUser -Identity <Identity>` |
+| LocationId | Find phone number information where the assigned phone number is associated with the LocationId | `Get-CsPhoneNumberAssignment -LocationId <LocationId>` |
+| NumberAssigned | Find enabled users with a phone number assigned | `Get-CsOnlineUser -Filter {(LineUri -ne $Null) -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
+| NumberNotAssigned | Find users without a phone number assigned | `Get-CsOnlineUser -Filter {(LineUri -eq $Null) -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
+| PSTNConnectivity | Find enabled users with PhoneSystem (OnPremises) or CallingPlan (Online) | Online: `Get-CsOnlineUser -Filter {(FeatureTypes -contains 'CallingPlan') -and (AccountEnabled -eq $True)} -AccountType User` OnPremises: `Get-CsOnlineUser -Filter {-not (FeatureTypes -contains 'CallingPlan') -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
+
+**Note**: `Get-CsOnlineUser` filtering on FeatureTypes will be available later this year.
+
+The following table lists the output fields from `Get-CsOnlineVoiceUser` and the alternative method of getting the same information using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment`, and `Get-CsOnlineLisLocation`.
+
+| Output field | Alternative |
+| :---------------------------------| :--------------------------------- |
+| Name | DisplayName in the output from `Get-CsOnlineUser` |
+| Id | Identity in the output from `Get-CsOnlineUser`|
+| SipDomain | Extract SipDomain from the SipAddress in the output from `Get-CsOnlineUser` |
+| DataCenter | Extract DataCenter from RegistrarPool in the output from `Get-CsOnlineUser`|
+| TenantId | TenantId in the output from `Get-CsOnlineUser`|
+| PstnConnectivity | FeatureTypes in the output from `Get-CsOnlineUser`. If FeatureTypes contains `CallingPlan`, PstnConnectivity is `Online`. If FeatureTypes contains `PhoneSystem` and does not contain `CallingPlan`, PstnConnectivity is `OnPremises` |
+| UsageLocation | UsageLocation in the output from `Get-CsOnlineUser` |
+| EnterpriseVoiceEnabled | EnterpriseVoiceEnabled in the output from `Get-CsOnlineUser` |
+| Number | LineUri in the output from `Get-CsOnlineUser`. You can get same phone number format by doing LineUri.Replace('tel:+','')  |
+| Location | Use LocationId in the output from `Get-CsPhoneNumberAssignment -AssignedPstnTargetId <Identity>` as the input to `Get-CsOnlineLisLocation -LocationId` |
+
+**Note**: `Get-CsOnlineUser` filtering on FeatureTypes will be available later this year.
+
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
 - The result size is not limited to 100 users anymore (the older cmdlet in version 2.6.0 and earlier limited the result size to 100).
