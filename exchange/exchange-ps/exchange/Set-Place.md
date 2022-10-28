@@ -28,6 +28,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Building <String>]
  [-Capacity <System.Int32>]
  [-City <String>]
+ [-Confirm]
  [-CountryOrRegion <CountryInfo>]
  [-DisplayDeviceName <String>]
  [-Floor <System.Int32>]
@@ -149,6 +150,21 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
