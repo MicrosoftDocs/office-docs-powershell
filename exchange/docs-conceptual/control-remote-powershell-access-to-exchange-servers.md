@@ -39,7 +39,7 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forums.
 
-- You should disable the EAP for such users prior to using the `Set-User` command to disable RPS. If you don't disable EAP and if you're using third-party/external tools to customize email addresses on the users and haven't disabled the Email address policy (EAP), the `Set-User` command will change the email address of such users to match the conventions of the EAP. For more information on how to disable the EAP, see [Set-Mailbox](../powershell/module/exchange/set-mailbox.md).
+- You should disable the EAP for such users prior to using the `Set-User` command to disable RPS. If you don't disable EAP and if you're using third-party/external tools to customize email addresses on the users and haven't disabled the Email address policy (EAP), the `Set-User` command will change the email address of such users to match the conventions of the EAP. For more information on how to disable the EAP, see [Set-Mailbox](/exchange/exchange-ps/exchange/Set-Mailbox.md).
 
 ## Use the Exchange Management Shell to enable or disable remote PowerShell access for a user
 
