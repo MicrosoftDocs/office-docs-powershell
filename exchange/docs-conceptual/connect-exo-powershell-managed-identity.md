@@ -26,7 +26,7 @@ description: "Learn about using the Exchange Online PowerShell V3 module and Azu
 If you're going to use an existing resource that's already configured with system-assigned managed identity, you can skip to the next step. The following resource types are supported:
 
 - Azure Automation accounts
-- Azure Virtual Machines
+- Azure virtual machines (VMs)
 
 #### Create Azure Automation accounts with system-assigned managed identities
 
@@ -41,13 +41,13 @@ Create an Automation account that's configured for system-assigned managed ident
 To create the Automation account in [Azure PowerShell](https:///powershell/azure/what-is-azure-powershell) (the Az.Accounts module), use the following syntax:
 
 ```powershell
-New-AzAutomationAccount -Name "<Automation account name>" -ResourceGroupName "<Existing resource group>" -Location "<Location>"
+New-AzAutomationAccount -Name "<Automation account name>" -ResourceGroupName "<Existing resource group>" -Location "<Location>" -AssignSystemIdentity
 ```
 
 For example:
 
 ```powershell
-New-AzAutomationAccount -Name "ContosoAzAuto1" -ResourceGroupName "Contoso RG" -Location "Western US"
+New-AzAutomationAccount -Name "ContosoAzAuto1" -ResourceGroupName "Contoso RG" -Location "Western US" -AssignSystemIdentity
 ```
 
 For detailed syntax and parameter information, see [New-AzAutomationAccount](/powershell/module/az.automation/new-azautomationaccount).
@@ -57,9 +57,22 @@ For detailed syntax and parameter information, see [New-AzAutomationAccount](/po
 For instructions, see the following articles:
 
 - [System-assigned managed identity in the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm#system-assigned-managed-identity)
+
 - [System-assigned managed identity in PowerShell](s/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm#system-assigned-managed-identity)
 
-### Step 2: Add the Exchange Online PowerShell module to the managed identity
+### Step 2: Store the system-assigned managed identity in variables
+
+Use the following syntax to store the managed identity in a variable (`$MI`). You'll use the variable in upcoming steps.
+
+```powershell
+$MI = Get-AzADServicePrincipal -DisplayName "<Resource Name>"
+```
+
+Where \<Resource Name\> is the display name of the Azure Automation account or the Azure VM.
+
+For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/powershell/module/az.automation/get-azadserviceprincipal).
+
+### Step 3: Add the Exchange Online PowerShell module to the managed identity
 
 #### Add the Exchange Online PowerShell module to Azure Automation accounts with system-assigned managed identities
 
@@ -75,9 +88,9 @@ For instructions, see the following articles:
 
    When you're finished, click **Import**.
 
-![Screenshot of adding a module to an Automation account in the Azure portal.](media/mi-add-exo-module.png)
+   ![Screenshot of adding a module to an Automation account in the Azure portal.](media/mi-add-exo-module.png)
 
-Back on the **Modules** flyout, start typing "ExchangeOnlineManagement" in the ![Search icon.](media/search-icon.png) **Search** box to see the **Status** value. When the module import is complete, the value is **Available**.
+5. Back on the **Modules** flyout, start typing "ExchangeOnlineManagement" in the ![Search icon.](media/search-icon.png) **Search** box to see the **Status** value. When the module import is complete, the value is **Available**.
 
 To add the module to the Automation account in Azure PowerShell, use the following syntax:
 
@@ -91,36 +104,11 @@ For example:
 New-AzAutomationModule -AutomationAccountName "ContosoAzAuto1" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.0.0 -ResourceGroupName "Contoso RG"
 ```
 
-For detailed syntax and parameter information, see [New-AzAutomationAccount](/powershell/module/az.automation/new-azautomationmodue).
+For detailed syntax and parameter information, see [New-AzAutomationModule](/powershell/module/az.automation/new-azautomationmodule).
 
-### Step 3: Find the GUID value of the system-assigned managed identity
+#### Add the Exchange Online PowerShell module to Azure VMs with system-assigned managed identities
 
-#### Find the GUID value of an Azure Automation account with system-assigned managed identity
-
-Use either of the following methods:
-
-- **Azure portal**:
-  1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
-  2. In the details flyout, start typing "Identity" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Identity** in the results.
-  3. In the **Identity** flyout that opens, verify the **System assigned** tab is selected, and note or copy the value of the **Object (principal) ID** property. You'll use the value in Step 4 (the `$MISA` value).
-
-  ![Screenshot of the Identity flyout and the Object (principal) ID of an Automation account in the Azure portal.](media/mi-automation-account-id.png)
-
-- **Azure PowerShell**:
-
-  Replace \<Automation account name\> with the name of the Automation account, and then run the following command:
-
-  ```powershell
-  Get-AzADServicePrincipal -DisplayName "<Automation account name>" | Format-Table Id
-  ```
-
-  For example:
-
-  ```powershell
-  Get-AzADServicePrincipal -DisplayName "ContosoAzAuto1" | Format-Table Id
-  ```
-
-For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/powershell/module/az.automation/get-azadserviceprincipal).
+Install the Exchange Online PowerShell module in the Azure VM. For instructions, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
 ### Step 4: Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online
 
@@ -132,20 +120,19 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 
 2. In the **Permissions requested** dialog that opens, select **Consent on behalf of your organization**, and then click **Accept**.
 
-3. Replace \<Automation Account GUID value\> with the GUID value you found in Step 3, and then run the following commands:
+3. Run the following commands:
 
    ```powershell
-   $MISA = "<Automation Account GUID value>"
-
-   $ResourceID = (Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'").Id
-
    $AppRoleID = "dc50a0fb-09a3-484d-be87-e023b12c6440"
 
-   New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MISA -PrincipalId $MISA -AppRoleId $AppRoleID -ResourceId $ResourceID
+   $ResourceID = "(Get-MgServicePrincipal -Filter {AppId eq '00000002-0000-0ff1-ce00-000000000000'}).Id"
+
+   New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $MI_ID -PrincipalId $MI_ID -AppRoleId $AppRoleID -ResourceId $ResourceID
    ```
 
-   - `$ResourceID` is the Id value (GUID) of the "Office 365 Exchange Online" resource in Azure Active Directory. The Id value is different in every organization.
+   - `$MI` is the managed identity from Step 2. `$MI.Id` is the Id (GUID) value of the managed identity.
    - `$AppRoleID` is the Id value (GUID) of the "Exchange.ManageAsApp" API permission that's the same in every organization.
+   - `$ResourceID` is the Id value (GUID) of the "Office 365 Exchange Online" resource in Azure Active Directory. The Id value is different in every organization.
 
 For detailed syntax and parameter information, see the following articles:
 
@@ -206,18 +193,20 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
    Connect-MgGraph -Scopes RoleManagement.ReadWrite.Directory
    ```
 
-2. Use the following syntax:
+2. In the **Permissions requested** dialog that opens, select **Consent on behalf of your organization**, and then click **Accept**.
+
+3. Run the following commands:
 
    ```powershell
-   $MISA = "<Automation Account GUID value>"
+   $MI_ID = $MI.Id
 
    $RoleID = "(Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq '<Role Display Name>'").Id"
    
-   New-MgRoleManagementDirectoryRoleAssignment -PrincipalId $MISA -RoleDefinitionId $RoleID -DirectoryScopeId "/"
+   New-MgRoleManagementDirectoryRoleAssignment -PrincipalId $MI_ID -RoleDefinitionId $RoleID -DirectoryScopeId "/"
    ```
 
-   - \<Automation Account GUID value\> is the GUID value of the Automation account that you found in Step 3.
-   - \<Role Display Name\> is the name of the role as described earlier in this section (for example, Exchange Administrator)
+   - `$MI` is the managed identity from Step 2. `$MI.Id` is the Id (GUID) value of the managed identity.
+   - \<Role Display Name\> is the name of the role as described earlier in this section (for example, `Exchange Administrator`).
 
 For detailed syntax and parameter information, see the following articles:
 
@@ -237,7 +226,7 @@ Otherwise, create the user-assigned managed identity by using the instructions a
 If you're going to use an existing resource that's already configured with user-assigned managed identity, you can skip to the next step. The following resource types are supported:
 
 - Azure Automation accounts
-- Azure Virtual Machines
+- Azure Virtual Machines (VMs)
 
 #### Create Azure Automation accounts with user-assigned managed identities
 
@@ -252,13 +241,13 @@ Create an Automation account that's configured for user-assigned managed identit
 To create the Automation account in [Azure PowerShell](https:///powershell/azure/what-is-azure-powershell) (the Az.Accounts module), use the following syntax:
 
 ```powershell
-New-AzAutomationAccount -Name "<Automation account name>" -ResourceGroupName "<Existing resource group>" -Location "<Location>" -AssignUserIdentity <string>
+New-AzAutomationAccount -Name "<Automation account name>" -ResourceGroupName "<Existing resource group>" -Location "<Location>" -AssignUserIdentity (Get-AzUserAssignedIdentity -Name "<UserAssigned MI>").Id
 ```
 
 For example:
 
 ```powershell
-New-AzAutomationAccount -Name "ContosoAzAuto1" -ResourceGroupName "Contoso RG" -Location "Western US" -AssignUserIdentity
+New-AzAutomationAccount -Name "ContosoAzAuto1" -ResourceGroupName "Contoso RG" -Location "Western US" -AssignUserIdentity (Get-AzUserAssignedIdentity -Name "ContosoMI1").Id
 ```
 
 For detailed syntax and parameter information, see [New-AzAutomationAccount](/powershell/module/az.automation/new-azautomationaccount).
@@ -270,8 +259,45 @@ For instructions, see the following articles:
 - [User-assigned managed identity in the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm#user-assigned-managed-identity)
 - [User-assigned managed identity in PowerShell](s/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm#user-assigned-managed-identity)
 
+### Step 3: Store the user-assigned managed identity in variables
+
+Use the following syntax to store the PrincipalId value of the managed identity in a variable (`$MI`). You'll use the variable in the later steps.
+
+```powershell
+$Global:ResourceGroup = Get-AzResourceGroup -Name "<Resource Group Name>"
+
+$MI = Get-AzUserAssignedIdentity -Name "<UserAssigned MI>" -ResourceGroupName $Global:ResourceGroup.ResourceGroupName
+
+$MI_ID = $MI.Id
+
+$MI_PID = $MI.PrincipalId
+```
+
+- \<Resource Group Name\> is the name of the resource group that's associated with the user-assigned managed identity.
+- \<UserAssigned MI\> is the name of the user-assigned managed identity.
+
+For detailed syntax and parameter information, see the following articles:
+
+- [Get-AzResourceGroup](/powershell/module/az.resources/get-azresourcegroup)
+- [Get-AzUserAssignedIdentity](/powershell/module/az.managedserviceidentity/get-azuserassignedidentity).
+
+### Step 4: Add the Exchange Online PowerShell module to the managed identity
+
+The steps for user-assigned managed identity are the same as in [System-assigned managed identity Step 3](#step-3-add-the-exchange-online-powershell-module-to-the-managed-identity).
+
+### Step 5: Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online
+
+The steps for user-assigned managed identity are the same as in [System-assigned managed identity Step 4](#step-4-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online).
+
+The only difference is: the `$MI_ID` value for user-assigned managed identity comes from [User-assigned managed identity Step 3](#step-3-store-the-user-assigned-managed-identity-in-variables).
+
+### Step 6: Assign Azure AD roles to the managed identity
+
+The steps for user-assigned managed identity are the same as in [System-assigned managed identity Step 5](#step-5-assign-azure-ad-roles-to-the-managed-identity).
+
+The only differences are:
+
+- For the procedures in the Azure portal, you create or identify the Automation account in [User-assigned managed identity Step 2](#step-2-create-a-resource-with-user-assigned-managed-identity).
+- For the procedures in Azure PowerShell, the `$MI_ID` value for user-assigned managed identity comes from [User-assigned managed identity Step 3](#step-3-store-the-user-assigned-managed-identity-in-variables).
 
 
-4. Once Created, add the ExchangeOnlineManagement PowerShell Module from Gallery
-5. Grant Permission for MSI to call EXO (from below)
-6. Assign the SP for the MSI the Exchange Administrator Role
