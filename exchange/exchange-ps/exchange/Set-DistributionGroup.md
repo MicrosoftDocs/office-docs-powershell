@@ -1131,7 +1131,11 @@ To add or remove owners without affecting other existing entries, use the follow
 
 Owners that you specify with this parameter are not added as group members. You need to manually add the owner as a member.
 
-**Note**: Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
+>[!NOTE]
+> Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
+
+>[!NOTE]
+> If the DL managed by/Owner is assigned to a Security group, and when the owner logs in to `OWA options -> Distribution group` they will not see the DL under "Distribution group they own". If the Managed by/Owner is a normal user instead of security group, they will be able to see them under "Distribution group they own".
 
 ```yaml
 Type: MultiValuedProperty
