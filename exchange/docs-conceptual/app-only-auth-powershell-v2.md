@@ -287,7 +287,7 @@ After you register the certificate with your application, you can use the privat
 
 ### Step 5: Assign Azure AD roles to the application
 
-Azure AD has more than 50 admin roles available. The supported roles are described in the following table:
+The supported Azure AD roles are described in the following table:
 
 |Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
 |---|:---:|:---:|
