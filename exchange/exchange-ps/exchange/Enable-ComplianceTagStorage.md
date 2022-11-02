@@ -29,7 +29,7 @@ Enable-ComplianceTagStorage
 ```
 
 ## DESCRIPTION
-If you run this cmdlet more than once, you'll get an error that says a policy already exists.
+You can check the status by running the following command: `Get-ComplianceTagStorage | Format-List Enabled,DistributionStatus`. The value True for the Enabled property and the value Success for the DistributionStatus property indicates the Enable-ComplianceTagStorage cmdlet has already been run in the organization, and you don't need to run it again. If you run the cmdlet unnecessarily, you'll get a warning, and the DistributionStatus property changes to the value Pending for a few minutes before returning to the value Success.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
