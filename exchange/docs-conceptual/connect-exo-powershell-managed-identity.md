@@ -126,7 +126,7 @@ In a Windows PowerShell window in the Azure VM, use the command as described in 
 ```powershell
 $MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").PrincipalId
 
-Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
+Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
 ```
 
 ## Create and configure a system-assigned managed identity
