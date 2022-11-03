@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnOfficeCommunicationServer
-TThis parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
 
 ```yaml
 Type: SwitchParameter
