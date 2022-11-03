@@ -19,7 +19,131 @@ description: "Learn about using the Exchange Online PowerShell V3 module and Azu
 
 # Use Azure managed identities to connect to Exchange Online PowerShell
 
-## System-assigned managed identity
+Using the [Exchange Online PowerShell V3 module](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module), you can connect to Exchange Online PowerShell using a user-assigned or system assigned Azure managed identity. For more information about managed identities, see [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview).
+
+Unlike other connection methods using the Exchange Online PowerShell module, you can't run the connection commands in a Windows PowerShell session on your local computer. Instead, you connect in the context of the Azure resource that's associated with the managed identity (for example, and Azure automation account or an Azure Virtual Machine).
+
+The rest of this article explains how to connect using managed identity, and the requirements for creating and configuring the proper resources with managed identities in Azure.
+
+## Connect to Exchange Online PowerShell using system-assigned managed identity
+
+After you've [Created and configured a system-assigned managed identity](#create-and-configure-a-system-assigned-managed-identity), use the following syntax to connect to Exchange Online PowerShell:
+
+```powershell
+Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com
+```
+
+For example:
+
+```powershell
+Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com
+```
+
+The rest of this section explains how to connect using supported Azure resources. For example:
+
+- A PowerShell runbook on the Azure Automation account with system-assigned managed identity.
+- An Azure VM with a system-assigned managed identity.
+
+### Connect to Exchange Online PowerShell using Azure Automation accounts with system-assigned managed identity
+
+Create a PowerShell runbook on the automation account. For instructions, see [Manage runbooks in Azure Automation](/azure/automation/manage-runbooks).
+
+The first command in the PowerShell runbook must be the `Connect-ExchangeOnline...` command as described in the beginning of this section. For example:
+
+```powershell
+Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com
+```
+
+After that, as a test, you can start with as simple, low-impact command in the runbook before moving on to more complex commands or scripts. For example:
+
+```powershell
+Get-AcceptedDomain | Format-Table Name
+```
+
+The Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 5: Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity).
+
+After you've successfully created, saved, and published the PowerShell runbook, do the following steps to run it in the future:
+
+1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
+2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
+3. On the **Runbooks** flyout that opens, select the runbook.
+4. On the details page of the runbook, click **Start**.
+
+### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identity
+
+In a Windows PowerShell window in the Azure VM, use the command as described in the beginning of this section. For example:
+
+```powershell
+Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com
+```
+
+The Exchange Online PowerShell cmdlets and parameters are available to you based on the RBAC role you assigned in [Step 5: Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity).
+
+## Connect to Exchange Online PowerShell using user-assigned managed identity
+
+After you've [created and configured a user-assigned managed identity](#create-and-configure-a-user-assigned-managed-identity), use the following syntax to connect to Exchange Online PowerShell:
+
+```powershell
+Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId <UserAssignedManagedIdentityPrincipalIdValue>
+```
+
+You get the \<UserAssignedManagedIdentityPrincipalIdValue\> value from [Step 3: Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable).
+
+The rest of this section explains how to connect using supported Azure resources. For example:
+
+- A PowerShell runbook on the Azure Automation account with user-assigned managed identity.
+- An Azure VM with a user-assigned managed identity.
+
+### Connect to Exchange Online PowerShell using Azure Automation accounts with user-assigned managed identities
+
+Create a PowerShell runbook on the automation account. For instructions, see [Manage runbooks in Azure Automation](/azure/automation/manage-runbooks).
+
+The first command in the PowerShell runbook must be the `Connect-ExchangeOnline...` command as described in the beginning of this section. For example:
+
+```powershell
+Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com -ManagedIdentityAccountId bf6dcc76-4331-4942-8d50-87ea41d6e8a1
+```
+
+You get the ManagedIdentityAccount value from [Step 3: Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable).
+
+After that, as a test, you can start with as simple, low-impact command in the runbook before moving on to more complex commands or scripts. For example:
+
+```powershell
+Get-AcceptedDomain | Format-Table Name
+```
+
+The Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 6: Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity).
+
+After you've successfully created the PowerShell runbook, do the following steps to run it in the future:
+
+1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
+2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
+3. On the **Runbooks** flyout that opens, select the runbook.
+4. On the details page of the runbook, click **Start**.
+
+### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identities
+
+In a Windows PowerShell window in the Azure VM, use the command as described in the beginning of this section. For example:
+
+```powershell
+$MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").PrincipalId
+
+Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
+```
+
+After that, Exchange Online PowerShell cmdlets and parameters are available to you based on the RBAC role you assigned in [Step 6: Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity).
+
+## Create and configure a system-assigned managed identity
+
+The steps are:
+
+1. [(Optional) Create a resource with system-assigned managed identity](#step-1-create-a-resource-with-system-assigned-managed-identity)
+2. [Store the system-assigned managed identity in a variable](#step-2-store-the-system-assigned-managed-identity-in-a-variable)
+3. [Add the Exchange Online PowerShell module to the managed identity](#step-3-add-the-exchange-online-powershell-module-to-the-managed-identity)
+4. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-4-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
+5. [Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity)
+
+After you complete the steps, you're ready to [connect to Exchange Online PowerShell using system-assigned managed identity](connect-to-exchange-online-powershell-using-system-assigned-managed-identity).
 
 ### Step 1: Create a resource with system-assigned managed identity
 
@@ -264,55 +388,18 @@ For detailed syntax and parameter information, see the following articles:
 - [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment).
 - [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgrolemanagementdirectoryroleassignment)
 
-### Step 6: Connect to Exchange Online PowerShell using system-assigned managed identity
+## Create and configure a user-assigned managed identity
 
-Use the following syntax to connect to Exchange Online PowerShell using a system-assigned managed identity:
+The steps are:
 
-```powershell
-Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com
-```
+1. [(Optional) Create a user-assigned managed identity](#step-1-create-a-user-assigned-managed-identity)
+2. [(Optional) Create a resource with user-assigned managed identity](#step-2-create-a-resource-with-user-assigned-managed-identity)
+3. [Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable)
+4. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-4-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
+5. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-5-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
+6. [Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity)
 
-For example:
-
-```powershell
-Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com
-```
-
-You can't simply open Windows PowerShell on your computer and run those commands to connect. Instead, you need to connect using in the context of an Azure resource. For example:
-
-- An Azure Automation account with system-assigned managed identity.
-- An Azure VM with a system-assigned managed identity.
-
-#### Connect to Exchange Online PowerShell using Azure Automation accounts with system-assigned managed identity
-
-Create a PowerShell runbook on the automation account. For instructions, see [Manage runbooks in Azure Automation](/azure/automation/manage-runbooks).
-
-The first command in the PowerShell runbook must be the `Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com` command as previously described.
-
-After that, as a test, you can start with as simple, low-impact command in the runbook before moving on to more complex commands or scripts. For example:
-
-```powershell
-Get-AcceptedDomain | Format-Table Name
-```
-
-After you've successfully created the PowerShell runbook, do the following steps to connect and run it in the future:
-
-1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
-2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
-3. On the **Runbooks** flyout that opens, select the runbook.
-4. On the details page of the runbook, click **Start**.
-
-#### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identity
-
-In the Azure VM, open a Windows PowerShell window, replace \<YourDomain\> with your domain, and then run the following command:
-
-```powershell
-Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com
-```
-
-After that, Exchange Online PowerShell cmdlets and parameters are available to you based on the RBAC role you assigned in [Step 5: Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity).
-
-## User-assigned managed identity
+After you complete the steps, you're ready to [Connect to Exchange Online PowerShell using user-assigned managed identity](#connect-to-exchange-online-powershell-using-user-assigned-managed-identity).
 
 ### Step 1: Create a user-assigned managed identity
 
@@ -365,7 +452,7 @@ To create the user-assigned managed identity in [Azure PowerShell](/powershell/a
 
 ### Step 2: Create a resource with user-assigned managed identity
 
-If you're going to use an existing resource that's already configured with user-assigned managed identity, you can skip to the [next step](#step-3-store-the-user-assigned-managed-identity-in-variables). The following resource types are supported:
+If you're going to use an existing resource that's already configured with user-assigned managed identity, you can skip to the [next step](#step-3-store-the-user-assigned-managed-identity-in-a-variable). The following resource types are supported:
 
 - Azure Automation accounts
 - Azure Virtual Machines (VMs)
@@ -457,70 +544,6 @@ Although the managed identity values were obtained differently for user-assigned
 
 The steps for user-assigned managed identity are basically the same as in [System-assigned managed identity Step 5](#step-5-assign-azure-ad-roles-to-the-managed-identity).
 
-But, **you need to make the following change in the Azure portal procedures for automation accounts**: In step 4, select the [user-assigned managed identity](#step-2-create-a-resource-with-user-assigned-managed-identity) as the managed identity to assign the Azure AD role to (not the automation account itself).
+In the Azure portal, be sure to select the [user-assigned managed identity](#step-2-create-a-resource-with-user-assigned-managed-identity) as the managed identity to assign the Azure AD role to (not the automation account itself).
 
-No changes are required in the PowerShell procedures for automation accounts. Although the managed identity values were obtained differently for user-assigned vs. system-assigned, we're using the same variable name in the command (`$MI_ID`), so the command works for both types of managed identities.
-
-### Step 7: Connect to Exchange Online PowerShell using user-assigned managed identity
-
-Use the following syntax to connect to Exchange Online PowerShell using a system-assigned managed identity:
-
-```powershell
-Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId <UserAssignedManagedIdentityPrincipalIdValue>
-```
-
-For example:
-
-```powershell
-$MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").PrincipalId
-
-Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
-```
-
-You can't simply open Windows PowerShell on your computer and run those commands to connect. Instead, you need to connect using in the context of an Azure resource. For example:
-
-- An Azure Automation account with user-assigned managed identity.
-- An Azure VM with a user-assigned managed identity.
-
-#### Connect to Exchange Online PowerShell using Azure Automation accounts with user-assigned managed identities
-
-Create a PowerShell runbook on the automation account. For instructions, see [Manage runbooks in Azure Automation](/azure/automation/manage-runbooks).
-
-The first commands in the PowerShell runbook must be the `$MI_ID = ...` and `Connect-ExchangeOnline...` commands as previously described.
-
-After that, as a test, you can start with as simple, low-impact command in the runbook before moving on to more complex commands or scripts. For example:
-
-```powershell
-Get-AcceptedDomain | Format-Table Name
-```
-
-After you've successfully created the PowerShell runbook, do the following steps to connect and run it in the future:
-
-1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
-2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
-3. On the **Runbooks** flyout that opens, select the runbook.
-4. On the details page of the runbook, click **Start**.
-
-#### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identities
-
-In the Azure VM, open a Windows PowerShell window and use the following syntax:
-
-```powershell
-$MI_ID = (Get-AzUserAssignedIdentity -Name "<UserAssignedMI>" -ResourceGroupName "<MIResourceGroupName>").PrincipalId
-
-Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
-```
-
-- \<UserAssignedMI\> is the name of the user-assigned managed identity.
-- \<MIResourceGroupName\> is the name of the resource group that's associated with the user-assigned managed identity.
-- \<YourDomain\> is the custom part of your onmicrosoft.com domain.
-
-For example:
-
-```powershell
-$MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").PrincipalId
-
-Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
-```
-
-After that, Exchange Online PowerShell cmdlets and parameters are available to you based on the RBAC role you assigned in [Step 6: Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity).
+The PowerShell command works for both user-assigned and system-assigned managed identities. Although the managed identity values were obtained differently for user-assigned vs. system-assigned, we're using the same variable name in the command (`$MI_ID`).
