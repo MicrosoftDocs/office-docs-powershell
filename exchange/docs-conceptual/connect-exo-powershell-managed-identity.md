@@ -44,6 +44,8 @@ The rest of this section explains how to connect using supported Azure resources
 - A PowerShell runbook on the Azure Automation account with system-assigned managed identity.
 - An Azure VM with a system-assigned managed identity.
 
+After the resource is connected, the Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 5: Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity)
+
 ### Connect to Exchange Online PowerShell using Azure Automation accounts with system-assigned managed identity
 
 Create a PowerShell runbook on the automation account. For instructions, see [Manage runbooks in Azure Automation](/azure/automation/manage-runbooks).
@@ -60,8 +62,6 @@ After that, as a test, you can start with as simple, low-impact command in the r
 Get-AcceptedDomain | Format-Table Name
 ```
 
-The Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 5: Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity).
-
 After you've successfully created, saved, and published the PowerShell runbook, do the following steps to run it in the future:
 
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
@@ -77,8 +77,6 @@ In a Windows PowerShell window in the Azure VM, use the command as described in 
 Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com
 ```
 
-The Exchange Online PowerShell cmdlets and parameters are available to you based on the RBAC role you assigned in [Step 5: Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity).
-
 ## Connect to Exchange Online PowerShell using user-assigned managed identity
 
 After you've [created and configured a user-assigned managed identity](#create-and-configure-a-user-assigned-managed-identity), use the following syntax to connect to Exchange Online PowerShell:
@@ -93,6 +91,8 @@ The rest of this section explains how to connect using supported Azure resources
 
 - A PowerShell runbook on the Azure Automation account with user-assigned managed identity.
 - An Azure VM with a user-assigned managed identity.
+
+After the resource is connected, the Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 6: Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity).
 
 ### Connect to Exchange Online PowerShell using Azure Automation accounts with user-assigned managed identities
 
@@ -112,8 +112,6 @@ After that, as a test, you can start with as simple, low-impact command in the r
 Get-AcceptedDomain | Format-Table Name
 ```
 
-The Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 6: Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity).
-
 After you've successfully created the PowerShell runbook, do the following steps to run it in the future:
 
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
@@ -131,8 +129,6 @@ $MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "Cont
 Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
 ```
 
-After that, Exchange Online PowerShell cmdlets and parameters are available to you based on the RBAC role you assigned in [Step 6: Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity).
-
 ## Create and configure a system-assigned managed identity
 
 The steps are:
@@ -143,7 +139,7 @@ The steps are:
 4. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-4-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
 5. [Assign Azure AD roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity)
 
-After you complete the steps, you're ready to [connect to Exchange Online PowerShell using system-assigned managed identity](connect-to-exchange-online-powershell-using-system-assigned-managed-identity).
+After you complete the steps, you're ready to [Connect to Exchange Online PowerShell using system-assigned managed identity](#connect-to-exchange-online-powershell-using-system-assigned-managed-identity).
 
 ### Step 1: Create a resource with system-assigned managed identity
 
@@ -211,7 +207,7 @@ For instructions, see the following articles:
 
 - [System-assigned managed identity in the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm#system-assigned-managed-identity)
 
-- [System-assigned managed identity in PowerShell](s/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm#system-assigned-managed-identity)
+- [System-assigned managed identity in PowerShell](/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm#system-assigned-managed-identity)
 
 ### Step 2: Store the system-assigned managed identity in a variable
 
@@ -504,7 +500,7 @@ To create the Automation account with user-assigned managed identity in [Azure P
 For instructions, see the following articles:
 
 - [User-assigned managed identity in the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm#user-assigned-managed-identity)
-- [User-assigned managed identity in PowerShell](s/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm#user-assigned-managed-identity)
+- [User-assigned managed identity in PowerShell](/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm#user-assigned-managed-identity)
 
 ### Step 3: Store the user-assigned managed identity in a variable
 
