@@ -1131,7 +1131,7 @@ To add or remove owners without affecting other existing entries, use the follow
 
 Owners that you specify with this parameter are not added as group members. You need to manually add the owner as a member.
 
->[!NOTE]
+> [!NOTE]
 > Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
 
 >[!NOTE]
