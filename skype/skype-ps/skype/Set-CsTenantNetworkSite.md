@@ -269,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyCallingPolicy
-This parameter is used to assign a custom emergency calling policy to a network site. For more information see [Assign a custom emergency calling policy to a network site](/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
+This parameter is used to assign a custom emergency calling policy to a network site. For more information, see [Assign a custom emergency calling policy to a network site](/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
 
 ```yaml
 Type: String
