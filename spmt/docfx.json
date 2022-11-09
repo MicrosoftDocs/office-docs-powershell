@@ -29,6 +29,9 @@
         "files": [
           "**/*.yml"
         ],
+        "exclude": [
+          "toc.yml"
+        ],
         "src": "spmt-ps",
         "version": "spmt-ps",
         "dest": "module"
