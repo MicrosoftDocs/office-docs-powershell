@@ -27,7 +27,7 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
         ],
         "src": "spmt-ps",
         "version": "spmt-ps",
