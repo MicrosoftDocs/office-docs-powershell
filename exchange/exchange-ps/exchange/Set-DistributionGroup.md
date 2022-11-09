@@ -1134,7 +1134,7 @@ Owners that you specify with this parameter are not added as group members. You 
 > [!NOTE]
 > Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
 >
-> If the _DL managed by_ or _owner_ is assigned to a security group, and when the owner logs in to `OWA options -> Distribution group`, they will not see the distribution list under "Distribution groups I own". If the _managed by_ or _owner_ is a normal user instead of a security group, they will be able to see them under "Distribution groups I own".
+> If the _DL managed by_ or _owner_ is assigned to a security group, and when the owner login to `OWA options -> Distribution group`, they will not see the distribution list under "Distribution groups I own". If the _managed by_ or _owner_ is a normal user instead of a security group, they will be able to see them under "Distribution groups I own".
 
 ```yaml
 Type: MultiValuedProperty
