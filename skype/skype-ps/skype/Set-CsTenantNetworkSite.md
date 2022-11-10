@@ -20,7 +20,8 @@ As an Admin, you can use the Windows PowerShell command, Set-CsTenantNetworkSite
 ### Identity (Default)
 ```powershell
 Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>] 
+ [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>]
+ [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>]
  [-NetworkRoamingPolicy <String>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,6 +29,7 @@ Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-Networ
 ```powershell
 Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
  [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>]
+ [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>]
  [-NetworkRoamingPolicy <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -243,6 +245,36 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmergencyCallRoutingPolicy
+This parameter is used to assign a custom emergency call routing policy to a network site. For more information, see [Assign a custom emergency call routing policy to a network site](/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmergencyCallingPolicy
+This parameter is used to assign a custom emergency calling policy to a network site. For more information, see [Assign a custom emergency calling policy to a network site](/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
