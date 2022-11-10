@@ -6787,7 +6787,7 @@
     },
     {
       "source_path": "spmt/spmt-ps/spmt/spmt.md",
-      "redirect_url": "/powershell/module/spmt/index",
+      "redirect_url": "/powershell/module/spmt",
       "redirect_document_id": false
     }
   ]
