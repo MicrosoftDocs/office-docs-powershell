@@ -6784,6 +6784,11 @@
       "source_path": "teams/docs-conceptual/intro.md",
       "redirect_url": "/powershell/teams",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "spmt/spmt-ps/spmt/spmt.md",
+      "redirect_url": "/powershell/module/spmt/index",
+      "redirect_document_id": false
     }
   ]
 }
