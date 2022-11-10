@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ### -AllowConflicts
 The AllowConflicts parameter specifies whether to allow conflicting meeting requests. Valid values are:
 
-- $true: Conflicts are allowed. The recurring meeting series is accepted regardless of whether any occurrences conflict with existing bookings. Where conflicts occur, the individual occurrences are declined without notification messages to the meeting organizer. The values of the ConflictPercentageAllowed or MaximumConflictInstances parameters are ignored.
+- $true: Conflicts are allowed. The recurring meeting series is accepted regardless of whether any occurrences conflict with existing bookings. The values of the ConflictPercentageAllowed or MaximumConflictInstances parameters are ignored.
 - $false: Conflicts aren't allowed. This is the default value. Whether the entire series is declined depends on the amount of conflicts in the series: <br> • The series is declined if the number or percentage of conflicts is higher than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. <br> • The series is accepted, but conflicting occurrences are declined if the number or percentage of conflicts is lower than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. If the EnableResponseDetails parameter value is $true, the organizer will receive a notification email for each declined occurrence.
 
 ```yaml
