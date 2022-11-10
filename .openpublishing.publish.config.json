@@ -158,7 +158,10 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "version": 0
+      "version": 0,
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
     },
     {
       "docset_name": "whiteboard-ps",
