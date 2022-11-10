@@ -28,7 +28,7 @@
       {
         "files": [
           "**/*.yml",
-          "spmt-ps/spmt/spmt.md"
+          "**/spmt.md"
         ],
         "exclude": [
           "toc.yml"
