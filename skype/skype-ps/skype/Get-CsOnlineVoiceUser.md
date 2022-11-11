@@ -40,7 +40,6 @@ The following table lists the parameters to `Get-CsOnlineVoiceUser` and the alte
 | NumberNotAssigned | Find users without a phone number assigned | `Get-CsOnlineUser -Filter {(LineUri -eq $Null) -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
 | PSTNConnectivity | Find enabled users with PhoneSystem (OnPremises) or CallingPlan (Online) | Online: `Get-CsOnlineUser -Filter {(FeatureTypes -contains 'CallingPlan') -and (AccountEnabled -eq $True)} -AccountType User` OnPremises: `Get-CsOnlineUser -Filter {-not (FeatureTypes -contains 'CallingPlan') -and (FeatureTypes -contains 'PhoneSystem') -and (AccountEnabled -eq $True)} -AccountType User` |
 
-
 The following table lists the output fields from `Get-CsOnlineVoiceUser` and the alternative method of getting the same information using a combination of `Get-CsOnlineUser`, `Get-CsPhoneNumberAssignment`, and `Get-CsOnlineLisLocation`.
 
 | Output field | Alternative |
