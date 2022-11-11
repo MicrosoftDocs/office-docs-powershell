@@ -55,7 +55,6 @@ The following table lists the output fields from `Get-CsOnlineVoiceUser` and the
 | Number | LineUri in the output from `Get-CsOnlineUser`. You can get same phone number format by doing LineUri.Replace('tel:+','')  |
 | Location | Use LocationId in the output from `Get-CsPhoneNumberAssignment -AssignedPstnTargetId <Identity>` as the input to `Get-CsOnlineLisLocation -LocationId` |
 
-
 In Teams PowerShell Module version 3.0 and later, the following improvements have been introduced for organizations using Teams: 
 - This cmdlet now accurately returns users who are voice-enabled (the older cmdlet in version 2.6.0 and earlier returned users without MCOEV* plans assigned).
 - The result size is not limited to 100 users anymore (the older cmdlet in version 2.6.0 and earlier limited the result size to 100).
