@@ -211,7 +211,7 @@ For instructions, see the following articles:
 
 ### Step 2: Store the system-assigned managed identity in a variable
 
-Use the following syntax to store the Id (GUID) value of the managed identity in a variable that you'll use in the upcoming steps.
+Use the following syntax to store the Id (GUID) value of the managed identity in a variable that you'll use in the upcoming steps in [Azure Az PowerShell](/powershell/azure/install-az-ps).
 
 ```powershell
 $MI_ID = (Get-AzADServicePrincipal -DisplayName "<ResourceName>").Id
@@ -504,7 +504,7 @@ For instructions, see the following articles:
 
 ### Step 3: Store the user-assigned managed identity in a variable
 
-Use the following syntax to store the PrincipalId value of the user-assigned managed identity in variable that you'll use in the upcoming steps:
+Use the following syntax in [Azure Az PowerShell](/powershell/azure/install-az-ps) to store the PrincipalId value of the user-assigned managed identity in variable that you'll use in the upcoming steps:
 
 ```powershell
 $MI_ID = (Get-AzUserAssignedIdentity -Name "<UserAssignedMI>" -ResourceGroupName "<MIResourceGroupName>").PrincipalId
