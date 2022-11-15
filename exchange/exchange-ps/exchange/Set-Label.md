@@ -224,6 +224,8 @@ The ApplyContentMarkingFooterFontName parameter specifies the font of the footer
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
+This parameter is supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
