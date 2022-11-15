@@ -521,16 +521,16 @@ Accept wildcard characters: False
 
 The ManagedIdentity switch specifies that you're using managed identity to connect. You don't need to specify a value with this switch.
 
-For user-assigned managed identity, use this switch with the Organization and ManagedIdentityAccountId parameters.
-
-For system-assigned managed identity, use this switch with the Organization parameter.
-
 Managed identity connections are currently supported for the following types of Azure resources:
 
 - Azure Automation runbooks
 - Azure Virtual Machines
 - Azure Virtual Machine Scale Sets
 - Azure Functions
+
+You must use this switch with the Organization parameter.
+
+For user-assigned managed identity, you must also use this switch with the ManagedIdentityAccountId parameter.
 
 For more information about connecting with managed identity, see [Use Azure managed identities to connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-exo-powershell-managed-identity).
 
@@ -550,9 +550,9 @@ Accept wildcard characters: False
 ### -ManagedIdentityAccountId
 **Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
 
-The ManagedIdentityAccountId parameter specifies the user-assigned managed identity that you're using to connect. A valid value for this parameter is application ID of the service principal that corresponds the the user-assigned managed identity in Azure.
+The ManagedIdentityAccountId parameter specifies the user-assigned managed identity that you're using to connect. A valid value for this parameter is the application ID (GUID) of the service principal that corresponds to the user-assigned managed identity in Azure.
 
-You must use this parameter with the Organization parameter.
+You must use this parameter with the Organization parameter and the ManagedIdentity switch.
 
 For more information about connecting with managed identity, see [Use Azure managed identities to connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-exo-powershell-managed-identity).
 
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 ### -Organization
 The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use an .onmicrosoft.com domain for the value of this parameter.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
 For more information about connecting with managed identity, see [Use Azure managed identities to connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-exo-powershell-managed-identity).
 
