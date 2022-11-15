@@ -18,7 +18,8 @@ Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access to a speci
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
-**Note**: App access policy will soon be replaced by Application Role Based Access Control (APP RBAC), and we want your feedback as we prepare for general availability. To learn more, see [Roles Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac).
+> [!Note]
+> App access policy will soon be replaced by Application Role Based Access Control (APP RBAC), and we want your feedback as we prepare for general availability. To learn more, see [Roles Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac).
 
 ## SYNTAX
 
