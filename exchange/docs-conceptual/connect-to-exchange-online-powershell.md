@@ -453,17 +453,19 @@ This section attempts to compare older connection methods that have been replace
 
 - **Exchange Online PowerShell module**:
 
-  - **System-assigned**:
+  - **System-assigned managed identity**:
 
     ```powershell
     Connect-ExchangeOnline -ManagedIdentity -Organization "contoso.onmicrosoft.com"
     ```
 
-  - **User-assigned**:
+  - **User-assigned managed identity**:
 
     ```powershell
-    Connect-ExchangeOnline -ManagedIdentity -Organization "contoso.onmicrosoft.com" -ManagedIdentityAccountId $ManagedIdentityAccountIdGuid
+    Connect-ExchangeOnline -ManagedIdentity -Organization "contoso.onmicrosoft.com" -ManagedIdentityAccountId <UserAssignedManagedIdentityPrincipalIdValue>
     ```
+
+  For more information, see [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
 
 - **Basic authentication**: Not available.
 
