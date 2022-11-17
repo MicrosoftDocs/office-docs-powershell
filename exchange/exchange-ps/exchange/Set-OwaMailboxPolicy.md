@@ -2065,8 +2065,6 @@ Accept wildcard characters: False
 ### -SMimeSuppressNameChecksEnabled
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
