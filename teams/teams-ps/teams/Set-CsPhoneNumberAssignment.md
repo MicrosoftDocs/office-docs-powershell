@@ -55,8 +55,7 @@ This example assigns the Microsoft Calling Plan phone number +1 (206) 555-1234 t
 $loc=Get-CsOnlineLisLocation -City Vancouver
 Set-CsPhoneNumberAssignment -Identity user2@contoso.com -PhoneNumber +12065551224 -PhoneNumberType CallingPlan -LocationId $loc.LocationId
 ```
-This example finds the emergency location defined for the corporate location Vancouver and assigns the Microsoft Calling Plan phone number +1 (206) 555-1224 and location 
-to the user user2@contoso.com.
+This example finds the emergency location defined for the corporate location Vancouver and assigns the Microsoft Calling Plan phone number +1 (206) 555-1224 and location to the user user2@contoso.com.
 
 ### Example 3
 ```powershell
@@ -84,14 +83,9 @@ This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=100 t
 
 ### Example 7
 ```powershell
-$pn=Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting
-$pn
-Code       Message
-----       -------
-BadRequest Telephone Number '+14255551000;ext=100' has already been assigned to another user
+Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occured }
 ```
-In this example the assignment cmdlet fails, because the phone number "+14255551000;ext=100" has already been assigned to another user.
-
+This example shows how to use Try/Catch and ErrorAction to perform error checking on the assignment cmdlet failing.
 
 ## PARAMETERS
 
@@ -145,8 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have
-"tel:" prefixed.
+The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have "tel:" prefixed.
 
 We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user, but such phone numbers are
 not supported to be assigned to a resource account.
@@ -165,8 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumberType
-The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan, and OperatorConnect. When you acquire a phone number
-you will typically know which type it is.
+The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan, and OperatorConnect. When you acquire a phone number you will typically know which type it is.
 
 ```yaml
 Type: System.String
@@ -195,8 +187,7 @@ The cmdlet is available in Teams PowerShell module 3.0.0 or later.
 
 The cmdlet is only available in commercial and GCC cloud instances.
 
-If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone
-number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
+If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
 
 The previous command for assigning phone numbers to users Set-CsUser had the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
 necessary and that is why the parameter is not available on Set-CsPhoneNumberAssignment.
