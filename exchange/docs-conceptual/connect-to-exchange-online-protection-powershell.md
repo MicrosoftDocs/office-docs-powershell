@@ -69,7 +69,6 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 
 - If you're behind a proxy server, you can use the _PSSessionOption_ parameter in the connection command. First, run this command: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the value `$ProxyOptions` for the _PSSessionOption_ parameter. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
-
 ### Connect to Security & Compliance PowerShell with an interactive login prompt
 
 This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization:

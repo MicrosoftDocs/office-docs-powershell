@@ -13,7 +13,7 @@ ms.reviewer:
 # Show-SPMTMigration
 
 ## SYNOPSIS
-If the user starts the migration with -NoShow parameter, running the ‘Show-SPMTMigration’ cmdlet will display the task ID, data source location, target location and migration status in the console. Pressing Ctrl+C will return to NoShow mode.
+If the user starts the migration with -NoShow parameter, running the 'Show-SPMTMigration' cmdlet will display the task ID, data source location, target location and migration status in the console. Pressing Ctrl+C will return to NoShow mode.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Show-SPMTMigration  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-If the user starts the migration with -NoShow parameter, running the ‘Show-SPMTMigration’ cmdlet will display the task ID, data source location, target location and migration status in the console. Pressing Ctrl+C will return to NoShow mode.
+If the user starts the migration with -NoShow parameter, running the 'Show-SPMTMigration' cmdlet will display the task ID, data source location, target location and migration status in the console. Pressing Ctrl+C will return to NoShow mode.
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ Start-SPMTMigration -NoShow
 Show-SPMTMigration
 ```
 
-This example, first, starts a migration with -NoShow parameter, then run ‘Show-SPMTMigration’, the migration task ID, data source location, target location and migration status will show up in the console.
+This example, first, starts a migration with -NoShow parameter, then run 'Show-SPMTMigration', the migration task ID, data source location, target location and migration status will show up in the console.
 
 ## PARAMETERS
 
