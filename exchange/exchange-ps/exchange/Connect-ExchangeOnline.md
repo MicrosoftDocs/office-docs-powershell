@@ -634,7 +634,7 @@ The ShowProgress parameter specifies whether to show or hide the progress bar of
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 
 Required: False
 Position: Named
