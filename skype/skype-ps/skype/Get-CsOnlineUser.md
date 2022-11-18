@@ -108,6 +108,13 @@ Get-CsOnlineUser -AccountType ResourceAccount
 ```
 Example 6 returns information for user accounts that are categorized as resource accounts. 
 
+### -------------------------- Example 7 --------------------------
+```
+Get-CsOnlineUser - Filter "FeatureTypes -Contains 'PhoneSystem'"
+```
+Example 7 returns information for user's assigned plans. 
+
+
 ## PARAMETERS
 
 ### -AccountType
@@ -264,6 +271,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
 - LastName (available in Teams PowerShell Module 4.2.1 and later)
+
 
 *Attributes that have changed in meaning/format*:
 
@@ -475,6 +483,8 @@ Some of the commonly used FeatureTypes include:
 - AudioConferencing
 - PhoneSystem
 - CallingPlan
+
+_Note -_ This attribute is now filterable in Teams Powershell Module versions 4.0.0 and above using the "-Contains" operator as showon in Example 7
 
 AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
 
