@@ -114,7 +114,6 @@ Get-CsOnlineUser -Filter "FeatureTypes -Contains 'PhoneSystem'"
 ```
 Example 7 returns information for user's assigned plans. 
 
-
 ## PARAMETERS
 
 ### -AccountType
