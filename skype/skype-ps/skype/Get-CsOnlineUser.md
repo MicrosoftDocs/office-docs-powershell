@@ -110,7 +110,7 @@ Example 6 returns information for user accounts that are categorized as resource
 
 ### -------------------------- Example 7 --------------------------
 ```
-Get-CsOnlineUser - Filter "FeatureTypes -Contains 'PhoneSystem'"
+Get-CsOnlineUser -Filter "FeatureTypes -Contains 'PhoneSystem'"
 ```
 Example 7 returns information for user's assigned plans. 
 
