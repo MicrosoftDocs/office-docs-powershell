@@ -483,7 +483,7 @@ Some of the commonly used FeatureTypes include:
 - PhoneSystem
 - CallingPlan
 
-**NOTE:** This attribute is now filterable in Teams Powershell Module versions 4.0.0 and later using the "-Contains" operator as shown in Example 7
+**Note**: This attribute is now filterable in Teams Powershell Module versions 4.0.0 and later using the "-Contains" operator as shown in Example 7.
 
 AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
 
