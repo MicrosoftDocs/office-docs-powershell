@@ -393,8 +393,8 @@ The VoiceId parameter represents the voice that is used to read text-to-speech (
 You can query the supported voices by using the `Get-CsAutoAttendantSupportedLanguage` cmdlet. You can determine the default voice for a language by issuing the following command:
 
 ```
-$language = Get-CsAutoAttendantSupportedLanguage -Identity "en-US"`
-$defaultVoice = $language.Voices[0].Gender
+$language = Get-CsAutoAttendantSupportedLanguage -Identity "en-US"
+$defaultVoice = $language.Voices[0].Id
 ```
 
 ```yaml
