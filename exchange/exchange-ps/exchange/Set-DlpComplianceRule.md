@@ -2688,9 +2688,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 Explanation of the parameters:
+
+
 Ignore : Will ignore the failure of the rule and thereby any actions in that rule and move to the next rule.
+
 RetryThenBlock : Will do upto 5 retrys of the rule with an increasing time gap of 10 min i.e, 1st retry happens after 10 min, 2nd retry after 20 min and so on. Once 5th retry also results in a failure the message is dropped and we send a NDR.
+
 Blank : Will defer the delivery of the message and keep retrying the rule.
 
 ### -SenderADAttributeContainsWords
