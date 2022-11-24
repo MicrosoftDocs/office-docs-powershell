@@ -954,8 +954,6 @@ Specifies the number of days before meeting recordings will expire and move to t
 
 NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
 
-NOTE: This parameter is available to be set, but will not be effective until this feature gets general availability. Please refer to the [roadmap (Feature ID: 84580)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=84580) for more information on its delivery date.
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
