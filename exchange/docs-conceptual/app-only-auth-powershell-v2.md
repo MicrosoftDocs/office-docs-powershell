@@ -25,6 +25,8 @@ Certificate based authentication (CBA) or app-only authentication as described i
 
 > [!NOTE]
 >
+> - Did you know that you can connect to Exchange Online PowerShell using managed identities in Azure? Check out [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
+>
 > - The features and procedures described in this article require the following versions of the Exchange Online PowerShell module:
 >   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
 >   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 2.0.6-Preview5 or later.
