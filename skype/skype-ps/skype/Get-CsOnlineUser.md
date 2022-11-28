@@ -108,6 +108,12 @@ Get-CsOnlineUser -AccountType ResourceAccount
 ```
 Example 6 returns information for user accounts that are categorized as resource accounts. 
 
+### -------------------------- Example 7 --------------------------
+```
+Get-CsOnlineUser -Filter "FeatureTypes -Contains 'PhoneSystem'"
+```
+Example 7 returns information for user's assigned plans. 
+
 ## PARAMETERS
 
 ### -AccountType
@@ -206,25 +212,27 @@ The following updates are applicable for organizations having TeamsOnly users th
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
 
 - AccountType
-- accountEnabled
+- AccountEnabled
 - AssignedPlan
+- CallingLineIdentity
 - Company
 - Country
-- department
-- displayName
+- Department
+- DisplayName
 - EnterpriseVoiceEnabled
 - ExternalAccessPolicy
-- givenName
+- FeatureTypes (new)
+- GivenName
 - Identity
 - IsSipEnabled
-- lineUri
-- userPrincipalName
-- CallingLineIdentity
+- LastName (available in Teams PowerShell Module 4.2.1 and later)
+- LineUri
+- UserPrincipalName
 - OnlineAudioConferencingRoutingPolicy
 - OnlineDialOutPolicy
 - OnlineVoicemailPolicy
 - OnlineVoiceRoutingPolicy
-- ownerUrn
+- OwnerUrn
 - TeamsAppPermissionPolicy
 - TeamsAppSetupPolicy
 - TeamsAudioConferencingPolicy
@@ -234,6 +242,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - TeamsChannelsPolicy
 - TeamsComplianceRecordingPolicy
 - TeamsCortanaPolicy
+- TenantDialPlan
 - TeamsEducationAssignmentsAppPolicy
 - TeamsEmergencyCallingPolicy
 - TeamsEmergencyCallRoutingPolicy
@@ -257,13 +266,11 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - TeamsVdiPolicy
 - TeamsVerticalPackagePolicy
 - TeamsVideoInteropServicePolicy
-- TenantDialPlan
+- TeamsWorkLoadPolicy
 - Title
 - UsageLocation
 - UserDirSyncEnabled
-- TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
-- LastName (available in Teams PowerShell Module 4.2.1 and later)
 
 *Attributes that have changed in meaning/format*:
 
@@ -475,6 +482,8 @@ Some of the commonly used FeatureTypes include:
 - AudioConferencing
 - PhoneSystem
 - CallingPlan
+
+**Note**: This attribute is now filterable in Teams PowerShell Module versions 4.0.0 and later using the "-Contains" operator as shown in Example 7.
 
 AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
 
