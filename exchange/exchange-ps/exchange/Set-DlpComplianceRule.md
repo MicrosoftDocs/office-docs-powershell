@@ -2672,9 +2672,9 @@ Accept wildcard characters: False
 ### -RuleErrorAction
 The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
 
-- Ignore
-- RetryThenBlock
-- Blank (the value $null): This is the default value.
+- Ignore: Ignore the failure of the rule and thereby any actions in that rule and move to the next rule.
+- RetryThenBlock: Do a maximum of 5 retries of the rule with an increasing time gap of 10 min (i.e, 1st retry happens after 10 min, 2nd retry after 20 min, etc.). After the failure of the fifth retry, the message is dropped and we send a non-delivery report (also known as an NDR or bounce messages).
+- Blank (the value $null): Defer the delivery of the message and keep retrying the rule. This is the default value.
 
 ```yaml
 Type: PolicyRuleErrorAction

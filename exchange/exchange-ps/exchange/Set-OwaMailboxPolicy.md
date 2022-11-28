@@ -2065,7 +2065,7 @@ Accept wildcard characters: False
 ### -SMimeSuppressNameChecksEnabled
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The SMimeSuppressNameChecksEnabled switch specifies whether to suppress name check in S/MIME messages. You don't need to specify a value with this switch.
 
 ```yaml
 Type: Boolean
