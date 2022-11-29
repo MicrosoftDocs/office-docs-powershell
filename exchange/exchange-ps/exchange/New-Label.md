@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
- [-AdvancedSettings <PswsHashtable>]n\n
+ [-AdvancedSettings <PswsHashtable>]
  [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
  [-ApplyContentMarkingFooterEnabled <System.Boolean>]
  [-ApplyContentMarkingFooterFontColor <String>]
