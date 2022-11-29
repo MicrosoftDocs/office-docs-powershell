@@ -82,6 +82,8 @@ You can use any value that uniquely identifies the recipient. For example:
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
+You must use this parameter with the LinkType parameter, which means the specified recipients will all be removed from the same role in the Microsoft 365 Group (you can't remove different roles from specific recipients in the same command).
+
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
@@ -96,12 +98,13 @@ Accept wildcard characters: False
 ```
 
 ### -LinkType
-The LinkType parameter specifies the Microsoft 365 Group property that you want to modify. Valid values are:
+The LinkType parameter specifies the recipient's role in the Microsoft 365 Group that you want to remove. Valid values are:
 
-- Aggregators
-- Members
-- Owners
-- Subscribers
+- Members: Participate in conversations, create Teams channels, collaborate on files, and edit the connected SharePoint site.
+- Owners: Add or remove members, delete conversations, changes Team settings, delete the Team, and full control of the connected SharePoint site. A group must have at least one owner.
+- Subscribers: Members who receive conversation and calendar event notifications from the group. All subscribers are members of the group, but all members aren't necessarily subscribers (depending on the AutoSubscribeNewMembers property value of the group and when the member was added).
+
+You must use this parameter with the LinkType parameter.
 
 ```yaml
 Type: LinkType
