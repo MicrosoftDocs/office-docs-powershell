@@ -24,23 +24,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-AdvancedSettings <PswsHashtable>]
  [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
- [-ApplyContentMarkingFooterEnabled <Boolean>]
+ [-ApplyContentMarkingFooterEnabled <System.Boolean>]
  [-ApplyContentMarkingFooterFontColor <String>]
  [-ApplyContentMarkingFooterFontName <String>]
- [-ApplyContentMarkingFooterFontSize <Int32>]
- [-ApplyContentMarkingFooterMargin <Int32>]
+ [-ApplyContentMarkingFooterFontSize <System.Int32>]
+ [-ApplyContentMarkingFooterMargin <System.Int32>]
  [-ApplyContentMarkingFooterText <String>]
  [-ApplyContentMarkingHeaderAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
- [-ApplyContentMarkingHeaderEnabled <Boolean>]
+ [-ApplyContentMarkingHeaderEnabled <System.Boolean>]
  [-ApplyContentMarkingHeaderFontColor <String>]
  [-ApplyContentMarkingHeaderFontName <String>]
- [-ApplyContentMarkingHeaderFontSize <Int32>]
- [-ApplyContentMarkingHeaderMargin <Int32>]
+ [-ApplyContentMarkingHeaderFontSize <System.Int32>]
+ [-ApplyContentMarkingHeaderMargin <System.Int32>]
  [-ApplyContentMarkingHeaderText <String>]
- [-ApplyWaterMarkingEnabled <Boolean>]
+ [-ApplyWaterMarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingFontColor <String>]
  [-ApplyWaterMarkingFontName <String>]
- [-ApplyWaterMarkingFontSize <Int32>]
+ [-ApplyWaterMarkingFontSize <System.Int32>]
  [-ApplyWaterMarkingLayout <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout>]
  [-ApplyWaterMarkingText <String>]
  [-ColumnAssetCondition <String>]
@@ -48,16 +48,17 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-Conditions <MultiValuedProperty>]
  [-Confirm]
  [-ContentType <MipLabelContentType>]
+ [-DefaultContentLabel <String>]
  [-DisplayName <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
- [-EncryptionDoNotForward <Boolean>]
+ [-EncryptionDoNotForward <System.Boolean>]
  [-EncryptionDoubleKeyEncryptionUrl <String>]
- [-EncryptionEnabled <Boolean>]
- [-EncryptionEncryptOnly <Boolean>]
- [-EncryptionOfflineAccessDays <Int32>]
- [-EncryptionPromptUser <Boolean>]
+ [-EncryptionEnabled <System.Boolean>]
+ [-EncryptionEncryptOnly <System.Boolean>]
+ [-EncryptionOfflineAccessDays <System.Int32>]
+ [-EncryptionPromptUser <System.Boolean>]
  [-EncryptionProtectionType <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType>]
- [-EncryptionRightsDefinitions <String>]
+ [-EncryptionRightsDefinitions <EncryptionRightsDefinitionsParameter>]
  [-EncryptionRightsUrl <String>]
  [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
@@ -65,7 +66,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-NextLabel <ComplianceRuleIdParameter>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
- [-Priority <Int32>]
+ [-Priority <System.Int32>]
  [-SchematizedDataCondition <String>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
@@ -78,6 +79,22 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
  [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy>]
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
+ [-TeamsAllowedPresenters <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters>]
+ [-TeamsAllowMeetingChat <Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode>]
+ [-TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch <System.Boolean>]
+ [-TeamsBypassLobbyForDialInUsers <System.Boolean>]
+ [-TeamsChannelSharedWithExternalTenants <System.Boolean>]
+ [-TeamsChannelSharedWithPrivateTeamsOnly <System.Boolean>]
+ [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
+ [-TeamsCopyRestrictionEnforced <System.Boolean>]
+ [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
+ [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
+ [-TeamsLobbyRestrictionEnforced <System.Boolean>]
+ [-TeamsPresentersRestrictionEnforced <System.Boolean>]
+ [-TeamsProtectionEnabled <System.Boolean>]
+ [-TeamsRecordAutomatically <System.Boolean>]
+ [-TeamsVideoWatermark <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues>]
+ [-TeamsWhoCanRecord <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions>]
  [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -191,7 +208,7 @@ The ApplyContentMarkingFooterEnabled parameter enables or disables the Apply Con
 - $false: The Apply Content Marking Footer action is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -247,7 +264,7 @@ The ApplyContentMarkingFooterFontSize parameter specifies the font size (in poin
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -267,7 +284,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 **Note**: In Microsoft Word, the specified value is used as a bottom margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -326,7 +343,7 @@ The ApplyContentMarkingHeaderEnabled parameter enables or disables the Apply Con
 - $false: The Apply Content Marking Header action is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -380,7 +397,7 @@ The ApplyContentMarkingHeaderFontSize parameter specifies the font size (in poin
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -400,7 +417,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 **Note**: In Microsoft Word, the specified value is used as a top margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -437,7 +454,7 @@ The ApplyWaterMarkingEnabled parameter enables or disables the Apply Watermarkin
 - $false: The Apply Watermarking Header action is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -491,7 +508,7 @@ The ApplyWaterMarkingFontSize parameter specifies the font size (in points) of t
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -610,16 +627,34 @@ Accept wildcard characters: False
 ```
 
 ### -ContentType
-The ContentType parameter specifies where the sensivity label can be applied. Valid values are:
+The ContentType parameter specifies where the sensitivity label can be applied. Valid values are:
 
 - File, Email
 - Site, UnifiedGroup
 - PurviewAssets
+- Teamwork
+- SchematizedData
 
 Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into just "File" or just "Email" is not supported.
 
 ```yaml
 Type: MipLabelContentType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultContentLabel
+{{ Fill DefaultContentLabel Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -677,7 +712,7 @@ The EncryptionDoNotForward parameter specifies whether the Do Not Forward templa
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -712,7 +747,7 @@ The EncryptionEnabled parameter specifies whether encryption in enabled. Valid v
 - $false: Encryption is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -733,7 +768,7 @@ The EncryptionEncryptOnly parameter specifies whether the encrypt-only template 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -751,7 +786,7 @@ The EncryptionOfflineAccessDays parameter specifies the number of days that offl
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -772,7 +807,7 @@ The EncryptionPromptUser parameter specifies whether to set the label with user 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false, and when the EncryptionProtectionType parameter value is UserDefined.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -812,7 +847,7 @@ The EncryptionRightsDefinitions parameter specifies the rights users have when a
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false and the EncryptionProtectionType parameter value is Template.
 
 ```yaml
-Type: String
+Type: EncryptionRightsDefinitionsParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -951,7 +986,7 @@ Accept wildcard characters: False
 The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A higher integer value indicates a higher priority.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1189,6 +1224,262 @@ These correspond to the following settings through the admin center:
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowedPresenters
+{{ Fill TeamsAllowedPresenters Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowMeetingChat
+{{ Fill TeamsAllowMeetingChat Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch
+{{ Fill TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsBypassLobbyForDialInUsers
+{{ Fill TeamsBypassLobbyForDialInUsers Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithExternalTenants
+{{ Fill TeamsChannelSharedWithExternalTenants Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithPrivateTeamsOnly
+{{ Fill TeamsChannelSharedWithPrivateTeamsOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithSameLabelOnly
+{{ Fill TeamsChannelSharedWithSameLabelOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsCopyRestrictionEnforced
+{{ Fill TeamsCopyRestrictionEnforced Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsEndToEndEncryptionEnabled
+{{ Fill TeamsEndToEndEncryptionEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLobbyBypassScope
+{{ Fill TeamsLobbyBypassScope Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLobbyRestrictionEnforced
+{{ Fill TeamsLobbyRestrictionEnforced Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsPresentersRestrictionEnforced
+{{ Fill TeamsPresentersRestrictionEnforced Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsProtectionEnabled
+{{ Fill TeamsProtectionEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsRecordAutomatically
+{{ Fill TeamsRecordAutomatically Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsVideoWatermark
+{{ Fill TeamsVideoWatermark Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsWhoCanRecord
+{{ Fill TeamsWhoCanRecord Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
