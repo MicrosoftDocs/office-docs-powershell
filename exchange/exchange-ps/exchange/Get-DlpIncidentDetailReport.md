@@ -90,7 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -DlpCompliancePolicy
-{{ Fill DlpCompliancePolicy Description }}
+The DlpCompliancePolicy parameter filters the report by the name of the DLP compliance policy. You can specify multiple policies separated by commas.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
