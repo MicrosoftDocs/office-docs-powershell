@@ -8,7 +8,7 @@ title: Microsoft Whiteboard
 
 ## Description
 
-The following cmdlet references are for Microsoft Whiteboard. See [Overview](https://learn.microsoft.com/powershell/whiteboard/overview) for details on installing the module. The module can only be run by users with Global Administrator or SharePoint Administrator roles.
+The following cmdlet references are for Microsoft Whiteboard. See [Overview](https://learn.microsoft.com/powershell/whiteboard/overview) for details on installing the module. The module can only be run by users with Global Administrator or SharePoint Administrator roles. The module described here is for Whiteboard content stored in Azure.
 
 ## Microsoft Whiteboard Admin cmdlets
 

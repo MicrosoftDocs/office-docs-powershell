@@ -82,6 +82,31 @@ This example returns duplicate public folder migration requests (requests create
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the public folder mailbox migration request that you want to view. The value uses the syntax: `\PublicFolderMailboxMigration<GUID>` (for example, `\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
+
+You can't use this parameter with the following parameters:
+
+- BatchName
+- HighPriority
+- Name
+- RequestQueue
+- Suspend
+- Status
+
+```yaml
+Type: PublicFolderMailboxMigrationRequestIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -BatchName
 The BatchName parameter filters the results by the friendly BatchName value that was assigned when the batch job was created. The format of this value is: `MigrationService:<Batch name provided at batch creation>`.
 
@@ -138,31 +163,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the public folder mailbox migration request that you want to view. The value uses the syntax: `\PublicFolderMailboxMigration<GUID>` (for example, `\PublicFolderMailboxMigrationac6d9eb4-ee49-405f-b90d-04e9a258bd7e`).
-
-You can't use this parameter with the following parameters:
-
-- BatchName
-- HighPriority
-- Name
-- RequestQueue
-- Suspend
-- Status
-
-```yaml
-Type: PublicFolderMailboxMigrationRequestIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

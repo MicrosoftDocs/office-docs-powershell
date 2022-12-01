@@ -1199,7 +1199,7 @@ The PrimarySmtpAddress parameter specifies the primary return email address that
 
 By default, the primary address is the same as the ExternalEmailAddress parameter value.
 
-If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, which means the email addresses of the mail contact aren't automatically updated by email address policies. We recommend that you don't set the primary email address to a value other than the ExternalEmailAddress unless you're in a cross-forest scenario.
+If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but the email addresses of the mail contact aren't automatically updated by email address policies. We recommend that you don't set the primary email address to a value other than the ExternalEmailAddress unless you're in a cross-forest scenario.
 
 The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 

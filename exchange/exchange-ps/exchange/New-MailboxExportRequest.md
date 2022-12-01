@@ -160,45 +160,6 @@ This example exports all messages from Kweku's Inbox to the .pst file InPlaceHol
 
 ## PARAMETERS
 
-### -ComplianceStorePath
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: MailboxComplianceExportRequest
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FilePath
-The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
-
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
-
-- To import PST files from the share: Read permission
-- To save exported PST files to the share: Read/Write permission.
-
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
-
-```yaml
-Type: LongPath
-Parameter Sets: Mailbox, MailboxExportRequest
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Mailbox
 The Mailbox parameter specifies the source mailbox where the contents are being exported from.
 
@@ -240,6 +201,45 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ComplianceStorePath
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: MailboxComplianceExportRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePath
+The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
+
+You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
+
+- To import PST files from the share: Read permission
+- To save exported PST files to the share: Read/Write permission.
+
+If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+
+```yaml
+Type: LongPath
+Parameter Sets: Mailbox, MailboxExportRequest
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -409,16 +409,16 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilter
-The ContentFilter parameter uses OPath filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
-- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+- Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 - Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://learn.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
+- ComparisonOperator is an OPATH comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values in quotation marks (for example, use `500`, `$true`, `$false`, or `$null` instead).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPATH filters in Exchange, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String

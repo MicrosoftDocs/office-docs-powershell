@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy" 
+Remove-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy"
 ```
 
 This example removes the existing rule for Defender for Office 365 protections in the Standard preset security policy.

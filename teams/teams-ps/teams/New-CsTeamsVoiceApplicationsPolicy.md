@@ -3,6 +3,7 @@ external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsvoiceapplicationspolicy
 schema: 2.0.0
+ROBOTS: NOINDEX
 ---
 
 # New-CsTeamsVoiceApplicationsPolicy

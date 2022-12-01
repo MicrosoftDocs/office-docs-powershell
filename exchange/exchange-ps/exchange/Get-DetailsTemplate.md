@@ -58,6 +58,29 @@ This example retrieves all attributes for all User details template types in all
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the GUID of the details template or specifies the details template type and language separated by a backslash, for example, en-us\\User. Details template types are:
+
+- User
+- Group
+- PublicFolder
+- SearchDialog
+- MailboxAgent
+- Contact
+
+```yaml
+Type: DetailsTemplateIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -90,29 +113,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the GUID of the details template or specifies the details template type and language separated by a backslash, for example, en-us\\User. Details template types are:
-
-- User
-- Group
-- PublicFolder
-- SearchDialog
-- MailboxAgent
-- Contact
-
-```yaml
-Type: DetailsTemplateIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

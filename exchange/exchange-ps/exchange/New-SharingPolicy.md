@@ -51,6 +51,22 @@ This example creates a default sharing policy, which is applied to all mailboxes
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the name of the new sharing policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Domains
 The Domains parameter specifies the domains and the associated sharing options for those domains in the sharing policy. Values for this parameter use the basic syntax: `'Domain: SharingPolicyAction'`.
 
@@ -77,22 +93,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name of the new sharing policy.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

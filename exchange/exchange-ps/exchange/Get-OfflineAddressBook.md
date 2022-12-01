@@ -64,6 +64,28 @@ This example returns specific properties for all existing OABs, including the Ge
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the OAB that you want to view. You can use any value that uniquely identifies the OAB. For example:
+
+- Name or \\Name
+- Distinguished name (DN)
+- GUID
+
+You can't use this parameter with the Server parameter.
+
+```yaml
+Type: OfflineAddressBookIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Server
 This parameter is available only in on-premises Exchange.
 
@@ -107,28 +129,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the OAB that you want to view. You can use any value that uniquely identifies the OAB. For example:
-
-- Name or \\Name
-- Distinguished name (DN)
-- GUID
-
-You can't use this parameter with the Server parameter.
-
-```yaml
-Type: OfflineAddressBookIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

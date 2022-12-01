@@ -61,6 +61,29 @@ This example returns detailed information about the Exchange server named Mailbo
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the Exchange server that you want to view. You can use any value that uniquely identifies the Exchange server. For example:
+
+- Name
+- GUID
+- Distinguished name (DN)
+- ExchangeLegacyDN
+
+You can't use this parameter with the Domain parameter.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Domain
 The Domain parameter filters the results by the fully qualified domain name (FQDN) of the domain (for example, contoso.com).
 
@@ -94,29 +117,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the Exchange server that you want to view. You can use any value that uniquely identifies the Exchange server. For example:
-
-- Name
-- GUID
-- Distinguished name (DN)
-- ExchangeLegacyDN
-
-You can't use this parameter with the Domain parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

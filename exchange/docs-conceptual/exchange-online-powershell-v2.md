@@ -593,6 +593,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - [Certificate based authentication](app-only-auth-powershell-v2.md) for Security & Compliance PowerShell (version 2.0.6-Preview5 or later).
   - The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet for REST-based connections (version 2.0.6-Preview7 or later).
   - The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet for REST-based connections (version 2.0.6-Preview8 or later).
+- The _DelegatedOrganization_ parameter works in the **Connect-IPPSSession** cmdlet as long as you also use the _AzureADAuthorizationEndpointUri_ parameter in the command.
 - Certain cmdlets that used to prompt for confirmation in specific scenarios no longer do so. By default, the cmdlet will run to completion.
 - The format of the error returned from failed cmdlet execution has been slightly modified. The exception now contains additional data (for example, the exception type), and the `FullyQualifiedErrorId` does not contain the `FailureCategory`. The format of the error is subject to further modification.
 
@@ -611,7 +612,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - PowerShell 7 is officially supported in Windows, Linux, and Apple macOS as described in the [Prerequisites for the Exchange Online PowerShell module](#prerequisites-for-the-exchange-online-powershell-module) section in this article.
 
-- The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 log in experiences](connect-to-exchange-online-powershell.md#powershell-7-log-in-experiences).
+- The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 exclusive connection methods](connect-to-exchange-online-powershell.md#powershell-7-exclusive-connection-methods).
 
 - The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets have been replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**.Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
 

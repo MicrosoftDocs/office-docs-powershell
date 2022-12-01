@@ -21,6 +21,7 @@ Creates a new Online Voicemail policy. Online Voicemail policies determine wheth
 ```
 New-CsOnlineVoicemailPolicy [-Identity] <string> [-EnableEditingCallAnswerRulesSetting <boolean>] [-EnableTranscription <boolean>]
 [-EnableTranscriptionProfanityMasking <boolean>] [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
+[-PostAmbleAudioFile <string>] [-PreambleAudioFile <string>] [-PreamblePostambleMandatory <boolean>]
 [-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -141,6 +142,53 @@ Applicable: Microsoft Teams, Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostambleAudioFile
+The audio file to play to the caller after the user's voicemail greeting has played and before the caller is allowed to leave a voicemail message.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -PreambleAudioFile
+The audio file to play to the caller before the user's voicemail greeting is played.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreamblePostambleMandatory
+Is playing the Pre- or Post-amble mandatory before the caller can leave a message.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

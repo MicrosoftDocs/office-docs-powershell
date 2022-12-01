@@ -93,6 +93,31 @@ The credentials that are used to connect to the virtual directory are stored in 
 
 ## PARAMETERS
 
+### -ClientAccessServer
+The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
+
+You can use any value that uniquely identifies the server. For example:
+
+- Name
+- Distinguished name (DN)
+- ExchangeLegacyDN
+- GUID
+
+You can't use this parameter with the ConnectionUri parameter.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ConnectionUri
 The ConnectionUri parameter specifies the URL of the remote PowerShell virtual directory to test, for example, `https://contoso.com/powershell`.
 
@@ -151,31 +176,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClientAccessServer
-The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
-
-You can use any value that uniquely identifies the server. For example:
-
-- Name
-- Distinguished name (DN)
-- ExchangeLegacyDN
-- GUID
-
-You can't use this parameter with the ConnectionUri parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

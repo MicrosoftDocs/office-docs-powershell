@@ -61,6 +61,22 @@ The address space for the connector is c=US;a=Fabrikam;p=Contoso.
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the name of this delivery agent connector. The value for the Name parameter can't exceed 64 characters.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AddressSpaces
 The AddressSpaces parameter specifies the domain names that the delivery agent connector is responsible for. The complete syntax for entering an address space is: `AddressSpaceType:AddressSpace;AddressSpaceCost`. Enclose each address space in quotation marks (").
 
@@ -88,22 +104,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name of this delivery agent connector. The value for the Name parameter can't exceed 64 characters.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

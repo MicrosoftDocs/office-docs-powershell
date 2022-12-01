@@ -52,7 +52,7 @@ This example removes the specified custom quota message (combination of language
 ## PARAMETERS
 
 ### -Identity
-TheIdentity parameter specifies the custom system message that you want to remove. You can use any value that uniquely identifies the system message. For example:
+The Identity parameter specifies the custom system message that you want to remove. You can use any value that uniquely identifies the system message. For example:
 
 - Identity
 - Distinguished name (DN)
@@ -61,61 +61,47 @@ TheIdentity parameter specifies the custom system message that you want to remov
 The identity value of a system message uses one of these formats:
 
 - System messages for enhanced status codes: `Language\<Internal | External>\DSNCode`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
-- System messages for quotas: `Language\QuotaMessageType`. For example, `En\ProhibitSendReceiveMailBox`.
+- System messages for quotas: `Language\QuotaMessageType`. For example, `En\ProhibitSendReceiveMailbox`.
 
-Language: For the list of supported language codes, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
+\<Language\>: For the list of supported language codes, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
 
-DSNCode: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system code values that are currently used by custom system messages, run the command Get-SystemMessage.
+\<DSNCode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command `Get-SystemMessage`. To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default DSNs.html"`.
 
-QuotaMessageType: Valid value are:
+\<QuotaMessageType\>: Valid value are:
 
 Mailbox size quotas:
 
-ProhibitSendReceiveMailBox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
-
-ProhibitSendMailbox: A mailbox exceeds its ProhibitSendQuota limit.
-
-WarningMailbox: A mailbox exceeds its IssueWarningQuota limit when it has a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
-
-WarningMailboxUnlimitedSize: A mailbox exceeds its IssueWarningQuota limit when it doesn't have a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
+- ProhibitSendReceiveMailbox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
+- ProhibitSendMailbox: A mailbox exceeds its ProhibitSendQuota limit.
+- WarningMailbox: A mailbox exceeds its IssueWarningQuota limit when it has a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
+- WarningMailboxUnlimitedSize: A mailbox exceeds its IssueWarningQuota limit when it doesn't have a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
 
 Public folder size quotas:
 
-ProhibitPostPublicFolder: A public folder exceeds its ProhibitPostQuota limit.
-
-WarningPublicFolder: A public folder exceeds its IssueWarningQuota limit when it has a ProhibitPostQuota limit configured.
-
-WarningPublicFolderUnlimitedSize: A public folder exceeds its IssueWarningQuota limit when it doesn't have a ProhibitPostQuota limit configured.
+- ProhibitPostPublicFolder: A public folder exceeds its ProhibitPostQuota limit.
+- WarningPublicFolder: A public folder exceeds its IssueWarningQuota limit when it has a ProhibitPostQuota limit configured.
+- WarningPublicFolderUnlimitedSize: A public folder exceeds its IssueWarningQuota limit when it doesn't have a ProhibitPostQuota limit configured.
 
 Maximum number of messages in a mailbox folder:
 
-ProhibitReceiveMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountReceiveQuota limit.
-
-WarningMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it has a MailboxMessagesPerFolderCountReceiveQuota limit configured.
-
-WarningMailboxMessagesPerFolderUnlimitedCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it doesn't have a MailboxMessagesPerFolderCountReceiveQuota limit configured.
+- ProhibitReceiveMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountReceiveQuota limit.
+- WarningMailboxMessagesPerFolderCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it has a MailboxMessagesPerFolderCountReceiveQuota limit configured.
+- WarningMailboxMessagesPerFolderUnlimitedCount: A mailbox exceeds its MailboxMessagesPerFolderCountWarningQuota limit when it doesn't have a MailboxMessagesPerFolderCountReceiveQuota limit configured.
 
 Maximum number of subfolders in a mailbox folder:
 
-ProhibitReceiveFolderHierarchyChildrenCountCount: A mailbox exceeds its FolderHierarchyChildrenCountReceiveQuota limit.
-
-WarningFolderHierarchyChildrenCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it has a FolderHierarchyChildrenCountReceiveQuota limit configured.
-
-WarningFolderHierarchyChildrenUnlimitedCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it doesn't have a FolderHierarchyChildrenCountReceiveQuota limit configured.
-
-ProhibitReceiveFoldersCount: A mailbox exceeds its FoldersCountReceiveQuota limit.
-
-WarningFoldersCount: A mailbox exceeds its FoldersCountWarningQuota limit when it has a FoldersCountReceiveQuota limit configured.
-
-WarningFoldersCountUnlimited A mailbox exceeds its FoldersCountWarningQuota limit when it doesn't have a FoldersCountReceiveQuota limit configured.
+- ProhibitReceiveFolderHierarchyChildrenCountCount: A mailbox exceeds its FolderHierarchyChildrenCountReceiveQuota limit.
+- WarningFolderHierarchyChildrenCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it has a FolderHierarchyChildrenCountReceiveQuota limit configured.
+- WarningFolderHierarchyChildrenUnlimitedCount: A mailbox exceeds its FolderHierarchyChildrenCountWarningQuota limit when it doesn't have a FolderHierarchyChildrenCountReceiveQuota limit configured.
+- ProhibitReceiveFoldersCount: A mailbox exceeds its FoldersCountReceiveQuota limit.
+- WarningFoldersCount: A mailbox exceeds its FoldersCountWarningQuota limit when it has a FoldersCountReceiveQuota limit configured.
+- WarningFoldersCountUnlimited A mailbox exceeds its FoldersCountWarningQuota limit when it doesn't have a FoldersCountReceiveQuota limit configured.
 
 Maximum number of levels (depth) in a mailbox folder:
 
-ProhibitReceiveFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit.
-
-WarningFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it has a FolderHierarchyDepthReceiveQuota limit configured.
-
-WarningFolderHierarchyDepthUnlimited: : A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it doesn't have a FolderHierarchyDepthReceiveQuota limit configured.
+- ProhibitReceiveFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit.
+- WarningFolderHierarchyDepth: A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it has a FolderHierarchyDepthReceiveQuota limit configured.
+- WarningFolderHierarchyDepthUnlimited: : A mailbox exceeds its FolderHierarchyDepthWarningQuota limit when it doesn't have a FolderHierarchyDepthReceiveQuota limit configured.
 
 ```yaml
 Type: SystemMessageIdParameter

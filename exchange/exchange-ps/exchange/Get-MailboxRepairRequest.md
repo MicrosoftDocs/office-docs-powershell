@@ -149,6 +149,24 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -StoreMailbox
+The StoreMailbox parameter specifies the mailbox GUID of the mailbox that you want to get mailbox repair request information about. Use this parameter with the Database parameter.
+
+Use the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
+
+```yaml
+Type: StoreMailboxIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Archive
 The Archive switch displays information about the associated archive mailbox if the archive mailbox was included when the mailbox repair request was created. You don't need to specify a value with this switch.
 
@@ -198,24 +216,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreMailbox
-The StoreMailbox parameter specifies the mailbox GUID of the mailbox that you want to get mailbox repair request information about. Use this parameter with the Database parameter.
-
-Use the Get-MailboxStatistics cmdlet to find the mailbox GUID for a mailbox.
-
-```yaml
-Type: StoreMailboxIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

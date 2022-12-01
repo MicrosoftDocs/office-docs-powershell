@@ -61,6 +61,22 @@ This example runs a comparison using the Strict preset security policy settings 
 
 ## PARAMETERS
 
+### -Identity
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: ConfigAnalyzerPolicyRecommendationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -RecommendedPolicyType
 The RecommendedPolicyType parameter specifies the preset security policy that you want to use as a baseline. Valid values are:
 
@@ -77,22 +93,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ConfigAnalyzerPolicyRecommendationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

@@ -79,8 +79,7 @@ This example displays information about the Direct Routing phone number +1 (206)
 ```powershell
 Get-CsPhoneNumberAssignment -CapabilitiesContain "VoiceApplicationAssignment,ConferenceAssignment"
 ```
-This example returns all phone numbers that have both the capability VoiceApplicationAssignment and the capability ConferenceAssignment assigned, but phone numbers that have
-only one of these capabilities assigned won't be returned.
+This example returns all phone numbers that have both the capability VoiceApplicationAssignment and the capability ConferenceAssignment assigned, but phone numbers that have only one of these capabilities assigned won't be returned.
 
 ### Example 4
 ```powershell
@@ -106,7 +105,6 @@ Get-CsPhoneNumberAssignment -TelephoneNumberContain "524"
 ```
 This example returns information about all phone numbers that contain the digits 524, including the phone number with extension 524 used in example 2.
 
-
 ## PARAMETERS
 
 ### -ActivationState
@@ -127,7 +125,6 @@ Accept wildcard characters: False
 ### -AssignedPstnTargetId
 Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, and ObjectId.
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -141,10 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -CapabilitiesContain
-Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by a comma. Supported capabilities
-
-are ConferenceAssignment, VoiceApplicationAssignment, UserAssignment, and OCMobile.
-
+Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by a comma. Supported capabilities are ConferenceAssignment, VoiceApplicationAssignment, UserAssignment, and TeamsPhoneMobile.
 
 If you specify only one capability, you will get all phone numbers returned that have that capability assigned. If you specify a comma separated list for instance like 
 ConferenceAssignment, VoiceApplicationAssignment you will get all phone numbers that have both capabilities assigned, but you won't get phone numbers that have only
@@ -210,7 +204,6 @@ Accept wildcard characters: False
 ### -NumberType
 Filters the returned results based on the number type. Supported values are DirectRouting, CallingPlan, and OperatorConnect.
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -226,7 +219,6 @@ Accept wildcard characters: False
 ### -PstnAssignmentStatus
 Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, and ThirdPartyAppAssigned.
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -241,7 +233,6 @@ Accept wildcard characters: False
 
 ### -Skip
 Skips the first X returned results and the default value is 0.
-
 
 ```yaml
 Type: System.Int32
@@ -378,7 +369,6 @@ The ISO country code assigned to the phone number.
 
 ### IsoSubDivision
 The subdivision within the country assigned to the phone number, for example, the state for US phone numbers.
-
 
 ### LocationId
 The ID of the Location assigned to the phone number.
