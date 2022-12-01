@@ -65,6 +65,27 @@ This example returns all migration requests that have the name PFMigrate10\_11\_
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the identity of the public folder migration request that you want to view. You can use the following values:
+
+- GUID
+- Name
+
+You can't use this parameter with other filtering parameters (BatchName, HighPriority, Name, RequestQueue, Status, or Suspend).
+
+```yaml
+Type: PublicFolderMigrationRequestIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -BatchName
 The BatchName parameter specifies the name that was given to a batch migration request.
 
@@ -117,27 +138,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the identity of the public folder migration request that you want to view. You can use the following values:
-
-- GUID
-- Name
-
-You can't use this parameter with other filtering parameters (BatchName, HighPriority, Name, RequestQueue, Status, or Suspend)
-
-```yaml
-Type: PublicFolderMigrationRequestIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

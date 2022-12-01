@@ -192,11 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. This parameter works only if you also use the UseRPSSession switch in the same command.
 
-`$Options = New-PSSessionOption <Settings>`
-
-And you use the variable name as the value for this parameter (for example, `$Options`).
+Store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$PSOptions = New-PSSessionOption <Settings>`), and use the variable name as the value for this parameter (for example, `$PSOptions`).
 
 ```yaml
 Type: PSSessionOption
@@ -212,11 +210,11 @@ Accept wildcard characters: False
 ```
 
 ### -DelegatedOrganization
-The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter only works if the customer organization has agreed to your delegated management via the CSP program.
+The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter works only if the customer organization has agreed to your delegated management via the CSP program.
 
 After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
 
-**Note**: Use an .onmicrosoft.com domain for the parameter value. Not doing so might result in permission-related issues when you run commands in the app context. 
+**Note**: Use an .onmicrosoft.com domain for the value of this parameter. Otherwise, you might encounter permission-related issues when you run commands in the app context.
 
 ```yaml
 Type: String
@@ -521,11 +519,20 @@ Accept wildcard characters: False
 ### -ManagedIdentity
 **Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
 
-The ManagedIdentity switch connects to Exchange Online using a system-assigned or user-assigned managed identity. You don't need to specify a value with this switch.
+The ManagedIdentity switch specifies that you're using managed identity to connect. You don't need to specify a value with this switch.
 
-Managed identity is currently supported for Azure Virtual Machines, Virtual Machine Scale Sets and Azure Functions.
+Managed identity connections are currently supported for the following types of Azure resources:
+
+- Azure Automation runbooks
+- Azure Virtual Machines
+- Azure Virtual Machine Scale Sets
+- Azure Functions
 
 You must use this switch with the Organization parameter.
+
+For user-assigned managed identity, you must also use this switch with the ManagedIdentityAccountId parameter.
+
+For more information about connecting with managed identity, see [Use Azure managed identities to connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-exo-powershell-managed-identity).
 
 ```yaml
 Type: SwitchParameter
@@ -543,7 +550,11 @@ Accept wildcard characters: False
 ### -ManagedIdentityAccountId
 **Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
 
-The ManagedIdentityAccountId parameter specifies the application ID of the service principal that corresponds to the user-assigned managed identity that's used for authentication.
+The ManagedIdentityAccountId parameter specifies the user-assigned managed identity that you're using to connect. A valid value for this parameter is the application ID (GUID) of the service principal that corresponds to the user-assigned managed identity in Azure.
+
+You must use this parameter with the Organization parameter and the ManagedIdentity switch.
+
+For more information about connecting with managed identity, see [Use Azure managed identities to connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-exo-powershell-managed-identity).
 
 ```yaml
 Type: String
@@ -559,9 +570,11 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA or with the ManagedIdentity parameter. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use an .onmicrosoft.com domain for the value of this parameter.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+
+For more information about connecting with managed identity, see [Use Azure managed identities to connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-exo-powershell-managed-identity).
 
 ```yaml
 Type: String
@@ -621,7 +634,7 @@ The ShowProgress parameter specifies whether to show or hide the progress bar of
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
+Applicable: Exchange Online
 
 Required: False
 Position: Named

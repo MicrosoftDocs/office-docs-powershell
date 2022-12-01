@@ -42,6 +42,27 @@ This example sets the maintenance monitor on the Exch01 server.
 
 ## PARAMETERS
 
+### -Server
+The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- FQDN
+- Distinguished name (DN)
+- Exchange Legacy DN
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Name
 The Name parameter specifies the monitor identity.
 
@@ -73,27 +94,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- FQDN
-- Distinguished name (DN)
-- Exchange Legacy DN
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

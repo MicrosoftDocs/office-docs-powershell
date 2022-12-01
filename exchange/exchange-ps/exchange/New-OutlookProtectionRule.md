@@ -57,22 +57,6 @@ This example applies the AD RMS template named Template-Contoso to messages sent
 
 ## PARAMETERS
 
-### -ApplyRightsProtectionTemplate
-The ApplyRightsProtectionTemplate parameter specifies the AD RMS template to apply to the message. An AD RMS template can be specified using the template name. Use the Get-RMSTemplate cmdlet to retrieve templates from your AD RMS server.
-
-```yaml
-Type: RmsTemplateIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Name
 The Name parameter specifies a name for the rule.
 
@@ -86,6 +70,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyRightsProtectionTemplate
+The ApplyRightsProtectionTemplate parameter specifies the AD RMS template to apply to the message. An AD RMS template can be specified using the template name. Use the Get-RMSTemplate cmdlet to retrieve templates from your AD RMS server.
+
+```yaml
+Type: RmsTemplateIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

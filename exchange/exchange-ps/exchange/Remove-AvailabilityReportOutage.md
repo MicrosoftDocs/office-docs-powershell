@@ -44,22 +44,6 @@ This example removes a manually injected site-scoped outage for a specified day.
 
 ## PARAMETERS
 
-### -ReportDate
-The ReportDate parameter specifies the date to query for the outage report.
-
-```yaml
-Type: ExDateTime
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -SiteName
 The SiteName parameter specifies the name of the Active Directory site to associate the outage report with.
 
@@ -71,6 +55,22 @@ Applicable: Exchange Server 2010
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ReportDate
+The ReportDate parameter specifies the date to query for the outage report.
+
+```yaml
+Type: ExDateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

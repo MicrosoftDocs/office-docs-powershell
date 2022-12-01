@@ -72,6 +72,28 @@ This example returns detailed information about the mailbox database named Mailb
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Server
 The Server parameter filters the results by the specified Mailbox server. You can use any value that uniquely identifies the server. For example:
 
@@ -124,28 +146,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the mailbox database that you want to view. You can use any value that uniquely identifies the database. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-If you have multiple databases with the same name, the command retrieves all databases with the same name in the specified scope.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

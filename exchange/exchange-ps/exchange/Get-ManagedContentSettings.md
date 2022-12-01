@@ -66,6 +66,24 @@ This example retrieves the managed content settings for the managed folder Inbox
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name, distinguished name (DN), or GUID of the set of managed content settings. When used, this command retrieves the folder content settings and all associated attributes.
+
+This parameter can't be used with the FolderName parameter.
+
+```yaml
+Type: ELCContentSettingsIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -97,24 +115,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name, distinguished name (DN), or GUID of the set of managed content settings. When used, this command retrieves the folder content settings and all associated attributes.
-
-This parameter can't be used with the FolderName parameter.
-
-```yaml
-Type: ELCContentSettingsIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

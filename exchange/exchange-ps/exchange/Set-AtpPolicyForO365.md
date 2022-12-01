@@ -93,6 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
+**Note**: The functionality of this parameter is being replaced by the \*-TenantAllowBlockListItems cmdlets. This parameter now only supports the removal of blocked URLs. Use the \*-TenantAllowBlockListItems cmdlets to add and remove blocked URLs.
+
 The BlockUrls parameter specifies the URLs that are always blocked by Safe Links in email messages and Safe Links for Office 365 apps.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.

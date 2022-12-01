@@ -66,6 +66,22 @@ This example runs in a multi-tenant deployment by a data center administrator to
 
 ## PARAMETERS
 
+### -Server
+The Server parameter specifies the fully qualified domain name (FQDN) of the server that the application you want to reset is running on.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Application
 The Application parameter specifies the specific administrative application to reset the provisioning cache for. You can use the following values:
 
@@ -102,22 +118,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-The Server parameter specifies the fully qualified domain name (FQDN) of the server that the application you want to reset is running on.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

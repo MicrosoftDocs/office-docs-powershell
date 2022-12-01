@@ -18,14 +18,14 @@ description: "Learn how to use the Exchange Online PowerShell V2 module or V3 mo
 
 # Connect to Exchange Online Protection PowerShell
 
-The Exchange Online PowerShell module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+This article contains instructions for how to connect to Exchange Online Protection PowerShell using the Exchange Online PowerShell module with or without using multi-factor authentication (MFA).
+
+The Exchange Online PowerShell module uses modern authentication for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
 > [!NOTE]
 > Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
-This article contains instructions for how to connect to Exchange Online Protection PowerShell using the Exchange Online PowerShell module with or without using MFA.
-
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-and-exchange-online-july-update/ba-p/1530163), see [Basic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
+To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437), see [Basic auth - Connect to Exchange Online Protection PowerShell](basic-auth-connect-to-eop-powershell.md).
 
 ## What do you need to know before you begin?
 
@@ -33,9 +33,9 @@ To use the older, less secure remote PowerShell connection instructions that [wi
 
   If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for EOP, your EOP PowerShell connection instructions are the same as Exchange Online PowerShell. Use the Exchange Online PowerShell connection instructions in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) instead of the instructions in this article.
 
-- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). The rest of the instructions in the article assume that you've already installed the module.
+- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in standalone EOP](/microsoft-365/security/office-365-security/feature-permissions-in-eop).
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in standalone EOP](/exchange/standalone-eop/manage-admin-role-group-permissions-in-eop).
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351) forum.
@@ -44,46 +44,60 @@ To use the older, less secure remote PowerShell connection instructions that [wi
 
 These connection instructions use modern authentication and work with or without multi-factor authentication (MFA).
 
-1. After you've [installed the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command<sup>\*</sup>:
-
-   ```powershell
-   Import-Module ExchangeOnlineManagement
-   ```
-
-   <sup>\*</sup> In modern versions of PowerShell, you can typically skip this step and run **Connect-IPPSSession** without loading the module first.
-
-2. The command that you need to run uses the following syntax:
-
-   ```powershell
-   Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndPointUri <URL>] [-PSSessionOption $ProxyOptions]
-   ```
-
-   - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.com`).
-   - The required _ConnectionUri_ and _AzureADAuthorizationEndPointUrl_ values depend on the nature of your Microsoft 365 organization. For more information, see the parameter descriptions in [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
-   - If you're behind a proxy server, run this command first: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the _PSSessionOption_ parameter with the value `$ProxyOptions`. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
-
-   **This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization**:
-
-   ```powershell
-   Connect-IPPSSession -UserPrincipalName navin@contoso.com -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
-   ```
-
-For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-exchangeonline).
+## Step 1: Load the Exchange Online PowerShell module
 
 > [!NOTE]
-> Be sure to disconnect the remote PowerShell session when you're finished. If you close the Windows PowerShell window without disconnecting the session, you could use up all the remote PowerShell sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the remote PowerShell session, run the following command.
+> If the module is already installed, you can typically skip this step and run **Connect-IPPSSession** without manually loading the module first.
+
+After you've [installed the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
+
+```powershell
+Import-Module ExchangeOnlineManagement
+```
+
+## Step 2: Connect and authenticate
+
+The command that you need to run uses the following syntax:
+
+```powershell
+Connect-IPPSSession -UserPrincipalName <UPN> -ConnectionUri `https://ps.protection.outlook.com/powershell-liveid/ [-PSSessionOption $ProxyOptions]
+```
+
+For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
+
+- _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
+
+- If you're behind a proxy server, you can use the _PSSessionOption_ parameter in the connection command. First, run this command: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the value `$ProxyOptions` for the _PSSessionOption_ parameter. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
+
+### Connect to Security & Compliance PowerShell with an interactive login prompt
+
+This example connects to Exchange Online Protection PowerShell in a Microsoft 365 organization:
+
+```powershell
+Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
+```
+
+## Step 3: Disconnect when you're finished
+
+Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the session, run the following command.
 
 ```powershell
 Disconnect-ExchangeOnline
 ```
 
+To silently disconnect without a confirmation prompt, run the following command:
+
+```powershell
+Disconnect-ExchangeOnline -Confirm:$false
+```
+
 ## How do you know you've connected successfully?
 
-The Exchange Online Protection Protection cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you connected successfully. A quick test is to run an Exchange Online Protection cmdlet, for example, **Get-TransportRule**, and see the results.
+The Exchange Online Protection Protection cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you've connected successfully. A quick test is to run an Exchange Online Protection cmdlet, for example, **Get-AcceptedDomain**, and see the results.
 
 If you receive errors, check the following requirements:
 
-- A common problem is an incorrect password. Run the three steps again and pay close attention to the username and password that you use.
+- A common problem is an incorrect password. Run the connection steps again and pay close attention to the username and password that you use.
 
 - To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Exchange Online Protection.
 

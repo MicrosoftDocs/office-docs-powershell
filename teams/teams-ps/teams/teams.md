@@ -184,3 +184,6 @@ Use this cmdlet to update values in existing Teams enhanced encryption policy.
 
 ### [Set-TeamsShiftsPolicy](Set-TeamsShiftsPolicy.md)
 {{Manually Enter Set-TeamsShiftsPolicy Description Here}}
+
+### [Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
+This cmdlet updates Shifts connection instance fields.

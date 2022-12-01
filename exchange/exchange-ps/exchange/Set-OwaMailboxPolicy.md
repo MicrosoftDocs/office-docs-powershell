@@ -84,6 +84,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-NpsSurveysEnabled <Boolean>]
  [-OrganizationEnabled <Boolean>]
  [-OneDriveAttachmentsEnabled <Boolean>]
+ [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OnSendAddinsEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
@@ -1470,6 +1471,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OneWinNativeOutlookEnabled
+This parameter is available only in the cloud-based service.
+
+The OneWinNativeOutlookEnabled parameter controls the availability of the new Outlook for Windows App. Valid values are:
+
+- $true: The New Outlook for Windows App is available. This is the default value.
+- $false: The new Outlook for Windows App isn't available.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OnSendAddinsEnabled
 The OnSendAddinsEnabled parameter specifies whether to enable or disable on send add-ins in Outlook on the web (add-ins that support events when a user clicks Send). Valid values are:
 
@@ -2044,7 +2065,7 @@ Accept wildcard characters: False
 ### -SMimeSuppressNameChecksEnabled
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The SMimeSuppressNameChecksEnabled switch specifies whether to suppress name check in S/MIME messages. You don't need to specify a value with this switch.
 
 ```yaml
 Type: Boolean

@@ -51,7 +51,7 @@ TotalMissedSafeAttachmentCount is when the recipient or tenant is not included i
 
 TotalMissedSafeLinkCount is when the recipient or tenant is not included in a Safe Links policy, but a message with a detected URL was removed by ZAP after delivery.
 
-If the tenant had Safe Attachments or Safe Links policies, the messages would have been blocked and not delivered. 
+If the tenant had Safe Attachments or Safe Links policies, the messages would have been blocked and not delivered.
 
 By default, the command returns data for the last 14 days. Data for the last 90 days is available.
 
