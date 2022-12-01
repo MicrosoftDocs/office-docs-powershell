@@ -117,6 +117,22 @@ This example returns the public folders that reside in the public folder content
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: GetChildren, Recurse, Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -GetChildren
 The GetChildren switch specifies whether to return only the children of the folder specified by the Identity parameter. You don't need to specify a value with this switch.
 
@@ -168,22 +184,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: GetChildren, Recurse, Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

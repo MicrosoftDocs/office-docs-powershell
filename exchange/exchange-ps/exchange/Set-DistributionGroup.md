@@ -1000,9 +1000,7 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from members of the group and users who aren't members of the group. You don't need to specify a value with this switch.
-
-You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -1131,7 +1129,10 @@ To add or remove owners without affecting other existing entries, use the follow
 
 Owners that you specify with this parameter are not added as group members. You need to manually add the owner as a member.
 
-**Note**: Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
+> [!NOTE]
+> Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
+>
+> If the _DL managed by_ or _owner_ is assigned to a security group, and when the owner login to `OWA options -> Distribution group`, they will not see the distribution list under "Distribution groups I own". If the _managed by_ or _owner_ is a normal user instead of a security group, they will be able to see it under "Distribution groups I own".
 
 ```yaml
 Type: MultiValuedProperty
@@ -1318,7 +1319,7 @@ Accept wildcard characters: False
 ### -PrimarySmtpAddress
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. You can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
-If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but that means the email addresses of the mail user no longer automatically updated by email address policies.
+If you set the EmailAddressPolicyEnabled parameter to $false, you can specify the primary address using the PrimarySmtpAddress parameter, but the email addresses of the group are no longer automatically updated by email address policies.
 
 The PrimarySmtpAddress parameter updates the primary email address and WindowsEmailAddress property to the same value.
 

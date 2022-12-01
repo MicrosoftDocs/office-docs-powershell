@@ -138,7 +138,14 @@ Accept wildcard characters: False
 ```
 
 ### -DelegatedOrganization
-This parameter is reserved for internal Microsoft use.
+The DelegatedOrganization parameter specifies the customer organization that you want to manage (for example, contosoelectronics.onmicrosoft.com). This parameter works only if the customer organization has agreed to your delegated management via the CSP program.
+
+After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
+
+**Notes**:
+
+- Use an .onmicrosoft.com domain for the value of this parameter. Otherwise, you might encounter permission-related issues when you run commands in the app context.
+- You must use the AzureADAuthorizationEndpointUri parameter with this parameter.
 
 ```yaml
 Type: String
@@ -154,11 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. You store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable, for example:
+The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online.
 
-`$Options = New-PSSessionOption <Settings>`
-
-And you use the variable name as the value for this parameter (for example, `$Options`).
+Store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$PSOptions = New-PSSessionOption <Settings>`), and use the variable name as the value for this parameter (for example, `$PSOptions`).
 
 ```yaml
 Type: PSSessionOption
@@ -365,7 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA. Be sure to use an .onmicrosoft.com domain for the parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+The Organization parameter specifies the organization that's used in CBA. You must use an .onmicrosoft.com domain for the value of this parameter.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 

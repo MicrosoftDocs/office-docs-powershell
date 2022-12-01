@@ -308,7 +308,7 @@ This example creates a migration batch for a cross-forest enterprise move, where
 $Credentials = Get-Credential
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
 $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
-Start-MigrationBatch -Identity $OnboardingBatch.Identity
+Start-MigrationBatch -Identity $OnboardingBatch.Identity.Name
 ```
 
 This example creates a migration batch for an onboarding remote move migration from an on-premises Exchange organization to Exchange Online. The syntax is similar to that of a cross-forest move, but it's initiated from the Exchange Online organization. A new migration endpoint is created, which points to the on-premises organization as the source location of the mailboxes that will be migrated. This endpoint is used to create the migration batch. Then the migration batch is started with the Start-MigrationBatch cmdlet.
@@ -382,6 +382,50 @@ Start-MigrationBatch -Identity $OnboardingBatch.Identity
 A Google Workspace migration batch is created that uses the CSV migration file gmail.csv and includes the contents of the Payment label and only migrate the mails which were received after the time '2019/4/30 00:00' (local system time). This migration batch is pending until it's started with the Start-MigrationBatch cmdlet.
 
 ## PARAMETERS
+
+### -UserIds
+The UserIds parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify a user by email address or by their Guid property value from the Get-MigrationUser cmdlet. You can specify multiple users separated by commas.
+
+The users that you specify for this parameter must be defined in an existing migration batch.
+
+To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: PreexistingUserIds
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Users
+The Users parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify the users by using the Get-MigrationUser cmdlet. For example:
+
+$Failed = Get-MigrationUser -Status Failed
+
+New-MigrationBatch -Name "Retry Failed Users" -Users $Failed
+
+The users that you specify for this parameter must be defined in an existing migration batch.
+
+To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Preexisting
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Name
 The Name parameter specifies an unique name for the migration batch on each system (Exchange On-premises or Exchange Online). The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
@@ -469,50 +513,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UserIds
-The UserIds parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify a user by email address or by their Guid property value from the Get-MigrationUser cmdlet. You can specify multiple users separated by commas.
-
-The users that you specify for this parameter must be defined in an existing migration batch.
-
-To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: PreexistingUserIds
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Users
-The Users parameter specifies the users that you want to copy from an existing migration batch (for example, if a previous migration was partially successful). You identify the users by using the Get-MigrationUser cmdlet. For example:
-
-$Failed = Get-MigrationUser -Status Failed
-
-New-MigrationBatch -Name "Retry Failed Users" -Users $Failed
-
-The users that you specify for this parameter must be defined in an existing migration batch.
-
-To disable the migration of the users in the original migration batch, use the DisableOnCopy switch with this parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: Preexisting
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -753,7 +753,7 @@ Accept wildcard characters: False
 ### -ContentFilter
 This parameter is available only in the cloud-based service for IMAP migration and Google Workspace migration.
 
-The ContentFilter parameter uses OPath filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
+The ContentFilter parameter uses OPATH filter syntax to filter the messages by Received time. Only content that match the ContentFilter parameter will be moved to Exchange online. For example:
 
 - `"Received -gt '8/23/2020'"`
 - `"Received -le '2019/01/01'"`

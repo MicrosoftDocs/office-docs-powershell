@@ -40,23 +40,18 @@ That might be sufficient to meet your communication needs.
 If it doesn't meet your needs you can use external access policies to extend the ability of your users to communicate and collaborate.
 External access policies can grant (or revoke) the ability of your users to do any or all of the following:
 
-1.
-Communicate with people who have SIP accounts with a federated organization.
+1. Communicate with people who have SIP accounts with a federated organization.
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
-2.
-(Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
+2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
 
-3.
-Access Skype for Business Server over the Internet, without having to first log on to your internal network.
+3. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
-4.
-Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
+4. Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
-5.
-(Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting. 
+5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting. 
 
 When you install Skype for Business Server, a global external access policy is automatically created for you.
 In addition to the global policy, you can also create custom external access policies at either the site or the per-user scope.
@@ -70,9 +65,7 @@ In addition, you can have only one external access policy per site: if the Redmo
 
 The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, InMemory, PipelineVariable, and Tenant
 
-
 ## EXAMPLES
-
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
@@ -94,6 +87,7 @@ In this example, the Global policy is updated to allow Teams-ACS federation for 
 ```
 New-CsExternalAccessPolicy -Identity site:Redmond -EnableTeamsConsumerAccess $True -EnableTeamsConsumerInbound $False
 ```
+
 The command shown in Example 3 creates a new external access policy that has the Identity site:Redmond; upon creation, this policy will automatically be assigned to the Redmond site.
 Note that this new policy enables communication with people using Teams with an account that's not managed by an organization and limits this to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people with this policy assigned.
 
@@ -180,7 +174,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -EnableTeamsConsumerAccess
 (Microsoft Teams Only) Indicates whether the user is allowed to communicate with people who have who are using Teams with an account that's not managed by an organization.
 
@@ -188,7 +181,6 @@ To enable just for a selected set of users, use the Set-CsExternalAccessPolicy c
 
 Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
-
 
 ```yaml
 Type: Boolean
@@ -209,7 +201,6 @@ To enable just for a selected set of users, use the Set-CsExternalAccessPolicy c
 
 Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
-
 
 ```yaml
 Type: Boolean

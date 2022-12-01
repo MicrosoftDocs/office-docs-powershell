@@ -108,15 +108,21 @@ Get-CsOnlineUser -AccountType ResourceAccount
 ```
 Example 6 returns information for user accounts that are categorized as resource accounts. 
 
+### -------------------------- Example 7 --------------------------
+```
+Get-CsOnlineUser -Filter "FeatureTypes -Contains 'PhoneSystem'"
+```
+Example 7 returns information for user's assigned plans. 
+
 ## PARAMETERS
 
 ### -AccountType
-This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate the user type. The possible values for the AccountType parameter are: 
+This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate the user type. The possible values for the AccountType parameter are:
+
 - `User` - to query for user accounts.
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
 - `Unknown` - to query for a user type that is not known.
-
 
 ```yaml
 Type: UserIdParameter
@@ -135,7 +141,6 @@ Accept wildcard characters: False
 Indicates the Identity of the user account to be retrieved.
 
 For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
-
 
 - GUID
 - SIP address
@@ -207,25 +212,27 @@ The following updates are applicable for organizations having TeamsOnly users th
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are currently only rolled out in commercial environments and are currently **not** applicable to government environments):
 
 - AccountType
-- accountEnabled
+- AccountEnabled
 - AssignedPlan
+- CallingLineIdentity
 - Company
 - Country
-- department
-- displayName
+- Department
+- DisplayName
 - EnterpriseVoiceEnabled
 - ExternalAccessPolicy
-- givenName
+- FeatureTypes (new)
+- GivenName
 - Identity
 - IsSipEnabled
-- lineUri
-- userPrincipalName
-- CallingLineIdentity
+- LastName (available in Teams PowerShell Module 4.2.1 and later)
+- LineUri
+- UserPrincipalName
 - OnlineAudioConferencingRoutingPolicy
 - OnlineDialOutPolicy
 - OnlineVoicemailPolicy
 - OnlineVoiceRoutingPolicy
-- ownerUrn
+- OwnerUrn
 - TeamsAppPermissionPolicy
 - TeamsAppSetupPolicy
 - TeamsAudioConferencingPolicy
@@ -235,6 +242,7 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - TeamsChannelsPolicy
 - TeamsComplianceRecordingPolicy
 - TeamsCortanaPolicy
+- TenantDialPlan
 - TeamsEducationAssignmentsAppPolicy
 - TeamsEmergencyCallingPolicy
 - TeamsEmergencyCallRoutingPolicy
@@ -258,13 +266,11 @@ In the Teams PowerShell Module version 3.0.0 or later, filtering functionality i
 - TeamsVdiPolicy
 - TeamsVerticalPackagePolicy
 - TeamsVideoInteropServicePolicy
-- TenantDialPlan
+- TeamsWorkLoadPolicy
 - Title
 - UsageLocation
 - UserDirSyncEnabled
-- TeamsWorkLoadPolicy
 - VoiceRoutingPolicy
-- LastName (available in Teams PowerShell Module 4.2.1 and later)
 
 *Attributes that have changed in meaning/format*:
 
@@ -354,7 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnOfficeCommunicationServer
-TThis parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
+This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later as it is no longer relevant to Microsoft Teams.
 
 ```yaml
 Type: SwitchParameter
@@ -458,7 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters(https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## OUTPUTS
 
@@ -468,13 +474,16 @@ The following updates are applicable for organizations having TeamsOnly users th
 
 *New user attributes*:
 
-FeatureTypes – Array of unique strings specifying what features are enabled for a user. This attribute is an alternatitive to several attributes that have been dropped as outlined in the next section.
+FeatureTypes: Array of unique strings specifying what features are enabled for a user. This attribute is an alternative to several attributes that have been dropped as outlined in the next section.
+
 Some of the commonly used FeatureTypes include:
 
 - Teams
 - AudioConferencing
 - PhoneSystem
 - CallingPlan
+
+**Note**: This attribute is now filterable in Teams PowerShell Module versions 4.0.0 and later using the "-Contains" operator as shown in Example 7.
 
 AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
 
@@ -592,8 +601,8 @@ The following attributes are no longer relevant to Teams and have been dropped f
 - WindowsEmailAddress
 - SoftDeletedUsers (available in Teams PowerShell Module 4.4.3 and later)
 
-
 The following attributes are temporarily unavailable in the output when using the "-Filter" or when used without the "-Identity" parameter:
+
 - WhenChanged
 - CountryAbbreviation
 
@@ -625,7 +634,8 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 ## INPUTS
 
 ## NOTES
-- These changes are currently only rolled out in commercial environments and are **not** applicable to government environments.
+
+These changes are currently only rolled out in commercial environments and are **not** applicable to government environments.
 
 ## RELATED LINKS
 

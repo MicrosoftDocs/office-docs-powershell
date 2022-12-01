@@ -48,6 +48,22 @@ This example creates a data encryption policy named US Mailboxes with the specif
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the unique name for the data encryption policy. If the value contains spaces, enclose the value in quotation marks.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AzureKeyIDs
 The AzureKeyIDs parameter specifies the URI values of the Azure Key Vault keys to associate with the data encryption policy. You need to specify at least two Azure Key Vault keys separated by commas. For example, `"https://contosoWestUSvault01.vault.azure.net/keys/USA_Key_01","https://contosoEastUSvault01.vault.azure.net/keys/USA_Key_02"`.
 
@@ -61,22 +77,6 @@ Applicable: Exchange Online
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the unique name for the data encryption policy. If the value contains spaces, enclose the value in quotation marks.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

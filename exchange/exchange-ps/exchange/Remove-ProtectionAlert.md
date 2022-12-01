@@ -38,7 +38,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Remove-ProtectionAlert -Identity "External User File Activities"
 ```
 
-This example removes the alert policy named External User File Activities.
+This example removes the specified alert policy.
 
 ## PARAMETERS
 

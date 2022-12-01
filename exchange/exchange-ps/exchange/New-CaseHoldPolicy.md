@@ -51,6 +51,22 @@ Remember, after you create the policy, you need to create a rule for the policy 
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the unique name of the case hold policy. If the value contains spaces, enclose the value in quotation marks.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Case
 The Case parameter specifies the eDiscovery case that you want to associate with the case hold policy. You can use the following values to identify the eDiscovery case:
 
@@ -67,22 +83,6 @@ Applicable: Security & Compliance
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the unique name of the case hold policy. If the value contains spaces, enclose the value in quotation marks.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

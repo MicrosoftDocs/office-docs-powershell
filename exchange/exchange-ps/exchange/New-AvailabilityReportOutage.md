@@ -44,6 +44,22 @@ This example creates a timed injected outage scoped to site Site1 on the selecte
 
 ## PARAMETERS
 
+### -SiteName
+The SiteName parameter specifies the name of the Active Directory site to associate the outage report with.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 The Comment parameter specifies why the outage was inserted.
 
@@ -87,22 +103,6 @@ Applicable: Exchange Server 2010
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SiteName
-The SiteName parameter specifies the name of the Active Directory site to associate the outage report with.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

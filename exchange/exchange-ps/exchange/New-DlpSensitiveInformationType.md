@@ -48,6 +48,24 @@ This example creates a new sensitive information type rule named "Contoso Employ
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a name for the sensitive information type rule. The value must be less than 256 characters.
+
+The value of this parameter is used in the Policy Tip that's presented to users in Outlook on the web.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Description
 The Description parameter specifies a description for the sensitive information type rule.
 
@@ -77,24 +95,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a name for the sensitive information type rule. The value must be less than 256 characters.
-
-The value of this parameter is used in the Policy Tip that's presented to users in Outlook on the web.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

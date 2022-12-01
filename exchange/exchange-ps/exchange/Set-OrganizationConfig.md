@@ -2268,6 +2268,8 @@ Accept wildcard characters: False
 ### -IPListBlocked
 This parameter is available only in the cloud-based service.
 
+This parameter only affects Basic authentication connections.
+
 The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. Valid values are:
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.

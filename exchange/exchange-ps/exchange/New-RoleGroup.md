@@ -124,6 +124,24 @@ This example removes the role assignment between the Distribution Groups managem
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies the name of the new role group. The name can have a maximum of 64 characters. If the name contains spaces, enclose the name in quotation marks (").
+
+**Note**: If you create a linked role group, we recommend that you include the name of the foreign forest in the name of the role group so that you can more easily associate the linked role group and the associated foreign forest. This is especially important if you have multiple forests.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LinkedDomainController
 This parameter is available only in on-premises Exchange.
 
@@ -159,24 +177,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies the name of the new role group. The name can have a maximum of 64 characters. If the name contains spaces, enclose the name in quotation marks (").
-
-**Note**: If you create a linked role group, we recommend that you include the name of the foreign forest in the name of the role group so that you can more easily associate the linked role group and the associated foreign forest. This is especially important if you have multiple forests.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance, Exchange Online Protection
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

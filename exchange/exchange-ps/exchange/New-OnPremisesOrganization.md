@@ -46,6 +46,22 @@ This example creates the OnPremisesOrganization object ExchangeMail in a Microso
 
 ## PARAMETERS
 
+### -Name
+The Name parameter specifies a friendly name for the on-premises Exchange organization object in the Microsoft 365 organization.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HybridDomains
 The HybridDomains parameter specifies the domains that are configured in the hybrid deployment between a Microsoft 365 organization and an on-premises Exchange organization. The domains specified in this parameter must match the domains listed in the HybridConfiguration object for the on-premises Exchange organization configured by the Hybrid Configuration wizard. Multiple domains may be listed and must be separated by a comma, for example, "contoso.com, sales.contoso.com".
 
@@ -73,22 +89,6 @@ Applicable: Exchange Online
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-The Name parameter specifies a friendly name for the on-premises Exchange organization object in the Microsoft 365 organization.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
