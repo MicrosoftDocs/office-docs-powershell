@@ -296,6 +296,9 @@ You have two options:
 - **Assign Azure AD roles to the application**: This method is supported in Exchange Online PowerShell and Security & Compliance PowerShell.
 - **Assign custom Exchange Online role groups to the application**: Currently, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
 
+> [!NOTE]
+> You can also combine both methods to assign permissions. Like using Azure AD roles for the "Exchange Recipient Administrator" role and assign your custom RBAC role to extend the permissions.
+
 #### Assign Azure AD roles to the application
 
 The supported Azure AD roles are described in the following table:
