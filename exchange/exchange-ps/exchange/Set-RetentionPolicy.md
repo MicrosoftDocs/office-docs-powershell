@@ -128,10 +128,14 @@ The IsDefault switch specifies that this retention policy is the default retenti
 
 When you use this switch, you'll get a warning that this retention policy will replace the current default retention policy (the policy where the IsDefault property value is currently True) as the default. By default, the default retention policy is named Default MRM Policy.
 
-**Note**: Changing which retention policy is the default might or might not affect new and existing mailboxes based on the value of the RetentionPolicy parameter on the Set-MailboxPlan cmdlet:
+**Note**: Changing which retention policy is the default might or might not affect new and existing mailboxes based on the value of the RetentionPolicy parameter on all mailbox plans:
 
 - $null (blank): Changes to which retention policy is the default are continually reflected in new and existing mailboxes.
-- A retention policy is specified: Changes to which retention policy is the default are ignored. The retention policy specified in the mailbox plan is assigned to new mailboxes, and changing which policy is specified in the mailbox plan doesn't affect existing mailboxes. If you set the value back to blank, new mailboxes will use the default policy going forward. Existing mailboxes created during the time when a retention policy was specified in the mailbox plan will continue to use that policy, and are unaffected by changes to which retention policy is the default. Any existing mailboxes that you created during the last time when there was no retention policy specified in the mailbox plan will be continually affected by changes to which retention policy is the default.
+- A retention policy is specified: The value of the RetentionPolicy parameter for all mailbox plans should be $null (blank) or match the Exchange retention policy that's configured as the default policy for the organization. Otherwise, the experience might be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses. For more information see [Mailbox plans in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans).
+
+If a mailbox is assigned an Exchange retention policy that's not the default policy, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
+
+Changes to the default retention policy that affect existing mailboxes can potentially saturate the network if there are hundreds or thousands of mailboxes that require updates.
 
 ```yaml
 Type: SwitchParameter

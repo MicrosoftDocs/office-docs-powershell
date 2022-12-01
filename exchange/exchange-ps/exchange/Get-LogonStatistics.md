@@ -59,30 +59,6 @@ This example returns logon statistics for all users connected to the server Serv
 
 ## PARAMETERS
 
-### -Database
-The Database parameter specifies the mailbox database to get logon statistics from (all mailboxes in the specified database). You can use any value that uniquely identifies the mailbox database. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-This parameter accepts pipeline input from the Get-MailboxDatabase command.
-
-You can't use this parameter with the Identity or Server parameters.
-
-```yaml
-Type: DatabaseIdParameter
-Parameter Sets: Database
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the mailbox to get logon statistics from. You can use one of the following values to identify the mailbox:
 
@@ -106,6 +82,30 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Database
+The Database parameter specifies the mailbox database to get logon statistics from (all mailboxes in the specified database). You can use any value that uniquely identifies the mailbox database. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+This parameter accepts pipeline input from the Get-MailboxDatabase command.
+
+You can't use this parameter with the Identity or Server parameters.
+
+```yaml
+Type: DatabaseIdParameter
+Parameter Sets: Database
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

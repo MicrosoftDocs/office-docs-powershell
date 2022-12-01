@@ -66,6 +66,12 @@ Set-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -Resource
 
 This example modifies the Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
 
+### Example 5
+```
+Set-CsCallingLineIdentity -Identity AllowAnonymousForUsers -EnableUserOverride $true
+```
+
+This example modifies the Caller ID policy and allows Teams users to make anonymous calls.
 
 ## PARAMETERS
 
@@ -139,7 +145,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserOverride
-The EnableUserOverride switch lets the user override the Caller ID policy.
+The EnableUserOverride parameter gives Microsoft Teams users the option under Settings and Calls to hide their phone number when making outgoing calls. The CallerID will be Anonymous.
+
+If CallingIDSubstitute is set to Anonymous, the EnableUserOverride parameter has no effect, and the caller ID is always set to Anonymous.
+
+EnableUserOverride has precedence over other settings in the policy unless substitution is set to Anonymous. For example, assume the policy instance has substitution using a resource account and EnableUserOverride is set and enabled by the user. In this case, the outbound caller ID will be blocked and Anonymous will be used.
 
 ```yaml
 Type: Boolean
@@ -149,7 +159,7 @@ Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

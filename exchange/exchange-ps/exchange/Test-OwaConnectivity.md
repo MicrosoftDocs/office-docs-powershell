@@ -88,23 +88,23 @@ This example tests the connectivity of a specific Client Access server Contoso12
 
 ## PARAMETERS
 
-### -MailboxCredential
-The MailboxCredential parameter specifies the mailbox credential for a single URL test.
+### -ClientAccessServer
+This parameter is available only in Exchange Server 2010
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+The ClientAccessServer parameter specifies the name of the Client Access server to test. If this parameter is included, all Exchange Outlook Web App virtual directories on the Client Access server are tested against all Exchange Mailbox servers in the local Active Directory site.
 
-The MailboxCredential parameter is required only when using the URL parameter.
+Don't use this parameter with the URL parameter.
 
 ```yaml
-Type: PSCredential
-Parameter Sets: URL
+Type: ServerIdParameter
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 
-Required: True
-Position: Named
+Required: False
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -128,6 +128,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MailboxCredential
+The MailboxCredential parameter specifies the mailbox credential for a single URL test.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+
+The MailboxCredential parameter is required only when using the URL parameter.
+
+```yaml
+Type: PSCredential
+Parameter Sets: URL
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowUnsecureAccess
 The AllowUnsecureAccess switch specifies whether virtual directories that don't require SSL are tested. You don't need to specify a value with this switch.
 
@@ -143,26 +163,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClientAccessServer
-This parameter is available only in Exchange Server 2010
-
-The ClientAccessServer parameter specifies the name of the Client Access server to test. If this parameter is included, all Exchange Outlook Web App virtual directories on the Client Access server are tested against all Exchange Mailbox servers in the local Active Directory site.
-
-Don't use this parameter with the URL parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

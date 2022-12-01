@@ -73,26 +73,8 @@ You should output the list to a file, because the list is very long, and you'll 
 
 ## PARAMETERS
 
-### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-TheIdentity parameter specifies the custom system message that you want to view. You can use any value that uniquely identifies the system message. For example:
+The Identity parameter specifies the custom system message that you want to view. You can use any value that uniquely identifies the system message. For example:
 
 - Identity
 - Distinguished name (DN)
@@ -102,18 +84,18 @@ You can't use this parameter with the Original switch.
 
 The identity value of a system message uses one of these formats:
 
-- System messages for enhanced status codes:`Language\<Internal | External>\DSNCode`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
-- System messages for quotas:`Language\QuotaMessageType`. For example, `En\ProhibitSendReceiveMailBox`.
+- System messages for enhanced status codes: `Language\<Internal | External>\DSNCode`. For example, `En\Internal\5.1.2` or `Ja\External\5.1.2`.
+- System messages for quotas: `Language\QuotaMessageType`. For example, `En\ProhibitSendReceiveMailbox`.
 
-Language: For the list of supported language codes, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
+\<Language\>: For the list of supported language codes, see [Supported languages for NDRs](https://learn.microsoft.com/Exchange/mail-flow/non-delivery-reports-and-bounce-messages/ndr-procedures#supported-languages-for-ndrs).
 
-DSNCode: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers.
+\<DSNCode\>: Valid values are 4.x.y or 5.x.y where x and y are one to three digit numbers. To see the enhanced system codes that are currently used by custom system messages, run the command `Get-SystemMessage`. To generate a list of default enhanced status codes that are used by Exchange, run this command: `Get-SystemMessage -Original | Select-Object -Property Identity,DsnCode,Language,Text | ConvertTo-Html | Set-Content -Path "C:\My Documents\Default DSNs.html"`.
 
-QuotaMessageType: Valid value are:
+\<QuotaMessageType\>: Valid value are:
 
 Mailbox size quotas:
 
-- ProhibitSendReceiveMailBox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
+- ProhibitSendReceiveMailbox: A mailbox exceeds its ProhibitSendReceiveQuota limit.
 - ProhibitSendMailbox: A mailbox exceeds its ProhibitSendQuota limit.
 - WarningMailbox: A mailbox exceeds its IssueWarningQuota limit when it has a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
 - WarningMailboxUnlimitedSize: A mailbox exceeds its IssueWarningQuota limit when it doesn't have a ProhibitSendQuota or ProhibitSendReceiveQuota limit configured.
@@ -155,6 +137,24 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

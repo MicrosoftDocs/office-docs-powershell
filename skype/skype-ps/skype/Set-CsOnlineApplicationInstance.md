@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 Updates an application instance in Azure Active Directory. 
 
-**Note**: The use of this cmdlet for assigning phone numbers will be deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) 
+**Note**: The use of this cmdlet for assigning phone numbers has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) 
 and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnpremPhoneNumber
-**Note**: Using this parameter will be deprecated. Use the new Set-CsPhoneNumberAssignment cmdlet instead.
+**Note**: Using this parameter has been deprecated. Use the new Set-CsPhoneNumberAssignment cmdlet instead.
 
 Assigns a hybrid (on-premise) telephone number to the application instance.
 

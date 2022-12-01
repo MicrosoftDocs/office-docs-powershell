@@ -19,7 +19,13 @@ description: "Learn about using the Exchange Online PowerShell V2 module and V3 
 
 # App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell
 
+Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
+
+Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and self-signed certificates.
+
 > [!NOTE]
+>
+> - Did you know that you can connect to Exchange Online PowerShell using managed identities in Azure? Check out [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
 >
 > - The features and procedures described in this article require the following versions of the Exchange Online PowerShell module:
 >   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.3 or later.
@@ -36,28 +42,36 @@ description: "Learn about using the Exchange Online PowerShell V2 module and V3 
 >   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
 >   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >
->   You can use Microsoft Graph instead. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
+>   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
 >
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following cmdlets:
 >   - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
 >   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
+>
+> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
 
-Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
+## How does it work?
 
-Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and self-signed certificates.
+The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
+
+## Connection examples
 
 The following examples show how to use the Exchange Online PowerShell module with app-only authentication:
 
 > [!IMPORTANT]
-> In the following **Connect-** commands, be sure to use an `.onmicrosoft.com` domain for the _Organization_ parameter value. Otherwise, you might encounter cryptic permission issues when you run commands in the app context.
+> In the following connection commands, you must use an `.onmicrosoft.com` domain for the _Organization_ parameter value.
 >
-> In Microsoft 365 GCC High or DoD environments, the connection commands require the following additional parameters and values:
+> The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
-> - **Connect-IPPSSession in GCC High**: `-ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+> - In Exchange Online PowerShell using the EXO V3 module, you can omit or include the _UseRPSSession_ switch to use REST API cmdlets or original remote PowerShell cmdlets. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
 >
-> - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
-> - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+> - Microsoft 365 GCC High or Microsoft 365 DoD environments require the following additional parameters and values:
+>   - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
+>   - **Connect-IPPSSession in GCC High**: `-ConnectionUri https://ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+>   - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
+>   - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
+>
+> - If a **Connect-IPPSSession** command present a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
 - **Connect using a certificate thumbprint**:
 
@@ -108,13 +122,6 @@ The following examples show how to use the Exchange Online PowerShell module wit
     Connect-IPPSSession -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (Get-Credential).password -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
-> [!TIP]
-> App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
-
-## How does it work?
-
-The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
-
 ## Set up app-only authentication
 
 An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
@@ -144,24 +151,20 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Azure AD, you can use any of the supported built-in roles.
 
-## Appendix
-
-## Step 1: Register the application in Azure AD
+### Step 1: Register the application in Azure AD
 
 > [!NOTE]
 > If you encounter problems, check the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
 
 1. Open the Azure AD portal at <https://portal.azure.com/>.
 
-2. Under **Manage Azure Active Directory**, click **View**.
+2. In the **Search** box at the top of the page, start typing **App registrations**, and then select **App registrations** from the results in the **Services** section.
 
-   ![Click View in the Azure AD portal under Manage Azure Active Directory.](media/exo-app-only-auth-manage-ad-view.png)
+   ![Screenshot that shows App registrations in the Search results on the home page of the Azure portal.](media/exo-app-only-auth-find-app-registrations.png)
 
-3. On the **Overview** page that opens, under **Manage**, select **App registrations**.
+   Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>.
 
-   ![Select App registrations.](media/exo-app-only-auth-select-app-registrations.png)
-
-4. On the **App registrations** page that opens, click **New registration**.
+3. On the **App registrations** page, click **New registration**.
 
    ![Select New registration on the App registrations page.](media/exo-app-only-auth-new-app-registration.png)
 
@@ -179,9 +182,9 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    When you're finished, click **Register**.
 
-5. Leave the app page that you return to open. You'll use it in the next step.
+4. Leave the app page that you return to open. You'll use it in the next step.
 
-## Step 2: Assign API permissions to the application
+### Step 2: Assign API permissions to the application
 
 > [!NOTE]
 > The procedures in this section replace any default permissions that were automatically configured for the new app. The app doesn't need the default permissions that were replaced.
@@ -192,7 +195,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 47).
 
-   Modify the `resourceAppId`, `resourceAccess`, `id`, and `type` values as shown in the following code snippet:
+   Modify the `resourceAppId`, `resourceAccess id`, and `resourceAccess type` values as shown in the following code snippet:
 
    ```json
    "requiredResourceAccess": [
@@ -233,7 +236,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You'll use it in an upcoming step.
 
-## Step 3: Generate a self-signed certificate
+### Step 3: Generate a self-signed certificate
 
 Create a self-signed x.509 certificate using one of the following methods:
 
@@ -256,17 +259,13 @@ Create a self-signed x.509 certificate using one of the following methods:
   .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
   ```
 
-## Step 4: Attach the certificate to the Azure AD application
+### Step 4: Attach the certificate to the Azure AD application
 
 After you register the certificate with your application, you can use the private key (`.pfx` file) or the thumbprint for authentication.
 
-1. On the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
+1. On the **Owned applications** tab on the **Apps registration** page from the end of [Step 2](#step-2-assign-api-permissions-to-the-application), select your application.
 
-   If you need to get back to **Apps registration** page, do the following steps:
-
-   1. Open the Azure AD portal at <https://portal.azure.com/>.
-   2. Under **Manage Azure Active Directory**, click **View**.
-   3. Under **Manage**, select **App registrations**.
+   If you need to get back to **Apps registration** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>, verify the **Owned applications** tab is selected, and then select your application.
 
    ![Apps registration page where you select your app.](media/exo-app-only-auth-app-registration-page.png)
 
@@ -290,52 +289,50 @@ After you register the certificate with your application, you can use the privat
 
 4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
 
-## Step 5: Assign Azure AD roles to the application
+### Step 5: Assign Azure AD roles to the application
 
-Azure AD has more than 50 admin roles available. The supported roles are described in the following table:
+The supported Azure AD roles are described in the following table:
 
-|Role|Exchange Online PowerShell|Security & Compliance PowerShell|
+|Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
 |---|:---:|:---:|
-|Compliance Administrator|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Exchange Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)||
-|Global Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Global Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Helpdesk Administrator|![Check mark.](media/checkmark.png)||
-|Security Administrator<sup>\*</sup>|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Security Reader|![Check mark.](media/checkmark.png)|![Check mark.](media/checkmark.png)|
-|Exchange Recipient Administrator|![Check mark.](media/checkmark.png)||
+|[Compliance Administrator](/azure/active-directory/roles/permissions-reference#compliance-administrator)|✔|✔|
+|[Exchange Administrator](/azure/active-directory/roles/permissions-reference#exchange-administrator)<sup>\*</sup>|✔||
+|[Exchange Recipient Administrator](/azure/active-directory/roles/permissions-reference#exchange-recipient-administrator)|✔||
+|[Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator)<sup>\*</sup>|✔|✔|
+|[Global Reader](/azure/active-directory/roles/permissions-reference#global-reader)|✔|✔|
+|[Helpdesk Administrator](/azure/active-directory/roles/permissions-reference#helpdesk-administrator)|✔||
+|[Security Administrator](/azure/active-directory/roles/permissions-reference#security-administrator)<sup>\*</sup>|✔|✔|
+|[Security Reader](/azure/active-directory/roles/permissions-reference#security-reader)|✔|✔|
 
-<sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
-
-- Recipient management.
-- Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
-
-The Security Administrator role does not have the necessary permissions for those same tasks.
+> <sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
+>
+> - Recipient management.
+> - Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
+>
+> The Security Administrator role does not have the necessary permissions for those same tasks.
 
 For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](/azure/active-directory/roles/manage-roles-portal).
 
 > [!NOTE]
 > The following steps are slightly different for Exchange Online PowerShell vs. Security & Compliance PowerShell. The steps for both environments are shown. To configure roles for both environments, repeat the steps in this section.
 
-1. On the Azure AD portal at <https://portal.azure.com/>, under **Manage Azure Active Directory**, click **View**.
+1. In Azure AD portal at <https://portal.azure.com/>, start typing **roles and administrators** in the **Search** box at the top of the page, and then select **Azure AD roles and administrators** from the results in the **Services** section.
 
-   ![View in the Azure AD portal under Manage Azure Active Directory.](media/exo-app-only-auth-manage-ad-view.png)
+   ![Screenshot that shows Azure AD roles and administrators in the Search results on the on the home page of the Azure portal.](media/exo-app-only-auth-find-roles-and-administrators.png)
 
-2. On the **Overview** page that opens, under **Manage**, select **Roles and administrators**.
+   Or, to go directly to the **Azure AD roles and administrators** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/AllRolesBlade>.
 
-   ![Select Roles and administrators from the overview page.](media/exo-app-only-auth-select-roles-and-administrators.png)
+2. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
-3. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
-
-   - **Exchange Online PowerShell**:
+   - **Exchange Online PowerShell**: For example, find and select the **Exchange administrator** role.
 
      ![Find and select a supported Exchange Online PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
 
-   - **Security & Compliance PowerShell**:
+   - **Security & Compliance PowerShell**: For example, find and select the **Compliance Administrator** role.
 
      ![Find and select a supported Security & Compliance PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
-4. On the **Assignments** page that opens, click **Add assignments**.
+3. On the **Assignments** page that opens, click **Add assignments**.
 
    - **Exchange Online PowerShell**:
 
@@ -345,13 +342,13 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![Select Add assignments on the role assignments page for Security & Compliance PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments-scc.png)
 
-5. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
+4. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
 
    ![Find and select your app on the Add assignments flyout.](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
    When you're finished, click **Add**.
 
-6. Back on the **Assignments** page, verify that the app has been assigned to the role.
+5. Back on the **Assignments** page, verify that the role has been assigned to the app.
 
    - **Exchange Online PowerShell**:
 

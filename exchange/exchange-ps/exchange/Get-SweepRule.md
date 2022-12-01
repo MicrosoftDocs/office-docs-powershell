@@ -57,6 +57,26 @@ This example returns detailed information for the Sweep rule with the specified 
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the Sweep rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+
+- RuleId property (for example, x2hlsdpGmUifjFgxxGIOJw==).
+- Exchange Online: `MailboxAlias\RuleID` (for example, `rzaher\2hlsdpGmUifjFgxxGIOJw==`).
+- On-premises Exchange: `MailboxCanonicalName\RuleID` (for example, `contoso.com/Users/Rick Zaher\x2hlsdpGmUifjFgxxGIOJw==`).
+
+```yaml
+Type: SweepRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -BypassScopeCheck
 The BypassScopeCheck switch specifies whether to bypass the scope check for the user that's running the command. You don't need to specify a value with this switch.
 
@@ -88,26 +108,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the Sweep rule that you want to view. You can use any value that uniquely identifies the rule. For example:
-
-- RuleId property (for example, x2hlsdpGmUifjFgxxGIOJw==).
-- Exchange Online: `MailboxAlias\RuleID` (for example, `rzaher\2hlsdpGmUifjFgxxGIOJw==`).
-- On-premises Exchange: `MailboxCanonicalName\RuleID` (for example, `contoso.com/Users/Rick Zaher\x2hlsdpGmUifjFgxxGIOJw==`).
-
-```yaml
-Type: SweepRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

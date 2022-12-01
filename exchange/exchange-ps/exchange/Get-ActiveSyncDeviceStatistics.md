@@ -64,7 +64,7 @@ Get-Mailbox $UserList | foreach {Get-ActiveSyncDeviceStatistics -Mailbox $_}
 
 This example uses the Get-CASMailbox cmdlet to determine who in the organization has an Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
 
-**Note**: For more information about OPath filter syntax, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
+**Note**: For more information about OPATH filter syntax, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
 ### Example 3
 ```powershell

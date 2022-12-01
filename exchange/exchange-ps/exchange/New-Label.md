@@ -159,13 +159,13 @@ Supported settings for built-in labeling:
 
 - **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
-- **DefaultShareLinkToExistingAcces**: Specifies whether to override *DefaultSharingScope* and *DefaultShareLinkPermission* to instead set the default sharing link type to people with existing access with their existing permissions. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultShareLinkToExistingAccess="True"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+- **DefaultShareLinkToExistingAccess**: Specifies whether to override *DefaultSharingScope* and *DefaultShareLinkPermission* to instead set the default sharing link type to people with existing access with their existing permissions. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultShareLinkToExistingAccess="True"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
 - **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `New-Label -DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
 
-- **SMimeEncrypt**: Specifies S/MIME encryption for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeEncrypt="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
- 
-- **SMimeSign**: Specifies S/MIME digital signature for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeSign="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
+- **SMimeEncrypt**: Specifies S/MIME encryption for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeEncrypt="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
+
+- **SMimeSign**: Specifies S/MIME digital signature for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeSign="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
 
 ```yaml
 Type: PswsHashtable
@@ -244,6 +244,8 @@ The ApplyContentMarkingFooterFontName parameter specifies the font of the footer
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
+This parameter is supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -279,6 +281,8 @@ Accept wildcard characters: False
 The ApplyContentMarkingFooterMargin parameter specifies the size (in points) of the footer margin.
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
+
+**Note**: In Microsoft Word, the specified value is used as a bottom margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
 Type: System.Int32
@@ -410,6 +414,8 @@ Accept wildcard characters: False
 The ApplyContentMarkingHeaderMargin parameter specifies the size (in points) of the header margin.
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
+
+**Note**: In Microsoft Word, the specified value is used as a top margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
 
 ```yaml
 Type: System.Int32

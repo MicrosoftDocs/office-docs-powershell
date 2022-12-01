@@ -513,6 +513,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
 
+[Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
+
 [Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
 
 [Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)

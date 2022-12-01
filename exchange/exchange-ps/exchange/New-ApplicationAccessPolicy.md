@@ -18,6 +18,8 @@ Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access to a speci
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
+**Note:** App Access Policies will soon be replaced by Roles Based Access Control for Applications. To learn more, see [Roles Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac).
+
 ## SYNTAX
 
 ```
@@ -121,8 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyScopeGroupID
-The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group to restrict/deny access to more than one user mailbox.
-For example:
+The PolicyScopeGroupID parameter specifies the recipient to define in the policy. Valid recipient types are security principals in Exchange Online (users or groups that can have permissions assigned to them). For example:
+
+- Mailboxes with associated user accounts (UserMailbox)
+- Mail users, also known as mail-enabled users (MailUser)
+- Mail-enabled security groups (MailUniversalSecurityGroup)
+
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 - Distinguished name (DN)
@@ -130,16 +137,20 @@ For example:
 - Email address
 - GUID
 
-This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter:
+To verify that a recipient is a security principal, run either of the following commands: `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal` or `Get-Recipient -ResultSize unlimited | Format-Table -Auto Name,RecipientType,RecipientTypeDetails,IsValidSecurityPrincipal`.
 
-- Discovery mailboxes
-- Dynamic distribution groups
-- Distribution groups
-- Shared mailboxes
+You can't use recipients that aren't security principals with this parameter. For example, the following types of recipients won't work:
 
-To verify that a recipient is a security principal, use the syntax `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal`.
+- Discovery mailboxes (DiscoveryMailbox)
+- Dynamic distribution groups (DynamicDistributionGroup)
+- Distribution groups (MailUniversalDistributionGroup)
+- Mail contacts (MailContact)
+- Mail-enabled public folders (PublicFolder)
+- Microsoft 365 Groups (GroupMailbox)
+- Resource mailboxes (RoomMailbox or EquipmentMailbox)
+- Shared mailboxes (SharedMailbox)
 
-If you need to scope the policy to shared mailboxes, you can add them to a mail enabled security group.
+If you need to scope the policy to shared mailboxes, you can add the shared mailboxes as members of a mail-enabled security group.
 
 ```yaml
 Type: RecipientIdParameter

@@ -116,6 +116,7 @@ Performing this procedure on a linked mailbox removes all permissions on the mai
 The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user. For example:
 
 - Name
+- User principal name (UPN)
 - Distinguished name (DN)
 - Canonical DN
 - GUID

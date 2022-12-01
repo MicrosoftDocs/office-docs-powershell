@@ -77,6 +77,24 @@ This example displays information about all migration batches associated with th
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter identifies the name of the current migration batch. The value for this parameter is specified by the Name parameter of the New-MigrationBatch cmdlet.
+
+If you use this parameter, you can't include the Endpoint parameter.
+
+```yaml
+Type: MigrationBatchIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -Diagnostic
 This parameter is available only in on-premises Exchange.
 
@@ -186,24 +204,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter identifies the name of the current migration batch. The value for this parameter is specified by the Name parameter of the New-MigrationBatch cmdlet.
-
-If you use this parameter, you can't include the Endpoint parameter.
-
-```yaml
-Type: MigrationBatchIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

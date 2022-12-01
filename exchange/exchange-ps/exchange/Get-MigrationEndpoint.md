@@ -79,6 +79,22 @@ This example retrieves the settings for the migration endpoint, OnboardingME01.
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the name of the migration endpoint you want to retrieve settings for.
+
+```yaml
+Type: MigrationEndpointIdParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -ConnectionSettings
 This parameter is available only in on-premises Exchange.
 
@@ -188,22 +204,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the migration endpoint you want to retrieve settings for.
-
-```yaml
-Type: MigrationEndpointIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 

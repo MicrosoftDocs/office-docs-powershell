@@ -57,22 +57,6 @@ This example returns an IP Allow list entry in which the specified IP address is
 
 ## PARAMETERS
 
-### -IPAddress
-The IPAddress parameter specifies an IP address to view in the IP Allow list entry or entries. For example, if you have an IP Allow list entry that specifies a range of IP addresses from 192.168.0.1 through 192.168.0.20, enter any IP address in the IP Allow list IP address range to return the IP Allow list entry.
-
-```yaml
-Type: IPAddress
-Parameter Sets: IPAddress
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies the identity integer value of the IP Allow list entry that you want to view. When you add an entry to the IP Allow list, the Identity value is automatically assigned.
 
@@ -86,6 +70,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -IPAddress
+The IPAddress parameter specifies an IP address to view in the IP Allow list entry or entries. For example, if you have an IP Allow list entry that specifies a range of IP addresses from 192.168.0.1 through 192.168.0.20, enter any IP address in the IP Allow list IP address range to return the IP Allow list entry.
+
+```yaml
+Type: IPAddress
+Parameter Sets: IPAddress
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

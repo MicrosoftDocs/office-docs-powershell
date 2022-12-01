@@ -68,6 +68,22 @@ This example recovers the deleted mailbox for the user Brian Johnson. When this 
 
 ## PARAMETERS
 
+### -SoftDeletedObject
+The SoftDeletedObject parameter specifies the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -PublicFolder
 The PublicFolder switch is required to recover public folder mailboxes. You don't need to specify a value with this switch.
 
@@ -83,22 +99,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SoftDeletedObject
-The SoftDeletedObject parameter specifies the deleted mailbox to recover. You can use the alias or the email address of the deleted mailbox for the value of this parameter. Use the Get-Mailbox -SoftDeletedMailbox command to get information for deleted mailboxes.
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
