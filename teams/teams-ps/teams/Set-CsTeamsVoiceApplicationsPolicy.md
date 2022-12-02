@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantTimeZoneChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's timezone. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's timezone.
+When set to True users affected by the policy will be allowed to change the auto attendant's time zone. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's time zone.
 
 ```yaml
 Type: Boolean
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueOptOutChange
 
-When set to True users affected by the policy will be allowed to change the call queue whether to allow agent opt-out. When set to False (the default value) users affected by the policy will not be allowed to change the call queue whether to allow agent opt-out.
+When set to True users affected by the policy will be allowed to change the call queue opt-out setting that allows agents to opt-out of receiving calls. When set to False (the default value) users affected by the policy will not be allowed to change the call queue opt-out setting.
 
 ```yaml
 Type: Boolean
@@ -287,7 +287,9 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueAgentOptChange
 
-When set to True users affected by the policy will be allowed to change the call queue's agent opt-in status. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's agent opt-in status.
+When set to True users affected by the policy will be allowed to change an agent's opt-in status in the call queue. When set to False (the default value) users affected by the policy will not be will not be allowed to change an agent's opt-in status in the call queue.
+
+Note: The call queue must be configured to allow agent's to opt-out in order for this option to work.
 
 ```yaml
 Type: Boolean
@@ -335,7 +337,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueuePresenceBasedRoutingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's presence aware routing. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's presence aware routing.
+When set to True users affected by the policy will be allowed to change the call queue's presence-based routing option. When set to False (the default value) users affected by the policy will not be not allowed to change the call queue's presence-based routing option.
 
 ```yaml
 Type: Boolean
