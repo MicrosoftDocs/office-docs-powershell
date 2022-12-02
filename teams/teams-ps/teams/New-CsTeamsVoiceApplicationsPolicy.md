@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantTimeZoneChange
 
-This parameter allows supervisors and users to change auto attendants' timezone.
+This parameter allows supervisors and users to change auto attendants' time zone.
 
 ```yaml
 Type: Boolean
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueOptOutChange
 
-This parameter allows supervisors and users to change call queue whether to allow agent opt-out.
+This parameter allows supervisors and users to change the call queue opt-out setting that allows agents to opt-out of receiving calls.
 
 ```yaml
 Type: Boolean
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueAgentOptChange
 
-This parameter allows supervisors and users to change call queue agent opt-in status.
+This parameter allows supervisors and users to change an agent's opt-in status in the call queue.
 
 ```yaml
 Type: Boolean
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueuePresenceBasedRoutingChange
 
-This parameter allows supervisors and users to change the call queue's presence aware routing.
+This parameter allows supervisors and users to change the call queue's presence-based routing option.
 
 ```yaml
 Type: Boolean
