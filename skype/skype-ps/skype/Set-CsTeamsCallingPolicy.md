@@ -23,7 +23,7 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <boolean>] [-AllowCallForwardingToUser <boolean>] [-AllowCallGroups <boolean>]
 [-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <boolean>] [-AllowDelegation <boolean>] [-AllowPrivateCalling <boolean>]
 [-AllowSIPDevicesCalling <boolean>] [-AllowTranscriptionForCalling <boolean>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <boolean>]
-[-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>]
+[-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-NewCallRecordingExpirationDays <long>] [-Description <string>]
 [-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>] [-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -276,7 +276,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CallRecordingExpirationDays
+### -NewCallRecordingExpirationDays
 Sets the expiration of the recorded 1:1 calls. Default is 60 days.
 
 ```yaml
