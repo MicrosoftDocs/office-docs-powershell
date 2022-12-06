@@ -100,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPVideoMobileMode
-When set to WifiOnly, prohibits the user from making, receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on cellular data connection. Possible values are: WifiOnly,AllNetworks.
+When set to WifiOnly, prohibits the user from making and receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on a cellular data connection. Possible values are: WifiOnly, AllNetworks.
+
 
 ```yaml
 Type: String
