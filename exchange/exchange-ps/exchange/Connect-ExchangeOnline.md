@@ -33,6 +33,7 @@ Connect-ExchangeOnline
  [[-Prefix] <String>]
  [[-CommandName] <String[]>]
  [[-FormatTypeName] <String[]>]
+ [-AccessToken <String>]
  [-AppId <String>]
  [-BypassMailboxAnchoring]
  [-Certificate <X509Certificate2>]
@@ -275,6 +276,26 @@ Applicable: Exchange Online
 
 Required: False
 Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AccessToken
+**Note**: This parameter is available in version 3.1.0-Preview1 or later of the module.
+
+The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
+
+Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
