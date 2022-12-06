@@ -66,12 +66,11 @@ Accept wildcard characters: False
 ```
 
 ### -LinkType
-The LinkType parameter specifies the Microsoft 365 Group property that you want to view. Valid values are:
+The LinkType parameter filters the results by recipient roles in the Microsoft 365 Group. Valid values are:
 
-- Aggregators
-- Members
-- Owners
-- Subscribers
+- Members: Participate in conversations, create Teams channels, collaborate on files, and edit the connected SharePoint site.
+- Owners: Add or remove members, delete conversations, changes Team settings, delete the Team, and full control of the connected SharePoint site. A group must have at least one owner.
+- Subscribers: Members who receive conversation and calendar event notifications from the group. All subscribers are members of the group, but all members aren't necessarily subscribers (depending on the AutoSubscribeNewMembers property value of the group and when the member was added).
 
 ```yaml
 Type: LinkType
