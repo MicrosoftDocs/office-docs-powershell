@@ -172,7 +172,7 @@ The Filters parameter specifies the search criteria for the compliance security 
 
 You can specify multiple filters of the same type. For example, `"Mailbox_CustomAttribute10 -eq 'FTE' -and Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'"`.
 
-You have to create a search permissions filter to explicitly prevent users from searching any content location in a specific Microsoft 365 service (such as preventing a user from searching Exchange mailboxes or SharePoint sites). In other words, creating a search permissions filter that allows a user to search all SharePoint sites in the organization doesn't prevent that user from searching mailboxes. For example, to allow a SharePoint admin to only search SharePoint sites, you have to create a filter that prevents them from searching mailboxes. Similarly, to allow an Exchange admin to only search mailboxes, you have to create a filter that prevents them from searching sites.
+You need to create a search permissions filter to explicitly prevent users from searching any content location in a specific Microsoft 365 service (such as preventing a user from searching Exchange mailboxes or SharePoint sites). In other words, creating a search permissions filter that allows a user to search all SharePoint sites in the organization doesn't prevent that user from searching mailboxes. For example, to allow a SharePoint admin to only search SharePoint sites, you need to create a filter that prevents them from searching mailboxes (as described in Example 5). Similarly, to allow an Exchange admin to only search mailboxes, you need to create a filter that prevents them from searching sites.
 
 ```yaml
 Type: MultiValuedProperty
