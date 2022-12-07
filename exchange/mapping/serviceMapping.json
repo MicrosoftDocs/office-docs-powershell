@@ -42,7 +42,7 @@
   "Get-SafeLinksDetailReport": "defender-for-office-365",
   "Get-SafeLinksPolicy": "defender-for-office-365",
   "Get-SafeLinksRule": "defender-for-office-365",
-  "Get-SpoofIntelligenceInsight" "defender-for-office-365",
+  "Get-SpoofIntelligenceInsight": "defender-for-office-365",
   "Get-SpoofMailReport": "defender-for-office-365",
   "New-AntiPhishPolicy": "defender-for-office-365",
   "New-AntiPhishRule": "defender-for-office-365",
