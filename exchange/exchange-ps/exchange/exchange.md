@@ -109,6 +109,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
 
+### [Get-SpoofIntelligenceInsight](Get-SpoofIntelligenceInsight.md)
+
 ### [Get-SpoofMailReport](Get-SpoofMailReport.md)
 
 ### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
@@ -296,6 +298,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
 
+### [New-QuarantinePermissions](New-QuarantinePermissions.md)
+
 ### [New-QuarantinePolicy](New-QuarantinePolicy.md)
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
@@ -392,6 +396,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
+### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
+
 ### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
 
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
@@ -473,7 +479,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-CASMailbox](Set-CASMailbox.md)
 
-### [set-CASMailboxPlan](set-CASMailboxPlan.md)
+### [Set-CASMailboxPlan](Set-CASMailboxPlan.md)
 
 ### [Set-ClientAccessRule](Set-ClientAccessRule.md)
 
