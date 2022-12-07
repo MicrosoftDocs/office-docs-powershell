@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRecordingStorageOutsideRegion
-Allows storing recordings outside of region. All meeting recordings will be permanently stored in another region, and can't be migrated. This does not apply to recordings saved in OneDrive or SharePoint.
+Allows storing recordings outside of the region. All meeting recordings will be permanently stored in another region, and can't be migrated. This does not apply to recordings saved in OneDrive or SharePoint.
 
 ```yaml
 Type: Boolean
