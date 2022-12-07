@@ -6796,7 +6796,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "exchange/virtual-folder/exchange/Get-CustomNudgeAssignment.md.md",
+      "source_path": "exchange/virtual-folder/exchange/Get-CustomNudgeAssignment.md",
       "redirect_url": "/powershell/module/exchange/",
       "redirect_document_id": false
     },
