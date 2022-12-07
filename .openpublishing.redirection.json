@@ -6789,6 +6789,56 @@
       "source_path": "spmt/spmt-ps/spmt/spmt.md",
       "redirect_url": "/powershell/module/spmt",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-CustomNudge.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-CustomNudgeAssignment.md.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-CustomNudgeSettings.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-CustomNudge.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-CustomNudgeAssignment.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-CustomNudge.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-CustomNudgeAssignment.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-CustomNudge.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-CustomNudgeAssignment.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-CustomNudgeSettings.md",
+      "redirect_url": "/powershell/module/exchange/",
+      "redirect_document_id": false
     }
   ]
 }
