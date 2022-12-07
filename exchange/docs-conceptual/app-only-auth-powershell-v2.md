@@ -291,6 +291,16 @@ After you register the certificate with your application, you can use the privat
 
 ### Step 5: Assign Azure AD roles to the application
 
+You have two options:
+
+- **Assign Azure AD roles to the application**: This method is supported in Exchange Online PowerShell and Security & Compliance PowerShell.
+- **Assign custom Exchange Online role groups to the application**: Currently, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
+
+> [!NOTE]
+> You can also combine both methods to assign permissions. Like using Azure AD roles for the "Exchange Recipient Administrator" role and assign your custom RBAC role to extend the permissions.
+
+#### Assign Azure AD roles to the application
+
 The supported Azure AD roles are described in the following table:
 
 |Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
@@ -357,3 +367,60 @@ For general instructions about assigning roles in Azure AD, see [View and assign
    - **Security & Compliance PowerShell**:
 
      ![The role assignments page after to added the app to the role for Security & Compliance PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)
+
+#### Assign custom Exchange Online role groups to the application
+
+> [!NOTE]
+> Remember, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
+
+For information about creating custom role groups, see [Create role groups](/exchange/permissions-exo/role-groups#create-role-groups). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
+
+To assign custom Exchange Online role groups to the application, do the following steps:
+
+1. In [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2), run the following command to store the details of the Azure application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
+
+   ```powershell
+   $<VariableName1> = Get-AzureADServicePrincipal -SearchString "<AppName>"
+   ```
+
+   For example:
+
+   ```powershell
+   $AADApp = Get-AzureADServicePrincipal -SearchString "ExO PowerShell CBA"
+   ```
+
+   For detailed syntax and parameter information, see [Get-AzureADServicePrincipal](/powershell/module/azuread/get-azureadserviceprincipal).
+
+2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and run the following commands to:
+   - Create an Exchange Online service principal object for the Azure application.
+   - Store the details of the service principal in a variable.
+
+   ```powershell
+   New-ServicePrincipal -AppId $<VariableName1>.AppId -ServiceId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
+
+   $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
+   ```
+
+   For example:
+
+   ```powershell
+   New-ServicePrincipal -AppId $AADApp.AppId -ServiceId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
+
+   $SP = Get-ServicePrincipal -Identity "SP for Azure App ExO PowerShell CBA"
+   ```
+
+   For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchange/new-serviceprincipal).
+
+3. In Exchange Online PowerShell, run the following command to add the service principal as a member of the custom role group:
+
+   ```powershell
+   Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ServiceId | $<VariableName2>.Id>
+   ```
+
+   For example:
+
+   ```powershell
+   Add-RoleGroupMember -Identity "Contoso View-Only Recipients" -Member $SP.Identity
+   ```
+
+   For detailed syntax and parameter information, see [Add-RoleGroupMember](/powershell/module/exchange/add-rolegroupmember).
