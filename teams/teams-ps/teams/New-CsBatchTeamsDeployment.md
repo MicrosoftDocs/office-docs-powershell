@@ -38,7 +38,8 @@ This command runs a batch deployment with the provided parameters in the CSV fil
 ## PARAMETERS
 
 ### -TeamsFilePath
-The path to the CSV file that defines the teams you're creating.
+The path to the CSV file that defines the teams you're creating. For information about the CSV file format, see [Deploy Teams at scale for frontline workers](/microsoft-365/frontline/deploy-teams-at-scale).
+
 
 ```yaml
 Type: String
@@ -53,7 +54,8 @@ Accept wildcard characters: False
 ```
 
 ### -UsersFilePath
-The path to the CSV file that maps the users you're adding to each team.
+The path to the CSV file that maps the users you're adding to each team. For information about the CSV file format, see [Deploy Teams at scale for frontline workers](/microsoft-365/frontline/deploy-teams-at-scale).
+
 
 ```yaml
 Type: String
