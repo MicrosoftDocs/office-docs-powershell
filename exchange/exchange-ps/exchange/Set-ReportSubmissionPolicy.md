@@ -25,8 +25,8 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-Confirm]
  [-DisableQuarantineReportingOption <Boolean>]
  [-DisableUserSubmissionOptions <Boolean>]
- [-EnableCustomNotificationSender <Boolean>]
  [-EnableCustomizedMsg <Boolean>]
+ [-EnableCustomNotificationSender <Boolean>]
  [-EnableOrganizationBranding <Boolean>]
  [-EnableReportToMicrosoft <Boolean>]
  [-EnableThirdPartyAddress <Boolean>]
@@ -35,9 +35,14 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-NotJunkReviewResultMessage <String>]
  [-NotificationFooterMessage <String>]
  [-NotificationSenderAddress <MultiValuedProperty>]
+ [-NotificationsForCleanSubmissionAirInvestigationsEnabled <Boolean>]
+ [-NotificationsForPhishMalwareSubmissionAirInvestigationsEnabled <Boolean>]
+ [-NotificationsForSpamSubmissionAirInvestigationsEnabled <Boolean>]
+ [-NotificationsForSubmissionAirInvestigationsEnabled <Boolean>]
  [-OnlyShowPhishingDisclaimer <Boolean>]
  [-PhishingReviewResultMessage <String>]
  [-PostSubmitMessage <String>]
+ [-PostSubmitMessageEnabled <Boolean>]
  [-PostSubmitMessageForJunk <String>]
  [-PostSubmitMessageForNotJunk <String>]
  [-PostSubmitMessageForPhishing <String>]
@@ -46,6 +51,7 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-PostSubmitMessageTitleForNotJunk <String>]
  [-PostSubmitMessageTitleForPhishing <String>]
  [-PreSubmitMessage <String>]
+ [-PreSubmitMessageEnabled <Boolean>]
  [-PreSubmitMessageForJunk <String>]
  [-PreSubmitMessageForNotJunk <String>]
  [-PreSubmitMessageForPhishing <String>]
@@ -53,6 +59,7 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-PreSubmitMessageTitleForJunk <String>]
  [-PreSubmitMessageTitleForNotJunk <String>]
  [-PreSubmitMessageTitleForPhishing <String>]
+ [-ReportChatMessageEnabled <Boolean>]
  [-ReportJunkAddresses <MultiValuedProperty>]
  [-ReportJunkToCustomizedAddress <Boolean>]
  [-ReportNotJunkAddresses <MultiValuedProperty>]
@@ -62,15 +69,16 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-ThirdPartyReportAddresses <MultiValuedProperty>]
  [-UserSubmissionOptions <Int32>]
  [-UserSubmissionOptionsMessage <String>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The report submission policy controls most of the settings for user submissions in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>.
+The report submission policy controls most of the settings for user submissions in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
 
-The report submission rule (the SentTo parameter \*-ReportSubmissionRule cmdlets) controls the email address of the user submissions mailbox where user reported messages are sent.
+The report submission rule (the SentTo parameter \*-ReportSubmissionRule cmdlets) controls the email address of the reporting mailbox where user reported messages are sent.
 
-When you set the email address of the user submissions mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/userSubmissionsReportMessage>, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
+When you set the email address of the reporting mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
 - Third-party tools: The ThirdPartyReportAddresses parameter.
@@ -88,7 +96,7 @@ Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReport
 Get-ReportSubmissionRule | Remove-ReportSubmissionRule
 ```
 
-This example turns on the Microsoft integrated reporting experience, but allows users to report messages to Microsoft only. The user submissions mailbox is not used.
+This example turns on the Microsoft integrated reporting experience, but allows users to report messages to Microsoft only. The reporting mailbox is not used.
 
 **Notes**:
 
@@ -104,7 +112,7 @@ Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReport
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example turns on the Microsoft integrated reporting experience, allows users to report messages to Microsoft, and sends reported messages to the specified user submissions mailbox. The New-ReportSubmissionRule command is required only if you don't already have a report submission rule.
+This example turns on the Microsoft integrated reporting experience, allows users to report messages to Microsoft, and sends reported messages to the specified reporting mailbox. The New-ReportSubmissionRule command is required only if you don't already have a report submission rule.
 
 ### Example 3
 ```powershell
@@ -115,7 +123,7 @@ Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReport
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example turns on the Microsoft integrated reporting experience and sends reported messages to the specified user submissions mailbox only (users can't report messages to Microsoft). The New-ReportSubmissionRule command is required only if you don't already have a report submission rule.
+This example turns on the Microsoft integrated reporting experience and sends reported messages to the specified reporting mailbox only (users can't report messages to Microsoft). The New-ReportSubmissionRule command is required only if you don't already have a report submission rule.
 
 ### Example 4
 ```powershell
@@ -205,13 +213,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableCustomNotificationSender
-The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for notifications for user submitted messages. Valid values are:
+### -EnableCustomizedMsg
+The EnableCustomizedMsg parameter enables or disables the customized messages that are shown to users before and/or after they report messages. Valid values are:
 
-- $true: Use a custom Microsoft 365 sender email address.
-- $false: Use the default sender email address. This is the default value.
+- $true: Customized messages are enabled.
+- $false: Customized messages are disabled. This is the default value.
 
-You specify the sender email address using the NotificationSenderAddress parameter.
+You customize the messages using the following parameters:
+
+- PostSubmitMessage
+- PostSubmitMessageTitle
+- PreSubmitMessage
+- PreSubmitMessageTitle
 
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -228,18 +241,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableCustomizedMsg
-The EnableCustomizedMsg parameter enables or disables the customized messages that are shown to users before and/or after they report messages. Valid values are:
+### -EnableCustomNotificationSender
+The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for notifications for user submitted messages. Valid values are:
 
-- $true: Customized messages are enabled.
-- $false: Customized messages are disabled. This is the default value.
+- $true: Use a custom Microsoft 365 sender email address.
+- $false: Use the default sender email address. This is the default value.
 
-You customize the messages using the following parameters:
-
-- PostSubmitMessage
-- PostSubmitMessageTitle
-- PreSubmitMessage
-- PreSubmitMessageTitle
+You specify the sender email address using the NotificationSenderAddress parameter.
 
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -287,12 +295,12 @@ The EnableReportToMicrosoft parameter specifies whether Microsoft integrated rep
 The value $true for this parameter has the following possible outcomes:
 
 - If the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters are set to the value $false, the Microsoft integrated reporting experience is enabled, but users can only report messages to Microsoft.
-- If the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters are set to the value $true, the Microsoft integrated reporting experience is enabled. User reported messages are sent to Microsoft and a user submissions mailbox. Use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the user submissions mailbox.
+- If the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters are set to the value $true, the Microsoft integrated reporting experience is enabled. User reported messages are sent to Microsoft and a reporting mailbox. Use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the reporting mailbox.
 
 The value $false for this parameter has the following possible outcomes:
 
-- If the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters are set to the value $false and the EnableThirdPartyAddress parameter is set to the value $true, the Microsoft integrated reporting experience is disabled in favor of a third-party product. Use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the user submissions mailbox.
-- If the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters are set to the value $true and the EnableThirdPartyAddress parameter is set to the value $false, the Microsoft integrated reporting experience is enabled, but user reported messages are sent only to the user submissions mailbox. Use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the user submissions mailbox.
+- If the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters are set to the value $false and the EnableThirdPartyAddress parameter is set to the value $true, the Microsoft integrated reporting experience is disabled in favor of a third-party product. Use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the reporting mailbox.
+- If the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters are set to the value $true and the EnableThirdPartyAddress parameter is set to the value $false, the Microsoft integrated reporting experience is enabled, but user reported messages are sent only to the reporting mailbox. Use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the reporting mailbox.
 
 ```yaml
 Type: Boolean
@@ -310,7 +318,7 @@ Accept wildcard characters: False
 ### -EnableThirdPartyAddress
 The EnableThirdPartyAddress parameter specifies whether you're using a third-party product instead of the Microsoft integrated reporting experience. Valid values are:
 
-- $true: The Microsoft integrated reporting experience is disabled in favor of a third-party product for user submissions. Set the EnableReportToMicrosoft parameter to the value $false, and use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the user submissions mailbox.
+- $true: The Microsoft integrated reporting experience is disabled in favor of a third-party product for user submissions. Set the EnableReportToMicrosoft parameter to the value $false, and use the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet to specify the email address of the reporting mailbox.
 - $false: You're not using a third-party product for user submissions. Set the EnableReportToMicrosoft parameter to the value $true to enable the Microsoft integrated reporting experience.
 
 ```yaml
@@ -426,6 +434,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotificationsForCleanSubmissionAirInvestigationsEnabled
+{{ Fill NotificationsForCleanSubmissionAirInvestigationsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationsForPhishMalwareSubmissionAirInvestigationsEnabled
+{{ Fill NotificationsForPhishMalwareSubmissionAirInvestigationsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationsForSpamSubmissionAirInvestigationsEnabled
+{{ Fill NotificationsForSpamSubmissionAirInvestigationsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationsForSubmissionAirInvestigationsEnabled
+{{ Fill NotificationsForSubmissionAirInvestigationsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OnlyShowPhishingDisclaimer
 The OnlyShowPhishingDisclaimer parameter specifies whether to show users the before reporting and after reporting messages only for messages that were reported as phishing. Valid values are:
 
@@ -487,6 +559,22 @@ This parameter is meaningful only when the Microsoft integrated reporting experi
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostSubmitMessageEnabled
+{{ Fill PostSubmitMessageEnabled Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -638,6 +726,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreSubmitMessageEnabled
+{{ Fill PreSubmitMessageEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreSubmitMessageForJunk
 Don't use this parameter. Use the PreSubmitMessage parameter instead.
 
@@ -756,8 +860,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReportChatMessageEnabled
+{{ Fill ReportChatMessageEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReportJunkAddresses
-**Note**: You don't need to use this parameter. You specify the email address of the user submissions mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
+**Note**: You don't need to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
 
 The ReportJunkAddresses parameter specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
 
@@ -779,14 +899,14 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkToCustomizedAddress
-The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages to the user submissions mailbox in the Microsoft integrated reporting experience. Valid values are:
+The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages to the reporting mailbox in the Microsoft integrated reporting experience. Valid values are:
 
-- $true: User reported messages are sent to the user submissions mailbox.
-- $false: User reported messages are not sent to the user submissions mailbox.
+- $true: User reported messages are sent to the reporting mailbox.
+- $false: User reported messages are not sent to the reporting mailbox.
 
 You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters in the same command.
 
-You specify the email address of the user submissions mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
 
 Use the EnableReportToMicrosoft parameter to specify whether user reported messages are also sent to Microsoft.
 
@@ -806,7 +926,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkAddresses
-**Note**: You don't need to use this parameter. You specify the email address of the user submissions mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
+**Note**: You don't need to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
 
 The ReportNotJunkAddresses parameter specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
 
@@ -828,14 +948,14 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkToCustomizedAddress
-The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages to the user submissions mailbox in the Microsoft integrated reporting experience. Valid values are:
+The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages to the reporting mailbox in the Microsoft integrated reporting experience. Valid values are:
 
-- $true: User reported messages are sent to the user submissions mailbox.
-- $false: User reported messages are not sent to the user submissions mailbox.
+- $true: User reported messages are sent to the reporting mailbox.
+- $false: User reported messages are not sent to the reporting mailbox.
 
 You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters in the same command.
 
-You specify the email address of the user submissions mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
 
 Use the EnableReportToMicrosoft parameter to specify whether user reported messages are also sent to Microsoft.
 
@@ -855,7 +975,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishAddresses
-**Note**: You don't need to use this parameter. You specify the email address of the user submissions mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
+**Note**: You don't need to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
 
 The ReportPhishAddresses parameter specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
 
@@ -877,14 +997,14 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishToCustomizedAddress
-The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages to the user submissions mailbox in the Microsoft integrated reporting experience. Valid values are:
+The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages to the reporting mailbox in the Microsoft integrated reporting experience. Valid values are:
 
-- $true: User reported messages are sent to the user submissions mailbox.
-- $false: User reported messages are not sent to the user submissions mailbox.
+- $true: User reported messages are sent to the reporting mailbox.
+- $false: User reported messages are not sent to the reporting mailbox.
 
 You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters in the same command.
 
-You specify the email address of the user submissions mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
 
 Use the EnableReportToMicrosoft parameter to specify whether user reported messages are also sent to Microsoft.
 
@@ -904,9 +1024,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyReportAddresses
-**Note**: You don't need to use this parameter. You specify the email address of the user submissions mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
+**Note**: You don't need to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, you can set this parameter to the same value.
 
-Use the ThirdPartyReportAddresses parameter to specify the email address of the user submissions mailbox when you're using a third-party product for user submissions instead of the Microsoft integrated reporting experience.
+Use the ThirdPartyReportAddresses parameter to specify the email address of the reporting mailbox when you're using a third-party product for user submissions instead of the Microsoft integrated reporting experience.
 
 For more information about disabling the Microsoft integrated reporting experience in favor of a third-party product, see the EnableThirdPartyAddress parameter.
 

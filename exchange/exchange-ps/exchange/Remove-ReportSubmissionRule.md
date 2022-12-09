@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-ReportSubmissionRule cmdlet to remove the report submission rule from your cloud-based organization. The report submission rule identifies the user submissions mailbox (where to deliver user reported messages).
+Use the Remove-ReportSubmissionRule cmdlet to remove the report submission rule from your cloud-based organization. The report submission rule identifies the reporting mailbox where user reported messages are delivered.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
