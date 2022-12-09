@@ -89,47 +89,53 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-ReportSubmissionPolicy 
 ```
 
-This example creates the one and only report submission policy named DefaultReportSubmissionPolicy with the default values (users can report messages only to Microsoft, and the reporting mailbox isn't used).
+This example creates the one and only report submission policy named DefaultReportSubmissionPolicy with the default values: the Microsoft integrated reporting experience is on, Microsoft reporting tools are used, and reported messages are sent only to Microsoft (the reporting mailbox isn't used).
 
 ### Example 2
 ```powershell
 $usersub = "reportedmessages@contoso.com"
 
-New-ReportSubmissionPolicy -ReportJunkToCustomizedAddress $true -ReportJunkAddresses $usersub -ReportNotJunkToCustomizedAddress $true -ReportNotJunkAddresses $usersub -ReportPhishToCustomizedAddress $true -ReportPhishAddresses $usersub -DisableUserSubmissionOptions $false -EnableCustomizedMsg $false -OnlyShowPhishingDisclaimer $true -EnableCustomNotificationSender $false -EnableOrganizationBranding $false -DisableQuarantineReportingOption $false
+New-ReportSubmissionPolicy -ReportJunkToCustomizedAddress $true -ReportJunkAddresses $usersub -ReportNotJunkToCustomizedAddress $true -ReportNotJunkAddresses $usersub -ReportPhishToCustomizedAddress $true -ReportPhishAddresses $usersub
 
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example creates the report submission policy with the Microsoft integrated reporting experience enabled, user reporting to Microsoft enabled, and reported messages sent to the specified reporting mailbox.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on, Microsoft reporting tools are used, and reported messages are sent to Microsoft and the specified reporting mailbox.
 
 **Notes**:
 
 - The default value of the EnableReportToMicrosoft parameter is $true and the default value of the EnableThirdPartyAddress parameter is $false, so you don't need to use them.
-- To create the policy, you need to specify the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
-- The remaining parameters in the New-ReportSubmissionPolicy command are required to create the policy. The default values of those parameters are used.
-- Like the report submission policy, you can create the report submission rule only if it doesn't already exist. If the rule already exists, you can use Set-ReportSubmissionRule to change the email address of the reporitng mailbox, or Remove-ReportSubmissionRule to delete it and recreate it.
+- To create the policy, you need to specify the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
+- Like the report submission policy, you can create the report submission rule only if it doesn't already exist. If the rule already exists, you can use Set-ReportSubmissionRule to change the email address of the reporting mailbox, or Remove-ReportSubmissionRule to delete it and recreate it.
 
 ### Example 3
 ```powershell
 $usersub = "userreportedmessages@fabrikam.com"
 
-New-ReportSubmissionPolicy -EnableReportToMicrosoft $false -ReportJunkToCustomizedAddress $true -ReportJunkAddresses $usersub -ReportNotJunkToCustomizedAddress $true -ReportNotJunkAddresses $usersub -ReportPhishToCustomizedAddress $true -ReportPhishAddresses $usersub -DisableUserSubmissionOptions $false -EnableCustomizedMsg $false -OnlyShowPhishingDisclaimer $true -EnableCustomNotificationSender $false -EnableOrganizationBranding $false -DisableQuarantineReportingOption $false
+New-ReportSubmissionPolicy -EnableReportToMicrosoft $false -ReportJunkToCustomizedAddress $true -ReportJunkAddresses $usersub -ReportNotJunkToCustomizedAddress $true -ReportNotJunkAddresses $usersub -ReportPhishToCustomizedAddress $true -ReportPhishAddresses $usersub -DisableUserSubmissionOptions $false
 
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example creates the report submission policy with the Microsoft integrated reporting experience enabled, user reporting to Microsoft disabled, and reported messages sent to the specified reporting mailbox only.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on, Microsoft reporting tools are used, and reported messages are sent only to the specified reporting mailbox.
 
 ### Example 4
 ```powershell
 $usersub = "thirdpartyreporting@wingtiptoys.com"
 
-New-ReportSubmissionPolicy -EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ThirdPartyReportAddresses $usersub -DisableQuarantineReportingOption $false
+New-ReportSubmissionPolicy -EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ThirdPartyReportAddresses $usersub
 
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example creates the report submission policy with the Microsoft integrated reporting experience disabled, and user reporting via third-party tools to the specified reporting mailbox.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on and third-party reporting tools are used to send reported messages to the specified reporting mailbox.
+
+### Example 5
+```powershell
+New-ReportSubmissionPolicy -EnableReportToMicrosoft $false
+```
+
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is off. Microsoft reporting tools are not available to users and messages reported by third-party reporting tools are not available on the Submissions page in the Microsoft 365 Defender portal.
 
 ## PARAMETERS
 
@@ -138,8 +144,6 @@ The DisableQuarantineReportingOption parameter allows or prevents users from rep
 
 - $true: Users can't report quarantined messages from quarantine.
 - $false: Users can report quarantined messages from quarantine. This is the default value.
-
-This parameter is required to create the report submission policy if you're sending reported messages to the reporting mailbox (Microsoft integrated reporting experience or third-party tools).
 
 ```yaml
 Type: Boolean
@@ -155,12 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableUserSubmissionOptions
-The DisableUserSubmissionOptions parameter specifies whether users are allowed to choose if they want to report a message. Valid values are:
-
-- $true: Users aren't allowed to choose if they want to report a message. You specify the one and only option that's available to them using the UserSubmissionOptions parameter.
-- $false: Users are allowed to choose if they want to report a message. You specify the options that are available to them using the UserSubmissionOptions parameter. This is the default value.
-
-This parameter is required to create the report submission policy if you're using the Microsoft integrated reporting experience (see the EnableReportToMicrosoft parameter) and sending reported messages to the reporting mailbox (exclusively or in addition to reporting to Microsoft).
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -183,8 +182,6 @@ The EnableCustomNotificationSender parameter specifies whether a custom sender e
 
 You specify the sender email address using the NotificationSenderAddress parameter.
 
-This parameter is required to create the report submission policy if you're using the Microsoft integrated reporting experience (see the EnableReportToMicrosoft parameter) and sending reported messages to the reporting mailbox (exclusively or in addition to reporting to Microsoft).
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -199,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCustomizedMsg
-The EnableCustomizedMsg parameter enables or disables the customized messages that are shown to users before and/or after they report messages. Valid values are:
+The EnableCustomizedMsg parameter enables or disables the customized pop-up messages that are shown to users before and/or after they report messages. Valid values are:
 
 - $true: Customized messages are enabled.
 - $false: Customized messages are disabled. This is the default value.
@@ -210,8 +207,6 @@ You customize the messages using the following parameters:
 - PostSubmitMessageTitle
 - PreSubmitMessage
 - PreSubmitMessageTitle
-
-This parameter is required to create the report submission policy if you're using the Microsoft integrated reporting experience (see the EnableReportToMicrosoft parameter) and sending reported messages to the reporting mailbox (exclusively or in addition to reporting to Microsoft).
 
 ```yaml
 Type: Boolean
@@ -236,8 +231,6 @@ You can customize the footer in notification messages using the NotificationFoot
 
 You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
 
-This parameter is required to create the report submission policy if you're using the Microsoft integrated reporting experience (see the EnableReportToMicrosoft parameter) and sending reported messages to the reporting mailbox (exclusively or in addition to reporting to Microsoft).
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -256,13 +249,13 @@ The EnableReportToMicrosoft parameter specifies whether Microsoft integrated rep
 
 The value $true for this parameter enables the Microsoft integrated reporting experience. The following results are possible:
 
-- **Users can report messages to Microsoft only (the reporting mailbox isn't used)**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false. This is the default result.
-- **Users can report messages to Microsoft and reported messages are sent to the reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+- **Microsoft reporting tools are available in Outlook for users to report messages to Microsoft only (the reporting mailbox isn't used)**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false. This is the default result.
+- **Microsoft reporting tools are available in Outlook for users to report messages to Microsoft and reported messages are sent to the specified reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
 
 The value $false for this parameter has the following possible results:
 
-- **The Microsoft integrated reporting experience is enabled, but reported messages are sent only to the reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
-- **The Microsoft integrated reporting experience is disabled. Third-party tools send reported messages to the reporting mailbox**: The EnableThirdPartyAddress parameter value is $true. To create the policy, use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+- **Microsoft reporting tools are available in Outlook, but reported messages are sent only to the reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+- **The Microsoft integrated reporting experience is disabled. Microsoft reporting tools are not available in Outlook. Any messages reported by users in Outlook with third-party reporting tools aren't visible on the Submissions page in the Microsoft 365 Defender portal**: The EnableThirdPartyAddress, ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false.
 
 This parameter is required to create the report submission policy only if you set the value to $false (the default value is $true).
 
@@ -280,10 +273,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyAddress
-The EnableThirdPartyAddress parameter specifies whether you're using a third-party product instead of the Microsoft integrated reporting experience to send messages to the reporting mailbox. Valid values are:
+The EnableThirdPartyAddress parameter specifies whether you're using third-party reporting tools in Outlook instead of Microsoft tools to send messages to the reporting mailbox. Valid values are:
 
-- $true: The Microsoft integrated reporting experience is disabled. Third-party tools send reported messages to the reporting mailbox. You also need to set the EnableReportToMicrosoft parameter value to $false. To create the policy, use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
-- $false: The Microsoft integrated reporting experience is enabled. This is the default value. Use the EnableReportToMicrosoft parameter to control whether user reported messages are sent to the reporting mailbox, and whether users can report messages to Microsoft.
+- $true: The Microsoft integrated reporting experience is enabled, but third-party tools in Outlook send reported messages to the reporting mailbox. You also need to set the EnableReportToMicrosoft parameter value to $false. To create the policy, use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
+- $false: Third-party reporting tools in Outlook aren't used.
 
 This parameter is required to create the report submission policy only if you set the value to $true (the default value is $false).
 
