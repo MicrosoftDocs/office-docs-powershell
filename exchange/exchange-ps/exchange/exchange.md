@@ -1932,6 +1932,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DlpEdmSchema](Get-DlpEdmSchema.md)
 
+### [Get-DlpIncidentDetailReport](Get-DlpIncidentDetailReport.md)
+
 ### [Get-DlpKeywordDictionary](Get-DlpKeywordDictionary.md)
 
 ### [Get-DlpPolicy](Get-DlpPolicy.md)
