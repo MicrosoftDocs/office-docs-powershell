@@ -947,6 +947,7 @@
   "Get-DlpDetailReport": "policy-and-compliance-dlp",
   "Get-DlpDetectionsReport": "policy-and-compliance-dlp",
   "Get-DlpEdmSchema": "policy-and-compliance-dlp",
+  "Get-DlpIncidentDetailReport": "policy-and-compliance-dlp",
   "Get-DlpKeywordDictionary": "policy-and-compliance-dlp",
   "Get-DlpPolicy": "policy-and-compliance-dlp",
   "Get-DlpPolicyTemplate": "policy-and-compliance-dlp",
