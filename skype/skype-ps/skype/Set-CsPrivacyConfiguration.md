@@ -178,7 +178,7 @@ In advanced privacy mode, only people on your Contacts list will be allowed to v
 If False, your presence information will be available to anyone in your organization.
 The default value is False.
 
-For information regarding privacy mode in Microsoft Teams, see [User presence in Teams](/microsoftteams/presence-admins)
+For information regarding privacy mode in Microsoft Teams, see [User presence in Teams](/microsoftteams/presence-admins).
 
 ```yaml
 Type: Boolean
