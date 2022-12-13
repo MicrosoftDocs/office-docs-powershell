@@ -25,7 +25,9 @@ The Exchange Online PowerShell module uses modern authentication for connecting 
 > [!NOTE]
 > Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
-To connect to Exchange Online PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
+To connect to Exchange Online PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md) and [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
+
+To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exchange Online PowerShell](connect-to-exo-powershell-c-sharp.md).
 
 To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437), see [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md).
 

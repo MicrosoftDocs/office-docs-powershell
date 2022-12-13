@@ -28,7 +28,7 @@ Get-ConfigAnalyzerPolicyRecommendation -RecommendedPolicyType <RecommendedPolicy
 ```
 
 ## DESCRIPTION
-For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Office 365 ATP security](https://learn.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp).
+For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Office 365 ATP security](https://learn.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365).
 
 The output of this cmdlet only returns settings that fall below the value that you've specified as a baseline (Standard or Strict).
 
