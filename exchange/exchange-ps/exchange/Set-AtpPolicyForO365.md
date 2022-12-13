@@ -36,11 +36,11 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
 ```
 
 ## DESCRIPTION
-Safe Links protection for Office 365 apps checks links in Office documents, not links in email messages. For more information, see [Safe Links settings for Office 365 apps](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#safe-links-settings-for-office-365-apps).
+Safe Links protection for Office 365 apps checks links in Office documents, not links in email messages. For more information, see [Safe Links settings for Office 365 apps](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-links-about#safe-links-settings-for-office-365-apps.
 
-Safe Documents scans documents and files that are opened in Protected View. For more information, see [Safe Documents in Microsoft 365 E5](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-docs).
+Safe Documents scans documents and files that are opened in Protected View. For more information, see [Safe Documents in Microsoft 365 E5](https://learn.microsoft.com/microsoft-365/security/office-365-securitysafe-documents-in-e5-plus-security-about).
 
-Safe Attachments for SharePoint, OneDrive, and Microsoft Teams prevents users from opening and downloading files that are identified as malicious. For more information, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
+Safe Attachments for SharePoint, OneDrive, and Microsoft Teams prevents users from opening and downloading files that are identified as malicious. For more information, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-for-spo-odfb-teams-about).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -101,7 +101,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-links#entry-syntax-for-the-block-the-following-urls-list).
+For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-links-about#entry-syntax-for-the-block-the-following-urls-list).
 
 ```yaml
 Type: MultiValuedProperty
@@ -160,7 +160,7 @@ The EnableSafeDocs parameter enables or disables Safe Documents in organizations
 - $true: Safe Documents is enabled and will upload user files to Microsoft Defender for Endpoint for scanning and verification.
 - $false: Safe Documents is disabled. This is the default value.
 
-For more information about Safe Documents, see [Safe Documents in Microsoft 365 A5 or E5 Security](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-docs)
+For more information about Safe Documents, see [Safe Documents in Microsoft 365 A5 or E5 Security](https://learn.microsoft.com/microsoft-365/security/office-365-securitysafe-documents-in-e5-plus-security-about)
 
 ```yaml
 Type: Boolean
