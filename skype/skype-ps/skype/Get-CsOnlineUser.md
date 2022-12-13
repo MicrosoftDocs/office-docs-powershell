@@ -5,8 +5,8 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: isrumnon
+ms.author: isrumnon@microsoft.com
 ms.reviewer:
 ---
 
