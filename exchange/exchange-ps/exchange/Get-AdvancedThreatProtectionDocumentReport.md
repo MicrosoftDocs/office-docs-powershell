@@ -38,7 +38,7 @@ Get-AdvancedThreatProtectionDocumentReport
 ```
 
 ## DESCRIPTION
-For more information about this feature, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-for-spo-odb-and-teams).
+For more information about this feature, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-for-spo-odfb-teams-about).
 
 For the reporting period and organization you specify, the cmdlet returns the following information:
 
