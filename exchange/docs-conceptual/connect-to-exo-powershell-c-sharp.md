@@ -14,12 +14,12 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn about using the Exchange Online PowerShell V3 module and C# to connect to Exchange Online PowerShell."
+description: "Learn about using the Exchange Online PowerShell V3 module and C# to connect to Exchange Online."
 ---
 
 # Use C# to connect to Exchange Online PowerShell
 
-The code samples in this article use the [Exchange Online PowerShell V3 module](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module) module to connect to Exchange Online PowerShell from C#.
+The code samples in this article use the [Exchange Online PowerShell V3 module](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module) module to connect to Exchange Online from C#.
 
 To install the Exchange Online PowerShell module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
@@ -196,9 +196,9 @@ void ParallelConnectionsToExchangeOnline()
 
         // Configure the number of runspaces to maintain in the RunspacePool.
 
-        pool.SetMaxRunspaces(2);
+        pool.SetMaxRunspaces(3);
 
-        pool.SetMinRunspaces(2);
+        pool.SetMinRunspaces(3);
 
         // Set the ThreadOptions to reuse the same threads for the runspaces so that
 
