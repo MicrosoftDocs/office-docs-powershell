@@ -77,8 +77,8 @@ The report submission rule (\*-ReportSubmissionRule cmdlets) controls the email 
 
 When you set the email address of the reporting mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
 
-- Microsoft integrated reporting: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
-- Third-party tools: The ThirdPartyReportAddresses parameter.
+- Microsoft integrated reporting using Microsoft reporting tools in Outlook: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
+- Microsoft integrated reporting using third-party tools in Outlook: The ThirdPartyReportAddresses parameter.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -89,7 +89,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-ReportSubmissionPolicy 
 ```
 
-This example creates the one and only report submission policy named DefaultReportSubmissionPolicy with the default values: the Microsoft integrated reporting experience is on, Microsoft reporting tools are used, and reported messages are sent only to Microsoft (the reporting mailbox isn't used).
+This example creates the one and only report submission policy named DefaultReportSubmissionPolicy with the default values: the Microsoft integrated reporting experience is on, Microsoft reporting tools in Outlook are used, and reported messages are sent only to Microsoft (the reporting mailbox isn't used).
 
 ### Example 2
 ```powershell
@@ -100,7 +100,7 @@ New-ReportSubmissionPolicy -ReportJunkToCustomizedAddress $true -ReportJunkAddre
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on, Microsoft reporting tools are used, and reported messages are sent to Microsoft and the specified reporting mailbox.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on, Microsoft reporting tools in Outlook are used, and reported messages are sent to Microsoft and the specified reporting mailbox.
 
 **Notes**:
 
@@ -117,7 +117,7 @@ New-ReportSubmissionPolicy -EnableReportToMicrosoft $false -ReportJunkToCustomiz
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on, Microsoft reporting tools are used, and reported messages are sent only to the specified reporting mailbox.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on, Microsoft reporting tools in Outlook are used, and reported messages are sent only to the specified reporting mailbox in Exchange Online.
 
 ### Example 4
 ```powershell
@@ -128,14 +128,14 @@ New-ReportSubmissionPolicy -EnableReportToMicrosoft $false -EnableThirdPartyAddr
 New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
 ```
 
-This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on and third-party reporting tools are used to send reported messages to the specified reporting mailbox.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is on and third-party reporting tools in Outlook are used to send reported messages to the specified reporting mailbox in Exchange Online.
 
 ### Example 5
 ```powershell
 New-ReportSubmissionPolicy -EnableReportToMicrosoft $false
 ```
 
-This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is off. Microsoft reporting tools are not available to users and messages reported by third-party reporting tools are not available on the Submissions page in the Microsoft 365 Defender portal.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is off. Microsoft reporting tools are not available to users and messages reported by third-party reporting tools in Outlook are not available on the Submissions page in the Microsoft 365 Defender portal.
 
 ## PARAMETERS
 
@@ -174,8 +174,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableCustomizedMsg
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableCustomNotificationSender
-The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for notifications for user submitted messages. Valid values are:
+The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. Valid values are:
 
 - $true: Use a custom Microsoft 365 sender email address.
 - $false: Use the default sender email address. This is the default value.
@@ -195,41 +211,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableCustomizedMsg
-The EnableCustomizedMsg parameter enables or disables the customized pop-up messages that are shown to users before and/or after they report messages. Valid values are:
-
-- $true: Customized messages are enabled.
-- $false: Customized messages are disabled. This is the default value.
-
-You customize the messages using the following parameters:
-
-- PostSubmitMessage
-- PostSubmitMessageTitle
-- PreSubmitMessage
-- PreSubmitMessageTitle
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnableOrganizationBranding
-The EnableOrganizationBranding parameter specifies whether to show the company logo in the footer of email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing. Valid values are:
+The EnableOrganizationBranding parameter specifies whether to show the company logo in the footer of result messages that users receive after an admin reviews and marks the reported messages as junk, not junk, or phishing. Valid values are:
 
-- $true: Use the company logo in the footer text.
-- $false: Don't use the company logo in the footer text.
+- $true: Use the company logo in the footer text instead of the Microsoft logo.
+- $false: Don't use the company logo in the footer text. Use the Microsoft logo.
 
-You can customize the footer in notification messages using the NotificationFooterMessage parameter.
-
-You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: Boolean
@@ -247,12 +235,12 @@ Accept wildcard characters: False
 ### -EnableReportToMicrosoft
 The EnableReportToMicrosoft parameter specifies whether Microsoft integrated reporting experience is enabled or disabled. Valid values are $true or $false.
 
-The value $true for this parameter enables the Microsoft integrated reporting experience. The following results are possible:
+The value $true for this parameter enables the Microsoft integrated reporting experience. The following configurations are possible:
 
 - **Microsoft reporting tools are available in Outlook for users to report messages to Microsoft only (the reporting mailbox isn't used)**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false. This is the default result.
 - **Microsoft reporting tools are available in Outlook for users to report messages to Microsoft and reported messages are sent to the specified reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
 
-The value $false for this parameter has the following possible results:
+The value $false for this parameter disables the Microsoft integrated reporting experience. The following configurations are possible:
 
 - **Microsoft reporting tools are available in Outlook, but reported messages are sent only to the reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
 - **The Microsoft integrated reporting experience is disabled. Microsoft reporting tools are not available in Outlook. Any messages reported by users in Outlook with third-party reporting tools aren't visible on the Submissions page in the Microsoft 365 Defender portal**: The EnableThirdPartyAddress, ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false.
@@ -273,9 +261,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableThirdPartyAddress
-The EnableThirdPartyAddress parameter specifies whether you're using third-party reporting tools in Outlook instead of Microsoft tools to send messages to the reporting mailbox. Valid values are:
+The EnableThirdPartyAddress parameter specifies whether you're using third-party reporting tools in Outlook instead of Microsoft tools to send messages to the Exchange Online reporting mailbox. Valid values are:
 
-- $true: The Microsoft integrated reporting experience is enabled, but third-party tools in Outlook send reported messages to the reporting mailbox. You also need to set the EnableReportToMicrosoft parameter value to $false. To create the policy, use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
+- $true: The Microsoft integrated reporting experience is enabled, but third-party tools in Outlook send reported messages to the Exchange Online reporting mailbox. You also need to set the EnableReportToMicrosoft parameter value to $false. To create the policy, use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
 - $false: Third-party reporting tools in Outlook aren't used.
 
 This parameter is required to create the report submission policy only if you set the value to $true (the default value is $false).
@@ -294,7 +282,16 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUserEmailNotification
-This parameter is reserved for internal Microsoft use.
+The EnableUserEmailNotification parameter species whether users receive result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. Valid values are:
+
+- $true: Customized admin review result messages are sent.
+- $false: Customized admin review result messages are not sent.
+
+Use the JunkReviewResultMessage, NotJunkReviewResultMessage, PhishingReviewResultMessage parameters to configure the message body text that's used for each verdict.
+
+Use the NotificationFooterMessage parameter for the footer that's used for all verdicts (junk, not junk, and phishing).
+
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: Boolean
@@ -310,13 +307,13 @@ Accept wildcard characters: False
 ```
 
 ### -JunkReviewResultMessage
-The JunkReviewResultMessage parameter specifies the custom text to use in email notifications after an admin reviews and marks messages that were reported as junk. If the value contains spaces, enclose the value in quotation marks (").
+The JunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as junk. If the value contains spaces, enclose the value in quotation marks (").
 
-You can customize the footer in notification messages using the NotificationFooterMessage and EnableOrganizationBranding parameters.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
-You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+Use the NotificationSenderAddress parameter to customize the sender email address of result messages.
 
 ```yaml
 Type: String
@@ -332,13 +329,13 @@ Accept wildcard characters: False
 ```
 
 ### -NotJunkReviewResultMessage
-The NotJunkReviewResultMessage parameter specifies the custom text to use in email notifications after an admin reviews and marks messages that were reported as not junk. If the value contains spaces, enclose the value in quotation marks (").
+The NotJunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as not junk. If the value contains spaces, enclose the value in quotation marks (").
 
-You can customize the footer in notification messages using the NotificationFooterMessage and EnableOrganizationBranding parameters.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
-You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+Use the NotificationSenderAddress parameter to customize the sender email address of result messages.
 
 ```yaml
 Type: String
@@ -354,11 +351,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationFooterMessage
-The NotificationFooterMessage parameter specifies the custom footer text to use in email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing. If the value contains spaces, enclose the value in quotation marks.
+The NotificationFooterMessage parameter specifies the custom footer text to use in email notifications after an admin reviews and marks the reported messages as junk, not junk, or phishing. If the value contains spaces, enclose the value in quotation marks.
 
 You can use the EnableOrganizationBranding parameter to include your company logo in the message footer.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -374,9 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationSenderAddress
-The NotificationSenderAddress parameter specifies the sender email address to use in email notifications after an admin reviews and marks messages that were reported as junk, not junk, or phishing. The email address must be in Exchange Online.
-
-This parameter is meaningful only when the EnableCustomNotificationSender parameter value is $true.
+The NotificationSenderAddress parameter specifies the sender email address to use in result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. The email address must be in Exchange Online.
 
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -458,19 +453,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnlyShowPhishingDisclaimer
-The OnlyShowPhishingDisclaimer parameter specifies whether to show users the before reporting and after reporting messages only for messages that were reported as phishing. Valid values are:
-
-- $true: Show the before reporting and after reporting messages only when users report messages as phishing. This is the default value.
-- $false: Show the before reporting and after reporting messages when users report messages as junk, not junk, and phishing.
-
-You specify the title and message body for the before reporting and after reporting messages using the following parameters:
-
-- PreSubmitMessageTitle
-- PreSubmitMessage
-- PostSubmitMessageTitle
-- PostSubmitMessage
-
-This parameter is required to create the report submission policy if you're using the Microsoft integrated reporting experience (see the EnableReportToMicrosoft parameter) and sending reported messages to the reporting mailbox (exclusively or in addition to reporting to Microsoft).
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -486,13 +469,13 @@ Accept wildcard characters: False
 ```
 
 ### -PhishingReviewResultMessage
-The PhishingReviewResultMessage parameter specifies the custom text to use in email notifications after an admin reviews and marks messages that were reported as phishing. If the value contains spaces, enclose the value in quotation marks (").
+The PhishingReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as phishing. If the value contains spaces, enclose the value in quotation marks (").
 
-You can customize the footer in notification messages using the NotificationFooterMessage and EnableOrganizationBranding parameters.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
-You can customize the sender email address of notifications using the NotificationSenderAddress parameter.
+Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+Use the NotificationSenderAddress parameter to customize the sender email address of result messages.
 
 ```yaml
 Type: String
@@ -508,11 +491,9 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessage
-The PostSubmitMessage parameter specifies the custom message body text to use in notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
+The PostSubmitMessage parameter specifies the custom pop-up message text to use in Outlook notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You specify the custom title for after reporting messages using the PostSubmitMessageTitle parameter.
-
-This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+You specify the custom pop-up message title using the PostSubmitMessageTitle parameter.
 
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -578,11 +559,9 @@ Accept wildcard characters: False
 ```
 
 ### -PostSubmitMessageTitle
-The PostSubmitMessage parameter parameter specifies the custom title text to use in notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
+The PostSubmitMessage parameter parameter specifies the custom pop-up message title to use in Outlook notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You specify the custom message body for after reporting messages using the PostSubmitMessage parameter.
-
-This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+You specify the custom pop-up message text using the PostSubmitMessage parameter.
 
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -648,11 +627,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessage
-The PreSubmitMessage parameter specifies the custom message body text to use in notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
+The PreSubmitMessage parameter specifies the custom pop-up message text to use in Outlook notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You specify the custom title for after reporting messages using the PreSubmitMessageTitle parameter.
-
-This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+You specify the custom pop-up message title using the PreSubmitMessageTitle parameter.
 
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -718,11 +695,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreSubmitMessageTitle
-The PreSubmitMessage parameter parameter specifies the custom title text to use in notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
+The PreSubmitMessage parameter parameter specifies the custom pop-up message title to use in Outlook notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
 
-You specify the custom message body for before reporting messages using the PreSubmitMessage parameter.
-
-This parameter is meaningful only if the EnableCustomizedMsg parameter value is $true.
+You specify the pop-up message text using the PreSubmitMessage parameter.
 
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
@@ -788,7 +763,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkAddresses
-The ReportJunkAddresses parameter specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
+The ReportJunkAddresses parameter specifies the email address of the Exchange Online reporting mailbox to receive user reported messages in the Microsoft integrated reporting experience using Microsoft or third-party reporting tools in Outlook.
 
 This parameter is required to create the report submission policy if the ReportJunkToCustomizedAddress parameter value is $true.
 
@@ -810,7 +785,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkToCustomizedAddress
-The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages to the reporting mailbox in the Microsoft integrated reporting experience. Valid values are:
+The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages (from Outlook using Microsoft or third-party reporting tools) to the reporting mailbox as part of the Microsoft integrated reporting experience. Valid values are:
 
 - $true: User reported messages are sent to the reporting mailbox.
 - $false: User reported messages are not sent to the reporting mailbox.
@@ -833,7 +808,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkAddresses
-The ReportNotJunkAddresses parameter specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
+The ReportNotJunkAddresses parameter specifies the email address of the Exchange Online reporting mailbox to receive user reported messages in the Microsoft integrated reporting experience using Microsoft or third-party reporting tools in Outlook.
 
 This parameter is required to create the report submission policy if the ReportNotJunkToCustomizedAddress parameter value is $true.
 
@@ -855,7 +830,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotJunkToCustomizedAddress
-The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages to the reporting mailbox in the Microsoft integrated reporting experience. Valid values are:
+The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages (from Outlook using Microsoft or third-party reporting tools) to the reporting mailbox as part of the Microsoft integrated reporting experience. Valid values are:
 
 - $true: User reported messages are sent to the reporting mailbox.
 - $false: User reported messages are not sent to the reporting mailbox.
@@ -878,7 +853,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishAddresses
-The ReportPhishAddresses parameter specifies the email address of the custom Exchange Online mailbox to receive user reported messages in the Microsoft integrated reporting experience.
+The ReportPhishAddresses parameter specifies the email address of the Exchange Online reporting mailbox to receive user reported messages in the Microsoft integrated reporting experience using Microsoft or third-party reporting tools in Outlook.
 
 This parameter is required to create the report submission policy if the ReportPhishToCustomizedAddress parameter value is $true.
 
@@ -900,7 +875,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportPhishToCustomizedAddress
-The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages to the reporting mailbox in the Microsoft integrated reporting experience. Valid values are:
+The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages (from Outlook using Microsoft or third-party reporting tools) to the reporting mailbox as part of the Microsoft integrated reporting experience. Valid values are:
 
 - $true: User reported messages are sent to the reporting mailbox.
 - $false: User reported messages are not sent to the reporting mailbox.
@@ -923,7 +898,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyReportAddresses
-Use the ThirdPartyReportAddresses parameter to specify the email address of the reporting mailbox when you're using a third-party product for user submissions instead of the Microsoft integrated reporting experience.
+Use the ThirdPartyReportAddresses parameter to specify the email address of the Exchange Online reporting mailbox when you're using a third-party product for user submissions instead of the Microsoft integrated reporting experience.
 
 This parameter is required to create the report submission policy if you've disabled the Microsoft integrated reporting experience (`-EnableReportToMicrosoft $false`) and you're using the reporting mailbox with third-party tools (`-EnableThirdPartyAddress $true`).
 
@@ -941,18 +916,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSubmissionOptions
-The UserSubmissionOptions parameter specifies the reporting options that are available to users. Valid values are:
-
-- 0: No reporting options are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
-- 1: **Ask before reporting the message** is the only available option.
-- 2: **Always report the message** is the only available option.
-- 3: **Ask before reporting the message** and **Always report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
-- 4: **Never report the message** is the only available option.
-- 5: **Ask before reporting the message** and **Never report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
-- 6: **Always report the message** and **Never report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
-- 7: **Ask before reporting the message**, **Always report the message**, and **Never report the message** are available. This value is available only when the DisableUserSubmissionOptions parameter value is $false.
-
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
