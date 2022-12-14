@@ -39,12 +39,12 @@ You can use this cmdlet only if the following statements are true:
 - The report submission rule doesn't exist (the Get-ReportSubmissionRule cmdlet returns no output).
 - The report submission policy exists (the Get-ReportSubmissionPolicy returns output).
 
-The SentTo parameter identifies the email address of the reporting mailbox. Your organization needs a report submission rule only to send user reported messages to the reporting mailbox.
+The SentTo parameter identifies the email address of the reporting mailbox. Your organization needs a report submission rule only to send user reported messages to the reporting mailbox using Microsoft or third-party reporting tools in Outlook (the Microsoft integrated reporting experience is turned on).
 
 When you set the email address of the reporting mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the same email address is also set in the *\-ReportSubmissionPolicy cmdlets:
 
-- Microsoft integrated reporting: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
-- Third-party tools: The ThirdPartyReportAddresses parameter.
+- Microsoft integrated reporting using Microsoft reporting tools in Outlook: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
+- Microsoft integrated reporting using third-party reporting tools in Outlook: ThirdPartyReportAddresses.
 
 When you use this cmdlet to set the email address of the reporting mailbox, the corresponding parameters in the *\-ReportSubmissionPolicy cmdlets are not updated.
 
@@ -54,10 +54,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SendTo "userreportedmessages@contoso.com"
+New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SendTo "userreportedmessages@contoso.onmicrosoft.com"
 ```
 
-This example creates the report submission rule. The reporting mailbox is userreportedmessages@contoso.com.
+This example creates the report submission rule. The reporting mailbox is userreportedmessages@contoso.onmicrosoft.com.
 
 ## PARAMETERS
 
@@ -150,17 +150,17 @@ Accept wildcard characters: False
 ```
 
 ### -SentTo
-The SentTo parameter specifies the email address of the reporting mailbox that you want to use. User reported messages are sent to the reporting mailbox.
+The SentTo parameter specifies the email address of the reporting mailbox in Exchange Online where user reported messages are sent.
 
-The value of this parameter is meaningful only if user reporting to a reporting mailbox is enabled in the \*-ReportSubmissionPolicy cmdlets:
+The value of this parameter is meaningful only if the Microsoft integrated reporting experience is enabled, and user reported messages are sent to a reporting mailbox as configured in the \*-ReportSubmissionPolicy cmdlets:
 
-- Microsoft integrated reporting: `-EnableThirdPartyAddress $false`, `-ReportJunkToCustomizedAddress $true`, `-ReportNotJunkToCustomizedAddress $true`, and `-ReportPhishToCustomizedAddress $true`.
-- A third-party product: `-EnableReportToMicrosoft $false`, `-EnableThirdPartyAddress $true`, `-ReportJunkToCustomizedAddress $false`, `-ReportNotJunkToCustomizedAddress $false`, and `-ReportPhishToCustomizedAddress $false`.
+- Microsoft integrated reporting is enabled using Microsoft reporting tools in Outlook: `-EnableThirdPartyAddress $false -ReportJunkToCustomizedAddress $true -ReportNotJunkToCustomizedAddress $true -ReportPhishToCustomizedAddress $true`.
+- Microsoft integrated reporting is enabled using third-party reporting tools in Outlook: `-EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ReportJunkToCustomizedAddress $false -ReportNotJunkToCustomizedAddress $false -ReportPhishToCustomizedAddress $false`.
 
-If you set the email address of the reporting mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the following parameters in the *\-ReportSubmissionPolicy cmdlets are set to the same value:
+If you set the email address of the reporting mailbox in the Microsoft 365 Defender portal, the following parameters in the *\-ReportSubmissionPolicy cmdlets are set to the same value:
 
-- Microsoft integrated reporting: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
-- A third-party product: ThirdPartyReportAddresses.
+- Microsoft integrated reporting using Microsoft reporting tools in Outlook: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
+- Microsoft integrated reporting using third-party reporting tools in Outlook: ThirdPartyReportAddresses.
 
 When you use this cmdlet to set the email address of the reporting mailbox, the related parameter values in the *\-ReportSubmissionPolicy cmdlets are not updated. But, that doesn't matter, because only the value of the SentTo parameter specifies the email address of the reporting mailbox. You can update the related values in the \*-ReportSubmissionPolicy cmdlets for consistency and to avoid confusion.
 

@@ -135,7 +135,7 @@ This example creates the report submission policy with the following values: the
 New-ReportSubmissionPolicy -EnableReportToMicrosoft $false
 ```
 
-This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is off. Microsoft reporting tools are not available to users and messages reported by third-party reporting tools in Outlook are not available on the Submissions page in the Microsoft 365 Defender portal.
+This example creates the report submission policy with the following values: the Microsoft integrated reporting experience is off. Microsoft reporting tools in Outlook are not available to users and messages reported by third-party tools in Outlook are not available on the Submissions page in the Microsoft 365 Defender portal.
 
 ## PARAMETERS
 
@@ -144,6 +144,8 @@ The DisableQuarantineReportingOption parameter allows or prevents users from rep
 
 - $true: Users can't report quarantined messages from quarantine.
 - $false: Users can report quarantined messages from quarantine. This is the default value.
+
+This parameter is meaningful only the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: Boolean
@@ -217,7 +219,7 @@ The EnableOrganizationBranding parameter specifies whether to show the company l
 - $true: Use the company logo in the footer text instead of the Microsoft logo.
 - $false: Don't use the company logo in the footer text. Use the Microsoft logo.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: Boolean
@@ -291,7 +293,7 @@ Use the JunkReviewResultMessage, NotJunkReviewResultMessage, PhishingReviewResul
 
 Use the NotificationFooterMessage parameter for the footer that's used for all verdicts (junk, not junk, and phishing).
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: Boolean
@@ -309,7 +311,7 @@ Accept wildcard characters: False
 ### -JunkReviewResultMessage
 The JunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as junk. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
@@ -331,7 +333,7 @@ Accept wildcard characters: False
 ### -NotJunkReviewResultMessage
 The NotJunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as not junk. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
@@ -355,7 +357,7 @@ The NotificationFooterMessage parameter specifies the custom footer text to use 
 
 You can use the EnableOrganizationBranding parameter to include your company logo in the message footer.
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -373,7 +375,7 @@ Accept wildcard characters: False
 ### -NotificationSenderAddress
 The NotificationSenderAddress parameter specifies the sender email address to use in result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. The email address must be in Exchange Online.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -471,7 +473,7 @@ Accept wildcard characters: False
 ### -PhishingReviewResultMessage
 The PhishingReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as phishing. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
@@ -495,7 +497,7 @@ The PostSubmitMessage parameter specifies the custom pop-up message text to use 
 
 You specify the custom pop-up message title using the PostSubmitMessageTitle parameter.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -563,7 +565,7 @@ The PostSubmitMessage parameter parameter specifies the custom pop-up message ti
 
 You specify the custom pop-up message text using the PostSubmitMessage parameter.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -631,7 +633,7 @@ The PreSubmitMessage parameter specifies the custom pop-up message text to use i
 
 You specify the custom pop-up message title using the PreSubmitMessageTitle parameter.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -699,7 +701,7 @@ The PreSubmitMessage parameter parameter specifies the custom pop-up message tit
 
 You specify the pop-up message text using the PreSubmitMessage parameter.
 
-This parameter is meaningful only when the Microsoft integrated reporting experience is enabled as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
