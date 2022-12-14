@@ -1,54 +1,67 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-advancedthreatprotectiondocumentdetail
-applicable: Exchange Online, Exchange Online Protection
-title: Get-AdvancedThreatProtectionDocumentDetail
+online version: https://learn.microsoft.com/powershell/module/exchange/Get-DlpEdmSchema
+applicable: Exchange Online, Security & Compliance
+title: Get-DlpIncidentDetailReport
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-AdvancedThreatProtectionDocumentDetail
+# Get-DlpIncidentDetailReport
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-**Note**: This cmdlet will be deprecated. Use the [Get-ContentMalwareMdoDetailReport](https://learn.microsoft.com/powershell/module/exchange/get-contentmalwaremdodetailreport) cmdlet instead.
-
-Use the Get-AdvancedThreatProtectionDocumentDetailReport cmdlet to view the detailed results of Safe Attachments for SharePoint, OneDrive, and Microsoft Teams in your Microsoft Defender for Office 365 organization.
+Use the Get-DlpIncidentDetailReport cmdlet to view the details of incidents that happened in the last 30 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-AdvancedThreatProtectionDocumentDetail [-Action <MultiValuedProperty>]
- [-Domain <MultiValuedProperty>]
- [-EndDate <DateTime>]
+Get-DlpIncidentDetailReport
+ [-Action <MultiValuedProperty>]
+ [-Actor <MultiValuedProperty>]
+ [-DlpCompliancePolicy <MultiValuedProperty>]
+ [-DlpComplianceRule <MultiValuedProperty>]
+ [-EndDate <System.DateTime>]
  [-EventType <MultiValuedProperty>]
  [-Page <Int32>]
  [-PageSize <Int32>]
- [-ProbeTag <String>]
- [-StartDate <DateTime>]
+ [-Source <MultiValuedProperty>]
+ [-StartDate <System.DateTime>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-For the reporting period and organization you specify, the cmdlet returns the following information:
+The output of the Get-DlpIncidentDetailReport cmdlet includes the following properties:
 
-- Action
-- Document Id
-- Domain
-- Event Type
-- File Hash
-- File Name
-- File Path
+- Date
+- Title
+- Location
+- Severity
 - Size
-- Timestamp
-- Workload
-
-For more information about this feature, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-for-spo-odfb-teams-about).
+- Source
+- Actor
+- DlpCompliancePolicy
+- DlpComplianceRule
+- UserAction
+- Justification
+- SensitiveInformationType
+- SensitiveInformationCount
+- SensitiveInformationConfidence
+- EventType
+- Action
+- DistinctRuleCount
+- DistinctPolicyCount
+- RuleList
+- PolicyList
+- ActionList
+- SensitiveInformationTypeList
+- SensitiveInformationCountList
+- SensitiveInformationConfidenceList
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -56,24 +69,27 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-AdvancedThreatProtectionDocumentDetail -Organization contoso.com -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
+Get-DlpIncidentDetailReport -StartDate 2022/11 -EndDate 2022/11/30
 ```
 
-This example returns the detailed report of detections during the specified date range.
+This example lists the details of the all incidents that occurred between the dates specified.
 
 ## PARAMETERS
 
 ### -Action
-The Action parameter filters the results by the action taken on the attachment or link. Valid values are:
+The Action parameter filters the report by the action taken by DLP policies. Valid values are:
 
-- Allow
 - BlockAccess
+- GenerateIncidentReport
+- NotifyUser
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -82,19 +98,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Domain
-The Domain parameter filters the results by an accepted domain in the cloud-based organization. You can specify multiple domain values separated by commas, or the value All.
+### -Actor
+The Actor parameter filters the report by the user who last modified the item. You can enter multiple users separated by commas.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpCompliancePolicy
+The DlpCompliancePolicy parameter filters the report by the name of the DLP compliance policy. You can specify multiple policies separated by commas.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpComplianceRule
+The DlpComplianceRule parameter filters the report by the name of the DLP compliance rule. You can specify multiple rules separated by commas.
+
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -104,10 +158,10 @@ The EndDate parameter specifies the end date of the date range.
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -119,10 +173,14 @@ Accept wildcard characters: False
 ### -EventType
 The EventType parameter filters the report by the event type. Valid values are:
 
-- Advanced Threat Protection
-- Advanced Threat Protection clean
-- Anti-malware engine
-- Anti-malware engine clean
+- DLPByIncidentIdActionHits
+- DLPByIncidentIdMessages
+- DLPByIncidentIdPolicyFalsePositive
+- DLPByIncidentIdPolicyHits
+- DLPByIncidentIdPolicyOverride
+- DLPByIncidentIdRuleHits
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify DLP incident event types for DLP incident reports.
 
 You can specify multiple values separated by commas.
 
@@ -130,7 +188,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -146,7 +204,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -162,7 +220,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -171,14 +229,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProbeTag
-This parameter is reserved for internal Microsoft use.
+### -Source
+The Source parameter filters the report by workload. Valid values are:
+
+- EXCH: Exchange Online
+- ODB: OneDrive for Business
+- SPO: SharePoint Online
+- TEAMS
+
+You can specify multiple values separated by commas.
 
 ```yaml
-Type: String
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -193,10 +258,10 @@ The StartDate parameter specifies the start date of the date range.
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named

@@ -382,8 +382,8 @@ The EnableUnauthenticatedSender parameter enables or disables unauthenticated se
 
 To prevent these identifiers from being added to messages from specific senders, you have the following options:
 
-- Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
-- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
+- Allow the sender to spoof in the spoof intelligence policy. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spoofing-spoof-intelligence).
+- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-authentication-about#configure-email-authentication-for-domains-you-own).
 
 ```yaml
 Type: Boolean
@@ -429,8 +429,8 @@ The EnableViaTag parameter enables or disables adding the via tag to the From ad
 
 To prevent the via tag from being added to messages from specific senders, you have the following options:
 
-- Allow the sender to spoof. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
-- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-validation-and-authentication#configure-email-authentication-for-domains-you-own).
+- Allow the sender to spoof. For instructions, see [Configure spoof intelligence in Microsoft 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spoofing-spoof-intelligence).
+- If you own the sender's domain, configure email authentication for the domain. For more information, see [Configure email authentication for domains you own](https://learn.microsoft.com/microsoft-365/security/office-365-security/email-authentication-about#configure-email-authentication-for-domains-you-own).
 
 ```yaml
 Type: Boolean
