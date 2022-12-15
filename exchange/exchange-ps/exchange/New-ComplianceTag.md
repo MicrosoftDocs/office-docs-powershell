@@ -27,6 +27,7 @@ New-ComplianceTag [-Name] <String>
  [-Confirm]
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
+ [-FlowId <System.Guid>]
  [-Force]
  [-IsRecordLabel <Boolean>]
  [-IsRecordUnlockedAsDefault <Boolean>]
@@ -180,6 +181,22 @@ You use the second variable as the value for this parameter.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FlowId
+The FlowId parameter specifies the Power Automate flow to run at the end of the retention period. A valid value for this parameter is the GUID value of the flow.
+
+```yaml
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
