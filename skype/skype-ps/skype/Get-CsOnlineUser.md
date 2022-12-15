@@ -6,7 +6,7 @@ title: Get-CsOnlineUser
 schema: 2.0.0
 manager: bulenteg
 author: isrumnon
-ms.author: isrumnon@microsoft.com
+ms.author: isrumnon
 ms.reviewer:
 ---
 
