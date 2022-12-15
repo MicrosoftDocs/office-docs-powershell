@@ -1117,6 +1117,8 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureHtml
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your organization. Currently, the only way to make this parameter work again is to open a support ticket and ask to have Outlook roaming signatures disabled in your organization.
+
 The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
 
 To automatically add this email signature to HTML-formatted messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to $true.
