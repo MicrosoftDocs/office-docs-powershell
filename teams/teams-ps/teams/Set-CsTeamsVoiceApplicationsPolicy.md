@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantBusinessHoursChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's business hour schedule. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hour schedule.
+When set to True users affected by the policy will be allowed to change the auto attendant's business hours schedule. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hours schedule.
 
 ```yaml
 Type: Boolean
