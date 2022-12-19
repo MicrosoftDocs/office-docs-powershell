@@ -26,7 +26,6 @@ Set-CsTeamsVoiceApplicationsPolicy [-AllowAutoAttendantAfterHoursGreetingChange 
  [-AllowCallQueueTimeoutRoutingChange <Boolean>] [-AllowCallQueueNoAgentsRoutingChange <Boolean>]
  [-AllowCallQueueConferenceModeChange <Boolean>] [[-Identity] <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
 
 ## DESCRIPTION
 
@@ -36,7 +35,7 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 
 ### EXAMPLE 1
 
-```ps
+```powershell
 Set-CsTeamsVoiceApplicationsPolicy -Identity "SDA-CQ-OverflowGreeting" -AllowCallQueueOverflowSharedVoicemailGreetingChange $true
 ```
 
