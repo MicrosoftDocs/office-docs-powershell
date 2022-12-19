@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantBusinessHoursChange
 
-This parameter allows supervisors and users to change auto attendants' business hour schedule.
+This parameter allows supervisors and users to change auto attendants' business hours schedule.
 
 ```yaml
 Type: Boolean
