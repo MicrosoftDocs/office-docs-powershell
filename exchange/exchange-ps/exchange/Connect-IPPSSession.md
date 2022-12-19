@@ -144,7 +144,7 @@ After you successfully authenticate, the cmdlets in this session are mapped to t
 
 **Notes**:
 
-- Use an .onmicrosoft.com domain for the value of this parameter. Otherwise, you might encounter permission-related issues when you run commands in the app context.
+- Use the primary .onmicrosoft.com domain of the delegated organization for the value of this parameter.
 - You must use the AzureADAuthorizationEndpointUri parameter with this parameter.
 
 ```yaml
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization that's used in CBA. You must use an .onmicrosoft.com domain for the value of this parameter.
+The Organization parameter specifies the organization when you connect using CBA. You must use the primary .onmicrosoft.com domain of the organization for the value of this parameter.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 
