@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantBusinessHoursRoutingChange
 
-This parameter allows supervisors and users to change auto attendants' business hour call flow.
+This parameter allows supervisors and users to change auto attendants' business hours call flow.
 
 ```yaml
 Type: Boolean
