@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueOptOutChange
 
-This parameter allows supervisors and users to change the call queue opt-out setting that allows agents to opt-out of receiving calls.
+This parameter allows supervisors and users to change the call queue opt-out setting that allows agents to opt out of receiving calls.
 
 ```yaml
 Type: Boolean
