@@ -336,7 +336,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueuePresenceBasedRoutingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's presence-based routing option. When set to False (the default value) users affected by the policy will not be not allowed to change the call queue's presence-based routing option.
+When set to True users affected by the policy will be allowed to change the call queue's presence-based routing option. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's presence-based routing option.
 
 ```yaml
 Type: Boolean
