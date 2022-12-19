@@ -59,7 +59,7 @@ The Exchange Online PowerShell module uses the Active Directory Authentication L
 The following examples show how to use the Exchange Online PowerShell module with app-only authentication:
 
 > [!IMPORTANT]
-> In the following connection commands, you must use an `.onmicrosoft.com` domain for the _Organization_ parameter value.
+> In the following connection commands, use the primary `.onmicrosoft.com` domain for your organization as the value of the _Organization_ parameter.
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
