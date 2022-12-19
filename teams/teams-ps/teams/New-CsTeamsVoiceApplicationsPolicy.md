@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantAfterHoursRoutingChange
 
-This parameter allows supervisors and users to change auto attendants' after-hour call flow.
+This parameter allows supervisors and users to change auto attendants' after-hours call flow.
 
 ```yaml
 Type: Boolean
