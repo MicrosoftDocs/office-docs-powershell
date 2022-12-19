@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantBusinessHoursRoutingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's business hour call flow. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hour call flow.
+When set to True users affected by the policy will be allowed to change the auto attendant's business hours call flow. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hours call flow.
 
 ```yaml
 Type: Boolean
