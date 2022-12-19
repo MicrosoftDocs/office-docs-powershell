@@ -13,6 +13,7 @@ Modifies an existing Teams voice applications policy.
 
 ## SYNTAX
 
+```
 Set-CsTeamsVoiceApplicationsPolicy [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantHolidayGreetingChange <Boolean>] [-AllowAutoAttendantBusinessHoursChange <Boolean>] [-AllowAutoAttendantTimeZoneChange <Boolean>] [-AllowAutoAttendantLanguageChange <Boolean>] [-AllowAutoAttendantHolidaysChange <Boolean>] [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>] [-AllowAutoAttendantAfterHoursRoutingChange <Boolean>]
@@ -26,6 +27,7 @@ Set-CsTeamsVoiceApplicationsPolicy [-AllowAutoAttendantAfterHoursGreetingChange 
  [-AllowCallQueueTimeoutRoutingChange <Boolean>] [-AllowCallQueueNoAgentsRoutingChange <Boolean>]
  [-AllowCallQueueConferenceModeChange <Boolean>] [[-Identity] <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
 
 ## DESCRIPTION
 
