@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantAfterHoursRoutingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's after-hour call flow. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's after-hour call flow.
+When set to True users affected by the policy will be allowed to change the auto attendant's after-hours call flow. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's after-hours call flow.
 
 ```yaml
 Type: Boolean
