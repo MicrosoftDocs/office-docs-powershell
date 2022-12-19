@@ -360,7 +360,7 @@ When set to Monitor, users affected by the policy will be allowed to monitor and
 
 When set to Whisper, users affected by the policy will be allowed to monitor call sessions and whisper to an agent in the call.
 
-When set to Barge, users affected by the policy will be allowed to monitor call sessions, whisper to agent in the call, or join the call session.
+When set to Barge, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, or join the call session.
 
 When set to Takeover, users affected by the policy will be allowed to monitor call sessions, whisper to agent in the call, join the call session, or take over the call from agent.
 
