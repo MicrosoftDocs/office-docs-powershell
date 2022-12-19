@@ -14,7 +14,7 @@ Creates a new Teams voice applications policy. TeamsVoiceApplications policy gov
 
 ## SYNTAX
 
-```ps
+```
 New-CsTeamsVoiceApplicationsPolicy [-Identity] <String> [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]
  [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>] [-AllowAutoAttendantHolidayGreetingChange <Boolean>]
  [-AllowAutoAttendantBusinessHoursChange <Boolean>] [-AllowAutoAttendantTimeZoneChange <Boolean>]
@@ -51,7 +51,7 @@ The command shown in Example 1 creates a new per-user Teams voice applications p
 
 ### EXAMPLE 2
 
-```ps
+```powershell
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true 
 ```
 
