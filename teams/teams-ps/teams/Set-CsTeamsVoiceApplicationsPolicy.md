@@ -358,7 +358,7 @@ When set to Disabled (the default value), users affected by the policy will not 
 
 When set to Monitor, users affected by the policy will be allowed to monitor and listen to call sessions.
 
-When set to Whisper, users affected by the policy will be allowed to monitor call sessions and whisper to agent in the call.
+When set to Whisper, users affected by the policy will be allowed to monitor call sessions and whisper to an agent in the call.
 
 When set to Barge, users affected by the policy will be allowed to monitor call sessions, whisper to agent in the call, or join the call session.
 
