@@ -43,7 +43,7 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 
 ### EXAMPLE 1
 
-```ps
+```powershell
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-CQ-Moh -AllowCallQueueMusicOnHoldChange $true
 ```
 
