@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueOptOutChange
 
-When set to True users affected by the policy will be allowed to change the call queue opt-out setting that allows agents to opt-out of receiving calls. When set to False (the default value) users affected by the policy will not be allowed to change the call queue opt-out setting.
+When set to True users affected by the policy will be allowed to change the call queue opt-out setting that allows agents to opt out of receiving calls. When set to False (the default value) users affected by the policy will not be allowed to change the call queue opt-out setting.
 
 ```yaml
 Type: Boolean
