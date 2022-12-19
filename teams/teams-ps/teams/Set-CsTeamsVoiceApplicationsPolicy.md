@@ -286,7 +286,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueAgentOptChange
 
-When set to True users affected by the policy will be allowed to change an agent's opt-in status in the call queue. When set to False (the default value) users affected by the policy will not be will not be allowed to change an agent's opt-in status in the call queue.
+When set to True users affected by the policy will be allowed to change an agent's opt-in status in the call queue. When set to False (the default value) users affected by the policy will not be allowed to change an agent's opt-in status in the call queue.
 
 Note: The call queue must be configured to allow agent's to opt-out in order for this option to work.
 
