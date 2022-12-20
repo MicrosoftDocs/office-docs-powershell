@@ -47,6 +47,8 @@ Connect-IPPSSession
 ## DESCRIPTION
 This cmdlet allows you to create a remote PowerShell session to Exchange-related PowerShell environments other than Exchange Online PowerShell. For example, Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell (for organizations without Exchange Online mailboxes).
 
+For detailed connection instructions, including prerequisites, see [Connect to Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-scc-powershell).
+
 ## EXAMPLES
 
 ### Example 1
