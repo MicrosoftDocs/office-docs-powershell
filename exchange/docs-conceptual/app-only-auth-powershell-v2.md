@@ -174,9 +174,13 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
 
+     > [!NOTE]
+     > To make the application multi-tenant for delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
+
    - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
 
-     Note that you can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
+     > [!NOTE]
+     > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
      ![Register an application.](media/exo-app-only-auth-register-app.png)
 
