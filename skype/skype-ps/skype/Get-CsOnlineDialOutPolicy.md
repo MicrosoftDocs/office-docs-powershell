@@ -24,7 +24,7 @@ Get-CsOnlineDialOutPolicy [[-Identity] <string>] [<CommonParameters>]
 
 ### Filter
 ```
-Get-CsOnlineDialOutPolicy [-Filter <String>] [<CommonParameters>]
+Get-CsOnlineDialOutPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
