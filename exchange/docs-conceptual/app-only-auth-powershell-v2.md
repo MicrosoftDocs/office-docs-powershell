@@ -319,7 +319,7 @@ You have two options:
 > [!NOTE]
 > You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
 >
-> For multi-tenant applications in delegated scenarios, you need to assign permissions in each customer tenant.
+> For multi-tenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
 #### Assign Azure AD roles to the application
 
