@@ -41,7 +41,7 @@ $en2 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask
 Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -EmergencyNumbers @{add=$en1,$en2}
 ```
 
-This example first creates new Teams emergency number objects and then adds these emergency numbers to an existing Teams Emergency Call Routing policy.
+This example first creates new Teams emergency number objects and then adds these Teams emergency numbers to an existing Teams Emergency Call Routing policy.
 
 ### Example 3
 ```powershell
@@ -49,7 +49,7 @@ $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask
 Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -EmergencyNumbers @{remove=$en1}
 ```
 
-This example first creates new Teams emergency number objects and then removes that emergency number from an existing Teams Emergency Call Routing policy.
+This example first creates a new Teams emergency number object and then removes that Teams emergency number from an existing Teams Emergency Call Routing policy.
 
 ## PARAMETERS
 
