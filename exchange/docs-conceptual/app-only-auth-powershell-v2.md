@@ -48,7 +48,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >   - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
 >   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
 >
-> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
+> - Delegated scenarios are supported in **Exchange Online** using multi-tenant applications. The required steps are called out within the regular instructions in this article.
 
 ## How does it work?
 
@@ -175,7 +175,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
 
      > [!NOTE]
-     > To make the application multi-tenant for delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
+     > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
 
    - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
 
@@ -293,6 +293,22 @@ After you register the certificate with your application, you can use the privat
 
 4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
 
+### Step 4b: Exchange Online delegated scenarios only: Grant admin consent for the multi-tenant app
+
+If you made the application multi-tenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-azure-ad), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. You have two options:
+
+- **Allow the application to generate the admin consent prompt**: The first time the multi-tenant application is used to connect to Exchange Online in a tenant organization, it generates the admin consent prompt. **An admin in the customer tenant needs to be the first person to log in using the application so they can grant consent**.
+
+- **Use the admin consent URL to grant consent**: Before anyone uses the multi-tenant application to connect to Exchange Online in the tenant organization, open the following URL:
+
+  `https://login.microsoftonline.com/<tenant-id>/adminconsent?client_id=<client-id>&scope=https://outlook.office365.com/.default`
+
+  - `<tenant-id>` is the customer's tenant ID.
+  - `<client-id>` is the ID of the multi-tenant application.
+  - The default scope is used to grant application permissions.
+
+  For more information about the URL syntax, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-admin-consent#request-the-permissions-from-a-directory-admin).
+
 ### Step 5: Assign Azure AD roles to the application
 
 You have two options:
@@ -301,7 +317,9 @@ You have two options:
 - **Assign custom Exchange Online role groups to the application**: Currently, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
 
 > [!NOTE]
-> You can also combine both methods to assign permissions. Like using Azure AD roles for the "Exchange Recipient Administrator" role and assign your custom RBAC role to extend the permissions.
+> You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
+>
+> For multi-tenant applications in delegated scenarios, you need to assign permissions in each customer tenant.
 
 #### Assign Azure AD roles to the application
 
