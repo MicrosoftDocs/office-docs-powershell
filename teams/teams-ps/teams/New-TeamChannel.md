@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -MembershipType
-Channel membership type, Standard or Private.
+Channel membership type, Standard, Shared or Private.
 
 ```yaml
 Type: String
