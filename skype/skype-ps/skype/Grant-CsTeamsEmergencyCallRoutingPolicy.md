@@ -46,7 +46,8 @@ This cmdlet assigns a Teams Emergency Call Routing policy to a user, a group of 
 Grant-CsTeamsEmergencyCallRoutingPolicy -Identity user1 -PolicyName Test
 ```
 
-This example assigns a Teams Emergency Call Routing policy(Test) to a user(user1).
+This example assigns a Teams Emergency Call Routing policy (Test) to a user (user1).
+
 
 ### Example 2
 ```powershell
