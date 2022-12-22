@@ -54,7 +54,8 @@ This example assigns a Teams Emergency Call Routing policy (Test) to a user (use
 Grant-CsTeamsEmergencyCallRoutingPolicy -Group sales@contoso.com -Rank 10 -PolicyName Test
 ```
 
-This example assigns the Teams Emergency Call Routing policy(Test) to the members of the group sales@contoso.com.
+This example assigns the Teams Emergency Call Routing policy (Test) to the members of the group sales@contoso.com.
+
 
 ## PARAMETERS
 
