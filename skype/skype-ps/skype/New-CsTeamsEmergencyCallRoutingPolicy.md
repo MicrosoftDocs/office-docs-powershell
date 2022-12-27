@@ -30,7 +30,7 @@ This cmdlet creates a new Teams Emergency Call Routing policy with one or more e
 ### Example 1
 ```powershell
 $en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "911" -EmergencyDialMask "933" -OnlinePSTNUsage "USE911"
-New-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -EmergencyNumbers @{add=$en1} -AllowEnhancedEmergencyServices:$true -Description "test"
+New-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -EmergencyNumbers @{add=$en1} -AllowEnhancedEmergencyServices:$true -Description "test"
 ```
 
 This example first creates a new Teams emergency number object and then creates a Teams Emergency Call Routing policy with this emergency number object.
@@ -148,5 +148,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-CsTeamsEmergencyCallRoutingPolicy](Grant-CsTeamsEmergencyCallRoutingPolicy.md)
 
 [Remove-CsTeamsEmergencyCallRoutingPolicy](Remove-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Get-CsTeamsEmergencyCallRoutingPolicy](Get-CsTeamsEmergencyCallRoutingPolicy.md)
 
 [New-CsTeamsEmergencyNumber](New-CsTeamsEmergencyNumber.md)
