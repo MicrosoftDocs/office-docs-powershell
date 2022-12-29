@@ -249,7 +249,7 @@ The SourceFolder parameter specifies where to search for deleted items in the ma
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 - PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search all of these folders.
+If you don't use this parameter, the command will search all of these folders with the exception of DiscoveryHoldsItems, which will only be searched if manually specified using this parameter.
 
 ```yaml
 Type: RecoverableItemsFolderType
