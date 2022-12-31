@@ -122,7 +122,9 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `User` - to query for user accounts.
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
+- `SfBOnPremUser` - to query for users that are hosted on-premises (available from January 31, 2023, in the latest TPM versions at that time).
 - `Unknown` - to query for a user type that is not known.
+
 
 ```yaml
 Type: UserIdParameter
