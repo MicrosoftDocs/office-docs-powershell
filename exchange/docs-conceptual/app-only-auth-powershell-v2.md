@@ -295,11 +295,7 @@ After you register the certificate with your application, you can use the privat
 
 ### Step 4b: Exchange Online delegated scenarios only: Grant admin consent for the multi-tenant app
 
-If you made the application multi-tenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-azure-ad), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. You have two options:
-
-- **Allow the application to generate the admin consent prompt**: The first time the multi-tenant application is used to connect to Exchange Online in a tenant organization, it generates the admin consent prompt. **An admin in the customer tenant needs to be the first person to log in using the application so they can grant consent**.
-
-- **Use the admin consent URL to grant consent**: Before anyone uses the multi-tenant application to connect to Exchange Online in the tenant organization, open the following URL:
+If you made the application multi-tenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-azure-ad), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. To do this, generate an admin consent URL for each customer tenant. Before anyone uses the multi-tenant application to connect to Exchange Online in the tenant organization, an admin in the customer tenant should open the following URL:
 
   `https://login.microsoftonline.com/<tenant-id>/adminconsent?client_id=<client-id>&scope=https://outlook.office365.com/.default`
 
