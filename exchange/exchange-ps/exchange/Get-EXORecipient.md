@@ -343,6 +343,7 @@ The RecipientTypeDetails parameter filters the results by the specified recipien
 - RoomMailbox
 - SchedulingMailbox
 - SharedMailbox
+- SharedWithMailUser
 - TeamMailbox
 - UserMailbox
 

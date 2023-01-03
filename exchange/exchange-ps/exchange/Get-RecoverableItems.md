@@ -245,11 +245,12 @@ Accept wildcard characters: False
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
-- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold.
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 - PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search all of these folders.
+  If you don't use this parameter, the command will search these three folders.
+
+- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
 
 ```yaml
 Type: RecoverableItemsFolderType
