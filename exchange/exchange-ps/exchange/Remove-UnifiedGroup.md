@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Remove-UnifiedGroup cmdlet to remove Microsoft 365 Groups from your cloud-based organization.
 
-**Note**: You can't use this cmdlet to remove Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Delete group](https://learn.microsoft.com/graph/api/group-delete).
+**Note**: You can't use this cmdlet to remove Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts) or Azure managed identity. You can use Microsoft Graph instead. For more information, see [Delete group](https://learn.microsoft.com/graph/api/group-delete).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
