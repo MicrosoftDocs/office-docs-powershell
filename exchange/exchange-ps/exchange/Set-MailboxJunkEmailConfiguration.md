@@ -287,7 +287,7 @@ To empty the list of email addresses and domains, use the value $null.
 
 - You can't add sender email addresses from the same domain as the recipient's email address. All mailboxes in the global address list (GAL) are automatically considered as trusted senders.
 - You can't directly modify the Safe Recipients list by using this cmdlet. You use this parameter to modify the Safe Senders list, and the email addresses and domains are synchronized to the Safe Recipients list.
-- Safe domains aren't recognized in Exchange Online and Exchange Online Protection. For more information, see [KB3019657](https://support.microsoft.com/help/3019657).
+- In standalone EOP with directory synchronization, domain entries aren't synchronized by default, but you can enable synchronization for domains. For more information, see [Configure Content Filtering to Use Safe Domain Data: Exchange 2013 Help | Microsoft Learn](/exchange/configure-content-filtering-to-use-safe-domain-data-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty
