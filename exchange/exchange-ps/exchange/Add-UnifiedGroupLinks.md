@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Add-UnifiedGroupLinks cmdlet to add members, owners and subscribers to Microsoft 365 Groups in your cloud-based organization. To remove members, owners, and subscribers, use the Remove-UnifiedGroupLinks cmdlet. To modify other properties of Microsoft 365 Groups, use the Set-UnifiedGroup cmdlet.
 
-**Note**: You can't use this cmdlet to modify Microsoft 365 Group members, owners, or subscribers if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts). You can use Microsoft Graph instead. For more information, see [Group resource type](https://learn.microsoft.com/graph/api/resources/group).
+**Note**: You can't use this cmdlet to modify Microsoft 365 Group members, owners, or subscribers if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts) or Azure managed identity. You can use Microsoft Graph instead. For more information, see [Group resource type](https://learn.microsoft.com/graph/api/resources/group).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
