@@ -43,7 +43,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-New-AdaptiveScope -Name "Project X" -LocationType User -FilterConditions @{"Conditions" = @(@{"Conditions" = @(@{"Value" = "US"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}, @{"Value" = "CA"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}); "Conjunction" = "Or"}, @{"Value" = "Finance"; "Operator" = "NotEquals"; "Name" = "Department"}); "Conjunction" = "And"}
+New-AdaptiveScope -Name "Project X" -LocationType User -FilterConditions @{"Conditions" = @(@{"Conditions" = @(@{"Value" = "US"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}, @{"Value" = "Canada"; "Operator" = "Equals"; "Name" = "CountryOrRegion"}); "Conjunction" = "Or"}, @{"Value" = "Finance"; "Operator" = "Equals"; "Name" = "Department"}); "Conjunction" = "And"}
 ```
 
 This example create an adaptive query scope named Project X with the following details:
