@@ -260,7 +260,10 @@ The RecipientTypeDetails parameter filters the results by the specified group su
 - MailNonUniversalGroup
 - MailUniversalDistributionGroup
 - MailUniversalSecurityGroup
+- NonUniversalGroup (on-premises Exchange Server only)
 - RoomList
+- UniversalDistributionGroup (on-premises Exchange Server only)
+- UniversalSecurityGroup (on-premises Exchange Server only)
 
 You can specify multiple values separated by commas.
 

@@ -30,6 +30,7 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-City <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
+ [-Desks <RecipientIdParameter[]>]
  [-DisplayDeviceName <String>]
  [-Floor <System.Int32>]
  [-FloorLabel <String>]
@@ -194,6 +195,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Desks
+{{ Fill Desks Description }}
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisplayDeviceName
 The DisplayDeviceName parameter specifies the name of the display device in the room. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -301,9 +318,9 @@ Accept wildcard characters: False
 ```
 
 ### -MTREnabled
-**Note**: Currently, this parameter is informational only and results in no additional funcationality.
+**Note**: Currently, this parameter is informational only and results in no additional functionality.
 
-The MTREnabled parameter identfies the room as configured with a Microsoft Teams room system. You can add Teams room systems as audio sources in Teams meetings that involve the room. Valid values are:
+The MTREnabled parameter identifies the room as configured with a Microsoft Teams room system. You can add Teams room systems as audio sources in Teams meetings that involve the room. Valid values are:
 
 - $true: The room is has a Teams room system. You can add the Teams room system to Microsoft Teams meetings when selecting to join a meeting with room audio.
 - $false: The room is does not have a Teams room system. Users will join Teams meetings using their PC or mobile device audio instead of using room audio. This is the default value.
@@ -356,6 +373,8 @@ Accept wildcard characters: False
 ```
 
 ### -SpaceType
+**Note**: Currently, this parameter is not available in all organizations.
+
 The SpaceType parameter specifies the type of space. Valid values are:
 
 - CustomerSpace

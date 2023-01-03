@@ -405,11 +405,11 @@ The RecipientTypeDetails parameter filters the results by the specified recipien
 - EquipmentMailbox
 - LegacyMailbox
 - LinkedMailbox
-- LinkedRoomMailbox
+- LinkedRoomMailbox (Exchange 2013 or later and cloud)
 - MailUser
 - RoomMailbox
 - SharedMailbox
-- TeamMailbox
+- TeamMailbox (Exchange 2013 or later and cloud)
 - UserMailbox
 
 You can specify multiple values separated by commas.
