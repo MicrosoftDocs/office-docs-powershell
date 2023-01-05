@@ -37,7 +37,7 @@ Gets all the whiteboards in a tenant in a specified geography. Returns a list of
 PS C:\> Get-WhiteboardsForTenant -Geography Europe
 ```
 
-Gets all the whiteboards associated with the caller's tenant in Europe.
+Gets all the whiteboards associated with the caller's tenant in Europe as a list of whiteboard metadata objects.
 
 ### Output
 
@@ -123,8 +123,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-###
-The cmdlet returns a list of whiteboard metadata objects.
 
 ## NOTES
 
