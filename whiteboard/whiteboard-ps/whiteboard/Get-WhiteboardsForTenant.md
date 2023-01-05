@@ -36,7 +36,30 @@ Gets all the whiteboards in a tenant in a specified geography. Returns a list of
 ```powershell
 PS C:\> Get-WhiteboardsForTenant -Geography Europe
 ```
+
 Gets all the whiteboards associated with the caller's tenant in Europe.
+
+### Output
+
+```yaml
+baseApi:                   baseApi-value
+id:                        whiteboardId-value
+userId:                    userId-value
+folioId:                   folioId-value
+title:                     title-value
+createdBy:                 createdBy-value
+ownerId:                   ownerId-value
+ownerTenantId:             ownerTenantId-value
+isShared:                  isShared-value
+createdTime:               createdTime-value
+invitedTime:               invitedTime-value
+personalLastModifiedTime:  personalLastModifiedTime-value
+lastModifiedTime:          lastModifiedTime-value
+globalLastViewedTime:      globalLastViewedTime-value
+lastViewedTime:            lastViewedTime-value
+meetingId:                 meetingId-value
+eTag:                      eTag-value
+```
 
 ## PARAMETERS
 
@@ -100,28 +123,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-###  
-The cmdlet returns a list of whiteboard metadata objects.
 
-```yaml
-baseApi:                   baseApi-value
-id:                        whiteboardId-value
-userId:                    userId-value
-folioId:                   folioId-value
-title:                     title-value
-createdBy:                 createdBy-value
-ownerId:                   ownerId-value
-ownerTenantId:             ownerTenantId-value
-isShared:                  isShared-value
-createdTime:               createdTime-value
-invitedTime:               invitedTime-value
-personalLastModifiedTime:  personalLastModifiedTime-value
-lastModifiedTime:          lastModifiedTime-value
-globalLastViewedTime:      globalLastViewedTime-value
-lastViewedTime:            lastViewedTime-value
-meetingId:                 meetingId-value
-eTag:                      eTag-value
-```
+The cmdlet returns a list of whiteboard metadata objects.
 
 ## NOTES
 
