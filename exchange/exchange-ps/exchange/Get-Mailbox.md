@@ -623,14 +623,14 @@ The RecipientTypeDetails parameter filters the results by the specified mailbox 
 
 - DiscoveryMailbox
 - EquipmentMailbox
-- GroupMailbox
+- GroupMailbox (Exchange 2013 or later and cloud)
 - LegacyMailbox
 - LinkedMailbox
-- LinkedRoomMailbox
+- LinkedRoomMailbox (Exchange 2013 or later and cloud)
 - RoomMailbox
-- SchedulingMailbox
+- SchedulingMailbox (Exchange 2016 or later and cloud)
 - SharedMailbox
-- TeamMailbox
+- TeamMailbox (Exchange 2013 or later and cloud)
 - UserMailbox
 
 You can specify multiple values separated by commas.

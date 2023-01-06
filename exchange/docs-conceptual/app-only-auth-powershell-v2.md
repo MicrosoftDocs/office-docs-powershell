@@ -42,13 +42,13 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
 >   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >
->   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview)
+>   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following cmdlets:
 >   - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
 >   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
 >
-> - App-only authentication does not support delegation. Unattended scripting in delegation scenarios is supported with the Secure App Model. For more information, go [here](/powershell/partnercenter/multi-factor-auth#exchange).
+> - Delegated scenarios are supported in **Exchange Online** using multi-tenant applications. The required steps are called out within the regular instructions in this article.
 
 ## How does it work?
 
@@ -59,7 +59,7 @@ The Exchange Online PowerShell module uses the Active Directory Authentication L
 The following examples show how to use the Exchange Online PowerShell module with app-only authentication:
 
 > [!IMPORTANT]
-> In the following connection commands, you must use an `.onmicrosoft.com` domain for the _Organization_ parameter value.
+> In the following connection commands, use the primary `.onmicrosoft.com` domain for your organization as the value of the _Organization_ parameter.
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
@@ -174,9 +174,13 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
 
+     > [!NOTE]
+     > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
+
    - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
 
-     Note that you can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
+     > [!NOTE]
+     > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
 
      ![Register an application.](media/exo-app-only-auth-register-app.png)
 
@@ -289,6 +293,18 @@ After you register the certificate with your application, you can use the privat
 
 4. Close the current **Certificates & secrets** page, and then the **App registrations** page to return to the main <https://portal.azure.com/> page. You'll use it in the next step.
 
+### Step 4b: Exchange Online delegated scenarios only: Grant admin consent for the multi-tenant app
+
+If you made the application multi-tenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-azure-ad), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. To do this, generate an admin consent URL for each customer tenant. Before anyone uses the multi-tenant application to connect to Exchange Online in the tenant organization, an admin in the customer tenant should open the following URL:
+
+  `https://login.microsoftonline.com/<tenant-id>/adminconsent?client_id=<client-id>&scope=https://outlook.office365.com/.default`
+
+  - `<tenant-id>` is the customer's tenant ID.
+  - `<client-id>` is the ID of the multi-tenant application.
+  - The default scope is used to grant application permissions.
+
+  For more information about the URL syntax, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-admin-consent#request-the-permissions-from-a-directory-admin).
+
 ### Step 5: Assign Azure AD roles to the application
 
 You have two options:
@@ -297,7 +313,9 @@ You have two options:
 - **Assign custom Exchange Online role groups to the application**: Currently, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
 
 > [!NOTE]
-> You can also combine both methods to assign permissions. Like using Azure AD roles for the "Exchange Recipient Administrator" role and assign your custom RBAC role to extend the permissions.
+> You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
+>
+> For multi-tenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
 #### Assign Azure AD roles to the application
 

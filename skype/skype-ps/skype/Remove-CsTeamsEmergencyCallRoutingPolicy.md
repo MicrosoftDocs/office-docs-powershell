@@ -28,10 +28,10 @@ This cmdlet removes an existing Teams Emergency Call Routing policy instance.
 
 ### Example 1
 ```powershell
-Remove-CsTeamsEmergencyCallRoutingPolicy -Identity TestECRP
+Remove-CsTeamsEmergencyCallRoutingPolicy -Identity Test
 ```
 
-This example removes Teams Emergency Call Routing policy with identity TestECRP.
+This example removes Teams Emergency Call Routing policy with identity Test.
 
 ### Example 2
 ```powershell
