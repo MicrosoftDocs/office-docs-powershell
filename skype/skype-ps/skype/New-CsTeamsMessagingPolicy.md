@@ -24,7 +24,7 @@ New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartRepl
  [-Tenant <Guid>] [-AllowImmersiveReader <Boolean>] [-AllowUserTranslation <Boolean>]
  [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-AllowRemoveUser <Boolean>]
  [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Boolean>]
- [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-ChatPermissionRole <String>]
+ [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
  ```
 
 ## DESCRIPTION
@@ -397,6 +397,20 @@ Aliases:
 Required: False
 Position: Named
 Default value: Restricted
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSmartCompose
+Turn on this setting to let a user get text predictions for chat messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Con nombre
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -111,6 +111,10 @@ Supported settings for built-in labeling:
 
 - **OutlookDefaultLabel**: Outlook apps that support this setting apply a default label, or no label. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 
+- **TeamworkMandatory**: Outlook and Teams apps that support this setting can enable or disable mandatory labeling for meetings. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{TeamworkMandatory="True"}`. For more information about labeling meetings, see [Use sensitivity labels to protect calendar items, Teams meetings, and chat](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-meetings).
+
+- **teamworkdefaultlabelid**: Outlook and Teams apps that support this setting apply a default label, or no label for meetings. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{teamworkdefaultlabelid="General"}`. For more information about labeling meetings, see [Use sensitivity labels to protect calendar items, Teams meetings, and chat](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-meetings).
+
 - **HideBarByDefault**: For Office apps that support the sensitivity bar, don't display the sensitivity label name on the window bar title so that there's more space to display long file names. Just the label icon and color (if configured) will be displayed. Users can't revert this setting in the app. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
 
 Additionally, for Power BI:

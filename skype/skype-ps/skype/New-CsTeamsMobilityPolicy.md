@@ -85,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPAudioMobileMode
-When set to WifiOnly, prohibits the user from making, receiving calls or joining meetings using VoIP calls on the mobile device while on cellular data connection.
+When set to WifiOnly, prohibits the user from making and receiving calls or joining meetings using VoIP calls on the mobile device while on a cellular data connection. Possible values are: WifiOnly, AllNetworks.
+
 
 ```yaml
 Type: String
@@ -100,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPVideoMobileMode
-When set to WifiOnly, prohibits the user from making, receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on cellular data connection.
+When set to WifiOnly, prohibits the user from making and receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on a cellular data connection. Possible values are: WifiOnly, AllNetworks.
+
 
 ```yaml
 Type: String

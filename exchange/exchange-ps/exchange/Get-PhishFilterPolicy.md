@@ -46,7 +46,7 @@ The Get-PhishFilterPolicy cmdlet returns the following information:
 - AllowedToSpoof: The three possible values are Yes (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), No (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server), and Partial (messages that contain some spoofed sender email addresses in your organization are allowed from the source email server).
 - SpoofType: Indicates whether the domain is internal to your organization or external.
 
-For more information about spoof intelligence, see [Configure spoof intelligence in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/learn-about-spoof-intelligence).
+For more information about spoof intelligence, see [Configure spoof intelligence in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spoofing-spoof-intelligence).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

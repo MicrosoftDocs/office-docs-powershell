@@ -109,6 +109,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
 
+### [Get-SpoofIntelligenceInsight](Get-SpoofIntelligenceInsight.md)
+
 ### [Get-SpoofMailReport](Get-SpoofMailReport.md)
 
 ### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
@@ -296,6 +298,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
 
+### [New-QuarantinePermissions](New-QuarantinePermissions.md)
+
 ### [New-QuarantinePolicy](New-QuarantinePolicy.md)
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
@@ -392,6 +396,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
+### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
+
 ### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
 
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
@@ -473,7 +479,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-CASMailbox](Set-CASMailbox.md)
 
-### [set-CASMailboxPlan](set-CASMailboxPlan.md)
+### [Set-CASMailboxPlan](Set-CASMailboxPlan.md)
 
 ### [Set-ClientAccessRule](Set-ClientAccessRule.md)
 
@@ -1928,6 +1934,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DlpEdmSchema](Get-DlpEdmSchema.md)
 
+### [Get-DlpIncidentDetailReport](Get-DlpIncidentDetailReport.md)
+
 ### [Get-DlpKeywordDictionary](Get-DlpKeywordDictionary.md)
 
 ### [Get-DlpPolicy](Get-DlpPolicy.md)
@@ -2265,12 +2273,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ConnectionInformation](Get-ConnectionInformation.md)
 
-### [Get-CustomNudge](Get-CustomNudge.md)
-
-### [Get-CustomNudgeAssignment](Get-CustomNudgeAssignment.md)
-
-### [Get-CustomNudgeSettings](Get-CustomNudgeSettings.md)
-
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
 
 ### [Get-EXOMailbox](Get-EXOMailbox.md)
@@ -2294,20 +2296,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
-
-### [New-CustomNudge](New-CustomNudge.md)
-
-### [New-CustomNudgeAssignment](New-CustomNudgeAssignment.md)
-
-### [Remove-CustomNudge](Remove-CustomNudge.md)
-
-### [Remove-CustomNudgeAssignment](Remove-CustomNudgeAssignment.md)
-
-### [Set-CustomNudge](Set-CustomNudge.md)
-
-### [Set-CustomNudgeAssignment](Set-CustomNudgeAssignment.md)
-
-### [Set-CustomNudgeSettings](Set-CustomNudgeSettings.md)
 
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 

@@ -29,10 +29,27 @@ This cmdlet modifies an existing Teams Emergency Call Routing Policy. Teams Emer
 
 ### Example 1
 ```powershell
-Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -AllowEnhancedEmergencyServices:$false -Description "test"
+Set-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -AllowEnhancedEmergencyServices:$false -Description "test"
 ```
 
 This example modifies an existing Teams Emergency Call Routing Policy.
+
+### Example 2
+```powershell
+$en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "911" -EmergencyDialMask "933" -OnlinePSTNUsage "USE911"
+$en2 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "9112" -OnlinePSTNUsage "DKE911"
+Set-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -EmergencyNumbers @{add=$en1,$en2}
+```
+
+This example first creates new Teams emergency number objects and then adds these Teams emergency numbers to an existing Teams Emergency Call Routing policy.
+
+### Example 3
+```powershell
+$en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "9112" -OnlinePSTNUsage "DKE911"
+Set-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -EmergencyNumbers @{remove=$en1}
+```
+
+This example first creates a new Teams emergency number object and then removes that Teams emergency number from an existing Teams Emergency Call Routing policy.
 
 ## PARAMETERS
 
@@ -142,5 +159,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-CsTeamsEmergencyCallRoutingPolicy](Grant-CsTeamsEmergencyCallRoutingPolicy.md)
 
 [Remove-CsTeamsEmergencyCallRoutingPolicy](Remove-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Get-CsTeamsEmergencyCallRoutingPolicy](Get-CsTeamsEmergencyCallRoutingPolicy.md)
 
 [New-CsTeamsEmergencyNumber](New-CsTeamsEmergencyNumber.md)
