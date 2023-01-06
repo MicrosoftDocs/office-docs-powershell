@@ -96,6 +96,8 @@ The Member parameter specifies who you want to add to the role group. You can sp
 - Mail-enabled security groups (don't use in Security & Compliance PowerShell)
 - Security groups (on-premises Exchange only)
 
+You can't add security groups or mail-enabled security groups as members of the role group in the Microsoft Purview portal. You should add them via PowerShell with this parameter.
+
 You can use any value that uniquely identifies the user or group. For example:
 
 - Name

@@ -43,14 +43,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-EdgeSubscription -FileName "c:\EdgeServerSubscription.xml"
+New-EdgeSubscription -FileName "C:\Data\EdgeSubscription.xml"
 ```
 
 This example creates the Edge Subscription file. It should be run on your Edge Transport server.
 
 ### Example 2
 ```powershell
-$Temp = [System.IO.File]::ReadAllBytes('C:\EdgeServerSubscription.xml')
+$Temp = [System.IO.File]::ReadAllBytes('C:\Data\EdgeSubscription.xml')
 New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 
@@ -60,7 +60,7 @@ The first command reads the data from the Edge Subscription file and stores it i
 
 ### Example 3
 ```powershell
-New-EdgeSubscription -FileData ([System.IO.File]::ReadAllBytes('C:\EdgeServerSubscription.xml')) -Site "Default-First-Site-Name"
+New-EdgeSubscription -FileData ([System.IO.File]::ReadAllBytes('C:\Data\EdgeSubscription.xml')) -Site "Default-First-Site-Name"
 ```
 
 This example also imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name; however, the end result is accomplished using one command. You must run this command on the Mailbox server.

@@ -21,21 +21,21 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ```
 Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
- [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowUserDeleteChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-Allow [-ReadReceiptsEnabledType <String>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
- [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>] [-ChatPermissionRole <String>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
 ```
 
 ### Instance
 ```
 Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
- [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowUserDeleteChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-ReadReceiptsEnabledType <String>]
- [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
+ [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-AllowSmartCompose] <Boolean>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -198,6 +198,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserDeleteChat
+Turn this setting on to allow users to permanently delete their 1:1, group chat, and meeting chat as participants (this deletes the chat only for them, not other users in the chat). Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -449,6 +464,21 @@ Determines the Supervised Chat role of the user.  Set this to Full to allow the 
 Type: String
 Position: Named
 Default value: Restricted
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSmartCompose
+Turn on this setting to let a user get text predictions for chat messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Con nombre
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

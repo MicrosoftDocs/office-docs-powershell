@@ -68,7 +68,7 @@ This example adds a file block entry for the specified files that never expires.
 New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
 ```
 
-This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
+This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ The Entries parameter specifies the values that you want to add to the Tenant Al
 
 - FileHash: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 - Sender: A domain or email address value. For example, `contoso.com` or `michelle@contoso.com`.
-- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/microsoft-365/security/office-365-security/allow-block-urls#url-syntax-for-the-tenant-allowblock-list).
+- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -207,7 +207,7 @@ This parameter is available only in Exchange Online PowerShell.
 
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
-- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/configure-advanced-delivery).
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
 - Tenant: This is the default value.
 
 ```yaml

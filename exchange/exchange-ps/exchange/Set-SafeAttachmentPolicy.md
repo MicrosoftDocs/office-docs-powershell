@@ -35,7 +35,7 @@ Set-SafeAttachmentPolicy [-Identity] <SafeAttachmentPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-about).
 
 A safe attachment policy can be assigned to only one safe attachment rule by using the SafeAttachmentPolicy parameter on the New-SafeAttachmentRule or Set-SafeAttachmentRule cmdlets.
 
@@ -80,7 +80,7 @@ The Action parameter specifies the action for the safe attachment policy. Valid 
 - Allow: Deliver the message if malware is detected in the attachment and track scanning results. This value corresponds to **Monitor** for the **Safe Attachments unknown malware response** property of the policy in the admin center.
 - Block: Block the email message that contains the malware attachment. This is the default value.
 - Replace: Deliver the email message, but remove the malware attachment and replace it with warning text. This action will be deprecated. For more information, see [MC424901](https://admin.microsoft.com/AdminPortal/Home#/MessageCenter/:/messages/MC424901).
-- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [How Dynamic Delivery works](https://learn.microsoft.com/microsoft-365/security/office-365-security/dynamic-delivery-and-previewing#how-dynamic-delivery-works).
+- DynamicDelivery: Deliver the email message with a placeholder for each email attachment. The placeholder remains until a copy of the attachment is scanned and determined to be safe. For more information, see [Dynamic Delivery in Safe Attachments policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-about#dynamic-delivery-in-safe-attachments-policies).
 
 The value of this parameter is meaningful only when the value of the Enable parameter is $true (the default value is $false).
 

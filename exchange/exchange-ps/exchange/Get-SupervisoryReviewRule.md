@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-supervisoryreviewrule
 applicable: Exchange Online, Security & Compliance
-title: Exchange Online, Get-SupervisoryReviewRule
+title: Get-SupervisoryReviewRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda

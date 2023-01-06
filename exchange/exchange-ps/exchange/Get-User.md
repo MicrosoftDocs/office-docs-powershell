@@ -382,21 +382,24 @@ The RecipientTypeDetails parameter filters the results by the specified user sub
 - DisabledUser
 - DiscoveryMailbox
 - EquipmentMailbox
-- GuestMailUser
+- GuestMailUser (Exchange 2016 or later and cloud)
+- GroupMailbox (Exchange 2013 only)
 - LegacyMailbox
 - LinkedMailbox
+- LinkedRoomMailbox (Exchange 2013 or later and cloud)
 - LinkedUser
 - MailUser
-- PublicFolderMailbox
+- PublicFolderMailbox (Exchange 2013 or later and cloud)
 - RemoteEquipmentMailbox
 - RemoteRoomMailbox
 - RemoteSharedMailbox
-- RemoteTeamMailbox
+- RemoteTeamMailbox (Exchange 2013 or later and cloud)
 - RemoteUserMailbox
 - RoomMailbox
-- SchedulingMailbox
+- SchedulingMailbox (Exchange 2016 or later and cloud)
 - SharedMailbox
-- TeamMailbox
+- ShareWithMailUser (cloud only)
+- TeamMailbox (Exchange 2013 or later and cloud)
 - User
 - UserMailbox
 
