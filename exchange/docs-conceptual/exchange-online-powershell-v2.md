@@ -65,7 +65,8 @@ Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX ve
 
 - The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets in Exchange Online PowerShell:
   - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) on your client computer.
-  - If you don't use the _UseRPSSession_ switch when you connect to Exchange Online PowerShell, you can use _only_ the REST API cmdlets.
+  - If you don't use the _UseRPSSession_ switch when you connect to Exchange Online PowerShell, you have access to the REST API cmdlets _only_.
+  - Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
 - A few REST API cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
   - When you use the _UseCustomRouting_ switch, you can use only the following values for identity of the mailbox:
