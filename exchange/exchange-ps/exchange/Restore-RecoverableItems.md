@@ -46,6 +46,8 @@ Restore-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
  [-LastParentFolderID <String>]
  [-MaxParallelSize <Int32>]
  [-NoOutput]
+ [-PolicyTag <String[]>]
+ [-RestoreTargetFolder <String>]
  [-ResultSize <Unlimited>]
  [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
@@ -277,6 +279,42 @@ The NoOutput switch restores the deleted items directly without any command outp
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Cloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTag
+This parameter is available only in the cloud-based service.
+
+{{ Fill PolicyTag Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: Default
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestoreTargetFolder
+This parameter is available only in the cloud-based service.
+
+{{ Fill RestoreTargetFolder Description }}
+
+```yaml
+Type: String
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Online
 

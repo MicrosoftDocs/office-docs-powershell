@@ -36,6 +36,8 @@
           href: app-only-auth-powershell-v2.md
         - name: Connect using Azure managed identity
           href: connect-exo-powershell-managed-identity.md
+        - name: Connect using C#
+          href: connect-to-exo-powershell-c-sharp.md
         - name: Enable or disable access to Exchange Online PowerShell
           href: disable-access-to-exchange-online-powershell.md
         - name: Exchange cmdlet syntax
@@ -62,6 +64,8 @@
     - name: Security & Compliance PowerShell
       href: scc-powershell.md
       items:
+        - name: About the Exchange Online PowerShell module
+          href: exchange-online-powershell-v2.md
         - name: Connect to Security & Compliance PowerShell - modern auth and MFA
           href: connect-to-scc-powershell.md
         - name: App-only authentication for unattended scripts
@@ -77,6 +81,8 @@
     - name: Exchange Online Protection PowerShell
       href: exchange-online-protection-powershell.md
       items:
+        - name: About the Exchange Online PowerShell module
+          href: exchange-online-powershell-v2.md
         - name: Connect to Exchange Online Protection PowerShell - modern auth and MFA
           href: connect-to-exchange-online-protection-powershell.md
         - name: Exchange cmdlet syntax

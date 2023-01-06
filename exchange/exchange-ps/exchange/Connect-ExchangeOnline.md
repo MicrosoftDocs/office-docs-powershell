@@ -33,6 +33,7 @@ Connect-ExchangeOnline
  [[-Prefix] <String>]
  [[-CommandName] <String[]>]
  [[-FormatTypeName] <String[]>]
+ [-AccessToken <String>]
  [-AppId <String>]
  [-BypassMailboxAnchoring]
  [-Certificate <X509Certificate2>]
@@ -214,7 +215,7 @@ The DelegatedOrganization parameter specifies the customer organization that you
 
 After you successfully authenticate, the cmdlets in this session are mapped to the customer organization, and all operations in this session are done on the customer organization.
 
-**Note**: Use an .onmicrosoft.com domain for the value of this parameter. Otherwise, you might encounter permission-related issues when you run commands in the app context.
+**Note**: Use the primary .onmicrosoft.com domain of the delegated organization for the value of this parameter.
 
 ```yaml
 Type: String
@@ -275,6 +276,26 @@ Applicable: Exchange Online
 
 Required: False
 Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AccessToken
+**Note**: This parameter is available in version 3.1.0-Preview1 or later of the module.
+
+The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
+
+Depending on the type of access token, you need to use this parameter with the Organization, DelegatedOrganization, or UserPrincipalName parameter.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -570,7 +591,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use an .onmicrosoft.com domain for the value of this parameter.
+The Organization parameter specifies the organization when you connect using CBA or managed identity. You must use the primary .onmicrosoft.com domain of the organization for the value of this parameter.
 
 For more information about connecting with CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
 

@@ -42,12 +42,13 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-ApplyWaterMarkingFontName <String>]
  [-ApplyWaterMarkingFontSize <System.Int32>]
  [-ApplyWaterMarkingLayout <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout>]
- [-ColumnAssetCondition <String>]
  [-ApplyWaterMarkingText <String>]
+ [-ColumnAssetCondition <String>]
  [-Comment <String>]
  [-Conditions <MultiValuedProperty>]
  [-Confirm]
  [-ContentType <MipLabelContentType>]
+ [-DefaultContentLabel <String>]
  [-EncryptionAipTemplateScopes <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <System.Boolean>]
@@ -58,7 +59,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-EncryptionOfflineAccessDays <System.Int32>]
  [-EncryptionPromptUser <System.Boolean>]
  [-EncryptionProtectionType <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType>]
- [-EncryptionRightsDefinitions <String>]
+ [-EncryptionRightsDefinitions <EncryptionRightsDefinitionsParameter>]
  [-EncryptionRightsUrl <String>]
  [-EncryptionTemplateId <String>]
  [-Identity <MasterIdParameter>]
@@ -76,8 +77,21 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
  [-SiteAndGroupProtectionEnabled <System.Boolean>]
  [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
- [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType>]
+ [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy>]
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
+ [-TeamsAllowedPresenters <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters>]
+ [-TeamsAllowMeetingChat <Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode>]
+ [-TeamsBypassLobbyForDialInUsers <System.Boolean>]
+ [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
+ [-TeamsCopyRestrictionEnforced <System.Boolean>]
+ [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
+ [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
+ [-TeamsLobbyRestrictionEnforced <System.Boolean>]
+ [-TeamsPresentersRestrictionEnforced <System.Boolean>]
+ [-TeamsProtectionEnabled <System.Boolean>]
+ [-TeamsRecordAutomatically <System.Boolean>]
+ [-TeamsVideoWatermark <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues>]
+ [-TeamsWhoCanRecord <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -628,16 +642,34 @@ Accept wildcard characters: False
 ```
 
 ### -ContentType
-The ContentType parameter specifies where the sensivity label can be applied. Valid values are:
+The ContentType parameter specifies where the sensitivity label can be applied. Valid values are:
 
 - File, Email
 - Site, UnifiedGroup
 - PurviewAssets
+- Teamwork
+- SchematizedData
 
 Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into just "File" or just "Email" is not supported.
 
 ```yaml
 Type: MipLabelContentType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultContentLabel
+{{ Fill DefaultContentLabel Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -854,7 +886,7 @@ The EncryptionRightsDefinitions parameter specifies the rights users have when a
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false and the EncryptionProtectionType parameter value is Template.
 
 ```yaml
-Type: String
+Type: EncryptionRightsDefinitionsParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1186,7 +1218,7 @@ The SiteAndGroupProtectionPrivacy parameter specifies the privacy level for the 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
+Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1215,6 +1247,260 @@ These correspond to the following settings through the admin center:
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowedPresenters
+The TeamsAllowedPresenters parameter controls can present in Teams meetings. Valid values are:
+
+- Everyone
+- Organization
+- Organizer
+- RoleIsPresenter
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowMeetingChat
+The TeamsAllowMeetingChat parameter controls whether chat is available in Teams meetings. Valid values are:
+
+- Enabled
+- Disabled
+- Limited: Chat is available only for the duration of the call.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsBypassLobbyForDialInUsers
+The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial in users who join Teams meetings. Valid values are:
+
+- $true: Dial in users bypass the lobby when joining Teams meetings.
+- $false: Dial in users don't bypass the lobby when joining Teams meetings.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithSameLabelOnly
+{{ Fill TeamsChannelSharedWithSameLabelOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsCopyRestrictionEnforced
+The TeamsCopyRestrictionEnforced parameter controls whether chat messages in Teams meetings can be copied to the clipboard. Valid values are:
+
+- $true: Chat messages can be copied to the clipboard.
+- $false: Chat messages can't be copied to the clipboard.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsEndToEndEncryptionEnabled
+The TeamsEndToEndEncryptionEnabled parameter controls video stream encryption in Teams meetings. Valid values are:
+
+- $true: Video stream encryption is enabled.
+- $false: Video stream encryption is not enabled.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLobbyBypassScope
+The TeamsLobbyBypassScope parameter controls who bypasses the lobby when joining Teams meetings. Valid values are:
+
+- Everyone
+- Invited
+- Organization
+- OrganizationAndFederated
+- OrganizationExcludingGuests
+- Organizer
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLobbyRestrictionEnforced
+The TeamsLobbyRestrictionEnforced parameter controls whether participants bypass the lobby when joining Teams meetings. Valid values are:
+
+- $true: Users bypass the lobby when joining Teams meetings.
+- $false: Users don't bypass the lobby when joining Teams meetings.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsPresentersRestrictionEnforced
+The TeamsPresentersRestrictionEnforced parameter controls whether presenter restrictions are enabled in Teams meetings. Valid values are:
+
+- $true: Presenter restrictions are enabled in Teams meetings.
+- $false: Presenter restrictions aren't enabled in Teams meetings.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsProtectionEnabled
+The TeamsProtectionEnabled parameter controls whether Teams protection is enabled in Teams meetings. Valid values are:
+
+- $true: Teams protection is enabled in Teams meetings.
+- $false: Teams protection is not enabled in Teams meetings.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsRecordAutomatically
+The TeamsRecordAutomatically parameter controls whether Teams meetings are automatically recorded after they start. Valid values are:
+
+- $true: Teams meetings are automatically recorded after they start.
+- $false: Teams meetings are not automatically recorded.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsVideoWatermark
+The TeamsVideoWatermark parameter controls whether a watermark is shown in Teams meetings. Valid values are:
+
+- None
+- EnabledForContentSharing
+- EnabledForVideo
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsWhoCanRecord
+The TeamsWhoCanRecord parameter controls who can record Teams meetings. Valid values are:
+
+- None
+- Organizer
+- Coorganizers
+- Presenters
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

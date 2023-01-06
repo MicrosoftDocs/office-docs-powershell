@@ -38,7 +38,7 @@ Set-SafeAttachmentRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
-Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/atp-safe-attachments).
+Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-about).
 
 A safe attachment policy can be assigned only to one safe attachment rule.
 

@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRecordingStorageOutsideRegion
-Allow storing recording outside of region. All meeting recordings will be permanently stored in another region, and can't be migrated. For more info, see https://aka.ms/in-region.
+Allows storing recordings outside of the region. All meeting recordings will be permanently stored in another region, and can't be migrated. This does not apply to recordings saved in OneDrive or SharePoint.
 
 ```yaml
 Type: Boolean

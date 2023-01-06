@@ -157,16 +157,6 @@ Miscellaneous Exchange Online cmdlets that happen to be in the module are listed
 
 |Cmdlet|Comments|
 |---|---|
-|[Get-CustomNudge](/powershell/module/exchange/get-customnudge)|Available in v2.0.6-Preview5 or later|
-|[New-CustomNudge](/powershell/module/exchange/new-customnudge)|Available in v2.0.6-Preview5 or later|
-|[Remove-CustomNudge](/powershell/module/exchange/remove-customnudge)|Available in v2.0.6-Preview5 or later|
-|[Set-CustomNudge](/powershell/module/exchange/set-customnudge)|Available in v2.0.6-Preview5 or later|
-|[Get-CustomNudgeAssignment](/powershell/module/exchange/get-customnudgeassignment)|Available in v2.0.6-Preview5 or later|
-|[New-CustomNudgeAssignment](/powershell/module/exchange/new-customnudgeassignment)|Available in v2.0.6-Preview5 or later|
-|[Remove-CustomNudgeAssignment](/powershell/module/exchange/remove-customnudgeassignment)|Available in v2.0.6-Preview5 or later|
-|[Set-CustomNudgeAssignment](/powershell/module/exchange/set-customnudgeassignment)|Available in v2.0.6-Preview5 or later|
-|[Get-CustomNudgeSettings](/powershell/module/exchange/get-customnudgesettings)|Available in v2.0.6-Preview5 or later|
-|[Set-CustomNudgeSettings](/powershell/module/exchange/set-customnudgesettings)|Available in v2.0.6-Preview5 or later|
 |[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Replaced by [Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig).|
@@ -287,7 +277,7 @@ For more information about execution policies, see [About Execution Policies](/p
 #### Turn on Basic authentication in WinRM
 
 > [!NOTE]
-> As described [earlier in this article](#updates-for-version-300-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST-based connections.
+> As described [earlier in this article](#updates-for-version-300-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST-based connections to Exchange Online PowerShell.
 
 For remote PowerShell connections, WinRM needs to allow Basic authentication. **We do not send the username and password combination**. The Basic authentication **header** is required to send the session's OAuth token, because the client-side implementation of WinRM does not support OAuth.
 

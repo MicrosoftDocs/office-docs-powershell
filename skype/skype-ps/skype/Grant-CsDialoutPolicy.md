@@ -33,7 +33,8 @@ Grant-CsDialoutPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-R
 ```
 
 ## DESCRIPTION
-In Skype for Business Online and Microsoft Teams, outbound calling restriction policies are used to restrict the type of audio conferencing and end user PSTN calls that can be made by users in your organization.
+In Microsoft Teams, outbound calling restriction policies are used to restrict the type of audio conferencing and end user PSTN calls that can be made by users in your organization. The policies apply to all the different PSTN connectivity options for Microsoft Teams; Calling Plan, Direct Routing, and Operator Connect.
+
 To get all the available policies in your organization run `Get-CsOnlineDialOutPolicy`.
 
 ## EXAMPLES

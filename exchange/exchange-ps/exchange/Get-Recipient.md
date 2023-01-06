@@ -508,11 +508,11 @@ The RecipientTypeDetails parameter filters the results by the specified recipien
 - DiscoveryMailbox
 - DynamicDistributionGroup
 - EquipmentMailbox
-- GroupMailbox
-- GuestMailUser
+- GroupMailbox (Exchange 2013 or later and cloud)
+- GuestMailUser (Exchange 2016 or later and cloud)
 - LegacyMailbox
 - LinkedMailbox
-- LinkedRoomMailbox
+- LinkedRoomMailbox (Exchange 2013 or later and cloud)
 - MailContact
 - MailForestContact
 - MailNonUniversalGroup
@@ -520,17 +520,18 @@ The RecipientTypeDetails parameter filters the results by the specified recipien
 - MailUniversalSecurityGroup
 - MailUser
 - PublicFolder
-- PublicFolderMailbox
+- PublicFolderMailbox (Exchange 2013 or later and cloud)
 - RemoteEquipmentMailbox
 - RemoteRoomMailbox
 - RemoteSharedMailbox
-- RemoteTeamMailbox
+- RemoteTeamMailbox (Exchange 2013 or later and cloud)
 - RemoteUserMailbox
 - RoomList
 - RoomMailbox
-- SchedulingMailbox
+- SchedulingMailbox (Exchange 2016 or later and cloud)
 - SharedMailbox
-- TeamMailbox
+- SharedWithMailUser (cloud only)
+- TeamMailbox (Exchange 2013 or later and cloud)
 - UserMailbox
 
 You can specify multiple values separated by commas.

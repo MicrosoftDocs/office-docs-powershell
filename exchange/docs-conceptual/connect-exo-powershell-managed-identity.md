@@ -25,6 +25,17 @@ Unlike other connection methods using the Exchange Online PowerShell module, you
 
 The rest of this article explains how to connect using managed identity, and the requirements for creating and configuring the proper resources with managed identities in Azure.
 
+> [!NOTE]
+> In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
+>
+> - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
+> - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
+> - [Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)
+> - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
+> - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
+>
+> You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
+
 ## Connect to Exchange Online PowerShell using system-assigned managed identity
 
 After you've [Created and configured a system-assigned managed identity](#create-and-configure-a-system-assigned-managed-identity), use the following syntax to connect to Exchange Online PowerShell:
