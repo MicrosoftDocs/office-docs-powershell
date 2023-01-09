@@ -42,23 +42,41 @@ Gets all the whiteboards associated with the caller's tenant in Europe as a list
 ### Output
 
 ```yaml
-baseApi:                   baseApi-value
-id:                        whiteboardId-value
-userId:                    userId-value
-folioId:                   folioId-value
-title:                     title-value
-createdBy:                 createdBy-value
-ownerId:                   ownerId-value
-ownerTenantId:             ownerTenantId-value
-isShared:                  isShared-value
-createdTime:               createdTime-value
-invitedTime:               invitedTime-value
-personalLastModifiedTime:  personalLastModifiedTime-value
-lastModifiedTime:          lastModifiedTime-value
-globalLastViewedTime:      globalLastViewedTime-value
-lastViewedTime:            lastViewedTime-value
-meetingId:                 meetingId-value
-eTag:                      eTag-value
+baseApi                  : eu.whiteboard.microsoft.com
+id                       : 00000000-0000-0000-0000-000000000001
+userId                   : 00000000-0000-0000-0000-000000000000
+folioId                  : 00000000-0000-0000-0000-000000000000
+title                    : title1
+createdBy                : 00000000-0000-0000-0000-000000000000
+ownerId                  : 00000000-0000-0000-0000-000000000000
+ownerTenantId            : 00000000-0000-0000-0000-000000000000
+isShared                 : False
+createdTime              : 2022-09-10T19:59:03.3407011Z
+invitedTime              :
+personalLastModifiedTime : 2022-09-11T15:53:32.4494737Z
+lastModifiedTime         : 2022-09-11T15:53:32.4494737Z
+globalLastViewedTime     : 2022-09-11T15:55:28.7242817Z
+lastViewedTime           : 2022-09-11T15:55:28.7242817Z
+meetingId                :
+eTag                     : W/"datetime'2022-09-11T19%3A23%3A56.2845616Z'"
+
+baseApi                  : eu.whiteboard.microsoft.com
+id                       : 00000000-0000-0000-0000-000000000002
+userId                   : 00000000-0000-0000-0000-000000000000
+folioId                  : 00000000-0000-0000-0000-000000000000
+title                    : title2
+createdBy                : 00000000-0000-0000-0000-000000000000
+ownerId                  : 00000000-0000-0000-0000-000000000000
+ownerTenantId            : 00000000-0000-0000-0000-000000000000
+isShared                 : False
+createdTime              : 2023-01-06T19:23:04.8807147Z
+invitedTime              :
+personalLastModifiedTime : 2023-01-06T19:23:13.6235107Z
+lastModifiedTime         : 2023-01-06T19:23:13.6235107Z
+globalLastViewedTime     : 2023-01-06T19:23:56.0264268Z
+lastViewedTime           : 2023-01-06T19:23:56.0264268Z
+meetingId                :
+eTag                     : W/"datetime'2023-01-06T19%3A22%3A42.6717851Z'"
 ```
 
 ## PARAMETERS
