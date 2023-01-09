@@ -27,7 +27,7 @@ Get-WhiteboardsForTenant [-Geography] <String>
 
 ## DESCRIPTION
 
-Gets all the whiteboards in a tenant in a specified geography. Returns a list of whiteboard objects. The data returned is precalculated and therefore not realtime. Results are precalculated approximately every two weeks.
+Gets all the whiteboards in a tenant in a specified geography. Returns a list of whiteboard objects. The data is pre-calculated approximately every two weeks and is not realtime.
 
 ## EXAMPLES
 
