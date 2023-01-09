@@ -102,7 +102,7 @@ Applicable: Microsoft Whiteboard
 
 Saves incremental progress as the cmdlet runs. Use to resume a partially completed run. Use the same RunName on later calls to continue a previously canceled or failed run. Writes progress and results to .txt files in the current directory:
  - "Whiteboards-*.txt" contains the incremental results containing whiteboard objects for the tenant where * is the provided RunName. 
- - "WhiteboardAdminRun-*.txt" contains the current state current where * is the provided RunName. This file should not be modified manually.
+ - "WhiteboardAdminRun-*.txt" contains the current state where * is the provided RunName. This file should not be modified manually.
 
 ```yaml
 Type: String
