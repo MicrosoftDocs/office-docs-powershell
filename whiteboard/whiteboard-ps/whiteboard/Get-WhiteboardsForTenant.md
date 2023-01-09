@@ -101,7 +101,7 @@ Applicable: Microsoft Whiteboard
 
 ### -ForceAuthPrompt
 
-Optional. Always prompt for auth. Use to ignore cached credentials.
+Always prompt for authentication. Use to ignore cached credentials.
 
 ```yaml
 Type: SwitchParameter
