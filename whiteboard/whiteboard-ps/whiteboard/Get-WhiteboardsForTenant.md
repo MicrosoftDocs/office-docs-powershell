@@ -65,7 +65,7 @@ eTag:                      eTag-value
 
 ### -Geography
 
-Required. The geography to look for board owners in. Accepted values are: Europe, Australia, or Worldwide (all boards not in Australia or Europe).
+The geography to look for board owners in. Accepted values are Europe, Australia, or Worldwide (all boards not in Australia or Europe).
 
 ```yaml
 Type: String
