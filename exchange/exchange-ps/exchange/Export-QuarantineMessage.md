@@ -76,7 +76,11 @@ This example exports the quarantined file with the specified Identity value. The
 ## PARAMETERS
 
 ### -Identities
-{{ Fill Identities Description }}
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2...valueN`. Each value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
+
+You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
+
+When you use this parameter, the Identity parameter is required, but the value is ignored. For example, use the value 000 for the Identity parameter.
 
 ```yaml
 Type: QuarantineMessageIdentity[]
@@ -123,7 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompressOutput
-{{ Fill CompressOutput Description }}
+The CompressOutput switch exports the message as a compressed .zip file. You don't need to specify a value with this switch.
+
+For exported messages, including messages with attachments, the .zip file contains a folder that's named after the first GUID value in the Identity. The folder contains the .eml message that's named after the second GUID value in the Identity.
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceConversionToMime
-{{ Fill ForceConversionToMime Description }}
+The ForceConversionToMime switch converts exported plain text messages to MIME formatting. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -155,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-{{ Fill RecipientAddress Description }}
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
