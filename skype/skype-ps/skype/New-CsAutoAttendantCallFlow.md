@@ -41,10 +41,10 @@ This example creates a new call flow that renders the "Default Menu" menu.
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
 $menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts $menuPrompt -EnableDialByName
 $greeting = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
-$callFlow = New-CsAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting
+$callFlow = New-CsAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting -ForceListenMenuEnabled $True
 ```
 
-This example creates a new call flow that plays a greeting before rendering the "Default Menu" menu.
+This example creates a new call flow that plays a greeting before rendering the "Default Menu" menu with Force listen menu enabled.
 
 ## PARAMETERS
 
@@ -106,6 +106,23 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceListenMenuEnabled
+
+If True, Dtmf/Speech inputs will not be processed while the greeting/menu prompt is playing. It will enforce callers to listen to all menu options before making selection.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online
