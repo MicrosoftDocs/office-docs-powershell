@@ -60,6 +60,7 @@ The third command exports the message to the specified file using the message en
 
 **Notes**:
 
+- Don't enclose the Identity value in quotation marks (you'll get an error).
 - The `| select -ExpandProperty Eml`" part of the command specifies the whole message, including attachments.
 - You need to use the Out-File cmdlet to write the .eml message file with the required encoding. If you use the default PowerShell redirection operator ">" to write the output file, the default encoding is Unicode, which might not match the actual message encoding.
 
@@ -75,7 +76,11 @@ This example exports the quarantined file with the specified Identity value. The
 ## PARAMETERS
 
 ### -Identities
-{{ Fill Identities Description }}
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2...valueN`. Each value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
+
+You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
+
+When you use this parameter, the Identity parameter is required, but the value is ignored. For example, use the value 000 for the Identity parameter.
 
 ```yaml
 Type: QuarantineMessageIdentity[]
@@ -122,7 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompressOutput
-{{ Fill CompressOutput Description }}
+The CompressOutput switch exports the message as a compressed .zip file. You don't need to specify a value with this switch.
+
+For exported messages, including messages with attachments, the .zip file contains a folder that's named after the first GUID value in the Identity. The folder contains the .eml message that's named after the second GUID value in the Identity.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceConversionToMime
-{{ Fill ForceConversionToMime Description }}
+The ForceConversionToMime switch converts exported plain text messages to MIME formatting. You don't need to specify a value with this switch.
+
+This switch has no effect if the message is already encoded as Base64.
 
 ```yaml
 Type: SwitchParameter
@@ -154,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-{{ Fill RecipientAddress Description }}
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
