@@ -147,6 +147,8 @@ Accept wildcard characters: False
 ### -ForceConversionToMime
 The ForceConversionToMime switch converts exported plain text messages to MIME formatting. You don't need to specify a value with this switch.
 
+This switch has no effect if the message is already encoded as Base64.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
