@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whi
 applicable: Microsoft Whiteboard
 title: Get-WhiteboardsForTenant
 schema: 2.0.0
-author: srajabi
-ms.author: shlevari
+author: samanehrajabi
+ms.author: srajabi
 ms.reviewer:
 ---
 
@@ -19,8 +19,8 @@ Gets all the whiteboards associated with a tenant in a specified geography.
 ## SYNTAX
 
 ```powershell
-Get-WhiteboardsForTenant [-Geography] <String>
-  [-IncrementalRunName] <String>
+Get-WhiteboardsForTenant [-Geography <String>] 
+  [-IncrementalRunName <String>]
   [-ForceAuthPrompt]
   [<CommonParameters>]
 ```
@@ -33,15 +33,13 @@ Gets all the whiteboards in a tenant in a specified geography. Returns a list of
 
 ### EXAMPLE 1
 
+This command gets all the whiteboards associated with the caller's tenant in Europe as a list of whiteboard metadata objects.
+
 ```powershell
 PS C:\> Get-WhiteboardsForTenant -Geography Europe
 ```
 
-Gets all the whiteboards associated with the caller's tenant in Europe as a list of whiteboard metadata objects.
-
-### Output
-
-```yaml
+```Output
 baseApi                  : eu.whiteboard.microsoft.com
 id                       : 00000000-0000-0000-0000-000000000001
 userId                   : 00000000-0000-0000-0000-000000000000
@@ -83,7 +81,7 @@ eTag                     : W/"datetime'2023-01-06T19%3A22%3A42.6717851Z'"
 
 ### -Geography
 
-The geography to look for board owners in. Accepted values are Europe, Australia, or Worldwide (all boards not in Australia or Europe).
+The geography to look for board owners in. Accepted values are `Europe`, `Australia`, or `Worldwide` (all boards not in Australia or Europe).
 
 ```yaml
 Type: String
@@ -100,9 +98,10 @@ Applicable: Microsoft Whiteboard
 
 ### -IncrementalRunName
 
-Saves incremental progress as the cmdlet runs. Use to resume a partially completed run. Use the same RunName on later calls to continue a previously canceled or failed run. Writes progress and results to .txt files in the current directory:
- - "Whiteboards-*.txt" contains the incremental results containing whiteboard objects for the tenant where * is the provided RunName. 
- - "WhiteboardAdminRun-*.txt" contains the current state where * is the provided RunName. This file should not be modified manually.
+Saves incremental progress as the cmdlet runs. Use to resume a partially completed run. Use the same **IncrementalRunName** value on later calls to continue a previously canceled or failed run. Writes progress and results to `.txt` files in the current directory:
+
+- `Whiteboards-*.txt` contains the incremental results containing whiteboard objects for the tenant where `*` is the provided **IncrementalRunName**.
+- `WhiteboardAdminRun-*.txt` contains the current state where `*` is the provided **IncrementalRunName**. This file should not be modified manually.
 
 ```yaml
 Type: String
