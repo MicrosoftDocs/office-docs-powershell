@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -ForceListenMenuEnabled
 
-If True, Dtmf/Speech inputs will not be processed while the greeting/menu prompt is playing. It will enforce callers to listen to all menu options before making selection.
+If True, DTMF and speech inputs will not be processed while the greeting or menu prompt is playing. It will enforce callers to listen to all menu options before making a selection.
 
 ```yaml
 Type: Boolean
