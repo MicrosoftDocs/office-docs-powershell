@@ -13,7 +13,10 @@ ms.reviewer:
 # Remove-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the \`Remove-CsOnlineLisLocation\` cmdlet to remove an existing emergency location from the Location Information Service (LIS.) You can only remove locations that have no assigned users.
+Use the Remove-CsOnlineLisLocation cmdlet to remove an existing emergency location from the Location Information Service (LIS.) 
+
+You can only remove locations that have no assigned users or phone numbers. You can't remove the default location, you will have to delete the associated
+civic address which will delete the default location.
 
 ## SYNTAX
 ```
@@ -36,7 +39,7 @@ This example removes the location specified by its identity.
 
 ### -LocationId
 Specifies the unique identifier of the location to be deleted.
-Location identities can be discovered by using the \`Get-CsOnlineLisLocation\` cmdlet.
+Location identities can be discovered by using the Get-CsOnlineLisLocation cmdlet.
 
 ```yaml
 Type: Guid
@@ -107,7 +110,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### This cmdlet supports pipelined input from the \`Get-CsOnlineLisLocation\` cmdlet.
+### This cmdlet supports pipelined input from the Get-CsOnlineLisLocation cmdlet.
 
 ## OUTPUTS
 
