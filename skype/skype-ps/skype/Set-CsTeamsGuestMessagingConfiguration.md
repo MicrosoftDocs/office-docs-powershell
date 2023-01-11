@@ -21,7 +21,7 @@ TeamsGuestMessagingConfiguration determines the messaging settings for the guest
 ```
 Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
  [-AllowImmersiveReader <Boolean>] [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
- [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
+ [-AllowUserDeletChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -29,7 +29,7 @@ Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <
 ```
 Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
  [-AllowImmersiveReader <Boolean>] [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
- [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-Instance <PSObject>] [-Force]
+ [-AllowUserDeletChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-Instance <PSObject>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -162,6 +162,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUserDeleteChat
+Turn this setting on to allow users to permanently delete their 1:1, group chat, and meeting chat as participants (this deletes the chat only for them, not other users in the chat). Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
