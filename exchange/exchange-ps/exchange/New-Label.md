@@ -1266,6 +1266,8 @@ The TeamsAllowedPresenters parameter controls can present in Teams meetings. Val
 - Organizer
 - RoleIsPresenter
 
+Value is nullable to allow user to configure value in application.
+
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters
 Parameter Sets: (All)
@@ -1286,6 +1288,8 @@ The TeamsAllowMeetingChat parameter controls whether chat is available in Teams 
 - Disabled
 - Limited: Chat is available only for the duration of the call.
 
+Value is nullable to allow user to configure value in application.
+
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode
 Parameter Sets: (All)
@@ -1304,6 +1308,8 @@ The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for d
 
 - $true: Dial in users bypass the lobby when joining Teams meetings.
 - $false: Dial in users don't bypass the lobby when joining Teams meetings.
+
+Value is nullable to allow user to configure value in application.
 
 ```yaml
 Type: System.Boolean
@@ -1340,6 +1346,9 @@ The TeamsCopyRestrictionEnforced parameter controls whether chat messages in Tea
 - $true: Chat messages can be copied to the clipboard.
 - $false: Chat messages can't be copied to the clipboard.
 
+Value is nullable to allow user to configure value in application.
+
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -1358,6 +1367,9 @@ The TeamsEndToEndEncryptionEnabled parameter controls video stream encryption in
 
 - $true: Video stream encryption is enabled.
 - $false: Video stream encryption is not enabled.
+
+Value is nullable to allow user to configure value in application.
+
 
 ```yaml
 Type: System.Boolean
@@ -1382,6 +1394,8 @@ The TeamsLobbyBypassScope parameter controls who bypasses the lobby when joining
 - OrganizationExcludingGuests
 - Organizer
 
+Value is nullable to allow user to configure value in application.
+
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
 Parameter Sets: (All)
@@ -1401,6 +1415,8 @@ The TeamsLobbyRestrictionEnforced parameter controls whether participants bypass
 - $true: Users bypass the lobby when joining Teams meetings.
 - $false: Users don't bypass the lobby when joining Teams meetings.
 
+Value is nullable to allow user to configure value in application.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -1419,6 +1435,8 @@ The TeamsPresentersRestrictionEnforced parameter controls whether presenter rest
 
 - $true: Presenter restrictions are enabled in Teams meetings.
 - $false: Presenter restrictions aren't enabled in Teams meetings.
+
+Value is nullable to allow user to configure value in application.
 
 ```yaml
 Type: System.Boolean
@@ -1458,6 +1476,8 @@ The TeamsRecordAutomatically parameter controls whether Teams meetings are autom
 - $true: Teams meetings are automatically recorded after they start.
 - $false: Teams meetings are not automatically recorded.
 
+Value is nullable to allow user to configure value in application.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -1478,6 +1498,8 @@ The TeamsVideoWatermark parameter controls whether a watermark is shown in Teams
 - EnabledForContentSharing
 - EnabledForVideo
 
+Value is nullable to allow user to configure value in application.
+
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues
 Parameter Sets: (All)
@@ -1494,10 +1516,11 @@ Accept wildcard characters: False
 ### -TeamsWhoCanRecord
 The TeamsWhoCanRecord parameter controls who can record Teams meetings. Valid values are:
 
-- None
 - Organizer
 - Coorganizers
 - Presenters
+
+Value is nullable to allow user to configure value in application.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions
