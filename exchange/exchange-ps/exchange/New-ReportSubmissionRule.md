@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ### -SentTo
 The SentTo parameter specifies the email address of the reporting mailbox in Exchange Online where user reported messages are sent.
 
-The value of this parameter is meaningful only if the Microsoft integrated reporting experience is enabled, and user reported messages are sent to a reporting mailbox as configured in the \*-ReportSubmissionPolicy cmdlets:
+The value of this parameter is meaningful only if the Microsoft integrated reporting experience is enabled, and user reported messages are sent to a reporting mailbox as configured in the \*-ReportSubmissionPolicy cmdlets (either of the following scenarios):
 
 - Microsoft integrated reporting is enabled using Microsoft reporting tools in Outlook: `-EnableThirdPartyAddress $false -ReportJunkToCustomizedAddress $true -ReportNotJunkToCustomizedAddress $true -ReportPhishToCustomizedAddress $true`.
 - Microsoft integrated reporting is enabled using third-party reporting tools in Outlook: `-EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ReportJunkToCustomizedAddress $false -ReportNotJunkToCustomizedAddress $false -ReportPhishToCustomizedAddress $false`.
@@ -162,7 +162,7 @@ If you set the email address of the reporting mailbox in the Microsoft 365 Defen
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
 - Microsoft integrated reporting using third-party reporting tools in Outlook: ThirdPartyReportAddresses.
 
-When you use this cmdlet to set the email address of the reporting mailbox, the related parameter values in the *\-ReportSubmissionPolicy cmdlets are not updated. But, that doesn't matter, because only the value of the SentTo parameter specifies the email address of the reporting mailbox. You can update the related values in the \*-ReportSubmissionPolicy cmdlets for consistency and to avoid confusion.
+When you use this cmdlet to set the email address of the reporting mailbox, the related parameter values in the *\-ReportSubmissionPolicy cmdlets are not updated, which doesn't affect the functionality of the reporting mailbox. You should update the related values in the \*-ReportSubmissionPolicy cmdlets for consistency and to avoid confusion.
 
 ```yaml
 Type: RecipientIdParameter[]
