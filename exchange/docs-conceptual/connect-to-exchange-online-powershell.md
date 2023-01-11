@@ -64,6 +64,9 @@ Import-Module ExchangeOnlineManagement
 
 ## Step 2: Connect and authenticate
 
+> [!NOTE]
+> Connect commands will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+
 The command that you need to run uses the following syntax:
 
 ```powershell
