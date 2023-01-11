@@ -32,7 +32,7 @@ This cmdlet is the counterpart to the Connect-ExchangeOnline and Connect-IPPSSes
 
 This cmdlet disconnects any connections and clears the cache. After a successful disconnect, you can't successfully run any cmdlets for your organization.
 
-The disconnect command will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+Disconnect commands will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 
 ## EXAMPLES
 
