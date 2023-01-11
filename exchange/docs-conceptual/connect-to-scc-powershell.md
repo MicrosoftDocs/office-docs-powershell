@@ -173,6 +173,9 @@ To silently disconnect without a confirmation prompt, run the following command:
 Disconnect-ExchangeOnline -Confirm:$false
 ```
 
+> [!NOTE]
+> The disconnect command will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+
 ## How do you know you've connected successfully?
 
 The Security & Compliance PowerShell cmdlets are imported into your local Windows PowerShell session and tracked by a progress bar. If you don't receive any errors, you've connected successfully. A quick test is to run a Security & Compliance PowerShell cmdlet, for example, **Get-RetentionCompliancePolicy**, and see the results.
