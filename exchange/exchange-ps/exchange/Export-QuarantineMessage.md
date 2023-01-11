@@ -47,31 +47,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$e = Export-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7
-$e.BodyEncoding
-$e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii
+$e = Export-QuarantineMessage -Identity b28e0706-e50e-4c33-17e8-08daf2898d15\e939baaf-9dac-6126-2137-b82abf373159
+
+$txt = [System.Text.Encoding]::Ascii.GetString([System.Convert]::FromBase64String($e.eml))
+
+[IO.File]::WriteAllText("C:\My Documents\Quarantined Message.eml", $txt)
 ```
 
-This example exports the quarantined message with the specified Identity value.
+This example exports the specified message that was quarantined as spam:
 
-The first two commands determine the message encoding (the value of the BodyEncoding property in the output; for example, ascii).
+- The first command exports the quarantined message to the variable `$e`. The message is stored in the Eml property (the `$e.eml` value) as Base64 (based on the `$e.BodyEncoding` value).
+- The second command converts the Eml property from Base64 to ASCII text and stores the result in the variable `$txt`.
+- The third command writes the quarantined message to the specified .eml file.
 
-The third command exports the message to the specified file using the message encoding that you found in the previous commands.
-
-**Notes**:
-
-- Don't enclose the Identity value in quotation marks (you'll get an error).
-- The `| select -ExpandProperty Eml`" part of the command specifies the whole message, including attachments.
-- You need to use the Out-File cmdlet to write the .eml message file with the required encoding. If you use the default PowerShell redirection operator ">" to write the output file, the default encoding is Unicode, which might not match the actual message encoding.
+**Note**: Don't enclose the Identity value in quotation marks (you might get an error).
 
 ### Example 2
 ```powershell
-$e = Export-QuarantineMessage -Identity 9c6bb3e8-db9e-4823-9759-08d594179bd3\7fec89fe-41b0-ae67-4887-5bede017d111
-$bytes = [Convert]::FromBase64String($e.eml)
-[IO.File]::WriteAllBytes("C:\My Documents\Export1.txt", $bytes)
+$f = Export-QuarantineMessage -Identity 9c6bb3e8-db9e-4823-9759-08d594179bd3\7fec89fe-41b0-ae67-4887-5bede017d111
+
+$bytes = [Convert]::FromBase64String($f.eml)
+
+[IO.File]::WriteAllBytes("C:\My Documents\Quarantined Message with Attachments.eml", $bytes)
 ```
 
-This example exports the quarantined file with the specified Identity value. The first command exports the file to a Base 64 string. The next two commands convert the string to byte format and write it to the output file.
+This example exports the specified message with attachments that was quarantined as malware:
+
+- The first command exports the quarantined message and attachments to the variable `$f`. The message and attachments are stored in the Eml property (the `$f.eml` value) as Base64 (based on the `$f.BodyEncoding` value).
+- The second command converts the Eml property from Base64 to bytes and stores the result in the variable `$bytes`.
+- The third command writes the quarantined message and attachments to the specified .eml file.
 
 ## PARAMETERS
 
