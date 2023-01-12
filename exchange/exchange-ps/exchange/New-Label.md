@@ -666,7 +666,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultContentLabel
-{{ Fill DefaultContentLabel Description }}
+The DefaultContentLabel specifies a label that can be automatically applied to meetings created in a labeled Teams channel.
 
 ```yaml
 Type: String
@@ -1259,12 +1259,13 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsAllowedPresenters
-The TeamsAllowedPresenters parameter controls can present in Teams meetings. Valid values are:
+The TeamsAllowedPresenters parameter controls who can present in Teams meetings. Valid values are:
 
 - Everyone
 - Organization
 - Organizer
 - RoleIsPresenter
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters
@@ -1285,6 +1286,7 @@ The TeamsAllowMeetingChat parameter controls whether chat is available in Teams 
 - Enabled
 - Disabled
 - Limited: Chat is available only for the duration of the call.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode
@@ -1300,10 +1302,11 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsBypassLobbyForDialInUsers
-The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial in users who join Teams meetings. Valid values are:
+The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial-in users who join Teams meetings. Valid values are:
 
 - $true: Dial in users bypass the lobby when joining Teams meetings.
 - $false: Dial in users don't bypass the lobby when joining Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1340,6 +1343,8 @@ The TeamsCopyRestrictionEnforced parameter controls whether chat messages in Tea
 - $true: Chat messages can be copied to the clipboard.
 - $false: Chat messages can't be copied to the clipboard.
 
+The value $null (blank) allows users to configure this setting in the Teams app.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -1358,6 +1363,9 @@ The TeamsEndToEndEncryptionEnabled parameter controls video stream encryption in
 
 - $true: Video stream encryption is enabled.
 - $false: Video stream encryption is not enabled.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+The value $null (blank) allows users to configure this setting in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1381,6 +1389,7 @@ The TeamsLobbyBypassScope parameter controls who bypasses the lobby when joining
 - OrganizationAndFederated
 - OrganizationExcludingGuests
 - Organizer
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
@@ -1400,6 +1409,7 @@ The TeamsLobbyRestrictionEnforced parameter controls whether participants bypass
 
 - $true: Users bypass the lobby when joining Teams meetings.
 - $false: Users don't bypass the lobby when joining Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1419,6 +1429,7 @@ The TeamsPresentersRestrictionEnforced parameter controls whether presenter rest
 
 - $true: Presenter restrictions are enabled in Teams meetings.
 - $false: Presenter restrictions aren't enabled in Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1457,6 +1468,7 @@ The TeamsRecordAutomatically parameter controls whether Teams meetings are autom
 
 - $true: Teams meetings are automatically recorded after they start.
 - $false: Teams meetings are not automatically recorded.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1477,6 +1489,7 @@ The TeamsVideoWatermark parameter controls whether a watermark is shown in Teams
 - None
 - EnabledForContentSharing
 - EnabledForVideo
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues
@@ -1494,10 +1507,10 @@ Accept wildcard characters: False
 ### -TeamsWhoCanRecord
 The TeamsWhoCanRecord parameter controls who can record Teams meetings. Valid values are:
 
-- None
 - Organizer
 - Coorganizers
 - Presenters
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions
