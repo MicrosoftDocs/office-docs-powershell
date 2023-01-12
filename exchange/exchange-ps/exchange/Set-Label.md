@@ -648,7 +648,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultContentLabel
-{{ Fill DefaultContentLabel Description }}
+The DefaultContentLabel specifies a label that can be automatically applied to meetings created in a labeled Teams channel.
 
 ```yaml
 Type: String
