@@ -666,13 +666,15 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is only available on Mailbox servers.
 
-The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML disclaimer can't be added to a message. Valid values are:
+The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML disclaimer can't be applied to a message (for example, encrypted or signed messages where the contents can't be altered). Valid values are:
 
-- Wrap: The original message is wrapped in a new message envelope, and the disclaimer is used as the message body for the new message. This is the default value. Subsequent mail flow rules are applied to the new message envelope, not to the original message. Therefore, configure a rule with this action at a lower priority (a higher priority number) than other rules. If the original message can't be wrapped in a new message envelope, the original message isn't delivered. The message is returned to the sender in an non-delivery report (also known as an NDR or bounce message).
-- Ignore: The rule is ignored and the message is delivered without the disclaimer.
-- Reject: The message is rejected.
+- Wrap: A new message is created and the original message is added to it as an attachment. The disclaimer text is added to the new message, which is delivered to the recipients. This is the default value. <br> • If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules. <br> • If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
+- Ignore: The rule is ignored and the original message is delivered without the disclaimer.
+- Reject: The original message is returned to the sender in an NDR.
 
 If you don't use this parameter with the ApplyHtmlDisclaimerText parameter, the default value Wrap is used.
+
+ In Exchange Online, we recommend using the value Reject for this parameter.
 
 ```yaml
 Type: DisclaimerFallbackAction
