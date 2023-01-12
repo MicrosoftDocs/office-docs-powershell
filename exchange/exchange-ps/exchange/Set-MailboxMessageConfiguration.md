@@ -469,7 +469,7 @@ Accept wildcard characters: False
 ### -EchoGroupMessageBackToSubscribedSender
 This parameter is available only in the cloud-based service.
 
-The EchoGroupMessageBackToSubscribedSender parameter controls if Microsoft 365 Groups the user is subscribed to will send a copy of the message that the user sends back to the user. By default messages send to a Microsoft 365 Group do not get sent back to the sender.
+The EchoGroupMessageBackToSubscribedSender parameter controls whether Microsoft 365 Groups that the sender is subscribed to will send a copy of the message that is sent back to the sender. By default, messages sent to a Microsoft 365 Group do not get sent back to the sender.
 
 ```yaml
 Type: Boolean
