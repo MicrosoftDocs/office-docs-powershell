@@ -20,6 +20,10 @@ Gets one or more whiteboards from the Microsoft Whiteboard service and returns t
 
 Gets all the users in a tenant who own whiteboards in a specified geography.
 
+### [Get-WhiteboardsForTenant](Get-WhiteboardsForTenant.md)
+
+Gets all the whiteboards associated with a tenant in a specified geography.
+
 ### [Invoke-TransferAllWhiteboard](Invoke-TransferAllWhiteboards.md)
 
 Transfer ownership of all whiteboards owned by a user to another user.
