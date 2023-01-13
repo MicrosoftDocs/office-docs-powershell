@@ -13,7 +13,7 @@ ms.reviewer:
 # Remove-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the Remove-CsOnlineLisLocation cmdlet to remove an existing emergency location from the Location Information Service (LIS.) 
+Use the Remove-CsOnlineLisLocation cmdlet to remove an existing emergency location from the Location Information Service (LIS). 
 
 You can only remove locations that have no assigned users or phone numbers. You can't remove the default location, you will have to delete the associated
 civic address which will delete the default location.
