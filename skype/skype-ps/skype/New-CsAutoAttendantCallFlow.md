@@ -18,7 +18,7 @@ Use the New-CsAutoAttendantCallFlow cmdlet to create a new call flow.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [-ForceListenMenuEnabled <bool>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
