@@ -176,10 +176,10 @@ This example returns all the mailboxes that resolve from the ambiguous name reso
 
 ### Example 4
 ```powershell
-Get-Mailbox -Archive -Server Mailbox01
+Get-Mailbox -Archive -Database MBXDB01
 ```
 
-This example returns a summary list of all archive mailboxes on the Mailbox server named Mailbox01.
+This example returns a summary list of all archive mailboxes on the database named MBXDB01.
 
 ### Example 5
 ```powershell
@@ -688,6 +688,7 @@ Accept wildcard characters: False
 This parameter is available only in on-premises Exchange.
 
 The Server parameter filters the results by Exchange server. When you use this parameter, only mailboxes on the specified Exchange server are included in the results.
+The result could be a legacy value before migration. For better results please use -Database parameter instead.
 
 You can use any value that uniquely identifies the server. For example:
 
