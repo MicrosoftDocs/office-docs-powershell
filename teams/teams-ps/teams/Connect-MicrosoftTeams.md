@@ -34,12 +34,12 @@ Connect-MicrosoftTeams
 Connect-MicrosoftTeams 
 -TenantId <String> 
 -Certificate <X509Certificate2> 
--ApplicationId <String>
-[-LogLevel <LogLevel>]
-[-LogFilePath <String>]
-[-WhatIf]
-[-Confirm]
-[<CommonParameters>]
+-ApplicationId <String> 
+[-LogLevel <LogLevel>] 
+[-LogFilePath <String>] 
+[-WhatIf] 
+[-Confirm] 
+[<CommonParameters>] 
 ```
 
 ### ServicePrincipalCertificateThumbprint
