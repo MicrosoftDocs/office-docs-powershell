@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ### -RestoreTargetFolder
 This parameter is available only in the cloud-based service.
 
-{{ Fill RestoreTargetFolder Description }}
+The RestoreTargetFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
 
 ```yaml
 Type: String
