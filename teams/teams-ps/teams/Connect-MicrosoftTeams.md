@@ -273,7 +273,7 @@ Specifies the certificate that's used for application-based authentication. A va
 This parameter has been introduced with version 4.9.2-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
 ```yaml
-Type: CertificateParameter
+Type: X509Certificate2
 Parameter Sets: ServicePrincipalCertificate
 Aliases: CertificateThumbprint
 
