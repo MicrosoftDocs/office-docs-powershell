@@ -179,7 +179,7 @@ This example returns all the mailboxes that resolve from the ambiguous name reso
 Get-Mailbox -Archive -Database MBXDB01
 ```
 
-This example returns a summary list of all archive mailboxes on the database named MBXDB01.
+This example returns a summary list of all archive mailboxes in the database named MBXDB01.
 
 ### Example 5
 ```powershell
