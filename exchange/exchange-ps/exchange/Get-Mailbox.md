@@ -688,7 +688,6 @@ Accept wildcard characters: False
 This parameter is available only in on-premises Exchange.
 
 The Server parameter filters the results by Exchange server. When you use this parameter, only mailboxes on the specified Exchange server are included in the results.
-The result could be a legacy value before migration. For better results please use -Database parameter instead.
 
 You can use any value that uniquely identifies the server. For example:
 
@@ -700,6 +699,8 @@ You can use any value that uniquely identifies the server. For example:
 You can't use this parameter with the Anr, Database, or Identity parameters.
 
 The ServerName and ServerLegacyDN properties for a mailbox may not be updated immediately after a mailbox move within a database availability group (DAG). To get the most up-to-date values for these mailbox properties, run the command `Get-Mailbox <Identity> | Get-MailboxStatistics | Format-List Name,ServerName,ServerLegacyDN`.
+
+**Note**: The result from this parameter could be a legacy value before migration. For better results, use the Database parameter instead.
 
 ```yaml
 Type: ServerIdParameter
