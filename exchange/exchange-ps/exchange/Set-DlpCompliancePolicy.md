@@ -705,7 +705,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyTemplateInfo
-{{ Fill PolicyTemplateInfo Description }}
+The PolicyTemplateInfo specifies the built-in or custom DLP policy templates to use in the DLP policy.
+
+For more information about DLP policy templates, see [What the DLP policy templates include](https://learn.microsoft.com/microsoft-365/compliance/what-the-dlp-policy-templates-include).
 
 ```yaml
 Type: PswsHashtable
