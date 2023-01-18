@@ -58,7 +58,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-Place -Identity "Conference Room 01" -IsWheelChairAccessible $true -AudioDeviceName PolyCom -VideoDeviceName "InFocus WXGA Projector"
+Set-Place -Identity "Conference Room 01" -IsWheelChairAccessible $true -AudioDeviceName PolyCom -ScreenDeviceName "InFocus WXGA Projector"
 ```
 
 The example adds the specified metadata to the room mailbox named Conference Room 01.
