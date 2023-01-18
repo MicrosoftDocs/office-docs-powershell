@@ -116,8 +116,8 @@ Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 This example demonstrates how to authenticate using a certificate object. The Certificate parameter is available from Teams PowerShell Module version 4.9.2-preview or later. For details about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
 ```powershell
-$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\example.pfx",$password)
-Connect-MicrosoftTeams -Certificate <%X509Certificate2 object%> -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\exampleCert.pfx",$password)
+Connect-MicrosoftTeams -Certificate $cert -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
 ```
 
 ### Example 6: Connect to MicrosoftTeams using Application-based Access Tokens
