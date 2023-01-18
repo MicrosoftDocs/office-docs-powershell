@@ -113,7 +113,7 @@ Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ### Example 5: Connect to MicrosoftTeams using a certificate object
-This example demonstrates how to authenticate using a certificate object. The Certificate parameter is available from Teams PowerShell Module version 4.9.2-preview or later. For details on Application-based authentication and supported cmdlets, please see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+This example demonstrates how to authenticate using a certificate object. The Certificate parameter is available from Teams PowerShell Module version 4.9.2-preview or later. For details about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
 ```powershell
 Connect-MicrosoftTeams -Certificate <%X509Certificate2 object%> -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
@@ -268,9 +268,9 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-Specifies the certificate that's used for application-based authentication. A valid value is the X509Certificate2 object value of the certificate.
+Specifies the certificate that is used for application-based authentication. A valid value is the X509Certificate2 object value of the certificate.
 
-This parameter has been introduced with version 4.9.2-preview. For more information about Application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+This parameter has been introduced with version 4.9.2-preview. For more information about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
 
 ```yaml
 Type: X509Certificate2
