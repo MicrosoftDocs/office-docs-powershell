@@ -33,6 +33,19 @@ Connect-MicrosoftTeams
 ```
 Connect-MicrosoftTeams 
 -TenantId <String> 
+-Certificate <X509Certificate2> 
+-ApplicationId <String> 
+[-LogLevel <LogLevel>] 
+[-LogFilePath <String>] 
+[-WhatIf] 
+[-Confirm] 
+[<CommonParameters>] 
+```
+
+### ServicePrincipalCertificateThumbprint
+```
+Connect-MicrosoftTeams 
+-TenantId <String> 
 -CertificateThumbprint <String> 
 -ApplicationId <String> 
 [-LogLevel <LogLevel>] 
@@ -99,7 +112,15 @@ This example demonstrates how to authenticate using a certificate thumbprint. Ap
 Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
 ```
 
-### Example 5: Connect to MicrosoftTeams using Application-based Access Tokens
+### Example 5: Connect to MicrosoftTeams using a certificate object
+This example demonstrates how to authenticate using a certificate object. The Certificate parameter is available from Teams PowerShell Module version 4.9.2-preview or later. For details about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+
+```powershell
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\exampleCert.pfx",$password)
+Connect-MicrosoftTeams -Certificate $cert -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+```
+
+### Example 6: Connect to MicrosoftTeams using Application-based Access Tokens
 This example demonstrates how to authenticate with an application using Access Tokens. Access Tokens can be retrieved via the login.microsoftonline.com endpoint. It requires two Access Tokens: "MS Graph" and "Skype and Teams Tenant Admin API" resources.
 
 Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
@@ -130,7 +151,7 @@ $teamsToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantI
 Connect-MicrosoftTeams -AccessTokens @("$graphToken", "$teamsToken")
 ```
 
-### Example 6: Connect to MicrosoftTeams using Access Tokens in the delegated flow
+### Example 7: Connect to MicrosoftTeams using Access Tokens in the delegated flow
 This example demonstrates how to sign in using Access Tokens. Admin can retrieve Access Tokens via the login.microsoftonline.com endpoint. It requires two tokens, MS Graph Access Token and Teams Resource token. 
 
 A delegated flow, such as Resource Owner Password Credentials (ROPC) or device code, must be used, with the following delegated app permissions required.
@@ -240,6 +261,23 @@ This parameter has been reintroduced with version 4.7.1-preview. For more inform
 Type: String
 Parameter Sets: ServicePrincipalCertificate
 Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Certificate
+Specifies the certificate that is used for application-based authentication. A valid value is the X509Certificate2 object value of the certificate.
+
+This parameter has been introduced with version 4.9.2-preview. For more information about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: ServicePrincipalCertificate
+Aliases: CertificateThumbprint
+
 Required: True
 Position: Named
 Default value: None
