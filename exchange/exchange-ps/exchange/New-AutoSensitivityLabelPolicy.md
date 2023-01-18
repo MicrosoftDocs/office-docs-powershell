@@ -363,7 +363,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyTemplateInfo
-{{ Fill PolicyTemplateInfo Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
