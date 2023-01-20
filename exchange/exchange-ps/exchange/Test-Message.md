@@ -68,6 +68,7 @@ You can specify multiple email addresses separated by commas.
 Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -83,6 +84,7 @@ The SendReportTo parameter specifies the target email address for the command re
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -98,6 +100,7 @@ The TransportRules switch specifies that you want to test mail flow rules. You d
 Type: SwitchParameter
 Parameter Sets: TransportRules
 Aliases:
+Applicable: Exchange Server 2013, Exchange Online
 
 Required: True
 Position: Named
@@ -113,6 +116,7 @@ The UnifiedDlpRules switch specifies that you want to unified DLP rules. You don
 Type: SwitchParameter
 Parameter Sets: UnifiedDLPRules
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -125,6 +129,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: TransportRules
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -143,6 +148,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named
@@ -158,6 +164,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -175,6 +182,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -190,6 +198,7 @@ The Sender parameter specifies the sender email address to use for the test mess
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -205,6 +214,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named
