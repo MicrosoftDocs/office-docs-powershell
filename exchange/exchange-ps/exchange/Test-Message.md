@@ -20,16 +20,27 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### UnifiedDLPRules
-```
-Test-Message -Recipients <Object> [-Sender <Object>] -SendReportTo <Object> [-UnifiedDLPRules] 
- [-Confirm] [-Force] [-MessageFileData <Byte[]>] [-WhatIf]  [<CommonParameters>]
-```
-
 ### TransportRules
 ```
-Test-Message -Recipients <Object> [-Sender <Object>] -SendReportTo <Object> [-TransportRules] [-UnifiedDLPRules] 
- [-Confirm] [-Force] [-MessageFileData <Byte[]>] [-WhatIf] [<CommonParameters>]
+Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> [-TransportRules]
+ [-Confirm]
+ [-Force]
+ [-MessageFileData <Byte[]>]
+ [-Sender <SmtpAddress>]
+ [-UnifiedDlpRules]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### UnifiedDLPRules
+```
+Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> [-UnifiedDlpRules]
+ [-Confirm]
+ [-Force]
+ [-MessageFileData <Byte[]>]
+ [-Sender <SmtpAddress>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +65,7 @@ The Recipients parameter specifies the recipient email address to use for the te
 You can specify multiple email addresses separated by commas.
 
 ```yaml
-Type: Object
+Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
 
@@ -69,7 +80,7 @@ Accept wildcard characters: False
 The SendReportTo parameter specifies the target email address for the command results.
 
 ```yaml
-Type: Object
+Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -176,7 +187,7 @@ Accept wildcard characters: False
 The Sender parameter specifies the sender email address to use for the test message.
 
 ```yaml
-Type: Object
+Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
 
