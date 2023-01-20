@@ -1,27 +1,27 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label
+online version: https://learn.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label
 applicable: Security & Compliance
-title: Set-Label
+title: New-Label
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-Label
+# New-Label
 
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-Label cmdlet to modify sensitivity labels in your organization.
+Use the New-Label cmdlet to create sensitivity labels in your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-Label [-Identity] <ComplianceRuleIdParameter>
+New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-AdvancedSettings <PswsHashtable>]
  [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
  [-ApplyContentMarkingFooterEnabled <System.Boolean>]
@@ -49,24 +49,24 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-Confirm]
  [-ContentType <MipLabelContentType>]
  [-DefaultContentLabel <String>]
- [-DisplayName <String>]
+ [-EncryptionAipTemplateScopes <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <System.Boolean>]
  [-EncryptionDoubleKeyEncryptionUrl <String>]
  [-EncryptionEnabled <System.Boolean>]
  [-EncryptionEncryptOnly <System.Boolean>]
+ [-EncryptionLinkedTemplateId <String>]
  [-EncryptionOfflineAccessDays <System.Int32>]
  [-EncryptionPromptUser <System.Boolean>]
  [-EncryptionProtectionType <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType>]
  [-EncryptionRightsDefinitions <EncryptionRightsDefinitionsParameter>]
  [-EncryptionRightsUrl <String>]
+ [-EncryptionTemplateId <String>]
+ [-Identity <MasterIdParameter>]
  [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
  [-MigrationId <String>]
- [-NextLabel <ComplianceRuleIdParameter>]
  [-ParentId <ComplianceRuleIdParameter>]
- [-PreviousLabel <ComplianceRuleIdParameter>]
- [-Priority <System.Int32>]
  [-SchematizedDataCondition <String>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
@@ -92,7 +92,6 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-TeamsRecordAutomatically <System.Boolean>]
  [-TeamsVideoWatermark <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues>]
  [-TeamsWhoCanRecord <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions>]
- [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -104,29 +103,18 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}','{"localeKey":"tooltip","Settings":[{"Key":"en-us","Value":"This is an example label"},{"Key":"de-de","Value":"Dies ist ein Beispieletikett"},{"Key":"es-es","Value":"Esta es una etiqueta de ejemplo"}]}'
+New-Label -DisplayName "My New label" -Name "New Label"
 ```
 
-This example sets the localized label name and label Tooltips for "Label1" in different languages (English, German, and Spanish).
-
-### Example 2
-```powershell
-Set-Label -Identity "Label1" -LocaleSettings '{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":""},{"Key":"de-de","Value":""},{"Key":"es-es","Value":""}]}','{"localeKey":"tooltip","Settings":[{"Key":"en-us","Value":""},{"Key":"de-de","Value":""},{"Key":"es-es","Value":""}]}'
-```
-
-This example removes the localized label name and label Tooltips for "Label1" in different languages (English, German, and Spanish).
+This example create a new label named "New Label" with a display name "My New Label".
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the sensitivity label that you want to modify. You can use any value that uniquely identifies the label. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
+### -Name
+The Name parameter specifies the unique name for the sensitivity label. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
-Type: ComplianceRuleIdParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -134,7 +122,39 @@ Applicable: Security & Compliance
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayName
+The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in any client that supports sensitivity labels. This includes Word, Excel, PowerPoint, Outlook, SharePoint, Teams, and Power BI.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tooltip
+The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -147,21 +167,21 @@ Some of the settings that you configure with this parameter are supported only b
 
 Supported settings for built-in labeling:
 
-- **Color**: Specifies a label color as a hex triplet code for the red, green, and blue (RGB) components of the color. Example: `Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{color="#40e0d0"}`. For more information, see [Configuring custom colors by using PowerShell](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configuring-custom-colors-by-using-powershell).
+- **Color**: Specifies a label color as a hex triplet code for the red, green, and blue (RGB) components of the color. Example: `New-Label -DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{color="#40e0d0"}`. For more information, see [Configuring custom colors by using PowerShell](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configuring-custom-colors-by-using-powershell).
 
-- **DefaultSharingScope**: Specifies the default sharing link type for a site when the label scope includes **Groups & sites**, and the default sharing link type for a document when the label scope includes **Files & emails**. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+- **DefaultSharingScope**: Specifies the default sharing link type for a site when the label scope includes **Groups & sites**, and the default sharing link type for a document when the label scope includes **Files & emails**. Available values are SpecificPeople, Organization, and Anyone. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
-- **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+- **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
-- **DefaultShareLinkToExistingAccess**: Specifies whether to override *DefaultSharingScope* and *DefaultShareLinkPermission* to instead set the default sharing link type to people with existing access with their existing permissions. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkToExistingAccess="True"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+- **DefaultShareLinkToExistingAccess**: Specifies whether to override *DefaultSharingScope* and *DefaultShareLinkPermission* to instead set the default sharing link type to people with existing access with their existing permissions. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultShareLinkToExistingAccess="True"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
-- **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `Set-Label -Identity General -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
+- **DefaultSubLabelId**: Specifies a default sublabel to be applied automatically when a user selects a parent label in Office apps. Example: `New-Label -DisplayName "Confidential" -Name "Confidential" -Tooltip "Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content." -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}`. For more information, see [Specify a default sublabel for a parent label](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#specify-a-default-sublabel-for-a-parent-label).
 
-- **SMimeEncrypt**: Specifies S/MIME encryption for Outlook. Available values are True, and False (the default). Example: `Set-Label -Identity "Confidential" -AdvancedSettings @{SMimeEncrypt="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
+- **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `New-Label -DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
 
-- **SMimeSign**: Specifies S/MIME digital signature for Outlook. Available values are True, and False (the default). Example: `Set-Label -Identity "Confidential" -AdvancedSettings @{SMimeSign="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
+- **SMimeEncrypt**: Specifies S/MIME encryption for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeEncrypt="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
 
-For more information to help you configure advanced settings for a label, see [PowerShell tips for specifying the advanced settings](https://learn.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
+- **SMimeSign**: Specifies S/MIME digital signature for Outlook. Available values are True, and False (the default). Example: `New-Label DisplayName "Confidential" -Name "Confidential" -Tooltip "Sensitive business data that could cause damage to the business if shared with unauthorized people." -AdvancedSettings @{SMimeSign="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
 
 ```yaml
 Type: PswsHashtable
@@ -592,7 +612,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MultiValuedProperty
+Type: MulitValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -663,8 +683,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisplayName
-The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in any client that supports sensitivity labels. This includes Word, Excel, PowerPoint, Outlook, SharePoint, Teams, and Power BI.
+### -EncryptionAipTemplateScopes
+The EncryptionAipTemplateScopes parameter specifies that the label is still published and usable in the AIP classic client. An example value is `"['allcompany@labelaction.onmicrosoft.com','admin@labelaction.onmicrosoft.com']"`.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -722,7 +744,13 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionDoubleKeyEncryptionUrl
-This parameter is reserved for internal Microsoft use.
+The feature for this parameter is currently in Public Preview, and is not available to everyone.
+
+The EncryptionDoubleKeyEncryptionUrl parameter specifies the Double Key Encryption endpoint URL.
+
+You can't remove the URL after the label has been created; you can only modify it.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
 Type: String
@@ -766,6 +794,22 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionLinkedTemplateId
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -874,6 +918,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EncryptionTemplateId
+The EncryptionTemplateId parameter lets you convert an existing protection template from Azure Information Protection to a new sensitivity label. Specify the template by its ID that you can identify by running the [Get-AipServiceTemplate](https://learn.microsoft.com/powershell/module/aipservice/get-aipservicetemplate) cmdlet from the [AIPService PowerShell module](https://learn.microsoft.com/powershell/module/aipservice).
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter is used to migrate an existing Azure Information Protection label by specifying a GUID value.
+
+```yaml
+Type: MasterIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LabelActions
 This parameter is reserved for internal Microsoft use.
 
@@ -891,12 +969,10 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleSettings
-The LocaleSettings parameter specifies one or more localized label names and label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
+The LocaleSettings parameter specifies one or more localized label names or label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax:
 
-- Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}`
-- Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de","Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
-
-To remove a language, you need to enter an empty value for that language.
+- Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en español"}]}`
+- Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de",Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
 
 ```yaml
 Type: MultiValuedProperty
@@ -927,22 +1003,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NextLabel
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ParentId
 The ParentId parameter specifies the parent label that you want this label to be under (a sublabel). You can use any value that uniquely identifies the parent sensitivity label. For example:
 
@@ -952,38 +1012,6 @@ The ParentId parameter specifies the parent label that you want this label to be
 
 ```yaml
 Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreviousLabel
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Priority
-The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A higher integer value indicates a higher priority.
-
-```yaml
-Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1052,7 +1080,7 @@ The SiteAndGroupProtectionAllowAccessToGuestUsers parameter enables or disables 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1073,7 +1101,7 @@ The SiteAndGroupProtectionAllowEmailFromGuestUsers parameter enables or disables
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1094,7 +1122,7 @@ The SiteAndGroupProtectionAllowFullAccess parameter enables or disables full acc
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1115,7 +1143,7 @@ The SiteAndGroupProtectionAllowLimitedAccess parameter enables or disables limit
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1136,7 +1164,7 @@ The SiteAndGroupProtectionBlockAccess parameter blocks access. Valid values are:
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1155,7 +1183,7 @@ The SiteAndGroupProtectionEnabled parameter enables or disables the Site and Gro
 - $false: The Site and Group Protection action is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1192,7 +1220,7 @@ The SiteAndGroupProtectionPrivacy parameter specifies the privacy level for the 
 This parameter is meaningful only when the SiteAndGroupProtectionEnabled parameter value is $true or $false.
 
 ```yaml
-Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
+Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1317,6 +1345,8 @@ The TeamsCopyRestrictionEnforced parameter controls whether chat messages in Tea
 - $true: Chat messages can be copied to the clipboard.
 - $false: Chat messages can't be copied to the clipboard.
 
+The value $null (blank) allows users to configure this setting in the Teams app.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -1336,6 +1366,8 @@ The TeamsEndToEndEncryptionEnabled parameter controls video stream encryption in
 - $true: Video stream encryption is enabled.
 - $false: Video stream encryption is not enabled.
 - $null (blank): Users configure this setting themselves in the Teams app.
+
+The value $null (blank) allows users to configure this setting in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1495,22 +1527,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tooltip
-The ToolTip parameter specifies the default tooltip and sensitivity label description that's seen by users. It the value contains spaces, enclose the value in quotation marks (").
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
@@ -1537,5 +1553,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[New-Label](https://learn.microsoft.com/powershell/module/exchange/new-label)
