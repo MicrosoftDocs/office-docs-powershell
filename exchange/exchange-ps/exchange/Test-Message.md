@@ -20,35 +20,16 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Default
+### UnifiedDLPRules
 ```
-Test-Message [-TransportRules]
- [-Confirm]
- [-WhatIf]
- [<CommonParameters>]
+Test-Message -Recipients <Object> [-Sender <Object>] -SendReportTo <Object> [-UnifiedDLPRules] 
+ [-Confirm] [-Force] [-MessageFileData <Byte[]>] [-WhatIf]  [<CommonParameters>]
 ```
 
 ### TransportRules
 ```
-Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> [-TransportRules]
- [-Confirm]
- [-Force]
- [-MessageFileData <Byte[]>]
- [-Sender <SmtpAddress>]
- [-UnifiedDlpRules]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### UnifiedDLPRules
-```
-Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> [-UnifiedDlpRules]
- [-Confirm]
- [-Force]
- [-MessageFileData <Byte[]>]
- [-Sender <SmtpAddress>]
- [-WhatIf]
- [<CommonParameters>]
+Test-Message -Recipients <Object> [-Sender <Object>] -SendReportTo <Object> [-TransportRules] [-UnifiedDLPRules] 
+ [-Confirm] [-Force] [-MessageFileData <Byte[]>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,10 +54,9 @@ The Recipients parameter specifies the recipient email address to use for the te
 You can specify multiple email addresses separated by commas.
 
 ```yaml
-Type: ProxyAddressCollection
-Parameter Sets: TransportRules, UnifiedDLPRules
+Type: Object
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -89,10 +69,9 @@ Accept wildcard characters: False
 The SendReportTo parameter specifies the target email address for the command results.
 
 ```yaml
-Type: RecipientIdParameter
-Parameter Sets: TransportRules, UnifiedDLPRules
+Type: Object
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -106,13 +85,12 @@ The TransportRules switch specifies that you want to test mail flow rules. You d
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default, TransportRules
+Parameter Sets: TransportRules
 Aliases:
-Applicable: Exchange Server 2013, Exchange Online
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -124,11 +102,10 @@ The UnifiedDlpRules switch specifies that you want to unified DLP rules. You don
 Type: SwitchParameter
 Parameter Sets: UnifiedDLPRules
 Aliases:
-Applicable: Exchange Online
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -137,11 +114,10 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: TransportRules
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -156,7 +132,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named
@@ -170,13 +145,12 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: TransportRules, UnifiedDLPRules
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -188,9 +162,8 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets: TransportRules, UnifiedDLPRules
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -203,10 +176,9 @@ Accept wildcard characters: False
 The Sender parameter specifies the sender email address to use for the test message.
 
 ```yaml
-Type: SmtpAddress
-Parameter Sets: TransportRules, UnifiedDLPRules
+Type: Object
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -222,7 +194,6 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named
