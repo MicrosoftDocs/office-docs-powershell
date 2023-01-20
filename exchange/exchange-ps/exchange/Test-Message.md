@@ -20,14 +20,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Default
-```
-Test-Message [-TransportRules]
- [-Confirm]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### TransportRules
 ```
 Test-Message -Recipients <ProxyAddressCollection> -SendReportTo <RecipientIdParameter> [-TransportRules]
@@ -74,7 +66,7 @@ You can specify multiple email addresses separated by commas.
 
 ```yaml
 Type: ProxyAddressCollection
-Parameter Sets: TransportRules, UnifiedDLPRules
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -90,7 +82,7 @@ The SendReportTo parameter specifies the target email address for the command re
 
 ```yaml
 Type: RecipientIdParameter
-Parameter Sets: TransportRules, UnifiedDLPRules
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -106,13 +98,13 @@ The TransportRules switch specifies that you want to test mail flow rules. You d
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default, TransportRules
+Parameter Sets: TransportRules
 Aliases:
 Applicable: Exchange Server 2013, Exchange Online
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -128,7 +120,7 @@ Applicable: Exchange Online
 
 Required: True
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -141,7 +133,7 @@ Applicable: Exchange Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -170,13 +162,13 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: TransportRules, UnifiedDLPRules
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -188,7 +180,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets: TransportRules, UnifiedDLPRules
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
@@ -204,7 +196,7 @@ The Sender parameter specifies the sender email address to use for the test mess
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: TransportRules, UnifiedDLPRules
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
