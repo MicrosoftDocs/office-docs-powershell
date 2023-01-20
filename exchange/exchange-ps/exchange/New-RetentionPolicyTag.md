@@ -120,7 +120,7 @@ This parameter is available only in Exchange Server 2010.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: RecipientIdParameter
 Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010
@@ -243,7 +243,7 @@ This parameter is available only in Exchange Server 2010.
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: RetentionPolicy
 Aliases:
 Applicable: Exchange Server 2010
