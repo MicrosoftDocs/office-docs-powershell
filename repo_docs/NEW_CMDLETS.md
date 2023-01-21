@@ -4,37 +4,26 @@ Cmdlet reference topics follow a very strict schema that's difficult to duplicat
 
 ## Step 1: Install platyPS
 
-**If you're running Windows 10 or Windows Server 2016 or later, you already have Windows PowerShell 5.1 installed, so installing platyPS is easy.**
-
-Run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
+On Windows 10, Windows Server 2016, or later, run the following command in an elevated Windows PowerShell window (a Windows PowerShell window you open by selecting **Run as administrator**):
 
 ```powershell
 Install-Module -Name platyPS -Scope CurrentUser
 ```
 
-If you're running an older version of Windows, you need to install Windows PowerShell 5.1 as described below before you can install platyPS.
+If you need to install platyPS on old versions of Windows (Windows 8.1 or Windows 2012 R2 or earlier), you need to install Windows PowerShell 5.1 before you can install platyPS. For instructions, see the [Install platyPS on older versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this article.
+
+If you need to install platyPS on really old versions of Windows (a server running a product that lacks support for WMF 5.1 or its requirements), see the [Install platyPS on really old versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this article.
 
 **Notes**:
 
-- You need platyPS v0.14.0 or later, released on or about April 3 2019. If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded (or run the command `Remove-Module platyPS`) and then run `Update-Module platyPS` from an elevated Windows PowerShell window.
+- You need platyPS v0.14.0 or later (released April 2019). If you have an earlier version of platyPS installed, close all open Windows PowerShell windows where the platyPS module is currently loaded and then run `Update-Module platyPS` from a new elevated Windows PowerShell window. Or, run the command `Remove-Module platyPS` and then run `Install-Module -Name platyPS -Scope CurrentUser` to get the current version.
 
-  For services that use remote PowerShell (Exchange), be aware of the following issues observed in different platyPS versions:
+  For products where all cmdlets aren't baked into the product module itself (Exchange), be aware of the following issues observed in different platyPS versions:
 
   - v0.14.0: Works fine.
-  - v0.14.1 and v0.14.2: Work fine, but produce bogus/nuisance errors using New-MarkdownHelp that can slow down operation. See this [platyPS GitHub issue](https://github.com/PowerShell/platyPS/issues/509) for details. This issue will likely be fixed in v2.0.0-Preview3.
+  - v0.14.1 and v0.14.2: Work fine, but produce bogus/nuisance errors using New-MarkdownHelp that can slow down operation. See this [platyPS GitHub issue](https://github.com/PowerShell/platyPS/issues/509) for details. This issue will likely be fixed in platyPS v2.0.0-Preview3.
 
-  If all of the cmdlets are baked into the module itself, you likely won't have these issues (no dependence on remote PowerShell), so it doesn't matter which version you use.
-
-- Older versions of Windows don't automatically include Windows PowerShell 5.1. For the following versions of Windows, you need to download and install the Windows Management Framework (WMF) 5.1 from <https://aka.ms/wmf5download>:
-  
-  - Windows Server 2012 or Windows Server 2012 R2
-  - Windows Server 2008 R2 SP1<sup>\*</sup>
-  - Windows 8.1
-  - Windows 7 Service SP1<sup>\*</sup>
-
-  <sup>\*</sup> Also requires the Microsoft .NET Framework 4.5 or later. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
-
-  If you need to install platyPS on really old versions of Windows (for example, a server running a product that lacks support for WMF 5.1 or its requirements), see the [Install platyPS on older versions of Windows](#install-platyps-on-older-versions-of-windows) section at the end of this topic.
+  If all cmdlets are baked into the product module itself, you likely won't have these issues, so it doesn't matter which version of platyPS you use.
 
 ## Step 2: Connect to the PowerShell environment that has the cmdlet
 
@@ -51,11 +40,12 @@ You probably know how to do this already, but the available workloads and connec
   - Exchange Online Protection: [Connect to Exchange Online Protection PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-protection-powershell)
   - Exchange Server: [Connect to Exchange servers using remote PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-servers-using-remote-powershell)
 
-**Notes**:
-
-- You might need to connect to the service in an elevated Windows PowerShell prompt (Teams and Exchange environments don't require this). The connection instructions topic should contain this and other connection requirements.
-
-- In Exchange environments, the cmdlets available to you are controlled by role-based access control (RBAC). Most cmdlets and parameters are available to administrators by default, but some aren't (for example, the "Mailbox Search" and "Mailbox Import Export" roles).
+> [!NOTE]
+> You might need to connect to the service in an elevated Windows PowerShell prompt (Teams and Exchange environments don't require this). The connection instructions article should contain this and other connection requirements.
+>
+> In Exchange environments, the cmdlets available to you are controlled by role-based access control (RBAC). Most cmdlets and parameters are available to administrators by default, but some aren't (for example, the "Mailbox Search" and "Mailbox Import Export" roles.
+>
+> In v3.0.0 or later of the EXO V3 module, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. If you omit the _UseRPSSession_ switch and connect in REST API mode, the **Type** value of most parameters will be the incorrect and unhelpful `Object` or `Object[]` values. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
 
 ## Step 3: Load platyPS in the PowerShell environment
 
@@ -68,7 +58,7 @@ Import-Module platyPS
 ### Step 4: Find your module name
 
 > [!NOTE]
-> This step is required only if you're interested in creating cmdlet reference topics for **all** available cmdlets in your product (the _Module_ parameter in `New-MarkdownHelp`). If you're going to manually specify the cmdlet names (the _Command_ parameter in `New-MarkdownHelp`), you can skip this step.
+> This step is required only if you're interested in creating cmdlet reference articles for **all** available cmdlets in the product (using the _Module_ parameter in `New-MarkdownHelp`). If you're going to manually specify the cmdlet names (using the _Command_ parameter in `New-MarkdownHelp`), you can skip this step.
 
 platyPS needs the name of the loaded PowerShell module or snap-in that contains the cmdlets you want to update. To find the name, run the following command:
 
@@ -103,20 +93,20 @@ Script     2.2.5      PowerShellGet                       {Find-Command, Find-Ds
 Script     2.0.0      PSReadline                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption, Remove-PSReadLineKeyHandler, ...
 ```
 
-For services that use remote PowerShell (Exchange), the module name is a temporary value that changes every time you connect. In this output, the module name is `tmp_byivwzpq.e1k`, but yours will be different.
+For services that use remote connections (Exchange), the module name is a temporary value that changes every time you connect. In the example output, the module name is `tmp_byivwzpq.e1k`, but yours will be different.
 
 For Microsoft Teams, the module name is always `MicrosoftTeams`.
 
 Either way, take note of your module name. You'll need it in the next steps.
 
-### Step 5: Verify your PSSession variable name
+### Step 5: Store your PSSession in a variable
 
 > [!NOTE]
-> This step is required in Exchange or other products that use remote PowerShell. **If you're using a product where all of the cmdlets are baked into the module itself, you can skip this step**.
+> This step is required in products that use remote connections to retrieve cmdlets (Exchange). **If you're using a product where all of the cmdlets are baked into the module itself, you can skip this step**.
+>
+> As described earlier, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. Although the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet is a reasonable replacement for Get-PSSession in REST API mode, the output doesn't work with the _Session_ parameter in **New-MarkdownHelp**. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
 
-Check the details of your connection instructions, but your session information is stored in a variable. For example, in the Exchange connection instructions, the variable is `$Session`. You'll use this variable name in later steps.
-
-**If you connected via a custom script or your remote PowerShell session variable isn't apparent, do the following steps**:
+Do the following steps to store the remote PowerShell connection information to a variable:
 
 1. Run the following command to find your session:
 
@@ -153,7 +143,7 @@ Check the details of your connection instructions, but your session information 
 
 You have two choices:
 
-- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple but could take a while, and you'll end up with dozens or possibly hundreds of cmdlets files you don't need. The basic syntax is:
+- **Dump _all_ cmdlets in the module/snap-in to files**: This is simple but could take a while, and you'll end up with dozens or possibly hundreds of cmdlet files you don't need. The basic syntax is:
 
   ```powershell
   New-MarkdownHelp -Module <ModuleName> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
@@ -176,12 +166,12 @@ You have two choices:
 
 - \<ModuleName\> is the value you found in [Step 4](#step-4-find-your-module-name) (for example, `tmp_byivwzpq.e1k` or `MicrosoftTeams`).
 
-- \<PSSessionVariableName\> is the remote PowerShell session variable from [Step 5](#step-5-verify-your-your-pssession-variable-name) (for example, `$Session`) _and is required only if the connection uses remote PowerShell_.
+- \<PSSessionVariableName\> is the session variable from [Step 5](#step-5-store-your-pssession-in-a-variable) (for example, `$Session`) _and is required only if the cmdlets aren't baked into the module_.
 
   > [!IMPORTANT]
-  > Failure to use the _Session_ parameter in remote PowerShell environments that need it leads to weird results in the topic files. For example:
+  > Failure to use the _Session_ parameter in environments that need it leads to weird results in the topic file output. For example:
   >
-  > - Multiple syntax blocks/parameter sets aren't recognized and are collapsed into one big block
+  > - Multiple syntax blocks/parameter sets aren't recognized and are collapsed into one big block.
   > - The Type value is Object for all parameters.
   > - The Required value is False for all parameters.
   > - And more.
@@ -293,6 +283,9 @@ Most of the attributes and values are generated automatically by platyPS. The on
 
 - **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS **or any other PowerShell utility** (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
 
+> [!NOTE]
+> If the **Type** value for parameters is `Object`, then something is wrong. In Exchange Online environments, see [Step 2](#step-2-connect-to-the-powershell-environment-that-has-the-cmdlet) for an explanation of remote PowerShell mode vs. REST API mode.
+
 ### Step 8: Add the new cmdlet topic files to the repository
 
 When you're done editing the topics, upload them to GitHub. Note that you need to fork, upload your files to your fork, then submit a Pull Request.
@@ -391,16 +384,31 @@ After you're done editing the TOC files:
 
 - <https://learn.microsoft.com/powershell/module/microsoft.powershell.core/get-module>
 
-### Install platyPS on older versions of Windows (WMF 3.0 or 4.0)
+### Install platyPS on older versions of Windows
 
 > [!NOTE]
-> These procedures aren't required on Windows 10 or later, Windows Server 2016 or later, or other versions of Windows where WMF 5.1 is already installed.
+> The procedures in this section aren't required in current versions of Windows (Windows 10, Windows Server 2016, or later) or other versions of Windows where the WMF 5.1 is already installed.
 
-To install platyPS on very old Windows clients or servers that are using PowerShell 3.0 or 4.0 and don't have access to the **Install-Module** cmdlet, do the steps in this section.
+The following older versions of Windows don't automatically include Windows PowerShell 5.1, but they support it. You need to download and install the Windows Management Framework (WMF) 5.1 from <https://aka.ms/wmf5download> on these versions of Windows:
+
+- Windows 8.1
+- Windows Server 2012 or Windows Server 2012 R2
+- Windows 7 Service Pack 1 (SP1)<sup>1,</sup><sup>2</sup>
+- Windows Server 2008 R2 SP1<sup>1,</sup><sup>2</sup>
+
+- <sup>1</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
+- <sup>2</sup> Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+
+### Install platyPS on really old versions of Windows (WMF 3.0 or 4.0)
+
+> [!NOTE]
+> The procedures in this section aren't required in current versions of Windows (Windows 10, Windows Server 2016, or later) or other versions of Windows where the WMF 5.1 is already installed.
+
+To install platyPS for use with products that require PowerShell 3.0 or 4.0 and don't initially have access to the **Install-Module** cmdlet, do the steps in this section.
 
 1. Download and install PowerShellGet. The steps are described in [Installing PowerShellGet](https://learn.microsoft.com/powershell/scripting/gallery/installing-psget) and are summarized here as follows:
 
-   a. **PowerShell 3.0 only**: Run the following command in an elevated Windows PowerShell window:
+   a. **PowerShell 3.0 only**: On the target computer, run the following command in an elevated Windows PowerShell window:
 
       ```powershell
       [Environment]::SetEnvironmentVariable(
@@ -422,30 +430,30 @@ To install platyPS on very old Windows clients or servers that are using PowerSh
       - `PackageManagement\<VersionFolder>\<FilesAndFolders>`
       - `PowerShellGet\<VersionFolder>\<FilesAndFolders>`
 
-      You need to move the \<FilesAndFolders\> out from under the \<VersionFolder\> and delete the now empty \<VersionFolder\> so the contents of the folders look like this:
+   d. Move the \<FilesAndFolders\> out from under the \<VersionFolder\> and delete the now empty \<VersionFolder\> so the contents of the folders look like this:
 
       - `PackageManagement\<FilesAndFolders>`
       - `PowerShellGet\<FilesAndFolders>`
 
-2. Delete the following folders from your computer or move them to a remote location for safekeeping:
+2. On the target computer, delete the following folders or move them to a remote location for safekeeping:
 
    - `C:\Program Files\WindowsPowerShell\Modules\PackageManagement`
    - `C:\Program Files\WindowsPowerShell\Modules\PowerShellGet`
 
-3. Copy the `PackageManagement` and `PowerShellGet` folders that you downloaded and fixed in Step 1 to `C:\Program Files\WindowsPowerShell\Modules`.
+3. Copy the `PackageManagement` and `PowerShellGet` folders that you downloaded and fixed in Step 1b to `C:\Program Files\WindowsPowerShell\Modules` on the target computer.
 
-   You should now have the following folders again:
+   You should have the following folders on the target computer:
 
    - `C:\Program Files\WindowsPowerShell\Modules\PackageManagement`
    - `C:\Program Files\WindowsPowerShell\Modules\PowerShellGet`
 
-4. From an elevated Windows PowerShell window, run the following command:
+4. From an elevated Windows PowerShell window on the target computer, run the following command:
 
    ```powershell
    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
    ```
 
-5. Now you can finally install platyPS by running the usual command:
+5. Now you can finally install platyPS on the target computer by running the usual command:
 
    ```powershell
    Install-Module -Name platyPS -Scope CurrentUser
