@@ -637,7 +637,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 
 ## NOTES
 
-These changes are currently only rolled out in commercial environments and are **not** applicable to government environments.
+These changes are currently only rolled out in commercial environments at present and will be applicable to government environments starting 31st of March 2023.
 
 ## RELATED LINKS
 
