@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 
-For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments at present and will be applicable to government environments starting March 31, 2023.):
+For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
 
 - GUID
 - SIP address
@@ -211,7 +211,7 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later:
 
-In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments at present and will be applicable to government environments starting March 31, 2023.):
+In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
 
 - AccountType
 - AccountEnabled
@@ -472,7 +472,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (note that these changes are only rolled out in commercial environments at present and will be applicable to government environments starting March 31, 2023.):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
 
 *New user attributes*:
 
@@ -637,7 +637,7 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 
 ## NOTES
 
-These changes are only rolled out in commercial environments at present and will be applicable to government environments starting March 31, 2023.
+These changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.
 
 ## RELATED LINKS
 
