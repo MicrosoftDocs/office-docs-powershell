@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 
-For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that These changes are only rolled out in commercial environments at present and will be applicable to government environments starting March 31, 2023.):
+For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments at present and will be applicable to government environments starting March 31, 2023.):
 
 - GUID
 - SIP address
