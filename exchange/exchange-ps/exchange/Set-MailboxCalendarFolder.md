@@ -297,6 +297,7 @@ To specify a date/time value for this parameter, use either of the following opt
 - You use this parameter on the shared calendar in delegate's mailbox. For example, `Set-MailboxCalendarFolder -Identity "delegate@contoso.com:\Calendar\Name of shared calendar" -SharedCalendarSyncStartDate`. The word `...\Calendar\...` is in the language that the user sees in Outlook (for example, in German, the word is `...\Kalendar\...`).
 - Users need to have FullDetails, Editor, or Delegate access to the specified shared calendar.
 - Setting this parameter might cause events in the shared calendar to briefly disappear from view while the calendar is resynchronized.
+- The value set on the -SharedCalendarSyncStartDate is used when initializing the Calendar folder sync. After that, every newly added/updated/deleted item is processed and synced, regardless of that date setting.
 
 ```yaml
 Type: DateTime
