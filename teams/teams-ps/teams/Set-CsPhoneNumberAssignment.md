@@ -77,13 +77,13 @@ This example assigns the Direct Routing phone number +1 (425) 555-1225 to the re
 
 ### Example 6
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting
+Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+14255551000;ext=1234" -PhoneNumberType DirectRouting
 ```
-This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=100 to the user user4@contoso.com.
+This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=1234 to the user user4@contoso.com.
 
 ### Example 7
 ```powershell
-Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=100" -PhoneNumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occured }
+Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=1234" -PhoneNumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occured }
 ```
 This example shows how to use Try/Catch and ErrorAction to perform error checking on the assignment cmdlet failing.
 
