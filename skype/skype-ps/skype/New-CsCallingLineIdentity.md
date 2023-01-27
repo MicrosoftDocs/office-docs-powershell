@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
-**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resourcethe as soon as possible.
+**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
 
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, Service, LineUri, and Resource.
 
