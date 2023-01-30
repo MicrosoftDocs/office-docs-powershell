@@ -219,6 +219,8 @@ To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a datab
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
+**Note**: To restore the contents of a primary mailbox to an archive mailbox, use the TargetRootFolder parameter to specify the archive mailbox folders to migrate the content to. This content will be visible after it's restored. If you don't use this parameter, the restored content is not visible because it's mapped to locations in the archive mailbox that aren't visible to users.
+
 ## EXAMPLES
 
 ### Example 1
@@ -1005,6 +1007,8 @@ Accept wildcard characters: False
 
 ### -TargetRootFolder
 The TargetRootFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
+
+**Note**: To restore the contents of a primary mailbox to an archive mailbox, use this parameter to specify the archive mailbox folders to migrate the content to. This content will be visible after it's restored. If you don't use this parameter, the restored content is not visible because it's mapped to locations in the archive mailbox that aren't visible to users.
 
 ```yaml
 Type: String
