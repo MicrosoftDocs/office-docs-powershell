@@ -219,7 +219,7 @@ To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a datab
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-If you're looking to restore the contents of a Primary mailbox to an archive mailbox, use this parameter to specify the archive mailbox folders you wish the content to be migrated to and to be visible upon restore. In the absence of this parameter, as archive mailbox hides default folders, the contents on being restored won't be visible as they will be mapped to locations in the Archive mailbox that aren't visible to the end user.
+If you're looking to restore the contents of a primary mailbox to an archive mailbox, use this parameter to specify the archive mailbox folders you wish the content to be migrated to and to be visible upon restore. In the absence of this parameter, as the archive mailbox hides default folders, the contents on being restored won't be visible as they will be mapped to locations in the archive mailbox that aren't visible to the end user.
 
 ## EXAMPLES
 
