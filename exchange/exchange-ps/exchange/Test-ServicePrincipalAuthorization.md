@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Test-ServicePrincipalAuthorization cmdlet to test 
+Use the Test-ServicePrincipalAuthorization cmdlet to test role-based access control (RBAC) for Applications. For more information, see [Role Based Access Control for Applications in Exchange Online](https://learn.microsoft.com/Exchange/permissions-exo/application-rbac).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,10 +36,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Test-ServicePrincipalAuthorization -Identity "DemoB" -Resource "Test Mailbox" | Format-Table
 ```
 
-{{ Add example description here }}
+This example tests the RBAC for Applications permissions assigned to DemoB on the mailbox named Test Mailbox
 
 ## PARAMETERS
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-{{ Fill Organization Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter
@@ -101,7 +101,12 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-{{ Fill Resource Description }}
+The Resource parameter specifies the target mailbox where the scoped permissions apply. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Distinguished name (DN)
+- Canonical DN
+- GUID
 
 ```yaml
 Type: UserIdParameter
