@@ -674,8 +674,6 @@ The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML
 
 If you don't use this parameter with the ApplyHtmlDisclaimerText parameter, the default value Wrap is used.
 
- In Exchange Online, we recommend using the value Reject for this parameter.
-
 ```yaml
 Type: DisclaimerFallbackAction
 Parameter Sets: (All)
