@@ -21,7 +21,7 @@ TeamsGuestMessagingConfiguration determines the messaging settings for the guest
 ```
 Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
  [-AllowImmersiveReader <Boolean>] [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
- [-AllowUserDeletChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
+ [-AllowUserDeleteChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
