@@ -210,7 +210,7 @@ This example connects to customer organizations in the following scenarios:
 
 ### Connect to Exchange Online PowerShell using managed identity
 
-Managed identity is currently supported for Azure Virtual Machines, Virtual Machine Scale Sets, and Azure Functions. For more information about managed identity, see [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview).
+For more information, see [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
 
 - System-assigned managed identity:
 
