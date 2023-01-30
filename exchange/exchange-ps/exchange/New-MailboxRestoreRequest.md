@@ -1020,7 +1020,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-If you're looking to restore the contents of a Primary mailbox to an archive mailbox, use this parameter to specify the archive mailbox folders you wish the content to be migrated to and to be visible upon restore. In the absence of this parameter, as archive mailbox hides default folders, the contents on being restored won't be visible as they will be mapped to locations in the Archive mailbox that aren't visible to the end user.
+If you're looking to restore the contents of a primary mailbox to an archive mailbox, use this parameter to specify the archive mailbox folders you wish the content to be migrated to and to be visible upon restore. In the absence of this parameter, as the archive mailbox hides default folders, the contents on being restored won't be visible as they will be mapped to locations in the archive mailbox that aren't visible to the end user.
 
 ### -TargetType
 The TargetType parameter specifies the type of mailbox that's the target for the restore operation. Valid values are:
