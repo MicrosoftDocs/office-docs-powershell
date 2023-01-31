@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionTarget
-The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a Guid or a telephone number with a mandatory 'tel:' prefix. If the OverflowAction is set to SharedVoicemail, this parameter must be set to an Office 365 Group ID. Otherwise, this parameter is optional.
+The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a Guid or a telephone number with a mandatory 'tel:' prefix. If the OverflowAction is set to SharedVoicemail, this parameter must be set to a group ID (Microsoft 365, Distribution list or Mail-enabled security). Otherwise, this parameter is optional.
 
 ```yaml
 Type: String
