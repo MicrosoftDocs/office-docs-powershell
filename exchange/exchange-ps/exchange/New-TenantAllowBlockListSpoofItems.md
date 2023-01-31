@@ -86,6 +86,8 @@ The SpoofedUser parameter specifies the email address or domain for the spoofed 
 - For domains outside your organization (cross-org), use the domain of the email address that appears in the From field of the message.
 - For domains inside your organization (intra-org), use the full email address that appears in the From field of the message.
 
+For spoofed senders, the maximum number of entries is 1024.
+
 ```yaml
 Type: String
 Parameter Sets: (All)

@@ -81,6 +81,10 @@ The Entries parameter specifies the values that you want to add to the Tenant Al
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
+For senders, files, and URLs the maximum number of allow entries for each type is 500, and the maximum number of block entries for each type is 500 (1000 entries total for each type).
+
+The maximum number of characters in a file entry is 64 and the maximum number of characters in a URL entry is 250.
+
 You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
 
 In most cases, you can't modify the URL, file, or sender values after you create the entry. The only exception is allow URL entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
