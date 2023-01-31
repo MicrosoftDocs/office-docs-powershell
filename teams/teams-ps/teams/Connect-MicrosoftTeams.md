@@ -161,6 +161,10 @@ A delegated flow, such as Resource Owner Password Credentials (ROPC) or device c
 | Microsoft Graph | Delegated | User.Read.All |
 | Microsoft Graph | Delegated | Group.ReadWrite.All |
 | Microsoft Graph | Delegated | AppCatalog.ReadWrite.All |
+| Microsoft Graph | Delegated | TeamSettings.ReadWrite.All |
+| Microsoft Graph | Delegated | Channel.Delete.All |
+| Microsoft Graph | Delegated | ChannelSettings.ReadWrite.All |
+| Microsoft Graph | Delegated | ChannelMember.ReadWrite.All |
 | Skype and Teams Tenant Admin API | Delegated | user_impersonation |
 
 ```powershell
@@ -203,13 +207,13 @@ Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" re
    3. Add the following permission to this Application. 
    4. Click API permissions. 
    5. Click Add a permission. 
-   6. Click on the Microsoft MS Graph, and then select Delegated Permission.
-   7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
+   6. Click on the Microsoft Graph, and then select Delegated permissions.
+   7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All", "TeamSettings.ReadWrite.All", "Channel.Delete.All", "ChannelSettings.ReadWrite.All", "ChannelMember.ReadWrite.All".
    8. Next, we need to add "Skype and Teams Tenant Admin API" resource permission. Click Add a permission.
    9. Navigate to "APIs my organization uses" 
-   10. Search for "Skype and Teams Tenant Admin API".
+   10. Search for "Skype and Teams Tenant Admin API", and then select Delegated permissions.
    11. Add all the listed permissions. 
-   12. Grant admin consent to both MS Graph and "Skype and Teams Tenant Admin API" name.
+   12. Grant admin consent to both Microsoft Graph and "Skype and Teams Tenant Admin API" name.
 
 ```yaml
 Type: String[]
