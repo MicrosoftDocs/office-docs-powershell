@@ -64,7 +64,7 @@ Accept wildcard characters: False
 The SendingInfrastructure parameter specifies the source of the messages sent by the spoofed sender that's defined in the SpoofedUser parameter. Valid values are:
 
 - An email domain (for example contoso.com). The domain is found in the reverse DNS lookup (PTR record) of the source email server's IP address.
-- An IP address using the syntax: \<source IP\>/24 (for example, 192.168.100.100/24). Use the IP address if the source IP address has no PTR record.
+- An IP address using the syntax: \<source IP\>/24 (for example, 192.168.100.100/24). Use the IP address if the source IP address has no PTR record. /24 is the only available and maximum subnet depth.
 - A verified DKIM domain.
 
 ```yaml
