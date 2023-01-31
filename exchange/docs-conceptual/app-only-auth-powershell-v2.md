@@ -49,6 +49,8 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
 >
 > - Delegated scenarios are supported in **Exchange Online** using multi-tenant applications. The required steps are called out within the regular instructions in this article.
+>
+>   You can also connect to Exchange Online PowerShell using GDAP and App consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app).
 
 ## How does it work?
 
