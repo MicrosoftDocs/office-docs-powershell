@@ -35,8 +35,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
+Testing if this service principal can exercise each of its assigned permissions against the target mailbox "Mailbox A." The membership in the scope is indicated by the InScope column. 
 ```powershell
-Test-ServicePrincipalAuthorization -Identity "DemoB" -Resource "Test Mailbox" | Format-Table
+Test-ServicePrincipalAuthorization -Identity "DemoB" -Resource "Mailbox A" | Format-Table
+RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope 
+--------                      ------------------          --------------------        ---------                 ------
+Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     True 
+Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       False 
+Application Contacts.Read     Contacts.Read               Organization                 Organization             True 
+
+```
+
+### Example 2
+Testing the entitlement of DemoB including which permissions it has at which scopes. Since there is no target resource included the scope membership check is not run. 
+```powershell
+Test-ServicePrincipalAuthorization -Identity "DemoB" | Format-Table
+RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope 
+--------                      ------------------          --------------------        ---------                 ------
+Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     Not Run 
+Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       Not Run  
+Application Contacts.Read     Contacts.Read               Organization                 Organization             Not Run  
 ```
 
 This example tests the RBAC for Applications permissions assigned to DemoB on the mailbox named Test Mailbox
