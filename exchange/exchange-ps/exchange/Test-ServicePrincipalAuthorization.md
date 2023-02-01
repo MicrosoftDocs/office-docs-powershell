@@ -58,8 +58,6 @@ Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..    
 Application Contacts.Read     Contacts.Read               Organization                 Organization             Not Run  
 ```
 
-This example tests the RBAC for Applications permissions assigned to DemoB on the mailbox named Test Mailbox.
-
 This example tests the entitlement of the app named "DemoB", including which permissions it has at which scopes. Because the command doesn't use the Resource parameter, the scope membership check is not run.
 
 ## PARAMETERS
