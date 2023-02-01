@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ### -RestoreTargetFolder
 This parameter is available only in the cloud-based service.
 
-The RestoreTargetFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
+The RestoreTargetFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. This paramater is a required when restoring from archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
 
 ```yaml
 Type: String
@@ -345,7 +345,7 @@ Accept wildcard characters: False
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
-- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold.
+- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. By default, DiscoveryHolds are excluded from restore, so you must explicitly specify DiscoveryHoldsItems to successfully restore.
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 - PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
