@@ -24,6 +24,9 @@ New-CsCallingLineIdentity [-Identity] <string> [-BlockIncomingPstnCallerID <bool
 ```
 
 ## DESCRIPTION
+
+**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+
 You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
 Note:  
@@ -41,21 +44,14 @@ New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -C
 
 This example creates a new Caller ID policy that sets the Caller ID to Anonymous.
 
-###  Example 2
-```
-New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose 
-```
-
-This example creates a new Caller ID policy that sets the Caller ID to a specified service number.
-
-### Example 3
+### Example 2
 ```
 New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
 
 This example creates a new Caller ID policy that blocks the incoming Caller ID.
 
-### Example 4
+### Example 3
 ```
 $ObjId = (Get-CsOnlineApplicationInstance -Identity dkcq@contoso.com).ObjectId
 New-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -EnableUserOverride $false -ResourceAccount $ObjId -CompanyName "Contoso"
@@ -63,7 +59,7 @@ New-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -EnableUs
 
 This example creates a new Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
 
-### Example 5
+### Example 4
 ```
 New-CsCallingLineIdentity -Identity AllowAnonymousForUsers -EnableUserOverride $true
 ```
@@ -107,6 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
+**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, Service, LineUri, and Resource.
 
 ```yaml

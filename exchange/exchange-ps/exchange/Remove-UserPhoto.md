@@ -50,7 +50,7 @@ In on-premises Exchange, it also removes the user's photo from their Active Dire
 **Notes**:
 
 - Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
-- **Note**: In Microsoft Graph, the [Remove-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/remove-mguserphoto) and [Update-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) cmdlets are also available.
+- In Microsoft Graph, the [Update-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) cmdlet is also available.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
