@@ -50,7 +50,7 @@ The Filter value "Tag:*" limits the returned data to Teams call hold policies co
 ## PARAMETERS
 
 ### -Identity
-Unique identifier assigned to the Teams call hold policy.
+Unique identifier of the Teams call hold policy to be removed.
 
 ```yaml
 Type: String
