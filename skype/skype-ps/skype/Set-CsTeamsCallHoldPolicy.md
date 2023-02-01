@@ -55,7 +55,7 @@ This policy is re-assigned the description from its existing value to "country m
 ## PARAMETERS
 
 ### -Identity
-Unique identifier to be assigned to the new Teams call hold policy.
+Unique identifier of the Teams call hold policy being modified.
 
 ```yaml
 Type: String
