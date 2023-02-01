@@ -820,6 +820,7 @@
   "Set-SettingOverride": "organization",
   "Test-ApplicationAccessPolicy": "organization",
   "Test-OAuthConnectivity": "organization",
+  "Test-ServicePrincipalAuthorization": "organization",
   "Test-SystemHealth": "organization",
   "Update-ExchangeHelp": "organization",
   "Disable-JournalArchiving": "policy-and-compliance",
