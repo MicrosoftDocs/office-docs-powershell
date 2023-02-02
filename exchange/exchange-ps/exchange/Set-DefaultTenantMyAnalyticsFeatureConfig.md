@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://learn.microsoft.com/viva/insights/personal/setup/deployment-guide
+online version: https://learn.microsoft.com/powershell/module/exchange/set-defaulttenantmyanalyticsfeatureconfig
 applicable: Exchange Online
 title: Set-DefaultTenantMyAnalyticsFeatureConfig
 schema: 2.0.0
@@ -172,3 +172,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 We're in the process of verifying that this cmdlet works for guest user, DAP, and GDAP scenarios.
 
 ## RELATED LINKS
+
+https://learn.microsoft.com/viva/insights/personal/setup/deployment-guide
