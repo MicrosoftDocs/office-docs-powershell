@@ -107,11 +107,6 @@ The AllowedOOFType parameter specifies the type of automatic replies or out-of-o
 - InternalLegacy: Only internal automatic replies or automatic replies that aren't designated as internal or external are sent to recipients in the remote domain.
 - None: No automatic replies are sent to recipients in the remote domain.
 
-The value of this parameter is affected by the value of the IsInternal parameter, and vice-versa:
-
-- If you change the AllowedOOFType parameter to the value InternalLegacy, the IsInternal parameter is changed to the value $true.
-- If you change the IsInternal parameter to the value $false, the AllowedOOFType parameter is changed to the value ExternalLegacy.
-
 ```yaml
 Type: AllowedOOFType
 Parameter Sets: (All)
@@ -335,11 +330,6 @@ The IsInternal parameter specifies whether the recipients in the remote domain a
 
 - $true: All transport components (for example, transport rules) treat recipients in the remote domain as internal recipients. Typically, you use this value in cross-forest deployments.
 - $false: Recipients in the remote domain are treated as external recipients. This is the default value.
-
-The value of this parameter is affected by the value of the AllowedOOFType parameter, and vice-versa:
-
-- If you change the AllowedOOFType parameter to the value InternalLegacy, the IsInternal parameter is changed to the value $true.
-- If you change the IsInternal parameter to the value $false, the AllowedOOFType parameter is changed to the value ExternalLegacy.
 
 ```yaml
 Type: Boolean
