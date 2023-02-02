@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://learn.microsoft.com/powershell/module/exchange/set-defaulttenantbriefingconfig
+online version: https://learn.microsoft.com/en-us/viva/insights/personal/setup/deployment-guide
 applicable: Exchange Online
 title: Set-DefaultTenantBriefingConfig
 schema: 2.0.0
