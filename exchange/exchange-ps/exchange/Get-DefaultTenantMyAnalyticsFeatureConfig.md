@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://learn.microsoft.com/en-us/viva/insights/personal/setup/deployment-guide
+online version: https://learn.microsoft.com/viva/insights/personal/setup/deployment-guide
 applicable: Exchange Online
 title: Get-DefaultTenantMyAnalyticsFeatureConfig
 schema: 2.0.0
