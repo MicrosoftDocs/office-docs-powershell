@@ -78,4 +78,4 @@ We're in the process of verifying that this cmdlet works for guest user, DAP, an
 
 ## RELATED LINKS
 
-https://learn.microsoft.com/viva/insights/personal/setup/deployment-guide
+[Deploy personal insights](https://learn.microsoft.com/viva/insights/personal/setup/deployment-guide)
