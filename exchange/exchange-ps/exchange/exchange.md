@@ -1674,6 +1674,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-OAuthConnectivity](Test-OAuthConnectivity.md)
 
+### [Test-ServicePrincipalAuthorization](Test-ServicePrincipalAuthorization.md)
+
 ### [Test-SystemHealth](Test-SystemHealth.md)
 
 ### [Update-ExchangeHelp](Update-ExchangeHelp.md)
