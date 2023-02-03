@@ -42,7 +42,6 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-MTREnabled <Boolean>]
  [-Phone <String>]
  [-PostalCode <String>]
- [-SpaceType <String>]
  [-State <String>]
  [-Street <String>]
  [-Tags <String[]>]
@@ -367,27 +366,6 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SpaceType
-**Note**: Currently, this parameter is not available in all organizations.
-
-The SpaceType parameter specifies the type of space. Valid values are:
-
-- CustomerSpace
-- WorkArea
-- Custom
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None

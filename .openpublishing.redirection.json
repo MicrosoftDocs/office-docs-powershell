@@ -6839,6 +6839,21 @@
       "source_path": "exchange/virtual-folder/exchange/Set-CustomNudgeSettings.md",
       "redirect_url": "/powershell/module/exchange/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-MailTrafficTopReport.md",
+      "redirect_url": "/powershell/module/exchange/get-mailtrafficsummaryreport",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-PhishFilterPolicy.md",
+      "redirect_url": "/powershell/module/exchange/get-tenantallowblocklistppoofitems",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-PhishFilterPolicy.md",
+      "redirect_url": "/powershell/module/exchange/Set-tenantallowblocklistppoofitems",
+      "redirect_document_id": false
     }
   ]
 }
