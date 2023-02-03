@@ -95,6 +95,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
+ [-HybridRSVPEnabled <Boolean>]
  [-IPListBlocked <MultiValuedProperty>]
  [-IsAgendaMailEnabled <Boolean>]
  [-IsGroupFoldersAndRulesEnabled <Boolean>]
@@ -2217,6 +2218,24 @@ Type: UserContactGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HybridRSVPEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill HybridRSVPEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
