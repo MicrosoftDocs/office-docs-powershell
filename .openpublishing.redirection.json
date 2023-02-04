@@ -6852,7 +6852,7 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/Set-PhishFilterPolicy.md",
-      "redirect_url": "/powershell/module/exchange/Set-tenantallowblocklistppoofitems",
+      "redirect_url": "/powershell/module/exchange/set-tenantallowblocklistppoofitems",
       "redirect_document_id": false
     }
   ]
