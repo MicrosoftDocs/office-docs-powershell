@@ -109,6 +109,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
  [-MessageHighlightsEnabled <Boolean>]
+ [-MessageRecallEnabled <System.Boolean>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -2624,6 +2625,24 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallEnabled Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
