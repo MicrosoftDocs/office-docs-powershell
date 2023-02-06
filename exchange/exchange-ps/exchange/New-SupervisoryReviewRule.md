@@ -28,6 +28,13 @@ New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentMatchesDataModel <String>]
  [-ContentSources <String[]>]
+ [-DayXInsights <Boolean>]
+ [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+ [-ExceptIfRevieweeIs <MultiValuedProperty>]
+ [-ExceptIfSenderDomainIs <MultiValuedProperty>]
+ [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-IncludeAdaptiveScopes <String[]>]
+ [-InPurviewFilter <String>]
  [-Ocr <Boolean>]
  [-SamplingRate <Int32>]
  [-WhatIf]
@@ -187,6 +194,118 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DayXInsights
+{{ Fill DayXInsights Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfRecipientDomainIs
+{{ Fill ExceptIfRecipientDomainIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfRevieweeIs
+{{ Fill ExceptIfRevieweeIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSenderDomainIs
+{{ Fill ExceptIfSenderDomainIs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfSubjectOrBodyContainsWords
+{{ Fill ExceptIfSubjectOrBodyContainsWords Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAdaptiveScopes
+{{ Fill IncludeAdaptiveScopes Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InPurviewFilter
+{{ Fill InPurviewFilter Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
