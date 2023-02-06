@@ -95,6 +95,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
+ [-HybridRSVPEnabled <Boolean>]
  [-IPListBlocked <MultiValuedProperty>]
  [-IsAgendaMailEnabled <Boolean>]
  [-IsGroupFoldersAndRulesEnabled <Boolean>]
@@ -2218,6 +2219,27 @@ Type: UserContactGroupIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HybridRSVPEnabled
+This parameter is available only in the cloud-based service.
+
+The HybridRSVPEnabled parameter enables or disables Hybrid RSVP for your organization. Hybrid RSVP allows users the option to indicate if they will attend a meeting in-person or virtually when responding to a meeting invitation on Outlook. Valid values are:
+
+- $true: Hybrid RSVP is enabled (this is the default value).
+- $false: Hybrid RSVP is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
