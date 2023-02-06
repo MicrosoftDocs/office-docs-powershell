@@ -2526,7 +2526,7 @@ This parameter is available only in the cloud-based service.
 {{ Fill EmailAddressDisplayNames Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online

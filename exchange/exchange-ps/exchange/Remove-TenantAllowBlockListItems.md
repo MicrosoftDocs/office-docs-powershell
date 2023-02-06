@@ -133,7 +133,7 @@ The ListSubType specifies further specifies the type of entry that you want to r
 Type: ListSubType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
