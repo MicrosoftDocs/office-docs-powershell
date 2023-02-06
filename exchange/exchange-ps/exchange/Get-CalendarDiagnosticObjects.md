@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
+ [-AutoRequeryOnMeetingId <Boolean>
  [-ConfigurationName <String>]
  [-CustomPropertyNames <String[]>]
  [-EndDate <ExDateTime>]
@@ -30,6 +31,7 @@ Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
  [-ExactMatch <Boolean>]
  [-ItemClass <String[]>]
  [-ItemIds <String[]>]
+ [-MaxResults <Int32>]
  [-MeetingId <String>]
  [-ODataId <String>]
  [-ResultSize <Unlimited>]
@@ -113,6 +115,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AutoRequeryOnMeetingId
+{{ Fill AutoRequeryOnMeetingId Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -246,6 +264,22 @@ The ItemIds parameter filters the results by item ID. You can specify multiple v
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxResults
+{{ Fill MaxResults Description }}
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
