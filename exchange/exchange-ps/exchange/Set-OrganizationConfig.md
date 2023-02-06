@@ -2230,7 +2230,10 @@ Accept wildcard characters: False
 ### -HybridRSVPEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill HybridRSVPEnabled Description }}
+The HybridRSVPEnabled parameter enables or disables Hybrid RSVP for your organization. Hybrid RSVP allows users the option to indicate if they will attend a meeting in-person or virtually when responding to a meeting invitation on Outlook. Valid values are:
+
+- $true: Hybrid RSVP is enabled (this is the default value).
+- $false: Hybrid RSVP is disabled.
 
 ```yaml
 Type: Boolean
