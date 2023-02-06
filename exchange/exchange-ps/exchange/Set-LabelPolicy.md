@@ -53,6 +53,7 @@ Set-LabelPolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-MigrationId <String>]
  [-NextLabelPolicy <PolicyIdParameter>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveLabels <MultiValuedProperty>]
@@ -479,6 +480,22 @@ The NextLabelPolicy parameter updates the policy order so the policy that's spec
 ```yaml
 Type: PolicyIdParameter
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 

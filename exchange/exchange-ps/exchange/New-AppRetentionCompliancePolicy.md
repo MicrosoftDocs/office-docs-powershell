@@ -43,6 +43,7 @@ New-AppRetentionCompliancePolicy [-Name] <String> -Applications <String[]>
  [-Force]
  [-ModernGroupLocation <MultiValuedProperty>]
  [-ModernGroupLocationException <MultiValuedProperty>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -292,6 +293,22 @@ You can use any value that uniquely identifies the Microsoft 365 Group. For exam
 - GUID
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
 
 ```yaml
 Type: MultiValuedProperty

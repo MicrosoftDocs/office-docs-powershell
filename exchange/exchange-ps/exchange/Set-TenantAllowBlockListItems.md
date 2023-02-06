@@ -157,15 +157,13 @@ Accept wildcard characters: False
 ```
 
 ### -Allow
-This parameter is available only in Exchange Online PowerShell.
-
 The Allow switch specifies that you're modifying an allow entry. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -214,8 +212,6 @@ Accept wildcard characters: False
 ```
 
 ### -ListSubType
-This parameter is available only in Exchange Online PowerShell.
-
 The ListSubType parameter further specifies the entry that you want to modify. Valid values are:
 
 - AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
@@ -225,7 +221,7 @@ The ListSubType parameter further specifies the entry that you want to modify. V
 Type: ListSubType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
