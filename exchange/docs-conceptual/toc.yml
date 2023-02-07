@@ -57,8 +57,6 @@
               href: filters-v2.md
         - name: Property sets in Exchange Online PowerShell module cmdlets
           href: cmdlet-property-sets.md
-        - name: V1 module - Connect to Exchange Online PowerShell
-          href: v1-module-mfa-connect-to-exo-powershell.md
     - name: Security & Compliance PowerShell
       href: scc-powershell.md
       items:

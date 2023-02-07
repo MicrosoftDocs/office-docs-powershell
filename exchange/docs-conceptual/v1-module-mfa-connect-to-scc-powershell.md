@@ -18,11 +18,11 @@ description: "Admins can learn how to use the older Exchange Online Remote Power
 # V1 module - Connect to Security & Compliance PowerShell using MFA
 
 > [!NOTE]
-> > Support for the older Exchange Online Remote PowerShell Module that's described in this article will end on August 31, 2022. The ability to connect to Security & Compliance PowerShell using this version of the module will end on December 31, 2022.
+> Support for the older Exchange Online Remote PowerShell Module (the V1 module) that's described in this article will eventually end for Security & Compliance PowerShell. For more information, see [Understanding the Different Versions of Exchange Online PowerShell Modules and Basic Auth](https://techcommunity.microsoft.com/t5/exchange-team-blog/understanding-the-different-versions-of-exchange-online/ba-p/3394487).
 >
-> We recommend using the Exchange Online PowerShell module, which only uses modern authentication, and supports accounts with or without MFA. For installation and connection instructions, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For details on moving from this older version of the module to the current version, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/moving-from-the-exchange-powershell-v1-module-to-the-v2-preview/ba-p/3450679).
+> We recommend using the Exchange Online PowerShell module, which only uses modern authentication and supports accounts with or without MFA. For installation and connection instructions, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md).
 
-If your account uses multi-factor authentication (MFA) or federated authentication, you can't use the instructions at [Basic auth - Connect to Security & Compliance PowerShell](basic-auth-connect-to-scc-powershell.md) to use remote PowerShell to connect to Security & Compliance PowerShell. Instead, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance PowerShell.
+If your account uses multi-factor authentication (MFA) or federated authentication, you need to install the Exchange Online Remote PowerShell Module, and use the **Connect-IPPSSession** cmdlet to connect to Security & Compliance PowerShell.
 
 **Notes**:
 
