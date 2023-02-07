@@ -2,7 +2,7 @@
 title: Connect to Exchange Online PowerShell
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 01/20/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
