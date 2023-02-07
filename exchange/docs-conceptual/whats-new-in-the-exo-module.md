@@ -3,7 +3,7 @@ title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 02/07/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -22,6 +22,10 @@ description: "Learn about the new features and functionality available in the la
 
 This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
 
+## January 2023
+
+- [Version 3.1.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.1.0) has been released.
+
 ## December 2022
 
 - The end of support for remote PowerShell in Exchange Online PowerShell (not in Security & Compliance PowerShell) has been announced. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
@@ -33,4 +37,4 @@ This article lists new features in the Exchange Online PowerShell module that's 
   - All Exchange Online PowerShell cmdlets are now backed by the REST API. Basic authentication in WinRM is not required in Exchange Online PowerShell for REST API cmdlets.
   - Certificate based authentication (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
-  For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
+  For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).

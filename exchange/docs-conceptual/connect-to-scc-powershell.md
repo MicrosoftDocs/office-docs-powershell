@@ -27,16 +27,14 @@ The Exchange Online PowerShell module uses modern authentication for connecting 
 
 To connect to Security & Compliance PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437), see [Basic auth - Connect to Security & Compliance PowerShell](basic-auth-connect-to-scc-powershell.md).
-
-To use the older Exchange Online Remote PowerShell Module to connect to Security & Compliance PowerShell using MFA, see [V1 module - Connect to Security & Compliance PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md). Note that this older version of the module will eventually be retired.
+To use the older Exchange Online Remote PowerShell Module (the V1 module) to connect to Security & Compliance PowerShell using MFA, see [V1 module - Connect to Security & Compliance PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md). Note that this older version of the module will eventually be retired.
 
 ## What do you need to know before you begin?
 
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > Security & Compliance PowerShell still requires Basic authentication in WinRM as described [Prerequisites for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm). REST API cmdlets that allow you to turn off Basic authentication in WinRM are not yet available for the **Connect-IPPSSession** cmdlet. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
+  > Security & Compliance PowerShell still requires Basic authentication in WinRM as described [Prerequisites for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm). REST API cmdlets that allow you to turn off Basic authentication in WinRM are not yet available for the **Connect-IPPSSession** cmdlet. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 

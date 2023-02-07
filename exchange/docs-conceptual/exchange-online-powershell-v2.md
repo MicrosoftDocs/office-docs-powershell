@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V2 module and V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 02/07/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -33,9 +33,9 @@ For connection instructions using the module, see the following articles:
 
 The rest of this article explains how the module works, how to install and maintain the module, and the optimized Exchange Online cmdlets that are available in the module.
 
-## Updates for version 3.0.0 (the EXO V3 module)
+## Updates for the EXO V3 module
 
-Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX versions of the module, and is now known as the EXO V3 module. This version improves upon the historical capabilities of the EXO V2 module (version 2.0.5 and earlier) with the following features:
+Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves upon the historical capabilities of the EXO V2 module (version 2.0.5 and earlier) with the following features:
 
 - [Certificate based authentication](app-only-auth-powershell-v2.md) (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
@@ -57,7 +57,7 @@ Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX ve
   |**Functionality**|All parameters and output properties available|Limited parameters and output properties available|All parameters and output properties available|
 
   > [!NOTE]
-  > Currently, no cmdlets in Security & Compliance PowerShell cmdlets are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell still rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) to successfully use the **Connect-IPPSSession** cmdlet.
+  > Currently, no cmdlets in Security & Compliance PowerShell are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell still rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) to successfully use the **Connect-IPPSSession** cmdlet.
 
   - REST API cmdlets in Exchange Online PowerShell have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
 
@@ -111,8 +111,6 @@ Versions 3.0.0 is the General Availability (GA) release of the 2.0.6-PreviewX ve
 
 For additional information, see the [Release notes](#release-notes) section later in this article.
 
-For information about switching from the older Exchange Online Remote PowerShell Module (V1) to the current release, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/moving-from-the-exchange-powershell-v1-module-to-the-v2-preview/ba-p/3450679).
-
 ## Report bugs and issues for the Exchange Online PowerShell module
 
 > [!NOTE]
@@ -149,10 +147,10 @@ The connection-related cmdlets in the module are listed in the following table:
 
 |EXO module cmdlet|Older related cmdlet|Comments|
 |---|---|---|
-|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|[Connect-EXOPSSession](v1-module-mfa-connect-to-exo-powershell.md) <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
-|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession](v1-module-mfa-connect-to-scc-powershell.md)||
+|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
+|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession in V1 of the module](v1-module-mfa-connect-to-scc-powershell.md)||
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
-|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v2.0.6-Preview7 or later.|
+|[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v3.0.0 or later.|
 
 Miscellaneous Exchange Online cmdlets that happen to be in the module are listed in the following table:
 
@@ -234,7 +232,7 @@ After you install PowerShell 7, do the following steps:
 Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install the Exchange Online PowerShell module](#install-the-exchange-online-powershell-module).
 
 > [!NOTE]
-> If you connect to Exchange Online PowerShell from a network that's behind a proxy server, the EXO V2 module (version v2.0.5 or earlier) doesn't work in Linux. You need to use the EXO V3 module (v3.0.0 or v2.0.6-PreviewX) in Linux to connect from a network that's behind a proxy server.
+> If you connect to Exchange Online PowerShell from a network that's behind a proxy server, the EXO V2 module (version v2.0.5 or earlier) doesn't work in Linux. You need to use the EXO V3 module (v3.0.0 or later) in Linux to connect from a network that's behind a proxy server.
 
 #### Windows
 
@@ -278,7 +276,7 @@ For more information about execution policies, see [About Execution Policies](/p
 #### Turn on Basic authentication in WinRM
 
 > [!NOTE]
-> As described [earlier in this article](#updates-for-version-300-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST-based connections to Exchange Online PowerShell.
+> As described [earlier in this article](#updates-for-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST-based connections to Exchange Online PowerShell.
 
 For remote PowerShell connections, WinRM needs to allow Basic authentication. **We do not send the username and password combination**. The Basic authentication **header** is required to send the session's OAuth token, because the client-side implementation of WinRM does not support OAuth.
 
@@ -578,17 +576,23 @@ For more information about filtering in the module, see [Filters in the Exchange
 
 Unless otherwise noted, the current release of the Exchange Online PowerShell module contains all features of previous releases.
 
-### Current release: Version 3.0.0 (Preview versions known as v2.0.6-PreviewX)
+### Current release: Version 3.1.0
 
-- Features already described in the [Updates for version 3.0.0 (the EXO V3 module)](#updates-for-version-300-the-exo-v3-module) section:
+- _AccessToken_ parameter available in **Connect-ExchangeOnline**.
+- Bug fixes in **Connect-ExchangeOnline** and **Get-ConnectionInformation**.
+- Bug fix in **Connect-IPPSSession** for connecting to Security & Compliance PowerShell using _CertificateThumbprint_.
+
+### Previous releases
+
+#### Version 3.0.0 (Preview versions known as v2.0.6-PreviewX)
+
+- Features already described in the [Updates for the EXO V3 module)](#updates-for-the-exo-v3-module) section:
   - [Certificate based authentication](app-only-auth-powershell-v2.md) for Security & Compliance PowerShell (version 2.0.6-Preview5 or later).
   - The [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet for REST-based connections (version 2.0.6-Preview7 or later).
   - The _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet for REST-based connections (version 2.0.6-Preview8 or later).
 - The _DelegatedOrganization_ parameter works in the **Connect-IPPSSession** cmdlet as long as you also use the _AzureADAuthorizationEndpointUri_ parameter in the command.
 - Certain cmdlets that used to prompt for confirmation in specific scenarios no longer do so. By default, the cmdlet will run to completion.
 - The format of the error returned from failed cmdlet execution has been slightly modified. The exception now contains additional data (for example, the exception type), and the `FullyQualifiedErrorId` does not contain the `FailureCategory`. The format of the error is subject to further modification.
-
-### Previous releases
 
 #### Version 2.0.5
 

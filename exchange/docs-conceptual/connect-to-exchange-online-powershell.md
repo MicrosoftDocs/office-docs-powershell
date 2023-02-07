@@ -2,7 +2,7 @@
 title: Connect to Exchange Online PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 01/20/2023
+ms.date: 02/07/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -29,16 +29,12 @@ To connect to Exchange Online PowerShell for automation, see [App-only authentic
 
 To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exchange Online PowerShell](connect-to-exo-powershell-c-sharp.md).
 
-To use the older, less secure remote PowerShell connection instructions that [will eventually be deprecated](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-september/ba-p/3609437), see [Basic auth - Connect to Exchange Online PowerShell](basic-auth-connect-to-exo-powershell.md).
-
-To use the older Exchange Online Remote PowerShell Module to connect to Exchange Online PowerShell using MFA, see [V1 module - Connect to Exchange Online PowerShell using MFA](v1-module-mfa-connect-to-exo-powershell.md). This older version of the module will eventually be retired.
-
 ## What do you need to know before you begin?
 
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > If you're using the EXO V3 module (v3.0.0 or v2.0.6-PreviewX) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access to REST API cmdlets _only_. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
+  > If you're using the EXO V3 module (v3.0.0 or later) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
   >
   > Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
@@ -79,7 +75,7 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](/pow
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
-- With the EXO V3 module (v3.0.0 or v2.0.6-PreviewX), if you don't use the _UseRPSSession_ switch, you're using REST API cmdlets only. For more information, see [Updates for version 3.0.0 (the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-version-300-the-exo-v3-module).
+- With the EXO V3 module (v3.0.0 or later), if you don't use the _UseRPSSession_ switch, you're using REST API cmdlets only. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. Common values for the _ExchangeEnvironmentName_ parameter are described in the following table:
 
