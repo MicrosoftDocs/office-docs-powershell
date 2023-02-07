@@ -3,7 +3,7 @@ title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 02/07/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article

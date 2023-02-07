@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V2 module and V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 02/07/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
