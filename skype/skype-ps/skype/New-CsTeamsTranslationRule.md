@@ -67,6 +67,13 @@ New-CsTeamsTranslationRule -Identity 'StripE164SeattleAreaCode' -Pattern  '^\+12
 
 This example creates a rule that strips +1206555 from any E.164 ten digits number. For example, +12065555555 will be translated to 5555
 
+### Example 6
+```powershell
+New-CsTeamsTranslationRule -Identity 'GenerateFullNumber' -Pattern  '^\+1206555(\d{4})$' -Translation '+1206555$1;ext=$1'
+```
+
+This example creates a rule that adds the last four digits of a phone number starting with +1206555 as the extension. For example, +12065551234 will be translated to +12065551234;ext=1234.
+
 
 ## PARAMETERS
 
