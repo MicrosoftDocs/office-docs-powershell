@@ -260,7 +260,11 @@ The BulkQuarantineTag parameter specifies the quarantine policy that's used on m
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as bulk as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
 ```yaml
 Type: String
@@ -547,7 +551,11 @@ The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy t
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+The default value for this parameter is the built-in quarantine policy named AdminOnlyAccessPolicy. This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence phishing as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
 ```yaml
 Type: String
@@ -592,7 +600,11 @@ The HighConfidenceSpamQuarantineTag parameter specifies the quarantine policy th
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence spam as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
 ```yaml
 Type: String
@@ -1047,7 +1059,11 @@ The PhishQuarantineTag parameter specifies the quarantine policy that's used on 
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as phishing as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
 ```yaml
 Type: String
@@ -1211,7 +1227,11 @@ The SpamQuarantineTag parameter specifies the quarantine policy that's used on m
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+The default value for this parameter is the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization). This quarantine policy enforces the historical capabilities for messages that were quarantined as spam as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
 ```yaml
 Type: String
