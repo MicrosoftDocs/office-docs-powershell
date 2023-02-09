@@ -180,7 +180,11 @@ The QuarantineTag specifies the quarantine policy that's used on messages that a
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined. To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,AdminNotification*`.
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+The default value for this parameter is the built-in quarantine policy named AdminOnlyAccessPolicy. This quarantine policy enforces the historical capabilities for messages that were quarantined as malware by Safe Attachments as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
 
 ```yaml
 Type: String

@@ -310,7 +310,17 @@ Accept wildcard characters: False
 ### -RestoreTargetFolder
 This parameter is available only in the cloud-based service.
 
-{{ Fill RestoreTargetFolder Description }}
+The RestoreTargetFolder parameter specifies the top-level folder in which to restore data. If you don't specify this parameter, the command restores folders to the top of the folder structure in the target mailbox or archive. Content is merged under existing folders, and new folders are created if they don't already exist in the target folder structure.
+
+This parameter is required for archives and optional for primary mailboxes. A destination folder will be created if it does not exist. Valid paths are:
+
+- `/`
+- `/folder1`
+- `/folder1/folder2`
+- `folder1`
+- `folder1/folder2`
+```
+The preceding or trailing `/` will be ignored. Then, it will be treated as the relative path of the IPM sub-tree: `/Top Of Information Store`.
 
 ```yaml
 Type: String
@@ -345,11 +355,12 @@ Accept wildcard characters: False
 The SourceFolder parameter specifies where to search for deleted items in the mailbox. Valid values are:
 
 - DeletedItems: The Deleted Items folder.
-- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold.
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 - PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search all of these folders.
+If you don't use this parameter, the command will search these three folders.
+
+- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
 
 ```yaml
 Type: RecoverableItemsFolderType

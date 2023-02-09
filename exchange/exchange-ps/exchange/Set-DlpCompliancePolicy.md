@@ -48,6 +48,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Mode <PolicyMode>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <Int32>]
  [-RemoveEndpointDlpLocation <MultiValuedProperty>]
@@ -704,8 +705,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PolicyTemplateInfo
-{{ Fill PolicyTemplateInfo Description }}
+The PolicyTemplateInfo specifies the built-in or custom DLP policy templates to use in the DLP policy.
+
+For more information about DLP policy templates, see [What the DLP policy templates include](https://learn.microsoft.com/microsoft-365/compliance/what-the-dlp-policy-templates-include).
 
 ```yaml
 Type: PswsHashtable

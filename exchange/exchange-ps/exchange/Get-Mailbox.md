@@ -35,6 +35,7 @@ Get-Mailbox [-Anr <String>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InactiveMailboxOnly]
+ [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
  [-Monitoring]
@@ -88,6 +89,7 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InactiveMailboxOnly]
+ [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
  [-Monitoring]
@@ -135,6 +137,7 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [-Filter <String>]
  [-GroupMailbox]
  [-InactiveMailboxOnly]
+ [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
@@ -176,10 +179,10 @@ This example returns all the mailboxes that resolve from the ambiguous name reso
 
 ### Example 4
 ```powershell
-Get-Mailbox -Archive -Server Mailbox01
+Get-Mailbox -Archive -Database MBXDB01
 ```
 
-This example returns a summary list of all archive mailboxes on the Mailbox server named Mailbox01.
+This example returns a summary list of all archive mailboxes in the database named MBXDB01.
 
 ### Example 5
 ```powershell
@@ -471,6 +474,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeEmailAddressDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeEmailAddressDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludeInactiveMailbox
 This parameter is available only in the cloud-based service.
 
@@ -699,6 +720,8 @@ You can use any value that uniquely identifies the server. For example:
 You can't use this parameter with the Anr, Database, or Identity parameters.
 
 The ServerName and ServerLegacyDN properties for a mailbox may not be updated immediately after a mailbox move within a database availability group (DAG). To get the most up-to-date values for these mailbox properties, run the command `Get-Mailbox <Identity> | Get-MailboxStatistics | Format-List Name,ServerName,ServerLegacyDN`.
+
+**Note**: The result from this parameter could be a legacy value before migration. For better results, use the Database parameter instead.
 
 ```yaml
 Type: ServerIdParameter

@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-AutoSensitivityLabelRule [[-Identity] <ComplianceRuleIdParameter>]
  [-Confirm]
+ [-ForceValidate]
  [-IncludeExecutionRuleGuids <Boolean>]
  [-IncludeExecutionRuleInformation <Boolean>]
  [-Policy <PolicyIdParameter>]
@@ -71,6 +72,22 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceValidate
+{{ Fill ForceValidate Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

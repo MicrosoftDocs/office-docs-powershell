@@ -6,8 +6,8 @@ title: Get-CsTeamsCallHoldPolicy
 schema: 2.0.0
 ms.reviewer:
 manager: abnair
-ms.author: jomarque
-author: joelhmarquez
+ms.author: jenstr
+author: jenstrier
 ---
 
 # Get-CsTeamsCallHoldPolicy
@@ -16,18 +16,16 @@ author: joelhmarquez
 
 Returns information about the policies configured to customize the call hold experience for Teams clients.
 
-
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-CsTeamsCallHoldPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
- [<CommonParameters>]
+Get-CsTeamsCallHoldPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsCallHoldPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTeamsCallHoldPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -94,42 +92,12 @@ To return a policy configured at the per-user scope, use syntax like this:
 You cannot use wildcard characters when specifying the Identity.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
