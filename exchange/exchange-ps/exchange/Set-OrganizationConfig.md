@@ -1913,6 +1913,8 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
+**Note**: If users receive an error when they try to run "Play My Emails" in Outlook Mobile, use this parameter to add the value "Cortana" to the list of allowed applications.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
