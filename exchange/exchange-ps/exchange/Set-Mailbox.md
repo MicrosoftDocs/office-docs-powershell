@@ -251,6 +251,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -382,6 +383,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -513,6 +515,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -644,6 +647,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -773,6 +777,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <System.DateTime>]
@@ -903,6 +908,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -1033,6 +1039,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -2502,6 +2509,24 @@ The ElcProcessingDisabled parameter specifies whether to prevent the Managed Fol
 
 ```yaml
 Type: Boolean
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmailAddressDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill EmailAddressDisplayNames Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online
@@ -5244,13 +5269,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryAddress
+This parameter is available only in on-premises Exchange.
+
 The SecondaryAddress parameter specifies the secondary address used by the UM-enabled user.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

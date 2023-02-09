@@ -6,8 +6,8 @@ title: New-CsTeamsCallHoldPolicy
 schema: 2.0.0
 ms.reviewer:
 manager: abnair
-ms.author: jomarque
-author: joelhmarquez
+ms.author: jenstr
+author: jenstrier
 ---
 
 # New-CsTeamsCallHoldPolicy
@@ -16,12 +16,10 @@ author: joelhmarquez
 
 Creates a new Teams call hold policy in your tenant. The Teams call hold policy is used to customize the call hold experience for Teams clients.
 
-
 ## SYNTAX
 
 ```
-New-CsTeamsCallHoldPolicy [-Tenant <System.Guid>] [-Description <String>] [-AudioFileId <String>]
- [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsCallHoldPolicy [-Identity] <string> [-Description <string>] [-AudioFileId <string>] [-StreamingSourceUrl <string>] [-StreamingSourceAuthType <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +42,38 @@ Any Microsoft Teams users who are assigned this policy will have their call hold
 
 ## PARAMETERS
 
+### -Identity
+Unique identifier to be assigned to the new Teams call hold policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Enables administrators to provide explanatory text to accompany a Teams call hold policy.
+
+For example, the Description might include information about the users the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AudioFileId
 A string representing the ID referencing an audio file uploaded via the Import-CsOnlineAudioFile cmdlet.
 
@@ -59,13 +89,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -StreamingSourceUrl
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
@@ -74,10 +104,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
-Enables administrators to provide explanatory text to accompany a Teams call hold policy.
-
-For example, the Description might include information about the users the policy should be assigned to.
+### -StreamingSourceAuthType
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -106,55 +134,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-Unique identifier to be assigned to the new Teams call hold policy.
-
-Use the "Global" Identity if you wish to assign this policy to the entire tenant.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InMemory
-Creates an object reference without actually committing the object as a permanent change.
-
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -163,6 +142,21 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

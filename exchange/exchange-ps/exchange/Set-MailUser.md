@@ -1958,8 +1958,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-This parameter is available only in on-premises Exchange.
-
 The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the mail user. Messages larger than the maximum size are rejected.
 
 When you enter a value, qualify the value with one of the following units:
@@ -1979,7 +1977,7 @@ Base64 encoding increases the size of messages by approximately 33%, so specify 
 Type: Unlimited
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -1989,8 +1987,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSendSize
-This parameter is available only in on-premises Exchange.
-
 The MaxSendSize parameter specifies the maximum size of a message that can be sent by the mail user.
 
 When you enter a value, qualify the value with one of the following units:
@@ -2010,7 +2006,7 @@ Base64 encoding increases the size of messages by approximately 33%, so specify 
 Type: Unlimited
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -2654,13 +2650,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryAddress
+This parameter is available only in on-premises Exchange.
+
 The SecondaryAddress parameter specifies the secondary address used by the Unified Messaging (UM)-enabled user.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019 Online Protection
 
 Required: False
 Position: Named

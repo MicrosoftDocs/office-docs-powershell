@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-AppRetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
+ [-ErrorPolicyOnly]
  [-RetentionRuleTypes]
  [<CommonParameters>]
 ```
@@ -72,6 +73,22 @@ Accept wildcard characters: False
 
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ErrorPolicyOnly
+{{ Fill ErrorPolicyOnly Description }}
 
 ```yaml
 Type: SwitchParameter

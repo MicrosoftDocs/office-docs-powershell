@@ -55,7 +55,7 @@ $data = [System.IO.File]::ReadAllBytes('C:\Data\test.eml')
 Test-Message -MessageFileData $data -Sender megan@contoso.com -Recipients adele@contoso.com -SendReportTo admin@contoso.com -TransportRules -UnifiedDlpRules
 ```
 
-This example uses the test.eml message file at C:\Data to test mail flow rules and unified DLP rules for the sender megan@contoso.com to the recipient megan@contoso.com. The results report is sent to admin@contoso.com.
+This example uses the test.eml message file at C:\Data to test mail flow rules and unified DLP rules for the sender megan@contoso.com to the recipient adele@contoso.com. The results report is sent to admin@contoso.com.
 
 ## PARAMETERS
 

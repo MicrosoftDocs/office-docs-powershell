@@ -82,7 +82,6 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-TeamsAllowedPresenters <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters>]
  [-TeamsAllowMeetingChat <Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode>]
  [-TeamsBypassLobbyForDialInUsers <System.Boolean>]
- [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
  [-TeamsCopyRestrictionEnforced <System.Boolean>]
  [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
  [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
@@ -1283,22 +1282,6 @@ The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for d
 - $true: Dial in users bypass the lobby when joining Teams meetings.
 - $false: Dial in users don't bypass the lobby when joining Teams meetings.
 - $null (blank): Users configure this setting themselves in the Teams app.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TeamsChannelSharedWithSameLabelOnly
-{{ Fill TeamsChannelSharedWithSameLabelOnly Description }}
 
 ```yaml
 Type: System.Boolean

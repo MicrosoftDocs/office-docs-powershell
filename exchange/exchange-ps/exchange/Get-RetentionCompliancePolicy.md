@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
+ [-ErrorPolicyOnly] 
  [-ExcludeTeamsPolicy]
  [-RetentionRuleTypes]
  [-TeamsPolicyOnly]
@@ -91,6 +92,22 @@ Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ErrorPolicyOnly
+The ErrorPolicyOnly switch specifies whether to show only policies that have distribution errors in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
