@@ -72,6 +72,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-InvoiceEventsFromEmailEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
+ [-PreserveDeclinedMeetings <Boolean>]
  [-RemindersEnabled <Boolean>]
  [-ReminderSoundEnabled <Boolean>]
  [-RentalCarEventsFromEmailEnabled <Boolean>]
@@ -120,6 +121,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-InvoiceEventsFromEmailEnabled <Boolean>]
  [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
+ [-PreserveDeclinedMeetings <Boolean>]
  [-RemindersEnabled <Boolean>]
  [-ReminderSoundEnabled <Boolean>]
  [-RentalCarEventsFromEmailEnabled <Boolean>]
@@ -727,6 +729,24 @@ The PackageDeliveryEventsFromEmailEnabled parameter specifies whether to create 
 - $false: Don't create package delivery events from email messages. This is the default value.
 
 This parameter is meaningful only when the EventsFromEmailEnabled parameter is set to $true (which is the default value).
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreserveDeclinedMeetings
+This parameter is available only in the cloud-based service.
+
+{{ Fill PreserveDeclinedMeetings Description }}
 
 ```yaml
 Type: Boolean

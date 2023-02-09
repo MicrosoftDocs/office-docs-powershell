@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-Label [[-Identity] <ComplianceRuleIdParameter>]
- [-IncludeDetailedLabelActions <System.Boolean>]
+ [-IncludeDetailedLabelActions]
  [-SkipValidations]
  [<CommonParameters>]
 ```
@@ -69,13 +69,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDetailedLabelActions
-The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. Valid values are:
-
-- $true: Include detailed label actions.
-- $false: Don't include detailed label actions.
+The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. You don't need to specify a value with this switch.
 
 ```yaml
-Type: System.Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

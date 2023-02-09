@@ -82,7 +82,6 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-TeamsAllowedPresenters <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters>]
  [-TeamsAllowMeetingChat <Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode>]
  [-TeamsBypassLobbyForDialInUsers <System.Boolean>]
- [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
  [-TeamsCopyRestrictionEnforced <System.Boolean>]
  [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
  [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
@@ -174,6 +173,8 @@ Supported settings for built-in labeling:
 - **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
 
 - **DefaultShareLinkToExistingAccess**: Specifies whether to override *DefaultSharingScope* and *DefaultShareLinkPermission* to instead set the default sharing link type to people with existing access with their existing permissions. Example: `New-Label DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{DefaultShareLinkToExistingAccess="True"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+
+- **DefaultSubLabelId**: Specifies a default sublabel to be applied automatically when a user selects a parent label in Office apps. Example: `New-Label -DisplayName "Confidential" -Name "Confidential" -Tooltip "Confidential data that requires protection, which allows all employees full permissions. Data owners can track and revoke content." -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}`. For more information, see [Specify a default sublabel for a parent label](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#specify-a-default-sublabel-for-a-parent-label).
 
 - **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `New-Label -DisplayName "General" -Name "General" -Tooltip "Business data that is not intended for public consumption." -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
 
@@ -666,7 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultContentLabel
-{{ Fill DefaultContentLabel Description }}
+The DefaultContentLabel specifies a label that can be automatically applied to meetings created in a labeled Teams channel.
 
 ```yaml
 Type: String
@@ -1259,12 +1260,13 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsAllowedPresenters
-The TeamsAllowedPresenters parameter controls can present in Teams meetings. Valid values are:
+The TeamsAllowedPresenters parameter controls who can present in Teams meetings. Valid values are:
 
 - Everyone
 - Organization
 - Organizer
 - RoleIsPresenter
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters
@@ -1285,6 +1287,7 @@ The TeamsAllowMeetingChat parameter controls whether chat is available in Teams 
 - Enabled
 - Disabled
 - Limited: Chat is available only for the duration of the call.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode
@@ -1300,26 +1303,11 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsBypassLobbyForDialInUsers
-The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial in users who join Teams meetings. Valid values are:
+The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial-in users who join Teams meetings. Valid values are:
 
 - $true: Dial in users bypass the lobby when joining Teams meetings.
 - $false: Dial in users don't bypass the lobby when joining Teams meetings.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TeamsChannelSharedWithSameLabelOnly
-{{ Fill TeamsChannelSharedWithSameLabelOnly Description }}
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1340,6 +1328,8 @@ The TeamsCopyRestrictionEnforced parameter controls whether chat messages in Tea
 - $true: Chat messages can be copied to the clipboard.
 - $false: Chat messages can't be copied to the clipboard.
 
+The value $null (blank) allows users to configure this setting in the Teams app.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -1358,6 +1348,9 @@ The TeamsEndToEndEncryptionEnabled parameter controls video stream encryption in
 
 - $true: Video stream encryption is enabled.
 - $false: Video stream encryption is not enabled.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+The value $null (blank) allows users to configure this setting in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1381,6 +1374,7 @@ The TeamsLobbyBypassScope parameter controls who bypasses the lobby when joining
 - OrganizationAndFederated
 - OrganizationExcludingGuests
 - Organizer
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
@@ -1400,6 +1394,7 @@ The TeamsLobbyRestrictionEnforced parameter controls whether participants bypass
 
 - $true: Users bypass the lobby when joining Teams meetings.
 - $false: Users don't bypass the lobby when joining Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1419,6 +1414,7 @@ The TeamsPresentersRestrictionEnforced parameter controls whether presenter rest
 
 - $true: Presenter restrictions are enabled in Teams meetings.
 - $false: Presenter restrictions aren't enabled in Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1457,6 +1453,7 @@ The TeamsRecordAutomatically parameter controls whether Teams meetings are autom
 
 - $true: Teams meetings are automatically recorded after they start.
 - $false: Teams meetings are not automatically recorded.
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: System.Boolean
@@ -1477,6 +1474,7 @@ The TeamsVideoWatermark parameter controls whether a watermark is shown in Teams
 - None
 - EnabledForContentSharing
 - EnabledForVideo
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues
@@ -1494,10 +1492,10 @@ Accept wildcard characters: False
 ### -TeamsWhoCanRecord
 The TeamsWhoCanRecord parameter controls who can record Teams meetings. Valid values are:
 
-- None
 - Organizer
 - Coorganizers
 - Presenters
+- $null (blank): Users configure this setting themselves in the Teams app.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions

@@ -26,7 +26,6 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
- [-AllowPlusAddressInRecipients <Boolean>]
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
@@ -96,6 +95,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
+ [-HybridRSVPEnabled <Boolean>]
  [-IPListBlocked <MultiValuedProperty>]
  [-IsAgendaMailEnabled <Boolean>]
  [-IsGroupFoldersAndRulesEnabled <Boolean>]
@@ -110,6 +110,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
  [-MessageHighlightsEnabled <Boolean>]
+ [-MessageRecallEnabled <System.Boolean>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -618,27 +619,6 @@ Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowPlusAddressInRecipients
-This parameter is available only in the cloud-based service.
-
-The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
-
-- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to `jane+exampletag@contoso.com` is delivered to `jane@contoso.com`. If your Exchange Online organization was created after September 2020, this is the default value.
-- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to `jane+exampletag@contoso.com` is delivered only if `jane+exampletag@contoso.com` is configured as the primary address or a proxy address on an existing recipient. If your Exchange Online organization was created before September 2020, this is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -2249,6 +2229,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HybridRSVPEnabled
+This parameter is available only in the cloud-based service.
+
+The HybridRSVPEnabled parameter enables or disables Hybrid RSVP for your organization. Hybrid RSVP allows users the option to indicate if they will attend a meeting in-person or virtually when responding to a meeting invitation on Outlook. Valid values are:
+
+- $true: Hybrid RSVP is enabled (this is the default value).
+- $false: Hybrid RSVP is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Industry
 This parameter is available only in on-premises Exchange.
 
@@ -2648,6 +2649,24 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallEnabled Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online

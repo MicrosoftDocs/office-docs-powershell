@@ -39,6 +39,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OnPremisesScannerDlpLocation <MultiValuedProperty>]
  [-OnPremisesScannerDlpLocationException <MultiValuedProperty>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-PowerBIDlpLocation <MultiValuedProperty>]
  [-PowerBIDlpLocationException <MultiValuedProperty>]
@@ -454,6 +455,22 @@ The OnPremisesScannerDlpLocationException parameter specifies the on-premises fi
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
 For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
 
 ```yaml
 Type: MultiValuedProperty

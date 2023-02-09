@@ -57,10 +57,6 @@
               href: filters-v2.md
         - name: Property sets in Exchange Online PowerShell module cmdlets
           href: cmdlet-property-sets.md
-        - name: V1 module - Connect to Exchange Online PowerShell
-          href: v1-module-mfa-connect-to-exo-powershell.md
-        - name: Basic auth - Connect to Exchange Online PowerShell
-          href: basic-auth-connect-to-exo-powershell.md
     - name: Security & Compliance PowerShell
       href: scc-powershell.md
       items:
@@ -76,8 +72,6 @@
           href: whats-new-in-the-exo-module.md
         - name: V1 module - Connect to Security & Compliance PowerShell
           href: v1-module-mfa-connect-to-scc-powershell.md
-        - name: Basic auth - Connect to Exchange Online Protection PowerShell
-          href: basic-auth-connect-to-scc-powershell.md
     - name: Exchange Online Protection PowerShell
       href: exchange-online-protection-powershell.md
       items:
@@ -89,5 +83,3 @@
           href: exchange-cmdlet-syntax.md
         - name: What's new in the Exchange Online PowerShell module
           href: whats-new-in-the-exo-module.md
-        - name: Basic auth - Connect to Exchange Online Protection PowerShell
-          href: basic-auth-connect-to-eop-powershell.md

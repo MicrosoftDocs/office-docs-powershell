@@ -33,6 +33,19 @@ Connect-MicrosoftTeams
 ```
 Connect-MicrosoftTeams 
 -TenantId <String> 
+-Certificate <X509Certificate2> 
+-ApplicationId <String> 
+[-LogLevel <LogLevel>] 
+[-LogFilePath <String>] 
+[-WhatIf] 
+[-Confirm] 
+[<CommonParameters>] 
+```
+
+### ServicePrincipalCertificateThumbprint
+```
+Connect-MicrosoftTeams 
+-TenantId <String> 
 -CertificateThumbprint <String> 
 -ApplicationId <String> 
 [-LogLevel <LogLevel>] 
@@ -99,7 +112,15 @@ This example demonstrates how to authenticate using a certificate thumbprint. Ap
 Connect-MicrosoftTeams -CertificateThumbprint "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
 ```
 
-### Example 5: Connect to MicrosoftTeams using Application-based Access Tokens
+### Example 5: Connect to MicrosoftTeams using a certificate object
+This example demonstrates how to authenticate using a certificate object. The Certificate parameter is available from Teams PowerShell Module version 4.9.2-preview or later. For details about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+
+```powershell
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2("C:\exampleCert.pfx",$password)
+Connect-MicrosoftTeams -Certificate $cert -ApplicationId "00000000-0000-0000-0000-000000000000" -TenantId "YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY"
+```
+
+### Example 6: Connect to MicrosoftTeams using Application-based Access Tokens
 This example demonstrates how to authenticate with an application using Access Tokens. Access Tokens can be retrieved via the login.microsoftonline.com endpoint. It requires two Access Tokens: "MS Graph" and "Skype and Teams Tenant Admin API" resources.
 
 Application-based authentication has been reintroduced with version 4.7.1-preview. For details and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
@@ -130,7 +151,7 @@ $teamsToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantI
 Connect-MicrosoftTeams -AccessTokens @("$graphToken", "$teamsToken")
 ```
 
-### Example 6: Connect to MicrosoftTeams using Access Tokens in the delegated flow
+### Example 7: Connect to MicrosoftTeams using Access Tokens in the delegated flow
 This example demonstrates how to sign in using Access Tokens. Admin can retrieve Access Tokens via the login.microsoftonline.com endpoint. It requires two tokens, MS Graph Access Token and Teams Resource token. 
 
 A delegated flow, such as Resource Owner Password Credentials (ROPC) or device code, must be used, with the following delegated app permissions required.
@@ -140,6 +161,10 @@ A delegated flow, such as Resource Owner Password Credentials (ROPC) or device c
 | Microsoft Graph | Delegated | User.Read.All |
 | Microsoft Graph | Delegated | Group.ReadWrite.All |
 | Microsoft Graph | Delegated | AppCatalog.ReadWrite.All |
+| Microsoft Graph | Delegated | TeamSettings.ReadWrite.All |
+| Microsoft Graph | Delegated | Channel.Delete.All |
+| Microsoft Graph | Delegated | ChannelSettings.ReadWrite.All |
+| Microsoft Graph | Delegated | ChannelMember.ReadWrite.All |
 | Skype and Teams Tenant Admin API | Delegated | user_impersonation |
 
 ```powershell
@@ -182,13 +207,13 @@ Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" re
    3. Add the following permission to this Application. 
    4. Click API permissions. 
    5. Click Add a permission. 
-   6. Click on the Microsoft MS Graph, and then select Delegated Permission.
-   7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All";
+   6. Click on the Microsoft Graph, and then select Delegated permissions.
+   7. Add the following permissions: "AppCatalog.ReadWrite.All", "Group.ReadWrite.All", "User.Read.All", "TeamSettings.ReadWrite.All", "Channel.Delete.All", "ChannelSettings.ReadWrite.All", "ChannelMember.ReadWrite.All".
    8. Next, we need to add "Skype and Teams Tenant Admin API" resource permission. Click Add a permission.
    9. Navigate to "APIs my organization uses" 
-   10. Search for "Skype and Teams Tenant Admin API".
+   10. Search for "Skype and Teams Tenant Admin API", and then select Delegated permissions.
    11. Add all the listed permissions. 
-   12. Grant admin consent to both MS Graph and "Skype and Teams Tenant Admin API" name.
+   12. Grant admin consent to both Microsoft Graph and "Skype and Teams Tenant Admin API" name.
 
 ```yaml
 Type: String[]
@@ -240,6 +265,23 @@ This parameter has been reintroduced with version 4.7.1-preview. For more inform
 Type: String
 Parameter Sets: ServicePrincipalCertificate
 Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Certificate
+Specifies the certificate that is used for application-based authentication. A valid value is the X509Certificate2 object value of the certificate.
+
+This parameter has been introduced with version 4.9.2-preview. For more information about application-based authentication and supported cmdlets, see [Application-based authentication in Teams PowerShell Module](/MicrosoftTeams/teams-powershell-application-authentication).
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: ServicePrincipalCertificate
+Aliases: CertificateThumbprint
+
 Required: True
 Position: Named
 Default value: None

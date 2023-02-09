@@ -57,7 +57,7 @@ $ids = Get-QuarantineMessage | select -ExpandProperty Identity
 Delete-QuarantineMessage -Identity $ids[4]
 ```
 
-This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1 and so on).
+This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1 and so on.
 
 ### Example 3
 ```powershell
@@ -70,9 +70,9 @@ This example deletes all quarantined messages. The Identity parameter is require
 ## PARAMETERS
 
 ### -Identities
-The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2...valueN`. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2...valueN`. Each value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
 
-You can find the identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
+You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
 
 When you use this parameter, the Identity parameter is required, but the value is ignored. For example, use the value 000 for the Identity parameter.
 
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAddress
-{{ Fill RecipientAddress Description }}
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]

@@ -19,7 +19,7 @@ The CsTeamsChannelsPolicy allows you to manage features related to the Teams & C
 ## SYNTAX
 ```
 New-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>]
- [-AllowPrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>] 
+ [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>] 
  [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>]
  [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -40,7 +40,7 @@ This example shows creating a new policy with name "StudentPolicy" where Private
 
 ## PARAMETERS
 
-### -AllowPrivateTeamDiscovery
+### -EnablePrivateTeamDiscovery
 Determines whether a user is allowed to discover private teams in suggestions and search results. Set this to TRUE to allow. Set this FALSE to prohibit.
 
 ```yaml

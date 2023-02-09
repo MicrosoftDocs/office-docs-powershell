@@ -39,7 +39,9 @@ Search-AdminAuditLog
 ## DESCRIPTION
 If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 log entries are returned by default.
 
-**Note**: In Exchange Online PowerShell, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
+In Exchange Online PowerShell, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
+
+In Exchange Online PowerShell, data is available for the last 90 days. You can enter dates older than 90 days, but only data from the last 90 days will be returned.
 
 For more information about the structure and properties of the audit log, [Administrator audit log structure](https://learn.microsoft.com/Exchange/policy-and-compliance/admin-audit-logging/log-structure).
 

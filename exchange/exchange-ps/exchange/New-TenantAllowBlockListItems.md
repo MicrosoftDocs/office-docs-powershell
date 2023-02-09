@@ -81,6 +81,10 @@ The Entries parameter specifies the values that you want to add to the Tenant Al
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
+For senders, files, and URLs the maximum number of allow entries for each type is 500, and the maximum number of block entries for each type is 500 (1000 entries total for each type).
+
+The maximum number of characters in a file entry is 64 and the maximum number of characters in a URL entry is 250.
+
 You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
 
 In most cases, you can't modify the URL, file, or sender values after you create the entry. The only exception is allow URL entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
@@ -165,8 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -Allow
-This parameter is available only in Exchange Online PowerShell.
-
 The Allow switch specifies that you're creating an allow entry. You don't need to specify a value with this switch.
 
 You can't use this switch with the Block switch.
@@ -175,7 +177,7 @@ You can't use this switch with the Block switch.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -203,8 +205,6 @@ Accept wildcard characters: False
 ```
 
 ### -ListSubType
-This parameter is available only in Exchange Online PowerShell.
-
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
 - AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
@@ -214,7 +214,7 @@ The ListSubType parameter specifies the subtype for this entry. Valid values are
 Type: ListSubType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -258,15 +258,13 @@ Accept wildcard characters: False
 ```
 
 ### -SubmissionID
-This parameter is available only in Exchange Online PowerShell.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

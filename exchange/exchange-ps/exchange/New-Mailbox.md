@@ -911,16 +911,18 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRoomMailboxAccount
+This parameter is functional only in on-premises Exchange.
+
 The EnableRoomMailboxAccount parameter specifies whether to enable the disabled user account that's associated with this room mailbox. Valid values are:
 
-- $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. This allows the account to log on to the room mailbox.
-- $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
+- $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. The account is able to log in and access the room mailbox or other resources.
+- $false: The account that's associated with the room mailbox is disabled. The account is not able to log in and access the room mailbox or other resources. In on-premises Exchange, this is the default value.
+
+You need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
 
 You need to use this parameter with the Room switch.
 
-Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
-
-In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
+A room mailbox in Exchange Online is created with associated an account that has an unknown password. This account is active and visible in Azure Active Directory PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. If the password is known or changed, the account can be used to log in and access the mailbox or other resources. To prevent this account from being able to log in after you create the mailbox, use the Set-AzureADUser cmdlet in Azure Active Directory PowerShell. For instructions, see [Block Microsoft 365 user accounts with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/block-user-accounts-with-microsoft-365-powershell).
 
 ```yaml
 Type: Boolean
@@ -1190,7 +1192,9 @@ The Room switch is required to create room mailboxes. You don't need to specify 
 
 Room mailboxes are resource mailboxes that are associated with a specific location (for example, conference rooms).
 
-When you use this switch, a logon-disabled account is created with the room mailbox, which prevents users from signing in to the mailbox. When you use the EnableRoomMailboxAccount and RoomMailboxPassword parameters, you can mail-enable the associated account.
+When you use this switch in on-premises Exchange, a disabled account is created with the room mailbox. The account can't be used to sign in to the mailbox or anywhere in the organization. To enable the associated account, use the EnableRoomMailboxAccount and RoomMailboxPassword parameters.
+
+When you use this switch in Exchange Online, an account with an unknown password is created with the room mailbox. If the password is known or changed, the account can be used to log in to the mailbox or anywhere in the organization. To prevent this account from being able to log in after you create the room mailbox, use the Set-AzureADUser cmdlet in Azure Active Directory PowerShell. For instructions, see [Block Microsoft 365 user accounts with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/block-user-accounts-with-microsoft-365-powershell).
 
 ```yaml
 Type: SwitchParameter
@@ -2006,18 +2010,25 @@ Accept wildcard characters: False
 ```
 
 ### -RoomMailboxPassword
-Use the RoomMailboxPassword parameter to configure the password for a room mailbox that has a logon-enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
+This parameter is functional only in on-premises Exchange.
 
-To use this parameter, you need to be a member of one of the following role groups:
+Use the RoomMailboxPassword parameter to configure the password for the account that's associated with the room mailbox when that account is enabled and able to log in (the EnableRoomMailboxAccount parameter is set to the value $true).
 
-- Exchange Online: The Organization Management role group via the Mail Recipients, Reset Password, and User Options roles, the Help Desk role group via the Reset Password and User Options roles, or the Recipient Management role group via the Mail Recipients and Reset Password roles.
-- On-premises Exchange: The Organization Management role group via the Mail Recipients and User Options roles, the Recipient Management role group via the Mail Recipients role, or the Help Desk role group via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
+To use this parameter in on-premises Exchange, you need to be a member of one of the following role groups:
+
+- The Organization Management role group via the Mail Recipients and User Options roles.
+- The Recipient Management role group via the Mail Recipients role.
+- The Help Desk role group via the User Options role.
+
+The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
 You can use the following methods as a value for this parameter:
 
 - `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
+
+To configure the password for a room mailbox account in Exchange Online, use Set-AzureADUserPassword cmdlet in Azure Active Directory PowerShell. For instructions, see [Manage passwords with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/manage-passwords-with-microsoft-365-powershell).
 
 ```yaml
 Type: SecureString

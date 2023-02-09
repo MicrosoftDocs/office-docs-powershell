@@ -129,15 +129,13 @@ Accept wildcard characters: False
 ```
 
 ### -Allow
-This parameter is available only in Exchange Online PowerShell.
-
 The Allow switch filters the results for allow entries. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -184,8 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -ListSubType
-This parameter is available only in Exchange Online PowerShell.
-
 The ListSubType parameter filters the results by subtype. Valid values are:
 
 - AdvancedDelivery
@@ -195,7 +191,7 @@ The ListSubType parameter filters the results by subtype. Valid values are:
 Type: ListSubType[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
