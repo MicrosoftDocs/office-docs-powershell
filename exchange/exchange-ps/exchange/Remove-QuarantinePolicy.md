@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-QuarantinePolicy cmdlet to remove custom quarantine policies from your cloud-based organization.
+Use the Remove-QuarantinePolicy cmdlet to remove quarantine policies from your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

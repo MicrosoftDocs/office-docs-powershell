@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-QuarantinePolicy cmdlet to modify custom quarantine policies in your cloud-based organization.
+Use the Set-QuarantinePolicy cmdlet to modify quarantine policies in your cloud-based organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -44,7 +44,7 @@ Set-QuarantineTag [-Identity] <QuarantineTagIdParameter>
 ```
 
 ## DESCRIPTION
-You can't modify built-in quarantine policies with names that start with "Default".
+You can't modify the built-in quarantine policies named AdminOnlyAccessPolicy or DefaultFullAccessPolicy.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
