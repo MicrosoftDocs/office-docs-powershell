@@ -24,9 +24,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RetryDistribution
 ```
-Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-RetryDistribution]
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
  [-Confirm]
+ [-EnforceSimulationPolicy <Boolean>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -49,6 +50,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
@@ -63,20 +65,22 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSkypeLocation <MultiValuedProperty>]
  [-RemoveSkypeLocationException <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AdaptiveScopeLocation
 ```
-Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-AddAdaptiveScopeLocation <MultiValuedProperty>]
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddAdaptiveScopeLocation <MultiValuedProperty>]
  [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -91,11 +95,13 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-RemoveTeamsChannelLocation <MultiValuedProperty>]
  [-RemoveTeamsChannelLocationException <MultiValuedProperty>]
  [-RemoveTeamsChatLocation <MultiValuedProperty>]
  [-RemoveTeamsChatLocationException <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -586,6 +592,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnforceSimulationPolicy
+Use the EnforceSimulationPolicy parameter to promote a simulation policy to a regular auto-labeling policy. Valid values are:
+
+- $true: Promote the simulation policy to a regular auto-labeling policy.
+- $false: Don't promote the simulation policy. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -983,6 +1008,27 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartSimulation
+The StartSimulation parameter specifies whether to start a simulation job. Valid values are:
+
+- $true: Start the simulation job.
+- $false: Don't start the simulation job. This is the default value.
+
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

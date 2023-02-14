@@ -30,6 +30,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
  [-Force]
+ [-IsSimulation]
  [-ModernGroupLocation <MultiValuedProperty>]
  [-ModernGroupLocationException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
@@ -53,6 +54,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-IsSimulation]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
  [-TeamsChannelLocation <MultiValuedProperty>]
@@ -70,6 +72,7 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-IsSimulation]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
  [-WhatIf]
@@ -100,7 +103,6 @@ New-RetentionCompliancePolicy -Name "Marketing Department" -Enabled $true -Share
 This example creates a new auto-apply label policy targeted to cloud attachments named Marketing Department with the specified details.
 
 The next step is to use the New-RetentionComplianceRule cmdlet to add a retention label to the retention label policy.
-
 
 ## PARAMETERS
 
@@ -278,6 +280,24 @@ Accept wildcard characters: False
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsSimulation
+The IsSimulation switch specifies the retention policy is a DLM simulation. You don't need to specify a value with this switch.
+
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
 
 ```yaml
 Type: SwitchParameter
