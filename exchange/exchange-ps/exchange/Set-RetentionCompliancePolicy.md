@@ -598,6 +598,8 @@ Use the EnforceSimulationPolicy parameter to promote a simulation policy to a re
 - $true: Promote the simulation policy to a regular auto-labeling policy.
 - $false: Don't promote the simulation policy. This is the default value.
 
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
