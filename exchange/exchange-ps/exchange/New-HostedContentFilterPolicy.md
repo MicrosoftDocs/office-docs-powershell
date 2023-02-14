@@ -618,12 +618,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithBizOrInfoUrls
-**Note**: This setting is part of Advanced Spam Filtering (ASF) and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithBizOrInfoUrls parameter increases the spam score of messages that contain links to .biz or .info domains. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links to .biz or .info domains are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message.
+- On: The setting is enabled. Messages that contain links to .biz or .info domains are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message. Note that not all messages which matches the setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -640,12 +638,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithImageLinks
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithImageLinks parameter increases the spam score of messages that contain image links to remote websites. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain image links to remote websites are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: Image links to remote sites` is added to the message.
+- On: The setting is enabled. Messages that contain image links to remote websites are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Image links to remote sites` is added to the message. Note that not all messages which matches the setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -662,12 +658,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithNumericIps
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithNumericIps parameter increases the spam score of messages that contain links to IP addresses. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links to IP addresses are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: Numeric IP in URL` is added to the message.
+- On: The setting is enabled. Messages that contain links to IP addresses are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Numeric IP in URL` is added to the message. Note that not all messages which matches the setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -684,12 +678,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithRedirectToOtherPort
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithRedirectToOtherPort parameter increases the spam score of messages that contain links that redirect to TCP ports other than 80 (HTTP), 8080 (alternate HTTP), or 443 (HTTPS). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links that redirect to other TCP ports are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: URL redirect to other port` is added to the message.
+- On: The setting is enabled. Messages that contain links that redirect to other TCP ports are given  a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL redirect to other port` is added to the message. Note that not all messages which matches the setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -771,8 +763,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamEmbedTagsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamEmbedTagsInHtml parameter marks a message as spam when the message contains HTML \<embed\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -793,8 +783,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamEmptyMessages
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamEmptyMessages parameter marks a message as spam when the message contains no subject, no content in the message body, and no attachments. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -815,8 +803,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamFormTagsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamFormTagsInHtml parameter marks a message as spam when the message contains HTML \<form\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -837,8 +823,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamFramesInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamFramesInHtml parameter marks a message as spam when the message contains HTML \<frame\> or \<iframe\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -859,8 +843,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamFromAddressAuthFail
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamFromAddressAuthFail parameter marks a message as spam when Sender ID filtering encounters a hard fail. This setting combines an Sender Policy Framework (SPF) check with a Sender ID check to help protect against message headers that contain forged senders. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -880,8 +862,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamJavaScriptInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamJavaScriptInHtml parameter marks a message as spam when the message contains JavaScript or VBScript. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -902,8 +882,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamNdrBackscatter
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamNdrBackscatter parameter marks a message as spam when the message is a non-delivery report (also known as an NDR or bounce messages) sent to a forged sender (known as *backscatter*). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -923,8 +901,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamObjectTagsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamObjectTagsInHtml parameter marks a message as spam when the message contains HTML \<object\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -945,8 +921,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamSensitiveWordList
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamSensitiveWordList parameter marks a message as spam when the message contains words from the sensitive words list. Microsoft maintains a dynamic but non-editable list of words that are associated with potentially offensive messages. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -967,8 +941,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamSpfRecordHardFail
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamSpfRecordHardFail parameter marks a message as spam when SPF record checking encounters a hard fail. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -988,8 +960,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamWebBugsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamWebBugsInHtml parameter marks a message as spam when the message contains web bugs (also known as web beacons). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -1265,8 +1235,6 @@ Accept wildcard characters: False
 ```
 
 ### -TestModeAction
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you don't use this setting.
-
 The TestModeAction parameter specifies the additional action to take on messages when one or more IncreaseScoreWith\* or MarkAsSpam\* ASF parameters are set to the value Test. Valid values are:
 
 - None: This is the default value, and we recommend that you don't change it.
@@ -1287,7 +1255,6 @@ Accept wildcard characters: False
 ```
 
 ### -TestModeBccToRecipients
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you don't use this setting.
 
 The TestModeBccToRecipients parameter specifies the blind carbon copy (Bcc) recipients to add to spam messages when the TestModeAction ASF parameter is set to the value BccMessage.
 
