@@ -58,7 +58,7 @@ Import-Module ExchangeOnlineManagement
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-IPPSSession -UserPrincipalName <UPN> -ConnectionUri `https://ps.protection.outlook.com/powershell-liveid/ [-PSSessionOption $ProxyOptions]
+Connect-IPPSSession -UserPrincipalName <UPN> -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/ [-PSSessionOption $ProxyOptions]
 ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
