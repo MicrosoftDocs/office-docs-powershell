@@ -1562,7 +1562,7 @@ The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception f
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -1612,7 +1612,7 @@ The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -1678,7 +1678,7 @@ The ExceptIfSenderADAttributeContainsWords parameter specifies an exception for 
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -1728,7 +1728,7 @@ The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception fo
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -2647,7 +2647,7 @@ The RecipientADAttributeContainsWords parameter specifies a condition for the DL
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -2697,7 +2697,7 @@ The RecipientADAttributeMatchesPatterns parameter specifies a condition for the 
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the or operator is used.
 
@@ -2879,7 +2879,7 @@ The SenderADAttributeContainsWords parameter specifies a condition for the DLP r
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -2929,7 +2929,7 @@ The SenderADAttributeMatchesPatterns parameter specifies a condition for the DLP
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the or operator is used.
 
