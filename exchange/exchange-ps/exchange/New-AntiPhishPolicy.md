@@ -212,7 +212,7 @@ The EnableMailboxIntelligence parameter specifies whether to enable or disable m
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

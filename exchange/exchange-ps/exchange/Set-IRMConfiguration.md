@@ -275,7 +275,7 @@ The EnablePortalTrackingLogs parameter specifies whether to turn on auditing for
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
