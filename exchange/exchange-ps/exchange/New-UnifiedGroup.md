@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-unifiedgroup
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: New-UnifiedGroup
 schema: 2.0.0
 author: chrisda
@@ -148,7 +148,7 @@ For Microsoft 365 Groups, the DisplayName value is used in the unique Name prope
 Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -177,7 +177,7 @@ Microsoft 365 Groups don't have ReportToManager and ReportToOriginator parameter
 Type: DistributionGroupIdParameter
 Parameter Sets: DlMigration
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -200,7 +200,7 @@ You can change the privacy type at any point in the lifecycle of the group.
 Type: ModernGroupTypeInfo
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ The Alias value is appended with the ExternalDirectoryObjectId property value an
 Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ The AutoSubscribeNewMembers switch overrides this switch.
 Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -270,7 +270,7 @@ You need to use this switch with the SubscriptionEnabled switch.
 Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -286,7 +286,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -305,7 +305,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -327,7 +327,7 @@ You can only use this switch with the DlIdentity parameter.
 Type: SwitchParameter
 Parameter Sets: DlMigration
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -347,7 +347,7 @@ The DataEncryptionPolicy parameter specifies the data encryption policy that's a
 Type: DataEncryptionPolicyIdParameter
 Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -365,7 +365,7 @@ You can only use this switch with the DlIdentity parameter.
 Type: SwitchParameter
 Parameter Sets: DlMigration
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -396,7 +396,7 @@ To specify the primary SMTP email address, you can use any of the following meth
 Type: ProxyAddressCollection
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -412,7 +412,7 @@ This parameter is reserved for internal Microsoft use.
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -430,7 +430,7 @@ Creating Microsoft 365 Groups involves background operations in Azure Active Dir
 Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -450,7 +450,7 @@ You can use this setting to help comply with regulations that require you to hid
 Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -466,7 +466,7 @@ Accept wildcard characters: False
 Type: System.Boolean
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -484,7 +484,7 @@ Valid input for this parameter is a supported culture code value from the Micros
 Type: CultureInfo
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -494,15 +494,13 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxRegion
-This parameter is available only in the cloud-based service.
-
 The MailboxRegion parameter specifies the preferred data location (PDL) for the Microsoft 365 Group in multi-geo environments.
 
 ```yaml
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -518,7 +516,7 @@ This parameter is reserved for internal Microsoft use.
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -543,7 +541,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -561,7 +559,7 @@ Previously, if you specified a value for this parameter, a random GUID value was
 Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -577,7 +575,7 @@ The Notes parameter specifies the description of the Microsoft 365 Group. If the
 Type: String
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -602,7 +600,7 @@ The owner you specify for this parameter must be a mailbox or mail user (a mail-
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -618,7 +616,7 @@ The PrimarySmtpAddress parameter specifies the primary return email address that
 Type: SmtpAddress
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -637,7 +635,7 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 Type: Boolean
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -647,8 +645,6 @@ Accept wildcard characters: False
 ```
 
 ### -SensitivityLabelId
-This parameter is available only in the cloud-based service.
-
 The SensitivityLabelId parameter specifies the GUID value of the sensitivity label that's assigned to the Microsoft 365 Group.
 
 **Note**: In the output of the Get-UnifiedGroup cmdlet, this property is named SensitivityLabel, not SensitivityLabelId.
@@ -657,7 +653,7 @@ The SensitivityLabelId parameter specifies the GUID value of the sensitivity lab
 Type: System.Guid
 Parameter Sets: Identity, SegmentationOption, ProvisioningOptions
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -673,7 +669,7 @@ The SubscriptionEnabled switch specifies whether subscriptions to conversations 
 Type: SwitchParameter
 Parameter Sets: SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -689,7 +685,7 @@ This parameter has been deprecated and is no longer used.
 Type: SwitchParameter
 Parameter Sets: Identity, ProvisioningOptions, SegmentationOption
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -705,7 +701,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
