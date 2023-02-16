@@ -621,7 +621,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithBizOrInfoUrls parameter increases the spam score of messages that contain links to .biz or .info domains. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links to .biz or .info domains are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message. Note that not all messages that match the setting will be marked as spam.
+- On: The setting is enabled. Messages that contain links to .biz or .info domains are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message. Not all messages that match this setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -641,7 +641,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithImageLinks parameter increases the spam score of messages that contain image links to remote websites. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain image links to remote websites are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Image links to remote sites` is added to the message. Note that not all messages which matches the setting will be marked as spam.
+- On: The setting is enabled. Messages that contain image links to remote websites are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Image links to remote sites` is added to the message. Not all messages that match this setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
