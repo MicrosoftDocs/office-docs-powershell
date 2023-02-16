@@ -2805,10 +2805,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-DynamicDistributionGroup](New-DynamicDistributionGroup.md)
 
-### [New-EOPDistributionGroup](New-EOPDistributionGroup.md)
-
-### [New-EOPMailUser](New-EOPMailUser.md)
-
 ### [New-MailContact](New-MailContact.md)
 
 ### [New-MailUser](New-MailUser.md)
@@ -2820,10 +2816,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-DistributionGroupMember](Remove-DistributionGroupMember.md)
 
 ### [Remove-DynamicDistributionGroup](Remove-DynamicDistributionGroup.md)
-
-### [Remove-EOPDistributionGroup](Remove-EOPDistributionGroup.md)
-
-### [Remove-EOPMailUser](Remove-EOPMailUser.md)
 
 ### [Remove-MailContact](Remove-MailContact.md)
 
@@ -2838,14 +2830,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DistributionGroup](Set-DistributionGroup.md)
 
 ### [Set-DynamicDistributionGroup](Set-DynamicDistributionGroup.md)
-
-### [Set-EOPDistributionGroup](Set-EOPDistributionGroup.md)
-
-### [Set-EOPGroup](Set-EOPGroup.md)
-
-### [Set-EOPMailUser](Set-EOPMailUser.md)
-
-### [Set-EOPUser](Set-EOPUser.md)
 
 ### [Set-Group](Set-Group.md)
 
@@ -2862,7 +2846,5 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Undo-SoftDeletedUnifiedGroup](Undo-SoftDeletedUnifiedGroup.md)
 
 ### [Update-DistributionGroupMember](Update-DistributionGroupMember.md)
-
-### [Update-EOPDistributionGroupMember](Update-EOPDistributionGroupMember.md)
 
 ### [Upgrade-DistributionGroup](Upgrade-DistributionGroup.md)
