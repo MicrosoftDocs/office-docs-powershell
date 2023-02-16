@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-atpprotectionpolicyrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-ATPProtectionPolicyRule
 schema: 2.0.0
 author: chrisda
@@ -62,7 +62,7 @@ By default, the available rules (if they exist) are named Standard Preset Securi
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -82,7 +82,7 @@ Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

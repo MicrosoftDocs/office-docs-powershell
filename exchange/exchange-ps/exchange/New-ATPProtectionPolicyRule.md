@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-atpprotectionpolicyrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: New-ATPProtectionPolicyRule
 schema: 2.0.0
 author: chrisda
@@ -66,7 +66,7 @@ By default, the rules are named Standard Preset Security Policy or Strict Preset
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 0
@@ -89,7 +89,7 @@ You can find the Safe Attachments policy that's used by the Standard or Strict p
 Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -112,7 +112,7 @@ You can find the Safe Links policy that's used by the Standard or Strict preset 
 Type: SafeLinksPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ The Comments parameter specifies informative comments for the rule, such as what
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ After you create the rule, you turn on or turn off the preset security policy us
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ The ExceptIfRecipientDomainIs parameter specifies an exception that looks for re
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -212,7 +212,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -239,7 +239,7 @@ If you remove the group after you create the rule, no exception is made for mess
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online,
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ When you create the policy, you must use the default value.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The RecipientDomainIs parameter specifies a condition that looks for recipients 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Onlinen
 
 Required: False
 Position: Named
@@ -300,7 +300,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -327,7 +327,7 @@ If you remove the group after you create the rule, no action is taken on message
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -343,7 +343,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

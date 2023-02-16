@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-maildetailencryptionreport
-applicable: Exchange Online, Security & Compliance
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-MailDetailEncryptionReport
 schema: 2.0.0
 author: chrisda
@@ -89,7 +89,7 @@ The AggregateBy parameter specifies the reporting period. Valid values are Hour,
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ The Direction parameter filters the results by incoming or outgoing messages. Va
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ The Domain parameter filters the results by an accepted domain in the cloud-base
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ The MessageTraceId value is also available in the output of the following cmdlet
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

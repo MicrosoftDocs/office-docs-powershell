@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-onpremisesorganization
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: New-OnPremisesOrganization
 schema: 2.0.0
 author: chrisda
@@ -53,7 +53,7 @@ The Name parameter specifies a friendly name for the on-premises Exchange organi
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ The HybridDomains parameter specifies the domains that are configured in the hyb
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -85,7 +85,7 @@ The InboundConnector parameter specifies the name of the inbound connector confi
 Type: InboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -101,7 +101,7 @@ The OrganizationGuid parameter specifies the globally unique identifier (GUID) o
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -117,7 +117,7 @@ The OutboundConnector parameter specifies the name of the outbound connector con
 Type: OutboundConnectorIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ The OrganizationName parameter specifies the Active Directory object name of the
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ The OrganizationRelationship parameter specifies the organization relationship c
 Type: OrganizationRelationshipIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

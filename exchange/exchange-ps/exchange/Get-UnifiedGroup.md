@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-unifiedgroup
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-UnifiedGroup
 schema: 2.0.0
 author: chrisda
@@ -108,7 +108,7 @@ The Identity parameter specifies the Microsoft 365 Group that you want to view. 
 Type: UnifiedGroupIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
@@ -124,7 +124,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: AnrSet
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ For detailed information about OPATH filters in Exchange, see [Additional OPATH 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ If you don't use this switch, the values of some properties (for example, Calend
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ Soft-deleted Microsoft 365 Groups are deleted groups that are still recoverable.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ You can sort by the following properties:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

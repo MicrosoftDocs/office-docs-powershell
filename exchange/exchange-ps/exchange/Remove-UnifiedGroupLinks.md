@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/remove-unifiedgrouplinks
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Remove-UnifiedGroupLinks
 schema: 2.0.0
 author: chrisda
@@ -59,7 +59,7 @@ The Identity parameter specifies the Microsoft 365 Group that you want to modify
 Type: UnifiedGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -88,7 +88,7 @@ You must use this parameter with the LinkType parameter, which means the specifi
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ You must use this parameter with the LinkType parameter.
 Type: LinkType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -129,7 +129,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
