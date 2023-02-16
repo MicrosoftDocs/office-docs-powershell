@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-safelinkspolicy
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Set-SafeLinksPolicy
 schema: 2.0.0
 author: chrisda
@@ -68,7 +68,7 @@ The Identity parameter specifies the Safe Links policy that you want to modify. 
 Type: SafeLinksPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 1
@@ -84,7 +84,7 @@ The AdminDisplayName parameter specifies a description for the policy. If the va
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ $false: The user isn't allowed to click through to the original URL.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ The custom notification text specifies the customized notification text to show 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ The DeliverMessageAfterScan parameter specifies whether to deliver email message
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in emai
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ For details about the entry syntax, see [Entry syntax for the "Do not rewrite th
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -215,7 +215,7 @@ The EnableForInternalSenders parameter specifies whether the Safe Links policy i
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ The EnableOrganizationBranding parameter specifies whether your organization's l
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ The EnableSafeLinksForEmail parameter specifies whether to enable Safe Links pro
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -274,7 +274,7 @@ Note that this protection applies to links in Office documents, not links in ema
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -293,7 +293,7 @@ The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled fo
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ The ScanUrls parameter specifies whether to enable or disable real-time scanning
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -331,7 +331,7 @@ The TrackClicks parameter specifies whether to track user clicks related to Safe
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -350,7 +350,7 @@ The UseTranslatedNotificationText specifies whether to use Microsoft Translator 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -366,7 +366,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-atppolicyforo365
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-AtpPolicyForO365
 schema: 2.0.0
 author: chrisda
@@ -56,7 +56,7 @@ The Identity parameter specifies the policy that you want to modify. There's onl
 Type: AtpPolicyForO365IdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 1
