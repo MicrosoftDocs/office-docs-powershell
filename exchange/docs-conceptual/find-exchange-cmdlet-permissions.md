@@ -25,10 +25,9 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 - Basically, you need to be an administrator to complete this procedure. Specifically, you need access to the **Get-ManagementRole** and **Get-ManagementRoleAssignment** cmdlets. By default, access to these cmdlets is granted by the **View-Only Configuration** or **Role Management** roles, which are only assigned to the **View-Only Organization Management** and **Organization Management** role groups by default.
 
-- The procedures in this article don't work in Security & Compliance PowerShell or standalone Exchange Online Protection (EOP) PowerShell (Microsoft 365 organizations without Exchange Online mailboxes). For more information about permissions in these environments, see the following articles:
+- The procedures in this article don't work in Security & Compliance PowerShell. For more information about Security & Compliance permissions, see the following articles:
   - [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions)
   - [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions)
-  - [Permissions in standalone EOP](/microsoft-365/security/office-365-security/feature-permissions-in-eop).
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) or [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542).
@@ -37,6 +36,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 1. If you haven't already, open the Exchange PowerShell environment that you're interested in:
    - **Exchange Online**: [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+   - **Exchange Online Protection** (Microsoft 365 organizations without Exchange Online mailboxes): [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
    - **Exchange Server**: [Open the Exchange Management Shell](open-the-exchange-management-shell.md) or [Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md).
 
 2. Replace `<Cmdlet>` and optionally, `<Parameter1>,<Parameter2>,...` with the values that you want to use, and run the following command:
