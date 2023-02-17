@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineapplicationinstance
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsOnlineApplicationInstance
 schema: 2.0.0
 manager: bulenteg
@@ -45,7 +45,7 @@ The URI or ID of the application instance to update.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -63,7 +63,7 @@ Assigns a hybrid (on-premise) telephone number to the application instance.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ The application ID. The Microsoft application Auto Attendant has the Application
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -95,11 +95,61 @@ The display name.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -114,3 +164,12 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+
+[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+
+[Sync-CsOnlineApplicationInstance](Sync-CsOnlineApplicationInstance.md)
+
