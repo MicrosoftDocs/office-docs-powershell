@@ -105,13 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 
 Required: False
@@ -172,4 +171,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 [Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
 
 [Sync-CsOnlineApplicationInstance](Sync-CsOnlineApplicationInstance.md)
-
