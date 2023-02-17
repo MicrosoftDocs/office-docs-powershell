@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineapplicationinstance
-applicable: Skype for Business Online
+applicable: Microsoft Teams, Skype for Business Online
 title: Set-CsOnlineApplicationInstance
 schema: 2.0.0
 manager: bulenteg
@@ -21,27 +21,20 @@ and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumb
 ## SYNTAX
 
 ```
-Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <string>] [[-ApplicationId] <guid>]
-    [[-DisplayName] <string>] [-Tenant <guid>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <string>] [[-ApplicationId] <guid>] [[-DisplayName] <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet is used to update an application instance in Azure Active Directory. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
 
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -OnpremPhoneNumber +14250000000 -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
+Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
 ```
 
-This example shows updating OnpremPhoneNumber, ApplicationId, DisplayName information for an existing Auto Attendant application instance with Identity "appinstance01@contoso.com".
-
-The following are the application ID's for each type of application instance types:
-
-Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
-Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
+This example shows updating ApplicationId and DisplayName information for an existing Auto Attendant application instance with Identity "appinstance01@contoso.com".
 
 ## PARAMETERS
 
@@ -52,7 +45,7 @@ The URI or ID of the application instance to update.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: True
 Position: Named
@@ -70,7 +63,7 @@ Assigns a hybrid (on-premise) telephone number to the application instance.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -80,13 +73,13 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The application ID.
+The application ID. The Microsoft application Auto Attendant has the ApplicationId ce933385-9390-45d1-9512-c8d228074e07 and the Microsoft application Call Queue has the ApplicationId 11cd3e2e-fccb-42ad-ad00-878b93575e07. Third party applications available in a tenant might use other ApplicationId's.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -102,7 +95,7 @@ The display name.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
