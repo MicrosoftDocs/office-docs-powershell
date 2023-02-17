@@ -6,7 +6,7 @@ title: Sync-CsOnlineApplicationInstance
 schema: 2.0.0
 author: jenstrier
 ms.author: jenstr
-manager:naveenv
+manager: naveenv
 ms.reviewer:
 ---
 
