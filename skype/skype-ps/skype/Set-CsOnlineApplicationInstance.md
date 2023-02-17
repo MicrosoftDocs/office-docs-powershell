@@ -25,7 +25,7 @@ Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <stri
 ```
 
 ## DESCRIPTION
-This cmdlet is used to update an application instance in Azure Active Directory. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
+This cmdlet is used to update an application instance in Azure Active Directory.
 
 ## EXAMPLES
 
