@@ -18,12 +18,11 @@ schema: 2.0.0
 
 ```
 New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString <string> [-NotificationGroup <string>] 
- [-NotificationDialOutNumber <string>] [-NotificationMode <string>]
- [<CommonParameters>]
+ [-NotificationDialOutNumber <string>] [-NotificationMode <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet supports creating specific emergency calling notification setting per emergency phone numbers. Used with TeamsEmergencyCallingPolicy.
+This cmdlet supports creating specific emergency calling notification settings per emergency phone numbers. Used with TeamsEmergencyCallingPolicy.
 
 ## EXAMPLES
 
@@ -32,12 +31,12 @@ This cmdlet supports creating specific emergency calling notification setting pe
 PS C:>  $en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
 ```
 
-Creates an extended emergency calling notfication and stores it in the variable $en1. The variable should afterwards be added to a TeamsEmergencyCallingPolicy instance.
+Creates an extended emergency calling notfication for emergency phone number 911 and stores it in the variable $en1. The variable should afterwards be added to a TeamsEmergencyCallingPolicy instance.
  
 ## PARAMETERS
 
 ### -EmergencyDialString
-Specifies the emergency phone number
+Specifies the emergency phone number.
 
 ```yaml
 Type: String
