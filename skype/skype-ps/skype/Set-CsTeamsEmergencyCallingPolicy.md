@@ -101,10 +101,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocationLookupMode
-Enables ExternalLocationLookupMode. This mode allows users to set Emergency addresses for remote locations.
+Enable ExternalLocationLookupMode. This mode allow users to set Emergency addresses for remote locations.
 
 ```yaml
-Type: String
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.ExternalLocationLookupMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Disabled, Enabled
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 The type of conference experience for security desk notification. Support for the ConferenceUnMuted mode is pending.
 
 ```yaml
-Type: Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: NotificationOnly, ConferenceMuted, ConferenceUnMuted
