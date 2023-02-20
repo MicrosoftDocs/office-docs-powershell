@@ -69,7 +69,7 @@ Accept wildcard characters: False
 The result size for bulk get.
 
 ```yaml
-Type: UInt32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
@@ -82,10 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Skip the first X entries for bulk get.
+Skips the first X returned results and the default value is 0.
 
 ```yaml
-Type: UInt32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
