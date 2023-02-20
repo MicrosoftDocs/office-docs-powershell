@@ -17,9 +17,9 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-Description <string>] [-EnhancedEmergencyServiceDisclaimer <string>]
- [-ExternalLocationLookupMode <string>] [-NotificationDialOutNumber <string>] [-NotificationGroup <string>]
- [-NotificationMode <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-ExtendedNotifications <PSListModifier[TeamsEmergencyCallingExtendedNotification]>]
+ [-NotificationGroup <string>] [-NotificationDialOutNumber <string>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
+ [-NotificationMode <NotificationMode>] [-EnhancedEmergencyServiceDisclaimer <string>] [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
  ```
 
 ## DESCRIPTION
@@ -29,17 +29,34 @@ This cmdlet creates a new Teams Emergency Calling policy. Emergency calling poli
 
 ### Example 1
 ```powershell
-New-CsTeamsEmergencyCallingPolicy -Identity testECP -Description "Test ECP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode NotificationOnly -ExternalLocationLookupMode Enabled
+New-CsTeamsEmergencyCallingPolicy -Identity TestECP -Description "Test ECP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode NotificationOnly -ExternalLocationLookupMode Enabled
 ```
 
-This example creates a Teams Emergency Calling policy that has an identity of testECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
+This example creates a Teams Emergency Calling policy that has an identity of TestECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
 
 ### Example 2
 ```powershell
-PS C:>  New-CsTeamsEmergencyCallingPolicy -Identity "testECP2" -NotificationGroup "123@gh.com;567@test.com"
+New-CsTeamsEmergencyCallingPolicy -Identity "TestECP2" -NotificationGroup "123@contoso.com;567@contoso.com"
 ```
 
- This example creates a Teams Emergency Calling policy that has an identity of testECP2, with default settings except for the Notification Group. This parameter expects a single string with all users and groups separated with ";".
+This example creates a Teams Emergency Calling policy that has an identity of TestECP2, with default settings except for the Notification Group. This parameter expects a single string with all users and groups separated with ";".
+
+### Example 3
+```powershell
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "112" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP3" -ExtendedNotifications @{add=$en1,$en2}
+```
+
+This example creates specifc emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP3 policy instance.
+
+### Example 4
+```powershell
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP3" -ExtendedNotifications @{remove=$en2}
+```
+
+This example removes a specifc emergency calling notification setting from the existing TestECP3 policy instance.
 
 ## PARAMETERS
 
@@ -88,11 +105,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExtendedNotifications
+A list of one or more instances of TeamsEmergencyCallingExtendedNotification.
+
+```yaml
+Type: System.Management.Automation.PSListModifier[Microsoft.Teams.Policy.Administration.Cmdlets.Core.TeamsEmergencyCallingExtendedNotification]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExternalLocationLookupMode
 Enable ExternalLocationLookupMode. This mode allow users to set Emergency addresses for remote locations.
 
 ```yaml
-Type: String
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.ExternalLocationLookupMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Disabled, Enabled
@@ -138,7 +170,7 @@ Accept wildcard characters: False
 The type of conference experience for security desk notification. Support for the ConferenceUnMuted mode is pending.
 
 ```yaml
-Type: Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: NotificationOnly, ConferenceMuted, ConferenceUnMuted
@@ -202,3 +234,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
 
 [Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)
+
+[New-CsTeamsEmergencyCallingExtendedNotification](New-CsTeamsEmergencyCallingExtendedNotification.md)
