@@ -18,9 +18,10 @@ schema: 2.0.0
 
 ### Identity (Default)
 ```
-Set-CsTeamsEmergencyCallingPolicy [[-Identity] <string>] [-Description <string>] [-EnhancedEmergencyServiceDisclaimer <string>]
- [-ExternalLocationLookupMode <string>] [-NotificationDialOutNumber <string>] [-NotificationGroup <string>] [-NotificationMode <Object>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-ExtendedNotifications <PSListModifier[TeamsEmergencyCallingExtendedNotification]>]
+  [-NotificationGroup <string>] [-NotificationDialOutNumber <string>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
+  [-NotificationMode <NotificationMode>] [-EnhancedEmergencyServiceDisclaimer <string>]
+  [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,10 +31,27 @@ This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calli
 
 ### Example 1
 ```powershell
-Set-CsTeamsEmergencyCallingPolicy -Identity "testECP" -NotificationGroup "123@gh.com;567@test.com"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -NotificationGroup "123@contoso.com;567@contoso.com"
 ```
 
-This example modifies an existing cmdlet with identity testECP.
+This example modifies an existing policy instance with identity TestECP.
+
+### Example 2
+```powershell
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "112" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{add=$en1,$en2}
+```
+
+This example creates specifc emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP policy instance.
+
+### Example 3
+```powershell
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{remove=$en2}
+```
+
+This example removes a specifc emergency calling notification setting from the existing TestECP policy instance.
 
 ## PARAMETERS
 
@@ -57,6 +75,21 @@ Allows the tenant administrator to configure a text string, which is shown at th
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExtendedNotifications
+A list of one or more instances of TeamsEmergencyCallingExtendedNotification.
+
+```yaml
+Type: System.Management.Automation.PSListModifier[Microsoft.Teams.Policy.Administration.Cmdlets.Core.TeamsEmergencyCallingExtendedNotification]
 Parameter Sets: (All)
 Aliases:
 
@@ -193,3 +226,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
 
 [Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
+
+[New-CsTeamsEmergencyCallingExtendedNotification](New-CsTeamsEmergencyCallingExtendedNotification.md)
