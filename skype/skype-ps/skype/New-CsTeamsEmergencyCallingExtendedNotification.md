@@ -22,7 +22,7 @@ New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString <string> [-
 ```
 
 ## DESCRIPTION
-This cmdlet supports creating specific emergency calling notification settings per emergency phone numbers. Used with TeamsEmergencyCallingPolicy.
+This cmdlet supports creating specific emergency calling notification settings per emergency phone number. Used with TeamsEmergencyCallingPolicy.
 
 ## EXAMPLES
 
