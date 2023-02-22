@@ -88,6 +88,8 @@ Accept wildcard characters: False
 ### -ExtendedNotifications
 A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
 
+If an extended notification is found for an emergency phone number based on the EmergencyDialString parameter the extended notification will be controlling the notification. If no extended notification is found the notification settings on the policy instance itself will be used.
+
 ```yaml
 Type: System.Management.Automation.PSListModifier[Microsoft.Teams.Policy.Administration.Cmdlets.Core.TeamsEmergencyCallingExtendedNotification]
 Parameter Sets: (All)
@@ -134,8 +136,6 @@ Accept wildcard characters: False
 ### -NotificationDialOutNumber
 This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values.
 
-Used if there is not a specfic extended notification for the emergency phone number as specified by the EmergencyDialString parameter of the extended notification.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -151,8 +151,6 @@ Accept wildcard characters: False
 ### -NotificationGroup
 NotificationGroup is a email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance "group1@contoso.com;group2@contoso.com". A maximum of 50 users can be notified.
 
-Used if there is not a specfic extended notification for the emergency phone number as specified by the EmergencyDialString parameter of the extended notification.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -167,8 +165,6 @@ Accept wildcard characters: False
 
 ### -NotificationMode
 The type of conference experience for security desk notification.
-
-Used if there is not a specfic extended notification for the emergency phone number as specified by the EmergencyDialString parameter of the extended notification.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
