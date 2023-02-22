@@ -169,9 +169,14 @@ Accept wildcard characters: False
 ```
 
 ### -Allow
+Please see [Learn more about allow entries in the Tenant Allow/Block], before trying to create Allow in Tenant Allow/Block List.(https://learn.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list-about?view=o365-worldwide#allow-entries-in-the-tenant-allowblock-list).
+
+This command can be used for creating third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+
 The Allow switch specifies that you're creating an allow entry. You don't need to specify a value with this switch.
 
 You can't use this switch with the Block switch.
+
 
 ```yaml
 Type: SwitchParameter
