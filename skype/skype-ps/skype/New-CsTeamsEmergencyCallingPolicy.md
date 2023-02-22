@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedNotifications
-A list of one or more instances of TeamsEmergencyCallingExtendedNotification.
+A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier[Microsoft.Teams.Policy.Administration.Cmdlets.Core.TeamsEmergencyCallingExtendedNotification]
