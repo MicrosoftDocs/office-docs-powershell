@@ -137,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationDialOutNumber
-This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values.
+This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values. Used if there is not a specfic
+extended notification for the emergency phone number as specified by the EmergencyDialString parameter of the extended notification.
 
 ```yaml
 Type: String
@@ -153,6 +154,7 @@ Accept wildcard characters: False
 
 ### -NotificationGroup
 NotificationGroup is a email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance "group1@contoso.com;group2@contoso.com". A maximum of 50 users can be notified.
+Used if there is not a specfic extended notification for the emergency phone number as specified by the EmergencyDialString parameter of the extended notification.
 
 ```yaml
 Type: String
@@ -167,7 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationMode
-The type of conference experience for security desk notification.
+The type of conference experience for security desk notification. Used if there is not a specfic extended notification for the emergency phone number as
+specified by the EmergencyDialString parameter of the extended notification.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
