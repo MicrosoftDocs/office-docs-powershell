@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationDialOutNumber
-This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values.
+This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values.  The PSTN phone cannot be unmuted even when the NotificationMode is set to ConferenceUnMuted.
 
 ```yaml
 Type: String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationMode
-The type of conference experience for security desk notification. Support for the ConferenceUnMuted mode is pending.
+The type of conference experience for security desk notification.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
