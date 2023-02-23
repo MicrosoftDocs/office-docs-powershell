@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationMode
-The type of conference experience for security desk notification. 
+The type of conference experience for security desk notification. Support for the ConferenceUnMuted mode is pending.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
