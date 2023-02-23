@@ -173,9 +173,10 @@ The Allow switch specifies that you're creating an allow entry. You don't need t
 
 You can't use this switch with the Block switch.
 
-**Note**: See [Allow entries in the Tenant Allow/Block List](https://learn.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list-about#allow-entries-in-the-tenant-allowblock-list), before you try to create an allow entry.
-
-You can also use allow entries for third-party phishing simulation URLs with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+> [!NOTE]: 
+> 
+> - See [Allow entries in the Tenant Allow/Block List](https://learn.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list-about#allow-entries-in-the-tenant-allowblock-list), before you try to create an allow entry.
+> - You can also use it to create allow entries for third-party phishing simulation URLs with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
 
 ```yaml
 Type: SwitchParameter
