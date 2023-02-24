@@ -270,13 +270,7 @@ Accept wildcard characters: False
 
 The group notification override that will be set on the specified user. The supported values are Ring, Mute and Banner.
 
-The initial setting is Null. It means that the Teams client is honoring the group notification set on the call group. 
-
-When you set the GroupNotificationOverride to Ring or Banner for a user, the Teams client is honoring the group notification set on the call group.
-
-If you set GroupNotificationOverride to Mute for a user, that setting will precedence over the setting on the call group for the user.
-
-For example: User A is a member of User B's call group. The notification setting in User B's call group for User A says Banner. User A has GroupNotificationOverride set to Ring. When a call is forwarded to User A from User B's call group, User A will only get Banner, not the ring. If User A has GroupNotificationOverride set to Mute, no call notification will be shown to User A.
+The initial setting is shown as Null. It means that the group notification set for the user in the call group is used. If you set GroupNotificationOverride to Mute, that setting will override the group notification for the user in the call group for the user. If you set the GroupNotificationOverride to Ring or Banner, the group notification set for the user in the call group will be used.
  
 ```yaml
 Type: System.String
