@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Pr
 
 **Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Get-VivaModuleFeatureEnablement cmdlet to view the enablement state of features in a Viva module for specific users.
+Use the Get-VivaModuleFeatureEnablement cmdlet to view whether or not a feature in a Viva module is enabled for a specific user or group. Whether or not the feature is enabled will be referred to as the feature's “enablement state” in this documentation page.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,14 +30,15 @@ Get-VivaModuleFeatureEnablement -ModuleId <String> -FeatureId <String> -Identity
 ```
 
 ## DESCRIPTION
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with Viva Feature Access Management Service.
+You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
 To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
-- Insights Administrator
+
+There may be other admin roles permissioned access based on the particular feature’s scope. More details will be provided soon.
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -45,44 +46,19 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Get-VivaModuleFeatureEnablement -ModuleId test-module -FeatureId TestFeature -Identity admin@contoso.org
+Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity admin@contoso.org
 ```
 
-This example returns the enablement state for the specified module, feature, and user.
+This example returns the enablement state of the Reflection feature in Viva Insights for the **admin@contoso.org** user.
+
+### Example 2
+```powershell
+Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity us-user-grp@contoso.org
+```
+
+This example returns the enablement state of the Reflection feature in Viva Insights for the **us-user-grp@contoso.com** group.
 
 ## PARAMETERS
-
-### -FeatureId
-The FeatureId parameter specifies the feature within the Viva module.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Type: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the user principal name (UPN) of the user.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: UPN
-Type: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ModuleId
 The ModuleId parameter specifies the Viva module.
@@ -100,8 +76,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FeatureId
+The FeatureId parameter specifies the feature in the Viva module.
+
+To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Type: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter specifies the user principal name (UPN) of the user or the SMTP    address (email address) of the group that you want to view the feature enablement status of. 
+
+Note that Viva feature access management supports [mail-enabled AAD groups]( https://docs.microsoft.com/en-us/graph/api/resources/groups-overview?context=graph%2Fcontext&view=graph-rest-1.0#group-types-in-azure-ad-and-microsoft-graph).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Type: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
