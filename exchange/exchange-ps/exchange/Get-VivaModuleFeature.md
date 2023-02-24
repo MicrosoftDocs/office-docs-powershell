@@ -16,9 +16,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
-
-Use the Get-VivaModuleFeature cmdlet to view the features for a Viva module or the details of a specific feature available for a specific Viva module.
+Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module tht has Viva feature access controls available. This cmdlet provides details about the features, including the feature identifiers and descriptions.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -32,32 +30,29 @@ Get-VivaModuleFeature -ModuleId <String>
 ```
 
 ## DESCRIPTION
+**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+
+You can view all features in a particular Viva module that has Viva feature access controls available. To view a specific feature, you can include the FeatureId parameter.
+
 You need to use the Connect-ExchangeOnline cmdlet to authenticate with Viva Feature Access Management Service.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
-
-To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
-
-- Global Administrator
-- Insights Administrator
-
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-VivaModuleFeature -ModuleId test-module
+Get-VivaModuleFeature -ModuleId VivaInsights
 ```
 
-This example returns all features for the specified Viva module.
+This example returns all features in Viva Insights that have Viva feature access controls available.
 
 ### Example 2
 ```powershell
-Get-VivaModuleFeature -ModuleId test-module -FeatureId TestFeature1
+Get-VivaModuleFeature -ModuleId VivaInsights -FeatureId Reflection
 ```
 
-This example returns feature details for the specified Viva module.
+This example returns the details of the Reflection feature in Viva Insights.
 
 ## PARAMETERS
 
@@ -78,7 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureId
-The FeatureId parameter filters the results by the specified feature in the Viva module.
+The FeatureId parameter specifies the specific feature in the Viva module that you want to view.
+
+You can view details about all the features in a Viva module that have Viva feature access controls available by running the cmdlet without the FeatureId parameter. These details include the identifiers of all features in a Viva module that have Viva feature access controls available.
 
 ```yaml
 Type: String
@@ -94,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
