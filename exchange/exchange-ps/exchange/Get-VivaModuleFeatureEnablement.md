@@ -46,17 +46,17 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity admin@contoso.org
+Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity user@contoso.com
 ```
 
-This example returns the enablement state of the Reflection feature in Viva Insights for the **admin@contoso.org** user.
+This example returns the enablement state of the Reflection feature in Viva Insights for the **user@contoso.com** user.
 
 ### Example 2
 ```powershell
-Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity us-user-grp@contoso.org
+Get-VivaModuleFeatureEnablement -ModuleId VivaInsights -FeatureId Reflection -Identity group@contoso.com
 ```
 
-This example returns the enablement state of the Reflection feature in Viva Insights for the **us-user-grp@contoso.com** group.
+This example returns the enablement state of the Reflection feature in Viva Insights for the **group@contoso.com** group.
 
 ## PARAMETERS
 
