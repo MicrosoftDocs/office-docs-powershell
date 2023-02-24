@@ -545,7 +545,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -689,7 +689,7 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 Type: SmtpAddress
 Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-exoinformationbarriersegment
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-ExoInformationBarrierSegment
 schema: 2.0.0
 author: chrisda
@@ -57,7 +57,7 @@ The Identity parameter specifies the Exchange Online information barrier segment
 Type: InformationBarrierSegmentIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -75,7 +75,7 @@ When you use this switch, the FriendlyMembershipFilter property value is shown.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

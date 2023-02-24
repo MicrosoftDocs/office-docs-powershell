@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/test-message
-applicable: Exchange Server 2013, Exchange Online
+applicable: Exchange Server 2013, Exchange Online, Exchange Online Protection
 title: Test-Message
 schema: 2.0.0
 author: chrisda
@@ -68,7 +68,7 @@ You can specify multiple email addresses separated by commas.
 Type: ProxyAddressCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ The SendReportTo parameter specifies the target email address for the command re
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ The TransportRules switch specifies that you want to test mail flow rules. You d
 Type: SwitchParameter
 Parameter Sets: TransportRules
 Aliases:
-Applicable: Exchange Server 2013, Exchange Online
+Applicable: Exchange Server 2013, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ The UnifiedDlpRules switch specifies that you want to unified DLP rules. You don
 Type: SwitchParameter
 Parameter Sets: UnifiedDLPRules
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Online
+Applicable: Exchange Server 2013, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ The Force switch specifies whether to suppress warning or confirmation messages.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ The Sender parameter specifies the sender email address to use for the test mess
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Online
+Applicable: Exchange Server 2013, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

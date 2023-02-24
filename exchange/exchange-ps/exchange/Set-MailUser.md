@@ -1065,7 +1065,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1530,7 +1530,7 @@ This feature is not available in hybrid tenants.
 Type: SwitchParameter
 Parameter Sets: EnableLitigationHoldForMigration
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -1564,7 +1564,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: ExcludeFromAllOrgHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1582,7 +1582,7 @@ This parameter is available only in the cloud-based service.
 Type: String[]
 Parameter Sets: ExcludeFromOrgHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1859,7 +1859,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SmtpAddress
 Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2189,7 +2189,7 @@ The PrimarySmtpAddress parameter updates the primary email address and WindowsEm
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2207,7 +2207,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RecalculateInactiveMailUser
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -2412,7 +2412,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RemoveComplianceTagHoldApplied
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -2430,7 +2430,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RemoveDelayHoldApplied
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -2448,7 +2448,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RemoveDelayReleaseHoldApplied
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -2466,7 +2466,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RemoveDisabledArchive
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2484,7 +2484,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RemoveLitigationHoldEnabled
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -2502,27 +2502,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveMailboxProvisioningConstraint
-This parameter is available only in the cloud-based service.
-
-The RemoveMailboxProvisioningConstraint switch removes the mailbox provisioning constraint from the user. You don't need to specify a value with this switch.
-
-You should use this switch when the provisioning constraint is no longer needed, or if it's preventing the mailbox from being moved.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2540,7 +2520,7 @@ This parameter is available only in the cloud-based service.
 Type: String[]
 Parameter Sets: RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
