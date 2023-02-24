@@ -206,6 +206,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
 
+### [Get-BlockedConnector](Get-BlockedConnector.md)
+
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
 
 ### [Get-ConfigAnalyzerPolicyRecommendation](Get-ConfigAnalyzerPolicyRecommendation.md)
@@ -323,6 +325,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Release-QuarantineMessage](Release-QuarantineMessage.md)
 
 ### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
+
+### [Remove-BlockedConnector](Remove-BlockedConnector.md)
 
 ### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
 
