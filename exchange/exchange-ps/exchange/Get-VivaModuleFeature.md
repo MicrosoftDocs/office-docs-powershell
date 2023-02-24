@@ -16,7 +16,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that has Viva feature access controls available. This cmdlet provides details about the features, including the feature identifiers and descriptions.
+**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+
+Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that have Viva feature access controls available. This cmdlet provides details about the features, including the feature identifiers and descriptions.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,11 +32,9 @@ Get-VivaModuleFeature -ModuleId <String>
 ```
 
 ## DESCRIPTION
-**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+You can view all features in a particular Viva module that have Viva feature access controls available. To view a specific feature, you can include the FeatureId parameter.
 
-You can view all features in a particular Viva module that has Viva feature access controls available. To view a specific feature, you can include the FeatureId parameter.
-
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with Viva Feature Access Management Service.
+You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
@@ -57,7 +57,7 @@ This example returns the details of the Reflection feature in Viva Insights.
 ## PARAMETERS
 
 ### -ModuleId
-The ModuleId parameter specifies the Viva module that you want to view.
+The ModuleId parameter specifies the Viva module of the features that you want to view.
 
 ```yaml
 Type: String
