@@ -17,28 +17,31 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Pr
 
 **Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Get-VivaModuleFeaturePolicy cmdlet to view policies and policy details for features in Viva modules.
+Use the Get-VivaModuleFeaturePolicy cmdlet to view the policies for a specified feature in a Viva module. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy’s identifier, name, and creation date.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
+Get-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String>
  [[-PolicyId] <String>]
  [-ResultSize <Microsoft.Exchange.Management.RestApiClient.Unlimited`1[System.UInt32]>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with Viva Feature Access Management Service.
+You can view all policies for a specified feature in a Viva module. To view a specific policy, you can include the PolicyId parameter. 
+
+You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
 To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
-- Insights Administrator
+
+There may be other admin roles permissioned access based on the particular feature’s scope. More details will be provided soon.
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -46,22 +49,22 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Get-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2
+Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection
 ```
 
-This example returns all policies for the specified feature in the specified Viva module.
+This example returns details about all the policies added for the Reflection feature in Viva Insights.
 
 ### Example 2
 ```
-Get-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2 -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6
+Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6
 ```
 
-This example returns detailed information for the specified feature in the specified Viva module.
+This example returns details about a specific policy added for the Reflection feature in Viva Insights.
 
 ## PARAMETERS
 
-### -FeatureId
-The FeatureId parameter specifies the feature policy to view in the Viva module.
+### -ModuleId
+The ModuleId parameter specifies the Viva module of the feature policies that you want to view.
 
 ```yaml
 Type: String
@@ -76,8 +79,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ModuleId
-The ModuleId parameter specifies the Viva module that contains the feature policies that you want to view.
+### -FeatureId
+The FeatureId parameter specifies the feature in the Viva module that you want to view the policies for. 
+
+To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+
 
 ```yaml
 Type: String
@@ -93,7 +99,10 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyId
-The PolicyId parameter specifies the feature policy in the Viva module that you want to view.
+The PolicyId parameter specifies the specific policy for the feature in the Viva module that you want to view.
+
+You can view details about all the policies for a feature in a Viva module by running the cmdlet without the PolicyId parameter. These details include the identifiers of all the policies for a feature in a Viva module.
+
 
 ```yaml
 Type: String
@@ -109,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Microsoft.Exchange.Management.RestApiClient.Unlimited`1[System.UInt32]
