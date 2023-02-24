@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String>
+Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
  [[-PolicyId] <String>]
  [-ResultSize <Microsoft.Exchange.Management.RestApiClient.Unlimited`1[System.UInt32]>]
  [<CommonParameters>]
@@ -63,8 +63,11 @@ This example returns details about a specific policy added for the Reflection fe
 
 ## PARAMETERS
 
-### -ModuleId
-The ModuleId parameter specifies the Viva module of the feature policies that you want to view.
+### -FeatureId
+The FeatureId parameter specifies the feature in the Viva module that you want to view the policies for. 
+
+To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+
 
 ```yaml
 Type: String
@@ -79,11 +82,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FeatureId
-The FeatureId parameter specifies the feature in the Viva module that you want to view the policies for. 
-
-To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
-
+### -ModuleId
+The ModuleId parameter specifies the Viva module of the feature policies that you want to view.
 
 ```yaml
 Type: String
