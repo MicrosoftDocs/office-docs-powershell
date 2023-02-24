@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId <String>
+Remove-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]
  [-ResultSize <Unlimited>]
  [-WhatIf]
@@ -55,9 +55,11 @@ This example deletes the specified policy for the Reflection feature in Viva Ins
 
 ## PARAMETERS
 
+### -FeatureId
+The FeatureId parameter specifies the feature in the Viva module that you want to remove the policy from.
 
-### -ModuleId
-The ModuleId parameter specifies the Viva module of the feature that you want to remove the policy from.
+To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+
 
 ```yaml
 Type: String
@@ -72,11 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -FeatureId
-The FeatureId parameter specifies the feature in the Viva module that you want to remove the policy from.
-
-To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
-
+### -ModuleId
+The ModuleId parameter specifies the Viva module of the feature that you want to remove the policy from.
 
 ```yaml
 Type: String
@@ -129,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
