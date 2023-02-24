@@ -15,7 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Get-VivaModuleFeaturePolicy cmdlet to remove feature policies from Viva modules.
+**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+
+Use the Remove-VivaModuleFeaturePolicy cmdlet to delete a policy for a feature in a Viva module. Once you delete a policy, the policy is permanently deleted. You cannot undo the deletion.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -37,7 +39,8 @@ This cmdlet requires the .NET Framework 4.7.2 or later.
 To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
-- Insights Administrator
+
+There may be other admin roles permissioned access based on the particular feature’s scope. More details will be provided soon.
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -45,15 +48,18 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Remove-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2 -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6
+Remove-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6
 ```
 
-This example removes the specified feature policy from the specified Viva module.
+This example deletes the specified policy for the Reflection feature in Viva Insights.
 
 ## PARAMETERS
 
 ### -FeatureId
-The FeatureId parameter specifies the feature policy that contains the feature policy to remove from the Viva module.
+The FeatureId parameter specifies the feature in the Viva module that you want to remove the policy from.
+
+To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+
 
 ```yaml
 Type: String
@@ -69,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModuleId
-The ModuleId parameter specifies the Viva module that contains the feature policies that you want to remove.
+The ModuleId parameter specifies the Viva module of the feature that you want to remove the policy from.
 
 ```yaml
 Type: String
@@ -85,7 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyId
-The PolicyId parameter specifies the feature policy in the Viva module that you want to remove.
+The PolicyId parameter specifies the policy for the feature in the Viva module that you want to remove.
+
+To view details about the added policies for a feature in a Viva module, refer to the Get-VivaModuleFeaturePolicy cmdlet. The details provided by the Get-VivaModuleFeaturePolicy cmdlet include the policy identifier.
 
 ```yaml
 Type: String
@@ -120,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
