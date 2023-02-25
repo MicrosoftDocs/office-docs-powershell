@@ -34,7 +34,7 @@ This cmdlet is used to update an application instance in Azure Active Directory.
 Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
 ```
 
-This example shows updating ApplicationId and DisplayName information for an existing Auto Attendant application instance with Identity "appinstance01@contoso.com".
+This example shows updated ApplicationId and DisplayName information for an existing Auto Attendant application instance with Identity "appinstance01@contoso.com".
 
 ## PARAMETERS
 
