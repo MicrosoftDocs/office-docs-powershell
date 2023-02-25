@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-Skips the first X returned results and the default value is 0.
+Skips the first specified number of returned results. The default value is 0.
 
 ```yaml
 Type: System.Int32
