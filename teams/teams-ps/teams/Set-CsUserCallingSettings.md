@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 The group notification override that will be set on the specified user. The supported values are Ring, Mute and Banner.
 
-The initial setting is shown as Null. It means that the group notification set for the user in the call group is used. If you set GroupNotificationOverride to Mute, that setting will override the group notification for the user in the call group for the user. If you set the GroupNotificationOverride to Ring or Banner, the group notification set for the user in the call group will be used.
+The initial setting is shown as Null. It means that the group notification set for the user in the call group is used. If you set GroupNotificationOverride to Mute, that setting will override the group notification for the user in the call group. If you set the GroupNotificationOverride to Ring or Banner, the group notification set for the user in the call group will be used.
  
 ```yaml
 Type: System.String
