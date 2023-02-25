@@ -51,7 +51,7 @@ $en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911
 Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{remove=$en2}
 ```
 
-This example removes a specifc emergency calling notification setting from the existing TestECP policy instance.
+This example removes a specific emergency calling notification setting from the existing TestECP policy instance.
 
 ## PARAMETERS
 
