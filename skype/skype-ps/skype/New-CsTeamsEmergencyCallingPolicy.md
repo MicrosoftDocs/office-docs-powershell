@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationDialOutNumber
-This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values.  The PSTN phone cannot be unmuted even when the NotificationMode is set to ConferenceUnMuted.
+This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values. The PSTN phone cannot be unmuted even when the NotificationMode is set to ConferenceUnMuted.
 
 ```yaml
 Type: String
