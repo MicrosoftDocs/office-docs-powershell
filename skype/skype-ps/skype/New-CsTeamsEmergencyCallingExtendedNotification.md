@@ -31,7 +31,7 @@ This cmdlet supports creating specific emergency calling notification settings p
 PS C:>  $en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
 ```
 
-Creates an extended emergency calling notfication for emergency phone number 911 and stores it in the variable $en1. The variable should afterwards be added to a TeamsEmergencyCallingPolicy instance.
+Creates an extended emergency calling notification for the emergency phone number 911 and stores it in the variable $en1. The variable should be added afterward to a TeamsEmergencyCallingPolicy instance.
  
 ## PARAMETERS
 
