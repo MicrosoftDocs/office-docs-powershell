@@ -15,11 +15,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Update-VivaModuleFeaturePolicy cmdlet to remove feature policies from Viva modules.
+**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+
+Use the Update-VivaModuleFeaturePolicy cmdlet to update a policy for a feature in a Viva module.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
-
-Updates an existing feature policy for an existing Viva module feature.
 
 ## SYNTAX
 
@@ -30,22 +30,29 @@ Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId 
  [-GroupIds <String[]>] [-UserIds <String[]>]
  [-Everyone <Boolean>]
  [-Name <String>]
- [-ResultSize <Microsoft.Exchange.Management.RestApiClient.Unlimited`1[System.UInt32]>]
+ [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The access control list can contain a combined maximum of 20 user and group entries, or the value Everyone.
+This cmdlet updates the attributes of the policy that you specify. These attributes include:
 
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with Viva Feature Access Management Service.
+- The policy name (Name parameter).
+- Whether or not the policy disables the feature (IsFeatureDisabled parameter).
+- Who the policy applies to (the UserIds and GroupIds parameters or the Everyone parameter).
+
+You can update these attributes independently of each other. For example, if you specify the Name parameter but not the IsFeatureDisabled parameter, the name of the policy is updated but whether or not the policy disables the feature remains unchanged.
+
+**Important**: Values that you specify for the UserIds and/or GroupIds parameters or the Everyone parameter will **overwrite** any existing users or groups. To preserve the existing users and groups, you need to specify those existing users or groups **and** any additional users or groups that you want to add. Not including existing users or groups in the command effectively removes those specific users or groups from the policy. For more information, see the examples.
+
+You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
 To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
-- Insights Administrator
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -53,50 +60,38 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2 -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -Name NewTestPolicyName2Updated -IsFeatureDisabled $false
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -Name NewPolicyName -IsFeatureDisabled $false
 ```
 
-This example updates the specified Viva module feature policy without modifying the users or groups that the feature policy applies to.
+This example updates the name of the specified policy, and makes it so the policy does not disable the feature.
 
 ### Example 2
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2 -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -GroupIds german-users-group@contoso.com
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -GroupIds group1@contoso.com,group2@contoso.com
 ```
 
-This example replaces the groups that the specified feature policy applies to with a single group.
+This example updates who the specified policy applies to. The policy now applies **only** to the specified groups, regardless of who the policy used to apply to.
 
 ### Example 3
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2 -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -GroupIds german-users-group@contoso.com, us-users-group@contoso.com
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example replaces the groups that the specified feature policy applies to with multiple groups.
+This example updates who the specified policy applies to. The policy now applies **only** to the specified users, regardless of who the policy used to apply to.
 
 ### Example 4
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2 -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -UserIds admin@contoso.org
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -Name NewPolicyName -IsFeatureDisabled $true -GroupIds group1@contoso.com -UserIds user1@contoso.com
 ```
 
-This example replaces the users that the specified feature policy applies to with a single user.
-
-### Example 5
-```powershell
-Update-VivaModuleFeaturePolicy -ModuleId TestModule -FeatureId TestFeature2 -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -UserIds admin@contoso.org,admin2@contoso.com
-```
-
-This example replaces the users that the specified feature policy applies to with multiple users.
-
-### Example 6
-```powershell
-Update-VivaModuleFeaturePolicy -ModuleId test-module -FeatureId test-feature -PolicyId test-policy-id -Name updated-test-policy-name -IsFeatureDisabled $true -GroupIds german-users-group@contoso.com, us-users-group@contoso.com -UserIds admin@contoso.org,admin2@contoso.com
-```
-
-This example replaces the users and groups that the specified feature policy applies to with the specified users and groups.
+This example updates the name of the specified policy, makes it so the policy disables the feature, and updates who the policy applies to. The policy now applies **only** to the specified users and groups, regardless of who the policy used to apply to.
 
 ## PARAMETERS
 
 ### -FeatureId
-The FeatureId parameter specifies the feature policy to update in the Viva module.
+The FeatureId parameter specifies the feature in the Viva module of the policy that you want to update.
+
+To view details about the features in a Viva module that have Viva feature access controls available, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
@@ -112,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModuleId
-The ModuleId parameter specifies the Viva module that you want to update.
+The ModuleId parameter specifies the Viva module of the policy that you want to update.
 
 ```yaml
 Type: String
@@ -128,7 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyId
-The PolicyId parameter specifies the policy in the Viva module that you want to update.
+The PolicyId parameter specifies the policy for the feature in the Viva module that you want to update.
+
+To view details about the policies for a feature in a Viva module, use the Get-VivaModuleFeaturePolicy cmdlet. The PolicyId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
@@ -163,7 +160,12 @@ Accept wildcard characters: False
 ```
 
 ### -Everyone
-The Everyone switch specifies that the feature policy in the Viva module applies to all users and groups. You don't need to specify a value with this switch.
+The Everyone parameter specifies that the updated policy applies to all users in the organization. Valid values are:
+
+- $true: The policy applies to all users. This is the only useful value for this parameter.
+- $false: Don't use this value.
+
+If you don't want to update who the policy applies to, don't use this parameter.
 
 Don't use this parameter with the GroupIds or UserIds parameters.
 
@@ -181,11 +183,15 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the group email addresses that the feature policy in the Viva module applies to. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the email addresses of groups that the updated policy applies to. Viva feature access management supports [mail-enabled AAD groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph). You can enter multiple values separated by commas.
 
-The values that you enter for this parameter will overwrite any existing GroupIds entries.
+If you don't want to update who the policy applies to, don't use this parameter.
 
-To have the feature policy in the Viva module apply to all users and groups, use the Everyone switch.
+The values that you specify for this parameter or the UserIds parameter will replace any existing groups. To preserve the existing groups, include them along with any new users or groups that you specify.
+
+You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
 
 ```yaml
 Type: String[]
@@ -201,10 +207,12 @@ Accept wildcard characters: False
 ```
 
 ### -IsFeatureDisabled
-The IsFeatureDisabled parameter specifies whether the feature policy in the Viva module is enabled or disabled. Valid values are:
+The IsFeatureDisabled parameter specifies whether the feature is disabled by the updated policy. Valid values are:
 
-- $true: The feature policy is disabled.
-- $false: The feature policy is enabled.
+- $true: The feature is disabled by the policy.
+- $false: The feature is not disabled by the policy.
+
+If you don't want to update whether the feature is disabled by the policy, don't use this parameter.
 
 ```yaml
 Type: Boolean
@@ -220,7 +228,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the unique name of the feature policy assignment. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the updated name for the policy. If the value contains spaces, enclose the value in quotation marks (").
+
+If you don't want to update the name of the policy, don't use this parameter.
 
 ```yaml
 Type: String
@@ -236,10 +246,10 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Microsoft.Exchange.Management.RestApiClient.Unlimited`1[System.UInt32]
+Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -252,11 +262,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserIds
-The UserIds parameter specifies the email address of users that the feature policy in the Viva module applies to. You can enter multiple values separated by commas.
+The UserIds parameter specifies the user principal names (UPNs) of users that the updated policy applies to. You can enter multiple values separated by commas.
 
-The values that you enter for this parameter will overwrite any existing UserIds entries.
+If you don't want to update who the policy applies to, don't use this parameter.
 
-To have the feature policy in the Viva module apply to all users and groups, use the Everyone switch.
+The values that you specify for this parameter or the GroupIds parameter will replace any existing users. To preserve the existing users, include them along with any new users or groups that you specify.
+
+You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
 
 ```yaml
 Type: String[]
