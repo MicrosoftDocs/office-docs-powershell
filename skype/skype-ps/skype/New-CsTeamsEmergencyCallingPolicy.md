@@ -39,7 +39,7 @@ This example creates a Teams Emergency Calling policy that has an identity of Te
 New-CsTeamsEmergencyCallingPolicy -Identity "TestECP2" -NotificationGroup "123@contoso.com;567@contoso.com"
 ```
 
-This example creates a Teams Emergency Calling policy that has an identity of TestECP2, with default settings except for the Notification Group. This parameter expects a single string with all users and groups separated with ";".
+This example creates a Teams Emergency Calling policy that has an identity of TestECP2, with default settings, except for the Notification Group. This parameter expects a single string with all users and groups separated by ";".
 
 ### Example 3
 ```powershell
