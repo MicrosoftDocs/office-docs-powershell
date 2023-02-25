@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalLocationLookupMode
-Enable ExternalLocationLookupMode. This mode allow users to set Emergency addresses for remote locations.
+Enables ExternalLocationLookupMode. This mode allows users to set Emergency addresses for remote locations.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.ExternalLocationLookupMode
