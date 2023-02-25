@@ -43,7 +43,7 @@ $en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911
 Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{add=$en1,$en2}
 ```
 
-This example creates specifc emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP policy instance.
+This example creates specific emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP policy instance.
 
 ### Example 3
 ```powershell
