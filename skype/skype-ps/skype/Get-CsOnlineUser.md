@@ -546,8 +546,8 @@ New attributes have now been introduced in the output of Get-CsOnlineUser when n
 - UserValidationErrors                   
 - WhenCreated    
      
-Unlicensed Users – Unlicensed user would show up in the output for 30 days post license removal 
-Soft deleted users – These users will be displayed in the output of Get-CsOnlineUser and TAC Manage Users page by default with SoftDeletionTimestamp set to a value
+Unlicensed Users: Unlicensed users would show up in the output for 30 days post-license removal.
+Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
