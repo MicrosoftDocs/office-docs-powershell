@@ -551,7 +551,7 @@ Soft deleted users – These users will be displayed in the output of Get-CsOnli
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later excluding updates mentioned above for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
 
 *New user attributes*:
 
