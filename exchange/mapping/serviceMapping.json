@@ -850,6 +850,7 @@
   "Get-OrganizationSegment": "policy-and-compliance",
   "Get-OutlookProtectionRule": "policy-and-compliance",
   "Get-ProtectionAlert": "policy-and-compliance",
+  "Get-ReviewItems": "policy-and-compliance",
   "Get-SupervisoryReviewPolicyV2": "policy-and-compliance",
   "Get-SupervisoryReviewRule": "policy-and-compliance",
   "Get-TransportRule": "policy-and-compliance",

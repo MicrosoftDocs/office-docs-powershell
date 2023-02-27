@@ -1735,6 +1735,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ProtectionAlert](Get-ProtectionAlert.md)
 
+### [Get-ReviewItems](Get-ReviewItems.md)
+
 ### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
 ### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
