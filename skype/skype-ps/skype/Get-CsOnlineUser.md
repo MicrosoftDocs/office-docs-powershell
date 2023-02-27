@@ -265,7 +265,7 @@ Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
 ```
 Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt “abc”}
 ```
-- “-ge”(greater than or equal to) can now also be used for filtering on policies
+- “-ge” (greater than or equal to) can now also be used for filtering on policies. For example:
 ```
 Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 ```
