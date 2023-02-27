@@ -55,7 +55,7 @@ Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection
 This example returns details about all the policies added for the Reflection feature in Viva Insights.
 
 ### Example 2
-```
+```powershell
 Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6
 ```
 
