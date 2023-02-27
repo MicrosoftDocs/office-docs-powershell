@@ -261,7 +261,7 @@ Ends with scenario: Get-CsOnlineUser  -Filter {AssignedPlan -like '*MCO'}
 Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
 Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
 ```
-- “-gt”(greater than), “-lt”(less than), “-le”(less than or equal to) can now be used for filtering all string properties. Example:
+- “-gt” (greater than), “-lt” (less than), “-le” (less than or equal to) can now be used for filtering all string properties. For example:
 ```
 Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt “abc”}
 ```
