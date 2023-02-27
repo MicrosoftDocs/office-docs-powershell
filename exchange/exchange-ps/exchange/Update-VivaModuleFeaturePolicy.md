@@ -230,6 +230,10 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the updated name for the policy. If the value contains spaces, enclose the value in quotation marks (").
 
+Valid policy names must:
+ - only include English letters, numbers, commas, periods, and spaces
+ - be between 1 and 256 characters in length
+ - 
 If you don't want to update the name of the policy, don't use this parameter.
 
 ```yaml
