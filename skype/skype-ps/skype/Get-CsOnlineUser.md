@@ -256,7 +256,7 @@ These filtering operators have been reintroduced:
 Contains Scenario: Get-CsOnlineUser  -Filter "AssignedPlan -like '*MCO*'"
 Ends with scenario: Get-CsOnlineUser  -Filter {AssignedPlan -like '*MCO'}
 ```
-- “-contains” can now be used for filtering on properties that are an array of strings like FeatureTypes, ProxyAddresses and ShadowProxyAddresses. Example:
+- “-contains” can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
 ```
 Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
 Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
