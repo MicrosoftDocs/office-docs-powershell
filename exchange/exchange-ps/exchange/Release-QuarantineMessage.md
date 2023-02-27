@@ -291,9 +291,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReportFalsePositive
-The ReportFalsePositive switch sends a notification message indicating the specified message was not spam. You don't need to specify a value with this switch.
+The ReportFalsePositive switch specifies whether to report the message as a false positive to Microsoft (good message marked as bad). You don't need to specify a value with this switch.
 
-This switch is only available for quarantined spam messages.
+This switch is available only for quarantined spam messages.
 
 ```yaml
 Type: SwitchParameter
