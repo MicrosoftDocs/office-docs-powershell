@@ -250,7 +250,7 @@ _New Operators_
 
 These filtering operators have been reintroduced:
 
-- “-like” operator now supports use of wildcard operators in ‘contains’ and ‘ends with’ scenarios. Example:
+- “-like” operator now supports the use of wildcard operators in ‘contains’ and ‘ends with’ scenarios. For example:
 
 ```
 Contains Scenario: Get-CsOnlineUser  -Filter "AssignedPlan -like '*MCO*'"
