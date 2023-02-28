@@ -15,9 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Add-VivaModuleFeaturePolicy cmdlet to add a new policy for a specific feature in Viva. The attributes of the policy are defined using the various parameters of the cmdlet. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant.
+Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva. The attributes of the policy are defined using the various parameters of the cmdlet. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. Note that the most restrictive policy for a particular user or group will take priority when determining a feature's enablement.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -35,6 +35,8 @@ Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureDisabled <Boolean> -Mo
 ```
 
 ## DESCRIPTION
+Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva.
+
 A policy applies to a set of users and/or groups within your tenant. You can specify the users and/or groups using the respective parameters of the cmdlet. Note that you can provide up to 20 users and/or groups for the policy to apply to. This limit applies to the total across the related parameters. To apply the policy to all users in your tenant, provide the Everyone switch.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
