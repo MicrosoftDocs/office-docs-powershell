@@ -15,9 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Get-VivaModuleFeaturePolicy cmdlet to view the policies for a specified feature in a Viva module. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy’s identifier, name, and creation date.
+Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy’s identifier, name, and creation date.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -31,6 +31,8 @@ Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
 ```
 
 ## DESCRIPTION
+Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module.
+
 You can view all policies for a specified feature in a Viva module. To view a specific policy, you can include the PolicyId parameter. 
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
