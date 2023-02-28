@@ -16,7 +16,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
 Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that have Viva feature access controls available. This cmdlet provides details about the features, including the feature identifiers and descriptions.
 
@@ -32,6 +32,8 @@ Get-VivaModuleFeature -ModuleId <String>
 ```
 
 ## DESCRIPTION
+Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that have Viva feature access controls available.
+
 You can view all features in a particular Viva module that have Viva feature access controls available. To view a specific feature, you can include the FeatureId parameter.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
