@@ -15,9 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Update-VivaModuleFeaturePolicy cmdlet to update a policy for a feature in a Viva module.
+Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. Note that the most restrictive policy for a particular user or group will take priority when determining a feature's enablement.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,6 +36,8 @@ Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId 
 ```
 
 ## DESCRIPTION
+Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. 
+
 This cmdlet updates the attributes of the policy that you specify. These attributes include:
 
 - The policy name (Name parameter).
@@ -63,28 +65,28 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -Name NewPolicyName -IsFeatureDisabled $false
 ```
 
-This example updates the name of the specified policy, and makes it so the policy does not disable the feature.
+This example updates the name of the specified policy and makes it so the policy does not disable the feature.
 
 ### Example 2
 ```powershell
 Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -GroupIds group1@contoso.com,group2@contoso.com
 ```
 
-This example updates who the specified policy applies to. The policy now applies **only** to the specified groups, regardless of who the policy used to apply to.
+This example updates who the specified policy applies to. The policy now applies **only** to the specified groups, overwriting the users and groups the policy used to apply to.
 
 ### Example 3
 ```powershell
 Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example updates who the specified policy applies to. The policy now applies **only** to the specified users, regardless of who the policy used to apply to.
+This example updates who the specified policy applies to. The policy now applies **only** to the specified users, overwriting the users and groups the policy used to apply to.
 
 ### Example 4
 ```powershell
 Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -Name NewPolicyName -IsFeatureDisabled $true -GroupIds group1@contoso.com -UserIds user1@contoso.com
 ```
 
-This example updates the name of the specified policy, makes it so the policy disables the feature, and updates who the policy applies to. The policy now applies **only** to the specified users and groups, regardless of who the policy used to apply to.
+This example updates the name of the specified policy, makes it so the policy disables the feature, and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
 
 ## PARAMETERS
 
