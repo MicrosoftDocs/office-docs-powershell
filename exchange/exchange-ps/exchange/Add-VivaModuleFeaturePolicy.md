@@ -149,7 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name of the policy. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the name of the policy. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+Valid characters are English letters, numbers, commas, periods, and spaces.
 
 ```yaml
 Type: String
