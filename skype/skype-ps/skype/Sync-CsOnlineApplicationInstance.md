@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/sync-csonlineapplicationinstance
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Sync-CsOnlineApplicationInstance
 schema: 2.0.0
-author: xixian73
-ms.author: xixian
-manager:naveenv
+author: jenstrier
+ms.author: jenstr
+manager: naveenv
 ms.reviewer:
 ---
 
@@ -18,8 +18,7 @@ Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance
 ## SYNTAX
 
 ```
-Sync-CsOnlineApplicationInstance [-CallbackUri <String>] [-ObjectId <System.Guid>] [-ApplicationId <System.Guid>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Sync-CsOnlineApplicationInstance -ObjectId <guid> [-CallbackUri <string>] [-Force] [-ApplicationId <guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The application ID.
+The application ID. The Microsoft application Auto Attendant has the ApplicationId ce933385-9390-45d1-9512-c8d228074e07 and the Microsoft application Call Queue has the ApplicationId 11cd3e2e-fccb-42ad-ad00-878b93575e07. Third-party applications available in a tenant will use other ApplicationId's.
 
 ```yaml
 Type: System.Guid
@@ -138,3 +137,19 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information`, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+
+[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+
+[Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
