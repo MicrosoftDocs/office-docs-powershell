@@ -34,7 +34,7 @@ Remove-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId 
 ## DESCRIPTION
 Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module.
 
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with Viva Feature Access Management Service.
+You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
@@ -60,7 +60,7 @@ This example deletes the specified policy for the Reflection feature in Viva Ins
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to remove the policy from.
 
-To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+To view details about the 'features in a Viva module that support feature access controls, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
 
 
 ```yaml
