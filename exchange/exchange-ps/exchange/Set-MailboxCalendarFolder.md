@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxcalendarfolder
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-MailboxCalendarFolder
 schema: 2.0.0
 author: chrisda
@@ -87,7 +87,7 @@ Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Cal
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -106,7 +106,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -297,6 +297,7 @@ To specify a date/time value for this parameter, use either of the following opt
 - You use this parameter on the shared calendar in delegate's mailbox. For example, `Set-MailboxCalendarFolder -Identity "delegate@contoso.com:\Calendar\Name of shared calendar" -SharedCalendarSyncStartDate`. The word `...\Calendar\...` is in the language that the user sees in Outlook (for example, in German, the word is `...\Kalendar\...`).
 - Users need to have FullDetails, Editor, or Delegate access to the specified shared calendar.
 - Setting this parameter might cause events in the shared calendar to briefly disappear from view while the calendar is resynchronized.
+- The value of this parameter is used when initializing the calendar folder sync. After that, every new, updated, and deleted item is processed and synced, regardless of the SharedCalendarSyncStartDate parameter value.
 
 ```yaml
 Type: DateTime
@@ -336,7 +337,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

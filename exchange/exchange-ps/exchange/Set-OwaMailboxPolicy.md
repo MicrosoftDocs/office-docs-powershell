@@ -30,10 +30,12 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AllowCopyContactsToDeviceAddressBook <Boolean>]
  [-AllowedFileTypes <MultiValuedProperty>]
  [-AllowedMimeTypes <MultiValuedProperty>]
+ [-AllowedOrganizationAccountDomains <String[]>]
  [-AllowOfflineOn <AllowOfflineOnEnum>]
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
  [-BookingsMailboxCreationEnabled <Boolean>]
+ [-BookingsMailboxDomain <String>]
  [-BoxAttachmentsEnabled <Boolean>]
  [-CalendarEnabled <Boolean>]
  [-ChangePasswordEnabled <Boolean>]
@@ -379,6 +381,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowedOrganizationAccountDomains
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowedOrganizationAccountDomains Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowOfflineOn
 This parameter is functional only in on-premises Exchange.
 
@@ -471,6 +491,24 @@ The BookingsMailboxCreationEnabled parameter allows you disable Microsoft Bookin
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsMailboxDomain
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsMailboxDomain Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-serviceprincipal
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: New-ServicePrincipal
 schema: 2.0.0
 author: chrisda
@@ -52,14 +52,14 @@ The AppId parameter specifies the unique AppId GUID value for the service princi
 
 A valid value for this parameter is available in the following locations:
 
-- The AppId property in the output of the Get-AzureADApplication cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
+- The AppId property in the output of the Get-AzureADServicePrincipal cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
 - The Application ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -71,14 +71,14 @@ Accept wildcard characters: False
 ### -ServiceId
 The ServiceId parameter specifies the unique ServiceId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
-- The ObjectId property in the output of the Get-AzureADApplication cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
+- The ObjectId property in the output of the Get-AzureADServicePrincipal cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
 - The Object ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -97,7 +97,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ The DisplayName parameter specifies the friendly name of the service principal. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ This parameter is reserved for internal Microsoft use.
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

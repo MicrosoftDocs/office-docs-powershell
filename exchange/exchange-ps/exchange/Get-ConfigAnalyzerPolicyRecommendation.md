@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-configanalyzerpolicyrecommendation
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-ConfigAnalyzerPolicyRecommendation
 schema: 2.0.0
 author: chrisda
@@ -28,7 +28,7 @@ Get-ConfigAnalyzerPolicyRecommendation -RecommendedPolicyType <RecommendedPolicy
 ```
 
 ## DESCRIPTION
-For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Office 365 ATP security](https://learn.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365).
+For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Microsoft Defender for Office 365 security](https://learn.microsoft.com/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365).
 
 The output of this cmdlet only returns settings that fall below the value that you've specified as a baseline (Standard or Strict).
 
@@ -68,7 +68,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ConfigAnalyzerPolicyRecommendationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -87,7 +87,7 @@ The RecommendedPolicyType parameter specifies the preset security policy that yo
 Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ If you don't use this switch, the results include policies that are applied to u
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -50,6 +50,8 @@ Set-User [-Identity] <UserIdParameter>
  [-LinkedCredential <PSCredential>]
  [-LinkedDomainController <String>]
  [-LinkedMasterAccount <UserIdParameter>]
+ [-MailboxRegion <String>]
+ [-MailboxRegionSuffix <MailboxRegionSuffixValue>]
  [-Manager <UserContactIdParameter>]
  [-MobilePhone <String>]
  [-Name <String>]
@@ -292,7 +294,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -402,7 +404,7 @@ This parameter is available only in the cloud-based service.
 Type: Microsoft.Exchange.Data.MailboxWorkloadFlags
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -654,6 +656,42 @@ Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxRegion
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxRegion Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxRegionSuffix
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxRegionSuffix Description }}
+
+```yaml
+Type: MailboxRegionSuffixValue
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -27,6 +27,7 @@ Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
  [-Confirm]
  [-EventType <ComplianceRuleIdParameter>]
  [-FilePlanProperty <String>]
+ [-FlowId <System.Guid>]
  [-Force]
  [-MultiStageReviewProperty <String>]
  [-Notes <String>]
@@ -175,6 +176,22 @@ You use the second variable as the value for this parameter.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FlowId
+{{ Fill FlowId Description }}
+
+```yaml
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

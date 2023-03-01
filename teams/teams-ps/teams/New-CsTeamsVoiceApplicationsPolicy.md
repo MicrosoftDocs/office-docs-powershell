@@ -15,23 +15,35 @@ Creates a new Teams voice applications policy. TeamsVoiceApplications policy gov
 ## SYNTAX
 
 ```
-New-CsTeamsVoiceApplicationsPolicy [-Identity] <String> [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]
- [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>] [-AllowAutoAttendantHolidayGreetingChange <Boolean>]
- [-AllowAutoAttendantBusinessHoursChange <Boolean>] [-AllowAutoAttendantTimeZoneChange <Boolean>]
- [-AllowAutoAttendantLanguageChange <Boolean>] [-AllowAutoAttendantHolidaysChange <Boolean>]
- [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>] [-AllowAutoAttendantAfterHoursRoutingChange <Boolean>]
+New-CsTeamsVoiceApplicationsPolicy [-Identity] <String> 
+ [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]
+ [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>] 
+ [-AllowAutoAttendantHolidayGreetingChange <Boolean>]
+ [-AllowAutoAttendantBusinessHoursChange <Boolean>]
+ [-AllowAutoAttendantTimeZoneChange <Boolean>]
+ [-AllowAutoAttendantLanguageChange <Boolean>]
+ [-AllowAutoAttendantHolidaysChange <Boolean>]
+ [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>]
+ [-AllowAutoAttendantAfterHoursRoutingChange <Boolean>]
  [-AllowAutoAttendantHolidayRoutingChange <Boolean>]
  [-AllowCallQueueOverflowSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueTimeoutSharedVoicemailGreetingChange <Boolean>]
- [-AllowCallQueueWelcomeGreetingChange <Boolean>] [-AllowCallQueueMusicOnHoldChange <Boolean>]
- [-AllowCallQueueOptOutChange <Boolean>] [-AllowCallQueueAgentOptChange <Boolean>]
- [-AllowCallQueueMembershipChange <Boolean>] [-AllowCallQueueRoutingMethodChange <Boolean>]
+ [-AllowCallQueueWelcomeGreetingChange <Boolean>] 
+ [-AllowCallQueueMusicOnHoldChange <Boolean>]
+ [-AllowCallQueueOptOutChange <Boolean>] 
+ [-AllowCallQueueAgentOptChange <Boolean>]
+ [-AllowCallQueueMembershipChange <Boolean>] 
+ [-AllowCallQueueRoutingMethodChange <Boolean>]
  [-AllowCallQueuePresenceBasedRoutingChange <Boolean>]
+ [-AllowCallQueueLanguageChange <Boolean>] 
+ [-AllowCallQueueOverflowRoutingChange <Boolean>]
+ [-AllowCallQueueTimeoutRoutingChange <Boolean>] 
+ [-AllowCallQueueNoAgentsRoutingChange <Boolean>]
+ [-AllowCallQueueConferenceModeChange <Boolean>]
  [-CallQueueAgentMonitorMode <Disabled | Monitor | Whisper | Barge | Takeover>]
  [-CallQueueAgentMonitorNotificationMode <Disabled | Agent>]
- [-AllowCallQueueLanguageChange <Boolean>] [-AllowCallQueueOverflowRoutingChange <Boolean>]
- [-AllowCallQueueTimeoutRoutingChange <Boolean>] [-AllowCallQueueNoAgentsRoutingChange <Boolean>]
- [-AllowCallQueueConferenceModeChange <Boolean>] [-WhatIf] [-Confirm]
+ [-WhatIf] 
+ [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -379,54 +391,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CallQueueAgentMonitorMode
-
-PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
-
-This parameter allows supervisors and users to monitor agents during call sessions and take actions allowed when necessary.
-
-When set to Disabled (the default value), users affected by the policy will not be allowed to monitor call sessions.
-
-When set to Monitor, users affected by the policy will be allowed to monitor and listen to call sessions.
-
-When set to Whisper, users affected by the policy will be allowed to monitor call sessions and whisper to an agent in the call.
-
-When set to Barge, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, or join the call session.
-
-When set to Takeover, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, join the call session, or take over the call from an agent.
-
-```yaml
-Type: Object
-Parameter Sets: Dual
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: Disabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CallQueueAgentMonitorNotificationMode
-
-PARAMVALUE: Disabled | Agent
-
-This parameter allows supervisors and users to monitor agents.
-
-```yaml
-Type: Object
-Parameter Sets: Dual
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: Disabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowCallQueueLanguageChange
 
 This parameter allows supervisors and users to change the call queue's language.
@@ -506,6 +470,55 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -CallQueueAgentMonitorMode
+
+PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
+
+This parameter allows supervisors and users to monitor agents during call sessions and take actions allowed when necessary.
+
+When set to Disabled (the default value), users affected by the policy will not be allowed to monitor call sessions.
+
+When set to Monitor, users affected by the policy will be allowed to monitor and listen to call sessions.
+
+When set to Whisper, users affected by the policy will be allowed to monitor call sessions and whisper to an agent in the call.
+
+When set to Barge, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, or join the call session.
+
+When set to Takeover, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, join the call session, or take over the call from an agent.
+
+```yaml
+Type: Object
+Parameter Sets: Dual
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallQueueAgentMonitorNotificationMode
+
+PARAMVALUE: Disabled | Agent
+
+This parameter allows supervisors and users to monitor agents.
+
+```yaml
+Type: Object
+Parameter Sets: Dual
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -WhatIf
 

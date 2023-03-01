@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-mailbox
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-Mailbox
 schema: 2.0.0
 author: chrisda
@@ -251,6 +251,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -382,6 +383,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -513,6 +515,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -644,6 +647,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -773,6 +777,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <System.DateTime>]
@@ -903,6 +908,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -1033,6 +1039,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-DeliverToMailboxAndForward <Boolean>]
  [-DisplayName <String>]
  [-ElcProcessingDisabled <Boolean>]
+ [-EmailAddressDisplayNames <MultiValuedProperty>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-EnableRoomMailboxAccount <Boolean>]
  [-EndDateForRetentionHold <DateTime>]
@@ -1205,7 +1212,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -1327,7 +1334,7 @@ The AccountDisabled parameter specifies whether to disable the account that's as
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1988,7 +1995,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2513,6 +2520,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EmailAddressDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill EmailAddressDisplayNames Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EmailAddresses
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
@@ -2572,16 +2597,16 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRoomMailboxAccount
+This parameter is functional only in on-premises Exchange.
+
 The EnableRoomMailboxAccount parameter specifies whether to enable the disabled user account that's associated with this room mailbox. Valid values are:
 
-- $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. This allows the account to log on to the room mailbox.
-- $false: The account that's associated with the room mailbox is disabled. You can't use the account to logon to the room mailbox. This is the default value.
+- $true: The disabled account that's associated with the room mailbox is enabled. You also need to use the RoomMailboxPassword with this value. The account is able to log in and access the room mailbox or other resources.
+- $false: The account that's associated with the room mailbox is disabled. The account is not able to log in and access the room mailbox or other resources. In on-premises Exchange, this is the default value.
 
-Typically, the account that's associated with a room mailbox is disabled. However, you need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
+You need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
 
-In Exchange Online, a room mailbox with an associated enabled account doesn't require a license.
-
-In an on-premises Exchange organization, you also need to enable the corresponding user account in Active Directory Users and Computers or by running the Enable-ADAccount cmdlet in Windows PowerShell.
+A room mailbox in Exchange Online is created with associated an account that has an unknown password. This account is active and visible in Azure Active Directory PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. If the password is known or changed, the account can be used to log in and access the mailbox or other resources. To prevent this account from being able to log in, use the Set-AzureADUser cmdlet in Azure Active Directory PowerShell. For instructions, see [Block Microsoft 365 user accounts with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/block-user-accounts-with-microsoft-365-powershell).
 
 ```yaml
 Type: Boolean
@@ -2645,7 +2670,7 @@ When you use this switch, use the DistinguishedName or ExchangeGuid property val
 Type: SwitchParameter
 Parameter Sets: ExcludeFromAllOrgHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2667,7 +2692,7 @@ When you use this parameter, use the DistinguishedName or ExchangeGuid property 
 Type: String[]
 Parameter Sets: ExcludeFromOrgHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3082,7 +3107,7 @@ The GroupMailbox switch is required to modify Microsoft 365 Groups. You don't ne
 Type: MailboxIdParameter
 Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3195,7 +3220,7 @@ You can't use this switch to modify other properties on inactive mailboxes.
 Type: SwitchParameter
 Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3418,7 +3443,7 @@ A valid value is an integer that represents the number of days, or the value unl
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3441,7 +3466,7 @@ Placing public folder mailboxes on Litigation Hold isn't supported. To place pub
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3457,7 +3482,7 @@ The LitigationHoldOwner parameter specifies the user who placed the mailbox on l
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3986,7 +4011,7 @@ This parameter is available only in the cloud-based service.
 Type: MultiValuedProperty
 Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4347,7 +4372,7 @@ You use this switch with the InactiveMailbox switch and the Identity parameter (
 Type: SwitchParameter
 Parameter Sets: RecalculateInactiveMailbox
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -4577,7 +4602,7 @@ For more information, see [Managing mailboxes on delay hold](https://learn.micro
 Type: SwitchParameter
 Parameter Sets: RemoveDelayHoldApplied
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -4601,7 +4626,7 @@ For more information, see [Managing mailboxes on delay hold](https://learn.micro
 Type: SwitchParameter
 Parameter Sets: RemoveDelayReleaseHoldApplied
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -4637,7 +4662,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4677,7 +4702,7 @@ In an Exchange hybrid deployment, In-Place Holds that are created in the on-prem
 Type: String[]
 Parameter Sets: RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4878,7 +4903,7 @@ This comment should be localized to the user's preferred language. If the commen
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4941,7 +4966,7 @@ This URL can be used to expose details regarding retention policies in general, 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4975,13 +5000,25 @@ Accept wildcard characters: False
 ```
 
 ### -RoomMailboxPassword
-Use the RoomMailboxPassword parameter to change the password for a room mailbox that has an enabled account (the EnableRoomMailboxAccount parameter is set to the value $true.)
+This parameter is functional only in on-premises Exchange.
+
+Use the RoomMailboxPassword parameter to configure the password for the account that's associated with the room mailbox when that account is enabled and able to log in (the EnableRoomMailboxAccount parameter is set to the value $true).
+
+To use this parameter in on-premises Exchange, you need to be a member of one of the following role groups:
+
+- The Organization Management role group via the Mail Recipients and User Options roles.
+- The Recipient Management role group via the Mail Recipients role.
+- The Help Desk role group via the User Options role.
+
+The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
 
 You can use the following methods as a value for this parameter:
 
 - `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
+
+To configure the password for a room mailbox account in Exchange Online, use Set-AzureADUserPassword cmdlet in Azure Active Directory PowerShell. For instructions, see [Manage passwords with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/manage-passwords-with-microsoft-365-powershell).
 
 ```yaml
 Type: SecureString
@@ -5232,13 +5269,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryAddress
+This parameter is available only in on-premises Exchange.
+
 The SecondaryAddress parameter specifies the secondary address used by the UM-enabled user.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -5395,7 +5434,7 @@ This parameter is reserved for internal Microsoft use.
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -5565,7 +5604,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDisabledArchive, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RemoveDelayReleaseHoldApplied, RemoveOrphanedHolds
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -5690,7 +5729,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

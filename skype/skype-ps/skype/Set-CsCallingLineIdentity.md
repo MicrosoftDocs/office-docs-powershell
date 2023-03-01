@@ -24,6 +24,9 @@ Set-CsCallingLineIdentity [[-Identity] <string>] [-BlockIncomingPstnCallerID <bo
 ```
 
 ## DESCRIPTION
+
+**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+
 You can either change or block the Caller ID (also called a Calling Line ID) for a user.
 By default, the Microsoft Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.
 You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
@@ -46,19 +49,12 @@ The user can override this setting.
 
 ### Example 2
 ```
-PS C:\> Set-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080"
-```
-
-This example modifies the UKOrgAA Caller ID policy to sets the Caller ID to a specified service number.
-
-### Example 3
-```
 PS C:\> Set-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
 
 This example modifies the new Anonymous Caller ID policy that blocks the incoming Caller ID.
 
-### Example 4
+### Example 3
 ```
 $ObjId = (Get-CsOnlineApplicationInstance -Identity dkcq@contoso.com).ObjectId
 Set-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -ResourceAccount $ObjId -CompanyName "Contoso"
@@ -66,7 +62,7 @@ Set-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -Resource
 
 This example modifies the Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
 
-### Example 5
+### Example 4
 ```
 Set-CsCallingLineIdentity -Identity AllowAnonymousForUsers -EnableUserOverride $true
 ```
@@ -96,6 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
+**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+
 The CallingIDSubstitute parameter lets you specify an alternate Caller ID.
 The possible values are Anonymous, Service, LineUri and Resource.
 

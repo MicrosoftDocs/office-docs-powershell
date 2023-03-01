@@ -28,6 +28,9 @@ The steps are the same as [Create new cmdlet topics](NEW_CMDLETS.md#step-1-insta
 
 You probably know how to do this already, but the available workloads and connection methods are also described in [Create new cmdlet topics](NEW_CMDLETS.md#step-2-connect-to-the-powershell-environment-that-has-the-cmdlet).
 
+> [!NOTE]
+> In v3.0.0 or later of the EXO V3 module, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. If you omit the _UseRPSSession_ switch and connect in REST API mode, the **Type** value of most parameters will be the incorrect and unhelpful `Object` or `Object[]` values. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
+
 ### Step 3: Load platyPS in the PowerShell environment
 
 After you've connected in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), run the following command to make the platyPS cmdlets available in your session:
@@ -36,11 +39,14 @@ After you've connected in PowerShell to the server or service (either in a regul
 Import-Module platyPS
 ```
 
-### Step 4: Verify your PSSession variable name
+### Step 4: Store your PSSession in a variable
 
-This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-verify-your-your-pssession-variable-name).
+This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-store-your-pssession-in-a-variable).
 
-To recap: this step is required in Exchange and other products that use remote PowerShell, and the value is most likely `$Session`.
+To recap: this step is required in Exchange and other products that use remote PowerShell.
+
+> [!NOTE]
+> As described earlier, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. Although the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet is a reasonable replacement for Get-PSSession in REST API mode, the output doesn't work with the _Session_ parameter in **New-MarkdownHelp**. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
 
 If you're using Microsoft Teams or another product that doesn't use remote PowerShell, you can skip this step.
 

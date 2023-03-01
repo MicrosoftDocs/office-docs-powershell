@@ -33,6 +33,7 @@ New-LabelPolicy -Name <String> -Labels <MultiValuedProperty>
  [-ModernGroupLocationException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
@@ -307,6 +308,22 @@ Accept wildcard characters: False
 
 ### -OneDriveLocationException
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
 
 ```yaml
 Type: MultiValuedProperty

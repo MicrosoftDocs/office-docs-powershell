@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-unifiedgrouplinks
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-UnifiedGroupLinks
 schema: 2.0.0
 author: chrisda
@@ -56,7 +56,7 @@ The Identity parameter specifies the Microsoft 365 Group that you want to view. 
 Type: UnifiedGroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -76,7 +76,7 @@ The LinkType parameter filters the results by recipient roles in the Microsoft 3
 Type: LinkType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

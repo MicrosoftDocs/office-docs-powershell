@@ -95,8 +95,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
 
-### [Get-PhishFilterPolicy](Get-PhishFilterPolicy.md)
-
 ### [Get-SafeAttachmentPolicy](Get-SafeAttachmentPolicy.md)
 
 ### [Get-SafeAttachmentRule](Get-SafeAttachmentRule.md)
@@ -155,8 +153,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-EmailTenantSettings](Set-EmailTenantSettings.md)
 
-### [Set-PhishFilterPolicy](Set-PhishFilterPolicy.md)
-
 ### [Set-SafeAttachmentPolicy](Set-SafeAttachmentPolicy.md)
 
 ### [Set-SafeAttachmentRule](Set-SafeAttachmentRule.md)
@@ -188,6 +184,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disable-MalwareFilterRule](Disable-MalwareFilterRule.md)
 
+### [Disable-ReportSubmissionRule](Disable-ReportSubmissionRule.md)
+
 ### [Enable-AntispamUpdates](Enable-AntispamUpdates.md)
 
 ### [Enable-EOPProtectionPolicyRule](Enable-EOPProtectionPolicyRule.md)
@@ -200,11 +198,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Export-QuarantineMessage](Export-QuarantineMessage.md)
 
+### [Enable-ReportSubmissionRule](Enable-ReportSubmissionRule.md)
+
 ### [Get-AgentLog](Get-AgentLog.md)
 
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
+
+### [Get-BlockedConnector](Get-BlockedConnector.md)
 
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
 
@@ -264,6 +266,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
 
+### [Get-ReportSubmissionPolicy](Get-ReportSubmissionPolicy.md)
+
+### [Get-ReportSubmissionRule](Get-ReportSubmissionRule.md)
+
 ### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
 
 ### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
@@ -302,6 +308,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-QuarantinePolicy](New-QuarantinePolicy.md)
 
+### [New-ReportSubmissionPolicy](New-ReportSubmissionPolicy.md)
+
+### [New-ReportSubmissionRule](New-ReportSubmissionRule.md)
+
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
 ### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
@@ -315,6 +325,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Release-QuarantineMessage](Release-QuarantineMessage.md)
 
 ### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
+
+### [Remove-BlockedConnector](Remove-BlockedConnector.md)
 
 ### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
 
@@ -342,11 +354,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
 
-### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
-
 ### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
 
 ### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
+
+### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
+
+### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
+
+### [Remove-ReportSubmissionRule](Remove-ReportSubmissionRule.md)
 
 ### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
 
@@ -396,15 +412,19 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
-### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
-
-### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
-
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
 
 ### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
 
+### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
+
+### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
+
 ### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
+
+### [Set-ReportSubmissionPolicy](Set-ReportSubmissionPolicy.md)
+
+### [Set-ReportSubmissionRule](Set-ReportSubmissionRule.md)
 
 ### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
 
@@ -1656,6 +1676,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Test-OAuthConnectivity](Test-OAuthConnectivity.md)
 
+### [Test-ServicePrincipalAuthorization](Test-ServicePrincipalAuthorization.md)
+
 ### [Test-SystemHealth](Test-SystemHealth.md)
 
 ### [Update-ExchangeHelp](Update-ExchangeHelp.md)
@@ -1714,6 +1736,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-OutlookProtectionRule](Get-OutlookProtectionRule.md)
 
 ### [Get-ProtectionAlert](Get-ProtectionAlert.md)
+
+### [Get-ReviewItems](Get-ReviewItems.md)
 
 ### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
@@ -2364,8 +2388,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailTrafficSummaryReport](Get-MailTrafficSummaryReport.md)
 
-### [Get-MailTrafficTopReport](Get-MailTrafficTopReport.md)
-
 ### [Get-MxRecordReport](Get-MxRecordReport.md)
 
 ### [Get-O365ClientBrowserDetailReport](Get-O365ClientBrowserDetailReport.md)
@@ -2411,6 +2433,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SupervisoryReviewReport](Get-SupervisoryReviewReport.md)
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
+
+### [Test-Message](Test-Message.md]
 
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
@@ -2789,10 +2813,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-DynamicDistributionGroup](New-DynamicDistributionGroup.md)
 
-### [New-EOPDistributionGroup](New-EOPDistributionGroup.md)
-
-### [New-EOPMailUser](New-EOPMailUser.md)
-
 ### [New-MailContact](New-MailContact.md)
 
 ### [New-MailUser](New-MailUser.md)
@@ -2804,10 +2824,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-DistributionGroupMember](Remove-DistributionGroupMember.md)
 
 ### [Remove-DynamicDistributionGroup](Remove-DynamicDistributionGroup.md)
-
-### [Remove-EOPDistributionGroup](Remove-EOPDistributionGroup.md)
-
-### [Remove-EOPMailUser](Remove-EOPMailUser.md)
 
 ### [Remove-MailContact](Remove-MailContact.md)
 
@@ -2822,14 +2838,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DistributionGroup](Set-DistributionGroup.md)
 
 ### [Set-DynamicDistributionGroup](Set-DynamicDistributionGroup.md)
-
-### [Set-EOPDistributionGroup](Set-EOPDistributionGroup.md)
-
-### [Set-EOPGroup](Set-EOPGroup.md)
-
-### [Set-EOPMailUser](Set-EOPMailUser.md)
-
-### [Set-EOPUser](Set-EOPUser.md)
 
 ### [Set-Group](Set-Group.md)
 
@@ -2846,7 +2854,5 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Undo-SoftDeletedUnifiedGroup](Undo-SoftDeletedUnifiedGroup.md)
 
 ### [Update-DistributionGroupMember](Update-DistributionGroupMember.md)
-
-### [Update-EOPDistributionGroupMember](Update-EOPDistributionGroupMember.md)
 
 ### [Upgrade-DistributionGroup](Upgrade-DistributionGroup.md)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlineliscivicaddress
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
@@ -13,7 +13,9 @@ ms.reviewer:
 # Remove-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS). You can't remove a civic address if any of its associated locations are assigned to users.
+Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS). 
+
+You can't remove a civic address if any of its associated locations are assigned to users or phone numbers.
 
 ## SYNTAX
 
@@ -50,7 +52,7 @@ You can find civic address identifiers by using the Get-CsOnlineLisCivicAddress 
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -68,7 +70,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -85,7 +87,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -101,7 +103,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named

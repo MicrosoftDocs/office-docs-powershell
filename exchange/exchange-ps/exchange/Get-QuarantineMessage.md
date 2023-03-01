@@ -338,13 +338,15 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientTag
-{{ Fill RecipientTag Description }}
+The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/user-tags-about).
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: String[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

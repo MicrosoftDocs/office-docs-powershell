@@ -41,6 +41,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-Force]
  [-Mode <PolicyMode>]
  [-OverwriteLabel <Boolean>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
@@ -491,8 +492,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PolicyTemplateInfo
-{{ Fill PolicyTemplateInfo Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: PswsHashtable
