@@ -39,7 +39,7 @@ Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a spec
 
 A policy applies to a set of users and/or groups within your tenant. You can specify the users and/or groups using the respective parameters of the cmdlet. Note that you can provide up to 20 users and/or groups for the policy to apply to. This limit applies to the total across the related parameters. To apply the policy to all users in your tenant, provide the Everyone switch.
 
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
+You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
@@ -100,7 +100,7 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to add the policy for.
 
-To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+To view details about the features in a Viva module that support feature access controls, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
 
 ```yaml
 Type: String
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the  policy applies to. Viva feature access management supports [mail-enabled AAD groups]( https://docs.microsoft.com/en-us/graph/api/resources/groups-overview?context=graph%2Fcontext&view=graph-rest-1.0#group-types-in-azure-ad-and-microsoft-graph). You can enter multiple values separated by commas.
+The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled AAD groups]( https://docs.microsoft.com/en-us/graph/api/resources/groups-overview?context=graph%2Fcontext&view=graph-rest-1.0#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 Note that you can provide up to 20 users and/or groups for the policy to apply to. This limit applies to the total across the related parameters. To have the policy apply to all users in the tenant, use the Everyone switch.
 
