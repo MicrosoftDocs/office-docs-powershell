@@ -18,7 +18,7 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Pr
 
 **Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that have Viva feature access controls available. This cmdlet provides details about the features, including the feature identifiers and descriptions.
+Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that support feature access controls. This cmdlet provides details about the features, including the feature identifiers and descriptions.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -32,11 +32,11 @@ Get-VivaModuleFeature -ModuleId <String>
 ```
 
 ## DESCRIPTION
-Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that have Viva feature access controls available.
+Use the Get-VivaModuleFeature cmdlet to view the features in a Viva module that support feature access controls.
 
-You can view all features in a particular Viva module that have Viva feature access controls available. To view a specific feature, you can include the FeatureId parameter.
+You can view all features in a particular Viva module that support feature access controls. To view a specific feature, you can include the FeatureId parameter.
 
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
+You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
@@ -47,7 +47,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later.
 Get-VivaModuleFeature -ModuleId VivaInsights
 ```
 
-This example returns all features in Viva Insights that have Viva feature access controls available.
+This example returns all features in Viva Insights that support feature access controls.
 
 ### Example 2
 ```powershell
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ### -FeatureId
 The FeatureId parameter specifies the specific feature in the Viva module that you want to view.
 
-You can view details about all the features in a Viva module that have Viva feature access controls available by running the cmdlet without the FeatureId parameter. These details include the identifiers of all features in a Viva module that have Viva feature access controls available.
+You can view details about all the features in a Viva module that support feature access controls by running the cmdlet without the FeatureId parameter. These details include the identifiers of all features in a Viva module that support feature access controls.
 
 ```yaml
 Type: String
