@@ -54,7 +54,7 @@ To learn more about administrator role permissions in Azure Active Directory, se
 Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name DisableFeatureForAll -IsFeatureDisabled $true -Everyone
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for all users within the tenant.
+This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for all users in the organization.
 
 ### Example 2
 ```powershell
@@ -75,7 +75,7 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureDisabled $true -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the specified users and group memebers.
+This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the specified users and group members.
 
 ## PARAMETERS
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -IsFeatureDisabled
 The IsFeatureDisabled parameter specifies whether or not the feature is disabled by the policy. Valid values are:
- 
+
 - $true: The feature is disabled by the policy.
 - $false: The feature is not disabled by the policy.
 
@@ -170,12 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -Everyone
-The Everyone parameter specifies that the updated policy applies to all users in the organization. Valid values are:
+The Everyone switch specifies that the updated policy applies to all users in the organization. You don't need to specify a value with this switch.
 
-- $true: The policy applies to all users. This is the only useful value for this parameter.
-- $false: Don't use this value.
-
-Don't use this parameter with the GroupIds or UserIds parameters.
+Don't use this switch with the GroupIds or UserIds parameters.
 
 ```yaml
 Type: SwitchParameter
@@ -195,7 +192,7 @@ The GroupIds parameter specifies the SMTP addresses (email addresses) of the gro
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
 
-To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
+To have the policy apply to all users in the organization, use the Everyone switch.
 
 ```yaml
 Type: String[]
@@ -228,10 +225,10 @@ Accept wildcard characters: False
 
 ### -UserIds
 The UserIds parameter specifies the user principal names (UPNs) of the users that the policy applies to. You can enter multiple values separated by commas.
- 
+
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
 
-To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
+To have the policy apply to all users in the organization, use the Everyone switch.
 
 ```yaml
 Type: String[]
