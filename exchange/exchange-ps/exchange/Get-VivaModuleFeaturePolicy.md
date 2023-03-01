@@ -35,7 +35,7 @@ Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a spe
 
 You can view all policies for a specified feature in a Viva module. To view a specific policy, you can include the PolicyId parameter. 
 
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
+You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
@@ -68,7 +68,7 @@ This example returns details about a specific policy added for the Reflection fe
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to view the policies for. 
 
-To view details about the features in a Viva module that have Viva feature access controls available, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+To view details about the features in a Viva module that support feature access controls, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
 
 
 ```yaml
