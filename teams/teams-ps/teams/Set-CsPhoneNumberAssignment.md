@@ -39,9 +39,6 @@ and a Message string parameter with additional details of the failure.
 exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also now support the -ErrorAction parameter to
 control the execution after an error has occurred.
 
-
-**Note**: Macau region is currently not supported for phone number assignment or Enterprise Voice.
-
 ## EXAMPLES
 
 ### Example 1

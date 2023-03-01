@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-omeconfiguration
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-OMEConfiguration
 schema: 2.0.0
 author: chrisda
@@ -59,7 +59,7 @@ The Identity parameter specifies the OME configuration that you want to modify. 
 Type: OMEConfigurationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -79,7 +79,7 @@ The BackgroundColor parameter specifies the background color. Valid values are:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ To remove existing text and use the default value, use the value $null for this 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ To remove existing text and use the default value, use the value $null for this 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ To remove an existing image and use the default image, use the value $null for t
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ To remove existing text and use the default value, use the value $null for this 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ The OTPEnabled parameter specifies whether to allow recipients to use a one-time
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -235,7 +235,7 @@ To remove existing text and use the default value, use the value $null for this 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ If you don't use this parameter, the Privacy Statement link goes to the default 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -271,7 +271,7 @@ To remove existing text and use the default value, use the value $null for this 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ The SocialIdSignIn parameter specifies whether a user is allowed to view an encr
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -306,7 +306,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

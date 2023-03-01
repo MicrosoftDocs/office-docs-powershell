@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
+Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
 
 **Note**: Currently, this cmdlet still requires Basic authentication to be enabled in WinRM on the local computer. For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
 
@@ -45,50 +45,32 @@ Connect-IPPSSession
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to create a remote PowerShell session to Exchange-related PowerShell environments other than Exchange Online PowerShell. For example, Security & Compliance PowerShell or standalone Exchange Online Protection PowerShell (for organizations without Exchange Online mailboxes).
-
-If your organization is on-premises Exchange, and you have Exchange Enterprise CAL with Services licenses for Exchange Online Protection (EOP), use the [Connect-ExchangeOnline](https://learn.microsoft.com/powershell/module/exchange/connect-exchangeonline) cmdlet in the [Exchange Online PowerShell connection instructions](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell) to connect to your EOP PowerShell environment.
-
 For detailed connection instructions, including prerequisites, see [Connect to Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-scc-powershell).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-$UserCredential = Get-Credential
-Connect-IPPSSession -Credential $UserCredential
+Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com
 ```
 
-This example connects to Security & Compliance PowerShell in a Microsoft 365 organization.
-
-The first command gets the user credentials and stores them in the $UserCredential variable.
-
-The second command connects the current PowerShell session using the credentials in the $UserCredential, which isn't MFA enabled.
-
-After the Connect-IPPSSession command is complete, the password key in the $UserCredential variable is emptied, and you can run Security & Compliance PowerShell cmdlets.
+This example connects to Security & Compliance PowerShell in a Microsoft 365 organization. You're prompted for the password of the michelle@contoso.onmicrosoft.com account.
 
 ### Example 2
-```powershell
-Connect-IPPSSession -Credential (Get-Credential) -ConnectionUri https://ps.protection.outlook.com/powershell-liveid/
-```
-
-This example connects to standalone Exchange Online Protection PowerShell in an organization that doesn't have Exchange Online mailboxes.
-
-### Example 3
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
 ```
 
 Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using the public key of a certificate.
 
-### Example 4
+### Example 3
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
 Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
-### Example 5
+### Example 4
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
@@ -104,7 +86,6 @@ The ConnectionUri parameter specifies the connection endpoint for the remote Pow
 - Security & Compliance PowerShell in Office 365 operated by 21Vianet: `https://ps.compliance.protection.partner.outlook.cn/powershell-liveid`
 - Security & Compliance PowerShell in Microsoft GCC High: `https://ps.compliance.protection.office365.us/powershell-liveid/`
 - Security & Compliance PowerShell in Microsoft DoD: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`
-- Exchange Online Protection PowerShell in standalone EOP organizations without Exchange Online mailboxes: `https://ps.protection.outlook.com/powershell-liveid/`
 
 ```yaml
 Type: String
@@ -165,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
-The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online.
+The PSSessionOption parameter specifies the remote PowerShell session options to use in your connection to Security & Compliance PowerShell.
 
 Store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$PSOptions = New-PSSessionOption <Settings>`), and use the variable name as the value for this parameter (for example, `$PSOptions`).
 

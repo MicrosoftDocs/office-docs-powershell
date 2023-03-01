@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-exoinformationbarrierrelationship
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-ExoInformationBarrierRelationship
 schema: 2.0.0
 author: chrisda
@@ -53,7 +53,7 @@ The RecipientId1 parameter specifies the first recipient in the Exchange Online 
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The RecipientId2 parameter specifies the second recipient in the Exchange Online
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named

@@ -6347,12 +6347,12 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/New-EOPDistributionGroup.md",
-      "redirect_url": "/powershell/module/exchange/new-eopdistributiongroup",
+      "redirect_url": "/powershell/module/exchange/new-distributiongroup",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/New-EOPMailUser.md",
-      "redirect_url": "/powershell/module/exchange/new-eopmailuser",
+      "redirect_url": "/powershell/module/exchange/new-mailuser",
       "redirect_document_id": false
     },
     {
@@ -6387,12 +6387,12 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/Remove-EOPDistributionGroup.md",
-      "redirect_url": "/powershell/module/exchange/remove-eopdistributiongroup",
+      "redirect_url": "/powershell/module/exchange/remove-distributiongroup",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/Remove-EOPMailUser.md",
-      "redirect_url": "/powershell/module/exchange/remove-eopmailuser",
+      "redirect_url": "/powershell/module/exchange/remove-mailuser",
       "redirect_document_id": false
     },
     {
@@ -6432,22 +6432,22 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/Set-EOPDistributionGroup.md",
-      "redirect_url": "/powershell/module/exchange/set-eopdistributiongroup",
+      "redirect_url": "/powershell/module/exchange/set-distributiongroup",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/Set-EOPGroup.md",
-      "redirect_url": "/powershell/module/exchange/set-eopgroup",
+      "redirect_url": "/powershell/module/exchange/set-group",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/Set-EOPMailUser.md",
-      "redirect_url": "/powershell/module/exchange/set-eopmailuser",
+      "redirect_url": "/powershell/module/exchange/set-mailuser",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/Set-EOPUser.md",
-      "redirect_url": "/powershell/module/exchange/set-eopuser",
+      "redirect_url": "/powershell/module/exchange/set-user",
       "redirect_document_id": false
     },
     {
@@ -6492,7 +6492,7 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/users-and-groups/Update-EOPDistributionGroupMember.md",
-      "redirect_url": "/powershell/module/exchange/update-eopdistributiongroupmember",
+      "redirect_url": "/powershell/module/exchange/update-distributiongroupmember",
       "redirect_document_id": false
     },
     {
@@ -6873,6 +6873,51 @@
     {
       "source_path": "exchange/docs-conceptual/v1-module-mfa-connect-to-exo-powershell.md",
       "redirect_url": "/powershell/exchange/connect-to-exchange-online-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-EOPDistributionGroup.md",
+      "redirect_url": "/powershell/module/exchange/new-distributiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-EOPMailUser.md",
+      "redirect_url": "/powershell/module/exchange/new-mailuser",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-EOPDistributionGroup.md",
+      "redirect_url": "/powershell/module/exchange/remove-distributiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-EOPMailUser.md",
+      "redirect_url": "/powershell/module/exchange/remove-mailuser",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-EOPDistributionGroup.md",
+      "redirect_url": "/powershell/module/exchange/set-distributiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-EOPGroup.md",
+      "redirect_url": "/powershell/module/exchange/set-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-EOPMailUser.md",
+      "redirect_url": "/powershell/module/exchange/set-mailuser",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-EOPUser.md",
+      "redirect_url": "/powershell/module/exchange/set-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Update-EOPDistributionGroupMember.md",
+      "redirect_url": "/powershell/module/exchange/update-distributiongroupmember",
       "redirect_document_id": false
     }
   ]

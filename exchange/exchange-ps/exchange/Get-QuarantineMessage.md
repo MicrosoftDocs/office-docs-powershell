@@ -346,7 +346,7 @@ You can specify multiple values separated by commas.
 Type: String[]
 Parameter Sets: Summary
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

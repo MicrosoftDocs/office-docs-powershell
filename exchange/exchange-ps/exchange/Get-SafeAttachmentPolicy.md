@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-safeattachmentpolicy
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-SafeAttachmentPolicy
 schema: 2.0.0
 author: chrisda
@@ -61,7 +61,7 @@ You can use any value that uniquely identifies the policy. For example:
 Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 1

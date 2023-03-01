@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-onpremisesorganization
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-OnPremisesOrganization
 schema: 2.0.0
 author: chrisda
@@ -61,7 +61,7 @@ The Identity parameter specifies the identity of the on-premises organization ob
 Type: OnPremisesOrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: 1
