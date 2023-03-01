@@ -139,7 +139,7 @@ For exported messages, including messages with attachments, the .zip file contai
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ This switch has no effect if the message is already encoded as Base64.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -38,6 +38,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
  [-ContentFileTypeMatches <MultiValuedProperty>]
+ [-ContentIsNotLabeled <Boolean>]
  [-ContentIsShared <Boolean>]
  [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <Boolean>]
@@ -51,6 +52,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-DocumentNameMatchesWords <MultiValuedProperty>]
  [-DocumentSizeOver <ByteQuantifiedSize>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
+ [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
  [-ExceptIfAccessScope <AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
@@ -117,6 +119,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
  [-NotifyEndpointUser <PswsHashtable>]
+ [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyUser <MultiValuedProperty>]
@@ -135,6 +138,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-RemoveRMSTemplate <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-ReportSeverityLevel <RuleSeverity>]
+ [-RestrictBrowserAccess <Boolean>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
@@ -150,6 +154,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-SubjectMatchesPatterns <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyMatchesPatterns <MultiValuedProperty>]
+ [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
  [-WithImportance <WithImportance>]<MultiValuedProperty>
@@ -560,6 +565,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentIsNotLabeled
+{{ Fill ContentIsNotLabeled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentIsShared
 {{ Fill ContentIsShared Description }}
 
@@ -798,6 +819,22 @@ Use the Get-RMSTemplate cmdlet to see the RMS templates that are available.
 
 ```yaml
 Type: RmsTemplateIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpBrowserRestrictions
+{{ Fill EndpointDlpBrowserRestrictions Description }}
+
+```yaml
+Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1460,7 +1497,7 @@ The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception f
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -1510,7 +1547,7 @@ The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -1576,7 +1613,7 @@ The ExceptIfSenderADAttributeContainsWords parameter specifies an exception for 
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -1626,7 +1663,7 @@ The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception fo
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -2293,6 +2330,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifyOverrideRequirements
+{{ Fill NotifyOverrideRequirements Description }}
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyPolicyTipCustomText
 The NotifyPolicyTipCustomText parameter specifies the custom text in the Policy Tip notification message that's shown to recipients when the conditions of the rule are met. The maximum length is 256 characters. HTML tags and tokens (variables) aren't supported.
 
@@ -2504,7 +2557,7 @@ The RecipientADAttributeContainsWords parameter specifies a condition for the DL
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -2554,7 +2607,7 @@ The RecipientADAttributeMatchesPatterns parameter specifies a condition for the 
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the or operator is used.
 
@@ -2669,6 +2722,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictBrowserAccess
+{{ Fill RestrictBrowserAccess Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RuleErrorAction
 The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
 
@@ -2720,7 +2789,7 @@ The SenderADAttributeContainsWords parameter specifies a condition for the DLP r
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"Word1";AttributeName2:"Word2";...AttributeNameN:"WordN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the OR operator is used.
 
@@ -2770,7 +2839,7 @@ The SenderADAttributeMatchesPatterns parameter specifies a condition for the DLP
 - UserLogonName
 - ZipCode
 
-This parameter uses the syntax: `@{AttributeName:"RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1:"RegularExpression1";AttributeName2:"RegularExpression2";...AttributeNameN:"RegularExpressionN"}`. Don't use words with leading or trailing spaces.
+This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
 When you specify multiple attributes, the or operator is used.
 
@@ -3003,6 +3072,22 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: <MultiValuedProperty>
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThirdPartyAppDlpRestrictions
+{{ Fill ThirdPartyAppDlpRestrictions Description }}
+
+```yaml
+Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

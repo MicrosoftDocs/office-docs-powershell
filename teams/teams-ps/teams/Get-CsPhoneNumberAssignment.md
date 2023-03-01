@@ -105,6 +105,18 @@ Get-CsPhoneNumberAssignment -TelephoneNumberContain "524"
 ```
 This example returns information about all phone numbers that contain the digits 524, including the phone number with extension 524 used in example 2.
 
+### Example 8
+```powershell
+(Get-CsPhoneNumberAssignment | Where-Object {$_.NumberType.Contains('CallingPlan') -and $_.Capability.Contains('UserAssignment') -and ($_.PstnAssignmentStatus.Contains('UserAssigned') -or $_.PstnAssignmentStatus.Contains('Unassigned'))}).Count
+```
+This example returns the number of Calling Plan subscriber phone numbers that are either assigned or not assigned to users.
+
+### Example 9
+```powershell
+(Get-CsPhoneNumberAssignment | Where-Object {!$_.NumberType.Contains('DirectRouting') -and $_.Capability.Contains('VoiceApplicationAssignment') -and $_.Capability.Contains('ConferenceAssignment')}).Count
+```
+This example returns the number of Calling Plan or Operator Connect service phone numbers that can be assigned to voice applications and conference bridges.
+
 ## PARAMETERS
 
 ### -ActivationState

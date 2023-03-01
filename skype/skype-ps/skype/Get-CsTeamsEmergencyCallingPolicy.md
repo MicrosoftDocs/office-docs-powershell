@@ -52,6 +52,24 @@ Get-CsTeamsEmergencyCallingPolicy -Filter Test*
 
 Retrieves all emergency calling policies with Identity starting with Test.
 
+### Example 4
+```powershell
+(Get-CsTeamsEmergencyCallingPolicy -Identity TestECP).ExtendedNotifications
+```
+```output
+EmergencyDialString       : 112
+NotificationGroup         : alert2@contoso.com
+NotificationDialOutNumber :
+NotificationMode          : ConferenceUnMuted
+
+EmergencyDialString       : 911
+NotificationGroup         : alert3@contoso.com
+NotificationDialOutNumber : +14255551234
+NotificationMode          : NotificationOnly
+```
+
+This example displays extended notifications set on emergency calling policy with the identity TestECP.
+
 ## PARAMETERS
 
 ### -Identity

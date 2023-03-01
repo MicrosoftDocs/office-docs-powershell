@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-safelinksrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-SafeLinksRule
 schema: 2.0.0
 author: chrisda
@@ -62,7 +62,7 @@ You can use any value that uniquely identifies the rule. For example:
 Type: RuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 1
@@ -78,7 +78,7 @@ The State parameter filters the results by the state of the rule. Valid values a
 Type: RuleState
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

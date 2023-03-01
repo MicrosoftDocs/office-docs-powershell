@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-accesstocustomerdatarequest
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Set-AccessToCustomerDataRequest
 schema: 2.0.0
 author: chrisda
@@ -54,7 +54,7 @@ The ApprovalDecision parameter specifies the approval decision for the customer 
 Type: AccessToCustomerDataApproverDecision
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -70,7 +70,7 @@ The RequestId parameter specifies the reference number of the customer lockbox r
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The ServiceName parameter specifies the related service. Valid values are:
 Type: Microsoft.Exchange.Management.AccessToCustomerDataApproval.AccessToCustomerDataRequestServiceName
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

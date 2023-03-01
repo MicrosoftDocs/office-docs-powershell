@@ -44,6 +44,7 @@ Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
  [-FilterStartTime <DateTime>]
  [-LastParentFolderID <String>]
  [-MaxParallelSize <Int32>]
+ [-PolicyTag <String[]>]
  [-ResultSize <Unlimited>]
  [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
@@ -214,6 +215,24 @@ The value of this parameter has no effect when the Identity parameter specifies 
 
 ```yaml
 Type: Int32
+Parameter Sets: Cloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTag
+This parameter is available only in the cloud-based service.
+
+{{ Fill PolicyTag Description }}
+
+```yaml
+Type: String[]
 Parameter Sets: Cloud
 Aliases:
 Applicable: Exchange Online

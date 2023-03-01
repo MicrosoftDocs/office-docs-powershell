@@ -52,6 +52,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-MinimumDurationInMinutes <Int32>]
  [-OrganizerInfo <Boolean>]
  [-ProcessExternalMeetingMessages <Boolean>]
+ [-RemoveCanceledMeetings <Boolean>
  [-RemoveForwardedMeetingNotifications <Boolean>]
  [-RemoveOldMeetingMessages <Boolean>]
  [-RemovePrivateProperty <Boolean>]
@@ -740,6 +741,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveCanceledMeetings
+This parameter is available only in the cloud-based service.
+
+{{ Fill RemoveCanceledMeetings Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

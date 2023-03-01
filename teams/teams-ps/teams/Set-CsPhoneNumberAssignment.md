@@ -39,9 +39,6 @@ and a Message string parameter with additional details of the failure.
 exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also now support the -ErrorAction parameter to
 control the execution after an error has occurred.
 
-
-**Note**: Macau region is currently not supported for phone number assignment or Enterprise Voice.
-
 ## EXAMPLES
 
 ### Example 1
@@ -141,7 +138,8 @@ Accept wildcard characters: False
 ### -PhoneNumber
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have "tel:" prefixed.
 
-We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user or resource account.
+We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user account, but such phone numbers are
+not supported to be assigned to a resource account.
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 

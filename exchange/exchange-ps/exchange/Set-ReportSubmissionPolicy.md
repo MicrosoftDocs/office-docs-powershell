@@ -434,7 +434,7 @@ The NotificationSenderAddress parameter specifies the sender email address to us
 This parameter is meaningful only when the Microsoft integrated reporting experience is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

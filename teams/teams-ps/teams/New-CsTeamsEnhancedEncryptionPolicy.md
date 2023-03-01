@@ -17,14 +17,14 @@ Use this cmdlet to create a new Teams enhanced encryption policy.
 ## SYNTAX
 
 ```
-New-CsTeamsEnhancedEncryptionPolicy [-Description <Object>] [-CallingEndtoEndEncryptionEnabledType <Object>]
+New-CsTeamsEnhancedEncryptionPolicy [-Description <Object>] [-CallingEndtoEndEncryptionEnabledType <Object>] [-MeetingEndToEndEncryption <Object>]
  [[-Identity] <Object>] [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use this cmdlet to create a new Teams enhanced encryption policy.
 
-The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
+The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for end-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ Creates a new instance of TeamsEnhancedEncryptionPolicy called ContosoPartnerTea
 
 ### EXAMPLE 2
 ```PowerShell
-PS C:\> New-CsTeamsEnhancedEncryptionPolicy -Identity ContosoPartnerTeamsEnhancedEncryptionPolicy -CallingEndtoEndEncryptionEnabledType DisabledUserOverride
+PS C:\> New-CsTeamsEnhancedEncryptionPolicy -Identity ContosoPartnerTeamsEnhancedEncryptionPolicy -CallingEndtoEndEncryptionEnabledType DisabledUserOverride -MeetingEndToEndEncryption DisabledUserOverride
 ```
 
 Creates a new instance of TeamsEnhancedEncryptionPolicy called ContosoPartnerTeamsEnhancedEncryptionPolicy and applies the provided values to its settings.
@@ -63,7 +63,22 @@ Accept wildcard characters: False
 ```
 
 ### -CallingEndtoEndEncryptionEnabledType
-Determines whether End-to-end encrypted calling is available for the user in Teams. Set this to DisabledUserOverride to allow user to turn on End-to-end encrypted calls. Set this to Disabled to prohibit.
+Determines whether end-to-end encrypted calling is available for the user in Teams. Set this to DisabledUserOverride to allow user to turn on end-to-end encrypted calls. Set this to Disabled to prohibit.
+
+```yaml
+Type: Enum
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingEndToEndEncryption
+Determines whether end-to-end encrypted meetings are available in Teams ([requires a Teams Premium license](https://www.microsoft.com/en-us/microsoft-teams/premium)). Set this to DisabledUserOverride to allow users to schedule end-to-end encrypted meetings. Set this to Disabled to prohibit.
 
 ```yaml
 Type: Enum

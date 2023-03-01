@@ -95,8 +95,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
 
-### [Get-PhishFilterPolicy](Get-PhishFilterPolicy.md)
-
 ### [Get-SafeAttachmentPolicy](Get-SafeAttachmentPolicy.md)
 
 ### [Get-SafeAttachmentRule](Get-SafeAttachmentRule.md)
@@ -155,8 +153,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-EmailTenantSettings](Set-EmailTenantSettings.md)
 
-### [Set-PhishFilterPolicy](Set-PhishFilterPolicy.md)
-
 ### [Set-SafeAttachmentPolicy](Set-SafeAttachmentPolicy.md)
 
 ### [Set-SafeAttachmentRule](Set-SafeAttachmentRule.md)
@@ -209,6 +205,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
+
+### [Get-BlockedConnector](Get-BlockedConnector.md)
 
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
 
@@ -327,6 +325,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Release-QuarantineMessage](Release-QuarantineMessage.md)
 
 ### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
+
+### [Remove-BlockedConnector](Remove-BlockedConnector.md)
 
 ### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
 
@@ -1735,6 +1735,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ProtectionAlert](Get-ProtectionAlert.md)
 
+### [Get-ReviewItems](Get-ReviewItems.md)
+
 ### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
 ### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
@@ -2384,8 +2386,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailTrafficSummaryReport](Get-MailTrafficSummaryReport.md)
 
-### [Get-MailTrafficTopReport](Get-MailTrafficTopReport.md)
-
 ### [Get-MxRecordReport](Get-MxRecordReport.md)
 
 ### [Get-O365ClientBrowserDetailReport](Get-O365ClientBrowserDetailReport.md)
@@ -2811,10 +2811,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-DynamicDistributionGroup](New-DynamicDistributionGroup.md)
 
-### [New-EOPDistributionGroup](New-EOPDistributionGroup.md)
-
-### [New-EOPMailUser](New-EOPMailUser.md)
-
 ### [New-MailContact](New-MailContact.md)
 
 ### [New-MailUser](New-MailUser.md)
@@ -2826,10 +2822,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-DistributionGroupMember](Remove-DistributionGroupMember.md)
 
 ### [Remove-DynamicDistributionGroup](Remove-DynamicDistributionGroup.md)
-
-### [Remove-EOPDistributionGroup](Remove-EOPDistributionGroup.md)
-
-### [Remove-EOPMailUser](Remove-EOPMailUser.md)
 
 ### [Remove-MailContact](Remove-MailContact.md)
 
@@ -2844,14 +2836,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DistributionGroup](Set-DistributionGroup.md)
 
 ### [Set-DynamicDistributionGroup](Set-DynamicDistributionGroup.md)
-
-### [Set-EOPDistributionGroup](Set-EOPDistributionGroup.md)
-
-### [Set-EOPGroup](Set-EOPGroup.md)
-
-### [Set-EOPMailUser](Set-EOPMailUser.md)
-
-### [Set-EOPUser](Set-EOPUser.md)
 
 ### [Set-Group](Set-Group.md)
 
@@ -2868,7 +2852,5 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Undo-SoftDeletedUnifiedGroup](Undo-SoftDeletedUnifiedGroup.md)
 
 ### [Update-DistributionGroupMember](Update-DistributionGroupMember.md)
-
-### [Update-EOPDistributionGroupMember](Update-EOPDistributionGroupMember.md)
 
 ### [Upgrade-DistributionGroup](Upgrade-DistributionGroup.md)
