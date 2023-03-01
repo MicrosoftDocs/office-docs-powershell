@@ -18,9 +18,10 @@ schema: 2.0.0
 
 ### Identity (Default)
 ```
-Set-CsTeamsEmergencyCallingPolicy [[-Identity] <string>] [-Description <string>] [-EnhancedEmergencyServiceDisclaimer <string>]
- [-ExternalLocationLookupMode <string>] [-NotificationDialOutNumber <string>] [-NotificationGroup <string>] [-NotificationMode <Object>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-ExtendedNotifications <PSListModifier[TeamsEmergencyCallingExtendedNotification]>]
+  [-NotificationGroup <string>] [-NotificationDialOutNumber <string>] [-ExternalLocationLookupMode <ExternalLocationLookupMode>]
+  [-NotificationMode <NotificationMode>] [-EnhancedEmergencyServiceDisclaimer <string>]
+  [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,10 +31,27 @@ This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calli
 
 ### Example 1
 ```powershell
-Set-CsTeamsEmergencyCallingPolicy -Identity "testECP" -NotificationGroup "123@gh.com;567@test.com"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -NotificationGroup "123@contoso.com;567@contoso.com"
 ```
 
-This example modifies an existing cmdlet with identity testECP.
+This example modifies an existing policy instance with identity TestECP.
+
+### Example 2
+```powershell
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "112" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{add=$en1,$en2}
+```
+
+This example creates specific emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP policy instance.
+
+### Example 3
+```powershell
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{remove=$en2}
+```
+
+This example removes a specific emergency calling notification setting from the existing TestECP policy instance.
 
 ## PARAMETERS
 
@@ -67,11 +85,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExtendedNotifications
+A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
+
+If an extended notification is found for an emergency phone number based on the EmergencyDialString parameter the extended notification will be controlling the notification. If no extended notification is found the notification settings on the policy instance itself will be used.
+
+```yaml
+Type: System.Management.Automation.PSListModifier[Microsoft.Teams.Policy.Administration.Cmdlets.Core.TeamsEmergencyCallingExtendedNotification]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExternalLocationLookupMode
 Enables ExternalLocationLookupMode. This mode allows users to set Emergency addresses for remote locations.
 
 ```yaml
-Type: String
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.ExternalLocationLookupMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Disabled, Enabled
@@ -99,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationDialOutNumber
-This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values.
+This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values. The PSTN phone cannot be unmuted even when the NotificationMode is set to ConferenceUnMuted.
 
 ```yaml
 Type: String
@@ -129,10 +164,10 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationMode
-The type of conference experience for security desk notification. Support for the ConferenceUnMuted mode is pending.
+The type of conference experience for security desk notification.
 
 ```yaml
-Type: Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: NotificationOnly, ConferenceMuted, ConferenceUnMuted
@@ -193,3 +228,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
 
 [Grant-CsTeamsEmergencyCallingPolicy](Grant-CsTeamsEmergencyCallingPolicy.md)
+
+[New-CsTeamsEmergencyCallingExtendedNotification](New-CsTeamsEmergencyCallingExtendedNotification.md)
