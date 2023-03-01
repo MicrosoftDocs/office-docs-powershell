@@ -36,11 +36,7 @@ You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
-
-- Global Administrator
-
-There may be other admin roles permissioned access based on the particular feature's scope. More details will be provided soon.
+Currently, you need to be a member of the Global administrators role to run this cmdlet.
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
