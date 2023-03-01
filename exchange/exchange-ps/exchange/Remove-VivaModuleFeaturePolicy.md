@@ -58,8 +58,7 @@ This example deletes the specified policy for the Reflection feature in Viva Ins
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to remove the policy from.
 
-To view details about the 'features in a Viva module that support feature access controls, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
-
+To view details about the features in a Viva module that have Viva feature access controls available, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
