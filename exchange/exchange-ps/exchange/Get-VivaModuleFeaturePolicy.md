@@ -66,10 +66,9 @@ This example returns details about a specific policy added for the Reflection fe
 ## PARAMETERS
 
 ### -FeatureId
-The FeatureId parameter specifies the feature in the Viva module that you want to view the policies for. 
+The FeatureId parameter specifies the feature in the Viva module that you want to view the policies for.
 
 To view details about the features in a Viva module that support feature access controls, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
-
 
 ```yaml
 Type: String
@@ -103,7 +102,7 @@ Accept wildcard characters: False
 ### -PolicyId
 The PolicyId parameter specifies the specific policy for the feature in the Viva module that you want to view.
 
-You can view details about all the policies for a feature in a Viva module by running the cmdlet without the PolicyId parameter. These details include the identifiers of all the policies for a feature in a Viva module.
+To view details about all policies for a feature in a Viva module, run this cmdlet without the PolicyId parameter. These details include the identifiers of all the policies for a feature in a Viva module.
 
 
 ```yaml
