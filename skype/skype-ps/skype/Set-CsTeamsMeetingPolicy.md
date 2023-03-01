@@ -38,7 +38,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
-[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>]
+[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -1075,6 +1075,25 @@ Determines whether you provide support for your users to stream their Teams meet
 Possible values are: 
 - Disabled
 - Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedStreamingMediaInput
+Enables the use of RTMP-In in Teams meetings.
+
+Possible values are: 
+- <blank>
+- RTMP
 
 ```yaml
 Type: String
