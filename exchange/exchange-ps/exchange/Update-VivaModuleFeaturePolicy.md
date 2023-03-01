@@ -48,7 +48,7 @@ You can update these attributes independently of each other. For example, if you
 
 **Important**: Values that you specify for the UserIds and/or GroupIds parameters or the Everyone parameter will **overwrite** any existing users or groups. To preserve the existing users and groups, you need to specify those existing users or groups **and** any additional users or groups that you want to add. Not including existing users or groups in the command effectively removes those specific users or groups from the policy. For more information, see the examples.
 
-You need to use the Connect-ExchangeOnline cmdlet to authenticate with the Viva Feature Access Management Service.
+You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
@@ -93,7 +93,7 @@ This example updates the name of the specified policy, makes it so the policy di
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module of the policy that you want to update.
 
-To view details about the features in a Viva module that have Viva feature access controls available, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
+To view details about the features in a Viva module that support feature access controls, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the email addresses of groups that the updated policy applies to. Viva feature access management supports [mail-enabled AAD groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph). You can enter multiple values separated by commas.
+The GroupIds parameter specifies the email addresses of groups that the updated policy applies to. [Mail-enabled AAD groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 If you don't want to update who the policy applies to, don't use this parameter.
 
