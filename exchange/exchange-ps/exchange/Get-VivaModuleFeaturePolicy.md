@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Pr
 
 **Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy’s identifier, name, and creation date.
+Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy's identifier, name, and creation date.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -42,8 +42,6 @@ This cmdlet requires the .NET Framework 4.7.2 or later.
 To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
-
-There may be other admin roles permissioned access based on the particular feature’s scope. More details will be provided soon.
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 

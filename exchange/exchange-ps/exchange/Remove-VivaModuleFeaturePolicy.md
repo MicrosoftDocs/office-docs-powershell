@@ -42,8 +42,6 @@ To run this cmdlet, you need to be a member of one of the following directory ro
 
 - Global Administrator
 
-There may be other admin roles permissioned access based on the particular feature’s scope. More details will be provided soon.
-
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
