@@ -37,8 +37,6 @@ Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureDisabled <Boolean> -Mo
 ## DESCRIPTION
 Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva.
 
-A policy applies to a set of users and/or groups within your tenant. You can specify the users and/or groups using the respective parameters of the cmdlet. Note that you can provide up to 20 users and/or groups for the policy to apply to. This limit applies to the total across the related parameters. To apply the policy to all users in your tenant, provide the Everyone switch.
-
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
@@ -46,8 +44,6 @@ This cmdlet requires the .NET Framework 4.7.2 or later.
 To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
-
-There may be other admin roles permissioned access based on the particular feature’s scope. More details will be provided soon.
 
 To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
@@ -62,45 +58,31 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 
 ### Example 2
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name Group -IsFeatureDisabled $true -GroupIds group@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureDisabled $true -GroupIds group1@contoso.com,group2@contoso.com
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for all users within the group **group@contoso.com**.
+This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for all users in the specified groups.
 
 ### Example 3
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureDisabled $true -GroupIds group1@contoso.com, group2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleUsers -IsFeatureDisabled $true -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for all users within either the **group1@contoso.com** or **group2@contoso.com** groups.
+This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the specified users.
 
 ### Example 4
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name User -IsFeatureDisabled $true -UserIds user@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureDisabled $true -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the **user@contoso.com** user.
-
-### Example 5
-```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleUsers -IsFeatureDisabled $true -UserIds user1@contoso.com, user2@contoso.com
-```
-
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the **user1@contoso.com** and **user2@contoso.com** users.
-
-### Example 6
-```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureDisabled $true -GroupIds group1@contoso.com, group2@contoso.com -UserIds user1@contoso.com, user2@contoso.com
-```
-
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for users within multiple groups and a list of specific users.
+This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the specified users and group memebers.
 
 ## PARAMETERS
 
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to add the policy for.
 
-To view details about the features in a Viva module that support feature access controls, refer to the Get-VivaModuleFeature cmdlet. The details provided by the Get-VivaModuleFeature cmdlet include the feature identifier.
+To view details about the features in a Viva module that have Viva feature access controls available, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
@@ -188,9 +170,12 @@ Accept wildcard characters: False
 ```
 
 ### -Everyone
-The Everyone switch specifies that the policy applies to all users. You do not need to specify a value with this switch.
- 
-Do not use this parameter with the GroupIds or UserIds parameters.
+The Everyone parameter specifies that the updated policy applies to all users in the organization. Valid values are:
+
+- $true: The policy applies to all users. This is the only useful value for this parameter.
+- $false: Don't use this value.
+
+Don't use this parameter with the GroupIds or UserIds parameters.
 
 ```yaml
 Type: SwitchParameter
@@ -206,9 +191,11 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled AAD groups]( https://docs.microsoft.com/en-us/graph/api/resources/groups-overview?context=graph%2Fcontext&view=graph-rest-1.0#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled AAD groups]( https://docs.microsoft.comgraph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
-Note that you can provide up to 20 users and/or groups for the policy to apply to. This limit applies to the total across the related parameters. To have the policy apply to all users in the tenant, use the Everyone switch.
+You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
 
 ```yaml
 Type: String[]
@@ -242,7 +229,9 @@ Accept wildcard characters: False
 ### -UserIds
 The UserIds parameter specifies the user principal names (UPNs) of the users that the policy applies to. You can enter multiple values separated by commas.
  
-Note that you can provide up to 20 users and/or groups for the policy to apply to. This limit applies to the total across the related parameters. To have the policy apply to all users in the tenant, use the Everyone switch.
+You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
 
 ```yaml
 Type: String[]
