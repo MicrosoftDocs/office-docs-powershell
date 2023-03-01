@@ -104,7 +104,6 @@ The PolicyId parameter specifies the specific policy for the feature in the Viva
 
 To view details about all policies for a feature in a Viva module, run this cmdlet without the PolicyId parameter. These details include the identifiers of all the policies for a feature in a Viva module.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
