@@ -72,7 +72,7 @@ The RecipientAddress parameter filters the results by the recipient's email addr
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

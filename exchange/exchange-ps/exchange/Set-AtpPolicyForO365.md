@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-atppolicyforo365
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Set-AtpPolicyForO365
 schema: 2.0.0
 author: chrisda
@@ -62,7 +62,7 @@ The Identity parameter specifies the policy that you want to modify. There's onl
 Type: AtpPolicyForO365IdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 1
@@ -107,7 +107,7 @@ For details about the entry syntax, see [Entry syntax for the "Block the followi
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ The EnableATPForSPOTeamsODB parameter enables or disables Safe Attachments for S
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-dynamicdistributiongroupmember
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-DynamicDistributionGroupMember
 schema: 2.0.0
 author: chrisda
@@ -58,7 +58,7 @@ The Identity parameter specifies the dynamic distribution group. You can use any
 Type: DynamicDistributionGroupMemberIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -76,7 +76,7 @@ A value for this parameter requires the Get-Credential cmdlet. To pause this com
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Soft-deleted group members are deleted Microsoft 365 Groups or mailboxes that ar
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

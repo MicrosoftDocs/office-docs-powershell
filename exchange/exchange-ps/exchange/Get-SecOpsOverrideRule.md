@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-secopsoverriderule
-applicable: Exchange Online, Security & Compliance
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-SecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
@@ -54,7 +54,7 @@ The Identity parameter specifies the SecOps override rule that you want to view.
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: 0
@@ -70,7 +70,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The Policy parameter filters the results by SecOps mailbox override policy. You 
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

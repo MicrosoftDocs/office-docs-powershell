@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/search-unifiedauditlog
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Search-UnifiedAuditLog
 schema: 2.0.0
 author: chrisda
@@ -110,7 +110,7 @@ If you don't include a timestamp in the value for this parameter, the default ti
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ If you don't include a timestamp in the value for this parameter, the default ti
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -151,7 +151,7 @@ In addition, this switch makes AuditData more readable.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ The FreeText parameter filters the log entries by the specified text string. If 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ The IPAddresses parameter filters the log entries by the specified IP addresses.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -203,7 +203,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ The RecordType parameter filters the log entries by record type. For details abo
 Type: AuditRecordType
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ The ResultSize parameter specifies the maximum number of results to return. The 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -274,7 +274,7 @@ The SessionCommand parameter specifies how much information is returned and how 
 Type: UnifiedAuditSessionCommand
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -294,7 +294,7 @@ For a given session ID, if you use the SessionCommand value ReturnLargeSet, and 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ To obtain the the SiteId for a SharePoint site, append `/_api/site/id` to the UR
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -330,7 +330,7 @@ You can enter multiple values separated by commas. If the values contain spaces 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

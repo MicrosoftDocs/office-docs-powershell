@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-accesstocustomerdatarequest
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-AccessToCustomerDataRequest
 schema: 2.0.0
 author: chrisda
@@ -69,7 +69,7 @@ The ApprovalStatus parameter filters the results by approval status. Valid value
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ To specify a date/time value for this parameter, use either of the following opt
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ The RequestId parameter filters the results by reference number (for example, EX
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

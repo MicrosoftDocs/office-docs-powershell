@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-atpbuiltinprotectionrule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-ATPBuiltInProtectionRule
 schema: 2.0.0
 author: chrisda
@@ -53,7 +53,7 @@ The name of the only rule is ATP Built-In Protection Rule.
 Type: DehydrateableRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -75,7 +75,7 @@ Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Onlinen
 
 Required: False
 Position: Named

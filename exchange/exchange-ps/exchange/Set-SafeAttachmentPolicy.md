@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-safeattachmentpolicy
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Set-SafeAttachmentPolicy
 schema: 2.0.0
 author: chrisda
@@ -65,7 +65,7 @@ You can use any value that uniquely identifies the policy. For example:
 Type: SafeAttachmentPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 1
@@ -92,7 +92,7 @@ The results of all actions are available in message trace.
 Type: SafeAttachmentAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ The ActionOnError parameter specifies the error handling option for Safe Attachm
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ The AdminDisplayName parameter specifies a description for the policy. If the va
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ To enable or disable an existing Safe Attachments policy, use the Enable-SafeAtt
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ To view the list of available quarantine policies, run the following command: `G
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The Redirect parameter specifies whether to deliver messages that were identifie
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ The RedirectAddress parameter specifies the email address to deliver messages th
 Type: SmtpAddress
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

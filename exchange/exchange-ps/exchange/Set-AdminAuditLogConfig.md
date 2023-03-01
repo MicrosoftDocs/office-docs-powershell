@@ -139,7 +139,12 @@ Accept wildcard characters: False
 ### -AdminAuditLogEnabled
 This parameter is available only in on-premises Exchange.
 
-The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $true. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
+The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. Valid values are:
+
+- $true: Administrator audit logging is enabled. This is the default value.
+- $false: Administrator audit logging is disabled.
+
+You must specify an administrator audit log mailbox before you enable logging.
 
 Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
 
@@ -252,9 +257,10 @@ Accept wildcard characters: False
 ### -LogLevel
 This parameter is available only in on-premises Exchange.
 
-The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are None and Verbose.
+The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are:
 
-By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
+- None: The CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. This is the default value.
+- Verbose: The ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are also included in log entries.
 
 ```yaml
 Type: AuditLogLevel
@@ -292,7 +298,10 @@ Accept wildcard characters: False
 ### -TestCmdletLoggingEnabled
 This parameter is available only in on-premises Exchange.
 
-The TestCmdletLoggingEnabled parameter specifies whether the execution of test cmdlets should be logged. Test cmdlets begin with the verb Test. Valid values are $true and $false. The default value is $false.
+The TestCmdletLoggingEnabled parameter specifies whether test cmdlets (cmdlet names that begin with the verb Test) results are included in admin audit logging. Valid values are:
+
+- $true: Test cmdlets are included in admin audit logging.
+- $false: Test cmdlets aren't included in admin audit logging. This is the default value.
 
 Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
 
@@ -314,8 +323,8 @@ This parameter is functional only in the cloud-based service.
 
 The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or disable the recording of user and admin activities in the Microsoft 365 audit log. Valid values are:
 
-- $true: User and admin activities are recorded in the Microsoft 365 audit log, and you can search the Microsoft 365 audit log.
-- $false: User and admin activities aren't recorded in the Microsoft 365 audit log, and you can't search the Microsoft 365 audit log. This is the default value.
+- $true: User and admin activities are recorded in the Microsoft 365 audit log, and admins can search the Microsoft 365 audit log. This is the default value.
+- $false: User and admin activities aren't recorded in the Microsoft 365 audit log, and admins can't search the Microsoft 365 audit log.
 
 ```yaml
 Type: Boolean
