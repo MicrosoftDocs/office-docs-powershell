@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-exoinformationbarrierpolicy
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-ExoInformationBarrierPolicy
 schema: 2.0.0
 author: chrisda
@@ -57,7 +57,7 @@ The Identity parameter specifies the Exchange Online information barrier policy 
 Type: MailboxPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 0
@@ -78,7 +78,7 @@ When you use this switch, the following property values are shown:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

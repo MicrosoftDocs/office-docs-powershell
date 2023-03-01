@@ -1833,7 +1833,7 @@ For example, `Get-User -Filter "UpgradeStatus -ne 'None'"`.
 |---|---|---|
 |_msExchUsageLocation_|**Get-Mailbox** <br> **Get-MailUser** <br> **Get-Recipient**|String or `$null`|
 
-This filter requires the ISO 3166-1 country name (for example, `United States`), or two-letter country code (for example `US`) for the user in Microsoft 365. For more information, see [Country Codes - ISO 3166](https://www.iso.org/iso-3166-country-codes.html). <br> For example, `Get-Recipient -Filter 'UsageLocation -ne $null'`.
+This filter requires the ISO 3166-1 country name (for example, `United States`), or two-letter country code (for example `US`) for the user in Microsoft 365. For more information, see [Country Codes - ISO 3166](https://www.iso.org/iso-3166-country-codes.html). <br> For example, `Get-Recipient -Filter 'UsageLocation -eq "US"'`.
 
 ### UseDatabaseQuotaDefaults
 

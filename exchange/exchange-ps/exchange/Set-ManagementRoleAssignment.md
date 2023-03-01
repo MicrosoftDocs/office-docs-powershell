@@ -228,7 +228,7 @@ You use this parameter with the App parameter to assign permissions to service p
 Type: ManagementScopeIdParameter
 Parameter Sets: App
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

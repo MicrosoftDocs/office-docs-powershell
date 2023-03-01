@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-omeconfiguration
-applicable: Exchange Online
+applicable: Exchange Online, Exchange Online Protection
 title: Get-OMEConfiguration
 schema: 2.0.0
 author: chrisda
@@ -53,7 +53,7 @@ The Identity parameter specifies the OME configuration that you want to get. The
 Type: OMEConfigurationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
