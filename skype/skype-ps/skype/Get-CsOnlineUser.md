@@ -269,10 +269,11 @@ Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt “abc”}
 ```
 Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 ```
+**Updates in Teams PowerShell Module version 3.0.0 and abve**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
 
-In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 31, 2023.):
+In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023.):
 
 - AccountType
 - AccountEnabled
@@ -551,7 +552,7 @@ Soft deleted users: These users will be displayed in the output of Get-CsOnlineU
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments including GCC at present and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 31, 2023.):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments including GCC at present and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023.):
 
 *New user attributes*:
 
