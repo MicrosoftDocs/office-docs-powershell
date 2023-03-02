@@ -269,7 +269,7 @@ Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt “abc”}
 ```
 Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 ```
-**Updates in Teams PowerShell Module version 3.0.0 and abve**
+**Updates in Teams PowerShell Module version 3.0.0 and above**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
 
