@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
+**Note**: This cmdlet will be retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
+
 Use the Get-DlpSiDetectionsReport cmdlet to view information about data loss prevention (DLP) sensitive information type detections in the Microsoft Purview compliance portal for the last 90 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
