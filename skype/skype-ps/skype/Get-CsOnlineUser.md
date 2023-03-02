@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 
-For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
+For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments at present and will be applicable to the latest TPM versions in GCCH and DOC environments starting March 31, 2023.):
 
 - GUID
 - SIP address
@@ -272,7 +272,7 @@ Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
 
-In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
+In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments at present and will be applicable to the latest TPM versions in GCCH and DOC environments starting March 31, 2023.):
 
 - AccountType
 - AccountEnabled
@@ -551,7 +551,7 @@ Soft deleted users: These users will be displayed in the output of Get-CsOnlineU
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments at present and will be applicable to the latest TPM versions in GCCH and DOD environments starting March 31, 2023.):
 
 *New user attributes*:
 
