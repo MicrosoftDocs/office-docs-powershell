@@ -547,8 +547,21 @@ New attributes have now been introduced in the output of Get-CsOnlineUser when n
 - UserValidationErrors                   
 - WhenCreated    
      
-Unlicensed Users: Unlicensed users would show up in the output for 30 days post-license removal.
-Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
+The updates below are now applicable to the output in scenarios where "-identity" parameter is not used:
+
+- Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
+- Guest users are now available in the output.
+- Unlicensed Users: Unlicensed users would show up in the output for 30 days post-license removal.
+- Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default for 30 days with SoftDeletionTimestamp set to a value.
+
+If any infromation is required for a user that is not available in the output then it can be obtained using the "-identity" parameter. Infromation for all users would be available via point query until they are hard deleted.
+
+If Guest users and SoftDeletedUsers are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp respectively.
+```
+Example:
+- Get-csOnlineUser -Filter {AccountType -ne 'Guest'}
+- Get-csOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
+```
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
