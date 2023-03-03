@@ -547,7 +547,7 @@ New attributes have now been introduced in the output of Get-CsOnlineUser when n
 - UserValidationErrors                   
 - WhenCreated    
      
-The updates below are now applicable to the output in scenarios where "-identity" parameter is not used:
+The following updates are now applicable to the output in scenarios where "-identity" parameter is not used:
 
 - Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
 - Guest users are now available in the output.
