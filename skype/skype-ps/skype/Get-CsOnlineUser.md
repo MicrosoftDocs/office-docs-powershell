@@ -557,8 +557,8 @@ The updates below are now applicable to the output in scenarios where "-identity
 If any information is required for a user that is not available in the output (when not using "-identity" parameter) then it can be obtained using the "-identity" parameter. Information for all users would be available using the "-identity" parameter until they are hard deleted.
 
 If Guest users and SoftDeletedUsers are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp respectively. For example:
-Get-csOnlineUser -Filter {AccountType -ne 'Guest'}
-Get-csOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
+- Get-CsOnlineUser -Filter {AccountType -ne 'Guest'}
+- Get-CsOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
