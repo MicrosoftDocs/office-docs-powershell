@@ -1023,7 +1023,7 @@ Accept wildcard characters: False
 Enables the use of RTMP-In in Teams meetings.
 
 Possible values are: 
-- <blank>
+- \<blank\>
 - RTMP
 
 ```yaml
