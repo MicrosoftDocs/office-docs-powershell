@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 
-For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023.):
+For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
 - GUID
 - SIP address
@@ -273,7 +273,7 @@ Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
 
-In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023.):
+In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
 - AccountType
 - AccountEnabled
@@ -552,9 +552,9 @@ The updates below are now applicable to the output in scenarios where "-identity
 - Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
 - Guest users are now available in the output.
 - Unlicensed Users: Unlicensed users would show up in the output for 30 days post-license removal.
-- Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default for 30 days with SoftDeletionTimestamp set to a value.
+- Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
 
-If any infromation is required for a user that is not available in the output then it can be obtained using the "-identity" parameter. Infromation for all users would be available via point query until they are hard deleted.
+If any infromation is required for a user that is not available in the output (when not using "-identity" parameter) then it can be obtained using the "-identity" parameter. Infromation for all users would be available using the "-identity" parameter until they are hard deleted.
 
 If Guest users and SoftDeletedUsers are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp respectively.
 
@@ -566,7 +566,7 @@ Get-csOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments including GCC at present and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023.):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments including GCC at present and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
 *New user attributes*:
 
