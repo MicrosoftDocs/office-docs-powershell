@@ -80,7 +80,7 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to add the policy for.
 
-To view details about the features in a Viva module that have Viva feature access controls available, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
+To view details about the features in a Viva module that support feature access controls, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
