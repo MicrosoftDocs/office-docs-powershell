@@ -41,23 +41,6 @@ New-CsTeamsEmergencyCallingPolicy -Identity "TestECP2" -NotificationGroup "123@c
 
 This example creates a Teams Emergency Calling policy that has an identity of TestECP2, with default settings, except for the Notification Group. This parameter expects a single string with all users and groups separated by ";".
 
-### Example 3
-```powershell
-$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "112" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
-$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
-Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP3" -ExtendedNotifications @{add=$en1,$en2}
-```
-
-This example creates specific emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP3 policy instance.
-
-### Example 4
-```powershell
-$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
-Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP3" -ExtendedNotifications @{remove=$en2}
-```
-
-This example removes a specific emergency calling notification setting from the existing TestECP3 policy instance.
-
 ## PARAMETERS
 
 ### -Identity
