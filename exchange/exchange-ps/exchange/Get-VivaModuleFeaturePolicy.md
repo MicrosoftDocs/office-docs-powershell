@@ -33,7 +33,7 @@ Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
 ## DESCRIPTION
 Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module.
 
-You can view all policies for a specified feature in a Viva module. To view a specific policy, you can include the PolicyId parameter. 
+You can view all policies for a specified feature in a Viva module. To view a specific policy, you can include the PolicyId parameter.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
@@ -54,7 +54,7 @@ This example returns details about all the policies added for the Reflection fea
 
 ### Example 2
 ```powershell
-Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId zzz
+Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b
 ```
 
 This example returns details about a specific policy added for the Reflection feature in Viva Insights.

@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the user principal name (UPN) of the user or the SMTP address (email address) of the group that you want to view the feature enablement status of. 
+The Identity parameter specifies the user principal name (UPN) of the user or the SMTP address (email address) of the group that you want to view the feature enablement status of.
 
 [Mail-enabled AAD groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported.
 
