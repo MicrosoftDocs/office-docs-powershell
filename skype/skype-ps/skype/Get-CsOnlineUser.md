@@ -253,8 +253,8 @@ These filtering operators have been reintroduced:
 - “-like” operator now supports the use of wildcard operators in ‘contains’ and ‘ends with’ scenarios. For example:
 
 ```
-Contains Scenario: Get-CsOnlineUser  -Filter "AssignedPlan -like '*MCO*'"
-Ends with scenario: Get-CsOnlineUser  -Filter {AssignedPlan -like '*MCO'}
+Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
+Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
 ```
 - “-contains” can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
 ```
