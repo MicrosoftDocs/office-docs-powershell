@@ -36,23 +36,6 @@ Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -NotificationGroup "123@co
 
 This example modifies an existing policy instance with identity TestECP.
 
-### Example 2
-```powershell
-$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "112" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
-$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
-Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{add=$en1,$en2}
-```
-
-This example creates specific emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP policy instance.
-
-### Example 3
-```powershell
-$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
-Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{remove=$en2}
-```
-
-This example removes a specific emergency calling notification setting from the existing TestECP policy instance.
-
 ## PARAMETERS
 
 ### -Description
@@ -86,6 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedNotifications
+**Note**: The use of extended notifications and this parameter is currently not supported.
+
 A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
 
 If an extended notification is found for an emergency phone number based on the EmergencyDialString parameter the extended notification will be controlling the notification. If no extended notification is found the notification settings on the policy instance itself will be used.
