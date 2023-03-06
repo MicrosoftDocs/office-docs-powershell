@@ -174,17 +174,6 @@ The connection examples in the following sections use modern authentication, and
 
 For complete instructions, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
 
-> [!IMPORTANT]
-> The following example also connects without a login prompt, but the credentials are stored locally, so this method is not secure. Consider using this method only for brief testing purposes.
-
-```powershell
-$secpasswd = ConvertTo-SecureString -String '<YourPasswordHere>' -AsPlainText -Force 
-
-$o365cred = New-Object System.Management.Automation.PSCredential ("navin@contoso.onmicrosoft.com", $secpasswd) 
-
-Connect-ExchangeOnline -Credential $o365cred
-```
-
 ### Connect to Exchange Online PowerShell in customer organizations
 
 For more information about partners and customer organizations, see the following topics:
