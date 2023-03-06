@@ -60,28 +60,28 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -Name NewPolicyName -IsFeatureDisabled $false
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId zzz -Name NewPolicyName -IsFeatureDisabled $false
 ```
 
 This example updates the name of the specified policy and makes it so the policy does not disable the feature.
 
 ### Example 2
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -GroupIds group1@contoso.com,group2@contoso.com
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId zzz -GroupIds group1@contoso.com,group2@contoso.com
 ```
 
 This example updates who the specified policy applies to. The policy now applies **only** to the specified groups, overwriting the users and groups the policy used to apply to.
 
 ### Example 3
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -UserIds user1@contoso.com,user2@contoso.com
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId zzz -UserIds user1@contoso.com,user2@contoso.com
 ```
 
 This example updates who the specified policy applies to. The policy now applies **only** to the specified users, overwriting the users and groups the policy used to apply to.
 
 ### Example 4
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 8c4cfd84-400d-4e17-9d64-e78bbbe2f5f6 -Name NewPolicyName -IsFeatureDisabled $true -GroupIds group1@contoso.com -UserIds user1@contoso.com
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId zzz -Name NewPolicyName -IsFeatureDisabled $true -GroupIds group1@contoso.com -UserIds user1@contoso.com
 ```
 
 This example updates the name of the specified policy, makes it so the policy disables the feature, and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
