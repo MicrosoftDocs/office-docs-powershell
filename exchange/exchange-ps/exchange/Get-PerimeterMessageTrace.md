@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-perimetermessagetrace
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-PerimeterMessageTrace
 schema: 2.0.0
 author: chrisda
@@ -49,7 +49,7 @@ The Recipient parameter specifies the email address of the message recipient.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -67,7 +67,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ The Sender parameter filters the results by the email address of the message sen
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
