@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Everyone
-The Everyone switch specifies that the updated policy applies to all users in the organization. You don't need to specify a value with this switch.
+The Everyone switch specifies that the policy applies to all users in the organization. You don't need to specify a value with this switch.
 
 Don't use this switch with the GroupIds or UserIds parameters.
 
