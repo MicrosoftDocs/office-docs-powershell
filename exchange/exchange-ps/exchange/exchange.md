@@ -2295,6 +2295,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ConnectionInformation](Get-ConnectionInformation.md)
 
+### [Get-DefaultTenantBriefingConfig](Get-DefaultTenantBriefingConfig.md)
+
+### [Get-DefaultTenantMyAnalyticsFeatureConfig](Get-DefaultTenantMyAnalyticsFeatureConfig.md)
+
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
 
 ### [Get-EXOMailbox](Get-EXOMailbox.md)
@@ -2318,6 +2322,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
+
+### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
+
+### [Set-DefaultTenantMyAnalyticsFeatureConfig](Set-DefaultTenantMyAnalyticsFeatureConfig.md)
 
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 
