@@ -89,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedNotifications
+
 **Note**: The use of extended notifications and this parameter is currently not supported.
 
 A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
