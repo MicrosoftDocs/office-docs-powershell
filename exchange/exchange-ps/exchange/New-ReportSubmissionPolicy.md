@@ -86,7 +86,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ReportSubmissionPolicy 
+New-ReportSubmissionPolicy
 ```
 
 This example creates the one and only report submission policy named DefaultReportSubmissionPolicy with the default values: the Microsoft integrated reporting experience is on, Microsoft reporting tools in Outlook are used, and reported messages are sent only to Microsoft (the reporting mailbox isn't used).

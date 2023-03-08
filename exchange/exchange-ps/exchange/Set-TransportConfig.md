@@ -968,7 +968,7 @@ Accept wildcard characters: False
 ### -MessageExpiration
 This parameter is available only in the cloud-based service.
 
-The MessageExpiration parameter specifies the message expiration timeout interval for the organization. 
+The MessageExpiration parameter specifies the message expiration timeout interval for the organization.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
