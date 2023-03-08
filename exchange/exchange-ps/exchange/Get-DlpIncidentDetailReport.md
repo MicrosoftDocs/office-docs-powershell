@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/Get-DlpEdmSchema
+online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpincidentdetailsreport
 applicable: Exchange Online, Security & Compliance
 title: Get-DlpIncidentDetailReport
 schema: 2.0.0
@@ -13,6 +13,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
+
+**Note**: This cmdlet will be retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata) instead.
 
 Use the Get-DlpIncidentDetailReport cmdlet to view the details of incidents that happened in the last 30 days.
 
