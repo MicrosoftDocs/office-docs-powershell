@@ -9,7 +9,6 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
-
 # Enable-ReportSubmissionRule
 
 ## SYNOPSIS
