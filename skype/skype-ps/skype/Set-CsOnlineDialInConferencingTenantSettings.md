@@ -25,7 +25,7 @@ Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitN
  [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-PinLength <UInt32>]
  [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
  [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
- [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
+ [-AutomaticallyReplaceAcpProvider <Boolean>] 
  [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
  [-EnableDialOutJoinConfirmation <Boolean>] [[-Identity] <XdsIdentity>] [-MaskPstnNumbersType <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -408,22 +408,6 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseUniqueConferenceIds
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
