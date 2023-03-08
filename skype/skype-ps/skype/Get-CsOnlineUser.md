@@ -252,23 +252,30 @@ These filtering operators have been reintroduced:
 
 - `-like` operator now supports the use of wildcard operators in ‘contains’ and ‘ends with’ scenarios. For example:
 
-```PowerShell
+```
 Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
 Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
 ```
+
 - `-contains` can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
-```PowerShell
+
+```
 Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
 Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
 ```
+
 - `-gt` (greater than), “-lt” (less than), “-le” (less than or equal to) can now be used for filtering all string properties. For example:
-```PowerShell
+
+```
 Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt “abc”}
 ```
+
 - `-ge` (greater than or equal to) can now also be used for filtering on policies. For example:
-```PowerShell
+
+```
 Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 ```
+
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
