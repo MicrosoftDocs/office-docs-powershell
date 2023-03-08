@@ -128,17 +128,6 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 
 For complete instructions, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
 
-> [!IMPORTANT]
-> The following example also connects without a login prompt, but the credentials are stored locally, so this method is not secure. Consider using this method only for brief testing purposes.
-
-```powershell
-$secpasswd = ConvertTo-SecureString -String '<YourPasswordHere>' -AsPlainText -Force 
-
-$o365cred = New-Object System.Management.Automation.PSCredential ("navin@contoso.onmicrosoft.com", $secpasswd) 
-
-Connect-IPPSSession -Credential $o365cred
-```
-
 ### Connect to Security & Compliance PowerShell in customer organizations
 
 The procedures in this section require version 3.0.0 or later of the module.
