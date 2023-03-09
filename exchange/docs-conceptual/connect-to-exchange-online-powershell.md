@@ -165,7 +165,7 @@ The connection examples in the following sections use modern authentication, and
   2. On any other device with a web browser and internet access, open <https://microsoft.com/devicelogin> and enter the \<XXXXXXXXX\> code value from the previous step.
 
   3. Enter your credentials on the resulting pages.
-  
+
   4. In the confirmation prompt, click **Continue**. The next message should indicate success, and you can close the browser or tab.
 
   5. The command from step 1 continues to connect you to Exchange Online PowerShell.
