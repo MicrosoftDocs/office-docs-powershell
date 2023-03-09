@@ -6,7 +6,7 @@
         "packageRoot": "exchange-ps",
         "serviceMap": "mapping/serviceMapping.json",
         "modules": {
-            "exchange": {}     
+            "exchange": {}
         }
     }
 }
