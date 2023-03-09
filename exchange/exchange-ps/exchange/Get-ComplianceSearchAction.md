@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -Purge
-**Note**: In Security & Compliance PowerShell, this parameter is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management role group.
+**Note**: In Security & Compliance PowerShell, this parameter is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management and Data Investigator role groups.
 
 The Purge switch filters the results by Purge compliance search actions. You don't need to specify a value with this switch.
 
