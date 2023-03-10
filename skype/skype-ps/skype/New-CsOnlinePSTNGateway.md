@@ -202,8 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayLbrEnabledUserOverride
-Allow an LBR enabled user working from a network site outside the corporate network, i.e. a network site not configured using tenant network site - typically when working from
-home, to make outbound PSTN calls  via an LBR enabled gateway. The default value is False.
+Allows an LBR enabled user working from a network site outside the corporate network or a network site on the corporate network not configured using a tenant network site to make outbound PSTN calls or receive inbound PSTN calls via an LBR enabled gateway. The default value is False.
 
 ```yaml
 Type: Boolean
