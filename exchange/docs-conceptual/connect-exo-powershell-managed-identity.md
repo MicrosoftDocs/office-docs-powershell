@@ -375,7 +375,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 
    ```powershell
    $RoleID = (Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq '<Role Name>'").Id
-   
+
    New-MgRoleManagementDirectoryRoleAssignment -PrincipalId $MI_ID -RoleDefinitionId $RoleID -DirectoryScopeId "/"
    ```
 
@@ -386,7 +386,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 
    ```powershell
    $RoleID = (Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq 'Exchange Administrator'").Id
-   
+
    New-MgRoleManagementDirectoryRoleAssignment -PrincipalId $MI_ID -RoleDefinitionId $RoleID -DirectoryScopeId "/"
    ```
 

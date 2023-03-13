@@ -162,6 +162,8 @@ The IPAllowList parameter specifies IP addresses from which messages are always 
 
 You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
 
+**Note**: IPv6 ranges are not supported.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -183,6 +185,8 @@ The IPBlockList parameter specifies IP addresses from which messages are never a
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
 
 You can specify multiple IP addresses of the same type separated by commas. For example, `SingleIP1, SingleIP2,...SingleIPN` or `CIDRIP1,CIDRIP2,...CIDRIPN`. To specify multiple IP addresses of different types at the same time, you need to use the following multivalued property syntax: `@{Add="SingleIP1","IPRange1","CIDRIP1",...}`.
+
+**Note**: IPv6 ranges are not supported.
 
 ```yaml
 Type: MultiValuedProperty

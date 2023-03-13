@@ -61,6 +61,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-MaxRetriesForLocalSiteShadow <Int32>]
  [-MaxRetriesForRemoteSiteShadow <Int32>]
  [-MaxSendSize <Unlimited>]
+ [-MessageExpiration <EnhancedTimeSpan>]
  [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
  [-RejectMessageOnShadowFailure <Boolean>]
  [-ReplyAllStormBlockDurationHours <Int32>]
@@ -956,6 +957,32 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageExpiration
+This parameter is available only in the cloud-based service.
+
+The MessageExpiration parameter specifies the message expiration timeout interval for the organization.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+The default value is 1.00:00:00 or 1 day.
+
+A valid value is from 12 hours (0.12:00:00) to 24 hours (1.00:00:00).
+
+Queued messages typically expire after 24 hours, resulting in an NDR for failed delivery. If you change this value, the NDR will be sent at the new applicable time.
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

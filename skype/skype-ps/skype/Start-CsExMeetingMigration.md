@@ -26,7 +26,7 @@ Start-CsExMeetingMigration [-SourceMeetingType <MmsSourceMeetingTypes>] [-Target
 Meeting Migration Service (MMS) is a Skype for Business service that runs in the background and automatically updates Skype for Business and Microsoft Teams meetings for users.
 MMS is designed to eliminate the need for users to run the Meeting Migration Tool to update their Skype for Business and Microsoft Teams meetings.
 
-Also, with `Start-CsExMeetingMigration` cmdlet, you can start a meeting migration manually.
+Also, with `Start-CsExMeetingMigration` cmdlet, you can start a meeting migration manually. For more information about requirements of the Meeting Migration Service (MMS), see [Using the Meeting Migration Service (MMS)](/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 ## EXAMPLES
 

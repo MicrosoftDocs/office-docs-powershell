@@ -156,6 +156,10 @@ Miscellaneous Exchange Online cmdlets that happen to be in the module are listed
 
 |Cmdlet|Comments|
 |---|---|
+|[Get-DefaultTenantBriefingConfig](/powershell/module/exchange/get-defaulttenantbriefingconfig)|Available in v3.2.0-Preview1 or later.|
+|[Set-DefaultTenantBriefingConfig](/powershell/module/exchange/set-defaulttenantbriefingconfig)|Available in v3.2.0-Preview1 or later.|
+|[Get-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/get-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0-Preview1 or later.|
+|[Set-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/set-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0-Preview1 or later.|
 |[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Replaced by [Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig).|
@@ -304,7 +308,7 @@ If you don't see the value `Basic = true`, you need to run **one** of the follow
   ```
 
 - **In Windows PowerShell to modify the registry**:
-  
+
   ```PowerShell
   Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client' -Name 'AllowBasic' -Type DWord -Value '1'
   ```
@@ -314,10 +318,10 @@ If Basic authentication for WinRM is disabled, you'll get one of the following e
 > The WinRM client cannot process the request. Basic authentication is currently disabled in the client configuration. Change the client configuration and try the request again.
 >
 > Create Powershell Session is failed using OAuth.
-  
+
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
-  
+
 ### Install the Exchange Online PowerShell module
 
 To install the module for the first time, complete the following steps:
@@ -459,7 +463,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
 - You receive one of the following errors:
 
   > The specified module 'ExchangeOnlineManagement' with PowerShellGetFormatVersion '\<version\>' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ExchangeOnlineManagement'.
-  
+
   > WARNING: Unable to download from URI 'https://go.microsoft.com/fwlink/?LinkID=627338&clcid=0x409' to ''.
 
   > WARNING: Unable to download the list of available providers. Check your internet connection.
@@ -477,7 +481,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
   As described in the PowerShell Gallery TLS Support article, to _temporarily_ change the security protocol to TLS 1.2 to install the PowerShellGet or ExchangeOnlineManagement modules, run the following command in Windows PowerShell _before_ you install the module:
 
   ```powershell
-  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   ```
 
   To _permanently_ enable strong cryptography in the Microsoft .NET Framework version 4.x or later, run one of the following commands based on your Windows architecture:
@@ -501,7 +505,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
   > No match was found for the specified search criteria and module name 'ExchangeOnlineManagement'. Try running `Get-PSRepository` to see all available registered module repositories.
 
   The default repository for PowerShell modules is not set to PSGallery. To fix this error, run the following command:
-  
+
   ```powershell
   Register-PSRepository -Default
   ```

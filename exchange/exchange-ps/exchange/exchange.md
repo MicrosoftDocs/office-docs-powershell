@@ -206,6 +206,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
 
+### [Get-BlockedConnector](Get-BlockedConnector.md)
+
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
 
 ### [Get-ConfigAnalyzerPolicyRecommendation](Get-ConfigAnalyzerPolicyRecommendation.md)
@@ -323,6 +325,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Release-QuarantineMessage](Release-QuarantineMessage.md)
 
 ### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
+
+### [Remove-BlockedConnector](Remove-BlockedConnector.md)
 
 ### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
 
@@ -1731,6 +1735,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ProtectionAlert](Get-ProtectionAlert.md)
 
+### [Get-ReviewItems](Get-ReviewItems.md)
+
 ### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
 ### [Get-SupervisoryReviewRule](Get-SupervisoryReviewRule.md)
@@ -2289,6 +2295,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ConnectionInformation](Get-ConnectionInformation.md)
 
+### [Get-DefaultTenantBriefingConfig](Get-DefaultTenantBriefingConfig.md)
+
+### [Get-DefaultTenantMyAnalyticsFeatureConfig](Get-DefaultTenantMyAnalyticsFeatureConfig.md)
+
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
 
 ### [Get-EXOMailbox](Get-EXOMailbox.md)
@@ -2312,6 +2322,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
 ### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
+
+### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
+
+### [Set-DefaultTenantMyAnalyticsFeatureConfig](Set-DefaultTenantMyAnalyticsFeatureConfig.md)
 
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
 

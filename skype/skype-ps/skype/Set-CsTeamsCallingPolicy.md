@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -BusyOnBusyEnabledType
-Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, and Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: The UserOverride option value is not available for use currently, if set it will be read as setting the value to Disabled.
+Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled, and UserOverride. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. When set to UserOverride, users can set their busy options directly from call settings in Teams app. 
 
 ```yaml
 Type: String
