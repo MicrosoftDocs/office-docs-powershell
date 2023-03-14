@@ -24,6 +24,7 @@ Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <bo
 [-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <boolean>] [-AllowDelegation <boolean>] [-AllowPrivateCalling <boolean>]
 [-AllowSIPDevicesCalling <boolean>] [-AllowTranscriptionForCalling <boolean>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <boolean>]
 [-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>]
+[-InboundFederatedCallRoutingTreatment <string>] [-InboundPstnCallRoutingTreatment <string>]
 [-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>] [-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -304,6 +305,49 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundFederatedCallRoutingTreatment
+Setting this parameter lets you control how inbound federated calls should be routed. Valid options are: RegularIncoming, Unanswered, and Voicemail.
+
+When set to RegularIncoming, normal inbound routing will be performed. This is the default setting.
+When set to Unanswered, the inbound federated call will be routed according to the called user unanswered call forward settings and the call will not be presented to the user. If the called user does not have any unanswered call forwarding settings configured the call will be disconnected.
+When set to Voicemail, the inbound federated call will be routed directly to the called user voicemail and the call will not be presented to the user. If the called user does not have voicemail configured the call will be disconnected.
+Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: RegularIncoming
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundPstnCallRoutingTreatment
+Setting this parameter lets you control how inbound PSTN calls should be routed. Valid options are: RegularIncoming, Unanswered, Voicemail and UserOverride.
+
+When set to RegularIncoming, normal inbound routing will be performed. This is the default setting.
+When set to Unanswered, the inbound PSTN call will be routed according to the called user unanswered call forward settings and the call will not be presented to the user. If the called user does not have any unanswered call forwarding settings configured the call will be disconnected.
+When set to Voicemail, the inbound PSTN call will be routed directly to the called user voicemail and the call will not be presented to the user. If the called user does not have voicemail configured the call will be disconnected.
+When set to UserOverride, the user is allowed to decide the call routing via settings in the Teams client UI.
+Setting this parameter to Unanswered, Voicemail or UserOverride will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: RegularIncoming
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
