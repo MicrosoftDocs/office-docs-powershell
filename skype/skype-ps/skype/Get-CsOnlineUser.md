@@ -263,7 +263,7 @@ These filtering operators have been reintroduced:
 - Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
 
 
-"-gt" (greater than), "-lt" (less than), "-le" (less than or equal to) can now be used for filtering all string properties. For example:
+`-gt` (greater than), `-lt` (less than), and `-le` (less than or equal to) can now be used for filtering all string properties. For example:
 
 - Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt "abc"}
 
