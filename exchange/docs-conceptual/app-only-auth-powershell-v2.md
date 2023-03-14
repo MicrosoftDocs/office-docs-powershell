@@ -166,7 +166,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    ![Screenshot that shows App registrations in the Search results on the home page of the Azure portal.](media/exo-app-only-auth-find-app-registrations.png)
 
-   Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>.
+   Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade>.
 
 3. On the **App registrations** page, click **New registration**.
 
@@ -218,6 +218,25 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
       }
    ],
    ```
+
+   > [!NOTE]
+   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for `resourceAppId`, `resourceAccess id`, and `resourceAccess type`:
+   >
+   > ```json
+   > "requiredResourceAccess": [
+   >    {
+   >      "resourceAppId": "00000007-0000-0ff1-ce00-000000000000",
+   >      "resourceAccess": [
+   >         {
+   >            "id": "455e5cd2-84e8-4751-8344-5672145dfa17",
+   >            "type": "Role"
+   >         }
+   >      ]
+   >    }
+   > ],
+   > ```
+   >
+   > 
 
    When you're finished, click **Save**.
 
