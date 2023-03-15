@@ -220,7 +220,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    ```
 
    > [!NOTE]
-   > In Microsoft 365 GCC High or DoD environments, use the following values for `resourceAppId`, `resourceAccess id`, and `resourceAccess type`:
+   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for `resourceAppId`, `resourceAccess id`, and `resourceAccess type`:
    >
    > ```json
    > "requiredResourceAccess": [
@@ -235,6 +235,8 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    >    }
    > ],
    > ```
+   >
+   > 
 
    When you're finished, click **Save**.
 
