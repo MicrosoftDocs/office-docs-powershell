@@ -24,7 +24,7 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 ### TenantIdParams (Default)
 ```
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] [-Tenant <Guid>] [-ConferenceId <System.Int32>] [-ResetConferenceId]
+ [-BridgeName <String>] [-Tenant <Guid>] 
  [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
  [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
@@ -34,7 +34,7 @@ Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Gui
 ### TenantDomainParams
 ```
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] -TenantDomain <String> [-ConferenceId <Int32>] [-ResetConferenceId]
+ [-BridgeName <String>] -TenantDomain <String> 
  [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
  [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
