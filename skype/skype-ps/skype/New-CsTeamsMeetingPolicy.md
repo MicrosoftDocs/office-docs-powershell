@@ -1054,7 +1054,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWatermarkForScreenSharing
-This setting allows scheduling meetings with watermark for video enabled
+This setting allows scheduling meetings with watermarking for video enabled.
 
 ```yaml
 Type: Boolean
