@@ -1109,7 +1109,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWatermarkForScreenSharing
-This setting allows scheduling meetings with watermark for screenshare enabled
+This setting allows scheduling meetings with watermarking for screen sharing enabled.
 
 ```yaml
 Type: Boolean
