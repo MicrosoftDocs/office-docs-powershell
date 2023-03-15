@@ -24,8 +24,7 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 ### TenantIdParams (Default)
 ```
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] [-Tenant <Guid>] 
- [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-BridgeName <String>] [-Tenant <Guid>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
  [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -34,8 +33,7 @@ Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Gui
 ### TenantDomainParams
 ```
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] -TenantDomain <String> 
- [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-BridgeName <String>] [-TenantDomain <String>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
  [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
