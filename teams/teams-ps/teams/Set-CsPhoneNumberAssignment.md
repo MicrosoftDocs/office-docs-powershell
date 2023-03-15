@@ -91,7 +91,8 @@ foreach ($No in $Numbers) {
 	Remove-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber
 }
 ```
-This example shows how to change the location for unassigned Calling Plan subscriber phone numbers by looping through all the phone numbers and for each phone number temporarily assigning it with the new loction to a user and then unassign the phone number again from the user.
+This example shows how to change the location for unassigned Calling Plan subscriber phone numbers by looping through all the phone numbers, assigning each phone number temporarily with the new location to a user, and then unassigning the phone number again from the user.
+
 
 ## PARAMETERS
 
