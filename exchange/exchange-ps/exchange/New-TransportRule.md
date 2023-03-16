@@ -2050,6 +2050,8 @@ The ExceptIfFromAddressMatchesPatterns parameter specifies an exception that loo
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
+**Note**: Trying to search for empty From addresses using the value `""` for this parameter doesn't work.
+
 ```yaml
 Type: Pattern[]
 Parameter Sets: (All)
@@ -3105,6 +3107,8 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 The FromAddressMatchesPatterns parameter specifies a condition that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
+
+**Note**: Trying to search for empty From addresses using the value `""` for this parameter doesn't work.
 
 ```yaml
 Type: Pattern[]
