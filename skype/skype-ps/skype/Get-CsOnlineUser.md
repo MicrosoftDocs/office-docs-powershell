@@ -252,31 +252,27 @@ _New Operators_
 
 These filtering operators have been reintroduced:
 
-- "-like" operator now supports the use of wildcard operators in 'contains' and 'ends with' scenarios. For example:
+`-like` operator now supports the use of wildcard operators in 'contains' and 'ends with' scenarios. For example:
 
-```
-Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
-Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
-```
+- Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
+- Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
 
-- "-contains" can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
-```
+`-contains` can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
 
-Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
-Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
-```
+- Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
+- Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
 
-- "-gt" (greater than), "-lt" (less than), "-le" (less than or equal to) can now be used for filtering all string properties. For example:
 
-```
-Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt "abc"}
-```
+`-gt` (greater than), `-lt` (less than), and `-le` (less than or equal to) can now be used for filtering all string properties. For example:
 
-- "-ge" (greater than or equal to) can now also be used for filtering on policies. For example:
+- Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt "abc"}
 
-```
-Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
-```
+`-ge` (greater than or equal to) can now also be used for filtering on policies. For example:
+
+- Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
+
+**Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
+
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
