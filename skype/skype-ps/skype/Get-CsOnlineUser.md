@@ -271,7 +271,7 @@ These filtering operators have been reintroduced:
 
 - Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 
-Note: Some comparison operators mentioned above including -ge, -le, -gt and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
+**Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
 
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
