@@ -1123,7 +1123,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowWatermarkForScreenSharing
+### -AllowWatermarkForCameraVideo
 This setting allows scheduling meetings with watermarking for video enabled.
 
 ```yaml
