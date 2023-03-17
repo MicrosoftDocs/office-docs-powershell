@@ -230,7 +230,7 @@ These attributes are now enabled for filtering:
 
 - Alias
 - City
-- CompanyName
+- Company
 - HostingProvider
 - UserValidationErrors
 - OnPremEnterpriseVoiceEnabled
@@ -239,7 +239,7 @@ These attributes are now enabled for filtering:
 - OnPremSIPEnabled
 - SipAddress
 - SoftDeletionTimestamp
-- State
+- StateOrProvince
 - Street
 - TeamsOwnersPolicy
 - WhenChanged
