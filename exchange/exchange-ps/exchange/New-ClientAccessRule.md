@@ -18,12 +18,7 @@ Use the New-ClientAccessRule cmdlet to create client access rules. Client access
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
-
-> [!Important]
-
-> Starting from October 2022, we have disabled ClientAccessRule access for tenants that are not using this feature and effective from October 2023, we will end support for ClientAccessRule for all customers worldwide
->However, existing rules will not be removed and will remain operational until you migrate to an alternative solution. We recommend that you review your current ClientAccessRule configuration and plan your migration accordingly.
-
+**Note**: Beginning in October 2022, we've disabled access to client access rules for all existing organizations that weren't using them. In October 2023, support for client access rules will end for all organizations. For more information, see [Deprecation of Client Access Rules in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-client-access-rules-in-exchange-online/ba-p/3638563).
 
 ## SYNTAX
 
