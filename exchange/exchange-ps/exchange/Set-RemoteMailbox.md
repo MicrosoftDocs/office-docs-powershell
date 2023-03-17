@@ -1348,7 +1348,7 @@ The Type parameter specifies the type for the mailbox in the service. Valid valu
 Notes on the value Shared:
 
 - Shared is available only in Exchange 2013 CU21 or later, Exchange 2016 CU10 or later, and Exchange 2019. In Exchange 2013 and Exchange 2016, you also need to run setup.exe /PrepareAD. For more information, see [KB4133605](https://support.microsoft.com/help/4133605).
-- A migrated shared mailbox cannot be converted to a regular mailbox and a migrated regular mailbox cannot be converted to a shared mailbox.
+- Changing the mailbox type of a migrated mailbox in a hybrid environment, needs to be done on both sides (Exchange Online with Set-Mailbox CmdLet and Exchange On-premises with Set-RemoteMailbox CmdLet).
 - If directory synchronization unexpectedly converts shared mailboxes in Exchange Online back into user mailboxes, or if you continue to receive the `remoteMailbox.RemoteRecipientType must include ProvisionMailbox` error when you use the value Shared, take the action described in Step 3 in the Resolution section in [KB2710029](https://support.microsoft.com/help/2710029).
 
 ```yaml
