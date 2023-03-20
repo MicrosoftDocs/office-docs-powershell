@@ -106,7 +106,9 @@ Some of the settings that you configure with this parameter are supported only b
 
 Supported settings for built-in labeling:
 
-- **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (version 2201+), macOS (version 16.57+), iOS (version 2.57+), and Android (version 16.0.14827+); Outlook on Windows (version 2201+), Outlook on the web, and rolling out to macOS, iOS, and Android. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}`.
+- **AttachmentAction**: Unlabeled emails inherit the highest priority label from file attachments. Set the value to **Automatic** (to automatically apply the label) or **Recommended** (as a recommended prompt to the user. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}`. For more information about this configuration choice, see [Configure label inheritance from email attachments](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-label-inheritance-from-email-attachments).
+
+- **EnableAudit**: Prevent Office apps from sending sensitivity label data to Microsoft 365 auditing solutions. Supported apps: Word, Excel, and PowerPoint on Windows (version 2201+), macOS (version 16.57+), iOS (version 2.57+), and Android (version 16.0.14827+); Outlook on Windows (version 2201+), Outlook on the web, and rolling out to macOS, iOS, and Android. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}`.
 
 - **DisableMandatoryInOutlook**: Outlook apps that support this setting exempt Outlook messages from mandatory labeling. Example: `New-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}`. For more information about this configuration choice, see [Outlook-specific options for default label and mandatory labeling](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#outlook-specific-options-for-default-label-and-mandatory-labeling).
 

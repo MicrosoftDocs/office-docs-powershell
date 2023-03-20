@@ -39,7 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-$r = Test-DataClassification -TextToClassify "Credit card information Visa: 4485 3647 3952 7352. Patient Identifier or SSN: 452-12-1232"
+$r = Test-DataClassification -TextToClassify "Credit card information Visa: xxxx xxxx xxxx xxxx. Patient Identifier or SSN: xxx-xx-xxxx"
 $r.ClassificationResults
 ```
 

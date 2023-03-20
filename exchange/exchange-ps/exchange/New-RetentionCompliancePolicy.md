@@ -101,7 +101,6 @@ This example creates a new auto-apply label policy targeted to cloud attachments
 
 The next step is to use the New-RetentionComplianceRule cmdlet to add a retention label to the retention label policy.
 
-
 ## PARAMETERS
 
 ### -Name
