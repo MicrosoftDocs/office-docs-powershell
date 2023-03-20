@@ -2287,6 +2287,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Validate-RetentionRuleQuery](Validate-RetentionRuleQuery.md)
 
 ## powershell-v2-module Cmdlets
+### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
@@ -2323,6 +2325,14 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
 
+### [Get-VivaModuleFeature](Get-VivaModuleFeature.md)
+
+### [Get-VivaModuleFeatureEnablement](Get-VivaModuleFeatureEnablement.md)
+
+### [Get-VivaModuleFeaturePolicy](Get-VivaModuleFeaturePolicy.md)
+
+### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
+
 ### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
 
 ### [Set-DefaultTenantMyAnalyticsFeatureConfig](Set-DefaultTenantMyAnalyticsFeatureConfig.md)
@@ -2332,6 +2342,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
 
 ### [Set-VivaInsightsSettings](Set-VivaInsightsSettings.md)
+
+### [Update-VivaModuleFeaturePolicy](Update-VivaModuleFeaturePolicy.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
