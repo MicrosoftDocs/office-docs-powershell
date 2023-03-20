@@ -18,7 +18,7 @@ Use the Get-CsOnlineSchedule cmdlet to get information about schedules that belo
 ## SYNTAX
 
 ```
-Get-CsOnlineSchedule -Id <String> [-Tenant <Guid>] [-CommonParameters]
+Get-CsOnlineSchedule -Id <String> [-CommonParameters]
 ```
 
 ## DESCRIPTION
@@ -55,21 +55,6 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Tenant
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
