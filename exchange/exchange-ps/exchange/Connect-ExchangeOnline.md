@@ -231,10 +231,11 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-The Prefix parameter specifies a text value to add to the beginning of remote PowerShell cmdlet names when you connect.
+The Prefix parameter specifies a text value to add to the names of Exchange Online PowerShell cmdlets when you connect. For example, Get-InboundConnector becomes Get-ContosoInboundConnector when you use the value Contoso for this parameter.
 
-- You can't use spaces or special characters like underscores or asterisks.
-- You can't use the value EXO. This value is reserved for the nine exclusive **Get-EXO\*** cmdlets in the module.
+- The Prefix value can't contain spaces or special characters like underscores or asterisks.
+- You can't use the Prefix value EXO. That value is reserved for the nine exclusive **Get-EXO\*** cmdlets that are built into the module.
+- The Prefix parameter affects only imported Exchange Online cmdlet names. It doesn't affect the names of cmdlets that are built into the module (for example, Disconnect-ExchangeOnline).
 
 ```yaml
 Type: String
