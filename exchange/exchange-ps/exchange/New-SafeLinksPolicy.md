@@ -100,8 +100,10 @@ Accept wildcard characters: False
 ### -AllowClickThrough
 The AllowClickThrough parameter specifies whether users are allowed to click through to the original URL on warning pages. Valid values are:
 
-- $true: The user is allowed to click through to the original URL. This is the default value.
+- $true: The user is allowed to click through to the original URL.
 - $false: The user isn't allowed to click through to the original URL.
+
+In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft 365 Defender portal, the default value is $true.
 
 ```yaml
 Type: Boolean
@@ -154,8 +156,8 @@ Accept wildcard characters: False
 ### -DeliverMessageAfterScan
 The DeliverMessageAfterScan parameter specifies whether to deliver email messages only after Safe Links scanning is complete. Valid values are:
 
-- $true: Wait until Safe Links scanning is complete before delivering the message. Messages that contain malicious links are not delivered.
-- $false: If Safe Links scanning can't complete, deliver the message anyway. This is the default value.
+- $true: Wait until Safe Links scanning is complete before delivering the message. Messages that contain malicious links are not delivered. This is the default value.
+- $false: If Safe Links scanning can't complete, deliver the message anyway.
 
 ```yaml
 Type: Boolean
@@ -173,8 +175,10 @@ Accept wildcard characters: False
 ### -DisableUrlRewrite
 The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in email messages. Valid values are:
 
-- $true: URLs in messages are not rewritten, but messages are still scanned by Safe Links prior to delivery. Time of click checks on links are done using the Safe Links API in supported Outlook clients (currently, Outlook for Windows and Outlook for Mac). Typically, we don't recommend using this value.
+- $true: URLs in messages are not rewritten, but messages are still scanned by Safe Links prior to delivery. Time of click checks on links are done using the Safe Links API in supported Outlook clients (currently, Outlook for Windows and Outlook for Mac).
 - $false: URLs in messages are rewritten. API checks still occur on unwrapped URLs in supported clients if the user is in a valid Safe Links policy. This is the default value.
+
+In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft 365 Defender portal, the default value is $true.
 
 ```yaml
 Type: Boolean
@@ -214,8 +218,8 @@ Accept wildcard characters: False
 ### -EnableForInternalSenders
 The EnableForInternalSenders parameter specifies whether the Safe Links policy is applied to messages sent between internal senders and internal recipients within the same Exchange Online organization. Valid values are:
 
-- $true: The policy is applied to internal and external senders.
-- $false: The policy is applied only to external senders. This is the default value.
+- $true: The policy is applied to internal and external senders. This is the default value.
+- $false: The policy is applied only to external senders.
 
 ```yaml
 Type: Boolean
@@ -234,7 +238,7 @@ Accept wildcard characters: False
 The EnableOrganizationBranding parameter specifies whether your organization's logo is displayed on Safe Links warning and notification pages. Valid values are:
 
 - $true: Organization branding is displayed on Safe Links warning and notification pages. Before you configure this value, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](https://learn.microsoft.com/microsoft-365/admin/setup/customize-your-organization-theme) to upload your company logo.
-- $false: Organization branding is not displayed on Safe Links warning and notification pages.
+- $false: Organization branding is not displayed on Safe Links warning and notification pages. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -252,8 +256,8 @@ Accept wildcard characters: False
 ### -EnableSafeLinksForEmail
 The EnableSafeLinksForEmail parameter specifies whether to enable Safe Links protection for email messages. Valid values are:
 
-- $true: Safe Links is enabled for email. When a user clicks a link in an email, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
-- $false: Safe Links isn't enabled for email. This is the default value.
+- $true: Safe Links is enabled for email. This is the default value. When a user clicks a link in an email, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $false: Safe Links isn't enabled for email.
 
 ```yaml
 Type: Boolean
@@ -271,7 +275,7 @@ Accept wildcard characters: False
 ### -EnableSafeLinksForOffice
 The EnableSafeLinksForOffice parameter specifies whether to enable Safe Links protection for supported Office desktop, mobile, or web apps. Valid values are:
 
-- $true: Safe Links scanning is enabled in Office apps. When a user opens a file in a supported Office app and clicks a link in the file, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $true: Safe Links scanning is enabled in Office apps. This is the default value. When a user opens a file in a supported Office app and clicks a link in the file, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
 - $false: Safe Links isn't enabled for Office apps.
 
 Note that this protection applies to links in Office documents, not links in email messages.
@@ -292,8 +296,8 @@ Accept wildcard characters: False
 ### -EnableSafeLinksForTeams
 The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled for Microsoft Teams. Valid values are:
 
-- $true: Safe Links is enabled for Teams. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
-- $false: Safe Links isn't enabled for Teams. This is the default value.
+- $true: Safe Links is enabled for Teams. This is the default value. When a user clicks a link in a Teams conversation, group chat, or from channels, the link is checked by Safe Links. If the link is found to be malicious, a warning page appears in the default web browser.
+- $false: Safe Links isn't enabled for Teams.
 
 ```yaml
 Type: Boolean
@@ -343,8 +347,8 @@ Accept wildcard characters: False
 ### -ScanUrls
 The ScanUrls parameter specifies whether to enable or disable real-time scanning of clicked links in email messages. Valid values are:
 
-- $true: Real-time scanning of clicked links, including links that point to files, is enabled.
-- $false: Real-time scanning of clicked links, including links that point to files, is disabled. This is the default value.
+- $true: Real-time scanning of clicked links, including links that point to files, is enabled. This is the default value.
+- $false: Real-time scanning of clicked links, including links that point to files, is disabled.
 
 ```yaml
 Type: Boolean
