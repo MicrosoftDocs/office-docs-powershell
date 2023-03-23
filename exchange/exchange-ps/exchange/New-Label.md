@@ -645,13 +645,15 @@ Accept wildcard characters: False
 ### -ContentType
 The ContentType parameter specifies where the sensitivity label can be applied. Valid values are:
 
-- File, Email
-- Site, UnifiedGroup
+- File
+- Email
+- Site
+- UnifiedGroup
 - PurviewAssets
 - Teamwork
 - SchematizedData
 
-Values can be combined, for example: "File, Email, PurviewAssets". Splitting related content types like "File, Email" into just "File" or just "Email" is not supported.
+Values can be combined, for example: "File, Email, PurviewAssets".
 
 ```yaml
 Type: MipLabelContentType
