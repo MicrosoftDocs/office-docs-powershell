@@ -23,17 +23,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### DefaultParameterSet (Default)
 ```
-Disconnect-ExchangeOnline [-Confirm] [-WhatIf] [<CommonParameters>]
+Disconnect-ExchangeOnline
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ConnectionId
 ```
-Disconnect-ExchangeOnline -ConnectionId <String[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Disconnect-ExchangeOnline -ConnectionId <String[]>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### ModulePrefix
 ```
-Disconnect-ExchangeOnline -ModulePrefix <String[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+Disconnect-ExchangeOnline -ModulePrefix <String[]>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
