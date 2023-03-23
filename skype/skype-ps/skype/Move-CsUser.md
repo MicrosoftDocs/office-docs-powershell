@@ -265,7 +265,7 @@ Accept wildcard characters: False
 
 ### -ProxyPool
 
-This parameter has been deprecated and should not be used.
+This is an optional parameter that can be used to specify the front-end pool for user migration.
 
 ```yaml
 Type: Fqdn

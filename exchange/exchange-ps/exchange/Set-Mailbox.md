@@ -4386,7 +4386,7 @@ The RecipientLimits parameter specifies the maximum number of recipients allowed
 
 In on-premises Exchange, a valid value is an integer or the value unlimited. The default value is unlimited, which indicates the maximum number of recipients per message for the mailbox is controlled elsewhere (for example, organization, server, or connector limits).
 
-In the cloud-based service, a valid value is an integer from 1 to 1000.
+In the cloud-based service, a valid value is an integer from 1 to 1000. The default value is 500. This value does not apply to meeting messages.
 
 ```yaml
 Type: Unlimited
