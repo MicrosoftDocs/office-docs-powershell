@@ -21,8 +21,26 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### DefaultParameterSet (Default)
 ```
-Disconnect-ExchangeOnline [-Confirm]
+Disconnect-ExchangeOnline
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ConnectionId
+```
+Disconnect-ExchangeOnline -ConnectionId <String[]>
+ [-Confirm]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ModulePrefix
+```
+Disconnect-ExchangeOnline -ModulePrefix <String[]>
+ [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -50,6 +68,20 @@ Disconnect-ExchangeOnline -Confirm:$false
 
 This example silently disconnects from Exchange Online PowerShell or Security & Compliance PowerShell without a confirmation prompt or any notification text.
 
+### Example 3
+```powershell
+Disconnect-ExchangeOnline -ConnectionId 1a9e45e8-e7ec-498f-9ac3-0504e987fa85
+```
+
+This example disconnects the REST-based Exchange Online PowerShell connection with the specified ConnectionId value. Any other remote PowerShell connections to Exchange Online PowerShell or Security & Compliance PowerShell in the same Windows PowerShell window are also disconnected.
+
+### Example 4
+```powershell
+Disconnect-ExchangeOnline -ModulePrefix Contoso,Fabrikam
+```
+
+This example disconnects the REST-based Exchange Online PowerShell connections that are using the specified prefix values. Any other remote PowerShell connections to Exchange Online PowerShell or Security & Compliance PowerShell in the same Windows PowerShell window are also disconnected.
+
 ## PARAMETERS
 
 ### -Confirm
@@ -65,6 +97,44 @@ Aliases: cf
 Applicable: Exchange Online
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectionId
+**Note**: This parameter is available in version 3.2.0-Preview2 or later of the module.
+
+The ConnectionId parameter specifies the REST API connections to disconnect by ConnectionId. ConnectionId is a GUID value in the output of the Get-ConnectionInformation cmdlet that uniquely identifies a connection, even if you have multiple connections open. You can specify multiple ConnectionId values separated by commas.
+
+Don't use this parameter with the ModulePrefix parameter.
+
+```yaml
+Type: String[]
+Parameter Sets: ConnectionId
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModulePrefix
+**Note**: This parameter is available in version 3.2.0-Preview2 or later of the module.
+
+The ModulePrefix parameter specifies the REST API connections to disconnect by ModulePrefix. When you use the Prefix parameter with the Connect-ExchangeOnline cmdlet, the specified text is added to the names of all Exchange Online cmdlets (for example, Get-InboundConnector becomes Get-ContosoInboundConnector). The ModulePrefix value is visible in the output of the Get-ConnectionInformation cmdlet. You can specify multiple ModulePrefix values separated by commas.
+
+Don't use this parameter with the ConnectionId parameter.
+
+```yaml
+Type: String[]
+Parameter Sets: ModulePrefix
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
