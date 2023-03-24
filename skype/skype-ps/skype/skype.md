@@ -757,6 +757,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md)
 {{Manually Enter Get-CsTeamsMeetingPolicy Description Here}}
 
+### [Get-CsTeamsMeetingBrandingPolicy](Get-CsTeamsMeetingBrandingPolicy.md)
+{{Manually Enter Get-CsTeamsMeetingBrandingPolicy Description Here}}
+
 ### [Get-CsTelemetryConfiguration](Get-CsTelemetryConfiguration.md)
 {{Manually Enter Get-CsTelemetryConfiguration Description Here}}
 
@@ -1008,6 +1011,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
 {{Manually Enter Grant-CsTeamsMeetingPolicy Description Here}}
+
+### [Grant-CsTeamsMeetingBrandingPolicy](Grant-CsTeamsMeetingBrandingPolicy.md)
+{{Manually Enter Grant-CsTeamsMeetingBrandingPolicy Description Here}}
 
 ### [Grant-CsTenantDialPlan](Grant-CsTenantDialPlan.md)
 {{Manually Enter Grant-CsTenantDialPlan Description Here}}
@@ -1585,6 +1591,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [New-CsTeamsMeetingPolicy](New-CsTeamsMeetingPolicy.md)
 {{Manually Enter New-CsTeamsMeetingPolicy Description Here}}
 
+### [New-CsTeamsMeetingBrandingPolicy](New-CsTeamsMeetingBrandingPolicy.md)
+{{Manually Enter New-CsTeamsMeetingBrandingPolicy Description Here}}
+
 ### [New-CsTelemetryConfiguration](New-CsTelemetryConfiguration.md)
 {{Manually Enter New-CsTelemetryConfiguration Description Here}}
 
@@ -2079,6 +2088,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 
 ### [Remove-CsTeamsMeetingPolicy](Remove-CsTeamsMeetingPolicy.md)
 {{Manually Enter Remove-CsTeamsMeetingPolicy Description Here}}
+
+### [Remove-CsTeamsMeetingBrandingPolicy](Remove-CsTeamsMeetingBrandingPolicy.md)
+{{Manually Enter Remove-CsTeamsMeetingBrandingPolicy Description Here}}
 
 ### [Remove-CsTelemetryConfiguration](Remove-CsTelemetryConfiguration.md)
 {{Manually Enter Remove-CsTelemetryConfiguration Description Here}}
@@ -2710,6 +2722,9 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
 {{Manually Enter Set-CsTeamsMeetingPolicy Description Here}}
 
+### [Set-CsTeamsMeetingBrandingPolicy](Set-CsTeamsMeetingBrandingPolicy.md)
+{{Manually Enter Set-CsTeamsMeetingBrandingPolicy Description Here}}
+
 ### [Set-CsTelemetryConfiguration](Set-CsTelemetryConfiguration.md)
 {{Manually Enter Set-CsTelemetryConfiguration Description Here}}
 
@@ -3197,6 +3212,16 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 ### [Grant-CsTeamsMeetingPolicy](Grant-CsTeamsMeetingPolicy.md)
 
 ### [Remove-CsTeamsMeetingPolicy](Remove-CsTeamsMeetingPolicy.md)
+
+### [Get-CsTeamsMeetingBrandingPolicy](Get-CsTeamsMeetingBrandingPolicy.md)
+
+### [Set-CsTeamsMeetingBrandingPolicy](Set-CsTeamsMeetingBrandingPolicy.md)
+
+### [New-CsTeamsMeetingBrandingPolicy](New-CsTeamsMeetingBrandingPolicy.md)
+
+### [Grant-CsTeamsMeetingBrandingPolicy](Grant-CsTeamsMeetingBrandingPolicy.md)
+
+### [Remove-CsTeamsMeetingBrandingPolicy](Remove-CsTeamsMeetingBrandingPolicy.md)
 
 ### [Set-CsAuthConfig](Set-CsAuthConfig.md)
 
