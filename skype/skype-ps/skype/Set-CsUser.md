@@ -192,17 +192,17 @@ Accept wildcard characters: False
 
 ### -LineURI
 Phone number assigned to the user.
-The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "TEL:" prefix.
-For example: TEL:+14255551297.
-Any extension number should be added to the end of the line URI, for example: TEL:+14255551297;ext=51297.
+The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "tel:" prefix.
+For example: tel:+14255551297.
+Any extension number should be added to the end of the line URI, for example: tel:+14255551297;ext=51297.
 
-It is important to note that Skype for Business Server treats TEL:+14255551297 and TEL:+14255551297;ext=51297 as two different numbers.
-If you assign Ken Myer the line URI TEL:+14255551297 and later try to assign Pilar Ackerman the line URI TEL:+14255551297;ext=51297, that assignment will succeed; the number assigned to Pilar will not be flagged as a duplicate number.
+It is important to note that Skype for Business Server treats tel:+14255551297 and tel:+14255551297;ext=51297 as two different numbers.
+If you assign Ken Myer the line URI tel:+14255551297 and later try to assign Pilar Ackerman the line URI tel:+14255551297;ext=51297, that assignment will succeed; the number assigned to Pilar will not be flagged as a duplicate number.
 This is due to the fact that, depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
-Note: Extension should be part of the E164 Number. For example if you have 5 digit Extensions then the last 5 digits of the E164 Number should always match the 5 digit extension TEL:+14255551297;ext=51297
+Note: Extension should be part of the E164 Number. For example if you have 5 digit Extensions then the last 5 digits of the E164 Number should always match the 5 digit extension tel:+14255551297;ext=51297
 
 ```yaml
 Type: String
@@ -241,8 +241,8 @@ A private line is a phone number that is not published in Active Directory Domai
 In addition, this private line bypasses most in-bound call routing rules; for example, a call to a private line will not be forwarded to a person's delegates.
 Private lines are often used for personal phone calls or for business calls that should be kept separate from other team members.
 
-The private line value should be specified using the E.164 format, and be prefixed by the "TEL:" prefix.
-For example: TEL:+14255551297.
+The private line value should be specified using the E.164 format, and be prefixed by the "tel:" prefix.
+For example: tel:+14255551297.
 
 ```yaml
 Type: String
@@ -392,12 +392,12 @@ Accept wildcard characters: False
 
 ### -OnPremLineURI
 Specifies the phone number assigned to the user if no number is assigned to that user in the Skype for Business hybrid environment.
-The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "TEL:" prefix.
-For example: TEL:+14255551297.
-Any extension number should be added to the end of the line URI, for example: TEL:+14255551297;ext=51297.
+The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "tel:" prefix.
+For example: tel:+14255551297.
+Any extension number should be added to the end of the line URI, for example: tel:+14255551297;ext=51297.
 
-Note that Skype for Business treats TEL:+14255551297 and TEL:+14255551297;ext=51297 as two different numbers.
-If you assign Ken Myer the line URI TEL:+14255551297 and later try to assign Pilar Ackerman the line URI TEL:+14255551297;ext=51297, that assignment will succeed.
+Note that Skype for Business treats tel:+14255551297 and tel:+14255551297;ext=51297 as two different numbers.
+If you assign Ken Myer the line URI tel:+14255551297 and later try to assign Pilar Ackerman the line URI tel:+14255551297;ext=51297, that assignment will succeed.
 Depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
