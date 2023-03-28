@@ -51,7 +51,7 @@ List of meeting background images.
 It is not possible to add/remove background images using cmdlets. Please use Teams Admin Center (TAC) for that purpose.
 
 ```yaml
-Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]
+Type: PSListModifier
 Parameter Sets: (All)
 Aliases:
 
@@ -67,7 +67,7 @@ List of meeting branding themes. You can alter list returned by `Get-CsTeamsMeet
 It is not possible to add new/remove meeting branding themes using cmdlets. Please use Teams Admin Center (TAC) for that purpose.
 
 ```yaml
-Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]
+Type: PSListModifier
 Parameter Sets: (All)
 Aliases:
 

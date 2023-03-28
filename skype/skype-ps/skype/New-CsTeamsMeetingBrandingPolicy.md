@@ -48,7 +48,7 @@ List of meeting background images.
 Image upload is not possible via cmdlets. Please upload background images via Teams Admin Center (TAC).
 
 ```yaml
-Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]
+Type: PSListModifier
 Parameter Sets: (All)
 Aliases:
 
@@ -65,7 +65,7 @@ List of meeting branding themes.
 Image upload is not possible via cmdlets. Please create meeting themes via Teams Admin Center (TAC).
 
 ```yaml
-Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]
+Type: PSListModifier
 Parameter Sets: (All)
 Aliases:
 
