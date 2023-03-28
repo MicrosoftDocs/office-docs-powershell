@@ -29,7 +29,7 @@ Get-CsTeamsMeetingBrandingPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsTeamsMeetingBrandingPolicy cmdlet enables you to return information about all the meeting branding policies that have been configured for use in your organization
+The Get-CsTeamsMeetingBrandingPolicy cmdlet enables you to return information about all the meeting branding policies that have been configured for use in your organization.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ In the example shown above, the command will return a collection of all the team
 PS C:\> CsTeamsMeetingBrandingPolicy -Identity "policy test2"
 ```
 
-In the example shown above, the command will return the meeting branding policy that has an Identity `policy test 2``. Because identities are unique, this command will never return more than one item.
+In the example shown above, the command will return the meeting branding policy that has an Identity `policy test 2`. Because identities are unique, this command will never return more than one item.
 
 ## PARAMETERS
 

@@ -20,8 +20,8 @@ The CsTeamsMeetingBrandingPolicy cmdlets enable administrators to control the ap
 
 ```
 Set-CsTeamsMeetingBrandingPolicy
- [-MeetingBackgroundImages <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]>]
- [-MeetingBrandingThemes <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]>]
+ [-MeetingBackgroundImages <PSListModifier>]
+ [-MeetingBrandingThemes <PSListModifier>]
  [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -46,7 +46,9 @@ In the example shown above, the commands will change brand accent color of theme
 ## PARAMETERS
 
 ### -MeetingBackgroundImages
-List of meeting background images. You can alter list returned by `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter.
+*This parameter is reserved for Microsoft internal use only.*
+List of meeting background images.
+It is not possible to add/remove background images using cmdlets. Please use Teams Admin Center (TAC) for that purpose.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]
@@ -62,6 +64,7 @@ Accept wildcard characters: False
 
 ### -MeetingBrandingThemes
 List of meeting branding themes. You can alter list returned by `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter. (see example 1).
+It is not possible to add new/remove meeting branding themes using cmdlets. Please use Teams Admin Center (TAC) for that purpose.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]
@@ -76,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultTheme
-Identity of default meeting theme. It should not be changed manually.
+*This parameter is reserved for Microsoft internal use only.*
+Identity of default meeting theme.
 
 ```yaml
 Type: String
