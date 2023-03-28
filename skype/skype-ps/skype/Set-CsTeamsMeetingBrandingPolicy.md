@@ -20,10 +20,9 @@ The CsTeamsMeetingBrandingPolicy cmdlets enable administrators to control the ap
 
 ```
 Set-CsTeamsMeetingBrandingPolicy
- [-NdiAssuranceSlateImages <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.NdiAssuranceSlate]>]
  [-MeetingBackgroundImages <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]>]
  [-MeetingBrandingThemes <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]>]
- [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>] [-EnableNdiAssuranceSlate <Boolean>]
+ [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -46,8 +45,38 @@ In the example shown above, the commands will change brand accent color of theme
 
 ## PARAMETERS
 
+### -MeetingBackgroundImages
+List of meeting background images. You can alter list returned by `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter.
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingBrandingThemes
+List of meeting branding themes. You can alter list returned by `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter. (see example 1).
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultTheme
-Identity of default meeting theme.
+Identity of default meeting theme. It should not be changed manually.
 
 ```yaml
 Type: String
@@ -106,13 +135,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MeetingBackgroundImages
-List of meeting background images.
+### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
-Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -121,13 +150,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MeetingBrandingThemes
-List of meeting branding themes.
+### -WhatIf
+Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
-Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: wi
 
 Required: False
 Position: Named
@@ -135,6 +164,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## NOTES
 

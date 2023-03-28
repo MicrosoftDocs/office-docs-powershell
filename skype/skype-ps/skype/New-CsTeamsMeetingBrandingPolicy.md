@@ -19,17 +19,17 @@ The CsTeamsMeetingBrandingPolicy cmdlets enable administrators to control the ap
 
 ```
 New-CsTeamsMeetingBrandingPolicy
- [-NdiAssuranceSlateImages <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.NdiAssuranceSlate]>]
  [-MeetingBackgroundImages <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]>]
  [-MeetingBrandingThemes <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]>]
- [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>] [-EnableNdiAssuranceSlate <Boolean>]
+ [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet creates a new meeting branding policy.
-However, it cannot be used to upload the images. If you want to upload the images, please use Teams Admin Center.
+This cmdlet creates a new meeting branding policy.  
+You can only create an empty meeting branding policy with this cmdlet, image upload is not supported.
+If you want to upload the images, please use Teams Admin Center.
 
 ## EXAMPLES
 
@@ -42,16 +42,64 @@ In the example shown above, the command will create empty meeting branding polic
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -MeetingBackgroundImages
+List of meeting background images.
+**Note:** It should be not used since this object contains images. Image upload is not possible via cmdlets. Please upload background images via Teams Admin Center (TAC).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingBrandingThemes
+List of meeting branding themes.
+**Note:** It should be not used since meeting theme contains images. Image upload is not possible via cmdlets. Please create meeting themes via Teams Admin Center (TAC).
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultTheme
+Identity of default meeting theme.
+**Note:** It should be not used since creation of meeting themes via cmdlet is not possible. (see *-MeetingBrandingThemes* parameter)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Identity of meeting branding policy that will be created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -87,20 +135,53 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-Identity of meeting branding policy that will be created.
+### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -WhatIf
+Describes what would happen if you executed the command without actually executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## NOTES
 

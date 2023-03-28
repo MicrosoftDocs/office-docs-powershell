@@ -40,50 +40,19 @@ Assigns a teams meeting branding policy at the per-user scope. The CsTeamsMeetin
 
 ### Assign TeamsMeetingBrandingPolicy to user
 ```powershell
-PS C:\> Grant-CsTeamsMeetingBrandingPolicy -identity "testuser@testtenantdomain.onmicrosoft.com" -PolicyName "Policy Test"
+PS C:\> Grant-CsTeamsMeetingBrandingPolicy -identity "alice@contoso.com" -PolicyName "Policy Test"
 ```
 
-In the example shown above, the command will assign TeamsMeetingBrandingPolicy with name `Policy Test` to user `testuser@testtenantdomain.onmicrosoft.com`.
+In the example shown above, the command will assign TeamsMeetingBrandingPolicy with name `Policy Test` to user `alice@contoso.com`.
 
 ### Assign TeamsMeetingBrandingPolicy to group
 ```powershell
-PS C:\> Grant-CsTeamsMeetingBrandingPolicy -Group Testgroupassignments@testtenantdomain.onmicrosoft.com -PolicyName "Policy Test" -Rank 1
+PS C:\> Grant-CsTeamsMeetingBrandingPolicy -Group group@contoso.com -PolicyName "Policy Test" -Rank 1
 ```
 
-In the example shown above, the command will assign TeamsMeetingBrandingPolicy with name `Policy Test` to group `Testgroupassignments@testtenantdomain.onmicrosoft.com`.
-
+In the example shown above, the command will assign TeamsMeetingBrandingPolicy with name `Policy Test` to group `group@contoso.com`.
 
 ## PARAMETERS
-
-### -Global
-Use this switch if you want to grant the specified policy to be the default policy for all users in the tenant.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Group
-Specifies the group used for the group policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The user you want to grant policy to. This can be specified as SIP address, UserPrincipalName, or ObjectId.
@@ -115,6 +84,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Rank
 The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
@@ -129,6 +113,40 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Global
+Use this switch if you want to grant the specified policy to be the default policy for all users in the tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## NOTES
 
