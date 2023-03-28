@@ -19,8 +19,8 @@ The CsTeamsMeetingBrandingPolicy cmdlets enable administrators to control the ap
 
 ```
 New-CsTeamsMeetingBrandingPolicy
- [-MeetingBackgroundImages <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]>]
- [-MeetingBrandingThemes <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]>]
+ [-MeetingBackgroundImages <PSListModifier>]
+ [-MeetingBrandingThemes <PSListModifier>]
  [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -43,8 +43,9 @@ In the example shown above, the command will create empty meeting branding polic
 ## PARAMETERS
 
 ### -MeetingBackgroundImages
+*This parameter is reserved for Microsoft internal use only.*
 List of meeting background images.
-**Note:** It should be not used since this object contains images. Image upload is not possible via cmdlets. Please upload background images via Teams Admin Center (TAC).
+Image upload is not possible via cmdlets. Please upload background images via Teams Admin Center (TAC).
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBackgroundImage]
@@ -59,8 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingBrandingThemes
+*This parameter is reserved for Microsoft internal use only.*
 List of meeting branding themes.
-**Note:** It should be not used since meeting theme contains images. Image upload is not possible via cmdlets. Please create meeting themes via Teams Admin Center (TAC).
+Image upload is not possible via cmdlets. Please create meeting themes via Teams Admin Center (TAC).
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.MeetingBrandingTheme]
@@ -75,8 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultTheme
+*This parameter is reserved for Microsoft internal use only.*
 Identity of default meeting theme.
-**Note:** It should be not used since creation of meeting themes via cmdlet is not possible. (see *-MeetingBrandingThemes* parameter)
 
 ```yaml
 Type: String
