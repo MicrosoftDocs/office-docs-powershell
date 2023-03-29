@@ -2778,9 +2778,9 @@ The ExceptIfSenderIpRanges parameter specifies an exception that looks for sende
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple values separated by commas.  
+You can specify multiple values separated by commas.
 
-The IP address used during evaluation of this predicate is the IP address of the last MTA (Message Transfer Agent) before reaching Exchange Online, which is not guaranteed to be original sender IP address (especially if third party software is used during message transport).
+In Exchange Online, the IP address that's used during evaluation of this exception is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4488,9 +4488,9 @@ The SenderIpRanges parameter specifies a condition that looks for senders whose 
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple values separated by commas.  
+You can specify multiple values separated by commas.
 
-The IP address used during evaluation of this predicate is the IP address of the last MTA (Message Transfer Agent) before reaching Exchange Online, which is not guaranteed to be original sender IP address (especially if third party software is used during message transport).
+In Exchange Online, the IP address that's used during evaluation of this condition is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
