@@ -211,7 +211,7 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and above**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell versions >=5.0.0 and will be applicable to all Teams PowerShell Module versions by 15th April 2023 (note that these changes are only rolled out in commercial environments at present):
 
@@ -273,6 +273,12 @@ These filtering operators have been reintroduced:
 
 **Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
 
+_Sorting functionality is now available_
+
+Sorting is now enabled in Teams PowerShell Module 5.1.0 and above by using the "-Sort" or "-OrderBy" parameters. For Example:
+
+- Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
+- Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
