@@ -44,7 +44,56 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 
 ### Example 1
 
-Intentionally not provided.
+```powershell
+$identity = "test"
+# Create new teams app setup policy named "Set-Test".
+New-CsTeamsAppSetupPolicy -Identity Set-$identity
+Set-CsTeamsAppSetupPolicy -Identity Set-$identity -AllowUserPinning $true -AllowSideLoading $false 
+```
+
+Step 1: Create new teams app setup policy named "Set-Test".
+Step 2: Set AllowUserPinning as true, AllowSideLoading as false.
+
+### Example 2
+
+```powershell
+$identity = "test"
+# Create new teams app setup policy named "Set-Test".
+New-CsTeamsAppSetupPolicy -Identity Set-$identity
+# Set ActivityApp, ChatApp, TeamsApp as PinnedAppBarApps
+$ActivityApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="14d6962d-6eeb-4f48-8890-de55454bb136"}
+$ChatApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="86fcd49b-61a2-4701-b771-54728cd291fb"}
+$TeamsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="2a84919f-59d8-4441-a975-2a8c2643b741"}
+$PinnedAppBarApps = @($ActivityApp,$ChatApp,$TeamsApp)
+# Settings to pin these apps to the app bar in Teams client.
+Set-CsTeamsAppSetupPolicy -Identity Set-$identity -PinnedAppBarApps $PinnedAppBarApps
+```
+
+### Example 3
+
+```powershell
+$identity = "test"
+# Create new teams app setup policy named "Set-Test".
+New-CsTeamsAppSetupPolicy -Identity Set-$identity
+# Set VivaConnectionsApp as PinnedAppBarApps
+$VivaConnectionsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp -Property @{Id="d2c6f111-ffad-42a0-b65e-ee00425598aa"}
+$PinnedMessageBarApps = @($VivaConnectionsApp)
+# Settings to pin these apps to the messaging extension in Teams client.
+Set-CsTeamsAppSetupPolicy -Identity Set-$identity -PinnedMessageBarApps $PinnedMessageBarApps
+```
+
+### Example 4
+
+```powershell
+$identity = "test"
+# Create new teams app setup policy named "Set-Test".
+New-CsTeamsAppSetupPolicy -Identity Set-$identity
+# Set VivaConnectionsApp as AppPresetList
+$VivaConnectionsApp = New-Object -TypeName  Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset -Property @{Id="d2c6f111-ffad-42a0-b65e-ee00425598aa"}
+$AppPresetList = @($VivaConnectionsApp)
+# Settings to install these apps in your users' personal Teams environment
+Set-CsTeamsAppSetupPolicy -Identity Set-$identity -AppPresetList $AppPresetList
+```
 
 ## PARAMETERS
 
@@ -64,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Do not use.
+Description of App setup policy.
 
 ```yaml
 Type: String
@@ -94,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Do not use.
+Name of App setup policy.If empty, all Identities will be used by default.
 
 ```yaml
 Type: XdsIdentity
@@ -123,11 +172,71 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -PinnedAppBarApps
-Do not use.
+### -AllowUserPinning
+If you turn this on, the user’s existing app pins will be added to the list of pinned apps set in this policy. Users can rearrange, add, and remove pins as they choose. If you turn this off, the user’s existing app pins will be removed and replaced with the apps defined in this policy
 
 ```yaml
-Type:
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSideLoading
+This is also known as side loading. This setting determines if a user can upload a custom app package in the Teams app. Turning it on lets you create or develop a custom app to be used personally or across your organization without having to submit it to the Teams app store. Uploading a custom app also lets you test an app before you distribute it more widely by only assigning it to a single user or group of users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PinnedAppBarApps
+Pinning an app displays the app in the app bar in Teams client. Admins can pin app and they can allow users to pin. Pinning is a used to highlight apps that are needed the most by users and promote ease of access.
+
+```yaml
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PinnedMessageBarApps
+Apps will be pinned in messaging extensions and into the ellipsis menu.
+
+```yaml
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppPresetList
+Choose which apps and messaging extensions you want installed in your users' personal Teams environment and in meetings they create. Users can install other available apps from the Teams app store. 
+
+```yaml
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset[]
 Parameter Sets: (All)
 Aliases:
 
@@ -175,7 +284,11 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## INPUTS
 
-### System.Management.Automation.PSObject
+### Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset
+
+### Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp
+
+### Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp
 
 
 ## OUTPUTS
