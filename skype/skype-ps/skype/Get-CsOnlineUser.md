@@ -498,7 +498,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Sort/-OrderBy
+### -Sort
 
 Sorting is now enabled in Teams PowerShell Module 5.1.0 and above by using the "-Sort" or "-OrderBy" parameters. For Example:
 
