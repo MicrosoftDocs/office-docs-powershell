@@ -29,6 +29,7 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-OU <OUIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
+ [-Sort]
  [-UnassignedUser]
  [-UsePreferredDC]
  [<CommonParameters>]
@@ -273,12 +274,6 @@ These filtering operators have been reintroduced:
 
 **Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
 
-_Sorting functionality is now available_
-
-Sorting is now enabled in Teams PowerShell Module 5.1.0 and above by using the "-Sort" or "-OrderBy" parameters. For Example:
-
-- Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
-- Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
@@ -502,6 +497,13 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Sort/-OrderBy
+
+Sorting is now enabled in Teams PowerShell Module 5.1.0 and above by using the "-Sort" or "-OrderBy" parameters. For Example:
+
+- Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
+- Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
 
 ### -UnassignedUser
 This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
