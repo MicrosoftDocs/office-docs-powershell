@@ -213,7 +213,7 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 
 **Updates in Teams PowerShell Module version 5.0.0**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell versions >=5.0.0 and will be applicable to all Teams PowerShell Module versions by 15th April 2023 (note that these changes are only rolled out in commercial environments at present):
 
 _Performance_
 
@@ -276,7 +276,7 @@ These filtering operators have been reintroduced:
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version >=5.0.0):
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
@@ -541,7 +541,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 **Updates in Teams PowerShell Module version 5.0.0**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version >=5.0.0 and will be applicable to all Teams PowerShell Module versions by 15th April 2023  (note that these changes are only rolled out in commercial environments at present):
 
 New attributes have now been introduced in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
