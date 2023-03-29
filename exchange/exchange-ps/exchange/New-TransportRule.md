@@ -2395,7 +2395,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 The ExceptIfMessageTypeMatches parameter specifies an exception that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-- AutoForward: Messages automatically forwarded to an alternative recipient.
+- AutoForward: Messages automatically forwarded to an alternative recipient. In Exchange Online, if the message has been forwarded using [mailbox forwarding](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as SMTP forwarding), this exception **will not** match during mail flow rule evaluation.
 - Encrypted: S/MIME encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured using Office 365 Message Encryption (OME), Rights Management, and sensitivity labels (with encryption).
@@ -2800,6 +2800,8 @@ The ExceptIfSenderIpRanges parameter specifies an exception that looks for sende
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify multiple values separated by commas.
+
+In Exchange Online, the IP address that's used during evaluation of this exception is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
@@ -3609,7 +3611,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The MessageTypeMatches parameter specifies a condition that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-- AutoForward: Messages automatically forwarded to an alternative recipient.
+- AutoForward: Messages automatically forwarded to an alternative recipient.  In Exchange Online, if the message has been forwarded using [mailbox forwarding](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as SMTP forwarding), this condition **will not** match during mail flow rule evaluation.
 - Encrypted: S/MIME encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured using Office 365 Message Encryption (OME), Rights Management, and sensitivity labels (with encryption).
@@ -4492,6 +4494,8 @@ The SenderIpRanges parameter specifies a condition that looks for senders whose 
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
 You can specify multiple values separated by commas.
+
+In Exchange Online, the IP address that's used during evaluation of this condition is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
