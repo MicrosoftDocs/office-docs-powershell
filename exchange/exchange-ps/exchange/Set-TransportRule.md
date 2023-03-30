@@ -4410,7 +4410,7 @@ Accept wildcard characters: False
 ### -SenderAddressLocation
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
+- Header: Only examine senders in the message headers (**From** field). This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 
