@@ -212,7 +212,7 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-**Updates in Teams PowerShell Module version 5.0.0 and above**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present):
 
