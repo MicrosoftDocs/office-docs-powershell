@@ -38,7 +38,7 @@ If you want to upload the images, you should use Teams Admin Center.
 PS C:\> New-CsTeamsMeetingBrandingPolicy -Identity "test policy"
 ```
 
-In the example shown above, the command will create empty meeting branding policy with identity `test policy`.
+In this example, the command will create an empty meeting branding policy with the identity `test policy`.
 
 ## PARAMETERS
 
