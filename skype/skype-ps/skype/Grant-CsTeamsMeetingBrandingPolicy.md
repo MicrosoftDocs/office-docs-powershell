@@ -34,7 +34,7 @@ Grant-CsTeamsMeetingBrandingPolicy [[-PolicyName] <String>] [-Global] [-Force] [
 ```
 
 ## DESCRIPTION
-Assigns a teams meeting branding policy at the per-user scope. The CsTeamsMeetingBrandingPolicy cmdlets enable administrators to control the appearance in meetings by defining custom background, logo and colors.
+Assigns a teams meeting branding policy at the per-user scope. The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 ## EXAMPLES
 
