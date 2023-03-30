@@ -13,7 +13,7 @@ manager: stanlythomas
 # Get-CsTeamsMeetingBrandingPolicy
 
 ## SYNOPSIS
-The CsTeamsMeetingBrandingPolicy cmdlets enable administrators to control the appearance in meetings by defining custom background, logo and colors.
+The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 
 ## SYNTAX
