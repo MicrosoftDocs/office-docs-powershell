@@ -143,7 +143,7 @@ For example, `Get-SecurityPrincipal -Filter 'AdminDisplayName -ne $null' | Forma
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_msExchAdministrativeUnitLink_|**Get-Contact** <br> **Get-DistributionGroup** <br> **Get-DynamicDistributionGroup** <br> **Get-Group** <br> **Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailContact** <br> **Get-MailPublicFolder** <br> **Get-MailUser** <br> **Get-RemoteMailbox** <br> **Get-User** <br> **Get-UnifiedGroup**|String or `$null`|
+|_msExchAdministrativeUnitLink_|**Get-Contact** <br> **Get-DistributionGroup** <br> **Get-DynamicDistributionGroup** <br> **Get-Group** <br> **Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailContact** <br> **Get-MailPublicFolder** <br> **Get-MailUser** <br> **Get-RemoteMailbox** <br> **Get-User** <br> **Get-UnifiedGroup**|`$null`|
 
 For example, `Get-User -Filter 'AdministrativeUnits -ne $null'`.
 
