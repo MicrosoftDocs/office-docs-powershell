@@ -277,7 +277,7 @@ These filtering operators have been reintroduced:
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 or later):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 and later):
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
