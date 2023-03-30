@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name of the custom policy that is being assigned to the user. To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
+The name of the custom policy that is being assigned to the user. To remove a specific assignment and fall back to the default tenant policy, you can assign it to $Null.
 
 ```yaml
 Type: String
