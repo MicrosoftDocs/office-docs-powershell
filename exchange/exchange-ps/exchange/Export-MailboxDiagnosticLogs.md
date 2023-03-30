@@ -114,8 +114,11 @@ The ComponentName parameter specifies the component that you want to retrieve th
 - OOFRules
 - RBA
 - RemindersAssistant
+- CalendarSharingInvite
+- AcceptCalendarSharingInvite
 - SharingMigrationAssistant
 - SharingSyncAssistant
+- Sharing
 - SubstrateHoldTracking
 - SweepRules
 - TimeProfile
