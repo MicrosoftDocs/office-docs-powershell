@@ -48,7 +48,7 @@ In the example shown above, the commands will change brand accent color of theme
 ### -MeetingBackgroundImages
 *This parameter is reserved for Microsoft internal use only.*
 List of meeting background images.
-It is not possible to add/remove background images using cmdlets. Please use Teams Admin Center (TAC) for that purpose.
+It is not possible to add or remove background images using cmdlets. You should use Teams Admin Center for that purpose.
 
 ```yaml
 Type: PSListModifier
