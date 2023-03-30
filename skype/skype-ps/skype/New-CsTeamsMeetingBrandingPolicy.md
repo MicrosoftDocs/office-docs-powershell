@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ### -MeetingBrandingThemes
 *This parameter is reserved for Microsoft internal use only.*
 List of meeting branding themes.
-Image upload is not possible via cmdlets. Please create meeting themes via Teams Admin Center (TAC).
+Image upload is not possible via cmdlets. You should create meeting themes via Teams Admin Center.
 
 ```yaml
 Type: PSListModifier
