@@ -43,7 +43,65 @@ As an admin, you can use app permission policies to enable or block specific app
 ## EXAMPLES
 
 ### Example 1
-Intentionally omitted.
+
+No apps ae blocked,allow all Microsoft apps,Third-party apps,Custom apps.
+```powershell
+$identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
+New-CsTeamsAppPermissionPolicy -Identity Set-$identity
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType BlockedAppList  -DefaultCatalogApps @()-GlobalCatalogAppsType -GlobalCatalogApps @() BlockedAppList -PrivateCatalogAppsType BlockedAppList -PrivateCatalogApps @()
+```
+
+### Example 2
+
+No apps are allowed,block all Microsoft apps,Third-party apps,Custom apps.
+```powershell
+$identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
+New-CsTeamsAppPermissionPolicy -Identity Set-$identity
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -DefaultCatalogApps @() -GlobalCatalogAppsType AllowedAppList -GlobalCatalogApps @() -PrivateCatalogAppsType AllowedAppList -PrivateCatalogApps @()
+```
+
+### Example 3
+
+Allow Microsoft Lists、OneNote apps that can be installed by your users and block other Microsoft apps.
+```powershell
+$identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
+# create a new Teams app permission policy and block all apps
+New-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -GlobalCatalogAppsType AllowedAppList -PrivateCatalogAppsType AllowedAppList -DefaultCatalogApps @() -GlobalCatalogApps @() -PrivateCatalogApps @()
+
+$ListsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.DefaultCatalogApp -Property @{Id="0d820ecd-def2-4297-adad-78056cde7c78"}
+$OneNoteApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.DefaultCatalogApp -Property @{Id="26bc2873-6023-480c-a11b-76b66605ce8c"}
+$DefaultCatalogAppList = @($ListsApp,$OneNoteApp)
+# set allow Lists and OneNote apps and block other Microsoft apps
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList  -DefaultCatalogApps $DefaultCatalogAppList 
+```
+
+### Example 4
+
+Allow Third-party TaskList、OnePlan apps that can be installed by your users and block other Third-party apps.
+```powershell
+$identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
+# create a new Teams app permission policy and block all apps
+New-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -GlobalCatalogAppsType AllowedAppList -PrivateCatalogAppsType AllowedAppList -DefaultCatalogApps @() -GlobalCatalogApps @() -PrivateCatalogApps @()
+$TaskListApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.GlobalCatalogApp -Property @{Id="57c81e84-9b7b-4783-be4e-0b7ffc0719af"}
+$OnePlanApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.GlobalCatalogApp -Property @{Id="ca0540bf-6b61-3027-6313-a7cb4470bf1b"}
+$GlobalCatalogAppList = @($TaskListApp,$OnePlanApp)
+# set allow TaskList and OnePlan apps and block other Third-party apps
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -GlobalCatalogAppsType AllowedAppList  -GlobalCatalogApps $GlobalCatalogAppList
+```
+
+### Example 5
+
+Allow Custom GetStartApp、TestBotApp apps that can be installed by your users and block other Custom apps.
+```powershell
+$identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
+# create a new Teams app permission policy and block all apps
+New-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType BlockedAppList -GlobalCatalogAppsType BlockedAppList -PrivateCatalogAppsType BlockedAppList -DefaultCatalogApps @() -GlobalCatalogApps @() -PrivateCatalogApps @()
+$GetStartApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PrivateCatalogApp -Property @{Id="f8374f94-b179-4cd2-8343-9514dc5ea377"}
+$TestBotApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PrivateCatalogApp -Property @{Id="47fa3584-9366-4ce7-b1eb-07326c6ba799"}
+$PrivateCatalogAppList = @($GetStartApp,$TestBotApp)
+# set allow TaskList and OnePlan apps and block other custom apps
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -PrivateCatalogAppsType AllowedAppList  -PrivateCatalogApps $PrivateCatalogAppList
+```
 
 ## PARAMETERS
 
@@ -63,10 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultCatalogApps
-Do not use.
+Choose which Teams apps published by Microsoft or its partners can be installed by your users.
 
 ```yaml
-Type:
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.DefaultCatalogApp[]
 Parameter Sets: (All)
 Aliases:
 
@@ -78,11 +136,11 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultCatalogAppsType
-Do not use.
+Choose to allow or block the installation of Microsoft Apps.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: AllowedAppList,BlockedAppList
 Aliases:
 
 Required: False
@@ -93,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Do not use.
+Description of App setup permission policy.
 
 ```yaml
 Type: String
@@ -123,10 +181,10 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalogApps
-Do not use.
+Choose which Teams apps published by a third-party that can be installed by your users.
 
 ```yaml
-Type:
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.GlobalCatalogApp[]
 Parameter Sets: (All)
 Aliases:
 
@@ -138,11 +196,11 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalogAppsType
-Do not use.
+Choose to allow or block the installation of third-party.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: AllowedAppList,BlockedAppList
 Aliases:
 
 Required: False
@@ -153,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Do not use.
+Name of App setup permission policy.If empty, all Identities will be used by default
 
 ```yaml
 Type: XdsIdentity
@@ -183,10 +241,10 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateCatalogApps
-Do not use.
+Choose to allow or block the installation of custom apps.
 
 ```yaml
-Type:
+Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PrivateCatalogApp[]
 Parameter Sets: (All)
 Aliases:
 
@@ -198,11 +256,11 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateCatalogAppsType
-Do not use.
+Choose which custom apps can be installed by your users.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: AllowedAppList,BlockedAppList
 Aliases:
 
 Required: False
@@ -249,8 +307,9 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## INPUTS
 
-### System.Management.Automation.PSObject
-
+### Microsoft.Teams.Policy.Administration.Cmdlets.Core.DefaultCatalogApp
+### Microsoft.Teams.Policy.Administration.Cmdlets.Core.GlobalCatalogApp
+### Microsoft.Teams.Policy.Administration.Cmdlets.Core.PrivateCatalogApp
 
 ## OUTPUTS
 
