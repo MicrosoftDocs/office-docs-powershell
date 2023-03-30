@@ -29,7 +29,7 @@ New-CsTeamsMeetingBrandingPolicy
 ## DESCRIPTION
 This cmdlet creates a new meeting branding policy.  
 You can only create an empty meeting branding policy with this cmdlet, image upload is not supported.
-If you want to upload the images, please use Teams Admin Center.
+If you want to upload the images, you should use Teams Admin Center.
 
 ## EXAMPLES
 
