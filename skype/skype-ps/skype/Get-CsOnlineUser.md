@@ -547,7 +547,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 and later (note that these changes are only rolled out in commercial environments at present):
 
