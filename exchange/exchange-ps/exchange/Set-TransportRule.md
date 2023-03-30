@@ -2029,7 +2029,7 @@ The ExceptIfFromAddressMatchesPatterns parameter specifies an exception that loo
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
-**Note**: Trying to search for empty From addresses using the value `""` for this parameter doesn't work.
+**Note**: Trying to search for empty From addresses using this parameter doesn't work.
 
 ```yaml
 Type: Pattern[]
@@ -3089,7 +3089,7 @@ The FromAddressMatchesPatterns parameter specifies a condition that looks for te
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
-**Note**: Trying to search for empty From addresses using the value `""` for this parameter doesn't work.
+**Note**: Trying to search for empty From addresses using this parameter doesn't work.
 
 ```yaml
 Type: Pattern[]
