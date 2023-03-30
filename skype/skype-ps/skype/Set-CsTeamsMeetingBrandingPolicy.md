@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMeetingOptionsThemeOverride
-Allow organizer to control meeting theme.
+Allows organizers to control meeting themes.
 
 ```yaml
 Type: Boolean
