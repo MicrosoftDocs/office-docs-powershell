@@ -38,7 +38,7 @@ The Get-CsTeamsMeetingBrandingPolicy cmdlet enables you to return information ab
 PS C:\> Get-CsTeamsMeetingBrandingPolicy
 ```
 
-In the example shown above, the command will return a collection of all the teams meeting branding policies configured for use in your organization.
+In this example, the command returns a collection of all the teams meeting branding policies configured for use in your organization.
 
 ### Return specified policy
 ```powershell
