@@ -45,7 +45,7 @@ PS C:\> Grant-CsTeamsMeetingBrandingPolicy -identity "alice@contoso.com" -Policy
 
 In the example shown above, the command will assign TeamsMeetingBrandingPolicy with name `Policy Test` to user `alice@contoso.com`.
 
-### Assign TeamsMeetingBrandingPolicy to group
+### Assign TeamsMeetingBrandingPolicy to a group
 ```powershell
 PS C:\> Grant-CsTeamsMeetingBrandingPolicy -Group group@contoso.com -PolicyName "Policy Test" -Rank 1
 ```
