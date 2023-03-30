@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMeetingBackgroundImages
-Enable custom meeting backgrounds.
+Enables custom meeting backgrounds.
 
 ```yaml
 Type: Boolean
