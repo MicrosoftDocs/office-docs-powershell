@@ -31,7 +31,7 @@ Deletes a previously created TeamsMeetingBrandingPolicy. Any users with no expli
 PS C:\> Remove-CsTeamsMeetingBrandingPolicy -Identity "policy test"
 ```
 
-In the example shown above, the command will delete the `policy test` meeting branding policy from the organization's list of meeting branding policies and remove all assignments of this policy from users who have had the policy assigned.
+In this example, the command deletes the `policy test` meeting branding policy from the organization's list of meeting branding policies and removes all assignments of this policy from users who have the policy assigned.
 
 ## PARAMETERS
 
