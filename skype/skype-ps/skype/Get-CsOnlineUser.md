@@ -214,7 +214,7 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 
 **Updates in Teams PowerShell Module version 5.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell versions >=5.0.0 and will be applicable to all Teams PowerShell Module versions by 15th April 2023 (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present):
 
 _Performance_
 
