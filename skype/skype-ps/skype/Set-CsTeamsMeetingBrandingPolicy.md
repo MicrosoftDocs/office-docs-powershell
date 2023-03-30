@@ -29,7 +29,7 @@ Set-CsTeamsMeetingBrandingPolicy
 
 ## DESCRIPTION
 The Set-CsTeamsMeetingBrandingPolicy cmdlet allows administrators to update existing meeting branding policies.
-However, it cannot be used to upload the images. If you want to upload the images, please use Teams Admin Center.
+However, it cannot be used to upload the images. If you want to upload the images, you should use Teams Admin Center.
 
 ## EXAMPLES
 
