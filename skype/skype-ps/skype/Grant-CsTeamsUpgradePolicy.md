@@ -30,7 +30,7 @@ This cmdlet enables admins to apply TeamsUpgradePolicy to either individual user
 
 **[NOTE]** Earlier versions of this cmdlet used to support -MigrateMeetingsToTeams option. This option is removed in newer versions of the module. Tenants must run Start-CsExMeetingMigration. Please see [Start-CsExMeetingMigrationService](/powershell/module/skype/start-csexmeetingmigration).
 
-Microsoft Teams provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are listed below.
+Microsoft Teams provides all relevant instances of TeamsUpgradePolicy via built-in, read-only policies. The built-in instances are as follows:
 
 |Identity|Mode|NotifySfbUsers|Comments|
 |---|---|---|---|
