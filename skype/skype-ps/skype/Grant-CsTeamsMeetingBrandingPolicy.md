@@ -50,7 +50,7 @@ In the example shown above, the command will assign TeamsMeetingBrandingPolicy w
 PS C:\> Grant-CsTeamsMeetingBrandingPolicy -Group group@contoso.com -PolicyName "Policy Test" -Rank 1
 ```
 
-In the example shown above, the command will assign TeamsMeetingBrandingPolicy with name `Policy Test` to group `group@contoso.com`.
+In this example, the command will assign TeamsMeetingBrandingPolicy with the name `Policy Test` to group `group@contoso.com`.
 
 ## PARAMETERS
 
