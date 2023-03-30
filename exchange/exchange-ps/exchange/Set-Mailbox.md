@@ -4913,9 +4913,9 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionHoldEnabled
-The RetentionHoldEnabled parameter specifies whether the mailbox is placed on retention hold. Placing the mailbox on retention hold temporarily suspends the processing of retention policies or managed folder mailbox policies for the mailbox (for example, when the user is on vacation). Valid values are:
+The RetentionHoldEnabled parameter specifies whether the mailbox is placed on retention hold. Placing the mailbox on retention hold temporarily suspends the processing of retention policies or managed folder mailbox policies for the mailbox (for example, when the user is on vacation). Also, if this value is set on True, you won't be able to purge items from the mailbox (not even with MFCMapi). Valid values are:
 
-- $true: The mailbox is placed on retention hold. Retention policies and managed folder policies are suspended for the mailbox.
+- $true: The mailbox is placed on retention hold. Retention policies and managed folder policies are suspended for the mailbox, and purging items won't be possible. 
 - $false: The retention hold is removed from the mailbox. The mailbox is subject to retention policies and managed folder policies. This is the default value.
 
 To set the start date for retention hold, use the StartDateForRetentionHold parameter.
