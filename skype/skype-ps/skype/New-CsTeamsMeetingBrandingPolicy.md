@@ -45,7 +45,7 @@ In this example, the command will create an empty meeting branding policy with t
 ### -MeetingBackgroundImages
 *This parameter is reserved for Microsoft internal use only.*
 List of meeting background images.
-Image upload is not possible via cmdlets. Please upload background images via Teams Admin Center (TAC).
+Image upload is not possible via cmdlets. You should upload background images via Teams Admin Center.
 
 ```yaml
 Type: PSListModifier
