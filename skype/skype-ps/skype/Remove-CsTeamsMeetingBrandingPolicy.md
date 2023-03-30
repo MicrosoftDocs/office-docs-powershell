@@ -22,7 +22,7 @@ Remove-CsTeamsMeetingBrandingPolicy [-Identity] <String> [-Force] [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-Deletes a previously created TeamsMeetingBrandingPolicy. Any users with no explicitly assigned policies will then fall back to the default policy in the organization. You cannot delete the global policy from the organization. If you want to remove policies currently assigned to one or more users, you should assign a different policy to them before.
+Deletes a previously created TeamsMeetingBrandingPolicy. Any users with no explicitly assigned policies will then fall back to the default policy in the organization. You cannot delete the global policy from the organization. If you want to remove policies currently assigned to one or more users, you should first assign a different policy to them.
 
 ## EXAMPLES
 
