@@ -189,7 +189,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-Available in Teams PowerShell Module 4.9.3 or later.
+Available in Teams PowerShell Module 4.9.3 and later.
 
 ## RELATED LINKS
 
