@@ -63,8 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingBrandingThemes
-List of meeting branding themes. You can alter list returned by `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter. (see example 1).
-It is not possible to add new/remove meeting branding themes using cmdlets. Please use Teams Admin Center (TAC) for that purpose.
+List of meeting branding themes. You can alter the list returned by the `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter.
+It is not possible to add or remove meeting branding themes using cmdlets. You should use Teams Admin Center for that purpose.
 
 ```yaml
 Type: PSListModifier
