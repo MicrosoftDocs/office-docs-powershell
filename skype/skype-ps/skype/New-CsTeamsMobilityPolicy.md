@@ -149,6 +149,7 @@ Accept wildcard characters: False
 
 ### -MobileDialerPreference
 Determines the mobile dialer preference, possible values are: Teams, Native, UserOverride.
+For more information, see [Manage user incoming calling policies](/microsoftteams/operator-connect-mobile-configure#manage-user-incoming-calling-policies).
 
 ```yaml
 Type: String
