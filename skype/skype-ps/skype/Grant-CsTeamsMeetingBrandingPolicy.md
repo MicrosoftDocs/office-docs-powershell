@@ -55,7 +55,7 @@ In this example, the command will assign TeamsMeetingBrandingPolicy with the nam
 ## PARAMETERS
 
 ### -Identity
-The user you want to grant policy to. This can be specified as SIP address, UserPrincipalName, or ObjectId.
+The user you want to grant policy to. This can be specified as an SIP address, UserPrincipalName, or ObjectId.
 
 ```yaml
 Type: String
