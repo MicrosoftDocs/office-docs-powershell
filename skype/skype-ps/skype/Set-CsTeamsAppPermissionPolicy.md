@@ -44,7 +44,8 @@ As an admin, you can use app permission policies to enable or block specific app
 
 ### Example 1
 
-No apps ae blocked,allow all Microsoft apps,Third-party apps,Custom apps.
+This example allows all Microsoft apps, Third-party apps, and Custom apps. No apps are blocked.
+
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
 New-CsTeamsAppPermissionPolicy -Identity Set-$identity
