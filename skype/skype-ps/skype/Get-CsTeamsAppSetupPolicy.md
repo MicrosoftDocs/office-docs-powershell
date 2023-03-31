@@ -43,7 +43,7 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 
 ### Example 1
 
-Get the Global Teams App Setup Policy.
+Get the global Teams app setup policy.
 ```powershell
  Get-CsTeamsAppSetupPolicy -Identity Global
 
