@@ -214,7 +214,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Name of App setup permission policy.If empty, all Identities will be used by default
+Name of App setup permission policy. If empty, all Identities will be used by default.
+
 
 ```yaml
 Type: XdsIdentity
