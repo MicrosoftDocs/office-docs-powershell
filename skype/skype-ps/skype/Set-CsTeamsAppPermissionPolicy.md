@@ -64,7 +64,8 @@ Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType A
 
 ### Example 3
 
-Allow Microsoft Lists、OneNote apps that can be installed by your users and block other Microsoft apps.
+This example allows Microsoft Lists and OneNote apps and blocks other Microsoft apps. Microsoft Lists and OneNote can be installed by your users.
+
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
 # create a new Teams app permission policy and block all apps
