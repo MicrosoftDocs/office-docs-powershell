@@ -47,7 +47,8 @@ New-CsTeamsAppSetupPolicy -Identity $identity
 
 ### Example 2
 
-Create a new TeamsAppSetupPolicy.Set users can upload a custom app package in the Teams app because set AllowSideLoading as true,and set users’s existing app pins can be added to the list of pinned apps set because set AllowUserPinning as true.
+Create a new TeamsAppSetupPolicy. Users can upload a custom app package in the Teams app because AllowSideLoading is set as True, and existing app pins can be added to the list of pinned apps because AllowUserPinning is set as True.
+
 ```powershell
 $identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
 New-CsTeamsAppSetupPolicy -Identity Get-$identity -AllowSideLoading $true -AllowUserPinning $true 
