@@ -54,7 +54,8 @@ Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType B
 
 ### Example 2
 
-No apps are allowed,block all Microsoft apps,Third-party apps,Custom apps.
+This example blocks all Microsoft apps, Third-party apps, and Custom apps. No apps are allowed.
+
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
 New-CsTeamsAppPermissionPolicy -Identity Set-$identity
