@@ -73,7 +73,8 @@ New-CsTeamsAppSetupPolicy -Identity $identity -AllowUserPinning $true -PinnedApp
 
 ### Example 4
 
-Create a new TeamsAppSetupPolicy and pin VivaConnections app to the messaging extension in Teams client by settings these apps as PinnedMessageBarApps.
+Create a new TeamsAppSetupPolicy and pin VivaConnections app to the messaging extension in Teams client by setting these apps as PinnedMessageBarApps.
+
 ```powershell
 $identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
 
