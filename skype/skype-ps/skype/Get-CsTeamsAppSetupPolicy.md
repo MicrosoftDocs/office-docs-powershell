@@ -60,6 +60,7 @@ AllowUserPinning     : True
 ### Example 2
 
 Get all the Teams App Setup Policies.
+
 ```powershell
 Get-CsTeamsAppSetupPolicy
 
