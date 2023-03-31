@@ -83,7 +83,8 @@ Set-CsTeamsAppSetupPolicy -Identity Set-$identity -AllowUserPinning $true -Pinne
 
 ### Example 5
 
-Create a new TeamsAppSetupPolicy and install VivaConnections App in your users' personal Teams environment by settings these apps as AppPresetList.
+Create a new TeamsAppSetupPolicy and install VivaConnections App in users' personal Teams environment by setting these apps as AppPresetList.
+
 ```powershell
 $identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
 
