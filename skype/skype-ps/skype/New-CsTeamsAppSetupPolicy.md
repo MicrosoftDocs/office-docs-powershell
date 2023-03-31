@@ -38,7 +38,8 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 
 ### Example 1
 
-Create a new TeamsAppSetupPolicy,if no parameters are specified, the Global Policy configuration is used by default.
+Create a new TeamsAppSetupPolicy, if no parameters are specified, the Global Policy configuration is used by default.
+
 ```powershell
 $identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
 New-CsTeamsAppSetupPolicy -Identity $identity
