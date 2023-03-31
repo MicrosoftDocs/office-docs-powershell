@@ -56,7 +56,8 @@ New-CsTeamsAppSetupPolicy -Identity Get-$identity -AllowSideLoading $true -Allow
 
 ### Example 3
 
-Create a new TeamsAppSetupPolicy and pin ActivityApp、ChatApp、TeamsApp apps to the app bar in Teams client by settings these apps as PinnedAppBarApps.
+Create a new TeamsAppSetupPolicy and pin ActivityApp, ChatApp, TeamsApp apps to the app bar in Teams client by setting these apps as PinnedAppBarApps.
+
 ```powershell
 $identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
 
