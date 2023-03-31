@@ -80,7 +80,8 @@ Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType A
 
 ### Example 4
 
-Allow Third-party TaskList、OnePlan apps that can be installed by your users and block other Third-party apps.
+This example allows Third-party TaskList and OnePlan apps and blocks other Third-party apps.  TaskList and OnePlan can be installed by your users.
+
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
 # create a new Teams app permission policy and block all apps
