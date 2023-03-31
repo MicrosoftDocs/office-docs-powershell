@@ -95,7 +95,8 @@ Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -GlobalCatalogAppsType Al
 
 ### Example 5
 
-Allow Custom GetStartApp、TestBotApp apps that can be installed by your users and block other Custom apps.
+This example allows Custom GetStartApp and TestBotApp apps and blocks other Custom apps. GetStartApp and TestBotApp can be installed by your users.
+
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
 # create a new Teams app permission policy and block all apps
