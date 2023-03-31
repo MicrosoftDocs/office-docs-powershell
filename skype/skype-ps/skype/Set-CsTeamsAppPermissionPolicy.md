@@ -44,27 +44,24 @@ As an admin, you can use app permission policies to enable or block specific app
 
 ### Example 1
 
-This example allows all Microsoft apps, Third-party apps, and Custom apps. No apps are blocked.
-
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
 New-CsTeamsAppPermissionPolicy -Identity Set-$identity
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType BlockedAppList  -DefaultCatalogApps @()-GlobalCatalogAppsType -GlobalCatalogApps @() BlockedAppList -PrivateCatalogAppsType BlockedAppList -PrivateCatalogApps @()
 ```
+This example allows all Microsoft apps, Third-party apps, and Custom apps. No apps are blocked.
 
 ### Example 2
-
-This example blocks all Microsoft apps, Third-party apps, and Custom apps. No apps are allowed.
 
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
 New-CsTeamsAppPermissionPolicy -Identity Set-$identity
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -DefaultCatalogApps @() -GlobalCatalogAppsType AllowedAppList -GlobalCatalogApps @() -PrivateCatalogAppsType AllowedAppList -PrivateCatalogApps @()
 ```
+This example blocks all Microsoft apps, Third-party apps, and Custom apps. No apps are allowed.
+
 
 ### Example 3
-
-This example allows Microsoft Lists and OneNote apps and blocks other Microsoft apps. Microsoft Lists and OneNote can be installed by your users.
 
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
@@ -77,10 +74,9 @@ $DefaultCatalogAppList = @($ListsApp,$OneNoteApp)
 # set allow Lists and OneNote apps and block other Microsoft apps
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList  -DefaultCatalogApps $DefaultCatalogAppList 
 ```
+This example allows Microsoft Lists and OneNote apps and blocks other Microsoft apps. Microsoft Lists and OneNote can be installed by your users.
 
 ### Example 4
-
-This example allows Third-party TaskList and OnePlan apps and blocks other Third-party apps.  TaskList and OnePlan can be installed by your users.
 
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
@@ -92,10 +88,9 @@ $GlobalCatalogAppList = @($TaskListApp,$OnePlanApp)
 # set allow TaskList and OnePlan apps and block other Third-party apps
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -GlobalCatalogAppsType AllowedAppList  -GlobalCatalogApps $GlobalCatalogAppList
 ```
+This example allows Third-party TaskList and OnePlan apps and blocks other Third-party apps.  TaskList and OnePlan can be installed by your users.
 
 ### Example 5
-
-This example allows Custom GetStartApp and TestBotApp apps and blocks other Custom apps. GetStartApp and TestBotApp can be installed by your users.
 
 ```powershell
 $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUniversal)
@@ -107,6 +102,7 @@ $PrivateCatalogAppList = @($GetStartApp,$TestBotApp)
 # set allow TaskList and OnePlan apps and block other custom apps
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -PrivateCatalogAppsType AllowedAppList  -PrivateCatalogApps $PrivateCatalogAppList
 ```
+This example allows Custom GetStartApp and TestBotApp apps and blocks other Custom apps. GetStartApp and TestBotApp can be installed by your users.
 
 ## PARAMETERS
 
