@@ -39,11 +39,11 @@ As an admin, you can use app permission policies to enable or block specific app
 
 ### Example 1
 
-Get the Global Teams App Permission Policy.
-
 ```powershell
 Get-CsTeamsAppPermissionPolicy -Identity Global
+```
 
+```Output
 Identity               : Global
 DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
 GlobalCatalogApps      : {}
@@ -53,13 +53,15 @@ DefaultCatalogAppsType : AllowedAppList
 GlobalCatalogAppsType  : AllowedAppList
 PrivateCatalogAppsType : AllowedAppList
 ```
+Get the Global Teams App Permission Policy.
 
 ### Example 2
 
-Get all the Teams App Permission Policies.
 ```powershell
 Get-CsTeamsAppPermissionPolicy
+```
 
+```Output
 Identity               : Global
 DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
 GlobalCatalogApps      : {}
@@ -78,6 +80,7 @@ DefaultCatalogAppsType : AllowedAppList
 GlobalCatalogAppsType  : AllowedAppList
 PrivateCatalogAppsType : AllowedAppList
 ```
+Get all the Teams App Permission Policies.
 
 ## PARAMETERS
 
