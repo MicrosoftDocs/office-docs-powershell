@@ -40,6 +40,7 @@ As an admin, you can use app permission policies to enable or block specific app
 ### Example 1
 
 Get the Global Teams App Permission Policy.
+
 ```powershell
 Get-CsTeamsAppPermissionPolicy -Identity Global
 
