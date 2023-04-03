@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppPresetList
-Choose which apps and messaging extensions you want installed in your users' personal Teams environment and in meetings they create. Users can install other available apps from the Teams app store. 
+Choose which apps and messaging extensions you want to be installed in your users' personal Teams environment and in meetings they create. Users can install other available apps from the Teams app store. 
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset[]
