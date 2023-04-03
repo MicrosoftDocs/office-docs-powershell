@@ -214,7 +214,7 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 
 **Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 _Performance_
 
@@ -549,7 +549,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 **Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 and later (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 and later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 New attributes have now been introduced in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
