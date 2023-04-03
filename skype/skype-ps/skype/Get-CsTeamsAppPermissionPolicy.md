@@ -81,7 +81,8 @@ DefaultCatalogAppsType : AllowedAppList
 GlobalCatalogAppsType  : AllowedAppList
 PrivateCatalogAppsType : AllowedAppList
 ```
-Get all the Teams App Permission Policies.
+Get all the Teams app permission policies.
+
 
 ## PARAMETERS
 
