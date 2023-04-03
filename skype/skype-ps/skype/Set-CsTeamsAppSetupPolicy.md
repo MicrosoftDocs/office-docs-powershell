@@ -49,7 +49,7 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 New-CsTeamsAppSetupPolicy -Identity 'Set-Test'
 Set-CsTeamsAppSetupPolicy -Identity 'Set-Test' -AllowUserPinning $true -AllowSideLoading $false 
 ```
-Step 1: Create new teams app setup policy named "Set-Test".
+Step 1: Create a new Teams app setup policy named "Set-Test".
 Step 2: Set AllowUserPinning as true, AllowSideLoading as false.
 
 ### Example 2
