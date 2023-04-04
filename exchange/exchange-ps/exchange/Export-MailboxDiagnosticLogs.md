@@ -100,9 +100,11 @@ Accept wildcard characters: False
 ### -ComponentName
 The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises Exchange or Exchange Online). Valid values include:
 
+- AcceptCalendarSharingInvite
 - ActionProcessingAgent
 - BirthdayAssistant
 - CalendarPermissions
+- CalendarSharingInvite
 - CalendarSharingLocalFolder
 - DefaultViewIndexer
 - FreeBusyPublishingAssistantQuickLog
@@ -114,6 +116,7 @@ The ComponentName parameter specifies the component that you want to retrieve th
 - OOFRules
 - RBA
 - RemindersAssistant
+- Sharing
 - SharingMigrationAssistant
 - SharingSyncAssistant
 - SubstrateHoldTracking
