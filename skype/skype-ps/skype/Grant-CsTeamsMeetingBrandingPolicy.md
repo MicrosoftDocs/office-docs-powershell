@@ -54,6 +54,36 @@ In this example, the command will assign TeamsMeetingBrandingPolicy with the nam
 
 ## PARAMETERS
 
+### -Global
+Use this switch if you want to grant the specified policy to be the default policy for all users in the tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 The user you want to grant policy to. This can be specified as an SIP address, UserPrincipalName, or ObjectId.
 
@@ -84,21 +114,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Group
-Specifies the group used for the group policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Rank
 The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
@@ -109,21 +124,6 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-Use this switch if you want to grant the specified policy to be the default policy for all users in the tenant.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

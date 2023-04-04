@@ -45,39 +45,6 @@ In the example shown above, the commands will change brand accent color of theme
 
 ## PARAMETERS
 
-### -MeetingBackgroundImages
-*This parameter is reserved for Microsoft internal use only.*
-List of meeting background images.
-It is not possible to add or remove background images using cmdlets. You should use Teams Admin Center for that purpose.
-
-```yaml
-Type: PSListModifier
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MeetingBrandingThemes
-List of meeting branding themes. You can alter the list returned by the `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter.
-It is not possible to add or remove meeting branding themes using cmdlets. You should use Teams Admin Center for that purpose.
-
-```yaml
-Type: PSListModifier
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultTheme
 *This parameter is reserved for Microsoft internal use only.*
 Identity of default meeting theme.
@@ -139,6 +106,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MeetingBackgroundImages
+*This parameter is reserved for Microsoft internal use only.*
+List of meeting background images.
+It is not possible to add or remove background images using cmdlets. You should use Teams Admin Center for that purpose.
+
+```yaml
+Type: PSListModifier
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingBrandingThemes
+List of meeting branding themes. You can alter the list returned by the `Get-CsTeamsMeetingBrandingPolicy` cmdlet and pass it to this parameter.
+It is not possible to add or remove meeting branding themes using cmdlets. You should use Teams Admin Center for that purpose.
+
+```yaml
+Type: PSListModifier
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
@@ -161,21 +176,6 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

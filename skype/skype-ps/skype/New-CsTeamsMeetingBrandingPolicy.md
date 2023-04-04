@@ -42,40 +42,6 @@ In this example, the command will create an empty meeting branding policy with t
 
 ## PARAMETERS
 
-### -MeetingBackgroundImages
-*This parameter is reserved for Microsoft internal use only.*
-List of meeting background images.
-Image upload is not possible via cmdlets. You should upload background images via Teams Admin Center.
-
-```yaml
-Type: PSListModifier
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MeetingBrandingThemes
-*This parameter is reserved for Microsoft internal use only.*
-List of meeting branding themes.
-Image upload is not possible via cmdlets. You should create meeting themes via Teams Admin Center.
-
-```yaml
-Type: PSListModifier
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DefaultTheme
 *This parameter is reserved for Microsoft internal use only.*
 Identity of default meeting theme.
@@ -87,21 +53,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Identity of meeting branding policy that will be created.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -137,6 +88,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Identity
+Identity of meeting branding policy that will be created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingBackgroundImages
+*This parameter is reserved for Microsoft internal use only.*
+List of meeting background images.
+Image upload is not possible via cmdlets. You should upload background images via Teams Admin Center.
+
+```yaml
+Type: PSListModifier
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingBrandingThemes
+*This parameter is reserved for Microsoft internal use only.*
+List of meeting branding themes.
+Image upload is not possible via cmdlets. You should create meeting themes via Teams Admin Center.
+
+```yaml
+Type: PSListModifier
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
@@ -159,21 +174,6 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
