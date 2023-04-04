@@ -240,11 +240,15 @@ If you receive errors, check the following requirements:
 
 - If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a non-federated account in Microsoft 365 to connect to Exchange Online PowerShell.
 
-- REST-based connections to Exchange Online PowerShell require the PowerShellGet module, and by dependency, the PackageManagement module, so you'll receive errors if you try to connect without having them installed. For details, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+- REST-based connections to Exchange Online PowerShell require the PowerShellGet module, and by dependency, the PackageManagement module, so you'll receive errors if you try to connect without having them installed. For example, you might see the following error:
 
-- After you connect, you might received the following error:
+  > The term 'Update-ModuleManifest' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
-  > Unable to load file \<Filename and version\>
+  For more information about the PowerShellGet and PackageManagement module requirements, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+
+- After you connect, you might received an error that looks like this:
+
+  > Could not load file or assembly 'System.IdentityModel.Tokens.Jwt,Version=\<Version\>, Culture=neutral, PublicKeyToken=\<TokenValue\>'. Could not find or load a specific file.
 
   This error happens when the Exchange Online PowerShell module conflicts with another module that's imported into the runspace. Try connecting in a new Windows PowerShell window before importing other modules.
 
