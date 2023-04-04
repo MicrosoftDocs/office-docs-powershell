@@ -29,6 +29,7 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-OU <OUIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
+ [-Sort]
  [-UnassignedUser]
  [-UsePreferredDC]
  [<CommonParameters>]
@@ -211,9 +212,9 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 _Performance_
 
@@ -274,9 +275,9 @@ These filtering operators have been reintroduced:
 **Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
 
 
-**Updates in Teams PowerShell Module version 3.0.0 and above**
+**Updates in Teams PowerShell Module version 3.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 and later):
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
@@ -497,6 +498,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Sort
+
+Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. For Example:
+
+- Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
+- Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
+
 ### -UnassignedUser
 This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
 
@@ -539,9 +547,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 and later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 New attributes have now been introduced in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
