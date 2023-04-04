@@ -45,7 +45,7 @@ In this example, the command returns a collection of all the teams meeting brand
 PS C:\> CsTeamsMeetingBrandingPolicy -Identity "policy test2"
 ```
 
-In the example shown above, the command will return the meeting branding policy that has an Identity `policy test 2`. Because identities are unique, this command will never return more than one item.
+In this example, the command returns the meeting branding policy that has an Identity `policy test 2`. Because identities are unique, this command will never return more than one item.
 
 ## PARAMETERS
 
@@ -88,7 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-Available in Teams PowerShell Module 4.9.3 or later.
+Available in Teams PowerShell Module 4.9.3 and later.
 
 ## RELATED LINKS
 

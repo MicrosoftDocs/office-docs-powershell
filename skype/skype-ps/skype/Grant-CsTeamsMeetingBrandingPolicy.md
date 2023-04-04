@@ -43,7 +43,7 @@ Assigns a teams meeting branding policy at the per-user scope. The CsTeamsMeetin
 PS C:\> Grant-CsTeamsMeetingBrandingPolicy -identity "alice@contoso.com" -PolicyName "Policy Test"
 ```
 
-In the example shown above, the command will assign TeamsMeetingBrandingPolicy with name `Policy Test` to user `alice@contoso.com`.
+In this example, the command assigns TeamsMeetingBrandingPolicy with the name `Policy Test` to user `alice@contoso.com`.
 
 ### Assign TeamsMeetingBrandingPolicy to a group
 ```powershell

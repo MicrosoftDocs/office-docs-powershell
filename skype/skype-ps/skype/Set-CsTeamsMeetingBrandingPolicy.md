@@ -14,7 +14,7 @@ applicable: Skype for Business Online
 # Set-CsTeamsMeetingBrandingPolicy
 
 ## SYNOPSIS
-The CsTeamsMeetingBrandingPolicy cmdlets enable administrators to control the appearance in meetings by defining custom background, logo and colors.
+The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ PS C:\> $brandingPolicy.MeetingBrandingThemes[0].BrandAccentColor = "#FF0000"
 PS C:\> Set-CsTeamsMeetingBrandingPolicy -Identity "demo branding" -MeetingBrandingThemes $brandingPolicy.MeetingBrandingThemes
 ```
 
-In the example shown above, the commands will change brand accent color of theme inside the `demo branding` meeting branding policy to `#FF0000`. 
+In this example, the commands will change the brand accent color of the theme inside the `demo branding` meeting branding policy to `#FF0000`. 
 
 ## PARAMETERS
 
