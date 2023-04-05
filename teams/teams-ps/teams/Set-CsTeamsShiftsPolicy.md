@@ -18,7 +18,8 @@ Set-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [-ShiftNoticeFrequency <Stri
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance. Use this to set the policy name, and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance. Use this to set the policy name and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+
 
 
 ## EXAMPLES
