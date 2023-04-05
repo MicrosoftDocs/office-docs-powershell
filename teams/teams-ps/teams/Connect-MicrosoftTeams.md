@@ -434,9 +434,12 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsEnvironmentName
-Use this setting if your organization is in one of the Teams Government Cloud environments.
+TeamsEnvironmentName specifies the Teams environment. The following environments are supported:
 
-Specify "TeamsGCCH" if your organization is in the GCC High Environment.  Specify "TeamsDOD" if your organization is in the DoD Environment. 
+   - Commercial or GCC environments: Don’t use this parameter, this is the default. 
+   - GCC High environment: TeamsGCCH
+   - DoD environment: TeamsDOD
+   - Microsoft Teams operated by 21Vianet: TeamsChina
 
 ```yaml
 Type: String
