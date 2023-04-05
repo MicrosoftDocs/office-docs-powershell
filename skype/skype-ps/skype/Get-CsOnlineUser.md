@@ -505,6 +505,19 @@ Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "
 - Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
 - Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
 
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UnassignedUser
 This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
 
