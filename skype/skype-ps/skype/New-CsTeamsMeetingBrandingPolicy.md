@@ -13,7 +13,7 @@ manager: stanlythomas
 # New-CsTeamsMeetingBrandingPolicy
 
 ## SYNOPSIS
-The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ New-CsTeamsMeetingBrandingPolicy
 ```
 
 ## DESCRIPTION
-This cmdlet creates a new TeamsMeetingBrandingPolicy.  
+This cmdlet creates a new **TeamsMeetingBrandingPolicy**.  
 You can only create an empty meeting branding policy with this cmdlet, image upload is not supported.
 If you want to upload the images, you should use Teams Admin Center.
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## NOTES
 

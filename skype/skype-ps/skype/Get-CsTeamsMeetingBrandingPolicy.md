@@ -13,7 +13,7 @@ manager: stanlythomas
 # Get-CsTeamsMeetingBrandingPolicy
 
 ## SYNOPSIS
-The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 
 ## SYNTAX
@@ -29,7 +29,7 @@ Get-CsTeamsMeetingBrandingPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsTeamsMeetingBrandingPolicy cmdlet enables you to return information about all the meeting branding policies that have been configured for use in your organization.
+The `Get-CsTeamsMeetingBrandingPolicy` cmdlet enables you to return information about all the meeting branding policies that have been configured for use in your organization.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ In this example, the command returns a collection of all the teams meeting brand
 PS C:\> CsTeamsMeetingBrandingPolicy -Identity "policy test2"
 ```
 
-In this example, the command returns the meeting branding policy that has an Identity `policy test 2`. Because identities are unique, this command will never return more than one item.
+In this example, the command returns the meeting branding policy that has an **Identity** `policy test 2`. Because identities are unique, this command will never return more than one item.
 
 ## PARAMETERS
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: -Identity global. If this parameter is omitted, then all the meeting branding policies configured for use in your organization will be returned.
+Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: `-Identity global`. If this parameter is omitted, then all the meeting branding policies configured for use in your organization will be returned.
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## OUTPUTS
 

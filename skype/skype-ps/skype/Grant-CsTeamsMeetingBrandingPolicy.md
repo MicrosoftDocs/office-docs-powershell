@@ -13,7 +13,7 @@ manager: stanlythomas
 # Grant-CsTeamsMeetingBrandingPolicy
 
 ## SYNOPSIS
-Assigns a teams meeting branding policy at the per-user scope. The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+Assigns a teams meeting branding policy at the per-user scope. The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Grant-CsTeamsMeetingBrandingPolicy [[-PolicyName] <String>] [-Global] [-Force] [
 ```
 
 ## DESCRIPTION
-Assigns a teams meeting branding policy at the per-user scope. The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+Assigns a teams meeting branding policy at the per-user scope. The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 ## EXAMPLES
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name of the custom policy that is being assigned to the user. To remove a specific assignment and fall back to the default tenant policy, you can assign it to $Null.
+The name of the custom policy that is being assigned to the user. To remove a specific assignment and fall back to the default tenant policy, you can assign it to `$Null`.
 
 ```yaml
 Type: String
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
 ## NOTES

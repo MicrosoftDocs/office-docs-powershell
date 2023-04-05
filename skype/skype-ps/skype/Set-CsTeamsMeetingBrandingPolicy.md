@@ -14,7 +14,7 @@ applicable: Skype for Business Online
 # Set-CsTeamsMeetingBrandingPolicy
 
 ## SYNOPSIS
-The CsTeamsMeetingBrandingPolicy cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Set-CsTeamsMeetingBrandingPolicy
 ```
 
 ## DESCRIPTION
-The Set-CsTeamsMeetingBrandingPolicy cmdlet allows administrators to update existing meeting branding policies.
+The `Set-CsTeamsMeetingBrandingPolicy` cmdlet allows administrators to update existing meeting branding policies.
 However, it cannot be used to upload the images. If you want to upload the images, you should use Teams Admin Center.
 
 ## EXAMPLES
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Identity of meeting branding policy that will be updated. To refer to the global policy, use this syntax: -Identity global.
+Identity of meeting branding policy that will be updated. To refer to the global policy, use this syntax: `-Identity global`.
 
 ```yaml
 Type: String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## NOTES
 
