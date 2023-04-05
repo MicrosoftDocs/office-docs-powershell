@@ -758,7 +758,7 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 {{Manually Enter Get-CsTeamsMeetingPolicy Description Here}}
 
 ### [Get-CsTeamsMeetingBrandingPolicy](Get-CsTeamsMeetingBrandingPolicy.md)
-{{Manually Enter Get-CsTeamsMeetingBrandingPolicy Description Here}}
+The Get-CsTeamsMeetingBrandingPolicy cmdlet enables you to return information about all the meeting branding policies that have been configured for use in your organization.
 
 ### [Get-CsTelemetryConfiguration](Get-CsTelemetryConfiguration.md)
 {{Manually Enter Get-CsTelemetryConfiguration Description Here}}
@@ -1013,7 +1013,7 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 {{Manually Enter Grant-CsTeamsMeetingPolicy Description Here}}
 
 ### [Grant-CsTeamsMeetingBrandingPolicy](Grant-CsTeamsMeetingBrandingPolicy.md)
-{{Manually Enter Grant-CsTeamsMeetingBrandingPolicy Description Here}}
+Assigns a teams meeting branding policy at the per-user scope.
 
 ### [Grant-CsTenantDialPlan](Grant-CsTenantDialPlan.md)
 {{Manually Enter Grant-CsTenantDialPlan Description Here}}
@@ -1592,7 +1592,7 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 {{Manually Enter New-CsTeamsMeetingPolicy Description Here}}
 
 ### [New-CsTeamsMeetingBrandingPolicy](New-CsTeamsMeetingBrandingPolicy.md)
-{{Manually Enter New-CsTeamsMeetingBrandingPolicy Description Here}}
+This cmdlet creates a new TeamsMeetingBrandingPolicy.  
 
 ### [New-CsTelemetryConfiguration](New-CsTelemetryConfiguration.md)
 {{Manually Enter New-CsTelemetryConfiguration Description Here}}
@@ -2090,7 +2090,7 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 {{Manually Enter Remove-CsTeamsMeetingPolicy Description Here}}
 
 ### [Remove-CsTeamsMeetingBrandingPolicy](Remove-CsTeamsMeetingBrandingPolicy.md)
-{{Manually Enter Remove-CsTeamsMeetingBrandingPolicy Description Here}}
+Deletes a previously created TeamsMeetingBrandingPolicy.
 
 ### [Remove-CsTelemetryConfiguration](Remove-CsTelemetryConfiguration.md)
 {{Manually Enter Remove-CsTelemetryConfiguration Description Here}}
@@ -2723,7 +2723,7 @@ The following cmdlet references are for Skype for Business and Microsoft Teams. 
 {{Manually Enter Set-CsTeamsMeetingPolicy Description Here}}
 
 ### [Set-CsTeamsMeetingBrandingPolicy](Set-CsTeamsMeetingBrandingPolicy.md)
-{{Manually Enter Set-CsTeamsMeetingBrandingPolicy Description Here}}
+The Set-CsTeamsMeetingBrandingPolicy cmdlet allows administrators to update existing meeting branding policies.
 
 ### [Set-CsTelemetryConfiguration](Set-CsTelemetryConfiguration.md)
 {{Manually Enter Set-CsTelemetryConfiguration Description Here}}
