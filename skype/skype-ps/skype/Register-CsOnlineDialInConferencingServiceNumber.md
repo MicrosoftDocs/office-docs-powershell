@@ -13,7 +13,9 @@ ms.reviewer:
 # Register-CsOnlineDialInConferencingServiceNumber
 
 ## SYNOPSIS
-Provide the topic introduction here.
+When you buy Audio Conferencing licenses, Microsoft is hosting your audio conferencing bridge for your organization. The audio conferencing bridge gives out dial-in phone numbers from different locations so that meeting organizers and participants can use them to join Skype for Business or Microsoft Teams meetings using a phone.
+In addition to the phone numbers already assigned to your conferencing bridge, you can get additional service numbers (toll and toll-free numbers used for audio conferencing) from other locations, and then assign them to the conferencing bridge so you can expand coverage for your users. The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge. 
+
 
 ## SYNTAX
 
@@ -32,16 +34,16 @@ Register-CsOnlineDialInConferencingServiceNumber [-Instance] <ConferencingServic
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge. 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Register-CsOnlineDialinConferencingServiceNumber -Identity <number> -BridgeId <guid>
 ```
 
-Insert descriptive text for example 1.
+The above command registers the telephone number provided within <number> to your conference Bridge. To find the bridge ID associated with your conference bridge you can use the command Get-CsOnlineDialInConferencingBridge.
 
 
 ## PARAMETERS
