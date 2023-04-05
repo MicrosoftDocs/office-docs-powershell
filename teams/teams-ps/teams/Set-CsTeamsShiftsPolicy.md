@@ -28,7 +28,8 @@ This cmdlet allows you to set or update properties of a TeamsShiftPolicy instanc
 ```powershell
 PS C:\> Set-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage -ShiftNoticeMessageType Message1 -ShiftNoticeFrequency always -AccessGracePeriodMinutes 5
 ```
-In this example, the policy instance is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage", a warning message (Message 1) will be always be displayed to the user on opening Teams during off shift hours.
+In this example, the policy instance is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage", a warning message (Message 1) will always be displayed to the user on opening Teams during off shift hours.
+
 
 ## PARAMETERS
 
