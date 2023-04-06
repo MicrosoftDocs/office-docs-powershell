@@ -200,7 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalogAppsType
-Choose to allow or block the installation of third-party.
+Choose to allow or block the installation of third-party apps.
+
 
 ```yaml
 Type: String
