@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -PinnedAppBarApps
-Pinning an app displays the app in the app bar in Teams client. Admins can pin app and they can allow users to pin. Pinning is a used to highlight apps that are needed the most by users and promote ease of access.
+Pinning an app displays the app in the app bar in Teams client. Admins can pin apps and they can allow users to pin apps. Pinning is used to highlight apps that are needed the most by users and promote ease of access.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp[]
