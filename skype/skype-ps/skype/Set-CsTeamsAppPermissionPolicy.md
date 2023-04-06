@@ -184,7 +184,8 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalogApps
-Choose which Teams apps published by a third-party that can be installed by your users.
+Choose which Teams apps published by a third party can be installed by your users.
+
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.GlobalCatalogApp[]
