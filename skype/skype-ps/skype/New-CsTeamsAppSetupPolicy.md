@@ -97,7 +97,7 @@ Create a new TeamsAppSetupPolicy and install VivaConnections App in users' perso
 ## PARAMETERS
 
 ### -Description
-Description of App setup policy.
+Description of the app setup policy.
 
 ```yaml
 Type: String
