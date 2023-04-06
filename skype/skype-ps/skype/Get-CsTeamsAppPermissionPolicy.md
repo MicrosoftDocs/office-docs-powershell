@@ -38,7 +38,51 @@ As an admin, you can use app permission policies to enable or block specific app
 ## EXAMPLES
 
 ### Example 1
-Intentionally omitted.
+
+```powershell
+Get-CsTeamsAppPermissionPolicy -Identity Global
+```
+
+```Output
+Identity               : Global
+DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
+GlobalCatalogApps      : {}
+PrivateCatalogApps     : {}
+Description            :
+DefaultCatalogAppsType : AllowedAppList
+GlobalCatalogAppsType  : AllowedAppList
+PrivateCatalogAppsType : AllowedAppList
+```
+Get the global Teams app permission policy.
+
+
+### Example 2
+
+```powershell
+Get-CsTeamsAppPermissionPolicy
+```
+
+```Output
+Identity               : Global
+DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
+GlobalCatalogApps      : {}
+PrivateCatalogApps     : {}
+Description            :
+DefaultCatalogAppsType : AllowedAppList
+GlobalCatalogAppsType  : AllowedAppList
+PrivateCatalogAppsType : AllowedAppList
+
+Identity               : Tag:test
+DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
+GlobalCatalogApps      : {}
+PrivateCatalogApps     : {}
+Description            :
+DefaultCatalogAppsType : AllowedAppList
+GlobalCatalogAppsType  : AllowedAppList
+PrivateCatalogAppsType : AllowedAppList
+```
+Get all the Teams app permission policies.
+
 
 ## PARAMETERS
 
@@ -58,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Do not use.
+Name of the app setup permission policy. If empty, all identities will be used by default.
+
 
 ```yaml
 Type: XdsIdentity
