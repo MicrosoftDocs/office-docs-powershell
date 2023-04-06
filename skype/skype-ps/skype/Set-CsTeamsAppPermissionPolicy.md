@@ -49,7 +49,8 @@ $identity = "TestTeamsAppPermissionPolicy" + (Get-Date -Format FileDateTimeUnive
 New-CsTeamsAppPermissionPolicy -Identity Set-$identity
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType BlockedAppList  -DefaultCatalogApps @()-GlobalCatalogAppsType -GlobalCatalogApps @() BlockedAppList -PrivateCatalogAppsType BlockedAppList -PrivateCatalogApps @()
 ```
-This example allows all Microsoft apps, Third-party apps, and Custom apps. No apps are blocked.
+This example allows all Microsoft apps, third-party apps, and custom apps. No apps are blocked.
+
 
 ### Example 2
 
