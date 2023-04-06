@@ -90,7 +90,8 @@ $GlobalCatalogAppList = @($TaskListApp,$OnePlanApp)
 # set allow TaskList and OnePlan apps and block other Third-party apps
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -GlobalCatalogAppsType AllowedAppList  -GlobalCatalogApps $GlobalCatalogAppList
 ```
-This example allows Third-party TaskList and OnePlan apps and blocks other Third-party apps.  TaskList and OnePlan can be installed by your users.
+This example allows third-party TaskList and OnePlan apps and blocks other third-party apps.  TaskList and OnePlan can be installed by your users.
+
 
 ### Example 5
 
