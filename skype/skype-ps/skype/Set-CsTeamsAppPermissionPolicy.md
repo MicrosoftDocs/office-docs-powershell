@@ -137,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultCatalogAppsType
-Choose to allow or block the installation of Microsoft Apps.
+Choose to allow or block the installation of Microsoft apps.
+
 
 ```yaml
 Type: String
