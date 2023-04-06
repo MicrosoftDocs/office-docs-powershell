@@ -153,7 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of App setup permission policy.
+Description of app setup permission policy.
+
 
 ```yaml
 Type: String
