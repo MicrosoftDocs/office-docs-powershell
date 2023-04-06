@@ -104,7 +104,8 @@ $PrivateCatalogAppList = @($GetStartApp,$TestBotApp)
 # set allow TaskList and OnePlan apps and block other custom apps
 Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -PrivateCatalogAppsType AllowedAppList  -PrivateCatalogApps $PrivateCatalogAppList
 ```
-This example allows Custom GetStartApp and TestBotApp apps and blocks other Custom apps. GetStartApp and TestBotApp can be installed by your users.
+This example allows custom GetStartApp and TestBotApp apps and blocks other custom apps. GetStartApp and TestBotApp can be installed by your users.
+
 
 ## PARAMETERS
 
