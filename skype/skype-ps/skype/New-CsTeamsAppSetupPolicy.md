@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -PinnedMessageBarApps
-Apps will be pinned in messaging extensions and into the ellipsis menu.
+Apps are pinned in messaging extensions and into the ellipsis menu.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp[]
