@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-QuarantinePolicy [[-Identity] <QuarantineTagIdParameter>]
- [-QuarantinePolicyType <QuarantinePolicyTypeEnum>]
+ [-QuarantinePolicyType <QuarantinePolicyType>]
  [<CommonParameters>]
 ```
 
@@ -52,7 +52,7 @@ This example returns detailed information about the quarantine policy named NoAc
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy
 ```
 
-This example returns detailed information about the default quarantine policy named GlobalDefaultTag that controls the global quarantine notification (formerly known as end-user spam notification) settings.
+This example returns detailed information about the default quarantine policy named DefaultGlobalTag that controls the global quarantine notification (formerly known as end-user spam notification) settings.
 
 ## PARAMETERS
 
@@ -80,10 +80,10 @@ Accept wildcard characters: False
 The QuarantinePolicyType parameter filters the results by the specified quarantine policy type. Valid values are:
 
 - QuarantinePolicy: This is the default value, and returns built-in and custom quarantine policies.
-- GlobalQuarantinePolicy: This value is required to return the global settings (quarantine notification settings) in the quarantine policy named GlobalDefaultTag.
+- GlobalQuarantinePolicy: This value is required to return the global settings (quarantine notification settings) in the quarantine policy named DefaultGlobalTag.
 
 ```yaml
-Type: QuarantinePolicyTypeEnum
+Type: QuarantinePolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: QuarantinePolicy, GlobalQuarantinePolicy
