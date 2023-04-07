@@ -27,6 +27,7 @@ Set-DefaultTenantMyAnalyticsFeatureConfig
  [-Feature <String>]
  [-IsEnabled <Boolean>]
  [-ResultSize <Unlimited>]
+ [-SamplingRate <Double>]
  [<CommonParameters>]
 ```
 
@@ -70,6 +71,14 @@ Set-DefaultTenantMyAnalyticsFeatureConfig -PrivacyMode Opt-out -Feature Add-in -
 ```
 
 This example enables the Viva Insight add-in feature for the organization while disabling the other features.
+
+
+### Example 5
+```powershell
+Set-DefaultTenantMyAnalyticsFeatureConfig -Feature Meeting-Effectiveness-Survey-Sampling-Rate -SamplingRate 0.2
+```
+
+This example sets the meeting effectiveness survey sampling rate to 20%.
 
 ## PARAMETERS
 
@@ -149,6 +158,24 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SamplingRate
+This parameter is available only in version 3.2.0-Preview2 or later.
+
+The SamplingRate parameter specifies the meeting effectiveness survey sampling rate. The percentage value is expressed a a decimal (for example, 0.1 indicates 10%). A valid value is from 0.1 to 0.7.
+
+```yaml
+Type: Double
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
