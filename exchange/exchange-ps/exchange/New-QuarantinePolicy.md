@@ -39,7 +39,7 @@ New-QuarantinePolicy [-Name] <String>
  [-MultiLanguageSetting <MultiValuedProperty>]
  [-OrganizationBrandingEnabled <Boolean>]
  [-QuarantineRetentionDays <Int32>]
- [-QuarantinePolicyType <QuarantinePolicyTypeEnum>]
+ [-QuarantinePolicyType <QuarantinePolicyType>]
  [<CommonParameters>]
 ```
 
@@ -377,7 +377,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: QuarantinePolicyTypeEnum
+Type: QuarantinePolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: QuarantinePolicy, GlobalQuarantinePolicy
