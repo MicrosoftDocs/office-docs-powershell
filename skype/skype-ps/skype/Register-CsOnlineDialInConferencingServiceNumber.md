@@ -43,7 +43,7 @@ The Register-CsOnlineDialInConferencingServiceNumber command allows you to assig
 Register-CsOnlineDialinConferencingServiceNumber -Identity <number> -BridgeId <guid>
 ```
 
-The above command registers the telephone number provided within <number> to your conference Bridge. To find the bridge ID associated with your conference bridge you can use the command Get-CsOnlineDialInConferencingBridge.
+This command registers the telephone number provided within <number> to your conference bridge. To find the bridge ID associated with your conference bridge you can use the command Get-CsOnlineDialInConferencingBridge.
 
 
 ## PARAMETERS
