@@ -719,6 +719,34 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 
 The ApplyHtmlDisclaimerText parameter specifies an action that adds the disclaimer text to messages. Disclaimer text can include HTML tags and inline cascading style sheet (CSS) tags. You can add images using the IMG tag.
 
+This parameter also supports the following tokens that use values from the sender:
+
+- %%City%%
+- %%Company%%
+- %%CountryOrRegion%%
+- %%Department%%
+- %%DisplayName%%
+- %%Fax%%
+- %%FirstName%%
+- %%HomePhone%%
+- %%Initials%%
+- %%LastName%%
+- %%Manager%%
+- %%MobilePhone%%
+- %%Notes%%
+- %%Office%%
+- %%Pager%%
+- %%Phone%%
+- %%PostalCode%%
+- %%PostOfficeBox%%
+- %%StateOrProvince%%
+- %%StreetAddress%%
+- %%Title%%
+- %%UserPrincipalName%%
+- %%WindowsEmailAddress%%
+
+The maximum number of characters is 5000.
+
 You use the ApplyHtmlDisclaimerLocation parameter to specify where to insert the text in the message body (the default value is Append), and the ApplyHtmlDisclaimerFallbackAction parameter to specify what to do if the disclaimer can't be added to the message (the default value is Wrap).
 
 ```yaml
