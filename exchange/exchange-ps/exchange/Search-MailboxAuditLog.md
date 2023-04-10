@@ -56,6 +56,8 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
 ## DESCRIPTION
 The Search-MailboxAuditLog cmdlet performs a synchronous search of mailbox audit logs for one or more specified mailboxes and displays search results in the Exchange Management Shell window. To search mailbox audit logs for multiple mailboxes and have the results sent by email to specified recipients, use the New-MailboxAuditLogSearch cmdlet instead. To learn more about mailbox audit logging, see [Mailbox audit logging in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/mailbox-audit-logging/mailbox-audit-logging).
 
+In multi-geo environments, when you run this cmdlet in a different region from the mailbox that you're trying to search, you might receive the error, "An error occurred while trying to access the audit log." In this scenario, you need to anchor the PowerShell session to a user in the same region as the mailbox as described in [Connect directly to a geo location using Exchange Online PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/administering-exchange-online-multi-geo#connect-directly-to-a-geo-location-using-exchange-online-powershell).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
