@@ -24,7 +24,7 @@ User-level policy for tenant admin to configure options for customizing Teams ev
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsEventsPolicy -Identity Global -AllowWebinars Disabled
+Set-CsTeamsEventsPolicy -Identity Global -AllowWebinars Disabled
 ```
 
 The command shown in Example 1 sets the value of the Default (Global) Events Policy in the organization to disable webinars, and leaves all other parameters the same.
