@@ -40,10 +40,10 @@ The Register-CsOnlineDialInConferencingServiceNumber command allows you to assig
 
 ### -------------------------- Example 1 --------------------------
 ```
-Register-CsOnlineDialinConferencingServiceNumber -Identity <+1425555XXX> -BridgeId <fb91u3e9-5c2a-42c3-8yy5-ec02beexxx09>
+Register-CsOnlineDialinConferencingServiceNumber -Identity +1425555XXX -BridgeId fb91u3e9-5c2a-42c3-8yy5-ec02beexxx09
 ```
 
-This command registers the telephone number <+1425555XXX> to your conference bridge. To find the bridge ID associated with your conference bridge you can use the command Get-CsOnlineDialInConferencingBridge.
+This command registers the telephone number +1425555XXX to your conference bridge. To find the bridge ID associated with your conference bridge you can use the command Get-CsOnlineDialInConferencingBridge.
 
 
 ## PARAMETERS
