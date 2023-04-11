@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The result size for bulk get.
+The result size for bulk get. This parameter is currently not working.
 
 ```yaml
 Type: System.Int32
