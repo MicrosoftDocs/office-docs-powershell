@@ -1536,31 +1536,31 @@ The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception f
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -1586,31 +1586,31 @@ The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
@@ -1652,31 +1652,31 @@ The ExceptIfSenderADAttributeContainsWords parameter specifies an exception for 
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -1702,31 +1702,31 @@ The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception fo
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
@@ -2621,31 +2621,31 @@ The RecipientADAttributeContainsWords parameter specifies a condition for the DL
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -2671,31 +2671,31 @@ The RecipientADAttributeMatchesPatterns parameter specifies a condition for the 
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
@@ -2853,31 +2853,31 @@ The SenderADAttributeContainsWords parameter specifies a condition for the DLP r
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -2903,31 +2903,31 @@ The SenderADAttributeMatchesPatterns parameter specifies a condition for the DLP
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
