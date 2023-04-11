@@ -39,24 +39,20 @@ Apps are pinned to the app bar. This is the bar on the side of the Teams desktop
 ### Example 1
 
 ```powershell
-$identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
-New-CsTeamsAppSetupPolicy -Identity $identity
+New-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal)
 ```
 Create a new TeamsAppSetupPolicy, if no parameters are specified, the Global Policy configuration is used by default.
 
 ### Example 2
 
 ```powershell
-$identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
-New-CsTeamsAppSetupPolicy -Identity Get-$identity -AllowSideLoading $true -AllowUserPinning $true 
+New-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowSideLoading $true -AllowUserPinning $true 
 ```
 Create a new TeamsAppSetupPolicy. Users can upload a custom app package in the Teams app because AllowSideLoading is set as True, and existing app pins can be added to the list of pinned apps because AllowUserPinning is set as True.
 
 ### Example 3
 
 ```powershell
-$identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
-
 # Set ActivityApp, ChatApp, TeamsApp as PinnedAppBarApps
 $ActivityApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="14d6962d-6eeb-4f48-8890-de55454bb136"}
 $ChatApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="86fcd49b-61a2-4701-b771-54728cd291fb"}
@@ -64,33 +60,29 @@ $TeamsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.C
 $PinnedAppBarApps = @($ActivityApp,$ChatApp,$TeamsApp)
 
 # Settings to pin these apps to the app bar in Teams client.
-New-CsTeamsAppSetupPolicy -Identity $identity -AllowUserPinning $true -PinnedAppBarApps $PinnedAppBarApps
+New-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowUserPinning $true -PinnedAppBarApps $PinnedAppBarApps
 ```
 Create a new TeamsAppSetupPolicy and pin ActivityApp, ChatApp, TeamsApp apps to the app bar in Teams client by setting these apps as PinnedAppBarApps.
 
 ### Example 4
 
 ```powershell
-$identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
-
 # Set VivaConnectionsApp as PinnedMessageBarApps
 $VivaConnectionsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp -Property @{Id="d2c6f111-ffad-42a0-b65e-ee00425598aa"}
 $PinnedMessageBarApps = @($VivaConnectionsApp)
 # Settings to pin these apps to the messaging extension in Teams client.
-Set-CsTeamsAppSetupPolicy -Identity Set-$identity -AllowUserPinning $true -PinnedMessageBarApps $PinnedMessageBarApps
+Set-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowUserPinning $true -PinnedMessageBarApps $PinnedMessageBarApps
 ```
 Create a new TeamsAppSetupPolicy and pin VivaConnections app to the messaging extension in Teams client by setting these apps as PinnedMessageBarApps.
 
 ### Example 5
 
 ```powershell
-$identity = "New-TestTeamsAppSetupPolicy" + (Get-Date -Format FileDateTimeUniversal)
-
 # Set VivaConnectionsApp as AppPresetList
 $VivaConnectionsApp = New-Object -TypeName  Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset -Property @{Id="d2c6f111-ffad-42a0-b65e-ee00425598aa"}
 $AppPresetList = @($VivaConnectionsApp)
 # Settings to install these apps in your users' personal Teams environment
-Set-CsTeamsAppSetupPolicy -Identity Set-$identity -AllowSideLoading $true -AppPresetList $AppPresetList
+Set-CsTeamsAppSetupPolicy -Identity (Get-Date -Format FileDateTimeUniversal) -AllowSideLoading $true -AppPresetList $AppPresetList
 ```
 Create a new TeamsAppSetupPolicy and install VivaConnections App in users' personal Teams environment by setting these apps as AppPresetList.
 
