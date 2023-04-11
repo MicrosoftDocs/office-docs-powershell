@@ -18,134 +18,73 @@ This cmdlet updates Shifts connection instance fields.
 
 ### Update (Default)
 ```
-Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String>
- -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
- [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateExpanded
 ```
-Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> -IfMatch <String>
- [-ConnectorSpecificSettings <IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings>] [-DesignatedActorId <String>]
- [-EnabledConnectorScenario <String[]>] [-EnabledWfiScenario <String[]>] [-Name <String>] [-SyncFrequencyInMin <Int32>]
- [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>] [-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>] [-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <String>
- [-ConnectorSpecificSettings <IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings>]
- [-DesignatedActorId <String>] [-EnabledConnectorScenario <String[]>] [-EnabledWfiScenario <String[]>] [-Name <String>]
- [-SyncFrequencyInMin <Int32>] [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string> [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>] [-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>] [-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentity
 ```
-Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <String>
- -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string> -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet updates a Shifts connection instance. Similar to the Update-CsTeamsShiftsConnectionInstance cmdlet, it allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. The complete list of fields is not required allowing the user to update single fields of the instance.
+This cmdlet updates a Shifts connection instance. Similar to the Set-CsTeamsShiftsConnectionInstance cmdlet, it allows the admin to make changes to the settings in the instance such as name, enabled scenarios, and sync frequency. The complete list of fields is not required allowing the user to update single fields of the instance.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
+PS C:\> $connectionInstance = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-eba2865f-6cac-46f9-8733-e0631a4536e1
 PS C:\> $result = Update-CsTeamsShiftsConnectionInstance `
-    -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
-    -IfMatch "`"0a005fd6-0000-0d00-0000-60a76dbf1234`"" `
-    -Name "My Connector Instance Renamed" `
-    -SyncFrequencyInMin 15
+    -connectorInstanceId "WCI-eba2865f-6cac-46f9-8733-e0631a4536e1"
+    -IfMatch $connectionInstance.Etag `
+    -connectionId  "79964000-286a-4216-ac60-c795a426d61a" `
+    -name "Cmdlet test instance - updated" `
+    -syncFrequencyInMin "30" `
 
 PS C:\> $result.ToJsonString()
 ```
+
 ```output
 
 {
-    "id": "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3",
-    "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
-    "name": "My Connector Instance Renamed",
-    "connector": {
-        "id": "6A51B888-FF44-4FEA-82E1-839401E00000",
-        "name": "WFM 1"
-    },
-    "connectorSpecificSettings": {
-        "adminApiUrl ": "https://contoso.com/retail/data/wfmadmin/api/v1-beta2",
-        "siteManagerUrl": "https://contoso.com/retail/data/wfmsm/api/v1-beta2",
-        "essApiUrl": "https://contoso.com/retail/data/wfmess/api/v1-beta1",
-        "retailWebApiUrl": "https://contoso.com/retail/data/retailwebapi/api/v1",
-        "cookieAuthUrl": "https://contoso.com/retail/data/login",
-        "federatedAuthUrl": "https://contoso.com/retail/data/login"
-    },
-    "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"  ],
-    "workforceIntegrationId": "WFI_8dbddbb0-6cba-4861-a541-192320cc0e88",
-    "enabledWfiScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"   ],
-    "syncFrequencyInMin": 15,
-    "designatedActorId": "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8",
-    "etag": "\"0a005fd6-0000-0d00-0000-60a76dbf0000\""
-    "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
+  "syncScenarios": {
+    "offerShiftRequest": "FromWfmToShifts",
+    "openShift": "FromWfmToShifts",
+    "openShiftRequest": "FromWfmToShifts",
+    "shift": "FromWfmToShifts",
+    "swapRequest": "FromWfmToShifts",
+    "timeCard": "FromWfmToShifts",
+    "timeOff": "FromWfmToShifts",
+    "timeOffRequest": "FromWfmToShifts",
+    "userShiftPreferences": "Disabled"
+  },
+  "id": "WCI-eba2865f-6cac-46f9-8733-e0631a4536e1",
+  "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+  "connectionId": "a2d1b091-5140-4dd2-987a-98a8b5338744",
+  "connectorAdminEmails": [ ],
+  "connectorId": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+  "designatedActorId": "ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231",
+  "name": "Cmdlet test instance - updated",
+  "syncFrequencyInMin": 30,
+  "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
+  "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
+  "createdDateTime": "2023-04-07T10:54:01.8170000Z",
+  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z"
 }
 
 ```
 
 Updates the instance with the specified -ConnectorInstanceId with the given name and sync frequency. Returns the object of the updated connector instance.
-
-### Example 2
-```powershell
-PS C:\> $result = Update-CsTeamsShiftsConnectionInstance `
-    -ConnectorInstanceId "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3" `
-    -IfMatch "`"0a005fd6-0000-0d00-0000-60a76dbf2345`"" `
-    -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest `
-    -Property @{
-        apiUrl = "https://contoso.com/api/new_endpoint/"
-    })
-    
-
-PS C:\> $result.ToJsonString()
-```
-```output
-
-{
-    "id": "WCI-C6B1949E-FBA3-4374-B6F8-8BD2D4A255F3",
-    "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
-    "name": "My Connector Instance",
-    "connector": {
-        "id": "95BF2848-2DDA-4425-B0EE-D62AEED00000",
-        "name": "WFM 2"
-    },
-    "connectorSpecificSettings": {
-        apiUrl = "https://contoso.com/api/new_endpoint"
-        ssoUrl = "https://contoso.com/sso"
-        clientId = "myClientId"
-    },
-    "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"  ],
-    "workforceIntegrationId": "WFI_8dbddbb0-6cba-4861-a541-192320cc0e88",
-    "enabledWfiScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"   ],
-    "syncFrequencyInMin": 10,
-    "designatedActorId": "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8",
-    "etag": "\"0a005fd6-0000-0d00-0000-60a76dbf0000\""
-    "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
-}
-```
-
-Updates the instance with the specified -ConnectorInstanceId with the new API URL. Returns the object of the updated connector instance.
-
-In case of an error, we can capture the error response as follows:
-
-* Hold the cmdlet output in a variable: `$result=<CMDLET>`
-
-* To get the entire error message in JSON: `$result.ToJsonString()`
-
-* To get the error object and object details: `$result, $result.Detail`
-
 
 ## PARAMETERS
 
@@ -224,21 +163,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorSpecificSettings
-The connector-specific settings.
-
-```yaml
-Type: IUpdateConnectorInstanceFieldsRequestConnectorSpecificSettings
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DesignatedActorId
 The designated actor ID that App acts as for Shifts Graph API calls.
 
@@ -254,30 +178,153 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnabledConnectorScenario
-The connector-enabled scenarios that are synced from the WFM system to Shifts in Microsoft Teams.
+### -SyncScenarioOfferShiftRequest
+The sync state for the offer shift request scenario.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-
-Required: False
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnabledWfiScenario
-The WFI-enabled scenarios that are synced from Shifts in Microsoft Teams to the WFM system.
+### -SyncScenarioOpenShift
+The sync state for the offer shift request scenario.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-Required: False
+### -SyncScenarioOpenShiftRequest
+The sync state for the offer shift request scenario.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioShift
+The sync state for the offer shift request scenario.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioSwapRequest
+The sync state for the offer shift request scenario.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeCard
+The sync state for the offer shift request scenario.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeOff
+The sync state for the offer shift request scenario.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeOffRequest
+The sync state for the offer shift request scenario.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioUserShiftPreference
+The sync state for the offer shift request scenario.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+Enum: [ "Disabled",
+        "FromWfmToShifts",
+        "TwoWay"],
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -463,4 +510,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
 
 [Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
-
