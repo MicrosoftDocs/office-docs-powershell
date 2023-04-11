@@ -162,7 +162,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you must have the appropriate permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ### -AdvancedRule
 The AdvancedRule parameter uses complex rule syntax that supports multiple AND, OR, and NOT operators and nested groups.
 
-This parameter uses JSON syntax that's similar to the traditional advanced syntax, but read from a file that contains additional operators and combinations that aren't traditionally supported.
+This parameter uses JSON syntax that's similar to the traditional advanced syntax, but is read from a file that contains additional operators and combinations that aren't traditionally supported.
 
 For syntax details, see Example 2.
 
@@ -443,9 +443,9 @@ Accept wildcard characters: False
 ### -BlockAccessScope
 The BlockAccessScope parameter specifies the scope of the block access action. Valid values are:
 
-- All: Block access to everyone except the owner and the last modifier.
-- PerUser: Block access to external users.
-- PerAnonymousUser: Block access to people through the "Anyone with the link" option in SharePoint and OneDrive.
+- All: Blocks access to everyone except the owner and the last modifier.
+- PerUser: Blocks access to external users.
+- PerAnonymousUser: Blocks access to people through the "Anyone with the link" option in SharePoint and OneDrive.
 
 ```yaml
 Type: BlockAccessScope
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
@@ -514,9 +514,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentContainsSensitiveInformation
-The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type. In addition to sensitive information type, the parameter can also be applied to files that contain sensitivity labels.
+The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type. In addition to sensitive information types, the parameter can also be applied to files that contain sensitivity labels.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for a sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://learn.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
@@ -534,7 +534,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
+The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of the original file type, this predicates matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -598,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentPropertyContainsWords
-The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in content. The rule is applied to content that contains the specified property.
+The ContentPropertyContainsWords parameter specifies a condition for the DLP rule that's based on a property match in the content. The rule is applied to content that contains the specified property.
 
 This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
 
@@ -687,7 +687,7 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentIsPasswordProtected
-The DocumentIsPasswordProtected parameter specifies a condition for the DLP rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The DocumentIsPasswordProtected parameter specifies a condition for the DLP rule that looks for password-protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
 
 - $true: Look for password protected files.
 - $false: Don't look for password protected files.
@@ -795,7 +795,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, although small values may be rounded up to the nearest kilobyte.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -865,7 +865,7 @@ Example values:
 - `@{"Setting"="Print"; "Value"="Audit";}`
 - `@{"Setting"="UnallowedApps"; "Value"="notepad"; "value2"="Microsoft Notepad"}`
 
-When you use the values Block or Warn in this parameter, you also need to use the NotifyUser parameter.
+When you use the values Block or Warn in this parameter, you must also use the NotifyUser parameter.
 
 You can view and configure the available restrictions with the Get-PolicyConfig and Set-PolicyConfig cmdlets.
 
@@ -969,9 +969,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentContainsSensitiveInformation
-The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type. In addition to sensitive information type, the parameter can also be applied to files that contain sensitivity labels.
+The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type. In addition to sensitive information types, the parameter can also be applied to files that contain sensitivity labels.
 
-This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
+This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`. Example for a sensitivity label: `@(@{operator = "And"; groups = @(@{operator="Or";name="Default";labels=@(@{name="Confidential";type="Sensitivity"})})})`.
 
 Use the Get-DLPSensitiveInformationType cmdlet to list the sensitive information types for your organization. For more information on sensitive information types, see [What the sensitive information types in Exchange look for](https://learn.microsoft.com/exchange/what-the-sensitive-information-types-in-exchange-look-for-exchange-online-help).
 
@@ -989,7 +989,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentExtensionMatchesWords
-The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
+The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicates matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1107,10 +1107,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentIsPasswordProtected
-The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the DLP rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the DLP rule that looks for password-protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
 
-- $true: Look for password protected files.
-- $false: Don't look for password protected files.
+- $true: Look for password-protected files.
+- $false: Don't look for password-protected files.
 
 ```yaml
 Type: Boolean
@@ -1215,7 +1215,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, although small values may be rounded up to the nearest kilobyte.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1403,7 +1403,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, although small values may be rounded up to the nearest kilobyte.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1499,7 +1499,7 @@ The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception f
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the OR operator is used.
+When you specify multiple attributes, use the OR operator.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1549,7 +1549,7 @@ The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the OR operator is used.
+When you specify multiple attributes, use the OR operator.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1615,7 +1615,7 @@ The ExceptIfSenderADAttributeContainsWords parameter specifies an exception for 
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the OR operator is used.
+When you specify multiple attributes, use the OR operator.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1665,7 +1665,7 @@ The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception fo
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the OR operator is used.
+When you specify multiple attributes, use the OR operator.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
 
@@ -1841,7 +1841,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfUnscannableDocumentExtensionIs
-The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable.Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
+The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable. Irrespective of the original file type, this predicates matches based on the extension that is present in the name of the file.
 
 You can specify multiple values separated by commas.
 
@@ -2115,7 +2115,7 @@ The IncidentReportContent parameter specifies the content to include in the repo
 - Service
 - Title
 
-You can specify multiple values separated by commas. You can only use the value All by itself. If you use the value Default, the report includes the following content:
+You can specify multiple values separated by commas. You can only use the value "All" by itself. If you use the value "Default", the report includes the following content:
 
 - DocumentAuthor
 - MatchedItem
@@ -2123,7 +2123,7 @@ You can specify multiple values separated by commas. You can only use the value 
 - Service
 - Title
 
-Therefore, if you use any of these redundant values with the value Default, they will be ignored.
+Therefore, if you use any of these redundant values with the value "Default", they will be ignored.
 
 ```yaml
 Type: ReportContentOption[]
@@ -2149,7 +2149,7 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 - TB (terabytes)
 
-Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+Unqualified values are typically treated as bytes, although small values may be rounded up to the nearest kilobyte.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2363,7 +2363,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyPolicyTipCustomTextTranslations
-The NotifyPolicyTipCustomTextTranslations parameter specifies the localized policy tip text that's shown when the conditions of the rule are met based on the client settings. This parameter uses the syntax `CultureCode:Text`.
+The NotifyPolicyTipCustomTextTranslations parameter specifies the localized policy tip text that's shown when the conditions of the rule are met, based on the client settings. This parameter uses the syntax `CultureCode:Text`.
 
 Valid culture codes are supported values from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
@@ -2443,7 +2443,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrependSubject
-The PrependSubject parameter specifies an action for the rule that adds text to add to the beginning of the Subject field of messages. The value for this parameter is the text that you want to add. If the text contains spaces, enclose the value in quotation marks (").
+The PrependSubject parameter specifies an action for the rule that adds text to add to the beginning of the Subject field of messages. The value for this parameter is the text that you specify. If the text contains spaces, enclose the value in quotation marks (").
 
 Consider ending the value for this parameter with a colon (:) and a space, or at least a space, to separate it from the original subject.
 
@@ -2463,7 +2463,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing within the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing within the policy. A lower integer value indicates a higher priority, the value 0 is the highest priority. Rules can't have the same priority value.
 
 Valid values and the default value for this parameter depend on the number of existing rules in the policy. For example, if there are 8 existing rules:
 
@@ -2471,7 +2471,7 @@ Valid values and the default value for this parameter depend on the number of ex
 - Valid priority values for a new 9th rule that you add to the policy are from 0 through 8.
 - The default value for a new 9th rule that you add to the policy is 8.
 
-If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
+If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it are increased by 1.
 
 ```yaml
 Type: Int32
@@ -2559,7 +2559,7 @@ The RecipientADAttributeContainsWords parameter specifies a condition for the DL
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the OR operator is used.
+When you specify multiple attributes, use the OR operator.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2609,7 +2609,7 @@ The RecipientADAttributeMatchesPatterns parameter specifies a condition for the 
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the or operator is used.
+When you specify multiple attributes, use the or operator.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2663,7 +2663,7 @@ Accept wildcard characters: False
 ### -RemoveHeader
 The RemoveHeader parameter specifies an action for the DLP rule that removes a header field from the message header. This parameter uses the syntax `HeaderName` or `"HeaderName:HeaderValue"`.You can specify multiple header names or header name and value pairs separated by commas: `HeaderName1,"HeaderName2:HeaderValue2",HeaderName3,..."HeaderNameN:HeaderValueN"`.
 
-The maximum header name length is 64 characters, and header names can't contains spaces or colons ( : ). The maximum header value length is 128 characters.
+The maximum header name length is 64 characters, and header names can't contain spaces or colons ( : ). The maximum header value length is 128 characters.
 
 You can use this action in DLP policies that are scoped only to Exchange.
 
@@ -2791,7 +2791,7 @@ The SenderADAttributeContainsWords parameter specifies a condition for the DLP r
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the OR operator is used.
+When you specify multiple attributes, use the OR operator.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2841,7 +2841,7 @@ The SenderADAttributeMatchesPatterns parameter specifies a condition for the DLP
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the or operator is used.
+When you specify multiple attributes, use the OR operator.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
