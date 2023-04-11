@@ -20,7 +20,8 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 
 ```
 New-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
- [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>] [-RecordReroutedCalls <Boolean>] [-Description <String>]
+ [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>] 
+ [-RecordReroutedCalls <Boolean>] [-Description <String>]
  [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
