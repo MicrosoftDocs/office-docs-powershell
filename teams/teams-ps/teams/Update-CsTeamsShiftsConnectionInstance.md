@@ -95,7 +95,6 @@ The request body.
 Type: IUpdateConnectorInstanceFieldsRequest
 Parameter Sets: Update, UpdateViaIdentity
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -110,7 +109,6 @@ Wait for the .NET debugger to attach.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +123,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +137,6 @@ Gets or sets the list of connector admin email addresses.
 Type: String[]
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -155,7 +151,6 @@ The connector instance ID.
 Type: String
 Parameter Sets: Update, UpdateExpanded
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -170,7 +165,6 @@ The designated actor ID that App acts as for Shifts Graph API calls.
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -179,15 +173,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOfferShiftRequest
-The sync state for the offer shift request scenario.
+The sync state for the offer shift request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -196,15 +187,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOpenShift
-The sync state for the offer shift request scenario.
+The sync state for the open shift scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -213,15 +201,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOpenShiftRequest
-The sync state for the offer shift request scenario.
+The sync state for the open shift request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -230,15 +215,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioShift
-The sync state for the offer shift request scenario.
+The sync state for the shift scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -247,15 +229,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioSwapRequest
-The sync state for the offer shift request scenario.
+The sync state for the shift swap request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -264,15 +243,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeCard
-The sync state for the offer shift request scenario.
+The sync state for the time card scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -281,15 +257,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeOff
-The sync state for the offer shift request scenario.
+The sync state for the time off scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -298,15 +271,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeOffRequest
-The sync state for the offer shift request scenario.
+The sync state for the time off request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -315,15 +285,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioUserShiftPreference
-The sync state for the offer shift request scenario.
+The sync state for the user shift preferences scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
 
 ```yaml
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-Enum: [ "Disabled",
-        "FromWfmToShifts",
-        "TwoWay"],
 Required: True
 Position: Named
 Default value: None
@@ -338,7 +305,6 @@ SendAsync Pipeline Steps to be appended to the front of the pipeline.
 Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -353,7 +319,6 @@ SendAsync Pipeline Steps to be prepended to the front of the pipeline.
 Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -368,7 +333,6 @@ The value of the ETag field as returned by the cmdlets.
 Type: String
 Parameter Sets: (All)
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -383,7 +347,6 @@ Identity Parameter
 Type: IConfigApiBasedCmdletsIdentity
 Parameter Sets: UpdateViaIdentityExpanded, UpdateViaIdentity
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -398,7 +361,6 @@ The connector instance name.
 Type: String
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -413,7 +375,6 @@ The URI for the proxy server to use.
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -428,7 +389,6 @@ Credentials for a proxy server to use for the remote call.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -443,7 +403,6 @@ Use the default credentials for the proxy.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -458,7 +417,6 @@ The sync frequency in minutes.
 Type: Int32
 Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -474,7 +432,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: None
