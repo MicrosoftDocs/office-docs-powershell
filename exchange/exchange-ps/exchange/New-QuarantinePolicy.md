@@ -211,12 +211,12 @@ The EndUserQuarantinePermissionsValue parameter specifies the end-user permissio
 
 This parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the list of available permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False. The required order is described in the following list from highest (1000000 or 128) to lowest (00000001 or 1):
 
-- PermissionToViewHeader: The value 0 doesn't hide the **View message header** button in the details of the quarantined message.
-- PermissionToDownload: This setting is not used (the value 0 or 1 does nothing).
-- PermissionToAllowSender: This setting is not used (the value 0 or 1 does nothing).
+- PermissionToViewHeader: The value 0 doesn't hide the **View message header** action in quarantine. If the message is visible in quarantine, the action is always available for the message.
+- PermissionToDownload: This permission is not used (the value 0 or 1 does nothing).
+- PermissionToAllowSender: This permission is not used (the value 0 or 1 does nothing).
 - PermissionToBlockSender
-- PermissionToRequestRelease: Don't set this permission and PermissionToRelease to 1. Set one to 1 and the other to 0, or set both to 0.
-- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to 1. Set one to 1 and the other to 0, or set both to 0.
+- PermissionToRequestRelease: Don't set this permission and PermissionToRelease to the value 1. Set one to the 1 and the other to the 0, or set both to the value 0.
+- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to value 1. Set one to the value 1 and the other to the value 0, or set both to the value 0.
 - PermissionToPreview
 - PermissionToDelete
 
@@ -227,6 +227,8 @@ The values for the preset end-user permission groups are described in the follow
 - Full access: Binary = 00010111, so use the decimal value 23.
 
 For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use. Don't use the binary value for this parameter.
+
+**Note**: If the value of this parameter is $true and the value of the EndUserQuarantinePermissionsValue parameter is 0 (No access where all permissions are turned off), users can view their messages in quarantine, but the only available action for the messages is **View message header**.
 
 ```yaml
 Type: Int32
@@ -278,7 +280,9 @@ Accept wildcard characters: False
 The ESNEnabled parameter specifies whether to enable quarantine notifications (formerly known as end-user spam notifications) for the policy. Valid values are:
 
 - $true: Quarantine notifications are enabled.
-- $false: Quarantine notifications are disabled. User can only access quarantined messages in quarantine, not in email notifications. This is the default value.S
+- $false: Quarantine notifications are disabled. User can only access quarantined messages in quarantine, not in email notifications. This is the default value.
+
+**Note**: If the value of this parameter is $true and the value of the EndUserQuarantinePermissionsValue parameter is 0 (No access where all permissions are turned off), users can see their messages in quarantine, but the only available action for the messages is **View message header**.
 
 ```yaml
 Type: Boolean
