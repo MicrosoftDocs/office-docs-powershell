@@ -209,7 +209,7 @@ Choose to allow or block the installation of third-party apps.
 
 ```yaml
 Type: String
-Parameter Sets: AllowedAppList,BlockedAppList
+Parameter Sets: (All)
 Aliases:
 
 Required: False
