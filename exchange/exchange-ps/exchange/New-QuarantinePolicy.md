@@ -215,8 +215,8 @@ This parameter uses a decimal value that's converted from a binary value. The bi
 - PermissionToDownload: This permission is not used (the value 0 or 1 does nothing).
 - PermissionToAllowSender: This permission is not used (the value 0 or 1 does nothing).
 - PermissionToBlockSender
-- PermissionToRequestRelease: Don't set this permission and PermissionToRelease to the value 1. Set one to the 1 and the other to the 0, or set both to the value 0.
-- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to value 1. Set one to the value 1 and the other to the value 0, or set both to the value 0.
+- PermissionToRequestRelease: Don't set this permission and PermissionToRelease to the value 1. Set one value to 1 and the other value to 0, or set both values to 0.
+- PermissionToRelease: Don't set this permission and PermissionToRequestRelease to value 1. Set one value to 1 and the other value to 0, or set both values to 0. This permission isn't honored for messages that were quarantined as malware or high confidence phishing. If the quarantine policy gives users this permission, users are allowed to request the release of their quarantined malware or high confidence phishing messages as if PermissionToRequestRelease was selected instead.
 - PermissionToPreview
 - PermissionToDelete
 
