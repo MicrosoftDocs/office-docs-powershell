@@ -28,6 +28,8 @@ Export-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <Q
  [-CompressOutput]
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-ForceConversionToMime]
+ [-Password <SecureString>]
+ [-ReasonForExport <String>]
  [-RecipientAddress <String>]
  [<CommonParameters>]
 ```
@@ -38,6 +40,8 @@ Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-CompressOutput]
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-ForceConversionToMime]
+ [-Password <SecureString>]
+ [-ReasonForExport <String>]
  [-RecipientAddress <String>]
  [<CommonParameters>]
 ```
@@ -181,6 +185,44 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Password
+The Password parameter specifies the password that's required to open the exported message.
+
+You can use the following methods as a value for this parameter:
+
+- `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
+- Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
+- `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReasonForExport
+The ReasonForExport parameter specifies why the message was exported. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
