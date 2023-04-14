@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggMailboxCleanup
-This parameter is reserved for internal Microsoft use.
+The AggMailboxCleanup switch specifies a more aggressive processing cycle if items aren't moving as quickly as they should. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
