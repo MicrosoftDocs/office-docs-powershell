@@ -166,7 +166,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecordReroutedCalls
-Setting this attribute to true enables compliance recording for calls which have been re-routed from a compliance recording enabled user. Supported call scenarios include forward, transfer, delegation, call groups, simultaneous ring.
+Setting this attribute to true enables compliance recording for calls that have been re-routed from a compliance recording-enabled user. Supported call scenarios include forward, transfer, delegation, call groups, and simultaneous ring.
+
 
 
 ```yaml
