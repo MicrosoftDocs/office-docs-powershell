@@ -81,7 +81,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfHeaderContainsWords <PswsHashtable>]
  [-ExceptIfHeaderMatchesPatterns <PswsHashtable>]
  [-ExceptIfMessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
- [-ExceptIfMessageTypeMatches <MessageTypes>]
+ [-ExceptIfMessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-ExceptIfProcessingLimitExceeded <Boolean>]
  [-ExceptIfRecipientADAttributeContainsWords <PswsHashtable>]
  [-ExceptIfRecipientADAttributeMatchesPatterns <PswsHashtable>]
@@ -1502,7 +1502,7 @@ The ExceptIfMessageTypeMatches parameter specifies an exception for the rule tha
 You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: MessageTypes
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
