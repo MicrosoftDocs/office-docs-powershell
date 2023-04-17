@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
- [-AccessScope <AccessScope>]
- [-ActivationDate <DateTime>]
+ [-AccessScope <Microsoft.Office.CompliancePolicy.Tasks.AccessScope>]
+ [-ActivationDate <System.DateTime>]
  [-AddRecipients <PswsHashtable>]
  [-AdvancedRule <String>]
  [-AlertProperties <PswsHashtable>]
@@ -31,7 +31,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ApplyHtmlDisclaimer <PswsHashtable>]
  [-BlockAccess <Boolean>]
- [-BlockAccessScope <BlockAccessScope>]
+ [-BlockAccessScope <Microsoft.Office.CompliancePolicy.Tasks.BlockAccessScope>]
  [-Comment <String>]
  [-Confirm]
  [-ContentCharacterSetContainsWords <MultiValuedProperty>]
@@ -45,16 +45,16 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-DocumentContainsWords <MultiValuedProperty>]
  [-DocumentCreatedBy <MultiValuedProperty>]
  [-DocumentCreatedByMemberOf <RecipientIdParameter[]>]
- [-DocumentIsPasswordProtected <Boolean>
+ [-DocumentIsPasswordProtected <Boolean>]
  [-DocumentIsUnsupported <Boolean>]
  [-DocumentMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesPatterns <MultiValuedProperty>]
  [-DocumentNameMatchesWords <MultiValuedProperty>]
- [-DocumentSizeOver <ByteQuantifiedSize>]
+ [-DocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
- [-ExceptIfAccessScope <AccessScope>]
+ [-ExceptIfAccessScope <Microsoft.Office.CompliancePolicy.Tasks.AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfContentCharacterSetContainsWords <MultiValuedProperty>]
@@ -71,16 +71,16 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfDocumentMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfDocumentNameMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfDocumentNameMatchesWords <MultiValuedProperty>]
- [-ExceptIfDocumentSizeOver <ByteQuantifiedSize>]
+ [-ExceptIfDocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfFromMemberOf <SmtpAddress[]>]
- [-ExceptIfFromScope <FromScope>]
+ [-ExceptIfFromScope <Microsoft.Office.CompliancePolicy.PolicyEvaluation.FromScope>]
  [-ExceptIfHasSenderOverride <Boolean>]
  [-ExceptIfHeaderContainsWords <PswsHashtable>]
  [-ExceptIfHeaderMatchesPatterns <PswsHashtable>]
- [-ExceptIfMessageSizeOver <ByteQuantifiedSize>]
+ [-ExceptIfMessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-ExceptIfMessageTypeMatches <MessageTypes>]
  [-ExceptIfProcessingLimitExceeded <Boolean>]
  [-ExceptIfRecipientADAttributeContainsWords <PswsHashtable>]
@@ -97,25 +97,25 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfUnscannableDocumentExtensionIs <MultiValuedProperty>]
- [-ExceptIfWithImportance <WithImportance>]
- [-ExpiryDate <DateTime>]
+ [-ExceptIfWithImportance <Microsoft.Office.CompliancePolicy.Tasks.WithImportance>]
+ [-ExpiryDate <System.DateTime>]
  [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
  [-FromAddressMatchesPatterns <MultiValuedProperty>]
  [-FromMemberOf <SmtpAddress[]>]
- [-FromScope <FromScope>]
+ [-FromScope <Microsoft.Office.CompliancePolicy.PolicyEvaluation.FromScope>]
  [-GenerateAlert <MultiValuedProperty>]
  [-GenerateIncidentReport <MultiValuedProperty>]
  [-HasSenderOverride <Boolean>]
  [-HeaderContainsWords <PswsHashtable>]
  [-HeaderMatchesPatterns <PswsHashtable>]
- [-ImmutableId <Guid>]
+ [-ImmutableId <System.Guid>]
  [-IncidentReportContent <ReportContentOption[]>]
- [-MessageSizeOver <ByteQuantifiedSize>]
+ [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
  [-Moderate <PswsHashtable>]
  [-ModifySubject <PswsHashtable>]
- [-NonBifurcatingAccessScope <NonBifurcatingAccessScope>]
+ [-NonBifurcatingAccessScope <Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
@@ -123,11 +123,13 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
+ [-NotifyPolicyTipDisplayOption <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyTipDisplayOption>]
+ [-NotifyPolicyTipUrl <String>]
  [-NotifyUser <MultiValuedProperty>]
  [-NotifyUserType <Microsoft.Office.CompliancePolicy.PolicyEvaluation.NotifyUserType>]
  [-OnPremisesScannerDlpRestrictions <PswsHashtable[]>]
  [-PrependSubject <String>]
- [-Priority <Int32>]
+ [-Priority <System.Int32>]
  [-ProcessingLimitExceeded <Boolean>]
  [-Quarantine <Boolean>]
  [-RecipientADAttributeContainsWords <PswsHashtable>]
@@ -138,7 +140,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-RemoveRMSTemplate <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RestrictBrowserAccess <Boolean>]
- [-RuleErrorAction <PolicyRuleErrorAction>]
+ [-RuleErrorAction <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
  [-SenderADAttributeMatchesPatterns <PswsHashtable>]
  [-SenderAddressLocation <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicySenderAddressLocation>]
@@ -155,7 +157,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ThirdPartyAppDlpRestrictions <PswsHashtable[]>]
  [-UnscannableDocumentExtensionIs <MultiValuedProperty>]
  [-WhatIf]
- [-WithImportance <WithImportance>]
+ [-WithImportance <Microsoft.Office.CompliancePolicy.Tasks.WithImportance>]
  [<CommonParameters>]
 ```
 
@@ -333,7 +335,7 @@ The AccessScope parameter specifies a condition for the DLP rule that's based on
 - None: The condition isn't used.
 
 ```yaml
-Type: AccessScope
+Type: Microsoft.Office.CompliancePolicy.Tasks.AccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -349,7 +351,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -511,7 +513,7 @@ The BlockAccessScope parameter specifies the scope of the block access action. V
 - PerAnonymousUser: Blocks access to people through the "Anyone with the link" option in SharePoint and OneDrive.
 
 ```yaml
-Type: BlockAccessScope
+Type: Microsoft.Office.CompliancePolicy.Tasks.BlockAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -865,7 +867,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: ByteQuantifiedSize
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -957,7 +959,7 @@ The ExceptIfAccessScopeAccessScope parameter specifies an exception for the DLP 
 - None: The exception isn't used.
 
 ```yaml
-Type: AccessScope
+Type: Microsoft.Office.CompliancePolicy.Tasks.AccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1285,7 +1287,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: ByteQuantifiedSize
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1386,7 +1388,7 @@ The ExceptIfFromScope parameter specifies an exception for the rule that looks f
 You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: FromScope
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.FromScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1473,7 +1475,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: ByteQuantifiedSize
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1933,7 +1935,7 @@ The ExceptIfWithImportance parameter specifies an exception for the rule that lo
 You can use this exception in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: WithImportance
+Type: Microsoft.Office.CompliancePolicy.Tasks.WithImportance
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -1949,7 +1951,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: DateTime
+Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2050,7 +2052,7 @@ The FromScope parameter specifies a condition for the rule that looks for the lo
 You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: FromScope
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.FromScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2169,7 +2171,7 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Guid
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2236,7 +2238,7 @@ Unqualified values are typically treated as bytes, but small values may be round
 You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: ByteQuantifiedSize
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2327,7 +2329,7 @@ The NonBifurcatingAccessScope parameter specifies a condition for the DLP rule t
 You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: NonBifurcatingAccessScope
+Type: Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2343,6 +2345,7 @@ Accept wildcard characters: False
 The NotifyAllowOverride parameter specifies the notification override options when the conditions of the rule are met. Valid values are:
 
 - FalsePositive: Allows overrides in the case of false positives.
+- WithAcknowledgement: Allows overrides with explicit user acknowledgement. (Exchange only)
 - WithoutJustification: Allows overrides without justification.
 - WithJustification: Allows overrides with justification.
 
@@ -2472,6 +2475,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifyPolicyTipDisplayOption
+The NotifyPolicyTipDialogOption parameter specifies a display option for the policy tip. Valid values are:
+
+- Tip: Displays policy tip at the top of the mail. This is the default value.
+- Dialog: Displays policy tip at the top of the mail and as a popup dialog. (exchange only)
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyTipDisplayOption
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyPolicyTipUrl
+The NotifyPolicyTipUrl parameter specifies the URL in the popup dialog for Exchange workloads. This URL value has priority over the global: `Set-PolicyConfig -ComplianceUrl`.
+
+```yaml
+Type: String
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyUser
 The NotifyUser parameter specifies an action for the DLP rule that notifies the specified users when the conditions of the rule are met. Valid values are:
 
@@ -2564,7 +2602,7 @@ Valid values and the default value for this parameter depend on the number of ex
 If you modify the priority value of a rule, the position of the rule in the list changes to match the priority value you specify. In other words, if you set the priority value of a rule to the same value as an existing rule, the priority value of the existing rule and all other lower priority rules after it is increased by 1.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2836,7 +2874,7 @@ The RuleErrorAction parameter specifies what to do if an error is encountered du
 - Blank (the value $null): This is the default value.
 
 ```yaml
-Type: PolicyRuleErrorAction
+Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -3233,7 +3271,7 @@ The WithImportance parameter specifies a condition for the rule that looks for m
 You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
-Type: WithImportance
+Type: Microsoft.Office.CompliancePolicy.Tasks.WithImportance
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
