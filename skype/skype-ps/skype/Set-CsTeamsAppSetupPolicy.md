@@ -55,40 +55,40 @@ Step 2: Set AllowUserPinning as true, AllowSideLoading as false.
 ### Example 2
 
 ```powershell
-# Create new teams app setup policy named "Set-Test".
 New-CsTeamsAppSetupPolicy -Identity 'Set-Test'
-# Set ActivityApp, ChatApp, TeamsApp as PinnedAppBarApps
 $ActivityApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="14d6962d-6eeb-4f48-8890-de55454bb136"}
 $ChatApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="86fcd49b-61a2-4701-b771-54728cd291fb"}
 $TeamsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedApp -Property @{Id="2a84919f-59d8-4441-a975-2a8c2643b741"}
 $PinnedAppBarApps = @($ActivityApp,$ChatApp,$TeamsApp)
-# Settings to pin these apps to the app bar in Teams client.
 Set-CsTeamsAppSetupPolicy -Identity 'Set-Test' -PinnedAppBarApps $PinnedAppBarApps
 ```
+Step 1: Create new teams app setup policy named "Set-Test".
+Step 2: Set ActivityApp, ChatApp, TeamsApp as PinnedAppBarApps.
+Step 3: Settings to pin these apps to the app bar in Teams client.
 
 ### Example 3
 
 ```powershell
-# Create new teams app setup policy named "Set-Test".
 New-CsTeamsAppSetupPolicy -Identity 'Set-Test'
-# Set VivaConnectionsApp as PinnedAppBarApps
 $VivaConnectionsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PinnedMessageBarApp -Property @{Id="d2c6f111-ffad-42a0-b65e-ee00425598aa"}
 $PinnedMessageBarApps = @($VivaConnectionsApp)
-# Settings to pin these apps to the messaging extension in Teams client.
 Set-CsTeamsAppSetupPolicy -Identity 'Set-Test' -PinnedMessageBarApps $PinnedMessageBarApps
 ```
+Step 1: Create new teams app setup policy named "Set-Test".
+Step 2: Set VivaConnectionsApp as PinnedAppBarApps.
+Step 3: Settings to pin these apps to the messaging extension in Teams client.
 
 ### Example 4
 
 ```powershell
-# Create new teams app setup policy named "Set-Test".
 New-CsTeamsAppSetupPolicy -Identity 'Set-Test'
-# Set VivaConnectionsApp as AppPresetList
 $VivaConnectionsApp = New-Object -TypeName  Microsoft.Teams.Policy.Administration.Cmdlets.Core.AppPreset -Property @{Id="d2c6f111-ffad-42a0-b65e-ee00425598aa"}
 $AppPresetList = @($VivaConnectionsApp)
-# Settings to install these apps in your users' personal Teams environment
 Set-CsTeamsAppSetupPolicy -Identity 'Set-Test' -AppPresetList $AppPresetList
 ```
+Step 1: Create new teams app setup policy named "Set-Test".
+Step 2: Set VivaConnectionsApp as AppPresetList
+Step 3: Settings to install these apps in your users' personal Teams environment.
 
 ## PARAMETERS
 
