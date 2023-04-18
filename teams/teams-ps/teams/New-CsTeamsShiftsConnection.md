@@ -40,10 +40,10 @@ PS C:\> $result =  New-CsTeamsShiftsConnection `
    -connectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificBlueYonderSettingsRequest `
         -Property @{
             adminApiUrl = "https://contoso.com/retail/data/wfmadmin/api/v1-beta2"
-            siteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta2",
-            essApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta1",
-            retailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1",
-            cookieAuthUrl = "https://contoso.com/retail/data/login",
+            siteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta2"
+            essApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta1"
+            retailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1"
+            cookieAuthUrl = "https://contoso.com/retail/data/login"
             federatedAuthUrl = "https://contoso.com/retail/data/login"
             LoginUserName = "PlaceholderForUsername"
             LoginPwd = "PlaceholderForPassword"
