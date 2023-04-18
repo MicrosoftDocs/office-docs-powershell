@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet allows you to get properties of a TeamsShiftPolicy instance, including user's shift based presence and Teams off shift warning message-specific settings.
+This cmdlet allows you to get properties of a TeamsShiftPolicy instance, including user's Teams off shift warning message-specific settings.
 
 ## SYNTAX
 
@@ -19,7 +19,8 @@ Get-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to get properties of a TeamsShiftPolicy instance. Use this to get the policy name, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+This cmdlet allows you to get properties of a TeamsShiftPolicy instance. Use this to get the policy name and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+
 
 
 ## EXAMPLES
