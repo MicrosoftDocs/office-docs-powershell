@@ -6932,7 +6932,7 @@
     },
     {
       "source_path": "teams/teams-ps/teams/New-CsTeamsShiftsConnectionTeamMap.md",
-      "redirect_url": "teams/teams-ps/teams/New-CsTeamsShiftsConnectionBatchTeamMap.md",
+      "redirect_url": "powershell/module/teams",
       "redirect_document_id": false
     }
   ]
