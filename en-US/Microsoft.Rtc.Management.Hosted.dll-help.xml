@@ -1,0 +1,922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Clear-CsOnlineTelephoneNumberOrder</command:name>
+      <command:verb>Clear</command:verb>
+      <command:noun>CsOnlineTelephoneNumberOrder</command:noun>
+      <maml:description>
+        <maml:para>Use the `Clear-CsOnlineTelephoneNumberOrder` cmdlet to cancel a specific telephone number search order and release the telephone numbers. The telephone numbers can then be available for search and acquire.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the `Clear-CsOnlineTelephoneNumberOrder` cmdlet to cancel a specific telephone number search order and release the telephone numbers. The telephone numbers can then be available for search and acquire.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Clear-CsOnlineTelephoneNumberOrder</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>OrderId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order to look up. Use `New-CsOnlineTelephoneNumberOrder` to create a search order to obtain a search order Id.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>OrderId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order to look up. Use `New-CsOnlineTelephoneNumberOrder` to create a search order to obtain a search order Id.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert />
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Clear-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+PS C:\&gt; Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+
+AreaCode              :
+CivicAddressId        :
+CountryCode           : US
+CreatedAt             : 8/23/2021 5:43:44 PM
+Description           : test
+ErrorCode             : NoError
+Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+InventoryType         : Subscriber
+IsManual              : False
+Name                  : test
+NumberPrefix          : 1718
+NumberType            : UserSubscriber
+Quantity              : 1
+ReservationExpiryDate : 8/23/2021 5:59:45 PM
+SearchType            : Prefix
+SendToServiceDesk     : False
+Status                : Cancelled
+TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
+
+PS C:\&gt; $order.TelephoneNumber
+
+Location      TelephoneNumber
+--------      ---------------
+New York City +17182000004</dev:code>
+        <dev:remarks>
+          <maml:para>This example cancels the purchase of the telephone number order containing the phone number +17182000004.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberCountry</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberType</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Complete-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Clear-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Complete-CsOnlineTelephoneNumberOrder</command:name>
+      <command:verb>Complete</command:verb>
+      <command:noun>CsOnlineTelephoneNumberOrder</command:noun>
+      <maml:description>
+        <maml:para>Use the `Complete-CsOnlineTelephoneNumberOrder` cmdlet to complete a specific telephone number search order and confirm the purchase of the new telephone numbers. The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the `Complete-CsOnlineTelephoneNumberOrder` cmdlet to complete a specific telephone number search order and confirm the purchase of the new telephone numbers. The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Complete-CsOnlineTelephoneNumberOrder</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>OrderId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order to look up. Use `New-CsOnlineTelephoneNumberOrder` to create a search order to obtain a search order Id.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>OrderId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order to look up. Use `New-CsOnlineTelephoneNumberOrder` to create a search order to obtain a search order Id.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert />
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Complete-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+PS C:\&gt; Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912 | fl
+
+AreaCode              :
+CivicAddressId        :
+CountryCode           : US
+CreatedAt             : 8/23/2021 5:43:44 PM
+Description           : test
+ErrorCode             : NoError
+Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+InventoryType         : Subscriber
+IsManual              : False
+Name                  : test
+NumberPrefix          : 1718
+NumberType            : UserSubscriber
+Quantity              : 1
+ReservationExpiryDate : 8/23/2021 5:59:45 PM
+SearchType            : Prefix
+SendToServiceDesk     : False
+Status                : Completed
+TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
+
+PS C:\&gt; (Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912).TelephoneNumber
+
+Location      TelephoneNumber
+--------      ---------------
+New York City +17182000004</dev:code>
+        <dev:remarks>
+          <maml:para>This example completes the purchase of the telephone number order containing the phone number +17182000004.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://learn.microsoft.com/powershell/module/teams/complete-csonlinetelephonenumberorder</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberCountry</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberType</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Complete-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Clear-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-CsOnlineTelephoneNumberCountry</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CsOnlineTelephoneNumberCountry</command:noun>
+      <maml:description>
+        <maml:para>Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-CsOnlineTelephoneNumberCountry</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert />
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>Get-CsOnlineTelephoneNumberCountry
+
+Name                   Value
+----                   -----
+Antigua and Barbuda    AG
+Argentina              AR
+Australia              AU
+Austria                AT
+...
+United Kingdom         GB
+United States          US
+Uruguay                UY
+Venezuela              VE
+Vietnam                VN</dev:code>
+        <dev:remarks>
+          <maml:para>This example returns the list of supported countries or regions for the cmdlet search and acquire of new telephone numbers.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbercountry</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberCountry</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberType</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Complete-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Clear-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-CsOnlineTelephoneNumberOrder</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CsOnlineTelephoneNumberOrder</command:noun>
+      <maml:description>
+        <maml:para>Use the `Get-CsOnlineTelephoneNumberOrder` cmdlet to get the order report of a specific telephone number search order. The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the `Get-CsOnlineTelephoneNumberOrder` cmdlet to get the order report of a specific telephone number search order. The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-CsOnlineTelephoneNumberOrder</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>OrderId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order to look up. Use `New-CsOnlineTelephoneNumberOrder` to create a search order to obtain a search order Id.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>OrderId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order to look up. Use `New-CsOnlineTelephoneNumberOrder` to create a search order to obtain a search order Id.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert />
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; $order = Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+
+AreaCode              :
+CivicAddressId        :
+CountryCode           : US
+CreatedAt             : 8/23/2021 5:43:44 PM
+Description           : test
+ErrorCode             : NoError
+Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+InventoryType         : Subscriber
+IsManual              : False
+Name                  : test
+NumberPrefix          : 1718
+NumberType            : UserSubscriber
+Quantity              : 1
+ReservationExpiryDate : 8/23/2021 5:59:45 PM
+SearchType            : Prefix
+SendToServiceDesk     : False
+Status                : Reserved
+TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
+
+PS C:\&gt; $order.TelephoneNumber
+
+Location      TelephoneNumber
+--------      ---------------
+New York City +17182000004</dev:code>
+        <dev:remarks>
+          <maml:para>This example returns a successful telephone number search and the telephone number +17182000004 is reserved for purchase.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; $order = Get-CsOnlineTelephoneNumberOrder -OrderId 8d23e073-bc98-4f73-8e05-7517655d7042
+
+AreaCode              :
+CivicAddressId        :
+CountryCode           : US
+CreatedAt             : 8/23/2021 6:53:12 PM
+Description           : test
+ErrorCode             : OutOfStock
+Id                    : 8d23e073-bc98-4f73-8e05-7517655d7042
+InventoryType         : Subscriber
+IsManual              : False
+Name                  : test
+NumberPrefix          : 1425
+NumberType            : UserSubscriber
+Quantity              : 1
+ReservationExpiryDate :
+SearchType            : Prefix
+SendToServiceDesk     : False
+Status                : Error
+TelephoneNumber       : {}</dev:code>
+        <dev:remarks>
+          <maml:para>This example returns a failed telephone number search and the `ErrorCode` is showing that telephone numbers with `NumberPrefix: 1425` is `OutOfStock`.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumberorder</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberCountry</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberType</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Complete-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Clear-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-CsOnlineTelephoneNumberType</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>CsOnlineTelephoneNumberType</command:noun>
+      <maml:description>
+        <maml:para>Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country. The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country. The `NumberType` field in the response is used to indicate the capabilities of a given offering. The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-CsOnlineTelephoneNumberType</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Country</maml:name>
+          <maml:description>
+            <maml:para>Specifies the country that the number offerings belong. The country code uses ISO 3166 standard and the list of supported countries can be found by calling `Get-CsOnlineTelephoneNumberCountry`.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Country</maml:name>
+        <maml:description>
+          <maml:para>Specifies the country that the number offerings belong. The country code uses ISO 3166 standard and the list of supported countries can be found by calling `Get-CsOnlineTelephoneNumberCountry`.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert />
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-CsOnlineTelephoneNumberType -Country US
+
+AllowedSearchType    : {CivicAddress, Prefix}
+AreaCode             :
+AvailabilityInfo     : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.AvailabilityInfo
+Id                   : 470316bd-815e-459d-80e7-d7332f00fcb9
+NumberType           : UserSubscriber
+OfferModel           : DirectStock
+PrefixSearchOption   : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.PrefixSearchOptions
+RequiresCivicAddress : True
+
+AllowedSearchType    : {CivicAddress, Prefix}
+AreaCode             :
+AvailabilityInfo     : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.AvailabilityInfo
+Id                   : 25444938-a335-4a85-b64d-d445b45f04e3
+NumberType           : UserSubscriberVoiceAndSms
+OfferModel           : DirectStock
+PrefixSearchOption   : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.PrefixSearchOptions
+RequiresCivicAddress : True</dev:code>
+        <dev:remarks>
+          <maml:para>This example returns the list of supported number offerings in United States.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-CsOnlineTelephoneNumberType -Country CA | ft NumberType
+
+NumberType
+----------
+UserSubscriber
+UserSubscriberVoiceAndSms
+ConferenceToll
+ConferenceTollFree
+CallQueueToll
+CallQueueTollFree
+AutoAttendantToll
+AutoAttendantTollFree</dev:code>
+        <dev:remarks>
+          <maml:para>This example returns the list of supported NumberTypes in Canada.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbertype</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberCountry</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberType</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Complete-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Clear-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>New-CsOnlineTelephoneNumberOrder</command:name>
+      <command:verb>New</command:verb>
+      <command:noun>CsOnlineTelephoneNumberOrder</command:noun>
+      <maml:description>
+        <maml:para>Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number search order. The telephone numbers can then be used to set up calling features for users and services in your organization.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number search order. The telephone numbers can then be used to set up calling features for users and services in your organization. Use the `Get-CsOnlineTelephoneNumberType` cmdlet to find out the supported types of searches for each NumberType and construct the search request demonstrated below:</maml:para>
+      <maml:para>Telephone numbers can be created with 3 ways:</maml:para>
+      <maml:para>- Civic Address Search : A telephone number search order can be created base on a given civic address ID. The service will look up the address and fulfill the search order using available telephone numbers local to the given address. For civic address based search, the parameter `CivicAddressId` is required.</maml:para>
+      <maml:para>- Number Prefix Search : A telephone number search order can be created base on a given number prefix. The number prefix search allow the tenant to acquire telephone numbers with a fixed number prefix. For number prefix based search, the parameter `NumberPrefix` is required.</maml:para>
+      <maml:para>- Area Code Selection Search : A telephone number search order can be created base on a give area code. Certain service numbers are only offered with a dedicated set of area codes.  With area code selection search, the tenant can acquire the desired telephone numbers by area code. For area code selection based search, the parameter `AreaCode` is required.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-CsOnlineTelephoneNumberOrder</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order name.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Description</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order description.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Country</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order country. Use `Get-CsOnlineTelephoneNumberCountry` to find the supported countries.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>NumberType</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order number type. Use `Get-CsOnlineTelephoneNumberType` to find the supported number types.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Quantity</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order quantity. The number of allowed quantity is based on the tenant licenses.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Integer</command:parameterValue>
+          <dev:type>
+            <maml:name>Integer</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>CivicAddressId</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order civic address. CivicAddressId is required for civic address based search and when RequiresCivicAddress is true for a given NumberType.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>NumberPrefix</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order number prefix. NumberPrefix is required for number prefix based search.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Integer</command:parameterValue>
+          <dev:type>
+            <maml:name>Integer</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AreaCode</maml:name>
+          <maml:description>
+            <maml:para>Specifies the telephone number search order number area code. AreaCode is required for area code selection based search.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Integer</command:parameterValue>
+          <dev:type>
+            <maml:name>Integer</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order name.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Description</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order description.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Country</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order country. Use `Get-CsOnlineTelephoneNumberCountry` to find the supported countries.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>NumberType</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order number type. Use `Get-CsOnlineTelephoneNumberType` to find the supported number types.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Quantity</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order quantity. The number of allowed quantity is based on the tenant licenses.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Integer</command:parameterValue>
+        <dev:type>
+          <maml:name>Integer</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>CivicAddressId</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order civic address. CivicAddressId is required for civic address based search and when RequiresCivicAddress is true for a given NumberType.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>NumberPrefix</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order number prefix. NumberPrefix is required for number prefix based search.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Integer</command:parameterValue>
+        <dev:type>
+          <maml:name>Integer</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>AreaCode</maml:name>
+        <maml:description>
+          <maml:para>Specifies the telephone number search order number area code. AreaCode is required for area code selection based search.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Integer</command:parameterValue>
+        <dev:type>
+          <maml:name>Integer</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert />
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- Example 1 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; $orderId = New-CsOnlineTelephoneNumberOrder -Name "Example 1" -Description "Civic address search example" -Country "US" -NumberType "UserSubscriber" -Quantity 1 -CivicAddressId 3b175352-4131-431e-970c-273226b8fb46
+PS C:\&gt; $order = Get-CsOnlineTelephoneNumberOrder -OrderId $orderId
+
+AreaCode              :
+CivicAddressId        : 3b175352-4131-431e-970c-273226b8fb46
+CountryCode           : US
+CreatedAt             : 8/23/2021 5:43:44 PM
+Description           : Civic address search example
+ErrorCode             : NoError
+Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+InventoryType         : Subscriber
+IsManual              : False
+Name                  : Example 1
+NumberPrefix          : 
+NumberType            : UserSubscriber
+Quantity              : 1
+ReservationExpiryDate : 8/23/2021 5:59:45 PM
+SearchType            : CivicAddress
+SendToServiceDesk     : False
+Status                : Reserved
+TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
+
+PS C:\&gt; $order.TelephoneNumber
+
+Location      TelephoneNumber
+--------      ---------------
+New York City +17182000004</dev:code>
+        <dev:remarks>
+          <maml:para>This example demonstrates a civic address based telephone number search. Telephone number +17182000004 is found to belong to the given address and is reserved for purchase.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 2 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; $orderId = New-CsOnlineTelephoneNumberOrder -Name "Example 2" -Description "Number prefix search example" -Country "US" -NumberType "UserSubscriber" -Quantity 1 -NumberPrefix 1425
+PS C:\&gt; $order = Get-CsOnlineTelephoneNumberOrder -OrderId $orderId
+
+AreaCode              :
+CivicAddressId        : 
+CountryCode           : US
+CreatedAt             : 8/23/2021 5:43:44 PM
+Description           : Number prefix search example
+ErrorCode             : NoError
+Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+InventoryType         : Subscriber
+IsManual              : False
+Name                  : Example 2
+NumberPrefix          : 
+NumberType            : UserSubscriber
+Quantity              : 1
+ReservationExpiryDate : 8/23/2021 5:59:45 PM
+SearchType            : Prefix
+SendToServiceDesk     : False
+Status                : Reserved
+TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
+
+PS C:\&gt; $order.TelephoneNumber
+
+Location      TelephoneNumber
+--------      ---------------
+Bellevue  +14252000004</dev:code>
+        <dev:remarks>
+          <maml:para>This example demonstrates a number prefix based telephone number search. Telephone number +14252000004 is found to have the desired number prefix and is reserved for purchase.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 3 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; $orderId = New-CsOnlineTelephoneNumberOrder -Name "Example 3" -Description "Area code selection search example" -Country "US" -NumberType "ConferenceTollFree" -Quantity 1 -AreaCode 800
+PS C:\&gt; $order = Get-CsOnlineTelephoneNumberOrder -OrderId $orderId
+
+AreaCode              :
+CivicAddressId        : 
+CountryCode           : US
+CreatedAt             : 8/23/2021 5:43:44 PM
+Description           : Area code selection search example
+ErrorCode             : NoError
+Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+InventoryType         : Service
+IsManual              : False
+Name                  : Example 3
+NumberPrefix          : 
+NumberType            : ConferenceTollFree
+Quantity              : 1
+ReservationExpiryDate : 8/23/2021 5:59:45 PM
+SearchType            : AreaCodeSelection
+SendToServiceDesk     : False
+Status                : Reserved
+TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
+
+PS C:\&gt; $order.TelephoneNumber
+
+Location      TelephoneNumber
+--------      ---------------
+Toll Free  +18002000004</dev:code>
+        <dev:remarks>
+          <maml:para>This example demonstrates an area code selection based telephone number search. Telephone number +18002000004 is found to have the desired area code and is reserved for purchase.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version:</maml:linkText>
+        <maml:uri>https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberCountry</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberType</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>New-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Get-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Complete-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>Clear-CsOnlineTelephoneNumberOrder</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+</helpItems>
