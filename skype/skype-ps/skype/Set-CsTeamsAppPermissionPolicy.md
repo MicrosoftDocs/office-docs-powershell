@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultCatalogAppsType
-Choose to allow or block the installation of Microsoft apps. Value that can be used: AllowedAppList, BlockedAppList.
+Choose to allow or block the installation of Microsoft apps. Values that can be used: AllowedAppList, BlockedAppList.
 
 
 ```yaml
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalogAppsType
-Choose to allow or block the installation of third-party apps. Value that can be used: AllowedAppList, BlockedAppList.
+Choose to allow or block the installation of third-party apps. Values that can be used: AllowedAppList, BlockedAppList.
 
 
 ```yaml
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateCatalogAppsType
-Choose which custom apps can be installed by your users. Value that can be used: AllowedAppList, BlockedAppList.
+Choose which custom apps can be installed by your users. Values that can be used: AllowedAppList, BlockedAppList.
 
 ```yaml
 Type: String
