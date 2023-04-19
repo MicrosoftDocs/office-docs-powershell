@@ -146,7 +146,7 @@ Choose to allow or block the installation of Microsoft apps.
 
 ```yaml
 Type: String
-Parameter Sets: AllowedAppList,BlockedAppList
+Parameter Sets: (All)
 Aliases:
 
 Required: False
