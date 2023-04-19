@@ -56,6 +56,7 @@ For the reporting period you specify, the cmdlet returns the following informati
 - Sender Address
 - Recipient Address
 - Event Type
+- Bulk complaint level
 - Verdict Type
 - Action
 - File Name

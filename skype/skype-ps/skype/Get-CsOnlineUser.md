@@ -29,6 +29,7 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-OU <OUIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
+ [-Sort]
  [-UnassignedUser]
  [-UsePreferredDC]
  [<CommonParameters>]
@@ -211,9 +212,9 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 _Performance_
 
@@ -230,7 +231,7 @@ These attributes are now enabled for filtering:
 
 - Alias
 - City
-- CompanyName
+- Company
 - HostingProvider
 - UserValidationErrors
 - OnPremEnterpriseVoiceEnabled
@@ -239,7 +240,7 @@ These attributes are now enabled for filtering:
 - OnPremSIPEnabled
 - SipAddress
 - SoftDeletionTimestamp
-- State
+- StateOrProvince
 - Street
 - TeamsOwnersPolicy
 - WhenChanged
@@ -252,35 +253,31 @@ _New Operators_
 
 These filtering operators have been reintroduced:
 
-- "-like" operator now supports the use of wildcard operators in 'contains' and 'ends with' scenarios. For example:
+`-like` operator now supports the use of wildcard operators in 'contains' and 'ends with' scenarios. For example:
 
-```
-Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
-Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
-```
+- Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
+- Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
 
-- "-contains" can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
-```
+`-contains` can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
 
-Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
-Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
-```
+- Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
+- Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
 
-- "-gt" (greater than), "-lt" (less than), "-le" (less than or equal to) can now be used for filtering all string properties. For example:
 
-```
-Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt "abc"}
-```
+`-gt` (greater than), `-lt` (less than), and `-le` (less than or equal to) can now be used for filtering all string properties. For example:
 
-- "-ge" (greater than or equal to) can now also be used for filtering on policies. For example:
+- Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt "abc"}
 
-```
-Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
-```
+`-ge` (greater than or equal to) can now also be used for filtering on policies. For example:
 
-**Updates in Teams PowerShell Module version 3.0.0 and above**
+- Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
+**Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
+
+
+**Updates in Teams PowerShell Module version 3.0.0 and later**
+
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 and later):
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
@@ -501,6 +498,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Sort
+
+Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. For Example:
+
+- Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
+- Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UnassignedUser
 This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
 
@@ -543,9 +560,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 and later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 New attributes have now been introduced in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 

@@ -25,6 +25,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-Identity <QuarantineMessageIdentity>]
  [-Confirm]
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-HardDelete]
  [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
@@ -34,6 +36,8 @@ Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
 ```
 Delete-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-HardDelete]
  [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
@@ -131,6 +135,45 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EntityType
+The EntityType parameter filters the results by EntityType. Valid values are:
+
+- Email
+- SharePoint
+- Teams (currently in Preview)
+- DataLossPrevention (currently in Preview)
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HardDelete
+The HardDelete switch specifies the message is permanently deleted and isn't recoverable. You don't need to specify a value with this switch.
+
+If you don't use this switch, the message is deleted, but is potentially recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named

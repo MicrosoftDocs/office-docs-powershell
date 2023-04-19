@@ -16,8 +16,6 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Get-CaseHoldPolicy to view existing case hold policies in the Microsoft Purview compliance portal. To get relevant information about how the hold was applied and the affected locations, you need to include the DistributionDetail switch.
 
-**Note**: This cmdlet doesn't work if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts) or Azure managed identity.
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX

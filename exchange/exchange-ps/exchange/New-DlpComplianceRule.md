@@ -171,7 +171,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 New-DlpComplianceRule -Name "SocialSecurityRule" -Policy "USFinancialChecks" -ContentContainsSensitiveInformation @{Name="U.S. Social Security Number (SSN)"} -BlockAccess $True
 ```
 
-This example create a new DLP compliance rule named "SocialSecurityRule" that is assigned to the "USFinancialChecks" policy. The rule checks for social security numbers and blocks access if it finds them.
+This example creates a new DLP compliance rule named "SocialSecurityRule" that is assigned to the "USFinancialChecks" policy. The rule checks for social security numbers and blocks access if it finds them.
 
 ### Example 2
 ```powershell
@@ -218,7 +218,7 @@ $contains_complex_types = @{
 New-DLPComplianceRule -Name "Contoso Medical Information" -Policy "Contoso Medical Checks" -ContentContainsSensitiveInformation $contains_complex_types
 ```
 
-This example create a new DLP compliance rule named "Contoso Medical Information" that is assigned to the "Contoso Medical Checks" policy. The rule uses advanced syntax to search for the specified content.
+This example creates a new DLP compliance rule named "Contoso Medical Information". The rule is assigned to the "Contoso Medical Checks" policy. It uses advanced syntax to search for the specified content.
 
 ### Example 3
 ```powershell
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The Policy parameter specifies the existing DLP policy that will contain the DLP rule. You can use any value that uniquely identifies the policy. For example:
+The Policy parameter specifies the existing DLP policy that will contain the new DLP rule. You can use any value that uniquely identifies the policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -506,9 +506,9 @@ Accept wildcard characters: False
 ### -BlockAccessScope
 The BlockAccessScope parameter specifies the scope of the block access action. Valid values are:
 
-- All: Block access to everyone except the owner and the last modifier.
-- PerUser: Block access to external users.
-- PerAnonymousUser: Block access to people through the "Anyone with the link" option in SharePoint and OneDrive.
+- All: Blocks access to everyone except the owner and the last modifier.
+- PerUser: Blocks access to external users.
+- PerAnonymousUser: Blocks access to people through the "Anyone with the link" option in SharePoint and OneDrive.
 
 ```yaml
 Type: BlockAccessScope
@@ -599,7 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentExtensionMatchesWords
-The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
+The ContentExtensionMatchesWords parameter specifies a condition for the DLP rule that looks for words in file extensions. You can specify multiple words separated by commas. Irrespective of the original file type, this predicate matches based on the extension that is present in the name of the file.
 
 ```yaml
 Type: MultiValuedProperty
@@ -916,9 +916,9 @@ Accept wildcard characters: False
 
 The EndpointDlpRestrictions parameter specifies the restricted endpoints for Endpoint DLP. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
 
-The value of `<Setting>` is one of the supported values.
+The `<Setting>` value is one of the supported values.
 
-The value of `<Value>` is Audit, Block, Ignore, or Warn.
+The available values for `<Value>` are: Audit, Block, Ignore, or Warn.
 
 Example values:
 
@@ -1380,7 +1380,7 @@ Accept wildcard characters: False
 ### -ExceptIfFromScope
 The ExceptIfFromScope parameter specifies an exception for the rule that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 You can use this exception in DLP policies that are scoped only to Exchange.
@@ -1536,31 +1536,31 @@ The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception f
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -1586,31 +1586,31 @@ The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
@@ -1652,31 +1652,31 @@ The ExceptIfSenderADAttributeContainsWords parameter specifies an exception for 
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -1702,31 +1702,31 @@ The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception fo
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
@@ -1906,7 +1906,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfUnscannableDocumentExtensionIs
-The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files are unscannable. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
+The ExceptIfUnscannableDocumentExtensionIs parameter specifies an exception for the rule that looks for the specified true file extension when the files aren't scannable. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
 
 You can specify multiple values separated by commas.
 
@@ -2044,7 +2044,7 @@ Accept wildcard characters: False
 ### -FromScope
 The FromScope parameter specifies a condition for the rule that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
@@ -2197,7 +2197,7 @@ The IncidentReportContent parameter specifies the content to include in the repo
 - Severity
 - Title
 
-You can specify multiple values separated by commas. You can only use the value All by itself. If you use the value Default, the report includes the following content:
+You can specify multiple values separated by commas. You can only use the value "All" by itself. If you use the value "Default", the report includes the following content:
 
 - DocumentAuthor
 - MatchedItem
@@ -2205,7 +2205,7 @@ You can specify multiple values separated by commas. You can only use the value 
 - Service
 - Title
 
-Therefore, if you use any of these redundant values with the value Default, they will be ignored.
+Therefore, any additional values that you use with the value "Default" are ignored.
 
 ```yaml
 Type: ReportContentOption[]
@@ -2380,7 +2380,7 @@ Accept wildcard characters: False
 ### -NotifyEmailCustomText
 The NotifyEmailCustomText parameter specifies the custom text in the email notification message that's sent to recipients when the conditions of the rule are met.
 
-This parameter has a 5000 character limit, and supports plain text, HTML tags and the following tokens (variables):
+This parameter has a 5000 character limit, and supports plain text, HTML tags, and the following tokens (variables):
 
 - %%AppliedActions%%: The actions applied to the content.
 - %%ContentURL%%: The URL of the document on the SharePoint site or OneDrive for Business site.
@@ -2453,7 +2453,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyPolicyTipCustomTextTranslations
-The NotifyPolicyTipCustomTextTranslations parameter specifies the localized policy tip text that's shown when the conditions of the rule are met based on the client settings. This parameter uses the syntax `CultureCode:Text`.
+The NotifyPolicyTipCustomTextTranslations parameter specifies the localized policy tip text that's shown when the conditions of the rule are met, based on the client settings. This parameter uses the syntax `CultureCode:Text`.
 
 Valid culture codes are supported values from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
@@ -2533,7 +2533,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrependSubject
-The PrependSubject parameter specifies an action for the rule that adds text to add to the beginning of the Subject field of messages. The value for this parameter is the text that you want to add. If the text contains spaces, enclose the value in quotation marks (").
+The PrependSubject parameter specifies an action for the rule that adds text to add to the beginning of the Subject field of messages. The value for this parameter is text that you specify. If the text contains spaces, enclose the value in quotation marks (").
 
 Consider ending the value for this parameter with a colon (:) and a space, or at least a space, to separate it from the original subject.
 
@@ -2621,31 +2621,31 @@ The RecipientADAttributeContainsWords parameter specifies a condition for the DL
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -2671,35 +2671,35 @@ The RecipientADAttributeMatchesPatterns parameter specifies a condition for the 
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the or operator is used.
+When you specify multiple attributes, the OR operator is used.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2853,31 +2853,31 @@ The SenderADAttributeContainsWords parameter specifies a condition for the DLP r
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="Word"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="Word1";AttributeName2="Word2";...AttributeNameN="WordN"}`. Don't use words with leading or trailing spaces.
 
@@ -2903,35 +2903,35 @@ The SenderADAttributeMatchesPatterns parameter specifies a condition for the DLP
 
 - City
 - Company
-- Country
+- Country or Region
 - CustomAttribute1 to CustomAttribute15
 - Department
 - DisplayName
-- Email
-- FaxNumber
+- Email Addresses
+- Fax
 - FirstName
 - HomePhoneNumber
 - Initials
 - LastName
 - Manager
-- MobileNumber
+- Mobile Phone
 - Notes
 - Office
-- OtherFaxNumber
-- OtherHomePhoneNumber
-- OtherPhoneNumber
-- PagerNumber
-- PhoneNumber
-- POBox
-- State
-- Street
+- OtherFax
+- OtherHomePhone
+- Other Telephone
+- Pager
+- Phone
+- Post Office Box
+- State or Province
+- Street Address
 - Title
 - UserLogonName
-- ZipCode
+- Postal Code
 
 This parameter uses the syntax: `@{AttributeName="RegularExpression"}`. To specify multiple attributes, use the following syntax: `@{AttributeName1="RegularExpression1";AttributeName2="RegularExpression2";...AttributeNameN="RegularExpressionN"}`. Don't use words with leading or trailing spaces.
 
-When you specify multiple attributes, the or operator is used.
+When you specify multiple attributes, the OR operator is used.
 
 You can use this condition in DLP policies that are scoped only to Exchange.
 
@@ -2995,7 +2995,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPRanges
-The SenderIpRanges parameter specifies a condition for the DLP rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+The SenderIpRanges parameter specifies a condition for the DLP rule that looks for senders whose IP addresses matches the specified value or fall within the specified ranges. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
 - IP address range: For example, 192.168.0.1-192.168.0.254.
@@ -3190,7 +3190,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnscannableDocumentExtensionIs
-The UnscannableDocumentExtensionIs parameter specifies a condition for the rule that looks for the specified true file extension when the files are unscannable. Irrespective of what the original file type is, this predicate matches based on the extension that is present in the name of the file.
+The UnscannableDocumentExtensionIs parameter specifies a condition for the rule that looks for the specified true file extension when the files aren't scannable. Irrespective of the original file type, this predicate matches based on the extension that is present in the name of the file.
 
 You can specify multiple values separated by commas.
 

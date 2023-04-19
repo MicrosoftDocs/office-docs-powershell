@@ -18,7 +18,7 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ```
 New-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVideoMobileMode <String>]
- [-IPAudioMobileMode <String>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [-IPAudioMobileMode <String>] [-Identity] <XdsIdentity>] [-MobileDialerPreference <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -139,6 +139,22 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MobileDialerPreference
+Determines the mobile dialer preference, possible values are: Teams, Native, UserOverride.
+For more information, see [Manage user incoming calling policies](/microsoftteams/operator-connect-mobile-configure#manage-user-incoming-calling-policies).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

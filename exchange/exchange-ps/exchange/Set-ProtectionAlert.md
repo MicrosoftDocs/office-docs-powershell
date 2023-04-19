@@ -154,10 +154,13 @@ Accept wildcard characters: False
 The Category parameter specifies a category for the alert policy. Valid values are:
 
 - AccessGovernance
+- ComplianceManager
 - DataGovernance
-- DataLossPrevention
-- ThreatManagement
+- MailFlow
 - Others
+- PrivacyManagement
+- Supervision
+- ThreatManagement
 
 When an activity occurs that matches the conditions of the alert policy, the alert that's generated is tagged with the category that's specified by this parameter. This allows you to track and manage alerts that have the same category setting
 

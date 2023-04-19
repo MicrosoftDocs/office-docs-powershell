@@ -109,6 +109,8 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
 - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet in REST-based connections (you didn't use the _UseRPSSession_ switch) to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
+- Connections in REST API mode have a dependency on the PowerShellGet module.
+
 For additional information, see the [Release notes](#release-notes) section later in this article.
 
 ## Report bugs and issues for the Exchange Online PowerShell module
@@ -156,8 +158,8 @@ Miscellaneous Exchange Online cmdlets that happen to be in the module are listed
 
 |Cmdlet|Comments|
 |---|---|
-|[Get-DefaultTenantBriefingConfig](/powershell/module/exchange/get-defaulttenantbriefingconfig)|Available in v3.2.0-Preview1 or later.|
-|[Set-DefaultTenantBriefingConfig](/powershell/module/exchange/set-defaulttenantbriefingconfig)|Available in v3.2.0-Preview1 or later.|
+|Get-DefaultTenantBriefingConfig|See [Pausing the briefing email from Microsoft Viva](/viva/insights/personal/reference/briefing-pause).|
+|Set-DefaultTenantBriefingConfig|See [Pausing the briefing email from Microsoft Viva](/viva/insights/personal/reference/briefing-pause).|
 |[Get-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/get-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0-Preview1 or later.|
 |[Set-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/set-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0-Preview1 or later.|
 |[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
@@ -248,22 +250,22 @@ Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.1
 
 Windows PowerShell requirements and module support **in older versions of Windows** are described in the following list:
 
-- Windows 8.1<sup>1</sup>
-- Windows Server 2012 or Windows Server 2012 R2<sup>1</sup>
-- Windows 7 Service Pack 1 (SP1)<sup>2,</sup><sup>3,</sup><sup>4</sup>
-- Windows Server 2008 R2 SP1<sup>2,</sup><sup>3,</sup><sup>4</sup>
+- Windows 8.1¹
+- Windows Server 2012 or Windows Server 2012 R2¹
+- Windows 7 Service Pack 1 (SP1)² ³ ⁴
+- Windows Server 2008 R2 SP1² ³ ⁴
 
-- <sup>1</sup> PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
-- <sup>2</sup> This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
-- <sup>3</sup> This version of Windows supports only v2.0.3 or earlier versions of the module.
-- <sup>4</sup> Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
+- ¹ PowerShell 7 on this version of Windows requires the [Windows 10 Universal C Runtime (CRT)](https://www.microsoft.com/download/details.aspx?id=50410).
+- ² This version of Windows has reached its end of support, and is now supported only in Azure virtual machines.
+- ³ This version of Windows supports only v2.0.3 or earlier versions of the module.
+- ⁴ Windows PowerShell 5.1 on this version of Windows requires the .NET Framework 4.5 or later and the Windows Management Framework 5.1. For more information, see [Windows Management Framework 5.1](https://aka.ms/wmf5download).
 
 ### Prerequisites for the Exchange Online PowerShell module
 
-> [!NOTE]
-> The settings described in this section are required in all versions of PowerShell on all operating systems.
-
 #### Set the PowerShell execution policy to RemoteSigned
+
+> [!NOTE]
+> The settings in this section apply to all versions of PowerShell on all operating systems.
 
 PowerShell needs to be configured to run scripts, and by default, it isn't. You'll get the following error when you try to connect:
 
@@ -281,6 +283,8 @@ For more information about execution policies, see [About Execution Policies](/p
 
 > [!NOTE]
 > As described [earlier in this article](#updates-for-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST-based connections to Exchange Online PowerShell.
+>
+> Otherwise, the settings in this section apply to all versions of PowerShell on all operating systems.
 
 For remote PowerShell connections, WinRM needs to allow Basic authentication. **We do not send the username and password combination**. The Basic authentication **header** is required to send the session's OAuth token, because the client-side implementation of WinRM does not support OAuth.
 
@@ -319,8 +323,16 @@ If Basic authentication for WinRM is disabled, you'll get one of the following e
 >
 > Create Powershell Session is failed using OAuth.
 
-> [!TIP]
-> Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542), or [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
+### PowerShellGet for REST-based connections in Windows
+
+[REST-based connections](#updates-for-the-exo-v3-module) to Exchange Online PowerShell in Windows require the PowerShellGet module, and by dependency, the PackageManagement module. Consideration for these modules is more for PowerShell 5.1 than PowerShell 7, but all version of PowerShell benefit from having the latest versions of the modules installed. For installation and update instructions, see [Installing PowerShellGet on Windows](/powershell/scripting/gallery/installing-psget).
+
+> [!NOTE]
+> Beta versions of the PackageManagement or PowerShellGet modules might cause connection issues. If you have connection issues, verify that you don't have Beta versions of the modules installed by by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
+
+If you don't have PowerShellGet installed when you try to create a REST-based connection, you'll get the following error when you try to connect:
+
+> Cannot find a cmdlet Update-Manifest
 
 ### Install the Exchange Online PowerShell module
 
