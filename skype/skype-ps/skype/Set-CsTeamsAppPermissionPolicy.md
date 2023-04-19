@@ -270,7 +270,7 @@ Choose which custom apps can be installed by your users.
 
 ```yaml
 Type: String
-Parameter Sets: AllowedAppList,BlockedAppList
+Parameter Sets: (All)
 Aliases:
 
 Required: False
