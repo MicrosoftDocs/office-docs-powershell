@@ -22,7 +22,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 ```
 Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
- [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>]
+ [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>] [-RecordReroutedCalls <Boolean>]
  [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -211,6 +211,21 @@ Accept wildcard characters: False
 
 ### -DisableComplianceRecordingAudioNotificationForCalls
 Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordReroutedCalls
+Setting this attribute to true enables compliance recording for calls that have been re-routed from a compliance recording-enabled user. Supported call scenarios include forward, transfer, delegation, call groups, and simultaneous ring.
 
 ```yaml
 Type: Boolean
