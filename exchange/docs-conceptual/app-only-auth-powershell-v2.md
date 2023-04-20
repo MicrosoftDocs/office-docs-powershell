@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 01/31/2023
+ms.date: 4/20/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -409,7 +409,8 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
 > [!NOTE]
 > You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID is needed to create the new service principal).
-> Remember, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
+>
+> This method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
 
 For information about creating custom role groups, see [Create role groups](/exchange/permissions-exo/role-groups#create-role-groups). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
