@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsShiftsConnection
-author: shanemalone
+author: shane-malone
 ms.author: shanemalone
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnection
@@ -12,7 +12,7 @@ schema: 2.0.0
 # Set-CsTeamsShiftsConnection
 
 ## SYNOPSIS
-This cmdlet updates a Shifts WFM connection.
+This cmdlet sets an existing workforce management (WFM) connection.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ This cmdlet can update every input field except -ConnectorId and -ConnectionId.
 
 ## EXAMPLES
 
-### Example WFM 1
+### Example 1
 
 ```powershell
 PS C:\> $connection = Get-CsTeamsShiftsConnection -ConnectionId 4dae9db0-0841-412c-8d6b-f5684bfebdd7
@@ -98,7 +98,7 @@ In case of error, we can capture the error response as following:
 
 * To get the error object and object details: `$result, $result.Detail`
 
-### Example WFM 2
+### Example 2
 
 ```powershell
 PS C:\> $connection = Get-CsTeamsShiftsConnection -ConnectionId 79964000-286a-4216-ac60-c795a426d61a
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Break
-Wait for .NET debugger to attach
+Wait for .NET debugger to attach.
 
 ```yaml
 Type: SwitchParameter
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelineAppend
-SendAsync Pipeline Steps to be appended to the front of the pipeline
+SendAsync Pipeline Steps to be appended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelinePrepend
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
+SendAsync Pipeline Steps to be prepended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -IfMatch
-The value of the etag field as returned by the cmdlets
+The value of the etag field as returned by the cmdlets.
 
 ```yaml
 Type: String
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Identity Parameter
+Identity Parameter.
 
 ```yaml
 Type: IConfigApiBasedCmdletsIdentity
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-The URI for the proxy server to use
+The URI for the proxy server to use.
 
 ```yaml
 Type: Uri
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Credentials for a proxy server to use for the remote call
+Credentials for a proxy server to use for the remote call.
 
 ```yaml
 Type: PSCredential
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUseDefaultCredentials
-Use the default credentials for the proxy
+Use the default credentials for the proxy.
 
 ```yaml
 Type: SwitchParameter

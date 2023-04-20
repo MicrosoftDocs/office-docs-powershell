@@ -42,7 +42,7 @@ This cmdlet can update every input field except -ConnectorId and -ConnectorInsta
 
 ## EXAMPLES
 
-### Example WFM 1
+### Example 1
 
 ```powershell
 PS C:\> $connectionInstance = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-eba2865f-6cac-46f9-8733-e0631a4536e1

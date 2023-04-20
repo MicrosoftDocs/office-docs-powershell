@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsShiftsConnection
-author: shanemalone
+author: shane-malone
 ms.author: shanemalone
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnection
@@ -12,7 +12,7 @@ schema: 2.0.0
 # Get-CsTeamsShiftsConnection
 
 ## SYNOPSIS
-This cmdlet returns the list of existing WFM connections. It can also return the configuration details for a given WFM connection.
+This cmdlet returns the list of existing workforce management (WFM) connections. It can also return the configuration details for a given WFM connection.
 
 ## SYNTAX
 
@@ -58,7 +58,7 @@ Etag                                     : "5b00dd1b-0000-0400-0000-641d2df00000
 Id                                       : 4dae9db0-0841-412c-8d6b-f5684bfebdd7
 LastModifiedDateTime                     : 24/03/2023 04:58:23
 Name                                     : My connection 1
-TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
+TenantId                                 : dfd24b34-ccb0-47e1-bdb7-000000000000
 
 ConnectorId                              : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
 ConnectorSpecificSettingAdminApiUrl      :
@@ -76,7 +76,7 @@ Etag                                     : "3100fd6e-0000-0400-0000-642ea7840000
 Id                                       : a2d1b091-5140-4dd2-987a-98a8b5338744
 LastModifiedDateTime                     : 06/04/2023 11:05:39
 Name                                     : My connection 2
-TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
+TenantId                                 : dfd24b34-ccb0-47e1-bdb7-000000000000
 ```
 
 
@@ -95,7 +95,7 @@ PS C:\> $connection.ToJsonString()
     "clientId": "Es5Q2fB4PXweCyto6Ms6J2kRB7uwAc3W"
   },
   "id": "a2d1b091-5140-4dd2-987a-98a8b5338744",
-  "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+  "tenantId": "dfd24b34-ccb0-47e1-bdb7-000000000000",
   "connectorId": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
   "name": "My connection 2",
   "etag": "\"3100fd6e-0000-0400-0000-642ea7840000\"",
@@ -109,7 +109,7 @@ Returns the connection with the specified -ConnectionId.
 ## PARAMETERS
 
 ### -Break
-Wait for .NET debugger to attach
+Wait for .NET debugger to attach.
 
 ```yaml
 Type: SwitchParameter
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-The connection id
+The connection id.
 
 ```yaml
 Type: String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelineAppend
-SendAsync Pipeline Steps to be appended to the front of the pipeline
+SendAsync Pipeline Steps to be appended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelinePrepend
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
+SendAsync Pipeline Steps to be prepended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Identity Parameter
+Identity Parameter.
 
 ```yaml
 Type: IConfigApiBasedCmdletsIdentity
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-The URI for the proxy server to use
+The URI for the proxy server to use.
 
 ```yaml
 Type: Uri
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Credentials for a proxy server to use for the remote call
+Credentials for a proxy server to use for the remote call.
 
 ```yaml
 Type: PSCredential
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUseDefaultCredentials
-Use the default credentials for the proxy
+Use the default credentials for the proxy.
 
 ```yaml
 Type: SwitchParameter

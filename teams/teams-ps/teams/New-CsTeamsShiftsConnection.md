@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: New-CsTeamsShiftsConnection
-author: shanemalone
+author: shane-malone
 ms.author: shanemalone
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnection
@@ -12,7 +12,7 @@ schema: 2.0.0
 # New-CsTeamsShiftsConnection
 
 ## SYNOPSIS
-This cmdlet creates a Shifts WFM connection.
+This cmdlet creates a new workforce management (WFM) connection.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ This cmdlet creates a Shifts WFM connection. It allows the admin to set up the e
 
 ## EXAMPLES
 
-### Example WFM 1 Connection
+### Example 1
 
 ```powershell
 PS C:\> $result =  New-CsTeamsShiftsConnection `
@@ -83,7 +83,7 @@ In case of an error, we can capture the error response as follows:
 
 * To get the error object and object details: `$result, $result.Detail`
 
-### Example WFM 2 Connection
+### Example 2
 
 ```powershell
 PS C:\> $result = New-CsTeamsShiftsConnection `

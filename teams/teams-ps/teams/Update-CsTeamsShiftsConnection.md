@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Update-CsTeamsShiftsConnection
-author: shanemalone
+author: shane-malone
 ms.author: shanemalone
 manager:
 online version: https://docs.microsoft.com/powershell/module/teams/update-csteamsshiftsconnection
@@ -12,7 +12,7 @@ schema: 2.0.0
 # Update-CsTeamsShiftsConnection
 
 ## SYNOPSIS
-This cmdlet updates Shifts WFM connection fields.
+This cmdlet updates an existing workforce management (WFM) connection.
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ This cmdlet updates a Shifts WFM connection. Similar to the Set-CsTeamsShiftsCon
 
 ## EXAMPLES
 
-### Example 1: Update connection name
+### Example 1
 
 ```powershell
 PS C:\> $connection = Get-CsTeamsShiftsConnection -ConnectionId 4dae9db0-0841-412c-8d6b-f5684bfebdd7
@@ -77,7 +77,7 @@ TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 
 Updates the connection with the specified -ConnectionId with the given name. Returns the object of the updated connection.
 
-### Example 2: Update the connector specific settings
+### Example 2
 
 ```powershell
 PS C:\> $connection = Get-CsTeamsShiftsConnection -ConnectionId 79964000-286a-4216-ac60-c795a426d61a
