@@ -408,11 +408,12 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 #### Assign custom Exchange Online role groups to the application using service principals
 
 > [!NOTE]
+> You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID is needed to create the new service principal).
 > Remember, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
 
 For information about creating custom role groups, see [Create role groups](/exchange/permissions-exo/role-groups#create-role-groups). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
-To assign custom Exchange Online role groups to the application using service principals, do the following steps:
+To assign custom role groups to the application using service principals, do the following steps:
 
 1. In [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2), run the following command to store the details of the Azure application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
 
@@ -428,8 +429,8 @@ To assign custom Exchange Online role groups to the application using service pr
 
    For detailed syntax and parameter information, see [Get-AzureADServicePrincipal](/powershell/module/azuread/get-azureadserviceprincipal).
 
-2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and run the following commands to:
-   - Create an Exchange Online service principal object for the Azure application.
+2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) or [Security & Compliance PowerShell](connect-to-scc-powershell.md) and run the following commands to:
+   - Create a service principal object for the Azure application.
    - Store the details of the service principal in a variable.
 
    ```powershell
@@ -448,7 +449,7 @@ To assign custom Exchange Online role groups to the application using service pr
 
    For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchange/new-serviceprincipal).
 
-3. In Exchange Online PowerShell, run the following command to add the service principal as a member of the custom role group:
+3. In Exchange Online PowerShell or Security & Compliance PowerShell, run the following command to add the service principal as a member of the custom role group:
 
    ```powershell
    Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ServiceId | $<VariableName2>.Id>
