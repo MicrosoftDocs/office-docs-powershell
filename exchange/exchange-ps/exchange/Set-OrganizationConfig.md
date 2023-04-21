@@ -3198,7 +3198,7 @@ Accept wildcard characters: False
 The PublicFolderShowClientControl parameter enables or disables the control access feature to public folders in Microsoft Outlook. Valid values are:
 
 - $true: Users can or cannot access public folders in Outlook based on the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet (the default value is $false).
-- $false: User can access public folders and you will not control access public folders in Outlook based on PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet. This is the default value.
+- $false: Users can access public folders and you cannot control access to public folders in Outlook based on the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet. This is the default value.
 
 ```yaml
 Type: Boolean
