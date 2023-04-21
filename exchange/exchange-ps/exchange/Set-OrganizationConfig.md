@@ -3175,7 +3175,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFoldersEnabled
-The PublicFoldersEnabled parameter specifies how public folders are deployed in your organization. This parameter uses one of the following values.
+The PublicFoldersEnabled parameter specifies how public folders are deployed in your organization. Valid values are:
 
 - Local: The public folders are deployed locally in your organization.
 - Remote: The public folders are deployed in the remote forest.
@@ -3195,10 +3195,10 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderShowClientControl
-The PublicFolderShowClientControl parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
+The PublicFolderShowClientControl parameter enables or disables the control access feature for public folders in Microsoft Outlook. Valid values are:
 
-- $true: Users can access public folders in Outlook if the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is set to the value $true (the default value is $false).
-- $false: User can't access public folders in Outlook. This is the default value.
+- $true: User access to public folders in Outlook is controlled by the value of the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet (the default value is $false).
+- $false: This is the default value. User access to public folders in Outlook is enabled (the control access feature is disabled). The value of the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is meaningless.
 
 ```yaml
 Type: Boolean
