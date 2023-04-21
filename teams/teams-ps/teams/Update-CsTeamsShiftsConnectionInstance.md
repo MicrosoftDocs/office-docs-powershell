@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOfferShiftRequest
-The sync state for the offer shift request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the offer shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOpenShift
-The sync state for the open shift scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the open shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOpenShiftRequest
-The sync state for the open shift request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the open shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioShift
-The sync state for the shift scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioSwapRequest
-The sync state for the shift swap request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the shift swap request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeCard
-The sync state for the time card scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the time card scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeOff
-The sync state for the time off scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the time off scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeOffRequest
-The sync state for the time off request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the time off request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioUserShiftPreference
-The sync state for the user shift preferences scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the user shift preferences scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String

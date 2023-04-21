@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-Gets or sets the WFM connection id for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+Gets or sets the WFM connection ID for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
 
 ```yaml
 Type: String
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -DesignatedActorId
-Gets or sets the designated actor id that App acts as for Shifts Graph Api calls.
+Gets or sets the designated actor ID that App acts as for Shifts Graph Api calls.
 
 ```yaml
 Type: String
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOfferShiftRequest
-The sync state for the offer shift request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the offer shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOpenShift
-The sync state for the open shift scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the open shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioOpenShiftRequest
-The sync state for the open shift request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the open shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioShift
-The sync state for the shift scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioSwapRequest
-The sync state for the swap shift request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the swap shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeCard
-The sync state for the time card scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the time card scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeOff
-The sync state for the time off scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the time off scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioTimeOffRequest
-The sync state for the time off request scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the time off request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncScenarioUserShiftPreference
-The sync state for the user shift preferences scenario. Valid values are "Disabled", "FromWfmToShifts" or "TwoWay".
+The sync state for the user shift preferences scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
 Type: String
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelineAppend
-SendAsync Pipeline Steps to be appended to the front of the pipeline
+SendAsync Pipeline Steps to be appended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelinePrepend
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
+SendAsync Pipeline Steps to be prepended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-The URI for the proxy server to use
+The URI for the proxy server to use.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Credentials for a proxy server to use for the remote call
+Credentials for a proxy server to use for the remote call.
 
 ```yaml
 Type: PSCredential
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUseDefaultCredentials
-Use the default credentials for the proxy
+Use the default credentials for the proxy.
 
 ```yaml
 Type: SwitchParameter

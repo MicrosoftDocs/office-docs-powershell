@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-The connection id.
+The connection ID.
 
 ```yaml
 Type: String

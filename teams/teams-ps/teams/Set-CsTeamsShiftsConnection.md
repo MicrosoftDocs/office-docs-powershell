@@ -88,9 +88,9 @@ TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 
 ```
 
-Updates the instance with the specified -ConnectionId. Returns the object of updated connection.
+Updates the instance with the specified -ConnectionId. Returns the object of the updated connection.
 
-In case of error, we can capture the error response as following:
+In case of an error, you can capture the error response as follows:
 
 * Hold the cmdlet output in a variable: `$result=<CMDLET>`
 
@@ -142,9 +142,9 @@ TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 
 ```
 
-Updates the instance with the specified -ConnectionId. Returns the object of updated connection.
+Updates the instance with the specified -ConnectionId. Returns the object of the updated connection.
 
-In case of error, we can capture the error response as following:
+In case of an error, you can capture the error response as follows:
 
 * Hold the cmdlet output in a variable: `$result=<CMDLET>`
 
@@ -155,7 +155,7 @@ In case of error, we can capture the error response as following:
 ## PARAMETERS
 
 ### -Body
-The request body 
+The request body.
 
 ```yaml
 Type: IUpdateWfmConnectionRequest
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-The WFM connection id for the instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
+The WFM connection ID for the instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
 
 ```yaml
 Type: String

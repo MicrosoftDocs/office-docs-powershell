@@ -73,7 +73,7 @@ TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 }
 ```
 
-Returns the object of created connection.
+Returns the object of the created connection.
 
 In case of an error, we can capture the error response as follows:
 
@@ -126,7 +126,7 @@ TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 
 ### -Body
 
-The request body
+The request body.
 
 ```yaml
 Type: IConnectorInstanceRequest
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Break
-Wait for .NET debugger to attach
+Wait for .NET debugger to attach.
 
 ```yaml
 Type: SwitchParameter
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorId
-The WFM connector Id.
+The WFM connector ID.
 
 ```yaml
 Type: String
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Credentials for a proxy server to use for the remote call
+Credentials for a proxy server to use for the remote call.
 
 ```yaml
 Type: PSCredential
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUseDefaultCredentials
-Use the default credentials for the proxy
+Use the default credentials for the proxy.
 
 ```yaml
 Type: SwitchParameter
