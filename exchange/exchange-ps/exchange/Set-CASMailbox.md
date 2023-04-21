@@ -1156,7 +1156,7 @@ Accept wildcard characters: False
 The PublicFolderClientAccess parameter enables or disables access to public folders in Microsoft Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to $true. Valid values are:
 
 - $true: The user can access public folders in Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to the $true (the default value is $false).
-- $false: The user can't access public folders in Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to the $true. This is the default value.
+- $false: The user can't access public folders in Outlook if the PublicFolderShowClientControl parameter on the Set-OrganizationConfig cmdlet is set to $true. This is the default value.
 
 ```yaml
 Type: Boolean
