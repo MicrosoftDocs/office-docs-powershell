@@ -1,2 +1,30 @@
-- name: Index
+- name: MSCommerce PowerShell
   href: index.md
+  items:
+  - name: MSCommerce PowerShell overview
+    href: index.md
+  - name: Get started with MSCommerce PowerShell module
+    href: get-started.md
+  - name: Reference
+    href:
+    items:
+    - name: MSCommerce
+      href: mscommerce.md
+    - name: Connect-MSCommerce
+      href: connect-mscommerce.md
+    - name: Get-MSCommercePolicies
+      href: get-mscommercepolicies.md
+    - name: Get-MSCommercePolicy
+      href: get-mscommercepolicy.md
+    - name: Get-MSCommerceProductPolicies
+      href: get-mscommerceproductpolicies.md
+    - name: Get-MSCommerceProductPolicy
+      href: get-mscommerceprodcutpolicy.md
+    - name: Update-MSCommerceProductPolicy
+      href: update-mscommerceproductpolicy.md
+  - name: Troubleshooting
+    href:
+    items:
+    - name: HandleError : Failed to retrieve policy
+      href: handle-error-failed-retrieve-policy.md
+  
