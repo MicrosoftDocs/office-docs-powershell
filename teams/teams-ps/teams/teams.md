@@ -187,3 +187,9 @@ Use this cmdlet to update values in existing Teams enhanced encryption policy.
 
 ### [Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
 This cmdlet updates Shifts connection instance fields.
+
+### [Set-TeamsEnvironmentConfig](Set-TeamsEnvironmentConfig.md)
+This cmdlet sets environment specific configurations like endpoint URIs, Teams environment in local machine.
+
+### [Clear-TeamsEnvironmentConfig](Clear-TeamsEnvironmentConfig.md.md)
+This cmdlet clears environment specific configurations from local machine set by running Set-TeamsEnvironmentConfig.
