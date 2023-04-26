@@ -6931,7 +6931,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "teams/virtual-folder/teams/New-CsTeamsShiftsConnectionTeamMap.md",
+      "source_path": "teams/teams-ps/teams/New-CsTeamsShiftsConnectionTeamMap.md",
       "redirect_url": "powershell/module/teams",
       "redirect_document_id": false
     }
