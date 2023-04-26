@@ -620,8 +620,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithBizOrInfoUrls
-**Note**: This setting is part of Advanced Spam Filtering (ASF) and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithBizOrInfoUrls parameter increases the spam score of messages that contain links to .biz or .info domains. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -1240,8 +1238,6 @@ Accept wildcard characters: False
 ```
 
 ### -TestModeAction
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you don't use this setting.
-
 The TestModeAction parameter specifies the additional action to take on messages when one or more IncreaseScoreWith\* or MarkAsSpam\* ASF parameters are set to the value Test. Valid values are:
 
 - None: This is the default value, and we recommend that you don't change it.
@@ -1262,8 +1258,6 @@ Accept wildcard characters: False
 ```
 
 ### -TestModeBccToRecipients
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you don't use this setting.
-
 The TestModeBccToRecipients parameter specifies the blind carbon copy (Bcc) recipients to add to spam messages when the TestModeAction ASF parameter is set to the value BccMessage.
 
 Valid input for this parameter is an email address. Separate multiple email addresses with commas.
