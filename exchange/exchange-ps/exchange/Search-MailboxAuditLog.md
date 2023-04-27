@@ -29,7 +29,6 @@ Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>]
  [-ExternalAccess <Boolean>]
  [-GroupMailbox]
  [-HasAttachments <Boolean>]
- [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -45,7 +44,6 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
  [-ExternalAccess <Boolean>]
  [-GroupMailbox]
  [-HasAttachments <Boolean>]
- [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -197,26 +195,6 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeInactiveMailbox
-This parameter is available only in the cloud-based service.
-
-The IncludeInactiveMailbox switch is required to include inactive mailboxes in the search. You don't need to specify a value with this switch.
-
-An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named

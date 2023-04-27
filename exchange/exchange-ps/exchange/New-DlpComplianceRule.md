@@ -149,6 +149,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SentTo <MultiValuedProperty>]
  [-SentToMemberOf <RecipientIdParameter[]>]
  [-SetHeader <PswsHashtable>]
+ [-SharedByIRMUserRisk <MultiValuedProperty>]
  [-StopPolicyProcessing <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
@@ -3099,6 +3100,22 @@ You can use this action in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharedByIRMUserRisk
+{{ Fill SharedByIRMUserRisk Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
