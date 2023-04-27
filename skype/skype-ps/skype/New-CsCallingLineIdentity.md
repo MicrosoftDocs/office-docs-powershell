@@ -25,7 +25,7 @@ New-CsCallingLineIdentity [-Identity] <string> [-BlockIncomingPstnCallerID <bool
 
 ## DESCRIPTION
 
-**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+**Note**: The use of CallingIDSubstitute Service will be deprecated. You are no longer able to create new Caller ID policies using CallingIDSubstitute Service. You should use CallingIDSubstitute Resource instead.
 
 You can either change or block the Caller ID (also called a Calling Line ID) for a user. By default, the Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
 
@@ -103,9 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -CallingIDSubstitute
-**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+**Note**: The use of CallingIDSubstitute Service will be deprecated and you can't create new Caller ID policies with it. You should use CallingIDSubstitute Resource instead.
 
-The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, Service, LineUri, and Resource.
+The CallingIDSubstitute parameter lets you specify an alternate Caller ID. The default value is LineUri. Supported values are Anonymous, LineUri, and Resource.
 
 ```yaml
 Type: String
@@ -189,6 +189,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceNumber
+**Note**: The use of CallingIDSubstitute Service and ServiceNumber will be deprecated and you can't create new Caller ID policies with it. You should use CallingIDSubstitute Resource and ResourceAccount instead.
+
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
 
 Note: Do not add '+' to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx
