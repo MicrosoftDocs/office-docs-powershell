@@ -176,7 +176,7 @@ This parameter is meaningful only when the HonorDmarcPolicy parameter is set to 
 Type: SpoofDmarcQuarantineAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ This parameter is meaningful only when the HonorDmarcPolicy parameter is set to 
 Type: SpoofDmarcRejectAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -548,7 +548,7 @@ The HonorDmarcPolicy parameter specifies whether to use the `p=` policy action i
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
