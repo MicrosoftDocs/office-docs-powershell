@@ -26,7 +26,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Export-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <QuarantineMessageIdentity>]
  [-CompressOutput]
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-ForceConversionToMime]
+ [-Password <SecureString>]
+ [-ReasonForExport <String>]
  [-RecipientAddress <String>]
  [<CommonParameters>]
 ```
@@ -35,7 +38,10 @@ Export-QuarantineMessage -Identities <QuarantineMessageIdentity[]> [-Identity <Q
 ```
 Export-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-CompressOutput]
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-ForceConversionToMime]
+ [-Password <SecureString>]
+ [-ReasonForExport <String>]
  [-RecipientAddress <String>]
  [<CommonParameters>]
 ```
@@ -148,6 +154,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EntityType
+The EntityType parameter filters the results by EntityType. Valid values are:
+
+- Email
+- SharePoint
+- Teams (currently in Preview)
+- DataLossPrevention (currently in Preview)
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceConversionToMime
 The ForceConversionToMime switch converts exported plain text messages to MIME formatting. You don't need to specify a value with this switch.
 
@@ -155,6 +182,44 @@ This switch has no effect if the message is already encoded as Base64.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Password
+The Password parameter specifies the password that's required to open the exported message.
+
+You can use the following methods as a value for this parameter:
+
+- `(ConvertTo-SecureString -String '<password>' -AsPlainText -Force)`.
+- Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
+- `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReasonForExport
+The ReasonForExport parameter specifies why the message was exported. If the value contains spaces, enclose the value in quotation marks (").
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection

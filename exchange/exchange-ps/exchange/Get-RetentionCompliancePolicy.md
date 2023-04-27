@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
- [-ErrorPolicyOnly] 
+ [-ErrorPolicyOnly]
  [-ExcludeTeamsPolicy]
  [-RetentionRuleTypes]
  [-TeamsPolicyOnly]

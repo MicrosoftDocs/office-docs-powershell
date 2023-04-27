@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <HistoricalSearchReportType> -StartDate <DateTime>
  [-BlockStatus <String>]
  [-CompressFile <Boolean>]
+ [-ConnectorType <String>]
  [-DeliveryStatus <String>]
  [-Direction <MessageDirection>]
  [-DLPPolicy <MultiValuedProperty>]
@@ -37,6 +38,7 @@ Start-HistoricalSearch -EndDate <DateTime> -ReportTitle <String> -ReportType <Hi
  [-RecipientAddress <MultiValuedProperty>]
  [-SenderAddress <MultiValuedProperty>]
  [-SmtpSecurityError <String>]
+ [-TLSUsed <String>]
  [-TransportRule <MultiValuedProperty>]
  [-Url <String>]
  [<CommonParameters>]
@@ -170,6 +172,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectorType
+{{ Fill ConnectorType Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -387,6 +405,22 @@ Accept wildcard characters: False
 
 ### -SmtpSecurityError
 {{ Fill SmtpSecurityError Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TLSUsed
+{{ Fill TLSUsed Description }}
 
 ```yaml
 Type: String
