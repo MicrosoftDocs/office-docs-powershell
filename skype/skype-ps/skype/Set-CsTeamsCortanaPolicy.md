@@ -5,7 +5,7 @@ applicable: Skype for Business Online
 title: Set-CsTeamsCortanaPolicy
 schema: 2.0.0
 manager: amehta
-author: akshbhat
+author: akshbhat-msft
 ms.author: akshbhat
 ms.reviewer:
 ---

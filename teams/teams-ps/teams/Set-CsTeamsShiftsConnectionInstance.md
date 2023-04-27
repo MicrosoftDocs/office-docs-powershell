@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsShiftsConnectionInstance
-author: lespina
+author: leonardospina
 ms.author: lespina
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsshiftsconnectioninstance
