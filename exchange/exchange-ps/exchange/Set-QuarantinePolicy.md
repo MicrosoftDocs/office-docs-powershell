@@ -32,6 +32,7 @@ Set-QuarantineTag [-Identity] <QuarantineTagIdParameter>
  [-EndUserQuarantinePermissions <QuarantinePermissions>]
  [-EndUserQuarantinePermissionsValue <Int32>]
  [-EndUserSpamNotificationCustomFromAddress <String>]
+ [-EndUserSpamNotificationFrequency <TimeSpan>]
  [-EndUserSpamNotificationFrequencyInDays <Int32>]
  [-EndUserSpamNotificationLanguage <EsnLanguage>]
  [-EsnCustomSubject <MultiValuedProperty>]
@@ -62,7 +63,7 @@ This example configures the permissions in the quarantine policy named CustomAcc
 
 ### Example 2
 ```powershell
-Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('English','ChineseSimplified','French') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','有关更多信息，请联系服务台','Pour plus d''informations, contactez le service d''assistance.') -ESNCustomSubject ('You have quarantined messages','您有隔离邮件','Vous avez des messages en quarantaine') -MultiLanguageSenderName ('Contoso administrator','Contoso管理员','Administrateur Contoso') -EndUserSpamNotificationCustomFromAddress aashutosh@contso.onmicrosoft.com -OrganizationBrandingEnabled $true -EndUserSpamNotificationFrequencyInDays 5
+Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('English','ChineseSimplified','French') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','有关更多信息，请联系服务台','Pour plus d''informations, contactez le service d''assistance.') -ESNCustomSubject ('You have quarantined messages','您有隔离邮件','Vous avez des messages en quarantaine') -MultiLanguageSenderName ('Contoso administrator','Contoso管理员','Administrateur Contoso') -EndUserSpamNotificationCustomFromAddress aashutosh@contso.onmicrosoft.com -OrganizationBrandingEnabled $true -EndUserSpamNotificationFrequency 04:00:00
 ```
 
 This example modifies the global settings for quarantine notifications (formerly known as end-user spam notification settings):
@@ -70,7 +71,7 @@ This example modifies the global settings for quarantine notifications (formerly
 - Quarantine notifications are customized for English, Chinese, and French. Extra quotation marks are required in the French MultiLanguageCustomDisclaimer value as escape characters for the quotation mark characters in the text.
 - The existing user aashutosh@contso.onmicrosoft.com is used as the quarantine notification sender.
 - The previously configured custom logo replaces the default Microsoft logo.
-- The frequency of quarantine notification is changed to 5 days.
+- The frequency of quarantine notifications is changed to 4 hours.
 
 ## PARAMETERS
 
@@ -264,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomFromAddress
-The EndUserSpamNotificationCustomFromAddress specifies the email address of an existing internal sender to use as the sender for quarantine notifications. To set this parameter back to the default email address, use the value $null. 
+The EndUserSpamNotificationCustomFromAddress specifies the email address of an existing internal sender to use as the sender for quarantine notifications. To set this parameter back to the default email address quarantine@messaging.microsoft.com, use the value $null. 
 
 ```yaml
 Type: String
@@ -279,8 +280,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndUserSpamNotificationFrequency
+The EndUserSpamNotificationFrequency parameter species how often quarantine notifications are sent to users. Valid values are:
+
+- 04:00:00 (4 hours)
+- 1.00:00:00 (1 day)
+- 7.00:00:00 (7 days)
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndUserSpamNotificationFrequencyInDays
-The EndUserSpamNotificationFrequencyInDays parameter species how often quarantine notifications are sent. A valid value is an integer from 1 to 30. The default value is 3.
+This parameter is reserved for internal Microsoft use. 
 
 ```yaml
 Type: Int32

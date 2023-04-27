@@ -60,6 +60,7 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-PreSubmitMessageTitleForNotJunk <String>]
  [-PreSubmitMessageTitleForPhishing <String>]
  [-ReportChatMessageEnabled <Boolean>]
+ [-ReportChatMessageToCustomizedAddressEnabled <Boolean>]
  [-ReportJunkAddresses <MultiValuedProperty>]
  [-ReportJunkToCustomizedAddress <Boolean>]
  [-ReportNotJunkAddresses <MultiValuedProperty>]
@@ -860,6 +861,22 @@ Accept wildcard characters: False
 
 ### -ReportChatMessageEnabled
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportChatMessageToCustomizedAddressEnabled
+{{ Fill ReportChatMessageToCustomizedAddressEnabled Description }}
 
 ```yaml
 Type: Boolean
