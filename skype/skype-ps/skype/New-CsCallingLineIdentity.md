@@ -31,8 +31,6 @@ You can either change or block the Caller ID (also called a Calling Line ID) for
 
 Note:  
 - Identity must be unique.
-- ServiceNumber must be a valid Service Number in the tenant telephone number inventory.
-- If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
 - If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
  
 ## EXAMPLES
@@ -189,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceNumber
-**Note**: The use of CallingIDSubstitute Service and ServiceNumber will be deprecated and you can't create new Caller ID policies with it. You should use CallingIDSubstitute Resource and ResourceAccount instead.
+**Note**: The use of CallingIDSubstitute Service and -ServiceNumber will be deprecated and you can't create new Caller ID policies with it. You should use CallingIDSubstitute Resource and -ResourceAccount instead.
 
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
 
