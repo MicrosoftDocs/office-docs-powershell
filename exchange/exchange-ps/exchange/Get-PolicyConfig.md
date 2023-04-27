@@ -39,7 +39,7 @@ This example returns the endpoint restrictions that are available in the organiz
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+You don't need to use this parameter. The only endpoint restrictions object in the organization is named Settings.
 
 ```yaml
 Type: OrganizationIdParameter
