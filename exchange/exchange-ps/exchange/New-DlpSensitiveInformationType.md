@@ -21,9 +21,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-DlpSensitiveInformationType [-Name] <String> -Description <String> -Fingerprints <MultiValuedProperty>
+New-DlpSensitiveInformationType [[-Name] <String>]
+ [-Fingerprints <MultiValuedProperty>]
  [-Confirm]
+ [-Description <String>]
+ [-FileData <Byte[]>]
+ [-IsExact <Boolean>]
  [-Locale <CultureInfo>]
+ [-ThresholdConfig <PswsHashtable>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -38,9 +43,13 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $Employee_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Employee Template.docx')
+
 $Employee_Fingerprint = New-DlpFingerprint -FileData $Employee_Template -Description "Contoso Employee Template"
+
 $Customer_Template = [System.IO.File]::ReadAllBytes('D:\Data\Contoso Customer Template.docx')
+
 $Customer_Fingerprint = New-DlpFingerprint -FileData $Customer_Template -Description "Contoso Customer Template"
+
 New-DlpSensitiveInformationType -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint[0],$Customer_Fingerprint[0] -Description "Message contains Contoso employee or customer information."
 ```
 
@@ -59,24 +68,8 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
-Required: True
+Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-The Description parameter specifies a description for the sensitive information type rule.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -95,6 +88,38 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Description
+The Description parameter specifies a description for the sensitive information type rule.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileData
+{{ Fill FileData Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -117,6 +142,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsExact
+{{ Fill IsExact Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Locale
 The Locale parameter specifies the language that's associated with the sensitive information type rule.
 
@@ -126,6 +167,22 @@ You can add additional language translations to the sensitive information type r
 
 ```yaml
 Type: CultureInfo
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThresholdConfig
+{{ Fill ThresholdConfig Description }}
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
