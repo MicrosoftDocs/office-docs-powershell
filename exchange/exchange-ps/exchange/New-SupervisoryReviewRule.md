@@ -29,14 +29,18 @@ New-SupervisoryReviewRule [-Name] <String> -Policy <PolicyIdParameter>
  [-ContentMatchesDataModel <String>]
  [-ContentSources <String[]>]
  [-DayXInsights <Boolean>]
+ [-ExceptIfFrom <MultiValuedProperty>]
  [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
  [-ExceptIfRevieweeIs <MultiValuedProperty>]
  [-ExceptIfSenderDomainIs <MultiValuedProperty>]
+ [-ExceptIfSentTo <MultiValuedProperty>]
  [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-From <MultiValuedProperty>]
  [-IncludeAdaptiveScopes <String[]>]
  [-InPurviewFilter <String>]
  [-Ocr <Boolean>]
  [-SamplingRate <Int32>]
+ [-SentTo <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -221,6 +225,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfFrom
+{{ Fill ExceptIfFrom Description }}
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfRecipientDomainIs
 {{ Fill ExceptIfRecipientDomainIs Description }}
 
@@ -269,11 +289,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfSentTo
+{{ Fill ExceptIfSentTo Description }}
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfSubjectOrBodyContainsWords
 {{ Fill ExceptIfSubjectOrBodyContainsWords Description }}
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -From
+{{ Fill From Description }}
+
+```yaml
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -338,6 +390,22 @@ The SamplingRate parameter specifies the percentage of communications for review
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentTo
+{{ Fill SentTo Description }}
+
+```yaml
+Type:
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

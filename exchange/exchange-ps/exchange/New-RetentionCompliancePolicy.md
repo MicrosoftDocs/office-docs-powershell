@@ -30,6 +30,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeLocationException <MultiValuedProperty>]
  [-Force]
+ [-IsSimulation]
  [-ModernGroupLocation <MultiValuedProperty>]
  [-ModernGroupLocationException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
@@ -53,6 +54,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-IsSimulation]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
  [-TeamsChannelLocation <MultiValuedProperty>]
@@ -66,10 +68,12 @@ New-RetentionCompliancePolicy [-Name] <String>
 ### AdaptiveScopeLocation
 ```
 New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValuedProperty>
+ [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-IsSimulation]
  [-RestrictiveRetention <Boolean>]
  [-RetainCloudAttachment <Boolean>]
  [-WhatIf]
@@ -149,7 +153,7 @@ The Applications parameter specifies the target when Microsoft 365 Groups are in
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: Default, AdaptiveScopeLocation
 Aliases:
 Applicable: Security & Compliance
 
@@ -277,6 +281,22 @@ Accept wildcard characters: False
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsSimulation
+{{ Fill IsSimulation Description }}
 
 ```yaml
 Type: SwitchParameter
