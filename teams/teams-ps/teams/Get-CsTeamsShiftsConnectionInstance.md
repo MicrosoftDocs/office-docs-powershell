@@ -49,49 +49,49 @@ PS C:\> Get-CsTeamsShiftsConnectionInstance | Format-List
 ```
 ```output
 
-ConnectorAdminEmail                      : {admin@contoso.com}
-ConnectorId                              : 6A51B888-FF44-4FEA-82E1-839401E00000
-ConnectorName                            : WFM 1
-ConnectorSpecificSettingAdminApiUrl      : https://www.contoso.com/retail/data/wfmadmin/api/v1-beta3
-ConnectorSpecificSettingApiUrl           :
-ConnectorSpecificSettingClientId         :
-ConnectorSpecificSettingCookieAuthUrl    : https://www.contoso.com/retail/data/login
-ConnectorSpecificSettingEssApiUrl        : https://www.contoso.com/retail/data/wfmess/api/v1-beta2
-ConnectorSpecificSettingFederatedAuthUrl : https://www.contoso.com/retail/data/login
-ConnectorSpecificSettingRetailWebApiUrl  : https://www.contoso.com/retail/data/retailwebapi/api/v1
-ConnectorSpecificSettingSiteManagerUrl   : https://www.contoso.com/retail/data/wfmsm/api/v1-beta4
-ConnectorSpecificSettingSsoUrl           :
-DesignatedActorId                        : 538C1F8F-320E-4C46-8109-1F08918B13ED
-EnabledConnectorScenario                 : {Shift, SwapRequest, UserShiftPreferences, OpenShift...}
-EnabledWfiScenario                       : {SwapRequest, OpenShiftRequest, TimeCard, TimeOffRequest}
-Etag                                     : "05004cd2-0000-0400-0000-62fbc3e10000"
-Id                                       : WCI-74710858-44EC-4BC1-B43C-B71479A232D6
-Name                                     : My connector instance 1
-SyncFrequencyInMin                       : 3
-TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
-WorkforceIntegrationId                   : WFI_0D3DCF76-F826-4416-99AC-056F83A4C9F7
+ConnectionId                    : a2d1b091-5140-4dd2-987a-98a8b5338744
+ConnectorAdminEmail             : {testAdmin@contoso.com}
+ConnectorId                     : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
+CreatedDateTime                 : 07/04/2023 10:53:59
+DesignatedActorId               : ec1a4edb-1a5f-4b2d-b2a4-37aaf3acd231
+Etag                            : "4f00c221-0000-0400-0000-642ff6480000"
+Id                              : WCI-b58d7a98-ab2c-473f-99a5-e0627d54c062
+LastModifiedDateTime            : 07/04/2023 10:53:59
+Name                            : My connection instance 1
+SyncFrequencyInMin              : 10
+SyncScenarioOfferShiftRequest   : FromWfmToShifts
+SyncScenarioOpenShift           : FromWfmToShifts
+SyncScenarioOpenShiftRequest    : FromWfmToShifts
+SyncScenarioShift               : FromWfmToShifts
+SyncScenarioSwapRequest         : FromWfmToShifts
+SyncScenarioTimeCard            : FromWfmToShifts
+SyncScenarioTimeOff             : FromWfmToShifts
+SyncScenarioTimeOffRequest      : FromWfmToShifts
+SyncScenarioUserShiftPreference : FromWfmToShifts
+TenantId                        : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
+WorkforceIntegrationId          : WFI_2ab21992-b9b1-464a-b9cd-e0de1fac95b1
 
-ConnectorAdminEmail                      : {admin@contoso.com}
-ConnectorId                              : 95BF2848-2DDA-4425-B0EE-D62AEED00000
-ConnectorName                            : WFM 2
-ConnectorSpecificSettingAdminApiUrl      :
-ConnectorSpecificSettingApiUrl           : https://www.contoso.com/api
-ConnectorSpecificSettingClientId         : 86q446dXbJz6UdZeOr1FrP8chDHDZ66nu
-ConnectorSpecificSettingCookieAuthUrl    :
-ConnectorSpecificSettingEssApiUrl        :
-ConnectorSpecificSettingFederatedAuthUrl :
-ConnectorSpecificSettingRetailWebApiUrl  :
-ConnectorSpecificSettingSiteManagerUrl   :
-ConnectorSpecificSettingSsoUrl           : https://www.contoso.com/sso
-DesignatedActorId                        : 538C1F8F-320E-4C46-8109-1F08918B13ED
-EnabledConnectorScenario                 : {Shift, SwapRequest, UserShiftPreferences, OpenShift...}
-EnabledWfiScenario                       : {SwapRequest, UserShiftPreferences, OpenShiftRequest, TimeCard...}
-Etag                                     : "dd011bc0-0000-0400-0000-62f4dc450000"
-Id                                       : WCI-78F5116E-9098-45F5-B595-1153DF9D6F70
-Name                                     : My connector instance 2
-SyncFrequencyInMin                       : 30
-TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
-WorkforceIntegrationId                   : WFI_6E403D85-CCBA-4506-B62A-35A1D7B49E25
+ConnectionId                    : a2d1b091-5140-4dd2-987a-98a8b5338744
+ConnectorAdminEmail             : {}
+ConnectorId                     : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
+CreatedDateTime                 : 07/04/2023 10:54:01
+DesignatedActorId               : ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231
+Etag                            : "4f005d22-0000-0400-0000-642ff64a0000"
+Id                              : WCI-eba2865f-6cac-46f9-8733-e0631a4536e1
+LastModifiedDateTime            : 07/04/2023 10:54:01
+Name                            : My connection instance 2
+SyncFrequencyInMin              : 30
+SyncScenarioOfferShiftRequest   : FromWfmToShifts
+SyncScenarioOpenShift           : FromWfmToShifts
+SyncScenarioOpenShiftRequest    : FromWfmToShifts
+SyncScenarioShift               : FromWfmToShifts
+SyncScenarioSwapRequest         : Disabled
+SyncScenarioTimeCard            : Disabled
+SyncScenarioTimeOff             : FromWfmToShifts
+SyncScenarioTimeOffRequest      : FromWfmToShifts
+SyncScenarioUserShiftPreference : Disabled
+TenantId                        : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
+WorkforceIntegrationId          : WFI_6b225907-b476-4d40-9773-08b86db7b11b
 ```
 
 
@@ -99,30 +99,34 @@ Returns the list of connection instances.
 
 ### Example 2
 ```powershell
-PS C:\_\> $ci = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-78F5116E-9098-45F5-B595-1153DF9D6F70
-PS C:\_\> $ci.ToJsonString()
+PS C:\> $ci = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-78F5116E-9098-45F5-B595-1153DF9D6F70
+PS C:\> $ci.ToJsonString()
 ```
 ```output
 {
-  "connector": {
-    "id": "95BF2848-2DDA-4425-B0EE-D62AEED00000",
-    "name": "WFM 2"
-  },
-  "connectorSpecificSettings": {
-    "apiUrl": "https://www.contoso.com/api",
-    "ssoUrl": "https://www.contoso.com/sso",
-    "clientId": "86q446dXbJz6UdZeOr1FrP8chDHDZ66nu"
+  "syncScenarios": {
+    "offerShiftRequest": "FromWfmToShifts",
+    "openShift": "FromWfmToShifts",
+    "openShiftRequest": "FromWfmToShifts",
+    "shift": "FromWfmToShifts",
+    "swapRequest": "Disabled",
+    "timeCard": "Disabled",
+    "timeOff": "FromWfmToShifts",
+    "timeOffRequest": "FromWfmToShifts",
+    "userShiftPreferences": "Disabled"
   },
   "id": "WCI-78F5116E-9098-45F5-B595-1153DF9D6F70",
-  "tenantId": "3FDCAAF2-863A-4520-97BA-DFA211595876",
-  "name": "My connector instance 2",
-  "enabledConnectorScenarios": [ "Shift", "SwapRequest", "UserShiftPreferences", "OpenShift", "OpenShiftRequest", "TimeCard", "TimeOff", "TimeOffRequest" ],
-  "workforceIntegrationId": "WFI_6E403D85-CCBA-4506-B62A-35A1D7B49E25",
-  "enabledWfiScenarios": [ "SwapRequest", "UserShiftPreferences", "OpenShiftRequest", "TimeCard", "TimeOffRequest" ],
+  "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+  "connectionId": "a2d1b091-5140-4dd2-987a-98a8b5338744",
+  "connectorAdminEmails": [ ],
+  "connectorId": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+  "designatedActorId": "ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231",
+  "name": "My connection instance 2",
   "syncFrequencyInMin": 30,
-  "designatedActorId": "538C1F8F-320E-4C46-8109-1F08918B13ED",
-  "connectorAdminEmails": [ "admin@contoso.com" ],
-  "etag": "\"dd011bc0-0000-0400-0000-62f4dc450000\""
+  "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
+  "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
+  "createdDateTime": "2023-04-07T10:54:01.8170000Z",
+  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z"
 }
 ```
 Returns the connection instance with the specified -ConnectorInstanceId.
