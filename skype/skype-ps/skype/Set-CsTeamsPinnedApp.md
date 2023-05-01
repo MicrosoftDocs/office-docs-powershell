@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsTeamsPinnedApp
 
 ## SYNOPSIS
-**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
+**NOTE**: This cmdlet has been deprecated.
 
 As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
 
@@ -34,7 +34,7 @@ Set-CsTeamsPinnedApp [-Tenant <System.Guid>] [-Order <Int64>] [-Priority <Int32>
 ```
 
 ## DESCRIPTION
-**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
+**NOTE**: This cmdlet has been deprecated.
 
 As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
 
