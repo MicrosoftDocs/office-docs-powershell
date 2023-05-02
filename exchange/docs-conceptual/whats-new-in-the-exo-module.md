@@ -22,6 +22,12 @@ description: "Learn about the new features and functionality available in the la
 
 This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
 
+## April 2023
+
+- [Version 3.2.0-Preview3](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.2.0-Preview3) has been released.
+
+  This version supports the Preview of Security & Compliance cmdlets backed by the REST API. Most cmdlets are supported. Basic authentication in WinRM is not required in Security & Compliance PowerShell for REST API cmdlets.
+
 ## January 2023
 
 - [Version 3.1.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.1.0) has been released.

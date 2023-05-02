@@ -61,7 +61,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - In Exchange Online PowerShell using the EXO V3 module, you can omit or include the _UseRPSSession_ switch to use REST API cmdlets or original remote PowerShell cmdlets. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+> - You can omit or include the _UseRPSSession_ switch in the connection command to use REST API cmdlets or original remote PowerShell cmdlets. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 >
 >   Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 >
@@ -71,7 +71,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >   - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
 >   - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
 >
-> - If a **Connect-IPPSSession** command present a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
+> - If a **Connect-IPPSSession** command presents a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
 - **Connect using a certificate thumbprint**:
 
@@ -329,7 +329,7 @@ For more information about the URL syntax, see [Request the permissions from a d
 You have two options:
 
 - **Assign Azure AD roles to the application**: This method is supported in Exchange Online PowerShell and Security & Compliance PowerShell.
-- **Assign custom Exchange Online role groups to the application using service principals**: Currently, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
+- **Assign custom Exchange Online role groups to the application using service principals**: This method is supported only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the connection command).
 
 > [!NOTE]
 > You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
@@ -410,7 +410,7 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 > [!NOTE]
 > You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID is needed to create the new service principal).
 >
-> This method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
+> This method is supported only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the connection command).
 
 For information about creating custom role groups, see [Create role groups](/exchange/permissions-exo/role-groups#create-role-groups). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
