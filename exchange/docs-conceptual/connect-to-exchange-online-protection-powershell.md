@@ -84,7 +84,7 @@ Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com
 
 ## Step 3: Disconnect when you're finished
 
-Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the session, run the following command.
+Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you need to wait for the sessions to expire. To disconnect the session, run the following command:
 
 ```powershell
 Disconnect-ExchangeOnline
