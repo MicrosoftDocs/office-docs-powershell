@@ -55,28 +55,35 @@ For detailed connection instructions, including prerequisites, see [Connect to S
 Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com
 ```
 
-This example connects to Security & Compliance PowerShell in a Microsoft 365 organization. You're prompted for the password of the michelle@contoso.onmicrosoft.com account.
+This example connects to Security & Compliance PowerShell in a Microsoft 365 organization. You're prompted for the password of the michelle@contoso.onmicrosoft.com account. In v3.2.0-Preview3 or later, we aren't using the UseRPSSession switch, so the connection uses REST and doesn't require Basic authentication to be enabled in WinRM on the local computer.
 
 ### Example 2
+```powershell
+Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com -UseRPSSession
+```
+
+This example connects to Security & Compliance using modern authentication, with or without MFA. In v3.0.0 or later, we're using the UseRPSSession switch, so the connection requires Basic authentication to be enabled in WinRM on the local computer.
+
+### Example 3
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
 ```
 
-Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using the public key of a certificate.
+This example connects to Security & Compliance PowerShell in an unattended scripting scenario using the public key of a certificate.
 
-### Example 3
+### Example 4
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
-Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate thumbprint.
+This example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
-### Example 4
+### Example 5
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
-Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
+This example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
 ## PARAMETERS
 
