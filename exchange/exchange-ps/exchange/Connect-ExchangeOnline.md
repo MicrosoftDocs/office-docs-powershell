@@ -72,14 +72,14 @@ Connect commands will likely fail if the profile path of the account that you us
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 ```
 
-This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). We aren't using the UseRPSSession parameter, so the connection uses REST and doesn't require Basic authentication to be enabled in WinRM on the local computer.
+This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). We aren't using the UseRPSSession switch, so the connection uses REST and doesn't require Basic authentication to be enabled in WinRM on the local computer.
 
 ### Example 2
 ```powershell
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -UseRPSSession
 ```
 
-This example connects to Exchange Online PowerShell using modern authentication, with or without MFA. We're using the UseRPSSession parameter, so the connection requires Basic authentication to be enabled in WinRM on the local computer.
+This example connects to Exchange Online PowerShell using modern authentication, with or without MFA. We're using the UseRPSSession switch, so the connection requires Basic authentication to be enabled in WinRM on the local computer.
 
 ### Example 3
 ```powershell
