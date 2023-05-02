@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
 
-**Note**: Version 3.2.0-Preview3 of the module supports REST API mode for most Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
+**Note**: Version 3.2.0-Preview3 or later of the module supports REST API mode for most Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required for REST API mode). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
