@@ -39,15 +39,19 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
 - [Certificate based authentication](app-only-auth-powershell-v2.md) (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
-- Cmdlets backed by the REST API are available in Exchange Online PowerShell. REST API cmdlets have the following advantages over their historical counterparts:
+- Cmdlets backed by the REST API are available in the following PowerShell environments based on the version of the EXO V3 module:
+  - **Exchange Online PowerShell**: v3.0.0 or later.
+  - **Security & Compliance PowerShell**: v3.2.0-Preview3 or later.
 
-  - **More secure**: REST API cmdlets have built-in support for modern authentication and don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) for Exchange Online PowerShell.
+  REST API cmdlets have the following advantages over their historical counterparts:
+
+  - **More secure**: REST API cmdlets have built-in support for modern authentication and don't rely on the remote PowerShell session, so PowerShell on your client computer doesn't need [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm).
   - **More reliable**: REST API cmdlets handle transient failures with built-in retries, so failures or delays are minimized. For example:
     - Failures due to network delays.
     - Delays due to large queries that take a long time to complete.
-  - **Better performance**: The connection avoids setting up a PowerShell runspace in Exchange Online PowerShell.
+  - **Better performance**: The connection avoids setting up a PowerShell runspace.
 
-  The benefits of REST API cmdlets in Exchange Online PowerShell are described in the following table:
+  The benefits of REST API cmdlets are described in the following table:
 
   |&nbsp;|Remote PowerShell cmdlets|Get-EXO\* cmdlets|REST API cmdlets|
   |---|---|---|---|
@@ -56,17 +60,16 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
   |**Reliability**|Least reliable|Highly reliable|Highly reliable|
   |**Functionality**|All parameters and output properties available|Limited parameters and output properties available|All parameters and output properties available|
 
-  > [!NOTE]
-  > Currently, no cmdlets in Security & Compliance PowerShell are backed by the REST API. **All** cmdlets in Security & Compliance PowerShell still rely on the remote PowerShell session, so PowerShell on your client computer requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) to successfully use the **Connect-IPPSSession** cmdlet.
-
-  - REST API cmdlets in Exchange Online PowerShell have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
+  - REST API cmdlets have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
 
   - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API.
+  
+  - Most of the available remote PowerShell cmdlets in Security & Compliance PowerShell are backed by the REST API in v3.2.0-Preview3 or later.
 
-- The _UseRPSSession_ switch in **Connect-ExchangeOnline** grants access to all existing remote PowerShell cmdlets in Exchange Online PowerShell:
+- The _UseRPSSession_ switch in the **Connect-ExchangeOnline** and **Connect-IPPSSession** cmdlets grants access to all existing remote PowerShell cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell:
   - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) on your client computer.
-  - If you don't use the _UseRPSSession_ switch when you connect to Exchange Online PowerShell, you have access to the REST API cmdlets _only_.
-  - Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
+  - If you don't use the _UseRPSSession_ switch when you connect, you have access to the REST API cmdlets _only_.
+  - The end of remote PowerShell support in Exchange Online PowerShell has been announced. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
 - A few REST API cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
   - When you use the _UseCustomRouting_ switch, you can use only the following values for identity of the mailbox:
@@ -95,23 +98,23 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
     Use the _UseCustomRouting_ switch experimentally and [report any issues](#report-bugs-and-issues-for-the-exchange-online-powershell-module) that you encounter.
 
-- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about REST-based connections to Exchange Online PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST-based connections.
+- Use the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet to get information about REST-based connections to Exchange Online PowerShell and Security & Compliance PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST-based connections.
 
   Scenarios where you can use **Get-ConnectionInformation** are described in the following table:
 
   |Scenario|Expected output|
   |---|---|
-  |Run before a **Connect-ExchangeOnline** command.|Returns nothing.|
-  |Run after **Connect-ExchangeOnline** command that uses the _UseRPSSession_ switch.|Returns nothing (use [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)).|
-  |Run after a REST-based **Connect-ExchangeOnline** command (no _UseRPSSession_ switch).|Returns one connection information object.|
-  |Run after multiple REST-based **Connect-ExchangeOnline** commands.|Returns a collection of connection information objects.|
-  |Run after multiple **Connect-ExchangeOnline** commands with and without the _UseRPSSession_ switch.|Returns one connection information object for each REST-based session.|
+  |Run before a **Connect-ExchangeOnline** or **Connect-IPPSSession** command.|Returns nothing.|
+  |Run after a **Connect-ExchangeOnline** or **Connect-IPPSSession** command that uses the _UseRPSSession_ switch.|Returns nothing (use [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)).|
+  |Run after a REST-based **Connect-ExchangeOnline** or **Connect-IPPSSession** command (no _UseRPSSession_ switch).|Returns one connection information object.|
+  |Run after multiple REST-based **Connect-ExchangeOnline** or **Connect-IPPSSession** commands.|Returns a collection of connection information objects.|
+  |Run after multiple **Connect-ExchangeOnline** or **Connect-IPPSSession** commands with and without the _UseRPSSession_ switch.|Returns one connection information object for each REST-based session.|
 
 - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet in REST-based connections (you didn't use the _UseRPSSession_ switch) to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
 - Connections in REST API mode have a dependency on the PowerShellGet module.
 
-For additional information, see the [Release notes](#release-notes) section later in this article.
+For additional information about what's new in the EXO V3 module, see the [Release notes](#release-notes) section later in this article.
 
 ## Report bugs and issues for the Exchange Online PowerShell module
 
@@ -282,7 +285,7 @@ For more information about execution policies, see [About Execution Policies](/p
 #### Turn on Basic authentication in WinRM
 
 > [!NOTE]
-> As described [earlier in this article](#updates-for-the-exo-v3-module), the EXO V3 module does not require Basic authentication in WinRM for REST-based connections to Exchange Online PowerShell.
+> As described [earlier in this article](#updates-for-the-exo-v3-module), REST-based connections don't require Basic authentication in WinRM.
 >
 > Otherwise, the settings in this section apply to all versions of PowerShell on all operating systems.
 
@@ -325,7 +328,7 @@ If Basic authentication for WinRM is disabled, you'll get one of the following e
 
 ### PowerShellGet for REST-based connections in Windows
 
-[REST-based connections](#updates-for-the-exo-v3-module) to Exchange Online PowerShell in Windows require the PowerShellGet module, and by dependency, the PackageManagement module. Consideration for these modules is more for PowerShell 5.1 than PowerShell 7, but all version of PowerShell benefit from having the latest versions of the modules installed. For installation and update instructions, see [Installing PowerShellGet on Windows](/powershell/scripting/gallery/installing-psget).
+[REST-based connections](#updates-for-the-exo-v3-module) in Windows require the PowerShellGet module, and by dependency, the PackageManagement module. Consideration for these modules is more for PowerShell 5.1 than PowerShell 7, but all version of PowerShell benefit from having the latest versions of the modules installed. For installation and update instructions, see [Installing PowerShellGet on Windows](/powershell/scripting/gallery/installing-psget).
 
 > [!NOTE]
 > Beta versions of the PackageManagement or PowerShellGet modules might cause connection issues. If you have connection issues, verify that you don't have Beta versions of the modules installed by by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
@@ -504,7 +507,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
     Set-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
     ```
 
-  - x86
+  - x86:
 
     ```powershell
     Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
@@ -532,15 +535,10 @@ To see the version of the module that's currently installed and where it's insta
 
    If the module is installed in C:\Program Files\WindowsPowerShell\Modules\, it was installed for all users. If the module is installed in your Documents folder, it was installed only for the current user account.
 
-To uninstall the module, run **one** of the following commands based on how you originally installed the module (all users vs. only for the current user account):
+To uninstall the module, run the following command in one of the following environments based on how you originally installed the module (all users vs. only for the current user account):
 
-- In an elevated PowerShell window (all users):
-
-  ```powershell
-  Uninstall-Module -Name ExchangeOnlineManagement
-  ```
-
-- Only for the current user account:
+- In an elevated PowerShell window (all users).
+- In a normal PowerShell window (only for the current user account).
 
   ```powershell
   Uninstall-Module -Name ExchangeOnlineManagement
