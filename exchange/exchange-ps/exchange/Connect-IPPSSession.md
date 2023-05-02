@@ -66,19 +66,12 @@ This example connects to Security & Compliance using modern authentication, with
 
 ### Example 3
 ```powershell
-Connect-IPPSSession -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
-```
-
-This example connects to Security & Compliance PowerShell in an unattended scripting scenario using the public key of a certificate.
-
-### Example 4
-```powershell
 Connect-IPPSSession -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
 This example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
-### Example 5
+### Example 4
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
@@ -278,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateFilePath
-The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file.
+The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file. Use the CertificatePassword parameter with this parameter.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
 
@@ -307,6 +300,8 @@ You can use the following methods as a value for this parameter:
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+
+**Note**: Using a **ConvertTo-SecureString** command to store the password of the certificate locally defeats the purpose of a secure connection method for automation scenarios. Using a **Get-Credential** command to prompt you for the password of the certificate securely isn't ideal for automation scenarios. In other words, there's really no automated _and_ secure way to connect using a local certificate.
 
 ```yaml
 Type: SecureString

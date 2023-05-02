@@ -83,26 +83,19 @@ This example connects to Exchange Online PowerShell using modern authentication,
 
 ### Example 3
 ```powershell
-Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
-```
-
-This example connects to Exchange Online PowerShell in an unattended scripting scenario using the public key of a certificate.
-
-### Example 4
-```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
 This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
-### Example 5
+### Example 4
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
 This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
-### Example 6
+### Example 5
 ```powershell
 Connect-ExchangeOnline -Device
 ```
@@ -111,7 +104,7 @@ In PowerShell 7.0.3 or later using version 2.0.4 or later of the module, this ex
 
 The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
-### Example 7
+### Example 6
 ```powershell
 Connect-ExchangeOnline -InlineCredential
 ```
@@ -357,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateFilePath
-The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file.
+The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file. Use the CertificatePassword parameter with this parameter.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
 
@@ -386,6 +379,8 @@ You can use the following methods as a value for this parameter:
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+
+**Note**: Using a **ConvertTo-SecureString** command to store the password of the certificate locally defeats the purpose of a secure connection method for automation scenarios. Using a **Get-Credential** command to prompt you for the password of the certificate securely isn't ideal for automation scenarios. In other words, there's really no automated _and_ secure way to connect using a local certificate.
 
 ```yaml
 Type: SecureString
