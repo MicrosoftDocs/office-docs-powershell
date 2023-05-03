@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-**Note**: The functionality of this parameter has been replaced block entries for URLs in the Tenant Allow/Block List using the \*-TenantAllowBlockListItems cmdlets. This parameter now supports only the removal of entries from the list.
+**Note**: The functionality of this parameter has been replaced by block entries for URLs in the Tenant Allow/Block List using the \*-TenantAllowBlockListItems cmdlets. This parameter now supports only the removal of entries from this list.
 
 The BlockUrls parameter specifies the URLs that are always blocked by Safe Links in email messages and Safe Links for Office 365 apps.
 
