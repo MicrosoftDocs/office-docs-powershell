@@ -27,7 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-AllowSafeDocsOpen <Boolean>]
- [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
@@ -81,28 +80,6 @@ This parameter is meaningful only when the EnableSafeDocs parameter value is $tr
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlockUrls
-**Note**: The functionality of this parameter has been replaced block entries for URLs in the Tenant Allow/Block List using the \*-TenantAllowBlockListItems cmdlets. This parameter now supports only the removal of entries from the list.
-
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links in email messages and Safe Links for Office 365 apps.
-
-To remove one or more values without affecting any existing entries, use the following syntax: `@{Remove="Value1","Value2"...}`.
-
-To remove all existing entries, use the value `$null`.
-
-```yaml
-Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
