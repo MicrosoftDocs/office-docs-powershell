@@ -62,13 +62,17 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
   - REST API cmdlets have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
 
-  - Virtually all of the available remote PowerShell cmdlets in Exchange Online are now backed by the REST API.
-  
-  - Most of the available remote PowerShell cmdlets in Security & Compliance PowerShell are backed by the REST API in v3.2.0-Preview3 or later.
+  - In Exchange Online PowerShell, virtually all of the available remote PowerShell cmdlets are backed by the REST API.
 
-- The _UseRPSSession_ switch in the **Connect-ExchangeOnline** and **Connect-IPPSSession** cmdlets grants access to all existing remote PowerShell cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell:
-  - The _UseRPSSession_ switch requires [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) on your client computer.
-  - If you don't use the _UseRPSSession_ switch when you connect, you have access to the REST API cmdlets _only_.
+    In Exchange Online PowerShell, REST API connections are used by default. You need to use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command to access cmdlets in remote PowerShell mode.
+
+  - In Security & Compliance Center PowerShell using v3.2.0-Preview3 of the module, many of the available remote PowerShell cmdlets are backed by the REST API.
+
+    In Security & Compliance Center PowerShell, remote PowerShell connections are used by default. You need to use `-UseRPSSession:$false` to access cmdlets in REST API mode. This behavior will change to match **Connect-ExchangeOnline** in a later version of the module as more Security & Compliance cmdlets are available in REST API mode.
+
+- Consider the following items if you connect to Exchange Online PowerShell or Security & Compliance PowerShell in remote PowerShell mode:
+  - [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) is required on your client computer.
+  - If you don't connect is remote PowerShell mode, you have access to REST API cmdlets _only_.
   - The end of remote PowerShell support in Exchange Online PowerShell has been announced. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
 - A few REST API cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
@@ -105,12 +109,12 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
   |Scenario|Expected output|
   |---|---|
   |Run before a **Connect-ExchangeOnline** or **Connect-IPPSSession** command.|Returns nothing.|
-  |Run after a **Connect-ExchangeOnline** or **Connect-IPPSSession** command that uses the _UseRPSSession_ switch.|Returns nothing (use [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)).|
-  |Run after a REST-based **Connect-ExchangeOnline** or **Connect-IPPSSession** command (no _UseRPSSession_ switch).|Returns one connection information object.|
+  |Run after a **Connect-ExchangeOnline** or **Connect-IPPSSession** command that connects in remote PowerShell mode.|Returns nothing (use [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)).|
+  |Run after **Connect-ExchangeOnline** or **Connect-IPPSSession** command that connects in REST API mode.|Returns one connection information object.|
   |Run after multiple REST-based **Connect-ExchangeOnline** or **Connect-IPPSSession** commands.|Returns a collection of connection information objects.|
-  |Run after multiple **Connect-ExchangeOnline** or **Connect-IPPSSession** commands with and without the _UseRPSSession_ switch.|Returns one connection information object for each REST-based session.|
+  |Run after multiple **Connect-ExchangeOnline** or **Connect-IPPSSession** commands that connect in remote PowerShell mode and REST API mode.|Returns one connection information object for each REST-based session.|
 
-- Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet in REST-based connections (you didn't use the _UseRPSSession_ switch) to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
+- Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet in REST-based connections to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
 - Connections in REST API mode have a dependency on the PowerShellGet module.
 
