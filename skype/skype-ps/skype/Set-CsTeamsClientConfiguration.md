@@ -379,8 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
