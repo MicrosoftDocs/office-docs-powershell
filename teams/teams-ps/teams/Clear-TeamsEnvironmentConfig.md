@@ -12,7 +12,7 @@ manager: vinelap
 # Clear-TeamsEnvironmentConfig
 
 ## SYNOPSIS
-Clears environment specific configurations from local machine set by running Set-TeamsEnvironmentConfig.
+Clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Clear-TeamsEnvironmentConfig [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet clears environment specific configuaration from local machine set by running Set-TeamsEnvironmentConfig. This helps in clearing and rectifying any wrong information set in Set-TeamsEnvironmentConfig. 
+This cmdlet clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig. This helps in clearing and rectifying any wrong information set in Set-TeamsEnvironmentConfig. 
 
 ## EXAMPLES
 ### Example 1
@@ -29,12 +29,12 @@ This cmdlet clears environment specific configuaration from local machine set by
 PS C:\> Clear-TeamsEnvironmentConfig
 ```
 
-Clears environment specific configurations from local machine.
+Clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -44,5 +44,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 ## NOTES
-Clear-TeamsEnvironmentConfig is only introduced for special clouds and administrators of public and fairfax cloud should not use this cmdlet.
+Clear-TeamsEnvironmentConfig is not suggested to be used in Commercial, GCC, GCC High or DoD environments. This cmdlet is available in MicrosoftTeams powershell module from version 5.2.0-GA.
 ## RELATED LINKS

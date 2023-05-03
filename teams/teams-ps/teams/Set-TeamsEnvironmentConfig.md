@@ -13,7 +13,7 @@ manager: vinelap
 
 ## SYNOPSIS
 
-Sets environment specific configurations on local machine and will be used to connect to the right environment when running connect-microsoftteams
+Sets environment-specific configurations on the local machine and is used to connect to the right environment when running Connect-MicrosoftTeams.
 
 ## SYNTAX
 
@@ -23,27 +23,40 @@ Set-TeamsEnvironmentConfig [-EndpointUris <Hashtable>] [-TeamsEnvironmentName <S
 ```
 
 ## DESCRIPTION
-This cmdlet sets environment specific configurations like endpoint URIs(AAD\Graph etc.) and Teams environment (GCCH\DOD etc) in local machine.  
-When running connect-microsoftteams, environment specific information set in this cmdlet will be considered unless overridden by parameters of connect-microsoftteams.
+This cmdlet sets environment-specific configurations like endpoint URIs(such as Azure AD and Microsoft Graph) and Teams environment (such as GCCH and DOD) on the local machine.
+  
+When running Connect-MicrosoftTeams, environment-specific information set in this cmdlet will be considered unless overridden by Connect-MicrosoftTeams parameters.
+
 Parameters passed to connect-microsoftteams will take precedence over the information set by this cmdlet. 
-This cmdlet is not applicable for public and Azure government cloud and was introduced specifically to support other special clouds of Microsoft.  
-Administrators are advised not to use this cmdlet in public and azure government clouds.
+
+Clear-TeamsEnvironmentConfig should not be used in Commercial, GCC, GCC High, or DoD environments.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsGcch
+PS C:\> Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 ```
 
-Sets environment as GCCH in local machine and when connect-microsoftteams is run, authentication will happen in GCCH cloud and Microsoft Teams module will connect to GCCH environment.
+Sets environment as Gallatin China in local machine and when connect-microsoftteams is run, authentication will happen in Gallatin China cloud and Microsoft Teams module will connect to Gallatin environment.
 
 ### Example 2
 ```powershell
 $endPointUriDict = @{ActiveDirectory = 'https://login.microsoftonline.us/';MsGraphEndpointResourceId = 'https://graph.microsoft.us'}
 Set-TeamsEnvironmentConfig -TeamsEnvironmentName $endPointUriDict
 ```
-Sets endpoint uris required for sepcial clouds.
+Sets endpoint URIs required for special clouds.
+
+### Example 3
+```powershell
+Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
+
+$cred=get-credential
+Move-CsUser -Identity "PilarA@contoso.com" -Target "sipfed.online.lync.com" -Credential $cred
+```
+This cmdlet is mainly introduced to support Skype for business to Microsoft Teams user migration called with Move-CsUser. 
+Above exaple shows how tenant admins can run move-csuser in Gallatin and other special clouds after setting environment config using Set-TeamsEnvironmentConfig. 
+Note: Set-TeamsEnvironmentConfig needs to be run only once for a machine. No need to run everytime before running Move-CsUser.
 
 ## PARAMETERS
 
@@ -110,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -120,5 +133,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 ## NOTES
-Set-TeamsEnvironmentConfig is only introduced for special clouds and administrators of public and fairfax cloud should not use this cmdlet.
+Set-TeamsEnvironmentConfig should not be used in Commercial, GCC, GCC High, or DoD environments.
 ## RELATED LINKS
