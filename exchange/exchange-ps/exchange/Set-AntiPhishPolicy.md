@@ -548,7 +548,7 @@ Accept wildcard characters: False
 
 This setting is part of spoof protection.
 
-The HonorDmarcPolicy parameter allows different actions to take on messages that fail DMARC checks, based on the sender's DMARC policy. Valid values are:
+The HonorDmarcPolicy enables or disables using the sender's DMARC policy to determine what to do to messages that fail DMARC checks. Valid values are:
 
 - $true: If a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`, the DmarcQuarantineAction parameter specifies the action to take on the message. If a message fails DMARC checks and the sender's DMARC policy is `p=reject`, the DmarcRejectAction parameter specifies the action to take on the message.
 - $false: This is the default value. If the message fail DMARC checks, ignore the action in the sender's DMARC policy. The AuthenticationFailAction parameter specifies the action to take on the message.
