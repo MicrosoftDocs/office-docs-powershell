@@ -43,6 +43,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
-Clear-TeamsEnvironmentConfig is not suggested to be used in Commercial, GCC, GCC High or DoD environments. This cmdlet is available in MicrosoftTeams powershell module from version 5.2.0-GA.
+
+We do not recommend using Clear-TeamsEnvironmentConfig in Commercial, GCC, GCC High, or DoD environments. This cmdlet is available in Microsoft Teams PowerShell module from version 5.2.0-GA.
+
 ## RELATED LINKS
