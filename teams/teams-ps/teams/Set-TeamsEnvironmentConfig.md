@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointUris
-This can be used to provide custom endpoints.
+Provides custom endpoints.
 
 ```yaml
 Type: Hashtable
