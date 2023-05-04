@@ -93,13 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-**Note**: The functionality of this parameter has been replaced by block entries for URLs in the Tenant Allow/Block List using the \*-TenantAllowBlockListItems cmdlets. This parameter now supports only the removal of entries from this list.
+This parameter has been deprecated and is no longer used.
 
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links in email messages and Safe Links for Office 365 apps.
-
-To remove one or more values without affecting any existing entries, use the following syntax: `@{Remove="Value1","Value2"...}`.
-
-To remove all existing entries, use the value `$null`.
+The functionality of this parameter has been replaced by block entries for URLs in the Tenant Allow/Block List using the \*-TenantAllowBlockListItems cmdlets.
 
 ```yaml
 Type: MultiValuedProperty
