@@ -2604,7 +2604,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the ExceptIfRecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This predicate will match domains as well as subdomains with domain provided. For example: For the value "domain.com" both domain "domain.com" and subdomain "subdomain.domain.com" will be matched.
 
 ```yaml
 Type: Word[]
@@ -2781,7 +2781,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfSenderDomainIs parameter specifies an exception that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This predicate will match domains as well as subdomains with domain provided. For example: For the value "domain.com" both domain "domain.com" and subdomain "subdomain.domain.com" will be matched.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -4018,7 +4018,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the RecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This predicate will match domains as well as subdomains with domain provided. For example: For the value "domain.com" both domain "domain.com" and subdomain "subdomain.domain.com" will be matched.
 
 ```yaml
 Type: Word[]
@@ -4475,7 +4475,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The SenderDomainIs parameter specifies a condition that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This predicate will match domains as well as subdomains with domain provided. For example: For the value "domain.com" both domain "domain.com" and subdomain "subdomain.domain.com" will be matched.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
