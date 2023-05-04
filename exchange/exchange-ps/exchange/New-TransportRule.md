@@ -2604,7 +2604,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
-This exception matches domains and subdomains. For example, "domain.com" matches both "domain.com" and "subdomain.domain.com".
+This exception matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 ```yaml
 Type: Word[]
@@ -2781,7 +2781,7 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfSenderDomainIs parameter specifies an exception that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-This exception matches domains and subdomains. For example, "domain.com" matches both "domain.com" and "subdomain.domain.com".
+This exception matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -4018,7 +4018,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
-This condition matches domains and subdomains. For example, "domain.com" matches both "domain.com" and "subdomain.domain.com".
+This condition matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 ```yaml
 Type: Word[]
@@ -4475,7 +4475,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The SenderDomainIs parameter specifies a condition that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-This condition matches domains and subdomains. For example, "domain.com" matches both "domain.com" and "subdomain.domain.com".
+This condition matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
