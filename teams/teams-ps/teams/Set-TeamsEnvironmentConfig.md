@@ -55,8 +55,10 @@ $cred=get-credential
 Move-CsUser -Identity "PilarA@contoso.com" -Target "sipfed.online.lync.com" -Credential $cred
 ```
 This cmdlet is mainly introduced to support Skype for Business to Microsoft Teams user migration using Move-CsUser. 
-Above exaple shows how tenant admins can run move-csuser in Gallatin and other special clouds after setting environment config using Set-TeamsEnvironmentConfig. 
-Note: Set-TeamsEnvironmentConfig needs to be run only once for a machine. No need to run everytime before running Move-CsUser.
+
+This example shows how tenant admins can run Move-CsUser in Gallatin and other special clouds after setting the environment configuration using Set-TeamsEnvironmentConfig.
+ 
+Note that Set-TeamsEnvironmentConfig needs to be run only once for each machine. There is no need to run it each time before running Move-CsUser.
 
 ## PARAMETERS
 
