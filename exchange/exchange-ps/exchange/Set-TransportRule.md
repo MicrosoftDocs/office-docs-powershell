@@ -16,7 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-TransportRule cmdlet to modify existing transport rules (mail flow rules) in your organization.
 
-If you delete all conditions and exceptions from a rule, the rule action is applied to all messages. This can have unintended consequences. For example, if the rule action is to delete the message, removing the conditions and exceptions could cause the rule to delete all inbound and outbound messages for the entire organization.
+> [!NOTE]
+> If you delete all conditions and exceptions from a rule, the rule action is applied to all messages. This can have unintended consequences. For example, if the rule action is to delete the message, removing the conditions and exceptions could cause the rule to delete all inbound and outbound messages for the entire organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
