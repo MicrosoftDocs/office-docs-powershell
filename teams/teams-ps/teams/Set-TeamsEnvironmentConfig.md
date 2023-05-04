@@ -93,8 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -TeamsEnvironmentName
-This can be used to provide Teams environment to connect to.
-- TeamsGCCH, TeamsDOD
+Provides a Teams environment to connect to, for example, Teams GCCH or Teams DoD.
 
 ```yaml
 Type: String
