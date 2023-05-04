@@ -65,6 +65,8 @@ Accept wildcard characters: False
 
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+> [!NOTE]
+> Distribution in policy error should be ignored.
 
 ```yaml
 Type: SwitchParameter
@@ -96,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeProgressFeedback
-{{ Fill IncludeProgressFeedback Description }}
+IncludeProgressFeedback parameter showcases labeling progress of files to be labeled, files labeled (last 7 days), files labeled (total) for turned on auto-labeling policies scoped to OneDrive or SharePoint
 
 ```yaml
 Type: SwitchParameter
