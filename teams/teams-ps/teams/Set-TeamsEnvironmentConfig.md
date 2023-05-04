@@ -38,7 +38,7 @@ Clear-TeamsEnvironmentConfig should not be used in Commercial, GCC, GCC High, or
 PS C:\> Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 ```
 
-Sets environment as Gallatin China in local machine and when connect-microsoftteams is run, authentication will happen in Gallatin China cloud and Microsoft Teams module will connect to Gallatin environment.
+Sets the environment as Gallatin China on a local machine and when Connect-MicrosoftTeams is run, authentication will happen in the Gallatin China cloud and Microsoft Teams module will connect to the Gallatin environment.
 
 ### Example 2
 ```powershell
