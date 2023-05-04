@@ -94,7 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+- IntraOrg
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
