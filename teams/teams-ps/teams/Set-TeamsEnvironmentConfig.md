@@ -27,7 +27,7 @@ This cmdlet sets environment-specific configurations like endpoint URIs(such as 
   
 When running Connect-MicrosoftTeams, environment-specific information set in this cmdlet will be considered unless overridden by Connect-MicrosoftTeams parameters.
 
-Parameters passed to connect-microsoftteams will take precedence over the information set by this cmdlet. 
+Parameters passed to Connect-MicrosoftTeams will take precedence over the information set by this cmdlet. 
 
 Clear-TeamsEnvironmentConfig should not be used in Commercial, GCC, GCC High, or DoD environments.
 
