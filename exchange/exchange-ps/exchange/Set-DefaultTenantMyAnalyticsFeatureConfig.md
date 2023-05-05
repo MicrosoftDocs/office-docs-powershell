@@ -89,6 +89,7 @@ The Feature parameter specifies the Viva Insights feature to enable or disable. 
 - Dashboard
 - Digest-email
 - Meeting-effectiveness-survey
+- Meeting-effectiveness-survey-sampling-rate
 - Schedule-send
 - All (all features)
 
