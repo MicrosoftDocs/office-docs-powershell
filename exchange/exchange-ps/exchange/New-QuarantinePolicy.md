@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequencyInDays
-This parameter is reserved for internal Microsoft use. 
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32

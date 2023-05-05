@@ -1110,7 +1110,11 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 - Approve member depart or join requests (if available)
 - Approve messages sent to the group if moderation is enabled, but no moderators are specified.
 
-The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
+The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned).
+
+**Note**: Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
+
+You can use any value that uniquely identifies the owner. For example:
 
 - Name
 - Alias
@@ -1128,11 +1132,6 @@ To enter multiple owners and overwrite all existing entries, use the following s
 To add or remove owners without affecting other existing entries, use the following syntax: `@{Add="Owner1","Owner2",...; Remove="Owner3","Owner4"...}`.
 
 Owners that you specify with this parameter are not added as group members. You need to manually add the owner as a member.
-
-> [!NOTE]
-> Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
->
-> If the _DL managed by_ or _owner_ is assigned to a security group, and when the owner login to `OWA options -> Distribution group`, they will not see the distribution list under "Distribution groups I own". If the _managed by_ or _owner_ is a normal user instead of a security group, they will be able to see it under "Distribution groups I own".
 
 ```yaml
 Type: MultiValuedProperty
