@@ -482,7 +482,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedOrganizations
-"TrustedOrganizations" identifies other Office 365 organizations as trusted mail sources for your organization (for example, after acquisitions and mergers). This connector will only work for mail flow between two O365 organizations, so no other parameters will be used.
+The TrustedOrganizations parameter identifies other Office 365 organizations as trusted mail sources for your organization (for example, after acquisitions and mergers). This parameter only works for mail flow between two Office 365 organizations, so no other parameters are used.
 
 ```yaml
 Type: MultiValuedProperty
