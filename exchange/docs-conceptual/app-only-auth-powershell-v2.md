@@ -231,8 +231,6 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    >    }
    > ],
    > ```
-   >
-   > 
 
    When you're finished, click **Save**.
 

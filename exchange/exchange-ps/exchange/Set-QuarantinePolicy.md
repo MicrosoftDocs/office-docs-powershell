@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomFromAddress
-The EndUserSpamNotificationCustomFromAddress specifies the email address of an existing internal sender to use as the sender for quarantine notifications. To set this parameter back to the default email address quarantine@messaging.microsoft.com, use the value $null. 
+The EndUserSpamNotificationCustomFromAddress specifies the email address of an existing internal sender to use as the sender for quarantine notifications. To set this parameter back to the default email address quarantine@messaging.microsoft.com, use the value $null.
 
 ```yaml
 Type: String
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequencyInDays
-This parameter is reserved for internal Microsoft use. 
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
