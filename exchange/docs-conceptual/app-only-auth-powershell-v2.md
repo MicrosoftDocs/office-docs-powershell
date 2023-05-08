@@ -21,7 +21,7 @@ description: "Learn about using the Exchange Online PowerShell V2 module and V3 
 
 Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
 
-Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and self-signed certificates.
+Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and certificates.
 
 > [!NOTE]
 >
@@ -134,16 +134,13 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    An application object has the default permission `User.Read`. For the application object to access resources, it needs to have the Application permission `Exchange.ManageAsApp`.
 
-3. [Generate a self-signed certificate](#step-3-generate-a-self-signed-certificate)
+3. [Generate a certificate](#step-3-generate-a-certificate)
 
-   - For app-only authentication in Azure AD,  you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app, and the permissions granted to the app.
+   - For app-only authentication in Azure AD, you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app and the permissions granted to the app.
 
-   - Create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the app-only access token.
+   - Create and configure an X.509 certificate, which is used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
-   - This is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this article for instructions for generating certificates in PowerShell.
-
-     > [!NOTE]
-     > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
+   - This process is similar to generating a password for user accounts. The certificate can be self-signed. See the [Appendix](#step-3-generate-a-certificate) section later in this article for instructions for generating certificates.
 
 4. [Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
 
@@ -257,28 +254,35 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You'll use it in an upcoming step.
 
-### Step 3: Generate a self-signed certificate
+### Step 3: Generate a certificate
 
-Create a self-signed x.509 certificate using one of the following methods:
+> [!NOTE]
+> Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You need to use a certificate from a CSP key provider.
 
-- (Recommended) Use the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated (run as administrator) Windows PowerShell session to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
+Create an x.509 certificate. For example:
 
-  ```powershell
-  # Create certificate
-  $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\CurrentUser\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
+- **Self-signed certificates**:
 
-  # Export certificate to .pfx file
-  $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password (Get-Credential).password
+  - The recommended method for creating a self-signed certificate is using the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate), [Export-Certificate](/powershell/module/pki/export-certificate) and [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate) cmdlets in an elevated Windows PowerShell session (run as administrator) to request a self-signed certificate and export it to `.cer` and `.pfx` (SHA1 by default). For example:
 
-  # Export certificate to .cer file
-  $mycert | Export-Certificate -FilePath mycert.cer
-  ```
+    ```powershell
+    # Create certificate
+    $mycert = New-SelfSignedCertificate -DnsName "contoso.org" -CertStoreLocation "cert:\CurrentUser\My" -NotAfter (Get-Date).AddYears(1) -KeySpec KeyExchange
 
-- Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1) script to generate SHA1 certificates.
+    # Export certificate to .pfx file
+    $mycert | Export-PfxCertificate -FilePath mycert.pfx -Password (Get-Credential).password
 
-  ```powershell
-  .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
-  ```
+    # Export certificate to .cer file
+    $mycert | Export-Certificate -FilePath mycert.cer
+    ```
+
+  - Use the [Create-SelfSignedCertificate script](https://github.com/SharePoint/PnP-Partner-Pack/blob/master/scripts/Create-SelfSignedCertificate.ps1) script to generate SHA1 certificates.
+
+    ```powershell
+    .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
+    ```
+
+- **Microsoft PKI**: Create a **web server certificate** to use.
 
 ### Step 4: Attach the certificate to the Azure AD application
 
@@ -298,7 +302,7 @@ After you register the certificate with your application, you can use the privat
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
-   In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
+   In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-certificate).
 
    ![Browse to the certificate and then click Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
 
