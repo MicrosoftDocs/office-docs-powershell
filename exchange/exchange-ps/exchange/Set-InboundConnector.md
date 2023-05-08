@@ -482,7 +482,11 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedOrganizations
-The TrustedOrganizations parameter identifies other Office 365 organizations as trusted mail sources for your organization (for example, after acquisitions and mergers). This parameter only works for mail flow between two Office 365 organizations, so no other parameters are used.
+The TrustedOrganizations parameter specifies other Microsoft 365 organizations that are trusted mail sources (for example, after acquisitions and mergers). This parameter works only for mail flow between two Microsoft 365 organizations, so no other parameters are used.
+
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
