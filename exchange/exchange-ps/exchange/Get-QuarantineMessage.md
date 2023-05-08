@@ -195,7 +195,7 @@ Accept wildcard characters: False
 The EntityType parameter filters the results by EntityType. Valid values are:
 
 - Email
-- SharePoint
+- SharePointOnline
 - Teams (currently in Preview)
 - DataLossPrevention (currently in Preview)
 
@@ -304,7 +304,7 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 - DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
-- SafeAttachmentPolicy
+- SafeAttachmentPolicy (Microsoft Defender for Office 365 only)
 
 You can specify multiple values separated by commas.
 
@@ -326,8 +326,9 @@ The QuarantineTypes parameter filters the results by what caused the message to 
 
 - Bulk
 - DataLossPrevention
+- FileTypeBlock (common attachments filter in anti-malware policies in EOP)
 - HighConfPhish
-- Malware
+- Malware (anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365)
 - Phish
 - Spam
 - SPOMalware (Microsoft Defender for Office 365 only)
@@ -337,7 +338,7 @@ You can specify multiple values separated by commas.
 
 You don't need to use this parameter with the Type parameter.
 
-For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
+For files quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
 Type: QuarantineMessageTypeEnum[]
