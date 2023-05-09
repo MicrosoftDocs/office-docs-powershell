@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguserdefaultnumber
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguserdefaultnumber
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingUserDefaultNumber
 schema: 2.0.0
@@ -56,7 +56,7 @@ This example replaces the default toll or toll-free number for all users who hav
 ## PARAMETERS
 
 ### -BridgeId
-The Bridge Id results from running [Get-CsOnlineDialInConferencingBridge](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+The Bridge Id results from running [Get-CsOnlineDialInConferencingBridge](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
 For example "9884626f-dcfb-49f4-8025-912f5bc68fdc". You can either specify BridgeName or BridgeId.
 
 ```yaml
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
-The Bridge Name results from running [Get-CsOnlineDialInConferencingBridge](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+The Bridge Name results from running [Get-CsOnlineDialInConferencingBridge](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
 For example "Conference Bridge". You can either specify BridgeName or BridgeId.
 
 ```yaml
@@ -312,4 +312,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

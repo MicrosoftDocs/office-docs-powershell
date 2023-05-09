@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/install-csdatabase
+online version: https://learn.microsoft.com/powershell/module/skype/install-csdatabase
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Install-CsDatabase
 schema: 2.0.0
@@ -637,5 +637,3 @@ The Install-CsDatabase cmdlet does not return any values or objects.
 ## RELATED LINKS
 
 [Uninstall-CsDatabase](Uninstall-CsDatabase.md)
-
-

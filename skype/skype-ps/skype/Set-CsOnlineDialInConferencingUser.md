@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser
 applicable: Skype for Business Online
 title: Set-CsOnlineDialInConferencingUser
 schema: 2.0.0
@@ -13,6 +13,10 @@ ms.reviewer:
 # Set-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
+
+> [!NOTE]
+> The AllowPSTNOnlyMeetings, ResetConferenceId, and ConferenceId parameters will be deprecated on Jan 31, 2022. To allow Teams meeting participants joining via the PSTN to bypass the lobby, use the AllowPSTNUsersToBypassLobby of the [Set-CsTeamsMeetingPolicy cmdlet](https://learn.microsoft.com/powershell/module/skype/set-csteamsmeetingpolicy). The capabilities associated with the ResetConferenceId and ConferenceId parameters are no longer supported.
+
 Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of a user that has been enabled for Microsoft's audio conferencing service.
 
 ## SYNTAX
@@ -20,8 +24,7 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 ### TenantIdParams (Default)
 ```
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] [-Tenant <Guid>] [-ConferenceId <System.Int32>] [-ResetConferenceId]
- [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-BridgeName <String>] [-Tenant <Guid>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
  [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -30,8 +33,7 @@ Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Gui
 ### TenantDomainParams
 ```
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] -TenantDomain <String> [-ConferenceId <Int32>] [-ResetConferenceId]
- [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
+ [-BridgeName <String>] [-TenantDomain <String>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
  [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
  [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -46,18 +48,18 @@ The cmdlet will verify that the correct license is assigned to the user.
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -ConferenceId 3542699 -ResetLeaderPin -ServiceNumber 14255037265
+Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -ResetLeaderPin -ServiceNumber 14255037265
 ```
 
-This example shows how to set a ConferenceId for a user, reset the meeting leader's PIN and set the audio conferencing provider default meeting phone number.
+This example shows how to reset the meeting leader's PIN and set the audio conferencing provider default meeting phone number.
 
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -BridgeName "Conference Bridge" -ConferenceId 3542699
+Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -BridgeName "Conference Bridge"
 ```
 
-This example sets a user's ConferenceId and conference bridge assignment.
+This example sets a user's conference bridge assignment.
 
 
 ## PARAMETERS
@@ -149,31 +151,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConferenceId
-Specifies the ConferenceId that will be used by the user for dial-in meetings.
-The cmdlet will fail if:
-
-The ConferenceId is already being used in the bridge where the user is assigned, or to which the user would be assigned.
-
-The ConferenceId doesn't meet the ConferenceId format requirements.
-
-ConferenceId and ResetConferenceId are mutually exclusive.
-When ConferenceId is specified the new ConferenceId will be assigned to the user.
-When ResetConferenceId is specified, the user will get an auto-generated ConferenceId.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: Passcode
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
@@ -222,28 +199,6 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResetConferenceId
-Specifies whether to reset the ConferenceId for meetings that the user is organizing.
-If specified, the meetings using the old ConferenceId will fail.
-The user will have to reschedule his existing meetings, or run the meeting migration tool.
-
-ConferenceId and ResetConferenceId are mutually exclusive.
-When ConferenceId is specified the new ConferenceId will be assigned to the user.
-When ResetConferenceId is specified, the user will get an auto-generated ConferenceId.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: ResetPasscode
 Applicable: Skype for Business Online
 
 Required: False
@@ -406,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTollFreeDialIn
-If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. Please note that making modifications to this value could trigger rescheduling all existing meetings organized by the given users, and all meeting invites will be resent to all participants. 
+If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. This setting can ONLY be managed using the TeamsAudioConferencingPolicy. By default, AllowTollFreeDialin is always set to True. 
 
 ```yaml
 Type: Boolean
@@ -432,3 +387,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
+
+[New-CsTeamsAudioConferencingPolicy](New-CsTeamsAudioConferencingPolicy.md)

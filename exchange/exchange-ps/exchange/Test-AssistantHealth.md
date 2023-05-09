@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-assistanthealth
+online version: https://learn.microsoft.com/powershell/module/exchange/test-assistanthealth
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-AssistantHealth
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-AssistantHealth cmdlet to verify that the Microsoft Exchange Mailbox Assistants service (MSExchangeMailboxAssistants) is healthy, to recover from health issues, and to report the status of the diagnosis or recovery action.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -37,7 +37,7 @@ The Mailbox Assistants service runs on all servers that have the Mailbox server 
 
 By default, when you run this cmdlet, it returns the RunspaceId, events, and performance counters in a table format.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -56,6 +56,29 @@ Test-AssistantHealth -MaxProcessingTimeInMinutes 30 | Format-List
 This example detects the mailbox assistant's health on the local Mailbox server. The MaxProcessingTimeInMinutes parameter specifies 30 minutes as the maximum amount of time the service is allowed to process an event without responding, and formats the output to a list.
 
 ## PARAMETERS
+
+### -ServerName
+The ServerName parameter specifies the Mailbox server where you want to run this command. You can use any value that uniquely identifies the server. For example:
+
+- Name
+- FQDN
+- Distinguished name (DN)
+- Exchange Legacy DN
+
+If you don't use this parameter, the command is run on the local server.
+
+```yaml
+Type: ServerIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -77,11 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCrashDump
-The IncludeCrashDump parameter specifies that the command should take an error report prior to taking any recovery actions. This parameter should only be used if running from a local computer. If you use the parameter while connected remotely, the command fails.
+The IncludeCrashDump switch specifies that the command should take an error report prior to taking any recovery actions. You don't need to specify a value with this switch.
 
-The default value for this parameter is $false.
-
-You don't have to specify a value with this parameter.
+You should only use this switch on the local computer. If you use this switch while connected remotely, the command will fail.
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM). You don't need to specify a value with this switch.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter
@@ -129,12 +152,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResolveProblems
-This ResolveProblems parameter specifies that if the command detects an issue, it attempts to fix it. This command attempts to fix the following issues:
+This ResolveProblems switch specifies that if the command detects an issue, it attempts to fix it. You don't need to specify a value with this switch.
+
+This command attempts to fix the following issues:
 
 - Starts the Mailbox Assistants service if it isn't running.
 - Restarts the Mailbox Assistants service if it detects that the service is hung or deadlocked for more than 15 minutes.
-
-You don't have to specify a value with this parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -146,29 +169,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ServerName
-The ServerName parameter specifies the Mailbox server where you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-- FQDN
-- Distinguished name (DN)
-- Exchange Legacy DN
-
-If you don't use this parameter, the command is run on the local server.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -211,12 +211,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

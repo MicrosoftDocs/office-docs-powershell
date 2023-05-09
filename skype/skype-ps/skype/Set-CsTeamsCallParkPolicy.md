@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamscallparkpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamscallparkpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsCallParkPolicy
 schema: 2.0.0
@@ -22,7 +22,7 @@ NOTE: The call park feature currently available in desktop, mobile, and web clie
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [[-Identity] <XdsIdentity>]
+Set-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [-PickupRangeStart <Integer>] [-PickupRangeEnd <Integer>] [-ParkTimeoutSeconds <Integer>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,6 +43,20 @@ PS C:\> Set-CsTeamsCallParkPolicy -Identity SalesPolicy -AllowCallPark $true
 ```
 
 Update the existing policy "SalesPolicy" to enable the call park feature.
+
+### Example 2
+```powershell
+PS C:\> Set-CsTeamsCallParkPolicy -Identity "SalesPolicy" -PickupRangeStart 500 -PickupRangeEnd 1500
+```
+
+Update the existing policy "SalesPolicy" to generate pickup numbers starting from 500 and up until 1500.
+
+### Example 3
+```powershell
+PS C:\> New-CsTeamsCallParkPolicy -Identity "SalesPolicy" -ParkTimeoutSeconds 600
+```
+
+Update the existing policy "SalesPolicy" to ring back the parker after 600 seconds if the parked call is unanswered
 
 ## PARAMETERS
 
@@ -118,6 +132,55 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PickupRangeEnd
+Specify the maximum value that a rendered pickup code can take. Value can be from 10 to 9999.
+
+Note: PickupRangeStart must be smaller than PickupRangeEnd.
+
+```yaml
+Type: Integer
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 99
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParkTimeoutSeconds
+Specify the number of seconds to wait before ringing the parker when the parked call hasn't been picked up. Value can be from 120 to 1800 (seconds).
+
+```yaml
+Type: Integer
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 300
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PickupRangeStart
+Specify the minimum value that a rendered pickup code can take. Value can be from 10 to 9999.
+
+Note: PickupRangeStart must be smaller than PickupRangeEnd.
+
+```yaml
+Type: Integer
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 10
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

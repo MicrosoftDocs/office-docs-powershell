@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csmobilitypolicy
-applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csmobilitypolicy
+applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsMobilityPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -15,7 +15,7 @@ ms.reviewer: rogupta
 ## SYNOPSIS
 
 Grants a per-user mobility policy to a user or group of users.
-Mobility policies determine whether or not a user can use a mobile device (such as a cell phone) to connect to Skype for Business Server.
+Mobility policies determine whether or not a user can use a mobile device (such as a cell phone) to connect to Microsoft Teams or Skype for Business Server.
 These policies also manage a user's ability to employ Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
 Mobility policies can also be used to require Wi-Fi connections when making or receiving calls.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
@@ -30,19 +30,19 @@ Grant-CsMobilityPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainControlle
 
 ## DESCRIPTION
 
-Skype for Business Mobile is a client application that enables users to run Skype for Business Server on their mobile phones.
+Microsoft Teams Mobile or Skype for Business Mobile is a client application that enables users to run Microsoft Teams or Skype for Business Server on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
 Users who have been enabled for Call via Work can achieve this either by dialing directly from their mobile phone or by using the dial-out conferencing option.
 With dial-out conferencing, a user effectively asks the Mobility Service server to make a call for them.
 The server will set up the call, and then call the user back on their mobile phone.
 After the user has answered, the server will then dial the party being called.
-Both of these capabilities can be managed by using mobility policies.
+Both of these capabilities can be managed by using mobility policies. 
 
-With Skype for Business Server, mobile devices can make or receive phone calls by using either the standard cellular phone network.
+With Microsoft Teams or Skype for Business Server, mobile devices can make or receive phone calls by using either the standard cellular phone network.
 or by using Wi-Fi connections.
 Mobility policies can be used to require Wi-Fi connections and to prevent calls over the cellular network.
 
-When you install Skype for Business Server, you will have a single, global mobility policy that applies to all your users.
+When you install Microsoft Teams or Skype for Business Server, you will have a single, global mobility policy that applies to all your users.
 However, administrators can use the New-CsMobilityPolicy cmdlet to create custom policies at either the site or the per-user scope.
 
 If you create a new policy at the site scope that policy will automatically be assigned to the appropriate site.
@@ -119,7 +119,7 @@ For example, the Identity "* Smith" will assign the policy to all the users who 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
@@ -135,7 +135,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ If this parameter is not specified then the Grant-CsMobilityPolicy cmdlet will c
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ By default, the Grant-CsMobilityPolicy cmdlet does not pass objects through the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -210,7 +210,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -265,5 +265,3 @@ However, if you include the PassThru parameter, the cmdlet will be able to pipel
 ## NOTES
 
 ## RELATED LINKS
-
-

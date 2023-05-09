@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingbroadcastpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsmeetingbroadcastpolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsMeetingBroadcastPolicy
 schema: 2.0.0
@@ -14,9 +14,7 @@ ms.reviewer:
 # Get-CsTeamsMeetingBroadcastPolicy
 
 ## SYNOPSIS
-Get-CsTeamsMeetingBroadcastPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[\<CommonParameters\>\]
-
-Get-CsTeamsMeetingBroadcastPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[\<CommonParameters\>\]
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.
 
 ## SYNTAX
 
@@ -36,11 +34,23 @@ User-level policy for tenant admin to configure meeting broadcast behavior for t
 
 ## EXAMPLES
 
+### Example 1
+```
+Get-CsTeamsMeetingBroadcastPolicy
+```
+Returns all the Teams Meeting Broadcast policies.
+
+### Example 2
+```
+Get-CsTeamsMeetingBroadcastPolicy -Filter "Education_Teacher"
+```
+
+In this example, the -Filter parameter is used to return all the policies that match "Education_Teacher".
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to use wildcard characters when specifying the policy (or policies) to be returned. For example, this syntax returns all the policies configured at the per-user scope
+Enables you to use wildcard characters when specifying the policy (or policies) to be returned.
 
 ```yaml
 Type: String

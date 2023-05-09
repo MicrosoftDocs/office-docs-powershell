@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/enable-compliancetagstorage
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/enable-compliancetagstorage
+applicable: Security & Compliance
 title: Enable-ComplianceTagStorage
 schema: 2.0.0
 author: chrisda
@@ -12,24 +12,26 @@ ms.reviewer:
 # Enable-ComplianceTagStorage
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Enable-ComplianceTagStorage cmdlet to create the label policy in the Security & Compliance Center. This is a one-time operation. Labels apply retention settings to content.
+Use the Enable-ComplianceTagStorage cmdlet to create the retention label policy in the Microsoft Purview compliance portal. This is a one-time operation. Retention labels apply retention settings to content.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Enable-ComplianceTagStorage [-Confirm]
+Enable-ComplianceTagStorage
+ [-Confirm]
+ [-RecordsManagementSecurityGroupEmail <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-If you run this cmdlet more than once, you'll get an error that says a policy already exists.
+You can check the status by running the following command: `Get-ComplianceTagStorage | Format-List Enabled,DistributionStatus`. The value True for the Enabled property and the value Success for the DistributionStatus property indicates the Enable-ComplianceTagStorage cmdlet has already been run in the organization, and you don't need to run it again. If you run the cmdlet unnecessarily, you'll get a warning, and the DistributionStatus property changes to the value Pending for a few minutes before returning to the value Success.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -38,7 +40,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Enable-ComplianceTagStorage
 ```
 
-This example creates the label policy in the Security & Compliance Center.
+This example creates the label policy in the Microsoft Purview compliance portal.
 
 ## PARAMETERS
 
@@ -52,7 +54,23 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordsManagementSecurityGroupEmail
+This RecordsManagementSecurityGroupEmail parameter specifies the email address of the mail-enabled security group that contains the records managers in the organization.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -62,13 +80,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -82,11 +100,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csautoattendantstatus
+online version: https://learn.microsoft.com/powershell/module/skype/get-csautoattendantstatus
 applicable: Skype for Business Online
 title: Get-CsAutoAttendantStatus
 schema: 2.0.0
@@ -113,4 +113,3 @@ The Get-CsAutoAttendantStatus cmdlet accepts a string as the Identity parameter.
 ## RELATED LINKS
 
 [Get-CsAutoAttendant](Get-CsAutoAttendant.md)
-

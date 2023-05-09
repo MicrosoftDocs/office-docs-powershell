@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csoupermission
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csoupermission
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsOUPermission
 schema: 2.0.0
@@ -286,5 +286,3 @@ The Grant-CsOUPermission cmdlet does not return any objects or values.
 [Revoke-CsOUPermission](Revoke-CsOUPermission.md)
 
 [Test-CsOUPermission](Test-CsOUPermission.md)
-
-

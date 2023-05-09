@@ -5,9 +5,10 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: ITPro
+audience: ITPro
 ms.topic: reference
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: fb4b1396-9aae-4037-be1a-b09e336b890e
 description: "Learn about creating different kinds of recipient filters in the Exchange Management Shell and Exchange Online PowerShell."
 ---
@@ -29,7 +30,7 @@ A precanned filter is a commonly used Exchange filter that you can use to meet a
 
 - Determine the scope of recipients.
 - Add conditional filtering based on properties such as company, department, and state or region.
-- Add custom attributes for recipients. For more information, see [Custom Attributes](https://docs.microsoft.com/Exchange/recipients/mailbox-custom-attributes).
+- Add custom attributes for recipients. For more information, see [Custom Attributes](/Exchange/recipients/mailbox-custom-attributes).
 
 The following parameters are considered precanned filters:
 
@@ -41,17 +42,17 @@ The following parameters are considered precanned filters:
 
 Precanned filters are available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/new-dynamicdistributiongroup)
-- [Set-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/set-dynamicdistributiongroup)
+- [New-DynamicDistributionGroup](/powershell/module/exchange/new-dynamicdistributiongroup)
+- [Set-DynamicDistributionGroup](/powershell/module/exchange/set-dynamicdistributiongroup)
 
-- [New-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/new-emailaddresspolicy)
-- [Set-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/set-emailaddresspolicy)
+- [New-EmailAddressPolicy](/powershell/module/exchange/new-emailaddresspolicy)
+- [Set-EmailAddressPolicy](/powershell/module/exchange/set-emailaddresspolicy)
 
-- [New-AddressList](https://docs.microsoft.com/powershell/module/exchange/new-addresslist)
-- [Set-AddressList](https://docs.microsoft.com/powershell/module/exchange/set-addresslist)
+- [New-AddressList](/powershell/module/exchange/new-addresslist)
+- [Set-AddressList](/powershell/module/exchange/set-addresslist)
 
-- [New-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/new-globaladdresslist)
-- [Set-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/set-globaladdresslist)
+- [New-GlobalAddressList](/powershell/module/exchange/new-globaladdresslist)
+- [Set-GlobalAddressList](/powershell/module/exchange/set-globaladdresslist)
 
 ### Precanned filter example
 
@@ -84,17 +85,17 @@ If precanned filters don't meet your needs for creating or modifying dynamic dis
 
 The recipient filter parameter is available for the following cmdlets:
 
-- [New-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/new-dynamicdistributiongroup)
-- [Set-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/set-dynamicdistributiongroup)
+- [New-DynamicDistributionGroup](/powershell/module/exchange/new-dynamicdistributiongroup)
+- [Set-DynamicDistributionGroup](/powershell/module/exchange/set-dynamicdistributiongroup)
 
-- [New-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/new-emailaddresspolicy)
-- [Set-EmailAddressPolicy](https://docs.microsoft.com/powershell/module/exchange/set-emailaddresspolicy)
+- [New-EmailAddressPolicy](/powershell/module/exchange/new-emailaddresspolicy)
+- [Set-EmailAddressPolicy](/powershell/module/exchange/set-emailaddresspolicy)
 
-- [New-AddressList](https://docs.microsoft.com/powershell/module/exchange/new-addresslist)
-- [Set-AddressList](https://docs.microsoft.com/powershell/module/exchange/set-addresslist)
+- [New-AddressList](/powershell/module/exchange/new-addresslist)
+- [Set-AddressList](/powershell/module/exchange/set-addresslist)
 
-- [New-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/new-globaladdresslist)
-- [Set-GlobalAddressList](https://docs.microsoft.com/powershell/module/exchange/set-globaladdresslist)
+- [New-GlobalAddressList](/powershell/module/exchange/new-globaladdresslist)
+- [Set-GlobalAddressList](/powershell/module/exchange/set-globaladdresslist)
 
 For more information about the filterable properties you can use with the _RecipientFilter_ parameter, see [Filterable properties for the RecipientFilter parameter](recipientfilter-properties.md).
 
@@ -112,7 +113,7 @@ New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.c
 
 You can use the _Filter_ parameter to filter the results of a command to specify which objects to retrieve. For example, instead of retrieving all users or groups, you can specify a set of users or groups by using a filter string. This type of filter doesn't modify any configuration or attributes of objects. It only modifies the set of objects that the command returns.
 
-Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. We also support client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
+Using the _Filter_ parameter to modify command results is known as server-side filtering. Server-side filtering submits the command and the filter to the server for processing. We also support client-side filtering, in which the command retrieves all objects from the server and then applies the filter in the local console window. To perform client-side filtering, use the **Where-Object** cmdlet. For more information about server-side and client-side filtering, see "How to Filter Data" in [Working with Command Output](/exchange/working-with-command-output-exchange-2013-help).
 
 To find the filterable properties for cmdlets that have the _Filter_ parameter, you can run the **Get** command against an object and format the output by pipelining the **Format-List** parameter. Most of the returned values will be available for use in the _Filter_ parameter. The following example returns a detailed list for the mailbox Ayla.
 
@@ -122,21 +123,21 @@ Get-Mailbox -Identity Ayla | Format-List
 
 The _Filter_ parameter is available for the following recipient cmdlets:
 
-- [Get-CASMailbox](https://docs.microsoft.com/powershell/module/exchange/get-casmailbox)
-- [Get-Contact](https://docs.microsoft.com/powershell/module/exchange/get-contact)
-- [Get-DistributionGroup](https://docs.microsoft.com/powershell/module/exchange/get-distributiongroup)
-- [Get-DynamicDistributionGroup](https://docs.microsoft.com/powershell/module/exchange/get-dynamicdistributiongroup)
-- [Get-Group](https://docs.microsoft.com/powershell/module/exchange/get-group)
-- [Get-Mailbox](https://docs.microsoft.com/powershell/module/exchange/get-mailbox)
-- [Get-MailContact](https://docs.microsoft.com/powershell/module/exchange/get-mailcontact)
-- [Get-MailPublicFolder](https://docs.microsoft.com/powershell/module/exchange/get-mailpublicfolder)
-- [Get-MailUser](https://docs.microsoft.com/powershell/module/exchange/get-mailuser)
-- [Get-Recipient](https://docs.microsoft.com/powershell/module/exchange/get-recipient)
-- [Get-RemoteMailbox](https://docs.microsoft.com/powershell/module/exchange/get-remotemailbox)
-- [Get-SecurityPrincipal](https://docs.microsoft.com/powershell/module/exchange/get-securityprincipal)
-- [Get-UMMailbox](https://docs.microsoft.com/powershell/module/exchange/get-ummailbox)
-- [Get-User](https://docs.microsoft.com/powershell/module/exchange/get-user)
-- [Get-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/get-unifiedgroup)
+- [Get-CASMailbox](/powershell/module/exchange/get-casmailbox)
+- [Get-Contact](/powershell/module/exchange/get-contact)
+- [Get-DistributionGroup](/powershell/module/exchange/get-distributiongroup)
+- [Get-DynamicDistributionGroup](/powershell/module/exchange/get-dynamicdistributiongroup)
+- [Get-Group](/powershell/module/exchange/get-group)
+- [Get-Mailbox](/powershell/module/exchange/get-mailbox)
+- [Get-MailContact](/powershell/module/exchange/get-mailcontact)
+- [Get-MailPublicFolder](/powershell/module/exchange/get-mailpublicfolder)
+- [Get-MailUser](/powershell/module/exchange/get-mailuser)
+- [Get-Recipient](/powershell/module/exchange/get-recipient)
+- [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox)
+- [Get-SecurityPrincipal](/powershell/module/exchange/get-securityprincipal)
+- [Get-UMMailbox](/powershell/module/exchange/get-ummailbox)
+- [Get-User](/powershell/module/exchange/get-user)
+- [Get-UnifiedGroup](/powershell/module/exchange/get-unifiedgroup)
 
 For more information about the filterable properties you can use with the _Filter_ parameter, see [Filterable properties for the Filter parameter](filter-properties.md).
 
@@ -150,7 +151,7 @@ Get-User -Filter "Title -like 'Manager*'"
 
 ## Custom filters using the ContentFilter parameter
 
-You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](https://docs.microsoft.com/powershell/module/exchange/new-mailboxexportrequest) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
+You can use the _ContentFilter_ parameter to select specific message content to export when using the [New-MailboxExportRequest](/powershell/module/exchange/new-mailboxexportrequest) cmdlet. If the command finds a message that contains the match to the content filter, it exports the message to a .pst file.
 
 ### ContentFilter parameter example
 
@@ -160,53 +161,55 @@ This example creates an export request that searches Ayla's mailbox for messages
 New-MailboxExportRequest -Mailbox Ayla -ContentFilter "Body -like 'company prospectus*'"
 ```
 
-For more information about the filterable properties that you can use with the _ContentFilter_ parameter, see [Filterable properties for the ContentFilter parameter](https://docs.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
+For more information about the filterable properties that you can use with the _ContentFilter_ parameter, see [Filterable properties for the ContentFilter parameter](/exchange/filterable-properties-for-the-contentfilter-parameter).
 
 ## Additional OPATH syntax information
 
-When creating your own custom OPath filters, consider the following items:
+When creating your own custom OPATH filters, consider the following items:
 
 - Use the following syntax to identify the types of values that you're searching for:
 
-  - **Text values**: Enclose the text in single quotation marks (for example, `'Value'` or `'Value with spaces'`). Or, you can enclose a text value in double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
+  - **Text values**: Enclose the text in single quotation marks (for example, `'Value'` or `'Value with spaces'`). Or, you can enclose a text value in double quotation marks, but that limits the characters you can use to enclose the whole OPATH filter.
 
   - **Variables**: Enclose variables that need to be expanded in single quotation marks (for example, `'$User'`). If the variable value itself contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`.
 
-  - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters you can use to enclose the whole OPath filter.
+  - **Integer values**: You don't need to enclose integers (for example, `500`). You can often enclose integers in single quotation marks or double quotation marks, but that limits the characters you can use to enclose the whole OPATH filter.
 
-  - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`). To enclose the whole OPath filter in double quotation marks, you need to escape the dollar sign in system value (for example, `` `$true``).
+  - **System values**: Don't enclose system values (for example, `$true`, `$false`, or `$null`). To enclose the whole OPATH filter in double quotation marks, you need to escape the dollar sign in system value (for example, `` `$true``).
 
-- You need to enclose the whole OPath filter in double quotation marks " or " single quotation marks ' '. Although any OPath filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPath filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
+- You need to enclose the whole OPATH filter in double quotation marks " or " single quotation marks ' '. Although any OPATH filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPATH filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
 
   - **Text values**: Depends on how you enclosed the text to search for:
 
-    - **Text enclosed in single quotation marks**: Enclose the whole OPath filter in double quotation marks or braces.
-    - **Text enclosed in double quotation marks**: Enclose the whole OPath filter in braces.
+    - **Text enclosed in single quotation marks**: Enclose the whole OPATH filter in double quotation marks or braces.
+    - **Text enclosed in double quotation marks**: Enclose the whole OPATH filter in braces.
 
-  - **Variables**: Enclose the whole OPath filter in double quotation marks (for example, `"Name -eq '$User'"`).
+  - **Variables**: Enclose the whole OPATH filter in double quotation marks (for example, `"Name -eq '$User'"`).
 
   - **Integer values**: Depends on how you enclosed (or didn't enclose) the integer to search for:
 
-    - **Integer not enclosed**: Enclose the whole OPath filter in double quotation marks, single quotation marks, or braces (for example `"CountryCode -eq 840"`).
-    - **Integer enclosed in single quotation marks**: Enclose the whole OPath filter in double quotation marks or braces `"CountryCode -eq '840'"`.
-    - **Integer enclosed in double quotation marks**: Enclose the whole OPath filter in braces (for example `{CountryCode -eq "840"}`).
+    - **Integer not enclosed**: Enclose the whole OPATH filter in double quotation marks, single quotation marks, or braces (for example `"CountryCode -eq 840"`).
+    - **Integer enclosed in single quotation marks**: Enclose the whole OPATH filter in double quotation marks or braces `"CountryCode -eq '840'"`.
+    - **Integer enclosed in double quotation marks**: Enclose the whole OPATH filter in braces (for example `{CountryCode -eq "840"}`).
 
-  - **System values**: Enclose the whole OPath filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`). If you escape the dollar sign system value, you can also enclose the whole OPath filter in double quotation marks (for example, ``"HiddenFromAddressListsEnabled -eq `$true"``).
+  - **System values**: Enclose the whole OPATH filter in single quotation marks or braces (for example `'HiddenFromAddressListsEnabled -eq $true'`). If you escape the dollar sign system value, you can also enclose the whole OPATH filter in double quotation marks (for example, ``"HiddenFromAddressListsEnabled -eq `$true"``).
 
-  The compatibility of search criteria and the valid characters that you can use to enclose the whole OPath filter are summarized in the following table:
+  The compatibility of search criteria and the valid characters that you can use to enclose the whole OPATH filter are summarized in the following table:
+
+  <br>
 
   ****
 
-  |Search value|OPath filter <br/> enclosed in <br/> double quotation marks|OPath filter <br/> enclosed in <br/> single quotation marks|OPath filter enclosed in <br/> braces|
+  |Search value|OPATH filter <br> enclosed in <br> double quotation marks|OPATH filter <br> enclosed in <br> single quotation marks|OPATH filter enclosed in <br> braces|
   |---|:---:|:---:|:---:|
-  |`'Text'`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`"Text"`|||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`'$Variable'`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
-  |`500`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`'500'`|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'Text'`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`"Text"`|||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'$Variable'`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|||
+  |`500`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`'500'`|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |`"500"`|||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`$true`||![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
-  |`` `$true``|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`$true`||![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
+  |`` `$true``|![Check mark.](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|![Check mark](media/f3b4c351-17d9-42d9-8540-e48e01779b31.png)|
   |
 
 - Include the hyphen before all logical or comparison operators. The most common operators include:
@@ -221,22 +224,21 @@ When creating your own custom OPath filters, consider the following items:
   - `-like` (string comparison)
   - `-notlike` (string comparison)
 
-- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. The **-like** operator is used to find pattern matches in rich types (for example, strings) whereas the **-eq** operator is used to find an exact match.
+- Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. Use the **-like** operator to find pattern matches in rich types (for example, strings). Use the **-eq** operator to find an exact match.
+
+  When you use the **-like** operator in Exchange Online PowerShell, the wildcard character is supported only as a suffix. For example, `"Department -like 'sales*'"` is allowed; `"Department -like '*sales'"` is not allowed.
 
 - For more information about operators you can use, see:
 
-  - [about_Logical_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_logical_operators)
-  - [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
+  - [about_Logical_Operators](/powershell/module/microsoft.powershell.core/about/about_logical_operators)
+  - [about_Comparison_Operators](/powershell/module/microsoft.powershell.core/about/about_comparison_operators)
 
 ## Recipient filter documentation
 
-The following table contains links to topics that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
+The following table contains links to articles that will help you learn more about the filterable properties that you can use with Exchange recipient commands.
 
-****
-
-|Topic|Description|
+|Article|Description|
 |---|---|
 |[Filterable properties for the RecipientFilter parameter on Exchange cmdlets](recipientfilter-properties.md)|Learn more about the filterable properties that are available for the _RecipientFilter_ parameter.|
 |[Filterable properties for the Filter parameter on Exchange cmdlets](filter-properties.md) |Learn more about the filterable properties that are available for the _Filter_ parameter.|
-|[Filters in the EXO V2 module](filters-v2.md)|Learn about the considerations for filters when you connect to Exchange Online PowerShell using the Exchange Online PowerShell V2 module.|
-|
+|[Filters in the Exchange Online PowerShell module](filters-v2.md)|Learn about the considerations for filters in the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module.|

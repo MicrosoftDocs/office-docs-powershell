@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-cscceapplianceconfigurationreplicationstatus
+online version: https://learn.microsoft.com/powershell/module/skype/set-cscceapplianceconfigurationreplicationstatus
 applicable: Skype for Business Online
 title: Set-CsCceApplianceConfigurationReplicationStatus
 schema: 2.0.0
@@ -14,6 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
@@ -154,4 +156,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

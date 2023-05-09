@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csvoicepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csvoicepolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVoicePolicy
 schema: 2.0.0
@@ -169,4 +169,3 @@ It removes an instance of a Microsoft.Rtc.Management.WritableConfig.Policy.Voice
 [Grant-CsVoicePolicy](Grant-CsVoicePolicy.md)
 
 [Test-CsVoicePolicy](Test-CsVoicePolicy.md)
-

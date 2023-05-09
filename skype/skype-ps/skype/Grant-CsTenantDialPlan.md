@@ -1,114 +1,81 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/grant-cstenantdialplan
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-cstenantdialplan
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Grant-CsTenantDialPlan
 
 ## SYNOPSIS
-Use the Grant-DsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user.
+Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user, to a group of users, or to set the Global policy instance.
 
 ## SYNTAX
 
+### GrantToTenant (Default)
 ```
-Grant-CsTenantDialPlan [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTenantDialPlan [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Identity
+```
+Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user.
+The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user, a group of users, or sets the Global policy instance.
 Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
 Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
 A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsOnlineUser "<user name>" | Select-Object TenantDialPlan.`
+You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsUserPolicyAssignment -Identity "<user name>" -PolicyType TenantDialPlan.`
+
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 
-(Skype for Business Online)
-```
-Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUser Vt1_User1).SipAddress
+```powershell
+Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity Ken.Myer@contoso.com
 ```
 
-This example grants the Vt1tenantDialPlan9 dial plan to Vt1_User1.
+This example grants the Vt1tenantDialPlan9 dial plan to Ken.Meyer@contoso.com.
 
-### -------------------------- Example 2 -------------------------- 
-```
-Grant-CsTenantDialPlan -Identity "Ken Myer" -PolicyName $Null
+### Example 2
+```powershell
+Grant-CsTenantDialPlan -Identity Ken.Myer@contoso.com -PolicyName $Null
 ```
 
 In Example 2, any dial plan previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global dial plan.
 To unassign a custom tenant dial plan, set the PolicyName to a null value ($Null).
 
+### Example 3
 
+```powershell
+Grant-CsTenantDialPlan -Group sales@contoso.com -Rank 10 -PolicyName Vt1tenantDialPlan9
+```
+
+This example grants the Vt1tenantDialPlan9 dial plan to members of the group sales@contoso.com.
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter identifies the user to whom the policy should be assigned.
-
-```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PolicyName
-The PolicyName parameter is the name of the tenant dial plan to assign to the specified user.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-Specifies the domain controller that's used by the cmdlet to read or write the specified data.
-Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Parameter Sets: (GrantToTenant)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -123,7 +90,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -132,21 +99,67 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
-You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
+### -PolicyName
+The PolicyName parameter is the name of the tenant dial plan to be assigned.
 
 ```yaml
-Type: Guid
+Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: (GrantToGroup)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: (GrantToGroup)
+Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter identifies the user to whom the policy should be assigned.
+
+```yaml
+Type: String
+Parameter Sets: (Identity)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -157,7 +170,23 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -177,3 +206,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## RELATED LINKS
 
+[Set-CsTenantDialPlan](set-cstenantdialplan.md)
+
+[New-CsTenantDialPlan](new-cstenantdialplan.md)
+
+[Remove-CsTenantDialPlan](remove-cstenantdialplan.md)
+
+[Get-CsTenantDialPlan](get-cstenantdialplan.md)

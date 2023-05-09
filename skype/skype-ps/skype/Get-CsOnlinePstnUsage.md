@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinepstnusage
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinepstnusage
+applicable: Microsoft Teams
 title: Get-CsOnlinePstnUsage
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,12 +19,12 @@ Returns information about online public switched telephone network (PSTN) usage 
 
 ### Identity (Default)
 ```
-Get-CsOnlinePstnUsage [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlinePstnUsage [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsOnlinePstnUsage [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlinePstnUsage [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,50 +62,12 @@ Accept wildcard characters: False
 The level at which these settings are applied. The only identity that can be applied to PSTN usages is Global.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -119,7 +81,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -127,4 +88,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlinePstnUsage](https://docs.microsoft.com/powershell/module/skype/set-csonlinepstnusage?view=skype-ps)
+[Set-CsOnlinePstnUsage](set-csonlinepstnusage.md)

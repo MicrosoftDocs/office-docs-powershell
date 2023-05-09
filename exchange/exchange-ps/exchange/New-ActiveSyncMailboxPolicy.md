@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-activesyncmailboxpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-activesyncmailboxpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-ActiveSyncMailboxPolicy
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ActiveSyncMailboxPolicy cmdlet to create a Microsoft Mobile Device mailbox policy object.
 
-Note: In Exchange 2013 or later, use the New-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use New-ActiveSyncMailboxPolicy, update them to use New-MobileDeviceMailboxPolicy.
+**Note**: In Exchange 2013 or later, use the New-MobileDeviceMailboxPolicy cmdlet instead. If you have scripts that use New-ActiveSyncMailboxPolicy, update them to use New-MobileDeviceMailboxPolicy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -68,7 +68,6 @@ New-ActiveSyncMailboxPolicy [-Name] <String>
  [-MaxInactivityTimeDeviceLock <Unlimited>]
  [-MinDevicePasswordComplexCharacters <Int32>]
  [-MinDevicePasswordLength <Int32>]
- [-MobileOTAUpdateMode <MobileOTAUpdateModeType>]
  [-PasswordRecoveryEnabled <Boolean>]
  [-RequireDeviceEncryption <Boolean>]
  [-RequireEncryptedSMIMEMessages <Boolean>]
@@ -89,7 +88,7 @@ The New-ActiveSyncMailboxPolicy cmdlet creates a Mobile Device mailbox policy fo
 
 Some Mobile Device mailbox policy settings require the mobile device to have certain built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This allows devices that can't enforce all policy settings to synchronize with your server.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -860,30 +859,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MobileOTAUpdateMode
-This parameter is available or functional only in Exchange Server 2010.
-
-The MobileOTAUpdateMode parameter specifies which updates can be seen by the devices that implemented support for this restricting functionality. Valid values are:
-
-- MajorVersionUpdates
-- MinorVersionUpdates
-- BetaVersionUpdates
-
-You need to use this parameter with the AllowMobileOTAUpdate parametery.
-
-```yaml
-Type: MobileOTAUpdateModeType
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PasswordRecoveryEnabled
 The PasswordRecoveryEnabled parameter specifies whether you can store the recovery password for the device on an Exchange server. When set to $true, you can store the recovery password for the device on an Exchange server. The default value is $false. The recovery password can be viewed from either Outlook on the web or the Exchange admin center.
 
@@ -1081,12 +1056,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

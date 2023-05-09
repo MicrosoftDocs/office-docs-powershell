@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Whiteboard.PowerShell.Custom.dll-Help.xml
-Module Name: MicrosoftWhiteboard
-online version: https://docs.microsoft.com/powershell/module/whiteboard/get-whiteboard
+external help file: WhiteboardAdmin-help.xml
+Module Name: WhiteboardAdmin
+online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboard
 applicable: Microsoft Whiteboard
 title: Get-Whiteboard
 schema: 2.0.0
@@ -14,44 +14,35 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Gets one or more Whiteboards from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards from the Microsoft Whiteboard service and returns them as objects.
 
 ## SYNTAX
 
-### Get a specific Whiteboard
-
 ```powershell
-Get-Whiteboard -UserId <Guid> -WhiteboardId <Guid> [<CommonParameters>]
-```
-
-### Get all Whiteboards for a user
-
-```powershell
-Get-Whiteboard -UserId <Guid> [<CommonParameters>]
+Get-Whiteboard [-UserId] <Guid> [[-WhiteboardId] <Guid>] [-ForceAuthPrompt] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Gets one or more Whiteboards from the Microsoft Whiteboard service and returns them as objects.
+Gets one or more whiteboards from the Microsoft Whiteboard service and returns them as objects.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### EXAMPLE 1
 
-```
+```powershell
 PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
 ```
 
-Get all of a user's Whiteboards.
+Get all of a user's whiteboards.
 
-### -------------------------- EXAMPLE 2 --------------------------
+### EXAMPLE 2
 
-```
+```powershell
 PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
 ```
 
-Get user's specific Whiteboard.
-
+Get a user's specific whiteboard.
 
 ### Output
 
@@ -75,33 +66,39 @@ meetingId:                 meetingId-value
 eTag:                      eTag-value
 ```
 
-
 ## PARAMETERS
 
 ### -UserId
-Optional. The ID of the user account to query Whiteboards for. All Whiteboards this account has access to will be returned. 
+
+The ID of the user account to query whiteboards for. All whiteboards this account has access to will be returned.
 
 ```yaml
-Type:                        Guid
-Required:                    true
-Position:                    named
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
 
 ### -WhiteboardId
 
-Optional. The ID of a specific Whiteboard.
+Optional. The ID of a specific whiteboard.
 
 ```yaml
-Type:                        Guid
-Required:                    true
-Position:                    named
-Default value:               None
-Accept pipeline input:       false
-Accept wildcard characters:  false
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
 
@@ -110,22 +107,25 @@ Applicable: Microsoft Whiteboard
 Optional. Always prompt for auth. Use to ignore cached credentials.
 
 ```yaml
-Type:                        SwitchParameter
-Required:                    false
-Position:                    named
-Default value:               false
-Accept pipeline input:       false
-Accept wildcard characters:  false
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
 Applicable: Microsoft Whiteboard
 ```
 
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216)
+
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 

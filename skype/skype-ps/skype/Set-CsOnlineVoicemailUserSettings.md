@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailusersettings
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoicemailusersettings
+applicable: Microsoft Teams, Skype for Business Online
 title: Set-CsOnlineVoicemailUserSettings
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,7 +19,10 @@ New online voicemail user settings of the user would be returned after executing
 ## SYNTAX
 
 ```
-Set-CsOnlineVoicemailUserSettings -Identity <String> [-VoicemailEnabled <Boolean>] [-PromptLanguage <String>] [-OofGreetingEnabled <Boolean>] [-OofGreetingFollowAutomaticRepliesEnabled <Boolean>] [-OofGreetingFollowCalendarEnabled <Boolean>] [-CallAnswerRule <DeclineCall | PromptOnly | PromptOnlyWithTransfer | RegularVoicemail | VoicemailWithTransferOption>] [-TransferTarget <String>] [-DefaultGreetingPromptOverwrite <String>] [-DefaultOofGreetingPromptOverwrite <String>] [-Tenant <Guid>] [<CommonParameters>]
+Set-CsOnlineVoicemailUserSettings [-Identity] <string> [-CallAnswerRule <Object>] [-DefaultGreetingPromptOverwrite <string>]
+[-DefaultOofGreetingPromptOverwrite <string>] [-Force] [-OofGreetingEnabled <boolean>] [-OofGreetingFollowAutomaticRepliesEnabled <boolean>]
+[-OofGreetingFollowCalendarEnabled <boolean>] [-PromptLanguage <string>] [-ShareData <boolean>] [-TransferTarget <string>]
+[-VoicemailEnabled <boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,38 +33,38 @@ For example, tenant admin could enable/disable voicemail, change voicemail promp
 
 ### -------------------------- Example 1 --------------------------
 ```
-Set-CsOnlineVoicemailUserSettings -Identity sip:user@contoso.com -VoicemailEnabled $true
+Set-CsOnlineVoicemailUserSettings -Identity sip:user1@contoso.com -VoicemailEnabled $true
 ```
 
-This example changes VoicemailEnabled setting to true for the user with SIP URI sip:user@contoso.com.
+This example changes VoicemailEnabled setting to true for the user with SIP URI sip:user1@contoso.com.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000" -PromptLanguage "en-US" -OofGreetingFollowCalendarEnabled $false
+Set-CsOnlineVoicemailUserSettings -Identity user2@contoso.com -PromptLanguage "en-US" -OofGreetingFollowCalendarEnabled $false
 ```
 
-This example changes PromptLanguage setting to "en-US" and OofGreetingFollowCalendarEnabled setting to false for the user with Object ID "00000000-0000-0000-0000-000000000000".
+This example changes PromptLanguage setting to "en-US" and OofGreetingFollowCalendarEnabled setting to false for user2@contoso.com.
 
 ### -------------------------- Example 3 --------------------------
 ```
-Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000" -CallAnswerRule PromptOnlyWithTransfer -TransferTarget sip:user2@contoso.com
+Set-CsOnlineVoicemailUserSettings -Identity user3@contoso.com -CallAnswerRule PromptOnlyWithTransfer -TransferTarget sip:user4@contoso.com
 ```
 
-This example changes CallAnswerRule setting to PromptOnlyWithTransfer and set TransferTarget to "sip:user2@contoso.com" for the user with Object ID "00000000-0000-0000-0000-000000000000".
+This example changes CallAnswerRule setting to PromptOnlyWithTransfer and set TransferTarget to "sip:user4@contoso.com" for user3@contoso.com.
 
 ### -------------------------- Example 4 --------------------------
 ```
-Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000" -CallAnswerRule VoicemailWithTransferOption -TransferTarget "+12345678900"
+Set-CsOnlineVoicemailUserSettings -Identity user5@contoso.com -CallAnswerRule VoicemailWithTransferOption -TransferTarget "+14255551234"
 ```
 
-This example changes CallAnswerRule setting to VoicemailWithTransferOption and set TransferTarget to "+12345678900" for the user with Object ID "00000000-0000-0000-0000-000000000000".
+This example changes CallAnswerRule setting to VoicemailWithTransferOption and set TransferTarget to "+14255551234" for user5@contoso.com..
 
 ### -------------------------- Example 5 --------------------------
 ```
-Set-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000" -DefaultGreetingPromptOverwrite "Hi, I am currently not available."
+Set-CsOnlineVoicemailUserSettings -Identity user6@contoso.com -DefaultGreetingPromptOverwrite "Hi, I am currently not available."
 ```
 
-This example changes DefaultGreetingPromptOverwrite setting to "Hi, I am currently not available." for the user with Object ID "00000000-0000-0000-0000-000000000000".
+This example changes DefaultGreetingPromptOverwrite setting to "Hi, I am currently not available." for user6@contoso.com.
 
 
 ## PARAMETERS
@@ -73,130 +76,9 @@ The Identity parameter represents the ID of the specific user in your organizati
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VoicemailEnabled
-The VoicemailEnabled parameter represents whether to enable voicemail service.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PromptLanguage
-The PromptLanguage parameter represents the language that is used to play voicemail prompts. 
-
-Now the following languages are supported:
-
-- "ar-EG" (Arabic - Egypt)
-- "ca-ES" (Catalan - Catalan)
-- "da-DK" (Danish - Denmark)
-- "de-DE" (German - Germany)
-- "en-AU" (English - Australia)
-- "en-CA" (English - Canada)
-- "en-GB" (English - United Kingdom)
-- "en-IN" (English - India)
-- "en-US" (English - United States)
-- "es-ES" (Spanish - Spain)
-- "es-MX" (Spanish - Mexico)
-- "fi-FI" (Finnish - Finland)
-- "fr-CA" (French - Canada)
-- "fr-FR" (French - France)
-- "it-IT" (Italian - Italy)
-- "ja-JP" (Japanese - Japan)
-- "ko-KR" (Korean - Korea)
-- "nl-NL" (Dutch - Netherlands)
-- "nb-NO" (Norwegian, Bokmål - Norway)
-- "pl-PL" (Polish - Poland)
-- "pt-BR" (Portuguese - Brazil)
-- "pt-PT" (Portuguese - Portugal)
-- "ru-RU" (Russian - Russia)
-- "sv-SE" (Swedish - Sweden)
-- "tr-TR" (Turkish - Turkey)
-- "zh-CN" (Chinese - Simplified, PRC)
-- "zh-TW" (Chinese - Traditional, Taiwan)
-- "zh-HK" (Chinese - Traditional, Hong Kong S.A.R.)
-- "cs-CZ" (Czech - Czech Republic)
-- "th-TH" (Thai - Thailand)
-- "el-GR" (Greek - Greece)
-- "hu-HU" (Hungarian - Hungary)
-- "sk-SK" (Slovak - Slovakia)
-- "hr-HR" (Croatian - Croatia)
-- "sl-SI" (Slovenian - Slovenia)
-- "id-ID" (Indonesian - Indonesia)
-- "ro-RO" (Romanian - Romania)
-- "vi-VN" (Vietnamese - Viet Nam)
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OofGreetingEnabled
-The OofGreetingEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OofGreetingFollowAutomaticRepliesEnabled
-The OofGreetingFollowAutomaticRepliesEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set automatic replies in Outlook.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OofGreetingFollowCalendarEnabled
-The OofGreetingFollowCalendarEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set out-of-office in calendar.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -216,26 +98,7 @@ The CallAnswerRule parameter represents the value of the call answer rule, which
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransferTarget
-The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
-Value of this parameter should be a SIP URI of another user, an auto attendant, or a hunt group (call queue) in your organization.
-For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
-
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -246,13 +109,13 @@ Accept wildcard characters: False
 
 ### -DefaultGreetingPromptOverwrite
 The DefaultGreetingPromptOverwrite parameter represents the contents that overwrite the default normal greeting prompt.
-If user normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, voicemail service will play this overwrite greeting instead of default normal greeting in voicemail deposit scenario.
+If the user's normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default normal greeting in the voicemail deposit scenario.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -263,13 +126,13 @@ Accept wildcard characters: False
 
 ### -DefaultOofGreetingPromptOverwrite
 The DefaultOofGreetingPromptOverwrite parameter represents the contents that overwrite the default out-of-office greeting prompt.
-If user out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, voicemail service will play this overwrite greeting instead of default out-of-office greeting in voicemail deposit scenario.
+If the user's out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default out-of-office greeting in the voicemail deposit scenario.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -278,13 +141,216 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
+### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OofGreetingEnabled
+The OofGreetingEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario.
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OofGreetingFollowAutomaticRepliesEnabled
+The OofGreetingFollowAutomaticRepliesEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set automatic replies in Outlook.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OofGreetingFollowCalendarEnabled
+The OofGreetingFollowCalendarEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set out-of-office in calendar.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PromptLanguage
+The PromptLanguage parameter represents the language that is used to play voicemail prompts. 
+
+The following languages are supported:
+
+- "ar-EG" (Arabic - Egypt)
+- "ar-SA" (Arabic - Saudi Arabia)
+- "bg-BG" (Bulgarian - Bulgaria)
+- "ca-ES" (Catalan - Catalan)
+- "cy-GB" (Welsh - United Kingdom)
+- "cs-CZ" (Czech - Czech Republic)
+- "da-DK" (Danish - Denmark)
+- "de-AT" (German - Austria)
+- "de-CH" (German - Switzerland)
+- "de-DE" (German - Germany)
+- "el-GR" (Greek - Greece)
+- "en-AU" (English - Australia)
+- "en-CA" (English - Canada)
+- "en-GB" (English - United Kingdom)
+- "en-IE" (English - Ireland)
+- "en-IN" (English - India)
+- "en-PH" (English - Philippines)
+- "en-US" (English - United States)
+- "en-ZA" (English - South Africa)
+- "es-ES" (Spanish - Spain)
+- "es-MX" (Spanish - Mexico)
+- "et-EE" (Estonian - Estonia)
+- "fi-FI" (Finnish - Finland)
+- "fr-BE" (French - Belgium)
+- "fr-CA" (French - Canada)
+- "fr-CH" (French - Switzerland)
+- "fr-FR" (French - France)
+- "he-IL" (Hebrew - Israel)
+- "hi-IN" (Hindi - India)
+- "hr-HR" (Croatian - Croatia)
+- "hu-HU" (Hungarian - Hungary)
+- "id-ID" (Indonesian - Indonesia)
+- "it-IT" (Italian - Italy)
+- "ja-JP" (Japanese - Japan)
+- "ko-KR" (Korean - Korea)
+- "lt-LT" (Lithuanian - Lithuania)
+- "lv-LV" (Latvian - Latvia)
+- "nl-BE" (Dutch - Begium)
+- "nl-NL" (Dutch - Netherlands)
+- "nb-NO" (Norwegian, Bokmål - Norway)
+- "pl-PL" (Polish - Poland)
+- "pt-BR" (Portuguese - Brazil)
+- "pt-PT" (Portuguese - Portugal)
+- "ro-RO" (Romanian - Romania)
+- "ru-RU" (Russian - Russia)
+- "sk-SK" (Slovak - Slovakia)
+- "sl-SI" (Slovenian - Slovenia)
+- "sv-SE" (Swedish - Sweden)
+- "th-TH" (Thai - Thailand)
+- "tr-TR" (Turkish - Turkey)
+- "vi-VN" (Vietnamese - Viet Nam)
+- "zh-CN" (Chinese - Simplified, PRC)
+- "zh-TW" (Chinese - Traditional, Taiwan)
+- "zh-HK" (Chinese - Traditional, Hong Kong S.A.R.)
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShareData
+Specifies whether voicemail and transcription data is shared with the service for training and improving accuracy.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransferTarget
+The TransferTarget parameter represents the target to transfer the call when call answer rule set to PromptOnlyWithTransfer or VoicemailWithTransferOption.
+Value of this parameter should be a SIP URI of another user in your organization. 
+For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoicemailEnabled
+The VoicemailEnabled parameter represents whether to enable voicemail service. If set to $false, the user has no voicemail service.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Describes what would happen if you executed the command without actually executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -295,7 +361,6 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## INPUTS
 
@@ -312,4 +377,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CsOnlineVoicemailUserSettings](Get-CsOnlineVoicemailUserSettings.md)
-

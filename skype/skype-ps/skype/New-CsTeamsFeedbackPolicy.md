@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsfeedbackpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsfeedbackpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsFeedbackPolicy
 schema: 2.0.0
@@ -19,11 +19,12 @@ Use this cmdlet to control whether users in your organization can send feedback 
 
 ```
 New-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-InMemory]
- [-UserInitiatedMode <Object>] [-ReceiveSurveysMode <Object>] [-Force]
+[-AllowEmailCollection <Boolean>] [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>]
+ [-UserInitiatedMode <String>] [-ReceiveSurveysMode <String>] [-Force]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to control whether users in your organization can send feedback about Teams to Microsoft through Give feedback and whether they receive the survey. By default, all users in your organization are automatically assigned the global (Org-wide default) policy and the Give feedback feature and survey are enabled in the policy. The exception is Teams for Education, where the features are enabled for teachers and disabled for students. For more information, visit [Manage feedback policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/manage-feedback-policies-in-teams).
+Use this cmdlet to control whether users in your organization can send feedback about Teams to Microsoft through Give feedback and whether they receive the survey. By default, all users in your organization are automatically assigned the global (Org-wide default) policy and the Give feedback feature and survey are enabled in the policy. The exception is Teams for Education, where the features are enabled for teachers and disabled for students. For more information, visit [Manage feedback policies in Microsoft Teams](https://learn.microsoft.com/microsoftteams/manage-feedback-policies-in-teams).
 
 ## EXAMPLES
 
@@ -99,14 +100,19 @@ Accept wildcard characters: False
 ### -ReceiveSurveysMode
 Set the receiveSurveysMode parameter to enabled to allow users who are assigned the policy to receive the survey.
 
+Possible values:
+ - Enabled
+ - Disabled
+ - EnabledUserOverride
+
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -130,11 +136,57 @@ Accept wildcard characters: False
  Set the userInitiatedMode parameter to enabled to allow users who are assigned the policy to give feedback.
  Setting the parameter to disabled turns off the feature and users who are assigned the policy don't have the option to give feedback.
 
+ Possible values:
+ - Enabled
+ - Disabled
+
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEmailCollection
+Set this to TRUE to enable Email collection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLogCollection
+Set this to TRUE to enable log collection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowScreenshotCollection
+Set this to TRUE to enable Screenshot collection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Required: False
 Position: Named
 Default value: None

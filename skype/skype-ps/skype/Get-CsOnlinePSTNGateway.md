@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinepstngateway
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinepstngateway
+applicable: Microsoft Teams
 title: Get-CsOnlinePSTNGateway
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,13 +19,12 @@ Shows the configuration of the previously defined Session Border Controller(s) (
 
 ### Identity (Default)
 ```
-Get-CsOnlinePSTNGateway [-Tenant <System.Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
- [<CommonParameters>]
+Get-CsOnlinePSTNGateway [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsOnlinePSTNGateway [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlinePSTNGateway [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,10 +41,10 @@ This example shows all SBCs paired with the tenant.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsOnlinePSTNGateway | ?{$_.Identity -like "*.contoso.com"}
+PS C:\> Get-CsOnlinePSTNGateway -Filter "*.contoso.com"
 ```
 
-This example selects all SBC with names matching the pattern *.contoso.com. For example: sbc1.contoso.com, sbc2.contoso.com etc
+This example selects all SBCs with identities matching the pattern *.contoso.com, such as sbc1.contoso.com and sbc2.contoso.com.
 
 ## PARAMETERS
 
@@ -55,7 +54,7 @@ This example selects all SBC with names matching the pattern *.contoso.com. For 
 Type: String
 Parameter Sets: Filter
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -67,40 +66,12 @@ Accept wildcard characters: False
 The parameter is optional for the cmdlet. If not set all SBCs paired to the tenant are listed.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -113,7 +84,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

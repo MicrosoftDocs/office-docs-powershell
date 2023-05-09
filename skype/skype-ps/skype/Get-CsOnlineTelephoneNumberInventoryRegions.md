@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinetelephonenumberinventoryregions
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinetelephonenumberinventoryregions
 applicable: Skype for Business Online
 title: Get-CsOnlineTelephoneNumberInventoryRegions
 schema: 2.0.0
@@ -14,6 +14,10 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the `Get-CsOnlineTelephoneNumberInventoryRegions` cmdlet to retrieve the regions where specified inventory types are supported.
+
+**Note**:
+
+As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no longer be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
 
 ## SYNTAX
 
@@ -153,4 +157,3 @@ Instance or array of the object.
 ## NOTES
 
 ## RELATED LINKS
-

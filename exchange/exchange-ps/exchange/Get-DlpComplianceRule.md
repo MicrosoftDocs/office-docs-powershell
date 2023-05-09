@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpcompliancerule
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpcompliancerule
+applicable: Security & Compliance
 title: Get-DlpComplianceRule
 schema: 2.0.0
 author: chrisda
@@ -12,23 +12,23 @@ ms.reviewer:
 # Get-DlpComplianceRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpComplianceRule to view Data Loss Prevention (DLP) rules in the Security & Compliance Center. DLP rules identify and protect sensitive information.
+Use the Get-DlpComplianceRule to view data loss prevention (DLP) rules in the Microsoft Purview compliance portal. DLP rules identify and protect sensitive information.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-DlpComplianceRule [[-Identity] <ComplianceRuleIdParameter>]
- [-IncludeExecutionRuleGuids Boolean]
+ [-IncludeExecutionRuleGuids <Boolean>]
  [-Policy <PolicyIdParameter>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -37,7 +37,7 @@ You need to be assigned permissions in the Security & Compliance Center before y
 Get-DlpComplianceRule
 ```
 
-This example displays summary information for all DLP rules in the Security & Compliance Center.
+This example displays summary information for all DLP rules in the Microsoft Purview compliance portal.
 
 ### Example 2
 ```powershell
@@ -67,7 +67,7 @@ The Identity parameter specifies the DLP rule that you want to view. You can use
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 1
@@ -80,10 +80,10 @@ Accept wildcard characters: False
 {{ Fill IncludeExecutionRuleGuids Description }}
 
 ```yaml
-Type: $true | $false
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ The Policy parameter specifies the DLP policy that contains the rules. Using thi
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -118,11 +118,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

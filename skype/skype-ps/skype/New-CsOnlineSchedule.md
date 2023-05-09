@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csonlineschedule
+online version: https://learn.microsoft.com/powershell/module/skype/new-csonlineschedule
 applicable: Skype for Business Online
 title: New-CsOnlineSchedule
 schema: 2.0.0
@@ -28,9 +28,10 @@ New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Te
 ```
 
 ## DESCRIPTION
-The New-CsOnlineSchedule cmdlet creates a new schedule for the Organizational Auto Attendant (OAA) service. The OAA service uses schedules to conditionally execute call flows when a specific schedule is in effect.
+The New-CsOnlineSchedule cmdlet creates a new schedule for the Auto Attendant (AA) service. The AA service uses schedules to conditionally execute call flows when a specific schedule is in effect.
 
-**NOTE**
+**NOTES**:
+
 - The type of the schedule cannot be altered after the schedule is created.
 - Currently, only two types of schedules can be created: WeeklyRecurrentSchedule or FixedSchedule.
 - The schedule types are mutually exclusive. So a weekly recurrent schedule cannot be a fixed schedule and vice versa.
@@ -40,6 +41,7 @@ The New-CsOnlineSchedule cmdlet creates a new schedule for the Organizational Au
 - For a fixed schedule, at most 10 date-time ranges can be specified.
 - You can create a new date-time range for a fixed schedule by using the New-CsOnlineDateTimeRange cmdlet.
 - The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday's time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property. Similarly, date-time ranges of a fixed schedule can be modified by using the Schedule.FixedSchedule.DateTimeRanges property.
+- Schedules can then be used by [New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md).
 
 ## EXAMPLES
 
@@ -80,8 +82,6 @@ This example creates a fixed schedule that is active from December 24, 2017 to D
 
 ### -------------------------- Example 5 --------------------------
 ```powershell
-$dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
-$dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
 $notInEffectSchedule = New-CsOnlineSchedule -Name "NotInEffect" -FixedSchedule
 ```
 
@@ -319,6 +319,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 [New-CsOnlineDateTimeRange](New-CsOnlineDateTimeRange.md)
 
-[New-CsOrganizationalAutoAttendantCallFlow](New-CsOrganizationalAutoAttendantCallFlow.md)
+[New-CsAutoAttendantCallFlow](New-CsAutoAttendantCallFlow.md)
 
-[New-CsOrganizationalAutoAttendantCallHandlingAssociation](New-CsOrganizationalAutoAttendantCallHandlingAssociation.md)
+[New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.md)
+
+[New-CsAutoAttendant](New-CsAutoAttendant.md)

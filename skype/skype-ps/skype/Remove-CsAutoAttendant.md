@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csautoattendant
 applicable: Skype for Business Online
 title: Remove-CsAutoAttendant
 schema: 2.0.0
@@ -14,6 +14,10 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the Remove-CsAutoAttendant cmdlet to delete an Auto Attendant (AA).
+
+> [!NOTE]
+> Remove any associated resource accounts with [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md) before attempting to delete the Auto Attendant (AA).
+
 
 ## SYNTAX
 

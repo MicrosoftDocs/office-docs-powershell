@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csedgeallowallknowndomains
+online version: https://learn.microsoft.com/powershell/module/skype/new-csedgeallowallknowndomains
 applicable: Skype for Business Online
 title: New-CsEdgeAllowAllKnownDomains
 schema: 2.0.0
@@ -85,5 +85,3 @@ The New-CsEdgeAllowAllKnownDomains cmdlet creates new instances of the Microsoft
 ## RELATED LINKS
 
 [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
-
-

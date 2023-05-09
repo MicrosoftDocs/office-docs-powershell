@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-atptotaltrafficreport
+online version: https://learn.microsoft.com/powershell/module/exchange/get-atptotaltrafficreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-ATPTotalTrafficReport
 schema: 2.0.0
@@ -14,11 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ATPTotalTrafficReport to view details about message traffic in your organization.
+Use the Get-ATPTotalTrafficReport to view details about message traffic in your Microsoft Defender for Office 365 organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,9 +36,9 @@ Get-ATPTotalTrafficReport
 ```
 
 ## DESCRIPTION
-For the reporting period and organization you specify, the cmdlet returns the following information:
+For the reporting period you specify, the cmdlet returns the following information:
 
-- EventType
+- EventType: TotalBulkCount, TotalMalwareCount, TotalMissedSafeAttachmentCount, TotalMissedSafeLinkCount, TotalPhishCount, TotalSafeAttachmentCount, TotalSafeLinkCount, TotalSpamCount
 - Organization
 - Date
 - MessageCount
@@ -49,9 +47,15 @@ For the reporting period and organization you specify, the cmdlet returns the fo
 - AggregateBy
 - Index
 
+TotalMissedSafeAttachmentCount is when the recipient or tenant is not included in a Safe Attachments policy, but a message with a detected attachment was removed by zero-hour auto purge (ZAP) after delivery.
+
+TotalMissedSafeLinkCount is when the recipient or tenant is not included in a Safe Links policy, but a message with a detected URL was removed by ZAP after delivery.
+
+If the tenant had Safe Attachments or Safe Links policies, the messages would have been blocked and not delivered.
+
 By default, the command returns data for the last 14 days. Data for the last 90 days is available.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -99,7 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -217,7 +226,14 @@ Accept wildcard characters: False
 ### -SummarizeBy
 The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
-For this cmdlet, the SummarizedBy parameter accepts the value EventType.
+For this cmdlet, valid values are:
+
+- Action
+- Direction
+- Domain
+- EventType
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -237,11 +253,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

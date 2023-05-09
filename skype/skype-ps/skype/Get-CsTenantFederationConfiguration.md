@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstenantfederationconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantfederationconfiguration
 applicable: Skype for Business Online
 title: Get-CsTenantFederationConfiguration
 schema: 2.0.0
@@ -54,13 +54,10 @@ The command shown in Exercise 1 returns federation configuration information for
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsTenantFederationConfiguration | Select-Object -ExpandProperty AllowedList
+Get-CsTenantFederationConfiguration | Select-Object -ExpandProperty AllowedDomains
 ```
 
-In Example 2, information is returned for all the domains found on the federation allowed list for the current tenant.
-(The allowed list represents all the domains that the tenant is allowed to federate with.) To do this, the command first calls the Get-CsTenantFederationConfiguration cmdlet to return federation information for the specified tenant.
-That information is then piped to the Select-Object cmdlet, which uses the ExpandProperty to "expand" the property AllowedList.
-Expanding a property simply means displaying all the information stored in that property onscreen, and in an easy-to-read format.
+In Example 2, information is returned for all the allowed domains found on the federation configuration for the current tenant (This list represents all the domains that the tenant is allowed to federate with). To do this, the command first calls the Get-CsTenantFederationConfiguration cmdlet to return federation information for the specified tenant. That information is then piped to the Select-Object cmdlet, which uses the ExpandProperty to "expand" the property AllowedDomains. Expanding a property simply means displaying all the information stored in that property onscreen, and in an easy-to-read format.
 
 
 ## PARAMETERS
@@ -170,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)
 
 [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
-

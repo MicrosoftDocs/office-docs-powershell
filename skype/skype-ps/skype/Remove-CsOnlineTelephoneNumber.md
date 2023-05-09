@@ -1,53 +1,70 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinetelephonenumber
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinetelephonenumber
+applicable: Skype for Business Online, Microsoft Teams
 title: Remove-CsOnlineTelephoneNumber
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Remove-CsOnlineTelephoneNumber
 
 ## SYNOPSIS
-Use the `Remove-CsOnlineTelephoneNumber` cmdlet to remove a telephone number from the Business Voice Directory.
+Use the `Remove-CsOnlineTelephoneNumber` cmdlet to remove one or more unassigned telephone numbers from your tenant.
 
 ## SYNTAX
 
 ```
-Remove-CsOnlineTelephoneNumber -TelephoneNumber <String[]> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsOnlineTelephoneNumber -TelephoneNumber <String[]> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+This cmdlet removes one or more unassigned telephone numbers from your tenant. If at least one of the telephone numbers is assigned to a user or resource account, the cmdlet will fail and will not remove any of the specified telephone numbers.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Remove-CsOnlineTelephoneNumber -TelephoneNumber +14258884567
+Remove-CsOnlineTelephoneNumber -TelephoneNumber 14258884567
+```
+```Output
+NumberIdsDeleted NumberIdsDeleteFailed NumberIdsNotOwnedByTenant NumberIdsManagedByServiceDesk
+---------------- --------------------- ------------------------- -----------------------------
+{14258884567}    {}                    {}                        {}
 ```
 
-This example removes the specified telephone number from the Business Voice Directory.
+This example removes the specified telephone number from the tenant.
+
+### -------------------------- Example 2 --------------------------
+```
+[string[]]$tns="+14255551234","+14255551233"
+Remove-CsOnlineTelephoneNumber -TelephoneNumber $tns
+```
+```Output
+NumberIdsDeleted NumberIdsDeleteFailed NumberIdsNotOwnedByTenant NumberIdsManagedByServiceDesk
+---------------- --------------------- ------------------------- -----------------------------
+{14255551234,     {}                    {}                        {}
+ 14255551233}    
+```
+
+This example removes the specified list of telephone numbers from the tenant.
 
 
 ## PARAMETERS
 
 ### -TelephoneNumber
-Specifies the target telephone number.
-For example: -TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567
+Specifies the telephone number(s) to remove. The format can be withor without the prefixed +, but needs to include country code etc.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -61,23 +78,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -95,23 +96,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -128,7 +113,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -151,6 +136,7 @@ None
 None
 
 ## NOTES
+If one or more of the telephone numbers are assigned to a user or a service, the cmdlet will display an error message and none of the telephone numbers specified will be removed from your tenant.
 
 ## RELATED LINKS
-
+[Get-CsOnlineTelephoneNumber](Get-CsOnlineTelephoneNumber.md)

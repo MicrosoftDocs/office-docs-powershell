@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csvideointeropserversynthetictransactionconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csvideointeropserversynthetictransactionconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsVideoInteropServerSyntheticTransactionConfiguration
 schema: 2.0.0
@@ -135,4 +135,3 @@ None
 [New-CsVideoInteropServerSyntheticTransactionConfiguration](New-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
 [Test-CsP2PVideoInteropServerSipTrunkAV](Test-CsP2PVideoInteropServerSipTrunkAV.md)
-

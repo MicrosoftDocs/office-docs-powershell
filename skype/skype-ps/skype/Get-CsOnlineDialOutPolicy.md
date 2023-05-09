@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy
+applicable: Microsoft Teams
 title: Get-CsOnlineDialOutPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,39 +19,40 @@ Use the `Get-CsOnlineDialOutPolicy` cmdlet to get all the available outbound cal
 
 ### Identity (Default)
 ```
-Get-CsOnlineDialOutPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlineDialOutPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsOnlineDialOutPolicy [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlineDialOutPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-In Skype for Business Online, outbound calling restriction policies are used to restrict the type of audio conferencing and end user PSTN calls that can be made by users in your organization. 
-To get all the available policies in your organization run `Get-CSOnlineDialOutPolicy`.
+In Microsoft Teams, outbound calling restriction policies are used to restrict the type of audio conferencing and end user PSTN calls that can be made by users in your organization. The policies apply to all the different PSTN connectivity options for Microsoft Teams; Calling Plan, Direct Routing, and Operator Connect.
+
+To get all the available policies in your organization run `Get-CsOnlineDialOutPolicy`.
 To assign one of these policies to a user run `Grant-CsDialoutPolicy`.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-CSOnlineDialOutPolicy
+Get-CsOnlineDialOutPolicy
 ```
 
-In Example 1, `Get-CSOnlineDialOutPolicy` is called without any additional parameters; this returns a collection of all the outbound calling restriction policies configured for use in your organization.
+In Example 1, `Get-CsOnlineDialOutPolicy` is called without any additional parameters; this returns a collection of all the outbound calling restriction policies configured for use in your organization.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CSOnlineDialOutPolicy -Identity DialoutCPCandPSTNDisabled
+Get-CsOnlineDialOutPolicy -Identity DialoutCPCandPSTNDisabled
 ```
 
-In Example 2, `Get-CSOnlineDialOutPolicy` is used to return the per-user outbound calling restriction policy that has an Identity DialoutCPCandPSTNDisabled. Because identities are unique, this command will never return more than one item.
+In Example 2, `Get-CsOnlineDialOutPolicy` is used to return the per-user outbound calling restriction policy that has an Identity DialoutCPCandPSTNDisabled. Because identities are unique, this command will never return more than one item.
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the per-user policies, use this syntax: -Filter "tag:\*".
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
 
 ```yaml
 Type: String
@@ -71,27 +72,12 @@ Unique identifier of the outbound calling restriction policy to be returned. To 
 If this parameter is omitted, then all the outbound calling restriction policies configured for use in your tenant will be returned.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -112,4 +98,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsDialoutPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csdialoutpolicy)
+[Grant-CsDialoutPolicy](grant-csdialoutpolicy.md)

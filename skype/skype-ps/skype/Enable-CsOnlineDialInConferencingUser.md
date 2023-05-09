@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser
+online version: https://learn.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser
 applicable: Skype for Business Online
 title: Enable-CsOnlineDialInConferencingUser
 schema: 2.0.0
@@ -13,6 +13,10 @@ ms.reviewer:
 # Enable-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
+
+> [!NOTE]
+> This cmdlet will be deprecated on December 31, 2021. To enable Audio Conferencing for a user, please assign an Audio Conferencing license to the user and the user will be automatically enabled. For additional information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
+
 Use the `Enable-CsOnlineDialInConferencingUser` cmdlet to enable a Skype for Business user to access audio conferencing through Skype for Business Online.
 
 ## SYNTAX
@@ -303,6 +307,7 @@ Accept wildcard characters: False
 If true, specified toll-free number is used in meeting invitations.
 If false, specified toll-free number is not allowed to be used in meeting invitations.
 The default is true.
+This setting can ONLY be managed using the TeamsAudioConferencingPolicy.
 
 ```yaml
 Type: Boolean
@@ -327,8 +332,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
+[Disable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
+[Get-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
 
-[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+
+[Get-CsTeamsAudioConferencingPolicy](Get-CsTeamsAudioConferencingPolicy.md)
+
+[New-CsTeamsAudioConferencingPolicy](New-CsTeamsAudioConferencingPolicy.md)

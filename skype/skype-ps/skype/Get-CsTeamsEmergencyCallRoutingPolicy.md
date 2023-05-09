@@ -1,74 +1,65 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsemergencycallroutingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsemergencycallroutingpolicy
+applicable: Microsoft Teams
 title: Get-CsTeamsEmergencyCallRoutingPolicy
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 manager: roykuntz
-ms.reviewer: chenc, pthota
+ms.reviewer: chenc
 schema: 2.0.0
 ---
 
 # Get-CsTeamsEmergencyCallRoutingPolicy
 
 ## SYNOPSIS
+This cmdlet returns one or more Emergency Call Routing policies.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
- [<CommonParameters>]
+Get-CsTeamsEmergencyCallRoutingPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore]
- [<CommonParameters>]
+Get-CsTeamsEmergencyCallRoutingPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- This cmdlet returns one or more Emergency Call Routing policy. This Policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration
+This cmdlet returns one or more Emergency Call Routing policies. This policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>  Get-CsTeamsEmergencyCallRoutingPolicy
+Get-CsTeamsEmergencyCallRoutingPolicy
 ```
 
-  Retrieves all emergency call routing policies that are available in your scope
+Retrieves all emergency call routing policies that are available in your scope.
 
 ### Example 2
 ```powershell
-PS C:>  Get-CsTeamsEmergencyCallRoutingPolicy -Identity TestECRP
+Get-CsTeamsEmergencyCallRoutingPolicy -Identity TestECRP
 ```
 
-  Retrieves one emergency call routing policy specifying the identity
+Retrieves one emergency call routing policy specifying the identity.
+
+### Example 3
+```powershell
+Get-CsTeamsEmergencyCallRoutingPolicy -Filter 'Test*'
+```
+
+Retrieves all emergency call routing policies with identity starting with Test.
 
 ## PARAMETERS
 
-### -Filter
- The Filter parameter allows you to limit the number of results based on filters you specify.
+### -Identity
+Specify the policy that you would like to retrieve.
 
 ```yaml
 Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
- Specify the policy that you would like to retrieve.
-
-```yaml
-Type: XdsIdentity
 Parameter Sets: Identity
 Aliases:
 
@@ -79,27 +70,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
- Microsoft internal use.
+### -Filter
+ Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
- Microsoft internal use.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Filter
 Aliases:
 
 Required: False
@@ -118,7 +94,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsTeamsEmergencyCallRoutingPolicy](New-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Set-CsTeamsEmergencyCallRoutingPolicy](Set-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Grant-CsTeamsEmergencyCallRoutingPolicy](Grant-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Remove-CsTeamsEmergencyCallRoutingPolicy](Remove-CsTeamsEmergencyCallRoutingPolicy.md)

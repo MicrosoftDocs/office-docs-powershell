@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csinboundblockednumberpattern
-applicable: Skype for Business Online 
+online version: https://learn.microsoft.com/powershell/module/skype/get-csinboundblockednumberpattern
+applicable: Microsoft Teams, Skype for Business Online 
 title: Get-CsInboundBlockedNumberPattern
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 manager: bulenteg
 schema: 2.0.0 
@@ -19,14 +19,12 @@ Returns a list of all blocked number patterns added to the tenant list.
 
 ### Identity (Default)
 ```
-Get-CsInboundBlockedNumberPattern [-Tenant <Guid>] [[-Identity] <XdsGlobalRelativeIdentity>]
- [-LocalStore] [<CommonParameters>]
+Get-CsInboundBlockedNumberPattern [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsInboundBlockedNumberPattern [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
-[<CommonParameters>]
+Get-CsInboundBlockedNumberPattern [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,15 +34,23 @@ This cmdlet returns a list of all blocked number patterns added to the tenant li
 
 ### Example 1
 ```powershell
-PS C:> Get-CsInboundBlockedNumberPattern
+PS> Get-CsInboundBlockedNumberPattern
 ```
 
-In the preceding example, the *Get-CsInboundBlockedNumberPattern* cmdlet is called without any parameters in order to return all the blocked number patterns.
+In this example, the *Get-CsInboundBlockedNumberPattern* cmdlet is called without any parameters in order to return all the blocked number patterns.
+
+### Example 2
+```powershell
+PS> Get-CsInboundBlockedNumberPattern -Filter Block*
+```
+
+In this example, the *Get-CsInboundBlockedNumberPattern* cmdlet will return all the blocked number patterns which identity starts with Block.
+
 
 ## PARAMETERS
 
 ### -Filter
-Enables you to limit the returned data by filtering on Skype for Business Online-specific attributes. The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
+Enables you to limit the returned data by filtering on the Identity.
 
 ```yaml
 Type: String
@@ -62,7 +68,7 @@ Accept wildcard characters: False
 Indicates the Identity of the blocked number patterns to return.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -73,46 +79,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS

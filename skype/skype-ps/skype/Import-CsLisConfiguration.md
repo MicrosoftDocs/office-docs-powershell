@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-cslisconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/import-cslisconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsLisConfiguration
 schema: 2.0.0
@@ -16,8 +16,6 @@ ms.reviewer:
 
 Imports an Enterprise Voice Enhanced 9-1-1 (E9-1-1) configuration from a backup file.
 This cmdlet was introduced in Lync Server 2010.
-
-
 
 ## SYNTAX
 
@@ -48,10 +46,7 @@ You call the Export-CsLisConfiguration cmdlet to back up your configuration.
 Later, you modify the Location property of that wireless access point to Building30/Rooms20-40.
 If you then call the Import-CsLisConfiguration cmdlet to restore the backed-up configuration, the location for that WAP will be Building30/Room10 (the location before the backup), but the location for Building30/Rooms20-40 will remain in the location configuration database.
 
-
-
 ## EXAMPLES
-
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
 ```
@@ -60,7 +55,6 @@ Import-CsLisConfiguration -FileName C:\E911Config.bak
 ```
 
 This example imports the E9-1-1 configuration from the backup file named E911Config.back to the location configuration database.
-
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
@@ -78,34 +72,25 @@ In line 2 the Import-CsLisConfiguration cmdlet is called.
 The ByteInput parameter receives a value of $lisconfig, which is the variable containing the byte array we exported.
 This will import that byte array back into the location configuration database.
 
-
-
 ### -------------------------- EXAMPLE 3 -------------------------- 
 ```
 
 $lisconfig = Export-CsLisConfiguration -AsBytes
 
-$listconfig | Set-Content -Path C:\E911Config.bak -Encoding byte
+[System.IO.File]::WriteAllBytes('C:\E911Config.bak', $lisconfig)
 
-Get-Content -ReadCount 0 -Encoding byte -Path C:\E911Config.bak | Import-CsLisConfiguration
+[System.IO.File]::ReadAllBytes('C:\E911Config.bak') | Import-CsLisConfiguration
 ```
 
 Example 3 is a more complete version of Example 2.
 The first line is the same, we call the Export-CsLisConfiguration cmdlet with the AsBytes parameter to store the LIS configuration as an array of bytes in the variable $lisconfig.
 The rest of this example shows how to save that configuration to a file and then import it back into the location configuration database.
 
-In line 2 we pipe the contents of $lisconfig, which is the byte array representing the LIS configuration, to the Windows PowerShell Set-Content cmdlet.
-We assign values to two parameters of the Set-Content cmdlet: Path and Encoding.
-We assign the full path and file name of the file to which we want to save the configuration to the Path parameter.
-We use the Encoding parameter with a value of byte to ensure the configuration is stored as an array of bytes.
+In line 2 we pipe the contents of $lisconfig, which is the byte array representing the LIS configuration, to the full path and file name of the file to which we want to save the configuration.
 
 Finally, in line 3 we import the configuration back into the location configuration database.
-First we call the Get-Content cmdlet to retrieve the contents from the file.
-We pass a value of 0 to the ReadCount property, which tells the Get-Content cmdlet to read all the contents of the file at once rather than one line at a time.
-We again use the Encoding parameter with a value of byte to specify what type of data we're reading from the file.
-Finally we pass the file name to the Path parameter.
-The contents of the file that we read with the Get-Content cmdlet is piped to the Import-CsLisConfiguration cmdlet, which imports the saved configuration into the location configuration database.
-
+First we retrieve the contents from the file.
+The contents of the file are then piped to the Import-CsLisConfiguration cmdlet, which imports the saved configuration into the location database.
 
 ## PARAMETERS
 
@@ -172,4 +157,3 @@ This cmdlet does not return a value.
 [Debug-CsLisConfiguration](Debug-CsLisConfiguration.md)
 
 [Test-CsLisConfiguration](Test-CsLisConfiguration.md)
-

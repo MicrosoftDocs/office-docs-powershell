@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/invoke-csqoedatabasepurge
+online version: https://learn.microsoft.com/powershell/module/skype/invoke-csqoedatabasepurge
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Invoke-CsQoEDatabasePurge
 schema: 2.0.0
@@ -237,4 +237,3 @@ The Invoke-CsQoEDatabasePurge cmdlet returns instances of the Microsoft.Rtc.Mana
 [New-CsQoEConfiguration](New-CsQoEConfiguration.md)
 
 [Set-CsQoEConfiguration](Set-CsQoEConfiguration.md)
-

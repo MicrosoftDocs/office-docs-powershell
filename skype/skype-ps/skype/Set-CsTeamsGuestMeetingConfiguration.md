@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsguestmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsguestmeetingconfiguration
 applicable: Skype for Business Online
 title: Set-CsTeamsGuestMeetingConfiguration
 schema: 2.0.0
@@ -22,14 +22,14 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 ### Identity (Default)
 ```
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -135,6 +135,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LiveCaptionsEnabledType
+Determines whether real-time captions are available for guests in Teams meetings. Set this to DisabledUserOverride to allow guests to turn on live captions. Set this to Disabled to prohibit.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DisabledUserOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cssimpleurlconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-cssimpleurlconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsSimpleUrlConfiguration
 schema: 2.0.0
@@ -221,4 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsSimpleUrlConfiguration](Remove-CsSimpleUrlConfiguration.md)
 
 [Set-CsSimpleUrlConfiguration](Set-CsSimpleUrlConfiguration.md)
-

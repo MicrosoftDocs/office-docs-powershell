@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxdatabase
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxdatabase
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-MailboxDatabase
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MailboxDatabase cmdlet to configure a variety of properties for a mailbox database.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -62,7 +62,7 @@ Set-MailboxDatabase [-Identity] <DatabaseIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -80,7 +80,7 @@ Set-MailboxDatabase <Mailbox Database Name> -RpcClientAccessServer <ClientAccess
 
 In Exchange Server 2010, this example updates a mailbox database so that all client connections for mailboxes on the database come through the Client Access server or Client Access server array. You can also use this command to change the Client Access server or Client Access server array through which the client is connecting to the Mailbox server.
 
-For more information about RPC access through Client Access servers, see [Set-RpcClientAccess](https://docs.microsoft.com/powershell/module/exchange/set-rpcclientaccess) and [Set-ClientAccessArray](https://docs.microsoft.com/powershell/module/exchange/set-clientaccessarray).
+For more information about RPC access through Client Access servers, see [Set-RpcClientAccess](https://learn.microsoft.com/powershell/module/exchange/set-rpcclientaccess) and [Set-ClientAccessArray](https://learn.microsoft.com/powershell/module/exchange/set-clientaccessarray).
 
 ## PARAMETERS
 
@@ -215,7 +215,7 @@ The CircularLoggingEnabled parameter specifies whether circular logging is enabl
 - $true: Circular logging is enabled.
 - $false: Circular logging is disabled. This is the default value.
 
-For more information about circular logging, see [Exchange Native Data Protection](https://docs.microsoft.com/exchange/backup-restore-and-disaster-recovery-exchange-2013-help#exchange-native-data-protection).
+For more information about circular logging, see [Exchange Native Data Protection](https://learn.microsoft.com/exchange/backup-restore-and-disaster-recovery-exchange-2013-help#exchange-native-data-protection).
 
 ```yaml
 Type: Boolean
@@ -277,7 +277,7 @@ The DataMoveReplicationConstraint parameter specifies the throttling behavior fo
 - SecondCopy: At least one passive mailbox database copy must have the most recent changes synchronized. This is the default value. Use this setting to indicate that the database is replicated to one or more mailbox database copies.
 - SecondDatacenter: At least one passive mailbox database copy in another Active Directory site must have the most recent changes replicated. Use this setting to indicate that the database is replicated to database copies in multiple Active Directory sites.
 
-Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see [Active Manager](https://docs.microsoft.com/Exchange/high-availability/database-availability-groups/active-manager).
+Any value other than None enables the Microsoft Exchange Mailbox Replication service to coordinate with Active Manager. For more information, see [Active Manager](https://learn.microsoft.com/Exchange/high-availability/database-availability-groups/active-manager).
 
 ```yaml
 Type: DataMoveReplicationConstraintParameter
@@ -301,7 +301,7 @@ Valid values are 00:00:00 to 24855.03:14:07. The default value is 14.00:00:00 (1
 
 This setting applies to all mailboxes in the database that don't have their own deleted item retention value configured.
 
-For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
+For more information, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexEnabled
-This parameter isn't available in Exchange Server 2019.
+This parameter is functional only in Exchange 2016 or earlier.
 
 The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox database. Valid values are:
 
@@ -364,7 +364,7 @@ The IndexEnabled parameter specifies whether Exchange Search indexes the mailbox
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -583,11 +583,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceSchedule
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The MaintenanceSchedule parameter specifies when maintenance will be performed on the mailbox database. Maintenance includes online defragmentation, removing items that have passed their retention period, removing unused indexes and other cleanup tasks.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
@@ -611,7 +611,7 @@ Here are some examples:
 Type: Schedule
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -756,7 +756,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabase
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The PublicFolderDatabase parameter specifies the associated public folder database for this mailbox database. You can use any value that uniquely identifies the public folder database. For example:
 
@@ -768,7 +768,7 @@ The PublicFolderDatabase parameter specifies the associated public folder databa
 Type: DatabaseIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -778,11 +778,11 @@ Accept wildcard characters: False
 ```
 
 ### -QuotaNotificationSchedule
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The QuotaNotificationSchedule parameter specifies when quota messages are sent to mailboxes that have reached one of the quota values.
 
-The syntax for this parameter is: StartDay.Hour:Minute \[AM/PM\]-EndDay.Hour:Minute \[AM/PM\].
+The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`.
 
 You can use the following values for days:
 
@@ -806,7 +806,7 @@ Here are some examples:
 Type: Schedule
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -882,12 +882,17 @@ Accept wildcard characters: False
 ### -RetainDeletedItemsUntilBackup
 The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in the Recoverable Items\\Deletions folder of the mailbox until the next database backup occurs. Valid values are:
 
-- $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the deleted item retention and recoverable items quota values.
-- $false: Retention of deleted items doesn't depend on a backup of the mailbox database. This is the default value.
+- $true: Deleted items in mailboxes are kept until the next mailbox database backup. This value could effectively override the deleted DeletedItemRetention and RecoverableItemsQuota parameter values.
+- $false: This is the default value. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameters.
 
-For more information, see [Recoverable Items folder in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
+This settings applies to all mailboxes in the database that don't have their own RetainDeletedItemsUntilBackup value configured.
 
-This settings applies to all mailboxes in the database that don't have this value specifically configured.
+For more information, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
+
+**Note**: If you set the value of this parameter to $true when the value of the UseDatabaseRetentionDefaults parameter on a specific mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet will erroneously appear as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
+
+- Run the following command: `Import-Module ActiveDirectory`.
+- Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
 
 ```yaml
 Type: Boolean
@@ -903,11 +908,11 @@ Accept wildcard characters: False
 ```
 
 ### -RpcClientAccessServer
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The RpcClientAccessServer parameter specifies the Client Access server or Client Access server array through which RPC clients (for example, Microsoft Office Outlook 2007 clients) access their mailboxes. This feature is supported for all versions of Outlook.
 
-When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see [Understanding RPC Client Access](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/ee332317(v=exchg.141)).
+When connecting with Outlook 2003 clients, RPC encryption is disabled by default. Unless RPC encryption is enabled on Outlook 2003 or disabled on the server, Outlook 2003 clients won't be able to connect. For more information, see [Understanding RPC Client Access](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/ee332317(v=exchg.141)).
 
 ```yaml
 Type: ClientAccessServerOrArrayIdParameter
@@ -943,12 +948,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

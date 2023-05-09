@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsmessagingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsmessagingpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsMessagingPolicy
 schema: 2.0.0
@@ -24,11 +24,12 @@ New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartRepl
  [-Tenant <Guid>] [-AllowImmersiveReader <Boolean>] [-AllowUserTranslation <Boolean>]
  [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-AllowRemoveUser <Boolean>]
  [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Boolean>]
- [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>]
+ [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
  ```
 
 ## DESCRIPTION
  The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet creates a new Teams messaging policy.  Custom policies can then be assigned to users using the Grant-CsTeamsMessagingPolicy cmdlet.
+
 
 ## EXAMPLES
 
@@ -76,6 +77,9 @@ Accept wildcard characters: False
 
 ### -AllowOwnerDeleteMessage
 Determines whether owners are allowed to delete all the messages in their team. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+If the `-AllowUserDeleteMessage` parameter is set to FALSE, the team owner will not be able to delete their own messages.
+
 
 ```yaml
 Type: Boolean
@@ -382,6 +386,34 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -ChatPermissionRole
+Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the environment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.  
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Restricted
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSmartCompose
+Turn on this setting to let a user get text predictions for chat messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Con nombre
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## INPUTS
 
@@ -395,4 +427,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

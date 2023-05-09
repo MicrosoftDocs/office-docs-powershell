@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/export-csautoattendantholidays
+online version: https://learn.microsoft.com/powershell/module/skype/export-csautoattendantholidays
 applicable: Skype for Business Online
 title: Export-CsAutoAttendantHolidays
 schema: 2.0.0
@@ -26,15 +26,16 @@ The Export-CsAutoAttendantHolidays cmdlet and the Import-CsAutoAttendantHolidays
 
 The Export-CsAutoAttendantHolidays cmdlet returns the holiday schedule information in serialized form (as a byte array). The caller can then write the bytes to the disk to obtain a CSV file. Similarly, the Import-CsAutoAttendantHolidays cmdlet accepts the holiday schedule information as a byte array, which can be read from the aforementioned CSV file. The first line of the CSV file is considered a header record and is always ignored.
 
-**NOTE**
-- Each line in the CSV file used by Export-CsAutoAttendantHolidays and Import-CsAutoAttendantHolidays cmdlet should be of the following format:
+**NOTE**: Each line in the CSV file used by Export-CsAutoAttendantHolidays and Import-CsAutoAttendantHolidays cmdlet should be of the following format:
 
-   `HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,...,StartDateTime10,EndDateTime10`
+`HolidayName,StartDateTime1,EndDateTime1,StartDateTime2,EndDateTime2,...,StartDateTime10,EndDateTime10`
 
-    where
-    - HolidayName is the name of the holiday to be imported.
-    - StartDateTimeX and EndDateTimeX specify a date/time range for the holiday and are optional. If no date-time ranges are defined, then the holiday is imported without any date/time ranges. They follow the same format as New-CsOnlineDateTimeRange cmdlet.
-    - EndDateTimeX is optional. If it is not specified, the end bound of the date time range is set to 00:00 of the day after the start date.
+where
+
+- HolidayName is the name of the holiday to be imported.
+- StartDateTimeX and EndDateTimeX specify a date/time range for the holiday and are optional. If no date-time ranges are defined, then the holiday is imported without any date/time ranges. They follow the same format as New-CsOnlineDateTimeRange cmdlet.
+- EndDateTimeX is optional. If it is not specified, the end bound of the date time range is set to 00:00 of the day after the start date.
+
 - The first line of the CSV file is considered a header record and is always ignored by Import-CsAutoAttendantHolidays cmdlet.
 - If the destination auto attendant for the import already contains a call flow or schedule by the same name as one of the holidays being imported, the corresponding CSV record is skipped.
 - For holidays that are successfully imported, a default call flow is created which is configured without any greeting and simply disconnects the call on being executed.
@@ -104,4 +105,3 @@ The Export-CsAutoAttendantHolidays cmdlet accepts a string as the Identity param
 [Import-CsAutoAttendantHolidays](Import-CsAutoAttendantHolidays.md)
 
 [Get-CsAutoAttendantHolidays](Get-CsAutoAttendantHolidays.md)
-

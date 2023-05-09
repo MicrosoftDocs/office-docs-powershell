@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/enable-csuser
+online version: https://learn.microsoft.com/powershell/module/skype/enable-csuser
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Enable-CsUser
 schema: 2.0.0
@@ -82,6 +82,13 @@ Example 4 enables all the Active Directory users who have not yet been enabled f
 To do this, the Get-CsAdUser cmdlet is invoked, along with the Filter parameter.
 The filter {Enabled -ne $True} returns a collection of all the users who have not been enabled for Skype for Business Server.
 That collection is then piped to the Enable-CsUser cmdlet, which enables each account, assigning the user to the Registrar pool atl-cs-001.litwareinc.com and auto-generating a SIP address for each user.
+
+### -------------------------- Example 5 --------------------------
+```
+Enable-CsUser -Identity user@litwareinc.com -HostingProvider sipfed.online.lync.com -SipAddressType UserPrincipalName
+```
+
+Example 5 populates an existing Active Directory user in on-premises Skype for Business server who has been enabled for Skype for Business Online, or Microsoft Teams. The parameter -HostingProvider sipfed.online.lync.com specifies that the user is homed online, not on premises.
 
 
 ## PARAMETERS
@@ -319,4 +326,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.ADConne
 [Disable-CsUser](Disable-CsUser.md)
 
 [Get-CsUser](Get-CsUser.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csuserpstnsettings
+online version: https://learn.microsoft.com/powershell/module/skype/set-csuserpstnsettings
 applicable: Skype for Business Online
 title: Set-CsUserPstnSettings
 schema: 2.0.0
@@ -14,6 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the `Set-CsUserPstnSettings` cmdlet to modify an existing voice-enabled user's public switched telephone network (PSTN) settings.
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
@@ -172,4 +174,3 @@ The `Set-CsUserPstnSettings` cmdlet returns instances of the UserPstnSettings ob
 ## NOTES
 
 ## RELATED LINKS
-

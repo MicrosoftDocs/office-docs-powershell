@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/get-teamsshiftspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-teamsshiftspolicy
 schema: 2.0.0
 ---
 
@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet allows you to get properties of a TeamsShiftPolicy instance, including user's shift based presence and Teams off shift warning message-specific settings.
+This cmdlet allows you to get properties of a TeamsShiftPolicy instance, including user's Teams off shift warning message-specific settings.
 
 ## SYNTAX
 
@@ -19,7 +19,8 @@ Get-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to get properties of a TeamsShiftPolicy instance. Use this to get the policy name, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+This cmdlet allows you to get properties of a TeamsShiftPolicy instance. Use this to get the policy name and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+
 
 
 ## EXAMPLES
@@ -70,7 +71,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
 
 [New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
 

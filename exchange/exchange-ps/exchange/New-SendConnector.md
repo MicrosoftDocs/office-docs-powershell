@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-sendconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/new-sendconnector
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-SendConnector
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-SendConnector cmdlet to create a new Send connector.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -105,7 +105,7 @@ New-SendConnector [-Name] <String>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -121,7 +121,8 @@ This example creates the Send connector named MySendConnector with the following
 
 ### Example 2
 ```powershell
-$CredentialObject = Get-Credential; New-SendConnector -Name "Secure Email to Contoso.com" -AddressSpaces contoso.com -AuthenticationCredential $CredentialObject -SmartHostAuthMechanism BasicAuth
+$CredentialObject = Get-Credential
+New-SendConnector -Name "Secure Email to Contoso.com" -AddressSpaces contoso.com -AuthenticationCredential $CredentialObject -SmartHostAuthMechanism BasicAuth
 ```
 
 This example creates the Send connector Secure Email to Contoso.com with the following properties:
@@ -151,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressSpaces
-The AddressSpaces parameter specifies the domain names to which the Send connector routes mail. The complete syntax for entering each address space is as follows: \<AddressSpaceType\>:\<AddressSpace\>;\<AddressSpaceCost\>
+The AddressSpaces parameter specifies the domain names to which the Send connector routes mail. The complete syntax for entering each address space is: `AddressSpaceType:AddressSpace;AddressSpaceCost`.
 
 - AddressSpaceType: On an Edge server, the address space type must be SMTP. In the Transport service on a Mailbox server, the address space type may be SMTP, X400, or any other text string. If you omit the address space type, SMTP is assumed.
 - AddressSpace: For SMTP address space types, the address space that you enter must be RFC 1035-compliant. For example, \*, \*.com, and \*.contoso.com are permitted, but \*contoso.com is not. For X.400 address space types, the address space that you enter must be RFC 1685-compliant, such as o=MySite;p=MyOrg;a=adatum;c=us. For all other values of address space type, you can enter any text for the address space.
@@ -171,7 +172,7 @@ If you specify a non-SMTP address space type on a Send connector configured in t
 - The SmartHosts parameter must be set to a value that specifies a smart host.
 - The DNSRoutingEnabled parameter must be set to $false.
 
-Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://docs.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
+Although you can configure non-SMTP address spaces on a Send connector in the Transport service on a Mailbox server, the Send connector uses SMTP as the transport mechanism to send messages to other messaging servers. Foreign connectors in the Transport service on a Mailbox server are used to send messages to local messaging servers, such as third-party fax gateway servers, which don't use SMTP as their primary transport mechanism. For more information, see [Foreign connectors](https://learn.microsoft.com/exchange/foreign-connectors-exchange-2013-help).
 
 ```yaml
 Type: MultiValuedProperty
@@ -189,7 +190,7 @@ Accept wildcard characters: False
 ### -AuthenticationCredential
 The AuthenticationCredential parameter specifies the username and password that's required to use the connector.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -205,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServicesMailEnabled
-Note: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
+**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://learn.microsoft.com/exchange/hybrid-configuration-wizard).
 
 The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
@@ -302,14 +303,16 @@ Accept wildcard characters: False
 ```
 
 ### -Custom
-The Custom parameter specifies the Custom usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Custom parameter, you can't use any of the following parameters:
+The Custom switch specifies the Custom usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Custom switch, you can't use any of the following parameters:
 
 - Internal
 - Internet
 - Partner
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -429,7 +432,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -515,14 +520,16 @@ Accept wildcard characters: False
 ```
 
 ### -Internal
-The Internal parameter specifies the Internal usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internal parameter, you can't use any of the following parameters:
+The Internal switch specifies the Internal usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internal switch, you can't use any of the following parameters:
 
 - Custom
 - Internet
 - Partner
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -538,14 +545,16 @@ Accept wildcard characters: False
 ```
 
 ### -Internet
-The Internet parameter specifies the Internet usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internet parameter, you can't use any of the following parameters:
+The Internet switch specifies the Internet usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Internet switch, you can't use any of the following parameters:
 
 - Custom
 - Internal
 - Partner
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -561,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceConnector
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The IsCoexistenceConnector parameter specifies whether this Send connector is used for secure mail flow between your on-premises deployment and your Microsoft 365 organization. The default value is $false.
 
@@ -595,20 +604,20 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedReceiveConnector
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The LinkedReceiveConnector parameter specifies whether to force all messages received by the specified Receive connector out through this Send connector. The value of LinkedReceivedConnector can use any of the following identifiers to specify the Receive connector:
 
 - GUID
 - Distinguished name (DN)
-- Servername\\ConnectorName
+- ServerName\\ConnectorName
 
 When you use the LinkReceiveConnector parameter with this command, you must also use the following parameters with the specified values:
 
-- DNSRoutingEnabled $false
-- MaxMessageSize unlimited
-- Smarthosts \<SmarthostID\>
-- SmarthostAuthMechanism \<AuthMechanism\>
+- `DNSRoutingEnabled $false`
+- `MaxMessageSize unlimited`
+- `Smarthosts <SmarthostID>`
+- `SmarthostAuthMechanism <AuthMechanism>`
 
 When you use the LinkedReceiveConnector parameter, you can't use the AddressSpaces parameter.
 
@@ -654,14 +663,16 @@ Accept wildcard characters: False
 ```
 
 ### -Partner
-The Partner parameter specifies the Partner usage type. The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Partner parameter, you can't use any of the following parameters:
+The Partner switch specifies the Partner usage type. You don't need to specify a value with this switch.
+
+The usage type specifies the permissions and authentication methods assigned to the Send connector. If you use the Partner switch, you can't use any of the following parameters:
 
 - Custom
 - Internal
 - Internet
 - Usage
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: SwitchParameter
@@ -759,7 +770,7 @@ Accept wildcard characters: False
 ### -SmartHosts
 The SmartHosts parameter specifies the smart hosts the Send connector uses to route mail. This parameter is required if you set the DNSRoutingEnabled parameter to $false and it must be specified on the same command line. The SmartHosts parameter takes one or more FQDNs, such as server.contoso.com, or one or more IP addresses, or a combination of both FQDNs and IP addresses. If you enter an IP address, you must enter the IP address as a literal. For example, 10.10.1.1. The smart host identity can be the FQDN of a smart-host server, a mail exchanger (MX) record, or an address (A) record. If you configure an FQDN as the smart host identity, the source server for the Send connector must be able to use DNS name resolution to locate the smart host server.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -809,7 +820,7 @@ Accept wildcard characters: False
 ### -SourceTransportServers
 The SourceTransportServers parameter specifies the names of the Mailbox servers that can use this Send connector. This parameter isn't valid for Send connectors configured on an Edge server.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -847,7 +858,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsCertificateName
-The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)", and then use the value $TLSCertName for this parameter.
+The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is `"<I>X.500Issuer<S>X.500Subject"`. The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command `$TLSCert = Get-ExchangeCertificate -Thumbprint <Thumbprint>`, run the command `$TLSCertName = "<I>$($TLSCert.Issuer)<S>$($TLSCert.Subject)"`, and then use the value $TLSCertName for this parameter.
 
 ```yaml
 Type: SmtpX509Identifier
@@ -895,7 +906,7 @@ If you use the Usage parameter, you can't use any of the following parameters:
 - Internet
 - Partner
 
-For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://docs.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
+For more information about Send connector usage types, permissions, and authentication methods, see [Send connectors](https://learn.microsoft.com/Exchange/mail-flow/connectors/send-connectors).
 
 ```yaml
 Type: UsageType
@@ -947,12 +958,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

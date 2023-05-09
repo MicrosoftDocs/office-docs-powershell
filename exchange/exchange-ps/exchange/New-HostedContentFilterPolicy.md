@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-hostedcontentfilterpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-hostedcontentfilterpolicy
 applicable: Exchange Online, Exchange Online Protection
 title: New-HostedContentFilterPolicy
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-HostedContentFilterPolicy cmdlet to create spam filter policies (content filter policies) in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,6 +28,7 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-AllowedSenders <MultiValuedProperty>]
  [-BlockedSenderDomains <MultiValuedProperty>]
  [-BlockedSenders <MultiValuedProperty>]
+ [-BulkQuarantineTag <String>]
  [-BulkSpamAction <SpamFilteringAction>]
  [-BulkThreshold <Int32>]
  [-Confirm]
@@ -44,7 +43,9 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-EndUserSpamNotificationLanguage <EsnLanguage>]
  [-EndUserSpamNotificationLimit <Int32>]
  [-HighConfidencePhishAction <PhishFilteringAction>]
+ [-HighConfidencePhishQuarantineTag <String>]
  [-HighConfidenceSpamAction <SpamFilteringAction>]
+ [-HighConfidenceSpamQuarantineTag <String>]
  [-IncreaseScoreWithBizOrInfoUrls <SpamFilteringOption>]
  [-IncreaseScoreWithImageLinks <SpamFilteringOption>]
  [-IncreaseScoreWithNumericIps <SpamFilteringOption>]
@@ -64,24 +65,26 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-MarkAsSpamSpfRecordHardFail <SpamFilteringOption>]
  [-MarkAsSpamWebBugsInHtml <SpamFilteringOption>]
  [-ModifySubjectValue <String>]
+ [-PhishQuarantineTag <String>]
  [-PhishSpamAction <SpamFilteringAction>]
  [-PhishZapEnabled <Boolean>
  [-QuarantineRetentionPeriod <Int32>]
+ [-RecommendedPolicyType <RecommendedPolicyType>]
  [-RedirectToRecipients <MultiValuedProperty>]
  [-RegionBlockList <MultiValuedProperty>]
  [-SpamAction <SpamFilteringAction>]
+ [-SpamQuarantineTag <String>]
  [-SpamZapEnabled <Boolean>]
  [-TestModeAction <SpamFilteringTestModeAction>]
  [-TestModeBccToRecipients <MultiValuedProperty>]
  [-WhatIf]
- [-ZapEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-For more information about the limits for allowed and blocked senders, see [Exchange Online Protection Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
+For more information about the limits for allowed and blocked senders, see [Exchange Online Protection Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
 
 ## EXAMPLES
 
@@ -100,7 +103,7 @@ This example creates a spam filter policy named Contoso Executives with the foll
 ### -Name
 The Name parameter specifies a unique name for the spam filter policy. If the value contains spaces, enclose the value in quotation marks (").
 
-Don't use the following characters in the name value: \\, %, &, \*, +, /, =, ?, {, }, \|, \<, \>, (, ), ;, :, [, ], comma (,), or double quotation mark (").
+Don't use the following characters in the name value: `\ % & * + / = ? { } | < > ( ) ; : [ ] , "`.
 
 ```yaml
 Type: String
@@ -163,11 +166,11 @@ Accept wildcard characters: False
 ### -AllowedSenderDomains
 The AllowedSenderDomains parameter specifies trusted domains that aren't processed by the spam filter. Messages from senders in these domains are stamped with `SFV:SKA` in the `X-Forefront-Antispam-Report header` and receive a spam confidence level (SCL) of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP domains.
 
-**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add domains here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -185,11 +188,11 @@ Accept wildcard characters: False
 ### -AllowedSenders
 The AllowedSenders parameter specifies a list of trusted senders that skip spam filtering. Messages from these senders are stamped with SFV:SKA in the X-Forefront-Antispam-Report header and receive an SCL of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP email addresses.
 
-**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
+**Caution**: Think very carefully before you add senders here. For more information, see [Create safe sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-safe-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -205,13 +208,13 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedSenderDomains
-The BlockedSenderDomains parameter specifies domains that are always marked as spam sources. Messages from senders in these domains are stamped with `SFV:SKB` value in the `X-Forefront-Antispam-Report` header and receive an SCL of 9 (high confidence spam). Valid values are one or more SMTP domains.
+The BlockedSenderDomains parameter specifies domains that are always marked as spam sources. Messages from senders in these domains are stamped with `SFV:SKB` value in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP domains.
 
-**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
+**Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -227,16 +230,42 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedSenders
-The BlockedSenders parameter specifies senders that are always marked as spam sources. Messages from these senders are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header and receive an SCL of 9 (high confidence spam). Valid values are one or more SMTP email addresses.
+The BlockedSenders parameter specifies senders that are always marked as spam sources. Messages from these senders are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP email addresses.
 
-**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365?).
+**Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create block sender lists in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/create-block-sender-lists-in-office-365).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BulkQuarantineTag
+The BulkQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as bulk email (the BulkSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+If you don't use this parameter, the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization) is used. This quarantine policy enforces the historical capabilities for messages that were quarantined as bulk as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -254,9 +283,9 @@ The BulkSpamAction parameter specifies the action to take on messages that are m
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header and deliver the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://learn.microsoft.com/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 - NoAction
-- Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as bulk email are available to the intended recipients and admins. Or, you can use the BulkQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -273,7 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -BulkThreshold
-The BulkThreshold parameter specifies the BCL that triggers the BulkSpamAction on the message (greater than the specified value, not greater than or equal to). A valid value is an integer from 1 to 9, and the default value is 7. A higher value indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk compliant level (BCL) in EOP](https://docs.microsoft.com/microsoft-365/security/office-365-security/bulk-complaint-level-values).
+The BulkThreshold parameter specifies the BCL on messages that triggers the action specified by the BulkSpamAction parameter (greater than or equal to the specified BCL value). A valid value is an integer from 1 to 9. The default value is 7, which means a BCL of 7, 8, or 9 on messages will trigger the action that's specified by the BulkSpamAction parameter.
+
+A higher BCL indicates the message is more likely to generate complaints (and is therefore more likely to be spam). For more information, see [Bulk complaint level (BCL) in EOP](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spam-bulk-complaint-level-bcl-about).
 
 ```yaml
 Type: Int32
@@ -458,7 +489,7 @@ The EndUserSpamNotificationLanguage parameter specifies the language of end-user
 
 Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
 
-The default value is Default, which means end-user spam quarantine notifications use the default language of the cloud-based organization.
+The default value is Default, which means English.
 
 This parameter is meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
 
@@ -494,15 +525,41 @@ Accept wildcard characters: False
 ### -HighConfidencePhishAction
 The HighConfidencePhishAction parameter specifies the action to take on messages that are marked as high confidence phishing (not phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
-- Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is only available to admins.
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as high confidence phishing are available only to admins. Or, you can use the HighConfidencePhishQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 
 ```yaml
 Type: PhishFilteringAction
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighConfidencePhishQuarantineTag
+The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as high confidence phishing (the HighConfidencePhishAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+If you don't use this parameter, the built-in quarantine policy named AdminOnlyAccessPolicy is used. This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence phishing as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -517,8 +574,8 @@ The HighConfidenceSpamAction parameter specifies the action to take on messages 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
-- Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients and admins.
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://learn.microsoft.com/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as high confidence spam are available to the intended recipients and admins. Or, you can use the HighConfidenceSpamQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -534,13 +591,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IncreaseScoreWithBizOrInfoUrls
-**Note**: This setting is part of Advanced Spam Filtering (ASF) and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
+### -HighConfidenceSpamQuarantineTag
+The HighConfidenceSpamQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as high confidence spam (the HighConfidenceSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+If you don't use this parameter, the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization) is used. This quarantine policy enforces the historical capabilities for messages that were quarantined as high confidence spam as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncreaseScoreWithBizOrInfoUrls
 The IncreaseScoreWithBizOrInfoUrls parameter increases the spam score of messages that contain links to .biz or .info domains. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links to .biz or .info domains are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message.
+- On: The setting is enabled. Messages that contain links to .biz or .info domains are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message. Not all messages that match this setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -557,12 +638,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithImageLinks
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithImageLinks parameter increases the spam score of messages that contain image links to remote websites. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain image links to remote websites are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: Image links to remote sites` is added to the message.
+- On: The setting is enabled. Messages that contain image links to remote websites are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Image links to remote sites` is added to the message. Not all messages that match this setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -579,12 +658,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithNumericIps
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithNumericIps parameter increases the spam score of messages that contain links to IP addresses. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links to IP addresses are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: Numeric IP in URL` is added to the message.
+- On: The setting is enabled. Messages that contain links to IP addresses are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Numeric IP in URL` is added to the message. Note that not all messages which matches the setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -601,12 +678,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncreaseScoreWithRedirectToOtherPort
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The IncreaseScoreWithRedirectToOtherPort parameter increases the spam score of messages that contain links that redirect to TCP ports other than 80 (HTTP), 8080 (alternate HTTP), or 443 (HTTPS). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links that redirect to other TCP ports are given the SCL 5 or 6 (spam), and the X-header `X-CustomSpam: URL redirect to other port` is added to the message.
+- On: The setting is enabled. Messages that contain links that redirect to other TCP ports are given  a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL redirect to other port` is added to the message. Note that not all messages which matches the setting will be marked as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -648,9 +723,9 @@ af, ar, az, be, bg, bn, br, bs, ca, cs, cy, da, de, el, en, eo, es, et, eu, fa, 
 
 A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Note that not all possible language codes are available as input for this parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list, use the value $null.
 
@@ -688,8 +763,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamEmbedTagsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamEmbedTagsInHtml parameter marks a message as spam when the message contains HTML \<embed\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -710,8 +783,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamEmptyMessages
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamEmptyMessages parameter marks a message as spam when the message contains no subject, no content in the message body, and no attachments. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -732,8 +803,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamFormTagsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamFormTagsInHtml parameter marks a message as spam when the message contains HTML \<form\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -754,8 +823,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamFramesInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamFramesInHtml parameter marks a message as spam when the message contains HTML \<frame\> or \<iframe\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -776,8 +843,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamFromAddressAuthFail
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamFromAddressAuthFail parameter marks a message as spam when Sender ID filtering encounters a hard fail. This setting combines an Sender Policy Framework (SPF) check with a Sender ID check to help protect against message headers that contain forged senders. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -797,8 +862,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamJavaScriptInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamJavaScriptInHtml parameter marks a message as spam when the message contains JavaScript or VBScript. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -819,8 +882,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamNdrBackscatter
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamNdrBackscatter parameter marks a message as spam when the message is a non-delivery report (also known as an NDR or bounce messages) sent to a forged sender (known as *backscatter*). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -840,8 +901,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamObjectTagsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamObjectTagsInHtml parameter marks a message as spam when the message contains HTML \<object\> tags. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -862,8 +921,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamSensitiveWordList
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamSensitiveWordList parameter marks a message as spam when the message contains words from the sensitive words list. Microsoft maintains a dynamic but non-editable list of words that are associated with potentially offensive messages. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -884,8 +941,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamSpfRecordHardFail
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamSpfRecordHardFail parameter marks a message as spam when SPF record checking encounters a hard fail. Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -905,8 +960,6 @@ Accept wildcard characters: False
 ```
 
 ### -MarkAsSpamWebBugsInHtml
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you leave this setting turned off.
-
 The MarkAsSpamWebBugsInHtml parameter marks a message as spam when the message contains web bugs (also known as web beacons). Valid values are:
 
 - Off: The setting is disabled. This is the default value, and we recommend that you don't change it.
@@ -949,14 +1002,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PhishQuarantineTag
+The PhishQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as phishing (the PhishSpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+If you don't use this parameter, the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization) is used. This quarantine policy enforces the historical capabilities for messages that were quarantined as phishing as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhishSpamAction
 The PhishSpamAction parameter specifies the action to take on messages that are marked as phishing (not high confidence phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header and deliver the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. The message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes).
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Quarantine: Move the message to the quarantine. This is the default value. The quarantined message is available to the intended recipients (as of April, 2020) and admins.
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as phishing are available to admins and (as of April 2020) the intended recipients. Or, you can use the PhishQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
@@ -1002,12 +1082,28 @@ The QuarantineRetentionPeriod parameter specifies the number of days that spam m
 - PhishSpamAction
 - SpamAction
 
-A valid value is an integer between 1 and 30. The default value is 30.
+A valid value is an integer between 1 and 30. The default value is 15.
 
 After the time period expires, the message is deleted.
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecommendedPolicyType
+The RecommendedPolicyType parameter is used for Standard and Strict policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this parameter yourself.
+
+```yaml
+Type: RecommendedPolicyType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -1049,9 +1145,9 @@ AD, AE, AF, AG, AI, AL, AM, AO, AQ, AR, AS, AT, AU, AW, AX, AZ, BA, BB, BD, BE, 
 
 A reference for two-letter country codes is available at [Country Codes List](https://www.nationsonline.org/oneworld/country_code_list.htm).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>.
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 To empty the list, use the value $null.
 
@@ -1074,12 +1170,38 @@ The SpamAction parameter specifies the action to take on messages that are marke
 - AddXHeader: Add the AddXHeaderValue parameter value to the message header, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
 - Delete : Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - ModifySubject: Add the ModifySubject parameter value to the beginning of the subject line, deliver the message, and move the message to the Junk Email folder (same caveats as MoveToJmf).
-- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In Exchange Online, the message is only moved if the junk email rule is enabled on the mailbox (it's enabled by default). For more information, see [Configure junk email settings on Exchange Online mailboxes](https://docs.microsoft.com/microsoft-365/security/office-365-security/configure-junk-email-settings-on-exo-mailboxes). In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the  k Email folder in hybrid environments](https://docs.microsoft.com/microsoft-365/security/office-365-security/ensure-that-spam-is-routed-to-each-user-s-junk-email-folder).
-- Quarantine: Move the message to the quarantine. The quarantined message is available to the intended recipients and admins.
+- MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder. In standalone Exchange Online Protection environments, you need to configure mail flow rules in your on-premises Exchange organization. For instructions, see [Configure standalone EOP to deliver spam to the Junk Email folder in hybrid environments](https://learn.microsoft.com/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+- Quarantine: Move the message to quarantine. By default, messages that are quarantined as spam are available to the intended recipients and admins. Or, you can use the SpamQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 
 ```yaml
 Type: SpamFilteringAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpamQuarantineTag
+The SpamQuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as spam (the SpamAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+Quarantine policies define what users are able to do to quarantined messages based on why the message was quarantined and quarantine notification settings. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+
+If you don't use this parameter, the built-in quarantine policy named DefaultFullAccessPolicy (no notifications) or NotificationEnabledPolicy (if available in your organization) is used. This quarantine policy enforces the historical capabilities for messages that were quarantined as spam as described in the table [here](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-end-user).
+
+To view the list of available quarantine policies, run the following command: `Get-QuarantinePolicy | Format-List Name,EndUser*,ESNEnabled`.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
@@ -1113,8 +1235,6 @@ Accept wildcard characters: False
 ```
 
 ### -TestModeAction
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you don't use this setting.
-
 The TestModeAction parameter specifies the additional action to take on messages when one or more IncreaseScoreWith\* or MarkAsSpam\* ASF parameters are set to the value Test. Valid values are:
 
 - None: This is the default value, and we recommend that you don't change it.
@@ -1135,7 +1255,6 @@ Accept wildcard characters: False
 ```
 
 ### -TestModeBccToRecipients
-**Note**: This setting is part of ASF and will be deprecated. The functionality of this setting will be incorporated into other parts of the filtering stack. We recommend that you don't use this setting.
 
 The TestModeBccToRecipients parameter specifies the blind carbon copy (Bcc) recipients to add to spam messages when the TestModeAction ASF parameter is set to the value BccMessage.
 
@@ -1172,33 +1291,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ZapEnabled
-This parameter has been deprecated and is no longer used. Use the PhishZapEnabled and SpamZapEnabled parameters instead.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

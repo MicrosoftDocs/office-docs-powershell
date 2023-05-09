@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/unlock-csclientpin
+online version: https://learn.microsoft.com/powershell/module/skype/unlock-csclientpin
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Unlock-CsClientPin
 schema: 2.0.0
@@ -157,4 +157,3 @@ Instead, the cmdlet configures one or more instances of the Microsoft.Rtc.Manage
 [Lock-CsClientPin](Lock-CsClientPin.md)
 
 [Set-CsClientPin](Set-CsClientPin.md)
-

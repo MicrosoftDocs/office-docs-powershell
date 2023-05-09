@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-migrationserveravailability
+online version: https://learn.microsoft.com/powershell/module/exchange/test-migrationserveravailability
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Test-MigrationServerAvailability
 schema: 2.0.0
@@ -16,27 +16,26 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Test-MigrationServerAvailability cmdlet to test the availability of the target server in preparation to perform cross-forest mailbox moves, migration of on-premises mailboxes to Exchange Online, or to migrate on-premises mailbox data from an IMAP server to Exchange Online mailboxes. For all migration types, the cmdlet attempts to verify the connection settings used to connect to the target server.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### ExchangeRemoteMoveAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
- [-Autodiscover]
- [-ExchangeRemoteMove]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeRemoteMove]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhereAutodiscover
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>
- [-Autodiscover]
- [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Autodiscover] [-ExchangeOutlookAnywhere]
+ [-AcceptUntrustedCertificates]
  [-Confirm]
  [-MailboxPermission <MigrationMailboxPermission>]
+ [-Partition <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf]
@@ -45,34 +44,34 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <Smtp
 
 ### PSTImport
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
- [-FilePath <String>]
- [-PSTImport]
+Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn> [-FilePath <String>] [-PSTImport]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ExchangeOutlookAnywhere
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn>
- [-ExchangeOutlookAnywhere]
+Test-MigrationServerAvailability -Credentials <PSCredential> -ExchangeServer <String> -RPCProxyServer <Fqdn> [-ExchangeOutlookAnywhere]
+ [-AcceptUntrustedCertificates]
  [-Authentication <AuthenticationMethod>]
  [-EmailAddress <SmtpAddress>]
  [-MailboxPermission <MigrationMailboxPermission>]
  [-TestMailbox <MailboxIdParameter>]
  [-SourceMailboxLegacyDN <String>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### PublicFolder
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String>
- [-PublicFolder]
+Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDatabaseServerLegacyDN <String> -RPCProxyServer <Fqdn> -SourceMailboxLegacyDN <String> [-PublicFolder]
  [-Authentication <AuthenticationMethod>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -84,6 +83,7 @@ Test-MigrationServerAvailability -RemoteServer <Fqdn>
  [-Credentials <PSCredential>]
  [-ExchangeRemoteMove]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -92,27 +92,29 @@ Test-MigrationServerAvailability -RemoteServer <Fqdn>
 ```
 Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter>
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### IMAP
 ```
-Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32>
- [-Imap]
+Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
+ [-AcceptUntrustedCertificates]
  [-Authentication <AuthenticationMethod>]
  [-Security <NIMAPSecurityMechanism]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Gmail
 ```
-Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]>
- [-Gmail]
+Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]> [-Gmail]
  [-EmailAddress <SmtpAddress>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-TestMailbox <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -123,6 +125,7 @@ Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]>
 Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance]
  [-RemoteServer <Fqdn>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -133,6 +136,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn
  [-PublicFolderToUnifiedGroup]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -144,6 +148,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDataba
  [-Authentication <AuthenticationMethod>]
  [-TestMailbox <MailboxIdParameter>]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -153,6 +158,7 @@ Test-MigrationServerAvailability -Credentials <PSCredential> -PublicFolderDataba
 Test-MigrationServerAvailability -Credentials <PSCredential> -RemoteServer <Fqdn>
  [-PublicFolder]
  [-Confirm]
+ [-Partition <MailboxIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -172,7 +178,7 @@ If the verification is successful, you can use the same settings to create a mig
 - New-MigrationEndpoint
 - New-MigrationBatch
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -185,14 +191,16 @@ For IMAP migrations, this example verifies the connection to the IMAP mail serve
 
 ### Example 2
 ```powershell
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
+$Credentials = Get-Credential
+Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
 This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
 
 ### Example 3
 ```powershell
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
+$Credentials = Get-Credential
+Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
 ```
 
 This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
@@ -206,7 +214,8 @@ This example verifies the connection settings to a remote server using the setti
 
 ### Example 5
 ```powershell
-$MRSEndpoints = (Get-MigrationEndpoint).RemoteServer; Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
+$MRSEndpoints = (Get-MigrationEndpoint).Identity
+Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```
 
 This example tests multiple existing endpoints.
@@ -214,11 +223,11 @@ This example tests multiple existing endpoints.
 ## PARAMETERS
 
 ### -Autodiscover
-The Autodiscover parameter specifies that the cmdlet should use the Autodiscover service to obtain the connection settings for the target server. You don't need to specify a value with this switch.
+The Autodiscover switch specifies that the command should use the Autodiscover service to obtain the connection settings for the target server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscove
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeOutlookAnywhereAutoDiscover
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -248,7 +257,7 @@ Accept wildcard characters: False
 ### -Credentials
 The Credentials parameter specifies the username and password for an account that can access mailboxes on the target server. Specify the username in the domain\\username format or the user principal name (UPN) (user@example.com) format.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -324,7 +333,9 @@ Accept wildcard characters: False
 ### -ExchangeOutlookAnywhere
 This parameter is available only in the cloud-based service.
 
-The ExchangeOutlookAnywhere parameter specifies a migration type for migrating on-premises mailboxes to Exchange Online. Use this parameter if you plan to migrate mailboxes to Exchange Online using a staged Exchange migration or a cutover Exchange migration.
+The ExchangeOutlookAnywhere switch specifies a migration type for migrating on-premises mailboxes to Exchange Online. You don't need to specify a value with this switch.
+
+Use this switch if you plan to migrate mailboxes to Exchange Online using a staged Exchange migration or a cutover Exchange migration.
 
 ```yaml
 Type: SwitchParameter
@@ -340,7 +351,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeRemoteMove
-The ExchangeRemoteMove parameter specifies a type of migration where mailboxes are moved with full fidelity between two on-premises forests or between an on-premises forest and Exchange Online. Use this parameter if you plan to perform a cross-forest move or migrate mailboxes between an on-premises Exchange organization and Exchange Online in a hybrid deployment.
+The ExchangeRemoteMove switch specifies a migration type where mailboxes are moved with full fidelity between two on-premises forests or between an on-premises forest and Exchange Online. You don't need to specify a value with this switch.
+
+Use this switch if you plan to perform a cross-forest move or migrate mailboxes between an on-premises Exchange organization and Exchange Online in a hybrid deployment.
 
 ```yaml
 Type: SwitchParameter
@@ -376,7 +389,9 @@ Accept wildcard characters: False
 ### -Imap
 This parameter is available only in the cloud-based service.
 
-The Imap parameter specifies an IMAP migration as the migration type. This parameter is required when you want to migrate data from an IMAP mail server to Exchange Online mailboxes.
+The Imap parameter specifies an IMAP migration type. You don't need to specify a value with this switch.
+
+This switch is required when you want to migrate data from an IMAP mail server to Exchange Online mailboxes.
 
 ```yaml
 Type: SwitchParameter
@@ -394,7 +409,9 @@ Accept wildcard characters: False
 ### -Gmail
 This parameter is available only in the cloud-based service.
 
-The Gmail parameter specifies Gmail migration as the migration type. This parameter is required when you want to migrate data from a G Suite tenant to Exchange Online mailboxes.
+The Gmail parameter specifies Gmail as the migration type. You don't need to specify a value with this switch.
+
+This switch is required when you want to migrate data from a Google Workspace (formerly G Suite) tenant to Exchange Online mailboxes.
 
 ```yaml
 Type: SwitchParameter
@@ -430,13 +447,15 @@ Accept wildcard characters: False
 ```
 
 ### -PSTImport
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PSTImport
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -446,13 +465,15 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PublicFolder, MrsProxyPublicFolder
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -462,13 +483,15 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderDatabaseServerLegacyDN
+This parameter is available only in the cloud-based service.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
 Parameter Sets: PublicFolder, LegacyPublicFolderToUnifiedGroup
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -549,7 +572,7 @@ This parameter is available only in the cloud-based service.
 
 The ServiceAccountKeyFileData parameter is used to specify information needed to authenticate as a service account. The data should come from the JSON key file that is downloaded when the service account that has been granted access to your remote tenant is created.
 
-Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the JSON file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\service-account.json"))
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -585,6 +608,24 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AcceptUntrustedCertificates
+This parameter is available only in the cloud-based service.
+
+{{ Fill AcceptUntrustedCertificates Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, IMAP
 Aliases:
 Applicable: Exchange Online
 
@@ -675,6 +716,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Partition
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: MailboxIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Security
 This parameter is available only in the cloud-based service.
 
@@ -732,12 +791,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

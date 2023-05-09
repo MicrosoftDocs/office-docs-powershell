@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroutingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceroutingpolicy
+applicable: Microsoft Teams
 title: Set-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,16 +19,9 @@ Modifies an existing online voice routing policy. Online voice routing policies 
 
 ### Identity (Default)
 ```
-Set-CsOnlineVoiceRoutingPolicy [-Tenant <Guid>] [-OnlinePstnUsages <PSListModifier>]
- [-Description <String>] [-RouteType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsOnlineVoiceRoutingPolicy [-Tenant <Guid>] [-OnlinePstnUsages <PSListModifier>]
- [-Description <String>] [-RouteType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-CsOnlineVoiceRoutingPolicy [[-Identity] <string>] [-Description <string>]
+ [-OnlinePstnUsages <Object>] [-RouteType <string>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,21 +84,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Suppresses the display of any non-fatal error message that might arise when running the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Unique identifier assigned to the policy when it was created. Online voice routing policies can be assigned at the global scope or the per-user scope. To refer to the global instance, use this syntax:
 
@@ -118,7 +96,7 @@ To refer to a per-user policy, use syntax similar to this:
 If you do not specify an Identity, then the `Set-CsOnlineVoiceRoutingPolicy` cmdlet will modify the global policy.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -129,26 +107,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -OnlinePstnUsages
 A list of online PSTN usages (such as Local or Long Distance) that can be applied to this online voice routing policy. The online PSTN usage must be an existing usage. (PSTN usages can be retrieved by calling the `Get-CsOnlinePstnUsage` cmdlet.)
 
 ```yaml
-Type: PSListModifier
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -164,29 +127,6 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose online voice routing policies are being changed. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -219,9 +159,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## INPUTS
 
-### System.Management.Automation.PSObject
-
-
 ## OUTPUTS
 
 ### System.Object
@@ -229,10 +166,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
+[New-CsOnlineVoiceRoutingPolicy](new-csonlinevoiceroutingpolicy.md)
 
-[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
+[Get-CsOnlineVoiceRoutingPolicy](get-csonlinevoiceroutingpolicy.md)
 
-[Grant-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy?view=skype-ps)
+[Grant-CsOnlineVoiceRoutingPolicy](grant-csonlinevoiceroutingpolicy.md)
 
-[Remove-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroutingpolicy?view=skype-ps)
+[Remove-CsOnlineVoiceRoutingPolicy](remove-csonlinevoiceroutingpolicy.md)

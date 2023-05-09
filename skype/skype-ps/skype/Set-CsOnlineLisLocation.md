@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinelislocation
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinelislocation
+applicable: Microsoft Teams
 title: Set-CsOnlineLisLocation
 schema: 2.0.0
 manager: bulenteg
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,43 +19,37 @@ Typically the civic address designates the building, and locations are specific 
 
 ## SYNTAX
 
-### UseCivicAddressId
+### UseCivicAddressId (Default)
 ```
-Set-CsOnlineLisLocation -CivicAddressId <Guid> [-CompanyName <String>] [-CompanyTaxId <String>]
- [-HouseNumber <String>] [-HouseNumberSuffix <String>] [-StreetName <String>] [-StreetSuffix <String>]
- [-PreDirectional <String>] [-PostDirectional <String>] [-City <String>] [-CityAlias <String>]
- [-StateOrProvince <String>] [-CountryOrRegion <String>] [-PostalCode <String>] [-Description <String>]
- [-Latitude <String>] [-Longitude <String>] [-Confidence <String>] [-Elin <String>] [-Tenant <Guid>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlineLisLocation -CivicAddressId <guid> [-City <string>] [-CityAlias <string>] [-CompanyName <string>] [-CompanyTaxId <string>]
+ [-Confidence <string>] [-CountryOrRegion <string>] [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
+ [-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>] [-PreDirectional <string>]
+ [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseLocationId
 ```
-Set-CsOnlineLisLocation -LocationId <Guid> [-Location <String>] [-CityAlias <String>] [-Latitude <String>]
- [-Longitude <String>] [-Confidence <String>] [-Elin <String>] [-Tenant <Guid>]
- [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlineLisLocation -LocationId <guid> [-CityAlias <string>] [-Confidence <string>] [-Elin <string>] [-Force]
+ [-Latitude <string>] [-Longitude <string>] [-Location <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e -Location "B5 2nd Floor"
 ```
 
 This example changes the location description of the location specified by its location identity.
 
-
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Set-CsOnlineLisLocation -CivicAddressId 5687eb59-9039-4e99-bb89-71771d723b7a -Location "B5 2nd Floor" -Elin "TEST_ELIN"
 ```
 
 This example changes the Elin of the location specified by its location identity.
-
 
 ## PARAMETERS
 
@@ -67,12 +61,12 @@ Civic address identities can be discovered by using the \`Get-CsOnlineLisCivicAd
 Type: Guid
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -85,12 +79,12 @@ Location identities can be discovered by using the \`Get-CsOnlineLisLocation\` c
 Type: Guid
 Parameter Sets: UseLocationId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -101,23 +95,24 @@ Specifies the city of the civic address.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
 ### -CityAlias
-PARAMVALUE: String
+
+**Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -133,43 +128,43 @@ Specifies the name of your organization.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
 ### -CompanyTaxId
-PARAMVALUE: String
+The company tax ID.
 
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Confirm
-The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+### -Confidence
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -181,12 +176,12 @@ Specifies the country or region of the civic address.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -197,28 +192,29 @@ Specifies an administrator defined description of the civic address.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -DomainController
-This parameter is reserved for internal Microsoft use.
+### -Elin
+Specifies the Emergency Location Identification Number.
+This is used in Direct Routing EGW scenarios.
 
 ```yaml
-Type: Fqdn
+Type: String
 Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -231,7 +227,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -247,12 +243,12 @@ Specifies the numeric portion of the civic address.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -264,15 +260,46 @@ For example, if the property was multiplexed, the HouseNumberSuffix parameter wo
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Latitude
+Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Longitude
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 ### -Location
 Specifies an administrator defined description of the new location.
 For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
@@ -281,12 +308,12 @@ For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 Type: String
 Parameter Sets: UseLocationId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -297,12 +324,12 @@ Specifies the postal code of the civic address.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -314,12 +341,12 @@ For example, "425 Smith Avenue NE".
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -331,12 +358,12 @@ For example, "425 NE Smith Avenue ".
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -347,12 +374,12 @@ Specifies the state or province of the civic address.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -363,12 +390,12 @@ Specifies the street name of the civic address.
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -380,28 +407,12 @@ The street suffix will typically be something like street, avenue, way, or boule
 Type: String
 Parameter Sets: UseCivicAddressId
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teans
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -413,7 +424,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -422,67 +433,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confidence
-This parameter is reserved for internal Microsoft use.
+### -Confirm
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
-Type: String
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Aliases: cf
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Elin
-Specifies the Emergency Location Identification Number.
-This is used in Direct Routing EGW scenarios.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Latitude
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Longitude
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -498,3 +460,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CsOnlineLisLocation](New-CsOnlineLisLocation.md)
+
+[Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md)
+
+[Remove-CsOnlineLisLocation](Remove-CsOnlineLisLocation.md)

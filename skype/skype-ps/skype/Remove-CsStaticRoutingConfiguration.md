@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csstaticroutingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csstaticroutingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsStaticRoutingConfiguration
 schema: 2.0.0
@@ -176,4 +176,3 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 [New-CsStaticRoutingConfiguration](New-CsStaticRoutingConfiguration.md)
 
 [Set-CsStaticRoutingConfiguration](Set-CsStaticRoutingConfiguration.md)
-

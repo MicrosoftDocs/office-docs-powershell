@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csconferencingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csconferencingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConferencingConfiguration
 schema: 2.0.0
@@ -31,7 +31,7 @@ Set-CsConferencingConfiguration [[-Identity] <XdsIdentity>] [-ClientAppSharingPo
  [-HelpdeskExternalUrl <String>] [-HelpdeskInternalUrl <String>] [-MaxBandwidthPerAppSharingServiceMb <UInt64>]
  [-MaxContentStorageMb <UInt16>] [-Organization <String>] [-Force] [-WhatIf] [-Confirm]
  [-MaxUploadFileSizeMb <UInt16>] [-CloudPollServicePrimaryUrl <String>]
- [-CloudPollServiceSecondaryUrl <String>] [<CommonParameters>]
+ [-CloudPollServiceSecondaryUrl <String>] [-EncryptArchivedData <Boolean>] [<CommonParameters>]
 ```
 
 ### Instance
@@ -45,7 +45,7 @@ Set-CsConferencingConfiguration [-Instance <PSObject>] [-ClientAppSharingPort <U
  [-HelpdeskExternalUrl <String>] [-HelpdeskInternalUrl <String>] [-MaxBandwidthPerAppSharingServiceMb <UInt64>]
  [-MaxContentStorageMb <UInt16>] [-Organization <String>] [-Force] [-WhatIf] [-Confirm]
  [-MaxUploadFileSizeMb <UInt16>] [-CloudPollServicePrimaryUrl <String>]
- [-CloudPollServiceSecondaryUrl <String>] [<CommonParameters>]
+ [-CloudPollServiceSecondaryUrl <String>] [-EncryptArchivedData <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -645,6 +645,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EncryptArchivedData
+Boolean flag to turn on/off encryption for a conference's archived attachments.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -669,4 +685,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [New-CsConferencingConfiguration](New-CsConferencingConfiguration.md)
 
 [Remove-CsConferencingConfiguration](Remove-CsConferencingConfiguration.md)
-

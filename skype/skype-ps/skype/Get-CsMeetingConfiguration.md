@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csmeetingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsMeetingConfiguration
 schema: 2.0.0
@@ -10,7 +10,7 @@ ms.reviewer: rogupta
 manager: bulenteg
 audience: ITPro
 ms.topic: reference 
-localization_priority: Normal 
+ms.localizationpriority: medium 
 ---
 
 # Get-CsMeetingConfiguration
@@ -212,4 +212,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsMeetingConfiguration](Remove-CsMeetingConfiguration.md)
 
 [Set-CsMeetingConfiguration](Set-CsMeetingConfiguration.md)
-

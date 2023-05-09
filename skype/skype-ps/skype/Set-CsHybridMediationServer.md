@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-cshybridmediationserver
+online version: https://learn.microsoft.com/powershell/module/skype/set-cshybridmediationserver
 applicable: Skype for Business Online
 title: Set-CsHybridMediationServer
 schema: 2.0.0
@@ -14,6 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 Sets the external FQDN of an Edge server access proxy as the hosting provider for a user.
+
+**Note**: This cmdlet will be deprecated from Teams PowerShell Module.
 
 ## SYNTAX
 
@@ -158,4 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CsHybridMediationServer](Get-CsHybridMediationServer.md)
-

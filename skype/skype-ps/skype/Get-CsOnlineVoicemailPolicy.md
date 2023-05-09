@@ -1,29 +1,34 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineVoicemailPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Get-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Use the `Get-CsOnlineVoicemailPolicy` cmdlet to get a list of all pre-configured policy instances for Voicemail service.
+Use the `Get-CsOnlineVoicemailPolicy` cmdlet to get a list of all pre-configured policy instances related to Cloud Voicemail service.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsOnlineVoicemailPolicy [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <String>]
-[<CommonParameters>]
+Get-CsOnlineVoicemailPolicy [[-Identity] <string>] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsOnlineVoicemailPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet retrieves information about all the voicemail policies that have been configured for use in your organization. Voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
+This cmdlet retrieves information about one or more voicemail policies that have been configured for use in your organization. Voicemail policies are used by the organization to manage Voicemail-related features such as transcription.
 
 ## EXAMPLES
 
@@ -51,6 +56,21 @@ Example 3 uses the Filter parameter to return all the voicemail policies that ha
 
 ## PARAMETERS
 
+### -Identity
+A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, all voicemail policies available for use are returned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Filter
 This parameter accepts a wildcard string and returns all voicemail policies with identities matching that string. For example, a Filter value of Tag:* will return all preconfigured voicemail policy instances (excluding forest default "Global") available to use by the tenant admins.
 
@@ -58,57 +78,7 @@ This parameter accepts a wildcard string and returns all voicemail policies with
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, all voicemail policies available for use are returned.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voicemail policy is to be retrieved. For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" You can return the tenant ID for each of your tenants by running this command: 
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -134,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
 
-[New-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
 
-[Remove-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps)
+[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps)
 
-[Grant-CsOnlineVoicemailPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)

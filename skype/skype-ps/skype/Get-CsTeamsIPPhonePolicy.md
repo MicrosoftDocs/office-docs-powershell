@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsipphonepolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsipphonepolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsIPPhonePolicy
 author: tonywoodruff

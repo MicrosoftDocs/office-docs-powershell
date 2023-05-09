@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csgraphpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csgraphpolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsGraphPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the Grant-CsGraphPolicy cmdlet to assign a previously defined graph policy to a user or to your organization.
-Graph policies determine whether users can pre-load content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting,
+Graph policies determine whether users can pre-load content or files that are attached to an Outlook meeting invitation into a Microsoft Teams or Skype for Business Online meeting,
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Grant-CsGraphPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <
 ```
 
 ## DESCRIPTION
-Skype for Business Online supports a Global CsGraphPolicy that is set by default to enable Outlook content pre-load in Skype for Business Online meetings.
+Microsoft Teams and Skype for Business Online support a Global CsGraphPolicy that is set by default to enable Outlook content pre-load in Microsoft Teams or Skype for Business Online meetings.
 The Global policy can't be changed by you.
 Use the Grant-CsGraphPolicy cmdlet to assign a predefined graph policy to users in your organization.
 
@@ -55,17 +55,17 @@ This example grants the "GraphDisabled" policy to Ken Myer.
 Specifies the name of the graph policy to grant to the tenant or user.
 The two options are:
 
-Graph Enabled: Granting this policy will enable the pre-loading content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting.
+Graph Enabled: Granting this policy will enable the pre-loading content or files that are attached to an Outlook meeting invitation into a Microsoft Teams or Skype for Business Online meeting.
 For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled"`.
 
-Graph Disabled: Granting this policy will disable the pre-loading of content, files or attachments attached to an Outlook meeting invitation into a Skype for Business Online meeting.
+Graph Disabled: Granting this policy will disable the pre-loading of content, files or attachments attached to an Outlook meeting invitation into a Microsoft Teams or Skype for Business Online meeting.
 For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled"`.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 2
@@ -81,7 +81,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Valid inputs for this parameter are either the fully qualified domain name (FQDN
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ Specifies the identity of the user who will be granted the graph policy.
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -130,7 +130,7 @@ Enables you to pass a user object through the pipeline that represents the user 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -188,5 +188,3 @@ The Grant-CsGraphPolicy cmdlet returns an object of type Microsoft.Rtc.Managemen
 ## NOTES
 
 ## RELATED LINKS
-
-

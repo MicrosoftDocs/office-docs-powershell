@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinelisport
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinelisport
+applicable: Microsoft Teams
 title: Remove-CsOnlineLisPort
 schema: 2.0.0
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,8 +17,8 @@ Removes an association between a Location port and a location. This association 
 ## SYNTAX
 
 ```
-Remove-CsOnlineLisPort [[-TenantId] <Guid>] [-ChassisID] <String> -PortID <String> [-IsDebug <Boolean>]
- [-TargetStore <String>] [-NCSApiUrl <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsOnlineLisPort [-ChassisID] <string> -PortID <string> [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>] 
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,7 @@ Removing a port location will not remove the actual location of the port; it rem
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Remove-CsOnlineLisPort -PortID 12174 -ChassisID 0B-23-CD-16-AA-CC
 ```
@@ -45,25 +45,25 @@ The Media Access Control (MAC) address of the port's switch. This value will be 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -PortID
+This parameter identifies the ID of the port.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
+Aliases:
+Applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -79,7 +79,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -111,25 +111,9 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PortID
-This parameter identifies the ID of the port.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -143,7 +127,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -152,17 +136,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TenantId
-This parameter is reserved for internal Microsoft use.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Aliases: cf
+Applicable: Microsoft Teams
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -176,7 +160,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -190,21 +174,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-
-### System.Guid
-
+### System.String
 
 ### System.String
 
-
 ## OUTPUTS
-
 
 ### System.Object
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
+[Set-CsOnlineLisPort](Set-CsOnlineLisPort.md)
+
+[Get-CsOnlineLisPort](Get-CsOnlineLisPort.md)

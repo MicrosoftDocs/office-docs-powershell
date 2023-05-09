@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cswebserviceconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cswebserviceconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsWebServiceConfiguration
 schema: 2.0.0
@@ -23,7 +23,7 @@ This cmdlet was introduced in Lync Server 2010.
 
 ```
 Set-CsWebServiceConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousAccessToLWAConference <Boolean>]
- [-CASigningKeyLength <UInt64>] [-DefaultValidityPeriodHours <UInt64>] [-EnableCertChainDownload <Boolean>]
+ [-CASigningKeyLength <UInt64>] [-DefaultValidityPeriodHours <UInt64>] [-EnableCertChainDownload <Boolean>] [-EnableCORS <Boolean>]
  [-EnableGroupExpansion <Boolean>] [-InferCertChainFromSSL <Boolean>] [-MACResolverUrl <String>]
  [-MaxCSRKeySize <UInt64>] [-MaxGroupSizeToExpand <UInt32>] [-MaxValidityPeriodHours <UInt64>]
  [-MinCSRKeySize <UInt64>] [-MinValidityPeriodHours <UInt64>] [-SecondaryLocationSourceUrl <String>]
@@ -34,6 +34,7 @@ Set-CsWebServiceConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousAccess
  [-UseWsFedPassiveAuth <Boolean>] [-WsFedPassiveMetadataUri <String>]
  [-CrossDomainAuthorizationList <PSListModifier>] [-EnableMediaBasicAuth <Boolean>]
  [-EnableStatisticsInResponse <Boolean>] [-HstsMaxAgeInSeconds <Int64>]
+ [-PendingGetWaitTimeOutInMinutes <Int64>] [-PendingGetWaitSupportingApps <String>]
  [-MobilePreferredAuthType <MobilePreferredAuthType>] [-UseDomainAuthInLWA <Boolean>]
  [-OverrideAuthTypeForInternalClients <String>] [-OverrideAuthTypeForExternalClients <String>]
  [-UseWebClientLegacyUI <Boolean>] [<CommonParameters>]
@@ -54,6 +55,7 @@ Set-CsWebServiceConfiguration [-Instance <PSObject>] [-AllowAnonymousAccessToLWA
  [-UseWsFedPassiveAuth <Boolean>] [-WsFedPassiveMetadataUri <String>]
  [-CrossDomainAuthorizationList <PSListModifier>] [-EnableMediaBasicAuth <Boolean>]
  [-EnableStatisticsInResponse <Boolean>] [-HstsMaxAgeInSeconds <Int64>]
+ [-PendingGetWaitTimeOutInMinutes <Int64>] [-PendingGetWaitSupportingApps <String>]
  [-MobilePreferredAuthType <MobilePreferredAuthType>] [-UseDomainAuthInLWA <Boolean>]
  [-OverrideAuthTypeForInternalClients <String>] [-OverrideAuthTypeForExternalClients <String>]
  [-UseWebClientLegacyUI <Boolean>] [<CommonParameters>]
@@ -77,7 +79,7 @@ Alternatively, you can modify the property values for an existing collection by 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------
+### Example 1
 
 ```powershell
 Set-CsWebServiceConfiguration -Identity site:Redmond -EnableGroupExpansion $True
@@ -86,7 +88,7 @@ Set-CsWebServiceConfiguration -Identity site:Redmond -EnableGroupExpansion $True
 Example 1 enables group expansion for the Web Services configuration settings applied to the Redmond site (-Identity site:Redmond).
 This is done by including the EnableGroupExpansion property and setting the parameter value to True.
 
-### -------------------------- Example 2 ------------------------
+### Example 2
 
 ```powershell
 Get-CsWebServiceConfiguration -Filter "site:*" | Set-CsWebServiceConfiguration -MaxValidityPeriodHours 16
@@ -96,7 +98,7 @@ In Example 2, the maximum validity period for all the Web Services configuration
 To carry out this task, the `Get-CsWebServiceConfiguration` cmdlet is called along with the Filter parameter; the filter value "site:*" limits the returned data to settings where the Identity begins with the characters "site:".
 This collection is then piped to the `Set-CsWebServiceConfiguration` cmdlet, which takes each item in the collection and changes the MaxValidityPeriodHours property to 16.
 
-### -------------------------- Example 3 ------------------------
+### Example 3
 
 ```powershell
 Get-CsWebServiceConfiguration | Where-Object {$_.EnableGroupExpansion -eq $True} | Set-CsWebServiceConfiguration -MaxGroupSizeToExpand 400
@@ -107,7 +109,7 @@ To do this, the `Get-CsWebServiceConfiguration` cmdlet is called without any par
 This collection is then piped to the `Where-Object` cmdlet, which selects only those settings where the EnableGroupExpansion property is equal to True.
 In turn, this filtered collection is piped to the `Set-CsWebServiceConfiguration` cmdlet, which takes each item in the collection and sets the value of the MaxGroupSizeToExpand property to 400.
 
-### -------------------------- Example 4 ------------------------
+### Example 4
 
 ```powershell
 Set-CsWebServiceConfiguration -Identity global -ShowDownloadCommunicatorAttendeeLink $True
@@ -116,7 +118,7 @@ Set-CsWebServiceConfiguration -Identity global -ShowDownloadCommunicatorAttendee
 The command shown in Example 4 shows how the global Web Services settings can be configured so that any person joining a meeting using a client application other than Skype for Business Server will first be shown a link to a site where he or she can download Skype for Business Web App.
 This is done by including the ShowDownloadCommunicatorAttendeeLink parameter and setting the parameter value to $True.
 
-### -------------------------- Example 5 --------------------------
+### Example 5
 
 ```powershell
 $x = New-CsWebOrigin -Url "https://fabrikam.com"
@@ -132,7 +134,7 @@ The second command in the example uses the `Set-CsWebServiceConfiguration` cmdle
 The syntax @{Add=$x} adds the domain to any domains already in the collection of domains authorized for cross-domain scripting.
 To replace the existing collection with just https://fabrikam.com use the syntax @{Replace=$x}.
 
-### -------------------------- Example 6 --------------------------
+### Example 6
 
 ```powershell
 $x = Get-CsWebServiceConfiguration -Identity "site:Redmond"
@@ -155,7 +157,7 @@ To remove the second domain (index number 1) from the CrossDomainAuthorizationLi
 Note that command 2 removes the domain from the copy of the Redmond site stored in the variable $x and not from the site itself.
 To actually remove the domain from the Redmond site, the third command in the example uses the `Set-CsWebServiceConfiguration` cmdlet and the Instance parameter to overwrite settings for the Redmond site with the settings stored in $x.
 
-### -------------------------- Example 7 --------------------------
+### Example 7
 
 ```powershell
 Set-CsWebServiceConfiguration -Identity "site:Redmond" - CrossDomainAuthorizationList $Null
@@ -284,6 +286,23 @@ Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Position: Named
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -805,6 +824,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PendingGetWaitTimeOutInMinutes
+Specifies the time in minutes to send an event at a particular interval to Keep Alive EventChannel. 
+The value can be specified in between 5 to 15 minutes (both inclusive). 
+The default value is 15 minutes.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PendingGetWaitSupportingApps
+Specifies a semicolon-separated list of applications for which PendingGetWaitTimeOutInMinutes need to be set. 
+Supported applications are Android, iPhone, iPad, Macintosh, Windows. 
+To support all applications you can give All as input. 
+For example: 
+- To support Android and Macintosh - Android;Macintosh; 
+- To support all devices - All; 
+The default value is None.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MobilePreferredAuthType
 
 Specifies the default authentication method used for mobile client connectivity.
@@ -862,8 +921,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForExternalClients
 
-The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to
-https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skype/set-csauthconfig).
 
 ```yaml
 Type: String
@@ -879,8 +937,7 @@ Accept wildcard characters: False
 
 ### -OverrideAuthTypeForInternalClients
 
-The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, please go to
-https://docs.microsoft.com/en-us/powershell/module/skype/set-csauthconfig?view=skype-ps.
+The proper way to access the functionality that this parameter provide is to use the Get/Set-CsAuthConfig cmdlet. For more information, see [Set-CsAuthConfig](https://learn.microsoft.com/powershell/module/skype/set-csauthconfig).
 
 ```yaml
 Type: String

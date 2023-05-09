@@ -18,7 +18,7 @@
     - SharePoint Online:
        - https://www.microsoft.com/en-us/download/details.aspx?id=35588
     - Exchange Online:
-       - cmdlets could be imported using [this guide](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
+       - cmdlets could be imported using [this guide](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell)
 7. Run the app, type `node index` and press Enter in order to get info for all modules
 8. Run the app for a certain module, type `node index -m <TypeModuleNameHere>`, with one of the following options - teams, skype, sharepoint, whiteboard, exchange, staffhub. For example, you should run `node index -m teams` to run the tool for Microsoft Teams
 9. Run `node index -help` to get help information for all available commands

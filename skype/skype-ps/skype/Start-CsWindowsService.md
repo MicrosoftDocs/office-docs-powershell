@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/start-cswindowsservice
+online version: https://learn.microsoft.com/powershell/module/skype/start-cswindowsservice
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Start-CsWindowsService
 schema: 2.0.0
@@ -258,4 +258,3 @@ Instead, the `Start-CsWindowsService` cmdlet starts instances of the Microsoft.R
 [Get-CsWindowsService](Get-CsWindowsService.md)
 
 [Stop-CsWindowsService](Stop-CsWindowsService.md)
-

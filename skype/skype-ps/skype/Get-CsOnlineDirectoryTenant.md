@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedirectorytenant
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedirectorytenant
 applicable: Skype for Business Online
 title: Get-CsOnlineDirectoryTenant
 schema: 2.0.0
@@ -22,6 +22,9 @@ Get-CsOnlineDirectoryTenant [[-Tenant] <Guid>] [-DomainController <Fqdn>] [-Forc
 ```
 
 ## DESCRIPTION
+**Note**: Starting with Teams PowerShell Module 4.0, this cmdlet will be deprecated. Use the Get-CsTenant or Get-CsOnlineDialInConferencingBridge cmdlet to view information previously present in Get-CsOnlineDirectoryTenant.
+
+
 Use the Get-CsOnlineDirectoryTenant cmdlet to retrieve tenant parameters like AnnouncementsDisabled, NameRecordingDisabled and Bridges from the Business Voice Directory.
 
 ## EXAMPLES

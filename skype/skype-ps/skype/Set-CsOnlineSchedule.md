@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineschedule
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineschedule
 applicable: Skype for Business Online
 title: Set-CsOnlineSchedule
 schema: 2.0.0
@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsOnlineSchedule
 
 ## SYNOPSIS
-Use the Set-CsOnlineSchedule cmdlet to remove a schedule.
+Use the Set-CsOnlineSchedule cmdlet to update a schedule.
 
 ## SYNTAX
 ```powershell

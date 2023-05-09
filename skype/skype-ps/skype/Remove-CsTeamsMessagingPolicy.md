@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamsmessagingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsmessagingpolicy
 applicable: Skype for Business Online
 title: Remove-CsTeamsMessagingPolicy
 schema: 2.0.0
@@ -122,4 +122,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

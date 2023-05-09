@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/find-csgroup
+online version: https://learn.microsoft.com/powershell/module/skype/find-csgroup
 applicable: Skype for Business Online
 title: Find-CsGroup
 schema: 2.0.0
@@ -140,4 +140,3 @@ The Find-CsGroup cmdlet returns a list of Microsoft.Rtc.Management.Hosted.Group.
 
 
 ## RELATED LINKS
-

@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinepstnusage
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinepstnusage
+applicable: Microsoft Teams
 title: Set-CsOnlinePstnUsage
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,14 +19,7 @@ Modifies a set of strings that identify the allowed online public switched telep
 
 ### Identity (Default)
 ```
-Set-CsOnlinePstnUsage [-Tenant <Guid>] [-Usage <PSListModifier>] [[-Identity] <XdsIdentity>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsOnlinePstnUsage [-Tenant <Guid>] [-Usage <PSListModifier>] [-Instance <PSObject>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlinePstnUsage [[-Identity] <string>] [-Usage <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,26 +74,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Suppresses any confirmation prompts that would otherwise be displayed before making changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The scope at which these settings are applied. The Identity for this cmdlet is always Global.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -111,49 +89,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Instance
-A reference to a PSTN usage object. This object must be of type PstnUsages and can be retrieved by calling the Get-CsOnlinePstnUsage cmdlet.
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Usage
 Contains a list of allowable usage strings. These entries can be any string value.
 
 ```yaml
-Type: PSListModifier
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -188,7 +128,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ### System.Management.Automation.PSObject
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -196,4 +135,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlinePstnUsage](https://docs.microsoft.com/powershell/module/skype/get-csonlinepstnusage?view=skype-ps)
+[Get-CsOnlinePstnUsage](get-csonlinepstnusage.md)

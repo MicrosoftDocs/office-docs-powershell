@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/find-csonlineapplicationinstance
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/find-csonlineapplicationinstance
+applicable: Microsoft Teams
 title: Find-CsOnlineApplicationInstance
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -18,7 +18,7 @@ Use the Find-CsOnlineApplicationInstance cmdlet to find application instances th
 ## SYNTAX
 
 ```
-Find-CsOnlineApplicationInstance -SearchQuery <String> [-MaxResults <UInt32?>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Tenant <Guid>] [-CommonParameters]
+Find-CsOnlineApplicationInstance [-SearchQuery] <string> [[-MaxResults] <uint>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +65,7 @@ The SearchQuery parameter defines a query for application instances by display n
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -81,7 +81,7 @@ The ExactMatchOnly parameter instructs the cmdlet to return exact matches only. 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ The AssociatedOnly parameter instructs the cmdlet to return only application ins
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -113,7 +113,7 @@ The UnAssociatedOnly parameter instructs the cmdlet to return only application i
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ The MaxResults parameter identifies the maximum number of results to return. If 
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -138,17 +138,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
+### -Force
+This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -160,12 +161,18 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.Hosted.Online.Models.FindApplicationInstanceResult
 
-
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+
+[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+
+[Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)

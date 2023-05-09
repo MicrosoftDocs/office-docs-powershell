@@ -154,7 +154,9 @@ Accept wildcard characters: False
 ### -MaskBits
 This parameter determines the length of bits to mask to the subnet.
 
-IPv4 format IP address accepts maskbits from 0 to 32 inclusive. IPv6 format IP address accepts maskbits from 0 to 128 inclusive.
+IPv4 format IP address accepts maskbits from 0 to 32 inclusive. If not provided, the value is set to 32.
+
+IPv6 format IP address accepts maskbits from 0 to 128 inclusive. If not provided, the value is set to 128.
 
 ```yaml
 Type: System.Int32

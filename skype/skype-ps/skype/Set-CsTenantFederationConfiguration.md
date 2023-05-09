@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantfederationconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cstenantfederationconfiguration
 applicable: Skype for Business Online
 title: Set-CsTenantFederationConfiguration
 schema: 2.0.0
@@ -21,7 +21,7 @@ These settings are used to determine which domains (if any) your users are allow
 ### Identity (Default)
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
- [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
+ [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
  [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -40,7 +40,7 @@ With Skype for Business Online, administrators can use the federation configurat
 
 Whether or not users can communicate with people from other domains and if so, which domains they are allowed to communicate with.
 
-Whether or not users can communicate with people who have accounts on public IM and presence providers such as Windows Live, AOL and Yahoo.
+Whether or not users can communicate with people who have accounts on public IM and presence providers such as Windows Live, Skype, or people using Microsoft Teams with an account that's not managed by an organization.
 
 Administrators can use the `Set-CsTenantFederationConfiguration` cmdlet to enable and disable federation with other domains and federation with public providers.
 In addition, this cmdlet can be used to expressly indicate the domains that users can communicate with and/or the domains that users are not allowed to communicate with.
@@ -116,9 +116,39 @@ $list.add("fabrikam.com")
 Set-CsTenantFederationConfiguration -AllowedDomainsAsAList $list
 ```
 
-Example 6 shows how you can add domains to the Allowed Domains using a List collection object.
+Example 6 shows how you can replace domains in the Allowed Domains using a List collection object.
 First, a List collection is created and domains are added to it, then, simply include the AllowedDomainsAsAList parameter and set the parameter value to the List object.
-When this command completes, the allowed domain list will be filled with those domains.
+When this command completes, the allowed domains list will be replaced with those domains.
+
+
+### -------------------------- Example 7 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Add=$list}
+```
+
+Example 7 shows how you can add domains to the existing Allowed Domains using a List object.
+First, a List is created and domains are added to it, then use the Add method in the AllowedDomainsAsAList parameter to add the domains to the existing allowed domains list. When this command completes, the domains in the list will be added to any domains already on the AllowedDomains list.
+
+### -------------------------- Example 8 --------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+Set-CsTenantFederationConfiguration -AllowedDomainsAsAList @{Remove=$list}
+```
+
+Example 8 shows how you can remove domains from the existing Allowed Domains using a List object.
+First, a List is created and domains are added to it, then use the Remove method in the AllowedDomainsAsAList parameter to remove the domains from the existing allowed domains list. When this command completes, the domains in the list will be removed from the AllowedDomains list.
+
+### -------------------------- Example 9 --------------------------
+```
+Set-CsTenantFederationConfiguration -AllowTeamsConsumer $True -AllowTeamsConsumerInbound $False
+```
+
+The command shown in Example 9 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
 
 ## PARAMETERS
 
@@ -173,6 +203,35 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -AllowTeamsConsumer
+Allows federation with people using Teams with an account that's not managed by an organization.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTeamsConsumerInbound
+Allows people using Teams with an account that's not managed by an organization, to discover and start communication with users in your organization. When -AllowTeamsConsumer is enabled and this parameter is disabled, only the users in your organization will be able to discover and start communication with people using Teams with an account that's not managed by an organization, but they will not discover and start communications with users in your organization.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -378,4 +437,3 @@ Instead, the `Set-CsTenantFederationConfiguration` cmdlet modifies existing inst
 [Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
 
 [Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)
-

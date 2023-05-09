@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingpolicy
 applicable: Skype for Business Online
 title: Get-CsOnlineDialinConferencingPolicy
 schema: 2.0.0
@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsOnlineDialinConferencingPolicy
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Retrieves the available Dial-in Conferencing policies in the tenant.
 
 ## SYNTAX
 
@@ -28,22 +28,22 @@ Get-CsOnlineDialinConferencingPolicy [-Filter <String>] [-LocalStore] [<CommonPa
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Retrieves the available Dial-in Conferencing policies in the tenant.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Get-CsOnlineDialinConferencingPolicy
 ```
 
-Insert descriptive text for example 1.
+This example retrieves all the available Dial in Conferencing policies in the tenant.
 
 
 ## PARAMETERS
 
 ### -Filter
-PARAMVALUE: String
+This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
 
 ```yaml
 Type: String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: XdsIdentity
+A unique identifier specifying the scope and, in some cases the name, of the policy. If this parameter is omitted, all policies for the organization are returned.
 
 ```yaml
 Type: XdsIdentity
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-PARAMVALUE: SwitchParameter
+Reserved for Microsoft Internal use.
 
 ```yaml
 Type: SwitchParameter
@@ -100,4 +100,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

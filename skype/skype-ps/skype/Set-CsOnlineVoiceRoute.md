@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroute
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceroute
+applicable: Microsoft Teams
 title: Set-CsOnlineVoiceRoute
 schema: 2.0.0
 manager: bulenteg
@@ -13,22 +13,15 @@ ms.reviewer:
 # Set-CsOnlineVoiceRoute
 
 ## SYNOPSIS
-Modifies an online voice route. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+Modifies an online voice route. Online voice routes contain instructions that tell Microsoft Teams how to route calls from Microsoft or Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
 ## SYNTAX
 
-### Identity (Default)
+### Identity
 ```
-Set-CsOnlineVoiceRoute [-Tenant <Guid>] [-Description <String>] [-NumberPattern <String>]
- [-OnlinePstnUsages <PSListModifier>] [-OnlinePstnGatewayList <PSListModifier>] [-Priority <Int32>]
- [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsOnlineVoiceRoute [-Tenant <Guid>] [-Description <String>] [-NumberPattern <String>]
- [-OnlinePstnUsages <PSListModifier>] [-OnlinePstnGatewayList <PSListModifier>] [-Priority <Int32>]
- [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsOnlineVoiceRoute [-BridgeSourcePhoneNumber <String>] [-Description <String>] [[-Identity] <String>]
+ [-NumberPattern <String>] [-OnlinePstnGatewayList <Object>] [-OnlinePstnUsages <Object>] [-Priority <Int32>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +40,7 @@ This command sets the Description of the Route1 online voice route to "Test Rout
 
 ### -------------------------- Example 2 --------------------------
 ```
-PS C:\> Set-CsOnlineVoiceRoute -Identity Route1 -PstnUsages @{add="Long Distance"}
+PS C:\> Set-CsOnlineVoiceRoute -Identity Route1 -OnlinePstnUsages @{add="Long Distance"}
 ```
 
 The command in this example modifies the online voice route with the identity Route1 to add the online PSTN usage Long Distance to the list of usages for this voice route. Long Distance must be in the list of global online PSTN usages (which can be retrieved with a call to the `Get-CsOnlinePstnUsage` cmdlet).
@@ -61,31 +54,26 @@ PS C:\> Set-CsOnlineVoiceRoute -Identity Route1 -OnlinePstnUsages @{replace=$x}
 
 This example modifies the online voice route named Route1 to populate that route's list of online PSTN usages with all the existing usages for the organization. The first command in this example retrieves the list of global online PSTN usages. Notice that the call to the `Get-CsOnlinePstnUsage` cmdlet is in parentheses; this means that we first retrieve an object containing PSTN usage information. (Because there is only one--global--PSTN usage, only one object will be retrieved.) The command then retrieves the Usage property of this object. That property, which contains a list of online PSTN usages, is assigned to the variable $x. In the second line of this example, the Set-CsOnlineVoiceRoute cmdlet is called to modify the online voice route with the identity Route1. Notice the value passed to the OnlinePstnUsages parameter: @{replace=$x}. This value says to replace everything in the OnlinePstnUsages list for this route with the contents of $x, which contain the online PSTN usages list retrieved in line 1.
 
-### -------------------------- Example 4 --------------------------
-```
-PS C:\> $x = Get-CsOnlineVoiceRoute -Identity Route1
-
-PS C:\> $x.Name = "RouteA"
-
-PS C:\> Set-CsOnlineVoiceRoute -Instance $x
-```
-
-This set of commands changes the Name property of the online voice route with the identity Route1 to RouteA. Changing the Name property automatically changes the Identity property, in this case to RouteA.
-
-In the first line, the `Get-CsOnlineVoiceRoute` cmdlet is called to retrieve the online voice route with the identity Route1. The returned object is stored in the variable $x. Next, the Name property of that object is assigned the string value "RouteA". Finally, the object (contained in the variable $x) is passed to the Instance parameter of the `Set-CsOnlineVoiceRoute` cmdlet to make the change.
-
-### -------------------------- Example 5 --------------------------
-```
-PS C:\> $y = Get-CsOnlineVoiceRoute -Identity Route1
-
-PS C:\> $y.OnlinePstnGatewayList.Add("192.168.0.100")
-
-PS C:\> Set-CsOnlineVoiceRoute -Instance $y
-```
-
-This example modifies the online voice route named Route1 and populates that route's list of online PSTN gateways (OnlinePstnGatewayList) with the server role of the gateway with the identity PstnGateway:192.168.0.100. In the first line of this example, the `Get-CsOnlineVoiceRoute` cmdlet is called to retrieve the online voice route we want to modify, in this case Route1. Next we call the Add method on the OnlinePstnGatewayList property of Route1. We pass the Add method the Identity of the service we want to add. Finally, we call the `Set-CsOnlineVoiceRoute` cmdlet, passing the Instance parameter the variable $y, which will update Route1 (stored in $y) with the newly-added online PSTN gateway.
-
 ## PARAMETERS
+
+### -BridgeSourcePhoneNumber
+BridgeSourcePhoneNumber is an E.164 formatted Operator Connect Conferencing phone number assigned to your Audio Conferencing Bridge. Using BridgeSourcePhoneNumber in an online voice route is mutually exclusive with using OnlinePstnGatewayList in the same online voice route.
+
+When using BridgeSourcePhoneNumber in an online voice route, the OnlinePstnUsages used in the online voice route should only be used in a corresponding OnlineAudioConferencingRoutingPolicy. The same OnlinePstnUsages should not be used in online voice routes that are not using BridgeSourcePhoneNumber.
+
+For more information about Operator Connect Conferencing, please see [Configure Operator Connect Conferencing](https://learn.microsoft.com/microsoftteams/operator-connect-conferencing-configure).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -117,48 +105,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Suppresses any confirmation prompts that would otherwise be displayed before making changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The unique identity of the online voice route. (If the route name contains a space, such as Test Route, you must enclose the full string in parentheses.)
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values. This object can be retrieved by calling the `Get-CsOnlineVoiceRoute` cmdlet.
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -212,33 +170,10 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-A number could resolve to multiple online voice routes. The priority determines the order in which the routes will be applied if more than one route is possible.
+A number could resolve to multiple online voice routes. The priority determines the order in which the routes will be applied if more than one route is possible. The lowest priority will be applied first and then in ascendant order.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -281,8 +216,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
+[Get-CsOnlineVoiceRoute](get-csonlinevoiceroute.md)
 
-[New-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroute?view=skype-ps)
+[New-CsOnlineVoiceRoute](new-csonlinevoiceroute.md)
 
-[Remove-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroute?view=skype-ps)
+[Remove-CsOnlineVoiceRoute](remove-csonlinevoiceroute.md)

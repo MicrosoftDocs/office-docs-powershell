@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csapplicationaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csapplicationaccesspolicy
 applicable: Skype for Business Online
 title: New-CsApplicationAccessPolicy
 schema: 2.0.0
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 ### -AppIds
 
-A list of application (client) IDs. For details of application (client) ID, refer to: [Get tenant and app ID values for signing in](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in).
+A list of application (client) IDs. For details of application (client) ID, refer to: [Get tenant and app ID values for signing in](https://learn.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in).
 
 ```yaml
 Type: PSListModifier

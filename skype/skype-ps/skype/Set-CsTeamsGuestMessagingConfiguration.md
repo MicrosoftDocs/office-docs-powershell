@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsguestmessagingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsguestmessagingconfiguration
 applicable: Skype for Business Online
 title: Set-CsTeamsGuestMessagingConfiguration
 schema: 2.0.0
@@ -20,16 +20,16 @@ TeamsGuestMessagingConfiguration determines the messaging settings for the guest
 ### Identity (Default)
 ```
 Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
- [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
- [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
+ [-AllowImmersiveReader <Boolean>] [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
+ [-AllowUserDeleteChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [[-Identity] <XdsIdentity>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsTeamsGuestMessagingConfiguration [-Tenant <Guid>] [-AllowUserEditMessage <Boolean>]
- [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
- [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-Instance <PSObject>] [-Force]
+ [-AllowImmersiveReader <Boolean>] [-AllowUserDeleteMessage <Boolean>] [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>]
+ [-AllowUserDeleteChat <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>] [-AllowStickers <Boolean>] [-Instance <PSObject>] [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -166,11 +166,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowUserDeleteChat
+Turn this setting on to allow users to permanently delete their one-on-one chat, group chat, and meeting chat as participants (this deletes the chat only for them, not other users in the chat). Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GiphyRatingType
 Determines Giphy content restrictions. Default value is "Moderate", other options are "NoRestriction" and "Strict"
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowImmersiveReader
+Determines if immersive reader for viewing messages is enabled.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -251,4 +281,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csthirdpartyvideosystempolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csthirdpartyvideosystempolicy
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
@@ -196,4 +196,3 @@ The `New-CsThirdPartyVideoSystemPolicy` cmdlet creates new instances of the Micr
 [Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
 [Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)
-

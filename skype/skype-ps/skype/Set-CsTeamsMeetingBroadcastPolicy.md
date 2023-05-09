@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsmeetingbroadcastpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmeetingbroadcastpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingBroadcastPolicy
 schema: 2.0.0
@@ -14,15 +14,13 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Set-CsTeamsMeetingBroadcastPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowBroadcastScheduling \<bool\>\] \[-AllowBroadcastTranscription \<bool\>\] \[-BroadcastAttendeeVisibilityMode \<string\>\] \[-BroadcastRecordingMode \<string\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsMeetingBroadcastPolicy \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-AllowBroadcastScheduling \<bool\>\] \[-AllowBroadcastTranscription \<bool\>\] \[-BroadcastAttendeeVisibilityMode \<string\>\] \[-BroadcastRecordingMode \<string\>\] \[-Instance \<psobject\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.
 
 ## SYNTAX
 
 ### Identity (Default)
 
-```
+```powershell
 Set-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowBroadcastScheduling <Boolean>] [-AllowBroadcastTranscription <Boolean>]
  [-BroadcastAttendeeVisibilityMode <String>] [-BroadcastRecordingMode <String>] [[-Identity] <XdsIdentity>]
@@ -31,7 +29,7 @@ Set-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
 
 ### Instance
 
-```
+```powershell
 Set-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
  [-AllowBroadcastScheduling <Boolean>] [-AllowBroadcastTranscription <Boolean>]
  [-BroadcastAttendeeVisibilityMode <String>] [-BroadcastRecordingMode <String>] [-Instance <PSObject>] [-Force]
@@ -39,6 +37,7 @@ Set-CsTeamsMeetingBroadcastPolicy [-Tenant <Guid>] [-Description <String>]
 ```
 
 ## DESCRIPTION
+
 User-level policy for tenant admin to configure meeting broadcast behavior for the broadcast event organizer.  Use this cmdlet to update an existing policy.
 
 
@@ -55,7 +54,8 @@ Sets the value of the Default (Global) Broadcast Policy in the organization to d
 ## PARAMETERS
 
 ### -AllowBroadcastScheduling
-Specifies whether this user can create broadcast events in Teams.  This settng impacts broadcasts that use both self-service and external encoder production methods. 
+
+Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods. 
 
 ```yaml
 Type: Boolean
@@ -70,7 +70,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBroadcastTranscription
-Specifies whether real-time transcription and translation can be enabled in the broadcast event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+
+Specifies whether real-time transcription and translation can be enabled in the broadcast event.
+
+> [!NOTE]
+> This setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
 
 ```yaml
 Type: Boolean
@@ -85,7 +89,18 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastAttendeeVisibilityMode
-Specifies the attendee visibility mode of the broadcast events created by this user.  This setting controls who can watch the broadcast event - e.g. anyone can watch this event including anonymous users or only authenticated users in my company can watch the event.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+
+Specifies the attendee visibility mode of the broadcast events created by this user.  This setting controls who can watch the broadcast event - e.g. anyone can watch this event including anonymous users or only authenticated users in my company can watch the event.
+
+> [!NOTE]
+> This setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+
+Possible values:
+- Everyone 
+- EveryoneInCompany
+- InvitedUsersInCompany
+- EveryoneInCompanyAndExternal
+- InvitedUsersInCompanyAndExternal
 
 ```yaml
 Type: String
@@ -100,7 +115,16 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastRecordingMode
-Specifies whether broadcast events created by this user are always recorded, never recorded or user can choose whether to record or not.  Note: this setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+
+Specifies whether broadcast events created by this user are always recorded (AlwaysEnabled), never recorded (AlwaysDisabled) or user can choose whether to record or not (UserOverride).
+
+> [!NOTE]
+> This setting is applicable to broadcast events that use Teams Meeting production only and does not apply when external encoder is used as production method.
+
+Possible values:
+- AlwaysEnabled
+- AlwaysDisabled
+- UserOverride
 
 ```yaml
 Type: String
@@ -115,6 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -130,6 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Enables administrators to provide additional text about the conferencing policy. For example, the Description might indicate the users the policy should be assigned to.
 
 ```yaml
@@ -145,6 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml

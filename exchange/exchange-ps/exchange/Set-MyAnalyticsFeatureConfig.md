@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/set-myanalyticsfeatureconfig
 applicable: Exchange Online
 title: Set-MyAnalyticsFeatureConfig
 schema: 2.0.0
@@ -12,13 +12,13 @@ ms.author: chrisda
 # Set-MyAnalyticsFeatureConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
-
-**Note**: This cmdlet is available in version 2.0.4-Preview3 of the EXO V2 Module.
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Set-MyAnalyticsFeatureConfig cmdlet to configure the availability and features of MyAnalytics for the specified user.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+**Note**: This cmdlet replaces the Set-UserAnalyticsConfig cmdlet.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,7 +32,13 @@ Set-MyAnalyticsFeatureConfig -Identity <String>
 ```
 
 ## DESCRIPTION
-You need to be a member of the Organization Management role group (Global admins) in the destination organization to run this cmdlet.
+This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
+
+- Global Administrator
+- Exchange Administrator
+- Insights Administrator
+
+To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
@@ -159,11 +165,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/search-mailboxauditlog
+online version: https://learn.microsoft.com/powershell/module/exchange/search-mailboxauditlog
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-MailboxAuditLog
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Search-MailboxAuditLog cmdlet to search mailbox audit log entries matching the specified search terms.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,6 @@ Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>]
  [-ExternalAccess <Boolean>]
  [-GroupMailbox]
  [-HasAttachments <Boolean>]
- [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -45,7 +44,6 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
  [-ExternalAccess <Boolean>]
  [-GroupMailbox]
  [-HasAttachments <Boolean>]
- [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -54,11 +52,11 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-The Search-MailboxAuditLog cmdlet performs a synchronous search of mailbox audit logs for one or more specified mailboxes and displays search results in the Exchange Management Shell window. To search mailbox audit logs for multiple mailboxes and have the results sent by email to specified recipients, use the New-MailboxAuditLogSearch cmdlet instead. To learn more about mailbox audit logging, see [Mailbox audit logging in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/mailbox-audit-logging/mailbox-audit-logging).
+The Search-MailboxAuditLog cmdlet performs a synchronous search of mailbox audit logs for one or more specified mailboxes and displays search results in the Exchange Management Shell window. To search mailbox audit logs for multiple mailboxes and have the results sent by email to specified recipients, use the New-MailboxAuditLogSearch cmdlet instead. To learn more about mailbox audit logging, see [Mailbox audit logging in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/mailbox-audit-logging/mailbox-audit-logging).
 
-This cmdlet is available in Office 365 operated by 21Vianet, but it won't return any results.
+In multi-geo environments, when you run this cmdlet in a different region from the mailbox that you're trying to search, you might receive the error, "An error occurred while trying to access the audit log." In this scenario, you need to anchor the PowerShell session to a user in the same region as the mailbox as described in [Connect directly to a geo location using Exchange Online PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/administering-exchange-online-multi-geo#connect-directly-to-a-geo-location-using-exchange-online-powershell).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -205,26 +203,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IncludeInactiveMailbox
-This parameter is available only in the cloud-based service.
-
-The IncludeInactiveMailbox switch is required to include inactive mailboxes in the search. You don't need to specify a value with this switch.
-
-An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LogonTypes
 The LogonTypes parameter specifies the type of logons. Valid values are:
 
@@ -248,7 +226,7 @@ Accept wildcard characters: False
 ### -Mailboxes
 The Mailboxes parameter specifies the mailboxes to retrieve mailbox audit log entries from. You can use this parameter to search audit logs for multiple mailboxes.
 
-You enter multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+You enter multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You can't use this parameter with the ShowDetails switch.
 
@@ -366,12 +344,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

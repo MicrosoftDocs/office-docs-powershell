@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendantdialscope
+online version: https://learn.microsoft.com/powershell/module/skype/new-csautoattendantdialscope
 applicable: Skype for Business Online
 title: New-CsAutoAttendantDialScope
 schema: 2.0.0
@@ -24,9 +24,7 @@ New-CsAutoAttendantDialScope -GroupScope -GroupIds <List> [-Tenant <Guid>] [<Com
 ## DESCRIPTION
 This cmdlet creates a new dial-scope to be used with Auto Attendant (AA) service. AAs use dial-scopes to restrict the scope of call transfers that can be made through directory lookup feature.
 
-**NOTE**
-- The returned dial-scope model composes a member for the underlying type/implementation, e.g. in case of the group-based dial scope, in order to modify its Group IDs, you can access them through `DialScope.GroupScope.GroupIds`.
-
+**NOTE**: The returned dial-scope model composes a member for the underlying type/implementation, e.g. in case of the group-based dial scope, in order to modify its Group IDs, you can access them through `DialScope.GroupScope.GroupIds`.
 
 ## EXAMPLES
 

@@ -1,20 +1,21 @@
 ---
-title: "Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers"
+title: "Use Update-ExchangeHelp to update Exchange PowerShell help articles on Exchange servers"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 219f78a3-f0e5-4dc6-9787-9a0b9756ee09
-description: "Administrators can learn how to use Update-ExchangeHelp to update Exchange cmdlet reference topics that are available in Exchange Management Shell in Exchange 2016"
+description: "Administrators can learn how to use Update-ExchangeHelp to update Exchange cmdlet reference articles that are available in Exchange Management Shell in Exchange 2016"
 ---
 
-# Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers
+# Use Update-ExchangeHelp to update Exchange PowerShell help articles on Exchange servers
 
-Exchange cmdlet reference topics are created and updated all the time, but it's been difficult to get those updates into Exchange code in a timely manner so they're available in the Exchange Management Shell. Now, you can use the **Update-ExchangeHelp** cmdlet in the Exchange Management Shell to get the most up-to-date cmdlet reference topics for the command line in Exchange 2013 or later.
+Exchange cmdlet reference articles are created and updated all the time, but it's been difficult to get those updates into Exchange code in a timely manner so they're available in the Exchange Management Shell. Now, you can use the **Update-ExchangeHelp** cmdlet in the Exchange Management Shell to get the most up-to-date cmdlet reference articles for the command line in Exchange 2013 or later.
 
 The **Update-ExchangeHelp** cmdlet automatically connects to a predefined website, compares the version of the local Exchange server and the installed languages to what's available in the update packages, and then downloads and installed the updated Exchange Management Shell help. Typically, the cmdlet connects to the internet, but you can configure it to connect to an intranet source inside your organization.
 
@@ -26,7 +27,7 @@ The **Update-ExchangeHelp** cmdlet automatically connects to a predefined websit
 
   - Configure **Update-ExchangeHelp** to get updates from an internal web server: 30 minutes.
 
-- You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Exchange server configuration settings" entry in the [Exchange infrastructure and PowerShell permissions](https://docs.microsoft.com/Exchange/permissions/feature-permissions/infrastructure-permissions) topic.
+- You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Exchange server configuration settings" entry in the [Exchange infrastructure and PowerShell permissions](/Exchange/permissions/feature-permissions/infrastructure-permissions) article.
 
 - You can only use PowerShell to perform this procedure. To learn how to open the Exchange Management Shell in your on-premises Exchange organization, see [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
 
@@ -198,4 +199,4 @@ An easy way to find new update packages is to periodically run **Update-Exchange
 
 ## Details about Update-ExchangeHelp
 
-Windows PowerShell has the **Update-Help** and **Save-Help** cmdlets for online and offline updates of cmdlet reference topics. However, these cmdlets don't support Exchange cmdlet help, so a specific Exchange cmdlet is required to update cmdlet reference topics in the Exchange Management Shell.
+Windows PowerShell has the **Update-Help** and **Save-Help** cmdlets for online and offline updates of cmdlet reference articles. However, these cmdlets don't support Exchange cmdlet help, so a specific Exchange cmdlet is required to update cmdlet reference articles in the Exchange Management Shell.

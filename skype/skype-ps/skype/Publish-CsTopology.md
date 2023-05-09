@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/publish-cstopology
+online version: https://learn.microsoft.com/powershell/module/skype/publish-cstopology
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Publish-CsTopology
 schema: 2.0.0
@@ -268,4 +268,3 @@ Instead, the `Publish-CsTopology` cmdlet publishes instances of the Microsoft.Rt
 [New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
 
 [Test-CsTopology](Test-CsTopology.md)
-

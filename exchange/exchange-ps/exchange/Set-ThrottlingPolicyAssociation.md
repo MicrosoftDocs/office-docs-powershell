@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-throttlingpolicyassociation
+online version: https://learn.microsoft.com/powershell/module/exchange/set-throttlingpolicyassociation
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-ThrottlingPolicyAssociation
 schema: 2.0.0
@@ -27,7 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-IgnoreDefaultScope]
  [-ThrottlingPolicy <ThrottlingPolicyIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -38,9 +37,9 @@ The Set-ThrottlingPolicyAssociation cmdlet defines quota limits for specific obj
 
 In data center deployments, the object referred to by the Identity and ThrottlingPolicy parameters must be in the same tenant.
 
-For more information about how to control the resources consumed by individual users, see [User workload management in Exchange Server](https://docs.microsoft.com/Exchange/server-health/workload-management).
+For more information about how to control the resources consumed by individual users, see [User workload management in Exchange Server](https://learn.microsoft.com/Exchange/server-health/workload-management).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -53,7 +52,7 @@ This example associates a user with a username of tonysmith to the throttling po
 
 ### Example 2
 ```powershell
-$b = Get-ThrottlingPolicy ITStaffPolicy;
+$b = Get-ThrottlingPolicy ITStaffPolicy
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 
@@ -114,27 +113,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IgnoreDefaultScope
-This parameter is available or functional only in Exchange Server 2010.
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-- You can only use the distinguished name (DN) for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ThrottlingPolicy
 The ThrottlingPolicy parameter specifies the throttling policy that you want to be associated with the object specified by the Identity parameter.
 
@@ -172,12 +150,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

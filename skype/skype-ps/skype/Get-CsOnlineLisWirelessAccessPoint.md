@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineliswirelessaccesspoint
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineliswirelessaccesspoint
+applicable: Microsoft Teams
 title: Get-CsOnlineLisWirelessAccessPoint
 schema: 2.0.0
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,8 +17,7 @@ Retrieves one or more wireless access points (WAPs) from the location configurat
 ## SYNTAX
 
 ```
-Get-CsOnlineLisWirelessAccessPoint [[-TenantId] <Guid>] [[-BSSID] <String>] [-IsDebug <Boolean>]
- [-TargetStore <String>] [-NCSApiUrl <String>] [-Force] [<CommonParameters>]
+Get-CsOnlineLisWirelessAccessPoint [[-BSSID] <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,45 +29,66 @@ If a BSSID with a wildcard format is already exists, a location request with a W
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-CsOnlineLisWirelessAccessPoint
+```
+```output
+BSSID             LocationId                           Description
+-----             ----------                           -----------
+F0-6E-0B-C2-03-23 d7714269-ee52-4635-97b0-d7c228801d24 USWAP1
+34-E3-80-D5-AB-60 9905bca0-6fb0-11ec-84a4-25019013784a DKWAP1
+F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
 ```
 
 Example 1 retrieves all Location Information Server (LIS) wireless access points and any associated locations.
 
-
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
-Get-CsOnlineLisWirelessAccessPoint -BSSID 0B-23-CD-16-BB-CC
+Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-23
 ```
-
-Example 2 retrieves Location Information Server (LIS) wireless access point "0B-23-CD-16-BB-CC" and associated location.
-
-### -------------------------- Example 3 --------------------------
-```
-Get-CsOnlineLisWirelessAccessPoint -BSSID CB-FF-8D-44-3C-4*
+```output
+BSSID             LocationId                           Description
+-----             ----------                           -----------
+F0-6E-0B-C2-03-23 d7714269-ee52-4635-97b0-d7c228801d24 USWAP1
 ```
 
-Example 3 retrieves Location Information Server (LIS) wireless access point "CB-FF-8D-44-3C-4*" and associated location.
+Example 2 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-23" and associated location.
 
-### -------------------------- Example 4 --------------------------
+### Example 3
 ```
-Get-CsOnlineLisWirelessAccessPoint -BSSID CB-FF-8D-44-3C-44
+Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-*
+```
+```output
+BSSID             LocationId                           Description
+-----             ----------                           -----------
+F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
 ```
 
-Example 4 retrieves Location Information Server (LIS) wireless access point "CB-FF-8D-44-3C-4*" and associated location, when "CB-FF-8D-44-3C-4*" is already exists.
+Example 3 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-*" and associated location.
+
+### Example 4
+```
+Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-12
+```
+```output
+BSSID             LocationId                           Description
+-----             ----------                           -----------
+F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+```
+
+Example 4 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-12" and associated location.
 
 ## PARAMETERS
 
 ### -BSSID
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -86,7 +106,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -102,7 +122,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -118,7 +138,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -134,26 +154,10 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TenantId
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -165,21 +169,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-
-### System.Guid
-
-
 ### System.String
-
 
 ## OUTPUTS
 
-
 ### System.Object
-
 
 ## NOTES
 
-
 ## RELATED LINKS
 
+[Set-CsOnlineLisWirelessAccessPoint](Set-CsOnlineLisWirelessAccessPoint.md)
+
+[Remove-CsOnlineLisWirelessAccessPoint](Remove-CsOnlineLisWirelessAccessPoint.md)

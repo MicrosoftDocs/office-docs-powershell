@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/new-applicationaccesspolicy
+applicable: Exchange Online, Exchange Online Protection
 title: New-ApplicationAccessPolicy
 schema: 2.0.0
 author: chrisda
@@ -14,15 +14,14 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access to a specific set of mailboxes by an application that uses APIs (Outlook REST, Microsoft Graph, or Exchange Web Services (EWS)). These policies are complementary to the permission scopes that are declared by the application.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+**Note:** App Access Policies will soon be replaced by Roles Based Access Control for Applications. To learn more, see [Roles Based Access Control for Exchange Applications](https://learn.microsoft.com/exchange/permissions-exo/application-rbac).
 
 ## SYNTAX
 
-### Set1
 ```
 New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <String[]> -PolicyScopeGroupId <RecipientIdParameter>
  [-Confirm]
@@ -32,24 +31,18 @@ New-ApplicationAccessPolicy -AccessRight <ApplicationAccessPolicyRight> -AppId <
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-Use the New-ApplicationAccessPolicy cmdlet to restrict or deny access for an application that is using Outlook REST APIs or Microsoft Graph APIs to a specific set of mailboxes. These policies are complimentary to the permission scopes that are declared by the application.
+You can create a limited number of policies in your organization based on a fixed amount of space. If your organization runs out of space for these policies, you'll see the error: "The total size of App Access Policies exceeded the limit." To maximize the number of policies and reduce the amount of space that's consumed by the policies, set a one space character description for the policy. This method will allow approximately 300 policies (versus a previous limit of 100 policies).
 
-A limit of 100 policies per Microsoft 365 tenant is enforced as of today. An error message stating "A tenant cannot have more than 100 policies." will be displayed if this number is exceeded.
-
-While the scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read mails or events within a mailbox and not do anything else; Application Access Policy feature allows admins to enforce limits that are based on a list of mailboxes. For example, in a global organization apps developed for one country shouldn't have access to data from other countries or a CRM integration application should only access calendar of the Sales organization and no other departments.
+While scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read email or events within a mailbox and not do anything else, application access policies allow admins to enforce limits that are based on a list of mailboxes. For example, apps developed for one country shouldn't have access to data from other countries. Or, or a CRM integration application should only access calendars in the Sales organization and no other departments.
 
 Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 
 1. If there are multiple application access policies for the same Application and Target Mailbox pair, DenyAccess policy is prioritized over a RestrictAccess policy.
-
 2. If a DenyAccess policy exists for the Application and Target Mailbox, then the app's access request is denied (even if there exists a RestrictAccess policy).
-
 3. If there are any RestrictAccess policies that match the Application and Target Mailbox, then the app is granted access.
-
 4. If there are any Restrict policies for the Application, and the Target Mailbox is not a member of those policies, then application is denied access to the target mailbox.
-
 5. If none of the above conditions are met, then the application is granted access to the requested target mailbox.
 
 ## EXAMPLES
@@ -68,7 +61,7 @@ This example creates a new application access policy with the following settings
 
 ### Example 2
 ```powershell
-New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app to members of security group EvenUsers."
+New-ApplicationAccessPolicy -AccessRight RestrictAccess -AppId "e7e4dbfc-046f-4074-9b3b-2ae8f144f59b" -PolicyScopeGroupId EvenUsers@AppPolicyTest2.com -Description "Restrict this app's access to members of security group EvenUsers."
 ```
 
 This example creates a new application access policy with the following settings:
@@ -76,7 +69,7 @@ This example creates a new application access policy with the following settings
 - AccessRight: RestrictAccess
 - AppIDs: e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
 - PolicyScopeGroupId: EvenUsers@AppPolicyTest2.com
-- Description: Restrict this app to members of security group EvenUsers.
+- Description: Restrict this app's access to members of security group EvenUsers.
 
 ### Example 3
 ```powershell
@@ -93,16 +86,16 @@ This example creates a new application access policy with the following settings
 ## PARAMETERS
 
 ### -AccessRight
-The AccessRight parameter specifies the permission that you want to assign in the application access policy. Valid values are:
+The AccessRight parameter specifies the restriction type that you want to assign in the application access policy. Valid values are:
 
-- RestrictAccess
-- DenyAccess
+- RestrictAccess: Allows the associated app to only access data that's associated with mailboxes specified by the PolicyScopeGroupID parameter.
+- DenyAccess: Allows the associated app to only access data that's not associated with mailboxes specified by the PolicyScopeGroupID parameter.
 
 ```yaml
 Type: ApplicationAccessPolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -120,7 +113,7 @@ You can specify multiple app GUID values separated by commas or you can specify 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -130,8 +123,13 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyScopeGroupID
-The PolicyScopeGroupID parameter specifies the recipient to define in the policy. You can use any value that uniquely identifies the recipient. You can also specify a mail enabled security group to restrict/deny access to a large number of user mailboxes.
-For example:
+The PolicyScopeGroupID parameter specifies the recipient to define in the policy. Valid recipient types are security principals in Exchange Online (users or groups that can have permissions assigned to them). For example:
+
+- Mailboxes with associated user accounts (UserMailbox)
+- Mail users, also known as mail-enabled users (MailUser)
+- Mail-enabled security groups (MailUniversalSecurityGroup)
+
+You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 - Distinguished name (DN)
@@ -139,22 +137,26 @@ For example:
 - Email address
 - GUID
 
-This parameter only accepts recipients that are security principals (users or groups that can have permissions assigned to them). The following types of recipients are not security principals, so you can't use them with this parameter:
+To verify that a recipient is a security principal, run either of the following commands: `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal` or `Get-Recipient -ResultSize unlimited | Format-Table -Auto Name,RecipientType,RecipientTypeDetails,IsValidSecurityPrincipal`.
 
-- Discovery mailboxes
-- Dynamic distribution groups
-- Distribution groups
-- Shared mailboxes
+You can't use recipients that aren't security principals with this parameter. For example, the following types of recipients won't work:
 
-To verify that a recipient is a security principal, use the syntax `Get-Recipient -Identity <RecipientIdentity> | Select-Object IsValidSecurityPrincipal`.
+- Discovery mailboxes (DiscoveryMailbox)
+- Dynamic distribution groups (DynamicDistributionGroup)
+- Distribution groups (MailUniversalDistributionGroup)
+- Mail contacts (MailContact)
+- Mail-enabled public folders (PublicFolder)
+- Microsoft 365 Groups (GroupMailbox)
+- Resource mailboxes (RoomMailbox or EquipmentMailbox)
+- Shared mailboxes (SharedMailbox)
 
-If you need to scope the policy to shared mailboxes, you can add them to a mail enabled security group.
+If you need to scope the policy to shared mailboxes, you can add the shared mailboxes as members of a mail-enabled security group.
 
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -173,7 +175,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -189,7 +191,7 @@ The Description parameter specifies a description for the policy. If the value c
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -199,13 +201,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work on this cmdlet.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -219,11 +221,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

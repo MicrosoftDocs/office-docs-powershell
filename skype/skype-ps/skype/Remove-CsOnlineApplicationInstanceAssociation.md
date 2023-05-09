@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlineapplicationinstanceassociation
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlineapplicationinstanceassociation
 applicable: Skype for Business Online
 title: Remove-CsOnlineApplicationInstanceAssociation
 schema: 2.0.0
@@ -30,7 +30,7 @@ This is useful when you want to associate this application instance with another
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Remove-CsOnlineApplicationInstanceAssociation -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+Remove-CsOnlineApplicationInstanceAssociation -Identities "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
 ```
 
 This example removes the configuration association for the application instance that has the identity of "f7a821dc-2d69-5ae8-8525-bcb4a4556093".

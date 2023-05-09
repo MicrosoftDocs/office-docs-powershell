@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-publicfolderadministrativepermission
+online version: https://learn.microsoft.com/powershell/module/exchange/get-publicfolderadministrativepermission
 applicable: Exchange Server 2010
 title: Get-PublicFolderAdministrativePermission
 schema: 2.0.0
@@ -16,14 +16,13 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Get-PublicFolderAdministrativePermission cmdlet to get the administrative permissions for a public folder or a public folder hierarchy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- [-User <SecurityPrincipalIdParameter>]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-User <SecurityPrincipalIdParameter>]
  [-DomainController <Fqdn>]
  [-Server <ServerIdParameter>]
  [<CommonParameters>]
@@ -31,15 +30,14 @@ Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
 
 ### Owner
 ```
-Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter>
- [-Owner]
+Get-PublicFolderAdministrativePermission [-Identity] <PublicFolderIdParameter> [-Owner]
  [-DomainController <Fqdn>]
  [-Server <ServerIdParameter>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -101,7 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-The Owner parameter specifies that the command should return only the owner of the public folder.
+The Owner switch returns the owner of the public folder object. You don't need to specify a value with this switch.
+
+You can't use this switch with the User parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +138,26 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user for whom administrative permissions are sought.
+The User parameter filters the results by who has admin permissions on the specified public folder. You can specify the following types of users or groups (security principals) for this parameter:
+
+- Mailbox users
+- Mail users
+- Security groups
+
+You can use any value that uniquely identifies the user or group. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
+
+You can't use this parameter with the Owner switch.
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -158,12 +177,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

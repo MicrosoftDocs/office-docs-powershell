@@ -1,10 +1,9 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csexternalaccesspolicy
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+online version: https://learn.microsoft.com/powershell/module/skype/get-csexternalaccesspolicy
+applicable: Microsoft Teams, Skype for Business Online, Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsExternalAccessPolicy
 schema: 2.0.0
-manager: bulenteg
 author: tomkau
 ms.author: tomkau
 ms.reviewer: rogupta
@@ -14,9 +13,9 @@ ms.reviewer: rogupta
 
 ## SYNOPSIS
 Returns information about the external access policies that have been configured for use in your organization.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; and, 3) access Skype for Business Server over the Internet, without having to log on to your internal network.
-This cmdlet was introduced in Lync Server 2010.
+External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop); 3) access Skype for Business Server over the Internet, without having to log on to your internal network; and, 4) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Skype.
 
+This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
@@ -44,12 +43,15 @@ External access policies can grant (or revoke) the ability of your users to do a
 1. Communicate with people who have SIP accounts with a federated organization.
 Note that enabling federation alone will not provide users with this capability.
 Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
-2. Communicate with people who have SIP accounts with a public instant messaging service such as Windows Live.
+
+2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
+
 3. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
 This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
-The Get-CsExternalAccessPolicy cmdlet provides a way for you to return information about all of the external access policies that have been configured for use in your organization.
+4. Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
+The Get-CsExternalAccessPolicy cmdlet provides a way for you to return information about all of the external access policies that have been configured for use in your organization.
 
 ## EXAMPLES
 
@@ -61,7 +63,6 @@ Get-CsExternalAccessPolicy
 Example 1 returns a collection of all the external access policies configured for use in your organization.
 Calling the Get-CsExternalAccessPolicy cmdlet without any additional parameters always returns the complete collection of external access policies.
 
-
 ### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Online)
 ```
 Get-CsExternalAccessPolicy -Identity "tag:RedmondExternalAccessPolicy"
@@ -69,8 +70,6 @@ Get-CsExternalAccessPolicy -Identity "tag:RedmondExternalAccessPolicy"
 
 Example 2 uses the Identity parameter to return the external access policy that has the Identity tag:RedmondExternalAccessPolicy.
 Because access policy Identities must be unique, this command will never return more than one item.
-
-
 
 ### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
 ```
@@ -118,7 +117,6 @@ NOTE: The ApplicableTo parameter can only be used with Skype for Business Online
 
 NOTE: This command requires the Office 365 UsageLocation property to be configured for the user's Active Directory user account.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -150,17 +148,15 @@ Accept wildcard characters: False
 **Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables you to do a wildcard search for external access policies.
-For example, to find all the policies configured at the site scope, use this Filter: 
+For example, to find all the policies configured at the site scope, use this Filter:
 
 `site:*`
 
-To find the per-user policies Seattle, Seville, and Saskatoon (all of which start with the letter "S") use this Filter: 
+To find the per-user policies Seattle, Seville, and Saskatoon (all of which start with the letter "S") use this Filter:
 
 `"S*".`
 
 Note that the Filter parameter can only be applied to the policy Identity.
-
-
 
 **Below Content Applies To:** Skype for Business Online
 
@@ -174,8 +170,6 @@ To find the per-user policies Seattle, Seville, and Saskatoon (all of which star
 `"tag:S*"`
 
 Note that the Filter parameter can only be applied to the policy Identity.
-
-
 
 ```yaml
 Type: String
@@ -270,19 +264,15 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
 ### Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy
 
-
 ## NOTES
-
 
 ## RELATED LINKS
 
@@ -293,4 +283,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
 [Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
-

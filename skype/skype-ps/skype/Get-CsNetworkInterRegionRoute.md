@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csnetworkinterregionroute
+online version: https://learn.microsoft.com/powershell/module/skype/get-csnetworkinterregionroute
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsNetworkInterRegionRoute
 schema: 2.0.0
@@ -151,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsNetworkInterRegionRoute](Remove-CsNetworkInterRegionRoute.md)
 
 [Set-CsNetworkInterRegionRoute](Set-CsNetworkInterRegionRoute.md)
-

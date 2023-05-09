@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroute
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinevoiceroute
+applicable: Microsoft Teams
 title: Remove-CsOnlineVoiceRoute
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,7 +17,7 @@ Removes an online voice route. Online voice routes contain instructions that tel
 
 ## SYNTAX
 ```
-Remove-CsOnlineVoiceRoute [-Tenant <Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm]
+Remove-CsOnlineVoiceRoute [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,56 +64,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Suppresses any confirmation prompts that would otherwise be displayed before making changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The unique identity of the online voice route. (If the route name contains a space, such as Test Route, you must enclose the full string in parentheses.)
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: ByPropertyName
 Accept wildcard characters: False
 ```
 
@@ -139,9 +101,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity
-
-
 ## OUTPUTS
 
 ### System.Object
@@ -149,8 +108,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
+[Get-CsOnlineVoiceRoute](get-csonlinevoiceroute.md)
 
-[New-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroute?view=skype-ps)
+[New-CsOnlineVoiceRoute](new-csonlinevoiceroute.md)
 
-[Set-CsOnlineVoiceRoute](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroute?view=skype-ps)
+[Set-CsOnlineVoiceRoute](set-csonlinevoiceroute.md)

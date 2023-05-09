@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsmeetingbroadcastpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsmeetingbroadcastpolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsMeetingBroadcastPolicy
 schema: 2.0.0
 manager: bulenteg

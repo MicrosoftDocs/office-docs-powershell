@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-authserver
+online version: https://learn.microsoft.com/powershell/module/exchange/set-authserver
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-AuthServer
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-AuthServer cmdlet to configure an authorization server that partner applications can use to obtain tokens recognized by Microsoft Exchange.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,6 +27,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf]
@@ -41,6 +42,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf]
@@ -53,6 +55,7 @@ Set-AuthServer [-Identity] <AuthServerIdParameter>
  [-RefreshAuthMetadata]
  [-Confirm]
  [-DomainController <Fqdn>]
+ [-DomainName <MultiValuedProperty>]
  [-Enabled <Boolean>]
  [-Name <String>]
  [-WhatIf]
@@ -64,7 +67,7 @@ Partner applications authorized by Exchange can access their resources after the
 
 Use the Set-AuthServer cmdlet to enable or disable the authorization server, change the AuthMetadataUrl parameter or refresh authorization metadata.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -148,6 +151,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DomainName
+This parameter is available only in Exchange Server 2016 (CU18 or higher) and Exchange Server 2019 (CU7 or higher).
+
+The DomainName parameter specifies the tenant domain that's linked with the AuthServer object. This parameter usess the syntax: "tenantname.onmicrosoft.com".
+
+This parameter is used to link Tenant to the corresponding authserver object in the  Multi-Tenant Exchange Hybrid. For example, if DomainName is contoso.onmicrosoft.com, then the AuthServer object will be associated with the contoso tenant.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Enabled
 The Enabled parameter specifies whether the authorization server is enabled. Only enabled authorization servers can issue and accept tokens. Disabling the authorization server prevents any partner applications configured to use the authorization server from getting a token.
 
@@ -222,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate switch specifies whether Exchange should accept certificates from an untrusted certification authority. You don't need to specify a value with this switch.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
 
 We don't recommend using this switch in a production environment.
 
@@ -260,12 +283,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

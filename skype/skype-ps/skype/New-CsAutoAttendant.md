@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/skype/new-csautoattendant
 applicable: Skype for Business Online
 title: New-CsAutoAttendant
 schema: 2.0.0
@@ -27,7 +27,8 @@ Each AA can be associated with phone numbers that allow callers to reach specifi
 
 You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.
 
-**NOTE**
+**NOTES**:
+
 - To setup your AA for calling, you need to create an application instance first using `New-CsOnlineApplicationInstance` cmdlet , then associate it with your AA configuration using `New-CsOnlineApplicationInstanceAssociation` cmdlet.
 - The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
 - Holiday call flows have higher priority than after-hours call flows. Thus, if a holiday schedule and an after-hours schedule are both in effect at a particular time, the call flow corresponding to the holiday call flow will be rendered.
@@ -38,7 +39,7 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
+$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).Identity
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
 $greetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
@@ -75,7 +76,7 @@ This example creates a new AA named _Main auto attendant_ that has the following
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
+$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).Identity
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
 $dcfGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
@@ -126,7 +127,7 @@ $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -Date
 # Create First Auto Attendant
 $dcfGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso Customer Support!"
 $dcfMenuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
-$dcfMenu=New-CsAutoAttendantMenu -Name "Default menu" -Prompts @($dcfMenuPrompt) -EnableDialByName
+$dcfMenu = New-CsAutoAttendantMenu -Name "Default menu" -Prompts @($dcfMenuPrompt) -EnableDialByName -DirectorySearchMethod ByName
 $defaultCallFlow = New-CsAutoAttendantCallFlow -Name "Default call flow" -Greetings @($dcfGreetingPrompt) -Menu $dcfMenu
 
 $christmasGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
@@ -158,7 +159,7 @@ New-CsAutoAttendant -Name "Customer Support Auto Attendant" -DefaultCallFlow $de
 # Create Second Auto Attendant
 $dcfGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso Store!"
 $dcfMenuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
-$dcfMenu=New-CsAutoAttendantMenu -Name "Default menu" -Prompts @($dcfMenuPrompt) -EnableDialByName
+$dcfMenu = New-CsAutoAttendantMenu -Name "Default menu" -Prompts @($dcfMenuPrompt) -EnableDialByName -DirectorySearchMethod ByName
 $defaultCallFlow = New-CsAutoAttendantCallFlow -Name "Default call flow" -Greetings @($dcfGreetingPrompt) -Menu $dcfMenu
 
 $christmasGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
@@ -213,9 +214,9 @@ $greetingText = "Welcome to Contoso"
 $mainMenuText = "To reach your party by name, say it now. To talk to Sales, please press 1. To talk to User2 press 2. Please press 0 for operator"
 $afterHoursText = "Sorry Contoso is closed. Please call back during week days from 7AM to 8PM. Goodbye!"
 $tz = "Romance Standard Time"
-$operatorId = (Get-CsOnlineUser -Identity "sip:user1@contoso.com").ObjectId
-$user1Id = (Get-CsOnlineUser -Identity "sip:user2@contoso.com").ObjectId
-$salesCQappinstance = (Get-CsOnlineUser -Identity "sales@contoso.com").ObjectId # one of the application instances associated to the Call Queue
+$operatorId = (Get-CsOnlineUser -Identity "sip:user1@contoso.com").Identity
+$user1Id = (Get-CsOnlineUser -Identity "sip:user2@contoso.com").Identity
+$salesCQappinstance = (Get-CsOnlineUser -Identity "sales@contoso.com").Identity # one of the application instances associated to the Call Queue
 $tr1 = New-CsOnlineTimeRange -Start 07:00 -End 20:00
 
 # After hours
@@ -392,8 +393,8 @@ The VoiceId parameter represents the voice that is used to read text-to-speech (
 You can query the supported voices by using the `Get-CsAutoAttendantSupportedLanguage` cmdlet. You can determine the default voice for a language by issuing the following command:
 
 ```
-$language = Get-CsAutoAttendantSupportedLanguage -Identity "en-US"`
-$defaultVoice = $language.Voices[0].Gender
+$language = Get-CsAutoAttendantSupportedLanguage -Identity "en-US"
+$defaultVoice = $language.Voices[0].Id
 ```
 
 ```yaml

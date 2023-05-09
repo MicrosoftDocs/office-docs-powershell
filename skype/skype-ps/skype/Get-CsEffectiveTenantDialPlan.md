@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cseffectivetenantdialplan
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-cseffectivetenantdialplan
+applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsEffectiveTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -18,14 +18,13 @@ Use the Get-CsEffectiveTenantDialPlan cmdlet to retrieve an effective tenant dia
 ## SYNTAX
 
 ```
-Get-CsEffectiveTenantDialPlan [-Identity] <UserIdParameter> [-OU <OUIdParameter>] [-DomainController <Fqdn>]
- [-Credential <PSCredential>] [-ResultSize <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-CsEffectiveTenantDialPlan [-Identity] <UserIdParameter> [-OU <OUIdParameter>] [-ResultSize <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Get-CsEffectiveTenantDialPlan cmdlet returns information about the effective tenant dial plan in an organization.
-The returned effective Tenant Dial Plan contains the Identity and the Normalization rules that are effective for the user while using the EnterpriseVoice features.
-The Identity is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
+The returned effective Tenant Dial Plan contains the EffectiveTenantDialPlanName and the Normalization rules that are effective for the user while using 
+the EnterpriseVoice features. The EffectiveTenantDialPlanName is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
 
 ## EXAMPLES
 
@@ -34,19 +33,19 @@ The Identity is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
 Get-CsEffectiveTenantDialPlan -Identity Vt1_User1
 ```
 
-This example gets the effective tenant dial plan for the Vt1_User1 organization.
+This example gets the effective tenant dial plan for the Vt1_User1.
 
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter is the unique identifier of the tenant dial plan to retrieve.
+The Identity parameter is the unique identifier of the user for whom to retrieve the effective tenant dial plan.
 
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -62,41 +61,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Credential
-The Credential parameter specifies the user name and password that's used to run this command.
-Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-Specifies the domain controller that's used by the cmdlet to read or write the specified data.
-Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -106,6 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -OU
+**Note:** This parameter is not supported in Teams PowerShell Module version 3.0.0 or later.
+
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory.
 Only objects that exist in the specified location are returned.
 
@@ -123,6 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
+**Note:** This parameter is not supported in Teams PowerShell Module version 3.0.0 or later.
+
 Specifies the number of records returned by the cmdlet.
 The result size can be set to any whole number between 0 and 2147483647, inclusive.
 If set to 0, the command will run, but no data will be returned.
@@ -148,7 +117,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -171,4 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-

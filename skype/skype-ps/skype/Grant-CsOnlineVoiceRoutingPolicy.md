@@ -1,32 +1,35 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy
+applicable: Microsoft Teams
 title: Grant-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Grant-CsOnlineVoiceRoutingPolicy
 
 ## SYNOPSIS
-Assigns a per-user online voice routing policy to one or more users. Online voice routing policies manage online PSTN usages for Phone System users.
+Assigns a per-user online voice routing policy to one user, a group of users, or sets the Global policy instance. Online voice routing policies manage online PSTN usages for Phone System users.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Grant-CsOnlineVoiceRoutingPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsOnlineVoiceRoutingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsOnlineVoiceRoutingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsOnlineVoiceRoutingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsOnlineVoiceRoutingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,86 +39,48 @@ Note that simply assigning a user an online voice routing policy will not enable
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-PS C:\> Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName "RedmondOnlineVoiceRoutingPolicy"
-```
-
-The command shown in Example 1 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to the user with the display name "Ken Myer".
-
-### -------------------------- Example 2 --------------------------
-```
-PS C:\> Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName $Null
+### Example 1
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -Identity Ken.Myer@contoso.com -PolicyName "RedmondOnlineVoiceRoutingPolicy"
 ```
 
-In Example 2, any per-user online voice routing policy previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global online voice routing policy. To unassign a per-user policy, set the PolicyName to a null value ($Null).
+The command shown in Example 1 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to the user ken.myer@contoso.com.
 
-### -------------------------- Example 3 --------------------------
-```
-PS C:\> Get-CsOnlineUser | Grant-CsOnlineVoiceRoutingPolicy -PolicyName "RedmondOnlineVoiceRoutingPolicy"
-```
-
-Example 3 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Skype for Business Online. Those user accounts are then piped to the `Grant-CsOnlineVoiceRoutingPolicy` cmdlet, which assigns each user the online voice routing policy RedmondOnlineVoiceRoutingPolicy.
-
-### -------------------------- Example 4 --------------------------
-```
-PS C:\> Grant-CsOnlineVoiceRoutingPolicy -PolicyName "RedmondOnlineVoiceRoutingPolicy" -Global
+### Example 2
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -Identity Ken.Myer@contoso.com -PolicyName $Null
 ```
 
-Example 4 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant, except any that have an explicit policy assignment.
+In Example 2, any per-user online voice routing policy previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global online voice routing policy. To unassign a per-user policy, set the PolicyName to a null value ($null).
+
+### Example 3
+```powershell
+Get-CsOnlineUser | Grant-CsOnlineVoiceRoutingPolicy -PolicyName "RedmondOnlineVoiceRoutingPolicy"
+```
+
+Example 3 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Microsoft Teams or Skype for Business Online. Those user accounts are then piped to the `Grant-CsOnlineVoiceRoutingPolicy` cmdlet, which assigns each user the online voice routing policy RedmondOnlineVoiceRoutingPolicy.
+
+### Example 4
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -PolicyName "RedmondOnlineVoiceRoutingPolicy" -Global
+```
+
+Example 4 assigns the per-user online voice routing policy RedmondOnlineVoiceRoutingPolicy as the global online voice routing policy. This affects all the users in the tenant, except any that have an explicit policy assignment.
+
+### Example 5
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -Group sales@contoso.com -Rank 10 -PolicyName "RedmondOnlineVoiceRoutingPolicy"
+```
+
+Example 5 assigns the online voice routing policy RedmondOnlineVoiceRoutingPolicy to all members of the group sales@contoso.com.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. To skip a warning when you do this operation, specify this parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: GrantToTenant
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
-Indicates the Identity of the user account to be assigned the per-user online voice routing policy. User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
+Indicates the Identity of the user account to be assigned the per-user online voice routing policy. User Identities can be specified using one of the following formats: the user's SIP address, the user's user principal name (UPN), or the user's Active Directory display name (for example, Ken Myer).
 
 ```yaml
-Type: UserIdParameter
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -142,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-"Name" of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; likewise, a policy with the Identity tag:RedmondOnlineVoiceRoutingPolicy has a PolicyName equal to RedmondOnlineVoiceRoutingPolicy.
+Name of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; likewise, a policy with the Identity tag:RedmondOnlineVoiceRoutingPolicy has a PolicyName equal to RedmondOnlineVoiceRoutingPolicy.
 
 To unassign a per-user policy previously assigned to a user, set the PolicyName to a null value ($Null).
 
@@ -158,20 +123,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose online voice routing policy is being assigned. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+### -Global
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. To skip a warning when you do this operation, specify this parameter.
 
 ```yaml
-Type: System.Guid
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: False
@@ -197,14 +184,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-### Microsoft.Rtc.Management.AD.UserIdParameter
-
 
 ## OUTPUTS
 
@@ -212,11 +210,13 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## NOTES
 
+The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
+[New-CsOnlineVoiceRoutingPolicy](new-csonlinevoiceroutingpolicy.md)
 
-[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
+[Get-CsOnlineVoiceRoutingPolicy](get-csonlinevoiceroutingpolicy.md)
 
-[Set-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroutingpolicy?view=skype-ps)
+[Set-CsOnlineVoiceRoutingPolicy](set-csonlinevoiceroutingpolicy.md)
 
-[Remove-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroutingpolicy?view=skype-ps)
+[Remove-CsOnlineVoiceRoutingPolicy](remove-csonlinevoiceroutingpolicy.md)

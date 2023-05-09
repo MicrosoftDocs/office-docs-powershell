@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csmeetingconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsMeetingConfiguration
 schema: 2.0.0
@@ -125,11 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdmitAnonymousUsersByDefault
-Determines whether meetings will, by default, allow attendance by anonymous users (that is, by unauthenticated users) or by federated users (authenticated users from other tenants).
-Set this value to True if you would like new meetings to allow for attendance by anonymous users or federated users by default.
-Set this value to False if you would prefer that, by default, new meetings do not allow for attendance by anonymous users or federated users. When set to False, anonymous and federated users will be placed in the lobby of a meeting when trying to join it. After being placed in the lobby, they can be admitted by any presenter in the meeting.
-When this value is changed, the change will only apply to new meetings and it will not applied to meetings already scheduled.
-The default value is True.
+Determines whether meetings will, by default, allow attendance by anonymous users (that is, unauthenticated users). Set this value to True if you would like new meetings to allow for attendance by anonymous users by default. Set this value to False if you would prefer that, by default, new meetings do not allow for attendance by anonymous users. The default value is True.
 
 ```yaml
 Type: Boolean

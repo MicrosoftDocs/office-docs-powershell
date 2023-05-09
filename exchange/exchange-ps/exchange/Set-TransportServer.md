@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-transportserver
+online version: https://learn.microsoft.com/powershell/module/exchange/set-transportserver
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-TransportServer
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-TransportServer cmdlet to modify settings that are associated with the Hub Transport server role or the Edge Transport server role.
 
-Note: In Exchange 2013 or later, use the Set-TransportService cmdlet instead. If you have scripts that use Set-TransportServer, update them to use Set-TransportService.
+**Note**: In Exchange 2013 or later, use the Set-TransportService cmdlet instead. If you have scripts that use Set-TransportServer, update them to use Set-TransportService.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -42,7 +42,6 @@ Set-TransportServer [-Identity] <ServerIdParameter>
  [-ConnectivityLogPath <LocalLongFullPath>]
  [-ContentConversionTracingEnabled <Boolean>]
  [-DelayNotificationTimeout <EnhancedTimeSpan>]
- [-DeltaSyncClientCertificateThumbprint <String>]
  [-DnsLogEnabled <Boolean>]
  [-DnsLogMaxAge <EnhancedTimeSpan>]
  [-DnsLogMaxDirectorySize <Unlimited>]
@@ -54,13 +53,6 @@ Set-TransportServer [-Identity] <ServerIdParameter>
  [-ExternalDNSProtocolOption <ProtocolOption>]
  [-ExternalDNSServers <MultiValuedProperty>]
  [-ExternalIPAddress <IPAddress>]
- [-HttpProtocolLogEnabled <Boolean>]
- [-HttpProtocolLogFilePath <LocalLongFullPath>]
- [-HttpProtocolLogLoggingLevel <ProtocolLoggingLevel>]
- [-HttpProtocolLogMaxAge <EnhancedTimeSpan>]
- [-HttpProtocolLogMaxDirectorySize <ByteQuantifiedSize>]
- [-HttpProtocolLogMaxFileSize <ByteQuantifiedSize>]
- [-HttpTransportSyncProxyServer <String>]
  [-InternalDNSAdapterEnabled <Boolean>]
  [-InternalDNSAdapterGuid <Guid>]
  [-InternalDNSProtocolOption <ProtocolOption>]
@@ -72,11 +64,9 @@ Set-TransportServer [-Identity] <ServerIdParameter>
  [-IrmLogMaxDirectorySize <Unlimited>]
  [-IrmLogMaxFileSize <ByteQuantifiedSize>]
  [-IrmLogPath <LocalLongFullPath>]
- [-MaxActiveTransportSyncJobsPerProcessor <Int32>]
  [-MaxConcurrentMailboxDeliveries <Int32>]
  [-MaxConcurrentMailboxSubmissions <Int32>]
  [-MaxConnectionRatePerMinute <Int32>]
- [-MaxNumberOfTransportSyncAttempts <Int32>]
  [-MaxOutboundConnections <Unlimited>]
  [-MaxPerDomainOutboundConnections <Unlimited>]
  [-MessageExpirationTimeout <EnhancedTimeSpan>]
@@ -132,7 +122,7 @@ Set-TransportServer [-Identity] <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -257,7 +247,12 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveUserStatisticsLogPath
-The ActiveUserStatisticsLogPath parameter specifies the location of per user activity statistics log storage. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ActiveUsersStats. Setting the value of this parameter to $null disables server statistics logging.
+The ActiveUserStatisticsLogPath parameter specifies the location of per user activity statistics log storage. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ActiveUsersStats.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ActiveUsersStats.
+
+Setting the value of this parameter to $null disables server statistics logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -510,7 +505,12 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogPath
-The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Connectivity. Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
+The ConnectivityLogPath parameter specifies the default connectivity log directory location. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Connectivity
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Connectivity.
+
+Setting the value of this parameter to $null disables connectivity logging. However, setting this parameter to $null when the value of the ConnectivityLogEnabled attribute is $true generates event log errors.
 
 ```yaml
 Type: LocalLongFullPath
@@ -744,9 +744,9 @@ Accept wildcard characters: False
 ### -ExternalDNSServers
 The ExternalDNSServers parameter specifies the list of external DNS servers that the server queries when resolving a remote domain. DNS servers are specified by IP address. The default value is an empty list ({}).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the value of the ExternalDNSAdapterEnabled parameter is set to $true, the ExternalDNSServers parameter and its list of DNS servers isn't used.
 
@@ -834,9 +834,9 @@ Accept wildcard characters: False
 ### -InternalDNSServers
 The InternalDNSServers parameter specifies the list of DNS servers that should be used when resolving a domain name. DNS servers are specified by IP address. The default value is any empty list ({}).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the InternalDNSAdapterGuid parameter is set, and the value of the InternalDNSAdapterEnabled parameter is set to $true, the InternalDNSServers parameter and its list of DNS servers isn't used.
 
@@ -1359,7 +1359,16 @@ Accept wildcard characters: False
 ```
 
 ### -PipelineTracingPath
-The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\PipelineTracing. The path must be local to the Exchange computer. Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter. Pipeline tracing captures the complete contents of  messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
+The PipelineTracingPath parameter specifies the location of the pipeline tracing logs. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\PipelineTracing.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\PipelineTracing.
+
+The path must be local to the Exchange server.
+
+Setting the value of this parameter to $null disables pipeline tracing. However, setting this parameter to $null when the value of the PipelineTracingEnabled attribute is $true generates event log errors. The preferred method to disable pipeline tracing is to use the PipelineTracingEnabled parameter.
+
+Pipeline tracing captures the complete contents of  messages to the path specified by the PipelineTracingPath parameter. Make sure that you restrict access to this directory. The permissions required on the directory specified by the PipelineTracingPath parameter are as follows:
 
 - Administrators: Full Control
 - Network Service: Full Control
@@ -1615,7 +1624,12 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogPath
-The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpReceive. Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
+The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ProtocolLog\\SmtpReceive.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpReceive.
+
+Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1727,7 +1741,12 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogPath
-The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Routing. Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
+The RoutingTableLogPath parameter specifies the directory location where routing table log files should be stored. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Routing.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\Routing.
+
+Setting the value of the RoutingTableLogPath parameter to $null disables routing table logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1819,7 +1838,12 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogPath
-The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpSend. Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
+The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ProtocolLog\\SmtpSend.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpSend.
+
+Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
 
 ```yaml
 Type: LocalLongFullPath
@@ -1835,7 +1859,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxAge
-This parameter has been deprecated and is no longer used.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxAge parameter specifies the maximum duration that the server statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -1857,7 +1881,19 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxDirectorySize
-This parameter has been deprecated and is no longer used.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+
+The ServerStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the server statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB. When you enter a value, qualify the value with one of the following:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are treated as bytes.
+
+The value of the ServerStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ServerStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log directory.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1873,7 +1909,19 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxFileSize
-This parameter has been deprecated and is no longer used.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+
+The ServerStatisticsLogMaxFileSize parameter specifies the maximum file size for the server statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are treated as bytes.
+
+The value of the ServerStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ServerStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log files.
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1889,7 +1937,14 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogPath
-This parameter has been deprecated and is no longer used.
+This parameter is functional only in Exchange Server 2010 and Exchange 2013 CU6 or earlier.
+
+The ServerStatisticsLogPath parameter specifies the location of the server statistics log. The default location depends on your version of Exchange:
+
+- Exchange 2010: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\ServerStats.
+- Exchange 2013 or later: The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ServerStats.
+
+Setting the value of this parameter to $null disables server statistics logging.
 
 ```yaml
 Type: LocalLongFullPath
@@ -2045,12 +2100,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

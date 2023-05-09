@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csweblink
+online version: https://learn.microsoft.com/powershell/module/skype/new-csweblink
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsWebLink
 schema: 2.0.0
@@ -137,4 +137,3 @@ Creates new instances of the Microsoft.Rtc.Management.WriteableConfig.Settings.W
 ## NOTES
 
 ## RELATED LINKS
-

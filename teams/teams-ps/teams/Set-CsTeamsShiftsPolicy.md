@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/set-teamsshiftspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-teamsshiftspolicy
 schema: 2.0.0
 ---
 
@@ -9,25 +9,27 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance, including user's shift based presence and Teams off shift warning message-specific settings.
+This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance, including Teams off shift warning message-specific settings.
 
 ## SYNTAX
 
 ```
-Set-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [-EnableShiftPresence <Boolean>] [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [<CommonParameters>]
+Set-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [-EnableScheduleOwnerPermissions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance. Use this to set the policy name, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance. Use this to set the policy name and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+
 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage -EnableShiftPresence $true -ShiftNoticeMessageType Message1 -ShiftNoticeFrequency always -AccessGracePeriodMinutes 5
+PS C:\> Set-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage -ShiftNoticeMessageType Message1 -ShiftNoticeFrequency always -AccessGracePeriodMinutes 5
 ```
-In this example, the policy instance is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage", Shift based presence is enabled (On Shift, Off Shift), a warning message (Message 1) will be always be displayed to the user on opening Teams during off shift hours.
+In this example, the policy instance is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage", a warning message (Message 1) will always be displayed to the user on opening Teams during off shift hours.
+
 
 ## PARAMETERS
 
@@ -64,21 +66,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableShiftPresence
-Indicates whether a user is given shift-based presence (On shift, Off shift, or Busy). This must be set in order to have any off shift warning message-specific settings.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ShiftNoticeMessageType
 The warning message is shown in the blocking dialog when a user access Teams off shift hours. Select one of 7 Microsoft provided messages, a default message or a custom message. 
 'Message1' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. By accepting, you acknowledge that your use of Teams while off shift is not authorized and you will not be compensated.
@@ -86,7 +73,7 @@ The warning message is shown in the blocking dialog when a user access Teams off
 'Message3' - You won't be compensated for time using Teams. By accepting, you acknowledge that you understand the statement above.
 'Message4' - You're not authorized to use Teams while off shift. By accepting, you acknowledge your use of Teams is against your employer's policy.
 'Message5' - Access to Teams is turned off during non-working hours. You will be able to access the app when your next shift starts.
-'Message6' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. Access to corporate resources are only allowed during approved working hours and should be recorded as hours worked in your employer’s timekeeping system.
+'Message6' - Your employer does not authorize or approve of the use of its network, applications, systems, or tools by non-exempt or hourly employees during their non-working hours. Access to corporate resources are only allowed during approved working hours and should be recorded as hours worked in your employer's timekeeping system.
 'Message7' - Your employer has turned off access to Teams during non-working hours. Refer to your employer's guidelines on using this app outside working hours.
 'DefaultMessage' - You aren't authorized to use Microsoft Teams during non-working hours and will only be compensated for using it during approved working hours.
 'CustomMessage'
@@ -146,6 +133,21 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableScheduleOwnerPermissions
+Indicates whether a user can manage a Shifts schedule as a team member.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

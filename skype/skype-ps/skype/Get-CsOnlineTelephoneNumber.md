@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinetelephonenumber
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinetelephonenumber
 applicable: Skype for Business Online
 title: Get-CsOnlineTelephoneNumber
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
 
+**Note**: This cmdlet has been deprecated. Use the new [Get-CsPhoneNumberAssignment](/powershell/module/teams/get-csphonenumberassignment) cmdlet instead. For Microsoft 365 GCC High and DoD cloud instances use the new [Get-CshybridTelephoneNumber](/powershell/module/teams/get-cshybridtelephonenumber) cmdlet instead.
+
 ## SYNTAX
 
 ```
@@ -22,8 +24,24 @@ Get-CsOnlineTelephoneNumber [-ActivationState <String>] [-Assigned <MultiValuedP
 ```
 
 ## DESCRIPTION
-Here is an example of the output of the `Get-CsOnlineTelephoneNumber` cmdlet.
+Use the `Get-CsOnlineTelephoneNumber` to retrieve telephone numbers from the Business Voice Directory.
+Note: By default the result size is limited to 500 items, specify a higher result size using ResultSize parameter.
 
+## EXAMPLES
+
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
+```
+
+This example gets the attributes of a specific phone number.
+
+### -------------------------- Example 2 --------------------------
+```
+PS C:\> Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
+```
+
+```output
 RunspaceId : f90303a9-c6a8-483c-b3b3-a5b8cdbab19c
 
 ActivationState : Activated
@@ -57,20 +75,6 @@ UserId :
 IsManagedByServiceDesk : True
 
 PortInOrderStatus :
-
-
-## EXAMPLES
-
-### -------------------------- Example 1 --------------------------
-```
-PS C:\> Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
-```
-
-This example gets the attributes of a specific phone number.
-
-### -------------------------- Example 2 --------------------------
-```
-PS C:\> Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
 ```
 
 This example gets the phone numbers with the city code designating New York, New York.
@@ -189,9 +193,11 @@ Accept wildcard characters: False
 Specifies the target telephone number type for the cmdlet.
 Acceptable values are:
 
-* "Service" for numbers assigned to conferencing support.
+* "Service" for numbers assigned to conferencing support, call queue or auto attendant.
 
 * "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
+
+The values for the InventoryType parameter are case-sensitive.
 
 ```yaml
 Type: MultiValuedProperty
@@ -345,4 +351,4 @@ An instance or array of the objects.
 ## NOTES
 
 ## RELATED LINKS
-[Remove-CsOnlineTelephoneNumber](https://docs.microsoft.com/powershell/module/skype/remove-csonlinetelephonenumber?view=skype-ps)
+[Remove-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/skype/remove-csonlinetelephonenumber?view=skype-ps)

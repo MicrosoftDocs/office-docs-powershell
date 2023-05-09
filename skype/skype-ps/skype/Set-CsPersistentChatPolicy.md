@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cspersistentchatpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchatpolicy
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Set-CsPersistentChatPolicy
 schema: 2.0.0
@@ -235,4 +235,3 @@ Instead, the `Set-CsPersistentChatPolicy` cmdlet modifies existing instances of 
 [New-CsPersistentChatPolicy](New-CsPersistentChatPolicy.md)
 
 [Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)
-

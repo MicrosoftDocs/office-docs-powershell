@@ -30,7 +30,7 @@ landingContent:
             url: /powershell/exchange/exchange-management-shell
           - text: Exchange Online PowerShell
             url: /powershell/exchange/exchange-online-powershell
-          - text: Security & Compliance Center PowerShell
+          - text: Security & Compliance PowerShell
             url: /powershell/exchange/scc-powershell
           - text: Exchange Online Protection PowerShell
             url: /powershell/exchange/exchange-online-protection-powershell

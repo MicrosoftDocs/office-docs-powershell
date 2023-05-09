@@ -1,25 +1,24 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineliswirelessaccesspoint
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineliswirelessaccesspoint
+applicable: Microsoft Teams
 title: Set-CsOnlineLisWirelessAccessPoint
 schema: 2.0.0
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Set-CsOnlineLisWirelessAccessPoint
 
 ## SYNOPSIS
-Creates a Location Information Server (LIS) wireless access point (WAP), creates an association between a WAP and a location (creating a new location if that location doesn't exist), or modifies an existing WAP and its associated location. The association between a WAP and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
+Creates a Location Information Server (LIS) wireless access point (WAP), creates an association between a WAP and a location, or modifies an existing WAP and its associated location. The association between a WAP and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 
 ## SYNTAX
 
 ```
-Set-CsOnlineLisWirelessAccessPoint [[-TenantId] <Guid>] [-BSSID] <String> -LocationId <Guid>
- [-Description <String>] [-IsDebug <Boolean>] [-TargetStore <String>] [-NCSApiUrl <String>] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CsOnlineLisWirelessAccessPoint [-BSSID] <string> -LocationId <guid> [-Description <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>]
+ [-TargetStore <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,56 +30,48 @@ If a BSSID with wildcard format is already existing, the request for adding one 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
-Set-CsOnlineLisWirelessAccessPoint -BSSID 0B-23-CD-16-AA-CC -Description "LIS WAP with BSS ID 0B-23-CD-16-AA-CC" -LocationId d26a4935-5997-4bcf-b0db-6ae5a88805fd
-```
-
-Example 1 creates the Location Information Server (LIS) wireless access point with Chassis ID "0B-23-CD-16-AA-CC", associated with location ID d26a4935-5997-4bcf-b0db-6ae5a88805fd.
-
-### -------------------------- Example 2 --------------------------
-```
-Set-CsOnlineLisWirelessAccessPoint -BSSID 00-22-C4-17-BB-A* -Description "LIS WAP with BSS ID 00-22-C4-17-BB-A*" -LocationId ca5c581e-5006-499a-a5b3-cd8c2384cc9a
+Set-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-23 -Description "USWAP1" -LocationId d7714269-ee52-4635-97b0-d7c228801d24
 ```
 
-Example 2 creates the Location Information Server (LIS) wireless access point with Chassis ID "00-22-C4-17-BB-A*", associated with location ID ca5c581e-5006-499a-a5b3-cd8c2384cc9a. BSSID "00-22-C4-17-BB-A*" is in wildcard format which equivalents to adding all BSSIDs with the same LocationID in the range "00-22-C4-17-BB-A[0-9A-F]]"
+Example 1 creates the wireless access point with BSSID "F0-6E-0B-C2-03-23", associated with location ID d7714269-ee52-4635-97b0-d7c228801d24.
 
-### -------------------------- Example 3 --------------------------
+### Example 2
 ```
-Set-CsOnlineLisWirelessAccessPoint -BSSID 0F-27-5B-C7-FF-* -Description "LIS WAP with BSS ID 0F-27-5B-C7-FF-*" -LocationId 4d7357dd-7078-4907-8dfa-658c1811f109
+Set-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-04-* -LocationId b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a -Description 'SEWAPs'
 ```
 
-Example 3 creates the Location Information Server (LIS) wireless access point with Chassis ID "0F-27-5B-C7-FF-*", associated with location ID 4d7357dd-7078-4907-8dfa-658c1811f109. BSSID "0F-27-5B-C7-FF-*" is in wildcard format which equivalents to adding all BSSIDs with the same LocationID in the range "00-22-C4-17-BB-[0-9A-F][0-9A-F]]"
-
+Example 2 creates the wireless access point with Chassis ID "F0-6E-0B-C2-04-*", associated with location ID b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a. BSSID "F0-6E-0B-C2-04-*" is in wildcard format which is equivalent to adding all BSSIDs with the same LocationID in the range "F0-6E-0B-C2-04-[0-9A-F][0-9A-F]".
 
 ## PARAMETERS
 
 ### -BSSID
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -LocationId
+The name for this location.
 
 ```yaml
-Type: SwitchParameter
+Type: Guid
 Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
+Aliases:
+Applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -94,7 +85,7 @@ Specifies the administrator defined description of the WAP.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -112,7 +103,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -128,25 +119,9 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocationId
-The name for this location.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -160,7 +135,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -176,7 +151,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -185,17 +160,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TenantId
-This parameter is reserved for internal Microsoft use.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Aliases: cf
+Applicable: Microsoft Teams
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -209,7 +184,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -221,24 +196,20 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
-
-
-### System.Guid
-
 
 ### System.String
 
+### System.Guid
 
 ## OUTPUTS
 
-
 ### System.Object
-
 
 ## NOTES
 
-
 ## RELATED LINKS
 
+[Get-CsOnlineLisWirelessAccessPoint](Get-CsOnlineLisWirelessAccessPoint.md)
+
+[Remove-CsOnlineLisWirelessAccessPoint](Remove-CsOnlineLisWirelessAccessPoint.md)

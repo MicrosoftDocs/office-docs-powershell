@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsclientconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsclientconfiguration
 applicable: Skype for Business Online
 Module Name: Skype for Business Online
 title: Set-CsTeamsClientConfiguration
@@ -21,23 +21,23 @@ The TeamsClientConfiguration allows IT admins to control the settings that can b
 ### Identity (Default)
 ```
 Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <Boolean>]
- [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
+ [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>] [-AllowRoleBasedChatPermissions <Boolean>]
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] 
+ [<CommonParameters>] 
 ```
 
 ### Instance
 ```
 Set-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-AllowEmailIntoChannel <Boolean>]
- [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>]
+ [-RestrictedSenderList <String>] [-AllowDropBox <Boolean>] [-AllowEgnyte <Boolean>] [-AllowBox <Boolean>] [-AllowGoogleDrive <Boolean>] [-AllowRoleBasedChatPermissions <Boolean>]
  [-AllowShareFile <Boolean>] [-AllowOrganizationTab <Boolean>] [-AllowSkypeBusinessInterop <Boolean>]
  [-AllowTBotProactiveMessaging <Boolean>] [-ContentPin <String>] [-AllowResourceAccountSendMessage <Boolean>]
  [-ResourceAccountContentAccess <String>] [-AllowGuestUser <Boolean>]
- [-AllowScopedPeopleSearchandAccess <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AllowScopedPeopleSearchandAccess <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] 
+ [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGuestUser
-Designates whether or not guest users in your organization will have access to the Teams client.  If $true, guests in your tenant will be able to access the Teams client.  Note that this setting has a core dependency on Guest Access being enabled in your Office 365 tenant.  For more information on this topic, read Authorize Guest Access in Microsoft Teams: https://docs.microsoft.com/microsoftteams/teams-dependencies
+Designates whether or not guest users in your organization will have access to the Teams client.  If $true, guests in your tenant will be able to access the Teams client.  Note that this setting has a core dependency on Guest Access being enabled in your Office 365 tenant.  For more information on this topic, read Authorize Guest Access in Microsoft Teams: https://learn.microsoft.com/microsoftteams/teams-dependencies
 
 ```yaml
 Type: Boolean
@@ -180,6 +180,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowRoleBasedChatPermissions
+When set to True, Supervised Chat is enabled for the tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowScopedPeopleSearchandAccess
 If set to $true, the Exchange address book policy (ABP) will be used to provide customized view of the global address book for each user.  This is only a virtual separation and not a legal separation.
 
@@ -196,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowShareFile
-Designates whether users are able to leverage ShareFile as a third party storage solution in Microsoft Teams.  If $true, users will be able to add ShareFile in the client and interact with the files stored there.
+Designates whether users are able to leverage Citrix ShareFile as a third party storage solution in Microsoft Teams.  If $true, users will be able to add Citrix ShareFile in the client and interact with the files stored there.
 
 ```yaml
 Type: Boolean
@@ -289,6 +303,7 @@ Accept wildcard characters: False
 
 ### -Identity
 The only valid input is Global - the tenant wide configuration.
+
 ```yaml
 Type: XdsIdentity
 Parameter Sets: Identity
@@ -364,8 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -382,6 +396,7 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 

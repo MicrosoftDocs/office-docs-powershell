@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguserstate
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguserstate
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUserState
 schema: 2.0.0
@@ -13,6 +13,10 @@ ms.reviewer:
 # Get-CsOnlineDialInConferencingUserState
 
 ## SYNOPSIS
+
+> [!NOTE]
+> This cmdlet will be deprecated on December 31, 2021. To view the properties and settings of users that are enabled for Audio Conferencing, you can use the [Get-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet.
+
 Use the `Get-CsOnlineDialInConferencingUserState` cmdlet to view the current Dial In Conferencing state of users in your Tenant.
 
 ## SYNTAX

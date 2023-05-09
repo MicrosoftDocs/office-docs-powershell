@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstenantnetworksite
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantnetworksite
 applicable: Skype for Business Online
 title: Get-CsTenantNetworkSite
 schema: 2.0.0
@@ -39,19 +39,23 @@ Location-Based Routing leverages the same network regions, sites, and subnets co
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> Get-CsTenantNetworkSite
 ```
-
 The command shown in Example 1 returns the list of network sites for the current tenant.
 
-###-------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 PS C:\> Get-CsTenantNetworkSite -Identity siteA
 ```
-
 The command shown in Example 2 returns the network site within the scope of siteA.
+
+### Example 3
+```powershell
+PS C:\> Get-CsTenantNetworkSite -Filter "Los Angeles"
+```
+The command shown in Example 3 returns the network site that matches the specified filter.
 
 ## PARAMETERS
 

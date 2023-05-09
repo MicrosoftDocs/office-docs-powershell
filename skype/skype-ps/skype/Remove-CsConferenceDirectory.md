@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csconferencedirectory
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csconferencedirectory
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsConferenceDirectory
 schema: 2.0.0
@@ -151,4 +151,3 @@ Instead, the `Removes-CsConferenceDirectory` cmdlet deletes instances of the Mic
 [Move-CsConferenceDirectory](Move-CsConferenceDirectory.md)
 
 [New-CsConferenceDirectory](New-CsConferenceDirectory.md)
-

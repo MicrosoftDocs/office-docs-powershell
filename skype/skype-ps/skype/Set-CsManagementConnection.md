@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csmanagementconnection
+online version: https://learn.microsoft.com/powershell/module/skype/set-csmanagementconnection
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsManagementConnection
 schema: 2.0.0
@@ -188,4 +188,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Store.S
 [Remove-CsManagementConnection](Remove-CsManagementConnection.md)
 
 [Set-CsConfigurationStoreLocation](Set-CsConfigurationStoreLocation.md)
-
