@@ -16,8 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ThrottlingPolicyAssociation cmdlet to associate a throttling policy with a specific object. The object can be a user with a mailbox, a user without a mailbox, a contact or a computer account.
 
-> [!NOTE]
-> Some parameters in the throttling policy (for example, MessageRateLimit) apply only to the objects which have Mailbox GUID (MBX/Remote MBX) and won't apply to the MailUser.
+**Note**: Some parameters in the throttling policy (for example, MessageRateLimit) apply only to objects that have mailbox GUIDs (mailboxes or remote mailboxes) and don't apply to mail users.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
