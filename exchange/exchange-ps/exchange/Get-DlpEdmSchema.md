@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpedmschema
+online version: https://learn.microsoft.com/powershell/module/exchange/Get-DlpEdmSchema
 applicable: Security & Compliance
 title: Get-DlpEdmSchema
 schema: 2.0.0
