@@ -1721,6 +1721,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-InformationBarrierRecipientStatus](Get-InformationBarrierRecipientStatus.md)
 
+### [Get-JitConfiguration](Get-JitConfiguration.md)
+
 ### [Get-JournalRule](Get-JournalRule.md)
 
 ### [Get-Label](Get-Label.md)
@@ -1761,6 +1763,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-InformationBarrierPolicy](New-InformationBarrierPolicy.md)
 
+### [New-JitConfiguration](New-JitConfiguration.md)
+
 ### [New-JournalRule](New-JournalRule.md)
 
 ### [New-Label](New-Label.md)
@@ -1789,6 +1793,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-InformationBarrierPolicy](Remove-InformationBarrierPolicy.md)
 
+### [Remove-JitConfiguration](Remove-JitConfiguration.md)
+
 ### [Remove-JournalRule](Remove-JournalRule.md)
 
 ### [Remove-Label](Remove-Label.md)
@@ -1816,6 +1822,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-AutoSensitivityLabelRule](Set-AutoSensitivityLabelRule.md)
 
 ### [Set-InformationBarrierPolicy](Set-InformationBarrierPolicy.md)
+
+### [Set-JitConfiguration](Set-JitConfiguration.md)
 
 ### [Set-JournalRule](Set-JournalRule.md)
 
