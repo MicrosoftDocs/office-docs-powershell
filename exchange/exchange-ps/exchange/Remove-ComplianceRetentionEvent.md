@@ -1,55 +1,56 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/set-dlpedmschema
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-complianceretentionevent
 applicable: Security & Compliance
-title: Set-DlpEdmSchema
+title: Remove-ComplianceRetentionEvent
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-DlpEdmSchema
+# Remove-ComplianceRetentionEvent
 
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-DlpEdmSchema cmdlet to modify exact data match (EDM) data loss prevention (DLP) schemas in the Microsoft Purview compliance portal.
+Use the Remove-ComplianceRetentionEvent cmdlet to remove compliance retention events in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-DlpEdmSchema [-FileData] <Byte[]>
+Remove-ComplianceRetentionEvent [-Identity] <PolicyIdParameter>
  [-Confirm]
- [-WhatIf]
- [<CommonParameters>]
+ [-ForceDeletion]
+ [-PreviewOnly]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-For an explanation and example of the EDM schema, see [Define the schema for your database of sensitive information](https://learn.microsoft.com/microsoft-365/compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification#define-the-schema-for-your-database-of-sensitive-information).
-
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-DlpEdmSchema -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\edm.xml')) -Confirm:$true
+Remove-ComplianceRetentionEvent -Identity "Research Project Employees"
 ```
 
-This example modifies a DLP EDM schema using the edm.xml file in the C:\\My Documents folder.
+This example removes the specified compliance retention event.
 
 ## PARAMETERS
 
-### -FileData
-The FileData parameter specifies the DLP EDM schema that you want to import.
+### -Identity
+The Identity parameter specifies the compliance retention event that you want to remove. You can use any value that uniquely identifies the event. For example:
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+- Name
+- Distinguished name (DN)
+- GUID
 
 ```yaml
-Type: Byte[]
+Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -57,7 +58,7 @@ Applicable: Security & Compliance
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -71,6 +72,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceDeletion
+{{ Fill ForceDeletion Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreviewOnly
+{{ Fill PreviewOnly Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

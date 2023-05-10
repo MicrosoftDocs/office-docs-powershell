@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/New-DlpSensitiveInformationTypeRulePackage
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage
 applicable: Security & Compliance
 title: New-DlpSensitiveInformationTypeRulePackage
 schema: 2.0.0
