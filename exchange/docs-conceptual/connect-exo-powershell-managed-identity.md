@@ -3,7 +3,7 @@ title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 5/10/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -261,17 +261,18 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 To add the module to the Automation account in Azure PowerShell, use the following syntax:
 
 ```powershell
-New-AzAutomationModule -ResourceGroupName "<ResourceGroupName>" -AutomationAccountName "<AutomationAccountName>" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.0.0
+New-AzAutomationModule -ResourceGroupName "<ResourceGroupName>" -AutomationAccountName "<AutomationAccountName>" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/<LatestModuleVersion>
 ```
 
 - \<ResourceGroupName\> is the name of the resource group that's already assigned to the Automation account.
 - \<AutomationAccountName\> is the name of the Automation account.
+- \<LatestModuleVersion\> is the current version of the ExchangeOnlineManagement module. To see the latest GA (non-Preview) version of the module, run the following command in Windows PowerShell: `Find-Module ExchangeOnlineManagement`. To see the latest Preview release, run the following command: `Find-Module ExchangeOnlineManagement -AllowPrerelease`.
 - Currently, the PowerShell procedures don't give you a choice for the runtime version (it's 5.1).
 
 For example:
 
 ```powershell
-New-AzAutomationModule -ResourceGroupName "ContosoRG" -AutomationAccountName "ContosoAzAuto1" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.0.0
+New-AzAutomationModule -ResourceGroupName "ContosoRG" -AutomationAccountName "ContosoAzAuto1" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.1.0
 ```
 
 To verify that the module imported successfully, run the following command:
