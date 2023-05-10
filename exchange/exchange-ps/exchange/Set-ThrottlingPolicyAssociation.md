@@ -18,7 +18,7 @@ Use the Set-ThrottlingPolicyAssociation cmdlet to associate a throttling policy 
 
 **Note**: Some parameters in the throttling policy (for example, MessageRateLimit) apply only to objects that have mailbox GUIDs (mailboxes or remote mailboxes) and don't apply to mail users.
 
-For remote mailbox, use the Set-RemoteMailbox -ExchangeGUID cmdlet, if ExchangeGUID isn't populated.
+For remote mailboxes, use the Set-RemoteMailbox -ExchangeGUID cmdlet if ExchangeGUID isn't populated.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
