@@ -242,6 +242,9 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 
 #### Add the Exchange Online PowerShell module to Azure Automation accounts with system-assigned managed identities
 
+> [!TIP]
+> If the following procedure in the Azure portal doesn't work for you, try the **New-AzAutomationModule** command in Azure PowerShell that's described after the Azure portal procedure.
+
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Modules" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Modules** from results.
 3. On the **Modules** flyout that opens, click ![Add module icon.](media/add-icon.png) **Add a module**.
