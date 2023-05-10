@@ -280,7 +280,7 @@ Accept wildcard characters: False
 The EntityType parameter filters the results by EntityType. Valid values are:
 
 - Email
-- SharePoint
+- SharePointOnline
 - Teams (currently in Preview)
 - DataLossPrevention (currently in Preview)
 
