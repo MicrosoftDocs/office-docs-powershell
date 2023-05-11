@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsSimulation
-{{ Fill IsSimulation Description }}
+The IsSimulation switch specifies the policy is created in simulation mode. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
