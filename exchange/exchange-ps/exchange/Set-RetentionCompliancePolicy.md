@@ -594,7 +594,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceSimulationPolicy
-{{ Fill EnforceSimulationPolicy Description }}
+The EnforceSimulationPolicy switch specifies the policy in simulation mode is enforced as an active policy. You don't need to specify a value with this switch.
 
 ```yaml
 Type: Boolean
@@ -1017,7 +1017,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartSimulation
-{{ Fill StartSimulation Description }}
+The StartSimulation switch starts the simulation for a policy that was created in simulation mode. You don't need to specify a value with this switch.
 
 ```yaml
 Type: Boolean
