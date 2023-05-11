@@ -60,7 +60,7 @@ Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDa
 
 This example starts a new historical search named "Fabrikam Search" that has the following properties:
 
-- Date range: January 1, 2018 to January 7, 2018
+- Date range: January 1, 2018 to January 6, 2018, with the end date of January 7, 2018 excluded. Please note that if the time of day is not specified, the default time of 0:00 AM is used. In this example, the date range is equivalent to -StartDate "1/1/2018 0:00 AM" -EndDate 1/7/2018  "1/7/2018 0:00 AM"
 - Report type: Message trace
 - Sender address: michelle@fabrikam.com
 - Internal notification email address: chris@contoso.com
