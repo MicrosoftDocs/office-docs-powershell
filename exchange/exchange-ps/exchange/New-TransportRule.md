@@ -2643,7 +2643,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-This parameter is functional only in on-premises Exchange.
+**Note**: This parameter is functional only in on-premises Exchange.
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -4309,7 +4309,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-This parameter is functional only in on-premises Exchange.
+**Note**: This parameter is functional only in on-premises Exchange.
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
