@@ -75,6 +75,9 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
 - **Connect using a certificate thumbprint**:
 
+  > [!NOTE]
+  > The CertificateThumbprint parameter is supported only in Microsoft Windows.
+
   The certificate needs to be installed on the computer where you're running the command. The certificate should be installed in the user certificate store.
 
   - <u>Exchange Online PowerShell</u>:

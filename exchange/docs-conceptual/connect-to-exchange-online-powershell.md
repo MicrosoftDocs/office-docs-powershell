@@ -410,6 +410,9 @@ This section attempts to compare older connection methods that have been replace
 
   - **Certificate thumbprint**:
 
+    > [!NOTE]
+    > The CertificateThumbprint parameter is supported only in Microsoft Windows.
+
     ```powershell
     Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contoso.onmicrosoft.com"
     ```
