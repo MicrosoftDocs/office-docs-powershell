@@ -70,7 +70,7 @@ $exportItems = $itemsPendingDisposition.ExportItems
 
 While (![string]::IsNullOrEmpty($itemsPendingDisposition.PaginationCookie))
 {
-    $itemsPendingDisposition = $itemsPendingDisposition = Get-ReviewItems -TargetLabelId a8cbeaac-e7aa-42ed-8dba-54200537c9c9 -IncludeHeaders $true -PagingCookie $itemsPendingDisposition.PaginationCookie
+    $itemsPendingDisposition = Get-ReviewItems -TargetLabelId a8cbeaac-e7aa-42ed-8dba-54200537c9c9 -IncludeHeaders $true -PagingCookie $itemsPendingDisposition.PaginationCookie
     $exportItems += $itemsPendingDisposition.ExportItems
 }
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/New-ComplianceRetentionEventType
+online version: https://learn.microsoft.com/powershell/module/exchange/new-complianceretentioneventtype
 applicable: Security & Compliance
 title: New-ComplianceRetentionEventType
 schema: 2.0.0

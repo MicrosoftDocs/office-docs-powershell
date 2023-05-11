@@ -4386,7 +4386,7 @@ The RecipientLimits parameter specifies the maximum number of recipients allowed
 
 In on-premises Exchange, a valid value is an integer or the value unlimited. The default value is unlimited, which indicates the maximum number of recipients per message for the mailbox is controlled elsewhere (for example, organization, server, or connector limits).
 
-In the cloud-based service, a valid value is an integer from 1 to 1000.
+In the cloud-based service, a valid value is an integer from 1 to 1000. The default value is 500. This value does not apply to meeting messages.
 
 ```yaml
 Type: Unlimited
@@ -4915,7 +4915,7 @@ Accept wildcard characters: False
 ### -RetentionHoldEnabled
 The RetentionHoldEnabled parameter specifies whether the mailbox is placed on retention hold. Placing the mailbox on retention hold temporarily suspends the processing of retention policies or managed folder mailbox policies for the mailbox (for example, when the user is on vacation). Valid values are:
 
-- $true: The mailbox is placed on retention hold. Retention policies and managed folder policies are suspended for the mailbox.
+- $true: The mailbox is placed on retention hold. Retention policies and managed folder policies are suspended for the mailbox, and purging items from the mailbox isn't possible (even using MFCMapi).
 - $false: The retention hold is removed from the mailbox. The mailbox is subject to retention policies and managed folder policies. This is the default value.
 
 To set the start date for retention hold, use the StartDateForRetentionHold parameter.

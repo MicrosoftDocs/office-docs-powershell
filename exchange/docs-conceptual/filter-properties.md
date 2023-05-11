@@ -143,7 +143,7 @@ For example, `Get-SecurityPrincipal -Filter 'AdminDisplayName -ne $null' | Forma
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_msExchAdministrativeUnitLink_|**Get-Contact** <br> **Get-DistributionGroup** <br> **Get-DynamicDistributionGroup** <br> **Get-Group** <br> **Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailContact** <br> **Get-MailPublicFolder** <br> **Get-MailUser** <br> **Get-RemoteMailbox** <br> **Get-User** <br> **Get-UnifiedGroup**|String or `$null`|
+|_msExchAdministrativeUnitLink_|**Get-Contact** <br> **Get-DistributionGroup** <br> **Get-DynamicDistributionGroup** <br> **Get-Group** <br> **Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailContact** <br> **Get-MailPublicFolder** <br> **Get-MailUser** <br> **Get-RemoteMailbox** <br> **Get-User** <br> **Get-UnifiedGroup**|`$null`|
 
 For example, `Get-User -Filter 'AdministrativeUnits -ne $null'`.
 
@@ -1921,7 +1921,7 @@ For example, `Get-Recipient -Filter "WhenMailboxCreated -gt '8/1/2017 2:00:00 PM
 |---|---|---|
 |_msExchWhenSoftDeletedTime_|**Get-LinkedUser** <br> **Get-Mailbox** <br> **Get-MailUser** <br> **Get-RemoteMailbox** <br> **Get-User** <br> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
-This filter requires the _SoftDeleted_ switch in the command for mailboxes. <br> For example, `Get-Mailbox -SoftDeleted -Filter "WhenSoftDeleted -gt '8/1/2017 2:00:00 PM'"`.
+This filter requires the _SoftDeleted_ switch in the command for mailboxes. <br> For example, `Get-Mailbox -SoftDeletedMailbox -Filter "WhenSoftDeleted -gt '8/1/2017 2:00:00 PM'"`.
 
 ### WindowsEmailAddress
 

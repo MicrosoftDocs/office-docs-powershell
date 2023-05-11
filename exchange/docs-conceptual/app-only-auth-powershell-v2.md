@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 01/31/2023
+ms.date: 5/3/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -44,10 +44,6 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
-> - In Security & Compliance PowerShell, you can't use the procedures in this article with the following cmdlets:
->   - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
->   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
->
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
 >
 > - If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
@@ -65,7 +61,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - In Exchange Online PowerShell using the EXO V3 module, you can omit or include the _UseRPSSession_ switch to use REST API cmdlets or original remote PowerShell cmdlets. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+> - You can use REST API cmdlets or original remote PowerShell cmdlets. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 >
 >   Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 >
@@ -75,9 +71,12 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >   - **Connect-ExchangeOnline in DoD**: `-ExchangeEnvironmentName O365USGovDoD`.
 >   - **Connect-IPPSSession in DoD**: `-ConnectionUri https://l5.ps.compliance.protection.office365.us/powershell-liveid/ -AzureADAuthorizationEndpointUri https://login.microsoftonline.us/common`.
 >
-> - If a **Connect-IPPSSession** command present a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
+> - If a **Connect-IPPSSession** command presents a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
 - **Connect using a certificate thumbprint**:
+
+  > [!NOTE]
+  > The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
   The certificate needs to be installed on the computer where you're running the command. The certificate should be installed in the user certificate store.
 
@@ -166,7 +165,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    ![Screenshot that shows App registrations in the Search results on the home page of the Azure portal.](media/exo-app-only-auth-find-app-registrations.png)
 
-   Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps>.
+   Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade>.
 
 3. On the **App registrations** page, click **New registration**.
 
@@ -218,6 +217,23 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
       }
    ],
    ```
+
+   > [!NOTE]
+   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for `resourceAppId`, `resourceAccess id`, and `resourceAccess type`:
+   >
+   > ```json
+   > "requiredResourceAccess": [
+   >    {
+   >      "resourceAppId": "00000007-0000-0ff1-ce00-000000000000",
+   >      "resourceAccess": [
+   >         {
+   >            "id": "455e5cd2-84e8-4751-8344-5672145dfa17",
+   >            "type": "Role"
+   >         }
+   >      ]
+   >    }
+   > ],
+   > ```
 
    When you're finished, click **Save**.
 
@@ -314,7 +330,7 @@ For more information about the URL syntax, see [Request the permissions from a d
 You have two options:
 
 - **Assign Azure AD roles to the application**: This method is supported in Exchange Online PowerShell and Security & Compliance PowerShell.
-- **Assign custom Exchange Online role groups to the application**: Currently, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
+- **Assign custom Exchange Online role groups to the application using service principals**: This method is supported only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 > [!NOTE]
 > You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
@@ -390,14 +406,16 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![The role assignments page after to added the app to the role for Security & Compliance PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)
 
-#### Assign custom Exchange Online role groups to the application
+#### Assign custom Exchange Online role groups to the application using service principals
 
 > [!NOTE]
-> Remember, this method is supported only in Exchange Online PowerShell, and only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) (don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command).
+> You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID is needed to create the new service principal).
+>
+> This method is supported only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 For information about creating custom role groups, see [Create role groups](/exchange/permissions-exo/role-groups#create-role-groups). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
-To assign custom Exchange Online role groups to the application, do the following steps:
+To assign custom role groups to the application using service principals, do the following steps:
 
 1. In [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2), run the following command to store the details of the Azure application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
 
@@ -413,8 +431,8 @@ To assign custom Exchange Online role groups to the application, do the followin
 
    For detailed syntax and parameter information, see [Get-AzureADServicePrincipal](/powershell/module/azuread/get-azureadserviceprincipal).
 
-2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and run the following commands to:
-   - Create an Exchange Online service principal object for the Azure application.
+2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) or [Security & Compliance PowerShell](connect-to-scc-powershell.md) and run the following commands to:
+   - Create a service principal object for the Azure application.
    - Store the details of the service principal in a variable.
 
    ```powershell
@@ -433,7 +451,7 @@ To assign custom Exchange Online role groups to the application, do the followin
 
    For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchange/new-serviceprincipal).
 
-3. In Exchange Online PowerShell, run the following command to add the service principal as a member of the custom role group:
+3. In Exchange Online PowerShell or Security & Compliance PowerShell, run the following command to add the service principal as a member of the custom role group:
 
    ```powershell
    Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ServiceId | $<VariableName2>.Id>

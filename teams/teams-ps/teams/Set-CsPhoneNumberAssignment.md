@@ -30,14 +30,10 @@ Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean>
 ## DESCRIPTION
 This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
+You can also assign a location to a phone number when you assign the phone number to a user.
+
+
 To remove a phone number from a user or resource account, use the [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md) cmdlet.
-
-If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a Code string parameter
-and a Message string parameter with additional details of the failure.
-
-**Note**: In Teams PowerShell Module 4.2.1-preview and later we are changing how the cmdlet reports errors. Instead of using a result object, we will be generating an
-exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also now support the -ErrorAction parameter to
-control the execution after an error has occurred.
 
 ## EXAMPLES
 
@@ -83,6 +79,20 @@ This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=1234 
 Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=1234" -PhoneNumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occured }
 ```
 This example shows how to use Try/Catch and ErrorAction to perform error checking on the assignment cmdlet failing.
+
+### Example 8
+```powershell
+$TempUser = "tempuser@contoso.com"
+$OldLoc=Get-CsOnlineLisLocation -City Vancouver
+$NewLoc=Get-CsOnlineLisLocation -City Seattle
+$Numbers=Get-CsPhoneNumberAssignment -LocationId $OldLoc.LocationId -PstnAssignmentStatus Unassigned -NumberType CallingPlan -CapabilitiesContain UserAssignment
+foreach ($No in $Numbers) {
+	Set-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber -LocationId $NewLoc.LocationId
+	Remove-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber
+}
+```
+This example shows how to change the location for unassigned Calling Plan subscriber phone numbers by looping through all the phone numbers, assigning each phone number temporarily with the new location to a user, and then unassigning the phone number again from the user.
+
 
 ## PARAMETERS
 
@@ -138,8 +148,7 @@ Accept wildcard characters: False
 ### -PhoneNumber
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can not have "tel:" prefixed.
 
-We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user account, but such phone numbers are
-not supported to be assigned to a resource account.
+We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user or resource account.
 
 Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 

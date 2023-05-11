@@ -3,7 +3,7 @@ title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 5/10/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -242,6 +242,9 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 
 #### Add the Exchange Online PowerShell module to Azure Automation accounts with system-assigned managed identities
 
+> [!TIP]
+> If the following procedure in the Azure portal doesn't work for you, try the **New-AzAutomationModule** command in Azure PowerShell that's described after the Azure portal procedure.
+
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Modules" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Modules** from results.
 3. On the **Modules** flyout that opens, click ![Add module icon.](media/add-icon.png) **Add a module**.
@@ -261,17 +264,18 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 To add the module to the Automation account in Azure PowerShell, use the following syntax:
 
 ```powershell
-New-AzAutomationModule -ResourceGroupName "<ResourceGroupName>" -AutomationAccountName "<AutomationAccountName>" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.0.0
+New-AzAutomationModule -ResourceGroupName "<ResourceGroupName>" -AutomationAccountName "<AutomationAccountName>" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/<LatestModuleVersion>
 ```
 
 - \<ResourceGroupName\> is the name of the resource group that's already assigned to the Automation account.
 - \<AutomationAccountName\> is the name of the Automation account.
+- \<LatestModuleVersion\> is the current version of the ExchangeOnlineManagement module. To see the latest GA (non-Preview) version of the module, run the following command in Windows PowerShell: `Find-Module ExchangeOnlineManagement`. To see the latest Preview release, run the following command: `Find-Module ExchangeOnlineManagement -AllowPrerelease`.
 - Currently, the PowerShell procedures don't give you a choice for the runtime version (it's 5.1).
 
 For example:
 
 ```powershell
-New-AzAutomationModule -ResourceGroupName "ContosoRG" -AutomationAccountName "ContosoAzAuto1" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.0.0
+New-AzAutomationModule -ResourceGroupName "ContosoRG" -AutomationAccountName "ContosoAzAuto1" -Name ExchangeOnlineManagement -ContentLinkUri https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.1.0
 ```
 
 To verify that the module imported successfully, run the following command:
@@ -375,7 +379,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 
    ```powershell
    $RoleID = (Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq '<Role Name>'").Id
-   
+
    New-MgRoleManagementDirectoryRoleAssignment -PrincipalId $MI_ID -RoleDefinitionId $RoleID -DirectoryScopeId "/"
    ```
 
@@ -386,7 +390,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 
    ```powershell
    $RoleID = (Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq 'Exchange Administrator'").Id
-   
+
    New-MgRoleManagementDirectoryRoleAssignment -PrincipalId $MI_ID -RoleDefinitionId $RoleID -DirectoryScopeId "/"
    ```
 

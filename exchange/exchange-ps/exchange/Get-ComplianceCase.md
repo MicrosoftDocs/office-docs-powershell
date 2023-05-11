@@ -16,8 +16,6 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Get-ComplianceCase cmdlet to different types of compliance cases in the Microsoft Purview compliance portal. See the CaseType parameter for a list of these case types.
 
-**Note**: This cmdlet doesn't work if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts) or Azure managed identity.
-
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX

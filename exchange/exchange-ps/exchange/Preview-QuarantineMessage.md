@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Preview-QuarantineMessage -Identity <QuarantineMessageIdentity>
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-RecipientAddress <String>]
  [<CommonParameters>]
 ```
@@ -62,6 +63,27 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -EntityType
+The EntityType parameter filters the results by EntityType. Valid values are:
+
+- Email
+- SharePointOnline
+- Teams (currently in Preview)
+- DataLossPrevention (currently in Preview)
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

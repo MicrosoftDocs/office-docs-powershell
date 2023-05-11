@@ -56,6 +56,7 @@ For the reporting period you specify, the cmdlet returns the following informati
 - Sender Address
 - Recipient Address
 - Event Type
+- Bulk complaint level
 - Verdict Type
 - Action
 - File Name
@@ -93,7 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid values are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+- IntraOrg
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

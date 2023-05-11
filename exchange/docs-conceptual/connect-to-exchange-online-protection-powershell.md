@@ -28,7 +28,7 @@ For more information about Exchange Online Protection PowerShell, see [Exchange 
 > Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 >
 > As of June 2020, the instructions for connecting to standalone Exchange Online Protection PowerShell and Exchange Online PowerShell are basically the same. If you use the **Connect-IPPSSession** cmdlet with the _ConnectionUri_ parameter value `https://ps.protection.outlook.com/powershell-liveid/`, you're redirected to the same `https://outlook.office365.com/powershell-liveid/` endpoint that's used by **Connect-ExchangeOnline** for Exchange Online PowerShell connections.
->  
+>
 > Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
 ## What do you need to know before you begin?
@@ -84,7 +84,7 @@ Connect-ExchangeOnline -UserPrincipalName navin@contoso.onmicrosoft.com
 
 ## Step 3: Disconnect when you're finished
 
-Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the session, run the following command.
+Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you need to wait for the sessions to expire. To disconnect the session, run the following command:
 
 ```powershell
 Disconnect-ExchangeOnline

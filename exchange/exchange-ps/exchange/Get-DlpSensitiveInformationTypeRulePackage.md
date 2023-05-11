@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpSensitiveInformationTypeConfig cmdlet to view data loss prevention (DLP) sensitive information type rule packages in the Microsoft Purview compliance portal.
+Use the Get-DlpSensitiveInformationTypeRulePackage cmdlet to view data loss prevention (DLP) sensitive information type rule packages in the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -45,6 +45,7 @@ Get-Mailbox [-Anr <String>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
+ [-ServiceSafetyConfiguration]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
  [-SupervisoryReviewPolicy]
@@ -99,6 +100,7 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-RemoteArchive]
  [-ResultSize <Unlimited>]
+ [-ServiceSafetyConfiguration]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
  [-SupervisoryReviewPolicy]
@@ -144,6 +146,7 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [-PublicFolder]
  [-RecipientTypeDetails <RecipientTypeDetails[]>]
  [-ResultSize <Unlimited>]
+ [-ServiceSafetyConfiguration]
  [-SoftDeletedMailbox]
  [-SortBy <String>]
  [<CommonParameters>]
@@ -733,6 +736,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ServiceSafetyConfiguration
+This parameter is available only in the cloud-based service.
+
+{{ Fill ServiceSafetyConfiguration Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

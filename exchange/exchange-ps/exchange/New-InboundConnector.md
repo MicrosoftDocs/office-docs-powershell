@@ -472,7 +472,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedOrganizations
-{{ Fill TrustedOrganizations Description }}
+The TrustedOrganizations parameter specifies other Microsoft 365 organizations that are trusted mail sources (for example, after acquisitions and mergers). You can specify multiple Microsoft 365 organizations separated by commas.
+
+This parameter works only for mail flow between two Microsoft 365 organizations, so no other parameters are used.
 
 ```yaml
 Type: MultiValuedProperty

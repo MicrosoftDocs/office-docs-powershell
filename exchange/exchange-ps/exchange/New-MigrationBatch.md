@@ -51,6 +51,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-RemoveOnCopy]
  [-RenamePrimaryCalendar]
  [-ReportInterval <Timespan>]
+ [-Restore]
  [-SkipCalendar]
  [-SkipContacts]
  [-SkipMail]
@@ -1161,6 +1162,24 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Restore
+This parameter is available only in the cloud-based service.
+
+{{ Fill Restore Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
