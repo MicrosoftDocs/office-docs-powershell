@@ -2643,7 +2643,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-This parameter is functional only in on-premises Exchange.
+**Note**: This parameter is functional only in on-premises Exchange.
 
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
 
@@ -2660,7 +2660,7 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4309,7 +4309,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-This parameter is functional only in on-premises Exchange.
+**Note**: This parameter is functional only in on-premises Exchange.
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4326,7 +4326,7 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -4717,6 +4717,8 @@ Accept wildcard characters: False
 ```
 
 ### -SetSCL
+**Note**: This parameter is functionaly only in on-premises Exchange.
+
 This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
@@ -4730,7 +4732,7 @@ The SetSCL parameter specifies an action that adds or modifies the SCL value of 
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
