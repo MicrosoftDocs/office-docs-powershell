@@ -93,15 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUrls
-**Note**: The functionality of this parameter is being replaced by the \*-TenantAllowBlockListItems cmdlets. This parameter now only supports the removal of blocked URLs. Use the \*-TenantAllowBlockListItems cmdlets to add and remove blocked URLs.
+This parameter has been deprecated and is no longer used.
 
-The BlockUrls parameter specifies the URLs that are always blocked by Safe Links in email messages and Safe Links for Office 365 apps.
-
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
-
-For details about the entry syntax, see [Entry syntax for the "Block the following URLs" list](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-links-about#entry-syntax-for-the-block-the-following-urls-list).
+The functionality of this parameter has been replaced by block entries for URLs in the Tenant Allow/Block List using the \*-TenantAllowBlockListItems cmdlets.
 
 ```yaml
 Type: MultiValuedProperty

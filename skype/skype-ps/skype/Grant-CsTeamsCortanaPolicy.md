@@ -5,7 +5,7 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsCortanaPolicy
 schema: 2.0.0
 manager: amehta
-author: akshbhat
+author: akshbhat-msft
 ms.author: akshbhat
 ms.reviewer:
 ---

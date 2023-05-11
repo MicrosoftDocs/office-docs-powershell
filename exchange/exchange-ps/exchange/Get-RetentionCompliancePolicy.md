@@ -23,8 +23,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
- [-ErrorPolicyOnly] 
+ [-ErrorPolicyOnly]
  [-ExcludeTeamsPolicy]
+ [-IncludeTestModeResults]
  [-RetentionRuleTypes]
  [-TeamsPolicyOnly]
  [<CommonParameters>]
@@ -114,6 +115,22 @@ Accept wildcard characters: False
 
 ### -ExcludeTeamsPolicy
 The ExcludeTeamsPolicy switch specifies whether to exclude Teams policies from the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeTestModeResults
+The IncludeTestModeResults switch specifies whether to include the status of test mode in the policy details. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

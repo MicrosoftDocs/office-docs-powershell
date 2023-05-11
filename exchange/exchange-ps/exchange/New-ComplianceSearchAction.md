@@ -444,9 +444,9 @@ Accept wildcard characters: False
 ```
 
 ### -Purge
-The Purge switch specifies the action for the content search is to remove items that match the search criteria. You don't need to specify a value with this switch.
+**Note**: In Security & Compliance PowerShell, this switch is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management and Data Investigator role groups.
 
-**Notes**:
+The Purge switch specifies the action for the content search is to remove items that match the search criteria. You don't need to specify a value with this switch.
 
 - A maximum of 10 items per mailbox can be removed at one time. Because the capability to search for and remove messages is intended to be an incident-response tool, this limit helps ensure that messages are quickly removed from mailboxes. This action isn't intended to clean up user mailboxes.
 - You can remove items from a maximum of 50,000 mailboxes using a single content search. To remove items from more than 50,000 mailboxes, you'll have to create separate content searches. For more information, see [Search for and delete email messages in your Microsoft 365 organization](https://learn.microsoft.com/microsoft-365/compliance/search-for-and-delete-messages-in-your-organization).
@@ -467,6 +467,8 @@ Accept wildcard characters: False
 ```
 
 ### -PurgeType
+**Note**: In Security & Compliance PowerShell, this parameter is available only in the Search and Purge role. By default, this role is assigned only to the Organization Management and Data Investigator role groups.
+
 The PurgeType parameter specifies how to remove items when the action is Purge. Valid values are:
 
 - SoftDelete: Purged items are recoverable by users until the deleted item retention period expires.

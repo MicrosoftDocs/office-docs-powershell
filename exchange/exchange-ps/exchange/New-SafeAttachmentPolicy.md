@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -MakeBuiltInProtection
-{{ Fill MakeBuiltInProtection Description }}
+The MakeBuiltInProtection switch is used for Built-in protection policy creation as part of [Preset security policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies). Don't use this switch yourself.
 
 ```yaml
 Type: SwitchParameter

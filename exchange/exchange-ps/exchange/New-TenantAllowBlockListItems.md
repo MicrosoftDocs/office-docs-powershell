@@ -26,6 +26,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
  [-Allow]
  [-Block]
  [-ListSubType <ListSubType>]
+ [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
  [-SubmissionID <String>]
@@ -38,6 +39,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpir
  [-Allow]
  [-Block]
  [-ListSubType <ListSubType>]
+ [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
  [-SubmissionID <String>]
@@ -219,6 +221,22 @@ Type: ListSubType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LogExtraDetails
+{{ Fill LogExtraDetails Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

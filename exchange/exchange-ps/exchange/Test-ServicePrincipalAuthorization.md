@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Test-ServicePrincipalAuthorization [-Identity] <ServicePrincipalIdParameter>
  [-Confirm]
- [-Organization <OrganizationIdParameter>]
  [-Resource <UserIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -38,24 +37,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ```powershell
 PS C:\> Test-ServicePrincipalAuthorization -Identity "DemoB" -Resource "Mailbox A" | Format-Table
 
-RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope 
+RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope
 --------                      ------------------          --------------------        ---------                 ------
-Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     True 
-Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       False 
-Application Contacts.Read     Contacts.Read               Organization                 Organization             True 
+Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     True
+Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       False
+Application Contacts.Read     Contacts.Read               Organization                 Organization             True
 ```
 
-This example tests if this service principal (the app named "DemoB") can exercise each of its assigned permissions against the target mailbox named "Mailbox A." The membership in the scope is indicated by the InScope column. 
+This example tests if this service principal (the app named "DemoB") can exercise each of its assigned permissions against the target mailbox named "Mailbox A." The membership in the scope is indicated by the InScope column.
 
 ### Example 2
 ```powershell
 PS C:\> Test-ServicePrincipalAuthorization -Identity "DemoB" | Format-Table
 
-RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope 
+RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope
 --------                      ------------------          --------------------        ---------                 ------
-Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     Not Run 
-Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       Not Run  
-Application Contacts.Read     Contacts.Read               Organization                 Organization             Not Run  
+Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     Not Run
+Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       Not Run
+Application Contacts.Read     Contacts.Read               Organization                 Organization             Not Run
 ```
 
 This example tests the entitlement of the app named "DemoB", including which permissions it has at which scopes. Because the command doesn't use the Resource parameter, the scope membership check is not run.
@@ -97,22 +96,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
