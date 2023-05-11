@@ -476,6 +476,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAdministrativeUnitScope
+This parameter is functional only in the cloud-based service.
+
 The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the new role assignment to.
 
 Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.

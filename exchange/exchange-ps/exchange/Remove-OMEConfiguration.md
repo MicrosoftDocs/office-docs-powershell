@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/Remove-OMEConfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-omeconfiguration
 applicable: Exchange Online
 title: Remove-OMEConfiguration
 schema: 2.0.0

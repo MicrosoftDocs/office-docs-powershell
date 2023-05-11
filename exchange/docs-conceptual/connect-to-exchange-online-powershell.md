@@ -34,7 +34,7 @@ To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exch
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > If you're using the EXO V3 module (v3.0.0 or later) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+  > If you're using the EXO V3 module (v3.0.0 or later) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
   >
   > Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
@@ -68,8 +68,6 @@ Connect-ExchangeOnline -UserPrincipalName <UPN> [-UseRPSSession] [-ExchangeEnvir
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
-
-**Notes**:
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
@@ -165,7 +163,7 @@ The connection examples in the following sections use modern authentication, and
   2. On any other device with a web browser and internet access, open <https://microsoft.com/devicelogin> and enter the \<XXXXXXXXX\> code value from the previous step.
 
   3. Enter your credentials on the resulting pages.
-  
+
   4. In the confirmation prompt, click **Continue**. The next message should indicate success, and you can close the browser or tab.
 
   5. The command from step 1 continues to connect you to Exchange Online PowerShell.
@@ -209,7 +207,7 @@ For more information, see [Use Azure managed identities to connect to Exchange O
 
 ## Step 3: Disconnect when you're finished
 
-Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the session, run the following command.
+Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you need to wait for the sessions to expire. To disconnect the session, run the following command:
 
 ```powershell
 Disconnect-ExchangeOnline
@@ -239,6 +237,18 @@ If you receive errors, check the following requirements:
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
 - If your organization uses federated authentication, and your identity provider (IDP) and/or security token service (STS) isn't publicly available, you can't use a federated account to connect to Exchange Online PowerShell. Instead, create and use a non-federated account in Microsoft 365 to connect to Exchange Online PowerShell.
+
+- REST-based connections to Exchange Online PowerShell require the PowerShellGet module, and by dependency, the PackageManagement module, so you'll receive errors if you try to connect without having them installed. For example, you might see the following error:
+
+  > The term 'Update-ModuleManifest' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+
+  For more information about the PowerShellGet and PackageManagement module requirements, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+
+- After you connect, you might received an error that looks like this:
+
+  > Could not load file or assembly 'System.IdentityModel.Tokens.Jwt,Version=\<Version\>, Culture=neutral, PublicKeyToken=\<TokenValue\>'. Could not find or load a specific file.
+
+  This error happens when the Exchange Online PowerShell module conflicts with another module that's imported into the runspace. Try connecting in a new Windows PowerShell window before importing other modules.
 
 ## Appendix: Comparison of old and new connection methods
 
@@ -399,6 +409,9 @@ This section attempts to compare older connection methods that have been replace
 - **Exchange Online PowerShell module**:
 
   - **Certificate thumbprint**:
+
+    > [!NOTE]
+    > The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
     ```powershell
     Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contoso.onmicrosoft.com"

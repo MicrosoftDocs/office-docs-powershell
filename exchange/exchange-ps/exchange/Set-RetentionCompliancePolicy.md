@@ -24,9 +24,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RetryDistribution
 ```
-Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-RetryDistribution]
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
  [-Confirm]
+ [-EnforceSimulationPolicy <Boolean>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -49,6 +50,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
@@ -63,6 +65,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveSkypeLocation <MultiValuedProperty>]
  [-RemoveSkypeLocationException <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -75,8 +78,10 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -91,11 +96,13 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-RemoveTeamsChannelLocation <MultiValuedProperty>]
  [-RemoveTeamsChannelLocationException <MultiValuedProperty>]
  [-RemoveTeamsChatLocation <MultiValuedProperty>]
  [-RemoveTeamsChatLocationException <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -586,6 +593,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnforceSimulationPolicy
+The EnforceSimulationPolicy switch specifies the policy in simulation mode is enforced as an active policy. You don't need to specify a value with this switch.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
@@ -983,6 +1006,22 @@ You can enter multiple values separated by commas. If the values contain spaces 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: TeamLocation
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartSimulation
+The StartSimulation switch starts the simulation for a policy that was created in simulation mode. You don't need to specify a value with this switch.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 

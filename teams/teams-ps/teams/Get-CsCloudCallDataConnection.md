@@ -54,7 +54,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-The Get-CsCloudCallDataConnection cmdlet is only supported from Teams PowerShell Module versions 4.6.0 or later.
+The Get-CsCloudCallDataConnection cmdlet is only supported in commercial environments from Teams PowerShell Module versions 4.6.0 or later.
 
 ## RELATED LINKS
 

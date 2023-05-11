@@ -25,6 +25,8 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-AdminDisplayName <String>]
  [-AuthenticationFailAction <SpoofAuthenticationFailAction>]
  [-Confirm]
+ [-DmarcQuarantineAction <SpoofDmarcQuarantineAction>]
+ [-DmarcRejectAction <SpoofDmarcRejectAction>]
  [-Enabled <Boolean>]
  [-EnableFirstContactSafetyTips <Boolean>]
  [-EnableMailboxIntelligence <Boolean>]
@@ -40,6 +42,7 @@ Set-AntiPhishPolicy -Identity <AntiPhishPolicyIdParameter>
  [-EnableViaTag <Boolean>]
  [-ExcludedDomains <MultiValuedProperty>]
  [-ExcludedSenders <MultiValuedProperty>]
+ [-HonorDmarcPolicy <Boolean>]
  [-ImpersonationProtectionState <ImpersonationProtectionState>]
  [-MailboxIntelligenceProtectionAction <ImpersonationAction>]
  [-MailboxIntelligenceProtectionActionRecipients <MultiValuedProperty>]
@@ -153,6 +156,56 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DmarcQuarantineAction
+**Note**: This setting is currently in Preview.
+
+This setting is part of spoof protection.
+
+The DmarcQuarantineAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=reject`. Valid values are:
+
+- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
+- Quarantine: This is the default value. Move the message to quarantine.
+
+This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
+
+```yaml
+Type: SpoofDmarcQuarantineAction
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DmarcRejectAction
+**Note**: This setting is currently in Preview.
+
+This setting is part of spoof protection.
+
+The DmarcRejectAction parameter specifies the action to take when the message is detected as spoofing and the policy action value in the DMARC TXT record for the domain is `p=quarantine`. Valid values are:
+
+- Quarantine: This is the default value. Move the message to quarantine.
+- Reject: Reject the message.
+
+This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
+
+```yaml
+Type: SpoofDmarcRejectAction
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
@@ -482,6 +535,29 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HonorDmarcPolicy
+**Note**: This setting is currently in Preview.
+
+This setting is part of spoof protection.
+
+The HonorDmarcPolicy enables or disables using the sender's DMARC policy to determine what to do to messages that fail DMARC checks. Valid values are:
+
+- $true: If a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`, the DmarcQuarantineAction parameter specifies the action to take on the message. If a message fails DMARC checks and the sender's DMARC policy is `p=reject`, the DmarcRejectAction parameter specifies the action to take on the message.
+- $false: This is the default value. If the message fail DMARC checks, ignore the action in the sender's DMARC policy. The AuthenticationFailAction parameter specifies the action to take on the message.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

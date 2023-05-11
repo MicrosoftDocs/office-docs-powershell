@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata
-applicable: Exchange Online, Security & Compliance
+applicable: Security & Compliance
 title: Export-ActivityExplorerData
 schema: 2.0.0
 author: chrisda
@@ -90,7 +90,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Accepted values: csv, json
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -144,13 +144,13 @@ If you specify multiple filter values for the same parameter, OR behavior is use
 
 If you use this parameter with other filter parameters, AND behavior is used across parameters. For example:
 
-`-Filter1 =  @("Activity", "LabelApplied", "LabelRemoved") -Filter2 = @("Workload", "Exchange")` returns records with the activity values `LabelApplied` or `LabelRemoved` for the `Exchange` workload. In other words, ((`Activity eq LabelApplied`) OR (`Activity eq LabelRemoved`)) AND (`Workload eq Exchange`).
+`-Filter1 @("Activity", "LabelApplied", "LabelRemoved") -Filter2 = @("Workload", "Exchange")` returns records with the activity values `LabelApplied` or `LabelRemoved` for the `Exchange` workload. In other words, ((`Activity eq LabelApplied`) OR (`Activity eq LabelRemoved`)) AND (`Workload eq Exchange`).
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Use this parameter only if you're also using the Filter1 parameter in the same c
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ Use this parameter only if you're also using the Filter2 and Filter1 parameters 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ Use this parameter only if you're also using the Filter3, Filter2, and Filter1 p
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ Use this parameter only if you're also using the Filter4, Filter3, Filter2, and 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ The PageCookie parameter specifies whether to get more data when the value of th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

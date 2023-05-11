@@ -9,25 +9,27 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance, including user's shift based presence and Teams off shift warning message-specific settings.
+This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance, including Teams off shift warning message-specific settings.
 
 ## SYNTAX
 
 ```
-Set-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [-EnableShiftPresence <Boolean>] [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [-EnableScheduleOwnerPermissions <Boolean>] [<CommonParameters>]
+Set-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [-ShiftNoticeFrequency <String>] [-ShiftNoticeMessageType <String>] [-ShiftNoticeMessageCustom <String>] [-AccessType <String>] [-AccessGracePeriodMinutes <Int64>] [-EnableScheduleOwnerPermissions <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance. Use this to set the policy name, user's shift based presence (EnableShiftPresence) and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance. Use this to set the policy name and Teams off shift warning message-specific settings (ShiftNoticeMessageType, ShiftNoticeMessageCustom, ShiftNoticeFrequency, AccessGracePeriodMinutes).
+
 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage -EnableShiftPresence $true -ShiftNoticeMessageType Message1 -ShiftNoticeFrequency always -AccessGracePeriodMinutes 5
+PS C:\> Set-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage -ShiftNoticeMessageType Message1 -ShiftNoticeFrequency always -AccessGracePeriodMinutes 5
 ```
-In this example, the policy instance is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage", Shift based presence is enabled (On Shift, Off Shift), a warning message (Message 1) will be always be displayed to the user on opening Teams during off shift hours.
+In this example, the policy instance is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage", a warning message (Message 1) will always be displayed to the user on opening Teams during off shift hours.
+
 
 ## PARAMETERS
 
@@ -60,21 +62,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: UnrestrictedAccess_TeamsApp
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableShiftPresence
-Indicates whether a user is given shift-based presence (On shift, Off shift, or Busy). This must be set in order to have any off shift warning message-specific settings.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
