@@ -4304,7 +4304,7 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-This parameter is functional only in on-premises Exchange.
+**Note**: This parameter is functional only in on-premises Exchange.
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
@@ -4321,7 +4321,7 @@ The rule looks for messages with an SCL value that's greater than or equal to th
 Type: SclValue
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
