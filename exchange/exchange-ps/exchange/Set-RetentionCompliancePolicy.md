@@ -72,8 +72,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 
 ### AdaptiveScopeLocation
 ```
-Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
- [-AddAdaptiveScopeLocation <MultiValuedProperty>]
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddAdaptiveScopeLocation <MultiValuedProperty>]
  [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
@@ -594,7 +593,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceSimulationPolicy
-The EnforceSimulationPolicy switch specifies the policy in simulation mode is enforced as an active policy. You don't need to specify a value with this switch.
+The EnforceSimulationPolicy parameter specifies whether to enforce a simulation policy as an active policy. Valid values are:
+
+- $true: Enforce the simulation policy as an active policy.
+- $false: Don't enforce the simulation policy as an active policy. This is the default value.
+
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
 
 ```yaml
 Type: Boolean
@@ -1017,7 +1021,12 @@ Accept wildcard characters: False
 ```
 
 ### -StartSimulation
-The StartSimulation switch starts the simulation for a policy that was created in simulation mode. You don't need to specify a value with this switch.
+The StartSimulation parameter specifies whether to start the simulation for a policy that was created in simulation mode. Valid values are:
+
+- $true: Start the simulation.
+- $false: Don't start the simulation. This is the default value.
+
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
 
 ```yaml
 Type: Boolean
