@@ -19,7 +19,7 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 
 ```
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
- [-AccountType <String>] 
+ [-AccountType <String>]
  [-Credential <PSCredential>]
  [-DomainController <Fqdn>]
  [-Filter <String>]
@@ -29,6 +29,7 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-OU <OUIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
+ [-Sort]
  [-UnassignedUser]
  [-UsePreferredDC]
  [<CommonParameters>]
@@ -100,19 +101,22 @@ Get-CsOnlineUser -Filter {LineURI -eq "tel:+1234"}
 Get-CsOnlineUser -Filter {LineURI -eq "tel:+1234,ext:"}
 Get-CsOnlineUser -Filter {LineURI -eq "1234"}
 ```
-Example 5 returns information for user accounts that have been assigned a designated phone number. 
+
+Example 5 returns information for user accounts that have been assigned a designated phone number.
 
 ### -------------------------- Example 6 --------------------------
 ```
 Get-CsOnlineUser -AccountType ResourceAccount
 ```
-Example 6 returns information for user accounts that are categorized as resource accounts. 
+
+Example 6 returns information for user accounts that are categorized as resource accounts.
 
 ### -------------------------- Example 7 --------------------------
 ```
 Get-CsOnlineUser -Filter "FeatureTypes -Contains 'PhoneSystem'"
 ```
-Example 7 returns information for user's assigned plans. 
+
+Example 7 returns information for user's assigned plans.
 
 ## PARAMETERS
 
@@ -124,7 +128,6 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `Guest` - to query for guest accounts.
 - `SfBOnPremUser` - to query for users that are hosted on-premises (available from January 31, 2023, in the latest TPM versions at that time).
 - `Unknown` - to query for a user type that is not known.
-
 
 ```yaml
 Type: UserIdParameter
@@ -209,17 +212,17 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 _Performance_
 
-The performance of Get-CsOnlineUser without the “-identity” parameter is improved. Here are some examples where significant improvement can be observed: 
+The performance of Get-CsOnlineUser without the "-identity" parameter is improved. Here are some examples where significant improvement can be observed:
 
-- Get-CsOnlineUser -Filter {AssignedPlan -like "*MCO*"} 
-- Get-CsOnlineUser -Filter {UserPrincipalName -like "test*" -and (AssignedPlans -eq "MCOEV" -or AssignedPlans -like "MCOPSTN*")} 
-- Get-CsOnlineUser -Filter {OnPremHostingProvider -ne $null} 
+- Get-CsOnlineUser -Filter {AssignedPlan -like "*MCO*"}
+- Get-CsOnlineUser -Filter {UserPrincipalName -like "test*" -and (AssignedPlans -eq "MCOEV" -or AssignedPlans -like "MCOPSTN*")}
+- Get-CsOnlineUser -Filter {OnPremHostingProvider -ne $null}
 - Get-CsOnlineUser -Filter {WhenChanged -gt "1/25/2022 11:59:59 PM"}
 
 _New Filtering Attributes_
@@ -228,7 +231,7 @@ These attributes are now enabled for filtering:
 
 - Alias
 - City
-- CompanyName
+- Company
 - HostingProvider
 - UserValidationErrors
 - OnPremEnterpriseVoiceEnabled
@@ -237,12 +240,12 @@ These attributes are now enabled for filtering:
 - OnPremSIPEnabled
 - SipAddress
 - SoftDeletionTimestamp
-- State
+- StateOrProvince
 - Street
 - TeamsOwnersPolicy
 - WhenChanged
 - WhenCreated
-- FeatureTypes 
+- FeatureTypes
 - PreferredDataLocation
 - LastName
 
@@ -250,28 +253,31 @@ _New Operators_
 
 These filtering operators have been reintroduced:
 
-- “-like” operator now supports the use of wildcard operators in ‘contains’ and ‘ends with’ scenarios. For example:
+`-like` operator now supports the use of wildcard operators in 'contains' and 'ends with' scenarios. For example:
 
-```
-Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
-Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
-```
-- “-contains” can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
-```
-Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
-Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
-```
-- “-gt” (greater than), “-lt” (less than), “-le” (less than or equal to) can now be used for filtering all string properties. For example:
-```
-Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt “abc”}
-```
-- “-ge” (greater than or equal to) can now also be used for filtering on policies. For example:
-```
-Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
-```
-**Updates in Teams PowerShell Module version 3.0.0 and above**
+- Contains Scenario: Get-CsOnlineUser  -Filter "DisplayName -like '*abc*'"
+- Ends with scenario: Get-CsOnlineUser  -Filter {DisplayName -like '*abc'}
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0):
+`-contains` can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
+
+- Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
+- Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
+
+
+`-gt` (greater than), `-lt` (less than), and `-le` (less than or equal to) can now be used for filtering all string properties. For example:
+
+- Get-CsOnlineUser -Filter {UserPrincipalName -gt/-le/-lt "abc"}
+
+`-ge` (greater than or equal to) can now also be used for filtering on policies. For example:
+
+- Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
+
+**Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
+
+
+**Updates in Teams PowerShell Module version 3.0.0 and later**
+
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 and later):
 
 In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
@@ -364,14 +370,13 @@ In the Teams PowerShell Module version 3.0.0 or later, the format of the Assigne
 
 - Filtering for null policies: Admins can query for users that do not have any policies assigned (null policies) by including an empty value in the query, for example, Get-csonlineuser -filter "TeamsMeetingBroadcastPolicy -eq ' ' "
 
-*Change in Filter operators*:
+_Change in Filter operators_:
 
 The following filter syntaxes have been modified in Teams PowerShell Module 3.0.0 and later:
 
 - -not, -lt, -gt: These operators have been dropped.
 - -ge:  This operator is not supported with policy properties.
 - -like: This operator is supported only with wildcard character in the end (e.g., `"like <value>*"`).
-
 
 ```yaml
 Type: String
@@ -493,6 +498,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Sort
+
+Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. For Example:
+
+- Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
+- Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UnassignedUser
 This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
 
@@ -535,18 +560,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-**Updates in Teams PowerShell Module version 5.0.0**
+**Updates in Teams PowerShell Module version 5.0.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0  (note that these changes are only rolled out in commercial environments at present):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 and later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
 
 New attributes have now been introduced in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
-- CountryAbbreviation                   
-- SipProxyAddress                       
-- TeamsMediaLoggingPolicy               
-- UserValidationErrors                   
-- WhenCreated    
-     
+- CountryAbbreviation
+- SipProxyAddress
+- TeamsMediaLoggingPolicy
+- UserValidationErrors
+- WhenCreated
+
 The following updates are now applicable to the output in scenarios where "-identity" parameter is not used:
 
 - Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
@@ -557,6 +582,7 @@ The following updates are now applicable to the output in scenarios where "-iden
 If any information is required for a user that is not available in the output (when not using "-identity" parameter) then it can be obtained using the "-identity" parameter. Information for all users would be available using the "-identity" parameter until they are hard deleted.
 
 If Guest users and SoftDeletedUsers are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp respectively. For example:
+
 - Get-CsOnlineUser -Filter {AccountType -ne 'Guest'}
 - Get-CsOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
 
@@ -564,7 +590,7 @@ If Guest users and SoftDeletedUsers are not required in the output then they can
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments including GCC at present and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
 
-*New user attributes*:
+_New user attributes_:
 
 FeatureTypes: Array of unique strings specifying what features are enabled for a user. This attribute is an alternative to several attributes that have been dropped as outlined in the next section.
 
@@ -579,7 +605,7 @@ Some of the commonly used FeatureTypes include:
 
 AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
 
-*Dropped attributes*:
+_Dropped attributes_:
 
 The following attributes are no longer relevant to Teams and have been dropped from the output:
 
@@ -700,7 +726,7 @@ The following attributes are temporarily unavailable in the output when using th
 
 **Note**: These attributes will be available in the near future.
 
-*Attributes renamed*:
+_Attributes renamed_:
 
 - ObjectId renamed to Identity
 - FirstName renamed to GivenName
@@ -711,7 +737,7 @@ The following attributes are temporarily unavailable in the output when using th
 - CountryOrRegionDisplayName introduced as Country (in versions 4.2.0 and later)
 - InterpretedUserType: "AADConnectEnabledOnline" prefix for the InterpretedUserType output value has now been renamed DirSyncEnabledOnline, for example, AADConnectEnabledOnlineTeamsOnlyUser is now DirSyncEnabledOnlineTeamsOnlyUser.
 
-*Attributes that have changed in meaning/format*:
+_Attributes that have changed in meaning/format_:
 
 **OnPremLineURI**: This attribute previously used to refer to both:
 

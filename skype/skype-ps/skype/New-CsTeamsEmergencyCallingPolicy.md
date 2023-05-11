@@ -41,23 +41,6 @@ New-CsTeamsEmergencyCallingPolicy -Identity "TestECP2" -NotificationGroup "123@c
 
 This example creates a Teams Emergency Calling policy that has an identity of TestECP2, with default settings, except for the Notification Group. This parameter expects a single string with all users and groups separated by ";".
 
-### Example 3
-```powershell
-$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "112" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
-$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
-Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP3" -ExtendedNotifications @{add=$en1,$en2}
-```
-
-This example creates specific emergency calling notification settings for two emergency phone numbers and adds them to the existing TestECP3 policy instance.
-
-### Example 4
-```powershell
-$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert3@contoso.com" -NotificationMode NotificationOnly -NotificationDialOutNumber "+14255551234"
-Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP3" -ExtendedNotifications @{remove=$en2}
-```
-
-This example removes a specific emergency calling notification setting from the existing TestECP3 policy instance.
-
 ## PARAMETERS
 
 ### -Identity
@@ -91,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnhancedEmergencyServiceDisclaimer
-Allows the tenant administrator to configure a text string, which is shown at the top of the Calls app. The user can acknowledge the string by selecting OK. The string will be shown on client restart.
+Allows the tenant administrator to configure a text string, which is shown at the top of the Calls app. The user can acknowledge the string by selecting OK. The string will be shown on client restart. The disclaimer can be up to 350 characters.
 
 ```yaml
 Type: String
@@ -106,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedNotifications
+
+**Note**: The use of extended notifications and this parameter is currently not supported.
+
 A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
 
 If an extended notification is found for an emergency phone number based on the EmergencyDialString parameter the extended notification will be controlling the notification. If no extended notification is found the notification settings on the policy instance itself will be used.
@@ -154,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationGroup
-NotificationGroup is a email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance "group1@contoso.com;group2@contoso.com". A maximum of 50 users can be notified.
+NotificationGroup is an email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 e-mail addresses can be specified and a maximum of 50 users in total can be notified.
 
 ```yaml
 Type: String

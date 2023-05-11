@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
 
-**Note**: Currently, this cmdlet still requires Basic authentication to be enabled in WinRM on the local computer. For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
+**Note**: Version 3.2.0-Preview3 or later of the module supports REST API mode for most Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required for REST API mode). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,6 +41,7 @@ Connect-IPPSSession
  [-Credential <PSCredential>]
  [-Organization <String>]
  [-UserPrincipalName <String>]
+ [-UseRPSSession]
  [<CommonParameters>]
 ```
 
@@ -54,28 +55,29 @@ For detailed connection instructions, including prerequisites, see [Connect to S
 Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com
 ```
 
-This example connects to Security & Compliance PowerShell in a Microsoft 365 organization. You're prompted for the password of the michelle@contoso.onmicrosoft.com account.
+This example connects to Security & Compliance PowerShell in a Microsoft 365 organization. You're prompted for the password of the michelle@contoso.onmicrosoft.com account. In v3.2.0-Preview3 of the module, we're connecting in remote PowerShell mode, so Basic authentication in WinRM is required on the local computer.
+
 
 ### Example 2
 ```powershell
-Connect-IPPSSession -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
+Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com -UseRPSSession:$false
 ```
 
-Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using the public key of a certificate.
+This example connects to Security & Compliance using modern authentication, with or without MFA. In v3.2.0-Preview3 of the module, we're connecting in REST API mode, so Basic authentication in WinRM isn't required on the local computer.
 
 ### Example 3
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
-Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate thumbprint.
+This example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
 ### Example 4
 ```powershell
 Connect-IPPSSession -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
-Using the Exchange Online PowerShell module version 2.0.6-Preview5 or later, this example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
+This example connects to Security & Compliance PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
 ## PARAMETERS
 
@@ -164,10 +166,11 @@ Accept wildcard characters: False
 ```
 
 ### -Prefix
-The Prefix parameter specifies a text value to add to the beginning of remote PowerShell cmdlet names when you connect.
+The Prefix parameter specifies a text value to add to the names of Security & Compliance PowerShell cmdlets when you connect. For example, Get-ComplianceCase becomes Get-ContosoComplianceCase when you use the value Contoso for this parameter.
 
-- You can't use spaces or special characters like underscores or asterisks.
-- You can't use the value EXO. This value is reserved for the nine exclusive **Get-EXO\*** cmdlets in the module.
+- The Prefix value can't contain spaces or special characters like underscores or asterisks.
+- You can't use the Prefix value EXO. That value is reserved for the nine exclusive **Get-EXO\*** cmdlets that are built into the module.
+- The Prefix parameter affects only imported Security & Compliance cmdlet names. It doesn't affect the names of cmdlets that are built into the module (for example, Disconnect-ExchangeOnline).
 
 ```yaml
 Type: String
@@ -269,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateFilePath
-The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file.
+The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file. Use the CertificatePassword parameter with this parameter.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
 
@@ -298,6 +301,8 @@ You can use the following methods as a value for this parameter:
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+
+**Note**: Using a **ConvertTo-SecureString** command to store the password of the certificate locally defeats the purpose of a secure connection method for automation scenarios. Using a **Get-Credential** command to prompt you for the password of the certificate securely isn't ideal for automation scenarios. In other words, there's really no automated _and_ secure way to connect using a local certificate.
 
 ```yaml
 Type: SecureString
@@ -386,6 +391,26 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseRPSSession
+This parameter is available in version 3.2.0-Preview3 or later of the module.
+
+The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using REST API mode. To connect to Security & Compliance PowerShell in REST API mode, use this exact syntax: `-UseRPSSession:$false`.
+
+If you don't use this switch, you connect in traditional remote PowerShell access mode, and Basic authentication in WinRM is required on your local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

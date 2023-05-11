@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/Remove-DlpEdmSchema
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-dlpedmschema
 applicable: Security & Compliance
 title: Remove-DlpEdmSchema
 schema: 2.0.0

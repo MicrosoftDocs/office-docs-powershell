@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-OutboundConnector [[-Identity] <OutboundConnectorIdParameter>]
  [-IncludeTestModeConnectors <Boolean>]
  [-IsTransportRuleScoped <Boolean>]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -97,6 +98,22 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResultSize
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable:  Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

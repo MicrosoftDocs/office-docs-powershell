@@ -39,7 +39,7 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
+$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).Identity
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
 $greetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
@@ -76,7 +76,7 @@ This example creates a new AA named _Main auto attendant_ that has the following
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
+$operatorObjectId = (Get-CsOnlineUser operator@contoso.com).Identity
 $operatorEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 
 $dcfGreetingPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
@@ -214,9 +214,9 @@ $greetingText = "Welcome to Contoso"
 $mainMenuText = "To reach your party by name, say it now. To talk to Sales, please press 1. To talk to User2 press 2. Please press 0 for operator"
 $afterHoursText = "Sorry Contoso is closed. Please call back during week days from 7AM to 8PM. Goodbye!"
 $tz = "Romance Standard Time"
-$operatorId = (Get-CsOnlineUser -Identity "sip:user1@contoso.com").ObjectId
-$user1Id = (Get-CsOnlineUser -Identity "sip:user2@contoso.com").ObjectId
-$salesCQappinstance = (Get-CsOnlineUser -Identity "sales@contoso.com").ObjectId # one of the application instances associated to the Call Queue
+$operatorId = (Get-CsOnlineUser -Identity "sip:user1@contoso.com").Identity
+$user1Id = (Get-CsOnlineUser -Identity "sip:user2@contoso.com").Identity
+$salesCQappinstance = (Get-CsOnlineUser -Identity "sales@contoso.com").Identity # one of the application instances associated to the Call Queue
 $tr1 = New-CsOnlineTimeRange -Start 07:00 -End 20:00
 
 # After hours

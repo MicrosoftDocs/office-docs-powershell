@@ -12,6 +12,9 @@ ms.reviewer:
 # Remove-ClientAccessRule
 
 ## SYNOPSIS
+> [!NOTE]
+> Beginning in October 2022, we've disabled access to client access rules for all existing Exchange Online organizations that weren't using them. In October 2023, support for client access rules will end for all Exchange Online organizations. For more information, see [Deprecation of Client Access Rules in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-client-access-rules-in-exchange-online/ba-p/3638563).
+
 This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-ClientAccessRule cmdlet to remove client access rules. Client access rules help you control access to your cloud-based organization based on the properties of the connection.

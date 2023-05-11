@@ -29,12 +29,21 @@ This cmdlet shows the available list of Shifts Connectors that can be used to sy
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionConnector
+PS C:\> Get-CsTeamsShiftsConnectionConnector | Format-List
 ```
 ```
-Id                                   Name           SupportedScenario                                      Version         WfiSupportedScenario
---                                   ----           -----------------                                      -------         --------------------
-6A51B888-FF44-4FEA-82E1-839401E9CD74 Contoso V1      {Shift, SwapRequest, UserShiftPreferences, OpenShift...} 2020.3 - 2021.1 {SwapRequest, OpenShiftRequest, TimeOffRequest}
+Id                                       : 6A51B888-FF44-4FEA-82E1-839401E9CD74
+Name                                     : Contoso V1
+SupportedSyncScenarioOfferShiftRequest   : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioOpenShift           : {Disabled, FromWfmToShifts}
+SupportedSyncScenarioOpenShiftRequest    : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioShift               : {Disabled, FromWfmToShifts}
+SupportedSyncScenarioSwapRequest         : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioTimeCard            : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioTimeOff             : {Disabled, FromWfmToShifts}
+SupportedSyncScenarioTimeOffRequest      : {Disabled, FromWfmToShifts, TwoWay}
+SupportedSyncScenarioUserShiftPreference : {Disabled, FromWfmToShifts, TwoWay}
+Version                                  : 2020.3 - 2021.1
 ```
 Get the list of Shifts Connectors available on the tenant.
 
@@ -50,6 +59,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
 
 [New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
 

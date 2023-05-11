@@ -23,7 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
- [-ErrorPolicyOnly] 
+ [-ErrorPolicyOnly]
  [-ExcludeTeamsPolicy]
  [-IncludeTestModeResults]
  [-RetentionRuleTypes]
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTestModeResults
-The IncludeTestModeResults switch specifies whether to include simulation policy results. You don't need to specify a value with this switch.
+The IncludeTestModeResults switch specifies whether to include the status of test mode in the policy details. You don't need to specify a value with this switch.
 
 For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
 

@@ -593,10 +593,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnforceSimulationPolicy
-Use the EnforceSimulationPolicy parameter to promote a simulation policy to a regular auto-labeling policy. Valid values are:
+The EnforceSimulationPolicy parameter specifies whether to enforce a simulation policy as an active policy. Valid values are:
 
-- $true: Promote the simulation policy to a regular auto-labeling policy.
-- $false: Don't promote the simulation policy. This is the default value.
+- $true: Enforce the simulation policy as an active policy.
+- $false: Don't enforce the simulation policy as an active policy. This is the default value.
 
 For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
 
@@ -1021,10 +1021,10 @@ Accept wildcard characters: False
 ```
 
 ### -StartSimulation
-The StartSimulation parameter specifies whether to start a simulation job. Valid values are:
+The StartSimulation parameter specifies whether to start the simulation for a policy that was created in simulation mode. Valid values are:
 
-- $true: Start the simulation job.
-- $false: Don't start the simulation job. This is the default value.
+- $true: Start the simulation.
+- $false: Don't start the simulation. This is the default value.
 
 For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-retentionevent
-applicable: Exchange Online
+applicable: Exchange Online, Security & Compliance
 title: Get-RetentionEvent
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-RetentionEvent
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in the cloud-based service.
 
 Use the Get-RetentionEvent cmdlet to view retention events in your organization.
 
@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RetentionEvent [[-Identity] <EwsStoreObjectIdParameter>]
  [-AllStatus]
+ [-DomainController <Fqdn>]
  [<CommonParameters>]
 ```
 
@@ -54,7 +55,7 @@ The Identity parameter specifies the retention event that you want to view.
 Type: EwsStoreObjectIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: 1
@@ -71,6 +72,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

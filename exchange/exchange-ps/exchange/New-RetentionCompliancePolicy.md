@@ -68,6 +68,7 @@ New-RetentionCompliancePolicy [-Name] <String>
 ### AdaptiveScopeLocation
 ```
 New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValuedProperty>
+ [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -152,7 +153,7 @@ The Applications parameter specifies the target when Microsoft 365 Groups are in
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: Default
+Parameter Sets: Default, AdaptiveScopeLocation
 Aliases:
 Applicable: Security & Compliance
 
@@ -295,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsSimulation
-The IsSimulation switch specifies the retention policy is a DLM simulation. You don't need to specify a value with this switch.
+The IsSimulation switch specifies the policy is created in simulation mode. You don't need to specify a value with this switch.
 
 For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
 
