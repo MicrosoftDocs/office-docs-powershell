@@ -55,12 +55,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2018 -EndDate 1/7/2018 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
+Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2023 -EndDate 1/7/2023 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
 ```
 
 This example starts a new historical search named "Fabrikam Search" that has the following properties:
 
-- Date range: January 1, 2018 to January 6, 2018, with the end date of January 7, 2018 excluded. Please note that if the time of day is not specified, the default time of 0:00 AM is used. In this example, the date range is equivalent to -StartDate "1/1/2018 0:00 AM" -EndDate 1/7/2018  "1/7/2018 0:00 AM"
+- Date range: January 1 2023 to January 6 2023. Because we aren't specifying the time of day, the value 0:00 AM is used. In this example, the date range is equivalent to -StartDate "1/1/2023 0:00 AM" -EndDate "1/7/2023 0:00 AM"
 - Report type: Message trace
 - Sender address: michelle@fabrikam.com
 - Internal notification email address: chris@contoso.com
@@ -72,7 +72,9 @@ The EndDate parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
-You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+If you don't specify the time of day, the default value 0:00 AM is used. For example, the value 12/31/2022 is really "12/31/2022 0:00 AM", which means no data from 12/31/2022 is included (only data from 12/30/2022 is included).
+
+You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: DateTime
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 ### -ReportTitle
 The ReportTitle parameter specifies a descriptive name for the historical search. If the value contains spaces, enclose the value in quotation marks (").
 
-You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: String
@@ -118,7 +120,7 @@ The ReportType parameter specifies the type of historical search that you want t
 - TransportRule: Transport or Mail Flow Rules Report.
 - UnifiedDLP: Unified Data Loss Prevention Report.
 
-You also need to specify at least one of the following values in the command: MessageID, RecipientAddress, or SenderAddress.
+You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
 ```yaml
 Type: HistoricalSearchReportType
@@ -436,7 +438,7 @@ Accept wildcard characters: False
 ```
 
 ### -TransportRule
-The TransportRule parameter filters the results by the name of the transport rule that acted on the message. You can specify multiple transport rules separated by commas.
+The TransportRule parameter filters the results by the name of the Exchange mail flow rule (also known as a transport rule) that acted on the message. You can specify multiple transport rules separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
