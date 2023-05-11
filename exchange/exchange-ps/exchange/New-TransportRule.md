@@ -4717,8 +4717,6 @@ Accept wildcard characters: False
 ```
 
 ### -SetSCL
-**Note**: This parameter is functionaly only in on-premises Exchange.
-
 This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
