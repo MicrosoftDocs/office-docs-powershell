@@ -144,7 +144,7 @@ If you specify multiple filter values for the same parameter, OR behavior is use
 
 If you use this parameter with other filter parameters, AND behavior is used across parameters. For example:
 
-`-Filter1 =  @("Activity", "LabelApplied", "LabelRemoved") -Filter2 = @("Workload", "Exchange")` returns records with the activity values `LabelApplied` or `LabelRemoved` for the `Exchange` workload. In other words, ((`Activity eq LabelApplied`) OR (`Activity eq LabelRemoved`)) AND (`Workload eq Exchange`).
+`-Filter1 @("Activity", "LabelApplied", "LabelRemoved") -Filter2 = @("Workload", "Exchange")` returns records with the activity values `LabelApplied` or `LabelRemoved` for the `Exchange` workload. In other words, ((`Activity eq LabelApplied`) OR (`Activity eq LabelRemoved`)) AND (`Workload eq Exchange`).
 
 ```yaml
 Type: String[]
