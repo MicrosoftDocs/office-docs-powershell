@@ -282,6 +282,7 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePointOnline
 - Teams (currently in Preview)
+- DataLossPrevention
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
