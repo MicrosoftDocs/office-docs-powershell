@@ -197,7 +197,6 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePoint
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
@@ -301,7 +300,6 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 
 - AntiMalwarePolicy
 - AntiPhishPolicy
-- DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
 - SafeAttachmentPolicy
@@ -325,7 +323,6 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-- DataLossPrevention
 - HighConfPhish
 - Malware
 - Phish
@@ -507,7 +504,6 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-- DataLossPrevention
 - HighConfPhish
 - Malware
 - Phish
