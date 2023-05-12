@@ -64,11 +64,9 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
   - In Exchange Online PowerShell, virtually all of the available remote PowerShell cmdlets are backed by the REST API.
 
-    In Exchange Online PowerShell, REST API connections are used by default. You need to use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command to access cmdlets in remote PowerShell mode.
+  - In Security & Compliance Center PowerShell using v3.2.0-Preview4 or later of the module, many, but not all of the available remote PowerShell cmdlets are backed by the REST API.
 
-  - In Security & Compliance Center PowerShell using v3.2.0-Preview4 of the module, many of the available remote PowerShell cmdlets are backed by the REST API.
-
-    In Security & Compliance Center PowerShell, remote PowerShell connections are used by default. You need to use `-UseRPSSession:$false` to access cmdlets in REST API mode. This behavior will change to match **Connect-ExchangeOnline** in a later version of the module as more Security & Compliance cmdlets are available in REST API mode.
+  - In Exchange Online PowerShell and in Security & Compliance PowerShell, REST API connections are used by default. You need to use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** or **Connect-IPPSSession** command to access cmdlets in remote PowerShell mode.
 
 - Consider the following items if you connect to Exchange Online PowerShell or Security & Compliance PowerShell in remote PowerShell mode:
   - [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) is required on your client computer.

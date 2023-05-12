@@ -58,7 +58,7 @@ Import-Module ExchangeOnlineManagement
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-UseRPSSession:$false] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-UseRPSSession] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
 ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
