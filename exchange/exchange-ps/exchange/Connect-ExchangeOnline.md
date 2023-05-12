@@ -534,8 +534,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentity
-**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
-
 The ManagedIdentity switch specifies that you're using managed identity to connect. You don't need to specify a value with this switch.
 
 Managed identity connections are currently supported for the following types of Azure resources:
@@ -565,8 +563,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentityAccountId
-**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
-
 The ManagedIdentityAccountId parameter specifies the user-assigned managed identity that you're using to connect. A valid value for this parameter is the application ID (GUID) of the service principal that corresponds to the user-assigned managed identity in Azure.
 
 You must use this parameter with the Organization parameter and the ManagedIdentity switch.
@@ -661,8 +657,6 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLoadingFormatData
-**Note**: This parameter is available in version 2.0.6-Preview8 or later of the module.
-
 The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
@@ -741,11 +735,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 2.0.6-Preview3 or later of the module.
-
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Turn on Basic authentication in WinRM](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
 
 If you don't use this switch, Basic authentication in WinRM is not required.
 
