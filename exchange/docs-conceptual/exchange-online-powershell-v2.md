@@ -41,7 +41,7 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
 - Cmdlets backed by the REST API are available in the following PowerShell environments based on the version of the EXO V3 module:
   - **Exchange Online PowerShell**: v3.0.0 or later.
-  - **Security & Compliance PowerShell**: v3.2.0-Preview3 or later.
+  - **Security & Compliance PowerShell**: v3.2.0-Preview4 or later.
 
   REST API cmdlets have the following advantages over their historical counterparts:
 
@@ -66,7 +66,7 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
     In Exchange Online PowerShell, REST API connections are used by default. You need to use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command to access cmdlets in remote PowerShell mode.
 
-  - In Security & Compliance Center PowerShell using v3.2.0-Preview3 of the module, many of the available remote PowerShell cmdlets are backed by the REST API.
+  - In Security & Compliance Center PowerShell using v3.2.0-Preview4 of the module, many of the available remote PowerShell cmdlets are backed by the REST API.
 
     In Security & Compliance Center PowerShell, remote PowerShell connections are used by default. You need to use `-UseRPSSession:$false` to access cmdlets in REST API mode. This behavior will change to match **Connect-ExchangeOnline** in a later version of the module as more Security & Compliance cmdlets are available in REST API mode.
 

@@ -35,7 +35,7 @@ To use the older Exchange Online Remote PowerShell Module (the V1 module) to con
 
   > [!NOTE]
   >
-  > If you're using version 3.2.0-Preview3 of the module, and you use `-UseRPSSession:$false` in the **Connect-IPPSSession** command, you have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+  > If you're using version 3.2.0-Preview4 or later of the module, and you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -65,7 +65,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
-- In v3.2.0-Preview3 of the module, if you use `-UseRPSSession:$false` in the **Connect-IPPSSession** command, you connect in REST API mode. To connect in remote PowerShell mode, don't use the _UseRPSSession_ switch. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+- In v3.2.0-Preview4 or later of the module, if you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you connect in REST API mode. To connect in remote PowerShell mode, use the _UseRPSSession_ switch. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 - The required _ConnectionUri_ and _AzureADAuthorizationEndpointUri_ values depend on the nature of your Microsoft 365 organization. Common values are described in the following table:
 
