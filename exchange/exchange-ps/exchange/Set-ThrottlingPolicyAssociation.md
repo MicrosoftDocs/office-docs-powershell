@@ -34,11 +34,11 @@ Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParame
 ## DESCRIPTION
 The Set-ThrottlingPolicyAssociation cmdlet defines quota limits for specific objects. For example, if you notice that a user or other object is using excessive bandwidth, you can associate that object with a throttling policy that's more restrictive.
 
-In data center deployments, the object referred to by the Identity and ThrottlingPolicy parameters must be in the same tenant.
+In data center deployments, the Identity parameter-referred object and the ThrottlingPolicy parameter-referred must be in the same tenant.
 
 For more information about how to control the resources consumed by individual users, see [User workload management in Exchange Server](https://learn.microsoft.com/Exchange/server-health/workload-management).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run the Set-ThrottlingPolicyAssociation cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ $b = Get-ThrottlingPolicy ITStaffPolicy
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 
-You don't need to use the Set-ThrottlingPolicyAssociation cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith to the throttling policy ITStaffPolicy.
+You don't need to use the Set-ThrottlingPolicyAssociation cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith with the throttling policy ITStaffPolicy.
 
 ## PARAMETERS
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN), for example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingPolicy
-The ThrottlingPolicy parameter specifies the throttling policy that you want to be associated with the object specified by the Identity parameter.
+The ThrottlingPolicy parameter specifies the throttling policy that you want the object specified by the Identity parameter to be associated with.
 
 ```yaml
 Type: ThrottlingPolicyIdParameter
