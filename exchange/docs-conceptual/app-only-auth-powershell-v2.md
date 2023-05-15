@@ -38,7 +38,6 @@ Certificate based authentication (CBA) or app-only authentication as described i
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
 >   - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
->   - [Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)
 >   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
 >   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >

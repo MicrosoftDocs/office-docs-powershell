@@ -30,7 +30,6 @@ The rest of this article explains how to connect using managed identity, and the
 >
 > - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
 > - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
-> - [Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)
 > - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
 > - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >
