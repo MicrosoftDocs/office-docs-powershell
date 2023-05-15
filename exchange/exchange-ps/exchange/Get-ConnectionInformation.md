@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-ConnectionInformation
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module v2.0.6-Preview7 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available in the Exchange Online PowerShell module v3.0.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-ConnectionInformation cmdlet to get information about all REST-based connections in the current PowerShell instance with Exchange Online.
 
