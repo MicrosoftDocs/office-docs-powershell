@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. This cmdlet works for accounts with or without multi-factor authentication (MFA).
 
 To connect to Security & Compliance PowerShell, use the [Connect-IPPSSession](https://learn.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
@@ -52,6 +52,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
+ [-SigningCertificate <X509Certificate2>]
  [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -645,6 +646,28 @@ The ShowProgress parameter specifies whether to show or hide the progress bar of
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SigningCertificate
+**Note**: This parameter is available in version 3.2.0-Preview4 or later of the module.
+
+The SigningCertificate parameter specifies the client certificate that's used to sight the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
+
+A valid value for this parameter is a variable that contains the certificate, or a command or expression that gets the certificate.
+
+To find the certificate, use the Get-PfxCertificate cmdlet in the Microsoft.PowerShell.Security module or use the Get-ChildItem cmdlet in the certificate (Cert:) drive. If the certificate isn't valid or doesn't have sufficient authority, the command will fail.
+
+```yaml
+Type: X509Certificate2
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
