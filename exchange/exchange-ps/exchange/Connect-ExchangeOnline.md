@@ -660,7 +660,7 @@ Accept wildcard characters: False
 ### -SigningCertificate
 **Note**: This parameter is available in version 3.2.0-Preview4 or later of the module.
 
-The SigningCertificate parameter specifies the client certificate that's used to sight the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
+The SigningCertificate parameter specifies the client certificate that's used to sign the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
 
 A valid value for this parameter is a variable that contains the certificate, or a command or expression that gets the certificate.
 
