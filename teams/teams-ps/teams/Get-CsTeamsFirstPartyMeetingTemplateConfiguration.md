@@ -1,3 +1,12 @@
+---
+Module Name: MicrosoftTeams
+title: Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+author: boboPD
+ms.author: pradas
+online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+schema: 2.0.0
+---
+
 # Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 
 ## SYNOPSIS

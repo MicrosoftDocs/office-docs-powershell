@@ -1,3 +1,12 @@
+---
+Module Name: MicrosoftTeams
+title: New-CsTeamsMeetingTemplatePermissionPolicy
+author: boboPD
+ms.author: pradas
+online version: https://learn.microsoft.com/powershell/module/teams/New-CsTeamsMeetingTemplatePermissionPolicy
+schema: 2.0.0
+---
+
 # New-CsTeamsMeetingTemplatePermissionPolicy
 
 ## SYNOPSIS

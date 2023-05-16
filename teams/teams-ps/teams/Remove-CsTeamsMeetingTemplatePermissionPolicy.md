@@ -1,3 +1,12 @@
+---
+Module Name: MicrosoftTeams
+title: Remove-CsTeamsMeetingTemplatePermissionPolicy
+author: boboPD
+ms.author: pradas
+online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsMeetingTemplatePermissionPolicy
+schema: 2.0.0
+---
+
 # Remove-CsTeamsMeetingTemplatePermissionPolicy
 
 ## SYNOPSIS
