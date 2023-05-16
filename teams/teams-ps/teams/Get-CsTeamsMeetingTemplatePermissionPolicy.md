@@ -59,10 +59,6 @@ Description            :
 
 Note: _The "Tag:" prefix can be ignored when specifying the identity._
 
-## INPUTS
-
-## OUTPUTS
-
 ## RELATED LINKS
 [Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md)
 [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md)

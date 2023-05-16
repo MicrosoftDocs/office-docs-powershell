@@ -38,10 +38,6 @@ TeamsMeetingTemplates : {default, firstparty_30d773c0-1b4e-4bf6-970b-73f544c054b
 Description           :
 ```
 
-## INPUTS
-
-### None
-
 ## OUTPUTS
 
 A configuration object with the following structure:
