@@ -116,7 +116,9 @@ The Mode parameter specifies how the rule operates after it's enabled. Valid val
 
 - Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
 - AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
-- Enforce: All actions specified in the rule are taken. This is the default value.
+- Enforce: All actions specified in the rule are taken.
+
+The value that has already been set in the rule will be persevered, unless -Mode parameter is specified.
 
 ```yaml
 Type: RuleMode
