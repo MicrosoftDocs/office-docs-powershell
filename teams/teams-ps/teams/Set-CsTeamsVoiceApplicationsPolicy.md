@@ -68,6 +68,7 @@ Set-CsTeamsVoiceApplicationsPolicy -Identity "SDA-CQ-OverflowGreeting" -AllowCal
 
 The command shown in Example 1 sets allowing CQ overflow shared voicemail greeting changes to per-user Teams voice applications policy.
 
+
 ## PARAMETERS
 
 ### -AllowAutoAttendantBusinessHoursGreetingChange
@@ -230,7 +231,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## PARAMETERS - Call Queue
 
 ### -AllowCallQueueWelcomeGreetingChange
 
@@ -474,7 +474,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## PARAMETERS - Monitor Whisper Barge Takeover
+
 
 ### -CallQueueAgentMonitorMode
 
@@ -522,7 +522,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## PARAMETERS - Real-time and historical reporting metrics
+
+
+
 
 ### -RealTimeAutoAttendantMetricsPermission
 
