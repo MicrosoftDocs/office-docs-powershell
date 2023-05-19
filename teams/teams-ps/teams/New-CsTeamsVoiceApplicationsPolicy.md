@@ -10,7 +10,7 @@ ROBOTS: NOINDEX
 
 ## SYNOPSIS
 
-Creates a new Teams voice applications policy. TeamsVoiceApplications policy governs what permissions the supervisors/users have over auto attendants and call queues.
+Creates a new Teams voice applications policy. `TeamsVoiceApplications` policy governs what permissions the supervisors/users have over auto attendants and call queues.
 
 ## SYNTAX
 
@@ -57,7 +57,7 @@ New-CsTeamsVoiceApplicationsPolicy [-Identity] <String>
 
 ## DESCRIPTION
 
-TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations.
+`TeamsVoiceApplicationsPolicy` is used for **Supervisor Delegated Administration** which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations.
 
 ## EXAMPLES
 
@@ -67,7 +67,7 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-CQ-Moh -AllowCallQueueMusicOnHoldChange $true
 ```
 
-The command shown in Example 1 creates a new per-user Teams voice applications policy with the Identity SDA-Allow-Moh. This policy allows delegated administrators to change the music on hold information.
+The command shown in Example 1 creates a new per-user Teams voice applications policy with the Identity `SDA-Allow-Moh`. This policy allows delegated administrators to change the music on hold information.
 
 ### EXAMPLE 2
 
@@ -75,7 +75,7 @@ The command shown in Example 1 creates a new per-user Teams voice applications p
 New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true 
 ```
 
-The command shown in Example 2 creates a new per-user Teams voice applications policy with the Identity SDA-Allow-AA-After-Hour. This policy allows delegated administrators to change after-hours greetings for auto attendants.
+The command shown in Example 2 creates a new per-user Teams voice applications policy with the Identity `SDA-Allow-AA-After-Hour`. This policy allows delegated administrators to change after-hours greetings for auto attendants.
 
 ## PARAMETERS
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantBusinessHoursGreetingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's business hours greeting. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hours greeting.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's business hours greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's business hours greeting.
 
 ```yaml
 Type: Boolean
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantAfterHoursGreetingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's after-hours greeting. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's after-hours greeting.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's after-hours greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's after-hours greeting.
 
 ```yaml
 Type: Boolean
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantHolidayGreetingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's holiday greeting. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's holiday greeting.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's holiday greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's holiday greeting.
 
 ```yaml
 Type: Boolean
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantBusinessHoursChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's business hours schedule. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hours schedule.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's business hours schedule. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's business hours schedule.
 
 ```yaml
 Type: Boolean
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantHolidaysChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's holiday schedules. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's holiday schedules.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's holiday schedules. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's holiday schedules.
 
 ```yaml
 Type: Boolean
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantTimeZoneChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's time zone. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's time zone.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's time zone. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's time zone.
 
 ```yaml
 Type: Boolean
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantLanguageChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's language. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's language.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's language.
 
 ```yaml
 Type: Boolean
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantBusinessHoursRoutingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's business hours call flow. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's business hours call flow.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's business hours call flow. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's business hours call flow.
 
 ```yaml
 Type: Boolean
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantAfterHoursRoutingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's after-hours call flow. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's after-hours call flow.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's after-hours call flow. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's after-hours call flow.
 
 ```yaml
 Type: Boolean
@@ -241,7 +241,7 @@ Accept wildcard characters: False
 
 ### -AllowAutoAttendantHolidayRoutingChange
 
-When set to True users affected by the policy will be allowed to change the auto attendant's holiday call flows. When set to False (the default value) users affected by the policy will not be allowed to change the auto attendant's holiday call flows.
+When set to `True`, users affected by the policy will be allowed to change the auto attendant's holiday call flows. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's holiday call flows.
 
 ```yaml
 Type: Boolean
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueWelcomeGreetingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's welcome greeting. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's welcome greeting.
+When set to `True`, users affected by the policy will be allowed to change the call queue's welcome greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's welcome greeting.
 
 ```yaml
 Type: Boolean
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueMusicOnHoldChange
 
-When set to True users affected by the policy will be allowed to change the call queue's music on hold information. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's music on hold.
+When set to `True`, users affected by the policy will be allowed to change the call queue's music on hold information. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's music on hold.
 
 ```yaml
 Type: Boolean
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueOverflowSharedVoicemailGreetingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's overflow shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's overflow shared voicemail greeting.
+When set to `True`, users affected by the policy will be allowed to change the call queue's overflow shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's overflow shared voicemail greeting.
 
 ```yaml
 Type: Boolean
@@ -306,7 +306,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueTimeoutSharedVoicemailGreetingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's timeout shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's timeout shared voicemail greeting.
+When set to `True`, users affected by the policy will be allowed to change the call queue's timeout shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's timeout shared voicemail greeting.
 
 ```yaml
 Type: Boolean
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueNoAgentSharedVoicemailGreetingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's no agent shared voicemail greeting. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's no agent shared voicemail greeting.
+When set to `True`, users affected by the policy will be allowed to change the call queue's no agent shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no agent shared voicemail greeting.
 
 ```yaml
 Type: Boolean
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueLanguageChange
 
-When set to True users affected by the policy will be allowed to change the call queue's language. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's language.
+When set to `True`, users affected by the policy will be allowed to change the call queue's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's language.
 
 ```yaml
 Type: Boolean
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueMembershipChange
 
-When set to True users affected by the policy will be allowed to change the call queue's users. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's users.
+When set to `True`, users affected by the policy will be allowed to change the call queue's users. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's users.
 
 ```yaml
 Type: Boolean
@@ -370,7 +370,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueConferenceModeChange
 
-When set to True users affected by the policy will be allowed to change the call queue's conference mode. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's conference mode.
+When set to `True`, users affected by the policy will be allowed to change the call queue's conference mode. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's conference mode.
 
 ```yaml
 Type: Boolean
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueRoutingMethodChange
 
-When set to True users affected by the policy will be allowed to change the call queue's routing method. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's routing method.
+When set to `True`, users affected by the policy will be allowed to change the call queue's routing method. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's routing method.
 
 ```yaml
 Type: Boolean
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueuePresenceBasedRoutingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's presence-based routing option. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's presence-based routing option.
+When set to `True`, users affected by the policy will be allowed to change the call queue's presence-based routing option. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's presence-based routing option.
 
 ```yaml
 Type: Boolean
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueOptOutChange
 
-When set to True users affected by the policy will be allowed to change the call queue opt-out setting that allows agents to opt out of receiving calls. When set to False (the default value) users affected by the policy will not be allowed to change the call queue opt-out setting.
+When set to `True`, users affected by the policy will be allowed to change the call queue opt-out setting that allows agents to opt out of receiving calls. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue opt-out setting.
 
 ```yaml
 Type: Boolean
@@ -434,7 +434,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueOverflowRoutingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's overflow handling properties. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's overflow handling properties.
+When set to `True`, users affected by the policy will be allowed to change the call queue's overflow handling properties. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's overflow handling properties.
 
 ```yaml
 Type: Boolean
@@ -450,7 +450,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueTimeoutRoutingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's timeout handling properties. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's timeout handling properties.
+When set to `True`, users affected by the policy will be allowed to change the call queue's timeout handling properties. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's timeout handling properties.
 
 ```yaml
 Type: Boolean
@@ -466,7 +466,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueNoAgentsRoutingChange
 
-When set to True users affected by the policy will be allowed to change the call queue's no-agent handling properties. When set to False (the default value) users affected by the policy will not be allowed to change the call queue's no-agent handling properties.
+When set to `True`, users affected by the policy will be allowed to change the call queue's no-agent handling properties. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no-agent handling properties.
 
 ```yaml
 Type: Boolean
@@ -482,7 +482,7 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueAgentOptChange
 
-When set to True users affected by the policy will be allowed to change an agent's opt-in status in the call queue. When set to False (the default value) users affected by the policy will not be allowed to change an agent's opt-in status in the call queue.
+When set to `True`, users affected by the policy will be allowed to change an agent's opt-in status in the call queue. When set to `False` (the default value), users affected by the policy won't be allowed to change an agent's opt-in status in the call queue.
 
 Note that the call queue must be configured to allow agents to opt out in order for this option to work.
 
@@ -504,15 +504,15 @@ Accept wildcard characters: False
 
 PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
 
-When set to Disabled (the default value), users affected by the policy will not be allowed to monitor call sessions.
+When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor call sessions.
 
-When set to Monitor, users affected by the policy will be allowed to monitor and listen to call sessions.
+When set to `Monitor`, users affected by the policy will be allowed to monitor and listen to call sessions.
 
-When set to Whisper, users affected by the policy will be allowed to monitor call sessions and whisper to an agent in the call.
+When set to `Whisper`, users affected by the policy will be allowed to monitor call sessions and whisper to an agent in the call.
 
-When set to Barge, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, or join the call session.
+When set to `Barge`, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, or join the call session.
 
-When set to Takeover, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, join the call session, or take over the call from an agent.
+When set to `Takeover`, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, join the call session, or take over the call from an agent.
 
 ```yaml
 Type: Object
@@ -531,7 +531,9 @@ Accept wildcard characters: False
 
 PARAMVALUE: Disabled | Agent
 
-When set to Agent, users affected by the policy will be allowed to monitor agents during call sessions. When set to Disabled (the default value) users affected by the policy will not be allowed to monitor agents during call sessions.
+When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor agents during call sessions.
+
+When set to `Agent`, users affected by the policy will be allowed to monitor agents during call sessions.
 
 ```yaml
 Type: Object
@@ -546,19 +548,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
-
-
 ### -RealTimeAutoAttendantMetricsPermission
 
 PARAMVALUE: None | Authorized | All
 
-When set to None (the default value), users affected by the policy will not receive real-time metrics for auto attendants.
+When set to `None` (the default value), users affected by the policy won't receive real-time metrics for auto attendants.
 
-When set to Authorized, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
+When set to `Authorized`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
  
-When set to All, users affected by the policy will receive real-time metrics for all auto attendants in the tenant.
+When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the tenant.
 
 ```yaml
 Type: Object
@@ -577,11 +575,11 @@ Accept wildcard characters: False
 
 PARAMVALUE: None | Authorized | All
 
-When set to None (the default value), users affected by the policy will not receive real-time metrics for call queues.
+When set to `None` (the default value), users affected by the policy won't receive real-time metrics for call queues.
 
-When set to Authorized, users affected by the policy will receive real-time metrics for call queues they are authorized for.
+When set to `Authorized`, users affected by the policy will receive real-time metrics for call queues they are authorized for.
  
-When set to All, users affected by the policy will receive real-time metrics for all call queues in the tenant.
+When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the tenant.
 
 ```yaml
 Type: Object
@@ -600,11 +598,11 @@ Accept wildcard characters: False
 
 PARAMVALUE: None | Authorized | All
 
-When set to None (the default value), users affected by the policy will not receive real-time metrics for agents.
+When set to `None` (the default value), users affected by the policy won't receive real-time metrics for agents.
 
-When set to Authorized, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
+When set to `Authorized`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
  
-When set to All, users affected by the policy will receive real-time metrics for all agents in all queues call queues in the tenant.
+When set to `All`, users affected by the policy will receive real-time metrics for all agents in all queues call queues in the tenant.
 
 ```yaml
 Type: Object
@@ -618,7 +616,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -WhatIf
 
