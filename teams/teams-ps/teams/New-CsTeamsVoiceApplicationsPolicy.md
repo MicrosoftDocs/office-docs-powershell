@@ -497,8 +497,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
 ### -CallQueueAgentMonitorMode
 
 PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
