@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DefaultTenantMyAnalyticsFeatureConfig [-ResultSize <Unlimited]>] [<CommonParameters>]
+Get-DefaultTenantMyAnalyticsFeatureConfig [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
