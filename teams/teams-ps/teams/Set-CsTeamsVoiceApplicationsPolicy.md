@@ -55,7 +55,7 @@ Set-CsTeamsVoiceApplicationsPolicy
 
 ## DESCRIPTION
 
-`TeamsVoiceApplicationsPolicy` is used for **Supervisor Delegated Administration** which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations.
+`TeamsVoiceApplicationsPolicy` is used for **Supervisor Delegated Administration** which allows admins in the organization to permit certain users to make changes to auto attendant and call queue configurations.
 
 ## EXAMPLES
 
