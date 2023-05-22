@@ -255,7 +255,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -AllowCallQueueWelcomeGreetingChange
 
 When set to `True`, users affected by the policy will be allowed to change the call queue's welcome greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's welcome greeting.
