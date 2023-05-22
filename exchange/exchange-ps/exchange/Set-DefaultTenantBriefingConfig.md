@@ -3,7 +3,7 @@ external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
 online version: https://learn.microsoft.com/powershell/module/exchange/set-defaulttenantbriefingconfig
 applicable: Exchange Online
-title: Set-DefaultTenantMyAnalyticsFeatureConfig
+title: Set-DefaultTenantBriefingConfig
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
