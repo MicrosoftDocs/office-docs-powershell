@@ -85,10 +85,8 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
 ## DESCRIPTION
 Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
-The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. 
-
 > [!NOTE] 
-> You can't change this setting on an existing Microsoft 365 Group. The setting is only available upon new group creation.
+> You can't change the HiddenGroupMembershipEnabled setting on an existing Microsoft 365 Group. The setting is only available upon new group creation.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
