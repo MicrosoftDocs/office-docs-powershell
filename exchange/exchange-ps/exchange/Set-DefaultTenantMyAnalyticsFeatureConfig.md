@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-DefaultTenantMyAnalyticsFeatureConfig
- [-PrivacyMode <String>]
  [-Feature <String>]
  [-IsEnabled <Boolean>]
  [-ResultSize <Unlimited>]
@@ -40,7 +39,7 @@ To run this cmdlet, you need to be a member of one of the following directory ro
 - Exchange Administrator
 - Insights Administrator
 
-For more information, see, see [Azure AD built-in roles](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference).
+For more information, see [Azure AD built-in roles](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference).
 
 ## EXAMPLES
 
@@ -117,34 +116,6 @@ The IsEnabled parameter enables or disables the Viva Insights feature specified 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivacyMode
-The PrivacyMode parameter enables or disables all of the available Viva Insights features in this cmdlet:
-
-- Add-in
-- Digest email
-- Dashboard
-- Meeting effectiveness survey
-- Schedule send suggestions
-
-Valid values for this parameter are:
-
-- Opt-in: The features are enabled.
-- Opt-out: The features are disabled.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Accepted values: Opt-in, Opt-out
 Applicable: Exchange Online
 
 Required: False
