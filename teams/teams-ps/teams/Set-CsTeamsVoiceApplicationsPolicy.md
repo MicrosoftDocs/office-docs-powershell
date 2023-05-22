@@ -527,7 +527,7 @@ When set to `None` (the default value), users affected by the policy won't recei
 
 When set to `Authorized`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
  
-When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the tenant.
+When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
 ```yaml
 Type: Object
