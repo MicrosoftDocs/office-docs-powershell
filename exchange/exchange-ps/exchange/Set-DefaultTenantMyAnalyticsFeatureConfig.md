@@ -45,34 +45,19 @@ For more information, see [Azure AD built-in roles](https://learn.microsoft.com/
 
 ### Example 1
 ```powershell
-Set-DefaultTenantMyAnalyticsFeatureConfig -PrivacyMode Opt-in
+Set-DefaultTenantMyAnalyticsFeatureConfig -Feature All -IsEnabled $true
 ```
 
 This example enables all available Viva Insights features for the organization: add-in, dashboard, digest email, meeting effectiveness survey, schedule send suggestions.
 
 ### Example 2
 ```powershell
-Set-DefaultTenantMyAnalyticsFeatureConfig -Feature All -IsEnabled $true
-```
-
-This example also enables all available Viva Insights features for the organization: add-in, dashboard, digest email, meeting effectiveness survey, schedule send suggestions.
-
-### Example 3
-```powershell
 Set-DefaultTenantMyAnalyticsFeatureConfig -Feature Add-in -IsEnabled $false
 ```
 
 This example disables Viva Insight add-in feature for the organization.
 
-### Example 4
-```powershell
-Set-DefaultTenantMyAnalyticsFeatureConfig -PrivacyMode Opt-out -Feature Add-in -IsEnabled $true
-```
-
-This example enables the Viva Insight add-in feature for the organization while disabling the other features.
-
-
-### Example 5
+### Example 3
 ```powershell
 Set-DefaultTenantMyAnalyticsFeatureConfig -Feature Meeting-Effectiveness-Survey-Sampling-Rate -SamplingRate 0.2
 ```
@@ -167,8 +152,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-
-We're in the process of verifying that this cmdlet works for guest user, DAP, and GDAP scenarios.
 
 ## RELATED LINKS
 
