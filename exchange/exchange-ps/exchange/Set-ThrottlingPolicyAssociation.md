@@ -34,7 +34,7 @@ Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParame
 ## DESCRIPTION
 The Set-ThrottlingPolicyAssociation cmdlet defines quota limits for specific objects. For example, if you notice that a user or other object is using excessive bandwidth, you can associate that object with a throttling policy that's more restrictive.
 
-In data center deployments, the Identity parameter-referred object and the ThrottlingPolicy parameter-referred object must be in the same tenant.
+In data center deployments, the object referred to by the Identity and ThrottlingPolicy parameters must be in the same tenant.
 
 For more information about how to control the resources consumed by individual users, see [User workload management in Exchange Server](https://learn.microsoft.com/Exchange/server-health/workload-management).
 
