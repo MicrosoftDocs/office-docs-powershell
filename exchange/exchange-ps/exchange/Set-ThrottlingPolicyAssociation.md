@@ -14,9 +14,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-ThrottlingPolicyAssociation cmdlet to associate a throttling policy with a specific object. The object can be a user with a mailbox, a user without a mailbox, a contact or a computer account.
+Use the Set-ThrottlingPolicyAssociation cmdlet to associate a throttling policy with a specific object. The object can be a user with a mailbox, a user without a mailbox, a contact, or a computer account.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+**Note**: Some parameters in the throttling policy (for example, MessageRateLimit) apply only to objects that have mailbox GUIDs (mailboxes or remote mailboxes) and don't apply to mail users. And, if you want to apply throttling policy to a remote mailbox, first populate the remote mailbox with an ExchangeGUID by using Set-RemoteMailbox -ExchangeGUID.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +38,7 @@ In data center deployments, the object referred to by the Identity and Throttlin
 
 For more information about how to control the resources consumed by individual users, see [User workload management in Exchange Server](https://learn.microsoft.com/Exchange/server-health/workload-management).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run the Set-ThrottlingPolicyAssociation cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -53,7 +55,7 @@ $b = Get-ThrottlingPolicy ITStaffPolicy
 Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 
-You don't need to use the Set-ThrottlingPolicyAssociation cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith to the throttling policy ITStaffPolicy.
+You don't need to use the Set-ThrottlingPolicyAssociation cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith with the throttling policy ITStaffPolicy.
 
 ## PARAMETERS
 
@@ -111,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingPolicy
-The ThrottlingPolicy parameter specifies the throttling policy that you want to be associated with the object specified by the Identity parameter.
+The ThrottlingPolicy parameter specifies the throttling policy that you want the object specified by the Identity parameter to be associated with.
 
 ```yaml
 Type: ThrottlingPolicyIdParameter
