@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/New-OMEConfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/new-omeconfiguration
 applicable: Exchange Online
 title: New-OMEConfiguration
 schema: 2.0.0

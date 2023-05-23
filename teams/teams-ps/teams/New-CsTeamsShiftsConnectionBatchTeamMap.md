@@ -24,7 +24,7 @@ New-CsTeamsShiftsConnectionBatchTeamMap -ConnectorInstanceId <string> -TeamMappi
 
 ## DESCRIPTION
 
-This cmdlet connects multiple Microsoft Teams teams and WFM teams to allow for asynchronization of shifts related data. It acts like an async batch request of [New-CsTeamsShiftsConnectionTeamMap](New-CsTeamsShiftsConnectionTeamMap.md). You can check the operation status by running [Get-CsTeamsShiftsConnectionOperation](Get-CsTeamsShiftsConnectionOperation.md).
+This cmdlet connects multiple Microsoft Teams teams and WFM teams to allow for synchronization of shifts related data. It initiates an asynchronous job to map the WFM teams to the Microsoft Teams teams. You can check the operation status by running [Get-CsTeamsShiftsConnectionOperation](Get-CsTeamsShiftsConnectionOperation.md).
 
 ## EXAMPLES
 
@@ -99,5 +99,3 @@ Please check the example section for the format of TeamMap.
 ## RELATED LINKS
 
 [Get-CsTeamsShiftsConnectionOperation](Get-CsTeamsShiftsConnectionOperation.md)
-
-[New-CsTeamsShiftsConnectionTeamMap](New-CsTeamsShiftsConnectionTeamMap.md)

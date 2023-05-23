@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-serviceprincipal
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-ServicePrincipal
 schema: 2.0.0
 author: chrisda
@@ -64,7 +64,7 @@ The Identity parameter specifies the service principal that you want to view. Yo
 Type: ServicePrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protectionn
 
 Required: False
 Position: 0
@@ -80,7 +80,7 @@ This parameter is reserved for internal Microsoft use.
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

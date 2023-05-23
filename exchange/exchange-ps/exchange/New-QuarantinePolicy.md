@@ -31,15 +31,18 @@ New-QuarantinePolicy [-Name] <String>
  [-DomainController <Fqdn>]
  [-EndUserQuarantinePermissions <QuarantinePermissions>]
  [-EndUserQuarantinePermissionsValue <Int32>]
+ [-EndUserSpamNotificationCustomFromAddress <String>]
+ [-EndUserSpamNotificationFrequency <TimeSpan>]
  [-EndUserSpamNotificationFrequencyInDays <Int32>]
  [-EndUserSpamNotificationLanguage <EsnLanguage>]
+ [-EsnCustomSubject <MultiValuedProperty>]
  [-ESNEnabled <Boolean>]
  [-MultiLanguageCustomDisclaimer <MultiValuedProperty>]
  [-MultiLanguageSenderName <MultiValuedProperty>]
  [-MultiLanguageSetting <MultiValuedProperty>]
  [-OrganizationBrandingEnabled <Boolean>]
- [-QuarantineRetentionDays <Int32>]
  [-QuarantinePolicyType <QuarantinePolicyType>]
+ [-QuarantineRetentionDays <Int32>]
  [<CommonParameters>]
 ```
 
@@ -243,6 +246,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndUserSpamNotificationCustomFromAddress
+The EndUserSpamNotificationCustomFromAddress specifies the email address of an existing internal sender to use as the sender for quarantine notifications.
+
+If you don't use this parameter, the default sender is quarantine@messaging.microsoft.com.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndUserSpamNotificationFrequency
+The EndUserSpamNotificationFrequency parameter species how often quarantine notifications are sent to users. Valid values are:
+
+- 04:00:00 (4 hours)
+- 1.00:00:00 (1 day)
+- 7.00:00:00 (7 days)
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EndUserSpamNotificationFrequencyInDays
 This parameter is reserved for internal Microsoft use.
 
@@ -267,6 +308,28 @@ Type: EsnLanguage
 Parameter Sets: (All)
 Aliases:
 Accepted values: Default, English, French, German, Italian, Japanese, Spanish, Korean, Portuguese, Russian, ChineseSimplified, ChineseTraditional, Amharic, Arabic, Bulgarian, BengaliIndia, Catalan, Czech, Cyrillic, Danish, Greek, Estonian, Basque, Persian, Finnish, Filipino, Galician, Gujarati, Hebrew, Hindi, Croatian, Hungarian, Indonesian, Icelandic, Kazakh, Kannada, Lithuanian, Latvian, Malayalam, Marathi, Malay, Dutch, NorwegianNynorsk, Norwegian, Odia, Polish, PortuguesePortugal, Romanian, Slovak, Slovenian, SerbianCyrillic, Serbian, Swedish, Swahili, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, Vietnamese
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EsnCustomSubject
+The EsnCustomSubject parameter specifies the text to use in the Subject field of quarantine notifications.
+
+You can specify multiple values separated by commas using the syntax: `('value1',''value2',...'valueN')`. For each language that you specify with the MultiLanguageSetting parameter, you need to specify unique Sender text. Be sure to align the corresponding MultiLanguageSetting, MultiLanguageCustomDisclaimer, EsnCustomSubject, and MultiLanguageSenderName parameter values in the same order.
+
+To modify an existing value and preserve other values, you need to specify all existing values and the new value in the existing order.
+
+This setting is available only in the built-in quarantine policy named DefaultGlobalTag that controls global quarantine policy settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
+
+```yaml
+Type:
+Parameter Sets: (All)
+Aliases: MultiValuedProperty
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False

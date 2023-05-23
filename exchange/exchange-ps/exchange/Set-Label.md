@@ -81,7 +81,12 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
  [-TeamsAllowedPresenters <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters>]
  [-TeamsAllowMeetingChat <Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode>]
+ [-TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch <System.Boolean>]
  [-TeamsBypassLobbyForDialInUsers <System.Boolean>]
+ [-TeamsChannelProtectionEnabled <System.Boolean>]
+ [-TeamsChannelSharedWithExternalTenants <System.Boolean>]
+ [-TeamsChannelSharedWithPrivateTeamsOnly <System.Boolean>]
+ [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
  [-TeamsCopyRestrictionEnforced <System.Boolean>]
  [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
  [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
@@ -1278,12 +1283,92 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch
+{{ Fill TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TeamsBypassLobbyForDialInUsers
 The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial-in users who join Teams meetings. Valid values are:
 
 - $true: Dial in users bypass the lobby when joining Teams meetings.
 - $false: Dial in users don't bypass the lobby when joining Teams meetings.
 - $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelProtectionEnabled
+{{ Fill TeamsChannelProtectionEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithExternalTenants
+{{ Fill TeamsChannelSharedWithExternalTenants Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithPrivateTeamsOnly
+{{ Fill TeamsChannelSharedWithPrivateTeamsOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithSameLabelOnly
+{{ Fill TeamsChannelSharedWithSameLabelOnly Description }}
 
 ```yaml
 Type: System.Boolean

@@ -34,7 +34,7 @@ To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exch
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > If you're using the EXO V3 module (v3.0.0 or later) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you'll have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+  > If you're using the EXO V3 module (v3.0.0 or later) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
   >
   > Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
@@ -68,8 +68,6 @@ Connect-ExchangeOnline -UserPrincipalName <UPN> [-UseRPSSession] [-ExchangeEnvir
    ```
 
 For detailed syntax and parameter information, see [Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline).
-
-**Notes**:
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
@@ -209,7 +207,7 @@ For more information, see [Use Azure managed identities to connect to Exchange O
 
 ## Step 3: Disconnect when you're finished
 
-Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you'll need to wait for the sessions to expire. To disconnect the session, run the following command.
+Be sure to disconnect the session when you're finished. If you close the PowerShell window without disconnecting the session, you could use up all the sessions available to you, and you need to wait for the sessions to expire. To disconnect the session, run the following command:
 
 ```powershell
 Disconnect-ExchangeOnline
@@ -411,6 +409,9 @@ This section attempts to compare older connection methods that have been replace
 - **Exchange Online PowerShell module**:
 
   - **Certificate thumbprint**:
+
+    > [!NOTE]
+    > The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
     ```powershell
     Connect-ExchangeOnline -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contoso.onmicrosoft.com"

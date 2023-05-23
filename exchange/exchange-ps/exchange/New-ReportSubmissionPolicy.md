@@ -43,6 +43,7 @@ New-ReportSubmissionPolicy
  [-OnlyShowPhishingDisclaimer <Boolean>]
  [-PhishingReviewResultMessage <String>]
  [-PostSubmitMessage <String>]
+ [-PostSubmitMessageEnabled <Boolean>]
  [-PostSubmitMessageForJunk <String>]
  [-PostSubmitMessageForNotJunk <String>]
  [-PostSubmitMessageForPhishing <String>]
@@ -51,6 +52,7 @@ New-ReportSubmissionPolicy
  [-PostSubmitMessageTitleForNotJunk <String>]
  [-PostSubmitMessageTitleForPhishing <String>]
  [-PreSubmitMessage <String>]
+ [-PreSubmitMessageEnabled <Boolean>]
  [-PreSubmitMessageForJunk <String>]
  [-PreSubmitMessageForNotJunk <String>]
  [-PreSubmitMessageForPhishing <String>]
@@ -58,6 +60,8 @@ New-ReportSubmissionPolicy
  [-PreSubmitMessageTitleForJunk <String>]
  [-PreSubmitMessageTitleForNotJunk <String>]
  [-PreSubmitMessageTitleForPhishing <String>]
+ [-ReportChatMessageEnabled <Boolean>]
+ [-ReportChatMessageToCustomizedAddressEnabled <Boolean>]
  [-ReportJunkAddresses <MultiValuedProperty>]
  [-ReportJunkToCustomizedAddress <Boolean>]
  [-ReportNotJunkAddresses <MultiValuedProperty>]
@@ -512,6 +516,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PostSubmitMessageEnabled
+{{ Fill PostSubmitMessageEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PostSubmitMessageForJunk
 Don't use this parameter. Use the PostSubmitMessage parameter instead.
 
@@ -648,6 +668,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreSubmitMessageEnabled
+{{ Fill PreSubmitMessageEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreSubmitMessageForJunk
 Don't use this parameter. Use the PreSubmitMessage parameter instead.
 
@@ -753,6 +789,38 @@ Don't use this parameter. Use the PreSubmitMessageTitle parameter instead.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportChatMessageEnabled
+{{ Fill ReportChatMessageEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportChatMessageToCustomizedAddressEnabled
+{{ Fill ReportChatMessageToCustomizedAddressEnabled Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

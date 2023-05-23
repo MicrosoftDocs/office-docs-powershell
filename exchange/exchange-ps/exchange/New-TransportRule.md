@@ -16,6 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-TransportRule cmdlet to create transport rules (mail flow rules) in your organization.
 
+**Note**: The action of a rule without conditions or exceptions is applied to all messages, which could have unintended consequences. For example, if the rule action deletes messages, the rule without conditions or exceptions might delete all inbound and outbound messages for the entire organization.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -668,7 +670,12 @@ In on-premises Exchange, this action is only available on Mailbox servers.
 
 The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML disclaimer can't be applied to a message (for example, encrypted or signed messages where the contents can't be altered). Valid values are:
 
-- Wrap: A new message is created and the original message is added to it as an attachment. The disclaimer text is added to the new message, which is delivered to the recipients. This is the default value. <br> • If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules. <br> • If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
+- Wrap: This is the default value. A new message is created and the original message is added to it as an attachment. The disclaimer text is added to the new message, which is delivered to the recipients.
+
+  If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules.
+
+  If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
+
 - Ignore: The rule is ignored and the original message is delivered without the disclaimer.
 - Reject: The original message is returned to the sender in an NDR.
 
@@ -1361,7 +1368,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfADComparisonAttribute
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1413,7 +1420,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfADComparisonOperator
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1436,7 +1443,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfCcHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1469,7 +1476,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfCcHeaderMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1504,7 +1511,7 @@ Accept wildcard characters: False
 ### -ExceptIfAnyOfRecipientAddressContainsWords
 **Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressContainsWords parameter (other recipients in the message are not affected).
 
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -1530,7 +1537,7 @@ Accept wildcard characters: False
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
 **Note**: In the cloud-based service, this parameter behaves the same as the ExceptIfRecipientAddressMatchesPatterns parameter (other recipients in the message are not affected).
 
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -1554,7 +1561,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToCcHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1587,7 +1594,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToCcHeaderMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1620,7 +1627,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1653,7 +1660,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToHeaderMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1686,7 +1693,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1708,7 +1715,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentExtensionMatchesWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1728,7 +1735,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentHasExecutableContent
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1751,7 +1758,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentIsPasswordProtected
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1774,7 +1781,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentIsUnsupported
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1799,7 +1806,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1823,7 +1830,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentNameMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1843,7 +1850,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentProcessingLimitExceeded
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1868,7 +1875,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentPropertyContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1907,7 +1914,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentSizeOver
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -1937,7 +1944,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfBetweenMemberOf1
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1966,7 +1973,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfBetweenMemberOf2
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -1995,7 +2002,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentCharacterSetContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2017,7 +2024,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2048,7 +2055,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromAddressContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2070,7 +2077,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromAddressMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2094,7 +2101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2125,7 +2132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromScope
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2148,7 +2155,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHasClassification
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2174,7 +2181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHasNoClassification
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2197,7 +2204,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHasSenderOverride
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2220,7 +2227,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderContainsMessageHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2240,7 +2247,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2264,7 +2271,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderMatchesMessageHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2284,7 +2291,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2306,7 +2313,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfManagerAddresses
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2337,7 +2344,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfManagerForEvaluatedUser
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2362,7 +2369,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfMessageContainsDataClassifications
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2386,7 +2393,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfMessageSizeOver
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2416,7 +2423,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfMessageTypeMatches
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2446,7 +2453,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientADAttributeContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2502,7 +2509,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientADAttributeMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2556,7 +2563,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientAddressContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2576,7 +2583,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientAddressMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2598,13 +2605,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the ExceptIfRecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This exception matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 ```yaml
 Type: Word[]
@@ -2638,11 +2645,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-This parameter is functional only in on-premises Exchange.
+**Note**: This parameter is functional only in on-premises Exchange. This exception doesn't work in the cloud-based service.
 
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-This exception is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
+This exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
 
@@ -2665,7 +2672,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderADAttributeContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2721,7 +2728,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderADAttributeMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2775,13 +2782,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderDomainIs
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfSenderDomainIs parameter specifies an exception that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This exception matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -2817,7 +2824,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderIpRanges
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2845,7 +2852,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderManagementRelationship
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2868,7 +2875,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2897,7 +2904,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
 
@@ -2924,7 +2931,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToScope
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -2949,7 +2956,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2971,7 +2978,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2991,7 +2998,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectOrBodyContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -3013,7 +3020,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectOrBodyMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -3033,7 +3040,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfWithImportance
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
@@ -3057,7 +3064,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryDate
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 The ExpiryDate parameter specifies when this rule will stop processing messages. The rule won't take any action on messages after the specified date/time.
 
@@ -4018,7 +4025,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the RecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This condition matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 ```yaml
 Type: Word[]
@@ -4304,11 +4311,11 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-This parameter is functional only in on-premises Exchange.
+**Note**: This parameter is functional only in on-premises Exchange. This condition doesn't work in the cloud-based service.
 
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-This exception is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
+This condition is available on Mailbox servers and Edge Transport servers.
 
 The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
 
@@ -4475,7 +4482,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The SenderDomainIs parameter specifies a condition that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This condition matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 

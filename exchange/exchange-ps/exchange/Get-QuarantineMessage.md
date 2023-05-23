@@ -117,7 +117,12 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageDirectionEnum
@@ -192,7 +197,6 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePoint
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
@@ -296,7 +300,6 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 
 - AntiMalwarePolicy
 - AntiPhishPolicy
-- DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
 - SafeAttachmentPolicy
@@ -320,7 +323,6 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-- DataLossPrevention
 - HighConfPhish
 - Malware
 - Phish
@@ -502,7 +504,6 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-- DataLossPrevention
 - HighConfPhish
 - Malware
 - Phish
