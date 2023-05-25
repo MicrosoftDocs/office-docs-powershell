@@ -2138,9 +2138,7 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfFromScope parameter specifies an exception that looks for the location of message senders. Valid values are:
 
-- InOrganization: 
-1. The message was sent or received over an authenticated connection, **AND**
-2. The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization, **OR** The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the sender is a mailbox, mail user, group, or mail-enabled public folder in your organization, **OR** the sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in your organization.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
