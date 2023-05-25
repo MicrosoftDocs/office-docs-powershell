@@ -2138,7 +2138,7 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfFromScope parameter specifies an exception that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the sender meets at least one of the following criteria: The sender is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -2937,10 +2937,10 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfSentToScope parameter specifies an exception that looks for the location of a recipient. Valid values are:
 
-- InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-- NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-- ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-- ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the recipient meets at least one of the following criteria: The recipient is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
+- NotInOrganization: The recipients are outside the organization. The recipient's email address isn't in an accepted domain or is in an accepted domain that's configured as an external relay domain in the organization.
+- ExternalPartner: This value is available only in on-premises Exchange. The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail.
+- ExternalNonPartner: This value is available only in on-premises Exchange. The recipients are external to your organization, and the organization isn't a partner organization.
 
 ```yaml
 Type: ToUserScope
@@ -3198,7 +3198,7 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The FromScope parameter specifies a condition that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the sender meets at least one of the following criteria: The sender is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -4635,10 +4635,10 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The SentToScope parameter specifies a condition that looks for the location of recipients. Valid values are:
 
-- InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-- NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-- ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-- ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the recipient meets at least one of the following criteria: The recipient is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
+- NotInOrganization: The recipients are outside the organization. The recipient's email address isn't in an accepted domain or is in an accepted domain that's configured as an external relay domain in the organization.
+- ExternalPartner: This value is available only in on-premises Exchange. The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail.
+- ExternalNonPartner: This value is available only in on-premises Exchange. The recipients are external to your organization, and the organization isn't a partner organization.
 
 ```yaml
 Type: ToUserScope
