@@ -38,10 +38,10 @@ This example returns a summary list of all app retention compliance rules.
 
 ### Example 1
 ```powershell
-Get-AppRetentionComplianceRule -Identity "Contoso Yammer"
+Get-AppRetentionComplianceRule -Identity "Contoso VivaEngage"
 ```
 
-This example returns detailed information for the app retention compliance rule named Contoso Yammer.
+This example returns detailed information for the app retention compliance rule named Contoso Viva Engage.
 
 ## PARAMETERS
 

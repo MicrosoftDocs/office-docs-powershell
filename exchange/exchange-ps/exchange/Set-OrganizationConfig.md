@@ -59,7 +59,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ConnectorsEnabledForOutlook <Boolean>]
  [-ConnectorsEnabledForSharepoint <Boolean>]
  [-ConnectorsEnabledForTeams <Boolean>]
- [-ConnectorsEnabledForYammer <Boolean>]
+ [-ConnectorsEnabledForVivaEngage <Boolean>]
  [-CustomerLockboxEnabled <Boolean>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DefaultGroupAccessType <ModernGroupObjectType>]
@@ -1223,7 +1223,7 @@ The ConnectorsEnabled parameter specifies whether to enable or disable all conne
 - $true: Connectors are enabled. This is the default value.
 - $false: Connectors are disabled.
 
-The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Yammer.
+The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Viva Engage.
 
 ```yaml
 Type: Boolean
@@ -1305,10 +1305,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorsEnabledForYammer
+### -ConnectorsEnabledForVivaEngage
 This parameter is available only in the cloud-based service.
 
-The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Yammer. Valid values are:
+The ConnectorsEnabledForVivaEngage parameter specifies whether to enable or disable connected apps on Viva Engage. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
 - $false: Connectors are disabled.
