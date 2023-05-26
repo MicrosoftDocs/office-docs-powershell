@@ -44,7 +44,7 @@ This example returns a summary list of all app retention compliance policies.
 
 ### Example 1
 ```powershell
-Get-AppRetentionCompliancePolicy -Identity "Contoso VivaEngage"
+Get-AppRetentionCompliancePolicy -Identity "Contoso Viva Engage"
 ```
 
 This example returns detailed information for the app retention compliance policy named Contoso Viva Engage.
