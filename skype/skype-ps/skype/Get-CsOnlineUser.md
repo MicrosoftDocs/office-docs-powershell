@@ -498,7 +498,7 @@ Accept wildcard characters: False
 
 ### -Sort
 
-Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. For Example:
+Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. This parameter is currently rolled out in commercial environments only. For Example:
 
 - Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
 - Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
