@@ -35,7 +35,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Remove-AppRetentionComplianceRule -Identity "Contoso VivaEngage"
+Remove-AppRetentionComplianceRule -Identity "Contoso Viva Engage"
 ```
 
 This example removes the app retention compliance policy rule Contoso Viva Engage.
