@@ -1308,7 +1308,7 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForYammer
 This parameter is available only in the cloud-based service.
 
-The ConnectorsEnabledForVivaEngage parameter specifies whether to enable or disable connected apps on Viva Engage. Valid values are:
+The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Viva Engage. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
 - $false: Connectors are disabled.
