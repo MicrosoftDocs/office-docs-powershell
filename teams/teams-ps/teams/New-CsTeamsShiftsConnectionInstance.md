@@ -23,7 +23,7 @@ New-CsTeamsShiftsConnectionInstance -Body <IConnectorInstanceRequest> [-Break] [
 
 ### NewExpanded
 ```
-New-CsTeamsShiftsConnectionInstance [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Name <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>][-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>][-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-State <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsShiftsConnectionInstance [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Name <string>] [-State <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>][-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>][-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,6 +40,7 @@ PS C:\> $result = New-CsTeamsShiftsConnectionInstance `
 -name "Cmdlet test instance" `
 -connectorAdminEmail @("admin@contoso.com", "superadmin@contoso.com") `
 -designatedActorId "93f85765-47db-412d-8f06-9844718762a1" `
+-State "Active" `
 -syncFrequencyInMin "10" `
 -SyncScenarioOfferShiftRequest "FromWfmToShifts" `
 -SyncScenarioOpenShift "FromWfmToShifts" `
@@ -77,7 +78,8 @@ PS C:\> $result.ToJsonString()
   "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
   "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
   "createdDateTime": "2023-04-07T10:54:01.8170000Z",
-  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z"
+  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z",
+  "state": "Active"
 }
 ```
 
@@ -386,6 +388,20 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -State
+The state of the connection instance. Valid values are "Active" and "Disabled". A third value "ErrorDisabled" signifies an error in the connection instance.
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
