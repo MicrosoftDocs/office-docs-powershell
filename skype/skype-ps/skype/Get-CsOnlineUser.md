@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ### -Identity
 Indicates the Identity of the user account to be retrieved.
 
-For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
+For TeamsOnly customers using the Teams PowerShell Module version 3.0.0 or later, you use the following values to identify the account:
 
 - GUID
 - SIP address
@@ -159,8 +159,6 @@ Using the Teams PowerShell Module version 2.6 or earlier only, you can use the f
 - UPN
 - Alias
 - Display name. Supports the asterisk ( \* ) wildcard character. For example, `-Identity "* Smith"` returns all the users whose display names end with Smith.
-
-Using the the Teams PowerShell Module version version 2.5.1 or later, the the Get-CsOnlineUser command no longer includes deprecated properties in the output.
 
 ```yaml
 Type: UserIdParameter
@@ -279,7 +277,7 @@ These filtering operators have been reintroduced:
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later (excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 and later):
 
-In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes (note that these changes are only rolled out in commercial environments including GCC at present, and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
+In the Teams PowerShell Module version 3.0.0 or later, filtering functionality is now limited to the following attributes:
 
 - AccountType
 - AccountEnabled
@@ -500,7 +498,7 @@ Accept wildcard characters: False
 
 ### -Sort
 
-Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. For Example:
+Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. This parameter is currently rolled out in commercial environments only. For example:
 
 - Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
 - Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
@@ -588,7 +586,7 @@ If Guest users and SoftDeletedUsers are not required in the output then they can
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0 (note that these changes are only rolled out in commercial environments including GCC at present and will be applicable to the latest TPM versions in GCC High and DoD environments starting March 15, 2023 with TPM 5.0.1):
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 3.0.0 and later, excluding updates mentioned previously for Teams PowerShell Module version 5.0.0:
 
 _New user attributes_:
 
@@ -752,8 +750,6 @@ In Teams PowerShell Modules 3.0.0 and above OnPremLineURI will only refer to the
 ## INPUTS
 
 ## NOTES
-
-These changes are only rolled out in commercial environments at present and will be applicable to the lastest TPM versions in government environments starting March 31, 2023.
 
 ## RELATED LINKS
 
