@@ -931,11 +931,13 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
+
+Mail flow rules only can inspect the content of supported file types. If the mail flow rule finds an attachment file type that isn't supported, the AttachmentIsUnsupported condition is triggered. Supported file types for an attachment are listed here [Use mail flow rules to inspect message attachments in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments). Valid values are:
 
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
+To extend the list of supported file types in Exchange 2013 set up IFilter.
 For more information, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
