@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -State
-The state of the connection instance. Valid values are "Active" and "Disabled". A third value "ErrorDisabled" signifies an error in the connection instance.
+The state of the connection instance. Valid values are "Active" and "Disabled". A third value, "ErrorDisabled", signifies an error in the connection instance.
 
 ```yaml
 Type: String
