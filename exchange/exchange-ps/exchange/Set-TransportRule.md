@@ -883,12 +883,12 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-This condition inspects messages where an attachment is an executable file. The system inspects the file's properties rather than relying on the file's extension. To understand better this condition/exception, see [Use mail flow rules to inspect message attachments in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments).
-
-Valid values are:
+The AttachmentHasExecutableContent parameter specifies a condition that inspects messages where an attachment is an executable file. Valid values are:
 
 - $true: Look for executable content in message attachments.
 - $false: Don't look for executable content in message attachments.
+
+The system inspects the file properties rather than relying on the file extension. For more information, see [Supported executable file types for mail flow rule inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-executable-file-types-for-mail-flow-rule-inspection).
 
 ```yaml
 Type: Boolean
@@ -1722,12 +1722,12 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-This exception inspects messages where an attachment is an executable file. The system inspects the file's properties rather than relying on the file's extension. To understand better this condition/exception, see [Use mail flow rules to inspect message attachments in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments). 
-
-Valid values are:
+The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that inspects messages where an attachment is an executable file. Valid values are:
 
 - $true: Look for executable content in message attachments.
 - $false: Don't look for executable content in message attachments.
+
+The system inspects the file properties rather than relying on the file extension. For more information, see [Supported executable file types for mail flow rule inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-executable-file-types-for-mail-flow-rule-inspection).
 
 ```yaml
 Type: Boolean
