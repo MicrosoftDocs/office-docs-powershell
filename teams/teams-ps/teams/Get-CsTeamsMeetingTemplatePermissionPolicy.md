@@ -26,7 +26,7 @@ Fetches the instances of the policy. Each policy object contains a property call
 To fetch all the policy instances currently available run the command with any parameters;
 
 ```powershell
-PS C:\test> Get-CsTeamsMeetingTemplatePermissionPolicy
+PS> Get-CsTeamsMeetingTemplatePermissionPolicy
 ```
 ```output
 Identity               : Global
@@ -49,7 +49,18 @@ Description            :
 To fetch an instance of a policy with known identity, pass in the `Identity` parameter:
 
 ```powershell
-PS C:\test> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+```
+```output
+Identity               : Tag:Foobar
+HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
+Description            :
+```
+
+`Filter` parameter can be used to fetch policy instances based on partial matches on Identity:
+
+```powershell
+PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Filter *Foo*
 ```
 ```output
 Identity               : Tag:Foobar
@@ -58,6 +69,43 @@ Description            :
 ```
 
 Note: _The "Tag:" prefix can be ignored when specifying the identity._
+
+## PARAMETERS
+
+### -Identity
+
+This parameter can be used to fetch a specific instance of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+
+This parameter can be used to fetch policy instances based on partial matches on the `Identity` field.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: True
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 [Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md)

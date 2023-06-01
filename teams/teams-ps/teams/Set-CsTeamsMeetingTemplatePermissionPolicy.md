@@ -36,7 +36,7 @@ The below snippets illustrates a typical update operation where we fetch an exis
 Lets update a policy instance with Identity=Foobar:
 
 ```powershell
-PS C:\test> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
 ```
 ```output
 Identity               : Tag:Foobar
@@ -47,19 +47,73 @@ Description            :
 Nows lets try to update its description:
 
 ```powershell
-PS C:\test> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -Description "updated description"
+PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -Description "updated description"
 ```
 
 Fetch it again to confirm that the update was saved:
 
 ```powershell
-PS C:\test> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
 ```
 ```output
 Identity               : Tag:Foobar
 HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
 Description            : updated description
 ```
+
+## PARAMETERS
+
+### -Identity
+
+Name of the policy instance to be updated.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HiddenMeetingTemplates
+
+The updated list of meeting template IDs to hide.
+The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](New-CsTeamsHiddenMeetingTemplate.md).
+
+```yaml
+Type: HiddenMeetingTemplate[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+
+Pass in a new description if that field needs to be updated.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 [Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.md)

@@ -25,14 +25,14 @@ Deletes an instance of TeamsMeetingTemplatePermissionPolicy. The `Identity` para
 We'll first find a policy to delete, delete the policy and then confirm that it has been deleted by trying to fetch it again.
 
 ```powershell
-PS C:\test> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
+PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
 
 Identity               : Tag:Test_Policy
 HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056, firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748}
 Description            : This is a test policy
 
-PS C:\test> Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
-PS C:\test> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
+PS> Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
+PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
 
 Get-CsTeamsMeetingTemplatePermissionPolicy : "Test_Policy" not found Please check your request parameters. CorrelationId: c2738e06-0171-4da2-a0ae-e7e99b7c70e3
 At line:1 char:1
@@ -42,16 +42,33 @@ At line:1 char:1
     + FullyQualifiedErrorId : ClientError,Microsoft.Teams.Policy.Administration.Cmdlets.Core.GetTeamsMeetingTemplatePermissionPolicyCmdlet
 ```
 
-## INPUTS
+## PARAMETERS
 
-## OUTPUTS
+### -Identity
+
+Identity of the policy instance to be deleted.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## NOTES
 
 Attempting to delete a policy instance that is currently assigned to users will result in an error. Please remove the assignment before attempting to delete it.
 
 ```powershell
-PS C:\test> Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+PS> Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
 ```
 
 ```output
