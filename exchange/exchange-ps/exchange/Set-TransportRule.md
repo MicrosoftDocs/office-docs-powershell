@@ -3660,6 +3660,11 @@ The Mode parameter specifies how the rule operates. Valid values are:
 - AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
 - Enforce: All actions specified in the rule are taken. This is the default value.
 
+> [!NOTE]
+>
+> In the Audit mode, the action GenerateIncidentReport is going to be executed.
+> In the AuditAndNotify mode, actions GenerateIncidentReport and GenerateNotification are going to be executed.
+
 ```yaml
 Type: RuleMode
 Parameter Sets: (All)
