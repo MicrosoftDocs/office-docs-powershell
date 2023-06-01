@@ -3656,8 +3656,8 @@ Accept wildcard characters: False
 ### -Mode
 The Mode parameter specifies how the rule operates. Valid values are:
 
-- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
-- AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
+- Audit: The actions that the rule would have taken are written to the message tracking log, but no action that impacts message delivery is taken on the message. The GenerateIncidentReport action occurs.
+- AuditAndNotify: The actions that the rule would have taken are written to the message tracking log, but no action that impacts message delivery is taken on the message. The GenerateIncidentReport and GenerateNotification actions occur.
 - Enforce: All actions specified in the rule are taken. This is the default value.
 
 ```yaml

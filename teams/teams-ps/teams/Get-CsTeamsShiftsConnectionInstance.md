@@ -58,6 +58,7 @@ Etag                            : "4f00c221-0000-0400-0000-642ff6480000"
 Id                              : WCI-b58d7a98-ab2c-473f-99a5-e0627d54c062
 LastModifiedDateTime            : 07/04/2023 10:53:59
 Name                            : My connection instance 1
+State                           : Active
 SyncFrequencyInMin              : 10
 SyncScenarioOfferShiftRequest   : FromWfmToShifts
 SyncScenarioOpenShift           : FromWfmToShifts
@@ -80,6 +81,7 @@ Etag                            : "4f005d22-0000-0400-0000-642ff64a0000"
 Id                              : WCI-eba2865f-6cac-46f9-8733-e0631a4536e1
 LastModifiedDateTime            : 07/04/2023 10:54:01
 Name                            : My connection instance 2
+State                           : Active
 SyncFrequencyInMin              : 30
 SyncScenarioOfferShiftRequest   : FromWfmToShifts
 SyncScenarioOpenShift           : FromWfmToShifts
@@ -126,7 +128,8 @@ PS C:\> $ci.ToJsonString()
   "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
   "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
   "createdDateTime": "2023-04-07T10:54:01.8170000Z",
-  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z"
+  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z",
+  "state": "Active"
 }
 ```
 Returns the connection instance with the specified -ConnectorInstanceId.
