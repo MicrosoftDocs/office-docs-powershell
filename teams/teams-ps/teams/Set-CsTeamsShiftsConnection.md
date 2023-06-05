@@ -23,12 +23,12 @@ Set-CsTeamsShiftsConnection -ConnectionId <string> -Body <IUpdateWfmConnectionRe
 
 ### SetExpanded
 ```
-Set-CsTeamsShiftsConnection -ConnectionId <string> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>] [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsShiftsConnection -ConnectionId <string> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>] [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>] [-State <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetViaIdentityExpanded
 ```
-Set-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>] [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsShiftsConnection -InputObject <IConfigApiBasedCmdletsIdentity> [-Authorization <string>] [-IfMatch <string>] [-ConnectorId <string>] [-ConnectorSpecificSettings <IUpdateWfmConnectionRequestConnectorSpecificSettings>] [-Etag <string>] [-Name <string>] [-State <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetViaIdentity
@@ -61,7 +61,8 @@ PS C:\> $result =  Set-CsTeamsShiftsConnection `
             federatedAuthUrl = "https://contoso.com/retail/data/login"
             LoginUserName = "PlaceholderForUsername"
             LoginPwd = "PlaceholderForPassword"
-    })
+    }) `
+    -state "Active"
 
 PS C:\> $result | Format-List
 ```
@@ -84,6 +85,7 @@ Etag                                     : "5b00dd1b-0000-0400-0000-641d2df00000
 Id                                       : 4dae9db0-0841-412c-8d6b-f5684bfebdd7
 LastModifiedDateTime                     : 24/03/2023 04:58:23
 Name                                     : Cmdlet test connection - updated
+State                                    : Active
 TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 
 ```
@@ -116,7 +118,8 @@ PS C:\> $result =  Set-CsTeamsShiftsConnection `
             clientSecret = "PlaceholderForClientSecret"
             LoginUserName = "PlaceholderForUsername"
             LoginPwd = "PlaceholderForPassword"
-    })
+    }) `
+    -state "Active"
 PS C:\> $result | Format-List
 ```
 
@@ -138,6 +141,7 @@ Etag                                     : "3100fd6e-0000-0400-0000-642ea7840000
 Id                                       : a2d1b091-5140-4dd2-987a-98a8b5338744
 LastModifiedDateTime                     : 06/04/2023 11:05:39
 Name                                     : Cmdlet test connection - updated
+State                                    : Active
 TenantId                                 : 3FDCAAF2-863A-4520-97BA-DFA211595876
 
 ```
@@ -343,6 +347,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -State
+The state of the connection. Valid values are "Active" and "Disabled". A third value, "ErrorDisabled", signifies an error in the connection.
+
+```yaml
+Type: String
+Parameter Sets: SetExpanded, SetViaIdentityExpanded
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
