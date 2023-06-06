@@ -444,9 +444,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
-
 ### -OverflowDisconnectTextToSpeechPrompt
 The OverflowDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to the overflow. 
 
@@ -462,9 +459,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectPersonAudioFilePrompt
 The OverflowRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
@@ -482,9 +476,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
-
 ### -OverflowRedirectPersonTextToSpeechPrompt
 The OverflowRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
 
@@ -500,9 +491,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectVoiceAppAudioFilePrompt
 The OverflowRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to overflow. 
@@ -520,9 +508,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
-
 ### -OverflowRedirectVoiceAppTextToSpeechPrompt
 The OverflowRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to overflow. 
 
@@ -538,9 +523,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectPhoneNumberAudioFilePrompt
 The OverflowRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow. 
@@ -558,9 +540,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
-
 ### -OverflowRedirectPhoneNumberTextToSpeechPrompt
 The OverflowRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow. 
 
@@ -576,9 +555,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectVoicemailAudioFilePrompt
 The OverflowRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
@@ -596,9 +572,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
-
 ### OverflowRedirectVoicemailTextToSpeechPrompt
 The OverflowRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
 
@@ -614,9 +587,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
->[!CAUTION]
->This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowSharedVoicemailTextToSpeechPrompt
 The OverflowSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is to be played as a greeting to the caller when transferred to shared voicemail on overflow. This parameter becomes a required parameter when OverflowAction is SharedVoicemail and OverflowSharedVoicemailAudioFilePrompt is null.
