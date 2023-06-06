@@ -30,7 +30,7 @@ The Set-CsCallQueue cmdlet may suggest additional steps required to complete the
 Note that this cmdlet is in the Skype for Business Online PowerShell module and also affects Teams. The reason the "Applies To:" is stated as Skype for Business Online is because it must match the actual module name of the cmdlet. To learn how this cmdlet is used with Skype for Business Online and Teams, see https://learn.microsoft.com/microsoftteams/create-a-phone-system-call-queue.
 
 >[!CAUTION]
->The following configuration parameters are currenly only available in Powershell and do not appear in Teams Admin Center. Saving a call queue configuration through Teams Admin Center will **remove** any of these configured items. Teams Admin Center will support these items by the end of 2023.
+>The following configuration parameters are currently only available in Powershell and do not appear in Teams Admin Center. Saving a call queue configuration through Teams Admin Center will **remove** any of these configured items. Teams Admin Center will support these items by the end of 2023.
 > 
 > - -OverflowDisconnectTextToSpeechPrompt
 > - -OverflowDisconnectAudioFilePrompt
@@ -42,6 +42,17 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -OverflowRedirectPhoneNumberAudioFilePrompt
 > - -OverflowRedirectVoicemailTextToSpeechPrompt
 > - -OverflowRedirectVoicemailAudioFilePrompt
+> - -TimeoutDisconnectTextToSpeechPrompt
+> - -TimeoutDisconnectAudioFilePrompt
+> - -TimeoutRedirectPersonTextToSpeechPrompt
+> - -TimeoutRedirectPersonAudioFilePrompt
+> - -TimeoutRedirectVoiceAppTextToSpeechPrompt
+> - -TimeoutRedirectVoiceAppAudioFilePrompt
+> - -TimeoutRedirectPhoneNumberTextToSpeechPrompt
+> - -TimeoutRedirectPhoneNumberAudioFilePrompt
+> - -TimeoutRedirectVoicemailTextToSpeechPrompt
+> - -TimeoutRedirectVoicemailAudioFilePrompt
+
 
 ## EXAMPLES
 
