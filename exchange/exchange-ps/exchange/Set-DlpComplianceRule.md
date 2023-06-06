@@ -687,7 +687,7 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentIsPasswordProtected
-The DocumentIsPasswordProtected parameter specifies a condition for the DLP rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The DocumentIsPasswordProtected parameter specifies a condition for the DLP rule that looks for password protected files (because the contents of the file can't be inspected).  Password detection works for PDF files, Office documents, and .7z and .zip files only. Valid values are:
 
 - $true: Look for password protected files.
 - $false: Don't look for password protected files.
@@ -1107,7 +1107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentIsPasswordProtected
-The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the DLP rule that looks for password protected files (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the DLP rule that looks for password protected files (because the contents of the file can't be inspected).  Password detection works for PDF files, Office documents, and .7z and .zip files only. Valid values are:
 
 - $true: Look for password protected files.
 - $false: Don't look for password protected files.
