@@ -444,7 +444,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowDisconnectTextToSpeechPrompt
@@ -463,7 +463,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectPersonAudioFilePrompt
@@ -482,7 +482,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectPersonTextToSpeechPrompt
@@ -501,7 +501,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectVoiceAppAudioFilePrompt
@@ -520,7 +520,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectVoiceAppTextToSpeechPrompt
@@ -539,7 +539,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectPhoneNumberAudioFilePrompt
@@ -558,7 +558,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectPhoneNumberTextToSpeechPrompt
@@ -577,7 +577,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowRedirectVoicemailAudioFilePrompt
@@ -596,7 +596,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### OverflowRedirectVoicemailTextToSpeechPrompt
@@ -615,7 +615,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!WARNING]
+>[!CAUTION]
 >This configuration option is currently only available via PowerShell. Modifying the call queue settings via Teams Admin Center will remove this configuration. Teams Admin Center will support this setting by the end of 2023.
 
 ### -OverflowSharedVoicemailTextToSpeechPrompt
