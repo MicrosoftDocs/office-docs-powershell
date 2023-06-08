@@ -32,7 +32,7 @@ Fetches the instances of the policy. Each policy object contains a property call
 ### Example 1
 
 ```powershell
-PS> Get-CsTeamsMeetingTemplatePermissionPolicy
+Get-CsTeamsMeetingTemplatePermissionPolicy
 ```
 ```output
 Identity               : Global

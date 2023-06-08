@@ -26,7 +26,7 @@ Fetches the list of custom templates on the tenant. Each template object contain
 ### Example 1
 
 ```powershell
-PS> Get-CsTeamsMeetingTemplateConfiguration
+Get-CsTeamsMeetingTemplateConfiguration
 ```
 
 ```output

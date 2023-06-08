@@ -28,7 +28,7 @@ This is a readonly configuration.
 ### Example 1
 
 ```powershell
-PS> Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 ```
 
 ```output
