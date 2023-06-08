@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDomainValidationForMailContact
-{{ Fill SkipDomainValidationForMailContact Description }}
+The SkipDomainValidationForMailContact switch skips the check that confirms the proxy addresses of the external contact specified by the Identity parameter are in an accepted domain of the organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDomainValidationForMailUser
-{{ Fill SkipDomainValidationForMailUser Description }}
+The SkipDomainValidationForMailUser switch skips the check that confirms the proxy addresses of the mail user specified by the Identity parameter are in an accepted domain of the organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDomainValidationForSharedMailbox
-{{ Fill SkipDomainValidationForSharedMailbox Description }}
+The SkipDomainValidationForSharedMailbox switch skips the check that confirms the proxy addresses of the shared mailbox specified by the Identity parameter are in an accepted domain of the organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
