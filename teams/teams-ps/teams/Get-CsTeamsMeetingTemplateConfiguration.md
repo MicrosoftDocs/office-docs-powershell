@@ -23,11 +23,12 @@ Fetches the list of custom templates on the tenant. Each template object contain
 
 ## EXAMPLES
 
-To fetch all the custom templates on the tenant just run the command without any parameters:
+# Example 1
 
 ```powershell
 PS> Get-CsTeamsMeetingTemplateConfiguration
 ```
+
 ```output
 Identity              : Global
 TeamsMeetingTemplates : {default, customtemplate_1cb7073a-8b19-4b5d-a3a6-14737d006969,
@@ -50,6 +51,8 @@ Description         : Custom Template 2
 Name                : customtemplate_21ecf22c-eb1a-4f05-93e0-555b994ebeb5
 Category            :
 ```
+
+Fetches all the custom templates on the tenant.
 
 ## PARAMETERS
 

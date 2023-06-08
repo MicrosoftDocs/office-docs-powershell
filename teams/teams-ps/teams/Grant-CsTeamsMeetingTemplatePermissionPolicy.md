@@ -15,14 +15,18 @@ This cmdlet applies an instance of the TeamsMeetingTemplatePermissionPolicy to u
 
 ## SYNTAX
 
+### Identity
 ```powershell
-    Grant-CsTeamsMeetingTemplatePermissionPolicy  [<CommonParameters>]
+Grant-CsTeamsMeetingTemplatePermissionPolicy [[-PolicyName] <string>] -Identity <string> [<CommonParameters>]
+```
 
-    Grant-CsTeamsMeetingTemplatePermissionPolicy [[-PolicyName] <string>] -Identity <string>  [<CommonParameters>]
+### Group
+```powershell
+Grant-CsTeamsMeetingTemplatePermissionPolicy [-Group] <string> [[-PolicyName] <string>] [<CommonParameters>]
+```
 
-    Grant-CsTeamsMeetingTemplatePermissionPolicy [-Group] <string> [[-PolicyName] <string>] -Rank <int>
-    [<CommonParameters>]
-
+### Global
+```powershell
     Grant-CsTeamsMeetingTemplatePermissionPolicy [-Global] [[-PolicyName] <string>] [-Force] [<CommonParameters>]
 ```
 
@@ -34,22 +38,13 @@ Pass in the `Identity` of the policy instance in the `PolicyName` parameter and 
 
 ## EXAMPLES
 
-Lets attempt to assign the Foobar policy instance to the user testuser@test.onmicrosoft.com. The policy instance that we want to assign:
-
-```powershell
-PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
-```
-```output
-Identity               : Tag:Foobar
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
-Description            : updated description
-```
-
-Command to assign the policy to the user:
+### Example 1
 
 ```powershell
 PS> Grant-CsTeamsMeetingTemplatePermissionPolicy -PolicyName Foobar -Identity testuser@test.onmicrosoft.com
 ```
+
+Assigns a given policy to a user.
 
 ## PARAMETERS
 

@@ -15,15 +15,15 @@ Creates a new instance of the TeamsMeetingTemplatePermissionPolicy.
 ## SYNTAX
 
 ```powershell
-    New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates
-    <PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-Force] [-WhatIf] [-Confirm]
-    [<CommonParameters>]
+    New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates<PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Creates a new instance of the policy with a name and a list of hidden meeting template IDs. The templates IDs passed in to the `HiddenMeetingTemplates` object must be valid existing template IDs. The current custom and first party templates on a tenant can be fetched by [Get-CsTeamsMeetingTemplateConfiguration](Get-CsTeamsMeetingTemplateConfiguration.md) and [Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.md) respectively.
 
 ## EXAMPLES
+
+### Example 1
 
 Assuming there are two valid templates with IDs `firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748` and `customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056`, we will first create the `HiddenMeetingTemplate` objects
 

@@ -25,11 +25,12 @@ This is a readonly configuration.
 
 ## EXAMPLES
 
-To fetch all the first party templates on the tenant just run the command without any parameters:
+### Example 1
 
 ```powershell
 PS> Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 ```
+
 ```output
 Identity              : Global
 TeamsMeetingTemplates : {default, firstparty_30d773c0-1b4e-4bf6-970b-73f544c054bb,
@@ -52,6 +53,8 @@ Description         : Virtual appointment
 Name                : firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748
 Category            :
 ```
+
+Fetches all the first party templates on the tenant.
 
 ## PARAMETERS
 

@@ -31,35 +31,21 @@ Update any of the properties of an existing instance of the TeamsMeetingTemplate
 
 ## EXAMPLES
 
-The below snippets illustrates a typical update operation where we fetch an existing policy instance and then update one of its properties and then fetch it again to confirm that the update was applied.
-
-Lets update a policy instance with Identity=Foobar:
-
-```powershell
-PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
-```
-```output
-Identity               : Tag:Foobar
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
-Description            :
-```
-
-Nows lets try to update its description:
+### Example 1
 
 ```powershell
 PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -Description "updated description"
 ```
 
-Fetch it again to confirm that the update was saved:
+Updates the description field of a policy.
+
+### Example 2
 
 ```powershell
-PS> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -HiddenMeetingTemplates @($hiddentemplate_1, $hiddentemplate_2)
 ```
-```output
-Identity               : Tag:Foobar
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
-Description            : updated description
-```
+
+Updates the hidden meeting templates array.
 
 ## PARAMETERS
 

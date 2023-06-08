@@ -25,9 +25,14 @@ Creates an object that can be supplied as `HiddenMeetingTemplate` to [New-CsTeam
 
 ## EXAMPLES
 
+### Example 1
+
+Create a new hidden meeting template object:
 ```powershell
 PS> $hiddentemplate_1 = New-CsTeamsHiddenMeetingTemplate -Id customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056
 ```
+
+Creates a new HiddenMeetingTemplate object with the given template id.
 
 For more examples on how this can be used, please check the examples at [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md)
 
