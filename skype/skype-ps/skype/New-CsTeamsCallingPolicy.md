@@ -25,7 +25,8 @@ New-CsTeamsCallingPolicy [-Identity] <string> [-AllowCallForwardingToPhone <bool
 [-AllowSIPDevicesCalling <boolean>] [-AllowTranscriptionForCalling <boolean>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <boolean>]
 [-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>]
 [-InboundFederatedCallRoutingTreatment <string>] [-InboundPstnCallRoutingTreatment <string>]
-[-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>] [-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
+[-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>]
+[-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
