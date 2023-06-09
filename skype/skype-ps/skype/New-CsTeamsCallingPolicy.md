@@ -108,8 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. The valid options are: Enabled, Disabled, and UserOverride. When set to Enabled users will have the ability to redirect received calls. However, when set to Disabled the user will not have such ability. Note: The UserOverride option is not available for use. There's no UX implemented for its management.
+Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. 
 
+Valid options are:
+- Enabled: When set to Enabled users will have the ability to redirect received calls.
+- Disabled: When set to Disabled the user will not have such ability.
+- UserOverride: The UserOverride option is not available for use. There's no UX implemented for its management.
 
 ```yaml
 Type: String
@@ -206,8 +210,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voicemail. Valid options are: AlwaysEnabled, AlwaysDisabled, and UserOverride. When set to AlwaysDisabled, calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams. When set to AlwaysEnabled, calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user. When set to UserOverride, calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
+Enables inbound calls to be routed to voicemail. 
 
+Valid options are:
+- AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user.
+- AlwaysDisabled: Calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams.
+- UserOverride: Calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
 
 ```yaml
 Type: String
@@ -239,7 +247,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAnswerEnabledType
-Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. It is turned off by default. Valid options are Enabled and Disabled. This setting applies only to incoming meeting invites and does not include support for other call types.
+Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. This setting applies only to incoming meeting invites and does not include support for other call types.
+
+Valid options are:
+- Enabled: Auto-answer is enabled.
+- Disabled: Auto-answer is disabled. This is the default setting.
 
 ```yaml
 Type: String
@@ -255,8 +267,13 @@ Accept wildcard characters: False
 ```
 
 ### -BusyOnBusyEnabledType
-Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, and Disabled. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. Note: UserOverride option value is not available for use currently, if set it will be read as setting the value to Disabled.
+Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold.
 
+Valid options are:
+- Enabled: New or incoming calls will be rejected with a busy signal.
+- Unanswered: The user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user.
+- Disabled: New or incoming calls will be presented to the user.
+- UserOverride: Value is not available for use currently, if set it will be read as setting the value to Disabled.
 
 ```yaml
 Type: String
@@ -290,7 +307,6 @@ Accept wildcard characters: False
 ### -Description
 Enables administrators to provide explanatory text about the calling policy. For example, the Description might indicate the users to whom the policy should be assigned.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -307,7 +323,7 @@ Accept wildcard characters: False
 ### -InboundFederatedCallRoutingTreatment
 Setting this parameter lets you control how inbound federated calls should be routed. 
 
-Possible values:
+Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
 - Unanswered: The inbound federated call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
 - Voicemail: The inbound federated call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
@@ -330,7 +346,7 @@ Accept wildcard characters: False
 ### -InboundPstnCallRoutingTreatment
 Setting this parameter lets you control how inbound PSTN calls should be routed. 
 
-Possible values:
+Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
 - Unanswered: The inbound PSTN call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
 - Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
@@ -352,12 +368,11 @@ Accept wildcard characters: False
 ```
 
 ### -LiveCaptionsEnabledTypeForCalling
-Determines whether real-time captions are available for the user in Teams calls. Set this to DisabledUserOverride to allow the user to turn on live captions. Set this to Disabled to prohibit.
+Determines whether real-time captions are available for the user in Teams calls.
 
-
-Possible values:
-- DisabledUserOverride
-- Disabled
+Valid options are:
+- DisabledUserOverride: Allow the user to turn on live captions.
+- Disabled: Prohibts the user from turning on live captions.
 
 ```yaml
 Type: String
@@ -373,7 +388,12 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled.
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. 
+
+Valid options are:
+- Enabled: Music on hold is enabled. This is the default.
+- Disabled: Music on hold is disabled.
+- UserOverride: For now, setting the value to UserOverride is the same as Enabled.
 
 ```yaml
 Type: String
@@ -422,7 +442,6 @@ Accept wildcard characters: False
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
 **Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions. 
-
 
 ```yaml
 Type: Boolean
