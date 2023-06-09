@@ -176,7 +176,6 @@ Accept wildcard characters: False
 ### -AllowSIPDevicesCalling
 Determines whether the user is allowed to use a SIP device for calling on behalf of a Teams client.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -242,9 +241,8 @@ Accept wildcard characters: False
 ### -AutoAnswerEnabledType
 Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. It is turned off by default. Valid options are Enabled and Disabled. This setting applies only to incoming meeting invites and does not include support for other call types.
 
-
 ```yaml
-Type: Enum
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
@@ -310,9 +308,9 @@ Accept wildcard characters: False
 Setting this parameter lets you control how inbound federated calls should be routed. 
 
 Possible values:
-- RegularIncoming: no changes are made to default inbound routing. This is the default setting.
-- Unanswered: the inbound federated call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
-- Voicemail: the inbound federated call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
+- RegularIncoming: No changes are made to default inbound routing. This is the default setting.
+- Unanswered: The inbound federated call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
+- Voicemail: The inbound federated call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
 
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
 
@@ -333,10 +331,10 @@ Accept wildcard characters: False
 Setting this parameter lets you control how inbound PSTN calls should be routed. 
 
 Possible values:
-- RegularIncoming: no changes are made to default inbound routing. This is the default setting.
-- Unanswered: the inbound PSTN call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
-- Voicemail: the inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
-- UserOverride: for now, setting the value to UserOverride is the same as RegularIncoming.
+- RegularIncoming: No changes are made to default inbound routing. This is the default setting.
+- Unanswered: The inbound PSTN call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
+- Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
+- UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
 
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
 
@@ -446,7 +444,6 @@ Possible values:
 - Enabled: Spam Filtering is fully enabled. Both Basic and Captcha Interactive Voice Response (IVR) checks are performed. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
 - Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
 - EnabledWithoutIVR: Spam Filtering is partially enabled. Captcha IVR checks are disabled. A "Spam Likely" notification will appear. A call might get dropped if it gets a high score from Basic checks.
-
 
 ```yaml
 Type: String
