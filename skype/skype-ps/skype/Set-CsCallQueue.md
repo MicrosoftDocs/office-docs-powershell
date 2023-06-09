@@ -678,7 +678,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutDisconnectTextToSpeechPrompt
-The TimeoutDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to the timeout. 
+The TimeoutDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to timeout. 
 
 ```yaml
 Type: String
