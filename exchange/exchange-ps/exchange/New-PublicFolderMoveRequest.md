@@ -69,7 +69,7 @@ You can also move a branch of public folders by using the Move-PublicFolderBranc
 
 ### Example 3
 ```powershell
-$folders = Get-PublicFolder \ -Recurse -Mailbox PUB1 -ResidentFolders | ?{$_.Name -ne "IPM_SUBTREE"} | %{$_.Identity};New-PublicFolderMoveRequest -TargetMailbox PUB2 -Folders $folders
+$folders = Get-PublicFolder \ -Recurse -Mailbox PUB1 -ResidentFolders | ?{$_.Name -ne "IPM_SUBTREE"} | %{$_.Identity}; New-PublicFolderMoveRequest -TargetMailbox PUB2 -Folders $folders
 ```
 
 This example moves all public folders from public folder mailbox Pub1 to public folder mailbox Pub2.
