@@ -50,6 +50,9 @@ New-DistributionGroup [-Name] <String>
  [-WhatIf]
  [<CommonParameters>]
 ```
+[!]NOTE
+**InformationVariable** and **InformationAction** parameters are not supported for Microsoft Exchange Server.
+This is per Microsoft Support ticket 2306020040003027
 
 ## DESCRIPTION
 You can use the New-DistributionGroup cmdlet to create the following types of groups:
