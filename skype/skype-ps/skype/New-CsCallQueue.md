@@ -29,8 +29,8 @@ New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>
 ## DESCRIPTION
 The New-CsCallQueue cmdlet creates a new Call Queue.
 
->[!CAUTION]
->The following configuration parameters are currently only available in Powershell and do not appear in Teams Admin Center. Saving a call queue configuration through Teams Admin Center will **remove** any of these configured items. 
+> [!CAUTION]
+> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items:
 > 
 > - -OverflowDisconnectTextToSpeechPrompt
 > - -OverflowDisconnectAudioFilePrompt
