@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordReroutedCalls
-Setting this attribute to true enables compliance recording for calls that have been re-routed from a compliance recording-enabled user. Supported call scenarios include forward, transfer, delegation, call groups, and simultaneous ring.
+Setting this attribute to true enables compliance recording for calls that have been re-routed from a compliance recording-enabled user. Supported call scenarios include forward, transfer, delegation, call groups, and simultaneous ring. (Note: Only available in MicrosoftTeams PowerShell version 5.1.1-preview)
 
 ```yaml
 Type: Boolean
