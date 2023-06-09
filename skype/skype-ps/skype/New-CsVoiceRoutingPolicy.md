@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csvoiceroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csvoiceroutingpolicy
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsVoiceRoutingPolicy
 schema: 2.0.0
@@ -219,4 +219,3 @@ The `New-CsVoiceRoutingPolicy` cmdlet creates new instances of Microsoft.Rtc.Man
 [Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)
 
 [Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)
-

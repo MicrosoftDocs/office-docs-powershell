@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-webservicesvirtualdirectory
+online version: https://learn.microsoft.com/powershell/module/exchange/new-webservicesvirtualdirectory
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-WebServicesVirtualDirectory
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the New-WebServicesVirtualDirectory cmdlet to create Exchange Web Services v
 
 You can create multiple virtual directories by using this cmdlet. However, you can create only one Exchange Web Services virtual directory for each website.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ New-WebServicesVirtualDirectory [-ApplicationRoot <String>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
-- Single SPN or comma delimited list of valid SPNs: The SPN value format is \<protocol\>/\<FQDN\>. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
+- Single SPN or comma delimited list of valid SPNs: The SPN value format is `Protocol\FQDN`. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -234,9 +234,7 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 - Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
 - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
 
-Note:
-
-If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
 Type: ExtendedProtectionTokenCheckingMode
@@ -270,7 +268,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -MRSProxyEnabled
-The MRSProxyEnabled parameter specifies whether to enable MRSProxy for the Mailbox server. MRSProxy is a service that runs on Mailbox servers in a remote forest and helps to proxy a mailbox move. For more information, see [Mailbox moves in Exchange Server](https://docs.microsoft.com/Exchange/recipients/mailbox-moves).
+The MRSProxyEnabled parameter specifies whether to enable MRSProxy for the Mailbox server. MRSProxy is a service that runs on Mailbox servers in a remote forest and helps to proxy a mailbox move. For more information, see [Mailbox moves in Exchange Server](https://learn.microsoft.com/Exchange/recipients/mailbox-moves).
 
 ```yaml
 Type: Boolean
@@ -359,9 +359,9 @@ Accept wildcard characters: False
 ```
 
 ### -MRSProxyMaxConnections
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
-The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
+The MRSProxyMaxConnections parameter specifies the maximum number of simultaneous move sessions that an instance of MRSProxy will accept. This setting accepts values from 0 to unlimited. The default value is 100. For more information about MRSProxy, see [Understanding Move Requests](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
 
 ```yaml
 Type: Unlimited
@@ -528,12 +528,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

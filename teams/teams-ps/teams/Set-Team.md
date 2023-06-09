@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/set-team
+online version: https://learn.microsoft.com/powershell/module/teams/set-team
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -375,20 +375,18 @@ Accept wildcard characters: False
 ```
 
 ### -ShowInTeamsSearchAndSuggestions
-Setting that determines whether or not private teams should be searchable from Teams clients for users who do not belong to that team.  Set to $false to make those teams not discoverable from Teams clients.
+The parameter has been deprecated.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
@@ -405,4 +403,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 [Get-Team]()
 
 [New-Team]()
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/search-mailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/search-mailbox
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Search-Mailbox
 schema: 2.0.0
@@ -16,11 +16,11 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a specified target mailbox, delete messages from the source mailbox, or both.
 
-**Note**: In cloud-based environments, the Search-Mailbox cmdlet is being deprecated in favor of [New-ComplianceSearch](https://docs.microsoft.com/powershell/module/exchange/new-compliancesearch) and related eDiscovery cmdlets.
+**Note**: In cloud-based environments, the Search-Mailbox cmdlet is being deprecated in favor of [New-ComplianceSearch](https://learn.microsoft.com/powershell/module/exchange/new-compliancesearch) and related eDiscovery cmdlets.
 
-By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+By default, Search-Mailbox is available only in the Mailbox Search or Mailbox Import Export roles, and these roles aren't assigned to *any* role groups. To use this cmdlet, you need to add one or both of the roles to a role group (for example, the Organization Management role group). Only the Mailbox Import Export role gives you access to the DeleteContent parameter. For more information about adding roles to role groups, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -142,7 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -EstimateResultOnly
-The EstimateResultOnly switch specifies that only an estimate of the total number and size of messages returned by the search be provided. Messages aren't copied to the target mailbox. You can't use this switch with the TargetMailbox parameter.
+The EstimateResultOnly switch returns only an estimate of the total number and size of messages. Messages aren't copied to the target mailbox. You don't need to specify a value with this switch.
+
+You can't use this switch with the TargetMailbox parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -262,7 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotIncludeArchive
-The DoNotIncludeArchive switch specifies that the user's archive mailbox shouldn't be included in the search. You don't need to specify a value for this switch. By default, the archive mailbox is always searched.
+The DoNotIncludeArchive switch specifies that the user's archive mailbox shouldn't be included in the search. You don't need to specify a value for this switch.
+
+By default, the archive mailbox is always searched.
 
 If auto-expanding archiving is enabled for an Exchange Online mailbox, only the user's primary archive mailbox is searched. Auxiliary archive mailboxes aren't included in the search.
 
@@ -280,7 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch overrides the confirmation prompt displayed when your use the DeleteContent switch to permanently delete messages.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you use the DeleteContent switch to permanently delete messages.
 
 ```yaml
 Type: SwitchParameter
@@ -296,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUnsearchableItems
-The IncludeUnsearchableItems switch specifies whether to include items that couldn't be indexed by Exchange Search. When set to $true, the IncludeUnsearchableItems switch specifies that items that couldn't be indexed by Exchange Search should be included in the search results.
+The IncludeUnsearchableItems switch includes items that couldn't be indexed by Exchange Search in the search results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -336,7 +342,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogOnly
-The LogOnly switch specifies that a search be performed and only a log be generated. Messages returned by the search aren't copied to the target mailbox. The logging level is specified by using the LogLevel parameter.
+The LogOnly switch performs a search, but only generates a log. Messages returned by the search aren't copied to the target mailbox. You don't need to specify a value with this switch.
+
+The logging level is specified by using the LogLevel parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -352,7 +360,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchDumpster
-The SearchDumpster parameter specifies whether to search the Recoverable Items folder, which is the storage location in which items deleted from the Deleted Items folder or hard-deleted items are stored until they're purged from the mailbox database. By default, the Recoverable Items folder is always searched. To exclude the folder from the search, set the SearchDumpster switch to $false, for example,-SearchDumpster:$false
+The SearchDumpster switch specifies whether to include the Recoverable Items folder in the search. The Recoverable items folder stores items that were deleted from the Deleted Items folder or items that were hard-deleted until they're purged from the mailbox database.
+
+By default, the Recoverable Items folder is always included in the search. To exclude the Recoverable Items folder from the search, use this exact syntax: `-SearchDumpster:$false`.
 
 ```yaml
 Type: SwitchParameter
@@ -368,7 +378,11 @@ Accept wildcard characters: False
 ```
 
 ### -SearchDumpsterOnly
-The SearchDumpsterOnly switch specifies that only the Recoverable Items folder of the specified mailbox be searched. You can also use this switch with the DeleteContent switch to delete messages from the Recoverable Items folder and reduce the size of the folder.
+The SearchDumpsterOnly switch specifies that only the Recoverable Items folder of the specified mailbox is searched. You don't need to specify a value with this switch.
+
+The Recoverable items folder stores items that were deleted from the Deleted Items folder or items that were hard-deleted until they're purged from the mailbox database.
+
+You can also use this switch with the DeleteContent switch to delete messages from the Recoverable Items folder and reduce the size of the folder.
 
 ```yaml
 Type: SwitchParameter
@@ -384,7 +398,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more information about KQL in Exchange, see [Message properties and search operators for In-Place eDiscovery](https://docs.microsoft.com/exchange/security-and-compliance/in-place-ediscovery/message-properties-and-search-operators).
+The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more information about KQL in Exchange, see [Message properties and search operators for In-Place eDiscovery](https://learn.microsoft.com/exchange/security-and-compliance/in-place-ediscovery/message-properties-and-search-operators).
 
 If this parameter is empty, all messages are returned.
 
@@ -424,12 +438,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

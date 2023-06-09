@@ -8,10 +8,18 @@ title: exchange
 ## Description
 Exchange PowerShell is built on Windows PowerShell technology and provides a powerful command-line interface that enables automation of administrative tasks. The following PowerShell environments are available in Exchange:
 
-- [Exchange Server PowerShell (Exchange Management Shell)](https://docs.microsoft.com/powershell/exchange/exchange-management-shell)
-- [Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell)
-- [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
-- [Exchange Online Protection PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
+- [Exchange Server PowerShell (Exchange Management Shell)](https://learn.microsoft.com/powershell/exchange/exchange-management-shell)
+- [Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell)
+- [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell)
+- [Exchange Online Protection PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-online-protection-powershell)
+
+> [!NOTE]
+> For Exchange Online, Security & Compliance, and Exchange Online Protection, the module from the PowerShell Gallery that you use to connect is [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/). For more information, see [About the Exchange Online PowerShell module](../../docs-conceptual/exchange-online-powershell-v2.md).
+>
+> For Exchange Server, there is no Microsoft-provided module in the PowerShell Gallery. Instead, to use PowerShell in Exchange, you have the following options:
+>
+> - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](../../docs-conceptual/open-the-exchange-management-shell.md).
+> - Use remote PowerShell from a Windows PowerShell session. For more information, see [Connect to Exchange servers using remote PowerShell](../../docs-conceptual/connect-to-exchange-servers-using-remote-powershell.md).
 
 ## active-directory Cmdlets
 ### [Add-ADPermission](Add-ADPermission.md)
@@ -44,14 +52,18 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-AdSiteLink](Set-AdSiteLink.md)
 
-## advanced-threat-protection Cmdlets
+## defender-for-office-365 Cmdlets
 ### [Disable-AntiPhishRule](Disable-AntiPhishRule.md)
+
+### [Disable-ATPProtectionPolicyRule](Disable-ATPProtectionPolicyRule.md)
 
 ### [Disable-SafeAttachmentRule](Disable-SafeAttachmentRule.md)
 
 ### [Disable-SafeLinksRule](Disable-SafeLinksRule.md)
 
 ### [Enable-AntiPhishRule](Enable-AntiPhishRule.md)
+
+### [Enable-ATPProtectionPolicyRule](Enable-ATPProtectionPolicyRule.md)
 
 ### [Enable-SafeAttachmentRule](Enable-SafeAttachmentRule.md)
 
@@ -61,21 +73,27 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AdvancedThreatProtectionDocumentReport](Get-AdvancedThreatProtectionDocumentReport.md)
 
-### [Get-AdvancedThreatProtectionTrafficReport](Get-AdvancedThreatProtectionTrafficReport.md)
-
 ### [Get-AntiPhishPolicy](Get-AntiPhishPolicy.md)
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
 
+### [Get-ATPBuiltInProtectionRule](Get-ATPBuiltInProtectionRule.md)
+
 ### [Get-AtpPolicyForO365](Get-AtpPolicyForO365.md)
 
+### [Get-ATPProtectionPolicyRule](Get-ATPProtectionPolicyRule.md)
+
 ### [Get-ATPTotalTrafficReport](Get-ATPTotalTrafficReport.md)
+
+### [Get-ContentMalwareMdoAggregateReport](Get-ContentMalwareMdoAggregateReport.md)
+
+### [Get-ContentMalwareMdoDetailReport](Get-ContentMalwareMdoDetailReport.md)
+
+### [Get-EmailTenantSettings](Get-EmailTenantSettings.md)
 
 ### [Get-MailDetailATPReport](Get-MailDetailATPReport.md)
 
 ### [Get-MailTrafficATPReport](Get-MailTrafficATPReport.md)
-
-### [Get-PhishFilterPolicy](Get-PhishFilterPolicy.md)
 
 ### [Get-SafeAttachmentPolicy](Get-SafeAttachmentPolicy.md)
 
@@ -89,13 +107,17 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SafeLinksRule](Get-SafeLinksRule.md)
 
-### [Get-SpoofMailReport](Get-SpoofMailReport.md)
+### [Get-SpoofIntelligenceInsight](Get-SpoofIntelligenceInsight.md)
 
-### [Get-UrlTrace](Get-UrlTrace.md)
+### [Get-SpoofMailReport](Get-SpoofMailReport.md)
 
 ### [New-AntiPhishPolicy](New-AntiPhishPolicy.md)
 
 ### [New-AntiPhishRule](New-AntiPhishRule.md)
+
+### [New-ATPBuiltInProtectionRule](New-ATPBuiltInProtectionRule.md)
+
+### [New-ATPProtectionPolicyRule](New-ATPProtectionPolicyRule.md)
 
 ### [New-SafeAttachmentPolicy](New-SafeAttachmentPolicy.md)
 
@@ -109,6 +131,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-AntiPhishRule](Remove-AntiPhishRule.md)
 
+### [Remove-ATPProtectionPolicyRule](Remove-ATPProtectionPolicyRule.md)
+
 ### [Remove-SafeAttachmentPolicy](Remove-SafeAttachmentPolicy.md)
 
 ### [Remove-SafeAttachmentRule](Remove-SafeAttachmentRule.md)
@@ -121,9 +145,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-AntiPhishRule](Set-AntiPhishRule.md)
 
+### [Set-ATPBuiltInProtectionRule](Set-ATPBuiltInProtectionRule.md)
+
 ### [Set-AtpPolicyForO365](Set-AtpPolicyForO365.md)
 
-### [Set-PhishFilterPolicy](Set-PhishFilterPolicy.md)
+### [Set-ATPProtectionPolicyRule](Set-ATPProtectionPolicyRule.md)
+
+### [Set-EmailTenantSettings](Set-EmailTenantSettings.md)
 
 ### [Set-SafeAttachmentPolicy](Set-SafeAttachmentPolicy.md)
 
@@ -148,13 +176,19 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Delete-QuarantineMessage](Delete-QuarantineMessage.md)
 
+### [Disable-EOPProtectionPolicyRule](Disable-EOPProtectionPolicyRule.md)
+
 ### [Disable-HostedContentFilterRule](Disable-HostedContentFilterRule.md)
 
 ### [Disable-HostedOutboundSpamFilterRule](Disable-HostedOutboundSpamFilterRule.md)
 
 ### [Disable-MalwareFilterRule](Disable-MalwareFilterRule.md)
 
+### [Disable-ReportSubmissionRule](Disable-ReportSubmissionRule.md)
+
 ### [Enable-AntispamUpdates](Enable-AntispamUpdates.md)
+
+### [Enable-EOPProtectionPolicyRule](Enable-EOPProtectionPolicyRule.md)
 
 ### [Enable-HostedContentFilterRule](Enable-HostedContentFilterRule.md)
 
@@ -164,19 +198,27 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Export-QuarantineMessage](Export-QuarantineMessage.md)
 
+### [Enable-ReportSubmissionRule](Enable-ReportSubmissionRule.md)
+
 ### [Get-AgentLog](Get-AgentLog.md)
 
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
 
+### [Get-BlockedConnector](Get-BlockedConnector.md)
+
 ### [Get-BlockedSenderAddress](Get-BlockedSenderAddress.md)
+
+### [Get-ConfigAnalyzerPolicyRecommendation](Get-ConfigAnalyzerPolicyRecommendation.md)
 
 ### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
 
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
 
 ### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
+
+### [Get-EOPProtectionPolicyRule](Get-EOPProtectionPolicyRule.md)
 
 ### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
 
@@ -212,11 +254,25 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MalwareFilterRule](Get-MalwareFilterRule.md)
 
+### [Get-PhishSimOverridePolicy](Get-PhishSimOverridePolicy.md)
+
+### [Get-PhishSimOverrideRule](Get-PhishSimOverrideRule.md)
+
 ### [Get-QuarantineMessage](Get-QuarantineMessage.md)
 
 ### [Get-QuarantineMessageHeader](Get-QuarantineMessageHeader.md)
 
+### [Get-QuarantinePolicy](Get-QuarantinePolicy.md)
+
 ### [Get-RecipientFilterConfig](Get-RecipientFilterConfig.md)
+
+### [Get-ReportSubmissionPolicy](Get-ReportSubmissionPolicy.md)
+
+### [Get-ReportSubmissionRule](Get-ReportSubmissionRule.md)
+
+### [Get-SecOpsOverridePolicy](Get-SecOpsOverridePolicy.md)
+
+### [Get-SecOpsOverrideRule](Get-SecOpsOverrideRule.md)
 
 ### [Get-SenderFilterConfig](Get-SenderFilterConfig.md)
 
@@ -226,7 +282,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
 
+### [Get-TenantAllowBlockListSpoofItems](Get-TenantAllowBlockListSpoofItems.md)
+
 ### [New-DkimSigningConfig](New-DkimSigningConfig.md)
+
+### [New-EOPProtectionPolicyRule](New-EOPProtectionPolicyRule.md)
 
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
 
@@ -240,7 +300,25 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
 
+### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
+
+### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
+
+### [New-QuarantinePermissions](New-QuarantinePermissions.md)
+
+### [New-QuarantinePolicy](New-QuarantinePolicy.md)
+
+### [New-ReportSubmissionPolicy](New-ReportSubmissionPolicy.md)
+
+### [New-ReportSubmissionRule](New-ReportSubmissionRule.md)
+
+### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
+
+### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
+
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
+
+### [New-TenantAllowBlockListSpoofItems](New-TenantAllowBlockListSpoofItems.md)
 
 ### [Preview-QuarantineMessage](Preview-QuarantineMessage.md)
 
@@ -248,9 +326,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-AttachmentFilterEntry](Remove-AttachmentFilterEntry.md)
 
+### [Remove-BlockedConnector](Remove-BlockedConnector.md)
+
 ### [Remove-BlockedSenderAddress](Remove-BlockedSenderAddress.md)
 
 ### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
+
+### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
 
 ### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
 
@@ -272,7 +354,23 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-MalwareFilterRule](Remove-MalwareFilterRule.md)
 
+### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
+
+### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
+
+### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
+
+### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
+
+### [Remove-ReportSubmissionRule](Remove-ReportSubmissionRule.md)
+
+### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
+
+### [Remove-SecOpsOverrideRule](Remove-SecOpsOverrideRule.md)
+
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
+
+### [Remove-TenantAllowBlockListSpoofItems](Remove-TenantAllowBlockListSpoofItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
 
@@ -281,6 +379,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ContentFilterConfig](Set-ContentFilterConfig.md)
 
 ### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
+
+### [Set-EOPProtectionPolicyRule](Set-EOPProtectionPolicyRule.md)
 
 ### [Set-HostedConnectionFilterPolicy](Set-HostedConnectionFilterPolicy.md)
 
@@ -312,7 +412,23 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
+### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
+
+### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
+
+### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
+
+### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
+
 ### [Set-RecipientFilterConfig](Set-RecipientFilterConfig.md)
+
+### [Set-ReportSubmissionPolicy](Set-ReportSubmissionPolicy.md)
+
+### [Set-ReportSubmissionRule](Set-ReportSubmissionRule.md)
+
+### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
+
+### [Set-SecOpsOverrideRule](Set-SecOpsOverrideRule.md)
 
 ### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
 
@@ -321,6 +437,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
 
 ### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
+
+### [Set-TenantAllowBlockListSpoofItems](Set-TenantAllowBlockListSpoofItems.md)
 
 ### [Test-IPAllowListProvider](Test-IPAllowListProvider.md)
 
@@ -381,7 +499,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-CASMailbox](Set-CASMailbox.md)
 
-### [set-CASMailboxPlan](set-CASMailboxPlan.md)
+### [Set-CASMailboxPlan](Set-CASMailboxPlan.md)
 
 ### [Set-ClientAccessRule](Set-ClientAccessRule.md)
 
@@ -754,43 +872,51 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-IRMConfiguration](Get-IRMConfiguration.md)
 
+### [Get-M365DataAtRestEncryptionPolicy](Get-M365DataAtRestEncryptionPolicy.md)
+
+### [Get-M365DataAtRestEncryptionPolicyAssignment](Get-M365DataAtRestEncryptionPolicyAssignment.md)
+
+### [Get-MailboxIRMAccess](Get-MailboxIRMAccess.md)
+
 ### [Get-OMEConfiguration](Get-OMEConfiguration.md)
 
 ### [Get-OMEMessageStatus](Get-OMEMessageStatus.md)
 
 ### [Get-RMSTemplate](Get-RMSTemplate.md)
 
-### [Get-RMSTrustedPublishingDomain](Get-RMSTrustedPublishingDomain.md)
-
 ### [Get-SmimeConfig](Get-SmimeConfig.md)
 
 ### [Import-ExchangeCertificate](Import-ExchangeCertificate.md)
-
-### [Import-RMSTrustedPublishingDomain](Import-RMSTrustedPublishingDomain.md)
 
 ### [New-DataEncryptionPolicy](New-DataEncryptionPolicy.md)
 
 ### [New-ExchangeCertificate](New-ExchangeCertificate.md)
 
+### [New-M365DataAtRestEncryptionPolicy](New-M365DataAtRestEncryptionPolicy.md)
+
 ### [New-OMEConfiguration](New-OMEConfiguration.md)
 
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
-### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
+### [Remove-MailboxIRMAccess](Remove-MailboxIRMAccess.md)
 
-### [Remove-RMSTrustedPublishingDomain](Remove-RMSTrustedPublishingDomain.md)
+### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
 
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
 ### [Set-IRMConfiguration](Set-IRMConfiguration.md)
+
+### [Set-M365DataAtRestEncryptionPolicy](Set-M365DataAtRestEncryptionPolicy.md)
+
+### [Set-M365DataAtRestEncryptionPolicyAssignment](Set-M365DataAtRestEncryptionPolicyAssignment.md)
+
+### [Set-MailboxIRMAccess](Set-MailboxIRMAccess.md)
 
 ### [Set-OMEConfiguration](Set-OMEConfiguration.md)
 
 ### [Set-OMEMessageRevocation](Set-OMEMessageRevocation.md)
 
 ### [Set-RMSTemplate](Set-RMSTemplate.md)
-
-### [Set-RMSTrustedPublishingDomain](Set-RMSTrustedPublishingDomain.md)
 
 ### [Set-SmimeConfig](Set-SmimeConfig.md)
 
@@ -983,6 +1109,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EventsFromEmailConfiguration](Get-EventsFromEmailConfiguration.md)
 
+### [Get-ExternalInOutlook](Get-ExternalInOutlook.md)
+
 ### [Get-FocusedInbox](Get-FocusedInbox.md)
 
 ### [Get-InboxRule](Get-InboxRule.md)
@@ -1036,8 +1164,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SweepRule](Get-SweepRule.md)
 
 ### [Get-UserPhoto](Get-UserPhoto.md)
-
-### [Import-ContactList](Import-ContactList.md)
 
 ### [Import-RecipientDataProperty](Import-RecipientDataProperty.md)
 
@@ -1108,6 +1234,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-Clutter](Set-Clutter.md)
 
 ### [Set-EventsFromEmailConfiguration](Set-EventsFromEmailConfiguration.md)
+
+### [Set-ExternalInOutlook](Set-ExternalInOutlook.md)
 
 ### [Set-FocusedInbox](Set-FocusedInbox.md)
 
@@ -1482,6 +1610,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-PerimeterConfig](Get-PerimeterConfig.md)
 
+### [Get-ServicePrincipal](Get-ServicePrincipal.md)
+
 ### [Get-SettingOverride](Get-SettingOverride.md)
 
 ### [New-ApplicationAccessPolicy](New-ApplicationAccessPolicy.md)
@@ -1494,6 +1624,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-PartnerApplication](New-PartnerApplication.md)
 
+### [New-ServicePrincipal](New-ServicePrincipal.md)
+
 ### [New-SettingOverride](New-SettingOverride.md)
 
 ### [Remove-ApplicationAccessPolicy](Remove-ApplicationAccessPolicy.md)
@@ -1503,6 +1635,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-AuthServer](Remove-AuthServer.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
+
+### [Remove-ServicePrincipal](Remove-ServicePrincipal.md)
 
 ### [Remove-SettingOverride](Remove-SettingOverride.md)
 
@@ -1532,11 +1666,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-PerimeterConfig](Set-PerimeterConfig.md)
 
+### [Set-ServicePrincipal](Set-ServicePrincipal.md)
+
 ### [Set-SettingOverride](Set-SettingOverride.md)
 
 ### [Test-ApplicationAccessPolicy](Test-ApplicationAccessPolicy.md)
 
 ### [Test-OAuthConnectivity](Test-OAuthConnectivity.md)
+
+### [Test-ServicePrincipalAuthorization](Test-ServicePrincipalAuthorization.md)
 
 ### [Test-SystemHealth](Test-SystemHealth.md)
 
@@ -1571,6 +1709,12 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
 
+### [Get-ExoInformationBarrierPolicy](Get-ExoInformationBarrierPolicy.md)
+
+### [Get-ExoInformationBarrierSegment](Get-ExoInformationBarrierSegment.md)
+
+### [Get-ExoInformationBarrierRelationship](Get-ExoInformationBarrierRelationship.md)
+
 ### [Get-InformationBarrierPoliciesApplicationStatus](Get-InformationBarrierPoliciesApplicationStatus.md)
 
 ### [Get-InformationBarrierPolicy](Get-InformationBarrierPolicy.md)
@@ -1590,6 +1734,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-OutlookProtectionRule](Get-OutlookProtectionRule.md)
 
 ### [Get-ProtectionAlert](Get-ProtectionAlert.md)
+
+### [Get-ReviewItems](Get-ReviewItems.md)
 
 ### [Get-SupervisoryReviewPolicyV2](Get-SupervisoryReviewPolicyV2.md)
 
@@ -1790,6 +1936,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Stop-MailboxSearch](Stop-MailboxSearch.md)
 
 ## policy-and-compliance-dlp Cmdlets
+### [Export-ActivityExplorerData](Export-ActivityExplorerData.md)
+
 ### [Export-DlpPolicyCollection](Export-DlpPolicyCollection.md)
 
 ### [Get-ClassificationRuleCollection](Get-ClassificationRuleCollection.md)
@@ -1808,6 +1956,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DlpEdmSchema](Get-DlpEdmSchema.md)
 
+### [Get-DlpIncidentDetailReport](Get-DlpIncidentDetailReport.md)
+
 ### [Get-DlpKeywordDictionary](Get-DlpKeywordDictionary.md)
 
 ### [Get-DlpPolicy](Get-DlpPolicy.md)
@@ -1819,6 +1969,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-DlpSensitiveInformationTypeRulePackage](Get-DlpSensitiveInformationTypeRulePackage.md)
 
 ### [Get-DlpSiDetectionsReport](Get-DlpSiDetectionsReport.md)
+
+### [Get-PolicyConfig](Get-PolicyConfig.md)
 
 ### [Get-PolicyTipConfig](Get-PolicyTipConfig.md)
 
@@ -1890,7 +2042,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-DlpSensitiveInformationTypeRulePackage](Set-DlpSensitiveInformationTypeRulePackage.md)
 
+### [Set-PolicyConfig](Set-PolicyConfig.md)
+
 ### [Set-PolicyTipConfig](Set-PolicyTipConfig.md)
+
+### [Test-DataClassification](Test-DataClassification.md)
+
+### [Test-TextExtraction](Test-TextExtraction.md)
 
 ## policy-and-compliance-ediscovery Cmdlets
 ### [Add-ComplianceCaseMember](Add-ComplianceCaseMember.md)
@@ -1936,6 +2094,14 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## policy-and-compliance-retention Cmdlets
 ### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
+### [Export-FilePlanProperty](Export-FilePlanProperty.md)
+
+### [Get-AdaptiveScope](Get-AdaptiveScope.md)
+
+### [Get-AppRetentionCompliancePolicy](Get-AppRetentionCompliancePolicy.md)
+
+### [Get-AppRetentionComplianceRule](Get-AppRetentionComplianceRule.md)
+
 ### [Get-ComplianceRetentionEvent](Get-ComplianceRetentionEvent.md)
 
 ### [Get-ComplianceRetentionEventType](Get-ComplianceRetentionEventType.md)
@@ -1946,6 +2112,20 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DataRetentionReport](Get-DataRetentionReport.md)
 
+### [Get-FilePlanPropertyAuthority](Get-FilePlanPropertyAuthority.md)
+
+### [Get-FilePlanPropertyCategory](Get-FilePlanPropertyCategory.md)
+
+### [Get-FilePlanPropertyCitation](Get-FilePlanPropertyCitation.md)
+
+### [Get-FilePlanPropertyDepartment](Get-FilePlanPropertyDepartment.md)
+
+### [Get-FilePlanPropertyReferenceId](Get-FilePlanPropertyReferenceId.md)
+
+### [Get-FilePlanPropertyStructure](Get-FilePlanPropertyStructur.md)
+
+### [Get-FilePlanPropertySubCategory](Get-FilePlanPropertySubCategory.md)
+
 ### [Get-HoldCompliancePolicy](Get-HoldCompliancePolicy.md)
 
 ### [Get-HoldComplianceRule](Get-HoldComplianceRule.md)
@@ -1955,6 +2135,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ManagedFolder](Get-ManagedFolder.md)
 
 ### [Get-ManagedFolderMailboxPolicy](Get-ManagedFolderMailboxPolicy.md)
+
+### [Get-RecordReviewNotificationTemplateConfig](Get-RecordReviewNotificationTemplateConfig.md)
 
 ### [Get-RegulatoryComplianceUI](Get-RegulatoryComplianceUI.md)
 
@@ -1968,11 +2150,31 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-RetentionPolicyTag](Get-RetentionPolicyTag.md)
 
+### [Import-FilePlanProperty](Import-FilePlanProperty.md)
+
+### [New-AdaptiveScope](New-AdaptiveScope.md)
+
+### [New-AppRetentionCompliancePolicy](New-AppRetentionCompliancePolicy.md)
+
+### [New-AppRetentionComplianceRule](New-AppRetentionComplianceRule.md)
+
 ### [New-ComplianceRetentionEvent](New-ComplianceRetentionEvent.md)
 
 ### [New-ComplianceRetentionEventType](New-ComplianceRetentionEventType.md)
 
 ### [New-ComplianceTag](New-ComplianceTag.md)
+
+### [New-FilePlanPropertyAuthority](New-FilePlanPropertyAuthority.md)
+
+### [New-FilePlanPropertyCategory](New-FilePlanPropertyCategory.md)
+
+### [New-FilePlanPropertyCitation](New-FilePlanPropertyCitation.md)
+
+### [New-FilePlanPropertyDepartment](New-FilePlanPropertyDepartment.md)
+
+### [New-FilePlanPropertyReferenceId](New-FilePlanPropertyReferenceId.md)
+
+### [New-FilePlanPropertySubCategory](New-FilePlanPropertySubCategory.md)
 
 ### [New-HoldCompliancePolicy](New-HoldCompliancePolicy.md)
 
@@ -1992,9 +2194,27 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-RetentionPolicyTag](New-RetentionPolicyTag.md)
 
+### [Remove-AdaptiveScope](Remove-AdaptiveScope.md)
+
+### [Remove-AppRetentionCompliancePolicy](Remove-AppRetentionCompliancePolicy.md)
+
+### [Remove-AppRetentionComplianceRule](Remove-AppRetentionComplianceRule.md)
+
 ### [Remove-ComplianceRetentionEventType](Remove-ComplianceRetentionEventType.md)
 
 ### [Remove-ComplianceTag](Remove-ComplianceTag.md)
+
+### [Remove-FilePlanPropertyAuthority](Remove-FilePlanPropertyAuthority.md)
+
+### [Remove-FilePlanPropertyCategory](Remove-FilePlanPropertyCategory.md)
+
+### [Remove-FilePlanPropertyCitation](Remove-FilePlanPropertyCitation.md)
+
+### [Remove-FilePlanPropertyDepartment](Remove-FilePlanPropertyDepartment.md)
+
+### [Remove-FilePlanPropertyReferenceId](Remove-FilePlanPropertyReferenceId.md)
+
+### [Remove-FilePlanPropertySubCategory](Remove-FilePlanPropertySubCategor.md)
 
 ### [Remove-HoldCompliancePolicy](Remove-HoldCompliancePolicy.md)
 
@@ -2014,9 +2234,27 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-RetentionPolicyTag](Remove-RetentionPolicyTag.md)
 
+### [Set-AdaptiveScope](Set-AdaptiveScope.md)
+
+### [Set-AppRetentionCompliancePolicy](Set-AppRetentionCompliancePolicy.md)
+
+### [Set-AppRetentionComplianceRule](Set-AppRetentionComplianceRule.md)
+
 ### [Set-ComplianceRetentionEventType](Set-ComplianceRetentionEventType.md)
 
 ### [Set-ComplianceTag](Set-ComplianceTag.md)
+
+### [Set-FilePlanPropertyAuthority](Set-FilePlanPropertyAuthorit.md)
+
+### [Set-FilePlanPropertyCategory](Set-FilePlanPropertyCategory.md)
+
+### [Set-FilePlanPropertyCitation](Set-FilePlanPropertyCitation.md)
+
+### [Set-FilePlanPropertyDepartment](Set-FilePlanPropertyDepartment.md)
+
+### [Set-FilePlanPropertyReferenceId](Set-FilePlanPropertyReferenceId.md)
+
+### [Set-FilePlanPropertySubCategory](Set-FilePlanPropertySubCategory.md)
 
 ### [Set-HoldCompliancePolicy](Set-HoldCompliancePolicy.md)
 
@@ -2027,6 +2265,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ManagedFolder](Set-ManagedFolder.md)
 
 ### [Set-ManagedFolderMailboxPolicy](Set-ManagedFolderMailboxPolicy.md)
+
+### [Set-RecordReviewNotificationTemplateConfig](Set-RecordReviewNotificationTemplateConfig.md)
 
 ### [Set-RegulatoryComplianceUI](Set-RegulatoryComplianceUI.md)
 
@@ -2047,11 +2287,17 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Validate-RetentionRuleQuery](Validate-RetentionRuleQuery.md)
 
 ## powershell-v2-module Cmdlets
+### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
 
 ### [Disconnect-ExchangeOnline](Disconnect-ExchangeOnline.md)
+
+### [Get-ConnectionInformation](Get-ConnectionInformation.md)
+
+### [Get-DefaultTenantMyAnalyticsFeatureConfig](Get-DefaultTenantMyAnalyticsFeatureConfig.md)
 
 ### [Get-EXOCasMailbox](Get-EXOCasMailbox.md)
 
@@ -2075,9 +2321,25 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-UserBriefingConfig](Get-UserBriefingConfig.md)
 
-### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+### [Get-VivaInsightsSettings](Get-VivaInsightsSettings.md)
+
+### [Get-VivaModuleFeature](Get-VivaModuleFeature.md)
+
+### [Get-VivaModuleFeatureEnablement](Get-VivaModuleFeatureEnablement.md)
+
+### [Get-VivaModuleFeaturePolicy](Get-VivaModuleFeaturePolicy.md)
+
+### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
+
+### [Set-DefaultTenantMyAnalyticsFeatureConfig](Set-DefaultTenantMyAnalyticsFeatureConfig.md)
 
 ### [Set-MyAnalyticsFeatureConfig](Set-MyAnalyticsFeatureConfig.md)
+
+### [Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+
+### [Set-VivaInsightsSettings](Set-VivaInsightsSettings.md)
+
+### [Update-VivaModuleFeaturePolicy](Update-VivaModuleFeaturePolicy.md)
 
 ## reporting Cmdlets
 ### [Get-CompromisedUserAggregateReport](Get-CompromisedUserAggregateReport.md)
@@ -2126,9 +2388,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailDetailDlpPolicyReport](Get-MailDetailDlpPolicyReport.md)
 
-### [Get-MailDetailMalwareReport](Get-MailDetailMalwareReport.md)
-
-### [Get-MailDetailSpamReport](Get-MailDetailSpamReport.md)
+### [Get-MailDetailEncryptionReport](Get-MailDetailEncryptionReport.md)
 
 ### [Get-MailDetailTransportRuleReport](Get-MailDetailTransportRuleReport.md)
 
@@ -2136,13 +2396,11 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MailflowStatusReport](Get-MailflowStatusReport.md)
 
+### [Get-MailTrafficEncryptionReport](Get-MailTrafficEncryptionReport.md)
+
 ### [Get-MailTrafficPolicyReport](Get-MailTrafficPolicyReport.md)
 
-### [Get-MailTrafficReport](Get-MailTrafficReport.md)
-
 ### [Get-MailTrafficSummaryReport](Get-MailTrafficSummaryReport.md)
-
-### [Get-MailTrafficTopReport](Get-MailTrafficTopReport.md)
 
 ### [Get-MxRecordReport](Get-MxRecordReport.md)
 
@@ -2190,13 +2448,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SupervisoryReviewTopCasesReport](Get-SupervisoryReviewTopCasesReport.md)
 
-### [Get-TenantAnalyticsConfig](Get-TenantAnalyticsConfig.md)
-
-### [Get-UserAnalyticsConfig](Get-UserAnalyticsConfig.md)
-
-### [Set-TenantAnalyticsConfig](Set-TenantAnalyticsConfig.md)
-
-### [Set-UserAnalyticsConfig](Set-UserAnalyticsConfig.md)
+### [Test-Message](Test-Message.md]
 
 ## role-based-access-control Cmdlets
 ### [Add-ManagementRoleEntry](Add-ManagementRoleEntry.md)
@@ -2549,6 +2801,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DynamicDistributionGroup](Get-DynamicDistributionGroup.md)
 
+### [Get-DynamicDistributionGroupMember](Get-DynamicDistributionGroupMember.md)
+
 ### [Get-EligibleDistributionGroupForMigration](Get-EligibleDistributionGroupForMigration.md)
 
 ### [Get-Group](Get-Group.md)
@@ -2573,10 +2827,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-DynamicDistributionGroup](New-DynamicDistributionGroup.md)
 
-### [New-EOPDistributionGroup](New-EOPDistributionGroup.md)
-
-### [New-EOPMailUser](New-EOPMailUser.md)
-
 ### [New-MailContact](New-MailContact.md)
 
 ### [New-MailUser](New-MailUser.md)
@@ -2588,10 +2838,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-DistributionGroupMember](Remove-DistributionGroupMember.md)
 
 ### [Remove-DynamicDistributionGroup](Remove-DynamicDistributionGroup.md)
-
-### [Remove-EOPDistributionGroup](Remove-EOPDistributionGroup.md)
-
-### [Remove-EOPMailUser](Remove-EOPMailUser.md)
 
 ### [Remove-MailContact](Remove-MailContact.md)
 
@@ -2606,14 +2852,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DistributionGroup](Set-DistributionGroup.md)
 
 ### [Set-DynamicDistributionGroup](Set-DynamicDistributionGroup.md)
-
-### [Set-EOPDistributionGroup](Set-EOPDistributionGroup.md)
-
-### [Set-EOPGroup](Set-EOPGroup.md)
-
-### [Set-EOPMailUser](Set-EOPMailUser.md)
-
-### [Set-EOPUser](Set-EOPUser.md)
 
 ### [Set-Group](Set-Group.md)
 
@@ -2630,7 +2868,5 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Undo-SoftDeletedUnifiedGroup](Undo-SoftDeletedUnifiedGroup.md)
 
 ### [Update-DistributionGroupMember](Update-DistributionGroupMember.md)
-
-### [Update-EOPDistributionGroupMember](Update-EOPDistributionGroupMember.md)
 
 ### [Upgrade-DistributionGroup](Upgrade-DistributionGroup.md)

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-transportconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/set-transportconfig
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-TransportConfig
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-TransportConfig cmdlet to modify the transport configuration settings for the whole Exchange organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -25,6 +25,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-AddressBookPolicyRoutingEnabled <Boolean>]
  [-AgentGeneratedMessageLoopDetectionInSmtpEnabled <Boolean>]
  [-AgentGeneratedMessageLoopDetectionInSubmissionEnabled <Boolean>]
+ [-AllowLegacyTLSClients <System.Boolean>]
  [-ClearCategories <Boolean>]
  [-Confirm]
  [-ConvertDisclaimerWrapperToEml <Boolean>]
@@ -48,6 +49,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-InternalDsnReportingAuthority <SmtpDomain>]
  [-InternalDsnSendHtml <Boolean>]
  [-InternalSMTPServers <MultiValuedProperty>]
+ [-JournalMessageExpirationDays <Int32>]
  [-JournalingReportNdrTo <SmtpAddress>]
  [-LegacyJournalingMigrationEnabled <Boolean>]
  [-MaxAllowedAgentGeneratedMessageDepth <UInt32>]
@@ -59,9 +61,13 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
  [-MaxRetriesForLocalSiteShadow <Int32>]
  [-MaxRetriesForRemoteSiteShadow <Int32>]
  [-MaxSendSize <Unlimited>]
- [-OrganizationFederatedMailbox <SmtpAddress>]
+ [-MessageExpiration <EnhancedTimeSpan>]
  [-QueueDiagnosticsAggregationInterval <EnhancedTimeSpan>]
  [-RejectMessageOnShadowFailure <Boolean>]
+ [-ReplyAllStormBlockDurationHours <Int32>]
+ [-ReplyAllStormDetectionMinimumRecipients <Int32>]
+ [-ReplyAllStormDetectionMinimumReplies <Int32>]
+ [-ReplyAllStormProtectionEnabled <Boolean>]
  [-Rfc2231EncodingEnabled <Boolean>]
  [-SafetyNetHoldTime <EnhancedTimeSpan>]
  [-ShadowHeartbeatFrequency <EnhancedTimeSpan>]
@@ -84,7 +90,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -102,18 +108,20 @@ Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
 
 This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
 
-To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Microsoft 365 admin center or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
+To avoid journaling issues, we recommend that you set JournalingReportNdrTo to an external address. Like the journaling mailbox, the alternate journaling mailbox can't be an Exchange Online mailbox. In Exchange Online, you can configure this setting by using the Microsoft 365 admin center or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see [KB2829319](https://support.microsoft.com/help/2829319).
 
 ## PARAMETERS
 
 ### -Identity
+This parameter is available only in on-premises Exchange.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: 1
@@ -125,7 +133,7 @@ Accept wildcard characters: False
 ### -AddressBookPolicyRoutingEnabled
 The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolved in an organization that uses address book policies to create separate virtual organizations within the same Exchange organization. Specifically, the global address list (GAL) that's specified in the user's address book policy controls how recipients are resolved. When the value of this parameter is $true, users that are assigned different GALs appear as external recipients. When the value of this parameter is $false, users that are assigned different GALs appear as internal recipients.
 
-The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see [Address book policies in Exchange Server](https://docs.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
+The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see [Address book policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/address-book-policies/address-book-policies).
 
 ```yaml
 Type: Boolean
@@ -176,6 +184,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyTLSClients
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowLegacyTLSClients Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -282,11 +308,13 @@ Accept wildcard characters: False
 ```
 
 ### -DSNConversionMode
-The DSNConversionMode parameter controls how Exchange handles delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) that are generated by earlier versions of Exchange or other messaging systems. Valid values are:
+The DSNConversionMode parameter controls how Exchange handles delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) that are generated by earlier versions of Exchange or other email systems. Valid values are:
 
 - DoNotConvert: DSNs aren't modified. The DSN is delivered as a standard message.
-- PreserveDSNBody: DSNs are converted to the Exchange 2010 or later format, and the text in the body of the DSN message is retained. This is the default value.
+- PreserveDSNBody: DSNs are converted to the Exchange 2010 or later format, and the text in the body of the DSN message is retained.
 - UseExchangeDSNs: DSNs are converted to the Exchange 2010 or later format. However, any customized text or attachments that were associated with the original DSN are overwritten.
+
+The default value in Exchange 2010 and Exchange 2013 is UseExchangeDSNs. Otherwise, the default value is PreserveDSNBody.
 
 ```yaml
 Type: DSNConversionOption
@@ -398,8 +426,8 @@ Accept wildcard characters: False
 ### -ExternalDsnSendHtml
 The ExternalDsnSendHtml parameter specifies whether external DSN messages should be HTML or plain text. Valid values are:
 
-- $true: DSNs are HTML. This is the default value.
-- $false: DSNs are plain text.
+- $true: External DSNs are HTML. This is the default value.
+- $false: External DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -417,13 +445,13 @@ Accept wildcard characters: False
 ### -ExternalPostmasterAddress
 The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is blank ($null).
 
-The default value means the external postmaster address is postmaster@\<DefaultAcceptedDomain\> in the following locations:
+The default value means the external postmaster address is `postmaster@<DefaultAcceptedDomain>` in the following locations:
 
 - On Hub Transport servers or the Transport service on Mailbox servers.
 - On Edge Transport servers that are subscribed to the Exchange organization.
 - In Exchange Online.
 
-On Edge Transport servers that aren't subscribed to the Exchange organization, the default external postmaster email address is postmaster@\<EdgeTransportServerFQDN\>.
+On Edge Transport servers that aren't subscribed to the Exchange organization, the default external postmaster email address is `postmaster@<EdgeTransportServerFQDN>`.
 
 To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
 
@@ -441,7 +469,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -472,13 +502,13 @@ DSN codes are entered as x.y.z and are separated by commas. By default, the foll
 - 5.2.0
 - 5.1.4
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Although these DSN codes are monitored by default, the associated NDRs aren't copied to the Exchange recipient or to the external postmaster address if no mailbox is assigned to the Exchange recipient or to the external postmaster address. By default, no mailbox is assigned to the Exchange recipient or to the external postmaster address.
 
-To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of postmaster@\<Authoritative domain\> to the mailbox.
+To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of `postmaster@<AuthoritativeDomain>` to the mailbox.
 
 ```yaml
 Type: MultiValuedProperty
@@ -494,7 +524,7 @@ Accept wildcard characters: False
 ```
 
 ### -HeaderPromotionModeSetting
-The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received from outside the Exchange organization. Valid values are:
+The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received. Valid values are:
 
 - MustCreate: Exchange creates a named property for each new custom X-header.
 - MayCreate: Exchange creates a named property for each new custom X-header on messages received from authenticated senders. No named properties are created for custom X-headers on messages received from unauthenticated senders.
@@ -609,8 +639,8 @@ Accept wildcard characters: False
 ### -InternalDsnSendHtml
 The InternalDsnSendHtml parameter specifies whether internal DSN messages should be HTML or plain text. Valid values are:
 
-- $true: DSNs are HTML. This is the default value.
-- $false: DSNs are plain text.
+- $true: Internal DSNs are HTML. This is the default value.
+- $false: Internal DSNs are plain text.
 
 ```yaml
 Type: Boolean
@@ -630,9 +660,9 @@ This parameter is available only in on-premises Exchange.
 
 The InternalSMTPServers parameter specifies a list of internal SMTP server IP addresses or IP address ranges that should be ignored by Sender ID and connection filtering.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -647,8 +677,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JournalMessageExpirationDays
+This parameter is available only in the cloud-based service.
+
+The JournalMessageExpirationDays parameter extends the number of days that undeliverable journal reports are queued before they expire. A valid value is an integer from 0 to 7. The default value is 0, which means undeliverable journal reports are treated like regular undeliverable messages.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -JournalingReportNdrTo
-The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the argument to JournalingReportNdrTo.
+The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the value for this parameter. Like the journaling mailbox, the alternate journaling mailbox can't be an Exchange Online mailbox.
 
 ```yaml
 Type: SmtpAddress
@@ -664,7 +712,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyJournalingMigrationEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The LegacyJournalingMigrationEnabled parameter specifies whether journal messages generated in Microsoft Exchange Server 2003 will be reformatted by Exchange 2010.
 
@@ -821,7 +869,7 @@ The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipien
 
 In on-premises Exchange, the default value is 500. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message.
 
-In Exchange Online, the default value is Unlimited, which means the organizational limit of 1000 is used. You can enter a custom value up to 1000. For more information, see [Sending limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1) in the Microsoft 365 service description.
+In Exchange Online, the default value is Unlimited, which means the organizational limit of 1000 is used. You can enter a custom value up to 1000. For more information, see [Sending limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1) in the Microsoft 365 service description.
 
 ```yaml
 Type: Unlimited
@@ -917,16 +965,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OrganizationFederatedMailbox
-This parameter is available or functional only in Exchange Server 2010.
+### -MessageExpiration
+This parameter is available only in the cloud-based service.
 
-The OrganizationFederatedMailbox parameter specifies the SMTP address of the federated mailbox used for federated delivery with other organizations.
+The MessageExpiration parameter specifies the message expiration timeout interval for the organization.
+
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+The default value is 1.00:00:00 or 1 day.
+
+A valid value is from 12 hours (0.12:00:00) to 24 hours (1.00:00:00).
+
+Queued messages typically expire after 24 hours, resulting in an NDR for failed delivery. If you change this value, the NDR will be sent at the new applicable time.
 
 ```yaml
-Type: SmtpAddress
+Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -970,6 +1026,78 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormBlockDurationHours
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormBlockDurationHours Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormDetectionMinimumRecipients
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormDetectionMinimumRecipients Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormDetectionMinimumReplies
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormDetectionMinimumReplies Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReplyAllStormProtectionEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReplyAllStormProtectionEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1235,9 +1363,9 @@ The TLSReceiveDomainSecureList parameter specifies the domains from which you wa
 - Specify the domains to which you want to send domain secured email by using the TLSSendDomainSecureList parameter.
 - Enable Domain Security (Mutual Auth TLS) on the Send connectors that send messages to the domains that you specified in the TLSSendDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 The wildcard character (\*) isn't supported in the domains listed in the TLSReceiveDomainSecureList parameter or in the TLSSendDomainSecureList parameter. The default value for both parameters is an empty list ({}).
 
@@ -1263,9 +1391,9 @@ The TLSSendDomainSecureList parameter specifies the domains from which you want 
 - Specify the domains from which you want to receive domain secured email by using the TLSReceiveDomainSecureList parameter.
 - Enable Domain Security (Mutual Auth TLS) and the TLS authentication method on the Receive connectors that receive messages from the domains that you specified in the TLSReceiveDomainSecureList parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 Multiple domains may be separated by commas. The wildcard character (\*) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
 
@@ -1285,7 +1413,7 @@ Accept wildcard characters: False
 ### -TransportRuleAttachmentTextScanLimit
 This parameter is available only in on-premises Exchange.
 
-The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies. The default value is 150 kilobytes (KB).
+The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies.
 
 When you enter a value, qualify the value with one of the following units:
 
@@ -1295,6 +1423,8 @@ When you enter a value, qualify the value with one of the following units:
 - GB (gigabytes)
 
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+In Exchange Online, Exchange 2019, and Exchange 2016, the default value is 1 MB (1,048,576 bytes). In Exchange 2013, the default value is 150 KB (153,600 bytes).
 
 If the amount of text in the attachment is larger than the value of this parameter, only the specified amount of text is scanned. For example, if a 5 megabyte attachment contains 300 kilobytes of text, and the value of TransportRuleAttachmentTextScanLimit is 150 kilobytes, only the first 150 kilobytes of text are extracted and scanned.
 
@@ -1334,7 +1464,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoicemailJournalingEnabled
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The VoicemailJournalingEnabled parameter specifies whether Unified Messaging voice mail messages are journaled by the Journaling agent. Valid input for this parameter is $true or $false. The default value is $true.
 
@@ -1390,12 +1520,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

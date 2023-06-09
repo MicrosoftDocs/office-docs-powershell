@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineliscivicaddress
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineliscivicaddress
+applicable: Microsoft Teams, Skype for Business Online
 title: Set-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -24,31 +24,28 @@ Set-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-CompanyName <String>] [-Com
  [-PreDirectional <String>] [-PostDirectional <String>] [-City <String>] [-CityAlias <String>]
  [-StateOrProvince <String>] [-CountryOrRegion <String>] [-PostalCode <String>] [-Description <String>]
  [-ValidationStatus <String>] [-Latitude <String>] [-Longitude <String>] [-Confidence <String>]
- [-Elin <String>] [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+ [-Elin <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify an existing civic address which has not been validated. Validated civic addresses cannot be modified.
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Description "City Center" -CompanyName Contoso
 ```
 
 This example modifies the description and company name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
 
-
-### -------------------------- Example 2 --------------------------
-```
-Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Longitude 12 -Latitude 34 -ELIN MICROSOFT_ELIN
+### Example 2
+```powershell
+Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Latitude 47.63952 -Longitude -122.12781 -ELIN MICROSOFT_ELIN
 ```
 
 This example modifies the latitude, longitude and ELIN name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
-
 
 ## PARAMETERS
 
@@ -59,7 +56,7 @@ Specifies the unique identifier of the civic address to be modified.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: True
 Position: Named
@@ -75,7 +72,7 @@ Specifies a new city for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -91,7 +88,7 @@ Short form of the city name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -107,7 +104,7 @@ Specifies a new company name for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -123,7 +120,7 @@ Used to store TaxId for regulatory reasons.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -139,7 +136,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -155,7 +152,7 @@ Specifies a new country or region for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -171,23 +168,7 @@ Specifies a new description for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -205,7 +186,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -221,7 +202,7 @@ Specifies the new numeric portion of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -238,7 +219,7 @@ For example, if the property was multiplexed, the HouseNumberSuffix parameter wo
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -254,7 +235,7 @@ Specifies the new postal code of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -271,7 +252,7 @@ For example, "425 Smith Avenue NE".
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -288,7 +269,7 @@ For example, "425 NE Smith Avenue ".
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -304,7 +285,7 @@ Specifies the new state or province of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -320,7 +301,7 @@ Specifies the new street name of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -337,23 +318,7 @@ The street suffix will typically be something like street, avenue, way, or boule
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -369,7 +334,7 @@ Microsoft internal use only
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -386,7 +351,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -418,6 +383,7 @@ This is used in Direct Routing EGW scenarios.
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -427,12 +393,13 @@ Accept wildcard characters: False
 ```
 
 ### -Latitude
-Specifies the angular distance of a place north or south of the earth's equator.
+Specifies the angular distance of a place north or south of the earth's equator in the decimal degrees format.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -442,12 +409,13 @@ Accept wildcard characters: False
 ```
 
 ### -Longitude
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, in the decimal degrees format.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -461,13 +429,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
-
-### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-CsOnlineLisCivicAddress](get-csonlineliscivicaddress.md)
+
+[New-CsOnlineLisCivicAddress](new-csonlineliscivicaddress.md)
+
+[Remove-CsOnlineLisCivicAddress](remove-csonlineliscivicaddress.md)

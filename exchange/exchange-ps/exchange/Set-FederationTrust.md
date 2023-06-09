@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-federationtrust
+online version: https://learn.microsoft.com/powershell/module/exchange/set-federationtrust
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-FederationTrust
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-FederationTrust cmdlet to modify an existing federation trust.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -58,7 +58,7 @@ Set-FederationTrust [-Identity] <FederationTrustIdParameter>
 ## DESCRIPTION
 You can use the Set-FederationTrust cmdlet to manage the certificates used for the federation trust. You can also use the Set-FederationTrust cmdlet to refresh the metadata document from the Microsoft Federation Gateway and download its certificate.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -78,7 +78,7 @@ This example configures the federation trust Microsoft Federation Gateway to use
 
 ### Example 3
 ```powershell
-Set-FederationTrust -Identity "Azure AD Authentication" -MetadataUrl https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml
+Set-FederationTrust -Identity "Azure AD Authentication" -MetadataUrl https://nexus.microsoftonline-p.com/federationmetadata/2006-12/federationmetadata.xml
 ```
 
 This example updates the configuration if the tenant is hosted in Microsoft 365 U.S. Government GCC High or DoD environment.
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataUrl
-The MetadataUrl parameter specifies the URL where WS-FederationMetadata is published by the Microsoft Federation Gateway. <br/><br/> **Note**: For GCC High or DoD tenants, use the value https://login.microsoftonline.us/FederationMetadata/2006-12/FederationMetadata.xml.
+The MetadataUrl parameter specifies the URL where WS-FederationMetadata is published by the Microsoft Federation Gateway.
 
 ```yaml
 Type: Uri
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshMetadata
-The RefreshMetadata switch specifies that the metadata document and certificate is retrieved again from the Microsoft Federation Gateway.
+The RefreshMetadata switch specifies that the metadata document and certificate is retrieved again from the Microsoft Federation Gateway. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -261,12 +261,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

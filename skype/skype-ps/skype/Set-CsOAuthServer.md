@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csoauthserver
+online version: https://learn.microsoft.com/powershell/module/skype/set-csoauthserver
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsOAuthServer
 schema: 2.0.0
@@ -247,4 +247,3 @@ Instead, the `Set-CsOAuthServer` cmdlet modifies existing instances of the Micro
 [New-CsOAuthServer](New-CsOAuthServer.md)
 
 [Remove-CsOAuthServer](Remove-CsOAuthServer.md)
-

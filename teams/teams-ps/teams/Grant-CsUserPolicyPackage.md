@@ -2,10 +2,10 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Grant-CsUserPolicyPackage
-author: icchan
-ms.author: icchan
+author: serdarsoysal
+ms.author: serdars
 manager: amitar
-online version: https://docs.microsoft.com/powershell/module/teams/grant-csuserpolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csuserpolicypackage
 schema: 2.0.0
 ---
 
@@ -24,7 +24,7 @@ Grant-CsUserPolicyPackage [-Identity] <String[]> [-PackageName] <String> [<Commo
 ## DESCRIPTION
 
 This cmdlet supports applying a policy package to users in a tenant. Provide one or more user identities to assign the package with all the associated policies. The available policy packages and their definitions can be found by running Get-CsPolicyPackage. The recommended policy package for each user can be found by running Get-CsUserPolicyPackageRecommendation.
-For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+For more information on policy packages, please review https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 
 ### -PackageName
 
-The name of a specific policy package to apply. All possible policy package names can be found by running Get-CsPolicyPackage. To remove the currently assigned package, use $null or an empty string "". This will not remove any policy assignments, just the package assigned value.
+The name of a specific policy package to apply. All possible policy package names can be found by running Get-CsPolicyPackage.
 
 ```yaml
 Type: String

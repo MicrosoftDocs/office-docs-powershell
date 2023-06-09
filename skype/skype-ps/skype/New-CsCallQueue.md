@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cscallqueue
+online version: https://learn.microsoft.com/powershell/module/skype/new-cscallqueue
 applicable: Skype for Business Online
 title: New-CsCallQueue
 author: tomkau
@@ -22,7 +22,8 @@ New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>
 [-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] 
 [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] 
 [-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] 
-[-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-Users <List>] [-LanguageId <String>] [-LineUri <String>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] [<CommonParameters>]
+[-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-User <List>] [-LanguageId <String>] [-LineUri <String>] [-OboResourceAccountIds <List>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] 
+[-ChannelId <String>] [-ChannelUserObjectId <Guid>] [-AuthorizedUsers <List>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,14 +31,14 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- 
+### Example 1
 ```
 New-CsCallQueue -Name "Help Desk" -UseDefaultMusicOnHold $true
 ```
 
 This example creates a Call Queue for the organization named "Help Desk" using default music on hold.
 
-### -------------------------- Example 2 -------------------------- 
+### Example 2
 ```
 New-CsCallQueue -Name "Help desk" -RoutingMethod Attendant -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -AllowOptOut $false -AgentAlertTime 30 -OverflowThreshold 15 -OverflowAction Forward -OverflowActionTarget 7fd04db1-1c8e-4fdf-9af5-031514ba1358 -TimeoutThreshold 30 -TimeoutAction Disconnect -MusicOnHoldAudioFileId 1e81adaf-7c3e-4db1-9d61-5d135abb1bcc -WelcomeMusicAudioFileId 0b31bbe5-e2a0-4117-9b6f-956bca6023f8
 
@@ -128,6 +129,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OboResourceAccountIds
+The OboResourceAccountIds parameter lets you add resource account with phone number to the Call Queue. The agents in the Call Queue will be able to make outbound calls using the phone number on the resource accounts.  This is a list of resource account GUIDs.
+
+Only Call Queue managed by a Teams Channel will be able to use this feature. For more information, please refer to [Manage your support Call Queue in Teams](https://support.microsoft.com/office/manage-your-support-call-queue-in-teams-9f07dabe-91c6-4a9b-a545-8ffdddd2504e).
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OverflowAction
 The OverflowAction parameter designates the action to take if the overflow threshold is reached. The OverflowAction property must be set to one of the following values: DisconnectWithBusy, Forward, Voicemail, and SharedVoicemail. The default value is DisconnectWithBusy.
 
@@ -147,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionTarget
-The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a Guid or a telephone number with a mandatory ‘tel:’ prefix. If the OverflowAction is set to SharedVoicemail, this parameter must be set to an Office 365 Group ID. Otherwise, this parameter is optional.
+The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a Guid or a telephone number with a mandatory 'tel:' prefix. If the OverflowAction is set to SharedVoicemail, this parameter must be set to a group ID (Microsoft 365, Distribution list, or Mail-enabled security). Otherwise, this parameter is optional.
 
 ```yaml
 Type: String
@@ -215,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionTarget
-The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter must be set to a Guid or a telephone number with a mandatory ‘tel:’ prefix. If the TimeoutAction is set to SharedVoicemail, this parameter must be set to an Office 365 Group ID. Otherwise, this field is optional.
+The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter must be set to a Guid or a telephone number with a mandatory 'tel:' prefix. If the TimeoutAction is set to SharedVoicemail, this parameter must be set to an Office 365 Group ID. Otherwise, this field is optional.
 
 ```yaml
 Type: String
@@ -290,7 +309,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: False
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -310,7 +329,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: False
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -477,6 +496,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ChannelId
+Id of the channel to connect a call queue to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChannelUserObjectId
+Guid should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). This is the GUID of one of the owners of the team the channels belongs to.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthorizedUsers
+This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). 
+
+```yaml
+Type: List
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
@@ -489,4 +556,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-[Create a Phone System Call Queue](https://support.office.com/en-us/article/Create-a-Phone-System-call-queue-67ccda94-1210-43fb-a25b-7b9785f8a061)
+[Create a Phone System Call Queue](https://support.office.com/article/Create-a-Phone-System-call-queue-67ccda94-1210-43fb-a25b-7b9785f8a061)

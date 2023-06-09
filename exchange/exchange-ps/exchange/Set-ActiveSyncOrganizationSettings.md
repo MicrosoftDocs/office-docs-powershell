@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-activesyncorganizationsettings
+online version: https://learn.microsoft.com/powershell/module/exchange/set-activesyncorganizationsettings
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-ActiveSyncOrganizationSettings
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-ActiveSyncOrganizationSettings cmdlet to set the Exchange ActiveSync settings for the organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -28,14 +28,16 @@ Set-ActiveSyncOrganizationSettings [[-Identity] <ActiveSyncOrganizationSettingsI
  [-Confirm]
  [-DefaultAccessLevel <DeviceAccessLevel>]
  [-DomainController <Fqdn>]
+ [-EnableMobileMailboxPolicyWhenCAInplace <Boolean>]
  [-OtaNotificationMailInsert <String>]
+ [-TenantAdminPreference <TenantAdminPreference>]
  [-UserMailInsert <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -67,9 +69,9 @@ Accept wildcard characters: False
 ### -AdminMailRecipients
 The AdminMailRecipients parameter specifies the email addresses of the administrators for reporting purposes.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -101,6 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRMSSupportForUnenlightenedApps
+This parameter is functional only in the cloud-based service.
+
 The AllowRMSSupportForUnenlightenedApps parameter specifies whether to allow Rights Management Services (RMS) protected messages for ActiveSync clients that don't support RMS. Valid values are:
 
 - $true
@@ -178,6 +182,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableMobileMailboxPolicyWhenCAInplace
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnableMobileMailboxPolicyWhenCAInplace Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OtaNotificationMailInsert
 The OtaNotificationMailInsert parameter specifies the text to include in an email message that's sent to users who need to update their older devices to use the new Exchange ActiveSync features in Microsoft Exchange.
 
@@ -188,6 +210,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantAdminPreference
+This parameter is available only in the cloud-based service.
+
+{{ Fill TenantAdminPreference Description }}
+
+```yaml
+Type: TenantAdminPreference
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -235,12 +275,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

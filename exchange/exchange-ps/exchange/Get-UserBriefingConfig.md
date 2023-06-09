@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-userbriefingconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/get-userbriefingconfig
 applicable: Exchange Online
 title: Get-UserBriefingConfig
 schema: 2.0.0
@@ -12,23 +12,27 @@ ms.author: chrisda
 # Get-UserBriefingConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is being replaced by the [Get-MyAnalyticsFeatureConfig](https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig) cmdlet.
+Use the Get-UserBriefingConfig cmdlet to get the current state of the Briefing email flag for the specified user. For more details about configuring the Briefing email, see [Configure Briefing email](https://learn.microsoft.com/Briefing/be-admin).
 
-Use the Get-UserBriefingConfig cmdlet to get the current state of the Briefing email flag for the specified user. For more details about configuring the Briefing email, see [Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-UserBriefingConfig -Identity <string>
+Get-UserBriefingConfig -Identity <String>
  [-ResultSize <Unlimited>]
 ```
 
 ## DESCRIPTION
-This cmdlet requires the .NET Framework 4.7.2 or later. Also, you need to be a member of the Organization Management role group (Global admins).
+This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
+
+- Global Administrator
+- Exchange Administrator
+- Insights Administrator
+
+To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
@@ -57,7 +61,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResultSize	
+### -ResultSize
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -75,14 +79,10 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Configure Briefing email](https://docs.microsoft.com/Briefing/be-admin)
+[Configure Briefing email](https://learn.microsoft.com/Briefing/be-admin)

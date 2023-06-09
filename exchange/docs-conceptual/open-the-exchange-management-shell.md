@@ -5,9 +5,10 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 63976059-25f8-4b4f-b597-633e78b803c0
 description: "Find and open the shortcut for Exchange PowerShell (also known as the Exchange Management Shell) on Exchange servers or computers that have the Exchange management tools installed."
 ---
@@ -18,13 +19,15 @@ When you open the Exchange Management Shell you can perform administrative tasks
 
 - On the Exchange server directly or in a Remote Desktop Connection session.
 
-- On a local computer after you install the Exchange management tools. For more information, see [Install the Exchange management tools](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools).
+- On a local computer after you install the Exchange management tools. For more information, see [Install the Exchange management tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools).
 
 ## What do you need to know before you begin?
 
 - Estimated time to complete this procedure: less than 1 minute.
 
-- The user must be assigned at least one management role. For detailed steps, see [Exchange Server permissions](https://docs.microsoft.com/Exchange/permissions/permissions).
+- To do the procedures in this article, you need to be assigned at least one management role (typically, via membership in a role group). After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC).
+
+  For more information, see [Exchange Server permissions](/exchange/permissions/permissions).
 
 - If you want to run the Exchange Management Shell from a local installation of the Exchange management tools, you need to consider remote PowerShell access for your user account. By default, users are allowed to use remote PowerShell to connect to an Exchange server. However, you can block remote PowerShell access for a user account. For more information, see [Control remote PowerShell access to Exchange servers](control-remote-powershell-access-to-exchange-servers.md).
 
@@ -44,7 +47,7 @@ When you open the Exchange Management Shell you can perform administrative tasks
   ```dos
   exshell.psc1 & exchange.ps1
   ```
-  
+
 ## Open the Exchange Management Shell in Windows Server 2016 or Windows 10
 
 Click **Start** > **Microsoft Exchange Server 2016 \>** **Exchange Management Shell**.

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-messagetrackinglog
+online version: https://learn.microsoft.com/powershell/module/exchange/get-messagetrackinglog
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Get-MessageTrackingLog
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-MessageTrackingLog cmdlet to search for message delivery information stored in the message tracking log.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -49,11 +49,11 @@ The field names displayed in the results from the Get-MessageTrackingLog cmdlet 
 - The recipient-address field is displayed as Recipients.
 - The sender-address field is displayed as Sender.
 
-For more information about the message tracking log files, see [Message tracking](https://docs.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking).
+For more information about the message tracking log files, see [Message tracking](https://learn.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking).
 
-The Get-MessageTrackingLog results are displayed on-screen. You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding "\> \<filename\>" to the command. For example:
+You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding ` > <filename>` to the command. For example: `Get-MessageTrackingLog -Start "03/13/2020 09:00:00" -End "03/13/2020 09:10:00" | ConvertTo-Html > "C:\My Documents\message track.html"`.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-The Source parameter filters the message tracking log entries by the value of the Source field. These values indicate the transport component that's responsible for the message tracking event. For more information, see [Source values in the message tracking log](https://docs.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking#source-values-in-the-message-tracking-log).
+The Source parameter filters the message tracking log entries by the value of the Source field. These values indicate the transport component that's responsible for the message tracking event. For more information, see [Source values in the message tracking log](https://learn.microsoft.com/Exchange/mail-flow/transport-logs/message-tracking#source-values-in-the-message-tracking-log).
 
 ```yaml
 Type: String
@@ -326,12 +326,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

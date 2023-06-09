@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-reportexecutioninstance
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/get-reportexecutioninstance
+applicable: Exchange Online, Exchange Online Protection
 title: Get-ReportExecutionInstance
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-ReportExecutionInstance cmdlet to review the report execution instance in Exchange Online.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +27,7 @@ Get-ReportExecutionInstance [-Identity <InstanceIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -56,7 +54,7 @@ The Identity parameter specifies the report execution instance that you want to 
 Type: InstanceIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -72,7 +70,7 @@ The ScheduleId parameter filters the results by the specified ScheduleId propert
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -86,11 +84,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

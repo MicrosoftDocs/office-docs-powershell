@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstenantdialplan
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantdialplan
 applicable: Skype for Business Online
 title: New-CsTenantDialPlan
 schema: 2.0.0
@@ -29,7 +29,7 @@ Tenant dial plans provide required information to let Enterprise Voice users mak
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can add new normalization rules to a tenant dial plan by calling the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
+You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet.
 
 ## EXAMPLES
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Description
 The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to and any other information that helps to identify the purpose of the tenant dial plan.
-Maximum characters: 512.
+Maximum characters: 1040.
 
 ```yaml
 Type: String
@@ -110,8 +110,7 @@ The ExternalAccessPrefix parameter is a number (or set of numbers) that designat
 (For example, to tenant-dial an outside line, first press 9.) This prefix is ignored by the normalization rules, although these rules are applied to the remainder of the number.
 
 The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
-This parameter must match the regular expression \[0-9\]{1,4}: that is, it must be a value 0 through 9 and one to four digits in length.
-The default value is 9.
+The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
 
 ```yaml
 Type: String
@@ -162,13 +161,13 @@ Accept wildcard characters: False
 
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md) cmdlet, which creates the rule and then assign it to the specified tenant dial plan using [Set-CsTenantDialPlan](Set-CsTenantDialPlan.md) cmdlet.
 
 Each time a new tenant dial plan is created, a new voice normalization rule with default settings is also created for that site, service, or per-user tenant dial plan.
 By default, the Identity of the new voice normalization rule is the tenant dial plan Identity followed by a slash and then followed by the name Prefix All.
 (For example, TAG:Redmond/Prefix All.) The number of normalization rules cannot exceed 50 per TenantDialPlan.
 
-You can create a new normalization rule by calling the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
+You can create a new normalization rule by calling the [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md) cmdlet.
 
 ```yaml
 Type: List
@@ -202,18 +201,13 @@ Accept wildcard characters: False
 
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan.
-This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
+This name must be unique among all tenant dial plans.
 
 This string can be up to 49 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
 
 This parameter must contain a value.
-However, if you don't provide a value, a default value will be supplied.
-The default value for a Global tenant dial plan is Prefix All.
-The default value for a site-level tenant dial plan is the name of the site.
-The default value for a service is the name of the service (Registrar or PSTN gateway) followed by an underscore, followed by the service fully qualified domain name (FQDN).
-For example: Registrar_pool0.litwareinc.com.
-The default value for a per-user tenant dial plan is the Identity of the tenant dial plan.
+However, if you don't provide a value, a default value matching the Identity of the tenant dial plan will be supplied.
 
 ```yaml
 Type: String
@@ -273,4 +267,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

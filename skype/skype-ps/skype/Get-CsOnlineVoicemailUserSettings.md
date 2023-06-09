@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoicemailusersettings
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinevoicemailusersettings
+applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineVoicemailUserSettings
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -18,7 +18,7 @@ Use the Get-CsOnlineVoicemailUserSettings cmdlet to get information about online
 ## SYNTAX
 
 ```
-Get-CsOnlineVoicemailUserSettings -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+Get-CsOnlineVoicemailUserSettings [-Identity] <string> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,13 +33,6 @@ Get-CsOnlineVoicemailUserSettings -Identity sip:user@contoso.com
 
 This example gets the online voicemail user settings of user with SIP URI sip:user@contoso.com.
 
-### -------------------------- Example 2 --------------------------
-```
-Get-CsOnlineVoicemailUserSettings -Identity "00000000-0000-0000-0000-000000000000"
-```
-
-This example gets the online voicemail user settings of user with Object ID "00000000-0000-0000-0000-000000000000".
-
 
 ## PARAMETERS
 
@@ -50,7 +43,7 @@ The Identity parameter represents the ID of the specific user in your organizati
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: True
 Position: Named
@@ -59,17 +52,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
+### -Force
+Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -93,4 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-CsOnlineVoicemailUserSettings](Set-CsOnlineVoicemailUserSettings.md)
-

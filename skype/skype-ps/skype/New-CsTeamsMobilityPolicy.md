@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsmobilitypolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsmobilitypolicy
 applicable: Skype for Business Online
 title: New-CsTeamsMobilityPolicy
 schema: 2.0.0
@@ -18,7 +18,7 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ```
 New-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Description <String>] [-IPVideoMobileMode <String>]
- [-IPAudioMobileMode <String>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [-IPAudioMobileMode <String>] [-Identity] <XdsIdentity>] [-MobileDialerPreference <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -85,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPAudioMobileMode
-When set to WifiOnly, prohibits the user from making, receiving calls or joining meetings using VoIP calls on the mobile device while on cellular data connection.
+When set to WifiOnly, prohibits the user from making and receiving calls or joining meetings using VoIP calls on the mobile device while on a cellular data connection. Possible values are: WifiOnly, AllNetworks.
+
 
 ```yaml
 Type: String
@@ -100,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPVideoMobileMode
-When set to WifiOnly, prohibits the user from making, receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on cellular data connection.
+When set to WifiOnly, prohibits the user from making and receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on a cellular data connection. Possible values are: WifiOnly, AllNetworks.
+
 
 ```yaml
 Type: String
@@ -137,6 +139,22 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MobileDialerPreference
+Determines the mobile dialer preference, possible values are: Teams, Native, UserOverride.
+For more information, see [Manage user incoming calling policies](/microsoftteams/operator-connect-mobile-configure#manage-user-incoming-calling-policies).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

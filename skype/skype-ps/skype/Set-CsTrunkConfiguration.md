@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-cstrunkconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-cstrunkconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsTrunkConfiguration
 schema: 2.0.0
@@ -28,7 +28,7 @@ Set-CsTrunkConfiguration [[-Identity] <XdsIdentity>] [-ConcentratedTopology <Boo
  [-RTCPActiveCalls <Boolean>] [-RTCPCallsOnHold <Boolean>]
  [-SipResponseCodeTranslationRulesList <PSListModifier>] [-SRTPMode <SRTPMode>] [-Force] [-WhatIf] [-Confirm]
  [-Enable3pccRefer <Boolean>] [-EnableFastFailoverTimer <Boolean>] [-EnableOnlineVoice <Boolean>]
- [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>]
+ [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>] [-ForwardAnonymousCallGatewayPAI <Boolean>]
  [-OutboundCallingNumberTranslationRulesList <PSListModifier>] [-PstnUsages <PSListModifier>]
  [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [AcceptGatewayPAIForOutboundCalls] [<CommonParameters>]
 ```
@@ -42,7 +42,7 @@ Set-CsTrunkConfiguration [-Instance <PSObject>] [-ConcentratedTopology <Boolean>
  [-RTCPActiveCalls <Boolean>] [-RTCPCallsOnHold <Boolean>]
  [-SipResponseCodeTranslationRulesList <PSListModifier>] [-SRTPMode <SRTPMode>] [-Force] [-WhatIf] [-Confirm]
  [-Enable3pccRefer <Boolean>] [-EnableFastFailoverTimer <Boolean>] [-EnableOnlineVoice <Boolean>]
- [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>]
+ [-EnableRTPLatching <Boolean>] [-ForwardCallHistory <Boolean>] [-ForwardPAI <Boolean>] [-ForwardAnonymousCallGatewayPAI <Boolean>]
  [-OutboundCallingNumberTranslationRulesList <PSListModifier>] [-PstnUsages <PSListModifier>]
  [-EnableLocationRestriction <Boolean>] [-NetworkSiteID <String>] [AcceptGatewayPAIForOutboundCalls] [<CommonParameters>]
 ```
@@ -622,6 +622,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForwardAnonymousCallGatewayPAI
+If an anonymous call is forwarded to an outgoing PSTN call, this parameter indicates whether the incoming P-Asserted-Identity (PAI) header at the Gateway call will be preserved in the PSTN call. The default value is **False** ($False).
+
+**Notes:**
+- `EnablePAIPAssthrough` is deprecated in favor of `ForwardAnonymousCallGatewayPAI`. This change is made by installing KB5016483.
+- When `ForwardAnonymousCallGatewayPAI` is used, `ForwardPAI` must be set to **True**.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OutboundCallingNumberTranslationRulesList
 Collection of outbound calling number translation rules assigned to the trunk.
 You can retrieve information about the available rules by running this command:
@@ -745,4 +765,3 @@ This cmdlet does not return a value; it modifies an object of type Microsoft.Rtc
 [New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
 [Set-CsOutboundTranslationRule](Set-CsOutboundTranslationRule.md)
-

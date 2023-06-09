@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/move-csmanagementserver
+online version: https://learn.microsoft.com/powershell/module/skype/move-csmanagementserver
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsManagementServer
 schema: 2.0.0
@@ -254,5 +254,3 @@ The Move-CsManagementServer cmdlet does not return any objects.
 ## RELATED LINKS
 
 [Set-CsManagementServer](Set-CsManagementServer.md)
-
-

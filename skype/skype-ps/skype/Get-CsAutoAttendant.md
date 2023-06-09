@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/skype/get-csautoattendant
 applicable: Skype for Business Online
 title: Get-CsAutoAttendant
 schema: 2.0.0
@@ -26,14 +26,14 @@ The Get-CsAutoAttendant cmdlet returns information about the AAs in your organiz
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 Get-CsAutoAttendant
 ```
 
 This example gets all AAs in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 Get-CsAutoAttendant -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
 
@@ -57,14 +57,14 @@ Get-CsAutoAttendant -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
 
 This example gets the AA that has the identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
 
-### -------------------------- Example 3 --------------------------
+### Example 3
 ```
 Get-CsAutoAttendant -First 10
 ```
 
 This example gets the first ten auto attendants configured for use in the organization.
 
-### -------------------------- Example 4 --------------------------
+### Example 4
 ```
 Get-CsAutoAttendant -Skip 5 -First 10
 ```
@@ -76,6 +76,7 @@ This example skips initial 5 auto attendants and gets the next 10 AAs configured
 
 ### -Identity
 The identity for the AA to be retrieved. If this parameter is not specified, then all created AAs in the organization are returned.
+If you specify this parameter, you can't specify the other parameters.
 
 ```yaml
 Type: System.String

@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlineapplicationinstance
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineapplicationinstance
+applicable: Microsoft Teams
 title: Get-CsOnlineApplicationInstance
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -18,7 +18,7 @@ Get application instance for the tenant from Azure Active Directory.
 ## SYNTAX
 
 ```
-Get-CsOnlineApplicationInstance [[-Identity] <string>] [[-ResultSize] <int>] [-Tenant <guid>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+Get-CsOnlineApplicationInstance [[-Identity] <string>] [[-ResultSize] <int>] [[-Skip] <int>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,13 +50,13 @@ This example returns the details of all application instances.
 ## PARAMETERS
 
 ### -Identity
-The URI or the object ID of the application instance to retrieve. If this parameter is not provided, it will retrieve all application instances in the tenant.
+The UPN or the object ID of the application instance to retrieve. If this parameter is not provided, it will retrieve all application instances in the tenant.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -66,13 +66,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-The result size for bulk get.
+The result size for bulk get. This parameter is currently not working.
 
 ```yaml
-Type: UInt32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -81,18 +81,67 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-The Tenant ID.
+### -Skip
+Skips the first specified number of returned results. The default value is 0. This parameter is currently not working.
 
 ```yaml
-Type: System.Guid
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -107,3 +156,11 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CsOnlineApplicationInstance](Set-CsOnlineApplicationInstance.md)
+
+[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+
+[Sync-CsOnlineApplicationInstance](Sync-CsOnlineApplicationInstance.md)

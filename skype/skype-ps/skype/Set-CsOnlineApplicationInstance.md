@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineapplicationinstance
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineapplicationinstance
+applicable: Microsoft Teams
 title: Set-CsOnlineApplicationInstance
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -15,30 +15,25 @@ ms.reviewer:
 ## SYNOPSIS
 Updates an application instance in Azure Active Directory. 
 
+**Note**: The use of this cmdlet for assigning phone numbers in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+
 ## SYNTAX
 
 ```
-Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <string>] [[-ApplicationId] <guid>]
-    [[-DisplayName] <string>] [-Tenant <guid>] [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <string>] [[-ApplicationId] <guid>] [[-DisplayName] <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet is used to update an application instance in Azure Active Directory. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
-
+This cmdlet is used to update an application instance in Azure Active Directory.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```powershell
-Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -OnpremPhoneNumber +14250000000 -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
+Set-CsOnlineApplicationInstance -Identity appinstance01@contoso.com -ApplicationId ce933385-9390-45d1-9512-c8d228074e07 -DisplayName "AppInstance01"
 ```
 
-This example shows updating OnpremPhoneNumber, ApplicationId, DisplayName information for an existing Auto Attendant application instance with Identity "appinstance01@contoso.com".
-
-The following are the application ID's for each type of application instance types:
-
-Auto Attendant: ce933385-9390-45d1-9512-c8d228074e07
-Call Queue: 11cd3e2e-fccb-42ad-ad00-878b93575e07
+This example shows updated ApplicationId and DisplayName information for an existing Auto Attendant application instance with Identity "appinstance01@contoso.com".
 
 ## PARAMETERS
 
@@ -49,7 +44,7 @@ The URI or ID of the application instance to update.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -59,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -OnpremPhoneNumber
+**Note**: Using this parameter has been deprecated in commercial and GCC cloud instances. Use the new Set-CsPhoneNumberAssignment cmdlet instead.
+
 Assigns a hybrid (on-premise) telephone number to the application instance.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -75,13 +72,13 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-The application ID.
+The application ID. The Microsoft application Auto Attendant has the ApplicationId ce933385-9390-45d1-9512-c8d228074e07 and the Microsoft application Call Queue has the ApplicationId 11cd3e2e-fccb-42ad-ad00-878b93575e07. Third-party applications available in a tenant will use other ApplicationId's.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -97,11 +94,60 @@ The display name.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -116,3 +162,11 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.md)
+
+[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
+
+[Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
+
+[Sync-CsOnlineApplicationInstance](Sync-CsOnlineApplicationInstance.md)

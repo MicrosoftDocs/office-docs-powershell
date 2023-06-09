@@ -28,6 +28,9 @@ The steps are the same as [Create new cmdlet topics](NEW_CMDLETS.md#step-1-insta
 
 You probably know how to do this already, but the available workloads and connection methods are also described in [Create new cmdlet topics](NEW_CMDLETS.md#step-2-connect-to-the-powershell-environment-that-has-the-cmdlet).
 
+> [!NOTE]
+> In v3.0.0 or later of the EXO V3 module, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. If you omit the _UseRPSSession_ switch and connect in REST API mode, the **Type** value of most parameters will be the incorrect and unhelpful `Object` or `Object[]` values. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
+
 ### Step 3: Load platyPS in the PowerShell environment
 
 After you've connected in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), run the following command to make the platyPS cmdlets available in your session:
@@ -36,13 +39,16 @@ After you've connected in PowerShell to the server or service (either in a regul
 Import-Module platyPS
 ```
 
-### Step 4: Verify your PSSession variable name
+### Step 4: Store your PSSession in a variable
 
-This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-verify-your-your-pssession-variable-name).
+This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-store-your-pssession-in-a-variable).
 
-To recap: this step is required in Exchange, Skype for Business Online and other products that use remote PowerShell in their connection instructions (one or more **xxx-xxxSession** commands are present), and the value is most likely `$Session`.
+To recap: this step is required in Exchange and other products that use remote PowerShell.
 
-If you're using SharePoint, SharePoint Online or another product that doesn't use remote PowerShell to connect, you can skip this step.
+> [!NOTE]
+> As described earlier, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. Although the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet is a reasonable replacement for Get-PSSession in REST API mode, the output doesn't work with the _Session_ parameter in **New-MarkdownHelp**. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
+
+If you're using Microsoft Teams or another product that doesn't use remote PowerShell, you can skip this step.
 
 ### Step 5: Use New-MarkdownHelp to dump the latest version of the cmdlet to a file
 
@@ -117,29 +123,18 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 1. Go to the cmdlet topics location in the appropriate GiHub repository:
 
    - Exchange: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/exchange/exchange-ps/exchange>
-
    - Office Web Apps: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/officewebapps/officewebapps-ps/officewebapps>
-
-   - SharePoint Online: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-online>
-
-   - SharePoint PNP: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-pnp>
-
-   - SharePoint Server: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/sharepoint/sharepoint-ps/sharepoint-server>
-
    - Skype: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/skype/skype-ps/skype>
-
    - StaffHub: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub>
-
    - Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams>
-
    - Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard>
 
 2. Find the topic and click **Edit**
 
 3. Copy/paste your updates (and only your updates) from your new, local copy of the topic into the existing topic (click the **Preview** tab to see what they'll look like).
 
-   **IMPORTANT**: The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help.
-    Any deviation will throw errors in the Pull Request. The schema can be found here: <https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md>.
+   > [!IMPORTANT]
+   > The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help. Any deviation will throw errors in the Pull Request. The schema can be found here: <https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md>.
 
 4. After you're done modifying files, go to the **Propose file change** section at the bottom of the page:
 
@@ -148,18 +143,21 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
 
    When you're ready, click the green **Propose file change** button.
 
-   ![Propose file change section](../images/propose-file-change.png)
+   ![Propose file change section.](../images/propose-file-change.png)
 
 5. On the **Comparing changes** page that appears, click the green **Create pull request** button.
 
-   ![Comparing changes page](../images/comparing-changes-page.png)
+   ![Comparing changes page.](../images/comparing-changes-page.png)
 
 6. On the **Open a pull request** page that appears, click the green **Create pull request** button.
 
-   ![Open a pull request page](../images/open-a-pull-request-page.png)
+   ![Open a pull request page.](../images/open-a-pull-request-page.png)
 
 > [!NOTE]
-> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
+>
+> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.
+>
+> The point is: click any green buttons that are presented to you until there are no more.
 
 ## Remove existing parameters from existing topics
 

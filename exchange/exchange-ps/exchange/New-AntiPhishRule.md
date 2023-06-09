@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-antiphishrule
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/new-antiphishrule
+applicable: Exchange Online, Exchange Online Protection
 title: New-AntiPhishRule
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-AntiPhishRule cmdlet to create antiphish rules in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -41,7 +39,10 @@ New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
 ## DESCRIPTION
 You need to add the antiphish rule to an existing policy by using the AntiPhishPolicy parameter. You create antiphish policies by using the New-AntiPhishPolicy cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+> [!IMPORTANT]
+> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Common policy settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-phishing-policies-about#common-policy-settings).
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -64,7 +65,7 @@ The Name parameter specifies a unique name for the antiphish rule. If the value 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -88,7 +89,7 @@ You can't specify the default antiphish policy. And, you can't specify an antiph
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -104,7 +105,7 @@ The Comments parameter specifies informative comments for the rule, such as what
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -144,7 +145,7 @@ In the properties of the rule, the value of this parameter is visible in the Sta
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -160,7 +161,7 @@ The ExceptIfRecipientDomainIs parameter specifies an exception that looks for re
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -179,13 +180,13 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -195,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToMemberOf
-The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
+The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of distribution groups, mail-enabled security groups, or sent to Microsoft 365 Groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 - Alias
@@ -204,7 +205,7 @@ The ExceptIfSentToMemberOf parameter specifies an exception that looks for messa
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 If you remove the group after you create the rule, no exception is made for messages that are sent to members of the group.
 
@@ -212,7 +213,7 @@ If you remove the group after you create the rule, no exception is made for mess
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -236,7 +237,7 @@ If you modify the priority value of a rule, the position of the rule in the list
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -252,7 +253,7 @@ The RecipientDomainIs parameter specifies a condition that looks for recipients 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -271,13 +272,13 @@ The SentTo parameter specifies a condition that looks for recipients in messages
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -287,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -SentToMemberOf
-The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
+The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, mail-enabled security groups, or sent to Microsoft 365 Groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 - Alias
@@ -296,7 +297,7 @@ The SentToMemberOf parameter specifies a condition that looks for messages sent 
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 If you remove the group after you create the rule, no action is taken on messages that are sent to members of the group.
 
@@ -304,7 +305,7 @@ If you remove the group after you create the rule, no action is taken on message
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -320,7 +321,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -334,11 +335,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-publicfoldermoverequest
+online version: https://learn.microsoft.com/powershell/module/exchange/new-publicfoldermoverequest
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-PublicFolderMoveRequest
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the New-PublicFolderMoveRequest cmdlet to begin the process of moving public
 
 Be aware that the target public folder mailbox will be locked while the move request is active. See the Detailed Description section below for more details.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,7 +47,7 @@ The New-PublicFolderMoveRequest cmdlet moves public folders from a source public
 
 To move the public folder mailbox to another mailbox database, use the New-MoveRequest cmdlet. To ensure that this folder is already in the target public folder mailbox, run the Update-PublicFolderMailbox cmdlet against the target public folder mailbox. You can only perform one move request at a time. You can also move public folders by using the Move-PublicFolderBranch.ps1 script.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -68,6 +68,7 @@ This example begins the move request for public folders under the \\Dev public f
 You can also move a branch of public folders by using the Move-PublicFolderBranch.ps1 script.
 
 ### Example 3
+
 $folders = Get-PublicFolder \ -Recurse -Mailbox PUB1 -ResidentFolders | ?{$_.Name -ne "IPM_SUBTREE"} | %{$_.Identity};New-PublicFolderMoveRequest -TargetMailbox PUB2 -Folders $folders
 
 This example moves all public folders from public folder mailbox Pub1 to public folder mailbox Pub2.
@@ -136,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowLargeItems
-The AllowLargeItems parameter specifies that you can move large items only when large items are encountered. Large items are email messages with a maximum of 1,023 attachments.
+The AllowLargeItems switch specifies that you can move large items only when large items are encountered. You don't need to specify a value with this switch.
+
+Large items are email messages with a maximum of 1,023 attachments.
 
 ```yaml
 Type: SwitchParameter
@@ -301,7 +304,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -333,7 +338,9 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendWhenReadyToComplete
-The SuspendWhenReadyToComplete switch specifies whether to suspend the request before it reaches the status of CompletionInProgress. After the move is suspended, it has a status of AutoSuspended. You can then manually complete the move by using the Resume-PublicFolderMoveRequest command.
+The SuspendWhenReadyToComplete switch specifies whether to suspend the request before it reaches the status of CompletionInProgress. You don't need to specify a value with this switch.
+
+After the move is suspended, it has a status of AutoSuspended. You can then manually complete the move by using the Resume-PublicFolderMoveRequest command.
 
 ```yaml
 Type: SwitchParameter
@@ -385,12 +392,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

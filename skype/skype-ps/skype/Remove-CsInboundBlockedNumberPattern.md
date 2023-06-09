@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csinboundblockednumberpattern
-applicable: Skype for Business Online 
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csinboundblockednumberpattern
+applicable: Microsoft Teams, Skype for Business Online 
 title: Remove-CsInboundBlockedNumberPattern
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 manager: bulenteg
 schema: 2.0.0 
@@ -18,8 +18,7 @@ Removes a blocked number pattern from the tenant list.
 ## SYNTAX
 
 ```
-Remove-CsInboundBlockedNumberPattern [-Tenant <System.Guid>] [-Identity] <XdsGlobalRelativeIdentity> [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsInboundBlockedNumberPattern [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,48 +28,18 @@ This cmdlet removes a blocked number pattern from the tenant list.
 
 ### Example 1
 ```powershell
-PS C:> Remove-CsInboundBlockedNumberPattern -Identity "BlockAutomatic"
+PS> Remove-CsInboundBlockedNumberPattern -Identity "BlockAutomatic"
 ```
 
 This example removes a blocked number pattern identified as "BlockAutomatic".
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The *Force* switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the *Force* switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 A unique identifier specifying the blocked number pattern to be removed.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -78,21 +47,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -112,16 +66,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS

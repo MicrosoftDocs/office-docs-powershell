@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamstranslationrule
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamstranslationrule
+applicable: Microsoft Teams
 title: Get-CsTeamsTranslationRule
 schema: 2.0.0
 manager: nmurav
-author: filippse
-ms.author: filippse
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,8 +17,14 @@ Cmdlet to get an existing number manipulation rule (or list of rules).
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Get-CsTeamsTranslationRule [-LocalStore] [-Filter <Object>] [-Tenant <string>] [[-Identity] <string>]
+Get-CsTeamsTranslationRule [[-Identity] <string>] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsTranslationRule [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,28 +34,39 @@ You can use this cmdlet to get an existing number manipulation rule (or list of 
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsTranslationRule
+Get-CsTeamsTranslationRule
 ```
 
-This command will show all translation rules that exist in the tenant. Identity, Description, Pattern and Translation parameters listed for each rule.
+This command will show all translation rules that exist in the tenant. Identity, Name, Description, Pattern, and Translation parameters are listed for each rule.
+
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsTranslationRule -Identity AddPlus1
+Get-CsTeamsTranslationRule -Identity AddPlus1
 ```
 
-This command will show Identity, Description, Pattern and Translation parameters for "AddPlus1" rule
+This command will show Identity, Name, Description, Pattern, and Translation parameters for the "AddPlus1" rule.
+
+
+### Example 3
+```powershell
+Get-CsTeamsTranslationRule -Filter 'Add*'
+```
+
+This command will show Identity, Name, Description, Pattern, and Translation parameters for all rules with Identity starting with Add.
 
 
 ## PARAMETERS
 
 ### -Identity
-Identifier of the rule. This parameter is required and later used to assign the rule to Inbound or Outbound Trunk Normalization policy.
+Identifier of the specific translation rule to display.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases:
+Applicable: Microsoft Teams
+
 Required: False
 Position: 1
 Default value: None
@@ -57,19 +74,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose number manipulation rule is being evoked.
+### -Filter
+The filter to use against the Identity of translation rules.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Filter)
 Aliases:
+Applicable: Microsoft Teams
+
 Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -81,3 +100,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
+[New-CsTeamsTranslationRule](New-CsTeamsTranslationRule.md)
+
+[Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
+
+[Set-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
+
+[Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)

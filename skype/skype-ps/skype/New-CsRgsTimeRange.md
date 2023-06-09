@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csrgstimerange
+online version: https://learn.microsoft.com/powershell/module/skype/new-csrgstimerange
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsTimeRange
 schema: 2.0.0
@@ -175,4 +175,3 @@ New-CsRgsTimeRange creates new instances of the Microsoft.Rtc.Rgs.Management.Wri
 [New-CsRgsHoursOfBusiness](New-CsRgsHoursOfBusiness.md)
 
 [Set-CsRgsHoursOfBusiness](Set-CsRgsHoursOfBusiness.md)
-

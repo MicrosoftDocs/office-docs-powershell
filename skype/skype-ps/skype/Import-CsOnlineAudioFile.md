@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-csonlineaudiofile
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/import-csonlineaudiofile
+applicable: Microsoft Teams
 title: Import-CsOnlineAudioFile
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -18,46 +18,54 @@ Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
 ## SYNTAX
 
 ```powershell
-Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup> -FileName <string> -Content <byte[]>
+Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup | TenantGlobal> -FileName <string> -Content <byte[]>
 ```
 
 ## DESCRIPTION
-The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Auto Attendant (AA) or Call Queue (CQ) service.
+The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Auto Attendant (AA), Call Queue (CQ) service or Music on Hold for Microsoft Teams.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
-$content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
+$content = [System.IO.File]::ReadAllBytes('C:\Media\Hello.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example: [New-CsAutoAttendantPrompt] (https://docs.microsoft.com/powershell/module/skype/new-csautoattendantprompt)
+This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/skype/new-csautoattendantprompt).
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
-$content = Get-Content "C:\Media\MOH.wav" -Encoding byte -ReadCount 0
+$content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue] (https://docs.microsoft.com/powershell/module/skype/set-cscallqueue) to provide the audio file id. 
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](https://learn.microsoft.com/powershell/module/skype/set-cscallqueue) to provide the audio file id.
 
+### Example 3
+```powershell
+$content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
+$audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH.wav" -Content $content
+```
+
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/skype/new-csteamscallholdpolicy) to provide the audio file id.
 
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an organizational auto attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a hunt group (call queue), then it needs to be set to "HuntGroup".
+The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an Auto Attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a Call Queue, then it needs to be set to "HuntGroup". If the audio file will be used with Microsoft Teams, then it needs to be set to "TenantGlobal".
 
 Supported values:
 
 - OrgAutoAttendant
 - HuntGroup
+- TenantGlobal
 
 ```yaml
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -73,7 +81,7 @@ The FileName parameter is the name of the audio file. For example, the file name
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -89,7 +97,7 @@ The Content parameter represents the content of the audio file. Supported format
 Type: System.Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -111,4 +119,17 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## NOTES
 
+When you import an audio file to be used for Auto Attendant or Call Queue, the audio file will automatically be marked for deletion (as seen by running
+Get-CsOnlineAudioFile) and it will be deleted after 48 to 72 hours from the time of import, unless the audio file is associated to an
+Auto Attendant and Call Queue before 48 hours after it was imported.
+
+You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
+
 ## RELATED LINKS
+[Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
+
+[Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
+
+[New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
+
+[Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)

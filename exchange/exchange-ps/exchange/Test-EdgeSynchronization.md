@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-edgesynchronization
+online version: https://learn.microsoft.com/powershell/module/exchange/test-edgesynchronization
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-EdgeSynchronization
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-EdgeSynchronization cmdlet to diagnose whether the subscribed Edge Transport servers have a current and accurate synchronization status.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,7 +47,7 @@ The Test-EdgeSynchronization cmdlet is a diagnostic cmdlet that provides a repor
 
 This cmdlet compares the data stored in Active Directory and the data stored in AD LDS. Any inconsistencies in data are reported in the results output by this cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -119,7 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeRecipientTest
-The ExcludeRecipientTest switch specifies whether to exclude validation of recipient data synchronization. If you include this switch, only the synchronization of configuration objects is validated. Validating that recipient data is synchronized takes longer than validating only configuration data. You don't have to include a value with this switch.
+The ExcludeRecipientTest switch specifies whether to exclude validation of recipient data synchronization. You don't need to specify a value with this switch.
+
+If you use this switch, only the synchronization of configuration objects is validated. Validating that recipient data is synchronized takes longer than validating only configuration data.
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullCompareMode
-The FullCompareMode switch specifies whether a full comparison of the configuration data between Active Directory and AD LDS instance on the target Edge Transport server is performed. If you don't use this switch, a full comparison of replicated configuration data is skipped and the command only tests the Edge synchronization by verifying the replication cookie.
+The FullCompareMode switch specifies whether a full comparison of the configuration data between Active Directory and AD LDS instance on the target Edge Transport server is performed. You don't need to specify a value with this switch.
+
+If you don't use this switch, a full comparison of replicated configuration data is skipped and the command only tests the Edge synchronization by verifying the replication cookie.
 
 ```yaml
 Type: SwitchParameter
@@ -167,7 +171,10 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
+
+- $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -221,12 +228,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

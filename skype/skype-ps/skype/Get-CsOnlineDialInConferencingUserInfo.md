@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguserinfo
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguserinfo
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUserInfo
 schema: 2.0.0
@@ -13,6 +13,10 @@ ms.reviewer:
 # Get-CsOnlineDialInConferencingUserInfo
 
 ## SYNOPSIS
+
+> [!NOTE]
+> This cmdlet will be deprecated on December 31, 2021. To view the properties and settings of users that are enabled for Audio Conferencing, you can use the [Get-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet.
+
 Use the `Get-CsOnlineDialInConferencingUserInfo` cmdlet to view the properties and settings of users that are enabled for dial-in conferencing and are using Microsoft or third-party provider as their PSTN conferencing provider.
 
 ## SYNTAX
@@ -33,7 +37,7 @@ Get-CsOnlineDialInConferencingUserInfo [-Tenant <Guid>] [-Skip <Int32>] [-First 
 ## DESCRIPTION
 This cmdlet will return users that have been enabled for audio conferencing using Microsoft or a third-party as the audio conferencing provider. If there are no users in the organization that have been enabled for audio conferencing, then the cmdlet will return no results.
 
-You can use [Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet to return only users that have been enabled for audio conferencing using Microsoft as the audio conferencing provider.
+You can use [Get-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet to return only users that have been enabled for audio conferencing using Microsoft as the audio conferencing provider.
 
 ## EXAMPLES
 
@@ -242,4 +246,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
+[Get-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)

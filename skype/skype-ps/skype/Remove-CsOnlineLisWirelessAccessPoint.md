@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlineliswirelessaccesspoint
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlineliswirelessaccesspoint
+applicable: Microsoft Teams
 title: Remove-CsOnlineLisWirelessAccessPoint
 schema: 2.0.0
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,8 +17,8 @@ Removes a Location Information Server (LIS) wireless access point (WAP).
 ## SYNTAX
 
 ```
-Remove-CsOnlineLisWirelessAccessPoint [[-TenantId] <Guid>] [-BSSID] <String> [-IsDebug <Boolean>]
- [-TargetStore <String>] [-NCSApiUrl <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsOnlineLisWirelessAccessPoint [-BSSID] <string> [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,59 +30,35 @@ If a BSSID with wildcard format is already exists, the request for removing a si
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
-Remove-CsOnlineLisWirelessAccessPoint -BSSID 0B-23-CD-16-AA-CC
-```
-
-Example 1 removes the Location Information Server (LIS) wireless access point with BSS ID "0B-23-CD-16-AA-CC".
-
-### -------------------------- Example 2 --------------------------
-```
-Remove-CsOnlineLisWirelessAccessPoint -BSSID 5C-AA-3D-87-CC-4*
+Remove-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-23
 ```
 
-Example 2 removes the Location Information Server (LIS) wireless access point with BSS ID "5C-AA-3D-87-CC-4*".
+Example 1 removes the Location Information Server (LIS) wireless access point with BSS ID "F0-6E-0B-C2-03-23".
 
-### -------------------------- Example 3 --------------------------
+### Example 2
 ```
-Remove-CsOnlineLisWirelessAccessPoint -BSSID DD-FF-BB-66-88-*
+Remove-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-04-*
 ```
 
-Example 3 removes the Location Information Server (LIS) wireless access point with BSS ID "DD-FF-BB-66-88-*".
-
+Example 2 removes the Location Information Server (LIS) wireless access point with BSS ID "F0-6E-0B-C2-04-*".
 
 ## PARAMETERS
 
 ### -BSSID
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. If an entry with the specified BSSID value does not exist, a new WAP location will be created. If an entry with the specified BSSID already exists, that entry will be replaced. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -95,7 +71,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -111,7 +87,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -127,7 +103,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -143,7 +119,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -152,17 +128,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TenantId
-This parameter is reserved for internal Microsoft use.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Aliases: cf
+Applicable: Microsoft Teams
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -176,7 +152,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -191,21 +167,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-
-### System.Guid
-
-
 ### System.String
-
 
 ## OUTPUTS
 
-
 ### System.Object
-
 
 ## NOTES
 
-
 ## RELATED LINKS
 
+[Set-CsOnlineLisWirelessAccessPoint](Set-CsOnlineLisWirelessAccessPoint.md)
+
+[Get-CsOnlineLisWirelessAccessPoint](Get-CsOnlineLisWirelessAccessPoint.md)

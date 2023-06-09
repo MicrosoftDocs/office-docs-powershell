@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceuser
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceuser
 applicable: Skype for Business Online
 title: Set-CsOnlineVoiceUser
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -14,6 +14,10 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
+
+**Note**: This cmdlet has been deprecated. Use the new
+[Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and
+[Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
 
@@ -33,6 +37,12 @@ Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneN
 
 This example sets the telephone number and location for a user identified by the user ObjectID.
 
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineVoiceUser -Identity user@domain.com -TelephoneNumber $null
+```
+
+This example removes the telephone number for a user identified by the user's SIP address.
 
 ## PARAMETERS
 
@@ -196,4 +206,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-

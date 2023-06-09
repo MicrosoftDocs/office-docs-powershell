@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamschannelspolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamschannelspolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsChannelsPolicy
 schema: 2.0.0
 manager: bulenteg

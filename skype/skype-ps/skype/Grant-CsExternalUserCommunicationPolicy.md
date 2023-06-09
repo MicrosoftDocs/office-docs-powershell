@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsExternalUserCommunicationPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -51,7 +51,7 @@ PARAMVALUE: String
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 2
@@ -67,7 +67,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ PARAMVALUE: Fqdn
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ PARAMVALUE: UserIdParameter
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -115,7 +115,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -166,5 +166,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-
-

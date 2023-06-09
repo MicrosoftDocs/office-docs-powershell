@@ -1,55 +1,125 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsemergencycallroutingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsemergencycallroutingpolicy
+applicable: Microsoft Teams
 title: Set-CsTeamsEmergencyCallRoutingPolicy
-author: danny-levin
-ms.author: dannyle
-ms.reviewer: chenc, pthota
+author: jenstrier
+ms.author: jenstr
+ms.reviewer: chenc
 schema: 2.0.0
 ---
 
 # Set-CsTeamsEmergencyCallRoutingPolicy
 
 ## SYNOPSIS
+This cmdlet modifies an existing Teams Emergency Call Routing Policy.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Set-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers <>]
- [-AllowEnhancedEmergencyServices <Boolean>] [-Description <String>] [[-Identity] <XdsIdentity>] [-Force]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsTeamsEmergencyCallRoutingPolicy [-Tenant <System.Guid>] [-EmergencyNumbers <>]
- [-AllowEnhancedEmergencyServices <Boolean>] [-Description <String>] [-Instance <PSObject>] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CsTeamsEmergencyCallRoutingPolicy [[-Identity] <string>] [-AllowEnhancedEmergencyServices <bool>]
+ [-Description <string>] [-EmergencyNumbers <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
- This cmdlet modifies an existing Teams Emergency Call Routing Policy. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration
+This cmdlet modifies an existing Teams Emergency Call Routing Policy. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:>  Set-CsTeamsEmergencyCallRoutingPolicy -Identity "testecrp" -Tenant $tenant -AllowEnhancedEmergencyServices:$false -Description "test"
+Set-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -AllowEnhancedEmergencyServices:$false -Description "test"
 ```
 
- This example modifies an existing Teams Emergency Call Routing Policy.
+This example modifies an existing Teams Emergency Call Routing Policy.
+
+### Example 2
+```powershell
+$en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "911" -EmergencyDialMask "933" -OnlinePSTNUsage "USE911"
+$en2 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "9112" -OnlinePSTNUsage "DKE911"
+Set-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -EmergencyNumbers @{add=$en1,$en2}
+```
+
+This example first creates new Teams emergency number objects and then adds these Teams emergency numbers to an existing Teams Emergency Call Routing policy.
+
+### Example 3
+```powershell
+$en1 =  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "9112" -OnlinePSTNUsage "DKE911"
+Set-CsTeamsEmergencyCallRoutingPolicy -Identity "Test" -EmergencyNumbers @{remove=$en1}
+```
+
+This example first creates a new Teams emergency number object and then removes that Teams emergency number from an existing Teams Emergency Call Routing policy.
 
 ## PARAMETERS
 
 ### -AllowEnhancedEmergencyServices
- Flag to enable Enhanced Emergency Services
+Flag to enable Enhanced Emergency Services.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Provides a description of the Teams Emergency Call Routing policy to identify the purpose of setting it.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmergencyNumbers
+One or more emergency number objects obtained from the [New-CsTeamsEmergencyNumber](new-csteamsemergencynumber.md) cmdlet.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Identity parameter is a unique identifier that designates the name of the policy.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
@@ -73,122 +143,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Description
- Provide a description of the Teams Emergency Call Routing policy to identify purpose of setting it.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmergencyNumbers
- One or more emergency number objects obtained from [New-CsTeamsEmergencyNumber](https://docs.microsoft.com/powershell/module/skype/new-csteamsemergencynumber?view=skype-ps) cmdlet
-
-```yaml
-Type:
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
- The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
- The Identity parameter is a unique identifier that designates the name of the policy.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
- The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values. You can retrieve this object reference by calling the Get-CsTeamsEmergencyCallRoutingPolicy cmdlet.
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Tenant
- Specify the tenant id
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.Management.Automation.PSObject
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsTeamsEmergencyCallRoutingPolicy](New-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Grant-CsTeamsEmergencyCallRoutingPolicy](Grant-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Remove-CsTeamsEmergencyCallRoutingPolicy](Remove-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[Get-CsTeamsEmergencyCallRoutingPolicy](Get-CsTeamsEmergencyCallRoutingPolicy.md)
+
+[New-CsTeamsEmergencyNumber](New-CsTeamsEmergencyNumber.md)

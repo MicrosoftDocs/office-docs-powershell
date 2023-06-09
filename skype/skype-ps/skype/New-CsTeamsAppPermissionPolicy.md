@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csteamsapppermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsapppermissionpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsAppPermissionPolicy
 schema: 2.0.0
@@ -13,10 +13,9 @@ author: tomkau
 # New-CsTeamsAppPermissionPolicy
 
 ## SYNOPSIS
+**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
 
-As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
-
-The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
+As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the App Setup Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
 ## SYNTAX
 
@@ -28,9 +27,9 @@ New-CsTeamsAppPermissionPolicy [-Force] [-Description <Object>] [-GlobalCatalogA
 ```
 
 ## DESCRIPTION
-As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
+**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
 
-The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
+As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the App Setup Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
 ## EXAMPLES
 
@@ -46,7 +45,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

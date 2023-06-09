@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csautodiscoverconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csautodiscoverconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsAutodiscoverConfiguration
 schema: 2.0.0
@@ -24,14 +24,14 @@ This cmdlet was introduced in the cumulative update for Lync Server 2010: Novemb
 ```
 Set-CsAutodiscoverConfiguration [[-Identity] <XdsIdentity>] [-Confirm] [-ExternalSipClientAccessFqdn <String>]
  [-ExternalSipClientAccessPort <UInt32>] [-Force] [-WebLinks <PSListModifier>] [-WhatIf]
- [-EnableCertificateProvisioningServiceUrl <Boolean>] [<CommonParameters>]
+ [-EnableCertificateProvisioningServiceUrl <Boolean>] [-EnableCORS <Boolean>] [<CommonParameters>]
 ```
 
 ### Instance
 ```
 Set-CsAutodiscoverConfiguration [-Confirm] [-ExternalSipClientAccessFqdn <String>]
  [-ExternalSipClientAccessPort <UInt32>] [-Force] [-Instance <PSObject>] [-WebLinks <PSListModifier>] [-WhatIf]
- [-EnableCertificateProvisioningServiceUrl <Boolean>] [<CommonParameters>]
+ [-EnableCertificateProvisioningServiceUrl <Boolean>] [-EnableCORS <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,6 +128,23 @@ Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -272,6 +289,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableCORS
+
+If set to True, Cross-Origin Resource Sharing is enabled.
+
+```yaml
+Type: Boolean
+Position: Named
+Parameter Sets: (All)
+Aliases:
+Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -289,4 +323,3 @@ The `Set-CsAutoDiscoverConfiguration` cmdlet modifies instances of the Microsoft
 ## NOTES
 
 ## RELATED LINKS
-

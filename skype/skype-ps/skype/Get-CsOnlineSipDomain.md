@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinesipdomain
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
 schema: 2.0.0
@@ -22,7 +22,7 @@ Get-CsOnlineSipDomain [-Domain <String>] [-DomainStatus <DomainStatus>] [<Common
 ```
 
 ## DESCRIPTION
-This cmdlet is useful for organizations consolidating multiple on-premises deployments of Skype for Business Server into a single Office 365 tenant. During consolidation, sip domains for all forests hosting Skype for Business Server - other than the forest currently in hybrid mode -  must be disabled. Once a hybrid deployment is fully migrated to the cloud and detached from Office 365, the next forest can start migration to the cloud. This cmdlet allows administrators to view the status of  sip domains in their Office 365 tenant. For full details on cloud consolidation scenarios, see [Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation).
+This cmdlet is useful for organizations consolidating multiple on-premises deployments of Skype for Business Server into a single Office 365 tenant. During consolidation, sip domains for all forests hosting Skype for Business Server - other than the forest currently in hybrid mode -  must be disabled. Once a hybrid deployment is fully migrated to the cloud and detached from Office 365, the next forest can start migration to the cloud. This cmdlet allows administrators to view the status of  sip domains in their Office 365 tenant. For full details on cloud consolidation scenarios, see [Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation).
 
 ## EXAMPLES
 
@@ -93,4 +93,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 [Enable-CsOnlineSipDomain](Enable-CsOnlineSipDomain.md)
 
-[Cloud consolidation for Teams and Skype for Business](https://docs.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)
+[Cloud consolidation for Teams and Skype for Business](https://learn.microsoft.com/skypeforbusiness/hybrid/cloud-consolidation)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation
+online version: https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
@@ -17,7 +17,10 @@ This cmdlet is used to assign or unassign a policy to a batch of users.
 ## SYNTAX
 
 ```
-New-CsBatchPolicyAssignmentOperation -PolicyType <String> -PolicyName <String> -Identity <Array> [-OperationName <String>]
+New-CsBatchPolicyAssignmentOperation [-OperationName <String>] -Identity <String[]> -PolicyType <String>
+ [-AdditionalParameters <Hashtable>] [-PolicyName <String>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,42 +33,42 @@ A batch may contain up to 5,000 users. If a batch includes duplicate users, the 
 You must be a Teams service admin, a Teams communication admin, or Global Administrator to run the cmdlet.
 
 Batch policy assignment is currently limited to the following policy types:
-CallingLineIdentity, ExternalAccessPolicy, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
+CallingLineIdentity, ExternalAccessPolicy, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsTemplatePermissionPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
 
 ## EXAMPLES
 
-### Example 1
-In this example, the batch of users is specified as an array of user SIP addresses.
-
+### EXAMPLE 1
 ```
 $users_ids = @("psmith@contoso.com","tsanchez@contoso.com","bharvest@contoso.com")
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
 ```
 
-### Example 2
-In this example, a policy is removed from a batch of users by passing $null as the policy name.
+In this example, the batch of users is specified as an array of user SIP addresses.
 
+### EXAMPLE 2
 ```
 $users_ids = @("2bdb15a9-2cf1-4b27-b2d5-fcc1d13eebc9", "d928e0fc-c957-4685-991b-c9e55a3534c7", "967cc9e4-4139-4057-9b84-1af80f4856fc")
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName $null -Identity $users_ids -OperationName "Batch unassign meeting policy"
 ```
 
-### Example 3
-In this example, the batch of users is read from a text file containing user object IDs (guids).
+In this example, a policy is removed from a batch of users by passing $null as the policy name.
 
+### EXAMPLE 3
 ```
 $users_ids = Get-Content .\users_ids.txt
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
 ```
 
-### Example 4
-In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users and then referencing the SipProxyAddress property.
+In this example, the batch of users is read from a text file containing user object IDs (guids).
 
+### EXAMPLE 4
 ```
 Connect-AzureAD
 $users = Get-AzureADUser
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.SipProxyAddress -OperationName "batch assign kiosk"
 ```
+
+In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users and then referencing the SipProxyAddress property.
 
 ## PARAMETERS
 
@@ -74,7 +77,7 @@ An array of users, specified either using object IDs (guid) or SIP addresses.  T
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -89,7 +92,7 @@ The name of the policy to be assigned to the users. To remove the currently assi
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -100,11 +103,11 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
-The name of the policy to be assigned to the users.
+The type of the policy to be assigned to the users. For the list of current policy types accepted by this parameter, see the Description section at the beginning of this article.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -119,12 +122,117 @@ An optional name for the batch assignment operation.
 
 ```yaml
 Type: String
-Parameter Sets:
+Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdditionalParameters
+.
+
+```yaml
+Type: Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Break
+Wait for .NET debugger to attach
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelineAppend
+SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPipelinePrepend
+SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+```yaml
+Type: SendAsyncStep[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Proxy
+The URI for the proxy server to use
+
+```yaml
+Type: Uri
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyCredential
+Credentials for a proxy server to use for the remote call
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyUseDefaultCredentials
+Use the default credentials for the proxy
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csmeetingmigrationstatus
+online version: https://learn.microsoft.com/powershell/module/skype/get-csmeetingmigrationstatus
 applicable: Skype for Business Online
 title: Get-CsMeetingMigrationStatus
 schema: 2.0.0
@@ -195,8 +195,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration?view=skype-ps)
+[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration?view=skype-ps)
 
-[Get-CsOnlineDialInConferencingTenantSettings](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingtenantsettings?view=skype-ps)
+[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingtenantsettings?view=skype-ps)
 
-[Start-CsExMeetingMigration](https://docs.microsoft.com/powershell/module/skype/start-csexmeetingmigration?view=skype-ps)
+[Start-CsExMeetingMigration](https://learn.microsoft.com/powershell/module/skype/start-csexmeetingmigration?view=skype-ps)

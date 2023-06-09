@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-failedcontentindexdocuments
+online version: https://learn.microsoft.com/powershell/module/exchange/get-failedcontentindexdocuments
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-FailedContentIndexDocuments
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Get-FailedContentIndexDocuments
 
 ## SYNOPSIS
-Although this cmdlet is available in on-premises Exchange and in the cloud-based service, it only works in Exchange Server 2016 or earlier.
+This cmdlet is functional only in Exchange Server 2016 or earlier.
 
 Use the Get-FailedContentIndexDocuments cmdlet to retrieve a list of documents for a mailbox, mailbox database, or Mailbox server that couldn't be indexed by Exchange Search.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -70,7 +70,7 @@ After a new filter is installed, only new messages with attachments of the type 
 
 The cmdlet output provides details about items in a mailbox that couldn't be indexed, including an error code and the reason for failure.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -86,7 +86,7 @@ This example retrieves a list of items that couldn't be indexed by Exchange Sear
 Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
 ```
 
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox database Mailbox Database MDB2.
+This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox database named Mailbox Database MDB2.
 
 ## PARAMETERS
 
@@ -128,7 +128,7 @@ The MailboxDatabase parameter specifies the database from which to get the mailb
 Type: DatabaseIdParameter
 Parameter Sets: Database
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ The Server parameter specifies a Mailbox server. You can use the following value
 Type: ServerIdParameter
 Parameter Sets: Server
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -183,7 +183,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -193,7 +193,9 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-The Archive switch restricts the scope of the cmdlet to the user's archive. When using the Archive switch, you must also specify the Identity parameter.
+The Archive switch restricts the scope of the cmdlet to the user's archive. You don't need to specify a value with this switch.
+
+When using the Archive switch, you must also specify the Identity parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -317,12 +319,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

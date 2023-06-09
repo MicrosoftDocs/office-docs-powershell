@@ -2,10 +2,10 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsPolicyPackage
-author: icchan
-ms.author: icchan
+author: serdarsoysal
+ms.author: serdars
 manager: amitar
-online version: https://docs.microsoft.com/powershell/module/teams/get-cspolicypackage
+online version: https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage
 schema: 2.0.0
 ---
 
@@ -24,7 +24,7 @@ Get-CsPolicyPackage [[-Identity] <String>] [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet supports retrieving all the policy packages available on a tenant. Provide the identity of a specific policy package to retrieve its definition, including details on the policies applied with the package.
-For more information on policy packages, please review https://docs.microsoft.com/MicrosoftTeams/manage-policy-packages.
+For more information on policy packages, please review https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages.
 
 ## EXAMPLES
 
@@ -53,11 +53,11 @@ PS C:\> $a.Policies.AdditionalProperties
 
 Key                         Value
 ---                         -----
-TeamsMessagingPolicy        {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
-TeamsMeetingPolicy          {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
-TeamsAppSetupPolicy         {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
-TeamsCallingPolicy          {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
-TeamsMeetingBroadcastPolicy {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt…
+TeamsMessagingPolicy        {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt...
+TeamsMeetingPolicy          {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt...
+TeamsAppSetupPolicy         {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt...
+TeamsCallingPolicy          {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt...
+TeamsMeetingBroadcastPolicy {[Identity, Education_PrimaryStudent], [Description, This is an Education_PrimarySt...
 ```
 
 Returns the set of policies in the Education_PrimaryStudent policy package.

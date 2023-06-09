@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroutingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinevoiceroutingpolicy
+applicable: Microsoft Teams
 title: Remove-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,8 +19,7 @@ Deletes an existing online voice routing policy. Online voice routing policies m
 
 ### Identity
 ```
-Remove-CsOnlineVoiceRoutingPolicy [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Force] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+Remove-CsOnlineVoiceRoutingPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,71 +52,18 @@ In Example 3, all the online voice routing polices that include the online PSTN 
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-Suppresses the display of any non-fatal error message that might arise when running the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Unique identifier assigned to the policy when it was created.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose online voice routing policy is being removed. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: ByPropertyName
 Accept wildcard characters: False
 ```
 
@@ -137,14 +83,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-### Microsoft.Rtc.Management.Xds.XdsIdentity
-
 
 ## OUTPUTS
 
@@ -153,10 +111,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
+[New-CsOnlineVoiceRoutingPolicy](new-csonlinevoiceroutingpolicy.md)
 
-[Get-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy?view=skype-ps)
+[Get-CsOnlineVoiceRoutingPolicy](get-csonlinevoiceroutingpolicy.md)
 
-[Set-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroutingpolicy?view=skype-ps)
+[Set-CsOnlineVoiceRoutingPolicy](set-csonlinevoiceroutingpolicy.md)
 
-[Grant-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy?view=skype-ps)
+[Grant-CsOnlineVoiceRoutingPolicy](grant-csonlinevoiceroutingpolicy.md)

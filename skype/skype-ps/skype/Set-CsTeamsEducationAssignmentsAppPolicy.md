@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamseducationassignmentsapppolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamseducationassignmentsapppolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsEducationAssignmentsAppPolicy
 schema: 2.0.0
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParentDigestEnabledType
-Send digest emails to parents/guardians. Possible values are "Enabled" or "Disabled"
+Send digest emails to parents/guardians. Possible values are "Enabled" or "Disabled"
 
 ```yaml
 Type: String

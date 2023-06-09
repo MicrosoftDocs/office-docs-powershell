@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmeetingconfiguration
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingConfiguration
 schema: 2.0.0
@@ -26,7 +26,7 @@ Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL 
  [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL 
  [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -325,6 +325,25 @@ URL to a logo image. This would be included in the meeting invite. Please ensure
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableAppInteractionForAnonymousUsers
+Determines if anonymous users can interact with apps in meetings. Set to TRUE to disable App interaction.
+Possible values:
+
+- True
+- False
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csuserdelegates
+online version: https://learn.microsoft.com/powershell/module/skype/get-csuserdelegates
 applicable: Skype for Business Server 2019
 title: Get-CsUserDelegates
 schema: 2.0.0
@@ -23,13 +23,15 @@ Get-CsUserDelegates [-User] <String> [-Force] [<CommonParameters>]
 
 ## DESCRIPTION
 The feature enables the use of SEFAUtil functionality in PowerShell. SEFAUtil (Secondary Extension Feature Activation) enables Skype server administrators and helpdesk agents to configure delegate-ringing, call-forwarding and Group Call Pickup settings on behalf of a Skype server user. This tool also allows administrators to query the call-routing settings that are published for a particular user.
-The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below:
-•	CsAdministrator - Get and Set for all cmdlets
-•	CsVoiceAdministrator - Get and Set for all cmdlets
-•	CsServerAdministrator - Get and Set for all cmdlets
-•	CsHelpDesk - Get for all cmdlets
-Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets.
 
+The cmdlets introduced in this feature can only be run by members of the following groups for On-prem deployments, per the access level specified below:
+
+- CsAdministrator - Get and Set for all cmdlets
+- CsVoiceAdministrator - Get and Set for all cmdlets
+- CsServerAdministrator - Get and Set for all cmdlets
+- CsHelpDesk - Get for all cmdlets
+
+Server auto-discovery needs to be enabled. There are no additional licensing requirements for use of the cmdlets.
 
 ## EXAMPLES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsComplianceRecordingPolicy
 schema: 2.0.0
@@ -22,6 +22,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 ```
 Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
+ [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>] [-RecordReroutedCalls <Boolean>]
  [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -193,6 +194,50 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -DisableComplianceRecordingAudioNotificationForCalls
+Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableComplianceRecordingAudioNotificationForCalls
+Setting this attribute to true disables recording audio notifications for 1:1 calls that are under compliance recording.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordReroutedCalls
+Setting this attribute to true enables compliance recording for calls that have been re-routed from a compliance recording-enabled user. Supported call scenarios include forward, transfer, delegation, call groups, and simultaneous ring.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Tenant
 Globally unique identifier (GUID) of the tenant account whose Teams recording policies are being queried.
@@ -279,20 +324,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingpolicy?view=skype-ps)
+[Get-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[New-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpolicy?view=skype-ps)
+[New-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[Grant-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csteamscompliancerecordingpolicy?view=skype-ps)
+[Grant-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[Remove-CsTeamsComplianceRecordingPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingpolicy?view=skype-ps)
+[Remove-CsTeamsComplianceRecordingPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingpolicy?view=skype-ps)
 
-[Get-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingapplication?view=skype-ps)
+[Get-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingapplication?view=skype-ps)
 
-[New-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingapplication?view=skype-ps)
+[New-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingapplication?view=skype-ps)
 
-[Set-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingapplication?view=skype-ps)
+[Set-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingapplication?view=skype-ps)
 
-[Remove-CsTeamsComplianceRecordingApplication](https://docs.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingapplication?view=skype-ps)
+[Remove-CsTeamsComplianceRecordingApplication](https://learn.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingapplication?view=skype-ps)
 
-[New-CsTeamsComplianceRecordingPairedApplication](https://docs.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpairedapplication?view=skype-ps)
+[New-CsTeamsComplianceRecordingPairedApplication](https://learn.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpairedapplication?view=skype-ps)

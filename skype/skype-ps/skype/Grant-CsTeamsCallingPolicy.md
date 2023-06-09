@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamscallingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamscallingpolicy
+applicable: Microsoft Teams
 title: Grant-CsTeamsCallingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -15,87 +15,60 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Cmdlet to assign a specific Teams Calling Policy to a user.
+Assigns a specific Teams Calling Policy to a user, a group of users, or sets the Global policy instance.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Grant-CsTeamsCallingPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsTeamsCallingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsCallingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Teams Calling Policies designate which users are able to use calling functionality within teams and determine the interoperability state with Skype for Business.  This cmdlet allows admins to grant user level policies to individual users.
+The Teams Calling Policies designate how users are able to use calling functionality within Microsoft Teams. This cmdlet allows admins to grant user level policies to individual users, to members of a group, or to set the Global policy instance.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsCallingPolicy -identity "Ken Myer" -PolicyName SalesCallingPolicy
+Grant-CsTeamsCallingPolicy -identity user1@contoso.com -PolicyName SalesCallingPolicy
 ```
 
-Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the user "Ken Myer"
+Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to user1@contoso.com
+
+### Example 2
+```powershell
+Grant-CsTeamsCallingPolicy -Global -PolicyName SalesCallingPolicy
+```
+
+Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the Global policy instance. This sets the parameters in the Global policy instance to the values found
+in the SalesCallingPolicy instance.
+
+### Example 3
+```powershell
+Grant-CsTeamsCallingPolicy -Group sales@contoso.com -Rank 10 -PolicyName SalesCallingPolicy
+```
+
+Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the members of the group sales@contoso.com.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-Internal Microsoft use
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Global
-Internal Microsoft use
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The user object to whom the policy is being assigned.
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases:
 
 Required: False
@@ -121,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The name of the policy being assigned.  To remove an existing user level policy assignment, specify PolicyName as null.
+The name of the policy being assigned.  To remove an existing user level policy assignment, specify PolicyName as $null.
 
 ```yaml
 Type: String
@@ -135,12 +108,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Internal Microsoft use
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
-Type: Guid
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: (GrantToTenant)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: (GrantToGroup)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: (GrantToGroup)
 Aliases:
 
 Required: False
@@ -166,16 +169,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.AD.UserIdParameter
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+
 ## RELATED LINKS
+
+[Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+
+[Remove-CsTeamsCallingPolicy](Remove-CsTeamsCallingPolicy.md)
+
+[Get-CsTeamsCallingPolicy](Get-CsTeamsCallingPolicy.md)
+
+[New-CsTeamsCallingPolicy](New-CsTeamsCallingPolicy.md)

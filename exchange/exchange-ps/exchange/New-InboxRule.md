@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-inboxrule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-inboxrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-InboxRule
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the New-InboxRule cmdlet to create Inbox rules in mailboxes. Inbox rules pro
 
 You must have adequate permissions on the mailbox to create an Inbox rule.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -38,7 +38,6 @@ New-InboxRule [-Name] <String>
  [-ExceptIfFlaggedForAction <String>]
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
- [-ExceptIfFromSubscription <AggregationSubscriptionIdentity[]>]
  [-ExceptIfHasAttachment <Boolean>]
  [-ExceptIfHasClassification <MessageClassificationIdParameter[]>]
  [-ExceptIfHeaderContainsWords <MultiValuedProperty>]
@@ -64,7 +63,6 @@ New-InboxRule [-Name] <String>
  [-ForwardTo <RecipientIdParameter[]>]
  [-From <RecipientIdParameter[]>]
  [-FromAddressContainsWords <MultiValuedProperty>]
- [-FromSubscription <AggregationSubscriptionIdentity[]>]
  [-HasAttachment <Boolean>]
  [-HasClassification <MessageClassificationIdParameter[]>]
  [-HeaderContainsWords <MultiValuedProperty>]
@@ -86,6 +84,7 @@ New-InboxRule [-Name] <String>
  [-SendTextMessageNotificationTo <MultiValuedProperty>]
  [-SentOnlyToMe <Boolean>]
  [-SentTo <RecipientIdParameter[]>]
+ [-SoftDeleteMessage <Boolean>]
  [-StopProcessingRules <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectOrBodyContainsWords <MultiValuedProperty>]
@@ -117,7 +116,7 @@ When you create, modify, remove, enable, or disable an Inbox rule in Exchange Po
 
 Parameters that are used for conditions also have corresponding exception parameters. When conditions specified in an exception are matched, the rule isn't applied to the message. Exception parameters begin with ExceptIf. For example, the exception parameter for SubjectOrBodyContainsWords is ExceptIfSubjectOrBodyContainsWords.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -188,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysDeleteOutlookRulesBlob
-The AlwaysDeleteOutlookRulesBlob parameter suppresses a warning that end users or administrators get if they use Outlook Web App or Windows PowerShell to modify Inbox rules.
+The AlwaysDeleteOutlookRulesBlob switch hides a warning message when you use Outlook on the web (formerly known as Outlook Web App) or Exchange PowerShell to modify Inbox rules. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -474,7 +473,7 @@ The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks 
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 The corresponding condition parameter to this exception is From.
 
@@ -503,26 +502,6 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExceptIfFromSubscription
-This parameter is available only in the cloud-based service.
-
-The ExceptIfFromSubscription parameter specifies an exception for the Inbox rule that looks for messages received from subscriptions (for example, POP or IMAP subscriptions). You can identify the subscription by using the Get-Subscription cmdlet.
-
-The corresponding condition parameter to this exception is FromSubscription.
-
-```yaml
-Type: AggregationSubscriptionIdentity[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -795,7 +774,7 @@ The ExceptIfSentTo parameter specifies an exception that looks for recipients in
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 The corresponding condition parameter to this exception is SentTo.
 
@@ -986,7 +965,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 A confirmation prompt warns you if the mailbox contains rules that were created by Outlook, because any client-side rules will be removed by the actions of this cmdlet.
 
@@ -1013,7 +992,7 @@ The ForwardAsAttachmentTo parameter specifies an action for the Inbox rule that 
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1038,7 +1017,7 @@ The ForwardTo parameter specifies an action for the Inbox rule that forwards the
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1063,7 +1042,7 @@ The From parameter specifies a condition for the Inbox rule that looks for the s
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 The corresponding exception parameter to this condition is ExceptIfFrom.
 
@@ -1092,26 +1071,6 @@ Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FromSubscription
-This parameter is available only in the cloud-based service.
-
-The FromSubscription parameter specifies a condition for the Inbox rule that looks for messages received from subscriptions (for example, POP or IMAP subscriptions). You can identify the subscription by using the Get-Subscription cmdlet.
-
-The corresponding exception parameter to this condition is ExceptIfFromSubscription.
-
-```yaml
-Type: AggregationSubscriptionIdentity[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1495,7 +1454,7 @@ The RedirectTo parameter specifies an action for the Inbox rule that redirects t
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1511,6 +1470,8 @@ Accept wildcard characters: False
 ```
 
 ### -SendTextMessageNotificationTo
+This parameter is available only in on-premises Exchange.
+
 The SendTextMessageNotificationTo parameter specifies an action for the Inbox rule that send a text message notification to the specified telephone number.
 
 You can specify multiple values separated by commas.
@@ -1519,7 +1480,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1559,7 +1520,7 @@ The SentTo parameter specifies a condition for the Inbox rule that looks for mes
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 The corresponding exception parameter to this condition is ExceptIfSentTo.
 
@@ -1568,6 +1529,24 @@ Type: RecipientIdParameter[]
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeleteMessage
+This parameter is available only in the cloud-based service.
+
+{{ Fill SoftDeleteMessage Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1761,12 +1740,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/Get-RecoverableItems
+online version: https://learn.microsoft.com/powershell/module/exchange/get-recoverableitems
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-RecoverableItems
 schema: 2.0.0
@@ -15,9 +15,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-RecoverableItems items cmdlet to view deleted items in mailboxes. After you find the deleted items, you use the Restore-RecoverableItems cmdlet to restore them.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -44,6 +44,7 @@ Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
  [-FilterStartTime <DateTime>]
  [-LastParentFolderID <String>]
  [-MaxParallelSize <Int32>]
+ [-PolicyTag <String[]>]
  [-ResultSize <Unlimited>]
  [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
@@ -51,7 +52,7 @@ Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -69,7 +70,6 @@ Get-RecoverableItems -Identity "malik@contoso.com", "lillian@contoso.com" -Filte
 
 This example returns all of the available recoverable deleted messages with the specified subject in the mailboxes of both malik@contoso.com and lillian@contoso.com for the specified date/time range.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -86,7 +86,7 @@ The Identity parameter specifies the mailbox that contains the deleted items tha
 - SamAccountName
 - User ID or user principal name (UPN)
 
-In tExchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<Value1\>","\<Value2\>",..."\<ValueX>".
+In Exchange Online, you can specify multiple mailboxes separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: GeneralMailboxOrMailUserIdParameter
@@ -226,6 +226,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyTag
+This parameter is available only in the cloud-based service.
+
+{{ Fill PolicyTag Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: Cloud
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -247,30 +265,17 @@ The SourceFolder parameter specifies where to search for deleted items in the ma
 
 - DeletedItems: The Deleted Items folder.
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
-- PurgedItems: (Cloud only) The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
+- PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search all of these folders.
+  If you don't use this parameter, the command will search these three folders.
 
-```yaml
-Type: RecoverableItemsFolderType
-Parameter Sets: OnPremises
-Aliases:
-Accepted values: DeletedItems | RecoverableItems
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
 
 ```yaml
 Type: RecoverableItemsFolderType
-Parameter Sets: Cloud
+Parameter Sets: (All)
 Aliases:
-Accepted values: DeletedItems | RecoverableItems | PurgedItems
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -300,11 +305,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

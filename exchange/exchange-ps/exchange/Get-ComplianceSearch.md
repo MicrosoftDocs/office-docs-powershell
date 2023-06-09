@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancesearch
-applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-compliancesearch
+applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
 title: Get-ComplianceSearch
 schema: 2.0.0
 author: chrisda
@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-ComplianceSearch cmdlet to view estimate compliance searches in Exchange Server 2016 and in the Security & Compliance Center. After you use the New-ComplianceSearchAction cmdlet to define a preview action for the compliance search, use the Get-ComplianceSearchAction cmdlet to view the results of the compliance search.
+Use the Get-ComplianceSearch cmdlet to view estimate compliance searches in Exchange Server 2016 or later and in the Microsoft Purview compliance portal. After you use the New-ComplianceSearchAction cmdlet to define a preview action for the compliance search, use the Get-ComplianceSearchAction cmdlet to view the results of the compliance search.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,11 +29,11 @@ Get-ComplianceSearch [[-Identity] <ComplianceSearchIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-This cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group and not to the Organization Management role group.
+In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ To view these properties, you need to use the Identity parameter in the command.
 Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
 
 Required: False
 Position: 1
@@ -89,15 +89,17 @@ Accept wildcard characters: False
 ```
 
 ### -Case
-The Case parameter filters the results by the name of a Core eDiscovery case that the compliance search is associated with. If the value contains spaces, enclose the value in quotation marks.
+This parameter is available only in the cloud-based service.
 
-You can't use this parameter to view compliance searches associated with Advanced eDiscovery cases.
+The Case parameter filters the results by the name of a eDiscovery Standard case that the compliance search is associated with. If the value contains spaces, enclose the value in quotation marks.
+
+You can't use this parameter to view compliance searches associated with eDiscovery Premium cases.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -131,7 +133,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
 
 Required: False
 Position: Named
@@ -145,11 +147,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

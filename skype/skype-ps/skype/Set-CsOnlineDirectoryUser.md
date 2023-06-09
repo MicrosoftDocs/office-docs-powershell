@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlinedirectoryuser
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinedirectoryuser
 applicable: Skype for Business Online
 title: Set-CsOnlineDirectoryUser
 schema: 2.0.0
@@ -175,4 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

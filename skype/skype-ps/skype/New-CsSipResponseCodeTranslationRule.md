@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cssipresponsecodetranslationrule
+online version: https://learn.microsoft.com/powershell/module/skype/new-cssipresponsecodetranslationrule
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSipResponseCodeTranslationRule
 schema: 2.0.0
@@ -311,4 +311,3 @@ The `New-CsSipResponseCodeTranslationRule` cmdlet creates new instances of the M
 [Remove-CsSipResponseCodeTranslationRule](Remove-CsSipResponseCodeTranslationRule.md)
 
 [Set-CsSipResponseCodeTranslationRule](Set-CsSipResponseCodeTranslationRule.md)
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpdetailreport
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpdetailreport
+applicable: Exchange Online, Security & Compliance
 title: Get-DlpDetailReport
 schema: 2.0.0
 author: chrisda
@@ -14,11 +14,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-DlpDetailReport cmdlet to list details about Data Loss Prevention (DLP) rule matches for Exchange Online, SharePoint Online, and OneDrive for Business in your cloud-based organization for the last 30 days.
+**Note**: This cmdlet will be retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+Use the Get-DlpDetailReport cmdlet to list details about data loss prevention (DLP) rule matches for Exchange Online, SharePoint Online, and OneDrive for Business in your cloud-based organization for the last 30 days.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,7 +29,6 @@ Get-DlpDetailReport [-Action <MultiValuedProperty>]
  [-DlpComplianceRule <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-Expression <Expression>]
  [-Page <Int32>]
  [-PageSize <Int32>]
  [-Source <MultiValuedProperty>]
@@ -56,10 +55,12 @@ The Get-DlpDetailReport cmdlet returns detailed information about specific DLP r
 - EventType
 - Action
 - ObjectId
+- Recipients
+- AttachmentNames
 
-To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://docs.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport) cmdlet.
+To see DLP detection data that's aggregated per day, use the [Get-DlpDetectionsReport](https://learn.microsoft.com/powershell/module/exchange/get-dlpdetectionsreport) cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -85,7 +86,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -97,13 +98,13 @@ Accept wildcard characters: False
 ### -Actor
 The Actor parameter filters the report by the user who last modified the item. You can enter multiple users separated by commas.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -115,13 +116,13 @@ Accept wildcard characters: False
 ### -DlpCompliancePolicy
 The DlpCompliancePolicy parameter filters the report by the name of the DLP compliance policy. You can specify multiple policies separated by commas.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -133,13 +134,13 @@ Accept wildcard characters: False
 ### -DlpComplianceRule
 The DlpComplianceRule parameter filters the report by the name of the DLP compliance rule. You can specify multiple rules separated by commas.
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -157,7 +158,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -170,10 +171,14 @@ Accept wildcard characters: False
 The EventType parameter filters the report by the event type. Valid values are:
 
 - DLPActionHits
+- DLPActionUndo
+- DLPMessages
 - DLPPolicyFalsePositive
 - DLPPolicyHits
 - DLPPolicyOverride
 - DLPRuleHits
+
+To view the potential list of valid values for this parameter, run the command: `Get-MailFilterListReport -SelectionTarget EventTypes`. The event type you specify must correspond to the report. For example, you can only specify DLP event types for DLP reports.
 
 You can specify multiple values separated by commas.
 
@@ -181,23 +186,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Expression
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Expression
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -213,7 +202,7 @@ The Page parameter specifies the page number of the results you want to view. Va
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -229,7 +218,7 @@ The PageSize parameter specifies the maximum number of entries per page. Valid i
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -251,7 +240,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -269,7 +258,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -283,11 +272,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

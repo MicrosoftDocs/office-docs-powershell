@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/add-ipblocklistentry
+online version: https://learn.microsoft.com/powershell/module/exchange/add-ipblocklistentry
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Add-IPBlockListEntry
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Add-IPBlockListEntry cmdlet to add IP Block list entries to the IP Block list that's used by the Connection Filtering agent on Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -80,10 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -IPRange
-The IPRange parameter specifies a range of IP addresses to add to the IP Block list. You can use the following formats:
+The IPRange parameter specifies a range of IP addresses to add to the IP Block list. Valid values are:
 
-- CIDR IP:192.168.0.1/24
-- IP address range:192.168.0.1-192.168.0.254.
+- IP address range: 192.168.0.1-192.168.0.254.
+- Classless Inter-Domain Routing (CIDR) IP address range: 192.168.0.1/24.
 
 ```yaml
 Type: IPRange
@@ -197,12 +197,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,94 +1,60 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlineliscivicaddress
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlineliscivicaddress
+applicable: Microsoft Teams
 title: Remove-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
 # Remove-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the \`Remove-CsOnlineLisCivicAddress\` cmdlet to delete an existing civic address from the Location Information Server (LIS.) You can't remove a civic address if any of its associated locations are assigned to users.
+Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS). 
+
+You can't remove a civic address if any of its associated locations are assigned to users or phone numbers.
 
 ## SYNTAX
 
 ```
-Remove-CsOnlineLisCivicAddress -CivicAddressId <Guid> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsOnlineLisCivicAddress -CivicAddressId <guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
-
+Removes the specified emergency address or addresses.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
+### Example 1
+```powershell
 Remove-CsOnlineLisCivicAddress -CivicAddressId ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 ```
 
 This example removes the emergency civic address with the specified identification.
 
-
-### -------------------------- Example 2 --------------------------
-```
+### Example 2
+```powershell
 Get-CsOnlineLisCivicAddress -City Redmond | Remove-CsOnlineLisCivicAddress
 ```
 
 This example removes all the emergency civic addresses in the city of Redmond.
 
-
 ## PARAMETERS
 
 ### -CivicAddressId
 Specifies the unique identifier of the civic address to be deleted.
-You can find civic address identifiers by using the \`Get-CsOnlineLisCivicAddress\` cmdlet.
+You can find civic address identifiers by using the Get-CsOnlineLisCivicAddress cmdlet.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing and requires confirmation to proceed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -104,27 +70,11 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -137,7 +87,23 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -151,7 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### This cmdlet accepts pipelined input from the \`Get-CsOnlineLisCivicAddress\` cmdlet.
+### This cmdlet accepts pipelined input from the Get-CsOnlineLisCivicAddress cmdlet.
 
 ## OUTPUTS
 
@@ -161,3 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Set-CsOnlineLisCivicAddress](set-csonlineliscivicaddress.md)
+
+[New-CsOnlineLisCivicAddress](new-csonlineliscivicaddress.md)
+
+[Get-CsOnlineLisCivicAddress](get-csonlineliscivicaddress.md)

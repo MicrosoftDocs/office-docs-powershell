@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csbroadcastmeetingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csbroadcastmeetingpolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsBroadcastMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -22,7 +22,8 @@ Grant-CsBroadcastMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainC
 ```
 
 ## DESCRIPTION
-Administrators can manage Broadcast meeting functionality in Skype for Business Online using the following:
+Administrators can manage Broadcast meeting functionality in Microsoft Teams or Skype for Business Online using the following:
+
 - Broadcast meeting configuration at the tenant level
 - Broadcast meeting policy at the user level
 - Conferencing  policy at the user level.
@@ -31,15 +32,15 @@ Broadcast meeting configuration and broadcast meeting policy govern broadcast-sp
 
 This document describes how to specify which broadcast meeting policy is assigned to a user. Be sure to also review the following docs to manage conferencing policy:[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md), [New-CsConferencingPolicy](New-CsConferencingPolicy.md), and [Set-CsConferencingPolicy](Set-CsConferencingPolicy.md).
 
-**NOTES**
-- Broadcast meeting policies are predefined in Skype for Business. The defined settings for each policy can be displayed by using the Get-CsBroadcastMeetingPolicy cmdlet with no parameters.
+**NOTES**:
+
+- Broadcast meeting policies are predefined in Microsoft Teams or Skype for Business. The defined settings for each policy can be displayed by using the Get-CsBroadcastMeetingPolicy cmdlet with no parameters.
 - New broadcast meeting policy instance can't be created, and existing policies can't be modified. They can only be granted, or assigned to users.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
 Grant-CsBroadcastMeetingPolicy -Identity jphillips@contoso.com -PolicyName BroadcastMeetingPolicyAllEnabled
 ```
 
@@ -70,7 +71,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 1
@@ -90,7 +91,7 @@ To unassign a previously assigned policy, set PolicyName to $Null.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: 2
@@ -106,7 +107,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -122,7 +123,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -138,7 +139,7 @@ Enables you to pass a user object through the pipeline that represents the user 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -154,7 +155,7 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -171,7 +172,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named
@@ -202,4 +203,3 @@ None
 [New-CsConferencingPolicy](New-CsConferencingPolicy.md)
 [Set-CsConferencingPolicy](Set-CsConferencingPolicy.md)
 [Set-CsBroadcastMeetingConfiguration](Set-CsBroadcastMeetingConfiguration.md)
-

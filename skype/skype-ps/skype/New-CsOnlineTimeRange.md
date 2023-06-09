@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinetimerange
+online version: https://learn.microsoft.com/powershell/module/skype/new-csonlinetimerange
 applicable: Skype for Business Online
 title: New-CsOnlineTimeRange
 schema: 2.0.0
@@ -22,13 +22,12 @@ New-CsOnlineTimeRange -Start <TimeSpan> -End <TimeSpan> [-Tenant <Guid>] [<Commo
 ```
 
 ## DESCRIPTION
-The New-CsOnlineTimeRange cmdlet creates a new time range to be used with the Organizational Auto Attendant (OAA) service. Time ranges are used to form schedules.
+The New-CsOnlineTimeRange cmdlet creates a new time range to be used with the Auto Attendant (AA) service. Time ranges are used to form schedules.
 
-**NOTE**
+**NOTES**:
+
 - The start bound of the range must be less than its end bound.
-- A time range must be aligned with 30/60-minutes boundaries.
-- A time range can span from one minute to 24 hours.
- 
+- Time ranges within a weekly recurrent schedule must align with 15-minute boundaries.
 
 ## EXAMPLES
 
@@ -112,4 +111,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-

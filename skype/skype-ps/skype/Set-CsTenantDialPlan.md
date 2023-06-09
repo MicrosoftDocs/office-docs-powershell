@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-cstenantdialplan
+online version: https://learn.microsoft.com/powershell/module/skype/set-cstenantdialplan
 applicable: Skype for Business Online
 title: Set-CsTenantDialPlan
 schema: 2.0.0
@@ -37,7 +37,7 @@ Tenant dial plans provide required information to let Enterprise Voice users mak
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-Although normalization rules of a tenant dial plan can be added by using this cmdlet, it is recommended that you use the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet instead.
+Although normalization rules of a tenant dial plan can be added by using this cmdlet, it is recommended that you use the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet instead.
 
 ## EXAMPLES
 
@@ -51,12 +51,41 @@ This example updates the vt1tenantDialPlan9 tenant dial plan to use an external 
 
 ### -------------------------- Example 2 --------------------------
 ```
-$nr2 = Get-CsVoiceNormalizationRule -Identity Global/NR2
+$nr2 = Get-CsVoiceNormalizationRule -Identity "US/US Long Distance"
 
 Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
 ```
 
-This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the Global/NR2 normalization rules.
+This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the US/US Long Distance normalization rules.
+
+
+### -------------------------- Example 3 --------------------------
+```
+$DP = Get-CsTenantDialPlan -Identity Global
+$NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
+$NR.Name = "RedmondRule"
+Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
+```
+
+This example changes the name of an normalization rule.
+Keep in mind that changing the name also changes the name portion of the Identity.
+The `Set-CsVoiceNormalizationRule` cmdlet doesn't have a Name parameter, so in order to change the name, we first call the `Get-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign the returned object to the variable $NR.
+We then assign the string RedmondRule to the Name property of the object.
+Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
+
+
+### -------------------------- Example 4 --------------------------
+```
+$DP = Get-CsTenantDialPlan -Identity Global
+$NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
+$DP.NormalizationRules.Remove($NR)
+Set-CsTenantDialPlan -Identity Global -NormalizationRules $DP.NormalizationRules
+```
+
+This example removes a normalization rule.
+We utilize the same functionality as for Example 3 to manipulate the Normalization Rule Object and update it with the `Set-CsTenantDialPlan` cmdlet.
+We first call the `Get-CsTenantDialPlan` cmdlet to retrieve the Dial Plan with the Identity Global and assign the returned object to the variable $DP. Then we filter the NormalizationRules Object for the rule RedmondFourDigit and assign it to the variable $NR. Next, we remove this Object with the Remove Method from $DP.NormalizationRules.
+Finally, we pass the variable back to the NormalizationRules parameter of the `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
 
 ## PARAMETERS
@@ -79,7 +108,7 @@ Accept wildcard characters: False
 
 ### -Description
 The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to or any other information that helps to identify the purpose of the tenant dial plan.
-Maximum characters is 512.
+Maximum characters is 1040.
 
 ```yaml
 Type: String
@@ -99,8 +128,7 @@ The ExternalAccessPrefix parameter is a number (or set of numbers) that designat
 (For example, to tenant-dial an outside line, first dial 9). This prefix is ignored by the normalization rules, although these rules will be applied to the rest of the number.
 The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
 
-The value of this parameter must match the regular expression \[0-9\]{1,4}.
-This means it must be a value one to four digits in length, with each digit being a number 0 through 9.
+The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
 
 ```yaml
 Type: String
@@ -134,10 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is a unique identifier that designates the scope, or for per-user plans a name, to identify the tenant dial plan to modify.
-For example, a site Identity is in the format site:\<sitename\>, where sitename is the name of the site.
-A tenant dial plan at the service scope is a Registrar or PSTN gateway service, where the Identity value is formatted in this way: Registrar:Redmond.litwareinc.com.
-A per-user Identity is a unique string value.
+The Identity parameter is a unique identifier that designates the name of the tenant dial plan to modify.
 
 ```yaml
 Type: XdsIdentity
@@ -171,7 +196,7 @@ Accept wildcard characters: False
 
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
 
 The number of normalization rules cannot exceed 50 per TenantDialPlan.
 
@@ -207,9 +232,9 @@ Accept wildcard characters: False
 
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan.
-This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
+This name must be unique among all tenant dial plans.
 
-This string can be up to 256 characters long.
+This string can be up to 49 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
 
 ```yaml
@@ -269,4 +294,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

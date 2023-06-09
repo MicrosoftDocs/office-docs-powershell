@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-caseholdrule
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-caseholdrule
+applicable: Security & Compliance
 title: Get-CaseHoldRule
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,11 @@ ms.reviewer:
 # Get-CaseHoldRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-CaseHoldRule to view case hold rules in the Security & Compliance Center.
+Use the Get-CaseHoldRule to view case hold rules in the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Get-CaseHoldRule [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -51,7 +51,7 @@ The Identity parameter specifies the case hold rule you want to view. You can us
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 1
@@ -73,7 +73,7 @@ You can use this parameter with the Identity parameter in the same command.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -87,11 +87,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

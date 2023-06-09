@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -37,7 +37,7 @@ The Get-CsTeamsMeetingPolicy cmdlet enables you to return information about all 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+```powershell
 Get-CsTeamsMeetingPolicy
 ```
 
@@ -45,7 +45,7 @@ In Example 1, Get-CsTeamsMeetingPolicy is called without any additional paramete
 
 
 ### -------------------------- Example 2 --------------------------
-```
+```powershell
 Get-CsTeamsMeetingPolicy -Identity SalesPolicy
 ```
 
@@ -53,13 +53,26 @@ In Example 2, Get-CsTeamsMeetingPolicy is used to return the per-user meeting po
 Because identities are unique, this command will never return more than one item.
 
 ### -------------------------- Example 3 --------------------------
-```
+```powershell
 Get-CsTeamsMeetingPolicy | Where-Object {$_.AllowMeetNow -eq $True}
 ```
 
 The preceding command returns a collection of all the meeting policies where the AllowMeetNow property is True.
 To do this, Get-CsTeamsMeetingPolicy is first called without any parameters in order to return a collection of all the policies configured for use in the organization.
 This collection is then piped to the Where-Object cmdlet, which selects only those policies where the AllowMeetNow property is equal to True.
+
+### -------------------------- Example 4 --------------------------
+```powershell
+Get-CsTeamsMeetingPolicy -Identity Global | fl NewMeetingRecordingExpirationDays
+```
+
+```Output
+NewMeetingRecordingExpirationDays : 60
+```
+
+The above command returns expiration date setting currently applied on TMR. For more details, see:
+[Auto-expiration of Teams meeting recordings](https://learn.microsoft.com/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings).
+
 
 ## PARAMETERS
 
@@ -134,4 +147,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

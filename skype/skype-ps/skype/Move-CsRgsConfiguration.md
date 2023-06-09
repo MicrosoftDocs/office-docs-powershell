@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/move-csrgsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/move-csrgsconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Move-CsRgsConfiguration
 schema: 2.0.0
@@ -142,6 +142,3 @@ Move-CsRgsConfiguration moves instances of the Microsoft.Rtc.Management.Writable
 [Get-CsRgsConfiguration](Get-CsRgsConfiguration.md)
 
 [Move-CsRgsConfiguration](Move-CsRgsConfiguration.md)
-
-
-

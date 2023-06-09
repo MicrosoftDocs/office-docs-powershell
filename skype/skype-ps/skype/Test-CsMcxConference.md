@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csmcxconference
+online version: https://learn.microsoft.com/powershell/module/skype/test-csmcxconference
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Test-CsMcxConference
 schema: 2.0.0
@@ -325,4 +325,3 @@ The `Test-CsMcxConference` cmdlet returns an instance of the Microsoft.Rtc.Synth
 ## NOTES
 
 ## RELATED LINKS
-

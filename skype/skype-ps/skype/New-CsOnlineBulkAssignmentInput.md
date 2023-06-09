@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinebulkassignmentinput
+online version: https://learn.microsoft.com/powershell/module/skype/new-csonlinebulkassignmentinput
 applicable: Skype for Business Online
 title: New-CsOnlineBulkAssignmentInput
 schema: 2.0.0
@@ -14,6 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 Provide the topic introduction here.
+
+**Note**: This cmdlet will be deprecated.
 
 ## SYNTAX
 
@@ -160,5 +162,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-
-

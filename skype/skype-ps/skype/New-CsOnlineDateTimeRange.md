@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csonlinedatetimerange
+online version: https://learn.microsoft.com/powershell/module/skype/new-csonlinedatetimerange
 applicable: Skype for Business Online
 title: New-CsOnlineDateTimeRange
 schema: 2.0.0
@@ -24,7 +24,8 @@ New-CsOnlineDateTimeRange -Start <String> [-End <String>] [-Tenant <Guid>] [<Com
 ## DESCRIPTION
 The New-CsOnlineDateTimeRange cmdlet creates a new date-time range to be used with the Organizational Auto Attendant (OAA) service. Date time ranges are used to form schedules.
 
-**NOTE**
+**NOTE**:
+
 - The start bound of the range must be less than its end bound.
 - The time part of the range must be aligned with 30/60-minutes boundaries.
 - A date time range bound can only be input in the following formats:

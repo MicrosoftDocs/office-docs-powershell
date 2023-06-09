@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csteamsmessagingpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmessagingpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsMessagingPolicy
 schema: 2.0.0
@@ -21,21 +21,21 @@ The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is
 ```
 Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
- [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowUserDeleteChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-Allow [-ReadReceiptsEnabledType <String>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
- [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
 ```
 
 ### Instance
 ```
 Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPreviews <Boolean>]
  [-AllowOwnerDeleteMessage <Boolean>] [-AllowUserEditMessage <Boolean>] [-AllowUserDeleteMessage <Boolean>]
- [-AllowUserChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
+ [-AllowUserChat <Boolean>] [-AllowUserDeleteChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-ReadReceiptsEnabledType <String>]
- [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
+ [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-AllowSmartCompose] <Boolean>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -68,7 +68,7 @@ All other policy properties will be left as previously assigned.
 
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
-Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
+Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
 
 ```yaml
 Type: Boolean
@@ -202,8 +202,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowUserDeleteChat
+Turn this setting on to allow users to permanently delete their 1:1, group chat, and meeting chat as participants (this deletes the chat only for them, not other users in the chat). Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowUserDeleteMessage
 Determines whether a user is allowed to delete their own messages. Set this to TRUE to allow. Set this to FALSE to prohibit.
+If this value is set to FALSE, the team owner will not be able to delete their own messages.
 
 ```yaml
 Type: Boolean
@@ -249,7 +265,7 @@ Accept wildcard characters: False
 
 ### -AllowUrlPreviews
 Use this setting to turn automatic URL previewing on or off in messages. Set this to TRUE to turn on. Set this to FALSE to turn off.
-Note: [Optional Connected Experiences](https://docs.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
+Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for URL previews to be allowed.
 
 ```yaml
 Type: Boolean
@@ -441,6 +457,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ChatPermissionRole
+Determines the Supervised Chat role of the user.  Set this to Full to allow the user to supervise chats.  Supervisors have the ability to initiate chats with and invite any user within the enviornment.  Set this to Limited to allow the user to initiate conversations with Full and Limited permissioned users, but not Restricted.  Set this to Restricted to block chat creation with anyone other than Full permissioned users.  
+
+```yaml
+Type: String
+Position: Named
+Default value: Restricted
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSmartCompose
+Turn on this setting to let a user get text predictions for chat messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Con nombre
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
@@ -453,4 +495,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

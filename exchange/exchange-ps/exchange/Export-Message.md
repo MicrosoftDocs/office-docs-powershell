@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/export-message
+online version: https://learn.microsoft.com/powershell/module/exchange/export-message
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Export-Message
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Export-Message cmdlet to copy a message from a queue on a Mailbox server or an Edge Transport server to a specified file path in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Export-Message [-Identity] <MessageIdentity>
 ## DESCRIPTION
 The Export-Message cmdlet copies messages from the Delivery queue, the Unreachable queue, or the poison message queue on Mailbox server or an Edge Transport server to a specified file path. Before you export a message, you must first suspend the message. Messages in the poison message queue are already suspended. You can use the Export-Message cmdlet to copy messages to the Replay directory of another Mailbox server for delivery.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -43,19 +43,23 @@ This example exports a single message to the specified file path. Because the Ex
 
 ### Example 2
 ```powershell
-Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object {Suspend-Message $_.Identity -Confirm:$False; $Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml"; $Temp=$Temp.Replace("<","_"); $Temp=$Temp.Replace(">","_"); Export-Message $_.Identity | AssembleMessage -Path $Temp}
+Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object {Suspend-Message $_.Identity -Confirm:$False
+$Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml"
+$Temp=$Temp.Replace("<","_")
+$Temp=$Temp.Replace(">","_")
+Export-Message $_.Identity | AssembleMessage -Path $Temp}
 ```
 
 This example retrieves all messages from the specified queue. The query results are then piped to the Export-Message command, and all the messages are copied to individual .eml files. The Internet Message IDs of each message are used as the file names. To accomplish this, the command does the following:
 
 - Retrieves all messages in a specific queue using the Get-Message cmdlet.
-- The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets ("\>" and "\<") which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
+- The result is pipelined into the ForEach-Object cmdlet, which prepares a file name including full path using the temporary variable $Temp that consists of the Internet Message ID with .eml extension. The Internet Message ID field contains angled brackets (`<` and `>`) which need to be removed as they are invalid file names. This is done using the Replace method of the temporary variable.
 - The ForEach-Object cmdlet also exports the message using the file name prepared.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see [Message identity](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#message-identity).
+The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see [Message identity](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#message-identity).
 
 ```yaml
 Type: MessageIdentity
@@ -110,12 +114,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

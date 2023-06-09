@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label
+applicable: Security & Compliance
 title: Set-Label
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-Label
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Set-Label cmdlet to modify sensitivity labels in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -24,38 +24,41 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-AdvancedSettings <PswsHashtable>]
  [-ApplyContentMarkingFooterAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
- [-ApplyContentMarkingFooterEnabled <Boolean>]
+ [-ApplyContentMarkingFooterEnabled <System.Boolean>]
  [-ApplyContentMarkingFooterFontColor <String>]
  [-ApplyContentMarkingFooterFontName <String>]
- [-ApplyContentMarkingFooterFontSize <Int32>]
- [-ApplyContentMarkingFooterMargin <Int32>]
+ [-ApplyContentMarkingFooterFontSize <System.Int32>]
+ [-ApplyContentMarkingFooterMargin <System.Int32>]
  [-ApplyContentMarkingFooterText <String>]
  [-ApplyContentMarkingHeaderAlignment <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment>]
- [-ApplyContentMarkingHeaderEnabled <Boolean>]
+ [-ApplyContentMarkingHeaderEnabled <System.Boolean>]
  [-ApplyContentMarkingHeaderFontColor <String>]
  [-ApplyContentMarkingHeaderFontName <String>]
- [-ApplyContentMarkingHeaderFontSize <Int32>]
- [-ApplyContentMarkingHeaderMargin <Int32>]
+ [-ApplyContentMarkingHeaderFontSize <System.Int32>]
+ [-ApplyContentMarkingHeaderMargin <System.Int32>]
  [-ApplyContentMarkingHeaderText <String>]
- [-ApplyWaterMarkingEnabled <Boolean>]
+ [-ApplyWaterMarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingFontColor <String>]
  [-ApplyWaterMarkingFontName <String>]
- [-ApplyWaterMarkingFontSize <Int32>]
+ [-ApplyWaterMarkingFontSize <System.Int32>]
  [-ApplyWaterMarkingLayout <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout>]
  [-ApplyWaterMarkingText <String>]
+ [-ColumnAssetCondition <String>]
  [-Comment <String>]
  [-Conditions <MultiValuedProperty>]
  [-Confirm]
+ [-ContentType <MipLabelContentType>]
+ [-DefaultContentLabel <String>]
  [-DisplayName <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
- [-EncryptionDoNotForward <Boolean>]
+ [-EncryptionDoNotForward <System.Boolean>]
  [-EncryptionDoubleKeyEncryptionUrl <String>]
- [-EncryptionEnabled <Boolean>]
- [-EncryptionEncryptOnly <Boolean>]
- [-EncryptionOfflineAccessDays <Int32>]
- [-EncryptionPromptUser <Boolean>]
+ [-EncryptionEnabled <System.Boolean>]
+ [-EncryptionEncryptOnly <System.Boolean>]
+ [-EncryptionOfflineAccessDays <System.Int32>]
+ [-EncryptionPromptUser <System.Boolean>]
  [-EncryptionProtectionType <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType>]
- [-EncryptionRightsDefinitions <String>]
+ [-EncryptionRightsDefinitions <EncryptionRightsDefinitionsParameter>]
  [-EncryptionRightsUrl <String>]
  [-LabelActions <MultiValuedProperty>]
  [-LocaleSettings <MultiValuedProperty>]
@@ -63,16 +66,43 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-NextLabel <ComplianceRuleIdParameter>]
  [-ParentId <ComplianceRuleIdParameter>]
  [-PreviousLabel <ComplianceRuleIdParameter>]
- [-Priority <Int32>]
+ [-Priority <System.Int32>]
+ [-SchematizedDataCondition <String>]
  [-Setting <PswsHashtable>]
  [-Settings <PswsHashtable>]
+ [-SiteAndGroupProtectionAllowAccessToGuestUsers <System.Boolean>]
+ [-SiteAndGroupProtectionAllowEmailFromGuestUsers <System.Boolean>]
+ [-SiteAndGroupProtectionAllowFullAccess <System.Boolean>]
+ [-SiteAndGroupProtectionAllowLimitedAccess <System.Boolean>]
+ [-SiteAndGroupProtectionBlockAccess <System.Boolean>]
+ [-SiteAndGroupProtectionEnabled <System.Boolean>]
+ [-SiteAndGroupProtectionLevel <SiteAndGroupProtectionLevelParameter>]
+ [-SiteAndGroupProtectionPrivacy <Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+GroupProtectionPrivacy>]
+ [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
+ [-TeamsAllowedPresenters <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters>]
+ [-TeamsAllowMeetingChat <Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode>]
+ [-TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch <System.Boolean>]
+ [-TeamsBypassLobbyForDialInUsers <System.Boolean>]
+ [-TeamsChannelProtectionEnabled <System.Boolean>]
+ [-TeamsChannelSharedWithExternalTenants <System.Boolean>]
+ [-TeamsChannelSharedWithPrivateTeamsOnly <System.Boolean>]
+ [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
+ [-TeamsCopyRestrictionEnforced <System.Boolean>]
+ [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
+ [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
+ [-TeamsLobbyRestrictionEnforced <System.Boolean>]
+ [-TeamsPresentersRestrictionEnforced <System.Boolean>]
+ [-TeamsProtectionEnabled <System.Boolean>]
+ [-TeamsRecordAutomatically <System.Boolean>]
+ [-TeamsVideoWatermark <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues>]
+ [-TeamsWhoCanRecord <Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions>]
  [-Tooltip <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)..
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -103,7 +133,7 @@ The Identity parameter specifies the sensitivity label that you want to modify. 
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -113,13 +143,37 @@ Accept wildcard characters: False
 ```
 
 ### -AdvancedSettings
-The AdvancedSettings parameter enables client-specific features and capabilities on the sensitivity label. The settings that you configure with this parameter only affect apps that are designed for the setting. For more information, see [How to configure advanced settings for the client by using Security & Compliance Center PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+The AdvancedSettings parameter enables specific features and capabilities for a sensitivity label.
+
+Specify this parameter with the identity (name or GUID) of the sensitivity label, with key/value pairs in a [hash table](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
+
+Some of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling. For a list of these and instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://learn.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+
+Supported settings for built-in labeling:
+
+- **Color**: Specifies a label color as a hex triplet code for the red, green, and blue (RGB) components of the color. Example: `Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{color="#40e0d0"}`. For more information, see [Configuring custom colors by using PowerShell](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configuring-custom-colors-by-using-powershell).
+
+- **DefaultSharingScope**: Specifies the default sharing link type for a site when the label scope includes **Groups & sites**, and the default sharing link type for a document when the label scope includes **Files & emails**. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+
+- **DefaultShareLinkPermission**: Specifies the permissions for the sharing link for a site when the label scope includes **Groups & sites**, and the permissions for the sharing link for a document when the label scope includes **Files & emails**. Available values are View and Edit. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkPermission="Edit"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+
+- **DefaultShareLinkToExistingAccess**: Specifies whether to override *DefaultSharingScope* and *DefaultShareLinkPermission* to instead set the default sharing link type to people with existing access with their existing permissions. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultShareLinkToExistingAccess="True"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-default-sharing-link).
+
+- **DefaultSubLabelId**: Specifies a default sublabel to be applied automatically when a user selects a parent label in Office apps. Example: `Set-Label -Identity Confidential -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}`. For more information, see [Specify a default sublabel for a parent label](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#specify-a-default-sublabel-for-a-parent-label).
+
+- **MembersCanShare**: For a container label, specifies how members can share for a SharePoint site. Available values are MemberShareAll, MemberShareFileAndFolder, and MemberShareNone. Example: `Set-Label -Identity General -AdvancedSettings @{MembersCanShare="MemberShareFileAndFolder"}`. For more information, see [Configure site sharing permissions by using PowerShell advanced settings](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites#configure-site-sharing-permissions-by-using-powershell-advanced-settings).
+
+- **SMimeEncrypt**: Specifies S/MIME encryption for Outlook. Available values are True, and False (the default). Example: `Set-Label -Identity "Confidential" -AdvancedSettings @{SMimeEncrypt="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
+
+- **SMimeSign**: Specifies S/MIME digital signature for Outlook. Available values are True, and False (the default). Example: `Set-Label -Identity "Confidential" -AdvancedSettings @{SMimeSign="True"}`. For more information, see [Configure a label to apply S/MIME protection in Outlook](https://learn.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#configure-a-label-to-apply-smime-protection-in-outlook).
+
+For more information to help you configure advanced settings for a label, see [PowerShell tips for specifying the advanced settings](https://learn.microsoft.com/microsoft-365/compliance/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
 
 ```yaml
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -141,7 +195,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -157,10 +211,10 @@ The ApplyContentMarkingFooterEnabled parameter enables or disables the Apply Con
 - $false: The Apply Content Marking Footer action is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -178,7 +232,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -192,11 +246,13 @@ The ApplyContentMarkingFooterFontName parameter specifies the font of the footer
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
+This parameter is supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -211,10 +267,10 @@ The ApplyContentMarkingFooterFontSize parameter specifies the font size (in poin
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -228,11 +284,13 @@ The ApplyContentMarkingFooterMargin parameter specifies the size (in points) of 
 
 This parameter is meaningful only when the ApplyContentMarkingFooterEnabled parameter value is either $true or $false.
 
+**Note**: In Microsoft Word, the specified value is used as a bottom margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
+
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -250,7 +308,7 @@ This parameter is meaningful only when the ApplyContentMarkingFooterEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -272,7 +330,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+ContentAlignment
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -288,10 +346,10 @@ The ApplyContentMarkingHeaderEnabled parameter enables or disables the Apply Con
 - $false: The Apply Content Marking Header action is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -309,7 +367,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -327,7 +385,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -342,10 +400,10 @@ The ApplyContentMarkingHeaderFontSize parameter specifies the font size (in poin
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -359,11 +417,13 @@ The ApplyContentMarkingHeaderMargin parameter specifies the size (in points) of 
 
 This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled parameter value is either $true or $false.
 
+**Note**: In Microsoft Word, the specified value is used as a top margin and left margin or right margin for left-aligned or right-aligned content marks. A minimum value of 15 points is required. Word also adds a constant offset of 5 points to the left margin for left-aligned content marks, or to the right margin for right-aligned content marks.
+
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -381,7 +441,7 @@ This parameter is meaningful only when the ApplyContentMarkingHeaderEnabled para
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -397,10 +457,10 @@ The ApplyWaterMarkingEnabled parameter enables or disables the Apply Watermarkin
 - $false: The Apply Watermarking Header action is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -418,7 +478,7 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -436,7 +496,7 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -451,10 +511,10 @@ The ApplyWaterMarkingFontSize parameter specifies the font size (in points) of t
 This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -475,7 +535,7 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+WaterMarkingLayout
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -493,7 +553,23 @@ This parameter is meaningful only when the ApplyWaterMarkingEnabled parameter va
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ColumnAssetCondition
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -509,7 +585,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -522,10 +598,10 @@ Accept wildcard characters: False
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -544,7 +620,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -553,17 +629,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Disabled
-The Disabled parameter specifies whether to enable or disable the sensitivity label. Valid values are:
+### -ContentType
+The ContentType parameter specifies where the sensitivity label can be applied. Valid values are:
 
-- $true: The label is disabled.
-- $False: The label is enabled.
+- File
+- Email
+- Site
+- UnifiedGroup
+- PurviewAssets
+- Teamwork
+- SchematizedData
+
+Values can be combined, for example: "File, Email, PurviewAssets".
 
 ```yaml
-Type: Boolean
+Type: MipLabelContentType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultContentLabel
+The DefaultContentLabel specifies a label that can be automatically applied to meetings created in a labeled Teams channel.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -579,7 +678,7 @@ The DisplayName parameter specifies the display name for the sensitivity label. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -600,7 +699,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -618,10 +717,10 @@ The EncryptionDoNotForward parameter specifies whether the Do Not Forward templa
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -637,7 +736,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -647,16 +746,16 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEnabled
-The EncryptionEnabled parameter specifies whether encryption in enabled. Value values are:
+The EncryptionEnabled parameter specifies whether encryption in enabled. Valid values are:
 
 - $true: Encryption is enabled.
 - $false: Encryption is disabled.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -666,13 +765,18 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionEncryptOnly
-This parameter is reserved for internal Microsoft use.
+The EncryptionEncryptOnly parameter specifies whether the encrypt-only template is applied. Valid values are:
+
+- $true: The encrypt-only template is applied.
+- $false: The encrypt-only template is not applied.
+
+This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -687,10 +791,10 @@ The EncryptionOfflineAccessDays parameter specifies the number of days that offl
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -708,10 +812,10 @@ The EncryptionPromptUser parameter specifies whether to set the label with user 
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false, and when the EncryptionProtectionType parameter value is UserDefined.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -733,7 +837,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: Microsoft.Office.CompliancePolicy.Tasks.FlattenLabelActionUtils+SupportedProtectionType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -748,10 +852,10 @@ The EncryptionRightsDefinitions parameter specifies the rights users have when a
 This parameter is meaningful only when the EncryptionEnabled parameter value is either $true or $false and the EncryptionProtectionType parameter value is Template.
 
 ```yaml
-Type: String
+Type: EncryptionRightsDefinitionsParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -769,7 +873,7 @@ This parameter is meaningful only when the EncryptionEnabled parameter value is 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -785,7 +889,7 @@ This parameter is reserved for internal Microsoft use.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -795,18 +899,18 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleSettings
-The LocaleSettings parameter specifies one or more localized label name and label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
+The LocaleSettings parameter specifies one or more localized label names and label Tooltips in different languages. Regions include all region codes supported in Office Client applications. Valid values use the following syntax (JSON):
 
 - Label display names: `{"localeKey":"DisplayName","Settings":[{"Key":"en-us","Value":"English display name"},{"Key":"de-de","Value":"Deutscher Anzeigename"},{"Key":"es-es","Value":"Nombre para mostrar en Español"}]}`
 - Label Tooltips: `{"localeKey":"Tooltip","Settings":[{"Key":"en-us","Value":"English Tooltip"},{"Key":"de-de","Value":"Deutscher Tooltip"},{"Key":"es-es","Value":"Tooltip Español"}]}`
 
-To remove a language, you will have to give an empty value for that corresponding language.
+To remove a language, you need to enter an empty value for that language.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -822,7 +926,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -838,7 +942,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -858,7 +962,7 @@ The ParentId parameter specifies the parent label that you want this label to be
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -874,7 +978,7 @@ This parameter is reserved for internal Microsoft use.
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -887,10 +991,26 @@ Accept wildcard characters: False
 The Priority parameter specifies a priority value for the sensitivity label that determines the order of label processing. A higher integer value indicates a higher priority.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SchematizedDataCondition
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -906,7 +1026,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -922,7 +1042,7 @@ This parameter is reserved for internal Microsoft use.
 Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -943,7 +1063,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -964,7 +1084,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -985,7 +1105,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1006,7 +1126,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1027,7 +1147,7 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1046,7 +1166,23 @@ The SiteAndGroupProtectionEnabled parameter enables or disables the Site and Gro
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAndGroupProtectionLevel
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SiteAndGroupProtectionLevelParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1067,7 +1203,362 @@ This parameter is meaningful only when the SiteAndGroupProtectionEnabled paramet
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AccessType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteExternalSharingControlType
+The SiteExternalSharingControlType parameter specifies the external user sharing setting for the label. Valid values are:
+
+- ExternalUserAndGuestSharing
+- ExternalUserSharingOnly
+- ExistingExternalUserSharingOnly
+- Disabled
+
+These correspond to the following settings through the admin center:
+
+- Anyone
+- New and Existing Guests
+- Existing Guests
+- Only people in your organization
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowedPresenters
+The TeamsAllowedPresenters parameter controls who can present in Teams meetings. Valid values are:
+
+- Everyone
+- Organization
+- Organizer
+- RoleIsPresenter
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowMeetingChat
+The TeamsAllowMeetingChat parameter controls whether chat is available in Teams meetings. Valid values are:
+
+- Enabled
+- Disabled
+- Limited: Chat is available only for the duration of the call.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch
+{{ Fill TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsBypassLobbyForDialInUsers
+The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial-in users who join Teams meetings. Valid values are:
+
+- $true: Dial in users bypass the lobby when joining Teams meetings.
+- $false: Dial in users don't bypass the lobby when joining Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelProtectionEnabled
+{{ Fill TeamsChannelProtectionEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithExternalTenants
+{{ Fill TeamsChannelSharedWithExternalTenants Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithPrivateTeamsOnly
+{{ Fill TeamsChannelSharedWithPrivateTeamsOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithSameLabelOnly
+{{ Fill TeamsChannelSharedWithSameLabelOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsCopyRestrictionEnforced
+The TeamsCopyRestrictionEnforced parameter controls whether chat messages in Teams meetings can be copied to the clipboard. Valid values are:
+
+- $true: Chat messages can be copied to the clipboard.
+- $false: Chat messages can't be copied to the clipboard.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsEndToEndEncryptionEnabled
+The TeamsEndToEndEncryptionEnabled parameter controls video stream encryption in Teams meetings. Valid values are:
+
+- $true: Video stream encryption is enabled.
+- $false: Video stream encryption is not enabled.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLobbyBypassScope
+The TeamsLobbyBypassScope parameter controls who bypasses the lobby when joining Teams meetings. Valid values are:
+
+- Everyone
+- Invited
+- Organization
+- OrganizationAndFederated
+- OrganizationExcludingGuests
+- Organizer
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsLobbyRestrictionEnforced
+The TeamsLobbyRestrictionEnforced parameter controls whether participants bypass the lobby when joining Teams meetings. Valid values are:
+
+- $true: Users bypass the lobby when joining Teams meetings.
+- $false: Users don't bypass the lobby when joining Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsPresentersRestrictionEnforced
+The TeamsPresentersRestrictionEnforced parameter controls whether presenter restrictions are enabled in Teams meetings. Valid values are:
+
+- $true: Presenter restrictions are enabled in Teams meetings.
+- $false: Presenter restrictions aren't enabled in Teams meetings.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsProtectionEnabled
+The TeamsProtectionEnabled parameter controls whether Teams protection is enabled in Teams meetings. Valid values are:
+
+- $true: Teams protection is enabled in Teams meetings.
+- $false: Teams protection is not enabled in Teams meetings.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsRecordAutomatically
+The TeamsRecordAutomatically parameter controls whether Teams meetings are automatically recorded after they start. Valid values are:
+
+- $true: Teams meetings are automatically recorded after they start.
+- $false: Teams meetings are not automatically recorded.
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsVideoWatermark
+The TeamsVideoWatermark parameter controls whether a watermark is shown in Teams meetings. Valid values are:
+
+- None
+- EnabledForContentSharing
+- EnabledForVideo
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WaterMarkProtectionValues
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsWhoCanRecord
+The TeamsWhoCanRecord parameter controls who can record Teams meetings. Valid values are:
+
+- Organizer
+- Coorganizers
+- Presenters
+- $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.WhoCanRecordOptions
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1083,7 +1574,7 @@ The ToolTip parameter specifies the default tooltip and sensitivity label descri
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1093,13 +1584,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -1113,13 +1604,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
 ## RELATED LINKS
-[New-Label](New-Label.md)
+
+[New-Label](https://learn.microsoft.com/powershell/module/exchange/new-label)

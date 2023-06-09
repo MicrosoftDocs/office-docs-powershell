@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamsapppermissionpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsapppermissionpolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsAppPermissionPolicy
 schema: 2.0.0
@@ -13,10 +13,9 @@ author: tomkau
 # Get-CsTeamsAppPermissionPolicy
 
 ## SYNOPSIS
+**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
 
-As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
-
-The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
+As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
 ## SYNTAX
 
@@ -32,15 +31,58 @@ Get-CsTeamsAppPermissionPolicy [-Tenant <System.Guid>] [-Filter <String>] [-Loca
 ```
 
 ## DESCRIPTION
-As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies.
+**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
 
-The existence of this cmdlet is being documented for completeness, but do not use this cmdlet.  **We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.**
-
+As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Setup Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
 ## EXAMPLES
 
 ### Example 1
-Intentionally omitted.
+
+```powershell
+Get-CsTeamsAppPermissionPolicy -Identity Global
+```
+
+```Output
+Identity               : Global
+DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
+GlobalCatalogApps      : {}
+PrivateCatalogApps     : {}
+Description            :
+DefaultCatalogAppsType : AllowedAppList
+GlobalCatalogAppsType  : AllowedAppList
+PrivateCatalogAppsType : AllowedAppList
+```
+Get the global Teams app permission policy.
+
+
+### Example 2
+
+```powershell
+Get-CsTeamsAppPermissionPolicy
+```
+
+```Output
+Identity               : Global
+DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
+GlobalCatalogApps      : {}
+PrivateCatalogApps     : {}
+Description            :
+DefaultCatalogAppsType : AllowedAppList
+GlobalCatalogAppsType  : AllowedAppList
+PrivateCatalogAppsType : AllowedAppList
+
+Identity               : Tag:test
+DefaultCatalogApps     : {Id=26bc2873-6023-480c-a11b-76b66605ce8c, Id=0d820ecd-def2-4297-adad-78056cde7c78, Id=com.microsoft.teamspace.tab.planner}
+GlobalCatalogApps      : {}
+PrivateCatalogApps     : {}
+Description            :
+DefaultCatalogAppsType : AllowedAppList
+GlobalCatalogAppsType  : AllowedAppList
+PrivateCatalogAppsType : AllowedAppList
+```
+Get all the Teams app permission policies.
+
 
 ## PARAMETERS
 
@@ -60,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Do not use.
+Name of the app setup permission policy. If empty, all identities will be used by default.
+
 
 ```yaml
 Type: XdsIdentity

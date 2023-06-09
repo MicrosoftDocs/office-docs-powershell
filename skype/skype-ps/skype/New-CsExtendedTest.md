@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csextendedtest
+online version: https://learn.microsoft.com/powershell/module/skype/new-csextendedtest
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsExtendedTest
 schema: 2.0.0
@@ -140,5 +140,3 @@ The New-CsExtendedTest cmdlet creates new instances of the Microsoft.Rtc.Managem
 [New-CsWatcherNodeConfiguration](New-CsWatcherNodeConfiguration.md)
 
 [Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
-
-

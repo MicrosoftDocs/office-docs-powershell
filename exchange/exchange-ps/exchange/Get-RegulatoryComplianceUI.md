@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-regulatorycomplianceui
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-regulatorycomplianceui
+applicable: Security & Compliance
 title: Get-RegulatoryComplianceUI
 schema: 2.0.0
 ---
@@ -9,12 +9,12 @@ schema: 2.0.0
 # Get-RegulatoryComplianceUI
 
 ## SYNOPSIS
-This cmdlet is available only in the Security & Compliance Center. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell)
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell)
 .
 
-Use the Get-RegulatoryComplianceUI cmdlet to view the status of the regulatory compliance UI in the Security & Compliance Center (whether the preservation lock checkbox is displayed for retention policies and the immutable label checkbox is displayed for retention labels).
+Use the Get-RegulatoryComplianceUI cmdlet to view the status of the regulatory compliance UI in the Microsoft Purview compliance portal (whether the preservation lock checkbox is displayed for retention policies and the immutable label checkbox is displayed for retention labels).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-RegulatoryComplianceUI [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -41,11 +41,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### 
-
 ## OUTPUTS
-
-### 
 
 ## NOTES
 

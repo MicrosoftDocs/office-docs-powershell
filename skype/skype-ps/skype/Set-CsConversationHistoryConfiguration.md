@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csconversationhistoryconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csconversationhistoryconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsConversationHistoryConfiguration
 schema: 2.0.0
@@ -220,4 +220,3 @@ Instead, `Set-CsConversationHistoryConfiguration` modifies instances of the Micr
 [Get-CsConversationHistoryConfiguration](Get-CsConversationHistoryConfiguration.md)
 
 [Remove-CsConversationHistoryConfiguration](Remove-CsConversationHistoryConfiguration.md)
-

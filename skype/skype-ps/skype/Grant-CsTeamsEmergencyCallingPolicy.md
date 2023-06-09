@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsemergencycallingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsemergencycallingpolicy
+applicable: Microsoft Teams
 title: Grant-CsTeamsEmergencyCallingPolicy
-author: danny-levin
-ms.author: dannyle
+author: jenstrier
+ms.author: jenstr
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0
@@ -13,35 +13,54 @@ schema: 2.0.0
 # Grant-CsTeamsEmergencyCallingPolicy
 
 ## SYNOPSIS
+This cmdlet assigns a Teams Emergency Calling policy.
 
 ## SYNTAX
 
+### GrantToTenant (Default)
 ```
-Grant-CsTeamsEmergencyCallingPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-DomainController <Fqdn>]
- [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsEmergencyCallingPolicy [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### Identity
+```
+Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsEmergencyCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet assigns a Teams Emergency Calling policy to a user. Emergency Calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+This cmdlet assigns a Teams Emergency Calling policy to a user, a group of users, or to the Global policy instance. Emergency Calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:> Grant-CsTeamsEmergencyCallingPolicy -Identity user1 -PolicyName TestECP
+Grant-CsTeamsEmergencyCallingPolicy -Identity user1 -PolicyName TestTECP
 ```
 
-This example assigns a Teams Emergency Calling policy to a user
+This example assigns the Teams Emergency Calling policy TestTECP to a user
+
+### Example 2
+```powershell
+Grant-CsTeamsEmergencyCallingPolicy -Global -PolicyName SalesTECP
+```
+
+Assigns the Teams Emergency Calling policy called "SalesTECP" to the Global policy instance. This sets the parameters in the Global policy instance to the values found in the SalesTECP instance.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -Global
+Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Parameter Sets: (GrantToTenant)
+Aliases:
 
 Required: False
 Position: Named
@@ -50,16 +69,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-Allows you to specify a domain controller. If no domain controller is specified, the first available will be used.
+### -Group
+Specifies the group used for the group policy assignment.
 
 ```yaml
-Type: Fqdn
-Parameter Sets: (All)
+Type: String
+Parameter Sets: GrantToGroup
 Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -69,11 +88,11 @@ Accept wildcard characters: False
 Indicates the Identity of the user account the policy should be assigned to.
 
 ```yaml
-Type: UserIdParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases:
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
@@ -96,26 +115,26 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-The Identity of the Teams Emergency Calling policy to apply to the user.
+The Identity of the Teams Emergency Calling policy to apply to the user. To remove an existing user level policy assignment, specify PolicyName as $null.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Microsoft internal usage only
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
 
 ```yaml
-Type: System.Guid
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: False
@@ -141,16 +160,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.AD.UserIdParameter
-
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
+The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-preview or later.
+
 ## RELATED LINKS
+
+[New-CsTeamsEmergencyCallingPolicy](New-CsTeamsEmergencyCallingPolicy.md)
+
+[Get-CsTeamsEmergencyCallingPolicy](Get-CsTeamsEmergencyCallingPolicy.md)
+
+[Remove-CsTeamsEmergencyCallingPolicy](Remove-CsTeamsEmergencyCallingPolicy.md)
+
+[Set-CsTeamsEmergencyCallingPolicy](Set-CsTeamsEmergencyCallingPolicy.md)

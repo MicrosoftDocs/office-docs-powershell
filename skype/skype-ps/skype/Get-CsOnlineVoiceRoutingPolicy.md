@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinevoiceroutingpolicy
+applicable: Microsoft Teams
 title: Get-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,12 +19,12 @@ Returns information about the online voice routing policies configured for use i
 
 ### Identity (Default)
 ```
-Get-CsOnlineVoiceRoutingPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlineVoiceRoutingPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsOnlineVoiceRoutingPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsOnlineVoiceRoutingPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -102,50 +102,12 @@ You cannot use wildcard characters when specifying the Identity.
 If neither the Identity nor the Filter parameters are specified, then `Get-CsOnlineVoiceRoutingPolicy` returns all the voice routing policies configured for use in the tenant.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policies are being queried. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -159,7 +121,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
@@ -167,10 +128,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/new-csonlinevoiceroutingpolicy?view=skype-ps)
+[New-CsOnlineVoiceRoutingPolicy](new-csonlinevoiceroutingpolicy.md)
 
-[Set-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/set-csonlinevoiceroutingpolicy?view=skype-ps)
+[Set-CsOnlineVoiceRoutingPolicy](set-csonlinevoiceroutingpolicy.md)
 
-[Grant-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy?view=skype-ps)
+[Grant-CsOnlineVoiceRoutingPolicy](grant-csonlinevoiceroutingpolicy.md)
 
-[Remove-CsOnlineVoiceRoutingPolicy](https://docs.microsoft.com/powershell/module/skype/remove-csonlinevoiceroutingpolicy?view=skype-ps)
+[Remove-CsOnlineVoiceRoutingPolicy](remove-csonlinevoiceroutingpolicy.md)

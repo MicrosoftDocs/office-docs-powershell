@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstenantdialplan
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantdialplan
 applicable: Skype for Business Online
 title: Get-CsTenantDialPlan
 schema: 2.0.0
@@ -42,7 +42,7 @@ You can use the Get-CsTenantDialPlan cmdlet to retrieve specific information abo
 Get-CsTenantDialPlan
 ```
 
-This example retrieves a tenant dial plan.
+This example retrieves all existing tenant dial plans.
 
 
 
@@ -51,7 +51,7 @@ This example retrieves a tenant dial plan.
 Get-CsTenantDialPlan -Identity Vt1TenantDialPlan2
 ```
 
-This example retrieves the tenant dial plan that is within the scope of Vt1TenantDialplan2.
+This example retrieves the tenant dial plan that has an identity of Vt1TenantDialplan2.
 
 
 ## PARAMETERS
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is a unique identifier that designates the scope, and for per-user scope a name, which identifies the tenant dial plan to retrieve.
+The Identity parameter is a unique identifier that designates the name of the tenant dial plan to retrieve.
 
 ```yaml
 Type: XdsIdentity
@@ -132,4 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

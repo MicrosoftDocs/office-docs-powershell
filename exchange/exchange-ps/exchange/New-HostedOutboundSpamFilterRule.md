@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-hostedoutboundspamfilterrule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-hostedoutboundspamfilterrule
 applicable: Exchange Online, Exchange Online Protection
 title: New-HostedOutboundSpamFilterRule
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-HostedOutboundSpamFilterRule cmdlet to create outbound spam filter rules in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,7 +37,7 @@ New-HostedOutboundSpamFilterRule [-Name] <String> -HostedOutboundSpamFilterPolic
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -55,7 +53,7 @@ This example creates a new outbound spam filter rule named Contoso Executives th
 ### -Name
 The Name parameter specifies a unique name for the outbound spam filter rule. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
-The value itself can't contain the following characters: \\, %, &, \*, +, /, =, ?, {, }, \|, \<, \>, (, ), ;, :, [, ], comma (,), or double quotation mark (").
+Don't use the following characters: `\ % & * + / = ? { } | < > ( ) ; : [ ] , "`.
 
 ```yaml
 Type: String
@@ -160,7 +158,7 @@ The ExceptIfFrom parameter specifies an exception that looks for messages from s
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -185,7 +183,7 @@ The ExceptIfFromMemberOf parameter specifies an exception that looks for message
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -226,7 +224,7 @@ The From parameter specifies a condition that looks for messages from specific s
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -251,7 +249,7 @@ The FromMemberOf parameter specifies a condition that looks for messages sent by
 - Email address
 - GUID
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -327,11 +325,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-autosensitivitylabelpolicy
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-autosensitivitylabelpolicy
+applicable: Security & Compliance
 title: Get-AutoSensitivityLabelPolicy
 schema: 2.0.0
 author: chrisda
@@ -12,23 +12,25 @@ ms.reviewer:
 # Get-AutoSensitivityLabelPolicy
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-AutoSensitivityLabelPolicy cmdlet to view auto-labeling policies in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-AutoSensitivityLabelPolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
+ [-ForceValidate <Boolean>]
+ [-IncludeProgressFeedback]
  [-IncludeTestModeResults <Boolean>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance Center before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -52,7 +54,7 @@ The Identity parameter specifies the auto-labeling policy that you want to view.
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 0
@@ -64,11 +66,47 @@ Accept wildcard characters: False
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
 
+**Note**: You can ignore any errors about distribution in policy.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceValidate
+{{ Fill ForceValidate Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeProgressFeedback
+IncludeProgressFeedback specifies whether to include the labeling progress of files in SharePoint Online or OneDrive for Business. You don't need to specify a value with this switch.
+
+If you use this switch, the command shows the progress of files to be labeled, files labeled in the last 7 days, and total files labeled for enabled auto-labeling policies.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -87,7 +125,7 @@ The IncludeTestModeResults parameter specifies whether to include the status of 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -101,11 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

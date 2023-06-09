@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csrgsholidayset
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csrgsholidayset
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsRgsHolidaySet
 schema: 2.0.0
@@ -194,4 +194,3 @@ Microsoft.Rtc.Rgs.Management.WritableSettings.HolidaySet object.
 [New-CsRgsHolidaySet](New-CsRgsHolidaySet.md)
 
 [Set-CsRgsHolidaySet](Set-CsRgsHolidaySet.md)
-

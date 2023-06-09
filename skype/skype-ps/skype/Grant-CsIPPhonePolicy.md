@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csipphonepolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 schema: 2.0.0
 manager: bulenteg
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 Use the Grant-CsIPPhonePolicy cmdlet to assign an Internet Protocol (IP) phone policy to a user or a group of users.
-IP phone policies determine the features of Skype for Business Online and Skype for Business Server 2019 that are available to users.
+IP phone policies determine the features of Microsoft Teams, Skype for Business Online, or Skype for Business Server 2019 that are available to users.
 For example, you might enable the Better Together Over Ethernet feature for some users while disabling it for others.
 
 ## SYNTAX
@@ -32,7 +32,7 @@ Grant-CsIPPhonePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController
 ```
 
 ## DESCRIPTION
-Skype for Business Online uses IP phone policies to determine the features and capabilities that are available to users.
+Microsoft Teams or Skype for Business Online uses IP phone policies to determine the features and capabilities that are available to users.
 IP phone policies are applied each time a user accesses the system, regardless of where the user logs on from.
 
 ## EXAMPLES
@@ -68,7 +68,7 @@ For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 2
@@ -84,7 +84,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: 1
@@ -140,7 +140,7 @@ By default, the Grant-CsIPPhonePolicy cmdlet does not pass objects through the p
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online, Skype for Business Server 2019
+Applicable: Microsoft Teams, Skype for Business Online, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -203,5 +203,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Get-CsIPPhonePolicy](Get-CsIPPhonePolicy.md)
 
 [Set-CsIPPhonePolicy](Set-CsIPPhonePolicy.md)
-
-

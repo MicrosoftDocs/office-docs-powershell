@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csplatformservicesettings
+online version: https://learn.microsoft.com/powershell/module/skype/get-csplatformservicesettings
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsPlatformServiceSettings
 schema: 2.0.0
@@ -110,8 +110,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
+[New-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skype/new-csplatformservicesettings?view=skype-ps)
 
-[Set-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
+[Set-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skype/set-csplatformservicesettings?view=skype-ps)
 
-[Remove-CsPlatformServiceSettings](https://docs.microsoft.com/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)
+[Remove-CsPlatformServiceSettings](https://learn.microsoft.com/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps)

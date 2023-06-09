@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/enable-pushnotificationproxy
+online version: https://learn.microsoft.com/powershell/module/exchange/enable-pushnotificationproxy
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Enable-PushNotificationProxy
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Enable-PushNotificationProxy cmdlet to enable a push notification proxy 
 
 In order for event notifications to be successfully delivered, you also need to configure OAuth authentication between your on-premises Exchange organization and your Microsoft 365 organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Enable-PushNotificationProxy [-Confirm]
 ## DESCRIPTION
 The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Microsoft 365 to Outlook on the web for devices on the user's device.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -125,12 +125,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

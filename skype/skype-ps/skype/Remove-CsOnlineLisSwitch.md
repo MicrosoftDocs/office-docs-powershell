@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlinelisswitch
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinelisswitch
+applicable: Microsoft Teams
 title: Remove-CsOnlineLisSwitch
 schema: 2.0.0
-author: junya
-ms.author: junya
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -17,8 +17,8 @@ Removes a Location Information Server (LIS) network switch.
 ## SYNTAX
 
 ```
-Remove-CsOnlineLisSwitch [[-TenantId] <Guid>] [-ChassisID] <String> [-IsDebug <Boolean>]
- [-TargetStore <String>] [-NCSApiUrl <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsOnlineLisSwitch [-ChassisID] <string> [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] 
+ [-TargetStore <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,13 +26,12 @@ Enhanced 9-1-1 (E9-1-1) allows an emergency operator to identify the location of
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Remove-CsOnlineLisSwitch -ChassisID 0B-23-CD-16-AA-CC
 ```
 
-Example 1 removes the Location Information Server (LIS) switch with Chassis ID "0B-23-CD-16-AA-CC".
-
+Example 1 removes the switch with Chassis ID "0B-23-CD-16-AA-CC".
 
 ## PARAMETERS
 
@@ -43,28 +42,12 @@ The Media Access Control (MAC) address of the port's switch. This value will be 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -77,7 +60,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -93,7 +76,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -109,7 +92,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -125,7 +108,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -134,17 +117,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TenantId
-This parameter is reserved for internal Microsoft use.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Skype for Business Online
+Aliases: cf
+Applicable: Microsoft Teams
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -158,7 +141,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -170,24 +153,20 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-
 ## INPUTS
-
-
-### System.Guid
-
 
 ### System.String
 
+### System.String
 
 ## OUTPUTS
 
-
 ### System.Object
-
 
 ## NOTES
 
-
 ## RELATED LINKS
 
+[Set-CsOnlineLisSwitch](Set-CsOnlineLisSwitch.md)
+
+[Get-CsOnlineLisSwitch](Get-CsOnlineLisSwitch.md)

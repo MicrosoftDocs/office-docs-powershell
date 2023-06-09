@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/New-OMEConfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/new-omeconfiguration
 applicable: Exchange Online
 title: New-OMEConfiguration
 schema: 2.0.0
@@ -14,17 +14,16 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-OMEConfiguration cmdlet to create a Microsoft 365 Message Encryption (OME) configuration.
+Use the New-OMEConfiguration cmdlet to create a Microsoft Purview Message Encryption configuration.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-BackgroundColor <String>]
+ [-Confirm]
  [-DisclaimerText <String>]
  [-EmailText <String>]
  [-ExternalMailExpiryInDays <Int32>]
@@ -32,19 +31,21 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
  [-IntroductionText <String>]
  [-OTPEnabled <Boolean>]
  [-PortalText <String>]
+ [-PrivacyStatementUrl <String>]
  [-ReadButtonText <String>]
  [-SocialIdSignIn <Boolean>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-OMEConfiguration -Identity "Contoso Marketing" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
+New-OMEConfiguration -Identity "Contoso Marketing" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image ([System.IO.File]::ReadAllBytes('C:\Temp\OME Logo.gif'))
 ```
 
 This example creates a new OME configuration named "Contoso Marketing" with the specified values specified. Unused parameters get the default values.
@@ -70,16 +71,32 @@ Accept wildcard characters: False
 ### -BackgroundColor
 The BackgroundColor parameter specifies the background color. Valid values are:
 
-- An available HTML hexadecimal \(hex triplet\) color code value \(for example, 0x000000 is white\).
-- An available text value \(for example, yellow is 0x00FFFF00\).
-- $null \(blank\). This is the default value.
+- An available HTML hexadecimal (hex triplet) color code value (for example, `0x000000` is white).
+- An available text value (for example, `yellow` is 0x00FFFF00).
+- $null (blank). This is the default value.
 
-For more information, see [Add your organization's brand to your encrypted messages](https://docs.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
+For more information, see [Add your organization's brand to your encrypted messages](https://learn.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: Exchange Online
 
 Required: False
@@ -144,7 +161,7 @@ Accept wildcard characters: False
 ### -Image
 The Image parameter identifies and uploads an image that will be displayed in the email message and in the Microsoft 365 admin center.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 - Supported file formats: .png, .jpg, .bmp, or .tiff
 - Optimal size of logo file: less than 40 KB
@@ -214,6 +231,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PrivacyStatementUrl
+{{ Fill PrivacyStatementUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReadButtonText
 The ReadButtonText parameter specifies the text that appears on the "Read Message" button. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -249,16 +282,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

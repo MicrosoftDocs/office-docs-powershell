@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser
+online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUser
 schema: 2.0.0
@@ -30,30 +30,32 @@ If there are no users in the organization that have been enabled for audio confe
 
 The see a list of users with conferencing providers other than Microsoft use the Get-CsUserAcp cmdlet.
 
+**NOTE**: In the Teams PowerShell Module version 3.0 or later, the following input parameters have been deprecated for TeamsOnly customers (removed or very low usage):
+
+- BridgeId
+- BridgeName
+- DomainController
+- Force
+- LdapFilter
+- ServiceNumber
+- TenantDomain
+- Common Parameters
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```powershell
-Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
+```
+PS C:\> Get-CsOnlineDialInConferencingUser -Identity Ken.Myer@contoso.com
 ```
 
-This example uses the LdapFilter parameter to limit the returned data to users who work in the Finance department.
-
-### -------------------------- Example 2 --------------------------
-```powershell
-Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
-```
-
-This example returns users who have been enabled for audio conferencing provided by Microsoft, and are assigned to the specified service number.
-
-By default, the Get-CsOnlineDialInConferencingUser cmdlet returns a large number of properties.
-Therefore, in this example the retrieved data is piped to the Format-Table cmdlet.
-The Format-Table cmdlet then uses the Property parameter to select the properties DisplayName and SipAddress.
-
+This example uses the User Principal Name (UPN) to retrieve the BridgeID and ServiceNumber information.
 
 ## PARAMETERS
 
 ### -BridgeId
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
 
 ```yaml
@@ -70,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -BridgeName
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 Specifies the name for the audio conferencing bridge.
 
 ```yaml
@@ -104,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceNumber
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 Specifies a service number to serve as a filter for the returned user collection.
 Only users who have been assigned the specified number will be returned.
 The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
@@ -122,6 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -138,6 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
 If the Force switch isn't provided in the command, you're prompted for administrative input if required.
@@ -156,6 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
 The LdapFilter parameter uses the LDAP query language when creating filters.
@@ -196,6 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 NOTE: This parameter is reserved for internal Microsoft use.
 
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
@@ -218,6 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
+
+*This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -234,6 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 
@@ -244,8 +268,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
+[Enable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Disable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
+[Disable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)

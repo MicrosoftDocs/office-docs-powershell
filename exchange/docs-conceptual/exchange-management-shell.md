@@ -5,11 +5,12 @@ author: chrisda
 manager: dansimp
 ms.date:
 ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 925ad66f-2f05-4269-9923-c353d9c19312
-description: "Learn about Exchange Server PowerShell, also known as the Exchange Management Shell. This topic describes how PowerShell works on Exchange servers, and provides links to other topics that can help you learn how to use the Exchange Management Shell."
+description: "Learn about Exchange Server PowerShell, also known as the Exchange Management Shell. This article describes how PowerShell works on Exchange servers, and provides links to other articles that can help you learn how to use the Exchange Management Shell."
 ---
 
 # Exchange Server PowerShell (Exchange Management Shell)
@@ -18,7 +19,13 @@ The Exchange Management Shell is built on Windows PowerShell technology and prov
 
 The Exchange Management Shell also provides a robust and flexible scripting platform. Visual Basic scripts that required many lines of code can be replaced by Exchange Management Shell commands that use as little as one line of code. The Exchange Management Shell provides this flexibility because it uses an object model that's based on the Microsoft .NET Framework. This object model enables Exchange cmdlets to apply the output from one command to subsequent commands.
 
-To start using the Exchange Management Shell immediately, see the [Exchange Management Shell documentation](#exchange-management-shell-documentation) section later in this topic.
+To start using the Exchange Management Shell immediately, see the [Exchange Management Shell documentation](#exchange-management-shell-documentation) section later in this article.
+
+> [!NOTE]
+> There is no Microsoft-provided module in the PowerShell Gallery for Exchange Server PowerShell. Instead, to use PowerShell in Exchange Server, you have the following options:
+>
+> - Use the Exchange Management Shell on an Exchange server or that you've installed locally on your own computer using a **Management tools** only installation of Exchange server. For more information, see [Install the Exchange Server Management Tools](/Exchange/plan-and-deploy/post-installation-tasks/install-management-tools) and [Open the Exchange Management Shell](open-the-exchange-management-shell.md).
+> - Use remote PowerShell from a Windows PowerShell session. For more information, see [Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md).
 
 ## How the Exchange Management Shell works on all Exchange server roles except Edge Transport
 
@@ -32,7 +39,7 @@ When you click the Exchange Management Shell shortcut on an Exchange server, the
 
 3. Create a remote PowerShell session for you to use.
 
-You only get access to the Exchange cmdlets and parameters that are associated with the Exchange management role groups and management roles you're assigned. For more information about how Exchange uses role groups and roles to manage who can do what tasks, see [Exchange Server permissions](https://docs.microsoft.com/Exchange/permissions/permissions).
+You only get access to the Exchange cmdlets and parameters that are associated with the Exchange management role groups and management roles you're assigned. For more information about how Exchange uses role groups and roles to manage who can do what tasks, see [Exchange Server permissions](/Exchange/permissions/permissions).
 
 A benefit of remote PowerShell is that you can use Windows PowerShell on a local computer to connect to a remote Exchange server, and import the Exchange cmdlets in the Windows PowerShell session so you can administer Exchange. The only requirements for the computer are:
 
@@ -40,12 +47,12 @@ A benefit of remote PowerShell is that you can use Windows PowerShell on a local
 - A supported version of the .NET Framework.
 - A supported version of the Windows Management Framework (WMF), which includes WinRM and Windows PowerShell.
 
-For details, see the following topics:
+For details, see the following articles:
 
-- [Exchange 2019 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2019&preserve-view=true)
-- [Exchange 2016 system requirements](https://docs.microsoft.com/Exchange/plan-and-deploy/system-requirements?view=exchserver-2016&preserve-view=true)
-- [Exchange 2013 system requirements](https://docs.microsoft.com/exchange/exchange-2013-system-requirements-exchange-2013-help)
-- [Exchange 2010 system requirements](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141))
+- [Exchange 2019 system requirements](/Exchange/plan-and-deploy/system-requirements?view=exchserver-2019&preserve-view=true)
+- [Exchange 2016 system requirements](/Exchange/plan-and-deploy/system-requirements?view=exchserver-2016&preserve-view=true)
+- [Exchange 2013 system requirements](/exchange/exchange-2013-system-requirements-exchange-2013-help)
+- [Exchange 2010 system requirements](/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141))
 
 However, we recommend that you install the Exchange management tools (which includes the Exchange Management Shell) on any computer that you use to extensively manage Exchange Server. Without the Exchange management tools installed, you need to connect to the remote Exchange server manually, and you don't have access to the additional capabilities that the Exchange management tools provide.
 
@@ -59,15 +66,13 @@ When you click the Exchange Management Shell shortcut on an Exchange Edge Transp
 
 Edge Transport servers don't use management roles or management role groups to control permissions. The local Administrators group controls who can configure the Exchange features on the local server.
 
-For more information about Edge Transport servers, see [Edge Transport Servers](https://docs.microsoft.com/Exchange/architecture/edge-transport-servers/edge-transport-servers).
+For more information about Edge Transport servers, see [Edge Transport Servers](/Exchange/architecture/edge-transport-servers/edge-transport-servers).
 
 ## Exchange Management Shell documentation
 
-The following table provides links to topics that can help you learn about and use the Exchange Management Shell.
+The following table provides links to articles that can help you learn about and use the Exchange Management Shell.
 
-****
-
-|Topic|Description|
+|Article|Description|
 |---|---|
 |[Open the Exchange Management Shell](open-the-exchange-management-shell.md)|Find and open the Exchange Management Shell on an Exchange server or a computer that has the Exchange management tools installed.|
 |[Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md)|Use Windows PowerShell on a local computer to connect to an Exchange server.|
@@ -75,5 +80,4 @@ The following table provides links to topics that can help you learn about and u
 |[Find the permissions required to run any Exchange cmdlet](find-exchange-cmdlet-permissions.md)|Find the permissions you need to run a specific cmdlet, or one or more parameters on the cmdlet.|
 |[Exchange cmdlet syntax](exchange-cmdlet-syntax.md)|Learn about the structure and syntax of cmdlets in Exchange PowerShell.|
 |[Recipient filters in Exchange Management Shell commands](recipient-filters.md)|Learn about recipient filters in the Exchange Management Shell.|
-|[Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers](use-update-exchangehelp.md)|Learn how to use Update-ExchangeHelp to update help for Exchange cmdlet reference topics on Exchange servers.|
-|
+|[Use Update-ExchangeHelp to update Exchange PowerShell help articles on Exchange servers](use-update-exchangehelp.md)|Learn how to use Update-ExchangeHelp to update help for Exchange cmdlet reference articles on Exchange servers.|

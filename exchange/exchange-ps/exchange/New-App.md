@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-app
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/new-app
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-App
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-App cmdlet to install apps for Outlook.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -100,15 +100,15 @@ New-App [-Url <Uri>]
 ## DESCRIPTION
 If the app is enabled for the entire organization, users can activate the new app when viewing mail or calendar items within Microsoft Outlook or Outlook on the web. If an installed app isn't enabled, users can enable the app from Outlook on the web Options. Similarly, administrators can enable installed apps from the Exchange admin center or by using the Enable-App or Set-App cmdlet.
 
-For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://docs.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of add-ins in the Microsoft 365 admin center](https://docs.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
+For more information, see [Manage user access to add-ins for Outlook in Exchange Server](https://learn.microsoft.com/Exchange/manage-user-access-to-add-ins-exchange-2013-help) and [Manage deployment of add-ins in the Microsoft 365 admin center](https://learn.microsoft.com/office365/admin/manage/manage-deployment-of-add-ins).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-App -FileData ([Byte[]](Get-Content -Encoding Byte -Path "C:\Apps\FinanceTestApp.xml" -ReadCount 0))
+New-App -FileData ([System.IO.File]::ReadAllBytes('C:\Apps\FinanceTestApp.xml'))
 ```
 
 This example installs the Finance Test app manifest file that has been copied to the local hard disk.
@@ -148,7 +148,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ When you use this switch, the cmdlet only downloads the app manifest file and di
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ### -FileData
 The FileData parameter specifies the location of the app manifest file. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
 
-A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, \(\[Byte\[\]\]\(Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0\)\).
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -320,7 +320,7 @@ The MarketplaceAssetID parameter specifies the Office Store identifier for the a
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -336,7 +336,7 @@ The MarketplaceCorrelationID parameter specifies the Office Store correlation id
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -352,7 +352,7 @@ The MarketplaceQueryMarket parameter specifies the locale that an app is filed u
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -368,7 +368,7 @@ The MarketplaceServicesUrl parameter specifies the full services URL for the app
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -384,7 +384,7 @@ The MarketplaceUserProfileType parameter specifies the user profile type for the
 Type: String
 Parameter Sets: ExtensionOfficeMarketplace
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -449,11 +449,13 @@ Accept wildcard characters: False
 ### -Url
 The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
+**Note**: URLs with redirections are not supported in Exchange Server 2016, Exchange Server 2019, and Exchange Online. Use a direct URL to the manifest.
+
 ```yaml
 Type: Uri
 Parameter Sets: ExtensionPrivateURL
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -463,7 +465,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-The UserList parameter specifies who can use an organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
+The UserList parameter specifies who can use an organizational app. This parameter is limited to 1000 users. In the cloud-based service, this value is less relevant as Office Add-in management is moving to [Centralized Deployment](https://learn.microsoft.com/office/dev/add-ins/publish/centralized-deployment).
+
+Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user. For example:
 
 - Name
 - Alias
@@ -476,7 +480,7 @@ The UserList parameter specifies who can use an organizational app. Valid values
 - SamAccountName
 - User ID or user principal name (UPN)
 
-To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
+You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 You use this parameter with the OrganizationApp switch.
 
@@ -500,7 +504,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -514,12 +518,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

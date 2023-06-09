@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstenantnetworksite
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantnetworksite
 applicable: Skype for Business Online
 title: New-CsTenantNetworkSite
 schema: 2.0.0
@@ -20,7 +20,7 @@ As an Admin, you can use the Windows PowerShell command, New-CsTenantNetworkSite
 ### Identity (Default)
 ```
 New-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>]
+ [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-NetworkRoamingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>]
  [-SiteAddress <String>] [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -29,14 +29,14 @@ New-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-Networ
 ```
 New-CsTenantNetworkSite [-Tenant <System.Guid>] -NetworkSiteID <String> [-Description <String>]
  [-NetworkRegionID <String>] [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>]
- [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>] [-SiteAddress <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
+ [-EmergencyCallRoutingPolicy <String>] [-NetworkRoamingPolicy <String>] [-EmergencyCallingPolicy <String>] [-OnlineVoiceRoutingPolicy <String>] [-SiteAddress <String>] [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus. Network sites are defined as a collection of IP subnets. Each network site must be associated with a network region.
 
-A best practice for Location Based Routing (LBR) is to create a separate site for each location which has unique PSTN connectivity. Sites may be created as LBR or non-LBR enabled. A non-LBR enabled site may be created to allow LBR enabled users to make PSTN calls when they roam to that site. Note that network sites may also be used for emergency calling enablement and configuration.
+A best practice for Location Based Routing (LBR) is to create a separate site for each location which has unique PSTN connectivity. Sites may be created as LBR or non-LBR enabled. A non-LBR enabled site may be created to allow LBR enabled users to make PSTN calls when they roam to that site. Note that network sites may also be used for emergency calling enablement and configuration. In addition, network sites can also be used for configuring Network Roaming Policy capabilities.
 
 ## EXAMPLES
 
@@ -58,6 +58,12 @@ PS C:\> New-CsTenantNetworkSite -NetworkSiteID "site2" -Description "site 2" -Ne
 
 The command shown in Example 2 created the network site 'site2' with description 'site 2'. This site is enabled for LBR, and associates with network region 'RedmondRegion', with location policy 'TestLocationPolicy', and with OnlineVoiceRoutingPolicy "OVRP1"
 
+###-------------------------- Example 3 --------------------------
+```powershell
+PS C:\> New-CsTenantNetworkSite -NetworkSiteID "site3" -Description "site 3" -NetworkRegionID "RedmondRegion" -NetworkRoamingPolicy "TestNetworkRoamingPolicy"
+```
+
+The command shown in Example 3 created the network site 'site3' with description 'site 3'. This site is enabled for network roaming capabilities. The example associates the site with network region 'RedmondRegion' and network roaming policy 'TestNetworkRoamingPolicy'.
 ## PARAMETERS
 
 ### -Confirm
@@ -106,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyCallRoutingPolicy
-This parameter is used to assign a custom emergency call routing policy to a network site. For more information see [Assign a custom emergency call routing policy to a network site](https://docs.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
+This parameter is used to assign a custom emergency call routing policy to a network site. For more information see [Assign a custom emergency call routing policy to a network site](https://learn.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
 
 ```yaml
 Type: String
@@ -121,7 +127,22 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyCallingPolicy
-This parameter is used to assign a custom emergency calling policy to a network site. For more information see [Assign a custom emergency calling policy to a network site](https://docs.microsoft.com/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
+This parameter is used to assign a custom emergency calling policy to a network site. For more information see [Assign a custom emergency calling policy to a network site](https://learn.microsoft.com/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkRoamingPolicy
+NetworkRoamingPolicy is the identifier for the network roaming policy to which the network site will associate to.
 
 ```yaml
 Type: String

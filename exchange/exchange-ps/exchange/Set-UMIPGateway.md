@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-umipgateway
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-umipgateway
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Set-UMIPGateway
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-UMIPGateway
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 Use the Set-UMIPGateway cmdlet to modify the configuration settings for a single Unified Messaging (UM) IP gateway or to return a list of configuration settings that can be modified on a specified UM IP gateway.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -45,7 +45,7 @@ It's possible that modifications to the UM IP gateway settings may disrupt commu
 
 After this task is completed, the parameters and values specified are configured on the UM IP gateway.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -86,7 +86,7 @@ The Identity parameter specifies the identifier for the UM IP gateway being modi
 Type: UMIPGatewayIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
@@ -102,7 +102,7 @@ The Address parameter specifies the IP address or the fully qualified domain nam
 Type: UMSmartHost
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ The DelayedSourcePartyInfoEnabled parameter specifies whether Unified Messaging 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -147,15 +147,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -165,15 +163,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-This parameter is available only in on-premises Exchange.
-
-The ForceUpgrade switch specifies whether you're prompted for confirmation before a UM IP gateway object is upgraded.
+The ForceUpgrade switch suppresses the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -193,7 +189,7 @@ The IPAddressFamily parameter specifies whether the UM IP gateway will use Inter
 Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -209,7 +205,7 @@ The MessageWaitingIndicatorAllowed parameter specifies whether to enable the UM 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -225,7 +221,7 @@ The Name parameter specifies the display name for the UM IP gateway. This displa
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -241,7 +237,7 @@ The OutcallsAllowed parameter specifies whether to allow this UM IP gateway to b
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -257,7 +253,7 @@ The Port parameter specifies the IP port on which the IP gateway or IP PBX is li
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -273,7 +269,7 @@ The Simulator parameter specifies the simulator used for the UM IP gateway being
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -293,7 +289,7 @@ The Status parameter specifies whether to enable or disable the UM IP gateway. V
 Type: GatewayStatus
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -309,7 +305,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -323,12 +319,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

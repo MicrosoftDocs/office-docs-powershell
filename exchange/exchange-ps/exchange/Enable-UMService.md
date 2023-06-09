@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/enable-umservice
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+online version: https://learn.microsoft.com/powershell/module/exchange/enable-umservice
+applicable: Exchange Server 2013, Exchange Server 2016
 title: Enable-UMService
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,9 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-UMService cmdlet to set the status of an Exchange Server 2010 Unified Messaging (UM) server to enabled. This setting enables the Unified Messaging server to process UM calls.
 
-You can run this cmdlet in Exchange 2013 or later, but the target server must be an Exchange 2010 UM server. You can't use this cmdlet to enable the UM service on Exchange 2013 or Exchange 2016 Mailbox servers.
+You can run this cmdlet in Exchange 2013 or Exchange 2016, but the target server must be an Exchange 2010 UM server. You can't use this cmdlet to enable the UM service on Exchange 2013 or Exchange 2016 Mailbox servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ The Enable-UMService cmdlet sets the status of an Exchange server running the Un
 
 After this task is completed, the UM server is available to answer incoming calls.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ The Identity parameter specifies the Exchange 2010 UM server that you want to en
 Type: UMServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
@@ -79,7 +79,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -125,12 +125,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

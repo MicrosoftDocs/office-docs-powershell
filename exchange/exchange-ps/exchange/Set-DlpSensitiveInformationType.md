@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-dlpsensitiveinformationtype
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/set-dlpsensitiveinformationtype
+applicable: Security & Compliance
 title: Set-DlpSensitiveInformationType
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-DlpSensitiveInformationType cmdlet to modify sensitive information type rules that use document fingerprints.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -24,11 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter>
  [-Confirm]
  [-Description <String>]
- [-DomainController <Fqdn>]
+ [-FileData <Byte[]>]
  [-Fingerprints <MultiValuedProperty>]
- [-IsDefault]
+ [-IsExact <Boolean>]
  [-Locale <CultureInfo>]
  [-Name <String>]
+ [-Threshold <UInt32>]
+ [-ThresholdConfig <PswsHashtable>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -36,7 +38,7 @@ Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter
 ## DESCRIPTION
 Sensitive information type rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -56,14 +58,23 @@ This example removes the existing Spanish translation from the sensitive informa
 
 ### Example 3
 ```powershell
-$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte -ReadCount 0; $Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"; $Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"; $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints); $Array.Add($Benefits_FingerPrint[0]); Set-DlpSensitiveInformationType $Contoso_Confidential.Identity -FingerPrints $Array
+$Benefits_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Benefits Template.docx')
+$Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
+$Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"
+$Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)
+$Array.Add($Benefits_FingerPrint[0])
+Set-DlpSensitiveInformationType $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
 This example modifies the existing sensitive information type rule named "Contoso Confidential" by adding a new document fingerprint for the file C:\\My Documents\\Contoso Benefits Template.docx without affecting any existing document fingerprints that are already defined.
 
 ### Example 4
 ```powershell
-$cc = Get-DlpSensitiveInformationType "Contoso Confidential"; $a = [System.Collections.ArrayList]($cc.Fingerprints); $a; $a.RemoveAt(0); Set-DlpSensitiveInformationType $cc.Identity -FingerPrints $a
+$cc = Get-DlpSensitiveInformationType "Contoso Confidential"
+$a = [System.Collections.ArrayList]($cc.Fingerprints)
+$a
+$a.RemoveAt(0)
+Set-DlpSensitiveInformationType $cc.Identity -FingerPrints $a
 ```
 
 This example modifies the sensitive information type rule named "Contoso Confidential" by removing an existing document fingerprint without affecting other document fingerprints that are already defined.
@@ -83,7 +94,7 @@ The Identity parameter specifies the sensitive information type rule that you wa
 Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: 1
@@ -102,7 +113,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -118,7 +129,23 @@ The Description parameter specifies a description for the sensitive information 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileData
+{{ Fill FileData Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -128,13 +155,13 @@ Accept wildcard characters: False
 ```
 
 ### -Fingerprints
-The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see [New-DlpFingerprint](https://docs.microsoft.com/powershell/module/exchange/new-dlpfingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
+The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see [New-DlpFingerprint](https://learn.microsoft.com/powershell/module/exchange/new-dlpfingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -143,16 +170,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IsDefault
-The IsDefault switch is used with the Locale parameter to specify the default language for the sensitive information type rule. The default Locale value is stored in the DefaultCulture property.
-
-When you change the default Locale value, the Name value of the sensitive information type rule changes to match the Name value that's associated with the new default locale. The original Name value when the rule was created is permanently stored the LocalizedName property.
+### -IsExact
+{{ Fill IsExact Description }}
 
 ```yaml
-Type: SwitchParameter
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -164,7 +189,7 @@ Accept wildcard characters: False
 ### -Locale
 The Locale parameter adds or removes languages that are associated with the sensitive information type rule.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 Typically, you use the Locale parameter with the Name and Description parameters to add or remove translated names and descriptions for the sensitive information type rule. You can also use the Locale parameter with the IsDefault switch to designate an existing translated name and description as the default. Before you can remove the default translation, you need to set another translation as the default.
 
@@ -172,7 +197,7 @@ Typically, you use the Locale parameter with the Name and Description parameters
 Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -192,7 +217,39 @@ The value of the Name parameter is used in the Policy Tip that's presented to us
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Threshold
+{{ Fill Threshold Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThresholdConfig
+{{ Fill ThresholdConfig Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -202,13 +259,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -222,11 +279,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

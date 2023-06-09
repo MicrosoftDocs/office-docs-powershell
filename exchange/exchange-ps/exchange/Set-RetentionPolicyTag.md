@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-retentionpolicytag
+online version: https://learn.microsoft.com/powershell/module/exchange/set-retentionpolicytag
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-RetentionPolicyTag
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-RetentionPolicyTag cmdlet to modify the properties of a retention tag.
 
-For more information about retention tags, see [Retention tags and retention policies in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies).
+For more information about retention tags, see [Retention tags and retention policies in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/mrm/retention-tags-and-retention-policies).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -70,7 +70,7 @@ Set-RetentionPolicyTag -Mailbox <MailboxIdParameter>
 ## DESCRIPTION
 Retention tags are used to apply message retention settings to folders and items in a mailbox.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -136,12 +136,12 @@ Accept wildcard characters: False
 ```
 
 ### -AddressForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: RecipientIdParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
@@ -223,7 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch overrides the confirmation prompt displayed by the cmdlet when you use the RetentionId parameter.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you use the RetentionId parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -239,12 +241,12 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: Object
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
@@ -257,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -345,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageFormatForJournaling
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -440,7 +442,7 @@ The RetentionEnabled parameter specifies whether the tag is enabled. When set to
 
 Messages with a disabled tag are still considered tagged, so any default policy tags in the user's retention policy aren't applied to such messages.
 
-When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as DISABLED\_\<Original Name\>.
+When you set the RetentionEnabled parameter to $false, the retention period for the tag is shown as Never. Users may apply this tag to items that they want to indicate should never be deleted or should never be moved to the archive. Enabling the tag later may result in unintentional deletion or archiving of items. To avoid this situation, if a retention policy is disabled temporarily, it may be advisable to change the name of that tag so that users are discouraged from using it, such as `DISABLED_<Original Name>`.
 
 ```yaml
 Type: Boolean
@@ -458,7 +460,7 @@ Accept wildcard characters: False
 ### -RetentionId
 The RetentionId parameter specifies an alternate tag ID to ensure the retention tag found on mailbox items tagged in one Exchange organization matches the tag when the mailbox is moved to another Exchange organization (for example, in a cross-forest deployment or in a cross-premises deployment, when a mailbox is moved from an on-premises Exchange server to the cloud, or a cloud-based mailbox is moved to an on-premises Exchange server).
 
-It's not ordinarily required to specify or modify the RetentionId parameter for a retention tag. The parameter is populated automatically by \<scriptname\> when importing retention tags in a cross-forest or cross-premises deployment.
+Typically, you don't need to specify or modify the RetentionId parameter for a retention tag. This parameter is populated automatically when importing retention tags in a cross-forest or cross-premises deployment.
 
 ```yaml
 Type: Guid
@@ -510,12 +512,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

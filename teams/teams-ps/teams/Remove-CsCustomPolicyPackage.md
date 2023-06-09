@@ -4,34 +4,35 @@ Module Name: MicrosoftTeams
 title: Remove-CsCustomPolicyPackage
 author: sunguchuan
 ms.author: gucsun
-manager: amitar
-online version: https://docs.microsoft.com/powershell/module/teams/remove-CsCustomPolicyPackage
+manager: dasosby
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cscustompolicypackage
 schema: 2.0.0
 ---
 
 # Remove-CsCustomPolicyPackage
 
 ## SYNOPSIS
-This cmdlet submits an operation that deletes a custom policy package with the given package name.
+
+This cmdlet deletes a custom policy package.
 
 ## SYNTAX
 
 ```
-Remove-CsCustomPolicyPackage -Identity <String>
+Remove-CsCustomPolicyPackage -Identity <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet submits an operation that deletes a custom policy package. It allows the admin user to delete a custom package. The available package names can be found by running Get-CsPolicyPackage.
+This cmdlet deletes a custom policy package. All available package names can be found by running Get-CsPolicyPackage.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CsCustomPolicyPackage -Identity myCustomPackage
+PS C:\> Remove-CsCustomPolicyPackage -Identity "MyPackage"
 ```
 
-Deletes a custom package named "myCustomPackage".
+Deletes a custom package named "MyPackage".
 
 ## PARAMETERS
 
@@ -45,7 +46,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: True
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -59,8 +60,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-The user is not allowed to delete a default package created by Microsoft.
+Default packages created by Microsoft cannot be deleted.
 
 ## RELATED LINKS
 
 [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
+
+[New-CsCustomPolicyPackage](New-CsCustomPolicyPackage.md)
+
+[Update-CsCustomPolicyPackage](Update-CsCustomPolicyPackage.md)

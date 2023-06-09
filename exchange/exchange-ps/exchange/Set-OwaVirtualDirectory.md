@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-owavirtualdirectory
+online version: https://learn.microsoft.com/powershell/module/exchange/set-owavirtualdirectory
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-OwaVirtualDirectory
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-OwaVirtualDirectory cmdlet to modify existing Outlook on the web virtual directories that are used in Internet Information Services (IIS) on Exchange servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -157,11 +157,11 @@ Before you run the Set-OwaVirtualDirectory cmdlet, consider the following items:
 - You must have Write access to virtual directory objects in the metabase for some properties, such as Authentication and GZip. If you don't have the necessary permissions to run the Set-OwaVirtualDirectory cmdlet on a metabase virtual directory object or on a parameter that writes to the metabase, the cmdlet fails.
 - Verify that the data source can be read. Depending on the properties that you want to set on an Outlook on the web virtual directory, you may want to run the cmdlet in a test environment on the Outlook on the web virtual directory object in Active Directory, the metabase, or both.
 - You can run the Set-OwaVirtualDirectory cmdlet on any server that has the Exchange Server administration tools installed.
-- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see [Modifying multivalued properties](https://docs.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
+- Several parameters for the Set-OwaVirtualDirectory cmdlet can contain more than one value. These are known as multivalued properties. Make sure that you modify multivalued properties correctly. For information, see [Modifying multivalued properties](https://learn.microsoft.com/exchange/modifying-multivalued-properties-exchange-2013-help).
 - Many of the Outlook on the web virtual directory settings require you to restart IIS (Stop-Service WAS -Force and Start-Service W3SVC) before the change takes effect. For example, when you enable or disable forms-based authentication, or when you enable or disable the Private computer option on the sign-in page.
 - To switch from forms-based authentication to Basic authentication, you must first disable forms-based authentication, and then as a separate task, enable Basic authentication. You can't disable forms-based authentication and enable Basic authentication in a single task.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -184,11 +184,11 @@ This example sets the ActionForUnknownFileAndMIMETypes parameter to Block on the
 ### -Identity
 The Identity parameter specifies the OWA virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
 
-- Name or \<Server\>\\Name
+- Name or Server\\Name
 - Distinguished name (DN)
 - GUID
 
-The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
+The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -304,9 +304,9 @@ The AllowedFileTypes parameter specifies the attachment file types (file extensi
 
 .avi, .bmp, .doc, .docm, .docx, .gif, .jpg, .mp3, .one, .pdf, .png, .ppsm, .ppsx, .ppt, .pptm, .pptx, .pub, .rpmsg, .rtf, .tif, .tiff, .txt, .vsd, .wav, .wma, .wmv, .xls, .xlsb, .xlsm, .xlsx, .zip
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same file types are specified in multiple lists:
 
@@ -334,9 +334,9 @@ The AllowedMimeTypes parameter specifies the MIME extensions of attachments that
 - image/jpeg
 - image/png
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same MIME types are specified in multiple lists:
 
@@ -423,9 +423,9 @@ The BlockedFileTypes parameter specifies a list of attachment file types (file e
 
 .ade, .adp, .app, .appcontent-ms, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .cnt, .com, .cpl, .crt, .csh, .der, .diagcab, .exe, .fxp, .gadget, .grp, .hlp, .hpj, .hta, .htc, .inf, .ins, .isp, .its, .jar, .jnlp, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mcf, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .mht, .mhtml, .msc, .msh, .msh1, .msh1xml, .msh2, .msh2xml, .mshxml, .msi, .msp, .mst, .msu, .ops, .osd, .pcd, .pif, .pl, .plg, .prf, .prg, .printerexport, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .psd1, .psdm1, .pst, .reg, .scf, .scr, .sct, .settingcontent-ms, .shb, .shs, .theme, .tmp, .url, .vb, .vbe, .vbp, .vbs, .vsmacros, .vsw, .webpnp, .website, .ws, .wsc, .wsf, .wsh, .xbap, .xll, .xnk
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same file types are specified in multiple lists:
 
@@ -457,9 +457,9 @@ The BlockedMimeTypes parameter specifies MIME extensions in attachments that pre
 - text/scriplet
 - x-internet-signup
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same MIME types are specified in multiple lists:
 
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarPublishingEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The CalendarPublishingEnabled parameter specifies whether users can publish their calendar from Outlook Web App. Valid values are:
 
@@ -633,7 +633,7 @@ Accept wildcard characters: False
 ```
 
 ### -CrossSiteRedirectType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The CrossSiteRedirectType parameter controls how a Client Access server redirects Outlook Web App to the Client Access server infrastructure in another Active Directory site. Valid values are:
 
@@ -688,7 +688,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultTheme
-The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are available in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
+The DefaultTheme parameter specifies the default theme that's used in Outlook on the web when the user hasn't selected a theme. The default value is blank ($null). For more information about the built-in themes that are available in Outlook on the web, see [Default Outlook on the web themes in Exchange](https://learn.microsoft.com/Exchange/clients/outlook-on-the-web/themes#default-outlook-on-the-web-themes-in-exchange-2016).
 
 Note that this parameter is a text string, and the value you specify isn't validated against the list of available themes.
 
@@ -706,7 +706,7 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateAccessEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The DelegateAccessEnabled parameter specifies whether delegates can use Outlook Web App to open folders that they have delegate access to. Valid values are:
 
@@ -717,7 +717,7 @@ The DelegateAccessEnabled parameter specifies whether delegates can use Outlook 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -841,7 +841,7 @@ Accept wildcard characters: False
 ```
 
 ### -Exchange2003Url
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The Exchange2003Url parameter specifies the Outlook Web App URL for Exchange Server 2003 mailboxes. The URL must include the Outlook Web App virtual directory name, even if you're using a redirect to simplify the URL specified by the Exchange2003Url parameter.
 
@@ -849,7 +849,7 @@ The Exchange2003Url parameter specifies the Outlook Web App URL for Exchange Ser
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -902,9 +902,9 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 - Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
 - ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -923,11 +923,11 @@ Accept wildcard characters: False
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null (blank): This is the default value.
-- Single SPN or comma delimited list of valid SPNs: The SPN value format is \<protocol\>/\<FQDN\>. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
+- Single SPN or comma delimited list of valid SPNs: The SPN value format is `Protocol\FQDN`. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -949,7 +949,7 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 - Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
 - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
 
-Note: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+**Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
 
 ```yaml
 Type: ExtendedProtectionTokenCheckingMode
@@ -1117,9 +1117,9 @@ The ForceSaveFileTypes parameter specifies the attachment file types (file exten
 
 .ade, .adp, .app, .asp, .aspx, .asx, .bas, .bat, .cer, .chm, .cmd, .com, .cpl, .crt, .csh, .dcr, .dir, .exe, .fxp, .gadget, .hlp, .hta, .htm, .html, .inf, .ins, .isp, .its, .js, .jse, .ksh, .lnk, .mad, .maf, .mag, .mam, .maq, .mar, .mas, .mat, .mau, .mav, .maw, .mda, .mdb, .mde, .mdt, .mdw, .mdz, .msc, .msh, .mshxml, .msi, .msp, .mst, .ops, .pcd, .pif, .plg, .prf, .prg, .ps1, .ps1xml, .ps2, .ps2xml, .psc1, .psc2, .pst, .reg, .scf, .scr, .sct, .shb, .shs, .spl, .swf, .tmp, .url, .vb, .vbe, .vbs, .vsmacro, .vss, .vst, .vsw, .ws, .wsc, .wsf, .wsh
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same file types are specified in multiple lists:
 
@@ -1148,9 +1148,9 @@ The ForceSaveMimeTypes parameter specifies the MIME extensions in attachments th
 - Application/x-shockwave-flash
 - text/html
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 If the same MIME types are specified in multiple lists:
 
@@ -1366,7 +1366,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstantMessagingEnabled
-The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. Valid values are:
+The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
 - $true: Instant messaging is available in Outlook on the web. This is the default value.
 - $false: Instant messaging isn't available in Outlook on the web.
@@ -1567,7 +1567,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyRedirectType
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The LegacyRedirectType parameter specifies the type of redirect that Outlook Web App uses to a legacy Client Access server or Front End server when forms-based authentication isn't used on the Exchange 2010 Outlook Web App virtual directory. Valid values are:
 
@@ -1691,7 +1691,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationInterval
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The NotificationInterval parameter specifies the polling frequency in seconds that the client polls the server for new item notifications, reminder updates, and session time-out information in Outlook Web App.
 
@@ -1764,7 +1764,7 @@ Accept wildcard characters: False
 The OutboundCharset parameter specifies the character set that's used for outgoing messages in Outlook on the web. Valid values are:
 
 - AutoDetect: Examine the first 2 kilobytes (KB) of text in the message to determine the character set that's used in outgoing messages. This is the default value.
-- AlwaysUTF8: Always use UTF-8 encoded UNICODE characters in outgoing messages, regardless of the detected text in the message, or the user's language choice in Outlook on the web. Use this value if replies to UTF-8 encoded messages aren't being encoded in UTF-8.
+- AlwaysUTF8: Always use UTF-8 encoded Unicode characters in outgoing messages, regardless of the detected text in the message, or the user's language choice in Outlook on the web. Use this value if replies to UTF-8 encoded messages aren't being encoded in UTF-8.
 - UserLanguageChoice: Use the user's language choice in Outlook on the web to encode outgoing messages.
 
 ```yaml
@@ -1800,7 +1800,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMiniEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is available only in Exchange Server 2010.
 
 The OWAMiniEnabled parameter controls the availability of the mini version of Outlook Web App. Valid values are:
 
@@ -1840,7 +1840,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFoldersEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The PublicFoldersEnabled parameter specifies whether a user can browse or read items in public folders in Outlook Web App. Valid values are:
 
@@ -1861,7 +1861,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoverDeletedItemsEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outlook Web App to view, recover, or delete permanently items that have been deleted from the Deleted Items folder. Valid values are:
 
@@ -1941,7 +1941,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsActionForUnknownServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -1949,7 +1949,7 @@ This parameter has been deprecated and is no longer used.
 Type: RemoteDocumentsActions
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1959,7 +1959,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsAllowedServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -1977,7 +1977,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsBlockedServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -1985,7 +1985,7 @@ This parameter has been deprecated and is no longer used.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -1995,7 +1995,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDocumentsInternalDomainSuffixList
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 This parameter has been deprecated and is no longer used.
 
@@ -2003,7 +2003,7 @@ This parameter has been deprecated and is no longer used.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2015,8 +2015,8 @@ Accept wildcard characters: False
 ### -ReportJunkEmailEnabled
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
-- $true: This is the default value. Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk folder moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
-- $false: Selecting a message in the Junk Email folder and clicking Not junk \> Not junk moves the message back into the Inbox with no option to report the message to Microsoft. Selecting a message in any other email folder and clicking Junk \> Junk moves the message to the Junk Email folder with no option to report the message to Microsoft. Selecting a message and clicking Not junk \> Phishing (in the Junk Email folder) and Junk \> Phishing (everywhere else) are available to report phishing messages to Microsoft.
+- $true: This is the default value. Selecting a message in the Junk Email folder and clicking **Not junk** \> **Not junk** moves the message back into the Inbox and gives users the option to report the message to Microsoft. Selecting a message in any other email folder and clicking **Junk** \> **Junk folder** moves the message to the Junk Email folder and gives users the option to report the message to Microsoft. Selecting a message and clicking **Not junk** \> **Phishing** (in the Junk Email folder) and **Junk** \> **Phishing** (everywhere else) are available to report phishing messages to Microsoft.
+- $false: Selecting a message in the Junk Email folder and clicking **Not junk** \> **Not junk** moves the message back into the Inbox with no option to report the message to Microsoft. Selecting a message in any other email folder and clicking **Junk** \> **Junk** moves the message to the Junk Email folder with no option to report the message to Microsoft. Selecting a message and clicking **Not junk** \> **Phishing** (in the Junk Email folder) and **Junk** \> **Phishing** (everywhere else) are available to report phishing messages to Microsoft.
 
 This parameter is meaningful only when the JunkEmailEnabled parameter is set to $true.
 
@@ -2072,7 +2072,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchFoldersEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SearchFoldersEnabled parameter specifies whether Search Folders are available in Outlook on the web. Valid values are:
 
@@ -2083,7 +2083,7 @@ The SearchFoldersEnabled parameter specifies whether Search Folders are availabl
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2147,7 +2147,7 @@ Accept wildcard characters: False
 ```
 
 ### -SilverlightEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SilverlightEnabled parameter specifies whether a user can use Microsoft Silverlight features in Outlook Web App. Valid values are:
 
@@ -2158,7 +2158,7 @@ The SilverlightEnabled parameter specifies whether a user can use Microsoft Silv
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2168,20 +2168,20 @@ Accept wildcard characters: False
 ```
 
 ### -SMimeEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SMimeEnabled parameter specifies whether users can download the S/MIME control for Outlook Web App and use it to read and compose signed and encrypted messages. Valid values are:
 
 - $true: Users can read and compose S/MIME signed and encrypted messages in Outlook Web App. This is the default value.
 - $false: Users can't read or compose messages in Outlook Web App that are opaque-signed or encrypted by using S/MIME. Messages that are clear-signed can be read but not composed, and their signatures aren't validated.
 
-**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see [S/MIME for message signing and encryption](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+**Note**: In Exchange 2013 or later, use the Get-SmimeConfig and Set-SmimeConfig cmdlets to configure the S/MIME settings in Outlook on the web. For more information, see [S/MIME for message signing and encryption](https://learn.microsoft.com/Exchange/policy-and-compliance/smime).
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2191,7 +2191,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpellCheckerEnabled
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The SpellCheckerEnabled parameter specifies whether to enable or disable the built-in Outlook Web App spell checker in the full version of Outlook Web App. Valid values are:
 
@@ -2204,7 +2204,7 @@ This parameter doesn't apply to the light version of Outlook Web App.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2570,7 +2570,7 @@ Accept wildcard characters: False
 ### -WebReadyDocumentViewingSupportedMimeTypes
 This parameter is available only in Exchange Server 2010 and Exchange Server 2013.
 
-This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead..
+This is a read-only parameter that can't be modified; use the WebReadyMimeTypes parameter instead.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2603,9 +2603,9 @@ The WebReadyFileTypes parameter specifies the attachment file types (file extens
 
 You can only remove or add values from within the list of supported file types (you can't add additional values).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This list is used only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to $false. Otherwise, all supported file types are available in WebReady Document Viewing.
 
@@ -2639,9 +2639,9 @@ The WebReadyMimeTypes parameter specifies the MIME extensions of attachments tha
 
 You can only remove or add values from within the list of supported file types (you can't add additional values).
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This list is used only if the WebReadyDocumentViewingForAllSupportedTypes parameter is set to $false. Otherwise, all supported MIME types are available in WebReady Document Viewing.
 
@@ -2730,12 +2730,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

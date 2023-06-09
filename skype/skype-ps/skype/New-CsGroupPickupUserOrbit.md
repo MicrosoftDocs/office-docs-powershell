@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csgrouppickupuserorbit
+online version: https://learn.microsoft.com/powershell/module/skype/new-csgrouppickupuserorbit
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsGroupPickupUserOrbit
 schema: 2.0.0
@@ -52,7 +52,7 @@ The first parameter after the cmdlet is assumed to be the User parameter value.
 ### -Orbit
 Specifies the group pickup orbit number to be assigned to the user.
 The number must be within an orbit pickup range that was created with a type of GroupPickup.
-For more information on creating call park orbits, see New-CsCallParkOrbit (https://technet.microsoft.com/en-us/library/gg398936.aspx).
+For more information on creating call park orbits, see [New-CsCallParkOrbit](https://learn.microsoft.com/powershell/module/skype/New-CsCallParkOrbit).
 
 Values for the Orbit parameter must match the regular expression (\[\*|#\]?\[1-9\]\d{0,7})|(\[1-9\]\d{0,8}).
 
@@ -154,5 +154,3 @@ This cmdlet returns an instance of the Microsoft.Rtc.Management.Voice.Helpers.Gr
 ## NOTES
 
 ## RELATED LINKS
-
-

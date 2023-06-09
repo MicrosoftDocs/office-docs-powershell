@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/set-csonlineenhancedemergencyservicedisclaimer
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineenhancedemergencyservicedisclaimer
+applicable: Skype for Business Online, Microsoft Teams
 title: Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
 manager: bulenteg
@@ -13,8 +13,16 @@ ms.reviewer:
 # Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 
 ## SYNOPSIS
-Use the `Set-CsOnlineEnhancedEmergencyServiceDisclaimer` cmdlet to record your organization's acceptance of the enhanced emergency service terms and conditions.
-Any tenant administrator can accept the terms and conditions.
+When using Microsoft Teams PSTN Calling Services you need to record your organization's acceptance of the enhanced emergency service terms and conditions. This is done per
+country and it needs to be done before you can provide PSTN calling services to Microsoft Teams users in the country.
+
+You can record your organization's acceptance using the Set-CsOnlineEnhancedEmergencyServiceDisclaimer cmdlet at any time. If you haven't accepted it for a given country
+you will be prompted to do so by warning information in the Teams PS Module, when you try to assign a phone number to a Microsoft Teams user, or in the Teams admin center,
+when you create an emergency address in a country.
+
+Any tenant administrator can accept the terms and conditions and it only needs to be done once per country.
+
+As the output the cmdlet will show the emergency service disclaimer and that it has been accepted. You can use Get-CsOnlineEnhancedEmergencyServiceDisclaimer to see the status of the emergency service disclaimer.
 
 ## SYNTAX
 
@@ -23,9 +31,11 @@ Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion <String> [-Versi
  [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
-You must run this cmdlet prior to assigning phone numbers and locations to voice enabled users in the United States.
+You must run this cmdlet prior to assigning Microsoft Calling Plan phone numbers and locations to voice enabled users or accept the similar disclaimer in the Teams admin center.
+
+Microsoft Calling Plan phone numbers are available in several countries, see [Country and region availability for Audio Conferencing and Calling Plans](https://learn.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
+
 
 ## EXAMPLES
 
@@ -41,14 +51,13 @@ version of the enhanced emergency service terms and conditions.
 ## PARAMETERS
 
 ### -CountryOrRegion
-Specifies the region or country whose terms and conditions you wish to accept.
-The United States is currently the only country supported, but it must be specified as "US".
+Specifies the region or country whose terms and conditions you wish to accept. You need to use the ISO 31661-1 alpha-2 2 letter code for the country. For example for the United States it must be specified as "US" and for Denmark it must be specified as "DK".
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -64,7 +73,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -80,7 +89,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -98,7 +107,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,7 +123,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -130,7 +139,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -146,7 +155,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -163,7 +172,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Skype for Business Online, Microsoft Teams
 
 Required: False
 Position: Named
@@ -188,4 +197,4 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
+[Get-CsOnlineEnhancedEmergencyServiceDisclaimer](Get-CsOnlineEnhancedEmergencyServiceDisclaimer.md)

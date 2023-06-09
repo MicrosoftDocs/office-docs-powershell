@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstenantnetworksubnet
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantnetworksubnet
+applicable: Microsoft Teams, Skype for Business Online
 title: New-CsTenantNetworkSubnet
 schema: 2.0.0
 manager: bulenteg
@@ -19,7 +19,7 @@ As an Admin, you can use the Windows PowerShell command, New-CsTenantNetworkSubn
 
 ### Identity (Default)
 ```
-New-CsTenantNetworkSubnet [-Tenant <System.Guid>] [-Description <String>] [-NetworkSiteID <String>]
+New-CsTenantNetworkSubnet [-Tenant <System.Guid>] [-Description <String>] -NetworkSiteID <String>
  -MaskBits <Int32> [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -27,7 +27,7 @@ New-CsTenantNetworkSubnet [-Tenant <System.Guid>] [-Description <String>] [-Netw
 ### ParentAndRelativeKey
 ```
 New-CsTenantNetworkSubnet [-Tenant <System.Guid>] -SubnetID <String> [-Description <String>]
- [-NetworkSiteID <String>] -MaskBits <Int32> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -NetworkSiteID <String> -MaskBits <Int32> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

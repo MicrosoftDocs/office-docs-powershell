@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-dkimsigningconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dkimsigningconfig
 applicable: Exchange Online, Exchange Online Protection
 title: New-DkimSigningConfig
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-DkimSigningConfig cmdlet to create the DomainKeys Identified Mail (DKIM) signing policy settings for domains in a cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +34,7 @@ New-DkimSigningConfig [-DomainName] <SmtpDomainWithSubdomains> [-Enabled] <Boole
 ## DESCRIPTION
 DKIM in Microsoft 365 is an email authentication method that uses a public key infrastructure (PKI), message headers, and CNAME records in DNS to authenticate the message sender, which is stamped in the DKIM-Signature header field. DKIM helps prevent forged sender email addresses (also known as spoofing) by verifying that the domain in the From address matches the domain in the DKIM-Signature header field.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -200,11 +198,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

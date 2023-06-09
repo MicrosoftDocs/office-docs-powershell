@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser
+online version: https://learn.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser
 applicable: Skype for Business Online
 title: Disable-CsOnlineDialInConferencingUser
 schema: 2.0.0
@@ -13,6 +13,9 @@ ms.reviewer:
 # Disable-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
+
+> This cmdlet will be deprecated on December 31, 2021. To disable Audio Conferencing for a user, please unassign the Audio Conferencing license from the user or disable the Audio Conferencing component from the license that is assigned to the user. For additional information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
+
 Use the `Disable-CsOnlineDialInConferencingUser` cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
 
 ## SYNTAX
@@ -243,8 +246,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
+[Enable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Get-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
+[Get-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps)
 
-[Set-CsOnlineDialInConferencingUser](https://docs.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)

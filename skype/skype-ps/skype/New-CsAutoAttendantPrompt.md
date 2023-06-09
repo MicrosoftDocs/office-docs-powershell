@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csautoattendantprompt
+online version: https://learn.microsoft.com/powershell/module/skype/new-csautoattendantprompt
 applicable: Skype for Business Online
 title: New-CsAutoAttendantPrompt
 schema: 2.0.0
@@ -48,7 +48,7 @@ This example creates a new prompt that reads the supplied text.
 
 ### -------------------------- Example 2 --------------------------
 ```powershell
-$content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
+$content = [System.IO.File]::ReadAllBytes('C:\Media\hello.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "hello.wav" -Content $content
 $audioFilePrompt = New-CsAutoAttendantPrompt -AudioFilePrompt $audioFile
 ```
@@ -57,7 +57,7 @@ This example creates a new prompt that plays the selected audio file.
 
 ### -------------------------- Example 3 --------------------------
 ```powershell
-$content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
+$content = [System.IO.File]::ReadAllBytes('C:\Media\hello.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "hello.wav" -Content $content
 $dualPrompt = New-CsAutoAttendantPrompt -ActiveType AudioFile -AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to Contoso!"
 ```
@@ -159,4 +159,3 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## RELATED LINKS
 
 [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
-

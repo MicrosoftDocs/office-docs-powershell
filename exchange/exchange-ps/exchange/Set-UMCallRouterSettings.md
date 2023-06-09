@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-umcallroutersettings
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+online version: https://learn.microsoft.com/powershell/module/exchange/set-umcallroutersettings
+applicable: Exchange Server 2013, Exchange Server 2016
 title: Set-UMCallRouterSettings
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-UMCallRouterSettings cmdlet to modify the configuration of the Microsoft Exchange Unified Messaging Call Router service. This service exists on Exchange servers that have the Client Access server role installed, and is used by telephony clients to connect to Exchange.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Set-UMCallRouterSettings [[-Server] <ServerIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -75,7 +75,7 @@ If you don't use this parameter, the command is run on the local server.
 Type: ServerIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: 1
@@ -83,7 +83,6 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
-
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
@@ -95,7 +94,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -107,15 +106,15 @@ Accept wildcard characters: False
 ### -DialPlans
 The DialPlans parameter specifies the dial plan used by the Microsoft Exchange Unified Messaging Call Router service. The Exchange server only needs to be associated with a UM dial plan if Lync Server 2010, Lync Server 2013, or Skype for Business Server 2015 is used in your organization. To remove an Exchange server from a dial plan, use $null. The default is no dial plans assigned.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\>".
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -131,7 +130,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -147,7 +146,7 @@ The IPAddressFamily parameter specifies whether the UM IP gateway will use Inter
 Type: IPAddressFamily
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -163,7 +162,7 @@ The IPAddressFamilyConfigurable parameter specifies whether you're able to set t
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -179,7 +178,7 @@ This parameter has been deprecated and is no longer used.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -195,7 +194,7 @@ The SipTcpListeningPort parameter specifies the TCP port that's used by the Micr
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -211,7 +210,7 @@ The SipTlsListeningPort parameter specifies the Transport Layer Security (TLS) p
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -227,7 +226,7 @@ The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Mes
 Type: UMStartupMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -243,7 +242,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named
@@ -257,12 +256,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

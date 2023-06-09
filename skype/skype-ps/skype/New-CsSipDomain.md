@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cssipdomain
+online version: https://learn.microsoft.com/powershell/module/skype/new-cssipdomain
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsSipDomain
 schema: 2.0.0
@@ -180,5 +180,3 @@ The New-CsSipDomain cmdlet creates new instances of the Microsoft.Rtc.Management
 [Remove-CsSipDomain](Remove-CsSipDomain.md)
 
 [Set-CsSipDomain](Set-CsSipDomain.md)
-
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csonlineapplicationendpoint
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlineapplicationendpoint
 applicable: Skype for Business Online
 title: Remove-CsOnlineApplicationEndpoint
 schema: 2.0.0
@@ -13,6 +13,9 @@ ms.reviewer:
 # Remove-CsOnlineApplicationEndpoint
 
 ## SYNOPSIS
+> [!CAUTION]
+> This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+
 The `Remove-CsOnlineApplicationEndpoint` is used to remove a Trusted Application Endpoint for a tenant.
 
 ## SYNTAX
@@ -233,10 +236,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/set-csonlineapplicationendpoint)
+[Set-CsOnlineApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/set-csonlineapplicationendpoint)
 
-[New-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/new-csonlineapplicationendpoint)
+[New-CsOnlineApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/new-csonlineapplicationendpoint)
 
-[Get-CsOnlineApplicationEndpoint](https://docs.microsoft.com/powershell/module/skype/get-csonlineapplicationendpoint)
+[Get-CsOnlineApplicationEndpoint](https://learn.microsoft.com/powershell/module/skype/get-csonlineapplicationendpoint)
 
-[Set up a Trusted Application Endpoint](https://docs.microsoft.com/skype-sdk/trusted-application-api/docs/trustedapplicationendpoint)
+[Set up a Trusted Application Endpoint](https://learn.microsoft.com/skype-sdk/trusted-application-api/docs/trustedapplicationendpoint)

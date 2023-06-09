@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/get-cstenantlicensingconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantlicensingconfiguration
 applicable: Skype for Business Online
 title: Get-CsTenantLicensingConfiguration
 schema: 2.0.0
@@ -13,23 +13,24 @@ ms.reviewer:
 # Get-CsTenantLicensingConfiguration
 
 ## SYNOPSIS
-Indicates whether licensing information for the specified tenant is available in the Lync admin center.
+Indicates whether licensing information for the specified tenant is available in the Teams admin center.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Get-CsTenantHybridConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+Get-CsTenantLicensingConfiguration [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
  [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTenantHybridConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTenantLicensingConfiguration [-MsftInternalProcessingMode <String>] [-Filter <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsTenantLicensingConfiguration cmdlet indicates whether licensing information for the specified tenant is available in the Lync admin center.
+The Get-CsTenantLicensingConfiguration cmdlet indicates whether licensing information for the specified tenant is available in the Teams admin center.
 The cmdlet returns information similar to this:
 
 Identity : GlobalStatus : Enabled
@@ -55,7 +56,7 @@ Because each tenant is limited to a single, global collection of licensing confi
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Filter
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -72,7 +73,7 @@ Because each tenant is limited to a single, global collection of licensing setti
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -83,37 +84,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
-This parameter is not used with Skype for Business Online.
+### -MsftInternalProcessingMode
+For internal use only.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose licensing settings are being returned.
-For example:
-
-`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
-
-You can return your tenant ID by running this command:
-
-`Get-CsTenant | Select-Object DisplayName, TenantID`
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Aliases:
 
 Required: False
 Position: Named
@@ -141,4 +118,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CsTenant](Get-CsTenant.md)
-

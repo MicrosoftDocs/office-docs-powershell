@@ -75,12 +75,17 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "author": "chrisda",
       "ms.author": "chrisda",
       "manager": "serdars",
       "ms.date": "09/25/2017",
       "ms.topic": "reference",
       "ms.service": "exchange-powershell",
+      "products": [
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/0b654e73-5728-4af3-8c2e-17bfbf4c9f23",
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+      ],
       "ms.devlang": "powershell",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/office-docs-powershell",

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csrgsagentgroup
+online version: https://learn.microsoft.com/powershell/module/skype/set-csrgsagentgroup
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsRgsAgentGroup
 schema: 2.0.0
@@ -207,4 +207,3 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Rgs.Managem
 [New-CsRgsAgentGroup](New-CsRgsAgentGroup.md)
 
 [Remove-CsRgsAgentGroup](Remove-CsRgsAgentGroup.md)
-

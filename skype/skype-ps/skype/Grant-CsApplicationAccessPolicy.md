@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csapplicationaccesspolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csapplicationaccesspolicy
+applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsApplicationAccessPolicy
 schema: 2.0.0
 manager: zhengni
@@ -18,7 +18,7 @@ Assigns a per-user application access policy to one or more users. After assigni
 
 ## SYNTAX
 
-### FileName
+### Identity (Default)
 
 ```
 Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>] [-Global]
@@ -26,7 +26,7 @@ Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <Stri
 
 ## DESCRIPTION
 
-This cmdlet assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user.
+This cmdlet assigns a per-user application access policy to one or more users. After assigning an application access policy to a user, the applications configured in the policy will be authorized to access online meetings on behalf of that user.**Note:** You can assign only 1 application access policy at a time to a particular user. Assigning a new application access policy to a user will override the existing application access policy if any.
 
 ## EXAMPLES
 
@@ -52,7 +52,7 @@ In the command shown above, any per-user application access policy previously as
 PS C:\> Get-CsOnlineUser | Grant-CsApplicationAccessPolicy -PolicyName "ASimplePolicy"
 ```
 
-The command shown above assigns the per-user application access policy ASimplePolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Skype for Business Online. Those user accounts are then piped to the `Grant-CsApplicationAccessPolicy` cmdlet, which assigns each user the application access policy "ASimplePolicy".
+The command shown above assigns the per-user application access policy ASimplePolicy to all the users in the tenant. To do this, the command first calls the `Get-CsOnlineUser` cmdlet to get all user accounts enabled for Microsoft Teams or Skype for Business Online. Those user accounts are then piped to the `Grant-CsApplicationAccessPolicy` cmdlet, which assigns each user the application access policy "ASimplePolicy".
 
 ### Assign an application access policy to users who have not been assigned one
 
@@ -60,13 +60,13 @@ The command shown above assigns the per-user application access policy ASimplePo
 PS C:\> Grant-CsApplicationAccessPolicy -PolicyName "ASimplePolicy" -Global
 ```
 
-The command shown above assigns the per-user application access policy "ASimplePoicy" to all the users in the tenant, except any that have an explicit policy assignment.
+The command shown above assigns the per-user application access policy "ASimplePolicy" to all the users in the tenant, except any that have an explicit policy assignment.
 
 ## PARAMETERS
 
 ### -Identity
 
-Indicates the user (object) ID of the user account to be assigned the per-user application access policy. 
+Indicates the user (object) ID of the user account to be assigned the per-user application access policy.
 
 ```yaml
 Type: UserIdParameter
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -PolicyName
 
-Name of the policy to be assigned. The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:ASimplePolicy has a PolicyName equal to ASimplePolicy.
+Name of the policy to be assigned. The PolicyName is simply the policy Identity without the policy scope (the "tag:" prefix). For example, a policy with the Identity tag:ASimplePolicy has a PolicyName equal to ASimplePolicy.
 
 ```yaml
 Type: PSListModifier
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Global
 
-When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. To skip a warning when you do this operation, specify this parameter.
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant, except any that have an explicit policy assignment. For example, if the user already have application access policy "A" assigned, and tenant admin assigns "B" globally, then application access policy "A" will take effect for the user.
 
 ```yaml
 Type: SwitchParameter

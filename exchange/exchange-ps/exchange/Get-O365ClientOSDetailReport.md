@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-o365clientosdetailreport
+online version: https://learn.microsoft.com/powershell/module/exchange/get-o365clientosdetailreport
 applicable: Exchange Online
 title: Get-O365ClientOSDetailReport
 schema: 2.0.0
@@ -14,13 +14,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-This cmdlet was deprecated in January, 2018. For information about the available replacement Microsoft Graph reports in Microsoft 365, see the subtopics of [Working with Microsoft 365 usage reports in Microsoft Graph](https://docs.microsoft.com/graph/api/resources/report).
+This cmdlet was deprecated in January, 2018. For information about the available replacement Microsoft Graph reports in Microsoft 365, see the subtopics of [Working with Microsoft 365 usage reports in Microsoft Graph](https://learn.microsoft.com/graph/api/resources/report).
 
 Use the Get-O365ClientOSDetailReport cmdlet to get a detailed report of client operating system use.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -48,7 +46,7 @@ This report provides operating system details for all active users. The data con
 - Version: Operating system version.
 - OperatingSystemUsageCount: Number of days this operating system and version combination was used during the period of the report
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -178,11 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

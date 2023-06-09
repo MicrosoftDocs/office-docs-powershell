@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csconversationhistoryconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csconversationhistoryconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsConversationHistoryConfiguration
 schema: 2.0.0
@@ -129,4 +129,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsConversationHistoryConfiguration](Remove-CsConversationHistoryConfiguration.md)
 
 [Set-CsConversationHistoryConfiguration](Set-CsConversationHistoryConfiguration.md)
-

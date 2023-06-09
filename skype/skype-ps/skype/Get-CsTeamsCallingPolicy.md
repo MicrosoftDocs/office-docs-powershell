@@ -1,13 +1,13 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://docs.microsoft.com/powershell/module/skype/get-csteamscallingpolicy
-applicable: Skype for Business Online
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamscallingpolicy
+applicable: Microsoft Teams
 title: Get-CsTeamsCallingPolicy
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -22,12 +22,12 @@ Teams calling policies help determine which users are able to use calling functi
 
 ### Identity (Default)
 ```
-Get-CsTeamsCallingPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsTeamsCallingPolicy [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTeamsCallingPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTeamsCallingPolicy [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,31 +42,22 @@ Teams calling policies help determine which users are able to use calling functi
 Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
 ```
 
-Retrieves the calling policy with name "SalesCallingPolicy"
+Retrieves the calling policy with the Identity "SalesCallingPolicy".
+
+### Example 2
+```powershell
+Get-CsTeamsCallingPolicy -Filter "tag:Sales*"
+```
+
+Retrieves the calling policies with Identity starting with Sales.
 
 ## PARAMETERS
-
-### -Filter
-Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
-To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 Specify the TeamsCallingPolicy that you would like to retrieve.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -77,26 +68,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
-Microsoft internal use.
+### -Filter
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Microsoft internal use.
-
-```yaml
-Type: Guid
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -120,3 +97,11 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-CsTeamsCallingPolicy](Set-CsTeamsCallingPolicy.md)
+
+[Remove-CsTeamsCallingPolicy](Remove-CsTeamsCallingPolicy.md)
+
+[Grant-CsTeamsCallingPolicy](Grant-CsTeamsCallingPolicy.md)
+
+[New-CsTeamsCallingPolicy](New-CsTeamsCallingPolicy.md)

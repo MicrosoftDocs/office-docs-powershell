@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-roleassignmentpolicy
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/new-roleassignmentpolicy
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-RoleAssignmentPolicy
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-RoleAssignmentPolicy cmdlet to create management role assignment policies in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,17 +34,18 @@ New-RoleAssignmentPolicy [-Name] <String>
 ## DESCRIPTION
 When you create an assignment policy, you can assign it to users using the New-Mailbox, Set-Mailbox, or Enable-Mailbox cmdlets. If you make the new assignment policy the default assignment policy, it's assigned to all new mailboxes that don't have an explicit assignment policy assigned to them.
 
-You can add management roles to the new assignment policy when you create it, or you can create the assignment policy and add roles later. You must assign at least one management role to the new assignment policy for it to apply permissions to a mailbox. Without any roles assigned to the new assignment policy, users assigned to it won't be able to manage their mailbox configuration. To assign a management role after the assignment policy has been created, use the New-ManagementRoleAssignment cmdlet. For more information, see [Manage role assignment policies](https://docs.microsoft.com/Exchange/permissions/role-assignment-policies).
+You can add management roles to the new assignment policy when you create it, or you can create the assignment policy and add roles later. You must assign at least one management role to the new assignment policy for it to apply permissions to a mailbox. Without any roles assigned to the new assignment policy, users assigned to it won't be able to manage their mailbox configuration. To assign a management role after the assignment policy has been created, use the New-ManagementRoleAssignment cmdlet. For more information, see [Manage role assignment policies](https://learn.microsoft.com/Exchange/permissions/role-assignment-policies).
 
-For more information about assignment policies, see [Understanding management role assignment policies](https://docs.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
+For more information about assignment policies, see [Understanding management role assignment policies](https://learn.microsoft.com/exchange/understanding-management-role-assignment-policies-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
+New-RoleAssignmentPolicy -Name "End User Policy"
+Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
 ```
 
 This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
@@ -58,7 +59,8 @@ This example creates an assignment policy using the IsDefault switch.
 
 ### Example 3
 ```powershell
-New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
+New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault
+Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
 ```
 
 This example creates an assignment policy that enables users to modify their personal information, manage their distribution group membership, and manage their voice mail. The new assignment policy is created as the new default assignment policy. Then, all existing mailboxes are configured to use the new assignment policy.
@@ -76,7 +78,7 @@ The Name parameter specifies the name of the new assignment policy. If the assig
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -95,7 +97,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -111,7 +113,7 @@ The Description parameter specifies the description that's displayed when the ro
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -131,7 +133,7 @@ The DomainController parameter isn't supported on Edge Transport servers. An Edg
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -141,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-The IsDefault switch makes the assignment policy the default assignment policy. You don't have to specify a value with this switch.
+The IsDefault switch makes the assignment policy the default assignment policy. You don't need to specify a value with this switch.
 
 New mailboxes or mailboxes moved from previous versions of Exchange are assigned the default assignment policy when an explicit assignment policy isn't provided.
 
@@ -151,7 +153,7 @@ Setting an assignment policy as default doesn't change the role assignment on ex
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -163,13 +165,13 @@ Accept wildcard characters: False
 ### -Roles
 The Roles parameter specifies the management roles to assign to the role assignment policy when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
 
-For a list of built-in management roles that you can assign to a role group, see [Built-in management roles](https://docs.microsoft.com/exchange/built-in-management-roles-exchange-2013-help).
+For a list of built-in management roles that you can assign to a role group, see [Built-in management roles](https://learn.microsoft.com/exchange/built-in-management-roles-exchange-2013-help).
 
 ```yaml
 Type: RoleIdParameter[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -185,7 +187,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -199,12 +201,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

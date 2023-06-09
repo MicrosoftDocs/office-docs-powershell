@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://docs.microsoft.com/powershell/module/skype/start-csexmeetingmigration
+online version: https://learn.microsoft.com/powershell/module/skype/start-csexmeetingmigration
 applicable: Skype for Business Online
 title: Start-CsExMeetingMigration
 schema: 2.0.0
@@ -26,7 +26,7 @@ Start-CsExMeetingMigration [-SourceMeetingType <MmsSourceMeetingTypes>] [-Target
 Meeting Migration Service (MMS) is a Skype for Business service that runs in the background and automatically updates Skype for Business and Microsoft Teams meetings for users.
 MMS is designed to eliminate the need for users to run the Meeting Migration Tool to update their Skype for Business and Microsoft Teams meetings.
 
-Also, with `Start-CsExMeetingMigration` cmdlet, you can start a meeting migration manually.
+Also, with `Start-CsExMeetingMigration` cmdlet, you can start a meeting migration manually. For more information about requirements of the Meeting Migration Service (MMS), see [Using the Meeting Migration Service (MMS)](/skypeforbusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms).
 
 ## EXAMPLES
 
@@ -155,13 +155,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Using the Meeting Migration Service (MMS)](https://docs.microsoft.com/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
+[Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Get-CsMeetingMigrationStatus](https://docs.microsoft.com/powershell/module/skype/get-csmeetingmigrationstatus)
+[Get-CsMeetingMigrationStatus](https://learn.microsoft.com/powershell/module/skype/get-csmeetingmigrationstatus)
 
-[Set-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/set-cstenantmigrationconfiguration)
+[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/skype/set-cstenantmigrationconfiguration)
 
-[Get-CsTenantMigrationConfiguration](https://docs.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration)
-
-
-
+[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration)

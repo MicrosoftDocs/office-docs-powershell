@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/suspend-queue
+online version: https://learn.microsoft.com/powershell/module/exchange/suspend-queue
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Suspend-Queue
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Suspend-Queue cmdlet to stop processing for a queue on a Mailbox server or an Edge Transport server.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -40,9 +40,9 @@ Suspend-Queue [-Identity] <QueueIdentity>
 ## DESCRIPTION
 The Suspend-Queue cmdlet stops processing on a queue that has a status of Active or Retry. Messages being processed are delivered, but no additional messages leave the queue. When you use the Identity parameter, the queue is suspended only if the identity matches a single queue. If the identity matches more than one queue, you receive an error. To suspend more than one queue in a single operation, you must use the Filter parameter.
 
-For instructions on how to resume suspended queues, see [Resume-Queue](https://docs.microsoft.com/powershell/module/exchange/resume-queue).
+For instructions on how to resume suspended queues, see [Resume-Queue](https://learn.microsoft.com/powershell/module/exchange/resume-queue).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -63,7 +63,7 @@ This example suspends processing on all queues on the server Server1.contoso.com
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the queue. Valid input for this parameter uses the syntax Server\\Queue or Queue, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see [Queue identity](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#queue-identity).
+The Identity parameter specifies the queue. Valid input for this parameter uses the syntax Server\\Queue or Queue, for example, Mailbox01\\contoso.com or Unreachable. For details about queue identity, see [Queue identity](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#queue-identity).
 
 ```yaml
 Type: QueueIdentity
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more queues by using OPath filter syntax. The OPath filter includes a queue property name followed by a comparison operator and value (for example, `"NextHopDomain -eq 'contoso.com'"`). For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more queues by using OPATH filter syntax. The OPATH filter includes a queue property name followed by a comparison operator and value (for example, `"NextHopDomain -eq 'contoso.com'"`). For details about filterable queue properties and comparison operators, see [Queue properties in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/queues/queue-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -161,12 +161,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
