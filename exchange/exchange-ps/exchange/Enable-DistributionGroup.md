@@ -31,6 +31,9 @@ Enable-DistributionGroup [-Identity] <GroupIdParameter>
  [<CommonParameters>]
 ```
 
+Please note, that InformationVariable or InformationAction parameters are NOT supported in Microsoft Exchange Server on premises.
+This is per Microsoft Support ticket 2306020040003027 from June 1st, 2023.
+
 ## DESCRIPTION
 The Enable-DistributionGroup cmdlet mail-enables existing universal security groups and universal distribution groups by adding the email attributes that are required by Exchange. Mail-enabled security groups and distribution groups are visible to the other \*-DistributionGroup cmdlets and to the \*-DistributionGroupMember cmdlets.
 
