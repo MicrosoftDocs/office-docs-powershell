@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-DefaultTenantMyAnalyticsFeatureConfig [-ResultSize <Unlimited]>] [<CommonParameters>]
+Get-DefaultTenantMyAnalyticsFeatureConfig [-ResultSize <Unlimited>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +34,7 @@ To run this cmdlet, you need to be a member of one of the following directory ro
 - Exchange Administrator
 - Insights Administrator
 
-For more information, see, see [Azure AD built-in roles](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference).
+For more information, see [Azure AD built-in roles](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference).
 
 ## EXAMPLES
 
@@ -71,8 +71,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-
-We're in the process of verifying that this cmdlet works for guest user, DAP, and GDAP scenarios.
 
 ## RELATED LINKS
 
