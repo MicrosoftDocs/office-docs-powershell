@@ -307,11 +307,13 @@ Accept wildcard characters: False
 ```
 
 ### -InboundFederatedCallRoutingTreatment
-Setting this parameter lets you control how inbound federated calls should be routed. Valid options are: RegularIncoming, Unanswered, and Voicemail.
+Setting this parameter lets you control how inbound federated calls should be routed. 
 
-When set to RegularIncoming, no changes are made to default inbound routing. This is the default setting.
-When set to Unanswered, the inbound federated call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
-When set to Voicemail, the inbound federated call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
+Possible values:
+- RegularIncoming: no changes are made to default inbound routing. This is the default setting.
+- Unanswered: the inbound federated call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
+- Voicemail, the inbound federated call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
+
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
 
 ```yaml
