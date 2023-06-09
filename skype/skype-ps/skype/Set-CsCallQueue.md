@@ -470,7 +470,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowDisconnectTextToSpeechPrompt
-The OverflowDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to the overflow. 
+The OverflowDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to overflow. 
 
 ```yaml
 Type: String
