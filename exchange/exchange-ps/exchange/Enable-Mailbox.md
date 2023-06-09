@@ -274,6 +274,9 @@ When mailbox-enabling an existing user, beware of non-supported characters in th
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
+Please note, that InformationVariable or InformationAction parameters are NOT supported in Microsoft Exchange Server on premises.
+This is per Microsoft Support ticket 2306020040003027 from June 1st, 2023.
+
 ## EXAMPLES
 
 ### Example 1
