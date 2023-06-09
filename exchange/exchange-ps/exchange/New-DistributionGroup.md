@@ -50,8 +50,6 @@ New-DistributionGroup [-Name] <String>
  [-WhatIf]
  [<CommonParameters>]
 ```
-Please note, that InformationVariable or InformationAction parameters are NOT supported in Microsoft Exchange Server on premises.
-This is per Microsoft Support ticket 2306020040003027 from June 1st, 2023.
 
 ## DESCRIPTION
 You can use the New-DistributionGroup cmdlet to create the following types of groups:
@@ -62,6 +60,10 @@ You can use the New-DistributionGroup cmdlet to create the following types of gr
 Distribution groups are used to consolidate groups of recipients into a single point of contact for email messages. Distribution groups aren't security principals, and therefore can't be assigned permissions. However, you can assign permissions to mail-enabled security groups.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+
+Please note, that InformationVariable or InformationAction parameters are NOT supported in Microsoft Exchange Server on premises.
+This is per Microsoft Support ticket 2306020040003027 from June 1st, 2023.
+
 
 ## EXAMPLES
 
