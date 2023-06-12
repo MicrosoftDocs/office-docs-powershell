@@ -78,7 +78,7 @@ HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
 Description            :
 ```
 
-`Filter` parameter can be used to fetch policy instances based on partial matches on Identity.
+The `Filter` parameter can be used to fetch policy instances based on partial matches on Identity.
 
 Note: _The "Tag:" prefix can be ignored when specifying the identity._
 
