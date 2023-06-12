@@ -54,7 +54,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-Attempting to delete a policy instance that is currently assigned to users will result in an error. Please remove the assignment before attempting to delete it.
+Attempting to delete a policy instance that is currently assigned to users will result in an error. Remove the assignment before attempting to delete it.
 
 ```powershell
 PS> Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
