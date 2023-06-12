@@ -92,10 +92,10 @@ Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com
 After you've [created and configured a user-assigned managed identity](#create-and-configure-a-user-assigned-managed-identity), use the following syntax to connect to Exchange Online PowerShell:
 
 ```powershell
-Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId <UserAssignedManagedIdentityPrincipalIdValue>
+Connect-ExchangeOnline -ManagedIdentity -Organization <YourDomain>.onmicrosoft.com -ManagedIdentityAccountId <UserAssignedManagedIdentityClientIdValue>
 ```
 
-You get the \<UserAssignedManagedIdentityPrincipalIdValue\> value from [Step 3: Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable).
+You get the \<UserAssignedManagedIdentityClientIdValue\> value from [Step 3: Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable).
 
 The rest of this section explains how to connect using supported Azure resources. For example:
 
@@ -134,7 +134,7 @@ After you've successfully created the PowerShell runbook, do the following steps
 In a Windows PowerShell window in the Azure VM, use the command as described in the beginning of this section. For example:
 
 ```powershell
-$MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").PrincipalId
+$MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").ClientId
 
 Connect-ExchangeOnline -ManagedIdentity -Organization contoso.onmicrosoft.com -ManagedIdentityAccountId $MI_ID
 ```
@@ -518,10 +518,10 @@ For instructions, see the following articles:
 
 ### Step 3: Store the user-assigned managed identity in a variable
 
-Use the following syntax in [Azure Az PowerShell](/powershell/azure/install-az-ps) to store the PrincipalId value of the user-assigned managed identity in variable that you'll use in the upcoming steps:
+Use the following syntax in [Azure Az PowerShell](/powershell/azure/install-az-ps) to store the ClientId value of the user-assigned managed identity in variable that you'll use in the upcoming steps:
 
 ```powershell
-$MI_ID = (Get-AzUserAssignedIdentity -Name "<UserAssignedMI>" -ResourceGroupName "<MIResourceGroupName>").PrincipalId
+$MI_ID = (Get-AzUserAssignedIdentity -Name "<UserAssignedMI>" -ResourceGroupName "<MIResourceGroupName>").ClientId
 ```
 
 - \<UserAssignedMI\> is the name of the user-assigned managed identity.
@@ -530,7 +530,7 @@ $MI_ID = (Get-AzUserAssignedIdentity -Name "<UserAssignedMI>" -ResourceGroupName
 For example:
 
 ```powershell
-$MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").PrincipalId
+$MI_ID = (Get-AzUserAssignedIdentity -Name "ContosoMI1" -ResourceGroupName "ContosoRG2").ClientId
 ```
 
 To verify that the variable was captured successfully, run the command `$MI_ID`. The output should be a GUID value (for example, bf6dcc76-4331-4942-8d50-87ea41d6e8a1).
