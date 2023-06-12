@@ -274,7 +274,7 @@ Valid options are:
 - Enabled: New or incoming calls will be rejected with a busy signal.
 - Unanswered: The user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user.
 - Disabled: New or incoming calls will be presented to the user.
-- UserOverride: Value is not available for use currently, if set it will be read as setting the value to Disabled.
+- UserOverride: Users can set their busy options directly from call settings in Teams app.
 
 ```yaml
 Type: String
