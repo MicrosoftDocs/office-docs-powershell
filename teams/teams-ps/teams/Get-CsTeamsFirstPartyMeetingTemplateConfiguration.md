@@ -10,7 +10,7 @@ schema: 2.0.0
 # Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 
 ## SYNOPSIS
-This cmdlet fetches the first party meeting templates stored on the tenant.
+This cmdlet fetches the first-party meeting templates stored on the tenant.
 
 ## SYNTAX
 
