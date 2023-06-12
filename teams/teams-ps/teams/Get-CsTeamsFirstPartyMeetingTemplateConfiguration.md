@@ -54,7 +54,7 @@ Name                : firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748
 Category            :
 ```
 
-Fetches all the first party templates on the tenant.
+Fetches all the first-party templates on the tenant.
 
 ## PARAMETERS
 
@@ -62,7 +62,7 @@ Fetches all the first party templates on the tenant.
 
 This parameter can be used to fetch a specific instance of the configuration.
 
-Note: This configuration is readonly and will only have the Global instance.
+Note: This configuration is read only and will only have the Global instance.
 
 ```yaml
 Type: String

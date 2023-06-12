@@ -34,7 +34,7 @@ Grant-CsTeamsMeetingTemplatePermissionPolicy [-Group] <string> [[-PolicyName] <s
 
 This cmdlet applies an instance of the TeamsMeetingTemplatePermissionPolicy to users or groups in a tenant.
 
-Pass in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of `Identity` or `Group` needs to be passed.
+Pass in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ Assigns a given policy to a user.
 
 ### -PolicyName
 
-Specifies the Identity of the policy to assign to the user/group.
+Specifies the Identity of the policy to assign to the user or group.
 
 ```yaml
 Type: String

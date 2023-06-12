@@ -19,7 +19,7 @@ Get-CsTeamsMeetingTemplateConfiguration [[-Identity] <string>] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Fetches the list of custom templates on the tenant. Each template object contains its list of meeting options, the name of the template and its ID.
+Fetches the list of custom templates on the tenant. Each template object contains its list of meeting options, the name of the template, and its ID.
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ Fetches all the custom templates on the tenant.
 
 This parameter can be used to fetch a specific instance of the configuration.
 
-Note: This configuration is readonly and will only have the Global instance.
+Note: This configuration is read only and will only have the Global instance.
 
 ```yaml
 Type: String

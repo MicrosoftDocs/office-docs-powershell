@@ -21,20 +21,21 @@ New-CsTeamsHiddenMeetingTemplate -Id <string>  [<CommonParameters>]
 
 ## DESCRIPTION
 
-Creates an object that can be supplied as `HiddenMeetingTemplate` to [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md) and [Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md) cmdlets.
+Creates an object that can be supplied as `HiddenMeetingTemplate` to the [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md) and [Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md) cmdlets.
 
 ## EXAMPLES
 
 ### Example 1
 
-Create a new hidden meeting template object:
+Creates a new hidden meeting template object:
+
 ```powershell
 PS> $hiddentemplate_1 = New-CsTeamsHiddenMeetingTemplate -Id customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056
 ```
 
-Creates a new HiddenMeetingTemplate object with the given template id.
+Creates a new HiddenMeetingTemplate object with the given template ID.
 
-For more examples on how this can be used, please check the examples at [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md)
+For more examples of how this can be used, see the examples for [New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md).
 
 ## PARAMETERS
 
