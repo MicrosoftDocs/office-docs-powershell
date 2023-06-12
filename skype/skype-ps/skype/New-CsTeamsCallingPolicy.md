@@ -477,6 +477,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
