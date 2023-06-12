@@ -20,11 +20,13 @@ Use this cmdlet to create a new instance of a Teams Calling Policy.
 
 ### Identity (Default)
 ```
-New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>] [-AllowSIPDevicesCalling <boolean>]
- [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>] [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>]
- [-PreventTollBypass <boolean>] [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
- [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-LiveCaptionsEnabledTypeForCalling <string>]
- [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>] [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
+New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>]
+ [-AllowSIPDevicesCalling <boolean>] [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>]
+ [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
+ [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
+ [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
  [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
