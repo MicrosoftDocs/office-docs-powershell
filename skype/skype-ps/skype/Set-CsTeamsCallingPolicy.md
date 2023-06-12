@@ -20,13 +20,14 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [[-Identity] <string>] [-AllowCallForwardingToPhone <boolean>] [-AllowCallForwardingToUser <boolean>] [-AllowCallGroups <boolean>]
-[-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <boolean>] [-AllowDelegation <boolean>] [-AllowPrivateCalling <boolean>]
-[-AllowSIPDevicesCalling <boolean>] [-AllowTranscriptionForCalling <boolean>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <boolean>]
-[-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>]
-[-InboundFederatedCallRoutingTreatment <string>] [-InboundPstnCallRoutingTreatment <string>]
-[-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>] [-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Identity] <string> [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>]
+ [-AllowSIPDevicesCalling <boolean>] [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>]
+ [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
+ [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
+ [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
+ [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,21 +53,6 @@ PS C:\> Set-CsTeamsCallingPolicy -Identity HRPolicy -LiveCaptionsEnabledTypeForC
 Sets the value of the parameter LiveCaptionsEnabledTypeForCalling to Disabled in the Teams Calling Policy instance called HRPolicy.
 
 ## PARAMETERS
-
-### -Identity
-Name of the policy instance being modified.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AllowCallForwardingToPhone
 Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
@@ -117,7 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter provides the ability to configure call redirection capabilities on Teams phones. The valid options are: Enabled, Disabled, and UserOverride. When set to Enabled users will have the ability to redirect received calls. However, when set to Disabled the user will not have such ability. Note: The UserOverride option is not available for use. There's no UX implemented for its management.
+Setting this parameter provides the ability to configure the availability of call redirection capabilities on Teams Phones. 
+
+Valid options are:
+- Enabled: Users will have the ability to redirect incoming calls directly to voicemail.
+- Disabled: User will not have such ability.
+- UserOverride: This option is not available for use. There's no user interface implemented for on the Teams Phone device.
 
 ```yaml
 Type: String
@@ -182,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSIPDevicesCalling
-Determines whether the user is allowed to use SIP devices for calling on behalf of a Teams client.
+Determines whether the user is allowed to use a SIP device for calling on behalf of a Teams client.
 
 ```yaml
 Type: Boolean
@@ -214,7 +205,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoicemail
-Enables inbound calls to be routed to voicemail. Valid options are: AlwaysEnabled, AlwaysDisabled, and UserOverride. When set to AlwaysDisabled, calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams. When set to AlwaysEnabled, calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user. When set to UserOverride, calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
+Enables inbound calls to be routed to voicemail. 
+
+Valid options are:
+- AlwaysEnabled: Calls are always forwarded to voicemail on unanswered after ringing for thirty seconds, regardless of the unanswered call forward setting for the user.
+- AlwaysDisabled: Calls are never routed to voicemail, regardless of the call forward or unanswered settings for the user. Voicemail isn't available as a call forwarding or unanswered setting in Teams.
+- UserOverride: Calls are forwarded to voicemail based on the call forwarding and/or unanswered settings for the user.
 
 ```yaml
 Type: String
@@ -230,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPSTNCalling
-Allows PSTN calling from the Teams web client.
+Allows PSTN calling from the Team web client.
 
 ```yaml
 Type: Object
@@ -246,10 +242,14 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAnswerEnabledType
-Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams phones. It is turned off by default. Valid options are Enabled and Disabled. This setting applies only to incoming meeting invites and does not include support for other call types.
+Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. This setting applies only to incoming meeting invites and does not include support for other call types.
+
+Valid options are:
+- Enabled: Auto-answer is enabled.
+- Disabled: Auto-answer is disabled. This is the default setting.
 
 ```yaml
-Type: Enum
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
@@ -262,7 +262,13 @@ Accept wildcard characters: False
 ```
 
 ### -BusyOnBusyEnabledType
-Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold. Valid options are: Enabled, Unanswered, Disabled, and UserOverride. When set to Enabled, new or incoming calls will be rejected with a busy signal. When set to Unanswered, the user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user. When set to UserOverride, users can set their busy options directly from call settings in Teams app. 
+Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold.
+
+Valid options are:
+- Enabled: New or incoming calls will be rejected with a busy signal.
+- Unanswered: The user's unanswered settings will take effect, such as routing to voicemail or forwarding to another user.
+- Disabled: New or incoming calls will be presented to the user.
+- UserOverride: Users can set their busy options directly from call settings in Teams app.
 
 ```yaml
 Type: String
@@ -294,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Enables administrators to provide explanatory text about the calling policy. For example, the Description might indicate the users the policy should be assigned to.
+Enables administrators to provide explanatory text about the calling policy. For example, the Description might indicate the users to whom the policy should be assigned.
 
 ```yaml
 Type: String
@@ -309,12 +315,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InboundFederatedCallRoutingTreatment
-Setting this parameter lets you control how inbound federated calls should be routed. Valid options are: RegularIncoming, Unanswered, and Voicemail.
+### -Identity
+Name of the policy instance being created.
 
-When set to RegularIncoming, normal inbound routing will be performed. This is the default setting.
-When set to Unanswered, the inbound federated call will be routed according to the called user unanswered call forward settings and the call will not be presented to the user. If the called user does not have any unanswered call forwarding settings configured the call will be disconnected.
-When set to Voicemail, the inbound federated call will be routed directly to the called user voicemail and the call will not be presented to the user. If the called user does not have voicemail configured the call will be disconnected.
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InboundFederatedCallRoutingTreatment
+Setting this parameter lets you control how inbound federated calls should be routed. 
+
+Valid options are:
+- RegularIncoming: No changes are made to default inbound routing. This is the default setting.
+- Unanswered: The inbound federated call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
+- Voicemail: The inbound federated call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
+
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
 
 ```yaml
@@ -331,13 +354,15 @@ Accept wildcard characters: False
 ```
 
 ### -InboundPstnCallRoutingTreatment
-Setting this parameter lets you control how inbound PSTN calls should be routed. Valid options are: RegularIncoming, Unanswered, Voicemail and UserOverride.
+Setting this parameter lets you control how inbound PSTN calls should be routed. 
 
-When set to RegularIncoming, normal inbound routing will be performed. This is the default setting.
-When set to Unanswered, the inbound PSTN call will be routed according to the called user unanswered call forward settings and the call will not be presented to the user. If the called user does not have any unanswered call forwarding settings configured the call will be disconnected.
-When set to Voicemail, the inbound PSTN call will be routed directly to the called user voicemail and the call will not be presented to the user. If the called user does not have voicemail configured the call will be disconnected.
-When set to UserOverride, the user is allowed to decide the call routing via settings in the Teams client UI.
-Setting this parameter to Unanswered, Voicemail or UserOverride will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
+Valid options are:
+- RegularIncoming: No changes are made to default inbound routing. This is the default setting.
+- Unanswered: The inbound PSTN call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
+- Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
+- UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
+
+Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
 
 ```yaml
 Type: String
@@ -353,11 +378,11 @@ Accept wildcard characters: False
 ```
 
 ### -LiveCaptionsEnabledTypeForCalling
-Determines whether real-time captions are available for the user in Teams calls. Set this to DisabledUserOverride to allow users to turn on live captions. Set this to Disabled to prohibit.
+Determines whether real-time captions are available for the user in Teams calls.
 
-Possible values:
-- DisabledUserOverride
-- Disabled
+Valid options are:
+- DisabledUserOverride: Allow the user to turn on live captions.
+- Disabled: Prohibts the user from turning on live captions.
 
 ```yaml
 Type: String
@@ -373,7 +398,12 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldEnabledType
-Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. It is turned on by default. Valid options are Enabled, Disabled, and UserOverride. For now, setting the value to UserOverride is the same as Enabled.
+Setting this parameter allows you to turn on or turn off the music on hold when a caller is placed on hold. 
+
+Valid options are:
+- Enabled: Music on hold is enabled. This is the default.
+- Disabled: Music on hold is disabled.
+- UserOverride: For now, setting the value to UserOverride is the same as Enabled.
 
 ```yaml
 Type: String
@@ -396,7 +426,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
-
 Required: False
 Position: Named
 Default value: ""
@@ -412,7 +441,6 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
-
 Required: False
 Position: Named
 Default value: Disabled
@@ -423,7 +451,7 @@ Accept wildcard characters: False
 ### -PreventTollBypass
 Setting this parameter to True will send calls through PSTN and incur charges rather than going through the network and bypassing the tolls. 
 
-**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing that is configured to handle location based routing restrictions. 
+**Note**: Do not set this parameter to True for Calling Plan or Operator Connect users as it will prevent successful call routing. This setting only works with Direct Routing which is configured to handle location-based routing restrictions. 
 
 ```yaml
 Type: Boolean
@@ -442,7 +470,7 @@ Accept wildcard characters: False
 Determines Spam filtering mode.
 
 Possible values:
-- Enabled: Spam Filtering is fully enabled. Both Basic and Captcha Interactive Voice Response (IVR) checks are performed. In case the call is considered as spam, the user will get a "Spam Likely" notification in Teams.
+- Enabled: Spam Filtering is fully enabled. Both Basic and Captcha Interactive Voice Response (IVR) checks are performed. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
 - Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
 - EnabledWithoutIVR: Spam Filtering is partially enabled. Captcha IVR checks are disabled. A "Spam Likely" notification will appear. A call might get dropped if it gets a high score from Basic checks.
 
@@ -455,6 +483,22 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -493,8 +537,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
