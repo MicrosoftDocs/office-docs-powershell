@@ -21,7 +21,7 @@ Get-CsTeamsFirstPartyMeetingTemplateConfiguration [[-Identity] <string>] [<Commo
 ## DESCRIPTION
 Fetches the list of first party templates on the tenant. Each template object contains its list of meeting options, the name of the template and its ID.
 
-This is a readonly configuration.
+This is a read-only configuration.
 
 ## EXAMPLES
 
