@@ -20,14 +20,12 @@ Use this cmdlet to create a new instance of a Teams Calling Policy.
 
 ### Identity (Default)
 ```
-New-CsTeamsCallingPolicy [-Identity] <string> [-AllowCallForwardingToPhone <boolean>] [-AllowCallForwardingToUser <boolean>] [-AllowCallGroups <boolean>]
-[-AllowCallRedirect <string>] [-AllowCloudRecordingForCalls <boolean>] [-AllowDelegation <boolean>] [-AllowPrivateCalling <boolean>]
-[-AllowSIPDevicesCalling <boolean>] [-AllowTranscriptionForCalling <boolean>] [-AllowVoicemail <string>] [-AllowWebPSTNCalling <boolean>]
-[-AutoAnswerEnabledType <string>] [-BusyOnBusyEnabledType <string>] [-CallRecordingExpirationDays <long>] [-Description <string>]
-[-InboundFederatedCallRoutingTreatment <string>] [-InboundPstnCallRoutingTreatment <string>]
-[-LiveCaptionsEnabledTypeForCalling <string>] [-MusicOnHoldEnabledType <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-PopoutForIncomingPstnCalls <string>]
-[-PreventTollBypass <boolean>] [-SpamFilteringEnabledType <string>]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsCallingPolicy [-Identity] <string> [-Description <string>] [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>] [-AllowSIPDevicesCalling <boolean>]
+ [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>] [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>]
+ [-PreventTollBypass <boolean>] [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>] [-LiveCaptionsEnabledTypeForCalling <string>]
+ [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>] [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
+ [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,20 +43,6 @@ values in the Global policy instance.
 
 ## PARAMETERS
 
-### -Identity
-Name of the policy instance being created.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AllowCallForwardingToPhone
 Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
@@ -109,12 +93,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. 
+Setting this parameter provides the ability to configure the availability of call redirection capabilities on Teams Phones. 
 
 Valid options are:
-- Enabled: Users will have the ability to redirect received calls.
+- Enabled: Users will have the ability to redirect incoming calls directly to voicemail.
 - Disabled: User will not have such ability.
-- UserOverride: The UserOverride option is not available for use. There's no UX implemented for its management.
+- UserOverride: This option is not available for use. There's no user interface implemented for on the Teams Phone device.
 
 ```yaml
 Type: String
@@ -316,6 +300,21 @@ Applicable: Microsoft Teams
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Name of the policy instance being created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
