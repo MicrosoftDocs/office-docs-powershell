@@ -10,7 +10,7 @@ schema: 2.0.0
 # Remove-CsTeamsMeetingTemplatePermissionPolicy
 
 ## SYNOPSIS
-Deletes an instance of TeamsMeetingTemplatePermissionPolicy
+Deletes an instance of TeamsMeetingTemplatePermissionPolicy.
 
 ## SYNTAX
 
