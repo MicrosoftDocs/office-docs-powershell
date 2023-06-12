@@ -29,7 +29,7 @@ Deletes an instance of TeamsMeetingTemplatePermissionPolicy. The `Identity` para
 PS> Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
 ```
 
-Delete a policy instance with the Identity *Test_Policy*.
+Deletes a policy instance with the Identity *Test_Policy*.
 
 ## PARAMETERS
 
