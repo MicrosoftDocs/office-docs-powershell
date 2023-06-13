@@ -671,7 +671,7 @@ The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML
 - Wrap: This is the default value. A new message is created and the original message is added to it as an attachment. The disclaimer text is added to the new message, which is delivered to the recipients.
 
   If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules.
- 
+
   If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
 
 - Ignore: The rule is ignored and the original message is delivered without the disclaimer.
@@ -936,7 +936,7 @@ The AttachmentIsUnsupported parameter specifies a condition that looks for unsup
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the AttachmentIsUnsupported condition is triggered. 
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the AttachmentIsUnsupported condition is triggered.
 
 For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
 
@@ -1775,7 +1775,7 @@ The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks 
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the ExceptIfAttachmentIsUnsupported exception is triggered. 
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the ExceptIfAttachmentIsUnsupported exception is triggered.
 
 For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
 
@@ -4215,7 +4215,12 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-{{ Fill RemoveRMSAttachmentEncryption Description }}
+The RemoveRMSAttachmentEncryption parameter specifies an action that removes Microsoft Purview Message Encryption from encrypted attachments in email. The attachments were already encrypted before they were attached to the message. The message itself doesn't need to be encrypted. Valid values are:
+
+- $true: The encrypted attachments are decrypted.
+- $false: The encrypted attachments aren't decrypted.
+
+ This parameter also requires the value $true for the RemoveOMEv2 parameter.
 
 ```yaml
 Type: Boolean
