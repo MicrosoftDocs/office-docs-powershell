@@ -45,7 +45,6 @@ values in the Global policy instance.
 
 ## PARAMETERS
 
-
 ### -AllowCallForwardingToPhone
 Enables the user to configure in the Microsoft Teams client call forwarding or simultaneous ringing of inbound calls to any phone number.
 
@@ -95,12 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter provides the ability to configure the availability of call redirection capabilities on Teams Phones. 
+Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. 
 
 Valid options are:
-- Enabled: Users will have the ability to redirect incoming calls directly to voicemail.
+- Enabled: Users will have the ability to redirect received calls.
 - Disabled: User will not have such ability.
-- UserOverride: This option is not available for use. There's no user interface implemented for on the Teams Phone device.
+- UserOverride: This option is not available for use. There's no user interface implemented for its management.
 
 ```yaml
 Type: String
