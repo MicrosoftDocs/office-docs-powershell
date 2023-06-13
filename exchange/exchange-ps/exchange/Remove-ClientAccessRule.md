@@ -13,7 +13,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 > [!NOTE]
-> Beginning in October 2022, we've disabled access to client access rules for all existing Exchange Online organizations that weren't using them. In October 2023, support for client access rules will end for all Exchange Online organizations. For more information, see [Deprecation of Client Access Rules in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-client-access-rules-in-exchange-online/ba-p/3638563).
+> Beginning in October 2022, we've disabled access to client access rules for all existing Exchange Online organizations that weren't using them. In September 2024, support for client access rules will end for all Exchange Online organizations. For more information, see [Update: Deprecation of Client Access Rules in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/update-deprecation-of-client-access-rules-in-exchange-online/ba-p/3790165).
 
 This cmdlet is functional only in Exchange Server 2019 and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
