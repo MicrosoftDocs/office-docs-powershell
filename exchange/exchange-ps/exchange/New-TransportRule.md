@@ -938,11 +938,11 @@ The AttachmentIsUnsupported parameter specifies a condition that looks for unsup
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the AttachmentIsUnsupported condition is triggered. 
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the AttachmentIsUnsupported condition is triggered.
 
 For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
 
-In Exhange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+In Exchange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -1793,12 +1793,16 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
+The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks for unsupported file types in messages. Valid values are:
 
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-For more information, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the ExceptIfAttachmentIsUnsupported exception is triggered.
+
+For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
+
+In Exhange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -4218,7 +4222,12 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-{{ Fill RemoveRMSAttachmentEncryption Description }}
+The RemoveRMSAttachmentEncryption parameter specifies an action that removes Microsoft Purview Message Encryption from encrypted attachments in email. The attachments were already encrypted before they were attached to the message. The message itself doesn't need to be encrypted. Valid values are:
+
+- $true: The encrypted attachments are decrypted.
+- $false: The encrypted attachments aren't decrypted.
+
+ This parameter also requires the value $true for the RemoveOMEv2 parameter.
 
 ```yaml
 Type: Boolean
