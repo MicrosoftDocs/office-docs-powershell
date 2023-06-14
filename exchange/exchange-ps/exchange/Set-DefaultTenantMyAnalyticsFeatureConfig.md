@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamplingRate
-This parameter is available only in version 3.2.0-Preview2 or later.
+This parameter is available only in version 3.2.0-Preview3 or later.
 
 The SamplingRate parameter specifies the meeting effectiveness survey sampling rate. The percentage value is expressed a a decimal (for example, 0.1 indicates 10%). A valid value is from 0.1 to 0.7.
 
