@@ -33,13 +33,11 @@ You must be a Teams service admin, a Teams communication admin, or Global Admini
 ## Examples
 
 ### Example 1
-
 In this example, federation has been enabled for just one ACS resource.
 
 ```powershell
 Get-CsTeamsAcsFederationConfiguration
 ```
-
 ```Output
 Identity             : Global
 AllowedAcsResources  : {'faced04c-2ced-433d-90db-063e424b87b1'}
@@ -47,13 +45,11 @@ EnableAcsUsers       : True
 ```
 
 ### Example 2
-
 In this example, federation is disabled for all ACS resources.
 
 ```powershell
 Get-CsTeamsAcsFederationConfiguration
 ```
-
 ```Output
 Identity             : Global
 AllowedAcsResources  : {}
