@@ -13,7 +13,6 @@ ms.reviewer: rogupta
 # Remove-CsExternalAccessPolicy
 
 ## SYNOPSIS
-
 Enables you to remove an existing external access policy.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; 3) communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/en-us/azure/communication-services/concepts/teams-interop) and 4) access Skype for Business Server over the Internet, without having to log on to your internal network.
 This cmdlet was introduced in Lync Server 2010.
@@ -26,17 +25,16 @@ Remove-CsExternalAccessPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force
 ```
 
 ## DESCRIPTION
-
 When you install Skype for Business Server your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services.
 In addition, users are not allowed to access Skype for Business Server over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Skype for Business Server.
 
 1. That might be sufficient to meet your communication needs.
-   If it doesn't meet your needs you can use external access policies to extend the ability of your users to communicate and collaborate.
-   External access policies can grant (or revoke) the ability of your users to do any or all of the following:
+If it doesn't meet your needs you can use external access policies to extend the ability of your users to communicate and collaborate.
+External access policies can grant (or revoke) the ability of your users to do any or all of the following:
 
 2. Communicate with people who have SIP accounts with a federated organization.
-   Note that enabling federation alone will not provide users with this capability.
-   Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
+Note that enabling federation alone will not provide users with this capability.
+Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
 3. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/en-us/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](https://learn.microsoft.com/en-us/powershell/module/teams/set-csteamsacsfederationconfiguration?view=teams-ps).
 
@@ -56,7 +54,6 @@ Instead, the properties of the global policy will simply be reset to their defau
 ## EXAMPLES
 
 ### -------------------------- Example 1 ------------------------
-
 ```
 Remove-CsExternalAccessPolicy -Identity site:Redmond
 ```
@@ -65,17 +62,15 @@ In Example 1, the external access policy with the Identity site:Redmond is delet
 After the policy is removed, users in the Redmond site will have their external access permissions governed by the global policy.
 
 ### -------------------------- Example 2 ------------------------
-
 ```
 Get-CsExternalAccessPolicy -Filter site:* | Remove-CsExternalAccessPolicy
 ```
 
 Example 2 deletes all the external access policies that have been configured at the site scope.
-To carry out this task, the command first uses the `Get-CsExternalAccessPolicy` cmdlet and the Filter parameter to return a collection of policies configured at the site scope; the filter value "site:\*" limits the returned data to external access policies that have an Identity that begins with the string value "site:".
+To carry out this task, the command first uses the `Get-CsExternalAccessPolicy` cmdlet and the Filter parameter to return a collection of policies configured at the site scope; the filter value "site:*" limits the returned data to external access policies that have an Identity that begins with the string value "site:".
 The filtered collection is then piped to the `Remove-CsExternalAccessPolicy` cmdlet, which deletes each policy in the collection.
 
 ### -------------------------- Example 3 ------------------------
-
 ```
 Get-CsExternalAccessPolicy | Where-Object {$_.EnableFederationAccess -eq $True} | Remove-CsExternalAccessPolicy
 ```
@@ -86,7 +81,6 @@ This collection is then piped to the `Where-Object` cmdlet, which picks out only
 This filtered collection is then piped to the `Remove-CsExternalAccessPolicy` cmdlet, which deletes each policy in the collection.
 
 ### -------------------------- Example 4 ------------------------
-
 ```
 Get-CsExternalAccessPolicy | Where-Object {$_.EnableFederationAccess -eq $True -or $_.EnablePublicCloudAccess -eq $True} | Remove-CsExternalAccessPolicy
 ```
@@ -103,7 +97,6 @@ To delete all the policies where both EnableFederationAccess and EnablePublicClo
 ## PARAMETERS
 
 ### -Identity
-
 Unique identifier for the external access policy to be removed.
 External access policies can be configured at the global, site, or per-user scopes.
 To "remove" the global policy, use this syntax: `-Identity global`.
@@ -127,7 +120,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
@@ -144,7 +136,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
@@ -161,7 +152,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
 
 ```yaml
@@ -178,7 +168,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the external access policy is being removed.
 For example:
 
@@ -202,20 +191,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ###
-
 Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 The `Remove-CsExternalAccessPolicy` cmdlet accepts pipelined input of the external access policy object.
 
 ## OUTPUTS
 
 ###
-
 None.
 Instead, the `Remove-CsExternalAccessPolicy` cmdlet does not return a value or object.
 Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
