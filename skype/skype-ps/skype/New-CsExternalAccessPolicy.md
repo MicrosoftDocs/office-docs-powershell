@@ -51,7 +51,7 @@ This enables your users to use Skype for Business and log on to Skype for Busine
 
 4. Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
-5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting.
+5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting. 
 
 When you install Skype for Business Server, a global external access policy is automatically created for you.
 In addition to the global policy, you can also create custom external access policies at either the site or the per-user scope.
@@ -67,7 +67,7 @@ The following parameters are not applicable to Skype for Business Online/Microso
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 New-CsExternalAccessPolicy -Identity site:Redmond -EnableFederationAccess $True -EnableOutsideAccess $True
 ```
@@ -91,7 +91,7 @@ New-CsExternalAccessPolicy -Identity site:Redmond -EnableTeamsConsumerAccess $Tr
 The command shown in Example 3 creates a new external access policy that has the Identity site:Redmond; upon creation, this policy will automatically be assigned to the Redmond site.
 Note that this new policy enables communication with people using Teams with an account that's not managed by an organization and limits this to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people with this policy assigned.
 
-### -------------------------- EXAMPLE 4 --------------------------
+### -------------------------- EXAMPLE 4 -------------------------- 
 ```
 $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
@@ -395,13 +395,13 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
-###
+###  
 None.
 The New-CsExternalAccessPolicy cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###
+###  
 Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 
 ### System.Object
