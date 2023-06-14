@@ -41,13 +41,13 @@ If it doesn't meet your needs you can use external access policies to extend the
 External access policies can grant (or revoke) the ability of your users to do any or all of the following:
 
 1. Communicate with people who have SIP accounts with a federated organization.
-   Note that enabling federation alone will not provide users with this capability.
-   Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
+Note that enabling federation alone will not provide users with this capability.
+Instead, you must enable federation and then assign users an external access policy that gives them the right to communicate with federated users.
 
 2. (Microsoft Teams only) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop). This policy setting only applies if ACS federation has been enabled at the tenant level using the cmdlet [Set-CsTeamsAcsFederationConfiguration](/powershell/module/teams/set-csteamsacsfederationconfiguration).
 
 3. Access Skype for Business Server over the Internet, without having to first log on to your internal network.
-   This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
+This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
 4. Communicate with people who have SIP accounts with a public instant messaging service such as Skype.
 
@@ -68,7 +68,6 @@ The following parameters are not applicable to Skype for Business Online/Microso
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-
 ```
 New-CsExternalAccessPolicy -Identity site:Redmond -EnableFederationAccess $True -EnableOutsideAccess $True
 ```
@@ -77,7 +76,6 @@ The command shown in Example 1 creates a new external access policy that has the
 Note that this new policy sets both the EnableFederationAccess and the EnableOutsideAccess properties to True.
 
 ### -------------------------- Example 2 ------------------------
-
 ```
 Set-CsExternalAccessPolicy -Identity Global -EnableAcsFederationAccess $true
 New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed -EnableAcsFederationAccess $false
@@ -86,7 +84,6 @@ New-CsExternalAccessPolicy -Identity AcsFederationNotAllowed -EnableAcsFederatio
 In this example, the Global policy is updated to allow Teams-ACS federation for all users, then a new external access policy instance is created with Teams-ACS federation disabled and which can then be assigned to selected users for which Team-ACS federation will not be allowed.
 
 ### -------------------------- Example 3 ------------------------
-
 ```
 New-CsExternalAccessPolicy -Identity site:Redmond -EnableTeamsConsumerAccess $True -EnableTeamsConsumerInbound $False
 ```
@@ -95,7 +92,6 @@ The command shown in Example 3 creates a new external access policy that has the
 Note that this new policy enables communication with people using Teams with an account that's not managed by an organization and limits this to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people with this policy assigned.
 
 ### -------------------------- EXAMPLE 4 --------------------------
-
 ```
 $x = New-CsExternalAccessPolicy -Identity RedmondAccessPolicy -InMemory
 
@@ -120,7 +116,6 @@ Should that happen, an external access policy with the Identity RedmondAccessPol
 ## PARAMETERS
 
 ### -Identity
-
 Unique Identity to be assigned to the policy.
 New external access policies can be created at the site or per-user scope.
 To create a new site policy, use the prefix "site:" and the name of the site as your Identity.
@@ -145,7 +140,6 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-
 Enables administrators to provide explanatory text to accompany the policy.
 For example, the Description might include information about the users the policy should be assigned to.
 
@@ -163,7 +157,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFederationAccess
-
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a federated organization.
 Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is True.
@@ -182,7 +175,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTeamsConsumerAccess
-
 (Microsoft Teams Only) Indicates whether the user is allowed to communicate with people who have who are using Teams with an account that's not managed by an organization.
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
@@ -203,7 +195,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTeamsConsumerInbound
-
 (Microsoft Teams Only) Indicates whether the user is allowed to be discoverable by people who are using Teams with an account that's not managed by an organization. It also controls if people who have who are using Teams with an account that's not managed by an organization can start the communication with the user.
 
 To enable just for a selected set of users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to False. Then assign selected users a policy with federation enabled.
@@ -244,7 +235,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOutsideAccess
-
 Indicates whether the user is allowed to connect to Skype for Business Server over the Internet, without logging on to the organization's internal network.
 The default value is False.
 
@@ -262,7 +252,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePublicCloudAccess
-
 Indicates whether the user is allowed to communicate with people who have SIP accounts with a public Internet connectivity provider such as MSN.
 Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
@@ -281,7 +270,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePublicCloudAudioVideoAccess
-
 Indicates whether the user is allowed to conduct audio/video conversations with people who have SIP accounts with a public Internet connectivity provider such as MSN.
 When set to False, audio and video options in Skype for Business Server will be disabled any time a user is communicating with a public Internet connectivity contact.
 
@@ -299,7 +287,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 ```yaml
@@ -316,7 +303,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
 
@@ -334,7 +320,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
@@ -351,7 +336,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before executing the command.
 
 ```yaml
@@ -368,7 +352,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableXmppAccess
-
 Indicates whether the user is allowed to communicate with users who have SIP accounts with a federated XMPP (Extensible Messaging and Presence Protocol) partner.
 The default value is False.
 
@@ -386,7 +369,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the new external access policy is being created.
 For example:
 
@@ -410,20 +392,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
 ###
-
 None.
 The New-CsExternalAccessPolicy cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###
-
 Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 
 ### System.Object
