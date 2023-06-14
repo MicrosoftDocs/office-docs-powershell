@@ -403,13 +403,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
+###  
 Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 The `Set-CsExternalAccessPolicy` cmdlet accepts pipelined input of the external access policy object.
 
 ## OUTPUTS
 
-###
+###  
 The `Set-CsExternalAccessPolicy` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ExternalAccess.ExternalAccessPolicy object.
 
