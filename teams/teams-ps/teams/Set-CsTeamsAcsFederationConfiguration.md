@@ -38,7 +38,6 @@ You must be a Teams service admin, a Teams communication admin, or Global Admini
 ## EXAMPLES
 
 ### Example 1
-
 In this example, federation between Teams and ACS is disabled completely.
 
 ```powershell
@@ -46,7 +45,6 @@ Set-CsTeamsAcsFederationConfiguration -EnableAcsUsers $False
 ```
 
 ### Example 2
-
 In this example, federation is enabled for just one ACS resource.
 
 ```powershell
@@ -83,7 +81,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
