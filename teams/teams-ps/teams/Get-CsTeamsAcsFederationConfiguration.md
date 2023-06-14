@@ -24,7 +24,7 @@ Get-CsTeamsAcsFederationConfiguration
 
 ## DESCRIPTION
 
-Federation between Teams and Azure Communication Services (ACS) allows users of custom solutions built with ACS to connect and communicate with Teams users over voice, video, chat, and more. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
+Federation between Teams and Azure Communication Services (ACS) allows users of custom solutions built with ACS to connect and communicate with Teams users over voice, video, Teams users over voice, video and screen sharing, and more. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
 
 This cmdlet is used retrieve the Teams and ACS federation configuration for a Teams tenant.
 
@@ -33,11 +33,13 @@ You must be a Teams service admin, a Teams communication admin, or Global Admini
 ## Examples
 
 ### Example 1
+
 In this example, federation has been enabled for just one ACS resource.
 
 ```powershell
 Get-CsTeamsAcsFederationConfiguration
 ```
+
 ```Output
 Identity             : Global
 AllowedAcsResources  : {'faced04c-2ced-433d-90db-063e424b87b1'}
@@ -45,11 +47,13 @@ EnableAcsUsers       : True
 ```
 
 ### Example 2
+
 In this example, federation is disabled for all ACS resources.
 
 ```powershell
 Get-CsTeamsAcsFederationConfiguration
 ```
+
 ```Output
 Identity             : Global
 AllowedAcsResources  : {}
