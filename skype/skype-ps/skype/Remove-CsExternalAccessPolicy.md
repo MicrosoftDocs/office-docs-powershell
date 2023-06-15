@@ -14,7 +14,7 @@ ms.reviewer: rogupta
 
 ## SYNOPSIS
 Enables you to remove an existing external access policy.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; 3) communicate with users who are using custom applications built with [Azure Communication Services (ACS)](https://learn.microsoft.com/en-us/azure/communication-services/concepts/teams-interop) and 4) access Skype for Business Server over the Internet, without having to log on to your internal network.
+External access policies determine whether or not your users can: 1) Communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) Communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; 3) Communicate with users who are using custom applications built with [Azure Communication Services (ACS)](/azure/communication-services/concepts/teams-interop) and 4) Access Skype for Business Server over the Internet, without having to log on to your internal network.
 This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
