@@ -44,7 +44,7 @@ This example creates a new Caller ID policy that sets the Caller ID to Anonymous
 
 ### Example 2
 ```
-New-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
+New-CsCallingLineIdentity -Identity BlockIncomingCLID -Description -BlockIncomingPstnCallerID $true
 ```
 
 This example creates a new Caller ID policy that blocks the incoming Caller ID.
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ### -BlockIncomingPstnCallerID
 The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID. The default value is false.
 
-The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a Lync user, then Caller ID for incoming calls is suppressed/anonymous. 
+The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a user, then Caller ID for incoming calls is suppressed/anonymous. 
 
 ```yaml
 Type: Boolean
