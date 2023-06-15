@@ -34,12 +34,8 @@ Identity              : Global
 TeamsMeetingTemplates : {default, customtemplate_1cb7073a-8b19-4b5d-a3a6-14737d006969,
                         customtemplate_21ecf22c-eb1a-4f05-93e0-555b994ebeb5,
                         customtemplate_0b9c1f57-01ec-4b8a-b4c2-08bd1c01e6ba...}
-Description           :
-```
+Description           : The `TeamsMeetingTemplates` property contains the meeting template details:
 
-The `TeamsMeetingTemplates` property contains the meeting template details:
-
-```output
 TeamsMeetingOptions : {SelectedSensitivityLabel, AutoAdmittedUsers, AllowPstnUsersToBypassLobby,
                       EntryExitAnnouncementsEnabled...}
 Description         : Custom Template 1
