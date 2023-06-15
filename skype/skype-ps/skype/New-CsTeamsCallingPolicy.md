@@ -352,7 +352,8 @@ Setting this parameter lets you control how inbound PSTN calls should be routed.
 
 Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
-- Unanswered: The inbound PSTN call will be routed according to the called user unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user have not enabled unanswered call settings the call will be disconnected.
+- Unanswered: The inbound PSTN call will be routed according to the called user's unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user has not enabled unanswered call settings the call will be disconnected.
+
 - Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
 - UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
 
