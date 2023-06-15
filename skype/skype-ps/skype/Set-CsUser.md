@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ### -LineURI
 Phone number to be assigned to the user in Skype for Business Server or Direct Routing phone number to be assigned to a Microsoft Teams user in GCC High and DoD cloud instances only.
 
-The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "tel:" prefix. For example: tel:+14255551297.
+The line Uniform Resource Identifier (URI) must be specified using the E.164 format and the "tel:" prefix, for example: tel:+14255551297.
 Any extension number should be added to the end of the line URI, for example: tel:+14255551297;ext=51297.
 
 It is important to note that Skype for Business Server treats tel:+14255551297 and tel:+14255551297;ext=51297 as two different numbers.
