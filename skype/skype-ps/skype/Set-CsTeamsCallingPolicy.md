@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPSTNCalling
-Allows PSTN calling from the Team web client.
+Allows PSTN calling from the Teams web client.
 
 ```yaml
 Type: Object
