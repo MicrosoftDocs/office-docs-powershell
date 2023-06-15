@@ -357,7 +357,8 @@ Valid options are:
 - Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
 - UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
 
-Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups or call forwarding.
+Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups, or call forwarding.
+
 
 ```yaml
 Type: String
