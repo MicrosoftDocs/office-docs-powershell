@@ -36,12 +36,9 @@ Identity              : Global
 TeamsMeetingTemplates : {default, firstparty_30d773c0-1b4e-4bf6-970b-73f544c054bb,
                         firstparty_399f69a3-c482-41bf-9cf7-fcdefe269ce6,
                         firstparty_64c92390-c8a2-471e-96d9-4ee8f6080155...}
-Description           :
-```
+Description           : The `TeamsMeetingTemplates` property contains the meeting template details:
 
-The `TeamsMeetingTemplates` property contains the meeting template details:
 
-```output
 TeamsMeetingOptions : {SelectedSensitivityLabel, AutoAdmittedUsers, AllowPstnUsersToBypassLobby,
                       EntryExitAnnouncementsEnabled...}
 Description         : Townhall
