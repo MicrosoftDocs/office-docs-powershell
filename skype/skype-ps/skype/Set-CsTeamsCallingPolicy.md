@@ -107,7 +107,7 @@ Setting this parameter provides the ability to configure call redirection capabi
 
 Valid options are:
 - Enabled: Users will have the ability to redirect received calls.
-- Disabled: User will not have such ability.
+- Disabled: Users will not have such an ability.
 - UserOverride: This option is not available for use. There's no user interface implemented for its management.
 
 ```yaml
