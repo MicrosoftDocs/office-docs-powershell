@@ -44,7 +44,7 @@ This example creates a new Caller ID policy that sets the Caller ID to Anonymous
 
 ### Example 2
 ```
-New-CsCallingLineIdentity -Identity BlockIncomingCLID -Description -BlockIncomingPstnCallerID $true
+New-CsCallingLineIdentity -Identity BlockIncomingCLID -BlockIncomingPstnCallerID $true
 ```
 
 This example creates a new Caller ID policy that blocks the incoming Caller ID.
