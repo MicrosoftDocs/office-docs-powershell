@@ -837,6 +837,7 @@
   "Get-AdministrativeUnit": "policy-and-compliance",
   "Get-AutoSensitivityLabelPolicy": "policy-and-compliance",
   "Get-AutoSensitivityLabelRule": "policy-and-compliance",
+  "Get-EtrLimits": "policy-and-compliance",
   "Get-ExoInformationBarrierPolicy": "policy-and-compliance",
   "Get-ExoInformationBarrierRelationship": "policy-and-compliance",
   "Get-ExoInformationBarrierSegment": "policy-and-compliance",
