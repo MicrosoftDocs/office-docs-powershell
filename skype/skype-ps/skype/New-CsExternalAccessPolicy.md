@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAcsFederationAccess
-Indicates whether Teams meeting organized by the user can be joined by users of customer applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsFederationConfiguration. Additionally, Azure Communication Services users would be able to call Microsoft 365 users, that have assigned policy with enabled federation.
+Indicates whether Teams meetings organized by the user can be joined by users of customer applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsFederationConfiguration. Additionally, Azure Communication Services users would be able to call Microsoft 365 users that have assigned policies with enabled federation.
 
 To enable for all users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to True. It can be disabled for selected users by assigning them a policy with federation disabled.
 
