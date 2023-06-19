@@ -56,7 +56,7 @@ This enables your users to use Skype for Business and log on to Skype for Busine
 
    The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
-5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting.
+5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams admin center under the External Access setting.
 
 After an external access policy has been created, you can use the `Set-CsExternalAccessPolicy` cmdlet to change the property values of that policy.
 For example, by default the global policy does not allow users to communicate with people who have accounts with a federated organization.
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ### -EnableAcsFederationAccess
 Indicates whether Teams meeting organized by the user can be joined by users of customer applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsFederationConfiguration.
 
-Additionally, Azure Communication Services users would be able to call Microsoft 365 users, that have assigned policy with enabled federation.
+Additionally, Azure Communication Services users would be able to call Microsoft 365 users that have assigned policies with enabled federation.
 
 To enable for all users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to True. It can be disabled for selected users by assigning them a policy with federation disabled.
 
