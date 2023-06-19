@@ -27,20 +27,21 @@ Creates a new instance of the policy with a name and a list of hidden meeting te
 
 Assuming there are two valid templates with IDs `firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748` and `customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056`, we will first create the `HiddenMeetingTemplate` objects.
 
+The next step would be to create the policy instance.
 ```powershell
-PS> $hiddentemplate_1 = New-CsTeamsHiddenMeetingTemplate -Id customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056
-PS> $hiddentemplate_2 = New-CsTeamsHiddenMeetingTemplate -Id firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748
+$hiddentemplate_1 = New-CsTeamsHiddenMeetingTemplate -Id customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056
+$hiddentemplate_2 = New-CsTeamsHiddenMeetingTemplate -Id firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748
+
+New-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy -HiddenMeetingTemplates @($hiddentemplate_1, $hiddentemplate_2) -Description "This is a test policy"
 ```
 
-The next step would be to create the policy instance.
-
-```powershell
-PS> New-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy -HiddenMeetingTemplates @($hiddentemplate_1, $hiddentemplate_2) -Description "This is a test policy"
-
+```output
 Identity               : Tag:Test_Policy
 HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056, firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748}
 Description            : This is a test policy
 ```
+
+
 
 ## PARAMETERS
 
