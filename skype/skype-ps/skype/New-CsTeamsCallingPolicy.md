@@ -94,13 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. 
-
-Valid options are:
-- Enabled: Users will have the ability to redirect received calls.
-- Disabled: Users will not have such an ability.
-- UserOverride: This option is not available for use. There is no user interface implemented for its management.
-
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
