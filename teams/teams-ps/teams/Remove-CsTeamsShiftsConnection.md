@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Remove-CsTeamsShiftsConnection
-author: somaniou
+author: sofiamaniou
 ms.author: somaniou
 manager: stepfitz
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsshiftsconnection
