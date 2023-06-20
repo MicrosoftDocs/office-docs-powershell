@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet deletes a connection.
+This cmdlet deletes a Shifts connection.
 
 ## SYNTAX
 
