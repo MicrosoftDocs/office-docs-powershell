@@ -105,6 +105,13 @@ Get-MoveRequestStatistics -MRSInstance CAS01.contoso.com -MailboxGuid b6a6795c-a
 
 In Exchange Server 2010, this example returns default statistics for a mailbox that has been moved by the instance of the Microsoft Exchange Mailbox Replication service running on the server CAS01.
 
+### Example 6
+```powershell
+Get-MoveRequestStatistics tony@contoso.com -IncludeReport -DiagnosticInfo Verbose | Export-Clixml "C:\Data\MoveReport.xml"
+```
+
+This example exports the move request information so you can later import it into the MRS_Explorer.ps1 script for analysis. For more information, see [MRS-Explorer](https://github.com/zarkatech/MRS-Explorer).
+
 ## PARAMETERS
 
 ### -Identity

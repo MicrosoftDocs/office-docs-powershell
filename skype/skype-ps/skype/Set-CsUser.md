@@ -191,16 +191,16 @@ Accept wildcard characters: False
 ```
 
 ### -LineURI
-Phone number assigned to the user.
-The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "tel:" prefix.
-For example: tel:+14255551297.
+Phone number to be assigned to the user in Skype for Business Server or Direct Routing phone number to be assigned to a Microsoft Teams user in GCC High and DoD cloud instances only.
+
+The line Uniform Resource Identifier (URI) must be specified using the E.164 format and the "tel:" prefix, for example: tel:+14255551297.
 Any extension number should be added to the end of the line URI, for example: tel:+14255551297;ext=51297.
 
 It is important to note that Skype for Business Server treats tel:+14255551297 and tel:+14255551297;ext=51297 as two different numbers.
-If you assign Ken Myer the line URI tel:+14255551297 and later try to assign Pilar Ackerman the line URI tel:+14255551297;ext=51297, that assignment will succeed; the number assigned to Pilar will not be flagged as a duplicate number.
-This is due to the fact that, depending on your setup, those two numbers could actually be different.
-For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
-Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
+If you assign Ken Myer the line URI tel:+14255551297 and later try to assign Pilar Ackerman the line URI tel:+14255551297;ext=51297, that assignment will succeed; the number assigned to Pilar will not
+be flagged as a duplicate number. This is due to the fact that, depending on your setup, those two numbers could actually be different. For example, in some organizations dialing 1-425-555-1297
+routes your call to an Exchange Auto Attendant. Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call
+directly to the user.
 
 Note: Extension should be part of the E164 Number. For example if you have 5 digit Extensions then the last 5 digits of the E164 Number should always match the 5 digit extension tel:+14255551297;ext=51297
 
@@ -208,7 +208,7 @@ Note: Extension should be part of the E164 Number. For example if you have 5 dig
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
 Position: Named
@@ -403,6 +403,8 @@ For example, in some organizations dialing 1-425-555-1297 routes your call to an
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
 **Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+
+**Note**: Using this parameter for Microsoft Teams users in GCC High and DoD cloud instances has been deprecated. Use the -LineURI parameter instead.
 
 ```yaml
 Type: String

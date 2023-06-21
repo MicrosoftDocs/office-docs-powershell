@@ -319,7 +319,7 @@ This parameter is required for archives and optional for primary mailboxes. A de
 - `/folder1/folder2`
 - `folder1`
 - `folder1/folder2`
-```
+
 The preceding or trailing `/` will be ignored. Then, it will be treated as the relative path of the IPM sub-tree: `/Top Of Information Store`.
 
 ```yaml
