@@ -163,8 +163,8 @@ Miscellaneous Exchange Online cmdlets that happen to be in the module are listed
 
 |Cmdlet|Comments|
 |---|---|
-|Get-DefaultTenantBriefingConfig|See [Pausing the briefing email from Microsoft Viva](/viva/insights/personal/reference/briefing-pause).|
-|Set-DefaultTenantBriefingConfig|See [Pausing the briefing email from Microsoft Viva](/viva/insights/personal/reference/briefing-pause).|
+|[Get-DefaultTenantBriefingConfig](/powershell/module/exchange/get-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
+|[Set-DefaultTenantBriefingConfig](/powershell/module/exchange/set-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
 |[Get-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/get-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0-Preview1 or later.|
 |[Set-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/set-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0-Preview1 or later.|
 |[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
