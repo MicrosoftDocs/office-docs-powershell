@@ -32,7 +32,7 @@ This cmdlet deletes a connection. All available connections can be found by runn
 PS C:\> Remove-CsTeamsShiftsConnection -ConnectionId 43cd0e23-b62d-44e8-9321-61cb5fcfae85
 ```
 
-Deletes the connection with id `43cd0e23-b62d-44e8-9321-61cb5fcfae85`.
+Deletes the connection with ID `43cd0e23-b62d-44e8-9321-61cb5fcfae85`.
 
 ## PARAMETERS
 
