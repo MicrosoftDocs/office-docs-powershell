@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuarantineTag
-The QuarantineTag specifies the quarantine policy that's used on messages that are quarantined as malware by Safe Attachments. You can use any value that uniquely identifies the quarantine policy. For example:
+The QuarantineTag parameter specifies the quarantine policy that's used on messages that are quarantined as malware by Safe Attachments. You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
