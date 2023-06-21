@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionId
-**Note**: This parameter is available in version 3.2.0-Preview2 or later of the module.
+**Note**: This parameter is available in version 3.2.0 or later of the module.
 
 The ConnectionId parameter specifies the REST API connections to disconnect by ConnectionId. ConnectionId is a GUID value in the output of the Get-ConnectionInformation cmdlet that uniquely identifies a connection, even if you have multiple connections open. You can specify multiple ConnectionId values separated by commas.
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModulePrefix
-**Note**: This parameter is available in version 3.2.0-Preview2 or later of the module.
+**Note**: This parameter is available in version 3.2.0 or later of the module.
 
 The ModulePrefix parameter specifies the REST API connections to disconnect by ModulePrefix. When you use the Prefix parameter with the Connect-ExchangeOnline cmdlet, the specified text is added to the names of all Exchange Online cmdlets (for example, Get-InboundConnector becomes Get-ContosoInboundConnector). The ModulePrefix value is visible in the output of the Get-ConnectionInformation cmdlet. You can specify multiple ModulePrefix values separated by commas.
 
