@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-DefaultTenantMyAnalyticsFeatureConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module version 3.2.0-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module version 3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-DefaultTenantMyAnalyticsFeatureConfig cmdlet to view the availability and status of Viva Insights features for the cloud-based organization: digest email, add-in, dashboard, meeting effectiveness survey, and schedule send suggestions.
 

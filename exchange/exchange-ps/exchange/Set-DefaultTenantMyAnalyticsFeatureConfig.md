@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-DefaultTenantMyAnalyticsFeatureConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module version 3.2.0-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module version 3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Set-DefaultTenantMyAnalyticsFeatureConfig cmdlet to update the availability and status of Viva Insights features for the cloud-based organization: digest email, add-in, dashboard, meeting effectiveness survey, and schedule send suggestions.
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamplingRate
-This parameter is available only in version 3.2.0-Preview3 or later.
+This parameter is available only in version 3.2.0 or later.
 
 The SamplingRate parameter specifies the meeting effectiveness survey sampling rate. The percentage value is expressed a a decimal (for example, 0.1 indicates 10%). A valid value is from 0.1 to 0.7.
 
