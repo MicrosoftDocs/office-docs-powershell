@@ -36,7 +36,7 @@ New-ReportSubmissionRule [-Name] <String> -ReportSubmissionPolicy <ReportSubmiss
 You can use this cmdlet only if the following statements are true:
 
 - The report submission rule doesn't exist (the Get-ReportSubmissionRule cmdlet returns no output).
-- The report submission policy exists (the Get-ReportSubmissionPolicy returns output).
+- The report submission policy exists (the Get-ReportSubmissionPolicy cmdlet returns output).
 
 The SentTo parameter identifies the email address of the reporting mailbox. Your organization needs a report submission rule only to send user reported messages to the reporting mailbox using Microsoft or third-party reporting tools in Outlook (the Microsoft integrated reporting experience is turned on).
 
