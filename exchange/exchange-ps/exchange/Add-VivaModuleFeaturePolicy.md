@@ -17,14 +17,14 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Pr
 
 **Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva. The attributes of the policy are defined using the various parameters of the cmdlet. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. Note that the most restrictive policy for a particular user or group will take priority when determining a feature's enablement.
+Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva. The attributes of the policy are defined using the various parameters of the cmdlet. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. Note that the most restrictive policy for a particular user or group take priority when determining whether a feature is enabled.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureDisabled <Boolean> -ModuleId <String> -Name <String>
+Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String>
  [-Confirm]
  [-GroupIds <String[]>]
  [-UserIds <String[]>]
@@ -49,31 +49,31 @@ To learn more about administrator role permissions in Azure Active Directory, se
 
 ### Example 1
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name DisableFeatureForAll -IsFeatureDisabled $true -Everyone
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name DisableFeatureForAll -IsFeatureEnabled $false -Everyone
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for all users in the organization.
+This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for all users in the organization.
 
 ### Example 2
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureDisabled $true -GroupIds group1@contoso.com,group2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for all users in the specified groups.
+This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for all users in the specified groups.
 
 ### Example 3
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleUsers -IsFeatureDisabled $true -UserIds user1@contoso.com,user2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleUsers -IsFeatureEnabled $false -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the specified users.
+This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for the specified users.
 
 ### Example 4
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureDisabled $true -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
 ```
 
-This example adds a policy for the Reflection feature in Viva Insights. The policy will disable the feature for the specified users and group members.
+This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for the specified users and group members.
 
 ## PARAMETERS
 
@@ -95,11 +95,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IsFeatureDisabled
-The IsFeatureDisabled parameter specifies whether or not the feature is disabled by the policy. Valid values are:
+### -IsFeatureEnabled
+The IsFeatureEnabled parameter specifies whether or not the feature is enabled by the policy. Valid values are:
 
-- $true: The feature is disabled by the policy.
-- $false: The feature is not disabled by the policy.
+- $true: The feature is enabled by the policy.
+- $false: The feature is not enabled by the policy.
 
 ```yaml
 Type: Boolean
