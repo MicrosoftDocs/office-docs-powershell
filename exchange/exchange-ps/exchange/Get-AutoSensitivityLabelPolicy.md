@@ -82,7 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForceValidate
-Populates details of the AdminUnits associated with current set of selected users/groups/sites under various locations in the policy
+The ForceValidate parameter specifies whether to include details related to the AdminUnits of users, groups, or sites in the policy. Valid values are:
+
+- $true: Various properties in the policy include details of the AdminUnits that are associated with current set of selected users, groups, or sites.
+- $false: The output doesn't contain the information. This is the default value.
 
 ```yaml
 Type: Boolean
