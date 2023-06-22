@@ -27,6 +27,8 @@ This cmdlet displays information about one or more phone numbers. You can filter
 
 Returned results are sorted by TelephoneNumber in ascending order.
 
+If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X and then the top Y results will be returned.
+
 ## EXAMPLES
 
 ### Example 1
