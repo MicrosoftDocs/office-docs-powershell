@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessToken
-**Note**: This parameter is available in version 3.1.0-Preview1 or later of the module.
+**Note**: This parameter is available in version 3.1.0 or later of the module.
 
 The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
 
@@ -658,7 +658,7 @@ Accept wildcard characters: False
 ```
 
 ### -SigningCertificate
-**Note**: This parameter is available in version 3.2.0-Preview4 or later of the module.
+**Note**: This parameter is available in version 3.2.0 or later of the module.
 
 The SigningCertificate parameter specifies the client certificate that's used to sign the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
 
