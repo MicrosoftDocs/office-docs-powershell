@@ -3,7 +3,7 @@ title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 5/10/2023
+ms.date: 6/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -268,7 +268,7 @@ New-AzAutomationModule -ResourceGroupName "<ResourceGroupName>" -AutomationAccou
 
 - \<ResourceGroupName\> is the name of the resource group that's already assigned to the Automation account.
 - \<AutomationAccountName\> is the name of the Automation account.
-- \<LatestModuleVersion\> is the current version of the ExchangeOnlineManagement module. To see the latest GA (non-Preview) version of the module, run the following command in Windows PowerShell: `Find-Module ExchangeOnlineManagement`. To see the latest Preview release, run the following command: `Find-Module ExchangeOnlineManagement -AllowPrerelease`.
+- \<LatestModuleVersion\> is the current version of the ExchangeOnlineManagement module. To see the latest General Availability (GA; non-Preview) version of the module, run the following command in Windows PowerShell: `Find-Module ExchangeOnlineManagement`. To see the latest Preview release, run the following command: `Find-Module ExchangeOnlineManagement -AllowPrerelease`.
 - Currently, the PowerShell procedures don't give you a choice for the runtime version (it's 5.1).
 
 For example:
