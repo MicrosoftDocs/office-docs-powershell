@@ -81,6 +81,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowTownhalls
+This setting governs if a user can create town halls using Teams Events.
+Possible values are:
+ - **Enabled**: Enables creating town halls.
+ - **Disabled**: Disables creating town halls.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Enables administrators to provide explanatory text to accompany a Teams Events policy.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EventAccessType
 This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
 Possible values are:
