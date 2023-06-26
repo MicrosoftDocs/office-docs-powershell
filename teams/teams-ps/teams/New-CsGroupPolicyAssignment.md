@@ -23,7 +23,7 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 
 ## DESCRIPTION
 > [!NOTE]
-> As of May 2023, group policy assignment functionality in Teams Powershell Module has been extended to support all policy types used in Teams except for the following:
+> As of May 2023, group policy assignment functionality in Teams PowerShell Module has been extended to support all policy types used in Teams except for the following:
 > -	Teams App Permission Policy
 > -	Teams Network Roaming Policy
 > -	Teams Emergency Call Routing Policy
