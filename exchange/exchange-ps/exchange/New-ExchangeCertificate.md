@@ -123,6 +123,7 @@ If the CA requires the certificate request in a file that's encoded by DER, use 
 ### Example 4
 ```powershell
 $txtrequest = New-ExchangeCertificate -GenerateRequest -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
+
 [System.IO.File]::WriteAllBytes('\\FileServer01\Data\woodgrovebank.req', [System.Text.Encoding]::Unicode.GetBytes($txtrequest))
 ```
 
@@ -133,6 +134,7 @@ This method is required in Exchange 2016 and Exchange 2019 because the RequestFi
 ### Example 5
 ```PowerShell
 $binrequest = New-ExchangeCertificate -GenerateRequest -BinaryEncoded -SubjectName "c=US,o=Woodgrove Bank,cn=mail.woodgrovebank.com" -DomainName autodiscover.woodgrovebank.com,mail.fabrikam.com,autodiscover.fabrikam.com
+
 [System.IO.File]::WriteAllBytes('\\FileServer01\Data\woodgrovebank.pfx', $binrequest.FileData)
 ```
 
@@ -158,6 +160,7 @@ After you create the certificate renewal request, you send the output to the CA.
 ### Example 7
 ```powershell
 $txtrequest = Get-ExchangeCertificate -Thumbprint 8A141F7F2BBA8041973399723BD2598D2ED2D831 | New-ExchangeCertificate -GenerateRequest
+
 [System.IO.File]::WriteAllBytes('C:\Cert Requests\fabrikam_renewal.req', [System.Text.Encoding]::Unicode.GetBytes($txtrequest))
 ```
 
@@ -168,6 +171,7 @@ This method is required in Exchange 2016 and Exchange 2019 because the RequestFi
 ### Example 8
 ```powershell
 $binrequest = Get-ExchangeCertificate -Thumbprint 8A141F7F2BBA8041973399723BD2598D2ED2D831 | New-ExchangeCertificate -GenerateRequest
+
 [System.IO.File]::WriteAllBytes('C:\Cert Requests\fabrikam_renewal.pfx', $binrequest.FileData)
 ```
 

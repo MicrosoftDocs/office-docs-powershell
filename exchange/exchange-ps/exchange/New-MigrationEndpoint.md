@@ -250,6 +250,7 @@ This example creates an endpoint for remote moves by specifying the settings man
 ### Example 3
 ```powershell
 $Credentials = Get-Credential
+
 New-MigrationEndpoint -ExchangeOutlookAnywhere -Name EXCH-AutoDiscover -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 

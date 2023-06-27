@@ -50,6 +50,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $a = Get-AddressList | Where {$_.Name -Like "*AgencyB*"}
+
 New-OfflineAddressBook -Name "OAB_AgencyB" -Server myserver.contoso.com -AddressLists $a -Schedule "Mon.01:00-Mon.02:00, Wed.01:00-Wed.02:00"
 ```
 

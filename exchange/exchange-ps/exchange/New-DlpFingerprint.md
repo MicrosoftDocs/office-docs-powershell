@@ -39,6 +39,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $Patent_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Patent Template.docx)'
+
 $Patent_Fingerprint = New-DlpFingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
 ```
 

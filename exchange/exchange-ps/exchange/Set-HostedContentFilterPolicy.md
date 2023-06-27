@@ -527,7 +527,6 @@ Accept wildcard characters: False
 ### -HighConfidencePhishAction
 The HighConfidencePhishAction parameter specifies the action to take on messages that are marked as high confidence phishing (not phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 - Quarantine: Move the message to quarantine. By default, messages that are quarantined as high confidence phishing are available only to admins. Or, you can use the HighConfidencePhishQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 
