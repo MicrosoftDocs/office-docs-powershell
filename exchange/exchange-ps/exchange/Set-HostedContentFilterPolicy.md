@@ -68,7 +68,7 @@ Set-HostedContentFilterPolicy [-Identity] <HostedContentFilterPolicyIdParameter>
  [-ModifySubjectValue <String>]
  [-PhishQuarantineTag <String>]
  [-PhishSpamAction <SpamFilteringAction>]
- [-PhishZapEnabled <Boolean>
+ [-PhishZapEnabled <Boolean>]
  [-QuarantineRetentionPeriod <Int32>]
  [-RedirectToRecipients <MultiValuedProperty>]
  [-RegionBlockList <MultiValuedProperty>]
