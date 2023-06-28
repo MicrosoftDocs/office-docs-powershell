@@ -192,6 +192,7 @@ For IMAP migrations, this example verifies the connection to the IMAP mail serve
 ### Example 2
 ```powershell
 $Credentials = Get-Credential
+
 Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
@@ -200,6 +201,7 @@ This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to ver
 ### Example 3
 ```powershell
 $Credentials = Get-Credential
+
 Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
 ```
 
@@ -215,6 +217,7 @@ This example verifies the connection settings to a remote server using the setti
 ### Example 5
 ```powershell
 $MRSEndpoints = (Get-MigrationEndpoint).Identity
+
 Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```
 

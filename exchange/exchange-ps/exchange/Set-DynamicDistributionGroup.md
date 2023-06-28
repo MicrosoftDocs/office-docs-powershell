@@ -139,6 +139,7 @@ This example applies the following changes to the existing dynamic distribution 
 ### Example 2
 ```powershell
 $extAtrValue="Contoso"
+
 Set-DynamicDistributionGroup -Identity Developers -RecipientFilter "ExtensionCustomAttribute1 -eq '$extAtrValue'"
 ```
 

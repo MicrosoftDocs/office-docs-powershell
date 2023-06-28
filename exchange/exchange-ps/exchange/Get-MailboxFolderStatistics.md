@@ -105,6 +105,7 @@ This example uses the IncludeAnalysis switch to view the statistics of Tony's Re
 ### Example 5
 ```powershell
 $All = Get-Mailbox -ResultSize Unlimited
+
 $All | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize}
 ```
 
