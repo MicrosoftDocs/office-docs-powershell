@@ -14,7 +14,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 ## SYNTAX
 
 ```
-New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-Description <String>]
+New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-Description <String>]
  [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+The Confirm switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
+The WhatIf switch does not work with this cmdlet.
 The cmdlet is not run.
 
 ```yaml
