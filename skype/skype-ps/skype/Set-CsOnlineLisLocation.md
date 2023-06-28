@@ -44,13 +44,6 @@ Set-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e -Locati
 
 This example changes the location description of the location specified by its location identity.
 
-### Example 2
-```powershell
-Set-CsOnlineLisLocation -CivicAddressId 5687eb59-9039-4e99-bb89-71771d723b7a -Location "B5 2nd Floor" -Elin "TEST_ELIN"
-```
-
-This example changes the Elin of the location specified by its location identity.
-
 ## PARAMETERS
 
 ### -CivicAddressId
@@ -204,6 +197,8 @@ Accept wildcard characters: False
 ### -Elin
 Specifies the Emergency Location Identification Number.
 This is used in Direct Routing EGW scenarios.
+
+**Note:** You can set or change the ELIN, but you can't clear its value.
 
 ```yaml
 Type: String
