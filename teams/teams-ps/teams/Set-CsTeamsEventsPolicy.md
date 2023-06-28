@@ -13,7 +13,7 @@ This cmdlet allows you to configure options for customizing Teams events experie
 ## SYNTAX
 
 ```
-Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-Description <String>] [-EventAccessType <String>]
+Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-AllowTownhalls <String>] [-Description <String>] [-EventAccessType <String>]
  [[-Identity] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+The Confirm switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+The Confirm switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
+The WhatIf switch does not work with this cmdlet.
 The cmdlet is not run.
 
 ```yaml
