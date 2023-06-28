@@ -164,6 +164,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $Credentials = Get-Credential
+
 New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
 ```
 
@@ -176,6 +177,7 @@ After the new mail user is created, directory synchronization synchronizes the n
 ### Example 2
 ```powershell
 $Credentials = Get-Credential
+
 New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
 ```
 

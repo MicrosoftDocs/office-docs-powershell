@@ -771,6 +771,7 @@ In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?Li
 ### Example 1
 ```powershell
 $password = Read-Host "Enter password" -AsSecureString
+
 New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
 ```
 

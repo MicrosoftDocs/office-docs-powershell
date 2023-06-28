@@ -59,6 +59,7 @@ This example retrieves the statistics for the mobile phone configured to synchro
 ### Example 2
 ```powershell
 $UserList = Get-CASMailbox -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'"
+
 Get-Mailbox $UserList | foreach {Get-ActiveSyncDeviceStatistics -Mailbox $_}
 ```
 

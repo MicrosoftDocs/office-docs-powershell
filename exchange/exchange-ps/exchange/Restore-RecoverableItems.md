@@ -77,6 +77,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 ### Example 2
 ```powershell
 $mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"
+
 $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains "Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
 ```
 

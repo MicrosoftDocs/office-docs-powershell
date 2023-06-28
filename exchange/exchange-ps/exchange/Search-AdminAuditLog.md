@@ -73,6 +73,7 @@ The command completed successfully
 ### Example 3
 ```powershell
 $LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog
+
 $LogEntries | ForEach { $_.CmdletParameters }
 ```
 

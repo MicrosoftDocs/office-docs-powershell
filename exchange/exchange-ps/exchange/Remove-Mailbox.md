@@ -101,6 +101,7 @@ In on-premises Exchange, this example removes the mailbox and the user account f
 ### Example 3
 ```powershell
 $Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}
+
 Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```
 
