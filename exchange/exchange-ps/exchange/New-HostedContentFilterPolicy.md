@@ -68,7 +68,7 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-ModifySubjectValue <String>]
  [-PhishQuarantineTag <String>]
  [-PhishSpamAction <SpamFilteringAction>]
- [-PhishZapEnabled <Boolean>
+ [-PhishZapEnabled <Boolean>]
  [-QuarantineRetentionPeriod <Int32>]
  [-RecommendedPolicyType <RecommendedPolicyType>]
  [-RedirectToRecipients <MultiValuedProperty>]

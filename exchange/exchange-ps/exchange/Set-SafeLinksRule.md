@@ -64,7 +64,9 @@ This example modifies the existing Safe Links rule named Contoso All to include 
 ### Example 3
 ```powershell
 $Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+
 $SLDomains = $Data.Domains
+
 Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs $SLDomains
 ```
 

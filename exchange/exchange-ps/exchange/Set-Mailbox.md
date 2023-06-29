@@ -1033,7 +1033,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
- [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
  [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <Boolean>]

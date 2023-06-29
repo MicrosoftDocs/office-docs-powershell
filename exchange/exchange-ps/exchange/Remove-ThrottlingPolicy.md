@@ -48,9 +48,13 @@ This example removes the user throttling policy ClientThrottlingPolicy2.
 ### Example 2
 ```powershell
 $policy = Get-ThrottlingPolicy ClientThrottlingPolicy2
+
 $mailboxes = Get-Mailbox | where-object {$_.ThrottlingPolicy -eq $policy.Identity}
+
 $defaultPolicy = Get-ThrottlingPolicy | where-object {$_.IsDefault -eq $true}
+
 foreach ($mailbox in $mailboxes) {Set-Mailbox -Identity $mailbox.Identity -ThrottlingPolicy $defaultPolicy}
+
 Remove-ThrottlingPolicy ClientThrottlingPolicy2
 ```
 
