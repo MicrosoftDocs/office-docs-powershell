@@ -57,10 +57,10 @@ This example adds the IP address 192.168.0.100 to the list of allowed IP address
 
 ### Example 2
 ```powershell
-Add-IPAllowListEntry -IPRange 192.168.0.1/24 -ExpirationTime "1/3/2013 23:59"
+Add-IPAllowListEntry -IPRange 192.168.0.1/24 -ExpirationTime "1/3/2014 23:59"
 ```
 
-This example adds the IP address range 192.168.0.1/24 to the list of allowed IP addresses and configures the IP Allow list entry to expire at 23:59 on January 3, 2013.
+This example adds the IP address range 192.168.0.1/24 to the list of allowed IP addresses and configures the IP Allow list entry to expire at 23:59 on January 3, 2014.
 
 ## PARAMETERS
 

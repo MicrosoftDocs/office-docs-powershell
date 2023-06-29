@@ -1518,7 +1518,7 @@ The valid input range for this parameter is from 0 through 2199023254529 bytes(2
 
 ```yaml
 Type: Unlimited
-Parameter Sets:  ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -2089,7 +2089,7 @@ This parameter is available only in the cloud-based service.
 
 The FindTimeAutoScheduleDisabled parameter controls automatically scheduling the meeting once a consensus is reached in meeting polls using the FindTime Outlook add-in. Valid values are:
 
-- $true:  Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
+- $true: Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
 - $false: By default, reaching a consensus for the meeting time doesn't automatically schedule the meeting, but meeting organizer is allowed to turn on this setting.
 
 This setting overrides individual user settings.
