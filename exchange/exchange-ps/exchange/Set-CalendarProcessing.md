@@ -52,7 +52,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-MinimumDurationInMinutes <Int32>]
  [-OrganizerInfo <Boolean>]
  [-ProcessExternalMeetingMessages <Boolean>]
- [-RemoveCanceledMeetings <Boolean>
+ [-RemoveCanceledMeetings <Boolean>]
  [-RemoveForwardedMeetingNotifications <Boolean>]
  [-RemoveOldMeetingMessages <Boolean>]
  [-RemovePrivateProperty <Boolean>]
@@ -115,7 +115,9 @@ This example allows a list of users to submit in-policy meeting requests to the 
 ### Example 7
 ```powershell
 $group = New-DistributionGroup "Room 221 Booking Allowed"
+
 Update-DistributionGroupMember -Identity $group.Identity -Members karina@contoso.com,tony@contoso.com -BypassSecurityGroupManagerCheck:$true
+
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group.Identity -AllBookInPolicy $false
 ```
 
