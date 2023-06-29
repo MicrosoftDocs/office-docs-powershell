@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
- [-AutoRequeryOnMeetingId <Boolean>
+ [-AutoRequeryOnMeetingId <Boolean>]
  [-ConfigurationName <String>]
  [-CustomPropertyNames <String[]>]
  [-EndDate <ExDateTime>]
@@ -69,6 +69,7 @@ This example retrieves the calendar diagnostic logs from Pedro Pizarro's mailbox
 ### Example 2
 ```powershell
 $A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true
+
 $A | Select-Object *,@{n='OLMT'
 e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
 ```
