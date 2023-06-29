@@ -38,7 +38,9 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($keywords)
+
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -47,10 +49,15 @@ This example replaces the existing terms in the DLP keyword dictionary named Dis
 ### Example 2
 ```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
+
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
+
 $Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"
+
 $Keywords = $Terms -Join ", "
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
+
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -59,11 +66,17 @@ This example adds the specified terms to the DLP keyword dictionary named Diseas
 ### Example 3
 ```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
+
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
+
 $TermsToRemove = @('abandonment', 'ablatio')
+
 $UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}
+
 $Keywords = $UpdatedTerms -Join ", "
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
+
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -72,11 +85,17 @@ This example removes the specified terms from the DLP keyword dictionary named D
 ### Example 4
 ```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Inappropriate Language"
+
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
+
 Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"
+
 $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"
+
 $Keywords = $UpdatedTerms -Join ", "
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
+
 Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
 

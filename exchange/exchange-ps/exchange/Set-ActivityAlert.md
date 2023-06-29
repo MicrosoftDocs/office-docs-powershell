@@ -49,7 +49,9 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $NU = Get-ActivityAlert "Contoso Elevation of Privilege"
+
 $NU.NotifyUser.Add("chris@fabrikam.com")
+
 Set-ActivityAlert "Contoso Elevation of Privilege" -NotifyUser $NU.NotifyUser
 ```
 

@@ -103,7 +103,9 @@ This example configures the UM dial plan MyDialPlan to use a welcome greeting.
 ### Example 3
 ```powershell
 $csv=import-csv "C:\MyInCountryGroups.csv"
+
 Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv
+
 Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
 ```
 

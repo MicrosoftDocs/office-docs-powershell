@@ -794,7 +794,9 @@ This example creates an enabled user account in Active Directory and a room mail
 ### Example 4
 ```powershell
 New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales
+
 Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG
+
 Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
 ```
 
