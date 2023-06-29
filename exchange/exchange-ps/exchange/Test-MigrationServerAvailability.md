@@ -122,7 +122,7 @@ Test-MigrationServerAvailability -ServiceAccountKeyFileData <Byte[]> [-Gmail]
 
 ### Compliance
 ```
-Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress>  [-Compliance]
+Test-MigrationServerAvailability -Credentials <PSCredential> -EmailAddress <SmtpAddress> [-Compliance]
  [-RemoteServer <Fqdn>]
  [-Confirm]
  [-Partition <MailboxIdParameter>]

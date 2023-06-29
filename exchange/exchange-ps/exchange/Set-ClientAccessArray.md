@@ -60,7 +60,7 @@ This example associates the existing Client Access array named ContosoArray with
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the Client Access array that you want to modify.  You can use these values:
+The Identity parameter specifies the Client Access array that you want to modify. You can use these values:
 
 - Name (if the value doesn't contain spaces)
 - Distinguished name (DN)
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-The Site parameter specifies the Active Directory site that contains the Client Access array.  You can use any value that uniquely identifies the site. For example:
+The Site parameter specifies the Active Directory site that contains the Client Access array. You can use any value that uniquely identifies the site. For example:
 
 - Name
 - Distinguished name (DN)
