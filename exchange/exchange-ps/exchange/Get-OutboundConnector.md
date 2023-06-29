@@ -113,7 +113,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable:  Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

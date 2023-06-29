@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-PopConnectivity cmdlet to verify that the Microsoft Exchange POP3 service is working as expected.
 
-**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or later, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
+**Note**: This cmdlet works best in Exchange 2010. In later versions of Exchange, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxServer
-The MailboxServer parameter specifies the Exchange 2016 or Exchange 2013 Mailbox server that you want to test. This parameter identifies the backend server that accepts proxied connections from the frontend server where clients connect.
+The MailboxServer parameter specifies the Exchange Mailbox server that you want to test. This parameter identifies the backend server that accepts proxied connections from the frontend server where clients connect.
 
 You can use any value that uniquely identifies the server. For example:
 

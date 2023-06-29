@@ -1073,7 +1073,7 @@ Accept wildcard characters: False
 ### -MicrosoftOnlineServicesID
 This parameter is available only in the cloud-based service.
 
-The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter applies only to objects in the cloud-based service and is used instead of the  UserPrincipalName parameter. The MicrosoftOnlineServicesID parameter isn't available in on-premises deployments.
+The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter applies only to objects in the cloud-based service and is used instead of the UserPrincipalName parameter. The MicrosoftOnlineServicesID parameter isn't available in on-premises deployments.
 
 ```yaml
 Type: WindowsLiveId

@@ -407,12 +407,11 @@ Accept wildcard characters: False
 ### -Versions
 This parameter is available only in Exchange Server 2010.
 
-The Versions parameter specifies what version of OAB to generate. The allowed values are:
+The Versions parameter specifies the OAB versions that are generated for client download. Valid values are:
 
-- Version1
-- Version2
-- Version3
-- Version4
+- Version2 (requires public folder distribution)
+- Version3 (requires public folder distribution)
+- Version4 (default value)
 
 ```yaml
 Type: MultiValuedProperty

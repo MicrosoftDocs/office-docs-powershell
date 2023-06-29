@@ -211,7 +211,7 @@ This parameter is functional only in the cloud-based service.
 
 The DeclineEventsForScheduledOOF parameter specifies whether it's possible to decline existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
-- $true: Existing calendar events in the mailbox that occur during the scheduled time period can be declined and removed from the calendar. To decline specific events during the scheduled time period, use the EventsToDeleteIDs parameter. To decline all events during the scheduled time period, use the DeclineAllEventsForScheduledOOF parameter.
+- $true: Existing calendar events in the mailbox that occur during the scheduled time period can be declined and removed from the calendar. To decline specific events during the scheduled time period, use the EventsToDeleteIDs parameter. To decline all events during the scheduled time period, use the DeclineAllEventsForScheduledOOF parameter. If the user is the meeting organizer, 
 - $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This is the default value.
 
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.

@@ -3660,7 +3660,7 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 The MessageTypeMatches parameter specifies a condition that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-- AutoForward: Messages automatically forwarded to an alternative recipient.  In Exchange Online, if the message has been forwarded using [mailbox forwarding](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as SMTP forwarding), this condition **will not** match during mail flow rule evaluation.
+- AutoForward: Messages automatically forwarded to an alternative recipient. In Exchange Online, if the message has been forwarded using [mailbox forwarding](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as SMTP forwarding), this condition **will not** match during mail flow rule evaluation.
 - Encrypted: S/MIME encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
 - PermissionControlled: Messages that have specific permissions configured using Office 365 Message Encryption (OME), Rights Management, and sensitivity labels (with encryption).
