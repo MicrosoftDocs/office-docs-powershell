@@ -156,7 +156,7 @@ This parameter is available only in Exchange Server 2016 (CU18 or higher) and Ex
 
 The DomainName parameter specifies the tenant domain that's linked with the AuthServer object. This parameter usess the syntax: "tenantname.onmicrosoft.com".
 
-This parameter is used to link Tenant to the corresponding authserver object in the  Multi-Tenant Exchange Hybrid. For example, if DomainName is contoso.onmicrosoft.com, then the AuthServer object will be associated with the contoso tenant.
+This parameter is used to link Tenant to the corresponding authserver object in the Multi-Tenant Exchange Hybrid. For example, if DomainName is contoso.onmicrosoft.com, then the AuthServer object will be associated with the contoso tenant.
 
 ```yaml
 Type: MultiValuedProperty

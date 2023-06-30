@@ -289,6 +289,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 New-MigrationBatch -Local -Name LocalMove1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\LocalMove1.csv")) -TargetDatabases MBXDB2
+
 Start-MigrationBatch -Identity LocalMove1
 ```
 
@@ -297,8 +298,11 @@ This example creates a migration batch for a local move, where the mailboxes in 
 ### Example 2
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointSource = New-MigrationEndpoint -ExchangeRemoteMove -Name Forest1Endpoint -Autodiscover -EmailAddress administrator@forest1.contoso.com -Credentials $Credentials
+
 $CrossForestBatch = New-MigrationBatch -Name CrossForestBatch1 -SourceEndpoint $MigrationEndpointSource.Identity -TargetDeliveryDomain forest2.contoso.com -TargetDatabases MBXDB1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\CrossForestBatch1.csv"))
+
 Start-MigrationBatch -Identity $CrossForestBatch.Identity
 ```
 
@@ -307,8 +311,11 @@ This example creates a migration batch for a cross-forest enterprise move, where
 ### Example 3
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv"))
+
 Start-MigrationBatch -Identity $OnboardingBatch.Identity.Name
 ```
 
@@ -317,8 +324,11 @@ This example creates a migration batch for an onboarding remote move migration f
 ### Example 4
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OffboardingBatch = New-MigrationBatch -Name RemoteOffBoarding1 -TargetEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain onprem.contoso.com -TargetDatabases @(MBXDB01,MBXDB02,MBXDB03) -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOffBoarding1.csv"))
+
 Start-MigrationBatch -Identity $OffboardingBatch.Identity
 ```
 
@@ -327,7 +337,9 @@ This example creates a migration batch for an offboarding remote move migration 
 ### Example 5
 ```powershell
 $credentials = Get-Credential
+
 $SourceEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Autodiscover -Name SourceEndpoint -EmailAddress administrator@contoso.com -Credentials $credentials
+
 New-MigrationBatch -Name CutoverBatch -SourceEndpoint $SourceEndpoint.Identity -TimeZone "Pacific Standard Time" -AutoStart
 ```
 
@@ -336,8 +348,11 @@ This example creates a migration batch for the cutover Exchange migration Cutove
 ### Example 6
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpoint = New-MigrationEndpoint -ExchangeOutlookAnywhere -Name ContosoEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
+
 $StagedBatch1 = New-MigrationBatch -Name StagedBatch1 -SourceEndpoint $MigrationEndpoint.Identity -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\StagedBatch1.csv"))
+
 Start-MigrationBatch -Identity $StagedBatch1.Identity
 ```
 
@@ -346,6 +361,7 @@ This example creates and starts a migration batch for a staged Exchange migratio
 ### Example 7
 ```powershell
 New-MigrationEndpoint -IMAP -Name IMAPEndpoint1 -RemoteServer imap.contoso.com -Port 993
+
 New-MigrationBatch -Name IMAPbatch1 -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -SourceEndpoint IMAPEndpoint1 -ExcludeFolders "Deleted Items","Junk Email"
 ```
 
@@ -354,8 +370,11 @@ This example creates a migration endpoint for the connection settings to the IMA
 ### Example 8
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM"
+
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -364,8 +383,11 @@ This example is the same as Example 3, but the CompleteAfter parameter is also u
 ### Example 9
 ```powershell
 $Credentials = Get-Credential
+
 $MigrationEndpointOnPrem = New-MigrationEndpoint -ExchangeRemoteMove -Name OnpremEndpoint -Autodiscover -EmailAddress administrator@onprem.contoso.com -Credentials $Credentials
+
 $OnboardingBatch = New-MigrationBatch -Name RemoteOnBoarding1 -SourceEndpoint $MigrationEndpointOnprem.Identity -TargetDeliveryDomain contoso.mail.onmicrosoft.com -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\RemoteOnBoarding1.csv")) -CompleteAfter "09/01/2018 7:00 PM" -TimeZone "Pacific Standard Time"
+
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 
@@ -374,9 +396,11 @@ This example is the same as Example 8, but the TimeZone parameter is also used. 
 ### Example 10
 ```powershell
 $MigrationEndpointGmail = New-MigrationEndpoint -Gmail -ServiceAccountKeyFileData $([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\gmailonboarding.json")) -EmailAddress admin@contoso.com -Name GmailEndpoint
+
 $OnboardingBatch = New-MigrationBatch -SourceEndpoint $MigrationEndpointGmail.Identity -Name GmailBatch1 -CSVData $([System.IO.File]::ReadAll
 Bytes("C:\Users\Administrator\Desktop\gmail.csv")) -TargetDeliveryDomain "o365.contoso.com" -ContentFilter "Received -ge '2019/4/30'" -Inc
 ludeFolders "Payment"
+
 Start-MigrationBatch -Identity $OnboardingBatch.Identity
 ```
 

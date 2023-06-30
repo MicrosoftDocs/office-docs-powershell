@@ -125,7 +125,7 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -L
 
 ### Linked
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter>
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
  [-LinkedCredential <PSCredential>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -273,6 +273,8 @@ The Enable-Mailbox cmdlet mailbox-enables existing users, public folders, or Ine
 When mailbox-enabling an existing user, beware of non-supported characters in the user account or Name property. If you don't specify an Alias value when you mailbox-enable the user, Exchange converts all non-supported characters to question marks (?). To avoid question marks in the Alias, verify that the user account and Name properties have only supported ASCII or Unicode characters or specify an Alias value when you mailbox-enable the user.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+
+In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216) InformationVariable and InformationAction don't work.
 
 ## EXAMPLES
 

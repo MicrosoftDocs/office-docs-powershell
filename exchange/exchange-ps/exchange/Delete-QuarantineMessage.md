@@ -58,6 +58,7 @@ This example deletes the quarantined message with the specified Identity value.
 ### Example 2
 ```powershell
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity
+
 Delete-QuarantineMessage -Identity $ids[4]
 ```
 
@@ -66,6 +67,7 @@ This example deletes the 5th quarantined message in the list of results from Get
 ### Example 3
 ```powershell
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity
+
 Delete-QuarantineMessage -Identities $ids -Identity 000
 ```
 
@@ -149,7 +151,6 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePointOnline
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType

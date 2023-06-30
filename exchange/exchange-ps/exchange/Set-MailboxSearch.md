@@ -70,7 +70,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-MailboxSearch -Identity "Legal-ProjectX" -StartDate "01/01/2016"
+Set-MailboxSearch -Identity "Legal-ProjectX" -StartDate "01/01/2017"
 ```
 
 This example modifies the start date of a mailbox search.

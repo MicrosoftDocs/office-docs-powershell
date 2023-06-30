@@ -1441,7 +1441,7 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
-This parameter is available only in Exchange 2010.
+This parameter is available only in Exchange Server 2010.
 
 The UMDtmfMap parameter specifies if you want to create a user-defined DTMF map for the UM-enabled user.
 

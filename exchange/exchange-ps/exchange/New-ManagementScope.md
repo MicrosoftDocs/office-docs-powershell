@@ -109,6 +109,7 @@ This example creates the Executive Mailboxes scope. Only mailboxes located withi
 ### Example 4
 ```powershell
 New-ManagementScope -Name "Protected Exec Users" -RecipientRestrictionFilter "Title -like 'VP*'" -Exclusive
+
 New-ManagementRoleAssignment -SecurityGroup "Executive Administrators" -Role "Mail Recipients" -CustomRecipientWriteScope "Protected Exec Users"
 ```
 

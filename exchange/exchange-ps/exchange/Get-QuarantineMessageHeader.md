@@ -44,6 +44,7 @@ This example displays the message header of the quarantined message that has the
 ### Example 2
 ```powershell
 $qMessages = Get-QuarantineMessage
+
 Get-QuarantineMessageHeader $qMessages[0].Identity
 ```
 
@@ -75,7 +76,6 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePointOnline
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType

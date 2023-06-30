@@ -96,6 +96,7 @@ This example creates a role group and enables Isabel to add or remove members to
 ### Example 4
 ```powershell
 $Credentials = Get-Credential
+
 New-RoleGroup -Name "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Administrators" -CustomRecipientWriteScope "Toronto Recipients" -Roles "Mail Recipients"
 ```
 
@@ -106,6 +107,7 @@ The first command retrieves the credentials using the Get-Credential cmdlet and 
 ### Example 5
 ```powershell
 $RoleGroup = Get-RoleGroup "Recipient Management"
+
 New-RoleGroup "Limited Recipient Management" -Roles $RoleGroup.Roles
 ```
 

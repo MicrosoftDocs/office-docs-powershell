@@ -671,7 +671,7 @@ The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML
 - Wrap: This is the default value. A new message is created and the original message is added to it as an attachment. The disclaimer text is added to the new message, which is delivered to the recipients.
 
   If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules.
- 
+
   If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
 
 - Ignore: The rule is ignored and the original message is delivered without the disclaimer.
@@ -883,10 +883,12 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentHasExecutableContent parameter specifies a condition that looks for executable content in message attachments. Valid values are:
+The AttachmentHasExecutableContent parameter specifies a condition that inspects messages where an attachment is an executable file. Valid values are:
 
 - $true: Look for executable content in message attachments.
 - $false: Don't look for executable content in message attachments.
+
+The system inspects the file properties rather than relying on the file extension. For more information, see [Supported executable file types for mail flow rule inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-executable-file-types-for-mail-flow-rule-inspection).
 
 ```yaml
 Type: Boolean
@@ -906,7 +908,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -929,12 +931,16 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
+The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Valid values are:
 
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-For more information, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the AttachmentIsUnsupported condition is triggered.
+
+For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
+
+In Exchange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -1716,10 +1722,12 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that looks for executable content in message attachments. Valid values are:
+The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that inspects messages where an attachment is an executable file. Valid values are:
 
 - $true: Look for executable content in message attachments.
 - $false: Don't look for executable content in message attachments.
+
+The system inspects the file properties rather than relying on the file extension. For more information, see [Supported executable file types for mail flow rule inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-executable-file-types-for-mail-flow-rule-inspection).
 
 ```yaml
 Type: Boolean
@@ -1739,7 +1747,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -1762,12 +1770,16 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
+The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks for unsupported file types in messages. Valid values are:
 
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-For more information, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the ExceptIfAttachmentIsUnsupported exception is triggered.
+
+For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
+
+In Exhange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -2115,7 +2127,7 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfFromScope parameter specifies an exception that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the sender meets at least one of the following criteria: The sender is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -2586,7 +2598,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
 This exception matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
@@ -2914,10 +2926,10 @@ In on-premises Exchange, this exception is only available on Mailbox servers.
 
 The ExceptIfSentToScope parameter specifies an exception that looks for the location of a recipient. Valid values are:
 
-- InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-- NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-- ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-- ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the recipient meets at least one of the following criteria: The recipient is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
+- NotInOrganization: The recipients are outside the organization. The recipient's email address isn't in an accepted domain or is in an accepted domain that's configured as an external relay domain in the organization.
+- ExternalPartner: This value is available only in on-premises Exchange. The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail.
+- ExternalNonPartner: This value is available only in on-premises Exchange. The recipients are external to your organization, and the organization isn't a partner organization.
 
 ```yaml
 Type: ToUserScope
@@ -3175,7 +3187,7 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The FromScope parameter specifies a condition that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the sender meets at least one of the following criteria: The sender is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -3206,6 +3218,8 @@ The GenerateIncidentReport parameter specifies where to send the incident report
 - GUID
 
 An incident report is generated for messages that violate a DLP policy in your organization.
+
+**Note**: An incdent report isn't generated for notifications or other incident reports that are generated by DLP or mail flow rules.
 
 ```yaml
 Type: RecipientIdParameter
@@ -3648,8 +3662,8 @@ Accept wildcard characters: False
 ### -Mode
 The Mode parameter specifies how the rule operates. Valid values are:
 
-- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
-- AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
+- Audit: The actions that the rule would have taken are written to the message tracking log, but no action that impacts message delivery is taken on the message. The GenerateIncidentReport action occurs.
+- AuditAndNotify: The actions that the rule would have taken are written to the message tracking log, but no action that impacts message delivery is taken on the message. The GenerateIncidentReport and GenerateNotification actions occur.
 - Enforce: All actions specified in the rule are taken. This is the default value.
 
 ```yaml
@@ -4016,7 +4030,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The RecipientDomainIs parameter specifies a condition that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
 This condition matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
@@ -4203,7 +4217,12 @@ This parameter is available only in the cloud-based service.
 
 This parameter specifies an action or part of an action for the rule.
 
-{{ Fill RemoveRMSAttachmentEncryption Description }}
+The RemoveRMSAttachmentEncryption parameter specifies an action that removes Microsoft Purview Message Encryption from encrypted attachments in email. The attachments were already encrypted before they were attached to the message. The message itself doesn't need to be encrypted. Valid values are:
+
+- $true: The encrypted attachments are decrypted.
+- $false: The encrypted attachments aren't decrypted.
+
+ This parameter also requires the value $true for the RemoveOMEv2 parameter.
 
 ```yaml
 Type: Boolean
@@ -4628,10 +4647,10 @@ In on-premises Exchange, this condition is only available on Mailbox servers.
 
 The SentToScope parameter specifies a condition that looks for the location of recipients. Valid values are:
 
-- InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-- NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-- ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-- ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the recipient meets at least one of the following criteria: The recipient is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
+- NotInOrganization: The recipients are outside the organization. The recipient's email address isn't in an accepted domain or is in an accepted domain that's configured as an external relay domain in the organization.
+- ExternalPartner: This value is available only in on-premises Exchange. The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail.
+- ExternalNonPartner: This value is available only in on-premises Exchange. The recipients are external to your organization, and the organization isn't a partner organization.
 
 ```yaml
 Type: ToUserScope
