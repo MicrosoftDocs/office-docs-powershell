@@ -253,7 +253,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 ### Step 3: Generate a certificate
 
 > [!NOTE]
-> Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You need to use a certificate from a CSP key provider.
+> Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication as described in this article. CNG certificates are created by default in modern Windows versions. You need to use a certificate from a CSP key provider.
 
 Create an x.509 certificate. For example:
 
