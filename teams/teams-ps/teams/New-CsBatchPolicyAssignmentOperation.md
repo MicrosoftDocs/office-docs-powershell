@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
-The name of the policy to be assigned to the users.
+The type of the policy to be assigned to the users. For the list of current policy types accepted by this parameter, see the Description section at the beginning of this article.
 
 ```yaml
 Type: String

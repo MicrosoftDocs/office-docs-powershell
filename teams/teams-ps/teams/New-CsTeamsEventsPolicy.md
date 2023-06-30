@@ -14,7 +14,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 ## SYNTAX
 
 ```
-New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-Description <String>]
+New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-Description <String>]
  [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -59,6 +59,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowTownhalls
+This setting governs if a user can create town halls using Teams Events. 
+Possible values are:
+ - **Enabled**: Enables creating town halls.
+ - **Disabled**: Disables creating town hall.
+
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EventAccessType
 This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
 Possible values are:
@@ -80,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+The Confirm switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -127,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
+The WhatIf switch does not work with this cmdlet.
 The cmdlet is not run.
 
 ```yaml

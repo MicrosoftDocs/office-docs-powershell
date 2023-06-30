@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/Get-RecoverableItems
+online version: https://learn.microsoft.com/powershell/module/exchange/get-recoverableitems
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-RecoverableItems
 schema: 2.0.0

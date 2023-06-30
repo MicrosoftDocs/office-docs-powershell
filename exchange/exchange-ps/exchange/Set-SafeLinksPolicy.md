@@ -26,7 +26,7 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-AllowClickThrough <Boolean>]
  [-Confirm]
  [-CustomNotificationText <String>]
- [-DeliverMessageAfterScan <Boolean>
+ [-DeliverMessageAfterScan <Boolean>]
  [-DisableUrlRewrite <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
  [-EnableForInternalSenders <Boolean>]

@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-###  Default
+### Default
 ```
 Test-OutlookWebServices [[-Identity] <RecipientIdParameter>]
  [-ClientAccessServer <ClientAccessServerIdParameter>]
@@ -63,7 +63,7 @@ Test-OutlookWebServices [[-Identity] <MailboxIdParameter>] [-MonitoringContext]
 ```
 
 ## DESCRIPTION
-The Test-OutlookWebServices cmdlet uses a specified  address to verify that the Outlook provider is configured correctly.
+The Test-OutlookWebServices cmdlet uses a specified address to verify that the Outlook provider is configured correctly.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -86,7 +86,7 @@ The example tests for a connection to each service. The example also submits a r
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed  addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and username in the domain\\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
+The Identity parameter specifies any valid address in the forest. If you specify this parameter, incorrectly formed addresses and addresses that are outside the forest are rejected. This address is used to test the Outlook provider. This property accepts the domain and username in the domain\\username format or an Active Directory GUID and resolves them to the SMTP address that's needed to authenticate.
 
 ```yaml
 Type: RecipientIdParameter

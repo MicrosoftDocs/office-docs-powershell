@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-The Site parameter specifies the Active Directory site that contains the Client Access array.  You can use any value that uniquely identifies the site. For example:
+The Site parameter specifies the Active Directory site that contains the Client Access array. You can use any value that uniquely identifies the site. For example:
 
 - Name
 - Distinguished name (DN)

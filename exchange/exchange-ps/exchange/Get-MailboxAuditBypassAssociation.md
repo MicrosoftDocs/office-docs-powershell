@@ -51,6 +51,7 @@ This example returns the status of the AuditBypassEnabled property for the Svc-M
 ### Example 3
 ```powershell
 $MBX = Get-MailboxAuditBypassAssociation -ResultSize unlimited
+
 $MBX | where {$_.AuditBypassEnabled -eq $true} | Format-Table Name,AuditBypassEnabled
 ```
 

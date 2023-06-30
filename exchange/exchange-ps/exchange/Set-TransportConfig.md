@@ -772,7 +772,7 @@ Accept wildcard characters: False
 ### -MaxDumpsterSizePerDatabase
 This parameter is available only in on-premises Exchange.
 
-This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
+This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
 The MaxDumpsterSizePerDatabase parameter specifies the maximum size of the transport dumpster on a Hub Transport server for each database. The default value is 18 MB. The valid input range for this parameter is from 0 through 2147483647 KB.
 
@@ -806,7 +806,7 @@ Accept wildcard characters: False
 ### -MaxDumpsterTime
 This parameter is available only in on-premises Exchange.
 
-This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
+This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
 The MaxDumpsterTime parameter specifies how long an email message should remain in the transport dumpster on a Hub Transport server. The default value is seven days.
 
@@ -1169,7 +1169,7 @@ Accept wildcard characters: False
 ### -ShadowHeartbeatRetryCount
 This parameter is available only in on-premises Exchange.
 
-This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
+This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
 The ShadowHeartbeatRetryCount parameter specifies the number of time-outs a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable. Valid input for this parameter is an integer between 1 and 15. The default value is 12.
 
@@ -1191,7 +1191,7 @@ Accept wildcard characters: False
 ### -ShadowHeartbeatTimeoutInterval
 This parameter is available only in on-premises Exchange.
 
-This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
+This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
 The ShadowHeartbeatTimeoutInterval parameter specifies the amount of time a server waits before establishing a connection to a primary server to query the discard status of shadow messages.
 
