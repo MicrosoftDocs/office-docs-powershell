@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ActiveSyncDeviceStatistics cmdlet to retrieve the list of mobile devices configured to synchronize with a specified user's mailbox and return a list of statistics about the mobile devices.
 
-**Note**: This cmdlet works best in Exchange 2010. In later versions of Exchange Server or Exchange Online, use the Get-MobileDeviceStatistics cmdlet instead. If you have scripts that use Get-ActiveSyncDeviceStatistics, update them to use Get-MobileDeviceStatistics.
+**Note**: This cmdlet works best in Exchange 2010. In later versions of Exchange or Exchange Online, use the Get-MobileDeviceStatistics cmdlet instead. If you have scripts that use Get-ActiveSyncDeviceStatistics, update them to use Get-MobileDeviceStatistics.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

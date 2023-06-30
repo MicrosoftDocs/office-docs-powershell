@@ -183,7 +183,7 @@ $contains_complex_types = @{
     groups = @(
         @{
             operator = "Or"
-            name =  "PII Identifiers"
+            name = "PII Identifiers"
             sensitivetypes = @(
                 @{
                     name = "Drug Enforcement Agency (DEA) Number"
@@ -196,7 +196,7 @@ $contains_complex_types = @{
         }
         @{
             operator = "Or"
-            name =  "Medical Terms"
+            name = "Medical Terms"
             sensitivetypes = @(
                 @{
                     name = "International Classification of Diseases (ICD-9-CM)"

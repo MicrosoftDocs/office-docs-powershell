@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUrl
-The TargetUrl parameter specifies the FQDN of the Exchange 2013 or later server that has the Client Access server role installed that's responsible for processing the redirected OAuth authentication requests.
+The TargetUrl parameter specifies the FQDN of the Exchange Client Access Server that's responsible for processing the redirected OAuth authentication requests.
 
 ```yaml
 Type: String

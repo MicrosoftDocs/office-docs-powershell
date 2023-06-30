@@ -61,7 +61,7 @@ After you've verified that the correct members will be removed the role group, r
 For more information about pipelining, and the WhatIf parameter, see the following topics:
 
 - [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
-- WhatIf, Confirm and ValidateOnly switches
+- [WhatIf, Confirm and ValidateOnly switches](https://learn.microsoft.com/exchange/whatif-confirm-and-validateonly-switches-exchange-2013-help)
 
 ### Example 3
 ```powershell

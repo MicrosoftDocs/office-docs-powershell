@@ -43,7 +43,7 @@ In Exchange Online PowerShell, if you don't use the StartDate or EndDate paramet
 
 In Exchange Online PowerShell, data is available for the last 90 days. You can enter dates older than 90 days, but only data from the last 90 days will be returned.
 
-For more information about the structure and properties of the audit log, [Administrator audit log structure](https://learn.microsoft.com/Exchange/policy-and-compliance/admin-audit-logging/log-structure).
+For more information about the structure and properties of the audit log, see [Administrator audit log structure](https://learn.microsoft.com/Exchange/policy-and-compliance/admin-audit-logging/log-structure).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

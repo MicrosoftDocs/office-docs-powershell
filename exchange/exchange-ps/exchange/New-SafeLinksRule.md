@@ -76,7 +76,9 @@ This example creates a Safe Links rule named Contoso All with the following cond
 ### Example 3
 ```powershell
 $Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+
 $SLDomains = $Data.Domains
+
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs $SLDomains
 ```
 

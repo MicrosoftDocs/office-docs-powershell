@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-UMConnectivity cmdlet to test the operation of Unified Messaging (UM) servers.
 
-**Note**: This cmdlet works best in Exchange 2010. In Exchange 2013 or Exchange 2016, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
+**Note**: This cmdlet works best in Exchange 2010. In later versions of Exchange, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
