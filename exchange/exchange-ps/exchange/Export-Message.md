@@ -44,9 +44,13 @@ This example exports a single message to the specified file path. Because the Ex
 ### Example 2
 ```powershell
 Get-Message -Queue "Server1\contoso.com" -ResultSize Unlimited | ForEach-Object {Suspend-Message $_.Identity -Confirm:$False
+
 $Temp="C:\ExportFolder\"+$_.InternetMessageID+".eml"
+
 $Temp=$Temp.Replace("<","_")
+
 $Temp=$Temp.Replace(">","_")
+
 Export-Message $_.Identity | AssembleMessage -Path $Temp}
 ```
 

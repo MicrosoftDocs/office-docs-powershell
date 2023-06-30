@@ -76,10 +76,10 @@ This example retrieves mailbox audit log entries for Ken Kwok and Ben Smith's ma
 
 ### Example 3
 ```powershell
-Search-MailboxAuditLog -Identity kwok -LogonTypes Owner -ShowDetails -StartDate 1/1/2016 -EndDate 3/1/2016 | Where-Object {$_.Operation -eq "HardDelete"}
+Search-MailboxAuditLog -Identity kwok -LogonTypes Owner -ShowDetails -StartDate 1/1/2017 -EndDate 3/1/2017 | Where-Object {$_.Operation -eq "HardDelete"}
 ```
 
-This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by the mailbox owner between 1/1/2016 and 3/1/2016. The results are piped to the Where-Object cmdlet and filtered to return only entries with the HardDelete action.
+This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by the mailbox owner between 1/1/2017 and 3/1/2017. The results are piped to the Where-Object cmdlet and filtered to return only entries with the HardDelete action.
 
 ## PARAMETERS
 

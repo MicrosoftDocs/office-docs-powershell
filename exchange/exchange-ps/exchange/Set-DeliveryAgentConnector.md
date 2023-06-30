@@ -62,7 +62,9 @@ Sets the maximum concurrent connections to 10.
 ### Example 2
 ```powershell
 $ConnectorConfig = Get-DeliveryAgentConnector "Contoso X.400 Connector"
+
 $ConnectorConfig.AddressSpaces += "X400:c=US;p=Fabrikam;a=Contoso;o=Sales;1"
+
 $ConnectorConfig.SourceTransportServers += Hub04; Set-DeliveryAgentConnector "Contoso X.400 Connector" -AddressSpaces $ConnectorConfig.AddressSpaces -SourceTransportServers $ConnectorConfig.SourceTransportServers
 ```
 

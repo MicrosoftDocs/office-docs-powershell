@@ -59,10 +59,15 @@ This example removes the existing Spanish translation from the data classificati
 ### Example 3
 ```powershell
 $Benefits_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Benefits Template.docx')
+
 $Benefits_Fingerprint = New-Fingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
+
 $Contoso_Confidential = Get-DataClassification "Contoso Confidential"
+
 $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)
+
 $Array.Add($Benefits_FingerPrint)
+
 Set-DataClassification $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
@@ -71,9 +76,13 @@ This example modifies the existing data classification rule named "Contoso Confi
 ### Example 4
 ```powershell
 $cc = Get-DataClassification "Contoso Confidential"
+
 $a = [System.Collections.ArrayList]($cc.Fingerprints)
+
 $a
+
 $a.RemoveAt(0)
+
 Set-DataClassification $cc.Identity -FingerPrints $a
 ```
 

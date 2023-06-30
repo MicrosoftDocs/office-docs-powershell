@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
 
-**Note**: You can ignore any errors about distribution in policy.
+**Note**: You can ignore errors about distribution in policy for SharePoint and OneDrive workloads.
 
 ```yaml
 Type: SwitchParameter
@@ -82,7 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForceValidate
-{{ Fill ForceValidate Description }}
+The ForceValidate parameter specifies whether to include details related to the AdminUnits of users, groups, or sites in the policy. Valid values are:
+
+- $true: Various properties in the policy include details of the AdminUnits that are associated with current set of selected users, groups, or sites.
+- $false: The output doesn't contain the information. This is the default value.
 
 ```yaml
 Type: Boolean

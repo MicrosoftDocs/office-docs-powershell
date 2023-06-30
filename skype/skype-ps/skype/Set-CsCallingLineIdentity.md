@@ -45,14 +45,13 @@ PS C:\> Set-CsCallingLineIdentity -Identity "MyBlockingPolicy" -BlockIncomingPst
 ```
 
 This example blocks the incoming caller ID.
-The user can override this setting.
 
 ### Example 2
 ```
 PS C:\> Set-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
 
-This example modifies the new Anonymous Caller ID policy that blocks the incoming Caller ID.
+This example modifies the new Anonymous Caller ID policy to block the incoming Caller ID.
 
 ### Example 3
 ```
@@ -72,11 +71,9 @@ This example modifies the Caller ID policy and allows Teams users to make anonym
 ## PARAMETERS
 
 ### -BlockIncomingPstnCallerID
-The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID.
-The default value is false.
+The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID. The default value is false.
 
-The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user.
-If this is set to True and if this policy is assigned to a Lync user, then Caller ID for incoming calls is suppressed/anonymous.
+The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a Teams user, then Caller ID for incoming calls is suppressed/anonymous.
 
 ```yaml
 Type: Boolean

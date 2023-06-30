@@ -40,7 +40,9 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"
+
 $filterusers.users.add("pilarp@contoso.com")
+
 Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
 
@@ -49,7 +51,9 @@ This example adds user pilarp@contoso.com to the compliance security filter name
 ### Example 2
 ```powershell
 $filterusers = Get-ComplianceSecurityFilter -FilterName "Ottawa Users Filter"
+
 $filterusers.users.remove("annb@contoso.com")
+
 Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.users
 ```
 

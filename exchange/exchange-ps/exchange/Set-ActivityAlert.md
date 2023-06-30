@@ -49,7 +49,9 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $NU = Get-ActivityAlert "Contoso Elevation of Privilege"
+
 $NU.NotifyUser.Add("chris@fabrikam.com")
+
 Set-ActivityAlert "Contoso Elevation of Privilege" -NotifyUser $NU.NotifyUser
 ```
 
@@ -258,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-The RecordType parameter specifies a record type label for the activity alert.  For details about the available values, see [AuditLogRecordType](https://learn.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
+The RecordType parameter specifies a record type label for the activity alert. For details about the available values, see [AuditLogRecordType](https://learn.microsoft.com/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
 You can't use this parameter when the value of the Type parameter is ElevationOfPrivilege.
 

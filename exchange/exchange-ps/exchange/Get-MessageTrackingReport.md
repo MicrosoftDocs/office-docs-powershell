@@ -47,6 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $Temp = Search-MessageTrackingReport -Identity "David Jones" -Recipients "wendy@contoso.com"
+
 Get-MessageTrackingReport -Identity $Temp.MessageTrackingReportID -ReportTemplate Summary
 ```
 

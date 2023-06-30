@@ -502,7 +502,11 @@ Accept wildcard characters: False
 ```
 
 ### -Versions
-The Versions parameter specifies the OAB versions that are generated for client download. In Exchange 2013 or later, the default and only supported value is Version4 (Version3 and Version2 require public folder distribution).
+The Versions parameter specifies the OAB versions that are generated for client download. Valid values are:
+
+- Version2 (requires public folder distribution)
+- Version3 (requires public folder distribution)
+- Version4 (default value in Exchange 2010 or later; the only available value in Exchange 2013 or later)
 
 ```yaml
 Type: MultiValuedProperty
