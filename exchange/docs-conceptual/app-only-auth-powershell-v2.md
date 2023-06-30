@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 6/30/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -294,15 +294,15 @@ After you register the certificate with your application, you can use the privat
 
    ![Select Certificates & Secrets on the application properties page.](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
-3. On the **Certificates & secrets** page that opens, select **Upload certificate**.
+3. On the **Certificates & secrets** page that opens, select the **Certificates** tab, and then select **Upload certificate**.
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
-   In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
+   In the **Upload certificate** flyout that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-self-signed-certificate).
 
    ![Browse to the certificate and then select Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
 
-   When you're finished, select **Add**.
+   When you're finished in the **Upload certificate** flyout, select **Add**.
 
    The certificate is now shown in the **Certificates** section.
 
@@ -414,26 +414,30 @@ For information about creating custom role groups, see [Create role groups in Ex
 
 To assign custom role groups to the application using service principals, do the following steps:
 
-1. In [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2), run the following command to store the details of the Azure application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
+1. In [Microsoft Graph PowerShell](/powershell/microsoftgraph/get-started#sign-in), run the following commands to store the details of the Azure application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
 
    ```powershell
-   $<VariableName1> = Get-AzureADServicePrincipal -SearchString "<AppName>"
+   Connect-MgGraph -Scopes 'Application.Read.All'
+
+   $<VariableName1> = Get-MgApplication -ConsistencyLevel eventual -Search '"DisplayName:<AppName>"'
    ```
 
    For example:
 
    ```powershell
-   $AADApp = Get-AzureADServicePrincipal -SearchString "ExO PowerShell CBA"
+   Connect-MgGraph -Scopes 'Application.Read.All'
+
+   $AADApp = Get-MgApplication -ConsistencyLevel eventual -Search '"DisplayName:ExO PowerShell CBA"'
    ```
 
-   For detailed syntax and parameter information, see [Get-AzureADServicePrincipal](/powershell/module/azuread/get-azureadserviceprincipal).
+   For detailed syntax and parameter information, see [Get-MgApplication](/powershell/module/microsoft.graph.applications/get-mgapplication).
 
 2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) or [Security & Compliance PowerShell](connect-to-scc-powershell.md) and run the following commands to:
    - Create a service principal object for the Azure application.
    - Store the details of the service principal in a variable.
 
    ```powershell
-   New-ServicePrincipal -AppId $<VariableName1>.AppId -ServiceId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
+   New-ServicePrincipal -AppId $<VariableName1>.AppId -ServiceId $<VariableName1>.Id -DisplayName "<Descriptive Name>"
 
    $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
    ```
@@ -441,7 +445,7 @@ To assign custom role groups to the application using service principals, do the
    For example:
 
    ```powershell
-   New-ServicePrincipal -AppId $AADApp.AppId -ServiceId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
+   New-ServicePrincipal -AppId $AADApp.AppId -ServiceId $AADApp.Id -DisplayName "SP for Azure App ExO PowerShell CBA"
 
    $SP = Get-ServicePrincipal -Identity "SP for Azure App ExO PowerShell CBA"
    ```
