@@ -16,7 +16,7 @@ This cmdlet is functional only in the cloud-based service.
 
 Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Azure Active Directory containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
 
-**Note**: Administrative units are only available in Azure Active Directory Premium. You create and manage administrative units in Azure AD PowerShell.
+**Note**: Administrative units are only available in Azure Active Directory Premium. You create and manage administrative units in Microsoft Graph PowerShell.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -54,8 +54,8 @@ This example returns detailed information about the administrative unit with the
 ### -Identity
 The Identity parameter specifies the administrative unit that you want to view. You can use any value that uniquely identifies the administrative unit. For example:
 
-- Display name (this value is the same in Azure AD PowerShell)
-- ExternalDirectoryObjectId (this GUID value is the same as the ObjectId property in Azure AD PowerShell)
+- Display name (this value is the same in Microsoft Graph PowerShell)
+- ExternalDirectoryObjectId (this GUID value is the same as the ObjectId property in Microsoft Graph PowerShell)
 - Name (GUID value)
 - Distinguished name (DN)
 - GUID (different value than Name)
