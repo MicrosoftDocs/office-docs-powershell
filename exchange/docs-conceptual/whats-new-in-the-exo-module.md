@@ -3,7 +3,7 @@ title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 5/3/2023
+ms.date: 6/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -22,6 +22,23 @@ description: "Learn about the new features and functionality available in the la
 
 This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
 
+## June 2023
+
+- [Version 3.2.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.2.0) has been released.
+
+  All Security & Compliance PowerShell cmdlets are now backed by the REST API, and REST API is used by default. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
+
+  For information about what's in this release, see [Version 3.2.0](exchange-online-powershell-v2.md#current-release-version-320).
+
+## May 2023
+
+- [Version 3.2.0-Preview4](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.2.0-Preview4) has been released.
+
+  This version supports the Preview of Security & Compliance cmdlets backed by the REST API. Some, but not all cmdlets are supported. Basic authentication in WinRM is not required in Security & Compliance PowerShell for REST API cmdlets.
+
+  > [!NOTE]
+  > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is now the same as **Connect-ExchangeOnline**. To connect in REST API mode, don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
+
 ## April 2023
 
 - [Version 3.2.0-Preview3](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.2.0-Preview3) has been released.
@@ -35,6 +52,8 @@ This article lists new features in the Exchange Online PowerShell module that's 
 
 - [Version 3.1.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.1.0) has been released.
 
+  For information about what's in this release, see [Version 3.1.0](exchange-online-powershell-v2.md#version-310).
+
 ## December 2022
 
 - The end of support for remote PowerShell in Exchange Online PowerShell (not in Security & Compliance PowerShell) has been announced. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
@@ -46,4 +65,4 @@ This article lists new features in the Exchange Online PowerShell module that's 
   - All Exchange Online PowerShell cmdlets are now backed by the REST API. Basic authentication in WinRM is not required in Exchange Online PowerShell for REST API cmdlets.
   - Certificate based authentication (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
-  For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+  For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) and [Version 3.0.0](exchange-online-powershell-v2.md#version-300-preview-versions-known-as-v206-previewx).
