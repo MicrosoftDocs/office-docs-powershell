@@ -62,6 +62,7 @@ This example sets the Recipient Administrators role group membership list to Mar
 ### Example 3
 ```powershell
 Update-RoleGroupMember "Organization Management" -Members @{Add=(Get-Mailbox David).Identity, (Get-Group "Help Desk Managers").Identity
+
 Remove=(Get-Mailbox "Christine").Identity, (Get-Mailbox "Isabel").Identity}
 ```
 

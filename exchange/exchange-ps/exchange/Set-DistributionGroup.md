@@ -314,7 +314,10 @@ Accept wildcard characters: False
 ### -BccBlocked
 This parameter is available only in the cloud-based service.
 
-{{ Fill BccBlocked Description }}
+The BccBlocked parameter specifies whether members of the group don't receive messages if the group is used in the Bcc line. Valid values are:
+
+- $true: If the group is used in the Bcc line, members of the group don't receive the message, and the sender receives a non-delivery report (also known as an NDR or bounce message). Other recipients of the message aren't blocked. If an external sender uses the group in the Bcc line, members of the group aren't blocked. For nested groups, the message is blocked only for members of the top-level group.
+- $false: There are no restrictions for using the group in the Bcc line of messages. This is the default value.
 
 ```yaml
 Type: Boolean

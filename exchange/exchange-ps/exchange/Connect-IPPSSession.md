@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
 
-**Note**: Version 3.2.0-Preview3 or later of the module supports REST API mode for most Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required for REST API mode). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
+**Note**: Version 3.2.0 or later of the module supports REST API mode for most Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required for REST API mode). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -55,15 +55,15 @@ For detailed connection instructions, including prerequisites, see [Connect to S
 Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com
 ```
 
-This example connects to Security & Compliance PowerShell in a Microsoft 365 organization. You're prompted for the password of the michelle@contoso.onmicrosoft.com account. In v3.2.0-Preview3 of the module, we're connecting in remote PowerShell mode, so Basic authentication in WinRM is required on the local computer.
+This example connects to Security & Compliance PowerShell using the specified account and modern authentication, with or without MFA. In v3.2.0 or later of the module, we're connecting in REST API mode, so Basic authentication in WinRM isn't required on the local computer.
 
 
 ### Example 2
 ```powershell
-Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com -UseRPSSession:$false
+Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com -UseRPSSession
 ```
 
-This example connects to Security & Compliance using modern authentication, with or without MFA. In v3.2.0-Preview3 of the module, we're connecting in REST API mode, so Basic authentication in WinRM isn't required on the local computer.
+This example connects to Security & Compliance PowerShell using the specified account and modern authentication, with or without MFA. In v3.2.0 or later of the module, we're connecting in remote PowerShell mode, so Basic authentication in WinRM is required on the local computer.
 
 ### Example 3
 ```powershell
@@ -396,11 +396,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 3.2.0-Preview3 or later of the module.
+This parameter is available in version 3.2.0 or later of the module.
 
-The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using REST API mode. To connect to Security & Compliance PowerShell in REST API mode, use this exact syntax: `-UseRPSSession:$false`.
+The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-If you don't use this switch, you connect in traditional remote PowerShell access mode, and Basic authentication in WinRM is required on your local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Turn on Basic authentication in WinRM](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
+
+If you don't use this switch, Basic authentication in WinRM is not required.
 
 ```yaml
 Type: SwitchParameter
@@ -410,7 +412,7 @@ Applicable: Exchange Online
 
 Required: False
 Position: Named
-Default value: True
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

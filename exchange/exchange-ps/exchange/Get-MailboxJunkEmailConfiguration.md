@@ -56,6 +56,7 @@ This example returns the junk email configuration for the user named David Pelto
 ### Example 2
 ```powershell
 $AllUsers = Get-Mailbox -ResultSize unlimited -RecipientTypeDetails UserMailbox
+
 $AllUsers | foreach {Get-MailboxJunkEmailConfiguration -Identity $_.UserPrincipalName} | Where {$_.Enabled -eq $false} | Format-Table -Auto Identity,Enabled
 ```
 

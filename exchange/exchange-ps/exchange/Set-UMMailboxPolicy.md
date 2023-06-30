@@ -511,7 +511,7 @@ Accept wildcard characters: False
 ```
 
 ### -FaxServerURI
-The FaxServerURI parameter specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) for the fax solution that serves the UM-enabled users associated with the UM mailbox policy. This fax product or fax service accepts incoming fax calls that were redirected from Exchange Server 2016 Mailbox servers and creates inbound fax messages for the UM-enabled users associated with the UM mailbox policy. Although you can enter more than one fax server URI, only one URI will be used by Mailbox servers running UM services.
+The FaxServerURI parameter specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) for the fax solution that serves the UM-enabled users associated with the UM mailbox policy. This fax product or fax service accepts incoming fax calls that were redirected from Exchange Unified Messaging servers and creates inbound fax messages for the UM-enabled users associated with the UM mailbox policy. Although you can enter more than one fax server URI, only one URI will be used by the Unified Messaging server.
 
 ```yaml
 Type: String

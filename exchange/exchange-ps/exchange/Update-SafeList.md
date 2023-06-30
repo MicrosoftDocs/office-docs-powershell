@@ -50,6 +50,7 @@ This example updates Safe Senders List data for the single user kim@contoso.com.
 ### Example 2
 ```powershell
 Set-AdServerSettings -ViewEntireForest $true
+
 Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Update-Safelist
 ```
 

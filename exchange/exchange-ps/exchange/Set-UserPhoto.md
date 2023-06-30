@@ -86,14 +86,14 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
 ```
 
 ## DESCRIPTION
-The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. Administrators use the Set-UserPhoto cmdlet to configure user photos. Users can upload, preview, and save a user photo to their account by using the Outlook on the web Options page. When a user uploads a photo, a preview of the photo is displayed on the Outlook on the web Options page. This is the preview state, and creates the same result as running the Set-UserPhoto cmdlet using the Preview parameter. If the user clicks Save, the preview photo is saved as the user's photo. This is the same result as running the Set-UserPhoto -Save command or running both the Set-UserPhoto -Preview and Set-UserPhoto -Save commands. If the user cancels the preview photo on the Outlook on the web Options page, then the Set-UserPhoto -Cancel command is called.
+The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. Administrators use the Set-UserPhoto cmdlet to configure user photos. Users can upload, preview, and save a user photo to their account in the Options page in Outlook on the web. When a user uploads a photo, a preview of the photo is displayed on the Options page in Outlook on the web. This is the preview state, and creates the same result as running the Set-UserPhoto cmdlet using the Preview parameter. If the user clicks Save, the preview photo is saved as the user's photo. This is the same result as running the `Set-UserPhoto -Save` command or running both the `Set-UserPhoto -Preview` and `Set-UserPhoto -Save` commands. If the user cancels the preview photo on the Options page in Outlook on the web, then the `Set-UserPhoto -Cancel` command is called.
 
 A user photo must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you'll get an error message saying the user photo doesn't exist for the specified user. Alternatively, you can run the `Get-UserPhoto -Preview` command to view information about a preview photo.
 
 **Notes**:
 
 - Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
-- In Microsoft Graph, the [Update-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) and [Set-MgUserPhotoContent](https://learn.microsoft.com/powershell/module/microsoft.graph.users/set-mguserphotocontent) cmdlets are also available.
+- In Microsoft Graph PowerShell, the [Update-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) and [Set-MgUserPhotoContent](https://learn.microsoft.com/powershell/module/microsoft.graph.users/set-mguserphotocontent) cmdlets are also available.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -109,6 +109,7 @@ This example uploads and saves a photo to Paul Cannon's user account using a sin
 ### Example 2
 ```powershell
 Set-UserPhoto -Identity "Ann Beebe" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\AnnBeebe.jpg")) -Preview
+
 Set-UserPhoto "Ann Beebe" -Save
 ```
 

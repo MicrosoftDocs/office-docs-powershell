@@ -225,7 +225,7 @@ The New-MigrationEndpoint cmdlet configures the connection settings for differen
 - Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. A cutover Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. A staged Exchange migration requires the use of an Outlook Anywhere migration endpoint.
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-- Google Workspace migration: Migration mailbox data from a Google Workspace tenant to Exchange Online.  For a Google Workspace migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
+- Google Workspace migration: Migration mailbox data from a Google Workspace tenant to Exchange Online. For a Google Workspace migration, you must first create cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
 
 Moving mailboxes between different servers or databases within a single on-premises Exchange forest (called a local move) doesn't require a migration endpoint.
 
@@ -250,6 +250,7 @@ This example creates an endpoint for remote moves by specifying the settings man
 ### Example 3
 ```powershell
 $Credentials = Get-Credential
+
 New-MigrationEndpoint -ExchangeOutlookAnywhere -Name EXCH-AutoDiscover -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 

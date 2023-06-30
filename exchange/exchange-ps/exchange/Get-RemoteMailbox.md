@@ -72,6 +72,7 @@ This example returns a detailed information for the remote mailbox for the user 
 ### Example 3
 ```powershell
 $Credentials = Get-Credential
+
 Get-RemoteMailbox -Credential $Credentials
 ```
 

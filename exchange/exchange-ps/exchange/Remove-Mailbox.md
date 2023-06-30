@@ -101,6 +101,7 @@ In on-premises Exchange, this example removes the mailbox and the user account f
 ### Example 3
 ```powershell
 $Temp = Get-Mailbox | Where {$_.DisplayName -eq 'John Rodman'}
+
 Remove-Mailbox -Database Server01\Database01 -StoreMailboxIdentity $Temp.MailboxGuid
 ```
 
@@ -347,7 +348,7 @@ After you disable or remove a mailbox, you can't include it in a discovery searc
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets:  Identity, StoreMailboxIdentity
+Parameter Sets: Identity, StoreMailboxIdentity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 

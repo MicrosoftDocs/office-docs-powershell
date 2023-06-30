@@ -105,6 +105,7 @@ This example releases all messages to all original recipients.
 ### Example 4
 ```powershell
 $q = Get-QuarantineMessage -QuarantineTypes SPOMalware
+
 $q[-1] | Release-QuarantineMessage -ReleaseToAll
 ```
 
@@ -282,7 +283,6 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePointOnline
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
