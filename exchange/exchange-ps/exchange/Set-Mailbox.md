@@ -2608,7 +2608,7 @@ The EnableRoomMailboxAccount parameter specifies whether to enable the disabled 
 
 You need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
 
-A room mailbox in Exchange Online is created with associated an account that has an unknown password. This account is active and visible in Azure Active Directory PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. If the password is known or changed, the account can be used to log in and access the mailbox or other resources. To prevent this account from being able to log in, use the Set-AzureADUser cmdlet in Azure Active Directory PowerShell. For instructions, see [Block Microsoft 365 user accounts with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/block-user-accounts-with-microsoft-365-powershell).
+A room mailbox in Exchange Online is created with associated an account that has a random, unknown password. This account is active and visible in Microsoft Graph PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. To prevent this account from being able to log in after you create the mailbox, use the AccountEnabled parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: Boolean
@@ -4143,10 +4143,10 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
+The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, consider the following options:
 
-- Exchange Online: You can't use this parameter to change another user's password. To change another user's password, use the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell). To change a another user's password in the Microsoft 365 admin center, see [Reset Microsoft 365 for business passwords](https://learn.microsoft.com/microsoft-365/admin/add-users/reset-passwords).
-- On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
+- Exchange Online: You can't use this parameter to change another user's password. Use the PasswordProfile parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
+- On-premises Exchange: You need the User Options or Reset Password role. The User Options role is assigned to the Organization Management or Help Desk role groups. The Reset Password role it isn't assigned to any role groups by default.
 
 You can use the following methods as a value for this parameter:
 
@@ -5020,7 +5020,7 @@ You can use the following methods as a value for this parameter:
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-To configure the password for a room mailbox account in Exchange Online, use Set-AzureADUserPassword cmdlet in Azure Active Directory PowerShell. For instructions, see [Manage passwords with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/manage-passwords-with-microsoft-365-powershell).
+To configure the password for a room mailbox account in Exchange Online, use the PasswordProfile parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: SecureString
