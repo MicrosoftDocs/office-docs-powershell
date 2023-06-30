@@ -46,10 +46,10 @@ This example creates a new case hold rule named 2016 Budget Spreadsheets and add
 
 ### Example 2
 ```powershell
-New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2018"
+New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2017..12/31/2018"
 ```
 
-This example places email messages received by the recipients between December 1, 2016 and December 31, 2018 on hold.
+This example places email messages received by the recipients between December 1, 2018 and December 31, 2018 on hold.
 
 ## PARAMETERS
 

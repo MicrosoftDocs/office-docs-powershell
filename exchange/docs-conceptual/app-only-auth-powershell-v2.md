@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 5/3/2023
+ms.date: 6/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -14,12 +14,12 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn about using the Exchange Online PowerShell V2 module and V3 module in scripts and other long-running tasks with modern authentication and app-only authentication (also known a certificate based authentication or CBA)."
+description: "Learn how to configure app-only authentication (also known as certificate based authentication or CBA) using the Exchange Online PowerShell V3 module in scripts and other long-running tasks."
 ---
 
 # App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell
 
-Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally is not a good security practice.
+Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally isn't a good security practice.
 
 Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and certificates.
 
@@ -38,7 +38,6 @@ Certificate based authentication (CBA) or app-only authentication as described i
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
 >   - [Remove-UnifiedGroup](/powershell/module/exchange/remove-unifiedgroup)
->   - [Set-UnifiedGroup](/powershell/module/exchange/set-unifiedgroup)
 >   - [Remove-UnifiedGroupLinks](/powershell/module/exchange/remove-unifiedgrouplinks)
 >   - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >
@@ -50,7 +49,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 
 ## How does it work?
 
-The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application Id, tenant Id (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
+The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application ID, tenant ID (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
 
 ## Connection examples
 
@@ -61,9 +60,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> - You can use REST API cmdlets or original remote PowerShell cmdlets. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
->
->   Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
+> Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 >
 > - Microsoft 365 GCC High or Microsoft 365 DoD environments require the following additional parameters and values:
 >   - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
@@ -74,6 +71,9 @@ The following examples show how to use the Exchange Online PowerShell module wit
 > - If a **Connect-IPPSSession** command presents a login prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 
 - **Connect using a certificate thumbprint**:
+
+  > [!NOTE]
+  > The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
   The certificate needs to be installed on the computer where you're running the command. The certificate should be installed in the user certificate store.
 
@@ -91,7 +91,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
 - **Connect using a certificate object**:
 
-  The certificate does not need to be installed on the computer where you're running the command. You can store the certificate object remotely. The certificate is fetched when the script is run.
+  The certificate doesn't need to be installed on the computer where you're running the command. You can store the certificate object remotely. The certificate is fetched when the script is run.
 
   - <u>Exchange Online PowerShell</u>:
 
@@ -124,7 +124,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
 ## Set up app-only authentication
 
-An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. You can learn more about this at [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
+An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. For more information, see [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
 
 For a detailed visual flow about creating applications in Azure AD, see <https://aka.ms/azuread-app>.
 
@@ -136,11 +136,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 3. [Generate a certificate](#step-3-generate-a-certificate)
 
-   - For app-only authentication in Azure AD, you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app and the permissions granted to the app.
-
-   - Create and configure an X.509 certificate, which is used to authenticate your Application against Azure AD, while requesting the app-only access token.
-
-   - This process is similar to generating a password for user accounts. The certificate can be self-signed. See the [Appendix](#step-3-generate-a-certificate) section later in this article for instructions for generating certificates.
+   Create and configure an X.509 certificate, which is used to authenticate your Application against Azure AD, while requesting the app-only access token. The certificate can be self-signed.
 
 4. [Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
 
@@ -161,7 +157,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    Or, to go directly to the **App registrations** page, use <https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade>.
 
-3. On the **App registrations** page, click **New registration**.
+3. On the **App registrations** page, select **New registration**.
 
    ![Select New registration on the App registrations page.](media/exo-app-only-auth-new-app-registration.png)
 
@@ -181,7 +177,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
      ![Register an application.](media/exo-app-only-auth-register-app.png)
 
-   When you're finished, click **Register**.
+   When you're finished on the **App registrations** page, select **Register**.
 
 4. Leave the app page that you return to open. You'll use it in the next step.
 
@@ -229,9 +225,9 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    > ],
    > ```
 
-   When you're finished, click **Save**.
+   When you're finished on the **Manifest** page, select **Save**.
 
-3. Still on the **Manifest** page, under **Management**, select **API permissions**.
+3. Still on the **Manifest** page, select **API permissions** under **Management**.
 
    ![Select API permissions on the application properties page.](media/exo-app-only-auth-select-api-permissions.png)
 
@@ -246,13 +242,13 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
      ![Original incorrect API permissions.](media/exo-app-only-auth-original-permissions.png)
 
-     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then click **Yes**.
+     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 
      The **Status** value should now be **Granted for \<Organization\>**.
 
      ![Admin consent granted.](media/exo-app-only-auth-admin-consent-granted.png)
 
-4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You'll use it in an upcoming step.
+4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
 
 ### Step 3: Generate a certificate
 
@@ -298,15 +294,15 @@ After you register the certificate with your application, you can use the privat
 
    ![Select Certificates & Secrets on the application properties page.](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
-3. On the **Certificates & secrets** page that opens, click **Upload certificate**.
+3. On the **Certificates & secrets** page that opens, select **Upload certificate**.
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
    In the dialog that opens, browse to the self-signed certificate (`.cer` file) that you created in [Step 3](#step-3-generate-a-certificate).
 
-   ![Browse to the certificate and then click Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
+   ![Browse to the certificate and then select Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
 
-   When you're finished, click **Add**.
+   When you're finished, select **Add**.
 
    The certificate is now shown in the **Certificates** section.
 
@@ -330,8 +326,8 @@ For more information about the URL syntax, see [Request the permissions from a d
 
 You have two options:
 
-- **Assign Azure AD roles to the application**: This method is supported in Exchange Online PowerShell and Security & Compliance PowerShell.
-- **Assign custom Exchange Online role groups to the application using service principals**: This method is supported only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+- **Assign Azure AD roles to the application**
+- **Assign custom role groups to the application using service principals**: This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
 > [!NOTE]
 > You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
@@ -381,7 +377,7 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![Find and select a supported Security & Compliance PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role-scc.png)
 
-3. On the **Assignments** page that opens, click **Add assignments**.
+3. On the **Assignments** page that opens, select **Add assignments**.
 
    - **Exchange Online PowerShell**:
 
@@ -395,7 +391,7 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
    ![Find and select your app on the Add assignments flyout.](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
-   When you're finished, click **Add**.
+   When you're finished in the **Add assignments** flyout, select **Add**.
 
 5. Back on the **Assignments** page, verify that the role has been assigned to the app.
 
@@ -407,14 +403,14 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
      ![The role assignments page after to added the app to the role for Security & Compliance PowerShell.](media/exo-app-only-auth-app-assigned-to-role-scc.png)
 
-#### Assign custom Exchange Online role groups to the application using service principals
+#### Assign custom role groups to the application using service principals
 
 > [!NOTE]
-> You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID is needed to create the new service principal).
+> You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID are needed to create the new service principal).
 >
-> This method is supported only when you connect in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+>  This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
-For information about creating custom role groups, see [Create role groups](/exchange/permissions-exo/role-groups#create-role-groups). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
+For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-365-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
 To assign custom role groups to the application using service principals, do the following steps:
 

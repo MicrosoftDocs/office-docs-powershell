@@ -51,6 +51,7 @@ This example creates the Edge Subscription file. It should be run on your Edge T
 ### Example 2
 ```powershell
 $Temp = [System.IO.File]::ReadAllBytes('C:\Data\EdgeSubscription.xml')
+
 New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 

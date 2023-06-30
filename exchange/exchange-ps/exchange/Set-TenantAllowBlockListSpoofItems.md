@@ -37,6 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 Get-TenantAllowBlockListSpoofItems | Format-Table SpoofedUser,SendingInfrastructure,SpoofType,Action,Identity
+
 Set-TenantAllowBlockListSpoofItems -Identity Default -Action Block -Ids 375e76f1-eefb-1626-c8bc-5efefd057488,f8cb0908-8533-1156-ce7b-9aebd685b0eb
 ```
 
@@ -44,8 +45,7 @@ This example bocks the specified spoof pairs. You get the Ids parameter values f
 
 ### Example 2
 ```powershell
-(Get-TenantAllowBlockListSpoofItems -SpoofType External | Select-Object -Property Identity).Identity | Remove-TenantAllowBlockListSpoofItems -Identity
-Default
+(Get-TenantAllowBlockListSpoofItems -SpoofType External | Select-Object -Property Identity).Identity | Remove-TenantAllowBlockListSpoofItems -Identity Default
 ```
 
 This example removes all external spoof pairs from the Tenant Allow/Block List.

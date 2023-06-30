@@ -51,7 +51,7 @@ The AppId parameter specifies the unique AppId GUID value for the service princi
 
 A valid value for this parameter is available in the following locations:
 
-- The AppId property in the output of the Get-AzureADServicePrincipal cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
+- The AppId property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
 - The Application ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ### -ServiceId
 The ServiceId parameter specifies the unique ServiceId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
-- The ObjectId property in the output of the Get-AzureADServicePrincipal cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
+- The ObjectId property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
 - The Object ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml

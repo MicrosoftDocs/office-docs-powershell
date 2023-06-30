@@ -48,6 +48,7 @@ This example adds members chris@contoso.com and michelle@contoso.com to the Micr
 ### Example 2
 ```powershell
 $users= Get-User -ResultSize unlimited | where {$_.Department -eq "Marketing" -AND $_.RecipientType -eq "UserMailbox"}
+
 Add-UnifiedGroupLinks -Identity Marketing -LinkType members -Links ($users.UserPrincipalName)
 ```
 

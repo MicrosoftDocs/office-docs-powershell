@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/Set-appretentioncompliancerule
+online version: https://learn.microsoft.com/powershell/module/exchange/set-appretentioncompliancerule
 applicable: Security & Compliance
 title: Set-AppRetentionComplianceRule
 schema: 2.0.0

@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. This cmdlet works for accounts with or without multi-factor authentication (MFA).
 
 To connect to Security & Compliance PowerShell, use the [Connect-IPPSSession](https://learn.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
@@ -52,6 +52,7 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
+ [-SigningCertificate <X509Certificate2>]
  [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -276,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessToken
-**Note**: This parameter is available in version 3.1.0-Preview1 or later of the module.
+**Note**: This parameter is available in version 3.1.0 or later of the module.
 
 The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
 
@@ -534,8 +535,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentity
-**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
-
 The ManagedIdentity switch specifies that you're using managed identity to connect. You don't need to specify a value with this switch.
 
 Managed identity connections are currently supported for the following types of Azure resources:
@@ -565,8 +564,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentityAccountId
-**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
-
 The ManagedIdentityAccountId parameter specifies the user-assigned managed identity that you're using to connect. A valid value for this parameter is the application ID (GUID) of the service principal that corresponds to the user-assigned managed identity in Azure.
 
 You must use this parameter with the Organization parameter and the ManagedIdentity switch.
@@ -660,9 +657,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SkipLoadingFormatData
-**Note**: This parameter is available in version 2.0.6-Preview8 or later of the module.
+### -SigningCertificate
+**Note**: This parameter is available in version 3.2.0 or later of the module.
 
+The SigningCertificate parameter specifies the client certificate that's used to sign the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
+
+A valid value for this parameter is a variable that contains the certificate, or a command or expression that gets the certificate.
+
+To find the certificate, use the Get-PfxCertificate cmdlet in the Microsoft.PowerShell.Security module or use the Get-ChildItem cmdlet in the certificate (Cert:) drive. If the certificate isn't valid or doesn't have sufficient authority, the command will fail.
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingFormatData
 The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
@@ -741,11 +758,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 2.0.6-Preview3 or later of the module.
-
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Turn on Basic authentication in WinRM](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
 
 If you don't use this switch, Basic authentication in WinRM is not required.
 

@@ -122,6 +122,7 @@ This example creates the Send connector named MySendConnector with the following
 ### Example 2
 ```powershell
 $CredentialObject = Get-Credential
+
 New-SendConnector -Name "Secure Email to Contoso.com" -AddressSpaces contoso.com -AuthenticationCredential $CredentialObject -SmartHostAuthMechanism BasicAuth
 ```
 

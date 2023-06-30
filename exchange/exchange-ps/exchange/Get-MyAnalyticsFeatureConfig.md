@@ -46,7 +46,7 @@ c:\users\vikram Get-MyAnalyticsFeatureConfig -Identity vikram@contoso.com
 UserId : vikram@contoso.com
 PrivacyMode : opt-in
 IsDashboardEnabled : true
-IsAddInEnabled  : true
+IsAddInEnabled : true
 IsDigestEmailEnabled : false
 ```
 
