@@ -719,7 +719,7 @@ Accept wildcard characters: False
 ### -MobilePhone
 The MobilePhone parameter specifies the user's primary mobile phone number.
 
-**Note**: In Exchange Online, you can't use this parameter. Instead, use the Mobile parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the MobilePhone parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: String
@@ -871,7 +871,7 @@ Accept wildcard characters: False
 ### -Phone
 The Phone parameter specifies the user's office telephone number.
 
-**Note**: In Exchange Online, you can't use this parameter. Instead, use the TelephoneNumber parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the BusinessPhones parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: String
