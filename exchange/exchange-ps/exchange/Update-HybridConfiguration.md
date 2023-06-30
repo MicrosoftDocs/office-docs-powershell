@@ -38,7 +38,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $OnPremisesCreds = Get-Credential
+
 $TenantCreds = Get-Credential
+
 Update-HybridConfiguration -OnPremisesCredentials $OnPremisesCreds -TenantCredentials $TenantCreds
 ```
 

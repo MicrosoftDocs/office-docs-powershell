@@ -59,10 +59,15 @@ This example removes the existing Spanish translation from the sensitive informa
 ### Example 3
 ```powershell
 $Benefits_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Benefits Template.docx')
+
 $Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
+
 $Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"
+
 $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)
+
 $Array.Add($Benefits_FingerPrint[0])
+
 Set-DlpSensitiveInformationType $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
@@ -71,9 +76,13 @@ This example modifies the existing sensitive information type rule named "Contos
 ### Example 4
 ```powershell
 $cc = Get-DlpSensitiveInformationType "Contoso Confidential"
+
 $a = [System.Collections.ArrayList]($cc.Fingerprints)
+
 $a
+
 $a.RemoveAt(0)
+
 Set-DlpSensitiveInformationType $cc.Identity -FingerPrints $a
 ```
 

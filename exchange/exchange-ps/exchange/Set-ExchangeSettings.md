@@ -183,7 +183,7 @@ Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String> 
 ### EnableSettingsGroup
 ```
 Set-ExchangeSettings [-Identity] <ExchangeSettingsIdParameter> -Reason <String>
- [-EnableGroup <String>
+ [-EnableGroup <String>]
  [-DisableGroup <String>]
  [-Confirm]
  [-DomainController <Fqdn>]

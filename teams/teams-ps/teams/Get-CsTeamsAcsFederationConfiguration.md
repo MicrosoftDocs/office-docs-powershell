@@ -24,7 +24,7 @@ Get-CsTeamsAcsFederationConfiguration
 
 ## DESCRIPTION
 
-Federation between Teams and Azure Communication Services (ACS) allows users of custom solutions built with ACS to connect and communicate with Teams users over voice, video, chat, and more. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
+Federation between Teams and Azure Communication Services (ACS) allows users of custom solutions built with ACS to connect and communicate with Teams users over voice, video, Teams users over voice, video and screen sharing, and more. For more information, see [Teams interoperability](/azure/communication-services/concepts/teams-interop).
 
 This cmdlet is used retrieve the Teams and ACS federation configuration for a Teams tenant.
 

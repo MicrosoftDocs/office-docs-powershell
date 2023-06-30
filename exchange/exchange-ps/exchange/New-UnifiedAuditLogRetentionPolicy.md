@@ -47,7 +47,7 @@ This example creates an audit log retention policy that retains all audit logs r
 
 ### Example 2
 ```powershell
-New-UnifiedAuditLogRetentionPolicy -Name "SearchQueryPerformed by app@sharepoint" -Description "90 day retention policy for noisy SharePoint events" -RecordTypes SharePoint  -Operations SearchQueryPerformed -UserIds "app@sharepoint" -RetentionDuration ThreeMonths -Priority 10000
+New-UnifiedAuditLogRetentionPolicy -Name "SearchQueryPerformed by app@sharepoint" -Description "90 day retention policy for noisy SharePoint events" -RecordTypes SharePoint -Operations SearchQueryPerformed -UserIds "app@sharepoint" -RetentionDuration ThreeMonths -Priority 10000
 ```
 
 This example creates an audit log retention policy that retains all audit logs for the SearchQueryPerformed activity performed by the app@sharepoint service account for 90 days.

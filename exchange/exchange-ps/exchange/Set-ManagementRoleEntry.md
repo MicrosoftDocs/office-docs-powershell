@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnScopedTopLevel
-This parameter is available on in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 

@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredClientVersions
-The RequiredClientVersions parameter specifies the minimum version of Microsoft Outlook that's allowed to connect to the Exchange server. This information is in the Autodiscover response to the client connection request. This parameter uses the syntax  `"MinimumVersion, ExpirationDate"`.
+The RequiredClientVersions parameter specifies the minimum version of Microsoft Outlook that's allowed to connect to the Exchange server. This information is in the Autodiscover response to the client connection request. This parameter uses the syntax `"MinimumVersion, ExpirationDate"`.
 
 MinimumVersion is the version of Outlook in the format xx.x.xxxx.xxxx. For example, to specify Outlook 2010 Service Pack 2 (SP2), use the value 14.0.7012.1000.
 

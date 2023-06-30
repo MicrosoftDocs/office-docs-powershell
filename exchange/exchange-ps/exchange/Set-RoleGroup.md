@@ -78,6 +78,7 @@ This example sets the role group managers list to the Seattle Role Administrator
 ### Example 3
 ```powershell
 $Credentials = Get-Credential
+
 Set-RoleGroup "ContosoUsers: Toronto Recipient Admins" -LinkedDomainController dc02.contosousers.contoso.com -LinkedCredential $Credentials -LinkedForeignGroup "Toronto Tier 2 Administrators"
 ```
 

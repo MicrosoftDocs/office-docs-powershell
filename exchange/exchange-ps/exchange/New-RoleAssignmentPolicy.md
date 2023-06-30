@@ -45,6 +45,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 New-RoleAssignmentPolicy -Name "End User Policy"
+
 Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
 ```
 
@@ -60,6 +61,7 @@ This example creates an assignment policy using the IsDefault switch.
 ### Example 3
 ```powershell
 New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault
+
 Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
 ```
 

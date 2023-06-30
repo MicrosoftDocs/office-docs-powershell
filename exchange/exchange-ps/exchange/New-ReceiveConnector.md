@@ -1146,7 +1146,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxAcknowledgementDelay
-This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
+This parameter isn't used by Exchange Server 2016. It's used only by Exchange 2010 servers in coexistence environments.
 
 The MaxAcknowledgementDelay parameter specifies the maximum period the transport server delays acknowledgement until it verifies that the message has been successfully delivered to all recipients. When receiving messages from a host that doesn't support shadow redundancy, an Exchange Server 2010 transport server will delay issuing an acknowledgement until it verifies that the message has been successfully delivered to all recipients. However, if it takes too long to verify successful delivery, the transport server will time out and issue an acknowledgement anyway.
 
