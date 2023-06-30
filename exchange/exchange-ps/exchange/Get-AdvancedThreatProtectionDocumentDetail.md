@@ -56,7 +56,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-AdvancedThreatProtectionDocumentDetail -Organization contoso.com -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
+Get-AdvancedThreatProtectionDocumentDetail -Organization contoso.com -StartDate "4/26/2017" -EndDate "4/28/2017" | Format-Table
 ```
 
 This example returns the detailed report of detections during the specified date range.

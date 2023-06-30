@@ -17,7 +17,7 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
 
-**Note**: Version 3.2.0-Preview4 or later of the module supports REST API mode for most Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required for REST API mode). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
+**Note**: Version 3.2.0 or later of the module supports REST API mode for most Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required for REST API mode). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -55,7 +55,7 @@ For detailed connection instructions, including prerequisites, see [Connect to S
 Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com
 ```
 
-This example connects to Security & Compliance PowerShell using the specified account and modern authentication, with or without MFA. In v3.2.0-Preview4 or later of the module, we're connecting in REST API mode, so Basic authentication in WinRM isn't required on the local computer.
+This example connects to Security & Compliance PowerShell using the specified account and modern authentication, with or without MFA. In v3.2.0 or later of the module, we're connecting in REST API mode, so Basic authentication in WinRM isn't required on the local computer.
 
 
 ### Example 2
@@ -63,7 +63,7 @@ This example connects to Security & Compliance PowerShell using the specified ac
 Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com -UseRPSSession
 ```
 
-This example connects to Security & Compliance PowerShell using the specified account and modern authentication, with or without MFA. In v3.2.0-Preview4 or later of the module, we're connecting in remote PowerShell mode, so Basic authentication in WinRM is required on the local computer.
+This example connects to Security & Compliance PowerShell using the specified account and modern authentication, with or without MFA. In v3.2.0 or later of the module, we're connecting in remote PowerShell mode, so Basic authentication in WinRM is required on the local computer.
 
 ### Example 3
 ```powershell
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 3.2.0-Preview4 or later of the module.
+This parameter is available in version 3.2.0 or later of the module.
 
 The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 

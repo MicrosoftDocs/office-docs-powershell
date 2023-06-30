@@ -37,6 +37,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $Rule = Get-DlpSensitiveInformationTypeRulePackage -Identity "Contoso Rule Pack"
+
 $Rule | Remove-DlpSensitiveInformationTypeRulePackage
 ```
 

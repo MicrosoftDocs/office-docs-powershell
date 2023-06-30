@@ -44,6 +44,7 @@ This example returns a summary list of all Exchange processes that are running o
 ### Example 2
 ```powershell
 [xml]$edi = Get-ExchangeDiagnosticInfo
+
 $edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
 ```
 

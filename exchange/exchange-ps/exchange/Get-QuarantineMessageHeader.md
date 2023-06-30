@@ -44,6 +44,7 @@ This example displays the message header of the quarantined message that has the
 ### Example 2
 ```powershell
 $qMessages = Get-QuarantineMessage
+
 Get-QuarantineMessageHeader $qMessages[0].Identity
 ```
 

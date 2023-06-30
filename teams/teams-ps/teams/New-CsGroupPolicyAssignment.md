@@ -22,15 +22,23 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 ```
 
 ## DESCRIPTION
-This cmdlet is used to assign a policy to a security group or distribution list. When creating a group policy assignment, you must specify a rank, which indicates the precedence of that assignment relative to any other group assignments for the same policy type that may exist. The assignment will be applied to users in the group for any user that does not have a direct policy assignment, provided the user does not have any higher ranking assignments from other groups for the same policy type.
+> [!NOTE]
+> As of May 2023, group policy assignment functionality in Teams PowerShell Module has been extended to support all policy types used in Teams except for the following:
+> -	Teams App Permission Policy
+> -	Teams Network Roaming Policy
+> -	Teams Emergency Call Routing Policy
+> -	Teams Voice Applications Policy
+> -	Teams Upgrade Policy
+>   
+> This cmdlet will be deprecated in the future. Going forward, group policy assignment can be performed by using the corresponding Grant-Cs[PolicyType] cmdlet with the ‘-Group’ parameter. 
 
-The group policy assignment rank is set at the time a policy is assigned to a group and it is relative to other group policy assignments of the same policy type. For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be rank 1 while the other will be rank 2.  It's helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank. In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank. When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be. If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list.
+This cmdlet is used to assign a policy to a Microsoft 365 group, a security group, or a distribution list. When creating a group policy assignment, you must specify a rank, which indicates the precedence of that assignment relative to any other group assignments for the same policy type that may exist. The assignment will be applied to users in the group for any user that does not have a direct policy assignment, provided the user does not have any higher-ranking assignments from other groups for the same policy type.
 
-Once a group policy assignment is created, the policy assignment will be propagated to the members of the group, including users that are added to the group after the assignment was created. Propagation time of the initial policy assignments to members of the group varies based on the number of users in the group. Propagation time for subsequent group membership changes also varies based on the number of users being added or removed from the group. For large groups, propagation to all members may take 24 hours or more. When using group policy assignment, the recommended maximum group membership size is 50,000 users per group.
+The group policy assignment rank is set at the time a policy is assigned to a group and it is relative to other group policy assignments of the same policy type. For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be rank 1 while the other will be rank 2. It's helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank. In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank. When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be. If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list. Assignments applied directly to a user will be treated like rank 0, having precedence over all assignments applied via groups.
+
+Once a group policy assignment is created, the policy assignment will be propagated to the members of the group, including users that are added to the group after the assignment was created. Propagation time of the policy assignments to members of the group varies based on the number of users in the group. Propagation time for subsequent group membership changes also varies based on the number of users being added or removed from the group. For large groups, propagation to all members may take 24 hours or more. When using group policy assignment, the recommended maximum group membership size is 50,000 users per group.
 
 > [!NOTE]
-> - Group policy assignment support is available only for the following policy types:
-CallingLineIdentity, TeamsAppSetupPolicy, TeamsAudioConferencingPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsMeetingBroadcastPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsShiftsPolicy, TeamsUpdateManagementPolicy, and TeamsVerticalPackagePolicy.
 > - A given policy type can be assigned to at most 64 groups, across policy instances for that type.
 > - Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups. 
 > - Direct user assignments of policy take precedence over any group policy assignments for a given policy type. Group PolicyPolicy assignments only take effect to a user if that user does not have a direct policy assignment. 
@@ -107,22 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
-The type of the policy to be assigned.
-Possible values:
-- CallingLineIdentity
-- TeamsAppSetupPolicy
-- TeamsAudioConferencingPolicy
-- TeamsCallingPolicy
-- TeamsCallParkPolicy
-- TeamsChannelsPolicy
-- TeamsComplianceRecordingPolicy
-- TenantDialPlan
-- TeamsMeetingBroadcastPolicy
-- TeamsMeetingPolicy
-- TeamsMessagingPolicy
-- TeamsShiftsPolicy
-- TeamsUpdateManagementPolicy
-- TeamsVerticalPackagePolicy
+The type of policy to be assigned.
 
 ```yaml
 Type: String

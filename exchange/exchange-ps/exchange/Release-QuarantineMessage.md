@@ -105,6 +105,7 @@ This example releases all messages to all original recipients.
 ### Example 4
 ```powershell
 $q = Get-QuarantineMessage -QuarantineTypes SPOMalware
+
 $q[-1] | Release-QuarantineMessage -ReleaseToAll
 ```
 

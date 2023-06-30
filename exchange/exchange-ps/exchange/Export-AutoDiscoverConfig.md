@@ -125,7 +125,10 @@ Accept wildcard characters: False
 ```
 
 ### -MultipleExchangeDeployments
-The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. This setting should be set to $true only if Exchange 2016 is deployed in more than one Active Directory forest, and the forests are connected. If set to $true, the list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Outlook 2010 clients use this object to select the most appropriate forest to search for the Autodiscover service.
+The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. Valid values are:
+
+- $true: Exchange is deployed in more than one Active Directory forest, and the forests are connected. The list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Outlook clients use this object to select the most appropriate forest to search for the Autodiscover service.
+- $False: Multiple Exchange deployments aren't used. This is the default value.
 
 ```yaml
 Type: Boolean

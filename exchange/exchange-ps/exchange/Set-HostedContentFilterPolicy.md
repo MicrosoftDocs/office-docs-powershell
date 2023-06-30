@@ -51,6 +51,7 @@ Set-HostedContentFilterPolicy [-Identity] <HostedContentFilterPolicyIdParameter>
  [-IncreaseScoreWithNumericIps <SpamFilteringOption>]
  [-IncreaseScoreWithRedirectToOtherPort <SpamFilteringOption>]
  [-InlineSafetyTipsEnabled <Boolean>]
+ [-IntraOrgFilterState <IntraOrgFilterState>]
  [-LanguageBlockList <MultiValuedProperty>]
  [-MakeDefault]
  [-MarkAsSpamBulkMail <SpamFilteringOption>]
@@ -68,7 +69,7 @@ Set-HostedContentFilterPolicy [-Identity] <HostedContentFilterPolicyIdParameter>
  [-ModifySubjectValue <String>]
  [-PhishQuarantineTag <String>]
  [-PhishSpamAction <SpamFilteringAction>]
- [-PhishZapEnabled <Boolean>
+ [-PhishZapEnabled <Boolean>]
  [-QuarantineRetentionPeriod <Int32>]
  [-RedirectToRecipients <MultiValuedProperty>]
  [-RegionBlockList <MultiValuedProperty>]
@@ -527,7 +528,6 @@ Accept wildcard characters: False
 ### -HighConfidencePhishAction
 The HighConfidencePhishAction parameter specifies the action to take on messages that are marked as high confidence phishing (not phishing). Phishing messages use fraudulent links or spoofed domains to get personal information. Valid values are:
 
-- MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
 - Redirect: Redirect the message to the recipients specified by the RedirectToRecipients parameter.
 - Quarantine: Move the message to quarantine. By default, messages that are quarantined as high confidence phishing are available only to admins. Or, you can use the HighConfidencePhishQuarantineTag parameter to specify what end-users are allowed to do on quarantined messages.
 
@@ -707,6 +707,29 @@ The InlineSafetyTipsEnabled parameter specifies whether to enable or disable saf
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntraOrgFilterState
+The IntraOrgFilterState parameter specifies whether to enable anti-spam filtering for messages sent between internal users (users in the same organization). The action that's configured in the policy for the specified spam filter verdicts is taken on messages sent between internal users. Valid values are:
+
+- Default: This is the default value. Currently, this value is the same as Disabled. The behavior for the value Default will eventually change to apply the action for high confidence phishing detections in the policy as if you selected HighConfidencePhish. Check the Message Center for announcements to changes in this setting.
+- HighConfidencePhish 
+- Phish: Includes phishing and high confidence phishing.
+- HighConfidenceSpam: Includes high confidence spam, phishing, and high confidence phishing.
+- Spam: Includes spam, high confidence spam, phishing, and high confidence phishing.
+- Disabled
+
+```yaml
+Type: IntraOrgFilterState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
