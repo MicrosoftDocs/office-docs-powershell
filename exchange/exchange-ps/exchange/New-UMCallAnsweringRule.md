@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule is created.  You can use any value that uniquely identifies the mailbox. For example:
+The Mailbox parameter specifies the UM-enabled mailbox where the call answering rule is created. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias

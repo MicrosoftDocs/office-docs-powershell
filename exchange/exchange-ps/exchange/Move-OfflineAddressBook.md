@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Move-OfflineAddressBook cmdlet to designate a new server responsible for generating the offline address book (OAB) in Exchange Server 2010. This cmdlet isn't used on OABs in Exchange Server 2016 or Exchange Server 2013. To perform this task in Exchange 2016 or Exchange 2013, use the Set-OfflineAddressBook cmdlet with the GeneratingMailbox parameter.
+Use the Move-OfflineAddressBook cmdlet to designate a new server that's responsible for generating the offline address book (OAB) in Exchange Server 2010. This cmdlet isn't used on OABs in Exchange Server 2016 or Exchange Server 2013. To perform this task in Exchange 2016 or Exchange 2013, use the Set-OfflineAddressBook cmdlet with the GeneratingMailbox parameter.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

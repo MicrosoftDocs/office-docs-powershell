@@ -40,7 +40,9 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ### Example 1
 ```powershell
 $Keywords = @("Aarskog's syndrome","Abandonment","Abasia","Abderhalden-Kaufmann-Lignac","Abdominalgia","Abduction contracture","Abetalipo proteinemia","Abiotrophy","Ablatio","ablation","Ablepharia","Abocclusion","Abolition","Aborter","Abortion","Abortus","Aboulomania","Abrami's disease","Abramo")
+
 $EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
+
 New-DlpKeywordDictionary -Name "Diseases" -Description "Names of diseases and injuries from ICD-10-CM lexicon" -FileData $EncodedKeywords
 ```
 
@@ -49,7 +51,9 @@ This example creates a DLP keyword dictionary named Diseases by using the specif
 ### Example 2
 ```powershell
 $Keywords = Get-Content "C:\My Documents\InappropriateTerms.txt"
+
 $EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
+
 New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $EncodedKeywords
 ```
 

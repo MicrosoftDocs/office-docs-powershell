@@ -62,6 +62,7 @@ This example returns the list of spoof pairs that appear to be sending spoofed e
 ### Example 4
 ```powershell
 $file = "C:\My Documents\Spoof Tenant Allow Block List.csv"
+
 Get-TenantAllowBlockListSpoofItems | Export-Csv $file
 ```
 

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Add-ContentFilterPhrase cmdlet to define custom words for the Content Filter agent. A custom word is a word or phrase that the administrator sets for the Content Filter agent to evaluate the content of an  message and apply appropriate filter processing.
+Use the Add-ContentFilterPhrase cmdlet to define custom words for the Content Filter agent. A custom word is a word or phrase that the administrator sets for the Content Filter agent to evaluate the content of an message and apply appropriate filter processing.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

@@ -56,7 +56,7 @@ This enables your users to use Skype for Business and log on to Skype for Busine
 
    The following parameters are not applicable to Skype for Business Online/Microsoft Teams: Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
-5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams Admin Center under the External Access setting. 
+5. (Microsoft Teams Only) Communicate with people who are using Teams with an account that's not managed by an organization. This policy only applies if Teams Consumer Federation has been enabled at the tenant level using the cmdlet [Set-CsTenantFederationConfiguration](/powershell/module/teams/set-cstenantfederationconfiguration) or Teams admin center under the External Access setting.
 
 After an external access policy has been created, you can use the `Set-CsExternalAccessPolicy` cmdlet to change the property values of that policy.
 For example, by default the global policy does not allow users to communicate with people who have accounts with a federated organization.
@@ -133,7 +133,7 @@ Note that wildcards are not allowed when specifying an Identity.
 ```yaml
 Type: XdsIdentity
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -149,7 +149,7 @@ Allows you to pass a reference to an object to the cmdlet rather than set indivi
 ```yaml
 Type: PSObject
 Parameter Sets: Instance
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -166,7 +166,7 @@ For example, the Description might include information about the users the polic
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -184,7 +184,7 @@ The default value is True.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -195,7 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAcsFederationAccess
-Indicates whether Teams meeting organized by the user can be joined by users of customer applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsFederationConfiguration. 
+Indicates whether Teams meeting organized by the user can be joined by users of customer applications built using Azure Communication Services (ACS). This policy setting only applies if ACS Teams federation has been enabled at the tenant level using the cmdlet Set-CsTeamsAcsFederationConfiguration.
+
+Additionally, Azure Communication Services users would be able to call Microsoft 365 users that have assigned policies with enabled federation.
 
 To enable for all users, use the Set-CsExternalAccessPolicy cmdlet to update the global policy, setting the value to True. It can be disabled for selected users by assigning them a policy with federation disabled.
 
@@ -204,7 +206,7 @@ To enable just for a selected set of users, use the Set-CsExternalAccessPolicy c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Microsoft Teams
 Required: False
 Position: Named
@@ -218,11 +220,10 @@ Indicates whether the user is allowed to communicate with people who have SIP ac
 Read [Manage external access in Microsoft Teams](/microsoftteams/manage-external-access) to get more information about the effect of this parameter in Microsoft Teams.
 The default value is False.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -240,7 +241,7 @@ The default value is False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -261,7 +262,7 @@ The default value is True.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -282,7 +283,7 @@ The default value is True.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -298,7 +299,7 @@ Suppresses the display of any non-fatal error message that might occur when runn
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -347,7 +348,7 @@ The default value is False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
@@ -364,7 +365,7 @@ The default value is False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False

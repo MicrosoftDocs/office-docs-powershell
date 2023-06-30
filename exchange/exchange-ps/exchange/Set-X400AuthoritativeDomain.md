@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -X400ExternalRelay
-The X400ExternalRelay parameter specifies whether this authoritative domain is an external relay domain. If you set the X400ExternalRelay parameter to $true, Exchange routes  to the external address and doesn't treat resolution failures to this subdomain as errors.
+The X400ExternalRelay parameter specifies whether this authoritative domain is an external relay domain. If you set the X400ExternalRelay parameter to $true, Exchange routes to the external address and doesn't treat resolution failures to this subdomain as errors.
 
 ```yaml
 Type: Boolean

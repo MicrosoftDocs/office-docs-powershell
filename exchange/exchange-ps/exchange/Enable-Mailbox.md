@@ -125,7 +125,7 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -L
 
 ### Linked
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter>
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
  [-LinkedCredential <PSCredential>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]

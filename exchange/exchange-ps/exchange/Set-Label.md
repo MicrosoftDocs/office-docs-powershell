@@ -524,7 +524,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyWaterMarkingLayout
-The ApplyWaterMarkingAlignment parameter specifies the watermark alignment. Valid values are:
+The ApplyWaterMarkingLayout parameter specifies the watermark alignment. Valid values are:
 
 - Horizontal
 - Diagonal
