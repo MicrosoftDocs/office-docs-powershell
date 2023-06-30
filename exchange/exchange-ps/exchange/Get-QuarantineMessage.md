@@ -323,7 +323,6 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-- DataLossPrevention
 - FileTypeBlock (common attachments filter in anti-malware policies in EOP)
 - HighConfPhish
 - Malware (anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365)
