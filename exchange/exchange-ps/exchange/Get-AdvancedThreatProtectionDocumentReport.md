@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventType
-The EventType parameter filters the report by the event type.  Valid values are:
+The EventType parameter filters the report by the event type. Valid values are:
 
 - Advanced Threat Protection
 - Advanced Threat Protection clean

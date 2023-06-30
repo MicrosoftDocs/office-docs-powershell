@@ -61,6 +61,8 @@ Distribution groups are used to consolidate groups of recipients into a single p
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
+In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216) InformationVariable and InformationAction don't work.
+
 ## EXAMPLES
 
 ### Example 1
@@ -165,7 +167,10 @@ Accept wildcard characters: False
 ### -BccBlocked
 This parameter is available only in the cloud-based service.
 
-{{ Fill BccBlocked Description }}
+The BccBlocked parameter specifies whether members of the group don't receive messages if the group is used in the Bcc line. Valid values are:
+
+- $true: If the group is used in the Bcc line, members of the group don't receive the message, and the sender receives a non-delivery report (also known as an NDR or bounce message). Other recipients of the message aren't blocked. If an external sender uses the group in the Bcc line, members of the group aren't blocked. For nested groups, the message is blocked only for members of the top-level group.
+- $false: There are no restrictions for using the group in the Bcc line of messages. This is the default value.
 
 ```yaml
 Type: Boolean

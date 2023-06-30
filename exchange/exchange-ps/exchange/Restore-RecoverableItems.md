@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/Restore-RecoverableItems
+online version: https://learn.microsoft.com/powershell/module/exchange/restore-recoverableitems
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
@@ -77,6 +77,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 ### Example 2
 ```powershell
 $mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"
+
 $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains "Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
 ```
 
@@ -319,7 +320,7 @@ This parameter is required for archives and optional for primary mailboxes. A de
 - `/folder1/folder2`
 - `folder1`
 - `folder1/folder2`
-```
+
 The preceding or trailing `/` will be ignored. Then, it will be treated as the relative path of the IPM sub-tree: `/Top Of Information Store`.
 
 ```yaml

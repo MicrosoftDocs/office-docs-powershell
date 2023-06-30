@@ -804,7 +804,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupervisoryReviewPolicy
-This parameter is available on in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
 This parameter is reserved for internal Microsoft use.
 

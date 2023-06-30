@@ -127,6 +127,7 @@ This example returns the summary move history for the completed move request for
 ### Example 8
 ```powershell
 $temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory
+
 $temp.MoveHistory[0]
 ```
 
@@ -135,6 +136,7 @@ This example returns the detailed move history for the completed move request fo
 ### Example 9
 ```powershell
 $temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport
+
 $temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
 ```
 

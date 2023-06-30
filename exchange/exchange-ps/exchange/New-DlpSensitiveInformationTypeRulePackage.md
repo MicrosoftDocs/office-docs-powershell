@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/New-DlpSensitiveInformationTypeRulePackage
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage
 applicable: Security & Compliance
 title: New-DlpSensitiveInformationTypeRulePackage
 schema: 2.0.0
@@ -37,7 +37,6 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-
 New-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External Sensitive Info Type Rule Collection.xml'))
 ```
 

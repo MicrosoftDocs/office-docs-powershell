@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-PublicFolderMoveRequest cmdlet to begin the process of moving public folder contents between public folder mailboxes. Moving public folders only moves the physical contents of the public folder; it doesn't change the logical hierarchy. When the move request is completed, you must run the Remove-PublicFolderMoveRequest cmdlet to remove the request or wait until the time specified in the CompletedRequestAgeLimit parameter has passed. The request must be removed before you can run another move request.
 
-Be aware that the target public folder mailbox will be locked while the move request is active. See the Detailed Description section below for more details.
+Be aware that the target public folder mailbox will be locked while the move request is active. For more information, see the Description section.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,7 +43,7 @@ New-PublicFolderMoveRequest -Folders <PublicFolderIdParameter[]> -TargetMailbox 
 ```
 
 ## DESCRIPTION
-The New-PublicFolderMoveRequest cmdlet moves public folders from a source public folder mailbox to a target public folder mailbox. While the move request is active, the target public folder mailbox will be locked. As a result, public folders already residing in the target public folder mailbox will be inaccessible until the move request is complete. Therefore, before you begin the move request, you should make sure no users are accessing public folder data in that target public folder mailbox.
+The New-PublicFolderMoveRequest cmdlet moves public folders from a source public folder mailbox to a target public folder mailbox. While the move request is active, the target public folder mailbox will be locked. As a result, public folders already residing in the target public folder mailbox will be inaccessible until the move request is complete. Therefore, before you begin the move request, you should ensure that no users are accessing public folder data in that target public folder mailbox.
 
 To move the public folder mailbox to another mailbox database, use the New-MoveRequest cmdlet. To ensure that this folder is already in the target public folder mailbox, run the Update-PublicFolderMailbox cmdlet against the target public folder mailbox. You can only perform one move request at a time. You can also move public folders by using the Move-PublicFolderBranch.ps1 script.
 
@@ -70,6 +70,7 @@ You can also move a branch of public folders by using the Move-PublicFolderBranc
 ### Example 3
 ```powershell
 $folders = Get-PublicFolder \ -Recurse -Mailbox PUB1 -ResidentFolders | ?{$_.Name -ne "IPM_SUBTREE"} | %{$_.Identity}
+
 New-PublicFolderMoveRequest -TargetMailbox PUB2 -Folders $folders
 ```
 
@@ -78,7 +79,7 @@ This example moves all public folders from public folder mailbox Pub1 to public 
 ## PARAMETERS
 
 ### -Folders
-The Folders parameter specifies the public folders that you want to move. If the public folder has child public folders, child public folders won't be moved unless you explicitly state them in the command. You can move multiple public folders by separating them with a comma, for example, \\Dev\\CustomerEngagements,\\Dev\\RequestsforChange,\\Dev\\Usability.
+The Folders parameter specifies the public folders that you want to move. If the public folder has child public folders, these child public folders won't be moved unless you explicitly state them in the command. You can move multiple public folders by separating them with a comma, for example, \\Dev\\CustomerEngagements,\\Dev\\RequestsforChange,\\Dev\\Usability.
 
 ```yaml
 Type: PublicFolderIdParameter[]
@@ -121,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptLargeDataLoss
-The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
+The AcceptLargeDataLoss switch specifies that the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You don't need to specify a value with this switch.
 
 You need to use this switch if you set the LargeItemLimit parameter to a value of 51 or higher. Otherwise, the command will fail.
 
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowLargeItems
-The AllowLargeItems switch specifies that you can move large items only when large items are encountered. You don't need to specify a value with this switch.
+The AllowLargeItems switch specifies that you can move large items only when they're encountered. You don't need to specify a value with this switch.
 
 Large items are email messages with a maximum of 1,023 attachments.
 
@@ -157,9 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -BadItemLimit
-The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
+The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to be completed.
 
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
+Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means that the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so that the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and then try the request again.
 
 ```yaml
 Type: Unlimited
@@ -175,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompletedRequestAgeLimit
-The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has completed before being automatically removed. The default CompletedRequestAgeLimit parameter value is 30 days.
+The CompletedRequestAgeLimit parameter specifies how long the request will be kept after it has been completed before being automatically removed. The default value for this parameter is 30 days.
 
 ```yaml
 Type: Unlimited
@@ -374,7 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkloadType
-This parameter is reserved for internal Microsoft use.
+The WorkloadType parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RequestWorkloadType

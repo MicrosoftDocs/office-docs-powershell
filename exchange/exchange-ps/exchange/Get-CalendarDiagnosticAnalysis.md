@@ -66,6 +66,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 $logs = Get-CalendarDiagnosticLog -Identity oevans -MeetingID 040000008200E00074C5B7101A82E008000000009421DCCD5046CD0100000000000000001000000010B0349F6B17454685E17D9F9512E71F
+
 Get-CalendarDiagnosticAnalysis -CalendarLogs $logs -DetailLevel Advanced | Set-Content -Path "C:\My Documents\Oscar Evans Analysis.csv"
 ```
 
@@ -87,6 +88,7 @@ For basic analysis of the items, don't include the DetailLevel parameter, or use
 ### Example 3
 ```powershell
 $calitems = Get-CalendarDiagnosticLog -Identity jkozma@contoso.com -Subject "Budget Meeting"
+
 ForEach($item in $calitems){$i++; Get-CalendarDiagnosticAnalysis -CalendarLogs $item -OutputAs HTML | Set-Content -Path ("\\FileServer01\Data\Jasen Kozma Analysis{0}.html" -f $i)}
 ```
 

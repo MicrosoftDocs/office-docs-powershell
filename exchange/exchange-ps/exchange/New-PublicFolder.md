@@ -53,10 +53,10 @@ In Exchange Server 2010, this example creates the public folder FY2010 under the
 
 ### Example 3
 ```powershell
-New-PublicFolder -Name FY2013 -Path \Legal\Cases
+New-PublicFolder -Name FY2014 -Path \Legal\Cases
 ```
 
-This example creates the public folder FY2013 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2013.
+This example creates the public folder FY2014 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2014.
 
 ### Example 4
 ```powershell

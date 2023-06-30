@@ -85,6 +85,7 @@ This example detects and repairs all corruption types for Ayla Kol's mailbox and
 ### Example 5
 ```powershell
 $Mailbox = Get-MailboxStatistics annb
+
 New-MailboxRepairRequest -Database $Mailbox.Database -StoreMailbox $Mailbox.MailboxGuid -CorruptionType ProvisionedFolder,SearchFolder,AggregateCounts,Folderview
 ```
 

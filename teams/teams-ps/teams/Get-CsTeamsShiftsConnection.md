@@ -58,6 +58,7 @@ Etag                                     : "5b00dd1b-0000-0400-0000-641d2df00000
 Id                                       : 4dae9db0-0841-412c-8d6b-f5684bfebdd7
 LastModifiedDateTime                     : 24/03/2023 04:58:23
 Name                                     : My connection 1
+State                                    : Active
 TenantId                                 : dfd24b34-ccb0-47e1-bdb7-000000000000
 
 ConnectorId                              : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
@@ -76,6 +77,7 @@ Etag                                     : "3100fd6e-0000-0400-0000-642ea7840000
 Id                                       : a2d1b091-5140-4dd2-987a-98a8b5338744
 LastModifiedDateTime                     : 06/04/2023 11:05:39
 Name                                     : My connection 2
+State                                    : Active
 TenantId                                 : dfd24b34-ccb0-47e1-bdb7-000000000000
 ```
 
@@ -100,7 +102,8 @@ PS C:\> $connection.ToJsonString()
   "name": "My connection 2",
   "etag": "\"3100fd6e-0000-0400-0000-642ea7840000\"",
   "createdDateTime": "2023-04-06T11:05:39.8790000Z",
-  "lastModifiedDateTime": "2023-04-06T11:05:39.8790000Z"
+  "lastModifiedDateTime": "2023-04-06T11:05:39.8790000Z",
+  "state": "Active"
 }
 ```
 Returns the connection with the specified -ConnectionId.

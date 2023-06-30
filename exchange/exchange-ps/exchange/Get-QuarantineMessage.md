@@ -63,10 +63,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-QuarantineMessage -StartReceivedDate 06/13/2016 -EndReceivedDate 06/15/2016
+Get-QuarantineMessage -StartReceivedDate 06/13/2017 -EndReceivedDate 06/15/2017
 ```
 
-This example returns a summary list of messages quarantined between June 13, 2016 and June 15, 2016.
+This example returns a summary list of messages quarantined between June 13, 2017 and June 15, 2017.
 
 ### Example 2
 ```powershell
@@ -197,7 +197,6 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePointOnline
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
@@ -301,7 +300,6 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 
 - AntiMalwarePolicy
 - AntiPhishPolicy
-- DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
 - SafeAttachmentPolicy (Microsoft Defender for Office 365 only)
@@ -508,7 +506,6 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
-- DataLossPrevention
 - HighConfPhish
 - Malware
 - Phish

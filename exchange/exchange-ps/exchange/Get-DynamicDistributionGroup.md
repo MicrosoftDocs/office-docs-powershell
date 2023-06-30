@@ -96,6 +96,7 @@ This example returns all dynamic distribution groups whose names contain the str
 ### Example 4
 ```powershell
 $FTE = Get-DynamicDistributionGroup "Full Time Employees"
+
 Get-Recipient -RecipientPreviewFilter $FTE.RecipientFilter -OrganizationalUnit $FTE.RecipientContainer
 ```
 
