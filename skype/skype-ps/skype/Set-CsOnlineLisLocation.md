@@ -26,7 +26,6 @@ Set-CsOnlineLisLocation -CivicAddressId <guid> [-City <string>] [-CityAlias <str
  [-Latitude <string>] [-Longitude <string>] [-PostalCode <string>] [-PostDirectional <string>] [-PreDirectional <string>]
  [-StateOrProvince <string>] [-StreetName <string>] [-StreetSuffix <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-**Note:** This parameter set is reserved for internal Microsoft use.
 
 ### UseLocationId
 ```
