@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ### -Elin
 Specifies the Emergency Location Identification Number. This is used in Direct Routing EGW scenarios.
 
-**Note:** You can set or change the ELIN, but you can't clear its value. If you need to clear the value, you should re-create the location.
+**Note:** You can set or change the ELIN, but you can't clear its value. If you need to clear the value, you should recreate the location.
 
 ```yaml
 Type: String
