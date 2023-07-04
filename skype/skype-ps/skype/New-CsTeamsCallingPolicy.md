@@ -94,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter is enabling local call redirection for SIP devices connecting via the Microsoft Teams SIP gateway.
+Setting this parameter enables local call redirection for SIP devices connecting via the Microsoft Teams SIP gateway.
+
 
 Valid options are:
 - Enabled: Enable the user to redirect an incoming call.
