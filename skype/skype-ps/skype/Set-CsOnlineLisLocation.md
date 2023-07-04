@@ -50,7 +50,7 @@ This example changes the location description of the location specified by its l
 Specifies the unique identifier of the civic address that contains the location to be modified.
 Civic address identities can be discovered by using the \`Get-CsOnlineLisCivicAddress\` cmdlet.
 
-**Note:** This parameter is for Microsoft Internal use only.
+**Note:** This parameter is for Microsoft internal use only.
 
 ```yaml
 Type: Guid
