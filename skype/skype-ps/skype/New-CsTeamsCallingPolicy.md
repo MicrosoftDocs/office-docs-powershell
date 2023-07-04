@@ -98,8 +98,9 @@ Setting this parameter enables local call redirection for SIP devices connecting
 
 
 Valid options are:
-- Enabled: Enable the user to redirect an incoming call.
-- Disabled: User will not have such ability.
+- Enabled: Enables the user to redirect an incoming call.
+- Disabled: The user is not enabled to redirect an incoming call.
+
 - UserOverride: This option is not available for use.
 
 ```yaml
