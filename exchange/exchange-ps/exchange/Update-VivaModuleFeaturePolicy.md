@@ -27,10 +27,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]
  [-IsFeatureEnabled <Boolean>]
- [-GroupIds <String[]>] [-UserIds <String[]>]
+ [-GroupIds <String[]>]
  [-Everyone <Boolean>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
+ [-UserIds <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
