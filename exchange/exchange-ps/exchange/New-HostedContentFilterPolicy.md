@@ -740,9 +740,9 @@ Accept wildcard characters: False
 ```
 
 ### -LanguageBlockList
-The LanguageBlockList parameter specifies the email content languages that are marked as spam when the EnableLanguageBlockList parameter value is $true. A valid value is a supported ISO 639-1 two-letter language code:
+The LanguageBlockList parameter specifies the email content languages that are marked as spam when the EnableLanguageBlockList parameter value is $true. A valid value is a supported uppercase ISO 639-1 two-letter language code:
 
-af, ar, az, be, bg, bn, br, bs, ca, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fo, fr, fy, ga, gl, gu, ha, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kl, kn, ko, ku, ky, la, lb, lt, lv, mi, mk, ml, mn, mr, ms, mt, nb, nl, nn, pa, pl, ps, pt, rm, ro, ru, se, sk, sl, sq, sr, sv, sw, ta, te, th, tl, tr, uk, ur, uz, vi, wen, yi, zh-cn, zh-tw, and zu.
+AF, AR, AZ, BE, BG, BN, BR, BS, CA, CS, CY, DA, DE, EL, EN, EO, ES, ET, EU, FA, FI, FO, FR, FY, GA, GL, GU, HA, HE, HI, HR, HU, HY, ID, IS, IT, JA, KA, KK, KL, KN, KO, KU, KY, LA, LB, LT, LV, MI, MK, ML, MN, MR, MS, MT, NB, NL, NN, PA, PL, PS, PT, RM, RO, RU, SE, SK, SL, SQ, SR, SV, SW, TA, TE, TH, TL, TR, UK, UR, UZ, VI, WEN, YI, ZH-CN, ZH-TW, and ZU.
 
 A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Not all possible language codes are available as input for this parameter.
 
