@@ -746,11 +746,7 @@ AF, AR, AZ, BE, BG, BN, BR, BS, CA, CS, CY, DA, DE, EL, EN, EO, ES, ET, EU, FA, 
 
 A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Not all possible language codes are available as input for this parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
-
-To empty the list, use the value $null.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
