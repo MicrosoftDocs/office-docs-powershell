@@ -744,7 +744,7 @@ The LanguageBlockList parameter specifies the email content languages that are m
 
 af, ar, az, be, bg, bn, br, bs, ca, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fo, fr, fy, ga, gl, gu, ha, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kl, kn, ko, ku, ky, la, lb, lt, lv, mi, mk, ml, mn, mr, ms, mt, nb, nl, nn, pa, pl, ps, pt, rm, ro, ru, se, sk, sl, sq, sr, sv, sw, ta, te, th, tl, tr, uk, ur, uz, vi, wen, yi, zh-cn, zh-tw, and zu.
 
-A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Note that not all possible language codes are available as input for this parameter.
+A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Not all possible language codes are available as input for this parameter.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`.
 
