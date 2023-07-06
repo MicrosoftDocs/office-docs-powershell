@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ### -App
 This parameter is available only in the cloud-based service.
 
-The App parameter specifies the service principal to assign the management role to. Specifically, the ServiceId GUID value from the output of the Get-ServicePrincipal cmdlet (for example, 6233fba6-0198-4277-892f-9275bf728bcc).
+The App parameter specifies the service principal to assign the management role to. Specifically, the ObjectId GUID value from the output of the Get-ServicePrincipal cmdlet (for example, 6233fba6-0198-4277-892f-9275bf728bcc).
 
 For more information about service principals, see [Application and service principal objects in Azure Active Directory](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
