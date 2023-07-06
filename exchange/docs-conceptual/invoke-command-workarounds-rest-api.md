@@ -1,9 +1,9 @@
 ---
-title: Workarounds 
+title: Workarounds for Invoke-Command scenarios in REST API connections 
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 7/5/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -17,15 +17,18 @@ search.appverid: MET150
 description: "Learn about the alternatives to Invoke-Command commands in REST API connections using the EXO V3 module."
 ---
 
-# Workarounds
+# Workarounds for Invoke-Command scenarios in REST API connections
 
-In multiple remote PowerShell connections to Exchange Online in the same window, you use the [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet to run scripts or commands in specific remote PowerShell sessions. But, the **Invoke-Command** cmdlet doesn't work in [REST API connections](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) to Exchange Online PowerShell.
+In multiple connections to Exchange Online or Security & Compliance PowerShell in the same window, you use the [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet to run scripts or commands in a specific remote PowerShell session. But, the **Invoke-Command** cmdlet doesn't work in [REST API connections](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) to Exchange Online or Security & Compliance PowerShell.
 
 This article offers REST API alternatives for scenarios that that use **Invoke-Command** commands.
 
 ## Scenario 1: Run Exchange Online cmdlets
 
 This example finds the identity of any other user (`$Us = $User.Identity`).
+
+> [!TIP]
+> Other commands were required to get the values of `$User` and therefore `$Us`. Those commands aren't important. The overall approach that's being used is what's important.
 
 - **In a remote PowerShell session**: Use the **Get-PSSession** cmdlet to store the remote PowerShell session details in the variable named `$Session`, and then run the following command:
 
@@ -110,7 +113,7 @@ This example shows how to create two PowerShell sessions in the same window and 
   5. Now you can run commands in either session. For example:
 
      ```powershell
-     $CommandStr1 = "Get-$($ConnectionInfo1.ModulePrefix)Mailbox -ResultSize 1" 
+     $CommandStr1 = "Get-$($ConnectionInfo1.ModulePrefix)Mailbox -ResultSize 10" 
 
      Invoke-Expression $CommandStr1
      ```
@@ -118,7 +121,7 @@ This example shows how to create two PowerShell sessions in the same window and 
      Or
 
      ```powershell
-     $CommandStr2 = "Get-$($ConnectionInfo2.ModulePrefix)Mailbox -ResultSize 1" 
+     $CommandStr2 = "Get-$($ConnectionInfo2.ModulePrefix)Mailbox -ResultSize 10" 
 
      Invoke-Expression $CommandStr2 
      ```

@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V2 module and V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 7/5/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -62,13 +62,15 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
   - REST API cmdlets have the same cmdlet names and work just like their remote PowerShell equivalents, so you don't need to update any of your scripts.
 
+    The [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet doesn't work in REST API connections. For alternatives, see [Workarounds for Invoke-Command scenarios in REST API connections](invoke-command-workarounds-rest-api.md).
+
   - In Exchange Online PowerShell and in Security & Compliance PowerShell, all of the available remote PowerShell cmdlets are backed by the REST API.
 
   - In Exchange Online PowerShell and in Security & Compliance PowerShell, REST API connections are used by default. You need to use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** or **Connect-IPPSSession** command to access cmdlets in remote PowerShell mode.
 
 - Consider the following items if you connect to Exchange Online PowerShell or Security & Compliance PowerShell in remote PowerShell mode:
   - [Basic authentication in WinRM](#turn-on-basic-authentication-in-winrm) is required on your client computer.
-  - If you don't connect i remote PowerShell mode, you have access to REST API cmdlets _only_.
+  - If you don't connect in remote PowerShell mode, you have access to REST API cmdlets _only_.
   - The end of remote PowerShell support in Exchange Online PowerShell has been announced. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
 
 - A few REST API cmdlets in Exchange Online PowerShell have been updated with the experimental _UseCustomRouting_ switch. This switch routes the command directly to the required Mailbox server, and might improve overall performance.
