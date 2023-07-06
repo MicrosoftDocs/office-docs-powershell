@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ServicePrincipal [[-Identity] <ServicePrincipalIdParameter>]
- [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -40,14 +39,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ServicePrincipal
 ```
 
-This example returns a summary list of all service principals.
+This example returns a summary list of all service principals within an organization.
 
 ### Example 2
 ```powershell
 Get-ServicePrincipal -Identity ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1 | Format-List
 ```
 
-This example returns detailed information about the service principal with the ServiceId value ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1.
+This example returns detailed information about the service principal with the ObjectId value ca73fffa-cedb-4b84-860f-d7fb8aa8a6c1.
 
 ## PARAMETERS
 
@@ -58,7 +57,7 @@ The Identity parameter specifies the service principal that you want to view. Yo
 - Distinguished name (DN)
 - GUID
 - AppId
-- ServiceId
+- ObjectId
 
 ```yaml
 Type: ServicePrincipalIdParameter
@@ -70,22 +69,6 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
