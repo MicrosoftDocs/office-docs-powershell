@@ -134,9 +134,7 @@ Connect-ExchangeOnline -EnableErrorReporting -LogDirectoryPath <Path to store lo
 
 ## Cmdlets in the Exchange Online PowerShell module
 
-All versions of the module contain nine exclusive **Get-EXO\*** cmdlets for Exchange Online PowerShell that are optimized for speed in bulk data retrieval scenarios (thousands and thousands of objects). The older related remote PowerShell cmdlets are still available.
-
-The improved Exchange Online PowerShell cmdlets that are available only in the module are listed in the following table:
+All versions of the module contain nine exclusive **Get-EXO\*** cmdlets for Exchange Online PowerShell that are optimized for speed in bulk data retrieval scenarios (thousands and thousands of objects). The improved Exchange Online PowerShell cmdlets that are available only in the module are listed in the following table:
 
 |EXO module cmdlet|Older related cmdlet|
 |---|---|
@@ -149,6 +147,9 @@ The improved Exchange Online PowerShell cmdlets that are available only in the m
 |[Get-EXOMailboxFolderStatistics](/powershell/module/exchange/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](/powershell/module/exchange/get-mailboxfolderstatistics)|
 |[Get-EXOMailboxFolderPermission](/powershell/module/exchange/get-exomailboxfolderpermission)|[Get-MailboxFolderPermission](/powershell/module/exchange/get-mailboxfolderpermission)|
 |[Get-EXOMobileDeviceStatistics](/powershell/module/exchange/get-exomobiledevicestatistics)|[Get-MobileDeviceStatistics](/powershell/module/exchange/get-mobiledevicestatistics)|
+
+> [!NOTE]
+> If you open multiple connections to Exchange Online PowerShell in the same window, the **Get-EXO\*** cmdlets are always associated with the last (most recent) Exchange Online PowerShell connection. Run the following command to find the REST API session where the **Get-EXO\*** cmdlets are run: `Get-ConnectionInformation | Where-Object {$_.ConnectionUsedForInbuiltCmdlets -eq $true}`. If the last Exchange Online PowerShell connection used remote PowerShell, the **Get-EXO\*** cmdlets are run in that connection (and the output of the **Get-ConnectionInformation** command is meaningless).
 
 The connection-related cmdlets in the module are listed in the following table:
 
