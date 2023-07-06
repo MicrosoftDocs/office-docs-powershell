@@ -193,7 +193,11 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectIds
-The ObjectIds parameter filters the log entries by object ID. The object ID is the target object that was acted upon, and depends on the RecordType and Operations values of the event. For example, for SharePoint operations, the object ID is the URL path to a file, folder, or site. For Azure Active Directory operations, the object ID is the account name or GUID value of the account.
+The ObjectIds parameter filters the log entries by object ID. The object ID is the target object that was acted upon, and depends on the RecordType and Operations values of the event.
+
+For example, for SharePoint operations, the object ID is the URL path to a file, folder, or site. To search logs in a site, add a wildcard (\*) in front of the site URL (for example, `"https://contoso.sharepoint.com/sites/test/*"`).
+
+For Azure Active Directory operations, the object ID is the account name or GUID value of the account.
 
 The ObjectId value appears in the AuditData (also known as Details) property of the event.
 
