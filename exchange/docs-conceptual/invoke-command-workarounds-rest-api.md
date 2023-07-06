@@ -55,7 +55,7 @@ This example finds the identity of a group member:
 
 ## Scenario 2: Run Exchange Online cmdlets and expand specific properties
 
-This example gets all mailboxes where the GrantSendOnBehalfTo permission is set, and returns the users who have this permission on the mailbox.
+This example finds all mailboxes where the GrantSendOnBehalfTo permission is set, and then returns the users who have the permission on the mailbox.
 
 - **In a remote PowerShell session**: Use the **Get-PSSession** cmdlet to store the remote PowerShell session details in the variable named `$Session`, and then run the following command:
 
