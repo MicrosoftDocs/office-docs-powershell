@@ -151,7 +151,7 @@ The AnyOfRecipientAddressContainsWords parameter specifies a condition for the a
 - Multiple words: `no_reply,urgent,...`
 - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
 
-The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 600.
 
 You can use this condition in auto-labeling policies that are scoped only to Exchange.
 
@@ -342,7 +342,7 @@ The ExceptIfAnyOfRecipientAddressContainsWords parameter specifies an exception 
 - Multiple words: `no_reply,urgent,...`
 - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
 
-The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 600.
 
 You can use this exception in auto-labeling policies that are scoped only to Exchange.
 
