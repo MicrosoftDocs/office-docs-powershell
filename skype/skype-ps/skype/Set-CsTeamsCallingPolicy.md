@@ -103,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. 
+Setting this parameter enables local call redirection for SIP devices connecting via the Microsoft Teams SIP gateway.
 
 Valid options are:
-- Enabled: Users will have the ability to redirect received calls.
-- Disabled: Users will not have such an ability.
-- UserOverride: This option is not available for use. There's no user interface implemented for its management.
+- Enabled: Enables the user to redirect an incoming call.
+- Disabled: The user is not enabled to redirect an incoming call.
+- UserOverride: This option is not available for use.
 
 ```yaml
 Type: String

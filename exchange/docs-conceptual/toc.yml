@@ -38,6 +38,8 @@
           href: connect-exo-powershell-managed-identity.md
         - name: Connect using C#
           href: connect-to-exo-powershell-c-sharp.md
+        - name: Workarounds for Invoke-Command in REST API connections
+          href: invoke-command-workarounds-rest-api.md
         - name: Enable or disable access to Exchange Online PowerShell
           href: disable-access-to-exchange-online-powershell.md
         - name: Exchange cmdlet syntax
