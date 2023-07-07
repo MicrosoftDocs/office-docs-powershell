@@ -193,7 +193,7 @@ The following HTML tags are available:
 - `<EM>` and `</EM>` (italic)
 - `<BR>` (line break)
 - `<P>` and `</P>` (paragraph)
-- `<A HREF="url">` and `</A>` (hyperlink). Note: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
+- `<A HREF="url">` and `</A>` (hyperlink). **Note**: You need to use single quotation marks (not double quotation marks) around the complete text string if you use this tag. Otherwise, you'll receive an error (because of the double quotation marks in the tag).
 
 Use the following escape codes for these special characters:
 
