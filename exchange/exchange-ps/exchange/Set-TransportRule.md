@@ -940,7 +940,7 @@ Rules can inspect the content of supported file types only. If the rule finds an
 
 For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
 
-In Exchange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+In Exchange 2010, to extend the list of supported file types, see [Register Filter Pack IFilters](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -1779,7 +1779,7 @@ Rules can inspect the content of supported file types only. If the rule finds an
 
 For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
 
-In Exhange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+In Exchange 2010, to extend the list of supported file types, see [Register Filter Pack IFilters](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean

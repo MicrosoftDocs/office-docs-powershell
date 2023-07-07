@@ -57,7 +57,6 @@ Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com
 
 This example connects to Security & Compliance PowerShell using the specified account and modern authentication, with or without MFA. In v3.2.0 or later of the module, we're connecting in REST API mode, so Basic authentication in WinRM isn't required on the local computer.
 
-
 ### Example 2
 ```powershell
 Connect-IPPSSession -UserPrincipalName michelle@contoso.onmicrosoft.com -UseRPSSession
