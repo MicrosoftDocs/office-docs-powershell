@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ServicePrincipal -AppId <String> -ObjectId <String>
- [-ServiceId <String>] **Will be deprecated for ObjectId** 
  [-Confirm]
  [-DisplayName <String>]
  [-WhatIf]
@@ -68,7 +67,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ObjectId (formerly ServiceId) 
+### -ObjectId
 The ObjectId parameter specifies the unique ObjectId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
 - The ObjectId property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
