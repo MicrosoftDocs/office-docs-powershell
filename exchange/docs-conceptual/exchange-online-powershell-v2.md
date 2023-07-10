@@ -116,6 +116,28 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
 - Connections in REST API mode have a dependency on the PowerShellGet module.
 
+- Cmdlets backed by the REST API have a 15 minute timeout, which can affect bulk operations. For example, the following **Update-DistributionGroupMember** command to update 7000 members of a distribution group will likely time out:
+
+  ```powershell
+  $Members = @("member1","member2",...,"member7000")
+
+  Update-DistributionGroupMember -Identity DG01 -Members $Members
+  ```
+
+  Instead, use the **Update-DistributionGroupMember** command to update fewer members, and then add the remaining members individually using an **Add-DistributionGroupMember** command. For example:
+
+  ```powershell
+  Update-DistributionGroupMember -Identity DG01 -Members $Members[0..3499]
+
+  $Remaining = $Members[-3500..-1]
+
+  foreach ($Member in $Remaining)
+
+  {
+     Add-DistributionGroupMember -Identity DG01 -Member $Member
+  }
+  ```
+
 For additional information about what's new in the EXO V3 module, see the [Release notes](#release-notes) section later in this article.
 
 ## Report bugs and issues for the Exchange Online PowerShell module
