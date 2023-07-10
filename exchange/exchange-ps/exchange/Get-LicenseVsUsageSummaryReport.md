@@ -31,7 +31,7 @@ This cmdlet produces a report that is intended to enable clients to track and ma
 
 - Date: The period being measured.
 - TenantGuid: The unique identifier for the Exchange Online tenant.
-- Workload: The workload whose users are being counted. The current workloads include: Exchange Online, SharePoint Online, Skype for Business Online, and Microsoft Viva Engage.
+- Workload: The workload whose users are being counted. The current workloads include: Exchange Online, SharePoint Online, Skype for Business Online, and Microsoft Yammer.
 - NonTrialEntitlements: The number of entitled users for the workload.
 - TrialEntitlements: The number of provisionally entitled (trial) users for the workload.
 - ActiveUsers: The count of active users for the workload.

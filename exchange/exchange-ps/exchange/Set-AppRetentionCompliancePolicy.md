@@ -108,7 +108,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Set-AppRetentionCompliancePolicy Identity "Regulation 563 Marketing" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams,VivaEngage" -AddExchangeLocation "Scott Smith" -Comment "Added new counsel, 9/9/21"
+Set-AppRetentionCompliancePolicy Identity "Regulation 563 Marketing" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams,Yammer" -AddExchangeLocation "Scott Smith" -Comment "Added new counsel, 9/9/21"
 ```
 
 This example adds a new user to the existing static scope retention policy named Regulation 563 Marketing that's set up for Teams private channels messages.
@@ -290,7 +290,7 @@ The Applications parameter specifies the applications to include and is relevant
 - ModernGroupLocation
 - AdaptiveScopeLocation
 
-This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`.
+This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:Yammer"`.
 
 ```yaml
 Type: String[]
