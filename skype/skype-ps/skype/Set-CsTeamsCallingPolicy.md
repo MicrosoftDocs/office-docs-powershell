@@ -467,11 +467,11 @@ Accept wildcard characters: False
 ```
 
 ### -SpamFilteringEnabledType
-Determines Spam filtering mode.
+Determines if spam detection is enabled for inbound PSTN calls.
 
 Possible values:
-- Enabled: Spam Filtering is enabled. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
-- Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
+- Enabled: Spam detection is enabled. In case the inbound call is considered spam, the user will get a "Spam Likely" label in Teams.
+- Disabled: Spam detection is disabled.
 
 ```yaml
 Type: String
