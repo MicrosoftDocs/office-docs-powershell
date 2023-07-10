@@ -166,16 +166,12 @@ Accept wildcard characters: False
 ```
 
 ### -DmarcQuarantineAction
-**Note**: This setting is currently in Preview.
-
 This setting is part of spoof protection.
 
-The DmarcQuarantineAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=reject`. Valid values are:
+The DmarcQuarantineAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`. Valid values are:
 
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: This is the default value. Move the message to quarantine.
-
-This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
+- Quarantine: Deliver the message to quarantine. This is the default value.
 
 ```yaml
 Type: SpoofDmarcQuarantineAction
@@ -191,14 +187,12 @@ Accept wildcard characters: False
 ```
 
 ### -DmarcRejectAction
-**Note**: This setting is currently in Preview.
-
 This setting is part of spoof protection.
 
-The DmarcRejectAction parameter specifies the action to take when the message is detected as spoofing and the policy action value in the DMARC TXT record for the domain is `p=quarantine`. Valid values are:
+The DmarcRejectAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=reject`. Valid values are:
 
-- Quarantine: This is the default value. Move the message to quarantine.
-- Reject: Reject the message.
+- Quarantine: Deliver the message to quarantine.
+- Reject: Reject the message. This is the default value.
 
 This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
 
@@ -550,8 +544,8 @@ This setting is part of spoof protection.
 
 The HonorDmarcPolicy enables or disables using the sender's DMARC policy to determine what to do to messages that fail DMARC checks. Valid values are:
 
-- $true: If a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`, the DmarcQuarantineAction parameter specifies the action to take on the message. If a message fails DMARC checks and the sender's DMARC policy is `p=reject`, the DmarcRejectAction parameter specifies the action to take on the message.
-- $false: This is the default value. If the message fail DMARC checks, ignore the action in the sender's DMARC policy. The AuthenticationFailAction parameter specifies the action to take on the message.
+- $true: If a message fails DMARC and the sender's DMARC policy is `p=quarantine` or `p=reject`, the DmarcQuarantineAction or DmarcRejectAction parameters specify the action to take on the message. This is the default value.
+- $false: If the message fails DMARC, ignore the action in the sender's DMARC policy. The AuthenticationFailAction parameter specifies the action to take on the message.
 
 ```yaml
 Type: Boolean
