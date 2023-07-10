@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ServicePrincipal -AppId <String> -ObjectId <String>
+ -ServiceId <String>
  [-Confirm]
  [-DisplayName <String>]
  [-WhatIf]
@@ -72,6 +73,22 @@ The ObjectId parameter specifies the unique ObjectId GUID value for the service 
 
 - The ObjectId property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
 - The Object ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceId
+This parameter is being deprecated. Use the ObjectId parameter instead.
 
 ```yaml
 Type: String
