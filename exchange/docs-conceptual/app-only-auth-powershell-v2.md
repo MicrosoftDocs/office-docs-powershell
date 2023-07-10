@@ -433,7 +433,7 @@ To assign custom role groups to the application using service principals, do the
    - Store the details of the service principal in a variable.
 
    ```powershell
-   New-ServicePrincipal -AppId $<VariableName1>.AppId -ServiceId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
+   New-ServicePrincipal -AppId $<VariableName1>.AppId -ObjectId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
 
    $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
    ```
@@ -441,7 +441,7 @@ To assign custom role groups to the application using service principals, do the
    For example:
 
    ```powershell
-   New-ServicePrincipal -AppId $AADApp.AppId -ServiceId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
+   New-ServicePrincipal -AppId $AADApp.AppId -ObjectId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
 
    $SP = Get-ServicePrincipal -Identity "SP for Azure App ExO PowerShell CBA"
    ```
@@ -451,7 +451,7 @@ To assign custom role groups to the application using service principals, do the
 3. In Exchange Online PowerShell or Security & Compliance PowerShell, run the following command to add the service principal as a member of the custom role group:
 
    ```powershell
-   Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ServiceId | $<VariableName2>.Id>
+   Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ObjectId | $<VariableName2>.Id>
    ```
 
    For example:
