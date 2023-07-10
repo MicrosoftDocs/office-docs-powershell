@@ -50,7 +50,7 @@ New-AppRetentionCompliancePolicy [-Name] <String> -Applications <String[]>
 ```
 
 ## DESCRIPTION
-\*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Viva Engage chats, and Viva Engage community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
+\*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Yammer chats, and Yammer community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -58,10 +58,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-New-AppRetentionCompliancePolicy -Name "Regulation 567 Compliance" -Applications "User:MicrosoftTeams,VivaEngage","Group:MicrosoftTeams,VivaEngage" -ExchangeLocation "Jennifer Petersen","Kitty Nakamura"
+New-AppRetentionCompliancePolicy -Name "Regulation 567 Compliance" -Applications "User:MicrosoftTeams,Yammer","Group:MicrosoftTeams,Yammer" -ExchangeLocation "Jennifer Petersen","Kitty Nakamura"
 ```
 
-This example creates a static scope retention policy named Regulation 567 Compliance for the Viva Engage user messages of Jennifer Petersen and Kitty Nakamura.
+This example creates a static scope retention policy named Regulation 567 Compliance for the Yammer user messages of Jennifer Petersen and Kitty Nakamura.
 
 After you create the retention policy, use the New-AppRetentionComplianceRule cmdlet to create a retention rule and assign it the retention policy to it.
 
@@ -110,7 +110,7 @@ The Applications parameter specifies the applications to include in the policy a
 - ModernGroupLocation
 - AdaptiveScopeLocation
 
-This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`.
+This parameter uses the following syntax: `"LocationtType:App1,LocationType:App2,...LocationType:AppN` where LocationType is User or Group. For example, `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:Yammer"`.
 
 ```yaml
 Type: String[]
