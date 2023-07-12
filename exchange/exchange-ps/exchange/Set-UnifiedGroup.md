@@ -1212,7 +1212,7 @@ The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disa
 - To enable this setting, you don't need to specify a value with this switch.
 - To disable this setting, use this exact syntax: `-UnifiedGroupWelcomeMessageEnabled:$false`.
 
-This setting only controls email send by the Microsoft 365 Group. It doesn't control email sent by connected products (for example, Teams or Yammer).
+This setting only controls email send by the Microsoft 365 Group. It doesn't control email sent by connected products (for example, Teams or Viva Engage).
 
 This setting is enabled by default.
 
