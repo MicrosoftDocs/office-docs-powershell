@@ -1315,6 +1315,10 @@ Accept wildcard characters: False
 ```
 
 ### -DlpPolicy
+
+Existing Transport rules with this property are no longer being evaluated or executed because it is linked to an Exchange DLP policy. 
+Please migrate the policies to the M365 Compliance Center by using the migration wizard.
+
 The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's associated with the rule. Each DLP policy is enforced using a set of mail flow rules (transport rules). To learn more about DLP, see [Data loss prevention in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/data-loss-prevention).
 
 ```yaml
