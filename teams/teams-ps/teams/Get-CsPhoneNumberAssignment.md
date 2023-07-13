@@ -19,11 +19,11 @@ This cmdlet displays information about one or more phone numbers.
 
 ### Assignment (Default)
 ```powershell
-Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-AssignmentCategory <string>] [-CapabilitiesContain <string>]
- [-CivicAddressId <string>] [-IsoCountryCode <string>] [-LocationId <string>] [-NumberType <string>]
- [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>] [-TelephoneNumberContain <string>]
- [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>] [-TelephoneNumberStartsWith <string>]
- [-Top <int>] [<CommonParameters>]
+Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-AssignmentCategory <string>]
+ [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-IsoCountryCode <string>]
+ [-LocationId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>]
+ [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>]
+ [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
