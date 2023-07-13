@@ -363,7 +363,7 @@ Accept wildcard characters: False
 Type: InformationBarrierMode
 Parameter Sets: (All)
 Aliases:
-Accepted values: Legacy, SingleSegment, MultiSegment
+Accepted values: SingleSegment, MultiSegment
 Applicable: Security & Compliance
 
 Required: False
