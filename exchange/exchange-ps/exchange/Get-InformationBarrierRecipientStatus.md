@@ -16,6 +16,8 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Get-InformationBarrierRecipientStatus cmdlet to return information about recipients and their relationship to information barrier policies.
 
+**Note**: This cmdlet doesn't work with Information Barriers V2. Instead, use the **Get-Get-ExoInformationBarrierRelationship** cmdlet, or run the command `Get-Recipient -Identity <IdentityValue> | Format-List Name,*segment*`.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
