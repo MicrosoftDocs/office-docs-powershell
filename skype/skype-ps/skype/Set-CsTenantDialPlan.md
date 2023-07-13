@@ -230,3 +230,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-CsTenantDialPlan](New-CsTenantDialPlan.md)
 
 [Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)
+
+[Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)
