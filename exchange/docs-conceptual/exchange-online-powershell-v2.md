@@ -119,7 +119,7 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 - Cmdlets backed by the REST API have a 15 minute timeout, which can affect bulk operations. For example, the following **Update-DistributionGroupMember** command to update 7000 members of a distribution group might time out:
 
   ```powershell
-  $Members = @("member1","member2",...,"member7000")
+  $Members = @("member1","member2",...,"member10000")
 
   Update-DistributionGroupMember -Identity DG01 -Members $Members
   ```
@@ -127,9 +127,9 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
   Instead, use the **Update-DistributionGroupMember** command to update fewer members, and then add the remaining members individually using an **Add-DistributionGroupMember** command. For example:
 
   ```powershell
-  Update-DistributionGroupMember -Identity DG01 -Members $Members[0..3499]
+  Update-DistributionGroupMember -Identity DG01 -Members $Members[0..4999]
 
-  $Remaining = $Members[-3500..-1]
+  $Remaining = $Members[-5000..-1]
 
   foreach ($Member in $Remaining)
 
