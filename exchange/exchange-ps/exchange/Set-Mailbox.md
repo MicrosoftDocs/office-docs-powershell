@@ -5373,10 +5373,11 @@ Accept wildcard characters: False
 ```
 
 ### -SingleItemRecoveryEnabled
-The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recovery Items folder from being purged. Valid values are:
+The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recoverable Items folder from being purged. Valid values are:
 
-- $true: Single item recovery is enabled. The Recovery Items folder can't be purged. and items that have been deleted or edited can't be removed.This is the default value in Exchange Online.
-- $false: Single item recovery isn't enabled. The Recovery Items folder can be purged, and, items that have been deleted or edited can be removed. This is the default value in [Exchange On-premises](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
+- $true: Single item recovery is enabled. The Recoverable Items folder can't be purged, and deleted or edited items can't be removed. This is the default value in Exchange Online. For more information, see [Enable or disable single item recovery for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
+- $false: Single item recovery isn't enabled. The Recoverable Items folder can be purged, and deleted or edited items can be removed. This is the default value in Exchange Server. For more information, see [Enable or disable single item recovery for a mailbox](https://learn.microsoft.com/exchange/recipients/user-mailboxes/single-item-recovery).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
