@@ -36,7 +36,7 @@ PS C:\>$HiddenList = @($manageProjectTemplate, $manageEventTemplate)
 PS C:\> Set-CsTeamsTemplatePermissionPolicy -Identity Global -HiddenTemplates $HiddenList    
 ```
 
-Updates the hidden meeting templates array.
+Updates the hidden templates array.
 
 ## PARAMETERS
 
