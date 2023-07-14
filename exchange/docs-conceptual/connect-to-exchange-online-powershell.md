@@ -34,9 +34,7 @@ To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exch
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > If you're using the EXO V3 module (v3.0.0 or later) and you don't use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command, you have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
-  >
-  > Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
+  > Remote PowerShell connections are deprecated in Exchange Online PowerShell. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
@@ -232,7 +230,7 @@ If you receive errors, check the following requirements:
 
 - To help prevent denial-of-service (DoS) attacks, when you connect using the _UseRPSSession_ switch, you're limited to five open connections to Exchange Online PowerShell.
 
-- The account that you use to connect to must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
+- The account that you use to connect to must be enabled for PowerShell access. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 
