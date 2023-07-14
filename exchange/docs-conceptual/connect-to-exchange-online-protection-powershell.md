@@ -2,7 +2,7 @@
 title: Connect to Exchange Online Protection PowerShell
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 7/14/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -29,7 +29,7 @@ For more information about Exchange Online Protection PowerShell, see [Exchange 
 >
 > As of June 2020, the instructions for connecting to standalone Exchange Online Protection PowerShell and Exchange Online PowerShell are basically the same. If you use the **Connect-IPPSSession** cmdlet with the _ConnectionUri_ parameter value `https://ps.protection.outlook.com/powershell-liveid/`, you're redirected to the same `https://outlook.office365.com/powershell-liveid/` endpoint that's used by **Connect-ExchangeOnline** for Exchange Online PowerShell connections.
 >
-> Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
+> Remote PowerShell connections in Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
 
 ## What do you need to know before you begin?
 
@@ -103,8 +103,6 @@ The Exchange Online Protection Protection cmdlets are imported into your local W
 If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the connection steps again and pay close attention to the username and password that you use.
-
-- To help prevent denial-of-service (DoS) attacks, you're limited to five open remote PowerShell connections to Exchange Online Protection.
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive Internet access policy.
 
