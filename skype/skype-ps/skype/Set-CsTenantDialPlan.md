@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan. This name must be unique among all tenant dial plans.
 
-This string can be up to 49 characters long. Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
+This string can be up to 49 characters long. Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), and parentheses (()).
 
 ```yaml
 Type: String
