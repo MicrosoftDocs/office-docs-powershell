@@ -1669,7 +1669,7 @@ Accept wildcard characters: False
 ### -PersonalAccountsEnabled
 This parameter is available only in the cloud-based service.
 
-The PersonalAccountsEnabled parameter specifies whether to allow users to add their personal accounts (for example, Outlook.com, Gmail, or Yahoo) in the new Outlook for Windows. Valid values are:
+The PersonalAccountsEnabled parameter specifies whether to allow users to add their personal accounts (for example, Outlook.com, Gmail, or Yahoo!) in the new Outlook for Windows. Valid values are:
 
 - $true: Users can add their personal accounts in the new Outlook for Windows. This is the default value.
 - $false: Users can't add their personal accounts in the new Outlook for Windows.
