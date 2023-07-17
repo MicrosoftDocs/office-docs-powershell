@@ -34,7 +34,7 @@ Fetches the instances of the policy. Each policy object contains a property call
 
 ### Example 1
 ```powershell
-Get-CsTeamsTemplatePermissionPolicy
+PS >Get-CsTeamsTemplatePermissionPolicy
 ```
 ```output
 Identity                  HiddenTemplates                                                                           Description
@@ -48,7 +48,7 @@ Fetches all the policy instances currently available.
 ### Example 2
 
 ```powershell
-Get-CsTeamsTemplatePermissionPolicy -Identity Foobar
+PS >Get-CsTeamsTemplatePermissionPolicy -Identity Foobar
 ```
 ```output
 Identity   HiddenTemplates                                                                           Description
@@ -61,7 +61,7 @@ Fetches an instance of a policy with known identity.
 ### Example 3
 
 ```powershell
-Get-CsTeamsTemplatePermissionPolicy -Filter *Foo*
+PS >Get-CsTeamsTemplatePermissionPolicy -Filter *Foo*
 ```
 ```output
 Identity   HiddenTemplates                                                                           Description
