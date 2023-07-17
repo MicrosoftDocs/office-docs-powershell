@@ -4,7 +4,7 @@ Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy
 title: Set-CsTeamsTemplatePermissionPolicy
 author: yishuaihuang
-ms.author: yishuaihuang
+ms.author: yishuaihuang4
 ms.reviewer: 
 manager: weiliu2
 schema: 2.0.0
@@ -24,16 +24,16 @@ Set-CsTeamsTemplatePermissionPolicy
 ```
 
 ## DESCRIPTION
-Update any of the properties of an existing instance of the TeamsTemplatePermissionPolicy.
+Updates any of the properties of an existing instance of the TeamsTemplatePermissionPolicy.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\>$manageEventTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAnEvent
-PS C:\>$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
-PS C:\>$HiddenList = @($manageProjectTemplate, $manageEventTemplate)
-PS C:\> Set-CsTeamsTemplatePermissionPolicy -Identity Global -HiddenTemplates $HiddenList    
+PS >$manageEventTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAnEvent
+PS >$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
+PS >$HiddenList = @($manageProjectTemplate, $manageEventTemplate)
+PS > Set-CsTeamsTemplatePermissionPolicy -Identity Global -HiddenTemplates $HiddenList    
 ```
 
 Updates the hidden templates array.
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Pass in a new description if that field needs to be updated.
+Adds a new description if that field needs to be updated.
 
 ```yaml
 Type: String
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
