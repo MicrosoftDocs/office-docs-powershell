@@ -3,7 +3,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamstemplatepermissionpolicy
 title: Remove-CsTeamsTemplatePermissionPolicy
-author: yishuaihuang
+author: yishuaihuang4
 ms.author: yishuaihuang
 ms.reviewer: 
 manager: weiliu2
@@ -28,17 +28,14 @@ Deletes an instance of TeamsTemplatePermissionPolicy. The `Identity` parameter a
 
 ### Example 1
 ```powershell
-PS C:\> Remove-CsTeamsTemplatePermissionPolicy -Identity Foobar
+PS >Remove-CsTeamsTemplatePermissionPolicy -Identity Foobar
 ```
 
 Deletes a policy instance with the Identity *Foobar*.
 
 ### Example 2
-
-Attempting to delete a policy instance that is currently assigned to users will result in an error. Remove the assignment before attempting to delete it.
-
 ```powershell
-Remove-CsTeamsTemplatePermissionPolicy -Identity Foobar
+PS >Remove-CsTeamsTemplatePermissionPolicy -Identity Foobar
 ```
 
 ```output
@@ -49,6 +46,8 @@ At line:1 char:1
     + CategoryInfo          : NotSpecified: (:) [Remove-CsTeamsTemplatePermissionPolicy], PolicyRpException
     + FullyQualifiedErrorId : ClientError,Microsoft.Teams.Policy.Administration.Cmdlets.Core.RemoveTeamsTemplatePermissionPolicyCmdlet
 ```
+
+Attempting to delete a policy instance that is currently assigned to users will result in an error. Remove the assignment before attempting to delete it.
 
 ## PARAMETERS
 
@@ -116,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
