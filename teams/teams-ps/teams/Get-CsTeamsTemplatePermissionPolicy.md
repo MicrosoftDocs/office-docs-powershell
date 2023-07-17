@@ -3,7 +3,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamstemplatepermissionpolicy
 title: Get-CsTeamsTemplatePermissionPolicy
-author: yishuaihuang
+author: yishuaihuang4
 ms.author: yishuaihuang
 ms.reviewer: 
 manager: weiliu2
@@ -13,7 +13,7 @@ schema: 2.0.0
 # Get-CsTeamsTemplatePermissionPolicy
 
 ## SYNOPSIS
-Fetches the TeamsTemplatePermissionPolicy. This policy can be used to hide teams templates from users and groups.
+Fetches the TeamsTemplatePermissionPolicy. This policy can be used to hide Teams templates from users and groups.
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Fetches the instances of the policy. Each policy object contains a property call
 
 ### Example 1
 ```powershell
-PS C:\> Get-CsTeamsTemplatePermissionPolicy
+Get-CsTeamsTemplatePermissionPolicy
 ```
 ```output
 Identity                  HiddenTemplates                                                                           Description
@@ -48,7 +48,7 @@ Fetches all the policy instances currently available.
 ### Example 2
 
 ```powershell
-PS> Get-CsTeamsTemplatePermissionPolicy -Identity Foobar
+Get-CsTeamsTemplatePermissionPolicy -Identity Foobar
 ```
 ```output
 Identity   HiddenTemplates                                                                           Description
@@ -61,7 +61,7 @@ Fetches an instance of a policy with known identity.
 ### Example 3
 
 ```powershell
-PS> Get-CsTeamsTemplatePermissionPolicy -Filter *Foo*
+Get-CsTeamsTemplatePermissionPolicy -Filter *Foo*
 ```
 ```output
 Identity   HiddenTemplates                                                                           Description
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
