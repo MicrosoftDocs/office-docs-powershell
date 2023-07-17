@@ -28,11 +28,10 @@ Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTe
 
 ### Example 1
 ```powershell
-$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
+PS >$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
 ```
 
 Creates a new hidden Teams template object. For more examples of how this can be used, see the examples for [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md).
-
 
 ## PARAMETERS
 
