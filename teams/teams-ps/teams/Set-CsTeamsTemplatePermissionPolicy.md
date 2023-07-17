@@ -3,8 +3,8 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamstemplatepermissionpolicy
 title: Set-CsTeamsTemplatePermissionPolicy
-author: yishuaihuang
-ms.author: yishuaihuang4
+author: yishuaihuang4
+ms.author: yishuaihuang
 ms.reviewer: 
 manager: weiliu2
 schema: 2.0.0
