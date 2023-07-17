@@ -3,7 +3,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamstemplatepermissionpolicy
 title: New-CsTeamsTemplatePermissionPolicy
-author: yishuaihuang
+author: yishuaihuang4
 ms.author: yishuaihuang
 ms.reviewer: 
 manager: weiliu2
@@ -34,10 +34,10 @@ Assuming there are two valid templates with IDs `com.microsoft.teams.template.Ma
 
 The next step would be to create the policy instance.
 ```powershell
-PS C:\>$manageEventTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAnEvent
-PS C:\>$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
-PS C:\>$HiddenList = @($manageProjectTemplate, $manageEventTemplate)
-PS C:\>New-CsTeamsTemplatePermissionPolicy -Identity Foobar -HiddenTemplates $HiddenList
+PS >$manageEventTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAnEvent
+PS >$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
+PS >$HiddenList = @($manageProjectTemplate, $manageEventTemplate)
+PS >New-CsTeamsTemplatePermissionPolicy -Identity Foobar -HiddenTemplates $HiddenList
 ```
 
 ```output
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
