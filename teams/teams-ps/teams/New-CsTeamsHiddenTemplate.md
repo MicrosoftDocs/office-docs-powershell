@@ -3,7 +3,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamshiddentemplate
 title: New-CsTeamsHiddenTemplate
-author: yishuaihuang
+author: yishuaihuang4
 ms.author: yishuaihuang
 ms.reviewer: 
 manager: weiliu2
@@ -28,16 +28,16 @@ Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTe
 
 ### Example 1
 ```powershell
-PS C:\> $manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
+$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
 ```
 
-Creates a new hidden teams template object. For more examples of how this can be used, see the examples for [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md).
+Creates a new hidden Teams template object. For more examples of how this can be used, see the examples for [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.md).
 
 
 ## PARAMETERS
 
 ### -Id
-{{ Fill Id Description }}
+ID of the Teams template to hide.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
