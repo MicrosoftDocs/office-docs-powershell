@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ### -DlpPolicy
 **Note**: This parameter is functional only in on-premises Exchange.
 
-The DlpPolicy parameter filters the results by the named of the specified data loss prevention (DLP) policy. If the value contains spaces, enclose the value in quotation marks (").
+The DlpPolicy parameter filters the results by the name of the specified data loss prevention (DLP) policy. If the value contains spaces, enclose the value in quotation marks (").
 
 DLP policies in your organization allow you to prevent unintentional disclosure of sensitive information. Each DLP policy is enforced using a set of transport rules.
 
