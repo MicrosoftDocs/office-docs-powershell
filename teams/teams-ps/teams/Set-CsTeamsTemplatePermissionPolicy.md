@@ -33,7 +33,7 @@ Updates any of the properties of an existing instance of the TeamsTemplatePermis
 PS >$manageEventTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAnEvent
 PS >$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
 PS >$HiddenList = @($manageProjectTemplate, $manageEventTemplate)
-PS > Set-CsTeamsTemplatePermissionPolicy -Identity Global -HiddenTemplates $HiddenList    
+PS >Set-CsTeamsTemplatePermissionPolicy -Identity Global -HiddenTemplates $HiddenList    
 ```
 
 Updates the hidden templates array.
