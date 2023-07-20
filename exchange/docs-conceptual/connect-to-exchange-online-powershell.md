@@ -69,7 +69,7 @@ For detailed syntax and parameter information, see [Connect-ExchangeOnline](/pow
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
-- With the EXO V3 module (v3.0.0 or later) and the [demise of Basic authentication (remote PowerShell) connections to Exchange Online]((https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432)), you're using REST API cmdlets only. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+- With the EXO V3 module (v3.0.0 or later) and the [demise of Basic authentication (remote PowerShell) connections to Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432), you're using REST API cmdlets only. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 - When you use the _ExchangeEnvironmentName_ parameter, you don't need use the _ConnectionUri_ or _AzureADAuthorizationEndPointUrl_ parameters. Common values for the _ExchangeEnvironmentName_ parameter are described in the following table:
 
