@@ -20,7 +20,7 @@ Moves one or more user accounts enabled for Skype for Business Server to TeamsOn
 - Install or update the Microsoft Teams PowerShell module to version 5.2.0 or later
 - Run Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 
-Above command needs to be run once per machine(SFB on-prem FE machine, admin toolbox) where move-csuser is triggered in China environment. For more information, refer to [Set-TeamsEnvironmentConfig](https://learn.microsoft.com/en-us/powershell/module/teams/set-teamsenvironmentconfig?view=teams-ps)
+For more information, see [Set-TeamsEnvironmentConfig](/powershell/module/teams/set-teamsenvironmentconfig).
 
 ## SYNTAX
 
