@@ -19,16 +19,19 @@ This cmdlet displays information about one or more phone numbers.
 
 ### Assignment (Default)
 ```powershell
-Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-IsoCountryCode <string>] [-LocationId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>] [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>] [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
+Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-AssignmentCategory <string>]
+ [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-IsoCountryCode <string>]
+ [-LocationId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>]
+ [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>]
+ [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters.
 
-Returned results are sorted by TelephoneNumber in ascending order.
+Returned results are sorted by TelephoneNumber in ascending order. 
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
-
 
 ## EXAMPLES
 
@@ -41,6 +44,7 @@ TelephoneNumber         : +14025551234
 NumberType              : CallingPlan
 ActivationState         : Activated
 AssignedPstnTargetId    : dc13d97b-7897-494e-bc28-6b469bf7a70e
+AssignmentCategory      : Primary
 Capability              : {UserAssignment}
 City                    : Omaha
 CivicAddressId          : 703b30e5-dbdd-4132-9809-4c6160a6acc7
@@ -64,6 +68,7 @@ TelephoneNumber         : +12065551000;ext=524
 NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
+AssignmentCategory      : Primary
 Capability              : {ConferenceAssignment, VoiceApplicationAssignment, UserAssignment}
 City                    : 
 CivicAddressId          : 00000000-0000-0000-0000-000000000000
@@ -139,6 +144,21 @@ Accept wildcard characters: False
 
 ### -AssignedPstnTargetId
 Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, and ObjectId.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignmentCategory
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.String
@@ -370,6 +390,9 @@ The activation state of the telephone number.
 ### AssignedPstnTargetId
 The ID of the object the phone number is assigned to.
 
+### AssignmentCategory
+This parameter is reserved for internal Microsoft use.
+
 ### Capability
 The list of capabilities assigned to the phone number.
 
@@ -412,7 +435,7 @@ The phone number. The number is always displayed with prefixed "+", even if it w
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 4.0.0 or later.
+The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview.
 
 The cmdlet is only available in commercial and GCC cloud instances.
 

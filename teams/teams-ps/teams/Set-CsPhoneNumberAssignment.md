@@ -17,9 +17,15 @@ This cmdlet will assign a phone number to a user or a resource account (online a
 
 ## SYNTAX
 
-### Assignment (Default)
+### LocationUpdate (Default)
 ```powershell
-Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String> [-LocationId <String>] [<CommonParameters>]
+Set-CsPhoneNumberAssignment -PhoneNumber <string> -LocationId <string> [<CommonParameters>]
+```
+
+### Assignment
+```powershell
+Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
+ [-LocationId <String>] [-AssignmentCategory <string>] [<CommonParameters>]
 ```
 
 ### Attribute
@@ -30,8 +36,7 @@ Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean>
 ## DESCRIPTION
 This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
-You can also assign a location to a phone number when you assign the phone number to a user.
-
+You can also assign a location to a phone number.
 
 To remove a phone number from a user or resource account, use the [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md) cmdlet.
 
@@ -93,8 +98,29 @@ foreach ($No in $Numbers) {
 ```
 This example shows how to change the location for unassigned Calling Plan subscriber phone numbers by looping through all the phone numbers, assigning each phone number temporarily with the new location to a user, and then unassigning the phone number again from the user.
 
+### Example 9
+```powershell
+$loc=Get-CsOnlineLisLocation -City Toronto
+Set-CsPhoneNumberAssignment -PhoneNumber +12065551224 -LocationId $loc.LocationId
+```
+This example shows how to set the location on a phone number.
 
 ## PARAMETERS
+
+### -AssignmentCategory
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: System.String
+Parameter Sets: (Assignment)
+Aliases: 
+Applicable: Microsoft Teams
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -EnterpriseVoiceEnabled
 Flag indicating if the user or resource account should be EnterpriseVoiceEnabled.
@@ -107,7 +133,7 @@ Parameter Sets: (Attribute)
 Aliases: 
 Applicable: Microsoft Teams
 
-Required: False
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -129,17 +155,18 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. 
+The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. You can set the location on both assigned and unassigned
+phone numbers.
 
 Removal of location from a phone number is supported for Direct Routing numbers and Operator Connect numbers that are not managed by the Service Desk. 
 If you want to remove the location, use the string value null for LocationId.
 
 ```yaml
 Type: System.String
-Parameter Sets: (Assignment)
+Parameter Sets: (Assignment, LocationUpdate)
 Aliases:
 
-Required: False
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -154,10 +181,10 @@ Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 
 ```yaml
 Type: System.String
-Parameter Sets: (Assignment)
+Parameter Sets: (Assignment, LocationUpdate)
 Aliases:
 
-Required: False
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -171,7 +198,7 @@ Type: System.String
 Parameter Sets: (Assignment)
 Aliases:
 
-Required: False
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -189,7 +216,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.0 or later.
+The cmdlet is available in Teams PowerShell module 3.0.0 or later. The parameter set LocationUpdate was introduced in Teams PowerShell module 5.3.1-preview.
 
 The cmdlet is only available in commercial and GCC cloud instances.
 
@@ -197,7 +224,6 @@ If a user or resource account has a phone number set in Active Directory on-prem
 
 The previous command for assigning phone numbers to users Set-CsUser had the parameter HostedVoiceMail. Setting HostedVoiceMail for Microsoft Teams users is no longer
 necessary and that is why the parameter is not available on Set-CsPhoneNumberAssignment.
-
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](Remove-CsPhoneNumberAssignment.md)
