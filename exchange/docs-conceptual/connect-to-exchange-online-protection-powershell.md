@@ -2,7 +2,7 @@
 title: Connect to Exchange Online Protection PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 7/14/2023
+ms.date: 7/20/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -63,16 +63,14 @@ Import-Module ExchangeOnlineManagement
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-ExchangeOnline -UserPrincipalName <UPN> [-UseRPSSession] [-PSSessionOption $ProxyOptions] [-ShowBanner:$false]
+Connect-ExchangeOnline -UserPrincipalName <UPN> [-ShowBanner:$false]
 ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
-- With the EXO V3 module (v3.0.0 or later), if you don't use the _UseRPSSession_ switch, you're using REST API cmdlets only. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
-
-- If you're behind a proxy server, you can use the _PSSessionOption_ parameter in the connection command, but only if you also use the _UseRPSSession_ switch. First, run this command: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the value `$ProxyOptions` for the _PSSessionOption_ parameter. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
+- With the EXO V3 module (v3.0.0 or later) and the [demise of Basic authentication (remote PowerShell) connections to Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432), you're using REST API cmdlets only. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
 
 ### Connect to Exchange Online Protection PowerShell with an interactive login prompt
 
