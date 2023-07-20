@@ -36,7 +36,7 @@ To use the older Exchange Online Remote PowerShell Module (the V1 module) to con
   > [!NOTE]
   > If you're using version 3.2.0 or later of the module, and you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
   >
-  > Remote PowerShell connections will deprecated in Security & Compliance PowerShell. For more information, see [Deprecation of Remote PowerShell (RPS) Protocol in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
+  > Remote PowerShell connections will be deprecated in Security & Compliance PowerShell. For more information, see [Deprecation of Remote PowerShell (RPS) Protocol in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 

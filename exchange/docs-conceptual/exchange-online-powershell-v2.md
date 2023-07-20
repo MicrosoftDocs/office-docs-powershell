@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V2 module and V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 7/14/2023
+ms.date: 7/20/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -66,7 +66,7 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
   - All available cmdlets in Exchange Online PowerShell and [virtually all cmdlets](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432) in Security & Compliance PowerShell are backed by the REST API.
 
-  - In Exchange Online PowerShell and in Security & Compliance PowerShell, REST API connections are used by default. You need to use the _UseRPSSession_ switch in the **Connect-ExchangeOnline** or **Connect-IPPSSession** command to access cmdlets in remote PowerShell mode.
+  - In Exchange Online PowerShell and in Security & Compliance PowerShell, REST API connections are used by default. You need to use the _UseRPSSession_ switch in the **Connect-IPPSSession** command to access cmdlets in remote PowerShell mode.
 
 - Consider the following items for connections in remote PowerShell mode:
   - Remote PowerShell connections are deprecated in Exchange Online PowerShell and will be deprecated in Security & Compliance PowerShell. For more information, see [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692) and [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
