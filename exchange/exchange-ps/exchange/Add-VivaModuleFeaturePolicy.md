@@ -29,6 +29,7 @@ Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -Mod
  [-GroupIds <String[]>]
  [-UserIds <String[]>]
  [-Everyone]
+ [-IsUserControlEnabled <Boolean>]
  [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
@@ -194,6 +195,22 @@ To have the policy apply to all users in the organization, use the Everyone swit
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsUserControlEnabled
+{{ Fill IsUserControlEnabled Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

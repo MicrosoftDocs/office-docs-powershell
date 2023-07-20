@@ -27,6 +27,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]
  [-IsFeatureEnabled <Boolean>]
+ [-IsUserControlEnabled <Boolean>]
  [-GroupIds <String[]>]
  [-Everyone <Boolean>]
  [-Name <String>]
@@ -214,6 +215,22 @@ The IsFeatureEnabled parameter specifies whether the feature is enabled by the u
 - $false: The feature is not enabled by the policy.
 
 If you don't want to update whether the feature is enabled by the policy, don't use this parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsUserControlEnabled
+{{ Fill IsUserControlEnabled Description }}
 
 ```yaml
 Type: Boolean
