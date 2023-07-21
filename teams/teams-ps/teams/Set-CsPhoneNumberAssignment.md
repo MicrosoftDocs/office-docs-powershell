@@ -92,8 +92,8 @@ $OldLoc=Get-CsOnlineLisLocation -City Vancouver
 $NewLoc=Get-CsOnlineLisLocation -City Seattle
 $Numbers=Get-CsPhoneNumberAssignment -LocationId $OldLoc.LocationId -PstnAssignmentStatus Unassigned -NumberType CallingPlan -CapabilitiesContain UserAssignment
 foreach ($No in $Numbers) {
-    Set-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber -LocationId $NewLoc.LocationId
-    Remove-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber
+	Set-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber -LocationId $NewLoc.LocationId
+	Remove-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber
 }
 ```
 This example shows how to change the location for unassigned Calling Plan subscriber phone numbers by looping through all the phone numbers, assigning each phone number temporarily with the new location to a user, and then unassigning the phone number again from the user.

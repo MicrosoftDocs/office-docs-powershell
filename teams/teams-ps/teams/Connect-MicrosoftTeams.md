@@ -436,7 +436,7 @@ Accept wildcard characters: False
 ### -TeamsEnvironmentName
 Specifies the Teams environment. The following environments are supported:
 
-   - Commercial or GCC environments: Don't use this parameter, this is the default. 
+   - Commercial or GCC environments: Don’t use this parameter, this is the default. 
    - GCC High environment: TeamsGCCH
    - DoD environment: TeamsDOD
    - Microsoft Teams operated by 21Vianet: TeamsChina

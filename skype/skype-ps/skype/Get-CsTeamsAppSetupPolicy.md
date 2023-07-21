@@ -50,7 +50,7 @@ Get-CsTeamsAppSetupPolicy -Identity Global
 ```Output
 Identity             : Global
 AppPresetList        : {Id=d2c6f111-ffad-42a0-b65e-ee00425598aa}
-PinnedAppBarApps     : {Id=14d6962d-6eeb-4f48-8890-de55454bb136;Order=1, Id=86fcd49b-61a2-4701-b771-54728cd291fb;Order=2, Id=2a84919f-59d8-4441-a975-2a8c2643b741;Order=3, Id=ef56c0de-36fc-4ef8-b417-3d82ba9d073c;Order=4...}
+PinnedAppBarApps     : {Id=14d6962d-6eeb-4f48-8890-de55454bb136;Order=1, Id=86fcd49b-61a2-4701-b771-54728cd291fb;Order=2, Id=2a84919f-59d8-4441-a975-2a8c2643b741;Order=3, Id=ef56c0de-36fc-4ef8-b417-3d82ba9d073c;Order=4…}
 PinnedMessageBarApps : {}
 AppPresetMeetingList : {}
 Description          :
@@ -68,7 +68,7 @@ Get-CsTeamsAppSetupPolicy
 ```Output
 Identity             : Global
 AppPresetList        : {Id=d2c6f111-ffad-42a0-b65e-ee00425598aa}
-PinnedAppBarApps     : {Id=14d6962d-6eeb-4f48-8890-de55454bb136;Order=1, Id=86fcd49b-61a2-4701-b771-54728cd291fb;Order=2, Id=2a84919f-59d8-4441-a975-2a8c2643b741;Order=3, Id=ef56c0de-36fc-4ef8-b417-3d82ba9d073c;Order=4...}
+PinnedAppBarApps     : {Id=14d6962d-6eeb-4f48-8890-de55454bb136;Order=1, Id=86fcd49b-61a2-4701-b771-54728cd291fb;Order=2, Id=2a84919f-59d8-4441-a975-2a8c2643b741;Order=3, Id=ef56c0de-36fc-4ef8-b417-3d82ba9d073c;Order=4…}
 PinnedMessageBarApps : {}
 AppPresetMeetingList : {}
 Description          :
@@ -77,7 +77,7 @@ AllowUserPinning     : True
 
 Identity             : Tag:Set-test
 AppPresetList        : {Id=d2c6f111-ffad-42a0-b65e-ee00425598aa}
-PinnedAppBarApps     : {Id=14d6962d-6eeb-4f48-8890-de55454bb136;Order=1, Id=86fcd49b-61a2-4701-b771-54728cd291fb;Order=2, Id=2a84919f-59d8-4441-a975-2a8c2643b741;Order=3, Id=ef56c0de-36fc-4ef8-b417-3d82ba9d073c;Order=4...}
+PinnedAppBarApps     : {Id=14d6962d-6eeb-4f48-8890-de55454bb136;Order=1, Id=86fcd49b-61a2-4701-b771-54728cd291fb;Order=2, Id=2a84919f-59d8-4441-a975-2a8c2643b741;Order=3, Id=ef56c0de-36fc-4ef8-b417-3d82ba9d073c;Order=4…}
 PinnedMessageBarApps : {}
 AppPresetMeetingList : {}
 Description          :
