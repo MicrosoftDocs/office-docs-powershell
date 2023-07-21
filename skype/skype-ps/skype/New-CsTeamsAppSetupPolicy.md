@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserPinning
-If you turn this on, the user’s existing app pins will be added to the list of pinned apps set in this policy. Users can rearrange, add, and remove pins as they choose. If you turn this off, the user’s existing app pins will be removed and replaced with the apps defined in this policy.
+If you turn this on, the user's existing app pins will be added to the list of pinned apps set in this policy. Users can rearrange, add, and remove pins as they choose. If you turn this off, the user's existing app pins will be removed and replaced with the apps defined in this policy.
 
 ```yaml
 Type: Boolean
