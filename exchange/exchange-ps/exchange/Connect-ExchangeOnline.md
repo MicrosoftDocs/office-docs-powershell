@@ -53,6 +53,7 @@ Connect-ExchangeOnline
  [-ShowBanner]
  [-ShowProgress <Boolean>]
  [-SigningCertificate <X509Certificate2>]
+ [-SkipLoadingCmdletHelp]
  [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -663,6 +664,22 @@ To find the certificate, use the Get-PfxCertificate cmdlet in the Microsoft.Powe
 
 ```yaml
 Type: X509Certificate2
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingCmdletHelp
+{{ Fill SkipLoadingCmdletHelp Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
