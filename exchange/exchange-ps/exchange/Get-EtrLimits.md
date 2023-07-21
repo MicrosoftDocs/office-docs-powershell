@@ -13,9 +13,9 @@ ms.reviewer:
 # Get-EtrLimits
 
 ## SYNOPSIS
-This cmdlet is available only in the cloud-based service.
+This cmdlet is available only in the cloud-based service. 
 
-Use the Get-EtrLimits cmdlet to show the limits and your current values for the total number, individual size, and total size of Exchange mail flow rules (also known as transport rules) in the organization.
+It provides information about [Microsoft Exchange Online limits regarding transport rules] (https://learn.microsoft.com/en-us/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits)(also known as organization-wide rules or mail flow rules), as well the current usage and the largest rule Ids in terms of size and regular expression character count. 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
