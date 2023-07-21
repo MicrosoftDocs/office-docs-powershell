@@ -19,6 +19,8 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or
 
 Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. The most restrictive policy for a particular user or group takes priority when determining whether a feature is enabled.
 
+Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -230,7 +232,12 @@ Accept wildcard characters: False
 ```
 
 ### -IsUserControlEnabled
-{{ Fill IsUserControlEnabled Description }}
+The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
+
+- $true: User control is enabled by the policy. Users can opt out of the feature.
+- $false: User control isn't enabled by the policy. Users can't opt of the feature.
+
+Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support this parameter, the default value applies. See the feature documentation for more information.
 
 ```yaml
 Type: Boolean
