@@ -46,6 +46,7 @@ This cmdlet updates the attributes of the policy that you specify. These attribu
 
 - The policy name (Name parameter).
 - Whether or not the policy enables the feature (IsFeatureEnabled parameter).
+- Whether or not the policy enables user controls (IsUserControlEnabled parameter).
 - Who the policy applies to (the UserIds and GroupIds parameters or the Everyone parameter).
 
 You can update these attributes independently of each other. For example, if you specify the Name parameter but not the IsFeatureEnabled parameter, the name of the policy is updated but whether or not the policy enables the feature remains unchanged.
@@ -237,7 +238,7 @@ The IsUserControlEnabled parameter specifies whether user control is enabled by 
 - $true: User control is enabled by the policy. Users can opt out of the feature.
 - $false: User control isn't enabled by the policy. Users can't opt of the feature.
 
-Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support this parameter, the default value applies. See the feature documentation for more information.
+Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
 
 ```yaml
 Type: Boolean
