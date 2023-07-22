@@ -676,6 +676,8 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLoadingCmdletHelp
+**Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
+
 {{ Fill SkipLoadingCmdletHelp Description }}
 
 ```yaml
