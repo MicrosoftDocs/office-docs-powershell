@@ -39,7 +39,7 @@ PS >Get-CsTeamsTemplatePermissionPolicy
 ```output
 Identity                  HiddenTemplates                                                                           Description
 --------                  ---------------                                                                           -----------
-Global                    {com.microsoft.teams.template.CoordinateIncidentResponse}
+Global                    {com.microsoft.teams.template.CoordinateIncidentResponse}
 Tag:Foobar                {com.microsoft.teams.template.ManageAProject, com.microsoft.teams.template.ManageAnEvent}
 ```
 
