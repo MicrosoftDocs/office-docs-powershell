@@ -678,7 +678,7 @@ Accept wildcard characters: False
 ### -SkipLoadingCmdletHelp
 **Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
 
-{{ Fill SkipLoadingCmdletHelp Description }}
+Use the SkipLoadingCmdletHelp switch to prevent cmdlet help from loading when you connect. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
