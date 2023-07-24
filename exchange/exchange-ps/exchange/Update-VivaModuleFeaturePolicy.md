@@ -242,6 +242,8 @@ The IsUserControlEnabled parameter specifies whether user control is enabled by 
 
 Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
 
+If you don't want to update whether the user control is enabled by the policy, don't use this parameter.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
