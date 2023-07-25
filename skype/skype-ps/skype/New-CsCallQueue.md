@@ -25,29 +25,24 @@ New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>
 [-NoAgentAction <>] [-NoAgentActionTarget <Guid>]
 [-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-User <List>] [-LanguageId <String>]
 [-LineUri <String>] [-OboResourceAccountIds <List>]
-
 [-OverflowDisconnectTextToSpeechPrompt <String>][-OverflowDisconnectAudioFilePrompt <Guid>]
 [-OverflowRedirectPersonTextToSpeechPrompt <String>][-OverflowRedirectPersonAudioFilePrompt <Guid>] [-OverflowRedirectVoiceAppTextToSpeechPrompt <String>]
 [-OverflowRedirectVoiceAppAudioFilePrompt <Guid>] [-OverflowRedirectPhoneNumberTextToSpeechPrompt <String>]
 [-OverflowRedirectPhoneNumberAudioFilePrompt <Guid>] [-OverflowRedirectVoicemailTextToSpeechPrompt <String>]
 [-OverflowRedirectVoicemailAudioFilePrompt <Guid>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>]
 [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-EnableOverflowSharedVoicemailSystemPromptSuppression <Boolean>]
-
 [-TimeoutDisconnectTextToSpeechPrompt <String>][-TimeoutDisconnectAudioFilePrompt <Guid>]
 [-TimeoutRedirectPersonTextToSpeechPrompt <String>] [-TimeoutRedirectPersonAudioFilePrompt <Guid>] [-TimeoutRedirectVoiceAppTextToSpeechPrompt <String>]
 [-TimeoutRedirectVoiceAppAudioFilePrompt <Guid>] [-TimeoutRedirectPhoneNumberTextToSpeechPrompt <String>]
 [-TimeoutRedirectPhoneNumberAudioFilePrompt <Guid>] [-TimeoutRedirectVoicemailTextToSpeechPrompt <String>]
 [-TimeoutRedirectVoicemailAudioFilePrompt <Guid>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>]
 [-EnableTimeoutSharedVoicemailTranscription <Boolean>] [-EnableTimeoutSharedVoicemailSystemPromptSuppression <Boolean>]
-
 [-NoAgentDisconnectTextToSpeechPrompt <String>][-NoAgentDisconnectAudioFilePrompt <Guid>]
 [-NoAgentRedirectPersonTextToSpeechPrompt <String>] [-NoAgentRedirectPersonAudioFilePrompt <Guid>] [-NoAgentRedirectVoiceAppTextToSpeechPrompt <String>]
 [-NoAgentRedirectVoiceAppAudioFilePrompt <Guid>] [-NoAgentRedirectPhoneNumberTextToSpeechPrompt <String>]
 [-NoAgentRedirectPhoneNumberAudioFilePrompt <Guid>] [-NoAgentRedirectVoicemailTextToSpeechPrompt <String>]
 [-NoAgentRedirectVoicemailAudioFilePrompt <Guid>] [-NoAgentSharedVoicemailTextToSpeechPrompt <String>] [-NoAgentSharedVoicemailAudioFilePrompt <Guid>]
 [-EnableNoAgentSharedVoicemailTranscription <Boolean>] [-EnableNoAgentSharedVoicemailSystemPromptSuppression <Boolean>]
-
-
 [-ChannelId <String>] [-ChannelUserObjectId <Guid>] [-AuthorizedUsers <List>] [<CommonParameters>]
 ```
 
