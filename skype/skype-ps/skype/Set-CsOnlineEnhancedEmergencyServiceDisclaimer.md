@@ -34,7 +34,7 @@ Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion <String> [-Versi
 ## DESCRIPTION
 You must run this cmdlet prior to assigning Microsoft Calling Plan phone numbers and locations to voice enabled users or accept the similar disclaimer in the Teams admin center.
 
-Microsoft Calling Plan phone numbers are available in several countries, see [Country and region availability for Audio Conferencing and Calling Plans](https://learn.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
+Microsoft Calling Plan phone numbers are available in several countries/regions, see [Country and region availability for Audio Conferencing and Calling Plans](https://learn.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
 
 
 ## EXAMPLES
