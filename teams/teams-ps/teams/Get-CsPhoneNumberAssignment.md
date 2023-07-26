@@ -406,7 +406,7 @@ The ID of the CivicAddress assigned to the phone number.
 The ISO country code assigned to the phone number.
 
 ### IsoSubDivision
-The subdivision within the country assigned to the phone number, for example, the state for US phone numbers.
+The subdivision within the country/region assigned to the phone number, for example, the state for US phone numbers.
 
 ### LocationId
 The ID of the Location assigned to the phone number.

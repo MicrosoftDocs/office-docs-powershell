@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### Country
-Specifies the telephone number search order country. Use `Get-CsOnlineTelephoneNumberCountry` to find the supported countries.
+Specifies the telephone number search order country/region. Use `Get-CsOnlineTelephoneNumberCountry` to find the supported countries/regions.
 
 ```yaml
 Type: String
