@@ -913,7 +913,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTimeoutSharedVoicemailSystemPromptSuppression
-The EnableTimeoutSharedVoicemailSystemPromptSuppress parameter is used to turn off the default voicemail system prompts.  This parameter is only applicable when OverflowAction is set to SharedVoicemail.
+The EnableTimeoutSharedVoicemailSystemPromptSuppression parameter is used to turn off the default voicemail system prompts.  This parameter is only applicable when OverflowAction is set to SharedVoicemail.
 
 ```yaml
 Type: Boolean
