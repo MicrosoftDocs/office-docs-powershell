@@ -29,6 +29,8 @@ Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod> -ForestNam
  [-DomainController <Fqdn>]
  [-ProxyUrl <Uri>]
  [-TargetAutodiscoverEpr <Uri>]
+ [-TargetServiceEpr <String>]
+ [-TargetTenantId <String>]
  [-UseServiceAccount <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -185,6 +187,42 @@ Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetServiceEpr
+This parameter is available only in the cloud-based service.
+
+{{ Fill TargetServiceEpr Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetTenantId
+This parameter is available only in the cloud-based service.
+
+{{ Fill TargetTenantId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

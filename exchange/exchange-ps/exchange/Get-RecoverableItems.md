@@ -46,6 +46,7 @@ Get-RecoverableItems -Identity <GeneralMailboxOrMailUserIdParameter[]>
  [-MaxParallelSize <Int32>]
  [-PolicyTag <String[]>]
  [-ResultSize <Unlimited>]
+ [-SkipCount <Int32>]
  [-SourceFolder <RecoverableItemsFolderType>]
  [-SubjectContains <String>]
  [<CommonParameters>]
@@ -252,6 +253,24 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCount
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipCount Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
