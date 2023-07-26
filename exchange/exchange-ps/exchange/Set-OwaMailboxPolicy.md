@@ -32,6 +32,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AllowedMimeTypes <MultiValuedProperty>]
  [-AllowedOrganizationAccountDomains <String[]>]
  [-AllowOfflineOn <AllowOfflineOnEnum>]
+ [-BizBarEnabled <Boolean>]
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
  [-BookingsMailboxCreationEnabled <Boolean>]
@@ -53,6 +54,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-DisplayPhotosEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-DropboxAttachmentsEnabled <Boolean>]
+ [-EmptyStateEnabled <Boolean>]
  [-ExplicitLogonEnabled <Boolean>]
  [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
@@ -84,13 +86,12 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
- [-OrganizationEnabled <Boolean>]
  [-OneDriveAttachmentsEnabled <Boolean>]
  [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OnSendAddinsEnabled <Boolean>]
+ [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
- [<CommonParameters>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -415,6 +416,24 @@ Type: AllowOfflineOnEnum
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BizBarEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BizBarEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -852,6 +871,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmptyStateEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill EmptyStateEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

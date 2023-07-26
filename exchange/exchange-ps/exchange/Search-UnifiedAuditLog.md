@@ -25,6 +25,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-Formatted]
  [-FreeText <String>]
  [-IPAddresses <String[]>]
+ [-LongerRetentionEnabled <String>]
  [-ObjectIds <String[]>]
  [-Operations <String[]>]
  [-RecordType <AuditRecordType>]
@@ -181,6 +182,22 @@ The IPAddresses parameter filters the log entries by the specified IP addresses.
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LongerRetentionEnabled
+{{ Fill LongerRetentionEnabled Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
