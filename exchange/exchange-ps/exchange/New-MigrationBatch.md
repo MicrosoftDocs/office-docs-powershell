@@ -34,9 +34,9 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-AvoidMergeOverlap]
  [-BadItemLimit <Unlimited>]
  [-CompleteAfter <DateTime>]
+ [-Confirm]
  [-ContentFilter <String>]
  [-ContentFilterLanguage <CultureInfo>]
- [-Confirm]
  [-DomainController <Fqdn>]
  [-ExcludeDumpsters]
  [-ExcludeFolders <MultiValuedProperty>]
@@ -54,6 +54,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-Restore]
  [-SkipCalendar]
  [-SkipContacts]
+ [-SkipDelegates]
  [-SkipMail]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
@@ -1234,6 +1235,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 The SkipContacts switch specifies that you want to skip contact migration during Google Workspace onboarding. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Onboarding
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipDelegates
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipDelegates Description }}
 
 ```yaml
 Type: SwitchParameter
