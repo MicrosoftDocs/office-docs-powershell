@@ -3,7 +3,7 @@ title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 7/14/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -26,11 +26,13 @@ This article lists new features in the Exchange Online PowerShell module that's 
 
 - [Version 3.2.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.2.0) has been released.
 
-  All Security & Compliance PowerShell cmdlets are now backed by the REST API, and REST API is used by default. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
+- [Virtually all](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432) Security & Compliance PowerShell cmdlets are now backed by the REST API, and REST API is used by default. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
 
   For information about what's in this release, see [Version 3.2.0](exchange-online-powershell-v2.md#current-release-version-320).
 
 ## May 2023
+
+- The end of support for remote PowerShell in Security & Compliance PowerShell has been announced. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 - [Version 3.2.0-Preview4](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.2.0-Preview4) has been released.
 

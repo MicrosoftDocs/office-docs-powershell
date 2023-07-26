@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 7/14/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -60,7 +60,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
+> Remote PowerShell connections are deprecated in Exchange Online PowerShell and will be deprecated in Security & Compliance PowerShell. For more information, see [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692) and [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 >
 > - Microsoft 365 GCC High or Microsoft 365 DoD environments require the following additional parameters and values:
 >   - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
@@ -433,7 +433,7 @@ To assign custom role groups to the application using service principals, do the
    - Store the details of the service principal in a variable.
 
    ```powershell
-   New-ServicePrincipal -AppId $<VariableName1>.AppId -ServiceId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
+   New-ServicePrincipal -AppId $<VariableName1>.AppId -ObjectId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
 
    $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
    ```
@@ -441,7 +441,7 @@ To assign custom role groups to the application using service principals, do the
    For example:
 
    ```powershell
-   New-ServicePrincipal -AppId $AADApp.AppId -ServiceId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
+   New-ServicePrincipal -AppId $AADApp.AppId -ObjectId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
 
    $SP = Get-ServicePrincipal -Identity "SP for Azure App ExO PowerShell CBA"
    ```
@@ -451,7 +451,7 @@ To assign custom role groups to the application using service principals, do the
 3. In Exchange Online PowerShell or Security & Compliance PowerShell, run the following command to add the service principal as a member of the custom role group:
 
    ```powershell
-   Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ServiceId | $<VariableName2>.Id>
+   Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ObjectId | $<VariableName2>.Id>
    ```
 
    For example:

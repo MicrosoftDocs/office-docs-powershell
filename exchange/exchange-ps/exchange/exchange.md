@@ -280,6 +280,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SenderReputationConfig](Get-SenderReputationConfig.md)
 
+### [Get-TeamsProtectionPolicy](Get-TeamsProtectionPolicy.md)
+
+### [Get-TeamsProtectionPolicyRule](Get-TeamsProtectionPolicyRule.md)
+
 ### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
 
 ### [Get-TenantAllowBlockListSpoofItems](Get-TenantAllowBlockListSpoofItems.md)
@@ -315,6 +319,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
 ### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
+
+### [New-TeamsProtectionPolicy](New-TeamsProtectionPolicy.md)
+
+### [New-TeamsProtectionPolicyRule](New-TeamsProtectionPolicyRule.md)
 
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
@@ -435,6 +443,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SenderIdConfig](Set-SenderIdConfig.md)
 
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
+
+### [Set-TeamsProtectionPolicy](Set-TeamsProtectionPolicy.md)
+
+### [Set-TeamsProtectionPolicyRule](Set-TeamsProtectionPolicyRule.md)
 
 ### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
 

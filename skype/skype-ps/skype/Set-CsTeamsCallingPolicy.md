@@ -103,12 +103,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCallRedirect
-Setting this parameter provides the ability to configure call redirection capabilities on Teams Phones. 
+Setting this parameter enables local call redirection for SIP devices connecting via the Microsoft Teams SIP gateway.
 
 Valid options are:
-- Enabled: Users will have the ability to redirect received calls.
-- Disabled: Users will not have such an ability.
-- UserOverride: This option is not available for use. There's no user interface implemented for its management.
+- Enabled: Enables the user to redirect an incoming call.
+- Disabled: The user is not enabled to redirect an incoming call.
+- UserOverride: This option is not available for use.
 
 ```yaml
 Type: String
@@ -467,11 +467,11 @@ Accept wildcard characters: False
 ```
 
 ### -SpamFilteringEnabledType
-Determines Spam filtering mode.
+Determines if spam detection is enabled for inbound PSTN calls.
 
 Possible values:
-- Enabled: Spam Filtering is enabled. In case the call is considered spam, the user will get a "Spam Likely" notification in Teams.
-- Disabled: Spam Filtering is completely disabled. No checks are performed. A "Spam Likely" notification will not appear.
+- Enabled: Spam detection is enabled. In case the inbound call is considered spam, the user will get a "Spam Likely" label in Teams.
+- Disabled: Spam detection is disabled.
 
 ```yaml
 Type: String

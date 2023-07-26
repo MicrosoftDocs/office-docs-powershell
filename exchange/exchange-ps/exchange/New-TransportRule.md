@@ -910,7 +910,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
+The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -942,7 +942,7 @@ Rules can inspect the content of supported file types only. If the rule finds an
 
 For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
 
-In Exchange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+In Exchange 2010, to extend the list of supported file types, see [Register Filter Pack IFilters](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -1770,7 +1770,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
+The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -1802,7 +1802,7 @@ Rules can inspect the content of supported file types only. If the rule finds an
 
 For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
 
-In Exhange 2013, to extend the list of supported file types, see [Register Filter Pack IFilters with Exchange 2013](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+In Exchange 2010, to extend the list of supported file types, see [Register Filter Pack IFilters](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean

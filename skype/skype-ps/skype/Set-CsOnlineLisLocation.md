@@ -44,18 +44,13 @@ Set-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e -Locati
 
 This example changes the location description of the location specified by its location identity.
 
-### Example 2
-```powershell
-Set-CsOnlineLisLocation -CivicAddressId 5687eb59-9039-4e99-bb89-71771d723b7a -Location "B5 2nd Floor" -Elin "TEST_ELIN"
-```
-
-This example changes the Elin of the location specified by its location identity.
-
 ## PARAMETERS
 
 ### -CivicAddressId
 Specifies the unique identifier of the civic address that contains the location to be modified.
 Civic address identities can be discovered by using the \`Get-CsOnlineLisCivicAddress\` cmdlet.
+
+**Note:** This parameter is for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -91,6 +86,8 @@ Accept wildcard characters: False
 ### -City
 Specifies the city of the civic address.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -124,6 +121,8 @@ Accept wildcard characters: False
 ### -CompanyName
 Specifies the name of your organization.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -140,6 +139,8 @@ Accept wildcard characters: False
 ### -CompanyTaxId
 The company tax ID.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -154,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confidence
-This parameter is reserved for internal Microsoft use.
+
+**Note:** This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -172,6 +174,8 @@ Accept wildcard characters: False
 ### -CountryOrRegion
 Specifies the country or region of the civic address.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -188,6 +192,8 @@ Accept wildcard characters: False
 ### -Description
 Specifies an administrator defined description of the civic address.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -202,8 +208,9 @@ Accept wildcard characters: False
 ```
 
 ### -Elin
-Specifies the Emergency Location Identification Number.
-This is used in Direct Routing EGW scenarios.
+Specifies the Emergency Location Identification Number. This is used in Direct Routing EGW scenarios.
+
+**Note:** You can set or change the ELIN, but you can't clear its value. If you need to clear the value, you should recreate the location.
 
 ```yaml
 Type: String
@@ -239,6 +246,8 @@ Accept wildcard characters: False
 ### -HouseNumber
 Specifies the numeric portion of the civic address.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -256,6 +265,8 @@ Accept wildcard characters: False
 Specifies the numeric suffix of the civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -272,6 +283,8 @@ Accept wildcard characters: False
 ### -Latitude
 Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -287,6 +300,8 @@ Accept wildcard characters: False
 
 ### -Longitude
 Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
+
+**Note:** This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -320,6 +335,8 @@ Accept wildcard characters: False
 ### -PostalCode
 Specifies the postal code of the civic address.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -336,6 +353,8 @@ Accept wildcard characters: False
 ### -PostDirectional
 Specifies the directional attribute of the civic address which follows the street name.
 For example, "425 Smith Avenue NE".
+
+**Note:** This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -354,6 +373,8 @@ Accept wildcard characters: False
 Specifies the directional attribute of the civic address which precedes the street name.
 For example, "425 NE Smith Avenue ".
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -369,6 +390,8 @@ Accept wildcard characters: False
 
 ### -StateOrProvince
 Specifies the state or province of the civic address.
+
+**Note:** This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -386,6 +409,8 @@ Accept wildcard characters: False
 ### -StreetName
 Specifies the street name of the civic address.
 
+**Note:** This parameter is reserved for internal Microsoft use.
+
 ```yaml
 Type: String
 Parameter Sets: UseCivicAddressId
@@ -402,6 +427,8 @@ Accept wildcard characters: False
 ### -StreetSuffix
 Specifies a modifier of the street name of the civic address.
 The street suffix will typically be something like street, avenue, way, or boulevard.
+
+**Note:** This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
