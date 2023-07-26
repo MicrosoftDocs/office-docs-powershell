@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldAudioFileId
-The MusicOnHoldFileContent parameter represents music to play when callers are placed on hold. This is the unique identifier of the audio file. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
+The MusicOnHoldAudioFileId parameter represents music to play when callers are placed on hold. This is the unique identifier of the audio file. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
 
 ```yaml
 Type: Guid
