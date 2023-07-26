@@ -33,6 +33,27 @@ New-ReportSubmissionPolicy
  [-EnableThirdPartyAddress <Boolean>]
  [-EnableUserEmailNotification <Boolean>]
  [-JunkReviewResultMessage <String>]
+ [-MultiLanguagePostSubmitMessageButtonLinkForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageButtonLinkForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageButtonTextForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageButtonTextForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageTitleForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageTitleForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonLinkForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonLinkForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonLinkForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonTextForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonTextForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonTextForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageTitleForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageTitleForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageTitleForPhishing <MultiValuedProperty>]
+ [-MultiLanguageSetting <MultiValuedProperty>]
  [-NotificationFooterMessage <String>]
  [-NotificationSenderAddress <MultiValuedProperty>]
  [-NotificationsForCleanSubmissionAirInvestigationsEnabled <Boolean>]
@@ -323,6 +344,342 @@ Use the NotificationSenderAddress parameter to customize the sender email addres
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageButtonLinkForJunk
+{{ Fill MultiLanguagePostSubmitMessageButtonLinkForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageButtonLinkForPhishing
+{{ Fill MultiLanguagePostSubmitMessageButtonLinkForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageButtonTextForJunk
+{{ Fill MultiLanguagePostSubmitMessageButtonTextForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageButtonTextForPhishing
+{{ Fill MultiLanguagePostSubmitMessageButtonTextForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageForJunk
+{{ Fill MultiLanguagePostSubmitMessageForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageForPhishing
+{{ Fill MultiLanguagePostSubmitMessageForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageTitleForJunk
+{{ Fill MultiLanguagePostSubmitMessageTitleForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageTitleForPhishing
+{{ Fill MultiLanguagePostSubmitMessageTitleForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonLinkForJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonLinkForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonLinkForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonLinkForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonLinkForPhishing
+{{ Fill MultiLanguagePreSubmitMessageButtonLinkForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonTextForJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonTextForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonTextForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonTextForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonTextForPhishing
+{{ Fill MultiLanguagePreSubmitMessageButtonTextForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageForJunk
+{{ Fill MultiLanguagePreSubmitMessageForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageForPhishing
+{{ Fill MultiLanguagePreSubmitMessageForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageTitleForJunk
+{{ Fill MultiLanguagePreSubmitMessageTitleForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageTitleForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageTitleForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageTitleForPhishing
+{{ Fill MultiLanguagePreSubmitMessageTitleForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguageSetting
+{{ Fill MultiLanguageSetting Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
