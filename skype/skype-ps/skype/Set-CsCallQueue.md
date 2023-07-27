@@ -1137,7 +1137,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNoAgentSharedVoicemailSystemPromptSuppression
-The EnableNoAgentSharedVoicemailSystemPromptSuppress parameter is used to turn off the default voicemail system prompts.  This parameter is only applicable when NoAgentAction is set to SharedVoicemail.
+The EnableNoAgentSharedVoicemailSystemPromptSuppression parameter is used to turn off the default voicemail system prompts.  This parameter is only applicable when NoAgentAction is set to SharedVoicemail.
 
 ```yaml
 Type: Boolean
