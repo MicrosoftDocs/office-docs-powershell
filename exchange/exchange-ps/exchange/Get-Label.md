@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-Label [[-Identity] <ComplianceRuleIdParameter>]
  [-IncludeDetailedLabelActions]
  [-SkipValidations]
+ [-ValidateContentTypeRemoval]
  [<CommonParameters>]
 ```
 
@@ -86,6 +87,22 @@ Accept wildcard characters: False
 
 ### -SkipValidations
 {{ Fill SkipValidations Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidateContentTypeRemoval
+{{ Fill ValidateContentTypeRemoval Description }}
 
 ```yaml
 Type: SwitchParameter
