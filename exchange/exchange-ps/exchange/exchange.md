@@ -202,6 +202,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AgentLog](Get-AgentLog.md)
 
+### [Get-AggregateZapReport](Get-AggregateZapReport.md)
+
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
@@ -215,6 +217,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
 
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
+
+### [Get-DetailZapReport](Get-DetailZapReport.md)
 
 ### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
 
