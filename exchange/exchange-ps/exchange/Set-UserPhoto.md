@@ -29,6 +29,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -41,6 +42,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureData <Byte[]>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -56,6 +58,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -68,6 +71,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureStream <Stream>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -81,6 +85,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -345,6 +350,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

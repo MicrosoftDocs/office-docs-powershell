@@ -30,6 +30,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
  [-GroupMailbox]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -43,6 +44,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipal
  [-IncludeUnresolvedPermissions]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -275,6 +277,24 @@ Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AccessRights
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
 

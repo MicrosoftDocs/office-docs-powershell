@@ -228,6 +228,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -296,8 +297,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -360,6 +359,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -428,8 +428,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -492,6 +490,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -560,8 +559,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -624,6 +621,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -692,8 +690,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -755,6 +751,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
  [-CustomAttribute10 <String>]
@@ -821,8 +818,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -885,6 +880,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -952,8 +948,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -1016,6 +1010,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -1084,8 +1079,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -1959,6 +1952,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearThrottlingPolicyAssignment
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearThrottlingPolicyAssignment Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -4167,42 +4178,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PitrCopyIntervalInSeconds
-This parameter is available only in the cloud-based service.
-
-{{ Fill PitrCopyIntervalInSeconds Description }}
-
-```yaml
-Type: Int16
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PitrEnabled
-This parameter is available only in the cloud-based service.
-
-{{ Fill PitrEnabled Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PrimarySmtpAddress
 This parameter is available only in on-premises Exchange.
 
@@ -4616,7 +4591,7 @@ Accept wildcard characters: False
 ### -RemoveDelayReleaseHoldApplied
 This parameter is available only in the cloud-based service.
 
-The RemoveDelayReleaseHoldApplied switch specifies whether to remove delay holds on cloud data generated by non-Exchange apps (such as Teams, Forms, and Yammer) from the mailbox. Data generated by a non-Exchange cloud-based app is typically stored in a hidden folder in the mailbox. You don't need to specify a value with this switch.
+The RemoveDelayReleaseHoldApplied switch specifies whether to remove delay holds on cloud data generated by non-Exchange apps (such as Teams, Forms, and Viva Engage) from the mailbox. Data generated by a non-Exchange cloud-based app is typically stored in a hidden folder in the mailbox. You don't need to specify a value with this switch.
 
 The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace `<MailboxIdentity>` with the name, email address, or alias of the mailbox, and run this command: `Export-MailboxDiagnosticLogs -Identity <MailboxIdentity> -ComponentName SubstrateHoldTracking`.
 
@@ -5373,10 +5348,10 @@ Accept wildcard characters: False
 ```
 
 ### -SingleItemRecoveryEnabled
-The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recovery Items folder from being purged. Valid values are:
+The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recoverable Items folder from being purged. Valid values are:
 
-- $true: Single item recovery is enabled. The Recovery Items folder can't be purged. and items that have been deleted or edited can't be removed.
-- $false: Single item recovery isn't enabled. The Recovery Items folder can be purged, and, items that have been deleted or edited can be removed. This is the default value.
+- $true: Single item recovery is enabled. The Recoverable Items folder can't be purged, and deleted or edited items can't be removed. This is the default value in Exchange Online. For more information, see [Enable or disable single item recovery for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
+- $false: Single item recovery isn't enabled. The Recoverable Items folder can be purged, and deleted or edited items can be removed. This is the default value in Exchange Server. For more information, see [Enable or disable single item recovery for a mailbox](https://learn.microsoft.com/exchange/recipients/user-mailboxes/single-item-recovery).
 
 ```yaml
 Type: Boolean

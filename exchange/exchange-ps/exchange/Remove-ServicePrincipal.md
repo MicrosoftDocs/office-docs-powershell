@@ -48,7 +48,7 @@ The Identity parameter specifies the service principal that you want to remove. 
 - Distinguished name (DN)
 - GUID
 - AppId
-- ServiceId
+- ObjectId
 
 ```yaml
 Type: ServicePrincipalIdParameter

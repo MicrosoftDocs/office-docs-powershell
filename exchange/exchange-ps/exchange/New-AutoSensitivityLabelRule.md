@@ -30,16 +30,24 @@ New-AutoSensitivityLabelRule [-Name] <String> -Policy <PolicyIdParameter> -Workl
  [-Confirm]
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ContentPropertyContainsWords <MultiValuedProperty>]
  [-Disabled <Boolean>]
+ [-DocumentCreatedBy <MultiValuedProperty>]
  [-DocumentIsPasswordProtected <Boolean>]
  [-DocumentIsUnsupported <Boolean>]
+ [-DocumentNameMatchesWords <MultiValuedProperty>]
+ [-DocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-ExceptIfAccessScope <AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
+ [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
+ [-ExceptIfDocumentCreatedBy <MultiValuedProperty>]
  [-ExceptIfDocumentIsPasswordProtected <Boolean>]
  [-ExceptIfDocumentIsUnsupported <Boolean>]
+ [-ExceptIfDocumentNameMatchesWords <MultiValuedProperty>]
+ [-ExceptIfDocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-ExceptIfFrom <RecipientIdParameter[]>]
  [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
@@ -168,7 +176,7 @@ The AnyOfRecipientAddressContainsWords parameter specifies a condition for the a
 - Multiple words: `no_reply,urgent,...`
 - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
 
-The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 600.
 
 You can use this condition in auto-labeling policies that are scoped only to Exchange.
 
@@ -274,6 +282,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentPropertyContainsWords
+The ContentPropertyContainsWords parameter specifies a condition for the auto-labeling policy rule that's based on a property match in content. The rule is applied to content that contains the specified property.
+
+This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Disabled
 The Disabled parameter specifies whether the auto-labeling policy rule is enabled or disabled. Valid values are:
 
@@ -282,6 +308,22 @@ The Disabled parameter specifies whether the auto-labeling policy rule is enable
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentCreatedBy
+{{ Fill DocumentCreatedBy Description }}
+
+```yaml
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -331,6 +373,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DocumentNameMatchesWords
+The DocumentNameMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
+
+- Single word: `"no_reply"`
+- Multiple words: `no_reply,urgent,...`
+- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentSizeOver
+The DocumentSizeOver parameter specifies a condition for the auto-labeling policy rule that looks for messages where any attachment is greater than the specified size.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+You can use this condition in auto-labeling policy rules that are scoped only to Exchange.
+
+```yaml
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfAccessScope
 The ExceptIfAccessScopeAccessScope parameter specifies an exception for the auto-labeling policy rule that's based on the access scope of the content. The rule isn't applied to content that matches the specified access scope. Valid values are:
 
@@ -359,7 +451,7 @@ The ExceptIfAnyOfRecipientAddressContainsWords parameter specifies an exception 
 - Multiple words: `no_reply,urgent,...`
 - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
 
-The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 600.
 
 You can use this exception in auto-labeling policies that are scoped only to Exchange.
 
@@ -430,6 +522,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfContentPropertyContainsWords
+The ExceptIfContentPropertyContainsWords parameter specifies an exception for the auto-labeling policy rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
+
+This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentCreatedBy
+{{ Fill ExceptIfDocumentCreatedBy Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfDocumentIsPasswordProtected
 The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the auto-labeling policy rule that looks for password protected files (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
 
@@ -457,6 +583,56 @@ The ExceptIfDocumentIsUnsupported parameter specifies an exception for the auto-
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentNameMatchesWords
+The ExceptIfDocumentNameMatchesWords parameter specifies an exception for the auto-labeling policy rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
+
+- Single word: `"no_reply"`
+- Multiple words: `no_reply,urgent,...`
+- Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfDocumentSizeOver
+The ExceptIfDocumentSizeOver parameter specifies an exception for the auto-labeling policy rule that looks for messages where any attachment is greater than the specified size.
+
+When you enter a value, qualify the value with one of the following units:
+
+- B (bytes)
+- KB (kilobytes)
+- MB (megabytes)
+- GB (gigabytes)
+- TB (terabytes)
+
+Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+You can use this exception in auto-labeling policy rules that are scoped only to Exchange.
+
+```yaml
+Type: Microsoft.Exchange.Data.ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
