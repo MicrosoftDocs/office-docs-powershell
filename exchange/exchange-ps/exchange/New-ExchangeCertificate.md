@@ -84,7 +84,7 @@ This example creates a self-signed certificate with the following settings:
 
 - The Subject value is `CN=<ServerName>` (for example, CN=Mailbox01).
 - The Domains (subject alternative names) value is `<ServerName>,<ServerFQDN>` (for example, `Mailbox01,Mailbox01.contoso.com`).
-- The Services value is IMAP,POP,SMTP
+- The Services value is `IMAP,POP,SMTP`.
 - The Services value SMTP grants the Network Services local security group read access to the certificate's private key.
 - The Services value SMTP and the Subject value that contains the server name publishes the certificate to Active Directory so that Exchange direct trust can validate the authenticity of the server for mutual TLS.
 
@@ -518,7 +518,7 @@ The Services parameter specifies the Exchange services that the new self-signed 
 - UM: This value requires that the UMStartupMode parameter on the Set-UMService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value of TCP, you can't enable the certificate for the UM service.
 - UMCallRouter: This value requires that the UMStartupMode parameter on the Set-UMCallRouterService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value TCP, you can't enable the certificate for the UM Call Router service.
 
-You can specify multiple values separated by commas. The default values are IMAP,POP, and SMTP.
+You can specify multiple values separated by commas. The default values are IMAP, POP, and SMTP.
 
 You can't use this parameter with the GenerateRequest switch.
 
