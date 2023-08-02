@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-JitConfiguration cmdlet to create ???.
+Use the New-JitConfiguration cmdlet to create the Just-in-time (JIT) configuration in your organization. For more information about JIT, see [Just-in-time protection](https://learn.microsoft.com/purview/endpoint-dlp-learn-about#just-in-time-protection-preview).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -57,7 +57,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the unique name for the ???. The only valid value is "Jit".
+The Name parameter specifies the unique name for the JIT configuration. The only valid value is "Jit".
 
 ```yaml
 Type: String
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-The Mode parameter specifies ???. Valid values are:
+The Mode parameter specifies the action and notification level of the JIT configuration. Valid values are:
 
 - Disable
 - Enable (default)

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Set-JitConfiguration cmdlet to modify ???.
+Use the Set-JitConfiguration cmdlet to modify the Just-in-time (JIT) configuration in the organization. For more information about JIT, see [Just-in-time protection](https://learn.microsoft.com/purview/endpoint-dlp-learn-about#just-in-time-protection-preview).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -64,7 +64,8 @@ Set-JitConfiguration [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-EndpointConfig <String>]
  [-Mode <PolicyMode>]
- [-WhatIf] [<CommonParameters>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,7 +75,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -82,7 +83,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -Identity
-The Name parameter specifies the ??? that you want to modify. There's one one ??? named "Jit" in the organization.
+The Identity parameter specifies the JIT configuration that you want to modify. There's only one JIT configuration named "Jit" in the organization.
 
 ```yaml
 Type: PolicyIdParameter
@@ -277,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
-The Mode parameter specifies ???. Valid values are:
+The Mode parameter specifies the action and notification level of the JIT configuration. Valid values are:
 
 - Disable
 - Enable (default)

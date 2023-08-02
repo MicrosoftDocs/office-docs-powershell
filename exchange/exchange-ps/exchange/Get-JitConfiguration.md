@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-JitConfiguration cmdlet to view ???.
+Use the Get-JitConfiguration cmdlet to view the Just-in-time (JIT) configuration in the organization. For more information about JIT, see [Just-in-time protection](https://learn.microsoft.com/purview/endpoint-dlp-learn-about#just-in-time-protection-preview).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,12 +36,12 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Get-JitConfiguration
 ```
 
-This example returns the ??? in your organization.
+This example returns the JIT configuration in your organization.
 
 ## PARAMETERS
 
 ### -Identity
-The Name parameter specifies the ??? that you want to modify. There's one one ??? named "Jit" in the organization.
+The Identity parameter specifies the JIT configuration that you want to view. There's only one JIT configuration named "Jit" in the organization.
 
 ```yaml
 Type: PolicyIdParameter

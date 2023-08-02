@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-JitConfiguration cmdlet to remove ???.
+Use the Remove-JitConfiguration cmdlet to remove the Just-in-time (JIT) configuration from the organization. For more information about JIT, see [Just-in-time protection](https://learn.microsoft.com/purview/endpoint-dlp-learn-about#just-in-time-protection-preview).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -38,12 +38,12 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Remove-JitConfiguration -Identity Jit
 ```
 
-This example removes the ???.
+This example removes the JIT configuration from the organization.
 
 ## PARAMETERS
 
 ### -Identity
-The Name parameter specifies the ??? that you want to remove. There's one one ??? named "Jit" in the organization.
+The Identity parameter specifies the JIT configuration that you want to remove. There's only one JIT configuration named "Jit" in the organization.
 
 ```yaml
 Type: PolicyIdParameter
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeletion
-{{ Fill ForceDeletion Description }}
+The ForceDeletion switch forces the removal of the JIT configuration. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
