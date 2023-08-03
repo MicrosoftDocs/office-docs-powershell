@@ -103,7 +103,7 @@ When you use the Identity parameter, more details are returned in the results. F
 
 - In the Results line, the values of the Item count, Total size, and Details properties are populated.
 - Location lines are added to the results.
-- The NumBinding property value is populated. This property includes only the primary mailbox, the main archive, and all additional archives.
+- The NumBinding property value is populated. This property includes only the primary mailbox, the main archive, and any additional archives.
 - The affected location properties (for example, ExchangeLocation) are populated.
 - The CaseName property value is populated.
 
