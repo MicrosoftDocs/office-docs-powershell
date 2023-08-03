@@ -99,7 +99,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocation
-{{ Fill AddEndpointDlpLocation Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -115,7 +121,13 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocationException
-{{ Fill AddEndpointDlpLocationException Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -131,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocation
-{{ Fill AddOneDriveLocation Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -147,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddOneDriveLocationException
-{{ Fill AddOneDriveLocationException Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -163,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocation
-{{ Fill AddSharePointLocation Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -179,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddSharePointLocationException
-{{ Fill AddSharePointLocationException Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -246,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedBy
-{{ Fill ExceptIfOneDriveSharedBy Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -262,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfOneDriveSharedByMemberOf
-{{ Fill ExceptIfOneDriveSharedByMemberOf Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -301,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedBy
-{{ Fill OneDriveSharedBy Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -317,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharedByMemberOf
-{{ Fill OneDriveSharedByMemberOf Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -333,7 +345,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocation
-{{ Fill RemoveEndpointDlpLocation Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -349,7 +367,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocationException
-{{ Fill RemoveEndpointDlpLocationException Description }}
+**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+
+The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -365,7 +389,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocation
-{{ Fill RemoveOneDriveLocation Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -381,7 +405,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveOneDriveLocationException
-{{ Fill RemoveOneDriveLocationException Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -397,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocation
-{{ Fill RemoveSharePointLocation Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -413,7 +437,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSharePointLocationException
-{{ Fill RemoveSharePointLocationException Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: MultiValuedProperty
