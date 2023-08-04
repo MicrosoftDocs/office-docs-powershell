@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEmailEditing
-This setting governs if a user is allowed to edit the communication emails in Teams Town hall or Webinar Events.
+This setting governs if a user is allowed to edit the communication emails in Teams Town Hall or Teams Webinar events.
 Possible values are:
  - **Enabled**: Enables editing of communication emails.
  - **Disabled**: Disables editing of communication emails.
