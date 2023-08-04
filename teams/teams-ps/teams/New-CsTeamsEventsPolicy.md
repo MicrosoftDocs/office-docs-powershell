@@ -79,6 +79,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowEmailEditing
+This setting governs if a user is allowed to edit the communication emails in Teams Town hall or Webinar Events. 
+Possible values are:
+ - **Enabled**: Enables editing of communication emails.
+ - **Disabled**: Disables editing of communication emails.
+
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EventAccessType
 This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
 Possible values are:
