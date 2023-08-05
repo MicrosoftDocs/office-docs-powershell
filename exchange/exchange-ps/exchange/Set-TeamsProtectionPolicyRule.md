@@ -38,10 +38,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule"-ExceptIfRecipientDomainIs research.contoso.com
+Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfRecipientDomainIs research.contoso.com
 ```
 
-This example modifies the existing Teams protection policy rule by excluding recipients in the domain research.contoso.com from Teams protection.
+This example modifies the existing Teams protection policy rule by excluding recipients in the domain research.contoso.com from ZAP for Teams protection.
 
 ## PARAMETERS
 
@@ -97,7 +97,37 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-The ExceptIfRecipientDomainIs parameter specifies an exception to Teams protection that looks for recipients of Teams messages with email addresses in the specified domains. You can specify multiple domains separated by commas.
+The ExceptIfRecipientDomainIs parameter specifies an exception to ZAP for Teams protection that looks for recipients of Teams messages with email addresses in the specified domains.
+
+To replace all existing domains with the values you specify, use the following syntax: `Domain1,Domain2,...DomainN`.
+
+To add domains without affecting other existing values, use the following syntax:
+
+`$DomainsAdd = Get-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" | select -Expand ExceptIfRecipientDomainIs`
+
+`$DomainsAdd += "Domain1","Domain2",..."DomainN"`
+
+`Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfRecipientDomainIs $DomainsAdd`
+
+To remove domains without affecting other existing values, use the following syntax:
+
+- Run the following commands to see the existing list of values in order:
+
+  `$x = Get-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule"`
+
+  `$d = [System.Collections.ArrayList]($x.ExceptIfRecipientDomainIs)`
+
+  `$d`
+
+  The first value in the list has the index number 0, the second has the index number 1, and so on.
+
+- Use the index number to specify the value to remove. For example, to remove the seventh value in the list, run the following commands:
+
+  `$d.RemoveAt(6)`
+
+  `Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfRecipientDomainIs $d`
+
+To empty the list, use the value $null for this parameter.
 
 ```yaml
 Type: Word[]
@@ -113,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-The ExceptIfSentTo parameter specifies an exception to Teams protection that looks for recipients of Teams messages. You can use any value that uniquely identifies the recipient. For example:
+The ExceptIfSentTo parameter specifies an exception to ZAP for Teams protection that looks for recipients of Teams messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 - Alias
@@ -122,7 +152,35 @@ The ExceptIfSentTo parameter specifies an exception to Teams protection that loo
 - Email address
 - GUID
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To replace all existing recipients with the values you specify, use the following syntax: `"User1","User2",..."UserN"`.
+
+To add recipients without affecting other existing values, use the following syntax:
+
+`$UsersAdd = Get-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" | select -Expand ExceptIfSentTo`
+
+`$UsersAdd += "User1","User2",..."UserN"`
+
+`Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfSentTo $UsersAdd`
+
+To remove recipients without affecting other existing values, use the following syntax:
+
+- Run the following commands to see the existing list of values in order:
+
+  `$x = Get-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule"`
+
+  `$u = [System.Collections.ArrayList]($x.ExceptIfSentTo)`
+
+  `$u`
+
+  The first value in the list has the index number 0, the second has the index number 1, and so on.
+
+- Use the index number to specify the value to remove. For example, to remove the seventh value in the list, run the following commands:
+
+  `$u.RemoveAt(6)`
+
+  `Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfSentTo $u`
+
+To empty the list, use the value $null for this parameter.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -138,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToMemberOf
-The ExceptIfSentToMemberOf parameter specifies an exception to Teams protection that looks for Teams messages sent to members of distribution groups or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
+The ExceptIfSentToMemberOf parameter specifies an exception to ZAP for Teams protection that looks for Teams messages sent to members of distribution groups or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 - Alias
@@ -147,9 +205,35 @@ The ExceptIfSentToMemberOf parameter specifies an exception to Teams protection 
 - Email address
 - GUID
 
-You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To add groups without affecting other existing values, use the following syntax:
 
-If you remove the group after you create the rule, no exception is made for Teams messages that are sent to members of the group.
+`$GroupsAdd = Get-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" | select -Expand ExceptIfSentToMemberOf`
+
+`$GroupsAdd += "Group1","Group2",..."GroupN"`
+
+`Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfSentToMemberOf $GroupsAdd`
+
+To remove groups without affecting other existing values, use the following syntax:
+
+- Run the following commands to see the existing list of values in order:
+
+  `$x = Get-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule"`
+
+  `$g = [System.Collections.ArrayList]($x.ExceptIfSentToMemberOf)`
+
+  `$g`
+
+  The first value in the list has the index number 0, the second has the index number 1, and so on.
+
+- Use the index number to specify the value to remove. For example, to remove the seventh value in the list, run the following commands:
+
+  `$g.RemoveAt(6)`
+
+  `Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfSentTo $g`
+
+If you remove the group after you create the rule, no exception is made for ZAP for Teams for messages that are sent to members of the group.
+
+To empty the list, use the value $null for this parameter.
 
 ```yaml
 Type: RecipientIdParameter[]

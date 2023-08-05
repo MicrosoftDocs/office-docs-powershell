@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-TeamsProtectionPolicy -Identity "Teams Protection Policy" -HighConfidencePhishQuarantineTag AdminOnlyWithNotifications
 ```
 
-This example changes the quarantine policy that's used for high confidence phishing detections in Teams messages.
+This example changes the quarantine policy that's used for high confidence phishing detections.
 
 ## PARAMETERS
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -HighConfidencePhishQuarantineTag
-The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy that's used on Teams messages that are quarantined as high confidence phishing. You can use any value that uniquely identifies the quarantine policy. For example:
+The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy that's used for messages that are quarantined as high confidence phishing by ZAP for Teams. You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -MalwareQuarantineTag
-The MalwareQuarantineTag parameter specifies the quarantine policy that's used on Teams messages that are quarantined as malware. You can use any value that uniquely identifies the quarantine policy. For example:
+The MalwareQuarantineTag parameter specifies the quarantine policy that's used for messages that are quarantined as malware by ZAP for Teams. You can use any value that uniquely identifies the quarantine policy. For example:
 
 - Name
 - Distinguished name (DN)
