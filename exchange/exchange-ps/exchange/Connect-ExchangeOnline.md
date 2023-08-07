@@ -53,6 +53,7 @@ Connect-ExchangeOnline
  [-ShowBanner]
  [-ShowProgress <Boolean>]
  [-SigningCertificate <X509Certificate2>]
+ [-SkipLoadingCmdletHelp]
  [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -663,6 +664,28 @@ To find the certificate, use the Get-PfxCertificate cmdlet in the Microsoft.Powe
 
 ```yaml
 Type: X509Certificate2
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingCmdletHelp
+**Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
+
+The SkipLoadingFormatData switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+
+When you use this switch, you don't get local help files for any cmdlet.
+
+This switch doesn't work with the UseRPSSession switch.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
