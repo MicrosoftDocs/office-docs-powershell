@@ -18,12 +18,7 @@ Creates new Call Queue in your Skype for Business Online organization.
 ## SYNTAX
 
 ```
-New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] 
-[-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] 
-[-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] 
-[-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] 
-[-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-User <List>] [-LanguageId <String>] [-LineUri <String>] [-OboResourceAccountIds <List>] [-OverflowDisconnectTextToSpeechPrompt <String>][-OverflowDisconnectAudioFilePrompt <Guid>] [-OverflowRedirectPersonTextToSpeechPrompt <String>][-OverflowRedirectPersonAudioFilePrompt <Guid>] [-OverflowRedirectVoiceAppTextToSpeechPrompt <String>] [-OverflowRedirectVoiceAppAudioFilePrompt <Guid>] [-OverflowRedirectPhoneNumberTextToSpeechPrompt <String>] [-OverflowRedirectPhoneNumberAudioFilePrompt <Guid>] [-OverflowRedirectVoicemailTextToSpeechPrompt <String>] [-OverflowRedirectVoicemailAudioFilePrompt <Guid>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-TimeoutDisconnectTextToSpeechPrompt <String>][-TimeoutDisconnectAudioFilePrompt <Guid>] [-TimeoutRedirectPersonTextToSpeechPrompt <String>] [-TimeoutRedirectPersonAudioFilePrompt <Guid>] [-TimeoutRedirectVoiceAppTextToSpeechPrompt <String>] [-TimeoutRedirectVoiceAppAudioFilePrompt <Guid>] [-TimeoutRedirectPhoneNumberTextToSpeechPrompt <String>][-TimeoutRedirectPhoneNumberAudioFilePrompt <Guid>] [-TimeoutRedirectVoicemailTextToSpeechPrompt <String>] [-TimeoutRedirectVoicemailAudioFilePrompt <Guid>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] 
-[-ChannelId <String>] [-ChannelUserObjectId <Guid>] [-AuthorizedUsers <List>] [<CommonParameters>]
+New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-NoAgentAction <Object>] [-NoAgentActionTarget <Guid>] [-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-User <List>] [-LanguageId <String>] [-LineUri <String>] [-OboResourceAccountIds <List>] [-OverflowDisconnectTextToSpeechPrompt <String>][-OverflowDisconnectAudioFilePrompt <Guid>] [-OverflowRedirectPersonTextToSpeechPrompt <String>][-OverflowRedirectPersonAudioFilePrompt <Guid>] [-OverflowRedirectVoiceAppTextToSpeechPrompt <String>] [-OverflowRedirectVoiceAppAudioFilePrompt <Guid>] [-OverflowRedirectPhoneNumberTextToSpeechPrompt <String>] [-OverflowRedirectPhoneNumberAudioFilePrompt <Guid>] [-OverflowRedirectVoicemailTextToSpeechPrompt <String>] [-OverflowRedirectVoicemailAudioFilePrompt <Guid>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-EnableOverflowSharedVoicemailSystemPromptSuppression <Boolean>] [-TimeoutDisconnectTextToSpeechPrompt <String>][-TimeoutDisconnectAudioFilePrompt <Guid>] [-TimeoutRedirectPersonTextToSpeechPrompt <String>] [-TimeoutRedirectPersonAudioFilePrompt <Guid>] [-TimeoutRedirectVoiceAppTextToSpeechPrompt <String>] [-TimeoutRedirectVoiceAppAudioFilePrompt <Guid>] [-TimeoutRedirectPhoneNumberTextToSpeechPrompt <String>] [-TimeoutRedirectPhoneNumberAudioFilePrompt <Guid>] [-TimeoutRedirectVoicemailTextToSpeechPrompt <String>] [-TimeoutRedirectVoicemailAudioFilePrompt <Guid>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] [-EnableTimeoutSharedVoicemailSystemPromptSuppression <Boolean>] [-NoAgentDisconnectTextToSpeechPrompt <String>][-NoAgentDisconnectAudioFilePrompt <Guid>] [-NoAgentRedirectPersonTextToSpeechPrompt <String>] [-NoAgentRedirectPersonAudioFilePrompt <Guid>] [-NoAgentRedirectVoiceAppTextToSpeechPrompt <String>] [-NoAgentRedirectVoiceAppAudioFilePrompt <Guid>] [-NoAgentRedirectPhoneNumberTextToSpeechPrompt <String>] [-NoAgentRedirectPhoneNumberAudioFilePrompt <Guid>] [-NoAgentRedirectVoicemailTextToSpeechPrompt <String>] [-NoAgentRedirectVoicemailAudioFilePrompt <Guid>] [-NoAgentSharedVoicemailTextToSpeechPrompt <String>] [-NoAgentSharedVoicemailAudioFilePrompt <Guid>] [-EnableNoAgentSharedVoicemailTranscription <Boolean>] [-EnableNoAgentSharedVoicemailSystemPromptSuppression <Boolean>] [-ChannelId <String>] [-ChannelUserObjectId <Guid>] [-AuthorizedUsers <List>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -52,6 +47,16 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -TimeoutRedirectPhoneNumberAudioFilePrompt
 > - -TimeoutRedirectVoicemailTextToSpeechPrompt
 > - -TimeoutRedirectVoicemailAudioFilePrompt
+> - -NoAgentDisconnectTextToSpeechPrompt
+> - -NoAgentDisconnectAudioFilePrompt
+> - -NoAgentRedirectPersonTextToSpeechPrompt
+> - -NoAgentRedirectPersonAudioFilePrompt
+> - -NoAgentRedirectVoiceAppTextToSpeechPrompt
+> - -NoAgentRedirectVoiceAppAudioFilePrompt
+> - -NoAgentRedirectPhoneNumberTextToSpeechPrompt
+> - -NoAgentRedirectPhoneNumberAudioFilePrompt
+> - -NoAgentRedirectVoicemailTextToSpeechPrompt
+> - -NoAgentRedirectVoicemailAudioFilePrompt
 
 ## EXAMPLES
 
@@ -137,8 +142,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MusicOnHoldAudioFileId
-The MusicOnHoldFileContent parameter represents music to play when callers are placed on hold. This is the unique identifier of the audio file. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
+### -Tenant
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -153,13 +158,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OboResourceAccountIds
-The OboResourceAccountIds parameter lets you add resource account with phone number to the Call Queue. The agents in the Call Queue will be able to make outbound calls using the phone number on the resource accounts.  This is a list of resource account GUIDs.
-
-Only Call Queue managed by a Teams Channel will be able to use this feature. For more information, please refer to [Manage your support Call Queue in Teams](https://support.microsoft.com/office/manage-your-support-call-queue-in-teams-9f07dabe-91c6-4a9b-a545-8ffdddd2504e).
+### -UseDefaultMusicOnHold
+The UseDefaultMusicOnHold parameter indicates that this Call Queue uses the default music on hold. This parameter cannot be specified together with MusicOnHoldAudioFileId.
 
 ```yaml
-Type: List
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WelcomeMusicAudioFileId
+The WelcomeMusicAudioFileId parameter represents the audio file to play when callers are connected with the Call Queue. This is the unique identifier of the audio file.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MusicOnHoldAudioFileId
+The MusicOnHoldAudioFileId parameter represents music to play when callers are placed on hold. This is the unique identifier of the audio file. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -221,24 +256,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RoutingMethod
-The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel. If routing method is set to RoundRobin, the agents will be called using Round Robin strategy so that all agents share the call-load equally. If routing method is set to LongestIdle, the agents will be called based on their idle time, i.e., the agent that has been idle for the longest period will be called.
-
-PARAMVALUE: Attendant | Serial | RoundRobin | LongestIdle
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: Attendant
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TimeoutAction
 The TimeoutAction parameter defines the action to take if the timeout threshold is reached. The TimeoutAction property must be set to one of the following values: Disconnect, Forward, Voicemail, and SharedVoicemail. The default value is Disconnect.
 
@@ -290,11 +307,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseDefaultMusicOnHold
-The UseDefaultMusicOnHold parameter indicates that this Call Queue uses the default music on hold. This parameter cannot be specified together with MusicOnHoldAudioFileId.
+### -NoAgentAction
+The NoAgentAction parameter defines the action to take if the no agents condition is reached. The NoAgentAction property must be set to one of the following values: Queue, Disconnect, Forward, Voicemail, and SharedVoicemail. The default value is Queue.
+
+PARAMVALUE: Queue | Disconnect | Forward | Voicemail | SharedVoicemail
 
 ```yaml
-Type: Boolean
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: Disconnect
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentActionTarget
+The NoAgentActionTarget represents the target of the no agent action. If the NoAgentAction is set to Forward, this parameter must be set to a GUID or a telephone number with a mandatory 'tel:' prefix. If the NoAgentAction is set to SharedVoicemail, this parameter must be set to a Microsoft 365 Group ID. Otherwise, this field is optional.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -306,18 +341,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WelcomeMusicAudioFileId
-The WelcomeMusicAudioFileId parameter represents the audio file to play when callers are connected with the Call Queue. This is the unique identifier of the audio file.
+### -RoutingMethod
+The RoutingMethod parameter defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel. If the routing method is set to RoundRobin, the agents will be called using the Round Robin strategy so that all agents share the call load equally. If the routing method is set to LongestIdle, the agents will be called based on their idle time, that is, the agent that has been idle for the longest period will be called.
+
+PARAMVALUE: Attendant | Serial | RoundRobin | LongestIdle
 
 ```yaml
-Type: Guid
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: Attendant
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -374,24 +411,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-This parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LanguageId
-The LanguageId parameter indicates the language that is used to play shared voicemail prompts. This parameter becomes a required parameter If either OverflowAction or TimeoutAction is set to SharedVoicemail.
+The LanguageId parameter indicates the language that is used to play shared voicemail prompts. This parameter becomes a required parameter if either OverflowAction or TimeoutAction is set to SharedVoicemail.
 
 You can query the supported languages using the Get-CsAutoAttendantSupportedLanguage cmdlet.
 
@@ -424,27 +445,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableOverflowSharedVoicemailTranscription
-The EnableOverflowSharedVoicemailTranscription parameter is used to turn on transcription for voicemails left by a caller on overflow. This parameter is only applicable when OverflowAction is set to SharedVoicemail.
+### -OboResourceAccountIds
+The OboResourceAccountIds parameter lets you add resource account with phone number to the Call Queue. The agents in the Call Queue will be able to make outbound calls using the phone number on the resource accounts.  This is a list of resource account GUIDs.
+
+Only Call Queue managed by a Teams Channel will be able to use this feature. For more information, refer to [Manage your support Call Queue in Teams](https://support.microsoft.com/office/manage-your-support-call-queue-in-teams-9f07dabe-91c6-4a9b-a545-8ffdddd2504e).
 
 ```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverflowDisconnectAudioFilePrompt
-The OverflowDisconnectAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being disconnected due to overflow.
-
-```yaml
-Type: Guid
+Type: List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -472,8 +479,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OverflowRedirectPersonAudioFilePrompt
-The OverflowRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
+### -OverflowDisconnectAudioFilePrompt
+The OverflowDisconnectAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being disconnected due to overflow.
 
 ```yaml
 Type: Guid
@@ -504,8 +511,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OverflowRedirectVoiceAppAudioFilePrompt
-The OverflowRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to overflow. 
+### -OverflowRedirectPersonAudioFilePrompt
+The OverflowRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
 
 ```yaml
 Type: Guid
@@ -536,8 +543,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OverflowRedirectPhoneNumberAudioFilePrompt
-The OverflowRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow. 
+### -OverflowRedirectVoiceAppAudioFilePrompt
+The OverflowRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to overflow. 
 
 ```yaml
 Type: Guid
@@ -568,8 +575,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OverflowRedirectVoicemailAudioFilePrompt
-The OverflowRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
+### -OverflowRedirectPhoneNumberAudioFilePrompt
+The OverflowRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to overflow. 
 
 ```yaml
 Type: Guid
@@ -589,6 +596,22 @@ The OverflowRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverflowRedirectVoicemailAudioFilePrompt
+The OverflowRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -632,8 +655,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableTimeoutSharedVoicemailTranscription
-The EnableTimeoutSharedVoicemailTranscription parameter is used to turn on transcription for voicemails left by a caller on timeout. This parameter is only applicable when TimeoutAction is set to SharedVoicemail.
+### -EnableOverflowSharedVoicemailTranscription
+The EnableOverflowSharedVoicemailTranscription parameter is used to turn on transcription for voicemails left by a caller on overflow. This parameter is only applicable when OverflowAction is set to SharedVoicemail.
 
 ```yaml
 Type: Boolean
@@ -648,18 +671,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TimeoutDisconnectAudioFilePrompt
-The TimeoutDisconnectAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being disconnected due to timeout.
+### -EnableOverflowSharedVoicemailSystemPromptSuppression
+The EnableOverflowSharedVoicemailSystemPromptSuppress parameter is used to turn off the default voicemail system prompts.  This parameter is only applicable when OverflowAction is set to SharedVoicemail.
 
 ```yaml
-Type: Guid
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -680,8 +703,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TimeoutRedirectPersonAudioFilePrompt
-The TimeoutRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to timeout. 
+### -TimeoutDisconnectAudioFilePrompt
+The TimeoutDisconnectAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being disconnected due to timeout.
 
 ```yaml
 Type: Guid
@@ -712,8 +735,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TimeoutRedirectVoiceAppAudioFilePrompt
-The TimeoutRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to timeout. 
+### -TimeoutRedirectPersonAudioFilePrompt
+The TimeoutRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to timeout. 
 
 ```yaml
 Type: Guid
@@ -744,8 +767,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TimeoutRedirectPhoneNumberAudioFilePrompt
-The TimeoutRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to timeout. 
+### -TimeoutRedirectVoiceAppAudioFilePrompt
+The TimeoutRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to timeout. 
 
 ```yaml
 Type: Guid
@@ -776,8 +799,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TimeoutRedirectVoicemailAudioFilePrompt
-The TimeoutRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to timeout. 
+### -TimeoutRedirectPhoneNumberAudioFilePrompt
+The TimeoutRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to timeout. 
 
 ```yaml
 Type: Guid
@@ -797,6 +820,22 @@ The TimeoutRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-S
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutRedirectVoicemailAudioFilePrompt
+The TimeoutRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to timeout. 
+
+```yaml
+Type: Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -836,6 +875,262 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTimeoutSharedVoicemailTranscription
+The EnableTimeoutSharedVoicemailTranscription parameter is used to turn on transcription for voicemails left by a caller on timeout. This parameter is only applicable when TimeoutAction is set to SharedVoicemail.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTimeoutSharedVoicemailSystemPromptSuppression
+The EnableTimeoutSharedVoicemailSystemPromptSuppress parameter is used to turn off the default voicemail system prompts. This parameter is only applicable when OverflowAction is set to SharedVoicemail.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentDisconnectTextToSpeechPrompt
+The NoAgentDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being disconnected due to no agents. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentDisconnectAudioFilePrompt
+The NoAgentDisconnectAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being disconnected due to no agents.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentRedirectPersonTextToSpeechPrompt
+The NoAgentRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to no agents. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentRedirectPersonAudioFilePrompt
+The NoAgentRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to no agents. 
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentRedirectVoiceAppTextToSpeechPrompt
+The NoAgentRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a voice application due to no agents. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentRedirectVoiceAppAudioFilePrompt
+The NoAgentRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to no agents. 
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentRedirectPhoneNumberTextToSpeechPrompt
+The NoAgentRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to an external PSTN phone number due to no agents. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentsRedirectPhoneNumberAudioFilePrompt
+The NoAgentRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to no agents. 
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentRedirectVoicemailTextToSpeechPrompt
+The NoAgentRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to no agent. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentRedirectVoicemailAudioFilePrompt
+The NoAgentRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to no agent. 
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentSharedVoicemailTextToSpeechPrompt
+The NoAgentSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is to be played as a greeting to the caller when transferred to shared voicemail on no agents. This parameter becomes a required parameter when NoAgentAction is SharedVoicemail and NoAgentSharedVoicemailAudioFilePrompt is null.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentSharedVoicemailAudioFilePrompt
+The NoAgentSharedVoicemailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is to be played as a greeting to the caller when transferred to shared voicemail on no agents. This parameter becomes a required parameter when NoAgentAction is SharedVoicemail and NoAgentSharedVoicemailTextToSpeechPrompt is null.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNoAgentSharedVoicemailTranscription
+The EnableNoAgentSharedVoicemailTranscription parameter is used to turn on transcription for voicemails left by a caller on no agents. This parameter is only applicable when NoAgentAction is set to SharedVoicemail.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNoAgentSharedVoicemailSystemPromptSuppression
+The EnableNoAgentSharedVoicemailSystemPromptSuppress parameter is used to turn off the default voicemail system prompts. This parameter is only applicable when NoAgentAction is set to SharedVoicemail.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
