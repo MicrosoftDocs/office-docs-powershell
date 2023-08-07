@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
+ [-AutoApprovalPeriod <System.Int32>]
  [-Comment <String>]
  [-ComplianceTagForNextStage <String>]
  [-Confirm]
@@ -68,6 +69,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AutoApprovalPeriod
+{{ Fill AutoApprovalPeriod Description }}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

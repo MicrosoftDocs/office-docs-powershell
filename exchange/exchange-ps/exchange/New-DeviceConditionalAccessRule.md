@@ -862,7 +862,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoviesRating
-The MoviesRating parameter species the maximum or most restrictive rating of movies that are allowed on devices. You specify the country rating system to use with the RegionRatings parameter.
+The MoviesRating parameter species the maximum or most restrictive rating of movies that are allowed on devices. You specify the country/region rating system to use with the RegionRatings parameter.
 
 Valid values for the MoviesRating parameter are:
 
@@ -1177,7 +1177,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegionRatings
-The RegionRatings parameter specifies the rating system (country) to use for movie and television ratings with the MoviesRating and TVShowsRating parameters.
+The RegionRatings parameter specifies the rating system (country/region) to use for movie and television ratings with the MoviesRating and TVShowsRating parameters.
 
 Valid values for the RegionRating parameter are:
 
@@ -1272,7 +1272,7 @@ Accept wildcard characters: False
 ```
 
 ### -TVShowsRating
-The TVShowsRating parameter species the maximum or most restrictive rating of television shows that are allowed on devices. You specify the country rating system to use with the RegionRatings parameter.
+The TVShowsRating parameter species the maximum or most restrictive rating of television shows that are allowed on devices. You specify the country/region rating system to use with the RegionRatings parameter.
 
 Valid values for the TVShowsRating parameter are:
 

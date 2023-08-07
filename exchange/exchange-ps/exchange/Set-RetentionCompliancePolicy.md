@@ -53,6 +53,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-PolicyTemplateInfo <PswsHashtable>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -621,6 +622,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity, TeamLocation
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 

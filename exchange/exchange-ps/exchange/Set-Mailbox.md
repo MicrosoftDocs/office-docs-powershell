@@ -228,6 +228,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -296,8 +297,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -360,6 +359,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -428,8 +428,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -492,6 +490,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -560,8 +559,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -624,6 +621,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -692,8 +690,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -755,6 +751,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
  [-CustomAttribute10 <String>]
@@ -821,8 +818,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -885,6 +880,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -952,8 +948,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -1016,6 +1010,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -1084,8 +1079,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -1959,6 +1952,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearThrottlingPolicyAssignment
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearThrottlingPolicyAssignment Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -4159,42 +4170,6 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PitrCopyIntervalInSeconds
-This parameter is available only in the cloud-based service.
-
-{{ Fill PitrCopyIntervalInSeconds Description }}
-
-```yaml
-Type: Int16
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PitrEnabled
-This parameter is available only in the cloud-based service.
-
-{{ Fill PitrEnabled Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named

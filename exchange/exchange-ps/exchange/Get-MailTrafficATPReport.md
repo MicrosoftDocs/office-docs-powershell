@@ -151,7 +151,7 @@ To specify a date/time value for this parameter, use either of the following opt
 - Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
-If you use the EndDate parameter, you must also use the StartDate parameter.
+If you use this parameter, you also need to use the StartDate parameter.
 
 ```yaml
 Type: DateTime
@@ -295,7 +295,7 @@ To specify a date/time value for this parameter, use either of the following opt
 - Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
-If you use the StartDate parameter, you must also use the EndDate parameter.
+If you use this parameter, you also need to use the EndDate parameter.
 
 ```yaml
 Type: DateTime

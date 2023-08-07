@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -CountryRegionId
-The CountryRegionId parameter specifies the country that your mobile phone is registered in. Although this parameter accepts any valid ISO 3166-1 two-letter country code value (for example, AU for Australia), the following values correspond to the country selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
+The CountryRegionId parameter specifies the country/region that your mobile phone is registered in. Although this parameter accepts any valid ISO 3166-1 two-letter country code value (for example, AU for Australia), the following values correspond to the country/region selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
 
 - US
 - CA
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -MobileOperatorId
-The MobileOperatorId parameter specifies the mobile operator (carrier) for your phone. Although this parameter accepts any random number, the following values correspond to the country and mobile operator selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
+The MobileOperatorId parameter specifies the mobile operator (carrier) for your phone. Although this parameter accepts any random number, the following values correspond to the country/region and mobile operator selections that are available in the text messaging settings in Outlook on the web (formerly known as Outlook Web App):
 
 United States:
 

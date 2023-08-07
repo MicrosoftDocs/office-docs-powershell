@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-AdaptiveScope
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in the cloud-based service.
 
 Use the Get-AdaptiveScope cmdlet to view adaptive scopes in your organization. Adaptive scopes (or static scopes) are used in retention policies and retention label policies.
 
@@ -21,7 +21,10 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-AdaptiveScope [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+Get-AdaptiveScope [[-Identity] <ComplianceRuleIdParameter>]
+ [-AdministrativeUnits <MultiValuedProperty>]
+ [-LocationTypes <MultiValuedProperty>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,6 +64,38 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -AdministrativeUnits
+{{ Fill AdministrativeUnits Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocationTypes
+{{ Fill LocationTypes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

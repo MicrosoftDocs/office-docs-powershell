@@ -4132,7 +4132,11 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is only available on Mailbox servers.
 
-The RejectMessageReasonText parameter specifies the explanation text that's used when the rule rejects messages. The maximum number of characters is 1024. If the value contains spaces, enclose the value in quotation marks (").
+The RejectMessageReasonText parameter specifies the explanation text that's used when the rule rejects messages. If the value contains spaces, enclose the value in quotation marks (").
+
+In Exchange 2013 or later, the maximum number of characters is 256.
+
+In the cloud-based service, the maximum number of characters is 1024.
 
 You can use this parameter with the NotifySender parameter for a custom non-delivery report (also known as an NDR or bounce message).
 
