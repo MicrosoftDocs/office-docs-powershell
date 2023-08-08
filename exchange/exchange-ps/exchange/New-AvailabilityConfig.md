@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AvailabilityConfig -OrgWideAccount <SecurityPrincipalIdParameter>
+ [-AllowedTenantIds <MultiValuedProperty>]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -68,6 +69,22 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTenantIds
+{{ Fill AllowedTenantIds Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

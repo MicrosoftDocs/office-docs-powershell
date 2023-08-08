@@ -34,6 +34,7 @@ Get-UserPhoto [-Anr <String>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -51,6 +52,7 @@ Get-UserPhoto [[-Identity] <MailboxIdParameter>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-SortBy <String>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -329,6 +331,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

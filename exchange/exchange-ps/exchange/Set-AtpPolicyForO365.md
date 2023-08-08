@@ -27,7 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
  [-AllowSafeDocsOpen <Boolean>]
- [-BlockUrls <MultiValuedProperty>]
  [-Confirm]
  [-EnableATPForSPOTeamsODB <Boolean>]
  [-EnableSafeDocs <Boolean>]
@@ -81,24 +80,6 @@ This parameter is meaningful only when the EnableSafeDocs parameter value is $tr
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BlockUrls
-This parameter has been deprecated and is no longer used.
-
-The functionality of this parameter has been replaced by block entries for URLs in the Tenant Allow/Block List using the \*-TenantAllowBlockListItems cmdlets.
-
-```yaml
-Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

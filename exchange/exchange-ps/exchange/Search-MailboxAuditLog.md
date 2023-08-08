@@ -29,6 +29,7 @@ Search-MailboxAuditLog [[-Identity] <MailboxIdParameter>]
  [-ExternalAccess <Boolean>]
  [-GroupMailbox]
  [-HasAttachments <Boolean>]
+ [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -44,6 +45,7 @@ Search-MailboxAuditLog [-Mailboxes <MultiValuedProperty>]
  [-ExternalAccess <Boolean>]
  [-GroupMailbox]
  [-HasAttachments <Boolean>]
+ [-IncludeInactiveMailbox]
  [-LogonTypes <MultiValuedProperty>]
  [-Operations <MultiValuedProperty>]
  [-ResultSize <Int32>]
@@ -195,6 +197,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeInactiveMailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeInactiveMailbox Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

@@ -53,6 +53,7 @@ Connect-ExchangeOnline
  [-ShowBanner]
  [-ShowProgress <Boolean>]
  [-SigningCertificate <X509Certificate2>]
+ [-SkipLoadingCmdletHelp]
  [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -62,7 +63,7 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-This cmdlet creates a PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for REST API-backed cmdlets in the Exchange Online PowerShell V3 module and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
+This cmdlet creates a PowerShell connection to your Exchange Online organization.
 
 Connect commands will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 
@@ -73,30 +74,23 @@ Connect commands will likely fail if the profile path of the account that you us
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 ```
 
-This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). We aren't using the UseRPSSession switch, so the connection uses REST and doesn't require Basic authentication to be enabled in WinRM on the local computer.
+This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). The connection uses REST API mode and doesn't require Basic authentication to be enabled in WinRM on the local computer.
 
 ### Example 2
-```powershell
-Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -UseRPSSession
-```
-
-This example connects to Exchange Online PowerShell using modern authentication, with or without MFA. We're using the UseRPSSession switch, so the connection requires Basic authentication to be enabled in WinRM on the local computer.
-
-### Example 3
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
 This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
-### Example 4
+### Example 3
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
 This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
-### Example 5
+### Example 4
 ```powershell
 Connect-ExchangeOnline -Device
 ```
@@ -117,7 +111,7 @@ In PowerShell 7.0.3 or later using version 2.0.4 or later of the module, this ex
 ### -ConnectionUri
 **Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
-The ConnectionUri parameter specifies the connection endpoint for the remote Exchange Online PowerShell session. The following Exchange Online PowerShell environments and related values are supported:
+The ConnectionUri parameter specifies the connection endpoint for the PowerShell session. The following Exchange Online PowerShell environments and related values are supported:
 
 - Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://outlook.office365.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter.
 - Office 365 Germany: `https://outlook.office.de/PowerShell-LiveID`
@@ -187,6 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
+**Note**: This parameter doesn't work in REST API connections.
+
 The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. This parameter works only if you also use the UseRPSSession switch in the same command.
 
 Store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$PSOptions = New-PSSessionOption <Settings>`), and use the variable name as the value for this parameter (for example, `$PSOptions`).
@@ -679,10 +675,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipLoadingCmdletHelp
+**Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
+
+The SkipLoadingFormatData switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+
+When you use this switch, you don't get local help files for any cmdlet.
+
+This switch doesn't work with the UseRPSSession switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipLoadingFormatData
 The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
+
+Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service.
 
 This switch does not work with the UseRPSSession switch.
 
@@ -758,11 +778,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
+**Note**: Remote PowerShell connections to Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692). 
+
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
 This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Turn on Basic authentication in WinRM](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
 
-If you don't use this switch, Basic authentication in WinRM is not required.
+If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
 
 ```yaml
 Type: SwitchParameter

@@ -1,29 +1,28 @@
 ---
-external help file: Microsoft.Exchange.Management-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-clutter
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+online version: https://learn.microsoft.com/powershell/module/exchange/get-etrlimits
 applicable: Exchange Online, Exchange Online Protection
-title: Get-Clutter
+title: Get-EtrLimits
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-Clutter
+
+# Get-EtrLimits
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-Clutter cmdlet to view Clutter settings for mailboxes in your organization.
+Use the Get-EtrLimits cmdlet to show information about [mail flow rule (also known as transport rule) limits in Exchange Online](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits), as well the current usage and the largest rule IDs in terms of size and regular expression character count.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-Clutter -Identity <MailboxIdParameter>
- [-UseCustomRouting]
- [<CommonParameters>]
+Get-EtrLimits [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,55 +32,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-Clutter -Identity "Constancia Pena"
+Get-EtrLimits
 ```
 
-This example returns the Clutter settings for the user Constancia Pena.
+This example returns information about the number and size of mail flow rules in the organization, and the organizational limits for mail flow rules.
 
 ## PARAMETERS
-
-### -Identity
-The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: MailboxIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UseCustomRouting
-{{ Fill UseCustomRouting Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

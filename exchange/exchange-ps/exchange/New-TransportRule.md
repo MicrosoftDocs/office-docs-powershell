@@ -910,7 +910,7 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is only available on Mailbox servers.
 
-The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
+The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -1770,7 +1770,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is only available on Mailbox servers.
 
-The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
+The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -4132,7 +4132,11 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is only available on Mailbox servers.
 
-The RejectMessageReasonText parameter specifies the explanation text that's used when the rule rejects messages. The maximum number of characters is 1024. If the value contains spaces, enclose the value in quotation marks (").
+The RejectMessageReasonText parameter specifies the explanation text that's used when the rule rejects messages. If the value contains spaces, enclose the value in quotation marks (").
+
+In Exchange 2013 or later, the maximum number of characters is 256.
+
+In the cloud-based service, the maximum number of characters is 1024.
 
 You can use this parameter with the NotifySender parameter for a custom non-delivery report (also known as an NDR or bounce message).
 

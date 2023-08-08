@@ -37,6 +37,7 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-EnableSpoAipMigration <Boolean>]
  [-EndpointDlpGlobalSettings <PswsHashtable[]>]
  [-EndpointDlpGlobalSettingsPsws <PswsHashtable[]>]
+ [-ExtendTeamsDlpPoliciesToSharePointOneDrive <Boolean>]
  [-InformationBarrierMode <InformationBarrierMode>]
  [-InformationBarrierPeopleSearchRestriction <InformationBarrierPeopleSearchRestriction>]
  [-OnPremisesWorkload <Workload>]
@@ -345,6 +346,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExtendTeamsDlpPoliciesToSharePointOneDrive
+{{ Fill ExtendTeamsDlpPoliciesToSharePointOneDrive Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

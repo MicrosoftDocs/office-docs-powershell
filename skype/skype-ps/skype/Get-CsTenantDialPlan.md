@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantdialplan
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,12 +19,12 @@ Use the Get-CsTenantDialPlan cmdlet to retrieve a tenant dial plan.
 
 ### Identity (Default)
 ```
-Get-CsTenantDialPlan [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+Get-CsTenantDialPlan [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTenantDialPlan [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTenantDialPlan [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,15 +44,12 @@ Get-CsTenantDialPlan
 
 This example retrieves all existing tenant dial plans.
 
-
-
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsTenantDialPlan -Identity Vt1TenantDialPlan2
 ```
 
 This example retrieves the tenant dial plan that has an identity of Vt1TenantDialplan2.
-
 
 ## PARAMETERS
 
@@ -61,9 +58,9 @@ The Filter parameter allows you to limit the number of results based on filters 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: (Filter)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -76,47 +73,13 @@ Accept wildcard characters: False
 The Identity parameter is a unique identifier that designates the name of the tenant dial plan to retrieve.
 
 ```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
+Type: String
+Parameter Sets: (Identity)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocalStore
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -132,3 +95,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Grant-CsTenantDialPlan](Grant-CsTenantDialPlan.md)
+
+[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
+
+[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
+
+[Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)

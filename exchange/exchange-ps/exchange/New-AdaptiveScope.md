@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Default
 ```
 New-AdaptiveScope -Name <String> -FilterConditions <PswsHashtable> -LocationType <DynamicBoundaryLocationType>
+ [-AdministrativeUnit <Guid>]
  [-Comment <String>]
  [<CommonParameters>]
 ```
@@ -30,6 +31,7 @@ New-AdaptiveScope -Name <String> -FilterConditions <PswsHashtable> -LocationType
 ### AdaptiveScopeRawQuery
 ```
 New-AdaptiveScope -Name <String> -LocationType <DynamicBoundaryLocationType> -RawQuery <String>
+ [-AdministrativeUnit <Guid>]
  [-Comment <String>]
  [<CommonParameters>]
 ```
@@ -123,6 +125,22 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdministrativeUnit
+{{ Fill AdministrativeUnit Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
