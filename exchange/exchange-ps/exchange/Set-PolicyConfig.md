@@ -374,13 +374,15 @@ Accept wildcard characters: False
 ```
 
 ### -InformationBarrierMode
-{{ Fill InformationBarrierMode Description }}
+The InformationBarrierMode parameter specifies the mode that controls total number of segments and how many segments can a user be part of. Valid values are:
+- SingleSegment – Users in your organization can have 5000 segments but can only be assigned to one segment.
+- MultiSegment – Users in your organization can have 5000 segments and can be assigned up to 10 segments. Learn more [here](https://learn.microsoft.com/purview/information-barriers-multi-segment).
 
 ```yaml
 Type: InformationBarrierMode
 Parameter Sets: (All)
 Aliases:
-Accepted values: Legacy, SingleSegment, MultiSegment
+Accepted values: SingleSegment, MultiSegment
 Applicable: Security & Compliance
 
 Required: False
