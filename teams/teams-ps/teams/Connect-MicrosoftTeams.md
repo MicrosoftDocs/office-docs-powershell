@@ -70,7 +70,7 @@ Connect-MicrosoftTeams
 ## DESCRIPTION
 The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
 
-**Note**: With versions 4.x.x or later, enablement of basic authentication is not needed anymore in commercial, GCC, GCC High & DoD environments. 
+**Note**: With versions 4.x.x or later, enablement of basic authentication is not needed anymore in commercial, GCC, GCC High, and DoD environments. 
 
 ## EXAMPLES
 
