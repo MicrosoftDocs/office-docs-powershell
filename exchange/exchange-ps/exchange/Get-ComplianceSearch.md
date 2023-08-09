@@ -75,6 +75,8 @@ To improve the performance of this cmdlet, some compliance search properties are
 
 To view these properties, you need to use the Identity parameter in the command.
 
+**Note**: The NumBindings property includes the primary mailbox, the main archive, and any additional archives for users included in the search. NumBindings is not the number of users included in the search, because each included user could have or not have a combination of a primary mailbox, a main archive, and additional archives.
+
 ```yaml
 Type: ComplianceSearchIdParameter
 Parameter Sets: (All)
