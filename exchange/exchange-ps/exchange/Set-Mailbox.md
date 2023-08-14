@@ -1963,7 +1963,9 @@ Accept wildcard characters: False
 ### -ClearThrottlingPolicyAssignment
 This parameter is available only in the cloud-based service.
 
-{{ Fill ClearThrottlingPolicyAssignment Description }}
+The ClearThrottlingPolicyAssignment switch specifies whether to clear any throttling policy assignments for the mailbox. You don't need to specify a value with this switch.
+
+Admins can contact Microsoft Support to assign a throttling policy to a mailbox, which changes the default throttling limits for various protocols. To revert those changes, use this switch.
 
 ```yaml
 Type: SwitchParameter
