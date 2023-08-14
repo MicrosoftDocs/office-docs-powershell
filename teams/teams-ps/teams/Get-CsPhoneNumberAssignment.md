@@ -21,7 +21,7 @@ This cmdlet displays information about one or more phone numbers.
 ```powershell
 Get-CsPhoneNumberAssignment [-ActivationState <string>] [-AssignedPstnTargetId <string>] [-AssignmentCategory <string>]
  [-CapabilitiesContain <string>] [-CivicAddressId <string>] [-IsoCountryCode <string>]
- [-LocationId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>]
+ [-LocationId <string>] [-NetworkSiteId <string>] [-NumberType <string>] [-PstnAssignmentStatus <string>] [-Skip <int>] [-TelephoneNumber <string>]
  [-TelephoneNumberContain <string>] [-TelephoneNumberGreaterThan <string>] [-TelephoneNumberLessThan <string>]
  [-TelephoneNumberStartsWith <string>] [-Top <int>] [<CommonParameters>]
 ```
@@ -52,6 +52,7 @@ IsoCountryCode          : US
 IsoSubdivision          : Nebraska
 LocationId              : 407c17ae-8c41-431e-894a-38787c682f68
 LocationUpdateSupported : True
+NetworkSiteId           :
 PortInOrderStatus       : 
 PstnAssignmentStatus    : UserAssigned
 PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
@@ -76,6 +77,7 @@ IsoCountryCode          :
 IsoSubdivision          : 
 LocationId              : 00000000-0000-0000-0000-000000000000
 LocationUpdateSupported : True
+NetworkSiteId           :
 PortInOrderStatus       : 
 PstnAssignmentStatus    : UserAssigned
 PstnPartnerId           : 
@@ -223,6 +225,21 @@ Accept wildcard characters: False
 
 ### -LocationId
 Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](/powershell/module/skype/get-csonlinelislocation).
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams
+
+Required: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkSiteId
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.String
@@ -414,6 +431,9 @@ The ID of the Location assigned to the phone number.
 ### LocationUpdateSupported
 Boolean stating if updating of the location assigned to the phone number is allowed.
 
+### NetworkSiteId
+This parameter is reserved for internal Microsoft use.
+
 ### NumberType
 The type of the phone number.
 
@@ -435,7 +455,7 @@ The phone number. The number is always displayed with prefixed "+", even if it w
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview.
+The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0.
 
 The cmdlet is only available in commercial and GCC cloud instances.
 
