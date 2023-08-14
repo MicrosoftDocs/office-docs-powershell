@@ -33,6 +33,8 @@ Returned results are sorted by TelephoneNumber in ascending order.
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
+By default, a maximum of 500 results are returned.
+
 ## EXAMPLES
 
 ### Example 1
@@ -124,6 +126,12 @@ This example returns the number of Calling Plan subscriber phone numbers that ar
 (Get-CsPhoneNumberAssignment | Where-Object {!$_.NumberType.Contains('DirectRouting') -and $_.Capability.Contains('VoiceApplicationAssignment') -and $_.Capability.Contains('ConferenceAssignment')}).Count
 ```
 This example returns the number of Calling Plan or Operator Connect service phone numbers that can be assigned to voice applications and conference bridges.
+
+### Example 10
+```powershell
+Get-CsPhoneNumberAssignment -Top ([int]::MaxValue)
+```
+This example returns all phone numbers.
 
 ## PARAMETERS
 
