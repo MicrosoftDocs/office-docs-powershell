@@ -405,7 +405,7 @@ The steps are:
 1. [(Optional) Create a user-assigned managed identity](#step-1-create-a-user-assigned-managed-identity)
 2. [(Optional) Create a resource with user-assigned managed identity](#step-2-create-a-resource-with-user-assigned-managed-identity)
 3. [Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable)
-4. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-4-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
+4. [Add the Exchange Online PowerShell module to the managed identity](#step-4-add-the-exchange-online-powershell-module-to-the-managed-identity)
 5. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-5-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
 6. [Assign Azure AD roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity)
 

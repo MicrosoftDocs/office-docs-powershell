@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-EventsFromEmailConfiguration
 
 ## SYNOPSIS
-This cmdlet is only available in the cloud-based service.
+This cmdlet is available only in the cloud-based service.
 
 Use the Get-EventsFromEmailConfiguration cmdlet to view the events from email settings on a mailbox. These settings define whether Outlook or Outlook on the web (formerly known as Outlook Web App) automatically discovers events from email messages and adds them to the user's calendar.
 

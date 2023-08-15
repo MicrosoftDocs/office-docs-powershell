@@ -237,7 +237,7 @@ The ExchangeArchiveFormat parameter specifies how to export Exchange search resu
 - SingleFolderPst: One PST file with a single root folder for the entire export.
 - IndividualMessage: Export each message as an .msg message file. This is the default value.
 - PerUserZip: One ZIP file for each mailbox. Each ZIP file contains the exported .msg message files from the mailbox.
-- SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes. This output setting is only available in PowerShell.
+- SingleZip: One ZIP file for all mailboxes. The ZIP file contains all exported .msg message files from all mailboxes. This output setting is available only in PowerShell.
 
 To specify the format for SharePoint and OneDrive search results, use the SharePointArchiveFormat parameter.
 
@@ -643,7 +643,7 @@ The SharePointArchiveFormat parameter specifies how to export SharePoint and One
 
 - IndividualMessage: Export the files uncompressed. This is the default value.
 - PerUserZip: One ZIP file for each user. Each ZIP file contains the exported files for the user.
-- SingleZip: One ZIP file for all users. The ZIP file contains all exported files from all users. This output setting is only available in PowerShell.
+- SingleZip: One ZIP file for all users. The ZIP file contains all exported files from all users. This output setting is available only in PowerShell.
 
 To specify the format for Exchange search results, use the ExchangeArchiveFormat parameter.
 
