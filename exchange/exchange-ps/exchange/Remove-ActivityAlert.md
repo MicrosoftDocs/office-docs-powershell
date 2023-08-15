@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-ActivityAlert cmdlet to remove activity alerts from the Microsoft 365 Defender portal or the Microsoft Purview compliance portal.
+**Note**: Activity alerts have been effectively replaced by alert policies and the corresponding **\*-ProtectionAlert** cmdlets. For more information about alert policies, see [Alert policies in Microsoft 365](https://learn.microsoft.com/purview/alert-policies).
+
+Use the Remove-ActivityAlert cmdlet to remove activity alerts.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
