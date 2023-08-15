@@ -14,6 +14,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
+**Note**: This parameter will be deprecated in Exchange Online PowerShell. For replacement functionality using a PowerShell script, see <link>.
+
 Use the Import-TransportRuleCollection cmdlet to import a transport rule collection. You can import a rule collection you previously exported as a backup, or import rules that you've exported from an older version of Exchange.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
