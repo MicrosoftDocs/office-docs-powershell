@@ -79,7 +79,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-DlpCompliancePolicy -Identity "Main PII" -RemoveExchangeLocation $_}`.
 
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocation
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The AddEndpointDLPLocation parameter specifies the user accounts to add to the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddEndpointDlpLocationException
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The AddEndpointDlpLocationException parameter specifies the user accounts to add to the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You identify the account by name or email address.
 
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddThirdPartyAppDlpLocation
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The AddThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to add to the list of included apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 
@@ -452,7 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddThirdPartyAppDlpLocationException
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The AddThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps to add to the list of excluded apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 
@@ -764,7 +764,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocation
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of included accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
 
@@ -786,7 +786,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEndpointDlpLocationException
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The RemoveEndpointDlpLocation parameter specifies the user accounts to remove from the list of excluded accounts for Endpoint DLP if you used the value All for the EndpointDLPLocation parameter. You specify the account by name or email address.
 
@@ -1022,7 +1022,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveThirdPartyAppDlpLocation
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The RemoveThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to remove from the list of included apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 
@@ -1044,7 +1044,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveThirdPartyAppDlpLocationException
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The RemoveThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps tp remove from the list of excluded apps if you used the value All for the ThirdPartyAppDlpLocation parameter.
 

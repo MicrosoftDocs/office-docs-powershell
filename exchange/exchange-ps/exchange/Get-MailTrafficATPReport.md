@@ -190,7 +190,7 @@ The EventType parameter filters the report by the event type. Valid values are:
 - URL detonation reputation
 - URL malicious reputation
 
-**Note**: Some values correspond to features that are only available in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
+**Note**: Some values correspond to features that are available only in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

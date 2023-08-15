@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-ActivityAlert cmdlet to create activity alerts in the Microsoft 365 Defender portal or the Microsoft Purview compliance portal. Activity alerts send you email notifications when users perform specific activities in Microsoft 365.
+**Note**: Activity alerts have been effectively replaced by alert policies and the corresponding **\*-ProtectionAlert** cmdlets. For more information about alert policies, see [Alert policies in Microsoft 365](https://learn.microsoft.com/purview/alert-policies).
+
+Use the New-ActivityAlert cmdlet to create activity alerts. Activity alerts send email notifications when users perform specific activities in Microsoft 365.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -73,7 +75,7 @@ New-ActivityAlert -Name <String> -NotifyUser <MultiValuedProperty> -Operation <M
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

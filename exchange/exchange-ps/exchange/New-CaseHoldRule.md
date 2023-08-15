@@ -33,7 +33,7 @@ New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter>
 ## DESCRIPTION
 You need to add the case hold rule to an existing case hold policy using the Policy parameter. Only one rule can be added to each case hold policy.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
