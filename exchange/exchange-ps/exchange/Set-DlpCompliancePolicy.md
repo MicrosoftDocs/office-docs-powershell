@@ -156,7 +156,7 @@ The AddEndpointDLPLocation parameter specifies the user accounts to add to the l
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -178,7 +178,7 @@ The AddEndpointDlpLocationException parameter specifies the user accounts to add
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -270,7 +270,7 @@ The AddOnPremisesScannerDlpLocation parameter specifies the on-premises file sha
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/purview/dlp-on-premises-scanner-learn).
 
 ```yaml
 Type: MultiValuedProperty
@@ -290,7 +290,7 @@ The AddOnPremisesScannerDlpLocationExclusion parameter specifies the on-premises
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/purview/dlp-on-premises-scanner-learn).
 
 ```yaml
 Type: MultiValuedProperty
@@ -436,7 +436,7 @@ The AddThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/purview/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty
@@ -458,7 +458,7 @@ The AddThirdPartyAppDlpLocationException parameter specifies the non-Microsoft c
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/purview/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty
@@ -724,7 +724,7 @@ Accept wildcard characters: False
 ### -PolicyTemplateInfo
 The PolicyTemplateInfo specifies the built-in or custom DLP policy templates to use in the DLP policy.
 
-For more information about DLP policy templates, see [What the DLP policy templates include](https://learn.microsoft.com/microsoft-365/compliance/what-the-dlp-policy-templates-include).
+For more information about DLP policy templates, see [What the DLP policy templates include](https://learn.microsoft.com/purview/what-the-dlp-policy-templates-include).
 
 ```yaml
 Type: PswsHashtable
@@ -770,7 +770,7 @@ The RemoveEndpointDlpLocation parameter specifies the user accounts to remove fr
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -792,7 +792,7 @@ The RemoveEndpointDlpLocation parameter specifies the user accounts to remove fr
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: MultiValuedProperty
@@ -866,7 +866,7 @@ The RemoveOnPremisesScannerDlpLocation parameter specifies the on-premises file 
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/purview/dlp-on-premises-scanner-learn).
 
 ```yaml
 Type: MultiValuedProperty
@@ -886,7 +886,7 @@ The RemoveOnPremisesScannerDlpLocationException parameter specifies the on-premi
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/microsoft-365/compliance/dlp-on-premises-scanner-learn).
+For more information about the DLP on-premises scanner, see [Learn about the data loss prevention on-premises scanner](https://learn.microsoft.com/purview/dlp-on-premises-scanner-learn).
 
 ```yaml
 Type: MultiValuedProperty
@@ -1028,7 +1028,7 @@ The RemoveThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud a
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/purview/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty
@@ -1050,7 +1050,7 @@ The RemoveThirdPartyAppDlpLocationException parameter specifies the non-Microsof
 
 To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
 
-For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/microsoft-365/compliance/dlp-use-policies-non-microsoft-cloud-apps).
+For more information about DLP for non-Microsoft cloud apps, see [Use data loss prevention policies for non-Microsoft cloud apps](https://learn.microsoft.com/purview/dlp-use-policies-non-microsoft-cloud-apps).
 
 ```yaml
 Type: MultiValuedProperty

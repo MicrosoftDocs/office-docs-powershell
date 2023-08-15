@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeAssetIdQuery
-The ExchangeAssetIdQuery parameter specifies the keywords that are used to scope Exchange content for the compliance retention event. For details, see [Keyword queries and search conditions for Content Search](https://learn.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
+The ExchangeAssetIdQuery parameter specifies the keywords that are used to scope Exchange content for the compliance retention event. For details, see [Keyword queries and search conditions for Content Search](https://learn.microsoft.com/purview/ediscovery-keyword-queries-and-search-conditions).
 
 ```yaml
 Type: String

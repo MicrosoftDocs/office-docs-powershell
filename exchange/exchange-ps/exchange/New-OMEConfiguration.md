@@ -75,7 +75,7 @@ The BackgroundColor parameter specifies the background color. Valid values are:
 - An available text value (for example, `yellow` is 0x00FFFF00).
 - $null (blank). This is the default value.
 
-For more information, see [Add your organization's brand to your encrypted messages](https://learn.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
+For more information, see [Add your organization's brand to your encrypted messages](https://learn.microsoft.com/purview/add-your-organization-brand-to-encrypted-messages).
 
 ```yaml
 Type: String
