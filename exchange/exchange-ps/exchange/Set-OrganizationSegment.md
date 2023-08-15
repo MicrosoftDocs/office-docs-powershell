@@ -29,7 +29,7 @@ Set-OrganizationSegment [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 Segments are defined by using certain [attributes](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-attributes) in Azure Active Directory.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
