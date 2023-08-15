@@ -30,7 +30,7 @@ New-OrganizationSegment [-Name] <String> -UserGroupFilter <String>
 ## DESCRIPTION
 For more information about the filterable attributes that you can use to define segments, see [Attributes for information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-attributes).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
