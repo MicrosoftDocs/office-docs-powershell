@@ -77,7 +77,7 @@ The Advanced switch filters the properties that are returned to the advanced set
 
 You don't need to specify a value with this switch.
 
-Advanced settings are only available in anti-phishing policies in Microsoft Defender for Office 365.
+Advanced settings are available only in anti-phishing policies in Microsoft Defender for Office 365.
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +117,7 @@ The Impersonation switch filters the properties that are returned to the imperso
 
 You don't need to specify a value with this switch.
 
-Impersonation settings are only available in anti-phishing policies in Microsoft Defender for Office 365.
+Impersonation settings are available only in anti-phishing policies in Microsoft Defender for Office 365.
 
 ```yaml
 Type: SwitchParameter
