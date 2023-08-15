@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpLocation
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The EndpointDLPLocation parameter specifies the user accounts to include in the DLP policy for Endpoint DLP when they are logged on to an onboarded device. You identify the account by name or email address. You can use the value All to include all user accounts.
 
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpLocationException
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The EndpointDlpLocationException parameter specifies the user accounts to exclude from Endpoint DLP when you use the value All for the EndpointDlpLocation parameter. You identify the account by name or email address.
 
@@ -654,7 +654,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAppDlpLocation
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The ThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to include in the DLP policy. You can use the value All to include all connected apps.
 
@@ -676,7 +676,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAppDlpLocationException
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The ThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps to exclude from the DLP policy when you use the value All for the ThirdPartyAppDlpLocation parameter.
 
