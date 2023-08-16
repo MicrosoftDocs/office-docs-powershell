@@ -120,6 +120,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Define policies for information barriers](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies)
+[Define policies for information barriers](https://learn.microsoft.com/purview/information-barriers-policies)
 
 [New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)

@@ -72,7 +72,7 @@ Accept wildcard characters: False
 The BackgroundColor parameter specifies the background color. Valid values are:
 
 - An HTML hexadecimal color code value (#RRGGBB) enclosed in quotation marks. For example, `"#FFFFFF"` is white.
-- A valid color name value. For example, `yellow` is #ffff00. For a list of the valid color names, see [Background color reference](https://learn.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages#background-color-reference).
+- A valid color name value. For example, `yellow` is #ffff00. For a list of the valid color names, see [Background color reference](https://learn.microsoft.com/purview/add-your-organization-brand-to-encrypted-messages#background-color-reference).
 - $null (blank). This is the default value.
 
 ```yaml

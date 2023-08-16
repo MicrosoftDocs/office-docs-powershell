@@ -28,7 +28,7 @@ Set-DlpEdmSchema [-FileData] <Byte[]>
 ```
 
 ## DESCRIPTION
-For an explanation and example of the EDM schema, see [Define the schema for your database of sensitive information](https://learn.microsoft.com/microsoft-365/compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification#define-the-schema-for-your-database-of-sensitive-information).
+For an explanation and example of the EDM schema, see [Learn about exact data match based sensitive information types](https://learn.microsoft.com/purview/sit-learn-about-exact-data-match-based-sits).
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
