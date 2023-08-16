@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ### -Operation
 The Operation parameter specifies the activity that triggers an activity alert.
 
-A valid value for this parameter is an activity that's available in the Microsoft 365 audit log. For a description of these activities, see [Audited activities](https://learn.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
+A valid value for this parameter is an activity that's available in the Microsoft 365 audit log. For a description of these activities, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

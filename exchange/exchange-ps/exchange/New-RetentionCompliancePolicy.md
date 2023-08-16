@@ -299,7 +299,7 @@ Accept wildcard characters: False
 ### -IsSimulation
 The IsSimulation switch specifies the policy is created in simulation mode. You don't need to specify a value with this switch.
 
-For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
 
 ```yaml
 Type: SwitchParameter

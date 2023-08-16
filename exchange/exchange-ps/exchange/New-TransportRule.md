@@ -2976,7 +2976,9 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfSubjectContainsWords parameter specifies an exception that looks for words in the Subject field of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
@@ -3018,7 +3020,9 @@ In on-premises Exchange, this exception is available on Mailbox servers and Edge
 
 The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception that looks for words in the Subject field or body of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
@@ -4840,7 +4844,9 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The SubjectContainsWords parameter specifies a condition that looks for words in the Subject field of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
@@ -4882,7 +4888,9 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The SubjectOrBodyContainsWords parameter specifies a condition that looks for words in the Subject field or body of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
