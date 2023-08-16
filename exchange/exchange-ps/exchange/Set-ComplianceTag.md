@@ -206,7 +206,14 @@ Accept wildcard characters: False
 ```
 
 ### -FlowId
-{{ Fill FlowId Description }}
+**Note**: This parameter is currently in Preview, is not available in all organizations, and is subject to change.
+
+The FlowId parameter specifies the Power Automate flow to run at the end of the retention period. A valid value for this parameter is the GUID value of the flow.
+
+You can find the GUID value of the flow by using either of the following methods:
+
+- Navigate to the flow from the Power Automate portal. The GUID value of the flow is in the URL.
+- Use the Power Automate action named 'List flows as admin'.
 
 ```yaml
 Type: System.Guid
