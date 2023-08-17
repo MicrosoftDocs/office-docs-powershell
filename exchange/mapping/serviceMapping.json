@@ -1066,6 +1066,7 @@
   "Get-RetentionPolicy": "policy-and-compliance-retention",
   "Get-RetentionPolicyTag": "policy-and-compliance-retention",
   "Import-FilePlanProperty": "policy-and-compliance-retention",
+  "Invoke-HoldRemovalAction": "policy-and-compliance-retention",
   "New-AdaptiveScope": "policy-and-compliance-retention",
   "New-AppRetentionCompliancePolicy": "policy-and-compliance-retention",
   "New-AppRetentionComplianceRule": "policy-and-compliance-retention",

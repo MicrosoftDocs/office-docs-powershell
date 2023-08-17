@@ -2170,6 +2170,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Import-FilePlanProperty](Import-FilePlanProperty.md)
 
+### [Invoke-HoldRemovalAction](Invoke-HoldRemovalAction.md)
+
 ### [New-AdaptiveScope](New-AdaptiveScope.md)
 
 ### [New-AppRetentionCompliancePolicy](New-AppRetentionCompliancePolicy.md)
