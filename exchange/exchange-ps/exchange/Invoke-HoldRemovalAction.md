@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ### -HoldId
 The HoldId parameter specifies the hold that you want to view or remove.
 
-To find valid HoldId values for this parameter, use the ??? cmdlet and look for the ??? property in the output.
+To find valid values for this parameter, use this cmdlet with the Action parameter value GetHolds and look for the HoldId property in the output.
 
 ```yaml
 Type: String
