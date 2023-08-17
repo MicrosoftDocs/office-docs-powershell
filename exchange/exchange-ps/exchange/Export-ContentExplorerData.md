@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/export-contentexplorerdata
 applicable: Security & Compliance
-title: Export-AutoDiscoverConfig
+title: Export-ContentExplorerData
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
