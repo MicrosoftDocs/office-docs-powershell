@@ -18,7 +18,7 @@ This cmdlet supports applying a policy package to users in a tenant. Note that t
 ## SYNTAX
 
 ```
-Grant-CsUserPolicyPackage [-Identity] <String[]> [-PackageName] <String> [<CommonParameters>]
+Grant-CsUserPolicyPackage [-Identity] <String[]> [-PackageName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
