@@ -41,6 +41,7 @@ Get-CsPhoneNumberAssignment -TelephoneNumber +14025551234
 ```
 ```output
 TelephoneNumber         : +14025551234
+OperatorId              : 2b24d246-a9ee-428b-96bc-fb9d9a053c8d
 NumberType              : CallingPlan
 ActivationState         : Activated
 AssignedPstnTargetId    : dc13d97b-7897-494e-bc28-6b469bf7a70e
@@ -66,6 +67,7 @@ Get-CsPhoneNumberAssignment -TelephoneNumber "+12065551000;ext=524"
 ```
 ```output
 TelephoneNumber         : +12065551000;ext=524
+OperatorId              : 83d289bc-a4d3-41e6-8a3f-cff260a3f091
 NumberType              : DirectRouting
 ActivationState         : Activated
 AssignedPstnTargetId    : 2713551e-ed63-415d-9175-fc4ff825a0be
@@ -436,6 +438,9 @@ This parameter is reserved for internal Microsoft use.
 
 ### NumberType
 The type of the phone number.
+
+### OperatorId
+The id of the operator.
 
 ### PortInOrderStatus
 The status of any port in order covering the phone number.
