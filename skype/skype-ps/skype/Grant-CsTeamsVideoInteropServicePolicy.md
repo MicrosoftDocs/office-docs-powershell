@@ -21,14 +21,21 @@ Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join T
 
 ### Identity (Default)
 ```
-Grant-CsTeamsVideoInteropServicePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String>
- [-Tenant <System.Guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsVideoInteropServicePolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsTeamsVideoInteropServicePolicy [-PolicyName] <String> [-Tenant <System.Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsVideoInteropServicePolicy [-PassThru] [[-PolicyName] <String>]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsVideoInteropServicePolicy [-PassThru] [[-PolicyName] <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -205,6 +212,36 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
 
 Required: False
 Position: Named
