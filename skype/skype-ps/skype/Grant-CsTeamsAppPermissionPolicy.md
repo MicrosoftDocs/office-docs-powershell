@@ -19,16 +19,20 @@ As an admin, you can use app permission policies to enable or block specific app
 
 ## SYNTAX
 
-### Identity (Default)
+### GrantToUser
 ```
-Grant-CsTeamsAppPermissionPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <System.Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsAppPermissionPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsAppPermissionPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32>
+ [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsTeamsAppPermissionPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-DomainController <Fqdn>]
- [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsAppPermissionPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -161,6 +165,36 @@ Aliases: wi
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Con nombre
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
