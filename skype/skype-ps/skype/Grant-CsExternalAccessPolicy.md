@@ -21,6 +21,11 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
+### Identity (Default)
+```
+Grant-CsExternalAccessPolicy [<CommonParameters>]
+```
+
 ### GrantToUser
 ```
 Grant-CsExternalAccessPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
