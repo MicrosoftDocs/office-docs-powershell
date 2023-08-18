@@ -19,6 +19,11 @@ As an admin, you can use app permission policies to enable or block specific app
 
 ## SYNTAX
 
+### Identity (Default)
+```
+Grant-CsTeamsAppPermissionPolicy [<CommonParameters>]
+```
+
 ### GrantToUser
 ```
 Grant-CsTeamsAppPermissionPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
