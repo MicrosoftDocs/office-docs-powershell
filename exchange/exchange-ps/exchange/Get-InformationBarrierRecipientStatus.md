@@ -16,8 +16,7 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the Get-InformationBarrierRecipientStatus cmdlet to return information about recipients and their relationship to information barrier policies.
 
-**Note**: This cmdlet doesn't work with information barriers in non-legacy mode. To determine your current mode, see [Check the IB mode for your organization
-](https://learn.microsoft.com/purview/information-barriers-multi-segment#check-the-ib-mode-for-your-organization). If you're in non-legacy mode, run the following command to get information about a single recipient: `Get-Recipient -Identity <IdentityValue> | Format-List Name,*segment*`. Similarly, to get the relationship information between two recipients, use the **Get-ExoInformationBarrierRelationship** cmdlet.
+**Note**: This cmdlet doesn't work with information barriers in non-legacy mode. To determine your current mode, see [Check the IB mode for your organization](https://learn.microsoft.com/purview/information-barriers-multi-segment#check-the-ib-mode-for-your-organization). If you're in non-legacy mode, run the following command to get information about a single recipient: `Get-Recipient -Identity <IdentityValue> | Format-List Name,*segment*`. Similarly, to get the relationship information between two recipients, use the **Get-ExoInformationBarrierRelationship** cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,7 +35,7 @@ The following information is returned in the output of this cmdlet:
 - Basic information about the recipient (display name, alias, and last name).
 - Recipient properties that can be used in organization segments (Department, CustomAttributeN, etc.) and the current property values for the recipient.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -117,8 +116,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Attributes for information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-attributes)
+[Attributes for information barrier policies](https://learn.microsoft.com/purview/information-barriers-attributes)
 
-[Define policies for information barriers](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies)
+[Define policies for information barriers](https://learn.microsoft.com/purview/information-barriers-policies)
 
 [New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)

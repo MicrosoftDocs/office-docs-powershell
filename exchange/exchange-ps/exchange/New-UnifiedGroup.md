@@ -190,7 +190,7 @@ Accept wildcard characters: False
 The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
 - Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner. This is the default value.
-- Private: The group content and conversations are only available to members of the group, and joining the group requires approval from a group owner.
+- Private: The group content and conversations are available only to members of the group, and joining the group requires approval from a group owner.
 
 You can change the privacy type at any point in the lifecycle of the group.
 
