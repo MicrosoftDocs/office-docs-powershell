@@ -442,7 +442,6 @@ The type of the phone number.
 ### OperatorId
 The ID of the operator.
 
-
 ### PortInOrderStatus
 The status of any port in order covering the phone number.
 
