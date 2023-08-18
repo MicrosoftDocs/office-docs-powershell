@@ -13,8 +13,24 @@ This commandlet supports applying the TeamsShiftsPolicy to users in a tenant.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsTeamsShiftsPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [<CommonParameters>]
+Grant-CsTeamsShiftsPolicy [<CommonParameters>]
+```
+
+### GrantToUser
+```
+Grant-CsTeamsShiftsPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32> [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,6 +71,51 @@ Aliases:
 Applicable: Microsoft Teams
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Con nombre
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
