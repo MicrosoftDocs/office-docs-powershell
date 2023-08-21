@@ -2,7 +2,7 @@
 title: Connect to Exchange Online Protection PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 7/20/2023
+ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -13,7 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell V2 module or V3 module to connect to standalone Exchange Online Protection PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V3 module to connect to standalone Exchange Online Protection PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
 # Connect to Exchange Online Protection PowerShell
@@ -25,11 +25,11 @@ The Exchange Online PowerShell module uses modern authentication for connecting 
 For more information about Exchange Online Protection PowerShell, see [Exchange Online Protection PowerShell](exchange-online-protection-powershell.md).
 
 > [!NOTE]
-> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
->
 > As of June 2020, the instructions for connecting to standalone Exchange Online Protection PowerShell and Exchange Online PowerShell are basically the same. If you use the **Connect-IPPSSession** cmdlet with the _ConnectionUri_ parameter value `https://ps.protection.outlook.com/powershell-liveid/`, you're redirected to the same `https://outlook.office365.com/powershell-liveid/` endpoint that's used by **Connect-ExchangeOnline** for Exchange Online PowerShell connections.
 >
 > Remote PowerShell connections in Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
+>
+> REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
 
 ## What do you need to know before you begin?
 

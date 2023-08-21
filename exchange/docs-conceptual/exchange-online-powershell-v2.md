@@ -1,9 +1,9 @@
 ---
-title: About the Exchange Online PowerShell V2 module and V3 module
+title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 7/20/2023
+ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -15,7 +15,7 @@ ms.custom:
 ms.assetid:
 search.appverid: MET150
 keywords: Exchange Online PowerShell V2 module, Exchange Online PowerShell V3 module, EXO V2 module, EXO V3 module
-description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V2 module and V3 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
+description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V3 module that they use to connect to all Exchange-related PowerShell environments in Microsoft 365."
 ---
 
 # About the Exchange Online PowerShell module
@@ -114,7 +114,7 @@ Version 3.0.0 or later is known as the EXO V3 module. The EXO V3 module improves
 
 - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet in REST-based connections to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
-- Connections in REST API mode have a dependency on the PowerShellGet module.
+- REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](#powershellget-for-rest-based-connections-in-windows).
 
 - Cmdlets backed by the REST API have a 15 minute timeout, which can affect bulk operations. For example, the following **Update-DistributionGroupMember** command to update 7000 members of a distribution group might time out:
 
