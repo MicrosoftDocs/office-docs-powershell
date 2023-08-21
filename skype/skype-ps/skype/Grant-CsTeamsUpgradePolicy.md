@@ -283,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -MigrateMeetingsToTeams
-Not supported anymore, see Description section.
+Not supported anymore, see the Description section.
 
 ```yaml
 Type: Boolean
