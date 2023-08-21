@@ -3,7 +3,7 @@ title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -34,6 +34,8 @@ The rest of this article explains how to connect using managed identity, and the
 > - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >
 > You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
+>
+> REST API connections in the V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
 
 ## Connect to Exchange Online PowerShell using system-assigned managed identity
 
