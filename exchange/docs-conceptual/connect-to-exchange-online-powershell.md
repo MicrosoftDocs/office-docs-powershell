@@ -2,7 +2,7 @@
 title: Connect to Exchange Online PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 7/20/2023
+ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -13,7 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell V2 module or V3 module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Exchange Online PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
 # Connect to Exchange Online PowerShell
@@ -21,9 +21,6 @@ description: "Learn how to use the Exchange Online PowerShell V2 module or V3 mo
 This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without multi-factor authentication (MFA).
 
 The Exchange Online PowerShell module uses modern authentication for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
-
-> [!NOTE]
-> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
 To connect to Exchange Online PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md) and [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
 
@@ -35,6 +32,8 @@ To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exch
 
   > [!NOTE]
   > Remote PowerShell connections are deprecated in Exchange Online PowerShell. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
+  >
+  > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 

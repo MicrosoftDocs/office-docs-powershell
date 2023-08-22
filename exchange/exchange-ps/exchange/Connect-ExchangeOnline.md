@@ -702,9 +702,9 @@ The SkipLoadingFormatData switch avoids downloading the format data for REST API
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 
-Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service.
+Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service or the Windows PowerShell SDK.
 
-This switch does not work with the UseRPSSession switch.
+This switch doesn't work with the UseRPSSession switch.
 
 ```yaml
 Type: SwitchParameter
@@ -725,7 +725,7 @@ The TrackPerformance parameter measures additional events (for example, CPU load
 - $true: Performance tracking is enabled.
 - $false: Performance tracking is disabled. This is the default value.
 
-This parameter only when works when logging is enabled.
+This parameter works only when logging is enabled.
 
 ```yaml
 Type: Boolean

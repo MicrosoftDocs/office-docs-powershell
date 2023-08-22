@@ -3,7 +3,7 @@ title: "Security & Compliance PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 9/29/2015
+ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -23,7 +23,9 @@ Security & Compliance PowerShell is the administrative interface that enables yo
   > [!NOTE]
   > Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
-- To create a PowerShell session that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). Note that the connection instructions are different from Exchange Online PowerShell or standalone Exchange Online Protection (EOP) PowerShell (the _ConnectionUri_ value is different).
+- To learn about what's new in the Exchange Online PowerShell module, see [What's new in the Exchange Online PowerShell module](whats-new-in-the-exo-module.md).
+
+- To create a PowerShell session that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). The connection instructions are different from Exchange Online PowerShell or standalone Exchange Online Protection (EOP) PowerShell (the _ConnectionUri_ value is different).
 
 - To learn about app-only authentication (also known as certificate based authentication or CBA) in Security & Compliance PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 
