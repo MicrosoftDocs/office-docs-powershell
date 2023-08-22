@@ -22,6 +22,11 @@ This cmdlet will assign a phone number to a user or a resource account (online a
 Set-CsPhoneNumberAssignment -PhoneNumber <string> -LocationId <string> [<CommonParameters>]
 ```
 
+### NetworkSiteUpdate
+```powershell
+Set-CsPhoneNumberAssignment -PhoneNumber <string> -NetworkSiteId <string> [<CommonParameters>]
+```
+
 ### Assignment
 ```powershell
 Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
@@ -231,7 +236,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.0 or later. The parameter set LocationUpdate was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0.
+The cmdlet is available in Teams PowerShell module 3.0.0 or later. The parameter set LocationUpdate was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The parameter set NetworkSiteUpdate was introduced in Teams PowerShell module 5.5.1-preview.
 
 The cmdlet is only available in commercial and GCC cloud instances.
 
