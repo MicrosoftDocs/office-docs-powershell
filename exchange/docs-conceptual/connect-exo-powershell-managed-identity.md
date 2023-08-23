@@ -303,7 +303,15 @@ The procedures in this step require the Microsoft Graph PowerShell SDK. For inst
    Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All
    ```
 
-2. If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
+   If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
+
+2. Run the following command to see if the Exchange.ManageAsApp API permission is available:
+
+   ```powershell
+   Get-MgServicePrincipalAppRoleAssignment -AppRoleAssignmentId "dc50a0fb-09a3-484d-be87-e023b12c6440"
+
+   Get-AzADServicePrincipal -Filter {AppId eq '00000002-0000-0ff1-ce00-000000000000'}
+   ```
 
 3. Run the following commands to grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online:
 
@@ -374,9 +382,9 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
    Connect-MgGraph -Scopes RoleManagement.ReadWrite.Directory
    ```
 
-2. If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
+   If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
 
-3. Use the following syntax to assign the required Azure AD role to the managed identity:
+2. Use the following syntax to assign the required Azure AD role to the managed identity:
 
    ```powershell
    $RoleID = (Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq '<Role Name>'").Id
