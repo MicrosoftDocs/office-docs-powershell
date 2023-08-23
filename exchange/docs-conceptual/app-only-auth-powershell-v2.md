@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 8/21/2023
+ms.date: 8/22/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -179,85 +179,149 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
      > [!NOTE]
      > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
 
-   - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
+   - **Redirect URI (optional)**: This setting is optional. In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
 
      > [!NOTE]
-     > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
+     > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use native applications for automated applications.
 
      ![Register an application.](media/exo-app-only-auth-register-app.png)
 
    When you're finished on the **App registrations** page, select **Register**.
 
-4. Leave the app page that you return to open. You'll use it in the next step.
+4. You're taken to the **Overview** page of the app you just registered. Leave this page open. You'll use it in the next step.
 
 ### Step 2: Assign API permissions to the application
 
+Choose **one** of the following methods in this section to assign API permissions to the app:
+
+- Select and assign the API permissions from the portal.
+- Modify the app manifest to assign API permissions. (Microsoft 365 GCC High and DoD organizations should use this method)
+
+#### Select and assign the API permissions from the portal
+
+1. On the app **Overview** page, select **API permissions** from the **Manage** section.
+
+   ![Select API permissions on the application overview page.](media/exo-app-only-auth-select-manifest.png)
+
+2. On the app **API Permissions** page, select **Add a permission**.
+
+   ![Select Add a permission on the API permissions page of the application.](media/exo-app-only-auth-api-permissions-add-a-permission.png)
+
+3. In the **Request API permissions** flyout that opens, select the **APIs my organization uses** tab, start typing **Office 365 Exchange Online** in the **Search** box, and then select it from the results.
+
+   ![Find and select Office 365 Exchange Online on the APIs my organization uses tab.](media/exo-app-only-auth-api-permissions-select-o365-exo.png)
+
+5. On the **What type of permissions does your application require?** flyout that appears, select **Application permissions**.
+
+6. In the permissions list that appears, expand **Exchange**, select **Exchange.ManageAsApp**, and then select **Add permissions**.
+
+   ![Find and select Exchange.ManageAsApp permissions from the Application permission tab.](media/exo-app-only-auth-api-permissions-select-exchange-manageasapp.png)
+
+7. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
+   - **Type**: **Application**.
+   - **Admin consent required**: **Yes**. 
+
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
+
+     Change this value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+
+     ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
+
+     The **Status** value is now **Granted for \<Organization\>**.
+
+     ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
+
+8. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
+
+   ![Admin consent removed from default Microsoft Graph User.Read permissions.](media/exo-app-only-auth-admin-consent-removed-from-graph.png)
+
+9. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
+
+#### Modify the app manifest to assign API permissions
+
 > [!NOTE]
-> The procedures in this section replace any default permissions that were automatically configured for the new app. The app doesn't need the default permissions that were replaced.
+> The procedures in this section _append_ the existing default permissions on the app (delegated **User.Read** permissions in **Microsoft Graph**) with the required application **Exchange.Manage.AsApp** permissions in **Office 365 Exchange Online**.
 
-1. On the app page under **Management**, select **Manifest**.
+1. On the app **Overview** page, select **Manifest** from the **Manage** section.
 
-   ![Select Manifest on the application properties page.](media/exo-app-only-auth-select-manifest.png)
+   ![Select Manifest on the application overview page.](media/exo-app-only-auth-select-manifest.png)
 
-2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 47).
-
-   Modify the `resourceAppId`, `resourceAccess id`, and `resourceAccess type` values as shown in the following code snippet:
+2. On the app **Manifest** page, find the `requiredResourceAccess` entry (on or about line 42), and make the entry look like the following code snippet:
 
    ```json
    "requiredResourceAccess": [
-      {
-         "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
-         "resourceAccess": [
-            {
-               "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
-               "type": "Role"
-            }
-         ]
-      }
+       {
+           "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
+           "resourceAccess": [
+               {
+                   "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
+                   "type": "Role"
+               }
+           ]
+       },
+       {
+           "resourceAppId": "00000003-0000-0000-c000-000000000000",
+           "resourceAccess": [
+               {
+                   "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+                   "type": "Scope"
+               }
+           ]
+       }
    ],
    ```
 
    > [!NOTE]
-   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for `resourceAppId`, `resourceAccess id`, and `resourceAccess type`:
+   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for the `requiredResourceAccess` entry:
    >
    > ```json
    > "requiredResourceAccess": [
-   >    {
-   >      "resourceAppId": "00000007-0000-0ff1-ce00-000000000000",
-   >      "resourceAccess": [
-   >         {
-   >            "id": "455e5cd2-84e8-4751-8344-5672145dfa17",
-   >            "type": "Role"
-   >         }
-   >      ]
-   >    }
+   >     {
+   >         "resourceAppId": "00000007-0000-0ff1-ce00-000000000000",
+   >         "resourceAccess": [
+   >             {
+   >                 "id": "455e5cd2-84e8-4751-8344-5672145dfa17",
+   >                 "type": "Role"
+   >             }
+   >         ]
+   >     },
+   >     {
+   >         "resourceAppId": "00000003-0000-0000-c000-000000000000",
+   >         "resourceAccess": [
+   >             {
+   >                 "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+   >                 "type": "Scope"
+   >             }
+   >         ]
+   >     }
    > ],
    > ```
 
    When you're finished on the **Manifest** page, select **Save**.
 
-3. Still on the **Manifest** page, select **API permissions** under **Management**.
+3. Still on the **Manifest** page, select **API permissions** from the **Manage** section.
 
-   ![Select API permissions on the application properties page.](media/exo-app-only-auth-select-api-permissions.png)
+   ![Select API permissions from the Manifest page.](media/exo-app-only-auth-manifest-select-api-permissions.png)
 
-   On the **API permissions** page that opens, do the following steps:
+4. On the **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
+   - **Type**: **Application**.
+   - **Admin consent required**: **Yes**. 
 
-   - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** is shown.
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
 
-     > [!NOTE]
-     > If necessary, search for **Office 365 Exchange** under **APIs my organization uses** on the **Request API Permissions** page.
+     Change this value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
 
-   - **Status**: The current incorrect value is **Not granted for \<Organization\>**, and this value needs to be changed.
+     ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
 
-     ![Original incorrect API permissions.](media/exo-app-only-auth-original-permissions.png)
+     The **Status** value is now **Granted for \<Organization\>**.
 
-     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
+     ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
 
-     The **Status** value should now be **Granted for \<Organization\>**.
+5. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
 
-     ![Admin consent granted.](media/exo-app-only-auth-admin-consent-granted.png)
+   ![Admin consent removed from default Microsoft Graph User.Read permissions.](media/exo-app-only-auth-admin-consent-removed-from-graph.png)
 
-4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
+6. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
 
 ### Step 3: Generate a self-signed certificate
 
@@ -292,11 +356,11 @@ After you register the certificate with your application, you can use the privat
 
    ![Apps registration page where you select your app.](media/exo-app-only-auth-app-registration-page.png)
 
-2. On the application page that opens, under **Manage**, select **Certificates & secrets**.
+2. On the application page that opens, select **Certificates & secrets** from the **Manage** section.
 
    ![Select Certificates & Secrets on the application properties page.](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
-3. On the **Certificates & secrets** page that opens, select **Upload certificate**.
+3. On the **Certificates & secrets** page, select **Upload certificate**.
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
