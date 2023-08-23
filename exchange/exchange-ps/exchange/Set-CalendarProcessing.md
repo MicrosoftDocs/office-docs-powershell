@@ -225,6 +225,11 @@ The AddOrganizerToSubject parameter specifies whether the meeting organizer's na
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
+Note: Default Calendar permissions are AvailabilityOnly which does not allow for viewing Subjects. In order to view the Subject, LimitedDetails or higher permissions are required. 
+For more information on setting folder permissions please see
+
+https://learn.microsoft.com/en-us/powershell/module/exchange/add-mailboxfolderpermission?view=exchange-ps
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
