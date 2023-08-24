@@ -305,7 +305,7 @@ The procedures in this step require the Microsoft Graph PowerShell SDK. For inst
 
    If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
 
-2. Run the following command to verify that the Office 365 Exchange Online resource in Azure AD is available:
+2. Run the following command to verify that the Office 365 Exchange Online resource is available in Azure AD:
 
    ```powershell
    Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'"
@@ -346,7 +346,7 @@ Do the following steps:
 1. Register an application in Azure AD as described in [Step 1: Register the application in Azure AD](app-only-auth-powershell-v2.md#step-1-register-the-application-in-azure-ad).
 2. Assign the Office 365 Exchange Online \> Exchange.ManageAsApp API permission to the application using the "Modify the app manifest" method as described in [Step 2: Assign API permissions to the application](app-only-auth-powershell-v2.md#step-2-assign-api-permissions-to-the-application).
 
-After you do these steps, run the **Get-MgServicePrincipal** command again to confirm that the Office 365 Exchange Online resource is available.
+After you do these steps, run the **Get-MgServicePrincipal** command again to confirm that the Office 365 Exchange Online resource is available in Azure AD.
 
 For even more information, run the following command to verify that the Exchange.ManageAsApp API permission (`dc50a0fb-09a3-484d-be87-e023b12c6440`) is available in the Office 365 Exchange Online resource:
 
