@@ -3,7 +3,7 @@ title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 8/21/2023
+ms.date: 8/24/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -305,13 +305,13 @@ The procedures in this step require the Microsoft Graph PowerShell SDK. For inst
 
    If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
 
-2. Run the following command to see if the Exchange.ManageAsApp API permission is available:
+2. Run the following command to verify that the Office 365 Exchange Online resource in Azure AD is available:
 
    ```powershell
-   Get-MgServicePrincipalAppRoleAssignment -AppRoleAssignmentId "dc50a0fb-09a3-484d-be87-e023b12c6440"
-
-   Get-AzADServicePrincipal -Filter {AppId eq '00000002-0000-0ff1-ce00-000000000000'}
+   Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'"
    ```
+
+   If the command returns no results, the next step won't work. See the subsection at the end of this section to fix the issue before you continue.
 
 3. Run the following commands to grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online:
 
@@ -325,12 +325,36 @@ The procedures in this step require the Microsoft Graph PowerShell SDK. For inst
 
    - `$MI_ID` is the Id (GUID) value of the managed identity that you stored in a variable in [Step 2](#step-2-store-the-system-assigned-managed-identity-in-a-variable).
    - `$AppRoleID` is the Id (GUID) value of the **Exchange.ManageAsApp** API permission that's the same in every organization.
-   - `$ResourceID` is the Id (GUID) value of the **Office 365 Exchange Online** resource in Azure Active Directory. The Id value is different in every organization.
+   - `$ResourceID` is the Id (GUID) value of the **Office 365 Exchange Online** resource in Azure AD. The AppId value is the same in every organization, but the Id value is different in every organization.
 
 For detailed syntax and parameter information, see the following articles:
 
 - [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment).
+- [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal)
 - [New-MgServicePrincipalAppRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment)
+
+#### What to do if the Office 365 Exchange Online resource is not available
+
+If the following command returns no results:
+
+```powershell
+Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'"
+```
+
+Do the following steps:
+
+1. Register an application in Azure AD as described in [Step 1: Register the application in Azure AD](app-only-auth-powershell-v2.md#step-1-register-the-application-in-azure-ad).
+2. Assign the Office 365 Exchange Online \> Exchange.ManageAsApp API permission to the application using the "Modify the app manifest" method as described in [Step 2: Assign API permissions to the application](app-only-auth-powershell-v2.md#step-2-assign-api-permissions-to-the-application).
+
+After you do these steps, run the **Get-MgServicePrincipal** command again to confirm that the Office 365 Exchange Online resource is available.
+
+For even more information, run the following command to verify that the Exchange.ManageAsApp API permission (`dc50a0fb-09a3-484d-be87-e023b12c6440`) is available in the Office 365 Exchange Online resource:
+
+```powershell
+Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'" | Select-Object -ExpandProperty AppRoles | Format-Table Value,Id
+```
+
+Now that the Office 365 Exchange Online resource is available, return to Step 4.3 in this section.
 
 ### Step 5: Assign Azure AD roles to the managed identity
 
