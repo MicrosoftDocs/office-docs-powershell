@@ -333,7 +333,7 @@ For detailed syntax and parameter information, see the following articles:
 - [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal)
 - [New-MgServicePrincipalAppRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment)
 
-#### What to do if the Office 365 Exchange Online resource is not available
+#### What to do if the Office 365 Exchange Online resource is not available in Azure AD
 
 If the following command returns no results:
 
