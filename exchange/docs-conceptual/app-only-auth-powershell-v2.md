@@ -138,7 +138,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 3. [Generate a self-signed certificate](#step-3-generate-a-self-signed-certificate)
 
-   - For app-only authentication in Azure AD,  you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app, and the permissions granted to the app.
+   - For app-only authentication in Azure AD, you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app with the permissions granted to the app.
 
    - Create and configure a self-signed X.509 certificate, which is used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
