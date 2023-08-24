@@ -79,7 +79,7 @@ After you've successfully created, saved, and published the PowerShell runbook, 
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
 3. On the **Runbooks** flyout that opens, select the runbook.
-4. On the details page of the runbook, click **Start**.
+4. On the details page of the runbook, select **Start**.
 
 ### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identity
 
@@ -129,7 +129,7 @@ After you've successfully created the PowerShell runbook, do the following steps
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
 3. On the **Runbooks** flyout that opens, select the runbook.
-4. On the details page of the runbook, click **Start**.
+4. On the details page of the runbook, select **Start**.
 
 ### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identities
 
@@ -248,15 +248,15 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Modules" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Modules** from results.
-3. On the **Modules** flyout that opens, click ![Add module icon.](media/add-icon.png) **Add a module**.
+3. On the **Modules** flyout that opens, select ![Add module icon.](media/add-icon.png) **Add a module**.
 4. On the **Add a module** page that opens, configure the following settings:
    - **Upload a module file**: Select **Browse from gallery**.
    - **PowerShell module file**: Select **Click here to browse from gallery**:
      1. In the **Browse Gallery** page that opens, start typing "ExchangeOnlineManagement" in the ![Search icon.](media/search-icon.png) **Search** box, press Enter, and then select **ExchangeOnlineManagement** from the results.
-     2. On the details page that opens, click **Select** to return to the **Add a module** page.
+     2. On the details page that opens, select **Select** to return to the **Add a module** page.
    - **Runtime version**: Select **5.1** or **7.1 (Preview)**. To add both versions, repeat the steps in this section to add and select the other runtime version for the module.
 
-   When you're finished, click **Import**.
+   When you're finished, select **Import**.
 
    ![Screenshot of adding a module to an Automation account in the Azure portal.](media/mi-add-exo-module.png)
 
@@ -364,13 +364,13 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
    ![Find and select a supported Exchange Online PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
 
-3. On the **Assignments** page that opens, click **Add assignments**.
+3. On the **Assignments** page that opens, select **Add assignments**.
 
    ![Select Add assignments on the role assignments page for Exchange Online PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
 
 4. In the **Add assignments** flyout that opens, find and select the managed identity you created or identified in [Step 1](#step-1-create-a-resource-with-system-assigned-managed-identity).
 
-   When you're finished, click **Add**.
+   When you're finished, select **Add**.
 
 5. Back on the **Assignments** page, verify that the role has been assigned to the managed identity.
 
