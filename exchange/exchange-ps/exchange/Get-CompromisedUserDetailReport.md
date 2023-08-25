@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-CompromisedUserDetailReport cmdlet to return detailed information about compromised users for the last 30 days.
+Use the Get-CompromisedUserDetailReport cmdlet to return detailed information about compromised users for the last 10 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
