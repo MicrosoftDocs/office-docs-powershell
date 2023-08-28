@@ -82,7 +82,7 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
 ```
 
 ## DESCRIPTION
-Policies are not valid until a rule is added (for retention policies) or a label is added (for retention label policies). For more information, see [New-RetentionComplianceRule](/powershell/module/exchange/get-mailboxfolderpermission/new-retentioncompliancerule). In addition, at least one location parameter must be defined to create a retention policy or retention label policy.
+Policies are not valid until a rule is added (for retention policies) or a label is added (for retention label policies). For more information, see [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule). In addition, at least one location parameter must be defined to create a retention policy or retention label policy.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal]/purview/microsoft-365-compliance-center-permissions).
 
