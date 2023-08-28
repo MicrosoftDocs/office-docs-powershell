@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 8/22/2023
+ms.date: 8/25/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -134,7 +134,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 2. [Assign API permissions to the application](#step-2-assign-api-permissions-to-the-application).
 
-   An application object has the default permission `User.Read`. For the application object to access resources, it needs to have the Application permission `Exchange.ManageAsApp`.
+   An application object has the **Delegated** API permission **Microsoft Graph** \> **User.Read** by default. For the application object to access resources in Exchange, it needs the **Application** API permission **Office 365 Exchange Online** \> **Exchange.ManageAsApp**.
 
 3. [Generate a self-signed certificate](#step-3-generate-a-self-signed-certificate)
 
@@ -142,10 +142,10 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
    - Create and configure a self-signed X.509 certificate, which is used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
-   - This procedure is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this article for instructions for generating certificates in PowerShell.
+   - This procedure is similar to generating a password for user accounts. The certificate can be self-signed as well. See [this section](#step-3-generate-a-self-signed-certificate) later in this article for instructions to generate certificates in PowerShell.
 
      > [!NOTE]
-     > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
+     > Cryptography: Next Generation (CNG) certificates aren't supported for app-only authentication with Exchange. CNG certificates are created by default in modern versions of Windows. You must use a certificate from a CSP key provider. [This section](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
 4. [Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
 
@@ -179,7 +179,9 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
      > [!NOTE]
      > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
 
-   - **Redirect URI (optional)**: This setting is optional. In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
+   - **Redirect URI (optional)**: This setting is optional. If you need to use it, configure the following settings:
+     - **Platform**: Select **Web**.
+     - **URI**: Enter the URI where the access token is sent.
 
      > [!NOTE]
      > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use native applications for automated applications.
@@ -309,7 +311,7 @@ Choose **one** of the following methods in this section to assign API permission
 
    - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
 
-     Change this value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+     Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
 
      ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
 
@@ -480,26 +482,30 @@ For information about creating custom role groups, see [Create role groups in Ex
 
 To assign custom role groups to the application using service principals, do the following steps:
 
-1. In [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2), run the following command to store the details of the Azure application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
+1. In [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation), run the following commands to store the details of the Azure AD application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
 
    ```powershell
-   $<VariableName1> = Get-AzureADServicePrincipal -SearchString "<AppName>"
+   Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All
+
+   $<VariableName1> = Get-MgServicePrincipal -Filter "DisplayName eq '<AppName>'"
    ```
 
    For example:
 
    ```powershell
-   $AADApp = Get-AzureADServicePrincipal -SearchString "ExO PowerShell CBA"
+   Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All
+
+   $AzureADApp = Get-MgServicePrincipal -Filter "DisplayName eq 'ExO PowerShell CBA'"
    ```
 
-   For detailed syntax and parameter information, see [Get-AzureADServicePrincipal](/powershell/module/azuread/get-azureadserviceprincipal).
+   For detailed syntax and parameter information, see [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal).
 
 2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) or [Security & Compliance PowerShell](connect-to-scc-powershell.md) and run the following commands to:
-   - Create a service principal object for the Azure application.
-   - Store the details of the service principal in a variable.
+   - Create a service principal object for the Azure AD application.
+   - Store the details of the service principal in a variable to use in the next step.
 
    ```powershell
-   New-ServicePrincipal -AppId $<VariableName1>.AppId -ObjectId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
+   New-ServicePrincipal -AppId $<VariableName1>.AppId -ObjectId $<VariableName1>.Id -DisplayName "<Descriptive Name>"
 
    $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
    ```
@@ -507,9 +513,9 @@ To assign custom role groups to the application using service principals, do the
    For example:
 
    ```powershell
-   New-ServicePrincipal -AppId $AADApp.AppId -ObjectId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
+   New-ServicePrincipal -AppId $AzureADApp.AppId -ObjectId $AzureADApp.Id -DisplayName "SP for Azure AD App ExO PowerShell CBA"
 
-   $SP = Get-ServicePrincipal -Identity "SP for Azure App ExO PowerShell CBA"
+   $SP = Get-ServicePrincipal -Identity "SP for Azure AD App ExO PowerShell CBA"
    ```
 
    For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchange/new-serviceprincipal).
