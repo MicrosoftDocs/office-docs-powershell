@@ -160,6 +160,8 @@ If the `New-CsEdgeAllowList` cmdlet is used then users can only communicate with
 Note that string values cannot be passed directly to the AllowedDomains parameter.
 Instead, you must create an object reference using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet and then use the object reference variable as the parameter value.
 
+The AllowedDomains parameter can support up to 4,000 domains.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
