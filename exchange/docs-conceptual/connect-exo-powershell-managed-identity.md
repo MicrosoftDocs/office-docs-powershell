@@ -237,7 +237,7 @@ $MI_ID = (Get-AzADServicePrincipal -DisplayName "ContosoAzAuto1").Id
 
 To verify that the variable was captured successfully, run the command `$MI_ID`. The output should be a GUID value (for example, 9f164909-3007-466e-a1fe-28d20b16e2c2).
 
-For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/powershell/module/az.automation/get-azadserviceprincipal).
+For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/powershell/module/az.resources/get-azadserviceprincipal).
 
 ### Step 3: Add the Exchange Online PowerShell module to the managed identity
 
@@ -430,7 +430,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 For detailed syntax and parameter information, see the following articles:
 
 - [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment).
-- [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgrolemanagementdirectoryroleassignment)
+- [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.identity.governance/new-mgrolemanagementdirectoryroleassignment)
 
 ## Create and configure a user-assigned managed identity
 
