@@ -430,7 +430,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 For detailed syntax and parameter information, see the following articles:
 
 - [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment).
-- [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgrolemanagementdirectoryroleassignment)
+- [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.identity.governance/new-mgrolemanagementdirectoryroleassignment)
 
 ## Create and configure a user-assigned managed identity
 
