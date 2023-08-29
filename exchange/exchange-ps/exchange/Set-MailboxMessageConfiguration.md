@@ -72,13 +72,9 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-ShowReadingPaneOnFirstLoad <Boolean>]
  [-ShowSenderOnTopInListView <Boolean>]
  [-ShowUpNext <Boolean>]
-
-Only avaiable for exchange on prem users who don't have any signature, depreciated for Office 365
  [-SignatureHtml <String>]
  [-SignatureText <String>]
  [-SignatureTextOnMobile <String>]
-Only avaiable for exchange on prem users who don't have any signature, depreciated for Office 365
-
  [-SigningCertificateId <String>]
  [-SigningCertificateSubject <String>]
  [-SmimeEncrypt <Boolean>]
