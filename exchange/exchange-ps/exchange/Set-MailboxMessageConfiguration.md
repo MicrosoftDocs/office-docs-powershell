@@ -72,9 +72,13 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-ShowReadingPaneOnFirstLoad <Boolean>]
  [-ShowSenderOnTopInListView <Boolean>]
  [-ShowUpNext <Boolean>]
+
+Only avaiable for exchange on prem users who don't have any signature, depreciated for Office 365
  [-SignatureHtml <String>]
  [-SignatureText <String>]
  [-SignatureTextOnMobile <String>]
+Only avaiable for exchange on prem users who don't have any signature, depreciated for Office 365
+
  [-SigningCertificateId <String>]
  [-SigningCertificateSubject <String>]
  [-SmimeEncrypt <Boolean>]
@@ -1122,6 +1126,8 @@ Accept wildcard characters: False
 ### -SignatureHtml
 **Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your organization. Currently, the only way to make this parameter work again is to open a support ticket and ask to have Outlook roaming signatures disabled in your organization.
 
+Only avaiable for exchange on prem users who don't have any signature, depreciated for Office 365
+
 The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
 
 To automatically add this email signature to HTML-formatted messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to $true.
@@ -1142,6 +1148,8 @@ Accept wildcard characters: False
 ### -SignatureText
 The SignatureText parameter specifies the email signature that's available to the user in plain text messages in Outlook on the web. This parameter supports all Unicode characters.
 
+Only avaiable for exchange on prem users who don't have any signature, depreciated for Office 365
+
 To automatically add the email signature to plain text messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to the value $true.
 
 ```yaml
@@ -1159,6 +1167,8 @@ Accept wildcard characters: False
 
 ### -SignatureTextOnMobile
 The SignatureTextOnMobile parameter specifies the email signature that's available in messages created by the user in Outlook on the web for devices. This parameter supports all Unicode characters.
+
+Only avaiable for exchange on prem users who don't have any signature, depreciated for Office 365
 
 To automatically add the email signature to messages created by the user in Outlook on the web for devices, the AutoAddSignatureOnMobile parameter must be set to the value $true.
 
