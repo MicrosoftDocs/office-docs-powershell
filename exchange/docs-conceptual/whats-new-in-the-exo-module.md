@@ -3,7 +3,7 @@ title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 7/14/2023
+ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -40,6 +40,8 @@ This article lists new features in the Exchange Online PowerShell module that's 
 
   > [!NOTE]
   > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is now the same as **Connect-ExchangeOnline**. To connect in REST API mode, don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
+  >
+  > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
 
 ## April 2023
 
@@ -65,6 +67,10 @@ This article lists new features in the Exchange Online PowerShell module that's 
 - Version 3.0.0 has been released, and is now known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module):
   - Version 3.0.0 is the Generally Availability (GA) release of the 2.0.6-PreviewX versions of the module.
   - All Exchange Online PowerShell cmdlets are now backed by the REST API. Basic authentication in WinRM is not required in Exchange Online PowerShell for REST API cmdlets.
+
+    > [!TIP]
+    > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+
   - Certificate based authentication (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
   For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) and [Version 3.0.0](exchange-online-powershell-v2.md#version-300-preview-versions-known-as-v206-previewx).

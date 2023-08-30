@@ -3,7 +3,7 @@ title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 8/24/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -34,6 +34,8 @@ The rest of this article explains how to connect using managed identity, and the
 > - [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks)
 >
 > You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
+>
+> REST API connections in the V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
 
 ## Connect to Exchange Online PowerShell using system-assigned managed identity
 
@@ -77,7 +79,7 @@ After you've successfully created, saved, and published the PowerShell runbook, 
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
 3. On the **Runbooks** flyout that opens, select the runbook.
-4. On the details page of the runbook, click **Start**.
+4. On the details page of the runbook, select **Start**.
 
 ### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identity
 
@@ -127,7 +129,7 @@ After you've successfully created the PowerShell runbook, do the following steps
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Runbooks" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Runbooks** from results.
 3. On the **Runbooks** flyout that opens, select the runbook.
-4. On the details page of the runbook, click **Start**.
+4. On the details page of the runbook, select **Start**.
 
 ### Connect to Exchange Online PowerShell using Azure VMs with system-assigned managed identities
 
@@ -235,7 +237,7 @@ $MI_ID = (Get-AzADServicePrincipal -DisplayName "ContosoAzAuto1").Id
 
 To verify that the variable was captured successfully, run the command `$MI_ID`. The output should be a GUID value (for example, 9f164909-3007-466e-a1fe-28d20b16e2c2).
 
-For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/powershell/module/az.automation/get-azadserviceprincipal).
+For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/powershell/module/az.resources/get-azadserviceprincipal).
 
 ### Step 3: Add the Exchange Online PowerShell module to the managed identity
 
@@ -246,15 +248,15 @@ For detailed syntax and parameter information, see [Get-AzADServicePrincipal](/p
 
 1. On the **Automation accounts** page at <https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.Automation%2FAutomationAccounts>, select the Automation account.
 2. In the details flyout that opens, start typing "Modules" in the ![Search icon.](media/search-icon.png) **Search** box, and then select **Modules** from results.
-3. On the **Modules** flyout that opens, click ![Add module icon.](media/add-icon.png) **Add a module**.
+3. On the **Modules** flyout that opens, select ![Add module icon.](media/add-icon.png) **Add a module**.
 4. On the **Add a module** page that opens, configure the following settings:
    - **Upload a module file**: Select **Browse from gallery**.
    - **PowerShell module file**: Select **Click here to browse from gallery**:
      1. In the **Browse Gallery** page that opens, start typing "ExchangeOnlineManagement" in the ![Search icon.](media/search-icon.png) **Search** box, press Enter, and then select **ExchangeOnlineManagement** from the results.
-     2. On the details page that opens, click **Select** to return to the **Add a module** page.
+     2. On the details page that opens, select **Select** to return to the **Add a module** page.
    - **Runtime version**: Select **5.1** or **7.1 (Preview)**. To add both versions, repeat the steps in this section to add and select the other runtime version for the module.
 
-   When you're finished, click **Import**.
+   When you're finished, select **Import**.
 
    ![Screenshot of adding a module to an Automation account in the Azure portal.](media/mi-add-exo-module.png)
 
@@ -301,7 +303,15 @@ The procedures in this step require the Microsoft Graph PowerShell SDK. For inst
    Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All
    ```
 
-2. If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
+   If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
+
+2. Run the following command to verify that the Office 365 Exchange Online resource is available in Azure AD:
+
+   ```powershell
+   Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'"
+   ```
+
+   If the command returns no results, the next step won't work. See the subsection at the end of this section to fix the issue before you continue.
 
 3. Run the following commands to grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online:
 
@@ -315,12 +325,36 @@ The procedures in this step require the Microsoft Graph PowerShell SDK. For inst
 
    - `$MI_ID` is the Id (GUID) value of the managed identity that you stored in a variable in [Step 2](#step-2-store-the-system-assigned-managed-identity-in-a-variable).
    - `$AppRoleID` is the Id (GUID) value of the **Exchange.ManageAsApp** API permission that's the same in every organization.
-   - `$ResourceID` is the Id (GUID) value of the **Office 365 Exchange Online** resource in Azure Active Directory. The Id value is different in every organization.
+   - `$ResourceID` is the Id (GUID) value of the **Office 365 Exchange Online** resource in Azure AD. The AppId value is the same in every organization, but the Id value is different in every organization.
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment).
+- [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment)
+- [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal)
 - [New-MgServicePrincipalAppRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment)
+
+#### What to do if the Office 365 Exchange Online resource is not available in Azure AD
+
+If the following command returns no results:
+
+```powershell
+Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'"
+```
+
+Do the following steps:
+
+1. Register an application in Azure AD as described in [Step 1: Register the application in Azure AD](app-only-auth-powershell-v2.md#step-1-register-the-application-in-azure-ad).
+2. Assign the Office 365 Exchange Online \> Exchange.ManageAsApp API permission to the application using the "Modify the app manifest" method as described in [Step 2: Assign API permissions to the application](app-only-auth-powershell-v2.md#step-2-assign-api-permissions-to-the-application).
+
+After you do these steps, run the **Get-MgServicePrincipal** command again to confirm that the Office 365 Exchange Online resource is available in Azure AD.
+
+For even more information, run the following command to verify that the Exchange.ManageAsApp API permission (`dc50a0fb-09a3-484d-be87-e023b12c6440`) is available in the Office 365 Exchange Online resource:
+
+```powershell
+Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'" | Select-Object -ExpandProperty AppRoles | Format-Table Value,Id
+```
+
+Now that the Office 365 Exchange Online resource is available, return to Step 4.3 in this section.
 
 ### Step 5: Assign Azure AD roles to the managed identity
 
@@ -354,13 +388,13 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 
    ![Find and select a supported Exchange Online PowerShell role by clicking on the role name.](media/exo-app-only-auth-find-and-select-supported-role.png)
 
-3. On the **Assignments** page that opens, click **Add assignments**.
+3. On the **Assignments** page that opens, select **Add assignments**.
 
    ![Select Add assignments on the role assignments page for Exchange Online PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments.png)
 
 4. In the **Add assignments** flyout that opens, find and select the managed identity you created or identified in [Step 1](#step-1-create-a-resource-with-system-assigned-managed-identity).
 
-   When you're finished, click **Add**.
+   When you're finished, select **Add**.
 
 5. Back on the **Assignments** page, verify that the role has been assigned to the managed identity.
 
@@ -372,9 +406,9 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
    Connect-MgGraph -Scopes RoleManagement.ReadWrite.Directory
    ```
 
-2. If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
+   If a **Permissions requested** dialog opens, select **Consent on behalf of your organization**, and then click **Accept**.
 
-3. Use the following syntax to assign the required Azure AD role to the managed identity:
+2. Use the following syntax to assign the required Azure AD role to the managed identity:
 
    ```powershell
    $RoleID = (Get-MgRoleManagementDirectoryRoleDefinition -Filter "DisplayName eq '<Role Name>'").Id
@@ -396,7 +430,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 For detailed syntax and parameter information, see the following articles:
 
 - [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment).
-- [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgrolemanagementdirectoryroleassignment)
+- [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.identity.governance/new-mgrolemanagementdirectoryroleassignment)
 
 ## Create and configure a user-assigned managed identity
 

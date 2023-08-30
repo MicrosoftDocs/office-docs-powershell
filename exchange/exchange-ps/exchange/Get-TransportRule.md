@@ -59,14 +59,14 @@ For more information about pipelining, see [About Pipelines](https://learn.micro
 Get-TransportRule -DlpPolicy "PII (U.S.)"
 ```
 
-This example returns a summary list of the rules that enforce the DLP policy named PII (U.S.) in your organization.
+In on-premises Exchange, this example returns a summary list of the rules that enforce the DLP policy named PII (U.S.) in the organization.
 
 ### Example 4
 ```powershell
 Get-TransportRule | Where {$_.DlpPolicy -ne $null}
 ```
 
-This example returns a summary list of all rules that enforce DLP policies in your organization.
+In on-premises Exchange, this example returns a summary list of all rules that enforce DLP policies in the organization.
 
 ## PARAMETERS
 
@@ -132,7 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -DlpPolicy
-The DlpPolicy parameter filters the results by the named of the specified data loss prevention (DLP) policy. If the value contains spaces, enclose the value in quotation marks (").
+**Note**: This parameter is functional only in on-premises Exchange.
+
+The DlpPolicy parameter filters the results by the name of the specified data loss prevention (DLP) policy. If the value contains spaces, enclose the value in quotation marks (").
 
 DLP policies in your organization allow you to prevent unintentional disclosure of sensitive information. Each DLP policy is enforced using a set of transport rules.
 

@@ -266,7 +266,9 @@ Accept wildcard characters: False
 ### -BodyContainsWords
 The BodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfBodyContainsWords.
 
@@ -416,7 +418,9 @@ Accept wildcard characters: False
 ### -ExceptIfBodyContainsWords
 The ExceptIfBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is BodyContainsWords.
 
@@ -493,7 +497,9 @@ Accept wildcard characters: False
 ### -ExceptIfFromAddressContainsWords
 The ExceptIfFromAddressContainsWords parameter specifies an exception for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is FromAddressContainsWords.
 
@@ -552,7 +558,9 @@ Accept wildcard characters: False
 ### -ExceptIfHeaderContainsWords
 The HeaderContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is HeaderContainsWords.
 
@@ -726,7 +734,7 @@ Accept wildcard characters: False
 ### -ExceptIfRecipientAddressContainsWords
 The ExceptIfRecipientAddressContainsWords parameter specifies an exception for the Inbox rule that looks for messages where the specified words are in recipient email addresses.
 
-You can specify multiple values separated by commas.
+You can specify multiple values separated by commas. The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is RecipientAddressContainsWords.
 
@@ -794,7 +802,9 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectContainsWords
 The ExceptIfSubjectContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is SubjectContainsWords.
 
@@ -814,9 +824,11 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectOrBodyContainsWords
 The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
-The corresponding condition parameter to this exception is ExceptIfSubjectOrBodyContainsWords.
+The maximum length of this parameter is 255 characters.
+
+The corresponding condition parameter to this exception is SubjectOrBodyContainsWords.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1062,7 +1074,9 @@ Accept wildcard characters: False
 ### -FromAddressContainsWords
 The FromAddressContainsWords parameter specifies a condition for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfFromAddressContainsWords.
 
@@ -1121,7 +1135,9 @@ Accept wildcard characters: False
 ### -HeaderContainsWords
 The HeaderContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfHeaderContainsWords.
 
@@ -1427,7 +1443,7 @@ Accept wildcard characters: False
 ### -RecipientAddressContainsWords
 The RecipientAddressContainsWords parameter specifies a condition for the Inbox rule that looks for messages where the specified words are in recipient email addresses.
 
-You can specify multiple values separated by commas.
+You can specify multiple values separated by commas. The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfRecipientAddressContainsWords.
 
@@ -1577,7 +1593,9 @@ Accept wildcard characters: False
 ### -SubjectContainsWords
 The SubjectContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfSubjectContainsWords.
 
@@ -1597,7 +1615,9 @@ Accept wildcard characters: False
 ### -SubjectOrBodyContainsWords
 The SubjectOrBodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-If the phrase contains spaces, you need to enclose the value in quotation marks. You can specify multiple values separated by commas.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfSubjectOrBodyContainsWords.
 

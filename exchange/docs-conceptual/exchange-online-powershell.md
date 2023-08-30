@@ -3,7 +3,7 @@ title: "Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 2/20/2018
+ms.date: 8/21/2018
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -23,9 +23,14 @@ Exchange Online PowerShell is the administrative interface that enables you to m
   > [!NOTE]
   > Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
 
+- To learn about what's new in the Exchange Online PowerShell module, see [What's new in the Exchange Online PowerShell module](whats-new-in-the-exo-module.md).
+
 - To create a PowerShell session to your Exchange Online organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
-- To learn about app-only authentication (also known as certificate based authentication or CBA) in Exchange Online PowerShell for unattended scripts using AzureAD applications and self-signed certificates, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
+- To learn about different methods to connect to Exchange Online PowerShell, see the following articles:
+  - [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
+  - [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
+  - [Use C# to connect to Exchange Online PowerShell](connect-to-exo-powershell-c-sharp.md)
 
 - To prevent or allow PowerShell access to your Exchange Online organization, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 

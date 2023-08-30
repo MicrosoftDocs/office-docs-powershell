@@ -33,7 +33,7 @@ Get-ReviewItems -TargetLabelId <String>
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-The `Get-ReviewItems` cmdlet can be used to export a list of pending or disposed items from disposition review. To learn more about disposition review, see [Disposition of content](https://learn.microsoft.com/microsoft-365/compliance/disposition).
+The `Get-ReviewItems` cmdlet can be used to export a list of pending or disposed items from disposition review. To learn more about disposition review, see [Disposition of content](https://learn.microsoft.com/purview/disposition).
 
 ## EXAMPLES
 
