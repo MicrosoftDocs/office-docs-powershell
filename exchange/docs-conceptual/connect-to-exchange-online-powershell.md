@@ -390,7 +390,7 @@ This section attempts to compare older connection methods that have been replace
 - **New-PSSession with OAuth token**:
 
   ```powershell
-  $oauthTokenAsPassword = ConvertTo-SecureString "<EncodedOAuthToken>' -AsPlainText -Force
+  $oauthTokenAsPassword = ConvertTo-SecureString '<EncodedOAuthToken>' -AsPlainText -Force
 
   $o365cred = New-Object System.Management.Automation.PSCredential ("admin@contoso.onmicrosoft.com", $oauthTokenAsPassword)
 
