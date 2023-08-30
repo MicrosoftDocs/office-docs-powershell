@@ -4,6 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsvirtualappointmentspolicy
 schema: 2.0.0
 ms.author: erocha
+manager: sonaggarwal
 ---
 
 # New-CsTeamsVirtualAppointmentsPolicy
