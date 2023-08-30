@@ -1,8 +1,6 @@
 ---
-external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/get-teamsshiftspolicy
-schema: 2.0.0
+online version: https://learn.microsoft.com/powershell/module/teams/get-teamscustombannertext
 ---
 
 # Get-CsTeamsCustomBannerText
@@ -69,10 +67,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsCustomBannerText](Set-CsTeamsCustomBannerText.md)
 
-[New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
+[New-CsTeamsCustomBannerText](New-CsTeamsCustomBannerText.md)
 
-[Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
-
-[Grant-CsTeamsShiftsPolicy](Grant-CsTeamsShiftsPolicy.md)
+[Remove-CsTeamsCustomBannerText](Remove-CsTeamsCustomBannerText.md)
