@@ -804,9 +804,9 @@ Accept wildcard characters: False
 Currently, this parameter has no effect.
 
 Possible values are:
-- Enabled 
-- FederatedOnly
-- Disabled
+- Anyone 
+- PeopleInTrustedOrganizationsOnly
+- Blocked
 
 ```yaml
 Type: String
@@ -815,7 +815,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Anyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
