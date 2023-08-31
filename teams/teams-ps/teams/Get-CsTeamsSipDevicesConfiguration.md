@@ -24,12 +24,11 @@ Get-CsTeamsSipDevicesConfiguration
 
 This cmdlet is used to retrieve the organization-wide Teams SIP devices configuration which contains settings that are applicable to SIP devices connected to teams using Teams Sip Gateway.
 
-You must be a Teams Service Administrator or a Global Administrator for your organization to run the cmdlet.
+To execute the cmdlet, you need to hold a role within your organization such as Global Administrator, Global Reader, Teams Administrator, or Teams Communication Administrator.
 
 ## Examples
 
 ### Example 1
-In this example, the organization has Bulk SignIn enabled for their SIP devices.
 
 ```powershell
 Get-CsTeamsSipDevicesConfiguration
@@ -38,14 +37,7 @@ Get-CsTeamsSipDevicesConfiguration
 Identity                              : Global
 BulkSignIn                            : Enabled
 ```
-
-## PARAMETERS
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
+In this example, the organization has Bulk SignIn enabled for their SIP devices.
 
 ## RELATED LINKS
 
