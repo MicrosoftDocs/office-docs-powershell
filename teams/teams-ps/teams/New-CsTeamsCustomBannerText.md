@@ -7,7 +7,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-teamscus
 
 ## SYNOPSIS
 
-Custom text on the banner displayed when compliance recording bots start recording the call.
+Enables administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call. 
 
 ## SYNTAX
 
