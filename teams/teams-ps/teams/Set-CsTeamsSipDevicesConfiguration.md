@@ -28,23 +28,23 @@ Set-CsTeamsSipDevicesConfiguration
 
 This cmdlet is used to manage the organization-wide Teams SIP devices configuration which contains settings that are applicable to SIP devices connected to teams using Teams Sip Gateway.
 
-You must be a Teams Service Administrator or a Global Administrator for your organization to run the cmdlet.
+To execute the cmdlet, you need to hold a role within your organization such as Global Administrator, Teams Administrator, or Teams Communication Administrator.
 
 ## EXAMPLES
 
 ### Example 1
-In this example, Bulk SignIn is set to Disabled across the organization.
 
 ```powershell
 Set-CsTeamsSipDevicesConfiguration -BulkSignIn "Enabled"
 ```
+In this example, Bulk SignIn is set to Enabled across the organization.
 
 ### Example 2
-In this example, Bulk SignIn is set to Disabled across the organization.
 
 ```powershell
 Set-CsTeamsSipDevicesConfiguration -BulkSignIn "Disabled"
 ```
+In this example, Bulk SignIn is set to Disabled across the organization.
 
 ## PARAMETERS
 
@@ -54,19 +54,13 @@ Indicates whether Bulk SingIn in to Teams SIP Devices is enabled or disabled for
 ```yaml
 Type: String
 Position: Named
-Default value: Disabled
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
 
 ## RELATED LINKS
 
