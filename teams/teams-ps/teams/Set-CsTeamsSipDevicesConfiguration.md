@@ -49,7 +49,7 @@ In this example, Bulk SignIn is set to Disabled across the organization.
 ## PARAMETERS
 
 ### -BulkSignIn
-Indicates whether Bulk SingIn in to Teams SIP Devices is enabled or disabled for the Common Area Phone(CAP) accounts across the organization. Possible values are 'Enabled' and 'Disabled'.
+Indicates whether Bulk SingIn into Teams SIP devices is enabled or disabled for the common area phone (CAP) accounts across the organization. Possible values are **Enabled** and '**Disabled**.
 
 ```yaml
 Type: String
