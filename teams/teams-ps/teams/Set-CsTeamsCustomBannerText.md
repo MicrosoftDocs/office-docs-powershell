@@ -1,9 +1,9 @@
 ---
 Module Name: MicrosoftTeams
-title: Get-CsTeamsCustomBannerText
+title: Set-CsTeamsCustomBannerText
 author: wblocker
 ms.author: 
-online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsCustomBannerText
+online version: https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsCustomBannerText
 schema: 2.0.0
 ---
 
