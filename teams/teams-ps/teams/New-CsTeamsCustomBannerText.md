@@ -7,6 +7,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-teamscus
 
 ## SYNOPSIS
 
+Custom text on the banner displayed when compliance recording bots start recording the call.
 
 ## SYNTAX
 
@@ -17,7 +18,7 @@ New-CsTeamsCustomBannerText [[-Identity] <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-
+Creates a single instance of a custom banner text.
 
 ## EXAMPLES
 
