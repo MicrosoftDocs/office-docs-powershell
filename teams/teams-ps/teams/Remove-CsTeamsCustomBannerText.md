@@ -18,7 +18,7 @@ Remove-CsTeamsCustomBannerText [[-Identity] <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-
+Removes a single instance of custom banner text.
 
 ## EXAMPLES
 
