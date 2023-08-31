@@ -26,7 +26,7 @@ Set-CsTeamsSipDevicesConfiguration
 
 ## DESCRIPTION
 
-This cmdlet is used to manage the organization-wide Teams SIP devices configuration which contains settings that are applicable to SIP devices connected to teams using Teams Sip Gateway.
+This cmdlet is used to manage the organization-wide Teams SIP devices configuration which contains settings that are applicable to SIP devices connected to Teams using Teams Sip Gateway.
 
 To execute the cmdlet, you need to hold a role within your organization such as Global Administrator, Teams Administrator, or Teams Communication Administrator.
 
