@@ -5,6 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/grant-csteam
 schema: 2.0.0
 ms.author: erocha
 manager: sonaggarwal
+author: emmanuelrocha001
 ---
 
 # Grant-CsTeamsVirtualAppointmentsPolicy

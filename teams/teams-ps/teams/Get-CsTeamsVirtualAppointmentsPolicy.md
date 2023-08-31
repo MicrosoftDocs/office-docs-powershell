@@ -5,6 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsv
 schema: 2.0.0
 ms.author: erocha
 manager: sonaggarwal
+author: emmanuelrocha001
 ---
 
 # Get-CsTeamsVirtualAppointmentsPolicy
