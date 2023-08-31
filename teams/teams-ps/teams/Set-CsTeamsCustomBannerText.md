@@ -13,7 +13,7 @@ Enables administrators to configure a custom text on the banner displayed when c
 
 ### Identity (Default)
 ```
-Set-CsTeamsCustomBannerText [[-Identity] <String>] [<CommonParameters>]
+Set-CsTeamsCustomBannerText [[-Id] <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +26,7 @@ Updates a single instance of custom banner text.
 PS C:\> Set-CsTeamsCustomBannerText -Identity CustomText
 ```
 
-Sets the properties of the CustomText instance of the TeamsShiftPolicy.
+Sets the properties of the CustomText instance of TeamsCustomBannerText.
 
 ## PARAMETERS
 
