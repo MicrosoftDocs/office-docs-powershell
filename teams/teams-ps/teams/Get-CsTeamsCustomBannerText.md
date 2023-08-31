@@ -35,7 +35,7 @@ Gets the properties of all instances of the TeamsCustomBannerText.
 PS C:\> Get-CsTeamsCustomBannerText -Identity CustomText
 ```
 
-Gets the properties of the CustomText instance of the TeamsShiftPolicy.
+Gets the properties of the CustomText instance of TeamsCustomBannerText.
 
 ## PARAMETERS
 
