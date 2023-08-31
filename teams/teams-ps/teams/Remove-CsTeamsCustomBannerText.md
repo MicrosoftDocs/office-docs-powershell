@@ -7,6 +7,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-teams
 
 ## SYNOPSIS
 
+Enables administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call. 
 
 ## SYNTAX
 
