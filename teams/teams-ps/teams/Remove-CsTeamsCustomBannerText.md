@@ -1,6 +1,10 @@
 ---
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/remove-teamscustombannertext
+title: Remove-CsTeamsCustomBannerText
+author: wblocker
+ms.author: 
+online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsCustomBannerText
+schema: 2.0.0
 ---
 
 # Remove-CsTeamsCustomBannerText
