@@ -7,7 +7,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-teamscus
 
 ## SYNOPSIS
 
-The CsTeamsCustomBannerText cmdlets enable administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call. 
+Custom text on the banner displayed when compliance recording bots start recording the call. 
 
 ## SYNTAX
 
@@ -18,6 +18,7 @@ Get-CsTeamsCustomBannerText [[-Identity] <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
+Returns all or a single instance of custom banner text(s).
 
 
 ## EXAMPLES
