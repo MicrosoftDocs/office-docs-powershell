@@ -3,7 +3,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/set-teamscustombannertext
 ---
 
-# set-CsTeamsCustomBannerText
+# Set-CsTeamsCustomBannerText
 
 ## SYNOPSIS
 
@@ -30,16 +30,38 @@ Sets the properties of the CustomText instance of the TeamsShiftPolicy.
 
 ## PARAMETERS
 
-### -Identity
-Policy instance name. Optional.
+### -Id
+The Identity of the CustomBannerText.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: Identity
 Aliases:
 Applicable: Microsoft Teams
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Text
+The text that the tenant admin would like to set in policy.
+
+```yaml
+Type: String
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+The description that the tenant admin would like to set to identify what this text represents.
+
+```yaml
+Type: String
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
