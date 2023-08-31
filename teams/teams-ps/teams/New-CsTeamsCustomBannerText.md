@@ -13,7 +13,7 @@ Enables administrators to configure a custom text on the banner displayed when c
 
 ### Identity (Default)
 ```
-New-CsTeamsCustomBannerText [[-Identity] <String>] [<CommonParameters>]
+New-CsTeamsCustomBannerText [[-Id] <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
