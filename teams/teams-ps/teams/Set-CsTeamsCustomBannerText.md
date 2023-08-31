@@ -35,7 +35,7 @@ Sets the properties of the CustomText instance of TeamsCustomBannerText.
 ## PARAMETERS
 
 ### -Id
-The Identity of the CustomBannerText.
+The Identity of the CustomBannerText. You do not need to provide an Id as the backend will generate it for you. However if you wish to provide your own ID, you can provide your own GUID. Please note that you have to provide a unique ID for every CsTeamsCustomBannerText you create.
 
 ```yaml
 Type: Guid
