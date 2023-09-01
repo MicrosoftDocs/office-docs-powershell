@@ -801,7 +801,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToJoinExternalMeeting
-Determines whether the user is allowed to join external meeting.
+Determines whether the user is allowed to join external meetings.
 
 Possible values are:
 - Anyone 
