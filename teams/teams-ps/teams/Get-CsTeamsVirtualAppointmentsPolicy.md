@@ -12,6 +12,7 @@ author: emmanuelrocha001
 
 ## SYNOPSIS
 This cmdlet is used to fetch policy instances of TeamsVirtualAppointmentsPolicy.
+
 ## SYNTAX
 
 ### Identity (Default)
