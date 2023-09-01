@@ -40,7 +40,7 @@ Grant-CsTeamsVirtualAppointmentsPolicy [[-PolicyName] <String>] [-Global] [-Forc
 
 This cmdlet applies an instance of the TeamsVirtualAppointmentsPolicy to users or groups in a tenant.
 
-Pass in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
+Passes in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
 
 
 ## EXAMPLES
