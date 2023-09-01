@@ -73,6 +73,7 @@ PS C:\> Grant-CsTeamsVirtualAppointmentsPolicy -Global -PolicyName sms-enabled
 ```
 
 Note: _Using $null in place of a policy name can be used to unassigned a policy instance._
+
 ## PARAMETERS
 
 ### -Force
