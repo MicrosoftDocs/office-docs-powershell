@@ -34,7 +34,7 @@ Identity                 EnableSmsNotifications
 --------                 ----------------------                                                                          
 Tag:sms-enabled                            True
 ```
-Creates a new policy instance with the identity enable-sms. `EnableSmsNotifications` will default to true, as it was not specified.
+Creates a new policy instance with the identity enable-sms. `EnableSmsNotifications` will default to true if it is not specified.
 
 ### Example 2
 ```powershell
