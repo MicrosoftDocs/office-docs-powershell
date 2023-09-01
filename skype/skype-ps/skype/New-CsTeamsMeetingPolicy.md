@@ -36,7 +36,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-NewMeetingRecordingExpirationDays <Int32>]
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>]
-[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>]
+[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-CopyRestrition <Boolean>] [-CopilotWithoutTranscript <String>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -91,6 +91,38 @@ Accept wildcard characters: False
 > The experience for users is dependent on both the value of -DisableAnonymousJoin (the old tenant-wide setting) and -AllowAnonymousUsersToJoinMeeting (the new per-organizer policy). Please check https://learn.microsoft.com/microsoftteams/meeting-settings-in-teams for details.
 
 Determines whether anonymous users can join the meetings that impacted users organize. Set this to TRUE to allow anonymous users to join a meeting. Set this to FALSE to prohibit them from joining a meeting.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CopilotWithoutTranscript
+
+This policy give admins the ability to enable or disable copilot use without having to start transcript.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CopyRestriction
+
+Enable this setting to allow users to disable right-click or Ctrl+C to copy, Copy link, Forward message, and Share to Outlook for meeting chat messages
 
 ```yaml
 Type: Boolean
