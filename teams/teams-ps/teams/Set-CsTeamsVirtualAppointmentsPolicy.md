@@ -21,7 +21,7 @@ Set-CsTeamsVirtualAppointmentsPolicy [-EnableSmsNotifications <Boolean>] [-Ident
 ```
 
 ## DESCRIPTION
-Updates any of the properties of an existing instance instance of TeamsVirtualAppointmentsPolicy.
+Updates any of the properties of an existing instance of TeamsVirtualAppointmentsPolicy.
 
 ## EXAMPLES
 
