@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), e.g. a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
+Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), for example, a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
 
 ```yaml
 Type: String
