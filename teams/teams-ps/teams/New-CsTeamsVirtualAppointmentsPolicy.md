@@ -45,7 +45,7 @@ Identity                 EnableSmsNotifications
 --------                 ----------------------                                                                          
 Tag:sms-enabled                            False
 ```
-Creates a new policy instance with the identity sms-disabled. `EnableSmsNotifications` is set to the value specified in the command above.
+Creates a new policy instance with the identity sms-disabled. `EnableSmsNotifications` is set to the value specified in the command.
 
 ## PARAMETERS
 
