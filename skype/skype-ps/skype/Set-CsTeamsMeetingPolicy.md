@@ -39,7 +39,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] 
-[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>]
+[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>] [-CopyRestriction <Boolean>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
