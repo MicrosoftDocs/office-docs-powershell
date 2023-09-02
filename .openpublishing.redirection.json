@@ -6547,7 +6547,7 @@
     },
     {
       "source_path": "exchange/docs-conceptual/exchange-server/use-update-exchangehelp.md",
-      "redirect_url": "/powershell/exchange/use-update-exchangehelp",
+      "redirect_url": "/powershell/exchange/exchange-management-shell",
       "redirect_document_id": true
     },
     {
