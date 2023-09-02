@@ -73,4 +73,4 @@ This article lists new features in the Exchange Online PowerShell module that's 
 
   - Certificate based authentication (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
-  For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) and [Version 3.0.0](exchange-online-powershell-v2.md#version-300-preview-versions-known-as-v206-previewx).
+  For more information, see [REST API connections in the EXO V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module) and [Version 3.0.0](exchange-online-powershell-v2.md#version-300-preview-versions-known-as-v206-previewx).
