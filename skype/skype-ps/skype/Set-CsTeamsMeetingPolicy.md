@@ -1152,6 +1152,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CopyRestriction
+This parameter enables a setting that controls a meeting option which allows users to disable right-click or Ctrl+C to copy, Copy link, Forward message, and Share to Outlook for meeting chat messages
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
