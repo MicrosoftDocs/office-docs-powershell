@@ -796,9 +796,10 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveCanceledMeetings
-This parameter is available only in the cloud-based service.
+This parameter is available only in the cloud-based service. The RemoveCanceledMeetings parameter specifies whether to automatically delete  meetings that were canceled by organizer from the resource mailbox's calendar.
 
-{{ Fill RemoveCanceledMeetings Description }}
+- $true: Canceled meetings are deleted.
+- $false: Canceled meetings aren't deleted. This is the default value.
 
 ```yaml
 Type: Boolean
