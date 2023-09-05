@@ -433,6 +433,8 @@ After you create the group, you use the Get-DistributionGroupMember cmdlet to vi
 
 Although it isn't required, it's a good idea to add only security principals (for example, mailboxes and mail users with user accounts or other mail-enabled security groups) to mail-enabled security groups. If you assign permissions to a mail-enabled security group, any members that aren't security principals (for example, mail contacts or distribution groups) won't have the permissions assigned.
 
+The maximum number of entries for this parameter is 10000.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
