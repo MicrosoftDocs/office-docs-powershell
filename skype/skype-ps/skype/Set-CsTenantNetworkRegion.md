@@ -35,15 +35,6 @@ PS C:\> Set-CsTenantNetworkRegion -Identity "RegionA" -Description "Region A"
 
 The command shown in Example 1 set the network region 'RegionA' with description 'Region A'.
 
-### Example 2
-```powershell
-PS C:\> Set-CsTenantNetworkRegion -Identity "RegionRedmond" -Description "Redmond region" -CentralSite "Central site 1"
-```
-
-The command shown in Example 2 set the network region 'RegionRedmond' with description 'Redmond region'. CentralSite is set to "Central site 1".
-
-Previously in Skype for Business there was an additional required parameter `-CentralSite <site ID>`, however it is now optional.
-
 ## PARAMETERS
 
 ### -Identity
@@ -62,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -CentralSite
-This parameter is optional.
+This parameter is not used.
 
 ```yaml
 Type: String
