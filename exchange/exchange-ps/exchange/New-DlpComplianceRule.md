@@ -470,6 +470,8 @@ Accept wildcard characters: False
 ### -ApplyBrandingTemplate
 The ApplyBrandingTemplate parameter specifies an action for the DLP rule that applies a custom branding template for messages encrypted by Microsoft Purview Message Encryption. You identify the custom branding template by name. If the name contains spaces, enclose the name in quotation marks (").
 
+Use the EnforcePortalAccess parameter to control whether external users are required to use the encrypted message portal to view encrypted messages.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -971,10 +973,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnforcePortalAccess
-The EnforcePortalAccess parameter specifies whether to . Valid values are:
+The EnforcePortalAccess parameter specifies whether external recipients are required to view encrypted mail using the encrypted message portal when the ApplyBrandingTemplate action is also specified. Valid values are:
 
-- $true: 
-- $false: 
+- $true: External recipients are required to use the encrypted message portal to view encrypted messages.
+- $false: External recipients aren't required to use the encrypted message portal. Outlook can decrypt messages inline.
 
 ```yaml
 Type: Boolean
