@@ -19,7 +19,8 @@ As an Admin, you can use the Teams PowerShell command, Set-CsTenantNetworkRegion
 
 ### Identity (Default)
 ```
-Set-CsTenantNetworkRegion [[-Identity] <string>] [-CentralSite <string>] [-Description <string>] [-NetworkRegionID <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTenantNetworkRegion [[-Identity] <string>] [-CentralSite <string>] [-Description <string>]
+  [-NetworkRegionID <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
