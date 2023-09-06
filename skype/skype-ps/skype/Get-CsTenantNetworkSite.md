@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantnetworksite
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTenantNetworkSite
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,13 +19,17 @@ Returns information about the network site setting in the tenant. Tenant network
 
 ### Identity (Default)
 ```
-Get-CsTenantNetworkSite [-Tenant <System.Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
- [<CommonParameters>]
+Get-CsTenantNetworkSite [[-Identity] <string>] [-IncludePhoneNumbers <bool>] [<CommonParameters>]
+```
+
+### QueryParameter
+```
+Get-CsTenantNetworkSite [-IncludePhoneNumbers <bool>] [-Filter <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTenantNetworkSite [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTenantNetworkSite [-IncludePhoneNumbers <bool>] [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
