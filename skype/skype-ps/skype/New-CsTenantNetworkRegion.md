@@ -41,13 +41,6 @@ PS C:\> New-CsTenantNetworkRegion -NetworkRegionID "RegionA"
 
 The command shown in Example 1 created the network region 'RegionA' with no description. Identity and CentralSite will both be set identical with NetworkRegionID.
 
-### Example 2
-```powershell
-PS C:\> New-CsTenantNetworkRegion -NetworkRegionID "RegionRedmond" -Description "Redmond region" -CentralSite "Central site 1"
-```
-
-The command shown in Example 2 created the network region 'RegionRedmond' with description 'Redmond region'. CentralSite is set to "Central site 1".
-
 ## PARAMETERS
 
 ### -Identity
@@ -66,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-Bypass ID is not used.
+This parameter is not used.
 
 ```yaml
 Type: String
@@ -81,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -CentralSite
-This parameter is optional.
+This parameter is not used.
 
 ```yaml
 Type: String
