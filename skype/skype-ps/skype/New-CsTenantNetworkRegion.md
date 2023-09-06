@@ -13,7 +13,7 @@ ms.reviewer:
 # New-CsTenantNetworkRegion
 
 ## SYNOPSIS
-As an Admin, you can use the Windows PowerShell command, New-CsTenantNetworkRegion to define network regions. A network region interconnects various parts of a network across multiple geographic areas. The RegionID parameter is a logical name that represents the geography of the region, and has no dependencies or restrictions. Tenant network region is used for Location Based Routing.
+As an Admin, you can use the Teams PowerShell command, New-CsTenantNetworkRegion to define network regions. A network region interconnects various parts of a network across multiple geographic areas. The RegionID parameter is a logical name that represents the geography of the region, and has no dependencies or restrictions. Tenant network region is used for Location Based Routing.
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ New-CsTenantNetworkRegion [-Identity] <string> [-BypassID <string>] [-CentralSit
 ### ParentAndRelativeKey
 ```
 New-CsTenantNetworkRegion -NetworkRegionID <string> [-BypassID <string>] [-CentralSite <string>]
-[-Description <string>] [-MsftInternalProcessingMode <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-Description <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
