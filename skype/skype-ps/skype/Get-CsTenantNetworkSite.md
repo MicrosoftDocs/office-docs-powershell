@@ -163,6 +163,7 @@ The name of the Teams network roaming policy assigned to the site.
 This parameter is reserved for internal Microsoft use.
 
 ## NOTES
+The parameter IncludePhoneNumbers was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
 [New-CsTenantNetworkSite](New-CsTenantNetworkSite.md)
