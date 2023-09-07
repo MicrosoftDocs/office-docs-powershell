@@ -13,8 +13,11 @@ This cmdlet allows you to configure options for customizing Teams events experie
 ## SYNTAX
 
 ```
-Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>] [-EventAccessType <String>]
- [[-Identity] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
+ [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
+ [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
+ [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
+ [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -224,6 +227,85 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedQuestionTypesInRegistrationForm
+Possible values are:
+DefaultOnly, DefaultAndPredefinedOnly, AllQuestions.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTownhallTypesForRecordingPublish
+Possible values are:
+None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedWebinarTypesForRecordingPublish
+Possible values are:
+None,InviteOnly,EveryoneInCompanyIncludingGuests,Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEventIntegrations
+Possible values
+true, false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallChatExperience
+Possible values are: Optimized, None.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
