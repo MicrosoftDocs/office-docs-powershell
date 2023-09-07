@@ -13,7 +13,7 @@ schema: 2.0.0
 # Remove-CsTeamsSharedCallingRoutingPolicy
 
 ## SYNOPSIS
-Deletes an existing Teams shared calling routing policy.
+Deletes an existing Teams shared calling routing policy instance.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ TeamsSharedCallingRoutingPolicy is used to configure Shared Calling.
 ```
 Remove-CsTeamsSharedCallingRoutingPolicy -Identity "Seattle"
 ```
-The command shown in Example 1 deletes the Teams shared calling routing policy Seattle.
+The command shown in Example 1 deletes the Teams shared calling routing policy instance Seattle.
 
 ### EXAMPLE 2
 ```
@@ -52,7 +52,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -110,14 +110,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
 ## OUTPUTS
 
-### System.Object
 ## NOTES
+This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-
 [Get-CsTeamsSharedCallingRoutingPolicy](Get-CsTeamsSharedCallingRoutingPolicy.md)
 
 [Grant-CsTeamsSharedCallingRoutingPolicy](Grant-CsTeamsSharedCallingRoutingPolicy.md)
