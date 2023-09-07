@@ -39,10 +39,12 @@ The emergency call will contain the location of the Shared Calling user. The loc
 ### Example 1
 ```
 $ra = Get-CsOnlineUser -Identity ra1@contoso.com
-New-CsTeamsSharedCallingRoutingPolicy -Identity Seattle -ResourceAccount $ra.Identity -EmergencyNumbers @{add='+14255556677','+14255554321'}
+$PhoneNumber=Get-CsPhoneNumberAssignment -AssignedPstnTargetId ra1@contoso.com
+$CivicAddress = Get-CsOnlineLisCivicAddress -City Seattle
+Set-CsPhoneNumberAssignment -LocationId $CivicAddress.DefaultLocationId -PhoneNumber $PhoneNumber.TelephoneNumber
+New-CsTeamsSharedCallingRoutingPolicy -Identity Seattle -ResourceAccount $ra.Identity -EmergencyNumbers @{add='+14255556677','+14255554321'} -Description 'Seattle'
 ```
-The command shown in Example 1 creates a new policy called Seattle that is using the Teams resource account ra1@contoso.com
-and the emergency call back numbers +14255556677 and +14255554321.
+The command shown in Example 1 gets the identity and phone number assigned to the Teams resource account ra1@contoso.com, sets the location of the phone number to be the Seattle location and creates a new Shared Calling policy called Seattle that is using the Teams resource account ra1@contoso.com and the emergency numbers +14255556677 and +14255554321.
 
 ## PARAMETERS
 
