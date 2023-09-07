@@ -77,13 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyNumbers
-An array of emergency callback numbers.
+An array of phone numbers used as caller ID on emergency calls.
 
 The emergency numbers must be routable for inbound PSTN calls and for Calling Plan & Operator Connect phone numbers they must be available within the tenant.
 
-The emeregncy numbers specified must all be of the same phone number type as the phone number assigned to the specified resource account. If the resource account has a Calling Plan service number assigned, the emeregncy numbers need to be Calling Plan subscriber numbers.
+The emergency numbers specified must all be of the same phone number type and country as the phone number assigned to the specified resource account. If the resource account has a Calling Plan service number assigned, the emergency numbers need to be Calling Plan subscriber numbers.
 
-If no emergency numbers are configured, the phone number of the resource account will be used as CAller ID for the emergency call.
+The emergency numbers must be unique and can't be reused in other Shared Calling policy instances. The emergency numbers can't be assigned to any user or resource account.
+
+If no emergency numbers are configured, the phone number of the resource account will be used as Caller ID for the emergency call.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier[String]
@@ -101,11 +103,11 @@ Accept wildcard characters: False
 The Identity of the resource account. Can only be specified using the Identity or ObjectId of the resource account.
 
 The phone number assigned to the resource account must:
-- Have the same phone number type as the emergency numbers configured in the policy instance.
-- Must have an emergency location assigned.
+- Have the same phone number type and country as the emergency numbers configured in this policy instance.
+- Must have an emergency location assigned. You can use the Teams PowerShell Module [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md) and the -LocationId parameter to set the location.
 - If the resource account is using a Calling Plan service number, you must have a Pay-As-You-Go Calling Plan, and assign it to the resource account.  In addition, you need to assign a Communications credits license to the resource account and fund it to support outbound Shared Calling calls via the Pay-As-You-Go Calling Plan.
 
-The same resource account can be used in multiple policy instances. 
+The same resource account can be used in multiple Shared Calling policy instances. 
 
 ```yaml
 Type: String
@@ -176,7 +178,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-In some Calling Plan markets you are not allowed to set the location on Service numbers. In this case please contact the Telephone Number Services Service desk https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk.
+In some Calling Plan markets you are not allowed to set the location on Service numbers. In this case please contact the [Telephone Number Services Service desk](https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
 
 This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
