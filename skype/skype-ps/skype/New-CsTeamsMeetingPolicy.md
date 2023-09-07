@@ -695,9 +695,9 @@ Accept wildcard characters: False
 
 ### -AllowUserToJoinExternalMeeting
 Possible values are:
-- Anyone 
-- PeopleInTrustedOrganizationsOnly
-- Blocked
+- Enabled 
+- FederatedOnly
+- Disabled
 
 ```yaml
 Type: String
@@ -706,7 +706,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Anyone
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
