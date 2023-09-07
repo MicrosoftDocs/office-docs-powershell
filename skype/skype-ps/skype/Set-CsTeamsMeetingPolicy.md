@@ -39,7 +39,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] 
-[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>]
+[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] 
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -801,12 +801,12 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToJoinExternalMeeting
-Determines whether the user is allowed to join external meetings.
+Currently, this parameter has no effect.
 
 Possible values are:
-- Anyone 
-- PeopleInTrustedOrganizationsOnly
-- Blocked
+- Enabled 
+- FederatedOnly
+- Disabled
 
 ```yaml
 Type: String
@@ -815,7 +815,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Anyone
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1148,6 +1148,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalMeetingJoin
+Determines whether the user is allowed to join external meetings.
+
+Possible values are:
+- EnabledForAnyone 
+- EnabledForTrustedOrgs
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledForAnyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
