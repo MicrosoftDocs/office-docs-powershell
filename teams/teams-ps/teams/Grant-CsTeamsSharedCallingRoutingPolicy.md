@@ -44,26 +44,26 @@ Grant-CsTeamsSharedCallingRoutingPolicy [-Group] <string> [[-PolicyName] <string
 ```
 Grant-CsTeamsSharedCallingRoutingPolicy -Identity "user@contoso.com" -PolicyName "Seattle"
 ```
-The command shown in Example 1 assigns the per-user Teams shared calling routing policy Seattle to the user user@contoso.com.
+The command shown in Example 1 assigns the per-user Teams shared calling routing policy instance Seattle to the user user@contoso.com.
 
 ### EXAMPLE 2
 ```
 Grant-CsTeamsSharedCallingRoutingPolicy -PolicyName "Seattle" -Global
 ```
-Example 2 assigns the per-user Teams shared calling routing policy "Seattle" to all the users in the tenant, except any that have an explicit policy assignment.
+Example 2 assigns the per-user Teams shared calling routing policy instance Seattle to all the users in the tenant, except any that have an explicit Teams shared calling routing policy assignment.
 
 ## PARAMETERS
 
 ### -Identity
-Indicates the Identity of the user account to be assigned the per-user Teams shared calling routing policy. User Identities can be specified using one of the following formats: the user's SIP address, the user's user principal name (UPN), or the user's Active Directory display name (for example, Ken Myer).
+Indicates the Identity of the user account to be assigned the per-user Teams shared calling routing policy. User Identities can be specified using one of the following formats: the user's SIP address, the user's user principal name (UPN), or the user's ObjectId or Identity.
 
 ```yaml
 Type: String
 Parameter Sets: Identity
 Aliases:
 
-Required: False
-Position: 1
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -80,7 +80,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -131,22 +131,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-### -PassThru
-Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams shared calling routing policy. By default, the Grant-CsTeamsSharedCallingRoutingPolicy cmdlet does not pass objects through the pipeline.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Force
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
@@ -168,14 +152,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
 ## OUTPUTS
 
-### System.Object
 ## NOTES
+This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-
 [Get-CsTeamsSharedCallingRoutingPolicy](Get-CsTeamsSharedCallingRoutingPolicy.md)
 
 [Set-CsTeamsSharedCallingRoutingPolicy](Set-CsTeamsSharedCallingRoutingPolicy.md)
