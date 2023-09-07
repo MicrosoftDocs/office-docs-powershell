@@ -19,7 +19,7 @@ description: "Learn about the alternatives to Invoke-Command commands in REST AP
 
 # Workarounds for Invoke-Command scenarios in REST API connections
 
-In multiple connections to Exchange Online or Security & Compliance PowerShell in the same window, you use the [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet to run scripts or commands in a specific remote PowerShell session. But, the **Invoke-Command** cmdlet doesn't work in [REST API connections](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module) to Exchange Online or Security & Compliance PowerShell.
+In multiple connections to Exchange Online or Security & Compliance PowerShell in the same window, you use the [Invoke-Command](/powershell/module/microsoft.powershell.core/invoke-command) cmdlet to run scripts or commands in a specific remote PowerShell session. But, the **Invoke-Command** cmdlet doesn't work in [REST API connections](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module) to Exchange Online or Security & Compliance PowerShell.
 
 This article offers REST API alternatives for scenarios that that use **Invoke-Command** commands.
 
