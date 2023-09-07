@@ -32,6 +32,8 @@ The caller ID for normal outbound PSTN calls will be the phone number assigned t
 
 When a Shared Calling user makes an emergency call, the emergency services need to be able to make a direct call back to the user who placed the emergency call. One of the defined emergency numbers will be used as caller ID for the emergency call. It will be reserved for the next 60 minutes and any inbound call to that number will directly ring the Shared Calling user that made the emergency call. If no emergency numbers are defined, the phone number of the resource account will be used as caller ID. If not free emergency numbers are available the first number in the list will be re-used.
 
+The emergency call will contain the location of the Shared Calling user. The location will either by the dynamic emergency location obtained by the Teams client or if that is not available the static location assigned to the phone of the resource account used in the Shared Calling policy instance.
+
 ## EXAMPLES
 
 ### Example 1
@@ -101,7 +103,7 @@ The Identity of the resource account. Can only be specified using the Identity o
 The phone number assigned to the resource account must:
 - Have the same phone number type as the emergency numbers configured in the policy instance.
 - Must have an emergency location assigned.
-- If there is a Calling Plan service phone number assigned to the resource account you need to have Pay-As-You-Go Calling Plan license and funding for it available.
+- If the resource account is using a Calling Plan service number, you must have a Pay-As-You-Go Calling Plan, and assign it to the resource account.  In addition, you need to assign a Communications credits license to the resource account and fund it to support outbound Shared Calling calls via the Pay-As-You-Go Calling Plan.
 
 The same resource account can be used in multiple policy instances. 
 
@@ -166,7 +168,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -175,10 +176,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-In some Calling Plan markets you are not allowed to set the location on Service numbers. In this case please contact the TNS Service desk https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk.
+In some Calling Plan markets you are not allowed to set the location on Service numbers. In this case please contact the Telephone Number Services Service desk https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk.
+
+This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
-
 [Set-CsTeamsSharedCallingRoutingPolicy](Set-CsTeamsSharedCallingRoutingPolicy.md)
 
 [Grant-CsTeamsSharedCallingRoutingPolicy](Grant-CsTeamsSharedCallingRoutingPolicy.md)
@@ -186,3 +188,5 @@ In some Calling Plan markets you are not allowed to set the location on Service 
 [Remove-CsTeamsSharedCallingRoutingPolicy](Remove-CsTeamsSharedCallingRoutingPolicy.md)
 
 [Get-CsTeamsSharedCallingRoutingPolicy](Get-CsTeamsSharedCallingRoutingPolicy.md)
+
+[Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md)
