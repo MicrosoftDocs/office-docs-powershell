@@ -87,6 +87,12 @@ Accept wildcard characters: False
 
 ### -PolicyType
 The policy type for which group policy assignments will be returned.
+Possible values:
+
+TeamsMeetingPolicy
+TeamsMeetingBroadcastPolicy
+TeamsCallingPolicy
+TeamsComplianceRecordingPolicy
 
 ```yaml
 Type: String
