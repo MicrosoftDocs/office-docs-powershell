@@ -20,19 +20,17 @@ Use the New-CsTeamsSharedCallingRoutingPolicy cmdlet to configure a Shared Calli
 ### Identity (Default)
 ```
 New-CsTeamsSharedCallingRoutingPolicy [-Identity] <string> [-EmergencyNumbers <PSListModifier[string]>]
- [-ResourceAccount <string>] [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ResourceAccount <string>] [-Description <string>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The Teams shared calling routing policy configures the phone number presented as the calling line identity or from for the users enabled
-for Shared Calling using this policy instance and the emergency call back numbers used in the case these users makes emergency calls.
+The Teams shared calling routing policy configures the caller ID for normal outbound PSTN calls and emergency calls made by users enabled for Shared Calling using this policy instance.
 
-The resource account will typically have the phone number of the company main Auto Attendant assigned. When a Shared Calling user makes
-an outbound PSTN call, that phone number will be presented as the caller id.
+The caller ID for normal outbound PSTN calls will be the phone number assigned to resource account specified in the policy instance. Typically this is the company main Auto Attendant phone number. Call backs will go to the Auto Attendant and the caller can use the Auto Attendant to be transferred to the Shared Calling user.
 
-When a Shared Calling user makes an emergency call, the emergency services need to be able to make a direct call back to the user who placed
-the emergency call. One of the emergency callback numbers will be used for that purpose.
+When a Shared Calling user makes an emergency call, the emergency services need to be able to make a direct call back to the user who placed the emergency call. One of the defined emergency numbers will be used as caller ID for the emergency call. It will be reserved for the next 60 minutes and any inbound call to that number will directly ring the Shared Calling user that made the emergency call. If no emergency numbers are defined, the phone number of the resource account will be used as caller ID. If not free emergency numbers are available the first number in the list will be re-used.
 
 ## EXAMPLES
 
@@ -55,7 +53,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -70,7 +68,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -79,14 +77,11 @@ Accept wildcard characters: False
 ### -EmergencyNumbers
 An array of emergency callback numbers.
 
-The callback phone numbers must be routable for inbound PSTN calls and for Calling Plan & Operator Connect phone numbers they
-must be available within the tenant.
+The emergency numbers must be routable for inbound PSTN calls and for Calling Plan & Operator Connect phone numbers they must be available within the tenant.
 
-The callback phone numbers specified must all be of the same phone number type as the phone number assigned to the specified resource
-account. If the resource account has a Calling Plan service number assigned, the call back numbers need to be Calling Plan subscriber
-numbers.
+The emeregncy numbers specified must all be of the same phone number type as the phone number assigned to the specified resource account. If the resource account has a Calling Plan service number assigned, the emeregncy numbers need to be Calling Plan subscriber numbers.
 
-If no emergency call back numbers are configured, the phone number of the resource account will be used as the emergency call back number.
+If no emergency numbers are configured, the phone number of the resource account will be used as CAller ID for the emergency call.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier[String]
@@ -94,7 +89,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -116,7 +111,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -179,8 +174,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
 ## NOTES
+In some Calling Plan markets you are not allowed to set the location on Service numbers. In this case please contact the TNS Service desk https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk.
 
 ## RELATED LINKS
 
