@@ -510,7 +510,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDeviceAuthentication
-Use device code authentication instead of a browser control
+Use device code authentication instead of a browser control.
 
 ```yaml
 Type: SwitchParameter
