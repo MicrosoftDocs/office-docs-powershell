@@ -70,8 +70,6 @@
           href: exchange-cmdlet-syntax.md
         - name: What's new in the Exchange Online PowerShell module
           href: whats-new-in-the-exo-module.md
-        - name: V1 module - Connect to Security & Compliance PowerShell
-          href: v1-module-mfa-connect-to-scc-powershell.md
     - name: Exchange Online Protection PowerShell
       href: exchange-online-protection-powershell.md
       items:

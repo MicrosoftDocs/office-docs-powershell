@@ -173,8 +173,8 @@ The connection-related cmdlets in the module are listed in the following table:
 
 |EXO module cmdlet|Older related cmdlet|Comments|
 |---|---|---|
-|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
-|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession in V1 of the module](v1-module-mfa-connect-to-scc-powershell.md)||
+|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br/> or <br/> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
+|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|**Connect-IPPSSession** in V1 of the module||
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
 |[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v3.0.0 or later.|
 
