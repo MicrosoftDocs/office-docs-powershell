@@ -39,7 +39,7 @@ The emergency call will contain the location of the shared calling user. The loc
 ```
 Set-CsTeamsSharedCallingRoutingPolicy -Identity Seattle -EmergencyNumbers @{remove='+14255556677'}
 ```
-The command shown in Example 1 removes the emergency call back number +14255556677 from the policy called Seattle.
+The command shown in Example 1 removes the emergency callback number +14255556677 from the policy called Seattle.
 
 ## PARAMETERS
 
