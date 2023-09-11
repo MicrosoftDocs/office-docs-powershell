@@ -28,11 +28,11 @@ New-CsTeamsSharedCallingRoutingPolicy [-Identity] <string> [-EmergencyNumbers <P
 
 The Teams shared calling routing policy configures the caller ID for normal outbound PSTN and emergency calls made by users enabled for Shared Calling using this policy instance.
 
-The caller ID for normal outbound PSTN calls will be the phone number assigned to resource account specified in the policy instance. Typically this is the company main Auto Attendant phone number. Call backs will go to the Auto Attendant and the PSTN caller can use the Auto Attendant to be transferred to the Shared Calling user.
+The caller ID for normal outbound PSTN calls is the phone number assigned to the resource account specified in the policy instance. Typically this is the organization's main auto attendant phone number. Callbacks will go to the auto attendant and the PSTN caller can use the auto attendant to be transferred to the shared calling user.
 
-When a Shared Calling user makes an emergency call, the emergency services need to be able to make a direct call back to the user who placed the emergency call. One of the defined emergency numbers will be used for this purpose as caller ID for the emergency call. It will be reserved for the next 60 minutes and any inbound call to that number will directly ring the Shared Calling user that made the emergency call. If no emergency numbers are defined, the phone number of the resource account will be used as caller ID. If no free emergency numbers are available the first number in the list will be re-used.
+When a shared calling user makes an emergency call, the emergency services need to be able to make a direct callback to the user who placed the emergency call. One of the defined emergency numbers is used for this purpose as caller ID for the emergency call. It will be reserved for the next 60 minutes and any inbound call to that number will directly ring the shared calling user who made the emergency call. If no emergency numbers are defined, the phone number of the resource account is used as caller ID. If no free emergency numbers are available, the first number in the list is reused.
 
-The emergency call will contain the location of the Shared Calling user. The location will either by the dynamic emergency location obtained by the Teams client or if that is not available the static location assigned to the phone number of the resource account used in the Shared Calling policy instance.
+The emergency call will contain the location of the shared calling user. The location will be either the dynamic emergency location obtained by the Teams client or if that is not available the static location assigned to the phone number of the resource account used in the shared calling policy instance.
 
 ## EXAMPLES
 
