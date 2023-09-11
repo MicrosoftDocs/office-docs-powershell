@@ -30,7 +30,7 @@ Get-CsTeamsSharedCallingRoutingPolicy [-Filter <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-TeamsSharedCallingRoutingPolicy is used to configure Shared Calling.
+TeamsSharedCallingRoutingPolicy is used to configure shared calling.
 
 ## EXAMPLES
 
