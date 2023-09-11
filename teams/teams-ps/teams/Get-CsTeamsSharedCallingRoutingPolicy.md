@@ -64,7 +64,7 @@ The command shown in Example 4 returns information about the Global policy insta
 Unique identifier of the Teams shared calling routing policy to be retrieved. 
 
 You cannot use wildcard characters when specifying the Identity. If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsSharedCallingRoutingPolicy
-returns all the Teams shared calling routing policies configured for use in the tenant.
+returns all the Teams shared calling routing policies configured for use in the organization.
 
 ```yaml
 Type: String
