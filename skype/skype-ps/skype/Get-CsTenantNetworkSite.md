@@ -139,7 +139,7 @@ The ID of the network site.
 The ID of the online voice routing policy assigned to the site.
 
 ### EnableLocationBasedRouting
-Boolean stating if Location Based Routing is enabled on the site.
+Boolean stating whether Location-Based Routing is enabled on the site.
 
 ### EmergencyCallRoutingPolicyTagID
 The ID of the Teams emergency call routing policy assigned to the site.
