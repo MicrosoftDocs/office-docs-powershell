@@ -13,7 +13,7 @@ schema: 2.0.0
 # New-CsTeamsSharedCallingRoutingPolicy
 
 ## SYNOPSIS
-Use the New-CsTeamsSharedCallingRoutingPolicy cmdlet to configure a Shared Calling routing policy.
+Use the New-CsTeamsSharedCallingRoutingPolicy cmdlet to configure a shared calling routing policy.
 
 ## SYNTAX
 
