@@ -175,7 +175,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-In some Calling Plan markets you are not allowed to set the location on Service numbers. In this case please contact the [Telephone Number Services Service desk](https://learn.microsoft.com/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
+In some Calling Plan markets, you are not allowed to set the location on service numbers. In this instance, kindly contact the [Telephone Number Services Service desk](/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
 
 This cmdlet was introduced in Teams PowerShell Module 5.5.0.
 
