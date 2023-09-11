@@ -13,7 +13,7 @@ schema: 2.0.0
 # Set-CsTeamsSharedCallingRoutingPolicy
 
 ## SYNOPSIS
-Use the Set-CsTeamsSharedCallingRoutingPolicy cmdlet to change a Shared Calling routing policy instance.
+Use the Set-CsTeamsSharedCallingRoutingPolicy cmdlet to change a shared calling routing policy instance.
 
 ## SYNTAX
 
