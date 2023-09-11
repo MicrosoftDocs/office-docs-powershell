@@ -13,7 +13,7 @@ ms.reviewer:
 # New-CsTenantNetworkSite
 
 ## SYNOPSIS
-As an Admin, you can use the Teams PowerShell command, New-CsTenantNetworkSite to define network sites. Network sites are defined as a collection of IP subnets. Each network site must be associated with a network region. Tenant network site is used for Location Based Routing.
+As an admin, you can use the Teams PowerShell command, New-CsTenantNetworkSite to define network sites. Network sites are defined as a collection of IP subnets. Each network site must be associated with a network region. The organization's network site is used for Location-Based Routing.
 
 ## SYNTAX
 
