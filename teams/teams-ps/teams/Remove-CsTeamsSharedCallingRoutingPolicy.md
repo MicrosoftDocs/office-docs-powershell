@@ -22,7 +22,7 @@ Remove-CsTeamsSharedCallingRoutingPolicy [-Identity] <string> [-Force] [-WhatIf]
 ```
 
 ## DESCRIPTION
-TeamsSharedCallingRoutingPolicy is used to configure Shared Calling.
+TeamsSharedCallingRoutingPolicy is used to configure shared calling.
 
 ## EXAMPLES
 
