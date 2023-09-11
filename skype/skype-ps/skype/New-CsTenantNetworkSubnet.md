@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 
 ### -Description
-Provide a description of the network subnet to identify purpose of creating it.
+Provide a description of the network subnet to identify the purpose of creating it.
 
 ```yaml
 Type: String
