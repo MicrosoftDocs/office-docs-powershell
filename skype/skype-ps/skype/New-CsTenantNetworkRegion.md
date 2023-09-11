@@ -39,7 +39,7 @@ Location-Based Routing leverages the same network regions, sites, and subnets co
 PS C:\> New-CsTenantNetworkRegion -NetworkRegionID "RegionA"
 ```
 
-The command shown in Example 1 created the network region 'RegionA' with no description. Identity and CentralSite will both be set identical with NetworkRegionID.
+The command shown in Example 1 creates the network region 'RegionA' with no description. Identity and CentralSite will both be set identically to NetworkRegionID.
 
 ## PARAMETERS
 
