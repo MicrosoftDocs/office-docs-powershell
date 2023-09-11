@@ -50,7 +50,7 @@ The command shown in Example 1 assigns the per-user Teams shared calling routing
 ```
 Grant-CsTeamsSharedCallingRoutingPolicy -PolicyName "Seattle" -Global
 ```
-Example 2 assigns the per-user Teams shared calling routing policy instance Seattle to all the users in the tenant, except any that have an explicit Teams shared calling routing policy assignment.
+Example 2 assigns the per-user Teams shared calling routing policy instance Seattle to all the users in the organization, except any that have an explicit Teams shared calling routing policy assignment.
 
 ## PARAMETERS
 
