@@ -107,7 +107,7 @@ The Identity of the resource account. Can only be specified using the Identity o
 The phone number assigned to the resource account must:
 - Have the same phone number type and country as the emergency numbers configured in this policy instance.
 - Must have an emergency location assigned. You can use the Teams PowerShell Module [Set-CsPhoneNumberAssignment](Set-CsPhoneNumberAssignment.md) and the -LocationId parameter to set the location.
-- If the resource account is using a Calling Plan service number, you must have a Pay-As-You-Go Calling Plan, and assign it to the resource account.  In addition, you need to assign a Communications credits license to the resource account and fund it to support outbound Shared Calling calls via the Pay-As-You-Go Calling Plan.
+- If the resource account is using a Calling Plan service number, you must have a Pay-As-You-Go Calling Plan, and assign it to the resource account.  In addition, you need to assign a Communications credits license to the resource account and fund it to support outbound shared calling calls via the Pay-As-You-Go Calling Plan.
 
 The same resource account can be used in multiple Shared Calling policy instances. 
 
