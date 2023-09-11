@@ -615,7 +615,9 @@ For more information about filtering in the module, see [Filters in the Exchange
 
 Unless otherwise noted, the current release of the Exchange Online PowerShell module contains all features of previous releases.
 
-### Current release: Version 3.3.0
+### Current release
+
+#### Version 3.3.0
 
 - _SkipLoadingCmdletHelp_ parameter on **Connect-ExchangeOnline** to support skip loading cmdlet help files.
 - Global variable `EXO_LastExecutionStatus` is available to check the status of the last cmdlet that was run.

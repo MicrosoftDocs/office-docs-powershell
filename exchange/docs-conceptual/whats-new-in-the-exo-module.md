@@ -26,7 +26,7 @@ This article lists new features in the Exchange Online PowerShell module that's 
 
 - [Version 3.3.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.3.0) has been released.
 
-  For information about what's in this release, see [Version 3.3.0](exchange-online-powershell-v2.md#current-release-version-330).
+  For information about what's in this release, see [Version 3.3.0](exchange-online-powershell-v2.md#version-330).
 
 ## June 2023
 
