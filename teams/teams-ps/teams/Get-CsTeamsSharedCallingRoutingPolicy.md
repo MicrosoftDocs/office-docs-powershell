@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Use the Get-CsTeamsSharedCallingRoutingPolicy cmdlet to get Teams shared calling routing policy information.
-Teams shared calling routing policy is used to configure Shared Calling.
+Teams shared calling routing policy is used to configure shared calling.
 
 ## SYNTAX
 
