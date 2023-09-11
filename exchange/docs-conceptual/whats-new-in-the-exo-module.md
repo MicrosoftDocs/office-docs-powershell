@@ -3,7 +3,7 @@ title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 8/21/2023
+ms.date: 9/11/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -21,6 +21,10 @@ description: "Learn about the new features and functionality available in the la
 # What's new in the Exchange Online PowerShell module
 
 This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
+
+## September 2023
+
+- [Version 3.3.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.3.0) has been released.
 
 ## June 2023
 
