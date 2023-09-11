@@ -407,7 +407,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The activation state of the telephone number.
 
 ### AssignedPstnTargetId
-The ID of the object the phone number is assigned to. Either the ObjectId of a user or resource account or the policy instance id of a Teams Shared Calling Routing Policy instance.
+The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
+
 
 ### AssignmentCategory
 This parameter is reserved for internal Microsoft use.
