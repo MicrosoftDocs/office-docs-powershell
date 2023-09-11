@@ -55,7 +55,7 @@ The command shown in Example 2 returns the IPv6 format network subnet within the
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter is a unique identifier that designates the scope. It specifies the collection of tenant network subnet to be returned.
+The Identity parameter is a unique identifier that designates the scope. It specifies the collection of tenant network subnets to be returned.
 
 ```yaml
 Type: String
