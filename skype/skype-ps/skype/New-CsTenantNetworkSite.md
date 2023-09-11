@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkRegionID
-NetworkRegionID is the identifier for the network region which the current network site is associating to.
+NetworkRegionID is the identifier for the network region to which the current network site is associated to.
 
 ```yaml
 Type: String
