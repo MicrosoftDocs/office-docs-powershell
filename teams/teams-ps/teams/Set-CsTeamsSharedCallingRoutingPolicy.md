@@ -80,7 +80,7 @@ The emergency numbers must be routable for inbound PSTN calls and for Calling Pl
 
 The emergency numbers specified must all be of the same phone number type and country as the phone number assigned to the specified resource account. If the resource account has a Calling Plan service number assigned, the emergency numbers need to be Calling Plan subscriber numbers.
 
-The emergency numbers must be unique and can't be reused in other Shared Calling policy instances. The emergency numbers can't be assigned to any user or resource account.
+The emergency numbers must be unique and can't be reused in other shared calling policy instances. The emergency numbers can't be assigned to any user or resource account.
 
 If no emergency numbers are configured, the phone number of the resource account will be used as Caller ID for the emergency call.
 
