@@ -130,7 +130,8 @@ foreach ($pn in $pns) {
 Write-Host (Get-CsPhoneNumberAssignment -LocationId $OldLocationId).Count numbers found in old location $OldLocationId
 Write-Host (Get-CsPhoneNumberAssignment -LocationId $NewLocationId).Count numbers found in new location $NewLocationId
 ```
-This Example shows how to update the LocationID from an old location to new location for a set of phone numbers.
+This Example shows how to update the LocationID from an old location to a new location for a set of phone numbers.
+
 
 ## PARAMETERS
 
