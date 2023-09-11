@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmergencyCallRoutingPolicy
-This parameter is used to assign a custom emergency call routing policy to a network site. For more information see [Assign a custom emergency call routing policy to a network site](https://learn.microsoft.com/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
+This parameter is used to assign a custom emergency call routing policy to a network site. For more information, see [Assign a custom emergency call routing policy to a network site](/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
 
 ```yaml
 Type: String
