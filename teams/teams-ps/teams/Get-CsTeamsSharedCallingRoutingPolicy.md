@@ -38,7 +38,7 @@ TeamsSharedCallingRoutingPolicy is used to configure shared calling.
 ```
 Get-CsTeamsSharedCallingRoutingPolicy
 ```
-The command shown in Example 1 returns information for all the Teams shared calling routing policies configured for use in the tenant.
+The command shown in Example 1 returns information for all the Teams shared calling routing policies configured for use in the organization.
 
 ### Example 2
 ```
