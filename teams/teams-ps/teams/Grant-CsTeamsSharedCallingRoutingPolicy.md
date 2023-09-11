@@ -55,7 +55,7 @@ Example 2 assigns the per-user Teams shared calling routing policy instance Seat
 ## PARAMETERS
 
 ### -Identity
-Indicates the Identity of the user account to be assigned the per-user Teams shared calling routing policy. User Identities can be specified using one of the following formats: the user's SIP address, the user's user principal name (UPN), or the user's ObjectId or Identity.
+Indicates the Identity of the user account to be assigned the per-user Teams shared calling routing policy. User identities can be specified using one of the following formats: the user's SIP address, the user's user principal name (UPN), or the user's ObjectId or Identity.
 
 ```yaml
 Type: String
