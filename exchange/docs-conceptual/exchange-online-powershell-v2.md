@@ -629,7 +629,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 #### Version 3.2.0
 
 - New cmdlets:
-  - **Get-DefaultTenantBriefingConfig**** and **Set-DefaultTenantBriefingConfig**.
+  - **Get-DefaultTenantBriefingConfig** and **Set-DefaultTenantBriefingConfig**.
   - **Get-DefaultTenantMyAnalyticsFeatureConfig** and **Set-DefaultTenantMyAnalyticsFeatureConfig**.
   - **Get-VivaModuleFeature**, **Get-VivaModuleFeatureEnablement**, **Add-VivaModuleFeaturePolicy**, **Get-VivaModuleFeaturePolicy**, **Remove-VivaModuleFeaturePolicy**, and **Update-VivaModuleFeaturePolicy**.
 - REST API connection support for Security & Compliance Center PowerShell.
