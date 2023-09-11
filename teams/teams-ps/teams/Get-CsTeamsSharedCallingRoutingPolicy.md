@@ -44,7 +44,7 @@ The command shown in Example 1 returns information for all the Teams shared call
 ```
 Get-CsTeamsSharedCallingRoutingPolicy -Identity "Seattle"
 ```
-In Example 2, information is returned for a single Teams shared calling routing policy; the policy with the Identity Seattle.
+In Example 2, information is returned for a single Teams shared calling routing policy; the policy with Identity Seattle.
 
 ### Example 3
 ```
