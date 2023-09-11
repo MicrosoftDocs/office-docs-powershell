@@ -44,7 +44,7 @@ and removed by the Remove-CsTeamsSharedCallingRoutingPolicy cmdlet.
 ## PARAMETERS
 
 ### -Identity
-Unique identifier assigned to the policy when it was created.
+Unique identifier assigned to the policy when it is created.
 
 ```yaml
 Type: String
