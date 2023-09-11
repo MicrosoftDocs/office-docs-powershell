@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLocationBasedRouting
-This parameter determines whether the current site is enabled for location based routing.
+This parameter determines whether the current site is enabled for Location-Based Routing.
 
 ```yaml
 Type: Boolean
