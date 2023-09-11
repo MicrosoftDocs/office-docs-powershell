@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ### -EmergencyNumbers
 An array of phone numbers used as caller ID on emergency calls.
 
-The emergency numbers must be routable for inbound PSTN calls and for Calling Plan & Operator Connect phone numbers they must be available within the tenant.
+The emergency numbers must be routable for inbound PSTN calls, and for Calling Plan and Operator Connect phone numbers, must be available within the organization.
 
 The emergency numbers specified must all be of the same phone number type and country as the phone number assigned to the specified resource account. If the resource account has a Calling Plan service number assigned, the emergency numbers need to be Calling Plan subscriber numbers.
 
