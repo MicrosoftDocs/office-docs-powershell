@@ -33,7 +33,7 @@ Location-Based Routing leverages the same network regions, sites, and subnets co
 PS C:\> Set-CsTenantNetworkRegion -Identity "RegionA" -Description "Region A"
 ```
 
-The command shown in Example 1 set the network region 'RegionA' with description 'Region A'.
+The command shown in Example 1 sets the network region 'RegionA' with the description 'Region A'.
 
 ## PARAMETERS
 
