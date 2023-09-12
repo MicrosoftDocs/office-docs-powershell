@@ -633,16 +633,15 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all email addresses (proxy addresses) for the Microsoft 365 Group, including the primary SMTP address. In cloud-based organizations, the primary SMTP address and other proxy addresses for Microsoft 365 Groups are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the Microsoft 365 Group.
 
-Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
-- X400: X.400 addresses in on-premises Exchange.
-- X500: X.500 addresses in on-premises Exchange.
+- SPO: SharePoint Online email address.
 
-If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
@@ -840,9 +839,9 @@ Accept wildcard characters: False
 ### -HiddenFromExchangeClientsEnabled
 The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Microsoft 365.
 
-- To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
-- To disable this setting, use this exact syntax: `-HiddenFromExchangeClientsEnabled:$false`. The Microsoft 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
-- If Microsoft 365 Groups are hidden from Exchange clients, users cannot view the option to subscribe or unsubscribe to a Microsoft 365 Group.
+- To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't visible in the global address list (GAL). The group name doesn't resolve during the creation of a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users can't find the group by using the Discover option in Outlook on the web. The HiddenFromAddressListsEnabled property is set to the value True to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
+- To disable this setting, use this exact syntax: `-HiddenFromExchangeClientsEnabled:$false`. The Microsoft 365 Group isn't hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
+- If Microsoft 365 Groups are hidden from Exchange clients, users don't see the option to subscribe or unsubscribe to a Microsoft 365 Group.
 
 ```yaml
 Type: SwitchParameter

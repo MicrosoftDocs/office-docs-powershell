@@ -14,8 +14,6 @@
           href: find-exchange-cmdlet-permissions.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
-        - name: Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers
-          href: use-update-exchangehelp.md
         - name: Recipient filters in Exchange Management Shell commands
           href: recipient-filters.md
           items:
@@ -72,8 +70,6 @@
           href: exchange-cmdlet-syntax.md
         - name: What's new in the Exchange Online PowerShell module
           href: whats-new-in-the-exo-module.md
-        - name: V1 module - Connect to Security & Compliance PowerShell
-          href: v1-module-mfa-connect-to-scc-powershell.md
     - name: Exchange Online Protection PowerShell
       href: exchange-online-protection-powershell.md
       items:

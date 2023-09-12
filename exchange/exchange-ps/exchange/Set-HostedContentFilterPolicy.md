@@ -342,12 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadLink
-The DownloadLink parameter shows or hides a link in end-user spam quarantine notifications to download the Junk Email Reporting Tool for Outlook. Valid values are:
-
-- $true: end-user spam quarantine notifications contain a link to download the Junk Email Reporting Tool for Outlook.
-- $false: end-user spam quarantine notifications don't contain the link. This is the default value.
-
-This parameter is only meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: Boolean
@@ -363,10 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEndUserSpamNotifications
-The EnableEndUserSpamNotification parameter enables for disables sending end-user spam quarantine notifications. Valid values are:
-
-- $true: End-users periodically receive notifications when a messages that was supposed to be delivered to them was quarantined as spam. When you use this value, you can also use the EndUserSpamNotificationCustomSubject, EndUserSpamNotificationFrequency, and EndUserSpamNotificationLanguage parameters.
-- $false: end-user spam quarantine notifications are disabled. This is the default value.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: Boolean
@@ -420,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomFromAddress
-This parameter has been deprecated and is no longer used.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: SmtpAddress
@@ -436,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomFromName
-This parameter has been deprecated and is no longer used.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: String
@@ -452,9 +444,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomSubject
-The EndUserSpamNotificationCustomSubject parameter specifies a custom subject for end-user spam notification messages. If the value includes spaces, enclose the value in quotation marks (").
-
-This parameter is meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: String
@@ -470,10 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequency
-The EndUserSpamNotificationFrequency parameter specifies the repeat interval in days that end-user spam quarantine notifications are sent. A valid value is an integer between 1 and 15. The default value is 3.
-
-This parameter is meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
-
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -488,13 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationLanguage
-The EndUserSpamNotificationLanguage parameter specifies the language of end-user spam quarantine notifications. Valid values are:
-
-Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
-
-The default value is Default, which means English.
-
-This parameter is meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: EsnLanguage

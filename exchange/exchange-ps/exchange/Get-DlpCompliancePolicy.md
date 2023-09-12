@@ -22,8 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
- [-ForceValidate <Boolean>]
  [-DistributionDetail]
+ [-ForceValidate <Boolean>]
  [-IncludeExtendedProperties <Boolean>]
  [-IncludeRulesMetadata <Boolean>]
  [-IRMUserRiskConfiguredAnyRule]
