@@ -162,7 +162,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -847,7 +847,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpRestrictions
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 The EndpointDlpRestrictions parameter specifies the restricted endpoints for Endpoint DLP. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
 
@@ -869,7 +869,7 @@ When you use the values Block or Warn in this parameter, also need to use the No
 
 You can view and configure the available restrictions with the Get-PolicyConfig and Set-PolicyConfig cmdlets.
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: PswsHashtable[]
@@ -2320,11 +2320,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEndpointUser
-**Note**: This parameter requires membership in the Compliance administrator or Compliance data administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
 
 {{ Fill NotifyEndpointUser Description }}
 
-For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about).
+For more information about Endpoint DLP, see [Learn about Endpoint data loss prevention](https://learn.microsoft.com/purview/endpoint-dlp-learn-about).
 
 ```yaml
 Type: PswsHashtable
@@ -2909,7 +2909,7 @@ The SenderAddressLocation parameter specifies where to look for sender addresses
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 
-Note that message envelope searching is only available for the following conditions and exceptions:
+Note that message envelope searching is available only for the following conditions and exceptions:
 
 - From and ExceptIfFrom
 - FromAddressContainsWords and ExceptIfFromAddressContainsWords

@@ -29,7 +29,7 @@ Get-M365DataAtRestEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter
 ```
 
 ## DESCRIPTION
-M365 data-at-rest encryption policy cmdlets are accessible to compliance administrator role as part of the Exchange Online infrastructure. For more information, see [Overview of M365 Customer Key at the tenant level](https://learn.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details).
+M365 data-at-rest encryption policy cmdlets are accessible to compliance administrator role as part of the Exchange Online infrastructure. For more information, see [Service encryption with Microsoft Purview Customer Key](https://learn.microsoft.com/purview/customer-key-overview).
 
 You can create and assign a Microsoft 365 data-at-rest encryption policy at the tenant level by using the appropriate M365DataAtRestEncryptionPolicy cmdlets in Exchange Online PowerShell.
 

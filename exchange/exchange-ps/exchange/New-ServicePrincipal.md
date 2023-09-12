@@ -71,7 +71,9 @@ Accept wildcard characters: False
 ### -ObjectId
 The ObjectId parameter specifies the unique ObjectId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
-- The ObjectId property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
+A valid value for this parameter is available in the following locations:
+
+- The Id property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
 - The Object ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml

@@ -19,6 +19,8 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or
 
 Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. The most restrictive policy for a particular user or group takes priority when determining whether a feature is enabled.
 
+Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -27,6 +29,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]
  [-IsFeatureEnabled <Boolean>]
+ [-IsUserControlEnabled <Boolean>]
  [-GroupIds <String[]>]
  [-Everyone <Boolean>]
  [-Name <String>]
@@ -43,6 +46,7 @@ This cmdlet updates the attributes of the policy that you specify. These attribu
 
 - The policy name (Name parameter).
 - Whether or not the policy enables the feature (IsFeatureEnabled parameter).
+- Whether or not the policy enables user controls (IsUserControlEnabled parameter).
 - Who the policy applies to (the UserIds and GroupIds parameters or the Everyone parameter).
 
 You can update these attributes independently of each other. For example, if you specify the Name parameter but not the IsFeatureEnabled parameter, the name of the policy is updated but whether or not the policy enables the feature remains unchanged.
@@ -228,6 +232,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsUserControlEnabled
+**Note**: This parameter is available in version 3.3.0 or later of the module.
+
+The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
+
+- $true: User control is enabled by the policy. Users can opt out of the feature.
+- $false: User control isn't enabled by the policy. Users can't opt of the feature.
+
+Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
+
+If you don't want to update whether the user control is enabled by the policy, don't use this parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 The Name parameter specifies the updated name for the policy. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -317,6 +346,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Exchange PowerShell](https://learn.microsoft.com/powershell/module/exchange)
 
-[About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#updates-for-the-exo-v3-module)
+[About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2)
 
 [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids)

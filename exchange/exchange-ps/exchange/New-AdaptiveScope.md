@@ -37,9 +37,9 @@ New-AdaptiveScope -Name <String> -LocationType <DynamicBoundaryLocationType> -Ra
 ```
 
 ## DESCRIPTION
-For more information about the properties to use in adaptive scopes, see [Configuration information for adaptive scopes](https://learn.microsoft.com/microsoft-365/compliance/retention-settings#configuration-information-for-adaptive-scopes).
+For more information about the properties to use in adaptive scopes, see [Configuration information for adaptive scopes](https://learn.microsoft.com/purview/retention-settings#configuration-information-for-adaptive-scopes).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

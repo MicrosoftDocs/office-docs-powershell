@@ -50,7 +50,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-TeamsProtectionPolicyRule -Name "Teams Protection Policy Rule" -TeamsProtectionPolicy "Teams Protection Policy" -ExceptIfSentToMemberOf research@contoso.onmicrosoft.com
 ```
 
-This example creates the Teams protection policy rule with protection in Teams turned off for members of the group named Research.
+This example creates the Teams protection policy rule with members of the group named Research excluded from ZAP for Teams protection.
 
 ## PARAMETERS
 
@@ -122,10 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter specifies whether the rule is enabled or disabled. Valid values are:
-
-- $true: The rule is enabled. This is the default value.
-- $false: The rule is disabled.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -141,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-The ExceptIfRecipientDomainIs parameter specifies an exception to Teams protection that looks for recipients of Teams messages with email addresses in the specified domains. You can specify multiple domains separated by commas.
+The ExceptIfRecipientDomainIs parameter specifies an exception to ZAP for Teams protection that looks for recipients of Teams messages with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]
@@ -157,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-The ExceptIfSentTo parameter specifies an exception to Teams protection that looks for recipients of Teams messages. You can use any value that uniquely identifies the recipient. For example:
+The ExceptIfSentTo parameter specifies an exception to ZAP for Teams protection that looks for recipients of Teams messages. You can use any value that uniquely identifies the recipient. For example:
 
 - Name
 - Alias
@@ -182,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToMemberOf
-The ExceptIfSentToMemberOf parameter specifies an exception to Teams protection that looks for Teams messages sent to members of distribution groups or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
+The ExceptIfSentToMemberOf parameter specifies an exception to ZAP for Teams protection that looks for Teams messages sent to members of distribution groups or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
 - Name
 - Alias

@@ -31,7 +31,7 @@ Remove-RetentionComplianceRule [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 Removing a retention rule causes the release of all Exchange mailbox and SharePoint site retentions that are associated with the rule. Removing a retention rule also causes the corresponding retention policy to become invalid, so you should remove it by using the Remove-RetentionCompliancePolicy cmdlet.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

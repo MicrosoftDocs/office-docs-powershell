@@ -40,7 +40,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
 ## DESCRIPTION
 The Search-UnifiedAuditLog cmdlet presents pages of data based on repeated iterations of the same command. Use SessionId and SessionCommand to repeatedly run the cmdlet until you get zero returns, or hit the maximum number of results based on the session command. To gauge progress, look at the ResultIndex (hits in the current iteration) and ResultCount (hits for all iterations) properties of the data returned by the cmdlet.
 
-The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. You can also view events from the unified auditing log by using the Microsoft Purview compliance portal. For more information, see [Audited activities](https://learn.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
+The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. You can also view events from the unified auditing log by using the Microsoft Purview compliance portal. For more information, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
 
 If you want to programmatically download data from the Microsoft 365 audit log, we recommend that you use the Microsoft 365 Management Activity API instead of using the Search-UnifiedAuditLog cmdlet in a PowerShell script. The Microsoft 365 Management Activity API is a REST web service that you can use to develop operations, security, and compliance monitoring solutions for your organization. For more information, see [Management Activity API reference](https://learn.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference).
 
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operations
-The Operations parameter filters the log entries by operation. The available values for this parameter depend on the RecordType value. For a list of the available values for this parameter, see [Audited activities](https://learn.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
+The Operations parameter filters the log entries by operation. The available values for this parameter depend on the RecordType value. For a list of the available values for this parameter, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
