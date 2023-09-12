@@ -312,7 +312,7 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/advanced-threat-protection/Get-PhishFilterPolicy.md",
-      "redirect_url": "/powershell/module/exchange/get-tenantallowblocklistppoofitems",
+      "redirect_url": "/powershell/module/exchange/get-tenantallowblocklistspoofitems",
       "redirect_document_id": false
     },
     {
@@ -422,7 +422,7 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/advanced-threat-protection/Set-PhishFilterPolicy.md",
-      "redirect_url": "/powershell/module/exchange/set-tenantallowblocklistppoofitems",
+      "redirect_url": "/powershell/module/exchange/set-tenantallowblocklistspoofitems",
       "redirect_document_id": false
     },
     {
@@ -6847,12 +6847,12 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/Get-PhishFilterPolicy.md",
-      "redirect_url": "/powershell/module/exchange/get-tenantallowblocklistppoofitems",
+      "redirect_url": "/powershell/module/exchange/get-tenantallowblocklistspoofitems",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/Set-PhishFilterPolicy.md",
-      "redirect_url": "/powershell/module/exchange/set-tenantallowblocklistppoofitems",
+      "redirect_url": "/powershell/module/exchange/set-tenantallowblocklistspoofitems",
       "redirect_document_id": false
     },
     {
