@@ -37,7 +37,7 @@ Set-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>]
 ## DESCRIPTION
 Safe Links protection for Office 365 apps checks links in Office documents, not links in email messages. For more information, see [Safe Links settings for Office 365 apps](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-links-about#safe-links-settings-for-office-365-apps.
 
-Safe Documents scans documents and files that are opened in Protected View. For more information, see [Safe Documents in Microsoft 365 E5](https://learn.microsoft.com/microsoft-365/security/office-365-securitysafe-documents-in-e5-plus-security-about).
+Safe Documents scans documents and files that are opened in Protected View. For more information, see [Safe Documents in Microsoft 365 E5](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-documents-in-e5-plus-security-about).
 
 Safe Attachments for SharePoint, OneDrive, and Microsoft Teams prevents users from opening and downloading files that are identified as malicious. For more information, see [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-for-spo-odfb-teams-about).
 
@@ -135,7 +135,7 @@ The EnableSafeDocs parameter enables or disables Safe Documents in organizations
 - $true: Safe Documents is enabled and will upload user files to Microsoft Defender for Endpoint for scanning and verification.
 - $false: Safe Documents is disabled. This is the default value.
 
-For more information about Safe Documents, see [Safe Documents in Microsoft 365 A5 or E5 Security](https://learn.microsoft.com/microsoft-365/security/office-365-securitysafe-documents-in-e5-plus-security-about)
+For more information about Safe Documents, see [Safe Documents in Microsoft 365 A5 or E5 Security](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-documents-in-e5-plus-security-about)
 
 ```yaml
 Type: Boolean
