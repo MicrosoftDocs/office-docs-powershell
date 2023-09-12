@@ -31,7 +31,7 @@ New-M365DataAtRestEncryptionPolicy [-Name] <String> -AzureKeyIDs <MultiValuedPro
 ```
 
 ## DESCRIPTION
-Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy for multi-workload usage. For more information, see [Overview of M365 Customer Key at the tenant level](https://learn.microsoft.com/microsoft-365/compliance/customer-key-tenant-level#get-policy-details) and [Create a DEP for use with multiple workloads for all tenant users](https://learn.microsoft.com/microsoft-365/compliance/customer-key-manage#create-a-dep-for-use-with-multiple-workloads-for-all-tenant-users).
+Use the New-M365DataAtRestEncryptionPolicy cmdlet to create a new Microsoft 365 data-at-rest encryption policy for multi-workload usage. For more information, see [Service encryption with Microsoft Purview Customer Key](https://learn.microsoft.com/purview/customer-key-overview).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

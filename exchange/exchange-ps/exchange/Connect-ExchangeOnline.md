@@ -53,6 +53,7 @@ Connect-ExchangeOnline
  [-ShowBanner]
  [-ShowProgress <Boolean>]
  [-SigningCertificate <X509Certificate2>]
+ [-SkipLoadingCmdletHelp]
  [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -674,14 +675,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SkipLoadingCmdletHelp
+**Note**: This parameter is available in version 3.3.0 or later of the module.
+
+The SkipLoadingCmdletHelp switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+
+When you use this switch, you don't get local help files for any cmdlet.
+
+This switch doesn't work with the UseRPSSession switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SkipLoadingFormatData
 The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 
-Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service.
+Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service or the Windows PowerShell SDK.
 
-This switch does not work with the UseRPSSession switch.
+This switch doesn't work with the UseRPSSession switch.
 
 ```yaml
 Type: SwitchParameter
@@ -702,7 +725,7 @@ The TrackPerformance parameter measures additional events (for example, CPU load
 - $true: Performance tracking is enabled.
 - $false: Performance tracking is disabled. This is the default value.
 
-This parameter only when works when logging is enabled.
+This parameter works only when logging is enabled.
 
 ```yaml
 Type: Boolean

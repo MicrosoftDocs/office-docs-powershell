@@ -1629,7 +1629,7 @@ This parameter is available only in the cloud-based service.
 
 The DisablePlusAddressInRecipients parameter specifies whether to enable or disable plus addressing (also known as subaddressing) for Exchange Online mailboxes. Valid values are:
 
-- $true: Plus addressing is disabled. You can no longer use the plus sign in regular email addresses. The plus sign is only available for plus addressing.
+- $true: Plus addressing is disabled. You can no longer use the plus sign in regular email addresses. The plus sign is available only for plus addressing.
 - $false: Plus addressing is enabled. You can use the plus sign in regular email addresses.
 
 For more information about plus addressing, see [Plus addressing in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/plus-addressing-in-exchange-online).

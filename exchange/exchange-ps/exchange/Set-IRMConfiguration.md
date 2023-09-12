@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ### -EnablePortalTrackingLogs
 This parameter is available only in the cloud-based service.
 
-**Note**: This parameter is available only in organizations with Microsoft Purview Advanced Message Encryption. For more information, see [Advanced Message Encryption](https://learn.microsoft.com/microsoft-365/compliance/ome-advanced-message-encryption).
+**Note**: This parameter is available only in organizations with Microsoft Purview Advanced Message Encryption. For more information, see [Advanced Message Encryption](https://learn.microsoft.com/purview/ome-advanced-message-encryption).
 
 The EnablePortalTrackingLogs parameter specifies whether to turn on auditing for the Office 365 Message Encryption (OME) portal. Valid values are:
 
