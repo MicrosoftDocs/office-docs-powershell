@@ -678,7 +678,7 @@ Accept wildcard characters: False
 ### -SkipLoadingCmdletHelp
 **Note**: This parameter is available in version 3.3.0 or later of the module.
 
-The SkipLoadingFormatData switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+The SkipLoadingCmdletHelp switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, you don't get local help files for any cmdlet.
 
