@@ -225,6 +225,8 @@ The AddOrganizerToSubject parameter specifies whether the meeting organizer's na
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
+**Note**: Default Calendar folder permissions use the AvailabilityOnly role, which doesn't allow viewing Subject fields in meeting requests. At a minimum, the LimitedDetails role is required to view Subject fields in meeting requests. Use the **\*-MailboxFolderPermission** cmdlets to manage mailbox folder permissions.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -796,7 +798,10 @@ Accept wildcard characters: False
 ### -RemoveCanceledMeetings
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveCanceledMeetings Description }}
+The RemoveCanceledMeetings parameter specifies whether to automatically delete meetings that were cancelled by the organizer from the resource mailbox's calendar. Valid values are:
+
+- $true: Canceled meetings are deleted.
+- $false: Canceled meetings aren't deleted. This is the default value.
 
 ```yaml
 Type: Boolean

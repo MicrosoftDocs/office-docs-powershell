@@ -298,6 +298,7 @@ When you're done editing the topics, upload them to GitHub. Note that you need t
    - StaffHub: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/staffhub/staffhub-ps/staffhub>
    - Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams>
    - Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard>
+   - SharePoint / OneDrive: <https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-PowerShell>
 
 2. Click **Upload files**
 

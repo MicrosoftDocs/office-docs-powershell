@@ -676,9 +676,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLoadingCmdletHelp
-**Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
+**Note**: This parameter is available in version 3.3.0 or later of the module.
 
-The SkipLoadingFormatData switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+The SkipLoadingCmdletHelp switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, you don't get local help files for any cmdlet.
 
@@ -702,9 +702,9 @@ The SkipLoadingFormatData switch avoids downloading the format data for REST API
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 
-Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service.
+Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service or the Windows PowerShell SDK.
 
-This switch does not work with the UseRPSSession switch.
+This switch doesn't work with the UseRPSSession switch.
 
 ```yaml
 Type: SwitchParameter
@@ -725,7 +725,7 @@ The TrackPerformance parameter measures additional events (for example, CPU load
 - $true: Performance tracking is enabled.
 - $false: Performance tracking is disabled. This is the default value.
 
-This parameter only when works when logging is enabled.
+This parameter works only when logging is enabled.
 
 ```yaml
 Type: Boolean

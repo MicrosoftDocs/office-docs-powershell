@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-CompromisedUserDetailReport cmdlet to return detailed information about compromised users for the last 30 days.
+Use the Get-CompromisedUserDetailReport cmdlet to return detailed information about compromised users for the last 10 days.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -43,7 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailFlowStatusReport -StartDate 06-01-2020 -EndDate 06-10-2020 -Action Suspicious
+Get-CompromisedUserDetailReport -StartDate 06-01-2020 -EndDate 06-10-2020 -Action Suspicious
 ```
 
 This example returns all suspicious user accounts for the specified date range.
