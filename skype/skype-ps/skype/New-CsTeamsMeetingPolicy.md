@@ -36,7 +36,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowTrackingInReport <Boolean>] [-LiveCaptionsEnabledType <String>] [-RecordingStorageMode <String>] [-RoomAttributeUserOverride <String>]
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <Object>] [-NewMeetingRecordingExpirationDays <Int32>]
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>]
-[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>]
+[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording] [-ExternalMeetingJoin <String>] 
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -183,6 +183,20 @@ Accept wildcard characters: False
 
 ### -AllowIPVideo
 Determines whether video is enabled in  a user's meetings or calls. Set this to TRUE to allow the user to share their video. Set this to FALSE to prohibit the user from sharing their video
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -AllowLocalRecording
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -1064,6 +1078,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalMeetingJoin
+Possible values are:
+- EnabledForAnyone 
+- EnabledForTrustedOrgs
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledForAnyone
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

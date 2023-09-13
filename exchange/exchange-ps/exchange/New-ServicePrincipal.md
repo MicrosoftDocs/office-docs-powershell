@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ServicePrincipal -AppId <String> -ServiceId <String>
+New-ServicePrincipal -AppId <String> -ObjectId <String>
+ -ServiceId <String>
  [-Confirm]
  [-DisplayName <String>]
  [-WhatIf]
@@ -39,10 +40,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ServicePrincipal -AppId 71487acd-ec93-476d-bd0e-6c8b31831053 -ServiceId 6233fba6-0198-4277-892f-9275bf728bcc
+New-ServicePrincipal -AppId 71487acd-ec93-476d-bd0e-6c8b31831053 -ObjectId 6233fba6-0198-4277-892f-9275bf728bcc
 ```
 
-This example create a new service principal in Exchange Online with the specified AppId and ServiceId values.
+This example create a new service principal in Exchange Online with the specified AppId and ObjectId values.
 
 ## PARAMETERS
 
@@ -67,11 +68,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServiceId
-The ServiceId parameter specifies the unique ServiceId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
+### -ObjectId
+The ObjectId parameter specifies the unique ObjectId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
 
-- The ObjectId property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
+A valid value for this parameter is available in the following locations:
+
+- The Id property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
 - The Object ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceId
+This parameter is being deprecated. Use the ObjectId parameter instead.
 
 ```yaml
 Type: String

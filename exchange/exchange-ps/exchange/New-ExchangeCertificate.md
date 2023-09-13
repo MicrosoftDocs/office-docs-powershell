@@ -84,7 +84,7 @@ This example creates a self-signed certificate with the following settings:
 
 - The Subject value is `CN=<ServerName>` (for example, CN=Mailbox01).
 - The Domains (subject alternative names) value is `<ServerName>,<ServerFQDN>` (for example, `Mailbox01,Mailbox01.contoso.com`).
-- The Services value is IMAP,POP,SMTP
+- The Services value is `IMAP,POP,SMTP`.
 - The Services value SMTP grants the Network Services local security group read access to the certificate's private key.
 - The Services value SMTP and the Subject value that contains the server name publishes the certificate to Active Directory so that Exchange direct trust can validate the authenticity of the server for mutual TLS.
 
@@ -95,12 +95,12 @@ If you don't want this certificate to replace the existing self-signed certifica
 Get-ExchangeCertificate -Thumbprint c4248cd7065c87cb942d60f7293feb7d533a4afc | New-ExchangeCertificate -PrivateKeyExportable $true
 ```
 
-This example shows how to renew a self-signed certificate with a specific thumbprint value. You can find the thumbprint value in one of two ways:
+This example shows how to renew a certificate with a specific thumbprint value. You can find the thumbprint value in one of two ways:
 
 - Select the certificate in the Exchange admin center and then select Edit to view properties of the certificate. The thumbprint value is shown in the Exchange Certificate window.
 - Run the Get-ExchangeCertificate cmdlet to return a list of all certificates installed on the server with their thumbprint values.
 
-Setting the PrivateKeyExportable parameter to the value $true allows the renewed self-signed certificate to be exported from the server (and imported on other servers).
+Setting the PrivateKeyExportable parameter to the value $true allows the renewed certificate to be exported from the server (and imported on other servers).
 
 ### Example 3
 ```powershell
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-The DomainName parameter specifies one or more FQDNs or server names for theSubject Alternative Namefield (also known as the Subject Alt Name or SAN field) of the certificate request or self-signed certificate.
+The DomainName parameter specifies one or more FQDNs or server names for theSubject Alternative Name field (also known as the Subject Alt Name or SAN field) of the certificate request or self-signed certificate.
 
 If the value in the certificate's Subject field doesn't match the destination server name or FQDN, the requestor looks for a match in the Subject Alternative Name field.
 
@@ -518,7 +518,7 @@ The Services parameter specifies the Exchange services that the new self-signed 
 - UM: This value requires that the UMStartupMode parameter on the Set-UMService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value of TCP, you can't enable the certificate for the UM service.
 - UMCallRouter: This value requires that the UMStartupMode parameter on the Set-UMCallRouterService cmdlet is set to TLS or Dual. If the UMStartupMode parameter is set to the default value TCP, you can't enable the certificate for the UM Call Router service.
 
-You can specify multiple values separated by commas. The default values are IMAP,POP, and SMTP.
+You can specify multiple values separated by commas. The default values are IMAP, POP, and SMTP.
 
 You can't use this parameter with the GenerateRequest switch.
 

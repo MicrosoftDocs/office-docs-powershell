@@ -53,6 +53,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-PolicyTemplateInfo <PswsHashtable>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-RemoveExchangeLocation <MultiValuedProperty>]
  [-RemoveExchangeLocationException <MultiValuedProperty>]
  [-RemoveModernGroupLocation <MultiValuedProperty>]
@@ -107,7 +108,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-RetentionCompliancePolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_}`.
 
@@ -598,7 +599,7 @@ The EnforceSimulationPolicy parameter specifies whether to enforce a simulation 
 - $true: Enforce the simulation policy as an active policy.
 - $false: Don't enforce the simulation policy as an active policy. This is the default value.
 
-For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
 
 ```yaml
 Type: Boolean
@@ -621,6 +622,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Identity, TeamLocation
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 
@@ -1026,7 +1043,7 @@ The StartSimulation parameter specifies whether to start the simulation for a po
 - $true: Start the simulation.
 - $false: Don't start the simulation. This is the default value.
 
-For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
 
 ```yaml
 Type: Boolean

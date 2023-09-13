@@ -72,7 +72,7 @@ Accept wildcard characters: False
 The BackgroundColor parameter specifies the background color. Valid values are:
 
 - An HTML hexadecimal color code value (#RRGGBB) enclosed in quotation marks. For example, `"#FFFFFF"` is white.
-- A valid color name value. For example, `yellow` is #ffff00. For a list of the valid color names, see [Background color reference](https://learn.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages#background-color-reference).
+- A valid color name value. For example, `yellow` is #ffff00. For a list of the valid color names, see [Background color reference](https://learn.microsoft.com/purview/add-your-organization-brand-to-encrypted-messages#background-color-reference).
 - $null (blank). This is the default value.
 
 ```yaml
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalMailExpiryInDays
-This parameter is only available with a Microsoft 365 Advanced Message Encryption subscription.
+This parameter is available only with a Microsoft 365 Advanced Message Encryption subscription.
 
 The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
 

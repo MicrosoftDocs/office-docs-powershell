@@ -70,7 +70,7 @@ Connect-MicrosoftTeams
 ## DESCRIPTION
 The Connect-MicrosoftTeams cmdlet connects to Microsoft Teams with an authenticated account for use with cmdlets from the MicrosoftTeams PowerShell module. After executing this cmdlet, you can disconnect from MicrosoftTeams account using Disconnect-MicrosoftTeams.
 
-**Note**: With versions 4.x.x or later, enablement of basic authentication is not needed anymore in commercial environments. For GCC High/DoD environments and customers that are, or have previously been enabled for Regionally Hosted Meetings in Skype for Business Online, basic authentication needs to be enabled for *-Cs cmdlets to function properly.
+**Note**: With versions 4.x.x or later, enablement of basic authentication is not needed anymore in commercial, GCC, GCC High, and DoD environments. 
 
 ## EXAMPLES
 
@@ -436,7 +436,7 @@ Accept wildcard characters: False
 ### -TeamsEnvironmentName
 Specifies the Teams environment. The following environments are supported:
 
-   - Commercial or GCC environments: Don’t use this parameter, this is the default. 
+   - Commercial or GCC environments: Don't use this parameter, this is the default. 
    - GCC High environment: TeamsGCCH
    - DoD environment: TeamsDOD
    - Microsoft Teams operated by 21Vianet: TeamsChina

@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
-The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange Server and Exchange Online. For more information about Exchange Online, see [Restore an inactive mailbox](https://learn.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox).
+The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange Server and Exchange Online. For more information about Exchange Online, see [Restore an inactive mailbox](https://learn.microsoft.com/purview/restore-an-inactive-mailbox).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -513,7 +513,7 @@ The AllowLegacyDNMismatch switch specifies that the operation should continue if
 
 By default, this cmdlet checks to make sure that the LegacyExchangeDN on the source physical mailbox is present on the target user in the form of the LegacyExchangeDN or an X500 proxy address that corresponds to the LegacyExchangeDN. This check prevents you from accidentally restoring a source mailbox into the incorrect target mailbox.
 
-**Note**: This parameter is being deprecated in the cloud-based service. To complete a mailbox restore request for mailboxes with a LegacyExchangeDN that doesn't match, you need to obtain the LegacyExchangeDN value for the source mailbox and add it to the target mailbox as an X500 proxy address. For detailed instructions, see [Restore an inactive mailbox](https://learn.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox#restore-inactive-mailboxes).
+**Note**: This parameter is being deprecated in the cloud-based service. To complete a mailbox restore request for mailboxes with a LegacyExchangeDN that doesn't match, you need to obtain the LegacyExchangeDN value for the source mailbox and add it to the target mailbox as an X500 proxy address. For detailed instructions, see [Restore an inactive mailbox](https://learn.microsoft.com/purview/restore-an-inactive-mailbox#restore-inactive-mailboxes).
 
 ```yaml
 Type: SwitchParameter

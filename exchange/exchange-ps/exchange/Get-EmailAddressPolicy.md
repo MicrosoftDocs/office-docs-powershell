@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-EmailAddressPolicy cmdlet to view email address policies. In Exchange Online, email address policies are only available for Microsoft 365 Groups.
+Use the Get-EmailAddressPolicy cmdlet to view email address policies. In Exchange Online, email address policies are available only for Microsoft 365 Groups.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
