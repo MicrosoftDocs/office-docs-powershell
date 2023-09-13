@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Default
 ```
 Set-AdaptiveScope [-Identity] <ComplianceRuleIdParameter> -FilterConditions <PswsHashtable>
+ [-AdministrativeUnit <Guid>]
  [-Comment <String>]
  [<CommonParameters>]
 ```
@@ -30,19 +31,20 @@ Set-AdaptiveScope [-Identity] <ComplianceRuleIdParameter> -FilterConditions <Psw
 ### AdaptiveScopeRawQuery
 ```
 Set-AdaptiveScope [-Identity] <ComplianceRuleIdParameter> -RawQuery <String>
+ [-AdministrativeUnit <Guid>]
  [-Comment <String>]
  [<CommonParameters>]
 ```
 
-### Identity
+### AdministrativeUnit
 ```
-Set-AdaptiveScope [-Identity] <ComplianceRuleIdParameter>
+Set-AdaptiveScope [-Identity] <ComplianceRuleIdParameter> -AdministrativeUnit <Guid>
  [-Comment <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -72,6 +74,35 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -AdministrativeUnit
+{{ Fill AdministrativeUnit Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: AdministrativeUnit
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: Guid
+Parameter Sets: Default, AdaptiveScopeRawQuery
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

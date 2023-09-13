@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 You can create a limited number of policies in your organization based on a fixed amount of space. If your organization runs out of space for these policies, you'll see the error: "The total size of App Access Policies exceeded the limit." To maximize the number of policies and reduce the amount of space that's consumed by the policies, set a one space character description for the policy. This method will allow approximately 300 policies (versus a previous limit of 100 policies).
 
-While scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read email or events within a mailbox and not do anything else, application access policies allow admins to enforce limits that are based on a list of mailboxes. For example, apps developed for one country shouldn't have access to data from other countries. Or, or a CRM integration application should only access calendars in the Sales organization and no other departments.
+While scope-based resource access like Mail.Read or Calendar.Read is effective to ensure that the application can only read email or events within a mailbox and not do anything else, application access policies allow admins to enforce limits that are based on a list of mailboxes. For example, apps developed for one country/region shouldn't have access to data from other countries/regions. Or, or a CRM integration application should only access calendars in the Sales organization and no other departments.
 
 Every API request using the Outlook REST APIs or Microsoft Graph APIs to a target mailbox done by an application is verified using the following rules (in the same order):
 

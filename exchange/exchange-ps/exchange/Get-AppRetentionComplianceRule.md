@@ -25,7 +25,7 @@ Get-AppRetentionComplianceRule [[-Identity] <ComplianceRuleIdParameter>] [-Polic
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -38,10 +38,10 @@ This example returns a summary list of all app retention compliance rules.
 
 ### Example 1
 ```powershell
-Get-AppRetentionComplianceRule -Identity "Contoso Yammer"
+Get-AppRetentionComplianceRule -Identity "Contoso Viva Engage"
 ```
 
-This example returns detailed information for the app retention compliance rule named Contoso Yammer.
+This example returns detailed information for the app retention compliance rule named Contoso Viva Engage.
 
 ## PARAMETERS
 

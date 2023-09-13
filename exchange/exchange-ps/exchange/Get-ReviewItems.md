@@ -33,7 +33,7 @@ Get-ReviewItems -TargetLabelId <String>
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-The `Get-ReviewItems` cmdlet can be used to export a list of pending or disposed items from disposition review. To learn more about disposition review, see [Disposition of content](https://learn.microsoft.com/microsoft-365/compliance/disposition).
+The `Get-ReviewItems` cmdlet can be used to export a list of pending or disposed items from disposition review. To learn more about disposition review, see [Disposition of content](https://learn.microsoft.com/purview/disposition).
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ $exportItems | ConvertFrom-Csv -Header $itemsPendingDisposition.Headers | Export
 
 This example retrieves all items pending disposition for the label with the immutable ID value `a8cbeaac-e7aa-42ed-8dba-54200537c9c9`. If multiple pages of items exist, the command continues until no more pages exist. The results are exported to the specified CSV file.
 
-**Note**: While the cmdlet does not impose any limit to the number of items/pages that can be retrieved, other throttling may occur. To prevent throttling while retrieving a large number of items, we recommended including breaks in your script. You can use the PagingCookie parameter to pick up where the script left off after a break.
+**Note**: Although this cmdlet doesn't limit the number of items/pages that can be retrieved, other throttling might occur. To prevent throttling while retrieving a large number of items, we recommended including breaks in your script. You can use the PagingCookie parameter to pick up where the script left off after a break.
 
 ## PARAMETERS
 

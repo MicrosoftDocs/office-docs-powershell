@@ -3,7 +3,7 @@ title: Filters in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
+ms.date: 9/1/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -21,10 +21,10 @@ description: "Learn about how to use filtering for cmdlets in the Exchange Onlin
 
 The Exchange Online PowerShell module contains nine exclusive **Get-EXO\*** cmdlets that are optimized for high speed, high volume operations, and (after you connect to your organization) gives you access to the hundreds of existing cmdlets in the service. For more information, see [Cmdlets in the Exchange Online PowerShell module](exchange-online-powershell-v2.md#cmdlets-in-the-exchange-online-powershell-module).
 
-> [!NOTE]
-> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
-
 In order to get the most out of filters in the nine exclusive **Get-EXO\*** cmdlets in the module, you need to follow the guidance in this article.
+
+> [!TIP]
+> Version 3.0.0 and later (2022) is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module). Version 2.0.5 and earlier (2021) was known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module).
 
 ## Use client-side filtering for the best performance
 

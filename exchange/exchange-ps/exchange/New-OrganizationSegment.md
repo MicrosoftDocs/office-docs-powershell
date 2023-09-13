@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-OrganizationSegment cmdlet to create organization segments for use with information barrier policies in the Microsoft Purview compliance portal. Organization Segments are not in effect until you [apply information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies#part-3-apply-information-barrier-policies).
+Use the New-OrganizationSegment cmdlet to create organization segments for use with information barrier policies in the Microsoft Purview compliance portal. Organization Segments are not in effect until you [apply information barrier policies](https://learn.microsoft.com/purview/information-barriers-policies#step-4-apply-ib-policies).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -28,9 +28,9 @@ New-OrganizationSegment [-Name] <String> -UserGroupFilter <String>
 ```
 
 ## DESCRIPTION
-For more information about the filterable attributes that you can use to define segments, see [Attributes for information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-attributes).
+For more information about the filterable attributes that you can use to define segments, see [Attributes for information barrier policies](https://learn.microsoft.com/purview/information-barriers-attributes).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 The UserGroupFilter parameter uses OPATH filter syntax to specify the members of the organization segment. The syntax is `"Property -ComparisonOperator 'Value'"` (for example, `"MemberOf -eq 'Engineering Department'"` or `"ExtensionAttribute1 -eq 'DayTrader'"`).
 
 - Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-- Property is a filterable property. For more information, see [Attributes for information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-attributes).
+- Property is a filterable property. For more information, see [Attributes for information barrier policies](https://learn.microsoft.com/purview/information-barriers-attributes).
 - ComparisonOperator is an OPATH comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
 - Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values in quotation marks (for example, use `500`, `$true`, `$false`, or `$null` instead).
 
@@ -144,6 +144,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Attributes for information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-attributes)
+[Attributes for information barrier policies](https://learn.microsoft.com/purview/information-barriers-attributes)
 
-[Define policies for information barriers](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies)
+[Define policies for information barriers](https://learn.microsoft.com/purview/information-barriers-policies)

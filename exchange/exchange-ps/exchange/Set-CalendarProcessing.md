@@ -42,6 +42,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-DeleteNonCalendarItems <Boolean>]
  [-DeleteSubject <Boolean>]
  [-DomainController <Fqdn>]
+ [-EnableAutoRelease <Boolean>]
  [-EnableResponseDetails <Boolean>]
  [-EnforceCapacity <Boolean>]
  [-EnforceSchedulingHorizon <Boolean>]
@@ -51,6 +52,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-MaximumDurationInMinutes <Int32>]
  [-MinimumDurationInMinutes <Int32>]
  [-OrganizerInfo <Boolean>]
+ [-PostReservationMaxClaimTimeInMinutes <Int32>]
  [-ProcessExternalMeetingMessages <Boolean>]
  [-RemoveCanceledMeetings <Boolean>]
  [-RemoveForwardedMeetingNotifications <Boolean>]
@@ -222,6 +224,8 @@ The AddOrganizerToSubject parameter specifies whether the meeting organizer's na
 - $false: The original Subject value is preserved.
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
+
+**Note**: Default Calendar folder permissions use the AvailabilityOnly role, which doesn't allow viewing Subject fields in meeting requests. At a minimum, the LimitedDetails role is required to view Subject fields in meeting requests. Use the **\*-MailboxFolderPermission** cmdlets to manage mailbox folder permissions.
 
 ```yaml
 Type: Boolean
@@ -560,6 +564,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableAutoRelease
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnableAutoRelease Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableResponseDetails
 The EnableResponseDetails parameter specifies whether to include the reasons for accepting or declining a meeting in the response email message. Valid values are:
 
@@ -736,6 +758,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PostReservationMaxClaimTimeInMinutes
+This parameter is available only in the cloud-based service.
+
+{{ Fill PostReservationMaxClaimTimeInMinutes Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProcessExternalMeetingMessages
 The ProcessExternalMeetingMessages parameter specifies whether to process meeting requests that originate outside the Exchange organization. Valid values are:
 
@@ -758,7 +798,10 @@ Accept wildcard characters: False
 ### -RemoveCanceledMeetings
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveCanceledMeetings Description }}
+The RemoveCanceledMeetings parameter specifies whether to automatically delete meetings that were cancelled by the organizer from the resource mailbox's calendar. Valid values are:
+
+- $true: Canceled meetings are deleted.
+- $false: Canceled meetings aren't deleted. This is the default value.
 
 ```yaml
 Type: Boolean

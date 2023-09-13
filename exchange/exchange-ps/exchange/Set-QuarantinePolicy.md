@@ -447,6 +447,8 @@ For each language that you specify, you can specify a unique value for the Multi
 
 This setting is available only in the built-in quarantine policy named DefaultGlobalTag that controls global settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
+**Note**: The value English maps to every English language code except en-US. If you have users with en-US mailboxes only, use the value Default. If you have a mix of mailboxes with en-US and other English languages codes (en-GB, en-CA, en-AU, etc.), use the value Default in one customized quarantine notification, and the value English in another customized quarantine notification.
+
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)

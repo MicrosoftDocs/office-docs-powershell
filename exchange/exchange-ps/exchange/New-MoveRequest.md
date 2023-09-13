@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDeliveryDomain
-The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the move request is complete. This parameter is allowed only when performing remote moves with the Remote or RemoteLegacy parameter.
+The TargetDeliveryDomain parameter specifies the FQDN of the external email address created in the source forest for the mail-enabled user when the move request is complete. This parameter is allowed only when performing remote moves with the Remote, RemoteLegacy, or Outbound parameter.
 
 ```yaml
 Type: Fqdn

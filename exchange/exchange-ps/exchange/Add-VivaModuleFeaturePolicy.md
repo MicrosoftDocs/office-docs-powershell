@@ -19,6 +19,8 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or
 
 Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva. The attributes of the policy are defined using the various parameters of the cmdlet. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. Note that the most restrictive policy for a particular user or group take priority when determining whether a feature is enabled.
 
+Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -29,6 +31,7 @@ Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -Mod
  [-GroupIds <String[]>]
  [-UserIds <String[]>]
  [-Everyone]
+ [-IsUserControlEnabled <Boolean>]
  [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
@@ -186,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled AAD groups]( https://docs.microsoft.comgraph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled AAD groups]( https://learn.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
 
@@ -194,6 +197,29 @@ To have the policy apply to all users in the organization, use the Everyone swit
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsUserControlEnabled
+**Note**: This parameter is available in version 3.3.0 or later of the module.
+
+The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
+
+- $true: User control is enabled by the policy. Users can opt out of the feature.
+- $false: User control isn't enabled by the policy. Users can't opt of the feature.
+
+Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -270,6 +296,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Exchange PowerShell](https://learn.microsoft.com/powershell/module/exchange)
 
-[About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#updates-for-the-exo-v3-module)
+[About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2)
 
 [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids)

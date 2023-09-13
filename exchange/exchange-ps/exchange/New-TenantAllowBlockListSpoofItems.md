@@ -21,8 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-TenantAllowBlockListSpoofItems [-Identity] <HostedConnectionFilterPolicyIdParameter> -Action <String>
- -SendingInfrastructure <String> -SpoofedUser <String> -SpoofType <String>
+New-TenantAllowBlockListSpoofItems [-Identity] <HostedConnectionFilterPolicyIdParameter> -Action <String> -SendingInfrastructure <String> -SpoofedUser <String> -SpoofType <String>
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]

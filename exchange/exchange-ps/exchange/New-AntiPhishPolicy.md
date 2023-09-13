@@ -128,7 +128,7 @@ This setting is part of spoof protection.
 The AuthenticationFailAction parameter specifies the action to take when the message fails composite authentication (a mixture of traditional SPF, DKIM, and DMARC email authentication checks and proprietary backend intelligence). Valid values are:
 
 - MoveToJmf: This is the default value. Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 
 ```yaml
 Type: SpoofAuthenticationFailAction
@@ -163,14 +163,12 @@ Accept wildcard characters: False
 ```
 
 ### -DmarcQuarantineAction
-**Note**: This setting is currently in Preview.
-
 This setting is part of spoof protection.
 
 The DmarcQuarantineAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`. Valid values are:
 
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: This is the default value. Move the message to quarantine.
+- Quarantine: Deliver the message to quarantine. This is the default value.
 
 This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
 
@@ -188,14 +186,12 @@ Accept wildcard characters: False
 ```
 
 ### -DmarcRejectAction
-**Note**: This setting is currently in Preview.
-
 This setting is part of spoof protection.
 
-The DmarcQuarantineAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=reject`. Valid values are:
+The DmarcRejectAction parameter specifies the action to take when a message fails DMARC checks and the sender's DMARC policy is `p=reject`. Valid values are:
 
-- Quarantine: This is the default value. Move the message to quarantine.
-- Reject: Reject the message.
+- Quarantine: Deliver the message to quarantine.
+- Reject: Reject the message. This is the default value.
 
 This parameter is meaningful only when the HonorDmarcPolicy parameter is set to the value $true.
 
@@ -254,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMailboxIntelligence
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence, which is artificial intelligence (AI) that determines user email patterns with their frequent contacts. Mailbox intelligence helps distinguish between messages from legitimate and impersonated senders based on a recipient's previous communication history. Valid values are:
 
@@ -275,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMailboxIntelligenceProtection
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableMailboxIntelligenceProtection specifies whether to enable or disable taking action for impersonation detections from mailbox intelligence results. Valid values are:
 
@@ -300,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOrganizationDomainsProtection
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableOrganizationDomainsProtection parameter specifies whether to enable domain impersonation protection for all registered domains in the Microsoft 365 organization. Valid values are:
 
@@ -321,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimilarDomainsSafetyTips
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableSimilarDomainsSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for domain impersonation detections. Valid values are:
 
@@ -342,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSimilarUsersSafetyTips
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableSimilarUsersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for user impersonation detections. Valid values are:
 
@@ -384,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTargetedDomainsProtection
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableTargetedDomainsProtection parameter specifies whether to enable domain impersonation protection for a list of specified domains. Valid values are:
 
@@ -405,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTargetedUserProtection
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableTargetedUserProtection parameter specifies whether to enable user impersonation protection for a list of specified users. Valid values are:
 
@@ -452,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnusualCharactersSafetyTips
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The EnableUnusualCharactersSafetyTips parameter specifies whether to enable the safety tip that's shown to recipients for unusual characters in domain and user impersonation detections. Valid values are:
 
@@ -499,7 +495,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedDomains
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The ExcludedDomains parameter specifies an exception for impersonation protection that looks for the specified domains in the message sender. You can specify multiple domains separated by commas.
 
@@ -521,7 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedSenders
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The ExcludedSenders parameter specifies an exception for impersonation protection that looks for the specified message sender. You can specify multiple email addresses separated by commas.
 
@@ -541,14 +537,12 @@ Accept wildcard characters: False
 ```
 
 ### -HonorDmarcPolicy
-**Note**: This setting is currently in Preview.
-
 This setting is part of spoof protection.
 
 The HonorDmarcPolicy enables or disables using the sender's DMARC policy to determine what to do to messages that fail DMARC checks. Valid values are:
 
-- $true: If a message fails DMARC checks and the sender's DMARC policy is `p=quarantine`, the DmarcQuarantineAction parameter specifies the action to take on the message. If a message fails DMARC checks and the sender's DMARC policy is `p=reject`, the DmarcRejectAction parameter specifies the action to take on the message.
-- $false: This is the default value. If the message fail DMARC checks, ignore the action in the sender's DMARC policy. The AuthenticationFailAction parameter specifies the action to take on the message.
+- $true: If a message fails DMARC and the sender's DMARC policy is `p=quarantine` or `p=reject`, the DmarcQuarantineAction or DmarcRejectAction parameters specify the action to take on the message. This is the default value.
+- $false: If the message fails DMARC, ignore the action in the sender's DMARC policy. The AuthenticationFailAction parameter specifies the action to take on the message.
 
 ```yaml
 Type: Boolean
@@ -564,7 +558,7 @@ Accept wildcard characters: False
 ```
 
 ### -ImpersonationProtectionState
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The ImpersonationProtectionState parameter specifies the configuration of impersonation protection. Valid values are:
 
@@ -586,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxIntelligenceProtectionAction
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The MailboxIntelligenceProtectionAction parameter specifies what to do with messages that fail mailbox intelligence protection. Valid values are:
 
@@ -594,7 +588,7 @@ The MailboxIntelligenceProtectionAction parameter specifies what to do with mess
 - BccMessage: Add the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the MailboxIntelligenceProtectionActionRecipients parameter.
 
 This parameter is meaningful only if the EnableMailboxIntelligence and EnableMailboxIntelligenceProtection parameters are set to the value $true.
@@ -613,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxIntelligenceProtectionActionRecipients
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The MailboxIntelligenceProtectionActionRecipients parameter specifies the recipients to add to detected messages when the MailboxIntelligenceProtectionAction parameter is set to the value Redirect or BccMessage.
 
@@ -633,7 +627,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxIntelligenceQuarantineTag
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The MailboxIntelligenceQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by mailbox intelligence (the MailboxIntelligenceProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
@@ -679,7 +673,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhishThresholdLevel
-This setting is part of advanced settings and is only available in Microsoft Defender for Office 365.
+This setting is part of advanced settings and is available only in Microsoft Defender for Office 365.
 
 The PhishThresholdLevel parameter specifies the tolerance level that's used by machine learning in the handling of phishing messages. Valid values are:
 
@@ -776,7 +770,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainActionRecipients
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedDomainActionRecipients parameter specifies the recipients to add to detected domain impersonation messages when the TargetedDomainProtectionAction parameter is set to the value Redirect or BccMessage.
 
@@ -796,7 +790,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainProtectionAction
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedDomainProtectionAction parameter specifies the action to take on detected domain impersonation messages. You specify the protected domains in the TargetedDomainsToProtect parameter. Valid values are:
 
@@ -804,7 +798,7 @@ The TargetedDomainProtectionAction parameter specifies the action to take on det
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
 ```yaml
@@ -821,7 +815,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainQuarantineTag
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedDomainQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by domain impersonation protection (the TargetedDomainProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
@@ -849,7 +843,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedDomainsToProtect
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedDomainsToProtect parameter specifies the domains that are included in domain impersonation protection when the EnableTargetedDomainsProtection parameter is set to $true.
 
@@ -869,7 +863,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserActionRecipients
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedUserActionRecipients parameter specifies the replacement or additional recipients for detected user impersonation messages when the TargetedUserProtectionAction parameter is set to the value Redirect or BccMessage.
 
@@ -889,7 +883,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserProtectionAction
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedUserProtectionAction parameter specifies the action to take on detected user impersonation messages. You specify the protected users in the TargetedUsersToProtect parameter. Valid values are:
 
@@ -897,7 +891,7 @@ The TargetedUserProtectionAction parameter specifies the action to take on detec
 - BccMessage: Add the recipients specified by the TargetedDomainActionRecipients parameter to the Bcc field of the message.
 - Delete: Delete the message during filtering. Use caution when selecting this value, because you can't recover the deleted message.
 - MoveToJmf: Deliver the message to the recipient's mailbox, and move the message to the Junk Email folder.
-- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are only available to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
+- Quarantine: Move the message to quarantine. Quarantined high confidence phishing messages are available only to admins. As of April 2020, quarantined phishing messages are available to the intended recipients.
 - Redirect: Redirect the message to the recipients specified by the TargetedDomainActionRecipients parameter.
 
 ```yaml
@@ -914,7 +908,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUserQuarantineTag
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedUserQuarantineTag specifies the quarantine policy that's used on messages that are quarantined by user impersonation protection (the TargetedUserProtectionAction parameter value is Quarantine). You can use any value that uniquely identifies the quarantine policy. For example:
 
@@ -942,7 +936,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetedUsersToProtect
-This setting is part of impersonation protection and is only available in Microsoft Defender for Office 365.
+This setting is part of impersonation protection and is available only in Microsoft Defender for Office 365.
 
 The TargetedUsersToProtect parameter specifies the users that are included in user impersonation protection when the EnableTargetedUserProtection parameter is set to $true.
 
