@@ -2,7 +2,7 @@
 title: Connect to Security & Compliance PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 8/21/2023
+ms.date: 9/7/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -23,8 +23,6 @@ This article contains instructions for how to connect to Security & Compliance P
 The Exchange Online PowerShell module uses modern authentication for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
 To connect to Security & Compliance PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
-
-To use the older Exchange Online Remote PowerShell Module (the V1 module) to connect to Security & Compliance PowerShell using MFA, see [V1 module - Connect to Security & Compliance PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md). This older version of the module will eventually be retired.
 
 ## What do you need to know before you begin?
 

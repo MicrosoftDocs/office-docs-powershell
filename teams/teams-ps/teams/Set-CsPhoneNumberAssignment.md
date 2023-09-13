@@ -110,6 +110,29 @@ Set-CsPhoneNumberAssignment -PhoneNumber +12065551224 -LocationId $loc.LocationI
 ```
 This example shows how to set the location on a phone number.
 
+### Example 10
+```powershell
+$OldLocationId = "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513"
+$NewLocationId = "951fac72-955e-4734-ab74-cc4c0f761c0b"
+# Get all phone numbers in old location
+$pns = Get-CsPhoneNumberAssignment -LocationId $OldLocationId
+Write-Host $pns.count numbers found in old location $OldLocationId
+# Move all those phone numbers to the new location
+foreach ($pn in $pns) {
+      Try {
+             Set-CsPhoneNumberAssignment -PhoneNumber $pn.TelephoneNumber -LocationId $NewLocationId -ErrorAction Stop
+             Write-Host $pn.TelephoneNumber was updated to have location $NewLocationId
+      } 
+      Catch { 
+             Write-Host Could not update $pn.TelephoneNumber with location $NewLocationId
+      }
+}
+Write-Host (Get-CsPhoneNumberAssignment -LocationId $OldLocationId).Count numbers found in old location $OldLocationId
+Write-Host (Get-CsPhoneNumberAssignment -LocationId $NewLocationId).Count numbers found in new location $NewLocationId
+```
+This Example shows how to update the LocationID from an old location to a new location for a set of phone numbers.
+
+
 ## PARAMETERS
 
 ### -AssignmentCategory
