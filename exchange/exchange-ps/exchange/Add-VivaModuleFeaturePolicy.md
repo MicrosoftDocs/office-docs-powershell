@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsUserControlEnabled
-**Note**: This parameter is available in version 3.3.0-Preview1 or later of the module.
+**Note**: This parameter is available in version 3.3.0 or later of the module.
 
 The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
 

@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 9/1/2023
+ms.date: 9/11/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -173,8 +173,8 @@ The connection-related cmdlets in the module are listed in the following table:
 
 |EXO module cmdlet|Older related cmdlet|Comments|
 |---|---|---|
-|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br> or <br> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
-|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|[Connect-IPPSSession in V1 of the module](v1-module-mfa-connect-to-scc-powershell.md)||
+|[Connect-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br/> or <br/> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
+|[Connect-IPPSSession](/powershell/module/exchange/connect-ippssession)|**Connect-IPPSSession** in V1 of the module||
 |[Disconnect-ExchangeOnline](/powershell/module/exchange/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
 |[Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v3.0.0 or later.|
 
@@ -184,8 +184,8 @@ Miscellaneous Exchange Online cmdlets that happen to be in the module are listed
 |---|---|
 |[Get-DefaultTenantBriefingConfig](/powershell/module/exchange/get-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
 |[Set-DefaultTenantBriefingConfig](/powershell/module/exchange/set-defaulttenantbriefingconfig)|Available in v3.2.0 or later.|
-|[Get-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/get-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0.|
-|[Set-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/set-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0.|
+|[Get-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/get-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0 or later.|
+|[Set-DefaultTenantMyAnalyticsFeatureConfig](/powershell/module/exchange/set-defaulttenantmyanalyticsfeatureconfig)|Available in v3.2.0 or later.|
 |[Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Set-MyAnalyticsFeatureConfig](/powershell/module/exchange/set-myanalyticsfeatureconfig)|Available in v2.0.4 or later.|
 |[Get-UserBriefingConfig](/powershell/module/exchange/get-userbriefingconfig)|Replaced by [Get-MyAnalyticsFeatureConfig](/powershell/module/exchange/get-myanalyticsfeatureconfig).|
@@ -276,7 +276,7 @@ All versions of the module are supported in Windows PowerShell 5.1.
 
 PowerShell 7 on Windows requires version 2.0.4 or later.
 
-Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.1 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.1, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-471).
+Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.2 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.2, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472).
 
 Windows PowerShell requirements and module support **in older versions of Windows** are described in the following list:
 
@@ -615,10 +615,21 @@ For more information about filtering in the module, see [Filters in the Exchange
 
 Unless otherwise noted, the current release of the Exchange Online PowerShell module contains all features of previous releases.
 
-### Current release: Version 3.2.0
+### Current release
+
+#### Version 3.3.0
+
+- _SkipLoadingCmdletHelp_ parameter on **Connect-ExchangeOnline** to support skip loading cmdlet help files.
+- Global variable `EXO_LastExecutionStatus` is available to check the status of the last cmdlet that was run.
+- Bug fixes in **Connect-ExchangeOnline** and **Connect-IPPSSession**.
+- _IsUserControlEnabled_ parameter on **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** to support the enablement of user controls by policy for features that are onboarded to Viva feature access management.
+
+### Previous releases
+
+#### Version 3.2.0
 
 - New cmdlets:
-  - **Get-DefaultTenantBriefingConfig**** and **Set-DefaultTenantBriefingConfig**.
+  - **Get-DefaultTenantBriefingConfig** and **Set-DefaultTenantBriefingConfig**.
   - **Get-DefaultTenantMyAnalyticsFeatureConfig** and **Set-DefaultTenantMyAnalyticsFeatureConfig**.
   - **Get-VivaModuleFeature**, **Get-VivaModuleFeatureEnablement**, **Add-VivaModuleFeaturePolicy**, **Get-VivaModuleFeaturePolicy**, **Remove-VivaModuleFeaturePolicy**, and **Update-VivaModuleFeaturePolicy**.
 - REST API connection support for Security & Compliance Center PowerShell.
@@ -627,8 +638,6 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - Selective disconnect for REST API connections.
 - _SigningCertificate_ parameter on **Connect-ExchangeOnline** allows you to sign the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that **Connect-ExchangeOnline** creates with a client certificate to use in all PowerShell execution policies.
 - Bug fixes in **Connect-ExchangeOnline**.
-
-### Previous releases
 
 #### Version 3.1.0
 
