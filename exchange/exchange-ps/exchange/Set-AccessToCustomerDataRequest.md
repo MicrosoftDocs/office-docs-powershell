@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-AccessToCustomerDataRequest cmdlet to approve, deny, or cancel Microsoft 365 customer lockbox requests that control access to your data by Microsoft support engineers.
 
-**Note**: Customer lockbox is included in the Microsoft 365 E5 plan. If you don't have a Microsoft 365 E5 plan, you can buy a separate customer lockbox subscription with any Microsoft 365 Enterprise plan.
+**Note**: Customer Lockbox is included in Microsoft 365 E5, or you can buy a separate Customer Lockbox subscription with any Microsoft 365 Enterprise plan.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

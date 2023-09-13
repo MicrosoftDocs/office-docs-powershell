@@ -29,14 +29,14 @@ Get-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter> [-DomainContro
 
 ### Identity
 ```
-Get-MailboxRegionalConfiguration [[-Identity] <MailboxIdParameter>] [-Archive]
+Get-MailboxRegionalConfiguration [[-Identity] <MailboxIdParameter>] [-Archive] [-UseCustomRouting]
  [-VerifyDefaultFolderNameLanguage]
  [<CommonParameters>]
 ```
 
 ### MailboxLocation
 ```
-Get-MailboxRegionalConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
+Get-MailboxRegionalConfiguration [-MailboxLocation <MailboxLocationIdParameter>] [-UseCustomRouting]
  [-VerifyDefaultFolderNameLanguage]
  [<CommonParameters>]
 ```
@@ -155,6 +155,24 @@ This parameter is available only in the cloud-based service.
 ```yaml
 Type: MailboxLocationIdParameter
 Parameter Sets: MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
 

@@ -14,13 +14,13 @@ ms.reviewer:
 
 ## SYNOPSIS
 When using Microsoft Teams PSTN Calling Services you need to record your organization's acceptance of the enhanced emergency service terms and conditions. This is done per
-country and it needs to be done before you can provide PSTN calling services to Microsoft Teams users in the country.
+country/region and it needs to be done before you can provide PSTN calling services to Microsoft Teams users in the country/region.
 
-You can record your organization's acceptance using the Set-CsOnlineEnhancedEmergencyServiceDisclaimer cmdlet at any time. If you haven't accepted it for a given country
+You can record your organization's acceptance using the Set-CsOnlineEnhancedEmergencyServiceDisclaimer cmdlet at any time. If you haven't accepted it for a given country/region
 you will be prompted to do so by warning information in the Teams PS Module, when you try to assign a phone number to a Microsoft Teams user, or in the Teams admin center,
-when you create an emergency address in a country.
+when you create an emergency address in a country/region.
 
-Any tenant administrator can accept the terms and conditions and it only needs to be done once per country.
+Any tenant administrator can accept the terms and conditions and it only needs to be done once per country/region.
 
 As the output the cmdlet will show the emergency service disclaimer and that it has been accepted. You can use Get-CsOnlineEnhancedEmergencyServiceDisclaimer to see the status of the emergency service disclaimer.
 
@@ -34,7 +34,7 @@ Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion <String> [-Versi
 ## DESCRIPTION
 You must run this cmdlet prior to assigning Microsoft Calling Plan phone numbers and locations to voice enabled users or accept the similar disclaimer in the Teams admin center.
 
-Microsoft Calling Plan phone numbers are available in several countries, see [Country and region availability for Audio Conferencing and Calling Plans](https://learn.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
+Microsoft Calling Plan phone numbers are available in several countries/regions, see [Country and region availability for Audio Conferencing and Calling Plans](https://learn.microsoft.com/MicrosoftTeams/country-and-region-availability-for-audio-conferencing-and-calling-plans/country-and-region-availability-for-audio-conferencing-and-calling-plans)
 
 
 ## EXAMPLES

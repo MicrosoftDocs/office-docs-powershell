@@ -35,6 +35,7 @@ New-RetentionCompliancePolicy [-Name] <String>
  [-ModernGroupLocationException <MultiValuedProperty>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
+ [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-PublicFolderLocation <MultiValuedProperty>]
  [-RestrictiveRetention <Boolean>]
@@ -81,9 +82,9 @@ New-RetentionCompliancePolicy [-Name] <String> -AdaptiveScopeLocation <MultiValu
 ```
 
 ## DESCRIPTION
-Policies are not valid until a rule is added (for retention policies) or a label is added (for retention label policies). For more information, see [New-RetentionComplianceRule](https://learn.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission/new-retentioncompliancerule). In addition, at least one location parameter must be defined to create a retention policy or retention label policy.
+Policies are not valid until a rule is added (for retention policies) or a label is added (for retention label policies). For more information, see [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule). In addition, at least one location parameter must be defined to create a retention policy or retention label policy.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal]/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -298,7 +299,7 @@ Accept wildcard characters: False
 ### -IsSimulation
 The IsSimulation switch specifies the policy is created in simulation mode. You don't need to specify a value with this switch.
 
-For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/microsoft-365/compliance/apply-retention-labels-automatically#learn-about-simulation-mode).
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
 
 ```yaml
 Type: SwitchParameter
@@ -388,6 +389,22 @@ Accept wildcard characters: False
 This parameter specifies the OneDrive for Business sites to exclude when you use the value All for the OneDriveLocation parameter. You identify the site by its URL value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
 
 ```yaml
 Type: MultiValuedProperty

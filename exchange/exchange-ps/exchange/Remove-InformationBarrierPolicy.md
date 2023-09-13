@@ -23,14 +23,15 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-InformationBarrierPolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
+ [-ForceDeletion]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-For more information, see [Information barrier policies](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies).
+For more information, see [Information barrier policies](https://learn.microsoft.com/purview/information-barriers-policies).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -82,6 +83,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForceDeletion
+The ForceDeletion switch forces the removal of the information barrier policy. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
@@ -109,6 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Define policies for information barriers](https://learn.microsoft.com/microsoft-365/compliance/information-barriers-policies)
+[Define policies for information barriers](https://learn.microsoft.com/purview/information-barriers-policies)
 
 [New-InformationBarrierPolicy](https://learn.microsoft.com/powershell/module/exchange/new-informationbarrierpolicy)

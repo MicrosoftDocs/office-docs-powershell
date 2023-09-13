@@ -202,6 +202,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AgentLog](Get-AgentLog.md)
 
+### [Get-AggregateZapReport](Get-AggregateZapReport.md)
+
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
@@ -215,6 +217,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-ContentFilterConfig](Get-ContentFilterConfig.md)
 
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
+
+### [Get-DetailZapReport](Get-DetailZapReport.md)
 
 ### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
 
@@ -280,6 +284,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SenderReputationConfig](Get-SenderReputationConfig.md)
 
+### [Get-TeamsProtectionPolicy](Get-TeamsProtectionPolicy.md)
+
+### [Get-TeamsProtectionPolicyRule](Get-TeamsProtectionPolicyRule.md)
+
 ### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
 
 ### [Get-TenantAllowBlockListSpoofItems](Get-TenantAllowBlockListSpoofItems.md)
@@ -315,6 +323,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
 ### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
+
+### [New-TeamsProtectionPolicy](New-TeamsProtectionPolicy.md)
+
+### [New-TeamsProtectionPolicyRule](New-TeamsProtectionPolicyRule.md)
 
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
@@ -435,6 +447,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-SenderIdConfig](Set-SenderIdConfig.md)
 
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
+
+### [Set-TeamsProtectionPolicy](Set-TeamsProtectionPolicy.md)
+
+### [Set-TeamsProtectionPolicyRule](Set-TeamsProtectionPolicyRule.md)
 
 ### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
 
@@ -1709,6 +1725,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
 
+### [Get-EtrLimits](Get-EtrLimits.md)
+
 ### [Get-ExoInformationBarrierPolicy](Get-ExoInformationBarrierPolicy.md)
 
 ### [Get-ExoInformationBarrierSegment](Get-ExoInformationBarrierSegment.md)
@@ -2286,7 +2304,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Validate-RetentionRuleQuery](Validate-RetentionRuleQuery.md)
 
-## powershell-v2-module Cmdlets
+## powershell-v3-module Cmdlets
 ### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
 
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)

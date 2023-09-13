@@ -26,6 +26,7 @@ Get-SweepRule [[-Identity] <SweepRuleIdParameter>]
  [-DomainController <Fqdn>]
  [-Mailbox <MailboxIdParameter>]
  [-Provider <String>]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -146,6 +147,42 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResultSize
+This parameter is available only in the cloud-based service.
+
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCount
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipCount Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

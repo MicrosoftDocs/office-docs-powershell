@@ -2,7 +2,7 @@
 title: Connect to Security & Compliance PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 9/7/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -13,7 +13,7 @@ ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 search.appverid: MET150
-description: "Learn how to use the Exchange Online PowerShell V2 module and V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multi-factor authentication (MFA)."
+description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multi-factor authentication (MFA)."
 ---
 
 # Connect to Security & Compliance PowerShell
@@ -22,20 +22,18 @@ This article contains instructions for how to connect to Security & Compliance P
 
 The Exchange Online PowerShell module uses modern authentication for connecting to all Exchange-related PowerShell environments in Microsoft 365: Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
-> [!NOTE]
-> Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
-
 To connect to Security & Compliance PowerShell for automation, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
-
-To use the older Exchange Online Remote PowerShell Module (the V1 module) to connect to Security & Compliance PowerShell using MFA, see [V1 module - Connect to Security & Compliance PowerShell using MFA](v1-module-mfa-connect-to-scc-powershell.md). Note that this older version of the module will eventually be retired.
 
 ## What do you need to know before you begin?
 
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
+  > If you're using version 3.2.0 or later of the module, and you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you have access to REST API cmdlets _only_. For more information, see [REST API connections in the EXO V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module).
   >
-  > If you're using version 3.2.0 or later of the module, and you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you have access to REST API cmdlets _only_. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+  > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+  >
+  > Remote PowerShell connections will be deprecated in Security & Compliance PowerShell. For more information, see [Deprecation of Remote PowerShell (RPS) Protocol in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -65,7 +63,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
-- In v3.2.0 or later of the module, if you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you connect in REST API mode. To connect in remote PowerShell mode, use the _UseRPSSession_ switch. For more information, see [Updates for the EXO V3 module)](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module).
+- In v3.2.0 or later of the module, if you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you connect in REST API mode. To connect in remote PowerShell mode, use the _UseRPSSession_ switch. For more information, see [REST API connections in the EXO V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module).
 
 - The required _ConnectionUri_ and _AzureADAuthorizationEndpointUri_ values depend on the nature of your Microsoft 365 organization. Common values are described in the following table:
 
@@ -179,7 +177,7 @@ If you receive errors, check the following requirements:
 
 - To help prevent denial-of-service (DoS) attacks, when you connect using remote PowerShell mode, you're limited to five open connections to Security & Compliance PowerShell.
 
-- The account that you use to connect must be enabled for remote PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
+- The account that you use to connect must be enabled for PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
 - TCP port 80 traffic needs to be open between your local computer and Microsoft 365. It's probably open, but it's something to consider if your organization has a restrictive internet access policy.
 

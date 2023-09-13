@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-Comment <String>]
  [-Confirm]
+ [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExchangeLocation <MultiValuedProperty>]
  [-ExchangeSender <SmtpAddress[]>]
  [-ExchangeSenderException <SmtpAddress[]>]
@@ -34,6 +35,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-Mode <PolicyMode>]
  [-OneDriveLocation <MultiValuedProperty>]
  [-OneDriveLocationException <MultiValuedProperty>]
+ [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OverwriteLabel <Boolean>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
@@ -46,7 +48,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -117,6 +119,28 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfOneDriveSharedBy
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+
+To use this parameter, OneDrive for Business sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the OneDriveSharedBy parameter.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False
@@ -331,6 +355,28 @@ You can enter multiple values separated by commas. If the values contain spaces 
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveSharedBy
+The OneDriveSharedBy parameter specifies the users to include in the policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+
+To use this parameter, OneDrive for Business sites need to be included in the policy (the OneDriveLocation parameter value is All, which is the default value).
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the ExceptIfOneDriveSharedBy parameter.
+
+```yaml
+Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
