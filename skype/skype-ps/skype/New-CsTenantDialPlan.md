@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantdialplan
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -18,14 +18,13 @@ Use the `New-CsTenantDialPlan` cmdlet to create a new tenant dial plan.
 ## SYNTAX
 
 ```
-New-CsTenantDialPlan [-Tenant <Guid>] [-Description <String>] [-NormalizationRules <List>]
- [-ExternalAccessPrefix <String>] [-SimpleName <String>] [-OptimizeDeviceDialing <Boolean>]
- [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTenantDialPlan [-Identity] <string> [-Description <string>] [-ExternalAccessPrefix <string>]
+ [-NormalizationRules <Object>] [-OptimizeDeviceDialing <bool>] [-SimpleName <string>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to create a new tenant dial plan.
-Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
+You can use this cmdlet to create a new tenant dial plan. Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
@@ -40,16 +39,13 @@ New-CsTenantDialPlan -Identity vt1tenantDialPlan9
 
 This example creates a tenant dial plan that has an Identity of vt1tenantDialPlan9.
 
-
 ### -------------------------- Example 2 --------------------------
 ```
 $nr2 = New-CsVoiceNormalizationRule -Identity Global/NR2 -Description "TestNR1" -Pattern '^(d{11})$' -Translation '+1' -InMemory
-
 New-CsTenantDialPlan -Identity vt1tenantDialPlan91 -NormalizationRules @{Add=$nr2}
 ```
 
 This example creates a new normalization rule and then applies that rule to a new tenant dial plan.
-
 
 ## PARAMETERS
 
@@ -60,13 +56,13 @@ Valid characters are alphabetic or numeric characters, hyphen (-) and dot (.).
 The value should not begin with a (.)
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
-Required: False
-Position: 2
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -79,7 +75,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -96,7 +92,7 @@ Maximum characters: 1040.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -116,41 +112,7 @@ The value of this parameter must be no longer than 4 characters long and can con
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages.
-It can be useful in scripting to suppress interactive prompts.
-If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InMemory
-The InMemory parameter creates an object reference without actually committing the object as a permanent change.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -173,7 +135,7 @@ You can create a new normalization rule by calling the [New-CsVoiceNormalization
 Type: List
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -190,7 +152,7 @@ If set to True, the ExternalAccessPrefix parameter takes effect.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -213,25 +175,7 @@ However, if you don't provide a value, a default value matching the Identity of 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
-You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -248,7 +192,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -267,3 +211,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Grant-CsTenantDialPlan](Grant-CsTenantDialPlan.md)
+
+[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)
+
+[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
+
+[Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)

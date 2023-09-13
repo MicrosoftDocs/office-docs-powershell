@@ -26,6 +26,7 @@ Get-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-RecipientAddress <String[]>]
  [-SenderAddress <String[]>]
+ [-TeamsConversationTypes <Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]>]
  [<CommonParameters>]
 ```
 
@@ -52,6 +53,7 @@ Get-QuarantineMessage
  [-StartExpiresDate <System.DateTime>]
  [-StartReceivedDate <System.DateTime>]
  [-Subject <String>]
+ [-TeamsConversationTypes <Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]>]
  [-Type <Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageTypeEnum>]
  [<CommonParameters>]
 ```
@@ -496,6 +498,29 @@ Type: String
 Parameter Sets: Summary
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsConversationTypes
+This parameter is available only in Security & Compliance PowerShell.
+
+The TeamsConversationTypes parameters filters the results by Microsoft Teams conversation types. Valid values are:
+
+- Channel
+- Chat
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

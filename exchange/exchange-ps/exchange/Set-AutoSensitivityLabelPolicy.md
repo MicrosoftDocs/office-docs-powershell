@@ -33,6 +33,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
+ [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExchangeSender <SmtpAddress[]>]
  [-ExchangeSenderException <SmtpAddress[]>]
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
@@ -40,6 +41,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-ExternalMailRightsManagementOwner <SmtpAddress>]
  [-Force]
  [-Mode <PolicyMode>]
+ [-OneDriveSharedBy <RecipientIdParameter[]>]
  [-OverwriteLabel <Boolean>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
@@ -79,7 +81,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -308,6 +310,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfOneDriveSharedBy
+The ExceptIfOneDriveSharedBy parameter specifies the users to exclude from the policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+
+To use this parameter, one of the following statements must be true:
+
+- The policy already includes OneDrive for Business sites (in the output of Get-AutoSensitivityLabelPolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the OneDriveSharedBy parameter.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExchangeSender
 The ExchangeSender parameter specifies the users whose email is included in the policy. You specify the users by email address. You can specify internal or external email addresses.
 
@@ -463,6 +490,32 @@ Type: PolicyMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enable, TestWithNotifications, TestWithoutNotifications, Disable, PendingDeletion
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -OneDriveSharedBy
+The OneDriveSharedBy parameter specifies the users to include in the policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
+
+To use this parameter, one of the following statements must be true:
+
+- The policy already includes OneDrive for Business sites (in the output of Get-AutoSensitivityLabelPolicy, the OneDriveLocation property value is All, which is the default value).
+- Use `-AddOneDriveLocation All` in the same command with this parameter.
+
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`.
+
+You can't use this parameter with the ExceptIfOneDriveSharedBy parameter.
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

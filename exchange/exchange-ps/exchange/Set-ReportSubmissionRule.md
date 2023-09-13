@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ### -SentTo
 The SentTo parameter specifies the email address of the reporting mailbox in Exchange Online where user reported messages are sent.
 
-The value of this parameter is meaningful only if the Microsoft integrated reporting experience is enabled, and user reported messages are sent to a reporting mailbox as configured in the \*-ReportSubmissionPolicy cmdlets (either of the following scenarios):
+The value of this parameter is meaningful only if reporting in Outlook is enabled, and user reported messages are sent to a reporting mailbox as configured in the \*-ReportSubmissionPolicy cmdlets (either of the following scenarios):
 
 - Microsoft integrated reporting is enabled using Microsoft reporting tools in Outlook: `-EnableThirdPartyAddress $false -ReportJunkToCustomizedAddress $true -ReportNotJunkToCustomizedAddress $true -ReportPhishToCustomizedAddress $true`.
 - Microsoft integrated reporting is enabled using third-party reporting tools in Outlook: `-EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ReportJunkToCustomizedAddress $false -ReportNotJunkToCustomizedAddress $false -ReportPhishToCustomizedAddress $false`.

@@ -13,7 +13,7 @@ ms.reviewer: julienp
 # Get-CsOnlineTelephoneNumberCountry
 
 ## SYNOPSIS
-Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
+Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries or regions to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ PS C:\> Get-CsOnlineTelephoneNumberCountry [<CommonParameters>]
 ```
 ## DESCRIPTION
 
-Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
+Use the `Get-CsOnlineTelephoneNumberCountry` cmdlet to get the list of supported countries or regions to search and acquire new telephone numbers.  The telephone numbers can then be used to set up calling features for users and services in your organization.
 
 ## EXAMPLES
 

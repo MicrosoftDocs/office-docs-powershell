@@ -13,7 +13,7 @@ ms.reviewer: julienp
 # Get-CsOnlineTelephoneNumberType
 
 ## SYNOPSIS
-Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country. The telephone numbers can then be used to set up calling features for users and services in your organization.
+Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country or region. The telephone numbers can then be used to set up calling features for users and services in your organization.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-CsOnlineTelephoneNumberType [-Country] <CountryCode> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country. The `NumberType` field in the response is used to indicate the capabilities of a given offering. The telephone numbers can then be used to set up calling features for users and services in your organization.
+Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country or region. The `NumberType` field in the response is used to indicate the capabilities of a given offering. The telephone numbers can then be used to set up calling features for users and services in your organization.
 
 
 ## EXAMPLES
@@ -78,7 +78,7 @@ This example returns the list of supported NumberTypes in Canada.
 ## PARAMETERS
 
 ### Country
-Specifies the country that the number offerings belong. The country code uses ISO 3166 standard and the list of supported countries can be found by calling `Get-CsOnlineTelephoneNumberCountry`.
+Specifies the country or region that the number offerings belong. The country code uses ISO 3166 standard and the list of supported countries or regions can be found by calling `Get-CsOnlineTelephoneNumberCountry`.
 
 ```yaml
 Type: String

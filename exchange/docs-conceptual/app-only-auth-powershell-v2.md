@@ -3,7 +3,7 @@ title: App-only authentication in Exchange Online PowerShell and Security & Comp
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 6/21/2023
+ms.date: 8/25/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -33,7 +33,9 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
 >
-> - Version 2.0.5 and earlier is known as the Exchange Online PowerShell V2 module (abbreviated as the EXO V2 module). Version 3.0.0 and later is known as the Exchange Online PowerShell V3 module (abbreviated as the EXO V3 module).
+> - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+>
+>   If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
 >
 > - In Exchange Online PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
@@ -45,7 +47,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
 >
-> - If the procedures in this article don't work for you, verify that you don't have Beta versions of the PackageManagement or PowerShellGet modules installed by running the following command: `Get-InstalledModule PackageManagement -AllVersions; Get-InstalledModule PowerShellGet -AllVersions`.
+> - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet if you get the following error when using the Windows PowerShell SDK to connect: `The term 'Update-ModuleManifest' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.`
 
 ## How does it work?
 
@@ -60,7 +62,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > The following connection commands have many of the same options available as described in [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md) and [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). For example:
 >
-> Remote PowerShell support in Exchange Online PowerShell will be deprecated. For more information, see [Announcing Deprecation of Remote PowerShell (RPS) Protocol in Exchange Online PowerShell](https://aka.ms/RPSDeprecation).
+> Remote PowerShell connections are deprecated in Exchange Online PowerShell and will be deprecated in Security & Compliance PowerShell. For more information, see [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692) and [here](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 >
 > - Microsoft 365 GCC High or Microsoft 365 DoD environments require the following additional parameters and values:
 >   - **Connect-ExchangeOnline in GCC High**: `-ExchangeEnvironmentName O365USGovGCCHigh`.
@@ -132,18 +134,18 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 2. [Assign API permissions to the application](#step-2-assign-api-permissions-to-the-application).
 
-   An application object has the default permission `User.Read`. For the application object to access resources, it needs to have the Application permission `Exchange.ManageAsApp`.
+   An application object has the **Delegated** API permission **Microsoft Graph** \> **User.Read** by default. For the application object to access resources in Exchange, it needs the **Application** API permission **Office 365 Exchange Online** \> **Exchange.ManageAsApp**.
 
 3. [Generate a self-signed certificate](#step-3-generate-a-self-signed-certificate)
 
-   - For app-only authentication in Azure AD,  you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app, and the permissions granted to the app.
+   - For app-only authentication in Azure AD, you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app with the permissions granted to the app.
 
    - Create and configure a self-signed X.509 certificate, which is used to authenticate your Application against Azure AD, while requesting the app-only access token.
 
-   - This procedure is similar to generating a password for user accounts. The certificate can be self-signed as well. See the [Appendix](#step-3-generate-a-self-signed-certificate) section later in this article for instructions for generating certificates in PowerShell.
+   - This procedure is similar to generating a password for user accounts. The certificate can be self-signed as well. See [this section](#step-3-generate-a-self-signed-certificate) later in this article for instructions to generate certificates in PowerShell.
 
      > [!NOTE]
-     > Cryptography: Next Generation (CNG) certificates are not supported for app-only authentication with Exchange. CNG certificates are created by default in modern Windows versions. You must use a certificate from a CSP key provider. The [Appendix](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
+     > Cryptography: Next Generation (CNG) certificates aren't supported for app-only authentication with Exchange. CNG certificates are created by default in modern versions of Windows. You must use a certificate from a CSP key provider. [This section](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
 4. [Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
 
@@ -177,85 +179,151 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
      > [!NOTE]
      > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
 
-   - **Redirect URI (optional)**: In the first box, verify that **Web** is selected. In the second box, enter the URI where the access token is sent.
+   - **Redirect URI (optional)**: This setting is optional. If you need to use it, configure the following settings:
+     - **Platform**: Select **Web**.
+     - **URI**: Enter the URI where the access token is sent.
 
      > [!NOTE]
-     > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use that type for automated applications.
+     > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use native applications for automated applications.
 
      ![Register an application.](media/exo-app-only-auth-register-app.png)
 
    When you're finished on the **App registrations** page, select **Register**.
 
-4. Leave the app page that you return to open. You'll use it in the next step.
+4. You're taken to the **Overview** page of the app you just registered. Leave this page open. You'll use it in the next step.
 
 ### Step 2: Assign API permissions to the application
 
+Choose **one** of the following methods in this section to assign API permissions to the app:
+
+- Select and assign the API permissions from the portal.
+- Modify the app manifest to assign API permissions. (Microsoft 365 GCC High and DoD organizations should use this method)
+
+#### Select and assign the API permissions from the portal
+
+1. On the app **Overview** page, select **API permissions** from the **Manage** section.
+
+   ![Select API permissions on the application overview page.](media/exo-app-only-auth-select-manifest.png)
+
+2. On the app **API Permissions** page, select **Add a permission**.
+
+   ![Select Add a permission on the API permissions page of the application.](media/exo-app-only-auth-api-permissions-add-a-permission.png)
+
+3. In the **Request API permissions** flyout that opens, select the **APIs my organization uses** tab, start typing **Office 365 Exchange Online** in the **Search** box, and then select it from the results.
+
+   ![Find and select Office 365 Exchange Online on the APIs my organization uses tab.](media/exo-app-only-auth-api-permissions-select-o365-exo.png)
+
+5. On the **What type of permissions does your application require?** flyout that appears, select **Application permissions**.
+
+6. In the permissions list that appears, expand **Exchange**, select **Exchange.ManageAsApp**, and then select **Add permissions**.
+
+   ![Find and select Exchange.ManageAsApp permissions from the Application permission tab.](media/exo-app-only-auth-api-permissions-select-exchange-manageasapp.png)
+
+7. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
+   - **Type**: **Application**.
+   - **Admin consent required**: **Yes**. 
+
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
+
+     Change this value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
+
+     ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
+
+     The **Status** value is now **Granted for \<Organization\>**.
+
+     ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
+
+8. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
+
+   ![Admin consent removed from default Microsoft Graph User.Read permissions.](media/exo-app-only-auth-admin-consent-removed-from-graph.png)
+
+9. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
+
+#### Modify the app manifest to assign API permissions
+
 > [!NOTE]
-> The procedures in this section replace any default permissions that were automatically configured for the new app. The app doesn't need the default permissions that were replaced.
+> The procedures in this section _append_ the existing default permissions on the app (delegated **User.Read** permissions in **Microsoft Graph**) with the required application **Exchange.Manage.AsApp** permissions in **Office 365 Exchange Online**.
 
-1. On the app page under **Management**, select **Manifest**.
+1. On the app **Overview** page, select **Manifest** from the **Manage** section.
 
-   ![Select Manifest on the application properties page.](media/exo-app-only-auth-select-manifest.png)
+   ![Select Manifest on the application overview page.](media/exo-app-only-auth-select-manifest.png)
 
-2. On the **Manifest** page that opens, find the `requiredResourceAccess` entry (on or about line 47).
-
-   Modify the `resourceAppId`, `resourceAccess id`, and `resourceAccess type` values as shown in the following code snippet:
+2. On the app **Manifest** page, find the `requiredResourceAccess` entry (on or about line 42), and make the entry look like the following code snippet:
 
    ```json
    "requiredResourceAccess": [
-      {
-         "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
-         "resourceAccess": [
-            {
-               "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
-               "type": "Role"
-            }
-         ]
-      }
+       {
+           "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
+           "resourceAccess": [
+               {
+                   "id": "dc50a0fb-09a3-484d-be87-e023b12c6440",
+                   "type": "Role"
+               }
+           ]
+       },
+       {
+           "resourceAppId": "00000003-0000-0000-c000-000000000000",
+           "resourceAccess": [
+               {
+                   "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+                   "type": "Scope"
+               }
+           ]
+       }
    ],
    ```
 
    > [!NOTE]
-   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for `resourceAppId`, `resourceAccess id`, and `resourceAccess type`:
+   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for the `requiredResourceAccess` entry:
    >
    > ```json
    > "requiredResourceAccess": [
-   >    {
-   >      "resourceAppId": "00000007-0000-0ff1-ce00-000000000000",
-   >      "resourceAccess": [
-   >         {
-   >            "id": "455e5cd2-84e8-4751-8344-5672145dfa17",
-   >            "type": "Role"
-   >         }
-   >      ]
-   >    }
+   >     {
+   >         "resourceAppId": "00000007-0000-0ff1-ce00-000000000000",
+   >         "resourceAccess": [
+   >             {
+   >                 "id": "455e5cd2-84e8-4751-8344-5672145dfa17",
+   >                 "type": "Role"
+   >             }
+   >         ]
+   >     },
+   >     {
+   >         "resourceAppId": "00000003-0000-0000-c000-000000000000",
+   >         "resourceAccess": [
+   >             {
+   >                 "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+   >                 "type": "Scope"
+   >             }
+   >         ]
+   >     }
    > ],
    > ```
 
    When you're finished on the **Manifest** page, select **Save**.
 
-3. Still on the **Manifest** page, select **API permissions** under **Management**.
+3. Still on the **Manifest** page, select **API permissions** from the **Manage** section.
 
-   ![Select API permissions on the application properties page.](media/exo-app-only-auth-select-api-permissions.png)
+   ![Select API permissions from the Manifest page.](media/exo-app-only-auth-manifest-select-api-permissions.png)
 
-   On the **API permissions** page that opens, do the following steps:
+4. On the **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
+   - **Type**: **Application**.
+   - **Admin consent required**: **Yes**. 
 
-   - **API / Permissions name**: Verify the value **Exchange.ManageAsApp** is shown.
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
 
-     > [!NOTE]
-     > If necessary, search for **Office 365 Exchange** under **APIs my organization uses** on the **Request API Permissions** page.
+     Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, reading the confirmation dialog that opens, and then selecting **Yes**.
 
-   - **Status**: The current incorrect value is **Not granted for \<Organization\>**, and this value needs to be changed.
+     ![Admin consent required but not granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-original-permissions.png)
 
-     ![Original incorrect API permissions.](media/exo-app-only-auth-original-permissions.png)
+     The **Status** value is now **Granted for \<Organization\>**.
 
-     Select **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
+     ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
 
-     The **Status** value should now be **Granted for \<Organization\>**.
+5. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
 
-     ![Admin consent granted.](media/exo-app-only-auth-admin-consent-granted.png)
+   ![Admin consent removed from default Microsoft Graph User.Read permissions.](media/exo-app-only-auth-admin-consent-removed-from-graph.png)
 
-4. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
+6. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
 
 ### Step 3: Generate a self-signed certificate
 
@@ -290,11 +358,11 @@ After you register the certificate with your application, you can use the privat
 
    ![Apps registration page where you select your app.](media/exo-app-only-auth-app-registration-page.png)
 
-2. On the application page that opens, under **Manage**, select **Certificates & secrets**.
+2. On the application page that opens, select **Certificates & secrets** from the **Manage** section.
 
    ![Select Certificates & Secrets on the application properties page.](media/exo-app-only-auth-select-certificates-and-secrets.png)
 
-3. On the **Certificates & secrets** page that opens, select **Upload certificate**.
+3. On the **Certificates & secrets** page, select **Upload certificate**.
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
@@ -327,7 +395,7 @@ For more information about the URL syntax, see [Request the permissions from a d
 You have two options:
 
 - **Assign Azure AD roles to the application**
-- **Assign custom role groups to the application using service principals**: This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
+- **Assign custom role groups to the application using service principals**: This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
 > [!NOTE]
 > You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
@@ -408,32 +476,36 @@ For general instructions about assigning roles in Azure AD, see [View and assign
 > [!NOTE]
 > You need to connect to Exchange Online PowerShell or Security & Compliance PowerShell _before_ completing steps to create a new service principal. Creating a new service principal without connecting to PowerShell won't work (your Azure App ID and Object ID are needed to create the new service principal).
 >
->  This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#updates-for-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
+>  This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
 For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-365-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
 To assign custom role groups to the application using service principals, do the following steps:
 
-1. In [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2), run the following command to store the details of the Azure application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
+1. In [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation), run the following commands to store the details of the Azure AD application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
 
    ```powershell
-   $<VariableName1> = Get-AzureADServicePrincipal -SearchString "<AppName>"
+   Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All
+
+   $<VariableName1> = Get-MgServicePrincipal -Filter "DisplayName eq '<AppName>'"
    ```
 
    For example:
 
    ```powershell
-   $AADApp = Get-AzureADServicePrincipal -SearchString "ExO PowerShell CBA"
+   Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All
+
+   $AzureADApp = Get-MgServicePrincipal -Filter "DisplayName eq 'ExO PowerShell CBA'"
    ```
 
-   For detailed syntax and parameter information, see [Get-AzureADServicePrincipal](/powershell/module/azuread/get-azureadserviceprincipal).
+   For detailed syntax and parameter information, see [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal).
 
 2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) or [Security & Compliance PowerShell](connect-to-scc-powershell.md) and run the following commands to:
-   - Create a service principal object for the Azure application.
-   - Store the details of the service principal in a variable.
+   - Create a service principal object for the Azure AD application.
+   - Store the details of the service principal in a variable to use in the next step.
 
    ```powershell
-   New-ServicePrincipal -AppId $<VariableName1>.AppId -ServiceId $<VariableName1>.ObjectId -DisplayName "<Descriptive Name>"
+   New-ServicePrincipal -AppId $<VariableName1>.AppId -ObjectId $<VariableName1>.Id -DisplayName "<Descriptive Name>"
 
    $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
    ```
@@ -441,9 +513,9 @@ To assign custom role groups to the application using service principals, do the
    For example:
 
    ```powershell
-   New-ServicePrincipal -AppId $AADApp.AppId -ServiceId $AADApp.ObjectId -DisplayName "SP for Azure App ExO PowerShell CBA"
+   New-ServicePrincipal -AppId $AzureADApp.AppId -ObjectId $AzureADApp.Id -DisplayName "SP for Azure AD App ExO PowerShell CBA"
 
-   $SP = Get-ServicePrincipal -Identity "SP for Azure App ExO PowerShell CBA"
+   $SP = Get-ServicePrincipal -Identity "SP for Azure AD App ExO PowerShell CBA"
    ```
 
    For detailed syntax and parameter information, see [New-ServicePrincipal](/powershell/module/exchange/new-serviceprincipal).
@@ -451,7 +523,7 @@ To assign custom role groups to the application using service principals, do the
 3. In Exchange Online PowerShell or Security & Compliance PowerShell, run the following command to add the service principal as a member of the custom role group:
 
    ```powershell
-   Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ServiceId | $<VariableName2>.Id>
+   Add-RoleGroupMember -Identity "<CustomRoleGroupName>" -Member <$<VariableName2>.Identity | $<VariableName2>.ObjectId | $<VariableName2>.Id>
    ```
 
    For example:

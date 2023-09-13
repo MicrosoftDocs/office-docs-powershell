@@ -37,6 +37,7 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-EnableSpoAipMigration <Boolean>]
  [-EndpointDlpGlobalSettings <PswsHashtable[]>]
  [-EndpointDlpGlobalSettingsPsws <PswsHashtable[]>]
+ [-ExtendTeamsDlpPoliciesToSharePointOneDrive <Boolean>]
  [-InformationBarrierMode <InformationBarrierMode>]
  [-InformationBarrierPeopleSearchRestriction <InformationBarrierPeopleSearchRestriction>]
  [-OnPremisesWorkload <Workload>]
@@ -53,7 +54,7 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -356,14 +357,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExtendTeamsDlpPoliciesToSharePointOneDrive
+{{ Fill ExtendTeamsDlpPoliciesToSharePointOneDrive Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InformationBarrierMode
-{{ Fill InformationBarrierMode Description }}
+The InformationBarrierMode parameter specifies the mode that controls the total number of segments and how many segments a user can be part of. Valid values are:
+
+- SingleSegment: Users in the organization can have 5000 segments but can only be assigned to one segment.
+- MultiSegment: Users in the organization can have 5000 segments and can be assigned up to 10 segments. For more information, see [Use multi-segment support in information barriers](https://learn.microsoft.com/purview/information-barriers-multi-segment).
 
 ```yaml
 Type: InformationBarrierMode
 Parameter Sets: (All)
 Aliases:
-Accepted values: Legacy, SingleSegment, MultiSegment
+Accepted values: SingleSegment, MultiSegment
 Applicable: Security & Compliance
 
 Required: False

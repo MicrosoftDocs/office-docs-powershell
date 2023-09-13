@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-AvailabilityConfig [-Confirm]
+Set-AvailabilityConfig
+ [-AllowedTenantIds <MultiValuedProperty>]
+ [-Confirm]
  [-DomainController <Fqdn>]
  [-OrgWideAccount <SecurityPrincipalIdParameter>]
  [-PerUserAccount <SecurityPrincipalIdParameter>]
@@ -53,6 +55,24 @@ Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
 This example is useful if the remote forest isn't trusted. Because this account is used for a cross-forest free/busy proxy account or group, minimize security vulnerabilities by using the credentials of a user who doesn't have an Exchange mailbox. When you're prompted, type the username and password.
 
 ## PARAMETERS
+
+### -AllowedTenantIds
+This parameter is available only in the cloud-based service.
+
+{{ Fill AllowedTenantIds Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.

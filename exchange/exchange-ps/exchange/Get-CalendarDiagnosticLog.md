@@ -150,7 +150,7 @@ In the location you specify, a subfolder is automatically created for the specif
 
 In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet to analyze the exported .msg files.
 
-**Note**: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (| Set-Content -Path "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
+**Note**: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (`| Set-Content -Path "C:\My Documents\Calendar Export"`) or substitute the output to a PowerShell variable.
 
 ```yaml
 Type: String

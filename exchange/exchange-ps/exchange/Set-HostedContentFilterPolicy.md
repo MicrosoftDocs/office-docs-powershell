@@ -342,12 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadLink
-The DownloadLink parameter shows or hides a link in end-user spam quarantine notifications to download the Junk Email Reporting Tool for Outlook. Valid values are:
-
-- $true: end-user spam quarantine notifications contain a link to download the Junk Email Reporting Tool for Outlook.
-- $false: end-user spam quarantine notifications don't contain the link. This is the default value.
-
-This parameter is only meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: Boolean
@@ -363,10 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEndUserSpamNotifications
-The EnableEndUserSpamNotification parameter enables for disables sending end-user spam quarantine notifications. Valid values are:
-
-- $true: End-users periodically receive notifications when a messages that was supposed to be delivered to them was quarantined as spam. When you use this value, you can also use the EndUserSpamNotificationCustomSubject, EndUserSpamNotificationFrequency, and EndUserSpamNotificationLanguage parameters.
-- $false: end-user spam quarantine notifications are disabled. This is the default value.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: Boolean
@@ -420,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomFromAddress
-This parameter has been deprecated and is no longer used.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: SmtpAddress
@@ -436,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomFromName
-This parameter has been deprecated and is no longer used.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: String
@@ -452,9 +444,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationCustomSubject
-The EndUserSpamNotificationCustomSubject parameter specifies a custom subject for end-user spam notification messages. If the value includes spaces, enclose the value in quotation marks (").
-
-This parameter is meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: String
@@ -470,10 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequency
-The EndUserSpamNotificationFrequency parameter specifies the repeat interval in days that end-user spam quarantine notifications are sent. A valid value is an integer between 1 and 15. The default value is 3.
-
-This parameter is meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
-
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -488,13 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationLanguage
-The EndUserSpamNotificationLanguage parameter specifies the language of end-user spam quarantine notifications. Valid values are:
-
-Default, Amharic, Arabic, Basque, BengaliIndia, Bulgarian, Catalan, ChineseSimplified, ChineseTraditional, Croatian, Cyrillic, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, German, Greek, Gujarati, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Malay, Malayalam, Marathi, Norwegian, NorwegianNynorsk, Odia, Persian, Polish, Portuguese, PortuguesePortugal, Romanian, Russian, Serbian, SerbianCyrillic, Slovak, Slovenian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, and Vietnamese.
-
-The default value is Default, which means English.
-
-This parameter is meaningful only when the EnableEndUserSpamNotifications parameter value is $true.
+This parameter has been deprecated and is no longer used. End-user quarantine notifications are controlled by quarantine policies as specified by the \*QuarantineTag parameters.
 
 ```yaml
 Type: EsnLanguage
@@ -742,11 +723,11 @@ Accept wildcard characters: False
 ```
 
 ### -LanguageBlockList
-The LanguageBlockList parameter specifies the email content languages that are marked as spam when the EnableLanguageBlockList parameter value is $true. A valid value is a supported ISO 639-1 two-letter language code:
+The LanguageBlockList parameter specifies the email content languages that are marked as spam when the EnableLanguageBlockList parameter value is $true. A valid value is a supported uppercase ISO 639-1 two-letter language code:
 
-af, ar, az, be, bg, bn, br, bs, ca, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fo, fr, fy, ga, gl, gu, ha, he, hi, hr, hu, hy, id, is, it, ja, ka, kk, kl, kn, ko, ku, ky, la, lb, lt, lv, mi, mk, ml, mn, mr, ms, mt, nb, nl, nn, pa, pl, ps, pt, rm, ro, ru, se, sk, sl, sq, sr, sv, sw, ta, te, th, tl, tr, uk, ur, uz, vi, wen, yi, zh-cn, zh-tw, and zu.
+AF, AR, AZ, BE, BG, BN, BR, BS, CA, CS, CY, DA, DE, EL, EN, EO, ES, ET, EU, FA, FI, FO, FR, FY, GA, GL, GU, HA, HE, HI, HR, HU, HY, ID, IS, IT, JA, KA, KK, KL, KN, KO, KU, KY, LA, LB, LT, LV, MI, MK, ML, MN, MR, MS, MT, NB, NL, NN, PA, PL, PS, PT, RM, RO, RU, SE, SK, SL, SQ, SR, SV, SW, TA, TE, TH, TL, TR, UK, UR, UZ, VI, WEN, YI, ZH-CN, ZH-TW, and ZU.
 
-A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Note that not all possible language codes are available as input for this parameter.
+A reference for two-letter language codes is available at [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php). Not all possible language codes are available as input for this parameter.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

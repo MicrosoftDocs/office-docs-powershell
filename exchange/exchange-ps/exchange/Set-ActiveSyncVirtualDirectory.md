@@ -60,21 +60,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -BasicAuthEnabled $false
+Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync (Default Web Site)" -BasicAuthEnabled $false
 ```
 
 This example disables Basic authentication on the default Exchange ActiveSync virtual directory on the server Contoso.
 
 ### Example 2
 ```powershell
-Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -BadItemReportingEnabled $true -SendWatsonReport:$true
+Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync (Default Web Site)" -BadItemReportingEnabled $true -SendWatsonReport:$true
 ```
 
 This example enables bad item reporting and turns on the option to send Watson reports for errors on the server Contoso.
 
 ### Example 3
 ```powershell
-Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync" -ExternalUrl "https://contoso.com/mail"
+Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync (Default Web Site)" -ExternalUrl "https://contoso.com/mail"
 ```
 
 This example configures the external URL on the default Exchange ActiveSync virtual directory on the server Contoso.

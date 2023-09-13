@@ -847,7 +847,7 @@ Accept wildcard characters: False
 ```
 
 ### -PermanentlyClearPreviousMailboxInfo
-This parameter is not available or functional in on-premises Exchange. It is only available in Exchange Online.
+This parameter is functional only in the cloud-based service.
 
 The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Exchange Online mailbox attributes on a user. You don't need to specify a value with this switch.
 

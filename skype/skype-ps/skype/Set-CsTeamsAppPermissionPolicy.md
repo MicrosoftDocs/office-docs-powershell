@@ -74,7 +74,7 @@ $ListsApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.C
 $OneNoteApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.DefaultCatalogApp -Property @{Id="26bc2873-6023-480c-a11b-76b66605ce8c"}
 $DefaultCatalogAppList = @($ListsApp,$OneNoteApp)
 # set allow Lists and OneNote apps and block other Microsoft apps
-Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList  -DefaultCatalogApps $DefaultCatalogAppList 
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -DefaultCatalogAppsType AllowedAppList -DefaultCatalogApps $DefaultCatalogAppList 
 ```
 This example allows Microsoft Lists and OneNote apps and blocks other Microsoft apps. Microsoft Lists and OneNote can be installed by your users.
 
@@ -88,7 +88,7 @@ $TaskListApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlet
 $OnePlanApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.GlobalCatalogApp -Property @{Id="ca0540bf-6b61-3027-6313-a7cb4470bf1b"}
 $GlobalCatalogAppList = @($TaskListApp,$OnePlanApp)
 # set allow TaskList and OnePlan apps and block other Third-party apps
-Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -GlobalCatalogAppsType AllowedAppList  -GlobalCatalogApps $GlobalCatalogAppList
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -GlobalCatalogAppsType AllowedAppList -GlobalCatalogApps $GlobalCatalogAppList
 ```
 This example allows third-party TaskList and OnePlan apps and blocks other third-party apps.  TaskList and OnePlan can be installed by your users.
 
@@ -103,7 +103,7 @@ $GetStartApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlet
 $TestBotApp = New-Object -TypeName Microsoft.Teams.Policy.Administration.Cmdlets.Core.PrivateCatalogApp -Property @{Id="47fa3584-9366-4ce7-b1eb-07326c6ba799"}
 $PrivateCatalogAppList = @($GetStartApp,$TestBotApp)
 # set allow TaskList and OnePlan apps and block other custom apps
-Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -PrivateCatalogAppsType AllowedAppList  -PrivateCatalogApps $PrivateCatalogAppList
+Set-CsTeamsAppPermissionPolicy -Identity Set-$identity -PrivateCatalogAppsType AllowedAppList -PrivateCatalogApps $PrivateCatalogAppList
 ```
 This example allows custom GetStartApp and TestBotApp apps and blocks other custom apps. GetStartApp and TestBotApp can be installed by your users.
 
