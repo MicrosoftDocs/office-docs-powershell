@@ -236,6 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedQuestionTypesInRegistrationForm
+This setting governs which users in a tenant can add which registration form questions to event registration page for attendees to answer when registering for the event.
 Possible values are:
 DefaultOnly, DefaultAndPredefinedOnly, AllQuestions.
 
@@ -252,6 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedTownhallTypesForRecordingPublish
+This setting describes how IT Admins can control which types of townhall can have their recordings published.
 Possible values are:
 None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
 
@@ -268,6 +270,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedWebinarTypesForRecordingPublish
+This setting describes how IT Admins can control which types of webinars can have their recordings published.
 Possible values are:
 None,InviteOnly,EveryoneInCompanyIncludingGuests,Everyone.
 
@@ -284,6 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEventIntegrations
+This setting governs the access to the integrations tab in event creation workflow.
 Possible values
 true, false.
 
@@ -300,6 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -TownhallChatExperience
+This setting governs if the user can enable Comment Stream chat experience for Townhalls.
 Possible values are: Optimized, None.
 
 ```yaml
