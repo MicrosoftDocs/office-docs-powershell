@@ -59,8 +59,7 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 > - To use Multi-Factor Authentication (MFA) with Move-CsUser requires either Skype for Business Server 2015 CU12 or any version of Skype for Business Server 2019. When using MFA do not specify the -Credential paremeter. If you are using an earlier version of Skype for Business Server, you should either disable MFA and use the credential parameter, or obtain a newer version of the administrative tools for Skype for Business Server that supports MFA.
 
 > [!NOTE]
->
-> - From November 10, 2023 onwards, moving users from Teams to On-Premises will discontinue migrating their contacts. This is mainly due to Microsoft's continuous efforts to tighten the security and protect customer's data. After carefully analyzing the usage patterns and performing risk assessment with the legacy infrastructure, Microsoft decided to deprecate this feature. 
+> As of November 10, 2023, moving users from Teams to On-Premises will no longer migrate their contacts. This is mainly due to our continuous efforts to tighten security and protect customers' data. After carefully analyzing the usage patterns and performing risk assessments with the legacy infrastructure, we decided to deprecate this feature. 
 
 **MINIMUM REQUIRED SERVER VERSIONS**:
 
