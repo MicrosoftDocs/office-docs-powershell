@@ -18,14 +18,20 @@ The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
 
 ### Identity (Default)
 ```
-Grant-CsTeamsMobilityPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <System.Guid>]
- [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsMobilityPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsTeamsMobilityPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-DomainController <Fqdn>]
- [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsMobilityPolicy [-PassThru] [[-PolicyName] <String>]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsMobilityPolicy [-PassThru] [[-PolicyName] <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,6 +89,68 @@ Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams call hold policy.
+
+By default, the cmdlet does not pass objects through the pipeline.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
