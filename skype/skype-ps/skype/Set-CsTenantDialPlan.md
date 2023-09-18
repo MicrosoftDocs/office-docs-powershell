@@ -108,26 +108,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalAccessPrefix
-The ExternalAccessPrefix parameter is a number (or set of numbers) that designates the call as external to the organization.
-(For example, to tenant-dial an outside line, first dial 9). This prefix is ignored by the normalization rules, although these rules will be applied to the rest of the number.
-The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
-
-The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter is a unique identifier that designates the name of the tenant dial plan to modify.
 
