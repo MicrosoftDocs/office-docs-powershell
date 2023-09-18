@@ -31,7 +31,7 @@ Get-CsTenantDialPlan [-Filter <String>] [<CommonParameters>]
 The Get-CsTenantDialPlan cmdlet returns information about one or more tenant dial plans (also known as a location profiles) in an organization.
 Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied, and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied.
 
 You can use the Get-CsTenantDialPlan cmdlet to retrieve specific information about the normalization rules of a tenant dial plan.
 
