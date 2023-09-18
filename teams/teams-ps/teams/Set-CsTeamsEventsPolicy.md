@@ -288,7 +288,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEventIntegrations
-This setting governs the access to the integrations tab in event creation workflow.
+This setting governs access to the integrations tab in the event creation workflow.
+
 Possible values
 true, false.
 
