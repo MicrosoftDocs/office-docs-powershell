@@ -118,12 +118,9 @@ Accept wildcard characters: False
 ### -DetailLevel
 The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Valid values are:
 
-- AvailabilityOnly (This is the default value)
+- AvailabilityOnly (default)
 - LimitedDetails
 - FullDetails
-
-**Note** Editor permission should be removed as it doesnt work irrespective if Anonymous is there or not in sharing Policy under Domain parameter.
-It always throws error "The policy doesn't allow anonymous sharing with Editor." . ALso even if we PublishEnabled Parameter is true still we are not allowed to give Editor permission. Reproduced in both Office 365 and Onpremises behavior. 
 
 This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
