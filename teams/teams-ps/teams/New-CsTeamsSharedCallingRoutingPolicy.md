@@ -182,7 +182,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 In some Calling Plan markets, you are not allowed to set the location on service numbers. In this instance, kindly contact the [Telephone Number Services service desk](/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
 
-If you are trying to use a resource account with an Operator Connect phone number assigned, please confirm the support for Shared Calling with your operator. 
+If you are attempting to use a resource account with an Operator Connect phone number assigned, you should confirm support for Shared Calling with your operator. 
 
 Shared Calling is not supported for Calling Plan service phone numbers in Romania, Czech Republic, Hungary, Singapore, New Zealand, Australia and Japan. A limited number of existing Calling Plan service phone numbers in other countries are also not supported for Shared Calling. For such service phone numbers, please contact the [Telephone Number Services Service desk](/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
 
