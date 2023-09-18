@@ -1,6 +1,7 @@
 ---
 ms.date: 9/15/2023
 ---
+
 # Overview
 
 ## Learn how to contribute
@@ -18,15 +19,13 @@ Contributors who make infrequent or small updates can edit the file directly on 
 
 1. Verify that you're signed in to GitHub.com with your GitHub account.
 2. On learn.microsoft.com, find the article that you want to update.
-3. Above the title of the article, select :::image type="icon" source="images/m365-cc-sc-edit-icon.png" border="false"::: **Edit this document**.
+3. Above the title of the article, select ![Edit this document icon.](images/m365-cc-sc-edit-icon.png) **Edit this document**.
 
-:::image type="content" source="images/m365-cc-sc-edit-icon.png" alt-text="x":::
+   ![Edit this document button on a learn.microsoft.com article.](images/quick-update-edit-button-on-learn-page.png)
 
-   :::image type="content" source="images/quick-update-edit-button-on-learn-page.png" alt-text="Edit this document button on a learn.microsoft.com article." lightbox="microsoft-365/media/quick-update-edit-button-on-learn-page.png":::
+4. The corresponding article file opens on GitHub. Select ![Edit this file icon.](images/m365-cc-sc-edit-icon.png) **Edit this file**.
 
-4. The corresponding article file opens on GitHub. Select :::image type="icon" source="images/m365-cc-sc-edit-icon.png" border="false"::: **Edit this file**.
-
-   :::image type="content" source="images/quick-update-edit-button-on-github-page.png" alt-text="Edit this document button on a GitHub article file." lightbox="microsoft-365/media/quick-update-edit-button-on-github-page.png":::
+   ![Edit this document button on a GitHub article file.](images/quick-update-edit-button-on-github-page.png)
 
 5. The article file opens in a line-numbered editor page where you can make updates.
 
@@ -39,7 +38,7 @@ Contributors who make infrequent or small updates can edit the file directly on 
 
    When you're finished making changes, select the green **Commit changes** button.
 
-   :::image type="content" source="images/quick-update-editor-page.png" alt-text="Select the green Commit changes button on the article editor page." lightbox="microsoft-365/media/quick-update-editor-page.png":::
+   ![Select the green Commit changes button on the article editor page.](images/quick-update-editor-page.png)
 
 6. In the **Propose changes** dialog that opens, review and/or enter the following values:
    - **Commit message**: This value is required. You can accept the default value ("Update \<filename\>") or you can change it.
@@ -49,15 +48,15 @@ Contributors who make infrequent or small updates can edit the file directly on 
 
    When you're finished on the **Propose changes** dialog, select the green **Propose changes** button.
 
-   :::image type="content" source="images/quick-update-propose-changes-dialog.png" alt-text="Select the green Propose changes button in the Propose changes dialog." lightbox="microsoft-365/media/quick-update-propose-changes-dialog.png":::
+   ![Select the green Propose changes button in the Propose changes dialog.](images/quick-update-propose-changes-dialog.png)
 
 7. On the **Comparing changes** page that opens, select the green **Create pull request** button.
 
-   :::image type="content" source="images/quick-update-comparing-changes-page.png" alt-text="Select the green Create pull request button on the Comparing changes page." lightbox="microsoft-365/media/quick-update-comparing-changes-page.png":::
+   ![Select the green Create pull request button on the Comparing changes page.](images/quick-update-comparing-changes-page.png)
 
 8. On the **Open a pull request** page that opens, review the title and comments, and then select the green **Create pull request** button.
 
-   :::image type="content" source="images/quick-update-open-a-pull-request-page.png" alt-text="Select the green Create pull request button on the Open a pull request page." lightbox="microsoft-365/media/quick-update-open-a-pull-request-page.png":::
+   ![Select the green Create pull request button on the Open a pull request page.](images/quick-update-open-a-pull-request-page.png)
 
 9. That's it. There's nothing more for you to do.
 
