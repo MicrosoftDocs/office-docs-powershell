@@ -271,7 +271,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedWebinarTypesForRecordingPublish
-This setting describes how IT Admins can control which types of webinars can have their recordings published.
+This setting describes how IT admins can control which types of webinar attendees can have their recordings published.
+
 Possible values are:
 None,InviteOnly,EveryoneInCompanyIncludingGuests,Everyone.
 
