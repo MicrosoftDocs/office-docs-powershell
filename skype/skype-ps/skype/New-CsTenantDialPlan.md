@@ -101,26 +101,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalAccessPrefix
-The ExternalAccessPrefix parameter is a number (or set of numbers) that designates the call as external to the organization.
-(For example, to tenant-dial an outside line, first press 9.) This prefix is ignored by the normalization rules, although these rules are applied to the remainder of the number.
-
-The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
-The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
 Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md) cmdlet, which creates the rule and then assign it to the specified tenant dial plan using [Set-CsTenantDialPlan](Set-CsTenantDialPlan.md) cmdlet.
