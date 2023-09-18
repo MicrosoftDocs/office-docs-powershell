@@ -25,7 +25,7 @@ Remove-CsTenantDialPlan [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParame
 The `Remove-CsTenantDialPlan` cmdlet removes an existing tenant dial plan (also known as a location profile).
 Tenant dial plans provide required information to allow Enterprise Voice users to make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied.
 
 Removing a tenant dial plan also removes any associated normalization rules.
 If no tenant dial plan is assigned to an organization, the Global dial plan is used.
