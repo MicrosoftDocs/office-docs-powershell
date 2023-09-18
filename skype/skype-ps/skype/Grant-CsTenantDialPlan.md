@@ -36,7 +36,7 @@ Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThr
 The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user, a group of users, or sets the Global policy instance.
 Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
 Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
-A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as how normalization rules are applied.
 
 You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsUserPolicyAssignment -Identity "<user name>" -PolicyType TenantDialPlan.`
 
