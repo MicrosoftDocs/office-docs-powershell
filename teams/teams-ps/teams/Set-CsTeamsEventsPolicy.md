@@ -306,7 +306,8 @@ Accept wildcard characters: False
 ```
 
 ### -TownhallChatExperience
-This setting governs if the user can enable Comment Stream chat experience for Townhalls.
+This setting governs whether the user can enable the Comment Stream chat experience for Town Halls.
+
 Possible values are: Optimized, None.
 
 ```yaml
