@@ -236,7 +236,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedQuestionTypesInRegistrationForm
-This setting governs which users in a tenant can add which registration form questions to event registration page for attendees to answer when registering for the event.
+This setting governs which users in a tenant can add which registration form questions to an event registration page for attendees to answer when registering for the event.
+
 Possible values are:
 DefaultOnly, DefaultAndPredefinedOnly, AllQuestions.
 
