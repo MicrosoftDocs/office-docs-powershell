@@ -275,7 +275,8 @@ Accept wildcard characters: False
 This setting describes how IT admins can control which types of webinar attendees can have their recordings published.
 
 Possible values are:
-None,InviteOnly,EveryoneInCompanyIncludingGuests,Everyone.
+None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
 
 ```yaml
 Type: String
