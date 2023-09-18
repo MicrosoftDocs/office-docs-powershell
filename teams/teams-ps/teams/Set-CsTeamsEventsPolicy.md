@@ -253,7 +253,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedTownhallTypesForRecordingPublish
-This setting describes how IT Admins can control which types of townhall can have their recordings published.
+This setting describes how IT admins can control which types of Town Hall attendees can have their recordings published.
+
 Possible values are:
 None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
 
