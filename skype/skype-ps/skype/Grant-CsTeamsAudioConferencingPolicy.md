@@ -19,6 +19,13 @@ Grant-CsTeamsAudioConferencingPolicy [-Global] [-PassThru] [[-PolicyName] <Strin
  [<CommonParameters>]
 ```
 
+### GrantToGroup
+```
+Grant-CsTeamsAudioConferencingPolicy [-PassThru] [[-PolicyName] <String>]
+ [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### Identity
 ```
 Grant-CsTeamsAudioConferencingPolicy [-PassThru] [[-PolicyName] <String>] [[-Identity] <String>] [-WhatIf]
@@ -97,6 +104,36 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
