@@ -29,6 +29,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AlertProperties <PswsHashtable>]
  [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
+ [-ApplyBrandingTemplate <String>]
  [-ApplyHtmlDisclaimer <PswsHashtable>]
  [-BlockAccess <Boolean>]
  [-BlockAccessScope <Microsoft.Office.CompliancePolicy.Tasks.BlockAccessScope>]
@@ -54,6 +55,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-EncryptRMSTemplate <RmsTemplateIdParameter>]
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
+ [-EnforcePortalAccess <Boolean>]
  [-ExceptIfAccessScope <Microsoft.Office.CompliancePolicy.Tasks.AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -454,6 +456,24 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyBrandingTemplate
+The ApplyBrandingTemplate parameter specifies an action for the DLP rule that applies a custom branding template for messages encrypted by Microsoft Purview Message Encryption. You identify the custom branding template by name. If the name contains spaces, enclose the name in quotation marks (").
+
+Use the EnforcePortalAccess parameter to control whether external users are required to use the encrypted message portal to view encrypted messages.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -941,6 +961,25 @@ For more information about Endpoint DLP, see [Learn about Endpoint data loss pre
 
 ```yaml
 Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforcePortalAccess
+The EnforcePortalAccess parameter specifies whether external recipients are required to view encrypted mail using the encrypted message portal when the ApplyBrandingTemplate action is also specified. Valid values are:
+
+- $true: External recipients are required to use the encrypted message portal to view encrypted messages.
+- $false: External recipients aren't required to use the encrypted message portal. Outlook can decrypt messages inline.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

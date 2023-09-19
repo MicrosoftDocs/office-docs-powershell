@@ -292,7 +292,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the name or alias of the user to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
+The User parameter specifies the user to assign the management role to.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
 
 You can't use this parameter with the App, SecurityGroup, Computer, or Policy parameters.
 
