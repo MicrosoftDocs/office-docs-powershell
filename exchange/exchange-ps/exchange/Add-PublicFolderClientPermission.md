@@ -114,6 +114,12 @@ Accept wildcard characters: False
 ### -User
 The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user for whom rights are being added.
 
+> [!NOTE]
+> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
+>
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+
 ```yaml
 Type: PublicFolderUserIdParameter
 Parameter Sets: (All)
@@ -126,12 +132,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-> [!NOTE]
-> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
->
-> 1. `user@domain.com` (UPN, user only, no groups.)
-> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
 
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
