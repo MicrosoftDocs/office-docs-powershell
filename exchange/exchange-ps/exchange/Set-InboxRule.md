@@ -421,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example: For example:
+The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
 
 - Name
 - Alias

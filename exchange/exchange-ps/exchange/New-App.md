@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example: For example:
+The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example:
 
 - Name
 - Alias
