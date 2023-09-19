@@ -260,8 +260,8 @@ You can use any value that uniquely identifies the user or group. For example:
 > [!NOTE]
 > We recommend using the below syntax to get the best results in any AD topology, simple or complex.
 >
-1. > `user@domain.com` (UPN, user only, no groups.)
-1. > `domain\samAccountname` (NETBIOS and DNS Domain)
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
 
 
 You can't use this parameter with the Owner parameter.
