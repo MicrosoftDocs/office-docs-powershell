@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedMasterAccount
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example: For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. This parameter is required only if you're creating a linked mailbox. You can use any value that uniquely identifies the master account. For example:
 
 - Name
 - Distinguished name (DN)
@@ -558,18 +558,19 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user object in Active Directory that you want to connect the mailbox to. You can use any value that uniquely identifies the user. For example: For example:
+The User parameter specifies the user object in Active Directory that you want to connect the mailbox to.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user. For example:
 
 - Name
 - Distinguished name (DN)
 - Canonical DN
 - GUID
-
-> [!NOTE]
-> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
->
-> 1. `user@domain.com` (UPN, user only, no groups.)
-> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
 
 If you don't use this parameter, the command uses the LegacyExchangeDN and DisplayName property values of the mailbox to find a user account that has those same values. If it can't find a unique match, it doesn't connect the mailbox.
 

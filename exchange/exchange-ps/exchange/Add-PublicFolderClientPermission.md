@@ -112,13 +112,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user for whom rights are being added.
+The User parameter specifies the user for whom rights are being added.
 
-> [!NOTE]
-> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
->
-> 1. `user@domain.com` (UPN, user only, no groups.)
-> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
 
 ```yaml
 Type: PublicFolderUserIdParameter

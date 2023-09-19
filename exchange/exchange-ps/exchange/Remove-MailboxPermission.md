@@ -210,7 +210,12 @@ The User parameter specifies whose permissions are being removed from the specif
 - Mail users
 - Security groups
 
-You can use any value that uniquely identifies the user or group. For example:
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias
@@ -222,12 +227,6 @@ You can use any value that uniquely identifies the user or group. For example:
 - LegacyExchangeDN
 - SamAccountName
 - User ID or user principal name (UPN)
-
-> [!NOTE]
-> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
->
-> 1. `user@domain.com` (UPN, user only, no groups.)
-> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
 
 ```yaml
 Type: SecurityPrincipalIdParameter

@@ -153,7 +153,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user account to test. You can use any value that uniquely identifies the user. For example:
+The User parameter specifies the user account to test.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user. For example:
 
 - Name
 - Alias
@@ -165,12 +172,6 @@ The User parameter specifies the user account to test. You can use any value tha
 - LegacyExchangeDN
 - SamAccountName
 - User ID or user principal name (UPN)
-
-> [!NOTE]
-> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
->
-> 1. `user@domain.com` (UPN, user only, no groups.)
-> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
 
 In client access rules, users are defined by the UsernameMatchesAnyOfPatterns, UserRecipientFilter, and ExceptUsernameMatchesAnyOfPatterns parameters.
 

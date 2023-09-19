@@ -181,7 +181,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter filters the results by the specified mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
+The User parameter filters the results by the specified mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias
@@ -189,12 +196,6 @@ The User parameter filters the results by the specified mailbox, mail user, or m
 - Canonical DN
 - Email address
 - GUID
-
-> [!NOTE]
-> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
->
-> 1. `user@domain.com` (UPN, user only, no groups.)
-> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
 
 ```yaml
 Type: MailboxFolderUserIdParameter
