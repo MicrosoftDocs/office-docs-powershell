@@ -126,6 +126,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 > [!NOTE]
 > We recommend using the below syntax to get the best results in any AD topology, simple or complex.
 >
