@@ -292,6 +292,12 @@ Accept wildcard characters: False
 ### -User
 The User parameter filters the results by user. You identify the user by their GUID value (for example, 87246450-1b19-4c81-93dc-1a4200eff66c). To find the GUID for a user, run the following command: `Get-User <UserIdentity> | Format-List Name,GUID`.
 
+> [!NOTE]
+> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
+>
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+
 ```yaml
 Type: Guid
 Parameter Sets: (All)

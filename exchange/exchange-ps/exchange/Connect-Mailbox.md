@@ -565,6 +565,12 @@ The User parameter specifies the user object in Active Directory that you want t
 - Canonical DN
 - GUID
 
+> [!NOTE]
+> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
+>
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+
 If you don't use this parameter, the command uses the LegacyExchangeDN and DisplayName property values of the mailbox to find a user account that has those same values. If it can't find a unique match, it doesn't connect the mailbox.
 
 ```yaml

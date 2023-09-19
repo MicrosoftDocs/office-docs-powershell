@@ -190,6 +190,12 @@ The User parameter filters the results by the specified mailbox, mail user, or m
 - Email address
 - GUID
 
+> [!NOTE]
+> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
+>
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+
 ```yaml
 Type: MailboxFolderUserIdParameter
 Parameter Sets: (All)

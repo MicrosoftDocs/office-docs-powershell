@@ -166,6 +166,12 @@ The User parameter specifies the user account to test. You can use any value tha
 - SamAccountName
 - User ID or user principal name (UPN)
 
+> [!NOTE]
+> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
+>
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+
 In client access rules, users are defined by the UsernameMatchesAnyOfPatterns, UserRecipientFilter, and ExceptUsernameMatchesAnyOfPatterns parameters.
 
 ```yaml

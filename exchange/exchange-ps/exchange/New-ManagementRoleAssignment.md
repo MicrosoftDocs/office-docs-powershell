@@ -294,6 +294,12 @@ Accept wildcard characters: False
 ### -User
 The User parameter specifies the name or alias of the user to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
 
+> [!NOTE]
+> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
+>
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+
 You can't use this parameter with the App, SecurityGroup, Computer, or Policy parameters.
 
 ```yaml

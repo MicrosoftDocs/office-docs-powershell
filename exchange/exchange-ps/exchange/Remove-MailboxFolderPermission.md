@@ -111,6 +111,12 @@ The User parameter specifies the mailbox, mail user, or mail-enabled security gr
 - Email address
 - GUID
 
+> [!NOTE]
+> We recommend using the below syntax to get the best results in any AD topology, simple or complex.
+>
+> 1. `user@domain.com` (UPN, user only, no groups.)
+> 1. `domain\samAccountname` (NETBIOS and DNS Domain)
+
 ```yaml
 Type: MailboxFolderUserIdParameter
 Parameter Sets: Default, Identity
