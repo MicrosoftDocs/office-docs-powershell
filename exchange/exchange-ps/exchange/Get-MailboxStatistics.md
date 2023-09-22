@@ -20,6 +20,8 @@ Use the Get-MailboxStatistics cmdlet to return information about a mailbox, such
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
+Please be aware of "LastUserActionTime" in deprecating process. You should not refer to "LastUserActionTime" as mailbox last active time.
+
 ## SYNTAX
 
 ### Database
