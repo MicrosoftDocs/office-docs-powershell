@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -PstnAssignmentStatus
-Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, and ThirdPartyAppAssigned.
+Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, ThirdPartyAppAssigned, and PolicyAssigned.
 
 ```yaml
 Type: System.String
@@ -416,7 +416,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The activation state of the telephone number.
 
 ### AssignedPstnTargetId
-The ID of the object the phone number is assigned to.
+The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
+
 
 ### AssignmentCategory
 This parameter is reserved for internal Microsoft use.
