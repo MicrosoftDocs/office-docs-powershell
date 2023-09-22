@@ -20,8 +20,6 @@ Use the Get-MailboxStatistics cmdlet to return information about a mailbox, such
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
-Please be aware of "LastUserActionTime" in deprecating process. You should not refer to "LastUserActionTime" as mailbox last active time.
-
 ## SYNTAX
 
 ### Database
@@ -73,6 +71,8 @@ The Get-MailboxStatistics cmdlet requires at least one of the following paramete
 You can use the Get-MailboxStatistics cmdlet to return detailed move history and a move report for completed move requests to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database and are numbered incrementally and the last executed move request is always numbered 0. For more information, see "Example 7," "Example 8," and "Example 9" in this topic.
 
 You can only see move reports and move history for completed move requests.
+
+**Note**: We're deprecating the LastUserActionTime property in Exchange Online PowerShell. Don't use the value of that property as the last active time for a mailbox.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
