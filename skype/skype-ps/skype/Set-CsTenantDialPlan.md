@@ -143,23 +143,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OptimizeDeviceDialing
-Use this parameter to determine the effect of ExternalAccessPrefix parameter.
-If set to True, the ExternalAccessPrefix parameter takes effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan. This name must be unique among all tenant dial plans.
 
