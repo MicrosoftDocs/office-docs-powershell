@@ -33,6 +33,27 @@ New-ReportSubmissionPolicy
  [-EnableThirdPartyAddress <Boolean>]
  [-EnableUserEmailNotification <Boolean>]
  [-JunkReviewResultMessage <String>]
+ [-MultiLanguagePostSubmitMessageButtonLinkForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageButtonLinkForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageButtonTextForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageButtonTextForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageTitleForJunk <MultiValuedProperty>]
+ [-MultiLanguagePostSubmitMessageTitleForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonLinkForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonLinkForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonLinkForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonTextForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonTextForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageButtonTextForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageForPhishing <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageTitleForJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageTitleForNotJunk <MultiValuedProperty>]
+ [-MultiLanguagePreSubmitMessageTitleForPhishing <MultiValuedProperty>]
+ [-MultiLanguageSetting <MultiValuedProperty>]
  [-NotificationFooterMessage <String>]
  [-NotificationSenderAddress <MultiValuedProperty>]
  [-NotificationsForCleanSubmissionAirInvestigationsEnabled <Boolean>]
@@ -223,7 +244,7 @@ The EnableOrganizationBranding parameter specifies whether to show the company l
 - $true: Use the company logo in the footer text instead of the Microsoft logo.
 - $false: Don't use the company logo in the footer text. Use the Microsoft logo.
 
-This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: Boolean
@@ -297,7 +318,7 @@ Use the JunkReviewResultMessage, NotJunkReviewResultMessage, PhishingReviewResul
 
 Use the NotificationFooterMessage parameter for the footer that's used for all verdicts (junk, not junk, and phishing).
 
-This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: Boolean
@@ -315,7 +336,7 @@ Accept wildcard characters: False
 ### -JunkReviewResultMessage
 The JunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as junk. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
@@ -334,10 +355,354 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MultiLanguagePostSubmitMessageButtonLinkForJunk
+{{ Fill MultiLanguagePostSubmitMessageButtonLinkForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageButtonLinkForPhishing
+{{ Fill MultiLanguagePostSubmitMessageButtonLinkForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageButtonTextForJunk
+{{ Fill MultiLanguagePostSubmitMessageButtonTextForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageButtonTextForPhishing
+{{ Fill MultiLanguagePostSubmitMessageButtonTextForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageForJunk
+{{ Fill MultiLanguagePostSubmitMessageForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageForPhishing
+{{ Fill MultiLanguagePostSubmitMessageForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageTitleForJunk
+{{ Fill MultiLanguagePostSubmitMessageTitleForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePostSubmitMessageTitleForPhishing
+{{ Fill MultiLanguagePostSubmitMessageTitleForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonLinkForJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonLinkForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonLinkForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonLinkForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonLinkForPhishing
+{{ Fill MultiLanguagePreSubmitMessageButtonLinkForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonTextForJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonTextForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonTextForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageButtonTextForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageButtonTextForPhishing
+{{ Fill MultiLanguagePreSubmitMessageButtonTextForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageForJunk
+{{ Fill MultiLanguagePreSubmitMessageForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageForPhishing
+{{ Fill MultiLanguagePreSubmitMessageForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageTitleForJunk
+{{ Fill MultiLanguagePreSubmitMessageTitleForJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageTitleForNotJunk
+{{ Fill MultiLanguagePreSubmitMessageTitleForNotJunk Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguagePreSubmitMessageTitleForPhishing
+{{ Fill MultiLanguagePreSubmitMessageTitleForPhishing Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiLanguageSetting
+The MultiLanguageSetting parameter specifies the language for customized pre-reporting or post-reporting pop-up notifications in supported versions of Outlook. Valid values are:
+
+`am, ar, bg, bn, ca, cs, da, de, el, en, es, et, eu, fi, fil, fr, gl, gu, he, hi, hr, hu, id, is, it, ja, kk, kn, ko, lt, lv, ml, mr, ms, nb, nl, nn, pl, pt, ro, ru, sk, sl, sr, sv, sw, ta, te, th, tr, uk, ur, vi, zn`
+
+You can enter multiple values separated by commas. The maximum number of values is 7.
+
+You specify the custom pop-up message text values using the other MultiLanguage parameters.
+
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotJunkReviewResultMessage
 The NotJunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as not junk. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
@@ -361,7 +726,7 @@ The NotificationFooterMessage parameter specifies the custom footer text to use 
 
 You can use the EnableOrganizationBranding parameter to include your company logo in the message footer.
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -379,7 +744,7 @@ Accept wildcard characters: False
 ### -NotificationSenderAddress
 The NotificationSenderAddress parameter specifies the sender email address to use in result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. The email address must be in Exchange Online.
 
-This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: MultiValuedProperty
@@ -477,7 +842,7 @@ Accept wildcard characters: False
 ### -PhishingReviewResultMessage
 The PhishingReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as phishing. If the value contains spaces, enclose the value in quotation marks (").
 
-This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 Use the NotificationFooterMessage parameter to customize the footer text of result messages.
 
@@ -501,7 +866,7 @@ The PostSubmitMessage parameter specifies the custom pop-up message text to use 
 
 You specify the custom pop-up message title using the PostSubmitMessageTitle parameter.
 
-This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -585,7 +950,7 @@ The PostSubmitMessage parameter parameter specifies the custom pop-up message ti
 
 You specify the custom pop-up message text using the PostSubmitMessage parameter.
 
-This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -653,7 +1018,7 @@ The PreSubmitMessage parameter specifies the custom pop-up message text to use i
 
 You specify the custom pop-up message title using the PreSubmitMessageTitle parameter.
 
-This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
@@ -737,7 +1102,7 @@ The PreSubmitMessage parameter parameter specifies the custom pop-up message tit
 
 You specify the pop-up message text using the PreSubmitMessage parameter.
 
-This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools as described in the EnableReportToMicrosoft parameter.
 
 ```yaml
 Type: String
