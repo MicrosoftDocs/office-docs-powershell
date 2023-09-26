@@ -23,7 +23,8 @@ Connect-MicrosoftTeams
 [-AccountId <String>]
 [-LogLevel <LogLevel>] 
 [-LogFilePath <String>] 
-[-TeamsEnvironmentName <String>] 
+[-TeamsEnvironmentName <String>]
+[-UseDeviceAuthentication] 
 [-WhatIf] 
 [-Confirm]
 [<CommonParameters>]
@@ -508,6 +509,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseDeviceAuthentication
+Use device code authentication instead of a browser control.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: UserCredential
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
