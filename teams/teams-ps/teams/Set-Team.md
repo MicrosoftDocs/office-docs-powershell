@@ -23,7 +23,7 @@ Set-Team -GroupId <String> [-DisplayName <String>] [-Description <String>] [-Mai
  [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
  [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
  [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
- [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] [<CommonParameters>]
+ [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] [-AllowCreatePrivateChannels <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -381,6 +381,21 @@ The parameter has been deprecated.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreatePrivateChannels
+Determines if private channel creation is allowed for the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: CreateTeam
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
