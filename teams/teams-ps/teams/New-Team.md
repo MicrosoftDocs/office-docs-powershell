@@ -484,7 +484,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCreatePrivateChannels
-Determines if private channel creation is allowed for the team.
+Determines whether private channel creation is allowed for the team.
 
 ```yaml
 Type: Boolean
