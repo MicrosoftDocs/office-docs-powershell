@@ -861,6 +861,8 @@ In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentExtensionMatchesWords parameter specifies a condition that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
 
+**Note:** Nested attachment extensions (files inside the original attachments) are also inspected. To see all attachment extensions that were evaluated for a specific message, use the Test-TextExtraction cmdlet.
+
 ```yaml
 Type: Word[]
 Parameter Sets: (All)
@@ -1697,6 +1699,8 @@ This parameter specifies an exception or part of an exception for the rule. The 
 In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentExtensionMatchesWords parameter specifies an exception that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
+
+**Note:** Nested attachment extensions (files inside the original attachments) are also inspected. To see all attachment extensions that were evaluated for a specific message, use the Test-TextExtraction cmdlet.
 
 ```yaml
 Type: Word[]
