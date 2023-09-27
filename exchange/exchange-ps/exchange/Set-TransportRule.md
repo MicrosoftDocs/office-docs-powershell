@@ -865,8 +865,7 @@ In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentExtensionMatchesWords parameter specifies a condition that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
 
-**Note:** Nested attachments (files inside original attachments) extensions are inspected as well as original attachment extension.
-If you want to see all attachment extensions evaluated by mail flow rule for specific message, see [Test-TextExtraction](/powershell/module/exchange/test-textextraction).
+**Note:** Nested attachments extensions (files inside the original attachments) are also inspected. To see all attachment extensions that were evaluated for a specific message, use the Test-TextExtraction cmdlet.
 
 ```yaml
 Type: Word[]
