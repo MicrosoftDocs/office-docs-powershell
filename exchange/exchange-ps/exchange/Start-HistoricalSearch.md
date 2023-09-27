@@ -119,6 +119,7 @@ The ReportType parameter specifies the type of historical search that you want t
 - Spoof: Spoof Mail Report.
 - TransportRule: Transport or Mail Flow Rules Report.
 - UnifiedDLP: Unified Data Loss Prevention Report.
+- P2SenderAttribution: P2SenderAttributionReport
 
 You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
