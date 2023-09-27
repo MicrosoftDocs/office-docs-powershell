@@ -547,7 +547,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+Accepts the list of Administrative units to assign to the policy. The expected format is comma separated list of GUIDs, where the GUID is the AAD Object ID of an Administrative unit
 
 ```yaml
 Type: MultiValuedProperty
@@ -715,7 +715,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpoAipIntegrationEnabled
-{{ Fill SpoAipIntegrationEnabled Description }}
+Enable built-in labeling for supported Office files in SharePoint and OneDrive so that users can apply your sensitivity labels in Office for the web. When this feature is enabled, users will see the Sensitivity button on the ribbon so they can apply labels, and see any applied label name on the status bar. Until you enable this feature, these services can't process encrypted files, which means that coauthoring, eDiscovery, Microsoft Purview data loss prevention, search, and other collaborative features won't work for these files.
 
 ```yaml
 Type: Boolean
@@ -731,7 +731,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartSimulation
-Use the StartSimulation parameter to restart the simulation for updated results. Valid values are:
+Use the StartSimulation parameter to restart the simulation for updated results. **Any edits to auto-labeling policy requires restarting simulation by setting StartSimulation to $true. **
+
+Valid values are:
 
 - $true: Restart the simulation for updated results.
 - $false: This is the default value
