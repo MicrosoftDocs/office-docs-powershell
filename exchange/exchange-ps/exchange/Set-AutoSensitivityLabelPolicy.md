@@ -547,7 +547,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-Accepts the list of Administrative units to assign to the policy. The expected format is comma separated list of GUIDs, where the GUID is the AAD Object ID of an Administrative unit
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Azure Active Directory ObjectID (GUID value) of the administrative unit. You can specify multiple values separaeted by commas.
+
+Administrative units are available only in Azure Active Directory Premium. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -715,7 +717,10 @@ Accept wildcard characters: False
 ```
 
 ### -SpoAipIntegrationEnabled
-Enable built-in labeling for supported Office files in SharePoint and OneDrive so that users can apply your sensitivity labels in Office for the web. When this feature is enabled, users will see the Sensitivity button on the ribbon so they can apply labels, and see any applied label name on the status bar. Until you enable this feature, these services can't process encrypted files, which means that coauthoring, eDiscovery, Microsoft Purview data loss prevention, search, and other collaborative features won't work for these files.
+The SpoAipIntegrationEnabled parameter enables or disables built-in labeling for supported Office files in SharePoint and OneDrive. Valid values are:
+
+- $true: Users can apply your sensitivity labels in Office for the web. Users see the Sensitivity button on the ribbon so they can apply labels, and they see the name of any applied label on the status bar.
+- $false: Users can't apply your sensitivity labels in Office for the web. These services can't process encrypted files, which means that coauthoring, eDiscovery, Microsoft Purview data loss prevention, search, and other collaborative features don't work for these files.
 
 ```yaml
 Type: Boolean
@@ -731,11 +736,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartSimulation
-Use the StartSimulation parameter to restart the simulation for updated results. **Any edits to auto-labeling policy requires restarting simulation by setting StartSimulation to $true. **
+Use the StartSimulation parameter to restart the simulation for updated results. Valid values are:
 
-Valid values are:
-
-- $true: Restart the simulation for updated results.
+- $true: Restart the simulation for updated results. **Any edits to an auto-labeling policy require restarting the simulation by using this value.**
 - $false: This is the default value
 
 ```yaml
