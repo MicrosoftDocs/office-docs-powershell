@@ -547,7 +547,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Azure Active Directory ObjectID (GUID value) of the administrative unit. You can specify multiple values separaeted by commas.
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Azure Active Directory ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
 Administrative units are available only in Azure Active Directory Premium. You create and manage administrative units in Microsoft Graph PowerShell.
 
@@ -720,7 +720,7 @@ Accept wildcard characters: False
 The SpoAipIntegrationEnabled parameter enables or disables built-in labeling for supported Office files in SharePoint and OneDrive. Valid values are:
 
 - $true: Users can apply your sensitivity labels in Office for the web. Users see the Sensitivity button on the ribbon so they can apply labels, and they see the name of any applied label on the status bar.
-- $false: Users can't apply your sensitivity labels in Office for the web. These services can't process encrypted files, which means that coauthoring, eDiscovery, Microsoft Purview data loss prevention, search, and other collaborative features don't work for these files.
+- $false: Users can't apply your sensitivity labels in Office for the web. Also, coauthoring, eDiscovery, Microsoft Purview data loss prevention, search, and other collaborative features don't work for encrypted files.
 
 ```yaml
 Type: Boolean
