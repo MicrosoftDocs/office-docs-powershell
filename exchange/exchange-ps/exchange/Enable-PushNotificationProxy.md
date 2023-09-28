@@ -46,10 +46,10 @@ This example displays the status of the push notification proxy in the on-premis
 
 ### Example 2
 ```powershell
-Enable-PushNotificationProxy -Organization contoso.com
+Enable-PushNotificationProxy -Organization contoso.onmicrosoft.com
 ```
 
-This example enables the push notification proxy in the on-premises Exchange organization by using the Microsoft 365 organization contoso.com.
+This example enables the push notification proxy in the on-premises Exchange organization by using the Microsoft 365 organization contoso.onmicrosoft.com.
 
 ## PARAMETERS
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-The Organization parameter specifies the domain name of the Microsoft 365 organization. For example, contoso.com.
+The Organization parameter specifies the domain name of the Microsoft 365 organization. For example, contoso.onmicrosoft.com.
 
 ```yaml
 Type: String
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
-The Uri parameter specifies the push notification service endpoint in Microsoft 365. The default value is https://outlook.office365.com/PushNotifications.
+The Uri parameter specifies the push notification service endpoint in Microsoft 365. The default value is <https://outlook.office365.com/PushNotifications>.
 
 ```yaml
 Type: String
