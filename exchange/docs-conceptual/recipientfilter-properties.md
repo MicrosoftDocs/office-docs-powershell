@@ -40,7 +40,10 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 
 - You typically use the object's name for properties that require a valid object value (for example, a mailbox, a distribution group, or an email address policy, but the property might also accept the object's distinguished name (DN) or globally unique identifier (GUID). To find the object's DN or GUID, use the **Get-** cmdlet that corresponds to the object's type (for example, `Get-EmailAddressPolicy | Format-List Name,DistinguishedName,GUID`).
 
-- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`). In Exchange Online PowerShell, you can't use the wildcard as a prefix (for example, `"Property -like '*abc'"`) is not allowed).
+- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`). In Exchange Online PowerShell, you can't use the wildcard as a prefix in **most** parameters (for example, `"Property -like '*abc'"`) isn't allowed).
+
+  > [!TIP]
+  > Even if a wildcard prefix works in a filter parameter in Exchange Online PowerShell, we don't recommend using it due to low performance issues.
 
 - The Value column in the table describes the acceptable values for the _filter_, not necessarily for the property itself. For example, a property might obviously contain a date or numeric value, but when you use that property in a filter, it might be treated like a text string (no value check, and wildcards are supported).
 

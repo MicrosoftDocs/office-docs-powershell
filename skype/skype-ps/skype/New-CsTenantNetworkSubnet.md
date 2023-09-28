@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantnetworksubnet
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsTenantNetworkSubnet
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,15 +19,14 @@ As an Admin, you can use the Windows PowerShell command, New-CsTenantNetworkSubn
 
 ### Identity (Default)
 ```
-New-CsTenantNetworkSubnet [-Tenant <System.Guid>] [-Description <String>] -NetworkSiteID <String>
- -MaskBits <Int32> [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-CsTenantNetworkSubnet [-Identity] <string> -MaskBits <int> [-Description <string>]
+ [-NetworkSiteID <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParentAndRelativeKey
 ```
-New-CsTenantNetworkSubnet [-Tenant <System.Guid>] -SubnetID <String> [-Description <String>]
- -NetworkSiteID <String> -MaskBits <Int32> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTenantNetworkSubnet -MaskBits <int> -SubnetID <string> [-Description <string>]
+ [-NetworkSiteID <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +36,7 @@ When the client is sending the network subnet, please make sure we have already 
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> New-CsTenantNetworkSubnet -SubnetID "192.168.0.1" -MaskBits "24" -NetworkSiteID "site1"
 ```
@@ -46,7 +45,7 @@ The command shown in Example 1 created the network subnet '192.168.0.1' with no 
 
 IPv4 format subnet accepts maskbits from 0 to 32 inclusive.
 
-###-------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 PS C:\> New-CsTenantNetworkSubnet -SubnetID "2001:4898:e8:25:844e:926f:85ad:dd8e" -MaskBits "120" -NetworkSiteID "site1"
 ```
@@ -57,56 +56,11 @@ IPv6 format subnet accepts maskbits from 0 to 128 inclusive.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Description
-Provide a description of the network subnet to identify purpose of creating it.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Unique identifier for the network subnet to be created.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -117,20 +71,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InMemory
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -MaskBits
 This parameter determines the length of bits to mask to the subnet.
@@ -143,6 +83,22 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -Description
+Provide a description of the network subnet to identify the purpose of creating it.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -179,19 +135,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose network subnets are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
@@ -226,7 +176,11 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsTenantNetworkSubnet](Get-CsTenantNetworkSubnet.md)
+
+[Remove-CsTenantNetworkSubnet](Remove-CsTenantNetworkSubnet.md)
+
+[Set-CsTenantNetworkSubnet](Set-CsTenantNetworkSubnet.md)

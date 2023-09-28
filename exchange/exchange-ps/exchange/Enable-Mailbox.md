@@ -425,7 +425,7 @@ Accept wildcard characters: False
 ### -LinkedMasterAccount
 This parameter is available only in on-premises Exchange.
 
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example: For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
 
 - Name
 - Distinguished name (DN)
