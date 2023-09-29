@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Remove-UserPhoto cmdlet to delete the photo associated with a user's account. The user photo feature allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web (formerly known as Outlook Web App or OWA), Lync, Skype for Business and SharePoint.
+Use the Remove-UserPhoto cmdlet to delete the photo associated with a user's account. The user photo feature allows users to associate a picture with their account. User photos appear in client applications, such as Outlook, Microsoft Teams, and SharePoint.
 
 **Note**: In Exchange Online, you can manage user photos in Microsoft Graph PowerShell. For instructions, see [Manage user photos in Microsoft Graph PowerShell](https://learn.microsoft.com/microsoft-365/admin/add-users/change-user-profile-photos#manage-user-photos-in-microsoft-graph-powershell).
 
