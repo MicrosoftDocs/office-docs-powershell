@@ -162,7 +162,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignedPstnTargetId
-Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, ObjectId and the Teams Shared Calling Routing Policy instance name.
+Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, ObjectId, and the Teams shared calling routing policy instance name.
+
 
 ```yaml
 Type: System.String
