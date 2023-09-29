@@ -142,7 +142,8 @@ This example returns all phone numbers.
 ```powershell
 Get-CsPhoneNumberAssignment -AssignedPstnTargetId 'TeamsSharedCallingRoutingPolicy|Tag:SC1'
 ```
-This example returns all phone numbers assigned as emergency numbers in the Teams Shared Calling Routing Policy instance SC1.
+This example returns all phone numbers assigned as emergency numbers in the Teams shared calling routing policy instance SC1.
+
 
 ## PARAMETERS
 
