@@ -412,6 +412,8 @@ The BookInPolicy parameter specifies users or groups who are allowed to submit i
 - Email address
 - GUID
 
+Query-based groups like Dynamic Distribution Groups are not supported.
+
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml
