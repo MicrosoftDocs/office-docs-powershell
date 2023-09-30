@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-UserPhoto cmdlet to view information about the user photos feature that allows users to associate a picture with their account. User photos appear in client applications, such as Outlook, Microsoft Teams, and SharePoint.
 
-**Note**: In Exchange Online, you can manage user photos in Microsoft Graph PowerShell. For instructions, see [Manage user photos in Microsoft Graph PowerShell](https://learn.microsoft.com/microsoft-365/admin/add-users/change-user-profile-photos#manage-user-photos-in-microsoft-graph-powershell).
+**Note**: In Microsoft 365, you can manage user photos in Microsoft Graph PowerShell. For instructions, see [Manage user photos in Microsoft Graph PowerShell](https://learn.microsoft.com/microsoft-365/admin/add-users/change-user-profile-photos#manage-user-photos-in-microsoft-graph-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
