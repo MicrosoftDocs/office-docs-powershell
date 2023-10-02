@@ -29,7 +29,7 @@ The Conferencing Attendant application also uses tenant dial plans for dial-in c
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 $nr2 = Get-CsVoiceNormalizationRule -Identity "US/US Long Distance"
 Set-CsTenantDialPlan -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
@@ -37,7 +37,7 @@ Set-CsTenantDialPlan -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2
 
 This example updates the vt1tenantDialPlan9 tenant dial plan to use the US/US Long Distance normalization rules.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 $DP = Get-CsTenantDialPlan -Identity Global
 $NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
@@ -51,7 +51,7 @@ the Identity Global and assign the returned object to the variable $DP. Then we 
 the variable $NR. We then assign the string RedmondRule to the Name property of the object. Finally, we pass the variable back to the NormalizationRules parameter of the
 `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
-### -------------------------- Example 4 --------------------------
+### Example 3
 ```
 $DP = Get-CsTenantDialPlan -Identity Global
 $NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
