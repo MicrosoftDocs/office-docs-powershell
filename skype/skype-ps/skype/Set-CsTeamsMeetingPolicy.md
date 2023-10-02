@@ -1188,6 +1188,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Copilot
+This setting allows the admin to choose if Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+
+Possible values are:
+- Enabled
+- EnabledWithTranscript
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledWithTranscript
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutomaticallyStartCopilot
+This setting gives admins the ability to auto-start copilot.
+
+Possible values are:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## INPUTS
 
 ### System.Management.Automation.PSObject
