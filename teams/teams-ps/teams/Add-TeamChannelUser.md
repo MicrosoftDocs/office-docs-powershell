@@ -12,7 +12,7 @@ Adds an owner or member to the private channel.
 
 The command will return immediately, but the Teams application will not reflect the update immediately. To see the update you should refresh the members page.
 
-Note: Technical limitations of private channels apply. To add a user as a member to a channel, they need to first be a member of the team. To make a user an owner of a channel, they need to first be a member of the channel. In some cases, this might require to call `Add-TeamChannelUser` twice.
+Note: Technical limitations of private channels apply. To add a user as a member to a channel, they need to first be a member of the team. To make a user an owner of a channel, they need to first be a member of the channel. In some cases, this might require you to call `Add-TeamChannelUser` twice.
 
 ## SYNTAX
 
