@@ -1208,7 +1208,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticallyStartCopilot
-This setting gives admins the ability to auto-start copilot.
+This setting gives admins the ability to auto-start Copilot.
 
 Possible values are:
 - Enabled
