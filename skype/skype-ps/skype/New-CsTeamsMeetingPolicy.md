@@ -1116,7 +1116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Copilot
-This setting allows the admin to choose if Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+This setting allows the admin to choose whether Copilot will be enabled with a persisted transcript or a non-persisted transcript.
 
 Possible values are:
 - Enabled
