@@ -1138,7 +1138,7 @@ Accept wildcard characters: False
 
 *Note: This feature has not been fully released yet, so the setting will have no effect.*
 
-This setting gives admins the ability to auto-start copilot.
+This setting gives admins the ability to auto-start Copilot.
 
 Possible values are:
 - Enabled
