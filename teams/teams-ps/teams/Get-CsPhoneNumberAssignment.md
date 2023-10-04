@@ -138,6 +138,13 @@ Get-CsPhoneNumberAssignment -Top ([int]::MaxValue)
 ```
 This example returns all phone numbers.
 
+### Example 11
+```powershell
+Get-CsPhoneNumberAssignment -AssignedPstnTargetId 'TeamsSharedCallingRoutingPolicy|Tag:SC1'
+```
+This example returns all phone numbers assigned as emergency numbers in the Teams shared calling routing policy instance SC1.
+
+
 ## PARAMETERS
 
 ### -ActivationState
@@ -156,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignedPstnTargetId
-Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, and ObjectId.
+Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, ObjectId, and the Teams shared calling routing policy instance name.
+
 
 ```yaml
 Type: System.String
@@ -417,7 +425,6 @@ The activation state of the telephone number.
 
 ### AssignedPstnTargetId
 The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
-
 
 ### AssignmentCategory
 This parameter is reserved for internal Microsoft use.
