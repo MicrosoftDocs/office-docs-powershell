@@ -18,15 +18,14 @@ Use the `New-CsTenantDialPlan` cmdlet to create a new tenant dial plan.
 ## SYNTAX
 
 ```
-New-CsTenantDialPlan [-Identity] <string> [-Description <string>] [-ExternalAccessPrefix <string>]
- [-NormalizationRules <Object>] [-OptimizeDeviceDialing <bool>] [-SimpleName <string>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTenantDialPlan [-Identity] <string> [-Description <string>] [-NormalizationRules <Object>]
+ [-SimpleName <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use this cmdlet to create a new tenant dial plan. Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied.
 
 You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet.
 
