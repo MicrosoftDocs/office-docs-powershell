@@ -19,34 +19,25 @@ Use the `Set-CsTenantDialPlan` cmdlet to modify an existing tenant dial plan.
 
 ### Identity (Default)
 ```
-Set-CsTenantDialPlan [[-Identity] <string>] [-Description <string>] [-ExternalAccessPrefix <string>]
- [-NormalizationRules <Object>] [-OptimizeDeviceDialing <bool>] [-SimpleName <string>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTenantDialPlan [[-Identity] <string>] [-Description <string>] [-NormalizationRules <Object>]
+ [-SimpleName <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Set-CsTenantDialPlan` cmdlet modifies an existing tenant dial plan. A tenant dial plan determines such things as which normalization rules are applied and whether a prefix
-must be dialed for external calls. Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
+The `Set-CsTenantDialPlan` cmdlet modifies an existing tenant dial plan. A tenant dial plan determines such things as which normalization rules are applied. Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9
-```
-
-This example updates the vt1tenantDialPlan9 tenant dial plan to use an external access prefix of 123.
-
-### -------------------------- Example 2 --------------------------
+### Example 1
 ```
 $nr2 = Get-CsVoiceNormalizationRule -Identity "US/US Long Distance"
-Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
+Set-CsTenantDialPlan -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
 ```
 
-This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the US/US Long Distance normalization rules.
+This example updates the vt1tenantDialPlan9 tenant dial plan to use the US/US Long Distance normalization rules.
 
-### -------------------------- Example 3 --------------------------
+### Example 2
 ```
 $DP = Get-CsTenantDialPlan -Identity Global
 $NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
@@ -60,7 +51,7 @@ the Identity Global and assign the returned object to the variable $DP. Then we 
 the variable $NR. We then assign the string RedmondRule to the Name property of the object. Finally, we pass the variable back to the NormalizationRules parameter of the
 `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
-### -------------------------- Example 4 --------------------------
+### Example 3
 ```
 $DP = Get-CsTenantDialPlan -Identity Global
 $NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
