@@ -235,11 +235,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoEnableAfter
-The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation with no modifications to the policy. You must explictly set AutoEnableAfter parameter after each policy edit, to keep/reset the automatic turn on timeline.
+The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation with no modifications to the policy. You need to explictly set this parameter after each policy edit to keep or reset the automatic turn on timeline.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-A valid value is between 1 hour and 25 days. To clear an existing AutoEnableAfter associated with a policy, use the value $null or don't add AutoEnableAfter parameter to policy edit. 
+A valid value is between 1 hour and 25 days. To clear an existing AutoEnableAfter schedule that's associated with a policy, use the value $null.
 
 You must use this parameter with the -StartSimulation parameter.
 
