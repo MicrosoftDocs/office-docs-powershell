@@ -204,6 +204,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AggregateZapReport](Get-AggregateZapReport.md)
 
+### [Get-ArcConfig](Get-ArcConfig.md)
+
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
@@ -385,6 +387,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-TenantAllowBlockListSpoofItems](Remove-TenantAllowBlockListSpoofItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
+
+### [Set-ArcConfig](Set-ArcConfig.md)
 
 ### [Set-AttachmentFilterListConfig](Set-AttachmentFilterListConfig.md)
 
