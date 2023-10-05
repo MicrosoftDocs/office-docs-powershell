@@ -39,7 +39,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] 
-[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] 
+[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -1151,6 +1151,22 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -CopyRestriction
+This parameter enables a setting that controls a meeting option which allows users to disable right-click or Ctrl+C to copy, Copy link, Forward message, and Share to Outlook for meeting chat messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -ExternalMeetingJoin
 Determines whether the user is allowed to join external meetings.

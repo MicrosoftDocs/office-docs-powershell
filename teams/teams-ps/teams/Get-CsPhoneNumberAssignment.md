@@ -33,6 +33,9 @@ Returned results are sorted by TelephoneNumber in ascending order.
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
+By default, this cmdlet returns a maximum of 500 results.
+
+
 ## EXAMPLES
 
 ### Example 1
@@ -129,6 +132,19 @@ This example returns the number of Calling Plan subscriber phone numbers that ar
 ```
 This example returns the number of Calling Plan or Operator Connect service phone numbers that can be assigned to voice applications and conference bridges.
 
+### Example 10
+```powershell
+Get-CsPhoneNumberAssignment -Top ([int]::MaxValue)
+```
+This example returns all phone numbers.
+
+### Example 11
+```powershell
+Get-CsPhoneNumberAssignment -AssignedPstnTargetId 'TeamsSharedCallingRoutingPolicy|Tag:SC1'
+```
+This example returns all phone numbers assigned as emergency numbers in the Teams shared calling routing policy instance SC1.
+
+
 ## PARAMETERS
 
 ### -ActivationState
@@ -147,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignedPstnTargetId
-Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, and ObjectId.
+Filters the returned results based on the user or resource account ID the phone number is assigned to. Supported values are UserPrincipalName, SIP address, ObjectId, and the Teams shared calling routing policy instance name.
+
 
 ```yaml
 Type: System.String
@@ -271,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -PstnAssignmentStatus
-Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, and ThirdPartyAppAssigned.
+Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, ThirdPartyAppAssigned, and PolicyAssigned.
 
 ```yaml
 Type: System.String
@@ -407,7 +424,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The activation state of the telephone number.
 
 ### AssignedPstnTargetId
-The ID of the object the phone number is assigned to.
+The ID of the object the phone number is assigned to, either the ObjectId of a user or resource account or the policy instance ID of a Teams shared calling routing policy instance.
 
 ### AssignmentCategory
 This parameter is reserved for internal Microsoft use.

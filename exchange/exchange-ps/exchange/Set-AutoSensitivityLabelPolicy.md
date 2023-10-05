@@ -235,11 +235,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoEnableAfter
-The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation. The time period restarts whenever you modify the policy or when a simulation is triggered.
+The AutoEnableAfter parameter allows you to automatically turn on the policy after a set time period in simulation with no modifications to the policy. You need to explictly set this parameter after each policy edit to keep or reset the automatic turn on timeline.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
-A valid value is between 1 hour and 25 days.
+A valid value is between 1 hour and 25 days. To clear an existing AutoEnableAfter schedule that's associated with a policy, use the value $null.
 
 You must use this parameter with the -StartSimulation parameter.
 
@@ -547,7 +547,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Azure Active Directory ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Azure Active Directory Premium. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -715,7 +717,10 @@ Accept wildcard characters: False
 ```
 
 ### -SpoAipIntegrationEnabled
-{{ Fill SpoAipIntegrationEnabled Description }}
+The SpoAipIntegrationEnabled parameter enables or disables built-in labeling for supported Office files in SharePoint and OneDrive. Valid values are:
+
+- $true: Users can apply your sensitivity labels in Office for the web. Users see the Sensitivity button on the ribbon so they can apply labels, and they see the name of any applied label on the status bar.
+- $false: Users can't apply your sensitivity labels in Office for the web. Also, coauthoring, eDiscovery, Microsoft Purview data loss prevention, search, and other collaborative features don't work for encrypted files.
 
 ```yaml
 Type: Boolean
@@ -733,7 +738,7 @@ Accept wildcard characters: False
 ### -StartSimulation
 Use the StartSimulation parameter to restart the simulation for updated results. Valid values are:
 
-- $true: Restart the simulation for updated results.
+- $true: Restart the simulation for updated results. **Any edits to an auto-labeling policy require restarting the simulation by using this value.**
 - $false: This is the default value
 
 ```yaml

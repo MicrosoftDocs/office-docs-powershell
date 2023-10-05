@@ -231,7 +231,10 @@ When creating your own custom OPATH filters, consider the following items:
 
 - Many filterable properties accept wildcard characters. If you use a wildcard character, use the **-like** operator instead of the **-eq** operator. Use the **-like** operator to find pattern matches in rich types (for example, strings). Use the **-eq** operator to find an exact match.
 
-  When you use the **-like** operator in Exchange Online PowerShell, the wildcard character is supported only as a suffix. For example, `"Department -like 'sales*'"` is allowed, but `"Department -like '*sales'"` isn't allowed.
+  When you use the **-like** operator in Exchange Online PowerShell, the wildcard character is supported only as a suffix in **most** parameters. For example, `"Department -like 'sales*'"` is allowed, but `"Department -like '*sales'"` isn't allowed.
+
+  > [!TIP]
+  > Even if a wildcard prefix works in a filter parameter in Exchange Online PowerShell, we don't recommend using it due to low performance issues.
 
 - For more information about operators that you can use, see:
 

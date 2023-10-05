@@ -2112,6 +2112,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## policy-and-compliance-retention Cmdlets
 ### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
+### [Export-ContentExplorerData](Export-ContentExplorerData.md)
+
 ### [Export-FilePlanProperty](Export-FilePlanProperty.md)
 
 ### [Get-AdaptiveScope](Get-AdaptiveScope.md)

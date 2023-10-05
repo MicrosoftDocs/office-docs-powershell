@@ -15,19 +15,25 @@ This cmdlet applies an instance of the TeamsMeetingTemplatePermissionPolicy to u
 
 ## SYNTAX
 
-### Identity
-```powershell
-Grant-CsTeamsMeetingTemplatePermissionPolicy [[-PolicyName] <string>] -Identity <string> [<CommonParameters>]
+### Identity (Default)
+```
+Grant-CsTeamsMeetingTemplatePermissionPolicy [<CommonParameters>]
 ```
 
-### Group
-```powershell
-Grant-CsTeamsMeetingTemplatePermissionPolicy [-Group] <string> [[-PolicyName] <string>] [<CommonParameters>]
+### GrantToUser
+```
+Grant-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
 ```
 
-### Global
-```powershell
-    Grant-CsTeamsMeetingTemplatePermissionPolicy [-Global] [[-PolicyName] <string>] [-Force] [<CommonParameters>]
+### GrantToGroup
+```
+Grant-CsTeamsMeetingTemplatePermissionPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32>
+ [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsMeetingTemplatePermissionPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -122,6 +128,21 @@ Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

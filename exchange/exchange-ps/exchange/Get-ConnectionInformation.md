@@ -39,6 +39,28 @@ Get-ConnectionInformation -ModulePrefix <String[]> [<CommonParameters>]
 ## DESCRIPTION
 The Get-ConnectionInformation cmdlet returns the information about all active REST-based connections with Exchange Online in the current PowerShell instance. This cmdlet is equivalent to the Get-PSSession cmdlet that's used with remote PowerShell sessions.
 
+The output of the cmdlet contains the following properties:
+
+- ConnectionId: A unique GUID value for the connection. For example, 8b632b3a-a2e2-8ff3-adcd-6d119d07694b.
+- State: For example, Connected.
+- Id: An integer that identifies the session in the PowerShell window. The first connection is 1, the second is 2, etc.
+- Name: A unique name that's based on the PowerShell environment and Id value. For example, ExchangeOnline_1 for Exchange Online PowerShell or ExchangeOnlineProtection_1 for Security & Compliance PowerShell.
+- UserPrincipalName: The account that was used to connect. For example, laura@contoso.onmicrosoft.com.
+- ConnectionUri: The connection endpoint that was used. For example, <https://outlook.office365.com> for Exchange Online PowerShell or <https://nam12b.ps.compliance.protection.outlook.com> for Security & Compliance PowerShell.
+- AzureAdAuthorizationEndpointUri : The Azure AD authorization endpoint for the connection. For example, <https://login.microsoftonline.com/organizations> for Exchange Online PowerShell or <https://login.microsoftonline.com/organizations> for Security & Compliance PowerShell.
+- TokenExpiryTimeUTC: When the connection token expires. For example, 9/30/2023 6:42:24 PM +00:00.
+- CertificateAuthentication: Whether certificate based authentication (also known as CBA or app-only authentication) was used to connect. Values are True or False.
+- ModuleName: The filename and path of the temporary data for the session. For example, C:\Users\laura\AppData\Local\Temp\tmpEXO_a54z135k.qgv
+- ModulePrefix: The value specified using the Prefix parameter in the Connect-ExchangeOnline or Connect-IPPSSession command.
+- Organization: The value specified using the the Organization parameter in the Connect-ExchangeOnline or Connect-IPPSSession command for CBA or managed identity connections.
+- DelegatedOrganization: The value specified using the the DelegatedOrganization parameter in the Connect-ExchangeOnline or Connect-IPPSSession command.
+- AppId: The value specified using the the AppId parameter in the Connect-ExchangeOnline or Connect-IPPSSession command for CBA connections.
+- PageSize: The default maximum number of entries per page in the connection. The default value is 1000, or you can use the PageSize parameter in the Connect-ExchangeOnline command to specify a lower number. Individual cmdlets might also have a PageSize parameter.
+- TenantID: The tenant ID GUID value. For example, 3750b40b-a68b-4632-9fb3-5b1aff664079.
+- TokenStatus: For example, Active.
+- ConnectionUsedForInbuiltCmdlets
+- IsEopSession: For Exchange Online PowerShell connections, the value is False. For Security & Compliance PowerShell connections, the value is True.
+
 ## EXAMPLES
 
 ### Example 1

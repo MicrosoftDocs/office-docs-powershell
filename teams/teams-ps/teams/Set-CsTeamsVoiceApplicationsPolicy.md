@@ -48,6 +48,10 @@ Set-CsTeamsVoiceApplicationsPolicy
  [-RealTimeAutoAttendantMetricsPermission <string>]
  [-RealTimeCallQueueMetricsPermission <string>]
  [-RealTimeAgentMetricsPermission <string>]
+
+ [-HistoricalAutoAttendantMetricsPermission <string>]
+ [-HistoricalCallQueueMetricsPermission <string>]
+ [-HistoricalAgentMetricsPermission <string>]
  
  [[-Identity] <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -521,11 +525,11 @@ Accept wildcard characters: False
 
 ### -RealTimeAutoAttendantMetricsPermission
 
-PARAMVALUE: None | Authorized | All
+PARAMVALUE: Disabled | AuthorizedOnly | All
 
-When set to `None` (the default value), users affected by the policy won't receive real-time metrics for auto attendants.
+When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for auto attendants.
 
-When set to `Authorized`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
+When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.
  
 When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
@@ -544,11 +548,11 @@ Accept wildcard characters: False
  
 ### -RealTimeCallQueueMetricsPermission
 
-PARAMVALUE: None | Authorized | All
+PARAMVALUE: Disabled | AuthorizedOnly | All
 
-When set to `None` (the default value), users affected by the policy won't receive real-time metrics for call queues.
+When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for call queues.
 
-When set to `Authorized`, users affected by the policy will receive real-time metrics for call queues they are authorized for.
+When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for call queues they are authorized for.
  
 When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
 
@@ -567,13 +571,82 @@ Accept wildcard characters: False
 
 ### -RealTimeAgentMetricsPermission
 
-PARAMVALUE: None | Authorized | All
+PARAMVALUE: Disabled | AuthorizedOnly | All
 
-When set to `None` (the default value), users affected by the policy won't receive real-time metrics for agents.
+When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for agents.
 
-When set to `Authorized`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
+When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
  
 When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
+
+```yaml
+Type: Object
+Parameter Sets: Dual
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HistoricalAutoAttendantMetricsPermission
+
+PARAMVALUE: Disabled | AuthorizedOnly | All
+
+When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for auto attendants.
+
+When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for auto attendants they are authorized for.
+ 
+When set to `All`, users affected by the policy will receive historical metrics for all auto attendants in the organization.
+
+```yaml
+Type: Object
+Parameter Sets: Dual
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+ 
+### -HistoricalCallQueueMetricsPermission
+
+PARAMVALUE: Disabled | AuthorizedOnly | All
+
+When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for call queues.
+
+When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for call queues they are authorized for.
+ 
+When set to `All`, users affected by the policy will receive historical metrics for all call queues in the organization.
+
+```yaml
+Type: Object
+Parameter Sets: Dual
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HistoricalAgentMetricsPermission
+
+PARAMVALUE: Disabled | AuthorizedOnly | All
+
+When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for agents.
+
+When set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for agents who are members in the call queues they are authorized for.
+ 
+When set to `All`, users affected by the policy will receive historical metrics for all agents in all call queues in the organization.
 
 ```yaml
 Type: Object

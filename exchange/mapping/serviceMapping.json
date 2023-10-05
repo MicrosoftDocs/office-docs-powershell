@@ -1037,6 +1037,7 @@
   "Update-ComplianceCaseMember": "policy-and-compliance-ediscovery",
   "Update-eDiscoveryCaseAdmin": "policy-and-compliance-ediscovery",
   "Enable-ComplianceTagStorage": "policy-and-compliance-retention",
+  "Export-ContentExplorerData": "policy-and-compliance-retention",
   "Export-FilePlanProperty": "policy-and-compliance-retention",
   "Get-AdaptiveScope": "policy-and-compliance-retention",
   "Get-AppRetentionCompliancePolicy": "policy-and-compliance-retention",
