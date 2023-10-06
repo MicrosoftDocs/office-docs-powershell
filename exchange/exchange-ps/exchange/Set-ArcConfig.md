@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-ArcConfig -Identity Default -ArcTrustedSealers fabrikam.com
 ```
 
-This example configures 'fabrikam.com as the one and only trusted ARC sealer in the organization.
+This example configures "fabrikam.com" as the only trusted ARC sealer in the organization.
 
 ### Example 2
 ```powershell
