@@ -1115,7 +1115,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -VoiceIsolation
-Determines whether you provide support for your users to enable voice isolation in teams meeting calls.
+Determines whether you provide support for your users to enable voice isolation in Teams meeting calls.
 
 Possible values are: 
 - Enabled (default)
