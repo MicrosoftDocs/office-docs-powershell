@@ -104,8 +104,6 @@ To replace the existing list of ARC sealers with the values you specify, use the
 
 To add or remove file types without affecting the other file type entries, see the Examples section in this topic.
 
-To clear the list, use the value $null.
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
