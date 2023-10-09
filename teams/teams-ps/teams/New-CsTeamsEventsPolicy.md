@@ -100,12 +100,10 @@ Accept wildcard characters: False
 ```
 
 ### -EventAccessType
-This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
-Possible values are:
+This setting governs which users can access the event for Town hall and access the event registration page or the event site to register for Webinar. It also governs which user type is allowed to join the session/s in the event for both event types. Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
 
- - **EveryoneInCompanyExcludingGuests**: Enables creating events to allow only in-tenant users to register and join the event.
-
+ - **EveryoneInCompanyExcludingGuests**: For Webinar - enables creating events to allow only in-tenant users to register and join the event. For Town hall - enables creating events to allow only in organization users to join the event (Note: for Town hall, in organization supports guests so this access policy will enable disable public Town halls). 
 
 ```yaml
 Type: String
