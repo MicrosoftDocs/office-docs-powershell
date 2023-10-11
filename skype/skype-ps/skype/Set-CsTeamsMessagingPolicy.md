@@ -66,6 +66,35 @@ All other policy properties will be left as previously assigned.
 
 ## PARAMETERS
 
+### -CreateCustomEmojis
+This setting enables creation of custom emojis/reactions within a tenant for the specified policy users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteCustomEmojis
+This settings enable/disable the editing/deletion of custom emojis and reactions for the users included in the messaging policy
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
 Note: [Optional Connected Experiences](https://learn.microsoft.com/deployoffice/privacy/manage-privacy-controls#policy-setting-for-optional-connected-experiences) must be also enabled for Giphys to be allowed.
