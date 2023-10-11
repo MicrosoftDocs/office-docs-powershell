@@ -26,6 +26,7 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-Allow [-ReadReceiptsEnabledType <String>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
+ [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>]
 ```
 
 ### Instance
@@ -35,8 +36,7 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
  [-AllowUserChat <Boolean>] [-AllowUserDeleteChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-ReadReceiptsEnabledType <String>]
- [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-AllowSmartCompose] <Boolean>]
- [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-AllowSmartCompose] <Boolean>] [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
