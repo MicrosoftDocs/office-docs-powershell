@@ -100,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -EventAccessType
-This setting governs which users can access the event for Town hall and access the event registration page or the event site to register for Webinar. It also governs which user type is allowed to join the session/s in the event for both event types. 
+This setting governs which users can access the Town hall event and access the event registration page or the event site to register for a Webinar. It also governs which user type is allowed to join the session or sessions in the event for both event types. 
+
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
 
