@@ -38,7 +38,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
-[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] 
+[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] [-AutomaticallyStartCopilot <String>] [-Copilot <String>]
 [-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -80,6 +80,38 @@ In Example 3, the Set-CsTeamsMeetingPolicy cmdlet is used to update an existing 
 This policy will use all the existing values except one: AllowNetworkConfigurationSettingsLookup; in this example, we will fetch network roaming policy for the non-EV user with NonEVNetworkRoamingPolicy based on his current network location. 
 
 ## PARAMETERS
+
+### -AutomaticallyStartCopilot
+
+This policy gives admins the ability to auto-start copilot.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Copilot
+
+This policy gives admins the ability to choose if copilot will be enabled with a persisted transcript or a non-persisted transcript.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledWithTranscript
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowAnonymousUsersToJoinMeeting
 
