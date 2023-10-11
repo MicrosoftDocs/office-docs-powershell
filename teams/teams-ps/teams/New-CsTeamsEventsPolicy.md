@@ -105,7 +105,8 @@ This setting governs which users can access the Town hall event and access the e
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
 
- - **EveryoneInCompanyExcludingGuests**: For Webinar - enables creating events to allow only in-tenant users to register and join the event. For Town hall - enables creating events to allow only in-tenant users to join the event (Note: for Town hall, in-tenant users includes guests; this parameter will disable public Town halls). 
+ - **EveryoneInCompanyExcludingGuests**: For Webinar - enables creating events to allow only in-tenant users to register and join the event. For Town hall - enables creating events to allow only in-tenant users to join the event (Note: for Town hall, in-tenant users include guests; this parameter will disable public Town halls). 
+
 
 
 ```yaml
