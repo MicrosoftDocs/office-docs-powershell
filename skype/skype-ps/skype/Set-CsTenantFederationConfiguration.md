@@ -241,6 +241,7 @@ Accept wildcard characters: False
 ### -BlockedDomains
 If the AllowedDomains property has been set to AllowAllKnownDomains, then users will be allowed to communicate with users from any domain except domains that appear in the blocked domains list.
 If the AllowedDomains property has not been set to AllowAllKnownDomains, then the blocked list is ignored, and users can only communicate with domains that have been expressly added to the allowed domains list.
+The BlockedDomains parameter can support up to 4,000 domains.
 
 ```yaml
 Type: List
