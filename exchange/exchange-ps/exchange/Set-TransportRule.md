@@ -3841,6 +3841,9 @@ The Quarantine parameter specifies an action that quarantines messages.
 - In on-premises Exchange, messages are delivered to the quarantine mailbox that you've configured as part of Content filtering. If the quarantine mailbox isn't configured, the message is returned to the sender in an NDR.
 - In Microsoft 365, messages are delivered to the hosted quarantine.
 
+If the action is executed for a rule that is not last in the rule collection, as soon as the action is executed current rule evaluation is stopped.
+When the message is released from Quarantine, rest of the rules in the rule collection (that are not evaluated initially because message is sent to quarantine) are not evaluated at all.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
