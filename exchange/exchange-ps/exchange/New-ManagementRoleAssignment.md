@@ -27,6 +27,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -App <Se
  [-Delegating]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -42,6 +43,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> 
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -60,6 +62,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Policy <MailboxPolicyIdParamete
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -79,6 +82,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -Securit
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -98,6 +102,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <U
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -493,6 +498,24 @@ Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientGroupScope
+This parameter is functional only in the cloud-based service.
+
+The RecipientGroupScope parameter specifies the universal security group to scope the new role assignment to. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
+
+```yaml
+Type: GroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
