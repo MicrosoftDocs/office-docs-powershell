@@ -1184,7 +1184,7 @@ Accept wildcard characters: False
 ```
 
 ### -WelcomeTextToSpeechPrompt
-{{ Fill WelcomeTextToSpeechPrompt Description }}
+This parameter indicates the Text-to-Speech (TTS) prompt which is played when callers are connected with the Call Queue.
 
 ```yaml
 Type: String
