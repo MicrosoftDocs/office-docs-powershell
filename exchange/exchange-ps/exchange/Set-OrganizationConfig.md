@@ -122,6 +122,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-OutlookPayEnabled <Boolean>]
  [-OutlookTextPredictionDisabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
+ [-PostponeRoamingSignaturesUntilLater <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
@@ -3060,6 +3061,30 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostponeRoamingSignaturesUntilLater
+This parameter is available only in the cloud-based service.
+
+The PostponeRoamingSignaturesUntilLater parameter controls whether the roaming signature is enabled for OWA/new Outlook for Windows. By default, this parameter is set to $false. If you set the parameter to $true, the roaming signature will be disabled for OWA/new Outlook for Windows. The rollout is expected to be completed by mid-November 23. Note that for Win32,[setting the registry value](https://support.microsoft.com/en-us/office/outlook-roaming-signatures-420c2995-1f57-4291-9004-8f6f97c54d15) to disable roaming signature feature will continue to work.
+
+This temporarily disables roaming signatures, rather than permanently disabling it. We are working on providing API support to access roaming signatures so that admins and ISV can get the functionality that they have today of setting and defining user signatures.
+An announcement will be made a few months before deprecating the cmdlet (PostponeRoamingSignaturesUntilLater). The deprecation timelines are yet to be decided and are tentatively expected around late CY24.
+
+Previously, the only way to disable roaming signatures in OWA was to open a support ticket and ask to have Outlook roaming signatures disabled in your organization. Going forward, this process will be discontinued as admins can disable roaming signatures themselves now. 
+
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
