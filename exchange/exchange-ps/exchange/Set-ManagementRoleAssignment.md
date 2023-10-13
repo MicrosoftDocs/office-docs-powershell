@@ -22,8 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### RelativeRecipientWriteScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
- [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
@@ -35,8 +34,7 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
 
 ### CustomRecipientWriteScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
- [-CustomConfigWriteScope <ManagementScopeIdParameter>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-Confirm]
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
@@ -48,8 +46,7 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
 
 ### RecipientOrganizationalUnitScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
- [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-Confirm]
  [-CustomConfigWriteScope <ManagementScopeIdParameter>]
  [-DomainController <Fqdn>]
@@ -61,9 +58,7 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
 
 ### ExclusiveScope
 ```
-Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter>
- [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
- [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>] [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
@@ -86,6 +81,16 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> -RecipientA
 ### App
 ```
 Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-CustomResourceScope <ManagementScopeIdParameter>]
+ [-Confirm]
+ [-Enabled <Boolean>]
+ [-Force]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### RecipientGroupScope
+```
+Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> -RecipientGroupScope <GroupIdParameter>
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
@@ -147,6 +152,46 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -RecipientAdministrativeUnitScope
+This parameter is functional only in the cloud-based service.
+
+The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the role assignment to.
+
+Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+
+You can't use this parameter with any of the other scope parameters.
+
+```yaml
+Type: AdministrativeUnitIdParameter
+Parameter Sets: RecipientAdministrativeUnitScope
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientGroupScope
+This parameter is functional only in the cloud-based service.
+
+The RecipientGroupScope parameter specifies the universal security group to scope the role assignment to. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
+
+```yaml
+Type: GroupIdParameter
+Parameter Sets: RecipientGroupScope
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -327,28 +372,6 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecipientAdministrativeUnitScope
-This parameter is functional only in the cloud-based service.
-
-The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the role assignment to.
-
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
-
-You can't use this parameter with any of the other scope parameters.
-
-```yaml
-Type: AdministrativeUnitIdParameter
-Parameter Sets: RecipientAdministrativeUnitScope
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
