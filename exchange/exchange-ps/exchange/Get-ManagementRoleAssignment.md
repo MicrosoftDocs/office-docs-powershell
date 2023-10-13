@@ -34,6 +34,7 @@ Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <RecipientWriteScopeType>]
  [-RoleAssigneeType <RoleAssigneeType>]
@@ -58,6 +59,7 @@ Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <RecipientWriteScopeType>]
  [-RoleAssignee <RoleAssigneeIdParameter>]
@@ -369,6 +371,24 @@ Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientGroupScope
+This parameter is functional only in the cloud-based service.
+
+The RecipientGroupScope parameter returns only the role assignments that are scoped to universal security groups. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
+
+```yaml
+Type: GroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
