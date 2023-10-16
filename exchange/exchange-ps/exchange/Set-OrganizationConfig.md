@@ -3070,12 +3070,14 @@ This parameter is available only in the cloud-based service.
 
 **Note**: This parameter is in the process of being rolled out. The rollout is expected to be completed by mid-November 2023.
 
-The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signatures are enabled or disabled in Outlook on the web (formerly knwon as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
+The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signatures are enabled or disabled in Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
 
-- $true: Roaming signatures are temporarily disabled for Outlook on the web and the new Outlook for Windows. We're working on API support so admins and ISVs can configure roaming signatures directly without the need to disable them. When the new API is available (and after plenty of warning), this parameter will be deprecated. For Windows, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15).
+- $true: Roaming signatures are temporarily disabled for Outlook on the web and the new Outlook for Windows. For Windows, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15). When roaming signatures are disabled, admins can use the SignatureHtml, SignatureText, and SignatureTextOnMobile parameters on the Set-MailboxMessageConfiguration cmdlet to configure email signatures in Outlook on the web.
 - $false: This is the default value.
 
-Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket. Using this parameter and eventually the API support that's coming, admins no longer need to open a support ticket to disable roaming signatures.
+We're working on API support so admins and ISVs can configure roaming signatures directly. When the new API is available (and after plenty of warning), this parameter will be deprecated. Admins will no longer need to disable roaming signatures or use the parameters on Set-MailboxMessageConfigureation to configure email signatures.
+
+Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket.
 
 ```yaml
 Type: Boolean
