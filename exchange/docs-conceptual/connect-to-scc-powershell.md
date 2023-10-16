@@ -147,7 +147,7 @@ This example connects to customer organizations in the following scenarios:
 - Connect to a customer organization as a guest user.
 
   ```powershell
-  Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com -DelegatedOrganization adatum.onmicrosoft.com -AzureADAuthorizationEndpointUri https://ps.compliance.protection.outlook.com/powershell-liveid/
+  Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com -DelegatedOrganization adatum.onmicrosoft.com -AzureADAuthorizationEndpointUri https://login.microsoftonline.com/adatum.onmicrosoft.com
   ```
 
 ## Step 3: Disconnect when you're finished
