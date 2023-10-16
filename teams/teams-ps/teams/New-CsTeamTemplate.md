@@ -127,6 +127,9 @@ PS C:> New-CsTeamTemplate -Locale en-US -Body $template
 
 Create template from scratch
 
+> [!Note]
+> It can take up to 24 hours for teams users to see a custom template change in the gallery.
+
 ## PARAMETERS
 
 ### -App
