@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignature
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your could-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
 
 The AutoAddSignature parameter specifies whether to automatically add signatures to new email messages created in Outlook on the web. Valid values are:
 
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignatureOnMobile
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your could-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
 
 The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
 
@@ -1124,7 +1124,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureHtml
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your could-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
 
 The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
 
@@ -1144,7 +1144,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureText
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your could-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
 
 The SignatureText parameter specifies the email signature that's available to the user in plain text messages in Outlook on the web. This parameter supports all Unicode characters.
 
@@ -1164,7 +1164,7 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureTextOnMobile
-**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your could-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
 
 The SignatureTextOnMobile parameter specifies the email signature that's available in messages created by the user in Outlook on the web for devices. This parameter supports all Unicode characters.
 
