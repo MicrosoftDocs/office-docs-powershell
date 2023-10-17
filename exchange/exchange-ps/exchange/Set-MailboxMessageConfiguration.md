@@ -194,6 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignature
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your could-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The AutoAddSignature parameter specifies whether to automatically add signatures to new email messages created in Outlook on the web. Valid values are:
 
 - $true: Email signatures are automatically added to new messages.
@@ -215,6 +217,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignatureOnMobile
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your could-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
 
 Valid input for this parameter is $true or $false. The default value is $false.
