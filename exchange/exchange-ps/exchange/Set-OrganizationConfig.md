@@ -122,6 +122,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-OutlookPayEnabled <Boolean>]
  [-OutlookTextPredictionDisabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
+ [-PostponeRoamingSignaturesUntilLater <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
@@ -3060,6 +3061,33 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostponeRoamingSignaturesUntilLater
+This parameter is available only in the cloud-based service.
+
+**Note**: This parameter is in the process of being rolled out. The rollout is expected to be completed by mid-November 2023.
+
+The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signatures are enabled or disabled in Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
+
+- $true: Roaming signatures are temporarily disabled for Outlook on the web and the new Outlook for Windows. For Windows, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15). When roaming signatures are disabled, admins can use the signature-related parameters on the Set-MailboxMessageConfiguration cmdlet (for example, AutoAddSignature, AutoAddSignatureOnReply, and SignatureHtml) to configure email signatures.
+- $false: This is the default value.
+
+We're working on API support so admins and ISVs can configure roaming signatures directly. When the new API is available (and after plenty of warning), this parameter will be deprecated. Admins will no longer need to disable roaming signatures or use the parameters on Set-MailboxMessageConfigureation to configure email signatures.
+
+Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
