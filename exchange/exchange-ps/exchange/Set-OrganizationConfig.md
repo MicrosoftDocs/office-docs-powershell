@@ -3075,9 +3075,9 @@ The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signa
 - $true: Roaming signatures are temporarily disabled for Outlook on the web and the new Outlook for Windows. For Windows, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15). When roaming signatures are disabled, admins can use the signature-related parameters on the Set-MailboxMessageConfiguration cmdlet (for example, AutoAddSignature, AutoAddSignatureOnReply, and SignatureHtml) to configure email signatures.
 - $false: This is the default value.
 
-We're working on API support so admins and ISVs can configure roaming signatures directly. When the new API is available (and after plenty of warning), this parameter will be deprecated. Admins will no longer need to disable roaming signatures or use the parameters on Set-MailboxMessageConfigureation to configure email signatures.
+We're working on API support so admins and ISVs can configure roaming signatures directly. When the new API is available (and after plenty of warning), this parameter will be deprecated. Admins will no longer need to disable roaming signatures or use the parameters on Set-MailboxMessageConfiguration to configure email signatures in Outlook on the web.
 
-Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket.
+Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket. With the introduction of this parameter, that process is discontinued as admins can now use this parameter to disable roaming signatures themselves.
 
 ```yaml
 Type: Boolean
