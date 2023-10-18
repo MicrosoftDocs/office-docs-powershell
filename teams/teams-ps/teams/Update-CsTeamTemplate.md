@@ -124,7 +124,8 @@ isFavoriteByDefault= $true `
 }
 ```
 > [!Note]
-> It can take up to 24 hours for teams users to see a custom template change in the gallery.
+> It can take up to 24 hours for Teams users to see a custom template change in the gallery.
+
 
 ## PARAMETERS
 
