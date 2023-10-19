@@ -32,9 +32,11 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
+ [-AutomaticForcedReadReceiptEnabled <Boolean>]
  [-BlockMoveMessagesForGroupFolders <Boolean>]
  [-BookingsAddressEntryRestricted <Boolean>]
  [-BookingsAuthEnabled <Boolean>]
+ [-BookingsBlockedWordsEnabled <Boolean>]
  [-BookingsCreationOfCustomQuestionsRestricted <Boolean>]
  [-BookingsEnabled <Boolean>]
  [-BookingsExposureOfStaffDetailsRestricted <Boolean>]
@@ -147,10 +149,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
- [-AdfsEncryptCertificateThumbprint <String>]
- [-AdfsIssuer <Uri>]
- [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
+Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>]  [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -214,9 +213,9 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
  [-PublicFolderMailboxesLockedForNewConnections <Boolean>]
  [-PublicFolderMailboxesMigrationComplete <Boolean>]
  [-PublicFolderMigrationComplete <Boolean>]
+ [-PublicFolderShowClientControl <Boolean>]
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
  [-PublicFoldersLockedForMigration <Boolean>]
- [-PublicFolderShowClientControl <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
  [-RefreshSessionEnabled <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
@@ -295,7 +294,6 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
- [-PublicFolderContentReplicationDisabled <Boolean>]
  [-PublicFolderMailboxesLockedForNewConnections <Boolean>]
  [-PublicFolderMailboxesMigrationComplete <Boolean>]
  [-PublicFolderMigrationComplete <Boolean>]
@@ -323,9 +321,11 @@ Set-OrganizationConfig
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
+ [-BlockMoveMessagesForGroupFolders <Boolean>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-Confirm]
  [-CustomerFeedbackEnabled <Boolean>]
+ [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
@@ -340,6 +340,8 @@ Set-OrganizationConfig
  [-Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <IndustryType>]
+ [-IsGroupFoldersAndRulesEnabled <Boolean>]
+ [-IsGroupMemberAllowedToEditContent <Boolean>]
  [-MailTipsAllTipsEnabled <Boolean>]
  [-MailTipsExternalRecipientsTipsEnabled <Boolean>]
  [-MailTipsGroupMetricsEnabled <Boolean>]
@@ -742,6 +744,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutomaticForcedReadReceiptEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutomaticForcedReadReceiptEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockMoveMessagesForGroupFolders
 This parameter is available only in the cloud-based service.
 
@@ -749,7 +769,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
+Parameter Sets: Identity, ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -1394,7 +1414,7 @@ You create authentication policies with the New-AuthenticationPolicy cmdlet to b
 
 ```yaml
 Type: AuthPolicyIdParameter
-Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -2378,7 +2398,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
+Parameter Sets: Identity, ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -2396,7 +2416,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
+Parameter Sets: Identity, ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
