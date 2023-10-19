@@ -32,7 +32,7 @@ Get-OrganizationSegment [[-Identity] <PolicyIdParameter>]
 ```
 
 ## DESCRIPTION
-Segments are defined by using certain [attributes](https://learn.microsoft.com/purview/information-barriers-attributes) in Azure Active Directory.
+Segments are defined by using certain [attributes](https://learn.microsoft.com/purview/information-barriers-attributes) in Microsoft Entra ID.
 
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
