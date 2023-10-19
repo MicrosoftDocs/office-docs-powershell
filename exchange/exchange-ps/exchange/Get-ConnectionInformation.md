@@ -47,7 +47,7 @@ The output of the cmdlet contains the following properties:
 - Name: A unique name that's based on the PowerShell environment and Id value. For example, ExchangeOnline_1 for Exchange Online PowerShell or ExchangeOnlineProtection_1 for Security & Compliance PowerShell.
 - UserPrincipalName: The account that was used to connect. For example, laura@contoso.onmicrosoft.com.
 - ConnectionUri: The connection endpoint that was used. For example, <https://outlook.office365.com> for Exchange Online PowerShell or <https://nam12b.ps.compliance.protection.outlook.com> for Security & Compliance PowerShell.
-- AzureAdAuthorizationEndpointUri : The Azure AD authorization endpoint for the connection. For example, <https://login.microsoftonline.com/organizations> for Exchange Online PowerShell or <https://login.microsoftonline.com/organizations> for Security & Compliance PowerShell.
+- AzureAdAuthorizationEndpointUri : The Microsoft Entra authorization endpoint for the connection. For example, <https://login.microsoftonline.com/organizations> for Exchange Online PowerShell or <https://login.microsoftonline.com/organizations> for Security & Compliance PowerShell.
 - TokenExpiryTimeUTC: When the connection token expires. For example, 9/30/2023 6:42:24 PM +00:00.
 - CertificateAuthentication: Whether certificate based authentication (also known as CBA or app-only authentication) was used to connect. Values are True or False.
 - ModuleName: The filename and path of the temporary data for the session. For example, C:\Users\laura\AppData\Local\Temp\tmpEXO_a54z135k.qgv
