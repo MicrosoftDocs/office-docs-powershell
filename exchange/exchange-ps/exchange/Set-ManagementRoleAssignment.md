@@ -160,7 +160,7 @@ This parameter is functional only in the cloud-based service.
 
 The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the role assignment to.
 
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+Administrative units are Microsoft Entra containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
 
 You can't use this parameter with any of the other scope parameters.
 
@@ -267,7 +267,7 @@ The CustomResourceScope parameter specifies the custom management scope to assoc
 
 If the value contains spaces, enclose the value in quotation marks (").
 
-You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Azure Active Directory](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
 
 ```yaml
 Type: ManagementScopeIdParameter
