@@ -23,7 +23,7 @@ Set-TeamsEnvironmentConfig [-EndpointUris <Hashtable>] [-TeamsEnvironmentName <S
 ```
 
 ## DESCRIPTION
-This cmdlet sets environment-specific configurations like endpoint URIs(such as Azure AD and Microsoft Graph) and Teams environment (such as GCCH and DOD) on the local machine.
+This cmdlet sets environment-specific configurations like endpoint URIs(such as Microsoft Entra ID and Microsoft Graph) and Teams environment (such as GCCH and DOD) on the local machine.
   
 When running Connect-MicrosoftTeams, environment-specific information set in this cmdlet will be considered unless overridden by Connect-MicrosoftTeams parameters.
 
