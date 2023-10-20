@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ### -CountryOrRegion
 Specifies the country or region of the civic address.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ### -City
 Specifies the city of the civic address.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ### -CityAlias
 Specifies the city alias.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ### -CompanyName
 Specifies the name of your organization.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ### -CompanyTaxId
 The company tax ID.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ### -Description
 Specifies an administrator defined description of the civic address.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ### -HouseNumber
 Specifies the numeric portion of the civic address.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 Specifies the numeric suffix of the civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 ### -Latitude
 Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ### -Longitude
 Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ### -PostalCode
 Specifies the postal code of the civic address.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ### -PostDirectional
 Specifies the directional attribute of the civic address which follows the street name. For example, "425 Smith Avenue NE".
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ### -PreDirectional
 Specifies the directional attribute of the civic address which precedes the street name. For example, "425 NE Smith Avenue".
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 ### -StateOrProvince
 Specifies the state or province of the civic address.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -377,7 +377,7 @@ Accept wildcard characters: False
 ### -StreetName
 Specifies the street name of the civic address.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -395,7 +395,7 @@ Accept wildcard characters: False
 ### -StreetSuffix
 Specifies the modifier of the street name. The street suffix will typically be something like street, avenue, way, or boulevard.
 
-This parameter is not supported and will be deprecated.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
