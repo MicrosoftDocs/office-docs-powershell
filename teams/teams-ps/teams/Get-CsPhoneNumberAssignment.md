@@ -456,7 +456,8 @@ Boolean stating if updating of the location assigned to the phone number is allo
 This parameter is reserved for internal Microsoft use.
 
 ### NumberSource
-The source of the phone number. Online for phone numbers assigned in Microsoft 365 and OnPremises for phone number assigned in AD on-premises and synchronized into Microsoft 365.
+The source of the phone number. Online for phone numbers assigned in Microsoft 365 and OnPremises for phone numbers assigned in AD on-premises and synchronized into Microsoft 365.
+
 
 ### NumberType
 The type of the phone number.
