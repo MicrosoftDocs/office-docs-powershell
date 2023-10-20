@@ -13,9 +13,7 @@ ms.reviewer:
 # New-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the New-CsOnlineLisLocation cmdlet to either to create a new emergency dispatch location within an existing civic address, or to create both a new civic address and a location assigned to that address.
-There can be multiple locations in a civic address.
-Typically the civic address designates the building, and locations are specific parts of that building such as a floor, office, or wing.
+Use the New-CsOnlineLisLocation cmdlet to create a new emergency dispatch location within an existing civic address. Typically the civic address designates the building, and locations are specific parts of that building such as a floor, office, or wing.
 
 ## SYNTAX
 
@@ -25,7 +23,7 @@ New-CsOnlineLisLocation -Location <string> -CivicAddressId <guid> [-CityAlias <s
 [-Elin <string>] [-Force] [-HouseNumberSuffix <string>] [-Latitude <string>] [-Longitude <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### CreateCivicAddress
+### CreateCivicAddress (This parameter set variant is not supported and will be deprecated)
 ```
 New-CsOnlineLisLocation -Location <string> -CountryOrRegion <string> [-CityAlias <string>] [-CompanyName <string>] [-CompanyTaxId <string>] [-Confidence <string>]
 [-Elin <string>] [-Force] [-HouseNumberSuffix <string>] [-Latitude <string>] [-Longitude <string>] [-City <string>] [-Description <string>] [-HouseNumber <string>]
@@ -44,19 +42,10 @@ New-CsOnlineLisLocation -CivicAddressId b39ff77d-db51-4ce5-8d50-9e9c778e1617 -Lo
 
 This example creates a new location called "Office 101, 1st Floor" in the civic address specified by its identity.
 
-### Example 2
-```powershell
-New-CsOnlineLisLocation -Location "Office 202, 2nd Floor" -CompanyName "Contoso" -HouseNumber 3910 -StreetName 163rd -StreetSuffix St -City Bellevue -StateOrProvince WA -CountryOrRegion US -PostalCode 98004 -Description "New civic address location" -Elin TEST_ELIN -Latitude 47.64499 -Longitude -122.12219
-```
-
-This example creates a new civic address and a location assigned to the address. Location is called "Office 202, 2st Floor" with Elin string "TEST_ELIN" and latitude and longitude set.
-
 ## PARAMETERS
 
 ### -CivicAddressId
-Specifies the unique identifier of the civic address that will contain the new location.
-If specified, no other address description parameters are allowed.
-Civic address identities can be discovered by using the Get-CsOnlineLisCivicAddress cmdlet.
+Specifies the unique identifier of the civic address that will contain the new location. Civic address identities can be discovered by using the Get-CsOnlineLisCivicAddress cmdlet.
 
 ```yaml
 Type: Guid
@@ -72,8 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies an administrator-defined description of the new location.
-For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
+Specifies an administrator-defined description of the new location. For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 
 ```yaml
 Type: String
@@ -104,6 +92,8 @@ Accept wildcard characters: False
 ### -CountryOrRegion
 Specifies the country or region of the civic address.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
@@ -119,6 +109,8 @@ Accept wildcard characters: False
 
 ### -City
 Specifies the city of the civic address.
+
+This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -136,6 +128,8 @@ Accept wildcard characters: False
 ### -CityAlias
 Specifies the city alias.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -152,6 +146,8 @@ Accept wildcard characters: False
 ### -CompanyName
 Specifies the name of your organization.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -167,6 +163,8 @@ Accept wildcard characters: False
 
 ### -CompanyTaxId
 The company tax ID.
+
+This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -200,6 +198,8 @@ Accept wildcard characters: False
 ### -Description
 Specifies an administrator defined description of the civic address.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
@@ -214,8 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Elin
-Specifies the Emergency Location Identification Number.
-This is used in Direct Routing EGW scenarios.
+Specifies the Emergency Location Identification Number. This is used in Direct Routing EGW scenarios.
 
 ```yaml
 Type: String
@@ -230,24 +229,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Suppresses the display of any non-fatal error message that might arise when running the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -HouseNumber
 Specifies the numeric portion of the civic address.
+
+This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -266,6 +251,8 @@ Accept wildcard characters: False
 Specifies the numeric suffix of the civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -281,6 +268,8 @@ Accept wildcard characters: False
 
 ### -Latitude
 Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
+
+This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -298,6 +287,8 @@ Accept wildcard characters: False
 ### -Longitude
 Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -314,6 +305,8 @@ Accept wildcard characters: False
 ### -PostalCode
 Specifies the postal code of the civic address.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
@@ -328,8 +321,9 @@ Accept wildcard characters: False
 ```
 
 ### -PostDirectional
-Specifies the directional attribute of the civic address which follows the street name.
-For example, "425 Smith Avenue NE".
+Specifies the directional attribute of the civic address which follows the street name. For example, "425 Smith Avenue NE".
+
+This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -345,8 +339,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreDirectional
-Specifies the directional attribute of the civic address which precedes the street name.
-For example, "425 NE Smith Avenue ".
+Specifies the directional attribute of the civic address which precedes the street name. For example, "425 NE Smith Avenue".
+
+This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -364,6 +359,8 @@ Accept wildcard characters: False
 ### -StateOrProvince
 Specifies the state or province of the civic address.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
@@ -380,6 +377,8 @@ Accept wildcard characters: False
 ### -StreetName
 Specifies the street name of the civic address.
 
+This parameter is not supported and will be deprecated.
+
 ```yaml
 Type: String
 Parameter Sets: CreateCivicAddress
@@ -394,8 +393,9 @@ Accept wildcard characters: False
 ```
 
 ### -StreetSuffix
-Specifies the modifier of the street name.
-The street suffix will typically be something like street, avenue, way, or boulevard.
+Specifies the modifier of the street name. The street suffix will typically be something like street, avenue, way, or boulevard.
+
+This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -439,6 +439,22 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
