@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ### -IgnoreLegalHold
 The IgnoreLegalHold switch ignores the legal hold status of the remote user. You don't need to specify a value with this switch.
 
-This switch removes the instance of the remote object in the on-premises organization, and the request to remove the mailbox is synchronized to the cloud. The Azure AD object is removed, but if the mailbox is on hold, the mailbox is converted into an inactive mailbox and remains on hold.
+This switch removes the instance of the remote object in the on-premises organization, and the request to remove the mailbox is synchronized to the cloud. The Microsoft Entra object is removed, but if the mailbox is on hold, the mailbox is converted into an inactive mailbox and remains on hold.
 
 ```yaml
 Type: SwitchParameter
