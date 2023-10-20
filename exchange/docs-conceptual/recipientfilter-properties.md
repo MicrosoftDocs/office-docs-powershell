@@ -185,7 +185,7 @@ The recipient properties that have been *confirmed* to work with the _RecipientF
 |_MaxSendSize_|_submissionContLength_|Dynamic distribution groups: A byte quantified size value (for example, `50MB`). Unqualified values are treated as bytes. <br> Others: Blank or non-blank.||
 |_MemberDepartRestriction_|_msExchGroupDepartRestriction_|`Closed` (0), `Open` (1), or `ApprovalRequired` (2).||
 |_MemberJoinRestriction_|_msExchGroupDepartRestriction_|`Closed` (0), `Open` (1), or `ApprovalRequired` (2).||
-|_MemberOfGroup_|_memberOf_|String (wildcards accepted in dynamic distribution groups).|You must use the DistinguishedName. This property only works with groups recognized by Exchange, therefore Azure AD security groups do not work.|
+|_MemberOfGroup_|_memberOf_|String (wildcards accepted in dynamic distribution groups).|You must use the DistinguishedName. This property only works with groups recognized by Exchange, therefore Microsoft Entra security groups do not work.|
 |_Members_|_member_|String (wildcards accepted in dynamic distribution groups).||
 |_MessageHygieneFlags_|_msExchMessageHygieneFlags_|`None` (0) or `AntispamBypass` (1).||
 |_MobileAdminExtendedSettings_|_msExchOmaAdminExtendedSettings_|String (wildcards accepted).||

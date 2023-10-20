@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the recipient that you want to view by the ObjectId in Azure Active Directory.
+The ExternalDirectoryObjectId parameter identifies the recipient that you want to view by the ObjectId in Microsoft Entra ID.
 
 You can't use this parameter with the Anr, Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 
