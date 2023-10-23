@@ -23,7 +23,7 @@ New-CsOnlineLisLocation -Location <string> -CivicAddressId <guid> [-CityAlias <s
 [-Elin <string>] [-Force] [-HouseNumberSuffix <string>] [-Latitude <string>] [-Longitude <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### CreateCivicAddress (This parameter set variant is not supported and will be deprecated)
+### CreateCivicAddress
 ```
 New-CsOnlineLisLocation -Location <string> -CountryOrRegion <string> [-CityAlias <string>] [-CompanyName <string>] [-CompanyTaxId <string>] [-Confidence <string>]
 [-Elin <string>] [-Force] [-HouseNumberSuffix <string>] [-Latitude <string>] [-Longitude <string>] [-City <string>] [-Description <string>] [-HouseNumber <string>]
