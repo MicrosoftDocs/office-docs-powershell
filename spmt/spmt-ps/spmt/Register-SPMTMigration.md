@@ -49,7 +49,7 @@ This example registers a migration session.
 
 ### -AzureActiveDirectoryLookup
 By default, this is set to On. 
-If no user mapping file is provided by the user, then Azure Active Directory is used as the default for user mapping.
+If no user mapping file is provided by the user, then Microsoft Entra ID is used as the default for user mapping.
 
 ```yaml
 Type: Boolean
@@ -449,8 +449,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserMappingFile
-By default, Azure AD lookup is used to map users when submitting migration jobs.
-If you choose to use a custom user mapping file and you want to preserve user permissions, turn off Azure Active Directory lookup.By doing so, if a user isn't found in the mapping file, the tool won't look it up in AAD.
+By default, Microsoft Entra lookup is used to map users when submitting migration jobs.
+If you choose to use a custom user mapping file and you want to preserve user permissions, turn off Microsoft Entra lookup.By doing so, if a user isn't found in the mapping file, the tool won't look it up in Microsoft Entra ID.
 
 ```yaml
 Type: String

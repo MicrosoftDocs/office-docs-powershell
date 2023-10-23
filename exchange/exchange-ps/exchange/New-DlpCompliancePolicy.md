@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The EndpointDLPLocation parameter specifies the user accounts to include in the DLP policy for Endpoint DLP when they are logged on to an onboarded device. You identify the account by name or email address. You can use the value All to include all user accounts.
 
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The EndpointDlpLocationException parameter specifies the user accounts to exclude from Endpoint DLP when you use the value All for the EndpointDlpLocation parameter. You identify the account by name or email address.
 
@@ -470,9 +470,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Azure Active Directory ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
 
-Administrative units are available only in Azure Active Directory Premium. You create and manage administrative units in Microsoft Graph PowerShell.
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty
@@ -656,7 +656,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAppDlpLocation
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The ThirdPartyAppDlpLocation parameter specifies the non-Microsoft cloud apps to include in the DLP policy. You can use the value All to include all connected apps.
 
@@ -678,7 +678,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyAppDlpLocationException
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The ThirdPartyAppDlpLocationException parameter specifies the non-Microsoft cloud apps to exclude from the DLP policy when you use the value All for the ThirdPartyAppDlpLocation parameter.
 
