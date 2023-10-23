@@ -98,7 +98,7 @@ This example creates a dynamic distribution group named Marketing Group that con
 
 ### Example 2
 ```powershell
-New-DynamicDistributionGroup -Name "Washington Management Team" -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (Title -like 'Director*' -or Title -like 'Manager*') -and (StateOrProvince -eq 'WA')" -RecipientContainer "North America"
+New-DynamicDistributionGroup -Name "Washington Management Team" -RecipientFilter "(RecipientTypeDetails -eq 'UserMailbox') -and (Title -like 'Director*' -or Title -like 'Manager*') -and (StateOrProvince -eq 'WA')" -RecipientContainer "North America"
 ```
 
 This example creates a dynamic distribution group named Washington Management Team that contains all users in the organizational unit named North America from Washington State whose titles start with "Director" or "Manager".

@@ -114,7 +114,7 @@ This example uses custom filters to create a dynamic distribution group with the
 - **Filters** Include only recipients who have the **Company** attribute defined as Contoso and the **Office** attribute defined as North Building.
 
 ```powershell
-New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.com/Users -RecipientFilter "((RecipientType -eq 'UserMailbox') -and (Company -eq 'Contoso') -and (Office -eq 'North Building'))"
+New-DynamicDistributionGroup -Name AllContosoNorth -OrganizationalUnit contoso.com/Users -RecipientFilter "((RecipientTypeDetails -eq 'UserMailbox') -and (Company -eq 'Contoso') -and (Office -eq 'North Building'))"
 ```
 
 ## Custom filters using the Filter parameter

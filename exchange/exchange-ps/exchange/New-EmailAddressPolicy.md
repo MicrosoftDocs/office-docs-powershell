@@ -159,7 +159,7 @@ This example creates an email address policy in an on-premises Exchange organiza
 
 ### Example 2
 ```powershell
-New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (Title -like '*Director*' -or Title -like '*Manager*') -and (StateOrProvince -eq 'WA' -or StateOrProvince -eq 'OR' -or StateOrProvince -eq 'ID')" -EnabledEmailAddressTemplates "SMTP:%2g%s@contoso.com" -Priority 2
+New-EmailAddressPolicy -Name "Northwest Executives" -RecipientFilter "(RecipientTypeDetails -eq 'UserMailbox') -and (Title -like '*Director*' -or Title -like '*Manager*') -and (StateOrProvince -eq 'WA' -or StateOrProvince -eq 'OR' -or StateOrProvince -eq 'ID')" -EnabledEmailAddressTemplates "SMTP:%2g%s@contoso.com" -Priority 2
 ```
 
 This example creates an email address policy in an on-premises Exchange organization that uses a custom recipient filter:
