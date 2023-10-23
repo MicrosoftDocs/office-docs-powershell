@@ -18,7 +18,7 @@ Typically the civic address designates the building, and locations are specific 
 
 ## SYNTAX
 
-### UseCivicAddressId (Default - This parameter set variant is not supported and will be deprecated)
+### UseCivicAddressId (Default)
 ```
 Set-CsOnlineLisLocation -CivicAddressId <guid> [-City <string>] [-CityAlias <string>] [-CompanyName <string>] [-CompanyTaxId <string>]
  [-Confidence <string>] [-CountryOrRegion <string>] [-Description <string>] [-Elin <string>] [-Force] [-HouseNumber <string>] [-HouseNumberSuffix <string>]
