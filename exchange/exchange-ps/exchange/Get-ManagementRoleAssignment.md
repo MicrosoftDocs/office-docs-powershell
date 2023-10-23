@@ -364,7 +364,7 @@ This parameter is functional only in the cloud-based service.
 
 The RecipientAdministrativeUnitScope parameter returns only the role assignments that include the specified administrative unit.
 
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+Administrative units are Microsoft Entra containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
 
 ```yaml
 Type: AdministrativeUnitIdParameter

@@ -935,10 +935,10 @@ Accept wildcard characters: False
 ```
 
 ### -OWAEnabled
-The OWAEnabled parameter enables or disables access to the mailbox using Outlook on the web (formerly known as Outlook Web App or OWA). Valid values are:
+The OWAEnabled parameter enables or disables access to the mailbox using Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
 
 - $true: Access to the mailbox using Outlook on the web is enabled. This is the default value.
-- $false: Access to the mailbox using Outlook on the web is disabled. The other Outlook on the web settings in this cmdlet are ignored.
+- $false: Access to the mailbox using Outlook on the web and the new Outlook for Windows is disabled. The other Outlook on the web settings in this cmdlet are ignored.
 
 For more information, see [Enable or disable Outlook on the web for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
 

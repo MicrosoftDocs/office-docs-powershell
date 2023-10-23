@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-Active Directory Organizational Unit (OU) for the disabled user to be created. Wait for the newly created user object to be directory synced to the Azure Active Directory or start a new directory sync cycle by running the [Start-ADSyncSyncCycle](https://learn.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-scheduler#start-the-scheduler) on the domain controller machine.
+Active Directory Organizational Unit (OU) for the disabled user to be created. Wait for the newly created user object to be directory synced to the Microsoft Entra ID or start a new directory sync cycle by running the [Start-ADSyncSyncCycle](https://learn.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-scheduler#start-the-scheduler) on the domain controller machine.
 
 ```yaml
 Type: OUIdParameter
