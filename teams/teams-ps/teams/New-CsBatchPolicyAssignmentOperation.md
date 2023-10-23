@@ -68,7 +68,7 @@ $users = Get-AzureADUser
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.SipProxyAddress -OperationName "batch assign kiosk"
 ```
 
-In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users and then referencing the SipProxyAddress property.
+In this example, the batch of users is obtained by connecting to Microsoft Entra ID and retrieving a collection of users and then referencing the SipProxyAddress property.
 
 ## PARAMETERS
 

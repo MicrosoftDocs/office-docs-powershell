@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is functional only in the cloud-based service.
 
-Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Azure Active Directory containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
+Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Microsoft Entra containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
 
-**Note**: Administrative units are available only in Azure Active Directory Premium. You create and manage administrative units in Microsoft Graph PowerShell.
+**Note**: Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -40,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AdministrativeUnit
 ```
 
-This example returns a summary list of all Azure Active Directory administrative units.
+This example returns a summary list of all Microsoft Entra administrative units.
 
 ### Example 2
 ```powershell

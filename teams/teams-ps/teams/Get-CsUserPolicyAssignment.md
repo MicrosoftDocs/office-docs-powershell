@@ -91,7 +91,7 @@ d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/20
 ### -Identity
 The identify of the user whose policy assignments will be returned.
 
-The -Identity parameter can be in the form of the users ObjectID (taken from Azure AD) or in the form of the UPN (a.smith@example.com)
+The -Identity parameter can be in the form of the users ObjectID (taken from Microsoft Entra ID) or in the form of the UPN (a.smith@example.com)
 
 ```yaml
 Type: String

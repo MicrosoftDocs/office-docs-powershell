@@ -935,7 +935,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpRestrictions
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The EndpointDlpRestrictions parameter specifies the restricted endpoints for Endpoint DLP. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
 
@@ -2444,7 +2444,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEndpointUser
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 {{ Fill NotifyEndpointUser Description }}
 

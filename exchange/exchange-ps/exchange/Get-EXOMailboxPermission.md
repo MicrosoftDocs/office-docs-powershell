@@ -72,7 +72,7 @@ This example return the permission the user has on mailboxes
 ## PARAMETERS
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Microsoft Entra ID.
 
 You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 

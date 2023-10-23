@@ -90,7 +90,7 @@ Before you configure a federation trust to use the next certificate as the curre
 ### -Identity
 The Identity parameter specifies the name of the federation trust being modified.
 
-**Note**: For Exchange Online organizations, use the value "Azure AD Authentication".
+**Note**: For Exchange Online organizations, use the value "Microsoft Entra authentication".
 
 ```yaml
 Type: FederationTrustIdParameter

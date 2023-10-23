@@ -229,7 +229,7 @@ None
 ## OUTPUTS
 
 ###  
-This cmdlets returns an Microsoft.Rtc.Management.Hosted.Bvd.Types.NumberReservationResponse object.
+This cmdlets returns a Microsoft.Rtc.Management.Hosted.Bvd.Types.NumberReservationResponse object.
 
 ## NOTES
 
