@@ -151,6 +151,7 @@ Accept wildcard characters: False
 
 ### -NotificationMode
 The type of conference experience for security desk notification.
+Possible values are NotificationOnly, ConferenceMuted, ConferenceUnMuted.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
