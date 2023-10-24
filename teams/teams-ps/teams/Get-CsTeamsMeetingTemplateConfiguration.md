@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsMeetingTemplateConfiguration
 author: boboPD
@@ -23,7 +24,7 @@ Fetches the list of custom templates on the tenant. Each template object contain
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Fetching all custom meeting templates on the tenant
 
 ```powershell
 Get-CsTeamsMeetingTemplateConfiguration
@@ -75,4 +76,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.md)
+[Get-CsTeamsFirstPartyMeetingTemplateConfiguration](Get-CsTeamsFirstPartyMeetingTemplateConfiguration.yml)
