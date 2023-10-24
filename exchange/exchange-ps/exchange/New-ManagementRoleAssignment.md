@@ -509,7 +509,7 @@ Accept wildcard characters: False
 ### -RecipientGroupScope
 This parameter is functional only in the cloud-based service.
 
-The RecipientGroupScope parameter specifies the universal security group to scope the new role assignment to. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
+The RecipientGroupScope parameter specifies a universal security group to consider for scoping a role assignment. Direct members of this group are considered in scope for the assignment. Only direct membership is considered in scope. Nested groups are not supported. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
 
 ```yaml
 Type: GroupIdParameter
