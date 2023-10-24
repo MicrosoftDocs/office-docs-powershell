@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsMeetingTemplatePermissionPolicy
 author: boboPD
@@ -10,7 +11,6 @@ schema: 2.0.0
 # Set-CsTeamsMeetingTemplatePermissionPolicy
 
 ## SYNOPSIS
-
 This cmdlet updates an existing TeamsMeetingTemplatePermissionPolicy.
 
 ## SYNTAX
@@ -31,7 +31,7 @@ Update any of the properties of an existing instance of the TeamsMeetingTemplate
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Updating the description of an existing policy
 
 ```powershell
 PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -Description "updated description"
@@ -39,7 +39,7 @@ PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -Description "up
 
 Updates the description field of a policy.
 
-### Example 2
+### Example 2 - Updating the hidden meeting template list of an existing policy
 
 ```powershell
 PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -HiddenMeetingTemplates @($hiddentemplate_1, $hiddentemplate_2)
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ### -HiddenMeetingTemplates
 
 The updated list of meeting template IDs to hide.
-The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](New-CsTeamsHiddenMeetingTemplate.md).
+The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](New-CsTeamsHiddenMeetingTemplate.yml).
 
 ```yaml
 Type: HiddenMeetingTemplate[]
@@ -102,10 +102,10 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-[Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md)
+[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[Remove-CsTeamsMeetingTemplatePermissionPolicy](Remove-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Remove-CsTeamsMeetingTemplatePermissionPolicy](Remove-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[Grant-CsTeamsMeetingTemplatePermissionPolicy](Grant-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Grant-CsTeamsMeetingTemplatePermissionPolicy](Grant-CsTeamsMeetingTemplatePermissionPolicy.yml)
