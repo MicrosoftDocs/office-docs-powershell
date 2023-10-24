@@ -16,14 +16,7 @@ This cmdlet updates an existing TeamsMeetingTemplatePermissionPolicy.
 ## SYNTAX
 
 ```powershell
-    Set-CsTeamsMeetingTemplatePermissionPolicy 
-        [-Identity] <string> 
-        [-HiddenMeetingTemplates <PSListModifier[HiddenMeetingTemplate]>] 
-        [-Description <string>]
-        [-Force]
-        [-WhatIf]
-        [-Confirm]
-        [<CommonParameters>]
+    Set-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates <PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-Force][-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
