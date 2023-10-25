@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Copilot
 
-This policy gives admins the ability to choose if copilot will be enabled with a persisted transcript or a non-persisted transcript.
+This policy gives admins the ability to choose if Copilot will be enabled with a persisted transcript or a non-persisted transcript.
 
 ```yaml
 Type: String
