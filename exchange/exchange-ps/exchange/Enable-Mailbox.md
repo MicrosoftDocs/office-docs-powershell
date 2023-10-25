@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Enable-Mailbox cmdlet to create mailboxes for existing users who don't already have mailboxes. You can also use this cmdlet to create In-Place archives for existing mailboxes.
 
-**Note**: In Exchange Online, you use this cmdlet to add archive mailboxes for existing users and to enable auto-expanding archives. To add a mailbox for an existing Azure AD account, you need to add a license to the account as described in [Assign licenses to user accounts](https://learn.microsoft.com/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell).
+**Note**: In Exchange Online, you use this cmdlet to add archive mailboxes for existing users and to enable auto-expanding archives. To add a mailbox for an existing Microsoft Entra account, you need to add a license to the account as described in [Assign licenses to user accounts](https://learn.microsoft.com/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -583,7 +583,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 

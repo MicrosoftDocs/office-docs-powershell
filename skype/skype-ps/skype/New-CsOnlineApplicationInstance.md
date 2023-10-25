@@ -13,7 +13,7 @@ ms.reviewer:
 # New-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Creates an application instance in Azure Active Directory. 
+Creates an application instance in Microsoft Entra ID. 
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ New-CsOnlineApplicationInstance [-UserPrincipalName] <string> [[-ApplicationId] 
 ```
 
 ## DESCRIPTION
-This cmdlet is used to create an application instance in Azure Active Directory. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
+This cmdlet is used to create an application instance in Microsoft Entra ID. This same cmdlet is also run when creating a new resource account using Teams Admin Center.
 
 ## EXAMPLES
 

@@ -82,7 +82,7 @@ This example creates the GAL named NewGAL.
 
 ### Example 2
 ```powershell
-New-GlobalAddressList -Name GAL_AgencyB -RecipientFilter "(RecipientType -eq 'UserMailbox') -and (CustomAttribute15 -eq 'AgencyB')"
+New-GlobalAddressList -Name GAL_AgencyB -RecipientFilter "(RecipientTypeDetails -eq 'UserMailbox') -and (CustomAttribute15 -eq 'AgencyB')"
 ```
 
 This example creates the GAL named GAL\_AgencyB by using the RecipientFilter parameter to include all mailbox users whose custom attribute 15 equals AgencyB.

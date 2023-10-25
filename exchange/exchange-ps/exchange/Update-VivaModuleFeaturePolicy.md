@@ -59,7 +59,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later.
 
 Currently, you need to be a member of the Global administrators role to run this cmdlet.
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the email addresses of groups that the updated policy applies to. [Mail-enabled AAD groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the email addresses of groups that the updated policy applies to. [Mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 If you don't want to update who the policy applies to, don't use this parameter.
 

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
+Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Entra ID, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -214,7 +214,7 @@ The ObjectIds parameter filters the log entries by object ID. The object ID is t
 
 For example, for SharePoint operations, the object ID is the URL path to a file, folder, or site. To search logs in a site, add a wildcard (\*) in front of the site URL (for example, `"https://contoso.sharepoint.com/sites/test/*"`).
 
-For Azure Active Directory operations, the object ID is the account name or GUID value of the account.
+For Microsoft Entra operations, the object ID is the account name or GUID value of the account.
 
 The ObjectId value appears in the AuditData (also known as Details) property of the event.
 

@@ -61,6 +61,7 @@ PortInOrderStatus       :
 PstnAssignmentStatus    : UserAssigned
 PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
 PstnPartnerName         : Microsoft
+NumberSource            : Online
 ```
 This example displays information about the Microsoft Calling Plan subscriber phone number +1 (402) 555-1234. You can see that it is assigned to a user.
 
@@ -86,7 +87,8 @@ NetworkSiteId           :
 PortInOrderStatus       : 
 PstnAssignmentStatus    : UserAssigned
 PstnPartnerId           : 
-PstnPartnerName         : 
+PstnPartnerName         :
+NumberSource            : OnPremises
 ```
 This example displays information about the Direct Routing phone number +1 (206) 555-1000;ext=524. You can see that it is assigned to a user.
 
@@ -453,6 +455,10 @@ Boolean stating if updating of the location assigned to the phone number is allo
 ### NetworkSiteId
 This parameter is reserved for internal Microsoft use.
 
+### NumberSource
+The source of the phone number. Online for phone numbers assigned in Microsoft 365 and OnPremises for phone numbers assigned in AD on-premises and synchronized into Microsoft 365.
+
+
 ### NumberType
 The type of the phone number.
 
@@ -477,7 +483,7 @@ The phone number. The number is always displayed with prefixed "+", even if it w
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0.
+The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0.
 
 The cmdlet is only available in commercial and GCC cloud instances.
 

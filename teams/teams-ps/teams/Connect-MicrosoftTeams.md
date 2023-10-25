@@ -202,7 +202,7 @@ Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" re
 
 - Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
 
-   Steps to configure the AAD application. 
+   Steps to configure the Microsoft Entra application. 
    1. Go to Azure portal and go to App Registrations. 
    2. Create or select the existing application.
    3. Add the following permission to this Application. 

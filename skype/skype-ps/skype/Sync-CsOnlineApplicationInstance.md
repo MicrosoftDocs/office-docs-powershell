@@ -13,7 +13,7 @@ ms.reviewer:
 # Sync-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance from Azure Active Directory into Agent Provisioning Service. This is needed because the mapping between application instance and application needs to be stored in Agent Provisioning Service. If an application ID was provided at the creation of the application instance, you need not run this cmdlet. 
+Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance from Microsoft Entra ID into Agent Provisioning Service. This is needed because the mapping between application instance and application needs to be stored in Agent Provisioning Service. If an application ID was provided at the creation of the application instance, you need not run this cmdlet. 
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Sync-CsOnlineApplicationInstance -ObjectId <guid> [-CallbackUri <string>] [-Forc
 ```
 
 ## DESCRIPTION
-Use the Sync-CsOnlineApplicationInstance cmdlet to sync application instances from Azure Active Directory into Agent Provisioning Service.
+Use the Sync-CsOnlineApplicationInstance cmdlet to sync application instances from Microsoft Entra ID into Agent Provisioning Service.
 
 ## EXAMPLES
 
