@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Specify this parameter to return teams with the provided displayname as a filter.  As displayname is not unique, multiple values can be returned. Note that this filter value is case-sensitive.
+Specify this parameter to return teams with the provided display name as a filter.  As the display name is not unique, multiple values can be returned. Note that this filter value is case-sensitive.
 
 ```yaml
 Type: String
