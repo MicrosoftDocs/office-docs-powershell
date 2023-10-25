@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteCustomEmojis
-This settings enable/disable the editing/deletion of custom emojis and reactions for the users included in the messaging policy
+These settings enable and disable the editing and deletion of custom emojis and reactions for the users included in the messaging policy.
 
 ```yaml
 Type: Boolean
