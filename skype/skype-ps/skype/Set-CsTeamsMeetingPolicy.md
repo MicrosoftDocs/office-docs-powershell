@@ -83,7 +83,7 @@ This policy will use all the existing values except one: AllowNetworkConfigurati
 
 ### -AutomaticallyStartCopilot
 
-This policy gives admins the ability to auto-start copilot.
+This policy gives admins the ability to auto-start Copilot.
 
 ```yaml
 Type: String
