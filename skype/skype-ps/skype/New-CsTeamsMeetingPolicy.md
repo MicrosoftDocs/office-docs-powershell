@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -AutomaticallyStartCopilot
 
-This policy gives admins the ability to auto-start copilot.
+This policy gives admins the ability to auto-start Copilot.
 
 ```yaml
 Type: String
