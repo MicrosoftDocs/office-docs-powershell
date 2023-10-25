@@ -66,7 +66,7 @@ All other policy properties will be left as previously assigned.
 ## PARAMETERS
 
 ### -CreateCustomEmojis
-This setting enables creation of custom emojis/reactions within a tenant for the specified policy users.
+This setting enables the creation of custom emojis and reactions within an organization for the specified policy users.
 
 ```yaml
 Type: Boolean
