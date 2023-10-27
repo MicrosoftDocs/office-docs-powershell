@@ -15,7 +15,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 
 ```
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
- [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-UseMicrosoftECDN -String] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,6 +55,21 @@ Aliases:
 Required: True
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseMicrosoftECDN
+This setting governs the admin disable this property and force the organizers to not create Town halls which use Microsoft eCDN even though they have been assigned a Teams Premium license.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
