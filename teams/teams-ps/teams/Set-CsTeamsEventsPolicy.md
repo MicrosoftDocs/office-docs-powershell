@@ -17,6 +17,7 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
+ [-UseMicrosoftECDN <String>]
  [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -56,6 +57,21 @@ Accept wildcard characters: False
 ### -Description
 Enables administrators to provide explanatory text to accompany a Teams Events policy.
 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseMicrosoftECDN
+This setting governs the admin disable this property and force the organizers to not create Town halls which use Microsoft eCDN even though they have been assigned a Teams Premium license.
 
 ```yaml
 Type: String
