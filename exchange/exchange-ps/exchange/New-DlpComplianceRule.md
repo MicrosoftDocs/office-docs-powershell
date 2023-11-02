@@ -285,7 +285,7 @@ Contents of the file named C:\Data\Sensitive Type.txt:
  }
 }
 
-$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0
+$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0 -encoding Byte
 $string = [System.Text.Encoding]::UTF8.GetString($data)
 New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $string -NotifyUser
 ```
