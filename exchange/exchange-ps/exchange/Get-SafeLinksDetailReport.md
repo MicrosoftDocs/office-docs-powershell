@@ -76,20 +76,19 @@ This example returns filters the results by the following information:
 
 ### -Action
 The Action parameter filters the results by action. Valid values are:
-|Value|Definition|
-|---|---|
-|Allowed|URL was allowed due to a "Good" verdict|
-|Blocked|URL was blocked due to a "Bad" verdict|
-|ClickedDuringScan|User skipped verification of the URL and proceeded to the URL destination before Safe Links finished scan|
-|ClickedEvenBlocked|User was blocked at time of click from accessing URL|
-|Scanning|URL is being scanned|
-|TenantAllowed|Tenant Allow is in place for the URL|
-|TenantBlocked|Tenant Block is in place for the URL|
-|TenantBlockedAndClickedThrough|URL was blocked due to Tenant Block and end user clicked through the block page to access the URL|
+
+- Allowed: URL was allowed due to a "Good" verdict.
+- Blocked: URL was blocked due to a "Bad" verdict.
+- ClickedDuringScan: User skipped verification of the URL and proceeded to the destination URL before Safe Links finished scanning.
+- ClickedEvenBlocked: User was blocked at time of click from accessing URL.
+- Scanning: URL is being scanned.
+- TenantAllowed: URL allow entry in the Tenant Allow/Block List.
+- TenantBlocked: URL block entry in the Tenant Allow/Block List.
+- TenantBlockedAndClickedThrough: URL was blocked due to a block entry in the Tenant Allow/Block List, and the user clicked through the block page to access the URL.
 
 You can specify multiple values separated by commas.
 
-Note: that the values for this parameter are case sensitive. If no data is returned for an action this implies that the scenario didn't occur in the tenant.
+**Note**: Values for this parameter are case sensitive. No data returned for an action implies that the action didn't occur.
 
 ```yaml
 Type: MultiValuedProperty
