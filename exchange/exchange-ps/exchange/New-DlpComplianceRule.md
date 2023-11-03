@@ -285,8 +285,11 @@ Contents of the file named C:\Data\Sensitive Type.txt:
  }
 }
 
-$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0
-New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $data -NotifyUer
+$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0 -encoding Byte
+
+$string = [System.Text.Encoding]::UTF8.GetString($data)
+
+New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $string -NotifyUser
 ```
 
 This example uses the AdvancedRule parameter to read the following complex condition from a file: "Content contains sensitive information: "Credit card number OR Highly confidential" AND (NOT (Sender is a member of "Jane's Team" OR Recipient is "adele@contoso.com")).
