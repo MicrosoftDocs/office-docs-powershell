@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-Formatted]
  [-FreeText <String>]
+ [-HighCompleteness]
  [-IPAddresses <String[]>]
  [-LongerRetentionEnabled <String>]
  [-ObjectIds <String[]>]
@@ -166,6 +167,22 @@ The FreeText parameter filters the log entries by the specified text string. If 
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighCompleteness
+{{ Fill HighCompleteness Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
