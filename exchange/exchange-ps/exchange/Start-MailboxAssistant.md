@@ -11,7 +11,7 @@ ms.reviewer:
 # Start-MailboxAssistant
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange 2019.
+This cmdlet is available only in Exchange Server 2019.
 
 Use the Start-MailboxAssistant cmdlet to ???.
 
