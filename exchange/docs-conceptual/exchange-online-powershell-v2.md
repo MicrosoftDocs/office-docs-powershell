@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date: 9/11/2023
+ms.date: 11/7/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -617,14 +617,19 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.4.0
+
+- Bug fixes in **Connect-ExchangeOnline**, **Get-EXORecipientPermission** and **Get-EXOMailboxFolderPermission**.
+- THe _SigningCertificate_ parameter in **Connect-ExchangeOnline** now supports [Constrained Language Mode (CLM)](/powershell/module/microsoft.powershell.core/about/about_language_modes#constrainedlanguage-mode).
+
+### Previous releases
+
 #### Version 3.3.0
 
 - _SkipLoadingCmdletHelp_ parameter on **Connect-ExchangeOnline** to support skip loading cmdlet help files.
 - Global variable `EXO_LastExecutionStatus` is available to check the status of the last cmdlet that was run.
 - Bug fixes in **Connect-ExchangeOnline** and **Connect-IPPSSession**.
 - _IsUserControlEnabled_ parameter on **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** to support the enablement of user controls by policy for features that are onboarded to Viva feature access management.
-
-### Previous releases
 
 #### Version 3.2.0
 
