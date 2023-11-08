@@ -39,7 +39,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] 
-[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>]
+[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>] [-VoiceIsolation <String>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -854,7 +854,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Enabled
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1184,6 +1184,65 @@ Aliases:
 Required: False
 Position: Named
 Default value: EnabledForAnyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Copilot
+This setting allows the admin to choose whether Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+
+Possible values are:
+- Enabled
+- EnabledWithTranscript
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledWithTranscript
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutomaticallyStartCopilot
+
+*Note: This feature has not been fully released yet, so the setting will have no effect.*
+
+This setting gives admins the ability to auto-start Copilot.
+
+Possible values are:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceIsolation
+Determines whether you provide support for your users to enable voice isolation in Teams meeting calls.
+
+Possible values are: 
+- Enabled (default)
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

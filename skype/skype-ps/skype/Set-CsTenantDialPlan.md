@@ -19,34 +19,25 @@ Use the `Set-CsTenantDialPlan` cmdlet to modify an existing tenant dial plan.
 
 ### Identity (Default)
 ```
-Set-CsTenantDialPlan [[-Identity] <string>] [-Description <string>] [-ExternalAccessPrefix <string>]
- [-NormalizationRules <Object>] [-OptimizeDeviceDialing <bool>] [-SimpleName <string>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTenantDialPlan [[-Identity] <string>] [-Description <string>] [-NormalizationRules <Object>]
+ [-SimpleName <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Set-CsTenantDialPlan` cmdlet modifies an existing tenant dial plan. A tenant dial plan determines such things as which normalization rules are applied and whether a prefix
-must be dialed for external calls. Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
+The `Set-CsTenantDialPlan` cmdlet modifies an existing tenant dial plan. A tenant dial plan determines such things as which normalization rules are applied. Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
-```
-Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9
-```
-
-This example updates the vt1tenantDialPlan9 tenant dial plan to use an external access prefix of 123.
-
-### -------------------------- Example 2 --------------------------
+### Example 1
 ```
 $nr2 = Get-CsVoiceNormalizationRule -Identity "US/US Long Distance"
-Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
+Set-CsTenantDialPlan -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
 ```
 
-This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the US/US Long Distance normalization rules.
+This example updates the vt1tenantDialPlan9 tenant dial plan to use the US/US Long Distance normalization rules.
 
-### -------------------------- Example 3 --------------------------
+### Example 2
 ```
 $DP = Get-CsTenantDialPlan -Identity Global
 $NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
@@ -60,7 +51,7 @@ the Identity Global and assign the returned object to the variable $DP. Then we 
 the variable $NR. We then assign the string RedmondRule to the Name property of the object. Finally, we pass the variable back to the NormalizationRules parameter of the
 `Set-CsTenantDialPlan` cmdlet to make the change permanent.
 
-### -------------------------- Example 4 --------------------------
+### Example 3
 ```
 $DP = Get-CsTenantDialPlan -Identity Global
 $NR = $DP.NormalizationRules | Where Name -eq "RedmondFourDigit")
@@ -94,26 +85,6 @@ Accept wildcard characters: False
 ### -Description
 The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to or any other information that helps to identify the purpose of the tenant dial plan.
 Maximum characters is 1040.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExternalAccessPrefix
-The ExternalAccessPrefix parameter is a number (or set of numbers) that designates the call as external to the organization.
-(For example, to tenant-dial an outside line, first dial 9). This prefix is ignored by the normalization rules, although these rules will be applied to the rest of the number.
-The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
-
-The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
 
 ```yaml
 Type: String
@@ -163,23 +134,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OptimizeDeviceDialing
-Use this parameter to determine the effect of ExternalAccessPrefix parameter.
-If set to True, the ExternalAccessPrefix parameter takes effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan. This name must be unique among all tenant dial plans.
 
@@ -222,6 +176,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+The ExternalAccessPrefix and OptimizeDeviceDialing parameters have been removed from New-CsTenantDialPlan and Set-CsTenantDialPlan cmdlet since they are no longer used. External access dialing is now handled implicitly using normalization rules of the dial plans.
+The Get-CsTenantDialPlan will still show the external access prefix in the form of a normalization rule of the dial plan.
 
 ## RELATED LINKS
 

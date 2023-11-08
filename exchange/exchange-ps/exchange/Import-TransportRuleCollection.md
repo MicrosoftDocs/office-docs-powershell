@@ -12,11 +12,11 @@ ms.reviewer:
 # Import-TransportRuleCollection
 
 ## SYNOPSIS
-**Note**: This parameter will be deprecated in Exchange Online PowerShell. For replacement functionality using a PowerShell script, see [Import or export a mail flow rule collection in Exchange Online](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#import-or-export-a-mail-flow-rule-collection-in-exchange-online).
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Import-TransportRuleCollection cmdlet to import a transport rule collection. You can import a rule collection you previously exported as a backup, or import rules that you've exported from an older version of Exchange.
+
+**Note**: For replacement import functionality in Exchange Online using a PowerShell script, see [Import or export a mail flow rule collection in Exchange Online](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#import-or-export-a-mail-flow-rule-collection-in-exchange-online).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

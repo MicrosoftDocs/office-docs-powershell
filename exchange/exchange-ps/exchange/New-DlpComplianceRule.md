@@ -285,8 +285,11 @@ Contents of the file named C:\Data\Sensitive Type.txt:
  }
 }
 
-$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0
-New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $data -NotifyUer
+$data = Get-Content -Path "C:\Data\Sensitive Type.txt" -ReadCount 0 -encoding Byte
+
+$string = [System.Text.Encoding]::UTF8.GetString($data)
+
+New-DLPComplianceRule -Name "Contoso Rule 1" -Policy "Contoso Policy 1" -AdvancedRule $string -NotifyUser
 ```
 
 This example uses the AdvancedRule parameter to read the following complex condition from a file: "Content contains sensitive information: "Credit card number OR Highly confidential" AND (NOT (Sender is a member of "Jane's Team" OR Recipient is "adele@contoso.com")).
@@ -935,7 +938,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndpointDlpRestrictions
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 The EndpointDlpRestrictions parameter specifies the restricted endpoints for Endpoint DLP. This parameter uses the following syntax: `@(@{"Setting"="<Setting>"; "Value"="<Value>}",@{"Setting"="<Setting>"; "Value"="<Value>"},...)`.
 
@@ -2444,7 +2447,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyEndpointUser
-**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Azure Active Directory.
+**Note**: This parameter requires membership in the Compliance Administrator or Compliance Data Administrator roles in Microsoft Entra ID.
 
 {{ Fill NotifyEndpointUser Description }}
 

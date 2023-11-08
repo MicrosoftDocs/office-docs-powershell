@@ -18,15 +18,14 @@ Use the `New-CsTenantDialPlan` cmdlet to create a new tenant dial plan.
 ## SYNTAX
 
 ```
-New-CsTenantDialPlan [-Identity] <string> [-Description <string>] [-ExternalAccessPrefix <string>]
- [-NormalizationRules <Object>] [-OptimizeDeviceDialing <bool>] [-SimpleName <string>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTenantDialPlan [-Identity] <string> [-Description <string>] [-NormalizationRules <Object>]
+ [-SimpleName <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You can use this cmdlet to create a new tenant dial plan. Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied.
 
 You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet.
 
@@ -101,26 +100,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalAccessPrefix
-The ExternalAccessPrefix parameter is a number (or set of numbers) that designates the call as external to the organization.
-(For example, to tenant-dial an outside line, first press 9.) This prefix is ignored by the normalization rules, although these rules are applied to the remainder of the number.
-
-The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
-The value of this parameter must be no longer than 4 characters long and can contain only digits, "#" or a "*".
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
 Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md) cmdlet, which creates the rule and then assign it to the specified tenant dial plan using [Set-CsTenantDialPlan](Set-CsTenantDialPlan.md) cmdlet.
@@ -140,23 +119,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OptimizeDeviceDialing
-Use this parameter to determine the effect of ExternalAccessPrefix parameter.
-If set to True, the ExternalAccessPrefix parameter takes effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -209,6 +171,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+The ExternalAccessPrefix and OptimizeDeviceDialing parameters have been removed from New-CsTenantDialPlan and Set-CsTenantDialPlan cmdlet since they are no longer used. External access dialing is now handled implicitly using normalization rules of the dial plans.
+The Get-CsTenantDialPlan will still show the external access prefix in the form of a normalization rule of the dial plan.
 
 ## RELATED LINKS
 

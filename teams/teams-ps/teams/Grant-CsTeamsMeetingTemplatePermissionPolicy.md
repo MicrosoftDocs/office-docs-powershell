@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Grant-CsTeamsMeetingTemplatePermissionPolicy
 author: boboPD
@@ -10,7 +11,6 @@ schema: 2.0.0
 # Grant-CsTeamsMeetingTemplatePermissionPolicy
 
 ## SYNOPSIS
-
 This cmdlet applies an instance of the TeamsMeetingTemplatePermissionPolicy to users or groups in a tenant.
 
 ## SYNTAX
@@ -44,7 +44,7 @@ Pass in the `Identity` of the policy instance in the `PolicyName` parameter and 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Assign a policy to a user
 
 ```powershell
 PS> Grant-CsTeamsMeetingTemplatePermissionPolicy -PolicyName Foobar -Identity testuser@test.onmicrosoft.com
@@ -153,10 +153,10 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-[Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md)
+[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[Remove-CsTeamsMeetingTemplatePermissionPolicy](Remove-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Remove-CsTeamsMeetingTemplatePermissionPolicy](Remove-CsTeamsMeetingTemplatePermissionPolicy.yml)

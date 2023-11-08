@@ -38,7 +38,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later.
 
 Currently, you need to be a member of the Global administrators role to run this cmdlet.
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the user principal name (UPN) of the user or the SMTP address (email address) of the group that you want to view the feature enablement status of.
 
-[Mail-enabled AAD groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported.
+[Mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported.
 
 ```yaml
 Type: String
