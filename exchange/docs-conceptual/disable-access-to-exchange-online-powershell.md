@@ -30,7 +30,7 @@ Admins can use the procedures in this article to disable or enable a user's abil
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Exchange Online RBAC](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Recipient Management** role groups.
-  - [Azure AD RBAC](/microsoft-365/admin/add-users/about-admin-roles): Membership in the **Global Administrator** role.
+  - [Microsoft Entra RBAC](/microsoft-365/admin/add-users/about-admin-roles): Membership in the **Global Administrator** role.
 
   > [!IMPORTANT]
   > In your haste to quickly and globally disable PowerShell access in your organization, beware of commands like `Get-User | Set-User -RemotePowerShellEnabled $false` without considering admin accounts. Use the procedures in this article to selectively remove remote PowerShell access, or preserve access for those who need it by using the following syntax in your global removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin1@contoso.onmicrosoft.com' -and $_.UserPrincipalName -ne 'admin2@contoso.onmicrosoft.com'...} | Set-User -RemotePowerShellEnabled $false`.

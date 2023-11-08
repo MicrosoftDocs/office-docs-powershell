@@ -31,7 +31,7 @@ Set-CsUser [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] 
 ```
 
 ## DESCRIPTION
-The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Azure Active Directory.
+The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Microsoft Entra ID.
 For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers. For Skype for Business online enable or disable a user for enterprise voice, hosted voicemail, or modify the user's on premise line uri.
 The `Set-CsUser` cmdlet can be used only for users who have been enabled for Skype for Business.
 

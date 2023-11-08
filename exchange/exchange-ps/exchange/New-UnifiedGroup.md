@@ -215,7 +215,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -423,7 +423,7 @@ Accept wildcard characters: False
 ### -ExoErrorAsWarning
 The ExoErrorAsWarning switch specifies that Exchange Online errors that you encounter while creating the Microsoft 365 Group are treated as warnings, not errors. You don't need to specify a value with this switch.
 
-Creating Microsoft 365 Groups involves background operations in Azure Active Directory and Exchange Online. Errors that you might encounter in Exchange Online don't prevent the creation of the group (and therefore aren't really errors), because the group object in Azure Active Directory is synchronized back to Exchange Online.
+Creating Microsoft 365 Groups involves background operations in Microsoft Entra ID and Exchange Online. Errors that you might encounter in Exchange Online don't prevent the creation of the group (and therefore aren't really errors), because the group object in Microsoft Entra ID is synchronized back to Exchange Online.
 
 ```yaml
 Type: SwitchParameter

@@ -398,7 +398,7 @@ The RecipientTypeDetails parameter filters the results by the specified user sub
 - RoomMailbox
 - SchedulingMailbox (Exchange 2016 or later and cloud)
 - SharedMailbox
-- ShareWithMailUser (cloud only)
+- SharedWithMailUser (cloud only)
 - TeamMailbox (Exchange 2013 or later and cloud)
 - User
 - UserMailbox

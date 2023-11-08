@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsFirstPartyMeetingTemplateConfiguration
 author: boboPD
@@ -25,7 +26,7 @@ This is a read-only configuration.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Fetching all first party meeting templates on the tenant
 
 ```powershell
 Get-CsTeamsFirstPartyMeetingTemplateConfiguration
@@ -77,4 +78,4 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-[Get-CsTeamsMeetingTemplateConfiguration](Get-CsTeamsMeetingTemplateConfiguration.md)
+[Get-CsTeamsMeetingTemplateConfiguration](Get-CsTeamsMeetingTemplateConfiguration.yml)

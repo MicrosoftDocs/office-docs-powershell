@@ -114,7 +114,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user whose permissions are being removed.
+The User parameter specifies the user whose permissions are being removed.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
 
 ```yaml
 Type: PublicFolderUserIdParameter

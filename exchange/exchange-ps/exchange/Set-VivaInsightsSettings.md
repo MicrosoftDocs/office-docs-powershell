@@ -35,7 +35,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 - Exchange Administrator
 - Teams Administrator
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
