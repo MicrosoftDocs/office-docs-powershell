@@ -32,9 +32,11 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
+ [-AutomaticForcedReadReceiptEnabled <Boolean>]
  [-BlockMoveMessagesForGroupFolders <Boolean>]
  [-BookingsAddressEntryRestricted <Boolean>]
  [-BookingsAuthEnabled <Boolean>]
+ [-BookingsBlockedWordsEnabled <Boolean>]
  [-BookingsCreationOfCustomQuestionsRestricted <Boolean>]
  [-BookingsEnabled <Boolean>]
  [-BookingsExposureOfStaffDetailsRestricted <Boolean>]
@@ -122,6 +124,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-OutlookPayEnabled <Boolean>]
  [-OutlookTextPredictionDisabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
+ [-PostponeRoamingSignaturesUntilLater <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
@@ -146,10 +149,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
- [-AdfsEncryptCertificateThumbprint <String>]
- [-AdfsIssuer <Uri>]
- [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
+Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>]  [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -213,9 +213,9 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
  [-PublicFolderMailboxesLockedForNewConnections <Boolean>]
  [-PublicFolderMailboxesMigrationComplete <Boolean>]
  [-PublicFolderMigrationComplete <Boolean>]
+ [-PublicFolderShowClientControl <Boolean>]
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
  [-PublicFoldersLockedForMigration <Boolean>]
- [-PublicFolderShowClientControl <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
  [-RefreshSessionEnabled <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
@@ -294,7 +294,6 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
- [-PublicFolderContentReplicationDisabled <Boolean>]
  [-PublicFolderMailboxesLockedForNewConnections <Boolean>]
  [-PublicFolderMailboxesMigrationComplete <Boolean>]
  [-PublicFolderMigrationComplete <Boolean>]
@@ -322,9 +321,11 @@ Set-OrganizationConfig
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
+ [-BlockMoveMessagesForGroupFolders <Boolean>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-Confirm]
  [-CustomerFeedbackEnabled <Boolean>]
+ [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
@@ -339,6 +340,8 @@ Set-OrganizationConfig
  [-Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <IndustryType>]
+ [-IsGroupFoldersAndRulesEnabled <Boolean>]
+ [-IsGroupMemberAllowedToEditContent <Boolean>]
  [-MailTipsAllTipsEnabled <Boolean>]
  [-MailTipsExternalRecipientsTipsEnabled <Boolean>]
  [-MailTipsGroupMetricsEnabled <Boolean>]
@@ -741,6 +744,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutomaticForcedReadReceiptEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutomaticForcedReadReceiptEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockMoveMessagesForGroupFolders
 This parameter is available only in the cloud-based service.
 
@@ -748,7 +769,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
+Parameter Sets: Identity, ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -1393,7 +1414,7 @@ You create authentication policies with the New-AuthenticationPolicy cmdlet to b
 
 ```yaml
 Type: AuthPolicyIdParameter
-Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -2377,7 +2398,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
+Parameter Sets: Identity, ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -2395,7 +2416,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
+Parameter Sets: Identity, ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -3060,6 +3081,33 @@ Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostponeRoamingSignaturesUntilLater
+This parameter is available only in the cloud-based service.
+
+**Note**: This parameter is in the process of being rolled out. The rollout is expected to be completed by mid-November 2023.
+
+The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signatures are enabled or disabled in Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
+
+- $true: Roaming signatures are temporarily disabled for Outlook on the web and the new Outlook for Windows. For Windows, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15). When roaming signatures are disabled, admins can use the signature-related parameters on the Set-MailboxMessageConfiguration cmdlet (for example, AutoAddSignature, AutoAddSignatureOnReply, and SignatureHtml) to configure email signatures.
+- $false: This is the default value.
+
+We're working on API support so admins and ISVs can configure roaming signatures directly. When the new API is available (and after plenty of warning), this parameter will be deprecated. Admins will no longer need to disable roaming signatures or use the parameters on Set-MailboxMessageConfiguration to configure email signatures in Outlook on the web.
+
+Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket. With the introduction of this parameter, that process is discontinued as admins can now use this parameter to disable roaming signatures themselves.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

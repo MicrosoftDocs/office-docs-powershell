@@ -30,7 +30,7 @@ This cmdlet enables online provisioning of users in the specified SIP domain. In
 
 - At any given time, only 1 on-premises SfB forest can be in hybrid mode (Shared Sip Address Space) with Office 365. All other on-premises SfB forests must remain on-premises. (They presumably are federated with each other.) 
 
-- If 1 deployment is in hybrid mode, all online SIP domains from any other SfB forests must be disabled before they can be synchronized into the tenant with Azure AD Connect. Users in all SfB forests other than the hybrid forest must remain on-premises. 
+- If 1 deployment is in hybrid mode, all online SIP domains from any other SfB forests must be disabled before they can be synchronized into the tenant with Microsoft Entra Connect. Users in all SfB forests other than the hybrid forest must remain on-premises. 
 
 - Organizations must fully migrate (e.g move all users to the cloud) each SfB forest individually into the O365 tenant using hybrid mode (Shared Sip Address Space), and then detach the "hybrid" deployment, *before* moving on to migrate the next on-premises SfB deployment. 
 

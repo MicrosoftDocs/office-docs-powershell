@@ -1366,7 +1366,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 

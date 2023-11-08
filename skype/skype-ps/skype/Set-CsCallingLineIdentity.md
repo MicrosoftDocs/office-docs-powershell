@@ -25,7 +25,7 @@ Set-CsCallingLineIdentity [[-Identity] <string>] [-BlockIncomingPstnCallerID <bo
 
 ## DESCRIPTION
 
-**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+**Note**: The use of CallingIDSubstitute Service has been deprecated. Existing policies using CallingIDSubstitute Service are not being honored. You should use CallingIDSubstitute Resource instead.
 
 You can either change or block the Caller ID (also called a Calling Line ID) for a user.
 By default, the Microsoft Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.

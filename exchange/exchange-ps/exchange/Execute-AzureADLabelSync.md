@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Execute-AzureADLabelSync cmdlet to start the synchronization of sensitivity labels into Azure Active Directory. This allows the application of sensitivity labels to Microsoft Teams sites, Microsoft 365 Groups, and SharePoint sites. This cmdlet is required if you were using sensitivity labels before September 2019.
+Use the Execute-AzureADLabelSync cmdlet to start the synchronization of sensitivity labels into Microsoft Entra ID. This allows the application of sensitivity labels to Microsoft Teams sites, Microsoft 365 Groups, and SharePoint sites. This cmdlet is required if you were using sensitivity labels before September 2019.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -34,7 +34,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Execute-AzureADLabelSync
 ```
 
-This example will initialize the synchronization of sensitivity labels into Azure Active Directory.
+This example will initialize the synchronization of sensitivity labels into Microsoft Entra ID.
 
 ## PARAMETERS
 

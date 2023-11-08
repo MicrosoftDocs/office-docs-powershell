@@ -23,7 +23,8 @@ Connect-MicrosoftTeams
 [-AccountId <String>]
 [-LogLevel <LogLevel>] 
 [-LogFilePath <String>] 
-[-TeamsEnvironmentName <String>] 
+[-TeamsEnvironmentName <String>]
+[-UseDeviceAuthentication] 
 [-WhatIf] 
 [-Confirm]
 [<CommonParameters>]
@@ -201,7 +202,7 @@ Specifies access tokens for "MS Graph" and "Skype and Teams Tenant Admin API" re
 
 - Delegated flow - The following steps must be performed by Tenant Admin in the Azure portal when using your own application. 
 
-   Steps to configure the AAD application. 
+   Steps to configure the Microsoft Entra application. 
    1. Go to Azure portal and go to App Registrations. 
    2. Create or select the existing application.
    3. Add the following permission to this Application. 
@@ -508,6 +509,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseDeviceAuthentication
+Use device code authentication instead of a browser control.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: UserCredential
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.

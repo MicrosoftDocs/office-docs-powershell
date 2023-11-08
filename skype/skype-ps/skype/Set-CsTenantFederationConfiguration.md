@@ -160,6 +160,8 @@ If the `New-CsEdgeAllowList` cmdlet is used then users can only communicate with
 Note that string values cannot be passed directly to the AllowedDomains parameter.
 Instead, you must create an object reference using the `New-CsEdgeAllowList` cmdlet or the `New-CsEdgeAllowAllKnownDomains` cmdlet and then use the object reference variable as the parameter value.
 
+The AllowedDomains parameter can support up to 4,000 domains.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -239,6 +241,7 @@ Accept wildcard characters: False
 ### -BlockedDomains
 If the AllowedDomains property has been set to AllowAllKnownDomains, then users will be allowed to communicate with users from any domain except domains that appear in the blocked domains list.
 If the AllowedDomains property has not been set to AllowAllKnownDomains, then the blocked list is ignored, and users can only communicate with domains that have been expressly added to the allowed domains list.
+The BlockedDomains parameter can support up to 4,000 domains.
 
 ```yaml
 Type: List
