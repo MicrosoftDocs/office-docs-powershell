@@ -33,7 +33,7 @@ New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] 
  [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
  [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
  [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] 
- [-RetainCreatedGroup <SwitchParameter>] [<CommonParameters>]
+ [-RetainCreatedGroup <SwitchParameter>] [-AllowCreatePrivateChannels <Boolean>] [<CommonParameters>]
 ```
 
 ### MigrateGroup
@@ -479,6 +479,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreatePrivateChannels
+Determines whether private channel creation is allowed for the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: CreateTeam
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

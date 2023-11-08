@@ -13,8 +13,7 @@ ms.reviewer:
 # Set-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the \`Set-CsOnlineLisLocation\` cmdlet to modify an existing emergency dispatch location.
-There can be multiple locations in a civic address.
+Use the \`Set-CsOnlineLisLocation\` cmdlet to modify an existing emergency dispatch location. There can be multiple locations in a civic address.
 Typically the civic address designates the building, and locations are specific parts of that building such as a floor, office, or wing.
 
 ## SYNTAX
@@ -50,7 +49,7 @@ This example changes the location description of the location specified by its l
 Specifies the unique identifier of the civic address that contains the location to be modified.
 Civic address identities can be discovered by using the \`Get-CsOnlineLisCivicAddress\` cmdlet.
 
-**Note:** This parameter is for Microsoft internal use only.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: Guid
@@ -66,9 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-Specifies the unique identifier of the location to be modified.
-If specified, no other address parameters are allowed.
-Location identities can be discovered by using the \`Get-CsOnlineLisLocation\` cmdlet.
+Specifies the unique identifier of the location to be modified. Location identities can be discovered by using the \`Get-CsOnlineLisLocation\` cmdlet.
 
 ```yaml
 Type: Guid
@@ -86,7 +83,7 @@ Accept wildcard characters: False
 ### -City
 Specifies the city of the civic address.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -121,7 +118,7 @@ Accept wildcard characters: False
 ### -CompanyName
 Specifies the name of your organization.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -139,7 +136,7 @@ Accept wildcard characters: False
 ### -CompanyTaxId
 The company tax ID.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -156,7 +153,7 @@ Accept wildcard characters: False
 
 ### -Confidence
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -174,7 +171,7 @@ Accept wildcard characters: False
 ### -CountryOrRegion
 Specifies the country or region of the civic address.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -192,7 +189,7 @@ Accept wildcard characters: False
 ### -Description
 Specifies an administrator defined description of the civic address.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -225,28 +222,10 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages.
-It can be useful in scripting to suppress interactive prompts.
-If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -HouseNumber
 Specifies the numeric portion of the civic address.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -265,7 +244,7 @@ Accept wildcard characters: False
 Specifies the numeric suffix of the civic address.
 For example, if the property was multiplexed, the HouseNumberSuffix parameter would be the multiplex specifier: "425A Smith Avenue", or "425B Smith Avenue".
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -283,7 +262,7 @@ Accept wildcard characters: False
 ### -Latitude
 Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -301,7 +280,7 @@ Accept wildcard characters: False
 ### -Longitude
 Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -316,8 +295,7 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 ### -Location
-Specifies an administrator defined description of the new location.
-For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
+Specifies an administrator defined description of the new location. For example, "2nd Floor Cafe", "Main Lobby", or "Office 250".
 
 ```yaml
 Type: String
@@ -335,7 +313,7 @@ Accept wildcard characters: False
 ### -PostalCode
 Specifies the postal code of the civic address.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -354,7 +332,7 @@ Accept wildcard characters: False
 Specifies the directional attribute of the civic address which follows the street name.
 For example, "425 Smith Avenue NE".
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -370,10 +348,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreDirectional
-Specifies the directional attribute of the civic address which precedes the street name.
-For example, "425 NE Smith Avenue ".
+Specifies the directional attribute of the civic address which precedes the street name. For example, "425 NE Smith Avenue ".
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -391,7 +368,7 @@ Accept wildcard characters: False
 ### -StateOrProvince
 Specifies the state or province of the civic address.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -409,7 +386,7 @@ Accept wildcard characters: False
 ### -StreetName
 Specifies the street name of the civic address.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -425,10 +402,9 @@ Accept wildcard characters: False
 ```
 
 ### -StreetSuffix
-Specifies a modifier of the street name of the civic address.
-The street suffix will typically be something like street, avenue, way, or boulevard.
+Specifies a modifier of the street name of the civic address. The street suffix will typically be something like street, avenue, way, or boulevard.
 
-**Note:** This parameter is reserved for internal Microsoft use.
+**Note:** This parameter is not supported and will be deprecated.
 
 ```yaml
 Type: String
@@ -440,6 +416,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning and confirmation messages.
+It can be useful in scripting to suppress interactive prompts.
+If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

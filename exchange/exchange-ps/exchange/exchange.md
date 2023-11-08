@@ -204,6 +204,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AggregateZapReport](Get-AggregateZapReport.md)
 
+### [Get-ArcConfig](Get-ArcConfig.md)
+
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
@@ -385,6 +387,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-TenantAllowBlockListSpoofItems](Remove-TenantAllowBlockListSpoofItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
+
+### [Set-ArcConfig](Set-ArcConfig.md)
 
 ### [Set-AttachmentFilterListConfig](Set-AttachmentFilterListConfig.md)
 
@@ -2120,6 +2124,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## policy-and-compliance-retention Cmdlets
 ### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
+### [Export-ContentExplorerData](Export-ContentExplorerData.md)
+
 ### [Export-FilePlanProperty](Export-FilePlanProperty.md)
 
 ### [Get-AdaptiveScope](Get-AdaptiveScope.md)
@@ -2177,6 +2183,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-RetentionPolicyTag](Get-RetentionPolicyTag.md)
 
 ### [Import-FilePlanProperty](Import-FilePlanProperty.md)
+
+### [Invoke-HoldRemovalAction](Invoke-HoldRemovalAction.md)
 
 ### [New-AdaptiveScope](New-AdaptiveScope.md)
 

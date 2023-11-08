@@ -108,7 +108,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Set-AppRetentionCompliancePolicy Identity "Regulation 563 Marketing" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams,VivaEngage" -AddExchangeLocation "Scott Smith" -Comment "Added new counsel, 9/9/21"
+Set-AppRetentionCompliancePolicy -Identity "Regulation 563 Marketing" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams,VivaEngage" -AddExchangeLocation "Scott Smith" -Comment "Added new counsel, 9/9/21"
 ```
 
 This example adds a new user to the existing static scope retention policy named Regulation 563 Marketing that's set up for Teams private channels messages.
@@ -378,7 +378,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyRBACScopes
-{{ Fill PolicyRBACScopes Description }}
+The PolicyRBACScopes parameter specifies the administrative units to assign to the policy. A valid value is the Microsoft Entra ObjectID (GUID value) of the administrative unit. You can specify multiple values separated by commas.
+
+Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
 ```yaml
 Type: MultiValuedProperty

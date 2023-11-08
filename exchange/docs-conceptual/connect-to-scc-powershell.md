@@ -2,7 +2,7 @@
 title: Connect to Security & Compliance PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 9/7/2023
+ms.date: 11/7/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -29,11 +29,9 @@ To connect to Security & Compliance PowerShell for automation, see [App-only aut
 - The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
   > [!NOTE]
-  > If you're using version 3.2.0 or later of the module, and you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you have access to REST API cmdlets _only_. For more information, see [REST API connections in the EXO V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module).
+  > Remote PowerShell connections are deprecated in Security & Compliance PowerShell. For more information, see [Deprecation of Remote PowerShell (RPS) Protocol in Security & Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
   >
   > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
-  >
-  > Remote PowerShell connections will be deprecated in Security & Compliance PowerShell. For more information, see [Deprecation of Remote PowerShell (RPS) Protocol in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 - After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
 
@@ -56,14 +54,12 @@ Import-Module ExchangeOnlineManagement
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-UseRPSSession] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
 ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchange/connect-ippssession).
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
-
-- In v3.2.0 or later of the module, if you don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command, you connect in REST API mode. To connect in remote PowerShell mode, use the _UseRPSSession_ switch. For more information, see [REST API connections in the EXO V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module).
 
 - The required _ConnectionUri_ and _AzureADAuthorizationEndpointUri_ values depend on the nature of your Microsoft 365 organization. Common values are described in the following table:
 
@@ -147,7 +143,7 @@ This example connects to customer organizations in the following scenarios:
 - Connect to a customer organization as a guest user.
 
   ```powershell
-  Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com -DelegatedOrganization adatum.onmicrosoft.com -AzureADAuthorizationEndpointUri https://ps.compliance.protection.outlook.com/powershell-liveid/
+  Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com -DelegatedOrganization adatum.onmicrosoft.com -AzureADAuthorizationEndpointUri https://login.microsoftonline.com/adatum.onmicrosoft.com
   ```
 
 ## Step 3: Disconnect when you're finished

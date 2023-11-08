@@ -49,7 +49,7 @@ This example enables a VTC device joining anonymously to shown in the meeting as
 ## PARAMETERS
 
 ### -AadApplicationIds
-This is an optional parameter. A semicolon separated list of AAD AppIds of the CVI partner bots can be specified in this parameter. This parameter works in conjunction with AllowAppGuestJoinsAsAuthenticated. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of these bots, is shown in the meeting as an authenticated tenant entity.
+This is an optional parameter. A semicolon separated list of Microsoft Entra AppIds of the CVI partner bots can be specified in this parameter. This parameter works in conjunction with AllowAppGuestJoinsAsAuthenticated. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of these bots, is shown in the meeting as an authenticated tenant entity.
 
 ```yaml
 Type: String
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ### -AllowAppGuestJoinsAsAuthenticated
 This is an optional parameter. Default = false.
-This parameter works in conjunction with AadApplicationIds. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of the bots AAD application ids specified in AadApplicationIds, is shown in the meeting as an authenticated tenant entity.
+This parameter works in conjunction with AadApplicationIds. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of the bots Microsoft Entra application ids specified in AadApplicationIds, is shown in the meeting as an authenticated tenant entity.
 
 ```yaml
 Type: Boolean

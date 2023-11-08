@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantnetworksubnet
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTenantNetworkSubnet
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: jenstr
 ms.reviewer:
 ---
 
@@ -19,13 +19,12 @@ Returns information about the network subnet setting in the tenant. Tenant netwo
 
 ### Identity (Default)
 ```
-Get-CsTenantNetworkSubnet [-Tenant <System.Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
- [<CommonParameters>]
+Get-CsTenantNetworkSubnet [[-Identity] <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTenantNetworkSubnet [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTenantNetworkSubnet [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,14 +38,14 @@ Location-Based Routing leverages the same network regions, sites, and subnets co
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> Get-CsTenantNetworkSubnet
 ```
 
 The command shown in Example 1 returns the list of network subnets for the current tenant.
 
-###-------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 PS C:\> Get-CsTenantNetworkSubnet -Identity '2001:4898:e8:25:844e:926f:85ad:dd70'
 ```
@@ -55,26 +54,11 @@ The command shown in Example 2 returns the IPv6 format network subnet within the
 
 ## PARAMETERS
 
-### -Filter
-The Filter parameter allows you to limit the number of results based on filters you specify.
+### -Identity
+The Identity parameter is a unique identifier that designates the scope. It specifies the collection of tenant network subnets to be returned.
 
 ```yaml
 Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter is a unique identifier that designates the scope. It specifies the collection of tenant network subnet to be returned.
-
-```yaml
-Type: XdsGlobalRelativeIdentity
 Parameter Sets: Identity
 Aliases:
 
@@ -85,27 +69,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
-PARAMVALUE: SwitchParameter
+### -Filter
+The Filter parameter allows you to limit the number of results based on filters you specify.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose network subnets are being returned.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Filter
 Aliases:
 
 Required: False
@@ -125,7 +94,12 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsTenantNetworkSubnet](New-CsTenantNetworkSubnet.md)
+
+[Remove-CsTenantNetworkSubnet](Remove-CsTenantNetworkSubnet.md)
+
+[Set-CsTenantNetworkSubnet](Set-CsTenantNetworkSubnet.md)
