@@ -112,7 +112,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of a specific user for whom you want to view the permissions on the public folder.
+The User parameter specifies the user for whom you want to view the permissions on the public folder.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
 
 ```yaml
 Type: PublicFolderUserIdParameter

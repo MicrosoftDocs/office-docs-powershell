@@ -29,6 +29,12 @@ Grant-CsTeamsCortanaPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-Doma
  [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### GrantToGroup
+```
+Grant-CsTeamsCortanaPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for Cortana voice assistant in Microsoft Teams. Specifically, these specify if a user can use Cortana voice assistant in Microsoft Teams and Cortana invocation behavior via CortanaVoiceInvocationMode parameter -
@@ -131,6 +137,36 @@ Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

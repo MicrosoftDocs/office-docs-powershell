@@ -21,7 +21,7 @@ description: "Learn how to configure app-only authentication (also known as cert
 
 Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault that's accessed at run-time. But, as we all know, storing user credentials locally isn't a good security practice.
 
-Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Azure AD apps and certificates.
+Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Microsoft Entra apps and certificates.
 
 > [!NOTE]
 >
@@ -51,7 +51,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 
 ## How does it work?
 
-The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application ID, tenant ID (organization), and certificate thumbprint. The application object provisioned inside Azure AD has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
+The Exchange Online PowerShell module uses the Active Directory Authentication Library to fetch an app-only token using the application ID, tenant ID (organization), and certificate thumbprint. The application object provisioned inside Microsoft Entra ID has a Directory Role assigned to it, which is returned in the access token. The session's role based access control (RBAC) is configured using the directory role information that's available in the token.
 
 ## Connection examples
 
@@ -126,11 +126,11 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
 ## Set up app-only authentication
 
-An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. For more information, see [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
+An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. For more information, see [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals).
 
-For a detailed visual flow about creating applications in Azure AD, see <https://aka.ms/azuread-app>.
+For a detailed visual flow about creating applications in Microsoft Entra ID, see <https://aka.ms/azuread-app>.
 
-1. [Register the application in Azure AD](#step-1-register-the-application-in-azure-ad).
+1. [Register the application in Microsoft Entra ID](#step-1-register-the-application-in-azure-ad).
 
 2. [Assign API permissions to the application](#step-2-assign-api-permissions-to-the-application).
 
@@ -138,27 +138,29 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
 
 3. [Generate a certificate](#step-3-generate-a-certificate)
 
-   - For app-only authentication in Azure AD, you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app with the permissions granted to the app.
+   - For app-only authentication in Microsoft Entra ID, you typically use a certificate to request access. Anyone who has the certificate and its private key can use the app with the permissions granted to the app.
 
-   - Create and configure an X.509 certificate, which is used to authenticate your Application against Azure AD, while requesting the app-only access token. The certificate can be self-signed.
+   - Create and configure an X.509 certificate, which is used to authenticate your Application against Microsoft Entra ID, while requesting the app-only access token. The certificate can be self-signed.
 
    - This procedure is similar to generating a password for user accounts. See [this section](#step-3-generate-a-self-signed-certificate) later in this article for instructions to generate certificates in PowerShell.
 
      > [!NOTE]
      > Cryptography: Next Generation (CNG) certificates aren't supported for app-only authentication with Exchange. CNG certificates are created by default in modern versions of Windows. You must use a certificate from a CSP key provider. [This section](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
-4. [Attach the certificate to the Azure AD application](#step-4-attach-the-certificate-to-the-azure-ad-application)
+4. [Attach the certificate to the Microsoft Entra application](#step-4-attach-the-certificate-to-the-azure-ad-application)
 
-5. [Assign Azure AD roles to the application](#step-5-assign-azure-ad-roles-to-the-application)
+5. [Assign Microsoft Entra roles to the application](#step-5-assign-azure-ad-roles-to-the-application)
 
-   The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Azure AD, you can use any of the supported built-in roles.
+   The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Microsoft Entra ID, you can use any of the supported built-in roles.
 
-### Step 1: Register the application in Azure AD
+<a name='step-1-register-the-application-in-azure-ad'></a>
+
+### Step 1: Register the application in Microsoft Entra ID
 
 > [!NOTE]
 > If you encounter problems, check the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
 
-1. Open the Azure AD portal at <https://portal.azure.com/>.
+1. Open the Microsoft Entra admin center at <https://portal.azure.com/>.
 
 2. In the **Search** box at the top of the page, start typing **App registrations**, and then select **App registrations** from the results in the **Services** section.
 
@@ -177,7 +179,7 @@ For a detailed visual flow about creating applications in Azure AD, see <https:/
    - **Supported account types**: Verify that **Accounts in this organizational directory only (\<YourOrganizationName\> only - Single tenant)** is selected.
 
      > [!NOTE]
-     > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**.
+     > To make the application multi-tenant for **Exchange Online** delegated scenarios, select the value **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
 
    - **Redirect URI (optional)**: This setting is optional. If you need to use it, configure the following settings:
      - **Platform**: Select **Web**.
@@ -355,7 +357,9 @@ Create an x.509 certificate. For example:
 
 - **Microsoft PKI**: Create a **web server certificate** to use.
 
-### Step 4: Attach the certificate to the Azure AD application
+<a name='step-4-attach-the-certificate-to-the-azure-ad-application'></a>
+
+### Step 4: Attach the certificate to the Microsoft Entra application
 
 After you register the certificate with your application, you can use the private key (`.pfx` file) or the thumbprint for authentication.
 
@@ -397,21 +401,25 @@ If you made the application multi-tenant for **Exchange Online** delegated scena
 
 For more information about the URL syntax, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-admin-consent#request-the-permissions-from-a-directory-admin).
 
-### Step 5: Assign Azure AD roles to the application
+<a name='step-5-assign-azure-ad-roles-to-the-application'></a>
+
+### Step 5: Assign Microsoft Entra roles to the application
 
 You have two options:
 
-- **Assign Azure AD roles to the application**
+- **Assign Microsoft Entra roles to the application**
 - **Assign custom role groups to the application using service principals**: This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
 > [!NOTE]
-> You can also combine both methods to assign permissions. For example, you can use Azure AD roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
+> You can also combine both methods to assign permissions. For example, you can use Microsoft Entra roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
 >
 > For multi-tenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
 
-#### Assign Azure AD roles to the application
+<a name='assign-azure-ad-roles-to-the-application'></a>
 
-The supported Azure AD roles are described in the following table:
+#### Assign Microsoft Entra roles to the application
+
+The supported Microsoft Entra roles are described in the following table:
 
 |Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
 |---|:---:|:---:|
@@ -431,16 +439,16 @@ The supported Azure AD roles are described in the following table:
 >
 > The Security Administrator role does not have the necessary permissions for those same tasks.
 
-For general instructions about assigning roles in Azure AD, see [View and assign administrator roles in Azure Active Directory](/azure/active-directory/roles/manage-roles-portal).
+For general instructions about assigning roles in Microsoft Entra ID, see [View and assign administrator roles in Microsoft Entra ID](/azure/active-directory/roles/manage-roles-portal).
 
 > [!NOTE]
 > The following steps are slightly different for Exchange Online PowerShell vs. Security & Compliance PowerShell. The steps for both environments are shown. To configure roles for both environments, repeat the steps in this section.
 
-1. In Azure AD portal at <https://portal.azure.com/>, start typing **roles and administrators** in the **Search** box at the top of the page, and then select **Azure AD roles and administrators** from the results in the **Services** section.
+1. In Microsoft Entra admin center at <https://portal.azure.com/>, start typing **roles and administrators** in the **Search** box at the top of the page, and then select **Microsoft Entra roles and administrators** from the results in the **Services** section.
 
-   ![Screenshot that shows Azure AD roles and administrators in the Search results on the on the home page of the Azure portal.](media/exo-app-only-auth-find-roles-and-administrators.png)
+   ![Screenshot that shows Microsoft Entra roles and administrators in the Search results on the on the home page of the Azure portal.](media/exo-app-only-auth-find-roles-and-administrators.png)
 
-   Or, to go directly to the **Azure AD roles and administrators** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/AllRolesBlade>.
+   Or, to go directly to the **Microsoft Entra roles and administrators** page, use <https://portal.azure.com/#view/Microsoft_AAD_IAM/AllRolesBlade>.
 
 2. On the **Roles and administrators** page that opens, find and select one of the supported roles by _clicking on the name of the role_ (not the check box) in the results.
 
@@ -489,7 +497,7 @@ For information about creating custom role groups, see [Create role groups in Ex
 
 To assign custom role groups to the application using service principals, do the following steps:
 
-1. In [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation), run the following commands to store the details of the Azure AD application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
+1. In [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation), run the following commands to store the details of the Microsoft Entra application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
 
    ```powershell
    Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All
@@ -508,7 +516,7 @@ To assign custom role groups to the application using service principals, do the
    For detailed syntax and parameter information, see [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal).
 
 2. In the same PowerShell window, connect to [Exchange Online PowerShell](connect-to-exchange-online-powershell.md) or [Security & Compliance PowerShell](connect-to-scc-powershell.md) and run the following commands to:
-   - Create a service principal object for the Azure AD application.
+   - Create a service principal object for the Microsoft Entra application.
    - Store the details of the service principal in a variable to use in the next step.
 
    ```powershell

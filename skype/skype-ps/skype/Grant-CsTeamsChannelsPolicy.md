@@ -30,6 +30,12 @@ Grant-CsTeamsChannelsPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-Dom
  [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### GrantToGroup
+```
+Grant-CsTeamsChannelsPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 The CsTeamsChannelsPolicy allows you to manage features related to the Teams & Channels experience within the Teams application.  The Grant-CsTeamsChannelsPolicy allows you to assign specific policies to users that have been created in your tenant.
 
@@ -158,6 +164,36 @@ Parameter Sets: (All)
 Aliases: wi
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

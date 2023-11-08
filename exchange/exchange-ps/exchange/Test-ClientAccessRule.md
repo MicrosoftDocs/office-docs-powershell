@@ -153,7 +153,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user account to test. You can use any value that uniquely identifies the user. For example:
+The User parameter specifies the user account to test.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user. For example:
 
 - Name
 - Alias
