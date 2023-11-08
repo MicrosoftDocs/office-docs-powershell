@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Get application instance for the tenant from Azure Active Directory.
+Get application instance for the tenant from Microsoft Entra ID.
 
 ## SYNTAX
 

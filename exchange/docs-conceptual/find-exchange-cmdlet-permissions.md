@@ -25,7 +25,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 - Basically, you need to be an administrator to complete this procedure. Specifically, you need access to the **Get-ManagementRole** and **Get-ManagementRoleAssignment** cmdlets. By default, access to these cmdlets is granted by the **View-Only Configuration** or **Role Management** roles in Exchange Online, which are assigned only to the **View-Only Organization Management** and **Organization Management** role groups by default.
 
-  In cloud-based organizations, membership in the **Global Administrators** role in Azure Active Directory gives you the required permissions.
+  In cloud-based organizations, membership in the **Global Administrators** role in Microsoft Entra ID gives you the required permissions.
 
 - The procedures in this article don't work in Security & Compliance PowerShell. For more information about Security & Compliance permissions, see the following articles:
   - [Permissions in the Microsoft 365 Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions)

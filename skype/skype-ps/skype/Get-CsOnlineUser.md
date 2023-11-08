@@ -601,7 +601,7 @@ Some of the commonly used FeatureTypes include:
 
 **Note**: This attribute is now filterable in Teams PowerShell Module versions 4.0.0 and later using the "-Contains" operator as shown in Example 7.
 
-AccountEnabled: Indicates whether a user is enabled for login in Azure AD.
+AccountEnabled: Indicates whether a user is enabled for login in Microsoft Entra ID.
 
 _Dropped attributes_:
 

@@ -944,7 +944,8 @@ This parameter uses the syntax: "DisplayName;EmailAddress".
 
 - DisplayName specifies the display name of the user that could be a target of impersonation. This value can contain special characters.
 - EmailAddress specifies the internal or external email address that's associated with the display name.
-- You can specify multiple values by using the syntax: "DisplayName1;EmailAddress1","DisplayName2;EmailAddress2",..."DisplayNameN;EmailAddressN". The combination of DisplayName and EmailAddress needs to be unique for each value.
+- You can specify multiple values by using the syntax: `"DisplayName1;EmailAddress1","DisplayName2;EmailAddress2",..."DisplayNameN;EmailAddressN"`. The combination of DisplayName and EmailAddress needs to be unique for each value.
+
 
 ```yaml
 Type: MultiValuedProperty

@@ -22,14 +22,20 @@ Grant-CsTeamsMeetingBroadcastPolicy \[-PolicyName\] \<string\> \[-Tenant \<guid\
 
 ### Identity (Default)
 ```
-Grant-CsTeamsMeetingBroadcastPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String>
- [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsMeetingBroadcastPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsTeamsMeetingBroadcastPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
- [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTeamsMeetingBroadcastPolicy [-PassThru] [[-PolicyName] <String>]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsMeetingBroadcastPolicy [-PassThru] [[-PolicyName] <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -74,7 +80,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
@@ -89,7 +95,7 @@ Indicates the Identity of the user account the policy should be assigned to. Use
 
 ```yaml
 Type: UserIdParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -123,6 +129,36 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
