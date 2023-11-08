@@ -15,7 +15,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 
 ```
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
-[-UseMicrosoftECDN -String] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
