@@ -11,7 +11,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Enables administrators to configure a custom text on the banner displayed when compliance recording bots start recording the call. 
+Enables administrators to update a configured custom text on the banner displayed when compliance recording bots start recording the call. 
 
 ## SYNTAX
 
