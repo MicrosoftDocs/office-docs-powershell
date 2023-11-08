@@ -18,10 +18,22 @@ Assigns a per-user application access policy to one or more users. After assigni
 
 ## SYNTAX
 
-### Identity (Default)
+### Identity
 
 ```
 Grant-CsApplicationAccessPolicy [-Identity <UserIdParameter>] [-PolicyName <String>] [-Global]
+```
+
+### GrantToTenant (Default)
+```
+Grant-CsApplicationAccessPolicy [-Global] [-PassThru] [-PolicyName <String>]
+ [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsApplicationAccessPolicy [-PassThru] [-PolicyName <String>] [-MsftInternalProcessingMode <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,6 +115,36 @@ When you use this cmdlet without specifying a user identity, the policy applies 
 ```yaml
 Type: SwitchParameter
 Parameter Sets:(All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: False

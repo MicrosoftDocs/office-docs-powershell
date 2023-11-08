@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Remove-CsTeamsMeetingTemplatePermissionPolicy
 author: boboPD
@@ -23,7 +24,7 @@ Deletes an instance of TeamsMeetingTemplatePermissionPolicy. The `Identity` para
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Deleting a meeting template permission policy
 
 ```powershell
 Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
@@ -31,7 +32,7 @@ Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
 
 Deletes a policy instance with the Identity *Test_Policy*.
 
-### Example 2
+### Example 2 - Deleting a policy when its assigned to a user
 
 Attempting to delete a policy instance that is currently assigned to users will result in an error. Remove the assignment before attempting to delete it.
 
@@ -72,10 +73,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Set-CsTeamsMeetingTemplatePermissionPolicy](Set-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Get-CsTeamsMeetingTemplatePermissionPolicy](Get-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.md)
+[New-CsTeamsMeetingTemplatePermissionPolicy](New-CsTeamsMeetingTemplatePermissionPolicy.yml)
 
-[Grant-CsTeamsMeetingTemplatePermissionPolicy](Grant-CsTeamsMeetingTemplatePermissionPolicy.md)
+[Grant-CsTeamsMeetingTemplatePermissionPolicy](Grant-CsTeamsMeetingTemplatePermissionPolicy.yml)

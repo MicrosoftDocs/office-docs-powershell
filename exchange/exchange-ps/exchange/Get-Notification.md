@@ -14,7 +14,13 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-Notification cmdlet to view notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notification events are related to:
+Use the Get-Notification cmdlet to view notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notifications are related to the following events:
+
+- Mailbox moves and migrations.
+- Expiring and expired certificates.
+- Exporting mailbox content to .pst files.
+- Importing mailbox content from .pst files.
+- Restoring deleted mailboxes.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

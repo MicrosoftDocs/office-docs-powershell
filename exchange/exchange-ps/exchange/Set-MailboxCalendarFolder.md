@@ -118,10 +118,9 @@ Accept wildcard characters: False
 ### -DetailLevel
 The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Valid values are:
 
-- AvailabilityOnly (This is the default value)
+- AvailabilityOnly (default)
 - LimitedDetails
 - FullDetails
-- Editor
 
 This parameter is meaningful only when the PublishEnabled parameter value is $true.
 

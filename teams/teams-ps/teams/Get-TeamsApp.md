@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalId
-The external ID of the app, provided by the app developer and used by Azure Active Directory
+The external ID of the app, provided by the app developer and used by Microsoft Entra ID
 
 ```yaml
 Type: String
