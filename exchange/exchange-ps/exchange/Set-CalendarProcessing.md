@@ -569,7 +569,7 @@ Accept wildcard characters: False
 ### -EnableAutoRelease
 This parameter is available only in the cloud-based service.
 
-{{ Fill EnableAutoRelease Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -763,7 +763,7 @@ Accept wildcard characters: False
 ### -PostReservationMaxClaimTimeInMinutes
 This parameter is available only in the cloud-based service.
 
-{{ Fill PostReservationMaxClaimTimeInMinutes Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Int32
