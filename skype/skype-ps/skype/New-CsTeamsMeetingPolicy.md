@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentSharingInExternalMeetings
-This policy give admins the ability to determine whether the user is allowed to share content in meetings organized by external tenant. The user should have Teams Premium license to be protected under this policy.
+This policy allows admins to determine whether the user can share content in meetings organized by external organizations. The user should have a Teams Premium license to be protected under this policy.
 
 ```yaml
 Type: String
