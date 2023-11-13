@@ -23,7 +23,7 @@ Get-CsTeamsCustomBannerText [[-Identity] <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-Returns all or a single instance of custom banner text(s).
+Returns all or a single instance of custom banner text.
 
 
 ## EXAMPLES
