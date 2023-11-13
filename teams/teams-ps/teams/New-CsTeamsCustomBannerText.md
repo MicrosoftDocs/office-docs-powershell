@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Text
-The text that the tenant admin would like to set in policy.
+The text that the global admin would like to set in the policy.
 
 ```yaml
 Type: String
