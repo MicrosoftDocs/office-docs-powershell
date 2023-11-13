@@ -35,7 +35,7 @@ This example removes a TeamsCustomBannerText instance with the name "CustomText"
 ## PARAMETERS
 
 ### -Identity
-Policy instance name. Optional.
+Policy instance name (optional).
 
 ```yaml
 Type: String
