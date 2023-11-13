@@ -45,7 +45,7 @@ Gets the properties of the CustomText instance of TeamsCustomBannerText.
 ## PARAMETERS
 
 ### -Identity
-Policy instance name. Optional.
+Policy instance name (optional).
 
 ```yaml
 Type: String
