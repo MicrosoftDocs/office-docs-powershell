@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The description that the tenant admin would like to set to identify what this text represents.
+The description that the global admin would like to set to identify what this text represents.
 
 ```yaml
 Type: String
