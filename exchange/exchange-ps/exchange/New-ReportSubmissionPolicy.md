@@ -75,11 +75,11 @@ New-ReportSubmissionPolicy
 ```
 
 ## DESCRIPTION
-The report submission policy controls most of the settings for user submissions in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
+The report submission policy controls most of the settings for user submissions in the Microsoft Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
 
 The report submission rule (\*-ReportSubmissionRule cmdlets) controls the email address of the reporting mailbox where user reported messages are delivered.
 
-When you set the email address of the reporting mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
+When you set the email address of the reporting mailbox in the Microsoft Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
 - Microsoft integrated reporting using third-party tools in Outlook: The ThirdPartyReportAddresses parameter.
@@ -139,7 +139,7 @@ This example creates the report submission policy with the following values: rep
 New-ReportSubmissionPolicy -EnableReportToMicrosoft $false
 ```
 
-This example creates the report submission policy with the following values: reporting in Outlook is off. Microsoft reporting tools in Outlook are not available to users and messages reported by third-party tools in Outlook are not available on the Submissions page in the Microsoft 365 Defender portal.
+This example creates the report submission policy with the following values: reporting in Outlook is off. Microsoft reporting tools in Outlook are not available to users and messages reported by third-party tools in Outlook are not available on the Submissions page in the Microsoft Defender portal.
 
 ## PARAMETERS
 
@@ -249,7 +249,7 @@ The value $true for this parameter enables reporting in Outlook. The following c
 The value $false for this parameter disables reporting in Outlook. The following configurations are possible:
 
 - **Microsoft reporting tools are available in Outlook, but reported messages are sent only to the reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
-- **Reporting in Outlook is disabled. Microsoft reporting tools are not available in Outlook. Any messages reported by users in Outlook with third-party reporting tools aren't visible on the Submissions page in the Microsoft 365 Defender portal**: The EnableThirdPartyAddress, ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false.
+- **Reporting in Outlook is disabled. Microsoft reporting tools are not available in Outlook. Any messages reported by users in Outlook with third-party reporting tools aren't visible on the Submissions page in the Microsoft Defender portal**: The EnableThirdPartyAddress, ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false.
 
 This parameter is required to create the report submission policy only if you set the value to $false (the default value is $true).
 
