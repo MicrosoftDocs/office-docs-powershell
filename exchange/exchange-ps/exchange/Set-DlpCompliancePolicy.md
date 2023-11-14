@@ -234,7 +234,7 @@ If the policy doesn't already include OneDrive for Business sites (in the output
 
 You can't specify inclusions and exclusions in the same policy.
 
-**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty
@@ -832,7 +832,7 @@ The RemoveOneDriveLocation parameter removes OneDrive for Business sites from th
 
 If the policy already includes OneDrive for Business sites (in the output of the Get-DlpCompliancePolicy cmdlet, the OneDriveLocation property value is All), you can use `-RemoveOneDriveLocation All` to prevent the policy from applying to OneDrive for Business sites.
 
-**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft Defender portal, you can't specify sites to include or exclude by URL; you specify sites to include or exclude only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty

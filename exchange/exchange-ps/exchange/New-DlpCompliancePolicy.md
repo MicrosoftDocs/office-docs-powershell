@@ -354,7 +354,7 @@ You can use this parameter in the following procedures:
 
 You can't specify inclusions and exclusions in the same policy.
 
-**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft 365 Defender portal, you can't identify sites by URL; you specify sites only by users or groups.
+**Note**: Although this parameter accepts site URLs, don't specify site URLs values. Use the OneDriveSharedBy, ExceptIfOneDriveShareBy, OneDriveSharedByMemberOf, and ExceptIfOneDriveSharedByMemberOf parameters instead. In the DLP policy settings in the Microsoft Defender portal, you can't identify sites by URL; you specify sites only by users or groups.
 
 ```yaml
 Type: MultiValuedProperty

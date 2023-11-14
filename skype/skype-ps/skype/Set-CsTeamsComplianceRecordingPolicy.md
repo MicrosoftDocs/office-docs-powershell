@@ -23,7 +23,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 Set-CsTeamsComplianceRecordingPolicy [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
  [-Enabled <Boolean>] [-WarnUserOnRemoval <Boolean>] [-Description <String>]
  [-DisableComplianceRecordingAudioNotificationForCalls <Boolean>] [-RecordReroutedCalls <Boolean>]
- [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>]
+ [-ComplianceRecordingApplications <ComplianceRecordingApplication[]>] [-CustomBanner <Guid>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -126,6 +126,23 @@ Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
+
+### CustomBanner
+References the Custom Banner text in the storage.
+
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -Enabled
 Controls whether this Teams recording policy is active or not.

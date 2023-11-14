@@ -187,7 +187,10 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorType
-{{ Fill ConnectorType Description }}
+The ConnectorType parameter filters the results by the connector type. Valid values are:
+
+- OnPremises
+- Partner
 
 ```yaml
 Type: String
@@ -325,7 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkMessageID
-{{ Fill NetworkMessageID Description }}
+The NetworkMessageId parameter filters the message tracking log entries by the value of the NetworkMessageId field. This field contains a unique message ID value that persists across copies of the message that may be created due to bifurcation or distribution group expansion. An example value is 1341ac7b13fb42ab4d4408cf7f55890f.
 
 ```yaml
 Type: MultiValuedProperty

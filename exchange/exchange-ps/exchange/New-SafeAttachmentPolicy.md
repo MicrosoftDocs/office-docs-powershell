@@ -158,9 +158,9 @@ Accept wildcard characters: False
 The Enable parameter works with the Action parameter to specify the action for the safe attachment policy. Valid values are:
 
 - $true: The Action parameter specifies the action for the Safe Attachment policy.
-- $false: This is the default value. Attachments are not scanned by Safe Attachments, regardless of the value of the Action parameter. This value corresponds to the **Off** selection for the **Safe Attachments unknown malware response** setting of the policy in the Microsoft 365 Defender portal.
+- $false: This is the default value. Attachments are not scanned by Safe Attachments, regardless of the value of the Action parameter. This value corresponds to the **Off** selection for the **Safe Attachments unknown malware response** setting of the policy in the Microsoft Defender portal.
 
-To enable or disable a complete Safe Attachments policy in the Microsoft 365 Defender portal (the combination of the rule and the corresponding associated policy in PowerShell), use the Enable-SafeAttachmentRule or Disable-SafeAttachmentRule cmdlets.
+To enable or disable a complete Safe Attachments policy in the Microsoft Defender portal (the combination of the rule and the corresponding associated policy in PowerShell), use the Enable-SafeAttachmentRule or Disable-SafeAttachmentRule cmdlets.
 
 ```yaml
 Type: Boolean

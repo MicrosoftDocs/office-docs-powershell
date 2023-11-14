@@ -1907,7 +1907,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft 365 Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
+**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
