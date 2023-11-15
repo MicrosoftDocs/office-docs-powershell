@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-SafeAttachmentPolicy [-Name] <String>
  [-Action <SafeAttachmentAction>]
- [-ActionOnError <Boolean>]
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
@@ -92,22 +91,6 @@ The results of all actions are available in message trace.
 
 ```yaml
 Type: SafeAttachmentAction
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ActionOnError
-This parameter has been deprecated and is no longer used.
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
