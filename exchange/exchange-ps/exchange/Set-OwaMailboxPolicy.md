@@ -86,6 +86,8 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
+ [-OfflineEnabledWeb <Boolean>]
+ [-OfflineEnabledWin <Boolean>]
  [-OneDriveAttachmentsEnabled <Boolean>]
  [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OnSendAddinsEnabled <Boolean>]
@@ -1514,6 +1516,42 @@ The NpsSurveysEnabled parameter specifies whether to enable or disable the Net P
 
 - $true: The NPS survey is available in Outlook on the web. This is the default value.
 - $false: The NPS survey isn't available in Outlook on the web.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OfflineEnabledWeb
+This parameter is available only in the cloud-based service.
+
+{{ Fill OfflineEnabledWeb Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OfflineEnabledWin
+This parameter is available only in the cloud-based service.
+
+{{ Fill OfflineEnabledWin Description }}
 
 ```yaml
 Type: Boolean

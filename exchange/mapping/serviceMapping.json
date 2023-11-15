@@ -22,8 +22,6 @@
   "Enable-ATPProtectionPolicyRule": "defender-for-office-365",
   "Enable-SafeAttachmentRule": "defender-for-office-365",
   "Enable-SafeLinksRule": "defender-for-office-365",
-  "Get-AdvancedThreatProtectionDocumentDetail": "defender-for-office-365",
-  "Get-AdvancedThreatProtectionDocumentReport": "defender-for-office-365",
   "Get-AntiPhishPolicy": "defender-for-office-365",
   "Get-AntiPhishRule": "defender-for-office-365",
   "Get-ATPBuiltInProtectionRule": "defender-for-office-365",
