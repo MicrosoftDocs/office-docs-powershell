@@ -27,6 +27,7 @@ Set-MailboxJunkEmailConfiguration [-Identity] <MailboxIdParameter>
  [-ContactsTrusted <Boolean>]
  [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
+ [-FailOnError <Boolean>]
  [-IgnoreDefaultScope]
  [-TrustedListsOnly <Boolean>]
  [-TrustedRecipientsAndDomains <MultiValuedProperty>]
@@ -208,6 +209,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FailOnError
+This parameter is available only in the cloud-based service.
+
+{{ Fill FailOnError Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
