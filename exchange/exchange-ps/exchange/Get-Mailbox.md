@@ -35,6 +35,9 @@ Get-Mailbox [-Anr <String>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InactiveMailboxOnly]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -90,6 +93,9 @@ Get-Mailbox [[-Identity] <MailboxIdParameter>]
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-InactiveMailboxOnly]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -139,6 +145,9 @@ Get-Mailbox [-MailboxPlan <MailboxPlanIdParameter>]
  [-Filter <String>]
  [-GroupMailbox]
  [-InactiveMailboxOnly]
+ [-IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames]
+ [-IncludeAcceptMessagesOnlyFromWithDisplayNames]
  [-IncludeEmailAddressDisplayNames]
  [-IncludeInactiveMailbox]
  [-Migration]
@@ -467,6 +476,60 @@ To include active and inactive mailboxes in the results, don't use this switch. 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AnrSet, Identity, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAcceptMessagesOnlyFromWithDisplayNames
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAcceptMessagesOnlyFromWithDisplayNames Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, AnrSet, MailboxPlanSet
 Aliases:
 Applicable: Exchange Online
 

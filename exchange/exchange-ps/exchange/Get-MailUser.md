@@ -52,6 +52,17 @@ Get-MailUser [[-Identity] <MailUserIdParameter>]
  [<CommonParameters>]
 ```
 
+### LOBAppAccount
+```
+Get-MailUser [-LOBAppAccount]
+ [-Filter <String>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-SharedWithMailUser]
+ [-SortBy <String>]
+ [-SoftDeletedMailUser]
+ [<CommonParameters>]
+
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -127,7 +138,7 @@ This parameter requires the creation and passing of a credential object. This cr
 
 ```yaml
 Type: PSCredential
-Parameter Sets: (All)
+Parameter Sets: AnrSet, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -145,7 +156,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: AnrSet, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -193,7 +204,7 @@ This switch enables the command to access Active Directory objects that aren't c
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: AnrSet, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -201,6 +212,24 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: false
+Accept wildcard characters: False
+```
+
+### -LOBAppAccount
+This parameter is available only in the cloud-based service.
+
+{{ Fill LOBAppAccount Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: LOBAppAccount
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -236,7 +265,7 @@ By default, the recipient scope is set to the domain that hosts your Exchange se
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: AnrSet, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
