@@ -182,7 +182,6 @@ Accept wildcard characters: False
 
 ### -ResultSize
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
