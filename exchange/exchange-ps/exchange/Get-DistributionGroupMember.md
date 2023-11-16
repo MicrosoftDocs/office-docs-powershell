@@ -69,7 +69,7 @@ Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members -ResultSize Unlimi
 }}} | Export-CSV "$env:USERPROFILE\Desktop\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
 ```
 
-This example downloads a comma-separated value (CSV) file containing all groups and members.
+In the cloud-based service, this example downloads a comma-separated value (CSV) file named Office365GroupMembers.csv that contains all Microsoft 365 Groups and members to the current user's Desktop.
 
 ## PARAMETERS
 
