@@ -219,7 +219,6 @@ To download a comma-separated values (CSV) file containing all groups and member
 ## Download a csv file containing all groups and members
 
 To download a comma-separated values (CSV) file containing all groups and members, use the following cmdlet:
-
 ```powershell
 $Groups = Get-UnifiedGroup -ResultSize Unlimited
 $Groups | ForEach-Object {
@@ -232,3 +231,6 @@ Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members -ResultSize Unlimi
        RecipientType= $_.RecipientType
 }}} | Export-CSV "$env:USERPROFILE\Desktop\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
 ```
+
+
+
