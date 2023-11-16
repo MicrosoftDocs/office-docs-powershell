@@ -40,6 +40,7 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-ExtendTeamsDlpPoliciesToSharePointOneDrive <Boolean>]
  [-InformationBarrierMode <InformationBarrierMode>]
  [-InformationBarrierPeopleSearchRestriction <InformationBarrierPeopleSearchRestriction>]
+ [-IsDlpSimulationOptedIn <Boolean>]
  [-OnPremisesWorkload <Workload>]
  [-ProcessingLimitExceededSeverity <RuleSeverity>]
  [-PurviewLabelConsent <Boolean>]
@@ -406,6 +407,22 @@ Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDlpSimulationOptedIn
+{{ Fill IsDlpSimulationOptedIn Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

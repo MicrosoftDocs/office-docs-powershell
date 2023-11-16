@@ -116,6 +116,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Force
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HoldId
 The HoldId parameter specifies the hold that you want to view or remove.
 
