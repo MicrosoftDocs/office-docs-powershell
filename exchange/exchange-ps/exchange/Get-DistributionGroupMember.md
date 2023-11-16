@@ -54,6 +54,23 @@ Get-DistributionGroupMember -Identity "Marketing Worldwide"
 
 This example sets the scope of the search to the entire forest by running the Set-ADServerSettings cmdlet, then the Get-DistributionGroupMember cmdlet searches the entire forest for the distribution group members in the Marketing Worldwide distribution group.
 
+### Example 3
+```powershell
+$Groups = Get-UnifiedGroup -ResultSize Unlimited
+
+$Groups | ForEach-Object {
+$group = $_
+Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members -ResultSize Unlimited | ForEach-Object {
+      New-Object -TypeName PSObject -Property @{
+       Group = $group.DisplayName
+       Member = $_.Name
+       EmailAddress = $_.PrimarySMTPAddress
+       RecipientType= $_.RecipientType
+}}} | Export-CSV "$env:USERPROFILE\Desktop\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
+```
+
+This example downloads a comma-separated value (CSV) file containing all groups and members.
+
 ## PARAMETERS
 
 ### -Identity
