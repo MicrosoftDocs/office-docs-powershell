@@ -209,6 +209,24 @@ To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Ty
 ### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
+## Download a csv file containing all groups and members
+
+To download a comma-separated values (CSV) file containing all groups and members, use the following cmdlet:
+
+
+```powershell
+$Groups = Get-UnifiedGroup -ResultSize Unlimited
+$Groups | ForEach-Object {
+$group = $_
+Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members -ResultSize Unlimited | ForEach-Object {
+      New-Object -TypeName PSObject -Property @{
+       Group = $group.DisplayName
+       Member = $_.Name
+       EmailAddress = $_.PrimarySMTPAddress
+       RecipientType= $_.RecipientType
+}}} | Export-CSV "$env:USERPROFILE\Desktop\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
+```
+
 ## NOTES
 
 ## RELATED LINKS
