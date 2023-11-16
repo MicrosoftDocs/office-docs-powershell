@@ -200,11 +200,9 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## Download a csv file containing all groups and members
-
-
-```powershell
 To download a comma-separated values (CSV) file containing all groups and members, use the following cmdlet:
 
+```powershell
 $Groups = Get-UnifiedGroup -ResultSize Unlimited
 $Groups | ForEach-Object {
 $group = $_
@@ -216,7 +214,6 @@ Get-UnifiedGroupLinks -Identity $group.Name -LinkType Members -ResultSize Unlimi
        RecipientType= $_.RecipientType
 }}} | Export-CSV "$env:USERPROFILE\Desktop\Office365GroupMembers.csv" -NoTypeInformation -Encoding UTF8
 ```
-
 
 ## INPUTS
 
