@@ -184,7 +184,7 @@ The RecipientGroupScope parameter specifies a group to consider for scoping the 
 
 ```yaml
 Type: GroupIdParameter
-Parameter Sets: RecipientGroupScope
+Parameter Sets: RecipientGroupScope, Exchange Online Protection
 Aliases:
 Applicable: Exchange Online
 

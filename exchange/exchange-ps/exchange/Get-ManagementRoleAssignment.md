@@ -388,7 +388,7 @@ The RecipientGroupScope parameter returns only the role assignments that are sco
 Type: GroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
