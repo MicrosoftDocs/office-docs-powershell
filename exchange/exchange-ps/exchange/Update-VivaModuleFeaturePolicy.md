@@ -19,8 +19,8 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or
 
 Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. Note that:
 
-- You cannot update a policy for a particular user or group to include the entire tenant if a policy for the entire tenant already exists for the feature because only one tenant-wide policy is supported.
-- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. In instances where a user has multiple policies assigned for a feature directly as a user or member of a group, the most restrictive policy will apply.
+- You can't update a policy for a particular user or group to include the entire tenant if a policy for the entire tenant already exists for the feature. Only one tenant-wide policy is supported.
+- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. If a user has multiple policies assigned for a feature (directly as a user or member of a group), the most restrictive policy applies.
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
