@@ -17,7 +17,10 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or
 
 **Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
 
-Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. The most restrictive policy for a particular user or group takes priority when determining whether a feature is enabled.
+Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. Note that:
+
+- You cannot update a policy for a particular user or group to include the entire tenant if a policy for the entire tenant already exists for the feature because only one tenant-wide policy is supported.
+- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. In instances where a user has multiple policies assigned for a feature directly as a user or member of a group, the most restrictive policy will apply.
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
