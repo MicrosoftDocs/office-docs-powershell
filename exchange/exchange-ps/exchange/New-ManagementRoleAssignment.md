@@ -515,7 +515,7 @@ The RecipientGroupScope parameter specifies a group to consider for scoping the 
 Type: GroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
