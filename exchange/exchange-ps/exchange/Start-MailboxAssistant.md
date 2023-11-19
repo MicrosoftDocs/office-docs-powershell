@@ -13,7 +13,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2019 in Cumulative Update 11 (CU11) or later.
 
-Use the Start-MailboxAssistant cmdlet to ???.
+Use the Start-MailboxAssistant cmdlet to start processing of a mailbox by the assistant, which was specified using the AssistantName parameter.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,15 +36,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-{{ Add example code here }}
+Start-MailboxAssistant -Identity "Chris" -AssistantName BigFunnelRetryFeederTimeBasedAssistant
 ```
 
-{{ Add example description here }}
+This example starts the `BigFunnelRetryFeederTimeBasedAssistant` assistant and lets it process the mailbox of the user "Chris". The assistant indexes the mailbox items that were not indexed previously.
+
+> [!NOTE]
+>
+> A [setting override](New-SettingOverride.md) must first be created as described in the [Incomplete search results after installing an Exchange Server 2019 update](https://support.microsoft.com/topic/incomplete-search-results-after-installing-an-exchange-server-2019-update-96ae2ef0-4569-4327-8d0c-8a3c1abdc1f6) article.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+The Identity parameter specifies the user whose mailboxt should be processed by the Mailbox Assistant. Possible values are:
+
+- Distinguished name (DN)
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: UserIdParameter
@@ -60,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssistantName
-{{ Fill AssistantName Description }}
+The AssistantName parameter specifies the assistant, which should process the mailbox. The AssistantName is case-sensitive. Supported values are:
+
+- BigFunnelRetryFeederTimeBasedAssistant
 
 ```yaml
 Type: String
@@ -111,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-{{ Fill Parameters Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -127,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedMailbox
-{{ Fill SoftDeletedMailbox Description }}
+Use this switch parameter if the mailbox, which should be process by the assistant, is in a soft-deleted state.
 
 ```yaml
 Type: SwitchParameter
