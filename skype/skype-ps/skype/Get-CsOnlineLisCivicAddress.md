@@ -163,11 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfResultsToSkip
-
-**Note:** This parameter has been deprecated from the Teams PowerShell Module version 3.0.0 or later.
-
 Specifies the number of results to skip.
-If there are a large number of civic addresses, you can limit the number of returns by using the ResultSize parameter.
+If there are a large number of civic addresses, you can limit the number of results by using the ResultSize parameter.
 If you limited the first cmdlet execution to 25 results, and want to look at the next 25 locations, then you leave ResultSize at 25 and set NumberOfResultsToSkip to 25 to omit the first 25 you've reviewed.
 For example the command below will return civic addresses 26-50 for Seattle.
 
