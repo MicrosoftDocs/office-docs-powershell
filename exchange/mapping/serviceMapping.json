@@ -517,6 +517,7 @@
   "Set-MailboxDatabase": "mailbox-databases-and-servers",
   "Set-MailboxServer": "mailbox-databases-and-servers",
   "Set-SearchDocumentFormat": "mailbox-databases-and-servers",
+  "Start-MailboxAssistant": "mailbox-databases-and-servers",
   "Test-AssistantHealth": "mailbox-databases-and-servers",
   "Test-ExchangeSearch": "mailbox-databases-and-servers",
   "Test-MRSHealth": "mailbox-databases-and-servers",
