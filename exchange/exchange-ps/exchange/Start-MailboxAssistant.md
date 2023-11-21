@@ -13,7 +13,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Exchange Server 2019 in Cumulative Update 11 (CU11) or later.
 
-Use the Start-MailboxAssistant cmdlet to start processing of a mailbox by the assistant, which was specified using the AssistantName parameter.
+Use the Start-MailboxAssistant cmdlet to start processing of a mailbox by the specified assistant.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,14 +41,12 @@ Start-MailboxAssistant -Identity "Chris" -AssistantName BigFunnelRetryFeederTime
 
 This example starts the `BigFunnelRetryFeederTimeBasedAssistant` assistant and lets it process the mailbox of the user "Chris". The assistant indexes the mailbox items that were not indexed previously.
 
-> [!NOTE]
->
-> A [setting override](New-SettingOverride.md) must first be created as described in the [Incomplete search results after installing an Exchange Server 2019 update](https://support.microsoft.com/topic/incomplete-search-results-after-installing-an-exchange-server-2019-update-96ae2ef0-4569-4327-8d0c-8a3c1abdc1f6) article.
+**Note**: You first need to create a setting override as described in [Incomplete search results after installing an Exchange Server 2019 update](https://support.microsoft.com/topic/incomplete-search-results-after-installing-an-exchange-server-2019-update-96ae2ef0-4569-4327-8d0c-8a3c1abdc1f6).
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the user whose mailboxt should be processed by the Mailbox Assistant. Possible values are:
+The Identity parameter specifies the user whose mailbox should be processed by the Mailbox Assistant. Valid values are:
 
 - Distinguished name (DN)
 - SamAccountName
@@ -68,9 +66,11 @@ Accept wildcard characters: False
 ```
 
 ### -AssistantName
-The AssistantName parameter specifies the assistant, which should process the mailbox. The AssistantName is case-sensitive. Supported values are:
+The AssistantName parameter specifies the assistant that should process the mailbox. Valid values are:
 
 - BigFunnelRetryFeederTimeBasedAssistant
+
+Values are case sensitive.
 
 ```yaml
 Type: String
@@ -137,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedMailbox
-Use this switch parameter if the mailbox, which should be process by the assistant, is in a soft-deleted state.
+The SoftDeletedMailbox switch specifies that the mailbox to be processed by the assistant is a soft-delted mailbox.
+
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
