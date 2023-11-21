@@ -6934,6 +6934,16 @@
       "source_path": "exchange/docs-conceptual/v1-module-mfa-connect-to-scc-powershell.md",
       "redirect_url": "/powershell/exchange/connect-to-scc-powershell",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-AdvancedThreatProtectionDocumentDetail.md",
+      "redirect_url": "/powershell/module/exchange/get-contentmalwaremdodetailreport",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Get-AdvancedThreatProtectionDocumentReport.md",
+      "redirect_url": "/powershell/module/exchange/get-contentmalwaremdoaggregatereport",
+      "redirect_document_id": false
     }
   ]
 }

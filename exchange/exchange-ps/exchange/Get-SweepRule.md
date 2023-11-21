@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-sweeprule
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-SweepRule
 schema: 2.0.0
 author: chrisda
@@ -69,7 +69,7 @@ The Identity parameter specifies the Sweep rule that you want to view. You can u
 Type: SweepRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: 1
@@ -85,7 +85,7 @@ The BypassScopeCheck switch specifies whether to bypass the scope check for the 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ The Mailbox parameter filters the results by the specified mailbox. You can use 
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ The Provider parameter filters the results by the specified provider.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

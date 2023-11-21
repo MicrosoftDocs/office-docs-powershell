@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-SafeAttachmentPolicy [-Name] <String>
  [-Action <SafeAttachmentAction>]
- [-ActionOnError <Boolean>]
  [-AdminDisplayName <String>]
  [-Confirm]
  [-Enable <Boolean>]
@@ -103,22 +102,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ActionOnError
-This parameter has been deprecated and is no longer used.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AdminDisplayName
 The AdminDisplayName parameter specifies a description for the policy. If the value contains spaces, enclose the value in quotation marks (").
 
@@ -158,9 +141,9 @@ Accept wildcard characters: False
 The Enable parameter works with the Action parameter to specify the action for the safe attachment policy. Valid values are:
 
 - $true: The Action parameter specifies the action for the Safe Attachment policy.
-- $false: This is the default value. Attachments are not scanned by Safe Attachments, regardless of the value of the Action parameter. This value corresponds to the **Off** selection for the **Safe Attachments unknown malware response** setting of the policy in the Microsoft 365 Defender portal.
+- $false: This is the default value. Attachments are not scanned by Safe Attachments, regardless of the value of the Action parameter. This value corresponds to the **Off** selection for the **Safe Attachments unknown malware response** setting of the policy in the Microsoft Defender portal.
 
-To enable or disable a complete Safe Attachments policy in the Microsoft 365 Defender portal (the combination of the rule and the corresponding associated policy in PowerShell), use the Enable-SafeAttachmentRule or Disable-SafeAttachmentRule cmdlets.
+To enable or disable a complete Safe Attachments policy in the Microsoft Defender portal (the combination of the rule and the corresponding associated policy in PowerShell), use the Enable-SafeAttachmentRule or Disable-SafeAttachmentRule cmdlets.
 
 ```yaml
 Type: Boolean

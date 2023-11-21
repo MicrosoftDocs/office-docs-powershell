@@ -34,6 +34,9 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <Boolean>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
+ [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
+ [-ExchangeAdaptiveScopes <MultiValuedProperty>]
+ [-ExchangeAdaptiveScopesException <MultiValuedProperty>]
  [-ExchangeSender <SmtpAddress[]>]
  [-ExchangeSenderException <SmtpAddress[]>]
  [-ExchangeSenderMemberOf <SmtpAddress[]>]
@@ -41,7 +44,10 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-ExternalMailRightsManagementOwner <SmtpAddress>]
  [-Force]
  [-Mode <PolicyMode>]
+ [-OneDriveAdaptiveScopes <MultiValuedProperty>]
+ [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
  [-OneDriveSharedBy <RecipientIdParameter[]>]
+ [-OneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-OverwriteLabel <Boolean>]
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
@@ -51,6 +57,8 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-RemoveOneDriveLocationException <MultiValuedProperty>]
  [-RemoveSharePointLocation <MultiValuedProperty>]
  [-RemoveSharePointLocationException <MultiValuedProperty>]
+ [-SharePointAdaptiveScopes <MultiValuedProperty>]
+ [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SpoAipIntegrationEnabled <Boolean>]
  [-StartSimulation <Boolean>]
  [-SystemOperation]
@@ -335,6 +343,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfOneDriveSharedByMemberOf
+{{ Fill ExceptIfOneDriveSharedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopes
+{{ Fill ExchangeAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAdaptiveScopesException
+{{ Fill ExchangeAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExchangeSender
 The ExchangeSender parameter specifies the users whose email is included in the policy. You specify the users by email address. You can specify internal or external email addresses.
 
@@ -499,6 +555,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OneDriveAdaptiveScopes
+{{ Fill OneDriveAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAdaptiveScopesException
+{{ Fill OneDriveAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -OneDriveSharedBy
 The OneDriveSharedBy parameter specifies the users to include in the policy (the sites of the OneDrive for Business user accounts are included in the policy). You identify the users by UPN (laura@contoso.onmicrosoft.com).
@@ -515,6 +602,22 @@ You can't use this parameter with the ExceptIfOneDriveSharedBy parameter.
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveSharedByMemberOf
+{{ Fill OneDriveSharedByMemberOf Description }}
+
+```yaml
+Type: RecipientIdParameter[]
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 
@@ -710,6 +813,38 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopes
+{{ Fill SharePointAdaptiveScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharePointAdaptiveScopesException
+{{ Fill SharePointAdaptiveScopesException Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
