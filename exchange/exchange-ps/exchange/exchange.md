@@ -1064,6 +1064,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-SearchDocumentFormat](Set-SearchDocumentFormat.md)
 
+### [Start-MailboxAssistant](Start-MailboxAssistant.md)
+
 ### [Test-AssistantHealth](Test-AssistantHealth.md)
 
 ### [Test-ExchangeSearch](Test-ExchangeSearch.md)
