@@ -44,6 +44,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-WorkingHoursStartTime <TimeSpan>]
  [-WorkingHoursTimeZone <ExTimeZoneValue>]
  [<CommonParameters>]
+ [-LocationDetailsInFreeBusy <LocationDetailsPermissionInFreeBusy>]
 ```
 
 ### Identity
@@ -92,6 +93,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-WorkingHoursTimeZone <ExTimeZoneValue>]
  [-WorkspaceUserEnabled <System.Boolean>]
  [<CommonParameters>]
+ [-LocationDetailsInFreeBusy <LocationDetailsPermissionInFreeBusy>]
 ```
 
 ### MailboxLocation
@@ -140,6 +142,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-WorkingHoursTimeZone <ExTimeZoneValue>]
  [-WorkspaceUserEnabled <System.Boolean>]
  [<CommonParameters>]
+ [-LocationDetailsInFreeBusy <LocationDetailsPermissionInFreeBusy>]
 ```
 
 ## DESCRIPTION
@@ -1131,6 +1134,22 @@ Type: Boolean
 Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocationDetailsPermissionInFreeBusy
+This parameter determines what level of location details are returned in user’s availability. 
+
+```yaml
+Type: LocationDetailsPermissionInFreeBusy
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
