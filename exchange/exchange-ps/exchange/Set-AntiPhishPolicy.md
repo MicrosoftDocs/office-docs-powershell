@@ -538,7 +538,6 @@ Accept wildcard characters: False
 ```
 
 ### -HonorDmarcPolicy
-**Note**: This setting is currently in Preview.
 
 This setting is part of spoof protection.
 
