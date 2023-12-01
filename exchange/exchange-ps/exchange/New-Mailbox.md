@@ -809,6 +809,8 @@ This example assumes that you've already created a mail-enabled security group n
 ### -Name
 The Name parameter specifies the unique name of the mailbox. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
+In the cloud-based service, many special characters aren't allowed in the Name value (for example, ö, ü, or ä). For more information, see [Error when you try to create a username that contains a special character in Microsoft 365](https://learn.microsoft.com/office/troubleshoot/office-suite-issues/username-contains-special-character).
+
 ```yaml
 Type: String
 Parameter Sets: (All)
