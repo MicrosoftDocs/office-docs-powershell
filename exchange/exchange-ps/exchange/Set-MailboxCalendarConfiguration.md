@@ -1143,7 +1143,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationDetailsPermissionInFreeBusy
-This parameter determines what level of location details are returned in user’s availability. 
+This parameter determines what level of location details are returned in the user’s availability. 
 
 ```yaml
 Type: LocationDetailsPermissionInFreeBusy
