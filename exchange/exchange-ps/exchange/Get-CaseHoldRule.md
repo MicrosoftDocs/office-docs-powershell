@@ -90,5 +90,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+For large environments this command should not be executed with only Get-CaseHoldRule as it will timeout
+As a workaround you can run:
+Get-ComplianceCase -Organization $org | %{ Get-CaseHoldPolicy -Case $_.CaseId | %{ Get-CaseHoldRule -Policy $_.Guid }}
 
 ## RELATED LINKS
