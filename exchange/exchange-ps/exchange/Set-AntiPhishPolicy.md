@@ -538,7 +538,6 @@ Accept wildcard characters: False
 ```
 
 ### -HonorDmarcPolicy
-
 This setting is part of spoof protection.
 
 The HonorDmarcPolicy enables or disables using the sender's DMARC policy to determine what to do to messages that fail DMARC checks. Valid values are:
