@@ -27,6 +27,10 @@ Get-CaseHoldRule [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
+In large environments, running this cmdlet without any parametersresults in a timeout. As a workaround, you can run the following command:
+
+`Get-ComplianceCase -Organization $org | foreach {Get-CaseHoldPolicy -Case $_.CaseId | foreach {Get-CaseHoldRule -Policy $_.Guid}}`
+
 To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
@@ -90,8 +94,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-For large environments this command should not be executed with only Get-CaseHoldRule as it will timeout
-As a workaround you can run:
-Get-ComplianceCase -Organization $org | %{ Get-CaseHoldPolicy -Case $_.CaseId | %{ Get-CaseHoldRule -Policy $_.Guid }}
 
 ## RELATED LINKS
