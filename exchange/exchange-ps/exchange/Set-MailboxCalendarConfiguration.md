@@ -69,6 +69,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-FlightEventsFromEmailEnabled <Boolean>]
  [-HotelEventsFromEmailEnabled <Boolean>]
  [-InvoiceEventsFromEmailEnabled <Boolean>]
+ [-LocationDetailsInFreeBusy <LocationDetailsPermissionInFreeBusy>]
  [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
  [-PreserveDeclinedMeetings <Boolean>]
@@ -117,6 +118,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-FlightEventsFromEmailEnabled <Boolean>]
  [-HotelEventsFromEmailEnabled <Boolean>]
  [-InvoiceEventsFromEmailEnabled <Boolean>]
+ [-LocationDetailsInFreeBusy <LocationDetailsPermissionInFreeBusy>]
  [-OnlineMeetingsByDefaultEnabled <System.Boolean>]
  [-PackageDeliveryEventsFromEmailEnabled <Boolean>]
  [-PreserveDeclinedMeetings <Boolean>]
@@ -645,6 +647,28 @@ The InvoiceEventsFromEmailEnabled parameter specifies whether to allow creating 
 
 ```yaml
 Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocationDetailsInFreeBusy
+This parameter is available only in the cloud-based service.
+
+The LocationDetailsInFreeBusy parameter specifies the level of location details that are returned in user's availability. Valid values are:
+
+- None
+- Building
+- Desk
+
+```yaml
+Type: LocationDetailsPermissionInFreeBusy
 Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
