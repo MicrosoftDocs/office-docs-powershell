@@ -60,6 +60,8 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-CreateEventsFromEmailAsPrivate <Boolean>]
  [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
+ [-DefaultMinutesToReduceLongEventsBy <Int32>]
+ [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
  [-DiningEventsFromEmailEnabled <Boolean>]
@@ -77,6 +79,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-ReminderSoundEnabled <Boolean>]
  [-RentalCarEventsFromEmailEnabled <Boolean>]
  [-ServiceAppointmentEventsFromEmailEnabled <Boolean>]
+ [-ShortenEventScopeDefault <ShortenEventScopeOption>]
  [-ShowWeekNumbers <Boolean>]
  [-SkipAgendaMailOnFreeDays <Boolean>]
  [-TimeIncrement <HourIncrement>]
@@ -109,6 +112,8 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-CreateEventsFromEmailAsPrivate <Boolean>]
  [-DailyAgendaMailSchedule <AgendaMailSchedule>]
  [-DefaultMeetingDuration <Int32>]
+ [-DefaultMinutesToReduceLongEventsBy <Int32>]
+ [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
  [-DiningEventsFromEmailEnabled <Boolean>]
@@ -126,6 +131,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-ReminderSoundEnabled <Boolean>]
  [-RentalCarEventsFromEmailEnabled <Boolean>]
  [-ServiceAppointmentEventsFromEmailEnabled <Boolean>]
+ [-ShortenEventScopeDefault <ShortenEventScopeOption>]
  [-ShowWeekNumbers <Boolean>]
  [-SkipAgendaMailOnFreeDays <Boolean>]
  [-TimeIncrement <HourIncrement>]
@@ -392,6 +398,42 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMinutesToReduceLongEventsBy
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultMinutesToReduceLongEventsBy Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMinutesToReduceShortEventsBy
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultMinutesToReduceShortEventsBy Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -837,6 +879,24 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShortenEventScopeDefault
+This parameter is available only in the cloud-based service.
+
+{{ Fill ShortenEventScopeDefault Description }}
+
+```yaml
+Type: ShortenEventScopeOption
 Parameter Sets: Identity, MailboxLocation
 Aliases:
 Applicable: Exchange Online
