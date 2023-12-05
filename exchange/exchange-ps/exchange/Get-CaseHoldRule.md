@@ -27,7 +27,7 @@ Get-CaseHoldRule [[-Identity] <ComplianceRuleIdParameter>]
 ```
 
 ## DESCRIPTION
-In large environments, running this cmdlet without any parametersresults in a timeout. As a workaround, you can run the following command:
+In large environments, running this cmdlet without any parameters results in a timeout. As a workaround, you can run the following command:
 
 `Get-ComplianceCase -Organization $org | foreach {Get-CaseHoldPolicy -Case $_.CaseId | foreach {Get-CaseHoldRule -Policy $_.Guid}}`
 
