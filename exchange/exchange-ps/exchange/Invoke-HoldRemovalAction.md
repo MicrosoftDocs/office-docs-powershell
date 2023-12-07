@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ### -Force
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-You can use this switch to force remove the hold even when the policy is active. Please remove hold from the case hold policy instead.
+You can use this switch to force remove the hold even when the policy is active. Instead, you should remove the hold from the case hold policy.
 
 ```yaml
 Type: SwitchParameter
