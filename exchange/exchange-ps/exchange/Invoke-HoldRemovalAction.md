@@ -32,7 +32,7 @@ Invoke-HoldRemovalAction -Action <HoldRemovalActionType>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. Only Compliance Administrator can remove hold for Exchange or Sharepoint locations. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -41,7 +41,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 Invoke-HoldRemovalAction -Action RemoveHold -ExchangeLocation "KittyPetersen@contoso.onmicrosoft.com" -HoldId "UniHecbf89df-74fc-444a-a2dc-c0756c7d3503"
 ```
 
-This example removes the specified hold on Kitty Petersen's mailbox.
+This example removes the specified hold on Kitty Petersen's mailbox if policy UniHecbf89df-74fc-444a-a2dc-c0756c7d3503 is not an active case hold policy.
 
 ### Example 2
 ```powershell
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ### -Force
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
-You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+You can use this switch to force remove the hold even when the policy is active. Instead, you should remove the hold from the case hold policy.
 
 ```yaml
 Type: SwitchParameter

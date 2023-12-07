@@ -114,7 +114,6 @@ The ReportType parameter specifies the type of historical search that you want t
 - DLP: Data Loss Prevention Report.
 - MessageTrace: Message Trace Report.
 - MessageTraceDetail: Message Trace Details Report.
-- Phish: Exchange Online Protection and Defender for Office 365 E-mail Phish Report.
 - SPAM: SPAM Detections Report.
 - Spoof: Spoof Mail Report.
 - TransportRule: Transport or Mail Flow Rules Report.
