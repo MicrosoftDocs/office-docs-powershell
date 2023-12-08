@@ -456,7 +456,7 @@ Accept wildcard characters: False
 ### -Identity
 Login using managed service identity in the current environment. For *-Cs cmdlets, this is supported from version 5.8.1-preview onwards. 
 
-Note: This is currently only supported in commercial environments. Few [cmdlets](/MicrosoftTeams/teams-powershell-application-authentication#cmdlets-supported) that don't support application-based authentication are not supported for this as well.
+**Note**: This is currently only supported in commercial environments. Few [cmdlets](/MicrosoftTeams/teams-powershell-application-authentication#cmdlets-supported) that don't support application-based authentication are not supported for this as well.
 
 ```yaml
 Type: SwitchParameter
