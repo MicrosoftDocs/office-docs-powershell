@@ -358,8 +358,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExtendTeamsDlpPoliciesToSharePointOneDrive
-{{ Fill ExtendTeamsDlpPoliciesToSharePointOneDrive Description }}
+### -ExtendTeamsDlpToSpoOdbConsent
+
+This flag is to enable Teams DLP Policy to automatically extend protection to the content stored in OneDrive shared in 1:1/n chats and content stored in SharePoint associated with Teams teams shared through channel chats.
 
 ```yaml
 Type: Boolean
