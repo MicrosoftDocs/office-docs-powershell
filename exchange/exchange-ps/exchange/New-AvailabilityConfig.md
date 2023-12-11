@@ -14,14 +14,14 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-AvailabilityConfig cmdlet to create an availability configuration. An availability configuration specifies an existing account that's used to exchange free/busy information between organizations.
+Use the New-AvailabilityConfig cmdlet to create an availability configuration. An availability configuration specifies a set of tenant ids representing organizations to exchange free/busy information with. 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-AvailabilityConfig -OrgWideAccount <SecurityPrincipalIdParameter>
+New-AvailabilityConfig 
  [-AllowedTenantIds <MultiValuedProperty>]
  [-Confirm]
  [-WhatIf]
@@ -35,48 +35,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-AvailabilityConfig -OrgWideAccount "Tony Smith"
+New-AvailabilityConfig -AllowedTenantIds "d6b0a40e-029b-43f2-9852-f3724f68ead9, 87d5bade-cefc-4067-a221-794aea71922d"
 ```
 
-This example creates a new availability configuration. The existing account named Tony Smith will be used to exchange free/busy information between organizations.
+This example creates a new availability configuration. In this example it is allowed to share free/busy information with the two other tenants as represented by the ids.
 
 ## PARAMETERS
 
-### -OrgWideAccount
-The OrgWideAccount parameter specifies who has permission to issue proxy Availability service requests on an organization-wide basis. You can specify the following types of users or groups (security principals) for this parameter:
-
-- Mailbox users
-- Mail users with a Microsoft account
-- Security groups
-
-You can use any value that uniquely identifies the user or group. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
-
-```yaml
-Type: SecurityPrincipalIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AllowedTenantIds
-{{ Fill AllowedTenantIds Description }}
+A comma seperated string with GUIDs representing the tenant ids of organization with home the free/busy information is shared with. A maximum of 25 tenant ids can specified.
 
 ```yaml
 Type: MultiValuedProperty
