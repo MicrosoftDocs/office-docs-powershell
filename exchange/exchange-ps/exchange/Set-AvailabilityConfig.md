@@ -68,7 +68,7 @@ In this example for Exchange Online, the availability config is modified to allo
 ### -AllowedTenantIds
 This parameter is available only in the cloud-based service.
 
-The AllowedTenantIds parameter specifies the Microsoft 365 organizations that you want to share free/busy information with. You identify the organizations using their tenant ID values (for example, d6b0a40e-029b-43f2-9852-f3724f68ead9). You can specifiy multiple values separated by commas. A maximum of 25 values are allowed.
+The AllowedTenantIds parameter specifies the tenant ID values of Microsoft 365 organization that you want to share free/busy information with (for example, d6b0a40e-029b-43f2-9852-f3724f68ead9). You can specifiy multiple values separated by commas. A maximum of 25 values are allowed.
 
 To replace all existing tenant IDs with the values you specify, use the following syntax: `"TenantID1","TenantID2",..."TenantID25"`.
 
