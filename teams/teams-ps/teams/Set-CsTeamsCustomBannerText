@@ -22,7 +22,7 @@ Set-CsTeamsCustomBannerText [[-Id] <Guid>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-Updates a single instance of custom banner text.
+Updates a single instance of a custom banner text.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ Sets the properties of the CustomText instance of TeamsCustomBannerText.
 ## PARAMETERS
 
 ### -Id
-The Identity of the CustomBannerText. You do not need to provide an Id as the backend will generate it for you. However if you wish to provide your own ID, you can provide your own GUID. Please note that you have to provide a unique ID for every CsTeamsCustomBannerText you create.
+The Identity of the CustomBannerText. You do not need to provide an ID as the backend will generate it for you. However, if you wish to provide your own ID, you can provide your own GUID. Note that you have to provide a unique ID for every CsTeamsCustomBannerText you create.
 
 ```yaml
 Type: Guid
@@ -50,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Text
-The text that the tenant admin would like to set in policy.
+The text that the tenant admin would like to set in the policy.
 
 ```yaml
 Type: String

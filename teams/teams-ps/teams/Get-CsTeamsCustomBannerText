@@ -23,7 +23,7 @@ Get-CsTeamsCustomBannerText [[-Identity] <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-Returns all or a single instance of custom banner text(s).
+Returns all or a single instance of custom banner texts.
 
 
 ## EXAMPLES
@@ -45,7 +45,7 @@ Gets the properties of the CustomText instance of TeamsCustomBannerText.
 ## PARAMETERS
 
 ### -Identity
-Policy instance name. Optional.
+Policy instance name (optional).
 
 ```yaml
 Type: String
