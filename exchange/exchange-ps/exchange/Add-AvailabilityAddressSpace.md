@@ -66,11 +66,10 @@ This example is useful with a trusted cross-forest Availability service. The con
 
 ### Example 4
 ```powershell
-Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod OrgWideFBToken -TargetTenantId “9d341953-da1f-41b0-8810-76d6ef905273" -TargetServiceEpr “outlook.office.com”
-
+Add-AvailabilityAddressSpace -ForestName contoso.contoso.com -AccessMethod OrgWideFBToken -TargetTenantId "9d341953-da1f-41b0-8810-76d6ef905273" -TargetServiceEpr "outlook.office.com"
 ```
 
-This example is for setting up sharing of free/busy information for Exchange Online. In this example you are requesting to read free/busy information of example.contoso.com with tenant ID 9d341953-da1f-41b0-8810-76d6ef905273 represtend by ForestName and TargetTenantID parameters. TargetServiceEpr is set to Exchange Online endpoint depending on where the requested tenant is loated in the cloud.
+This example sets up the sharing of free/busy information for Exchange Online. In this example, you're requesting to read free/busy information of contoso.contoso.com (tenant ID value 9d341953-da1f-41b0-8810-76d6ef905273), and contoso.com is a regular Microsoft 365 organization.
 
 ## PARAMETERS
 
@@ -79,7 +78,7 @@ The AccessMethod parameter specifies how the free/busy data is accessed. Valid v
 
 - PerUserFB: Per-user free/busy information can be requested. The free/busy data is accessed in the defined per-user free/busy proxy account or group, or in the All Exchange Servers group. This value requires a trust between the two forests, and requires you to use either the UseServiceAccount parameter or Credentials parameter.
 - OrgWideFB: Only default free/busy for each user can be requested. The free/busy data is accessed in the per-user free/busy proxy account or group in the target forest. This value requires you to use either the UseServiceAccount parameter or Credentials parameter.
-- OrgWideFBBasic: Only specified for free/busy sharing between tenants that are all in Exchange Online.
+- OrgWideFBBasic: Free/busy sharing between tenants that are all in Exchange Online.
 - InternalProxy: The request is proxied to an Exchange in the site that has a later version of Exchange.
 - PublicFolder: This value was used to access free/busy data on Exchange Server 2003 servers.
 
@@ -204,12 +203,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetServiceEpr
-The TargetServiceEPR parameter specificies the Exchange Online Calendar Service URL of the external organization whose free/busy informaton you are trying to read. 
-The following are the Exchange Online Calendar Service URLs for external organization in different Exchange Online environments
+This parameter is available only in the cloud-based service.
+
+The TargetServiceEpr parameter specificies the Exchange Online Calendar Service URL of the external organization whose free/busy informaton you're trying to read. Valid values are:
 
 - Microsoft 365 or Microsoft 365 GCC: outlook.office.com
 - Office 365 operated by 21Vianet: partner.outlook.cn
-- Microsoft 365 DoD or GCC High: outlook.office365.us
+- Microsoft 365 GCC High or DoD: outlook.office365.us
 
 ```yaml
 Type: String
@@ -225,9 +225,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetTenantId
-This parameter is available only in Exchange Online.
+This parameter is available only in the cloud-based service.
 
-The TargetTenantID parameter specifies the tenant ID of the target target whose free/busy data must be retrieved
+The TargetTenantID parameter specifies the tenant ID of the target tenant whose free/busy informaton you're trying to read.
 
 ```yaml
 Type: String
