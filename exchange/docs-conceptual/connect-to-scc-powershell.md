@@ -2,7 +2,7 @@
 title: Connect to Security & Compliance PowerShell
 author: chrisda
 manager: dansimp
-ms.date: 11/7/2023
+ms.date: 12/12/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -170,8 +170,6 @@ The Security & Compliance PowerShell cmdlets are imported into your local Window
 If you receive errors, check the following requirements:
 
 - A common problem is an incorrect password. Run the three steps again and pay close attention to the username and password that you use.
-
-- To help prevent denial-of-service (DoS) attacks, when you connect using remote PowerShell mode, you're limited to five open connections to Security & Compliance PowerShell.
 
 - The account that you use to connect must be enabled for PowerShell. For more information, see [Enable or disable access to Exchange Online PowerShell](disable-access-to-exchange-online-powershell.md).
 
