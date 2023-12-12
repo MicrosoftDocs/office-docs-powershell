@@ -2640,11 +2640,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-**Note**: This parameter is functional only in on-premises Exchange. This exception doesn't work in the cloud-based service.
-
 This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-This exception is available on Mailbox servers and Edge Transport servers.
+In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
 
@@ -4341,11 +4339,9 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-**Note**: This parameter is functional only in on-premises Exchange. This condition doesn't work in the cloud-based service.
-
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-This condition is available on Mailbox servers and Edge Transport servers.
+In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
 The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
 
