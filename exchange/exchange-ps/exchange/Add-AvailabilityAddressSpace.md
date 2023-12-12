@@ -69,7 +69,7 @@ This example is useful with a trusted cross-forest Availability service. The con
 Add-AvailabilityAddressSpace -ForestName contoso.contoso.com -AccessMethod OrgWideFBToken -TargetTenantId "9d341953-da1f-41b0-8810-76d6ef905273" -TargetServiceEpr "outlook.office.com"
 ```
 
-This example sets up the sharing of free/busy information for Exchange Online. In this example, you're requesting to read free/busy information of contoso.contoso.com (tenant ID value 9d341953-da1f-41b0-8810-76d6ef905273), and contoso.com is a regular Microsoft 365 organization.
+This example sets up the sharing of free/busy information in Exchange Online. You're requesting to read free/busy information of contoso.com (tenant ID value 9d341953-da1f-41b0-8810-76d6ef905273), and contoso.com is a regular Microsoft 365 organization.
 
 ## PARAMETERS
 
