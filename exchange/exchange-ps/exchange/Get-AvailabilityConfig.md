@@ -42,14 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AvailabilityConfig
 ```
 
-In on-premises Exchange, this example returns the accounts that are trusted in the cross-forest sharing of free/busy information.
+In on-premises Exchange, this example returns the accounts that are trusted in the cross-forest shared of free/busy information.
 
 In Exchange Online, this examples returns the tenant IDs that free/busy information is being shared with. 
 
 ## PARAMETERS
 
 ### -Identity
-This parameter is unnecessary. Each organization has only one availability config object named Availability Configuration.
+This parameter is unnecessary. Each organization has only one availability configuration object named Availability Configuration.
 
 ```yaml
 Type: OrganizationIdParameter
