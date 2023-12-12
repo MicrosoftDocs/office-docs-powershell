@@ -14,9 +14,11 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-AvailabilityConfig cmdlet to retrieve the accounts that are trusted in the cross-forest exchange of free/busy information. 
+Use the Get-AvailabilityConfig cmdlet to view information about the sharing of free/busy information in the organization.
 
-For Exchange Online use the Get-AvailabilityConfig cmdlet to retrieve the tenant ids of organizations with whome the free/busy information is being shared with. 
+In on-premises Exchange, the cmdlet returns the accounts that are trusted in the cross-forest sharing of free/busy information. 
+
+In Exchange Online, the cmdlet returns the tenant IDs of organizations that free/busy information is being shared with. 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,7 +31,7 @@ Get-AvailabilityConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-AvailabilityConfig cmdlet lists the accounts or tenant ids (for Exchange Online) that have permissions to issue proxy availability service requests on an organizational or per-user basis.
+The Get-AvailabilityConfig cmdlet lists the accounts or tenant IDs that have permissions to issue proxy availability service requests on an organizational or per-user basis.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -40,19 +42,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AvailabilityConfig
 ```
 
-This example retrieves the accounts that are trusted in the cross-forest exchange of free/busy information. For Exchange Online this examples retrieves the list of tenant ids with whome the Free/Busy information is being shared with. 
+In on-premises Exchange, this example returns the accounts that are trusted in the cross-forest sharing of free/busy information.
 
-### Example 2
-```powershell
-Get-AvailabilityConfig -Identity <AvailabilityConfig Value>
-```
-
-This example retrieves the accounts that are trusted in the cross-forest exchange of free/busy information. This example is scoped to return only the results of the specified Identity parameter. For Exchange Online this examples retrieves the list of tenant ids with whome the Free/Busy information is being shared with. 
+In Exchange Online, this examples returns the tenant IDs that free/busy information is being shared with. 
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the availability configuration to be retrieved.
+This parameter is unnecessary. Each organization has only one availability config object named Availability Configuration.
 
 ```yaml
 Type: OrganizationIdParameter
