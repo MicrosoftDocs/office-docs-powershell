@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-AvailabilityConfig cmdlet to create an availability configuration. An availability configuration specifies a set of tenant ids representing organizations to exchange free/busy information with. 
+Use the New-AvailabilityConfig cmdlet to create an availability configuration. An availability configuration specifies the Microsoft 365 organizations to exchange free/busy information with. 
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-AvailabilityConfig 
  [-AllowedTenantIds <MultiValuedProperty>]
  [-Confirm]
+ [-OrgWideAccount <SecurityPrincipalIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -35,16 +36,15 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-AvailabilityConfig -AllowedTenantIds "d6b0a40e-029b-43f2-9852-f3724f68ead9, 87d5bade-cefc-4067-a221-794aea71922d"
+New-AvailabilityConfig -AllowedTenantIds "d6b0a40e-029b-43f2-9852-f3724f68ead9","87d5bade-cefc-4067-a221-794aea71922d"
 ```
 
-This example creates a new availability configuration. In this example it is allowed to share free/busy information with the two other tenants as represented by the ids.
+This example creates a new availability configuration to share free/busy information with the specified Microsoft 365 organizations.
 
 ## PARAMETERS
 
-
 ### -AllowedTenantIds
-A comma seperated string with GUIDs representing the tenant ids of organization with home the free/busy information is shared with. A maximum of 25 tenant ids can specified.
+The AllowedTenantIds parameter specifies the tenant ID value of Microsoft 365 organization that you want to share free/busy information with (for example, d6b0a40e-029b-43f2-9852-f3724f68ead9). You can specifiy multiple values separated by commas. A maximum of 25 values are allowed.
 
 ```yaml
 Type: MultiValuedProperty
@@ -69,6 +69,22 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OrgWideAccount
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: SecurityPrincipalIdParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: Exchange Online
 
 Required: False
