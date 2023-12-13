@@ -1748,16 +1748,18 @@ Accept wildcard characters: False
 ### -DelayedDelicensingEnabled
 This parameter is available only in the cloud-based service.
 
-The DelayedDelicensingEnabled parameter enables or disables a 30 day delay for mailbox license removals. Valid values are:
+The DelayedDelicensingEnabled parameter enables or disables a 30 day delay for Exchange Online license removals from mailboxes. Valid values are:
 
-- $true: User mailbox license removals are delayed by 30 days. Admins can use the delay to identify potential mistakes and avoid disruptions for affected users.
-- $false: User mailbox license removals aren't delayed. This is the default value.
+- $true: Exchange Online license removals from mailboxes are delayed by 30 days. Admins can use the delay to identify potential mistakes and avoid disruptions for affected users.
+- $false: Exchange Online license removals from mailboxes aren't delayed. This is the default value.
 
-Admins can receive weekly notifications about delayed mailbox license removals by using the TenantAdminNotificationForDelayedDelicensingEnabled parameter.
+Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly notifications for admins about mailboxes with delayed Exchange Online license removal request.
 
-Use the Get-PendingDelicenseUser cmdlet to view mailboxes with pending mailbox license removals.
+Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected users periodic notifications that they're going to lose access to their mailbox.
 
-Use the Expedite-Delicensing cmdlet to end the delay for removing the license from the mailbox.
+Use the Get-PendingDelicenseUser cmdlet to view mailboxes with pending mailbox license removal requests.
+
+Use the Expedite-Delicensing cmdlet to end the delay for removing the Exchange Online license from the mailbox.
 
 ```yaml
 Type: Boolean
@@ -2062,7 +2064,14 @@ Accept wildcard characters: False
 ### -EndUserMailNotificationForDelayedDelicensingEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill EndUserMailNotificationForDelayedDelicensingEnabled Description }}
+The EndUserMailNotificationForDelayedDelicensingEnabled parameter enables or disables periodic warnings to affected users that have pending Exchange Online license removal requests on their mailboxes. Valid values are:
+
+- $true: Affected users receive periodic email notifications about losing access to their mailbox starting 18 days before the Exchange Online license is removed from their mailbox.
+- $false: Affected users don't receive periodic email notifications about losing access to their mailbox. This is the default value.
+
+The value of this parameter is meaningful on when the value of the DelayedDelicensingEnabled parameter is $true.
+
+Use the TenantAdminNotificationForDelayedDelicensingEnable to send weekly admin email notifications about users with pending Exchange Online license removal requests.
 
 ```yaml
 Type: Boolean
@@ -3624,12 +3633,14 @@ Accept wildcard characters: False
 ### -TenantAdminNotificationForDelayedDelicensingEnabled
 This parameter is available only in the cloud-based service.
 
-The TenantAdminNotificationForDelayedDelicensingEnabled parameter enables or disables weekly admin notifications about delicensed users. Valid values are:
+The TenantAdminNotificationForDelayedDelicensingEnabled parameter enables or disables weekly admin email notifications about users with pending Exchange Online license removal requests. Valid values are:
 
-- $true: Weekly admin notifications about delicensed users are enabled.
-- $false: Weekly admin notifications about delicensed users are disabled. This is the default value
+- $true: Weekly email notifications about users with pending Exchange Online license removal requests are enabled.
+- $false: Weekly email notifications about users with pending Exchange Online license removal requests are disabled. This is the default value.
 
 The value of this parameter is meaningful on when the value of the DelayedDelicensingEnabled parameter is $true.
+
+Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected users periodic notifications that they're going to lose access to their mailbox.
 
 ```yaml
 Type: Boolean
