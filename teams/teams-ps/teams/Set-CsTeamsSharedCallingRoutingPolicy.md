@@ -175,6 +175,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Shared Calling is currently available in public clouds only.
+
 In some Calling Plan markets, you are not allowed to set the location on service numbers. In this instance, kindly contact the [Telephone Number Services service desk](/microsoftteams/phone-reference/manage-numbers/contact-tns-service-desk).
 
 If you are attempting to use a resource account with an Operator Connect phone number assigned, kindly confirm support for Shared Calling with your operator. 
