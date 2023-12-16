@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter specifies whether the policy is enabled. Valid values are:
 
-- $true: The policy is enabled. This is the default value.
+- $true: The policy is enabled.
 - $false: The policy is disabled.
 
 ```yaml
