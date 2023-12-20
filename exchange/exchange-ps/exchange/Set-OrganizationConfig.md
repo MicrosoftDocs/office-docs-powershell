@@ -1748,18 +1748,23 @@ Accept wildcard characters: False
 ### -DelayedDelicensingEnabled
 This parameter is available only in the cloud-based service.
 
-The DelayedDelicensingEnabled parameter enables or disables a 30 day delay for Exchange Online license removals from mailboxes. Valid values are:
+The DelayedDelicensingEnabled parameter enables or disables a 30 days grace period for Exchange Online license removals from mailboxes. Valid values are:
 
 - $true: Exchange Online license removals from mailboxes are delayed by 30 days. Admins can use the delay to identify potential mistakes and avoid disruptions for affected users.
 - $false: Exchange Online license removals from mailboxes aren't delayed. This is the default value.
 
-Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly notifications for admins about mailboxes with delayed Exchange Online license removal request.
+Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly Service Health [Service Health](https://learn.microsoft.com/en-US/microsoft-365/enterprise/view-service-health?view=o365-worldwide&WT.mc_id=365AdminCSH_inproduct). advisory notifications for admins about count of EXO delicensed users in their Tenant over a period of 7 days, which are in 30 days grace period. 
 
-Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected users periodic notifications that they're going to lose access to their mailbox.
+Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected users periodic email notifications that they're going to lose access to their mailbox.
 
 Use the Get-PendingDelicenseUser cmdlet to view mailboxes with pending mailbox license removal requests.
 
 Use the Expedite-Delicensing cmdlet to end the delay for removing the Exchange Online license from the mailbox.
+
+Whenever the value of the DelayedDelicensingEnabled parameter is set $true, then TenantAdminNotificationForDelayedDelicensingEnabled and EndUserMailNotificationForDelayedDelicensingEnabled parameters are set $true by default. 
+Whenever the value of the DelayedDelicensingEnabled parameter is set $false, then TenantAdminNotificationForDelayedDelicensingEnabled and EndUserMailNotificationForDelayedDelicensingEnabled parameters are set $false by default. 
+
+The value of this parameter is meaningful on
 
 ```yaml
 Type: Boolean
@@ -2064,14 +2069,14 @@ Accept wildcard characters: False
 ### -EndUserMailNotificationForDelayedDelicensingEnabled
 This parameter is available only in the cloud-based service.
 
-The EndUserMailNotificationForDelayedDelicensingEnabled parameter enables or disables periodic warnings to affected users that have pending Exchange Online license removal requests on their mailboxes. Valid values are:
+The EndUserMailNotificationForDelayedDelicensingEnabled parameter enables or disables periodic email warnings to affected users that have pending Exchange Online license removal requests on their mailboxes. Valid values are:
 
-- $true: Affected users receive periodic email notifications about losing access to their mailbox starting 18 days before the Exchange Online license is removed from their mailbox.
+- $true: Affected users receive periodic email notifications about losing access to their mailbox starting after ~18 days from the Exchange Online license removed from their mailbox.
 - $false: Affected users don't receive periodic email notifications about losing access to their mailbox. This is the default value.
 
 The value of this parameter is meaningful on when the value of the DelayedDelicensingEnabled parameter is $true.
 
-Use the TenantAdminNotificationForDelayedDelicensingEnable to send weekly admin email notifications about users with pending Exchange Online license removal requests.
+Use the TenantAdminNotificationForDelayedDelicensingEnable to send weekly Service Health [Service Health](https://learn.microsoft.com/en-US/microsoft-365/enterprise/view-service-health?view=o365-worldwide&WT.mc_id=365AdminCSH_inproduct).advisory notifications for admins about count of EXO delicensed users in their Tenant over a period of 7 days, which are in 30 days grace period.
 
 ```yaml
 Type: Boolean
@@ -3633,14 +3638,14 @@ Accept wildcard characters: False
 ### -TenantAdminNotificationForDelayedDelicensingEnabled
 This parameter is available only in the cloud-based service.
 
-The TenantAdminNotificationForDelayedDelicensingEnabled parameter enables or disables weekly admin email notifications about users with pending Exchange Online license removal requests. Valid values are:
+The TenantAdminNotificationForDelayedDelicensingEnabled parameter enables or disables weekly admin Service Health [Service Health](https://learn.microsoft.com/en-US/microsoft-365/enterprise/view-service-health?view=o365-worldwide&WT.mc_id=365AdminCSH_inproduct). advisory notifications about count of EXO delicensed users over a period of 7 days, which are in 30 days grace period.Valid values are:
 
-- $true: Weekly email notifications about users with pending Exchange Online license removal requests are enabled.
-- $false: Weekly email notifications about users with pending Exchange Online license removal requests are disabled. This is the default value.
+- $true: Weekly Service Health advisory notifications about count of EXO delicensed users over a period of 7 days, which are in 30 days grace period.
+- $false: Disable weekly Service Health advisory notifications about count of EXO delicensed users over a period of 7 days, which are in 30 days grace period. This is the default value.
 
 The value of this parameter is meaningful on when the value of the DelayedDelicensingEnabled parameter is $true.
 
-Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected users periodic notifications that they're going to lose access to their mailbox.
+Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected users periodic email notifications that they're going to lose access to their mailbox.
 
 ```yaml
 Type: Boolean
