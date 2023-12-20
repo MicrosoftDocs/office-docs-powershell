@@ -35,7 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Expedite-Delicensing -Identity yajvendra@contoso.onmicrosoft.com
 ```
 
-This example ends the delay for the mailbox license removal request on the specified mailbox. Typically, the mailbox license is removed from the mailbox within 30 minutes after running the command.
+This example ends the delay for the mailbox license removal request on the specified mailbox. Typically, the mailbox license is removed from the mailbox within 30 minutes after running the command, but it might take up to 24 hours.
 
 ## PARAMETERS
 
