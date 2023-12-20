@@ -1748,7 +1748,7 @@ Accept wildcard characters: False
 ### -DelayedDelicensingEnabled
 This parameter is available only in the cloud-based service.
 
-The DelayedDelicensingEnabled parameter enables or disables a 30 days grace period for Exchange Online license removals from mailboxes. Valid values are:
+The DelayedDelicensingEnabled parameter enables or disables a 30 day grace period for Exchange Online license removals from mailboxes. Valid values are:
 
 - $true: Exchange Online license removals from mailboxes are delayed by 30 days. Admins can use the delay to identify potential mistakes and avoid disruptions for affected users.
 - $false: Exchange Online license removals from mailboxes aren't delayed. This is the default value.
@@ -1761,9 +1761,9 @@ Use the Get-PendingDelicenseUser cmdlet to view mailboxes with pending mailbox l
 
 Use the Expedite-Delicensing cmdlet to end the delay for removing the Exchange Online license from the mailbox.
 
-When the value of the DelayedDelicensingEnabled parameter is $true, the TenantAdminNotificationForDelayedDelicensingEnabled and EndUserMailNotificationForDelayedDelicensingEnabled parameters are set to $true by default.
+When you set the value of the DelayedDelicensingEnabled parameter to $true, the TenantAdminNotificationForDelayedDelicensingEnabled and EndUserMailNotificationForDelayedDelicensingEnabled parameters are set to $true by default.
 
-When the value of the DelayedDelicensingEnabled parameter is $false, the TenantAdminNotificationForDelayedDelicensingEnabled and EndUserMailNotificationForDelayedDelicensingEnabled parameters are set to $false by default.
+When you set the value of the DelayedDelicensingEnabled parameter to $false, the TenantAdminNotificationForDelayedDelicensingEnabled and EndUserMailNotificationForDelayedDelicensingEnabled parameters are set to $false by default.
 
 ```yaml
 Type: Boolean
@@ -2070,7 +2070,7 @@ This parameter is available only in the cloud-based service.
 
 The EndUserMailNotificationForDelayedDelicensingEnabled parameter enables or disables periodic email warnings to affected users that have pending Exchange Online license removal requests on their mailboxes. Valid values are:
 
-- $true: Affected users receive periodic email notifications about losing access to their mailbox starting after ~18 days from when the Exchange Online license was removed from their mailbox.
+- $true: Affected users receive periodic email notifications about losing access to their mailbox starting ~18 days after the Exchange Online license was removed.
 - $false: Affected users don't receive periodic email notifications about losing access to their mailbox. This is the default value.
 
 The value of this parameter is meaningful on when the value of the DelayedDelicensingEnabled parameter is $true.
