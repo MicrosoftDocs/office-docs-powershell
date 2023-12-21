@@ -1753,7 +1753,7 @@ The DelayedDelicensingEnabled parameter enables or disables a 30 day grace perio
 - $true: Exchange Online license removals from mailboxes are delayed by 30 days. Admins can use the delay to identify potential mistakes and avoid disruptions for affected users.
 - $false: Exchange Online license removals from mailboxes aren't delayed. This is the default value.
 
-Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly Service Health advisory notifications for admins about the number of Exchange Online delicensed users who are in the 30 day grace period over the last 7 days. For more information about Service Health, see [How to check Microsoft 365 service health](https://learn.microsoft.com/microsoft-365/enterprise/view-service-health).
+Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly Service Health advisory notifications for admins about the number of Exchange Online delicensed users who are in the 30 day grace period during the specified 7 day interval. For more information about Service Health, see [How to check Microsoft 365 service health](https://learn.microsoft.com/microsoft-365/enterprise/view-service-health).
 
 Use the EndUserMailNotificationForDelayedDelicensingEnabled to send affected users periodic email notifications that they're going to lose access to their mailbox.
 
@@ -2075,7 +2075,7 @@ The EndUserMailNotificationForDelayedDelicensingEnabled parameter enables or dis
 
 The value of this parameter is meaningful on when the value of the DelayedDelicensingEnabled parameter is $true.
 
-Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly Service Health advisory notifications for admins about the number of Exchange Online delicensed users who are in the 30 day grace period over the last 7 days. For more information about Service Health, see [How to check Microsoft 365 service health](https://learn.microsoft.com/microsoft-365/enterprise/view-service-health).
+Use the TenantAdminNotificationForDelayedDelicensingEnabled parameter to turn on weekly Service Health advisory notifications for admins about the number of Exchange Online delicensed users who are in the 30 day grace period during the specified 7 day interval. For more information about Service Health, see [How to check Microsoft 365 service health](https://learn.microsoft.com/microsoft-365/enterprise/view-service-health).
 
 ```yaml
 Type: Boolean
@@ -3639,7 +3639,7 @@ This parameter is available only in the cloud-based service.
 
 The TenantAdminNotificationForDelayedDelicensingEnabled parameter enables or disables weekly admin Service Health advisory notifications that are sent to admins. Valid values are:
 
-- $true: Weekly Service Health advisory notifications are sent to admins about the number of Exchange Online delicensed users who are in the 30 day grace period over the last 7 days.
+- $true: Weekly Service Health advisory notifications are sent to admins about the number of Exchange Online delicensed users who are in the 30 day grace period during the specified 7 day interval.
 - $false: Disable weekly Service Health advisory notifications about the number of Exchange Online delicensed users. This is the default value.
 
 For more information about Service Health, see [How to check Microsoft 365 service health](https://learn.microsoft.com/microsoft-365/enterprise/view-service-health).
