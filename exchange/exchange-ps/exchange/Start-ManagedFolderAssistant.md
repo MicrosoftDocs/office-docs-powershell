@@ -32,7 +32,7 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCl
 
 ### HoldCleanup
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> -HoldCleanup
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCleanup]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
