@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Default
+### Identity (Default)
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCleanup]
  [-AggMailboxCleanup]
@@ -30,9 +30,9 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCl
  [<CommonParameters>]
 ```
 
-### HoldCleanup
+### ComplianceBoundaryAssistantParameterSet
 ```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCleanup]
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-AdaptiveScope]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -41,52 +41,7 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCl
  [<CommonParameters>]
 ```
 
-### StopHoldCleanup
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ComplianceBoundaryAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter>
- [-AdaptiveScope]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ElcB2DumpsterArchiverAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2DumpsterArchiver]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ElcB2IPMArchiverAssistant
-```
-Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2IPMArchiver]
- [-AggMailboxCleanup]
- [-Confirm]
- [-FullCrawl]
- [-InactiveMailbox]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### ComplianceJobAssistant
+### ComplianceJobAssistantParameterSet
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-ComplianceJob]
  [-AggMailboxCleanup]
@@ -97,9 +52,53 @@ Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-Compli
  [<CommonParameters>]
 ```
 
-### DataGovernanceAssistant
+### DataGovernanceAssistantParameterSet
 ```
 Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-DataGovernance]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ElcB2DumpsterArchiverAssistantParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2DumpsterArchiver]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### ElcB2IPMArchiverAssistantParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-B2IPMArchiver]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### HoldCleanupParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-HoldCleanup]
+ [-AggMailboxCleanup]
+ [-Confirm]
+ [-FullCrawl]
+ [-InactiveMailbox]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### StopHoldCleanupParameterSet
+```
+Start-ManagedFolderAssistant [-Identity] <MailboxOrMailUserIdParameter> [-StopHoldCleanup]
  [-AggMailboxCleanup]
  [-Confirm]
  [-FullCrawl]
@@ -173,7 +172,7 @@ Removing duplicate items from the Recoverable Items folder reduces the folder si
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: HoldCleanup
+Parameter Sets: HoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -186,7 +185,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Default
+Parameter Sets: IdentityParameterSet
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -206,7 +205,7 @@ A hold clean-up command will run until it completely scans the Recoverable Items
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: StopHoldCleanup
+Parameter Sets: StopHoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -224,7 +223,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceBoundaryAssistant
+Parameter Sets: ComplianceBoundaryAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -258,7 +257,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ElcB2DumpsterArchiverAssistant
+Parameter Sets: ElcB2DumpsterArchiverAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -276,7 +275,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ElcB2IPMArchiverAssistant
+Parameter Sets: ElcB2IPMArchiverAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -294,7 +293,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceJobAssistant
+Parameter Sets: ComplianceJobAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -331,7 +330,7 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: DataGovernanceAssistant
+Parameter Sets: DataGovernanceAssistantParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -349,7 +348,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: Default
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -367,7 +366,7 @@ The FullCrawl switch recalculates the application of tags across the whole mailb
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistantParameterSet, ComplianceJobAssistantParameterSet, DataGovernanceAssistantParameterSet, ElcB2DumpsterArchiverAssistantParameterSet, ElcB2IPMArchiverAssistantParameterSet, HoldCleanupParameterSet, StopHoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Online
 
@@ -389,7 +388,7 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ComplianceBoundaryAssistant, ComplianceJobAssistant, DataGovernanceAssistant, ElcB2DumpsterArchiverAssistant, ElcB2IPMArchiverAssistant, HoldCleanup, StopHoldCleanup
+Parameter Sets: ComplianceBoundaryAssistantParameterSet, ComplianceJobAssistantParameterSet, DataGovernanceAssistantParameterSet, ElcB2DumpsterArchiverAssistantParameterSet, ElcB2IPMArchiverAssistantParameterSet, HoldCleanupParameterSet, StopHoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Online
 
