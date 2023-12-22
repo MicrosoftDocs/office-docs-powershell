@@ -165,57 +165,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -HoldCleanup
-The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that may have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
-
-Removing duplicate items from the Recoverable Items folder reduces the folder size and may help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: HoldCleanupParameterSet
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: IdentityParameterSet
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StopHoldCleanup
-This parameter is available only in the cloud-based service.
-
-The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
-
-A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: StopHoldCleanupParameterSet
-Aliases:
-Applicable: Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AdaptiveScope
 This parameter is available only in the cloud-based service.
 
@@ -377,6 +326,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HoldCleanup
+The HoldCleanup switch instructs the Managed Folder Assistant to clean up duplicate versions of items in the Recoverable Items folder that may have been created when a mailbox is on In-Place Hold, Litigation Hold, or has Single Item Recovery enabled. You don't need to specify a value with this switch.
+
+Removing duplicate items from the Recoverable Items folder reduces the folder size and may help prevent reaching Recoverable Items quota limits. For more details about Recoverable Items quota limits, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, HoldCleanupParameterSet
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InactiveMailbox
 This parameter is available only in the cloud-based service.
 
@@ -389,6 +356,26 @@ When you use this switch, items aren't moved from the inactive mailbox to the ar
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ComplianceBoundaryAssistantParameterSet, ComplianceJobAssistantParameterSet, DataGovernanceAssistantParameterSet, ElcB2DumpsterArchiverAssistantParameterSet, ElcB2IPMArchiverAssistantParameterSet, HoldCleanupParameterSet, StopHoldCleanupParameterSet
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopHoldCleanup
+This parameter is available only in the cloud-based service.
+
+The StopHoldCleanup switch stops a previous hold clean-up command that was issued on the mailbox. You don't need to specify a value with this switch.
+
+A hold clean-up command will run until it completely scans the Recoverable Items folder for duplicate versions of items (it even continues after an interruption). In some cases, the hold clean-up command gets stuck, which can block other regular MRM tasks on the mailbox (for example, expiring items). The StopHoldCleanup switch tells MRM to abandon the stuck hold clean-up task so that regular tasks can continue.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: StopHoldCleanupParameterSet
 Aliases:
 Applicable: Exchange Online
 
