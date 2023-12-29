@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageCookie
-The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters.
+The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. PageCookie is valid for 120 seconds to fetch next set of records for same query. 
 
 ```yaml
 Type: String
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 100.
+The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 100. Consider using smaller page size to avoid PageCookie expiry when exporting large datasets.
 
 ```yaml
 Type: Int32
