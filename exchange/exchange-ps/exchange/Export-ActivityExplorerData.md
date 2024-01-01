@@ -53,7 +53,6 @@ This example exports up to 100 records for the specified date range in Json form
 
 ### Example 3
 ```powershell
-
 $res = Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json
 
 #Run the below steps in loop until all results are fetched
@@ -63,7 +62,6 @@ while ($res.LastPage -ne $true)
   $pageCookie = $res.WaterMark
   $res = Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json -PageCookie $pageCookie
 }
-
 ```
 
 This example is related to the previous example where more than 100 records were available (the value of the LastPage property from that command was False). We're using the same date range, but this time we're using the value of the Watermark property from the previous command for the PageCookie parameter in this command to get the remaining results in a loop. ResultData from each iteration can be used as needed.
@@ -242,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageCookie
-The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. PageCookie is valid for 120 seconds to fetch next set of records for same query. 
+The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. The PageCookie value is valid for 120 seconds to fetch the next set of records for same query. 
 
 ```yaml
 Type: String
@@ -258,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 100. Consider using smaller page size to avoid PageCookie expiry when exporting large datasets.
+The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 100. Consider using a smaller PageSize value to avoid PageCookie expiry when exporting large datasets.
 
 ```yaml
 Type: Int32
