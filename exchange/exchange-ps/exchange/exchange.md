@@ -69,10 +69,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Enable-SafeLinksRule](Enable-SafeLinksRule.md)
 
-### [Get-AdvancedThreatProtectionDocumentDetail](Get-AdvancedThreatProtectionDocumentDetail.md)
-
-### [Get-AdvancedThreatProtectionDocumentReport](Get-AdvancedThreatProtectionDocumentReport.md)
-
 ### [Get-AntiPhishPolicy](Get-AntiPhishPolicy.md)
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
@@ -1067,6 +1063,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-MailboxServer](Set-MailboxServer.md)
 
 ### [Set-SearchDocumentFormat](Set-SearchDocumentFormat.md)
+
+### [Start-MailboxAssistant](Start-MailboxAssistant.md)
 
 ### [Test-AssistantHealth](Test-AssistantHealth.md)
 

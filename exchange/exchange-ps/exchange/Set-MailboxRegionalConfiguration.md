@@ -317,7 +317,7 @@ This parameter is available only in the cloud-based service.
 Type: SwitchParameter
 Parameter Sets: Identity, MailboxLocation
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

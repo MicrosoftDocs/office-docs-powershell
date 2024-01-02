@@ -29,7 +29,13 @@ The steps are the same as [Create new cmdlet topics](NEW_CMDLETS.md#step-1-insta
 You probably know how to do this already, but the available workloads and connection methods are also described in [Create new cmdlet topics](NEW_CMDLETS.md#step-2-connect-to-the-powershell-environment-that-has-the-cmdlet).
 
 > [!NOTE]
-> In v3.0.0 or later of the EXO V3 module, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. If you omit the _UseRPSSession_ switch and connect in REST API mode, the **Type** value of most parameters will be the incorrect and unhelpful `Object` or `Object[]` values. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
+> Remote PowerShell connections are deprecated in Exchange Online PowerShell and Security & Compliance PowerShell in favor of REST API connections. For more information, see the following articles:
+>
+> - [REST API connections in the EXO V3 module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#rest-api-connections-in-the-exo-v3-module).
+> - [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
+> - [Deprecation of Remote PowerShell (RPS) Protocol in Security & Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
+>
+> REST API connections in the Exchange Online PowerShell V3 module incorrectly identify many parameter **Type** values as `Object` or `Object[]`. The true parameter type values are visible in product code.
 
 ### Step 3: Load platyPS in the PowerShell environment
 
@@ -39,53 +45,41 @@ After you've connected in PowerShell to the server or service (either in a regul
 Import-Module platyPS
 ```
 
-### Step 4: Store your PSSession in a variable
-
-This step is the same as in [Create new cmdlet topics](NEW_CMDLETS.md#step-5-store-your-pssession-in-a-variable).
-
-To recap: this step is required in Exchange and other products that use remote PowerShell.
-
-> [!NOTE]
-> As described earlier, you need to connect to Exchange Online in remote PowerShell mode using the _UseRPSSession_ switch in the **Connect-ExchangeOnline** command. Although the [Get-ConnectionInformation](/powershell/module/exchange/get-connectioninformation) cmdlet is a reasonable replacement for Get-PSSession in REST API mode, the output doesn't work with the _Session_ parameter in **New-MarkdownHelp**. For more information about the EXO V3 module, see [Updates for version 3.0.0 (the EXO V3 module)](/powershell/exchange/exchange-online-powershell-v2#updates-for-version-300-the-exo-v3-module).
-
-If you're using Microsoft Teams or another product that doesn't use remote PowerShell, you can skip this step.
-
-### Step 5: Use New-MarkdownHelp to dump the latest version of the cmdlet to a file
+### Step 4: Use New-MarkdownHelp to dump the latest version of the cmdlet to a file
 
 These instructions are the same (up to a point) as in [Create new cmdlet topics](NEW_CMDLETS.md):
 
 The basic syntax is:
 
 ```powershell
-New-MarkdownHelp -Command <Cmdlet> -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
+New-MarkdownHelp -Command <Cmdlet> -OutputFolder "<Path">
 ```
 
 or
 
 ```powershell
 $x = "<Cmdlet1>","<Cmdlet2>",..."<CmdletN>"
-New-MarkdownHelp -Command $x -OutputFolder "<Path"> [-Session <PSSessionVariableName>]
+
+New-MarkdownHelp -Command $x -OutputFolder "<Path">
 ```
 
-This example create a topic file for the updated cmdlet named **Get-CoolFeature** in the Exchange Online PowerShell session where the session variable is `$Session` in the folder "C:\My Docs\ExO".
+This example create a topic file for the updated cmdlet named **Get-CoolFeature** in the Exchange Online PowerShell session in the folder "C:\My Docs\ExO".
 
 ```powershell
-New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO" -Session $Session
+New-MarkdownHelp -Command "Get-CoolFeature" -OutputFolder "C:\My Docs\ExO"
 ```
 
-This example creates topic files for the updated cmdlets **Get-CoolFeature**, **New-CoolFeature**, **Remove-CoolFeature**, and **Set-CoolFeature** from the Exchange Online session where the session variable is `$Session` in the folder C:\My Docs\ExO.
+This example creates topic files for the updated cmdlets **Get-CoolFeature**, **New-CoolFeature**, **Remove-CoolFeature**, and **Set-CoolFeature** from the Exchange Online session in the folder C:\My Docs\ExO.
 
 The first command stores the cmdlet names in a variable. The second command uses that variable to identify the cmdlets and write the output files.
 
 ```powershell
 $Delta = "Get-CoolFeature","New-CoolFeature","Remove-CoolFeature","Set-CoolFeature"
+
+New-MarkdownHelp -Command $Delta -OutputFolder "C:\My Docs\ExO"
 ```
 
-```powershell
-New-MarkdownHelp -Command $Delta -OutputFolder "C:\My Docs\ExO" -Session $Session
-```
-
-### Step 6: Document the new parameters
+### Step 5: Document the new parameters
 
 The resulting topics are plain text UTF-8 files that are formatted using [markdown](https://guides.github.com/features/mastering-markdown/). Office writers use [Visual Studio Code](https://code.visualstudio.com/) to edit topic files, but you can use Notepad or your favorite text editor.
 
@@ -112,13 +106,13 @@ The resulting topics are plain text UTF-8 files that are formatted using [markdo
 
    Most of the attributes and values are generated automatically by platyPS. The ones that require manual intervention are:
 
+   - **Type**: In any environment, the values `Object` or `Object[]` are wrong. As previously described, REST API connections in the Exchange Online PowerShell V3 module incorrectly identify many parameter **Type** values as `Object` or `Object[]`. Other values like `String`, `Boolean`, and `DateTime` are detected correctly. The true parameter type values are visible in product code. 
+
    - **Applicable**: You need to add this attribute and value yourself. Notice the capital 'A'. See other topics for available values (same available values as the **applicable** attribute at the top of the topic). Don't invent new values here. The value **must** come from the list of predefined values.
 
    - **Default value** and **Accept wildcard characters**: These attributes are present, but the values are never truthfully populated by platyPS **or any other PowerShell utility** (they're always None and False, respectively). You can correct the values if you think it's important. Otherwise, leave them as is.
 
-### Step 7: Copy your changes into the existing topic on GitHub
-
-At this point, the steps are basically identical to [Short URL: aka.ms/office-powershell](../README.md):
+### Step 6: Copy your changes into the existing topic on GitHub
 
 1. Go to the cmdlet topics location in the appropriate GiHub repository:
 
@@ -129,35 +123,14 @@ At this point, the steps are basically identical to [Short URL: aka.ms/office-po
    - Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams>
    - Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/whiteboard/whiteboard-ps/whiteboard>
 
-2. Find the topic and click **Edit**
+2. Find the existing topic and click **Edit**.
 
 3. Copy/paste your updates (and only your updates) from your new, local copy of the topic into the existing topic (click the **Preview** tab to see what they'll look like).
 
    > [!IMPORTANT]
    > The layout of headings and subheadings must follow a very specific schema that is required for PowerShell Get-Help. Any deviation will throw errors in the Pull Request. The schema can be found here: <https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md>.
 
-4. After you're done modifying files, go to the **Propose file change** section at the bottom of the page:
-
-   - A brief title is required. By default, the title is the name of the file, but you can change it.
-   - Optionally, you can enter more details in the **Add an optional extended description** box.
-
-   When you're ready, click the green **Propose file change** button.
-
-   ![Propose file change section.](../images/propose-file-change.png)
-
-5. On the **Comparing changes** page that appears, click the green **Create pull request** button.
-
-   ![Comparing changes page.](../images/comparing-changes-page.png)
-
-6. On the **Open a pull request** page that appears, click the green **Create pull request** button.
-
-   ![Open a pull request page.](../images/open-a-pull-request-page.png)
-
-> [!NOTE]
->
-> Your permissions in the repo determine what you see. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.
->
-> The point is: click any green buttons that are presented to you until there are no more.
+4. At this point, the steps are identical to [Short URL: aka.ms/office-powershell](../README.md) (You're starting at Step 4).
 
 ## Remove existing parameters from existing topics
 

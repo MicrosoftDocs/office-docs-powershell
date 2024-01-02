@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-MigrationUser -MailboxGuid <Guid>
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
@@ -31,10 +32,9 @@ Get-MigrationUser -MailboxGuid <Guid>
 
 ### StatusAndBatchId
 ```
-Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
- [-Status <MigrationUserStatus>]
- [-StatusSummary <MigrationUserStatusSummary>]
+Get-MigrationUser [-BatchId <MigrationBatchIdParameter>] [-Status <MigrationUserStatus>] [-StatusSummary <MigrationUserStatusSummary>]
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
@@ -44,6 +44,7 @@ Get-MigrationUser [-BatchId <MigrationBatchIdParameter>]
 ```
 Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
@@ -53,6 +54,7 @@ Get-MigrationUser [[-Identity] <MigrationUserIdParameter>]
 ```
 Get-MigrationUser -EmailAddress <SmtpAddress>
  [-DomainController <Fqdn>]
+ [-IncludeAssociatedUsers]
  [-ResultSize <Unlimited>]
  [-Partition <MailboxIdParameter>]
  [<CommonParameters>]
@@ -169,6 +171,24 @@ Aliases:
 Applicable: Exchange Online
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeAssociatedUsers
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeAssociatedUsers Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

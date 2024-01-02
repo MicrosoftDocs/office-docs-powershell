@@ -30,7 +30,7 @@ The Set-CsCallQueue cmdlet may suggest additional steps required to complete the
 Note that this cmdlet is in the Skype for Business Online PowerShell module and also affects Teams. The reason the "Applies To:" is stated as Skype for Business Online is because it must match the actual module name of the cmdlet. To learn how this cmdlet is used with Skype for Business Online and Teams, see https://learn.microsoft.com/microsoftteams/create-a-phone-system-call-queue.
 
 > [!CAUTION]
-> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items. Teams Admin Center will support these items by the end of 2023:
+> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items. 
 > 
 > - -OverflowDisconnectTextToSpeechPrompt
 > - -OverflowDisconnectAudioFilePrompt

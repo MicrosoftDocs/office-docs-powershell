@@ -45,6 +45,7 @@ Set-User [-Identity] <UserIdParameter>
  [-GeoCoordinates <GeoCoordinates>]
  [-HomePhone <String>]
  [-IgnoreDefaultScope]
+ [-IsShadowMailbox <Boolean>]
  [-Initials <String>]
  [-LastName <String>]
  [-LinkedCredential <PSCredential>]
@@ -52,6 +53,7 @@ Set-User [-Identity] <UserIdParameter>
  [-LinkedMasterAccount <UserIdParameter>]
  [-MailboxRegion <String>]
  [-MailboxRegionSuffix <MailboxRegionSuffixValue>]
+ [-ManagedOnboardingType <ManagedOnboardingType>]
  [-Manager <UserContactIdParameter>]
  [-MobilePhone <String>]
  [-Name <String>]
@@ -575,6 +577,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsShadowMailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsShadowMailbox Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LastName
 The LastName parameter specifies the user's last name.
 
@@ -692,6 +712,24 @@ Type: MailboxRegionSuffixValue
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedOnboardingType
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManagedOnboardingType Description }}
+
+```yaml
+Type: ManagedOnboardingType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
