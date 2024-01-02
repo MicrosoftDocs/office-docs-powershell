@@ -24,7 +24,8 @@ New-CsTeamsMessagingPolicy [-AllowOwnerDeleteMessage <Boolean>] [-AllowSmartRepl
  [-Tenant <Guid>] [-AllowImmersiveReader <Boolean>] [-AllowUserTranslation <Boolean>]
  [-AllowUserEditMessage <Boolean>] [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-AllowRemoveUser <Boolean>]
  [-ReadReceiptsEnabledType <String>] [-AllowMemes <Boolean>] [-Confirm] [-AllowPriorityMessages <Boolean>]
- [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
+ [-WhatIf] [-GiphyRatingType <String>] [-AllowGiphy <Boolean>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>] 
+ [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>]
  ```
 
 ## DESCRIPTION
@@ -47,6 +48,36 @@ All other policy properties will use the default values.
 
 ### -AllowGiphy
 Determines whether a user is allowed to access and post Giphys. Set this to TRUE to allow. Set this FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CreateCustomEmojis
+This setting enables the creation of custom emojis and reactions within an organization for the specified policy users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteCustomEmojis
+These settings enable and disable the editing and deletion of custom emojis and reactions for the users included in the messaging policy.
 
 ```yaml
 Type: Boolean

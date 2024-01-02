@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>]
+ [-Capability <ClassificationCapabilityType>]
  [-IncludeDetails]
  [-IncludeElements <ClassificationPrimitiveElementType>]
  [-Organization <OrganizationIdParameter>]
@@ -67,6 +68,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Capability
+{{ Fill Capability Description }}
+
+```yaml
+Type: ClassificationCapabilityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

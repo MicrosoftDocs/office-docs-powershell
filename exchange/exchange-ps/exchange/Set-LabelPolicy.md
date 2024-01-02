@@ -384,6 +384,8 @@ Supported settings for built-in labeling:
 
 - **HideBarByDefault**: For Office apps that support the sensitivity bar, don't display the sensitivity label name on the window bar title so that there's more space to display long file names. Just the label icon and color (if configured) will be displayed. Users can't revert this setting in the app. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="True"}`
 
+- **DisableShowSensitiveContent**: For Office apps that highlight the sensitive content that caused a label to be recommended, turn off these highlights and corresponding indications about the sensitive content. For more information, see [Sensitivity labels are automatically applied or recommended for your files and emails in Office](https://support.microsoft.com/office/sensitivity-labels-are-automatically-applied-or-recommended-for-your-files-and-emails-in-office-622e0d9c-f38c-470a-bcdb-9e90b24d71a1). Supported apps: Word for Windows (version 2311+). Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableShowSensitiveContent="True"}`
+
 Additionally, for Power BI:
 
 - **powerbimandatory**: Mandatory labeling for Power BI. Example: `Set-LabelPolicy -Identity Global -AdvancedSettings @{powerbimandatory="true"}`. For more information about this configuration choice, see [Mandatory label policy for Power BI](https://learn.microsoft.com/power-bi/admin/service-security-sensitivity-label-mandatory-label-policy).

@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-ServicePrincipal [[-Identity] <ServicePrincipalIdParameter>]
+ [-Organization <OrganizationIdParameter>]
  [<CommonParameters>]
 ```
 
@@ -63,12 +64,28 @@ The Identity parameter specifies the service principal that you want to view. Yo
 Type: ServicePrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protectionn
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

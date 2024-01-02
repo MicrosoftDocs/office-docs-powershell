@@ -40,6 +40,7 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-ExtendTeamsDlpPoliciesToSharePointOneDrive <Boolean>]
  [-InformationBarrierMode <InformationBarrierMode>]
  [-InformationBarrierPeopleSearchRestriction <InformationBarrierPeopleSearchRestriction>]
+ [-IsDlpSimulationOptedIn <Boolean>]
  [-OnPremisesWorkload <Workload>]
  [-ProcessingLimitExceededSeverity <RuleSeverity>]
  [-PurviewLabelConsent <Boolean>]
@@ -358,7 +359,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendTeamsDlpPoliciesToSharePointOneDrive
-{{ Fill ExtendTeamsDlpPoliciesToSharePointOneDrive Description }}
+The ExtendTeamsDlpPoliciesToSharePointOneDrive parameter enables the Teams DLP Policy to automatically extend protection to the content stored in OneDrive shared in 1:1 chats and content stored in SharePoint associated with Teams teams shared through channel chats. Valid values are:
+
+- $true
+- $false
 
 ```yaml
 Type: Boolean
@@ -406,6 +410,22 @@ Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDlpSimulationOptedIn
+{{ Fill IsDlpSimulationOptedIn Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
