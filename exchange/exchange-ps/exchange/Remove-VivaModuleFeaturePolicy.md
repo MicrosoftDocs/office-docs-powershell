@@ -15,8 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
-
 Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module. Once you delete a policy, the policy is permanently deleted. You cannot undo the deletion.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
