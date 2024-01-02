@@ -30,7 +30,7 @@ The Remove-CsOnlineSchedule cmdlet deletes a schedule that is specified by using
 Remove-CsOnlineSchedule -Id "fa9081d6-b4f3-5c96-baec-0b00077709e5"
 ```
 
-This example deletes the schedule that has a Id of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+This example deletes the schedule that has an Id of fa9081d6-b4f3-5c96-baec-0b00077709e5.
 
 
 ## PARAMETERS

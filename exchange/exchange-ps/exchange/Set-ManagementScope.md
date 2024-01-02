@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRoot
-The RecipientRoot parameter specifies the organizational unit (OU) under which the filter specified with the RecipientRestrictionFilter parameter should be applied. Valid input for this parameter is an OU or domain that's visibor domain that's returned bylUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
+The RecipientRoot parameter specifies the organizational unit (OU) under which the filter specified with the RecipientRestrictionFilter parameter should be applied. Valid input for this parameter is an OU or domain that's returned by lUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
 - Canonical name
