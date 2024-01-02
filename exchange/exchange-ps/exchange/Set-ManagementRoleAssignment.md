@@ -178,15 +178,15 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientGroupScope
-This parameter is functional only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The RecipientGroupScope parameter specifies a group to consider for scoping the role assignment. Individual members of the specified group (not nested groups) are considered as in scope for the assignment. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, or DisplayName.
 
 ```yaml
 Type: GroupIdParameter
-Parameter Sets: RecipientGroupScope
+Parameter Sets: RecipientGroupScope, Exchange Online Protection
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online
 
 Required: True
 Position: Named

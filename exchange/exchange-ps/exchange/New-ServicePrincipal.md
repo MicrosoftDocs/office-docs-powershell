@@ -25,6 +25,7 @@ New-ServicePrincipal -AppId <String> -ObjectId <String>
  -ServiceId <String>
  [-Confirm]
  [-DisplayName <String>]
+ [-Organization <OrganizationIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -132,6 +133,22 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

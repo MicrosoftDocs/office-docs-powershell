@@ -43,6 +43,7 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
  [-NonMimeCharacterSet <String>]
  [-PreferredInternetCodePageForShiftJis <PreferredInternetCodePageForShiftJisEnum>]
  [-RequiredCharsetCoverage <Int32>]
+ [-SmtpDaneMandatoryModeEnabled <Boolean>]
  [-TargetDeliveryDomain <Boolean>]
  [-TNEFEnabled <Boolean>]
  [-TrustedMailInboundEnabled <Boolean>]
@@ -522,6 +523,24 @@ Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpDaneMandatoryModeEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill SmtpDaneMandatoryModeEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

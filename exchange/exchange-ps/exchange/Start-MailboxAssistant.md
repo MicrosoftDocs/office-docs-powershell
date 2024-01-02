@@ -1,81 +1,84 @@
 ---
-external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/remove-app
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-title: Remove-App
+external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+online version: https://learn.microsoft.com/powershell/module/exchange/start-mailboxassistant
+applicable: Exchange Server 2019
+title: Start-MailboxAssistant
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
-
-# Remove-App
+# Start-MailboxAssistant
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in Exchange Server 2019 in Cumulative Update 11 (CU11) or later.
 
-Use the Remove-App cmdlet to uninstall an app.
+Use the Start-MailboxAssistant cmdlet to start processing of a mailbox by the specified assistant.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-App [-Identity] <AppIdParameter>
- [-AppType <String>]
+Start-MailboxAssistant [-Identity] <UserIdParameter> -AssistantName <String>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Mailbox <MailboxIdParameter>]
- [-OrganizationApp]
- [-PrivateCatalog]
+ [-Parameters <String>]
+ [-SoftDeletedMailbox]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Remove-App cmdlet requires that the specified app has already been installed (for example, that the app has been installed with the New-App cmdlet. Apps installed by default can't be uninstalled, but they can be disabled.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
+Start-MailboxAssistant -Identity "Chris" -AssistantName BigFunnelRetryFeederTimeBasedAssistant
 ```
 
-This example removes the Finance Test app installed for user Tony.
+This example starts the `BigFunnelRetryFeederTimeBasedAssistant` assistant and lets it process the mailbox of the user "Chris". The assistant indexes the mailbox items that were not indexed previously.
+
+**Note**: You first need to create a setting override as described in [Incomplete search results after installing an Exchange Server 2019 update](https://support.microsoft.com/topic/incomplete-search-results-after-installing-an-exchange-server-2019-update-96ae2ef0-4569-4327-8d0c-8a3c1abdc1f6).
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the AppID (GUID value) of the app that you want to remove. To find the GUID value of an app, run the command Get-App | Format-Table -Auto DisplayName,AppId.
+The Identity parameter specifies the user whose mailbox should be processed by the Mailbox Assistant. Valid values are:
+
+- Distinguished name (DN)
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
-Type: AppIdParameter
+Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -AppType
-This parameter is available only in the cloud-based service.
+### -AssistantName
+The AssistantName parameter specifies the assistant that should process the mailbox. Valid values are:
 
-{{ Fill AppType Description }}
+- BigFunnelRetryFeederTimeBasedAssistant
+
+Values are case sensitive.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -92,7 +95,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -102,15 +105,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -119,25 +120,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Mailbox
-The Mailbox parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example:
-
-- Name
-- Alias
-- Distinguished name (DN)
-- Canonical DN
-- Domain\\Username
-- Email address
-- GUID
-- LegacyExchangeDN
-- SamAccountName
-- User ID or user principal name (UPN)
+### -Parameters
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MailboxIdParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -146,32 +136,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OrganizationApp
-The OrganizationApp switch specifies that the scope of the app is organizational. You don't need to specify a value with this switch.
+### -SoftDeletedMailbox
+The SoftDeletedMailbox switch specifies that the mailbox to be processed by the assistant is a soft-delted mailbox.
 
-This switch is required if the targeted app is installed for the organization.
+Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PrivateCatalog
-The PrivateCatalog switch specifies that the app you want to remove is located in a private catalog. You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -187,7 +161,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -201,13 +175,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Input types
-To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
-
 ## OUTPUTS
-
-### Output types
-To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 

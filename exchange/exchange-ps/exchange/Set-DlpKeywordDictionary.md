@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
  [-Confirm]
  [-Description <String>]
+ [-DoNotPersistKeywords]
  [-FileData <Byte[]>]
  [-Name <String>]
  [-WhatIf]
@@ -145,6 +146,22 @@ The Description parameter specifies descriptive text for the DLP keyword diction
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DoNotPersistKeywords
+{{ Fill DoNotPersistKeywords Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

@@ -118,8 +118,10 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-ModifySubject <PswsHashtable>]
  [-NonBifurcatingAccessScope <Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope>]
  [-NotifyAllowOverride <OverrideOption[]>]
+ [-NotifyEmailCustomSenderDisplayName <String>]
  [-NotifyEmailCustomSubject <String>]
  [-NotifyEmailCustomText <String>]
+ [-NotifyEmailExchangeIncludeAttachment <Boolean>]
  [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
  [-NotifyPolicyTipCustomText <String>]
@@ -2321,6 +2323,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NotifyEmailCustomSenderDisplayName
+{{ Fill NotifyEmailCustomSenderDisplayName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotifyEmailCustomSubject
 The NotifyEmailCustomSubject parameter specifies the custom text in the subject line of email notification message that's sent to recipients when the conditions of the rule are met.
 
@@ -2349,6 +2367,22 @@ This parameter has a 5000 character limit, and supports plain text, HTML tags an
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyEmailExchangeIncludeAttachment
+{{ Fill NotifyEmailExchangeIncludeAttachment Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
