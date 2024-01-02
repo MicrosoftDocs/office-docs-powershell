@@ -96,9 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForestName
-The ForestName parameter specifies the SMTP domain name of the target forest that contains the users you're trying to read free/busy information from. If your users are distributed among multiple SMTP domains in the target forest, run the Add-AvailabilityAddressSpace command once for each SMTP domain.
-
-that contains the users you're trying to read free/busy information from.
+The ForestName parameter specifies the SMTP domain name of the target forest that contains the users you're trying to read free/busy information from. If users are distributed among multiple SMTP domains in the target forest, run the Add-AvailabilityAddressSpace command once for each SMTP domain.
 
 ```yaml
 Type: String
