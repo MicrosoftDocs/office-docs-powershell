@@ -46,7 +46,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Export-ContentExplorerData -TagType SensitiveInformationType -TagName "Credit Card Number" -Workload EXO -UserPrincipalName erika@contoso.onmicrosoft.com 
+Export-ContentExplorerData -TagType SensitiveInformationType -TagName "Credit Card Number" -Workload EXO -UserPrincipalName erika@contoso.onmicrosoft.com
 ```
 
 This example exports records for the specified sensitive info type from Erika's mailbox.

@@ -40,7 +40,7 @@ You can use this cmdlet only if the following statements are true:
 
 The SentTo parameter identifies the email address of the reporting mailbox. Your organization needs a report submission rule only to send user reported messages to the reporting mailbox using Microsoft or third-party reporting tools in Outlook (reporting in Outlook is turned on).
 
-When you set the email address of the reporting mailbox in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the same email address is also set in the *\-ReportSubmissionPolicy cmdlets:
+When you set the email address of the reporting mailbox in the Microsoft Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>, the same email address is also set in the *\-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
 - Microsoft integrated reporting using third-party reporting tools in Outlook: ThirdPartyReportAddresses.
@@ -156,7 +156,7 @@ The value of this parameter is meaningful only if reporting in Outlook is enable
 - Microsoft integrated reporting is enabled using Microsoft reporting tools in Outlook: `-EnableThirdPartyAddress $false -ReportJunkToCustomizedAddress $true -ReportNotJunkToCustomizedAddress $true -ReportPhishToCustomizedAddress $true`.
 - Microsoft integrated reporting is enabled using third-party reporting tools in Outlook: `-EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ReportJunkToCustomizedAddress $false -ReportNotJunkToCustomizedAddress $false -ReportPhishToCustomizedAddress $false`.
 
-If you set the email address of the reporting mailbox in the Microsoft 365 Defender portal, the following parameters in the *\-ReportSubmissionPolicy cmdlets are set to the same value:
+If you set the email address of the reporting mailbox in the Microsoft Defender portal, the following parameters in the *\-ReportSubmissionPolicy cmdlets are set to the same value:
 
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses (all three must be the same value).
 - Microsoft integrated reporting using third-party reporting tools in Outlook: ThirdPartyReportAddresses.

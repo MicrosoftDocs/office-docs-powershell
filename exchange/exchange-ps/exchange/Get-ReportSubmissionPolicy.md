@@ -25,7 +25,7 @@ Get-ReportSubmissionPolicy [[-Identity] <ReportSubmissionPolicyIdParameter>] [<C
 ```
 
 ## DESCRIPTION
-The report submission policy controls most of the settings for user submissions in the Microsoft 365 Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
+The report submission policy controls most of the settings for user submissions in the Microsoft Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
 
 The report submission rule (\*-ReportSubmissionRule cmdlets) controls the email address of the reporting mailbox where user reported messages are delivered.
 

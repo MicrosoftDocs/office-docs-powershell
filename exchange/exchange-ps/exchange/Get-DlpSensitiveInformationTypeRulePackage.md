@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpSensitiveInformationTypeRulePackage [[-Identity] <SensitiveInformationTypeRuleCollectionIdParameter>]
+ [-Capability <ClassificationCapabilityType>]
  [<CommonParameters>]
 ```
 
@@ -65,6 +66,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Capability
+{{ Fill Capability Description }}
+
+```yaml
+Type: ClassificationCapabilityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
