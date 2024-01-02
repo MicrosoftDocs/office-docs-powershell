@@ -103,7 +103,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### EnableLitigationHoldForMigration
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigration]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -130,7 +130,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EnableLitigationHoldForMigration]
  [-ExchangeGuid <Guid>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
@@ -144,6 +143,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -179,7 +179,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### ExcludeFromAllOrgHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -207,7 +207,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExchangeGuid <Guid>]
- [-ExcludeFromAllOrgHolds]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -220,6 +219,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -255,7 +255,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### ExcludeFromOrgHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromOrgHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -283,7 +283,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExchangeGuid <Guid>]
- [-ExcludeFromOrgHolds <String[]>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -296,6 +295,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -331,7 +331,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RecalculateInactiveMailUser
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RecalculateInactiveMailUser]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -371,6 +371,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -383,7 +384,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-Name <String>]
  [-Password <SecureString>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RecalculateInactiveMailUser]
  [-RecipientLimits <MultiValuedProperty>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
@@ -407,7 +407,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveComplianceTagHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveComplianceTagHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -447,6 +447,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -463,7 +464,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveComplianceTagHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -483,7 +483,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveDelayHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -523,6 +523,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -539,7 +540,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveDelayHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -559,7 +559,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveDelayReleaseHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -599,6 +599,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -615,7 +616,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveDelayReleaseHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -674,6 +674,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -707,7 +708,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
 
 ### RemoveLitigationHoldEnabled
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveLitigationHoldEnabled]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -747,6 +748,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -763,7 +765,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveLitigationHoldEnabled]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -783,7 +784,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveOrphanedHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -823,6 +824,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -840,7 +842,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RemoveMailboxProvisioningConstraint]
- [-RemoveOrphanedHolds <String[]>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SecondaryAddress <String>]
@@ -1857,6 +1858,24 @@ This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SmtpAddress
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LOBAppAccount
+This parameter is available only in the cloud-based service.
+
+{{ Fill LOBAppAccount Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection

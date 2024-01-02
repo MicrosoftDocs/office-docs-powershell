@@ -36,6 +36,8 @@ The Set-AvailabilityConfig cmdlet defines two accounts or security groups: a per
 
 For cross-forest availability services to retrieve free/busy information in the current forest, they must be using one of the specified accounts, belong to one of the specified security groups, or have a username and password for one of the specified accounts or security groups.
 
+In Exchange Online, this cmdlet lets you update the set of tenant ids that free/busy information sharing is allowed with. 
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -54,12 +56,23 @@ Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
 
 This example is useful if the remote forest isn't trusted. Because this account is used for a cross-forest free/busy proxy account or group, minimize security vulnerabilities by using the credentials of a user who doesn't have an Exchange mailbox. When you're prompted, type the username and password.
 
+### Example 3
+```powershell
+Set-AvailabilityConfig -AllowedTenantIds "d6b0a40e-029b-43f2-9852-f3724f68ead9","87d5bade-cefc-4067-a221-794aea71922d"
+```
+
+In this example for Exchange Online, the availability config is modified to allow free/busy sharing only with the specified tenants.
+
 ## PARAMETERS
 
 ### -AllowedTenantIds
 This parameter is available only in the cloud-based service.
 
-{{ Fill AllowedTenantIds Description }}
+The AllowedTenantIds parameter specifies the tenant ID values of Microsoft 365 organization that you want to share free/busy information with (for example, d6b0a40e-029b-43f2-9852-f3724f68ead9). You can specifiy multiple values separated by commas. A maximum of 25 values are allowed.
+
+To replace all existing tenant IDs with the values you specify, use the following syntax: `"TenantID1","TenantID2",..."TenantID25"`.
+
+To add or remove tenant IDs without affecting other existing values, use the following syntax: `@{Add="TenantID1","TenantID2",...; Remove="TenantID3","TenantID4",...}`.
 
 ```yaml
 Type: MultiValuedProperty
