@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientGroupScope
-This parameter is functional only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
 The RecipientGroupScope parameter returns only the role assignments that are scoped to groups. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
 
@@ -388,7 +388,7 @@ The RecipientGroupScope parameter returns only the role assignments that are sco
 Type: GroupIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

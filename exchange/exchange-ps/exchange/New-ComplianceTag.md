@@ -39,7 +39,6 @@ New-ComplianceTag [-Name] <String>
  [-RetentionDuration <Unlimited>]
  [-RetentionType <String>]
  [-ReviewerEmail <SmtpAddress[]>]
- [-WebHookUrl <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -407,22 +406,6 @@ The ReviewerEmail parameter specifies the email address of a reviewer for Delete
 
 ```yaml
 Type: SmtpAddress[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WebHookUrl
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

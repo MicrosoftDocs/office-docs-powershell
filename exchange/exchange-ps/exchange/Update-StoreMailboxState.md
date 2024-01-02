@@ -144,9 +144,8 @@ To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Ty
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
+If a mailbox is moved to another database, the mailbox is immediately disabled. There's a 24-hour delay to allow for replication.
 
-In a scenario where a mailbox is moved to another database, then the mailbox is immediately disabled, there is a 24-hour delay to allow for replication.
-
-In this scenario Update-StoreMailboxState may not immediately update DisconnectState and DisconnectReason when running Get-MailboxStatistics. The mailbox statistics will update approximately 24 hours after the move.
+In this scenario, Update-StoreMailboxState might not immediately update the DisconnectState and DisconnectReason properties in the output of Get-MailboxStatistics. The values will update approximately 24 hours after the move.
 
 ## RELATED LINKS

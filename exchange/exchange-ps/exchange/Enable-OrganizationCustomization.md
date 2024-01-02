@@ -36,7 +36,7 @@ Here are some examples of when you might see this:
 - Creating a new Outlook on the web mailbox policy or modifying a built-in Outlook on the web mailbox policy.
 - Creating a new sharing policy or modifying a built-in sharing policy.
 - Creating a new retention policy or modifying a built-in retention policy.
-- Enabling preset security policies in the Microsoft 365 Defender portal.
+- Enabling preset security policies in the Microsoft Defender portal.
 
 Note that you are only required to run the Enable-OrganizationCustomization cmdlet once in your Exchange Online organization. If you attempt to run the cmdlet again, you'll get an error.
 

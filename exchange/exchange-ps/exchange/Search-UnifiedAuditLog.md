@@ -16,6 +16,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Search-UnifiedAuditLog cmdlet to search the unified audit log. This log contains events from Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Entra ID, Microsoft Teams, Power BI, and other Microsoft 365 services. You can search for all events in a specified date range, or you can filter the results based on specific criteria, such as the user who performed the action, the action, or the target object.
 
+**Note**: By default, this cmdlet returns a subset of results containing up to 100 records. Use SessionCommand parameter with the ReturnLargeSet value to exhaustively search up to 50,000 results. The SessionCommand parameter causes the cmdlet to return unsorted data.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -57,44 +59,44 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/2/2018
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/2/2023 -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for all events from May 1, 201812:00AM to May 2, 2018 12:00AM.
+This example searches the unified audit log for all events from May 1, 2023 12:00AM to May 2, 2023 12:00AM.
 
 **Note**: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
 ### Example 2
 ```powershell
-Search-UnifiedAuditLog -StartDate "6/1/2018 8:00 AM" -EndDate "6/1/2018 6:00 PM" -RecordType ExchangeAdmin
+Search-UnifiedAuditLog -StartDate "6/1/2023 8:00 AM" -EndDate "6/1/2023 6:00 PM" -RecordType ExchangeAdmin -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2018.
+This example searches the unified audit log for all Exchange admin events from 8:00 AM to 6:00 PM on June 1, 2023.
 
 **Note** If you use the same date for the StartDate and EndDate parameters, you need to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
 ### Example 3
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnLargeSet
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/8/2023 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for all events from May 1, 2018 to May 8, 2018. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for all events from May 1, 2023 to May 8, 2023. If you don't include a time stamp in the StartDate or EndDate parameters, The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 **Note**: Always use the same SessionCommand value for a given SessionId value. Don't switch between ReturnLargeSet and ReturnNextPreviewPage for the same session ID. Otherwise, the output is limited to 10,000 results.
 
 ### Example 4
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnLargeSet
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/8/2023 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews" -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2018 to May 8, 2018. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
+This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2023 to May 8, 2023. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
 ### Example 5
 ```powershell
-Search-UnifiedAuditLog -StartDate 5/1/2018 -EndDate 5/8/2018 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
+Search-UnifiedAuditLog -StartDate 5/1/2023 -EndDate 5/8/2023 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx" -SessionCommand ReturnLargeSet
 ```
 
-This example searches the unified audit log from May 1, 2018 to May 8, 2018 for all events relating to a specific Word document identified by its ObjectIDs value.
+This example searches the unified audit log from May 1, 2023 to May 8, 2023 for all events relating to a specific Word document identified by its ObjectIDs value.
 
 ## PARAMETERS
 
@@ -301,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -SessionCommand
-The SessionCommand parameter specifies how much information is returned and how it's organized. Valid values are:
+The SessionCommand parameter specifies how much information is returned and how it's organized. This parameter is required if you want to retrieve more than the default limit of 100 results. Valid values are:
 
 - ReturnLargeSet: This value causes the cmdlet to return unsorted data. By using paging, you can access a maximum of 50,000 results. This is the recommended value if an ordered result is not required and has been optimized for search latency.
 - ReturnNextPreviewPage: This value causes the cmdlet to return data sorted on date. The maximum number of records returned through use of either paging or the ResultSize parameter is 5,000 records.
