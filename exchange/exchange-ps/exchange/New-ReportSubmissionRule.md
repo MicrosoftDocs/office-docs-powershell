@@ -53,7 +53,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SendTo "userreportedmessages@contoso.onmicrosoft.com"
+New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo "userreportedmessages@contoso.onmicrosoft.com"
 ```
 
 This example creates the report submission rule. The reporting mailbox is userreportedmessages@contoso.onmicrosoft.com.
