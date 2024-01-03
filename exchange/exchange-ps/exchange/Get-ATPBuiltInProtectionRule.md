@@ -75,7 +75,7 @@ Type: RuleState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Enabled, Disabled
-Applicable: Exchange Onlinen
+Applicable: Exchange Online
 
 Required: False
 Position: Named

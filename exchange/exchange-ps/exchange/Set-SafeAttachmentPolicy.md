@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ### -RedirectAddress
 The RedirectAddress parameter specifies the destination email address to deliver messages if malware is detected in an attachment.
 
-The value of this parameter is meaningful only when when value of the Redirect parameter is $true and the value of the Action parameter is Allow.
+The value of this parameter is meaningful only when value of the Redirect parameter is $true and the value of the Action parameter is Allow.
 
 **Note**: Redirection will soon be available only for the Allow action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
 

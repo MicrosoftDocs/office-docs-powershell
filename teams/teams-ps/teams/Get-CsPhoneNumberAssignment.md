@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsoCountryCode
-Filters the returned results based on the ISO 3166-1 Alpha-2 contry code assigned to the phone number.
+Filters the returned results based on the ISO 3166-1 Alpha-2 country code assigned to the phone number.
 
 ```yaml
 Type: System.String
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumber
-Filters the returned results to a specific phone number. It is optional to specify a prefixed "+". The phone number can not have "tel:" prefixed.
+Filters the returned results to a specific phone number. It is optional to specify a prefixed "+". The phone number can't have "tel:" prefixed.
 We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
 
 ```yaml
