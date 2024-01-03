@@ -30,7 +30,7 @@ Get-CsOnlineVoiceRoute [-Filter <string>] [<CommonParameters>]
 ## DESCRIPTION
 Use this cmdlet to retrieve one or more existing online voice routes in your tenant. Online voice routes contain instructions that tell Skype for Business Online how to route calls from Office 365 users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
-This cmdlet can be used to retrieve voice route information such as which online PSTN gateways the route is associated with (if any), which online PSTN usages are associated with the route, the pattern (in the form of a regular expression) that identifies the phone numbers to which the route applies, and caller ID settings. The PSTN usage associates the voice route to a online voice policy.
+This cmdlet can be used to retrieve voice route information such as which online PSTN gateways the route is associated with (if any), which online PSTN usages are associated with the route, the pattern (in the form of a regular expression) that identifies the phone numbers to which the route applies, and caller ID settings. The PSTN usage associates the voice route to an online voice policy.
 
 This cmdlet is used when configuring Microsoft Phone System Direct Routing.
 

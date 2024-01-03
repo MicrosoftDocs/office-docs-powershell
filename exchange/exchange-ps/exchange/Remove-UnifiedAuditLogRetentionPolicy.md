@@ -49,7 +49,7 @@ This example deletes the audit log retention policy named "SearchQueryPerformed 
 The Identity parameter specifies the audit log retention policy that you want to delete. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-- Distingished name (DN)
+- Distinguished name (DN)
 - GUID
 
 ```yaml

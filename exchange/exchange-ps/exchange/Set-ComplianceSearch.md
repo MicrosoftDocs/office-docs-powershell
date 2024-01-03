@@ -339,7 +339,7 @@ This parameter is available only in the cloud-based service.
 
 The HoldNames parameter specifies that the content locations that have been placed on hold in the eDiscovery case will be searched. You use the value All for this parameter. You can use this parameter only for compliance searches that are associated with an eDiscovery case.
 
-If the content locations in the compliance search include mailboxes, you also need to use the ExchangeLocation parameter with the value $null. Similarly, if the compliance search includes SharePoint sites, you also need to use the SharePointLocation parameter withthe value $null.
+If the content locations in the compliance search include mailboxes, you also need to use the ExchangeLocation parameter with the value $null. Similarly, if the compliance search includes SharePoint sites, you also need to use the SharePointLocation parameter with the value $null.
 
 Also, if a content location was placed on a query-based case hold, only items that are on hold will be searched when you restart this compliance search. For example, if a user was placed on a query-based case hold that preserves items that were sent or created before a specific date, only those items would be searched by using the search criteria specified by this compliance search.
 

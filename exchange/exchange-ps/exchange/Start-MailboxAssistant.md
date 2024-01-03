@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedMailbox
-The SoftDeletedMailbox switch specifies that the mailbox to be processed by the assistant is a soft-delted mailbox.
+The SoftDeletedMailbox switch specifies that the mailbox to be processed by the assistant is a soft-deleted mailbox.
 
 Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
 
