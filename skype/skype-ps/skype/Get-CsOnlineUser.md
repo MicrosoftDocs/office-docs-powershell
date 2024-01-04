@@ -43,7 +43,7 @@ Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that m
 
 `Get-CsOnlineUser -TenantId "bf19b7db-6960-41e5-a139-2aa373474354"`
 
-However, if you have multiple tenants you can return users from a specified tenant by using the Filter parameter and a command similar to this:
+However, if you have multiple tenants (more than 1) you can return users from a specified tenant by using the Filter parameter and a command similar to this:
 
 `Get-CsOnlineUser -Filter "TenantId -eq 'bf19b7db-6960-41e5-a139-2aa373474354'"`
 
