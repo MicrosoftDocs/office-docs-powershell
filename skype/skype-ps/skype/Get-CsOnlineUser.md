@@ -212,7 +212,7 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 
 **Updates in Teams PowerShell Module version 5.9.0 and later**
 
-The following updates will be applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments and will be rolled out in GCC High and DoD environments from new Teams PowerShell Module version 5.9.0 targeted to release on 17th January 2024). These updates will be applicable to remaining Teams PowerShell versions from 8th February 2024 in GCC High and DoD environments:
+The following updates will be applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments and will be rolled out in GCC High and DoD environments from new Teams PowerShell Module version 5.9.0 targeted to release on 17th January 2024). These updates will be applicable to remaining Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
 
 _Performance_
 
@@ -498,7 +498,7 @@ Accept wildcard characters: False
 
 ### -Sort
 
-Sorting will now be enabled in Teams PowerShell Module 5.9.0 and later by using the "-Sort" or "-OrderBy" parameters in GCC High and DoD environments. These updates will be applicable to older Teams PowerShell versions starting from 8th February 2024 in GCC High and DoD environments(note that this parameter is already rolled out in commercial environments). For example:
+Sorting will now be enabled in Teams PowerShell Module 5.9.0 and later by using the "-Sort" or "-OrderBy" parameters in GCC High and DoD environments. These updates will be applicable to older Teams PowerShell versions starting from 15th March 2024 in GCC High and DoD environments(note that this parameter is already rolled out in commercial environments). For example:
 
 - Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
 - Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
@@ -560,7 +560,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 **Updates in Teams PowerShell Module version 5.9.0 and later**
 
-The following updates will be applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments and will be rolled out in GCC High and DoD environments from new Teams PowerShell Module version 5.9.0 targeted to release on 17th January 2024). These updates will be applicable to remaining Teams PowerShell versions from 8th February 2024 in GCC High and DoD environments:
+The following updates will be applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments and will be rolled out in GCC High and DoD environments from new Teams PowerShell Module version 5.9.0 targeted to release on 17th January 2024). These updates will be applicable to remaining Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
 
 The following attributes will be populated with correct values in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
