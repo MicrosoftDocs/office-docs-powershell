@@ -574,7 +574,7 @@ The following updates will be applicable to the output in scenarios where "-iden
 - Guest would be available in the output.
 - Unlicensed Users: Unlicensed users would show up in the output of Get-CsOnlineUser (note Unlicensed users in commercial clouds would show up in the output for only 30 days post-license removal.)
 - Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
-- Account type as Unknown will be renamed to account type as IneligibleUser in GCC High and DoD environments. IneligibleUser will include users who do not have any valid Teams licenses (except Guest, SfbOnPremUser, ResourceAccount).
+- AccountType as Unknown will be renamed to AccountType as IneligibleUser in GCC High and DoD environments. IneligibleUser will include users who do not have any valid Teams licenses (except Guest, SfbOnPremUser, ResourceAccount).
 
 If any information is required for a user that is not available in the output (when not using "-identity" parameter) then it can be obtained using the "-identity" parameter. Information for all users would be available using the "-identity" parameter until they are hard deleted.
 
