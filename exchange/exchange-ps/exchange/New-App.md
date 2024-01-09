@@ -151,7 +151,7 @@ This parameter is available only in the cloud-based service.
 {{ Fill AddInOverrides Description }}
 
 ```yaml
-Type: Object
+Type: AddInOverrides
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -185,7 +185,7 @@ This parameter is available only in the cloud-based service.
 {{ Fill AllowSetting Description }}
 
 ```yaml
-Type: Object
+Type: AllowSetting
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

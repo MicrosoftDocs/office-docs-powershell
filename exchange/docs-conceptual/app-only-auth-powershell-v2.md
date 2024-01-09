@@ -48,6 +48,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 > - In Security & Compliance PowerShell, you can't use the procedures in this article with the following Microsoft 365 Group cmdlets:
 >   - [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction)
 >   - [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch)
+>   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multi-tenant applications when CSP relationships are not created with the customer. The required steps for using multi-tenant applications are called out within the regular instructions in this article.
 >

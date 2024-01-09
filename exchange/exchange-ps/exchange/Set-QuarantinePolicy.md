@@ -343,7 +343,7 @@ To modify an existing value and preserve other values, you need to specify all e
 This setting is available only in the built-in quarantine policy named DefaultGlobalTag that controls global quarantine policy settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: MultiValuedProperty
 Applicable: Exchange Online, Exchange Online Protection
