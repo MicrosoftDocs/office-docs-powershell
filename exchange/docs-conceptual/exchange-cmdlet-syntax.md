@@ -108,7 +108,7 @@ For more information about variables, see [about_Variables](/powershell/module/m
 
 In any programming language, an _escape character_ is used to identify special characters literally, and not by their normal function in that language. In Exchange PowerShell, when you enclose a text string in double quotation marks, the escape character is the back quotation mark escape character ( ` ).
 
-For example, if you want the output `The price is $23`, enter the value  **"The price is \`$23"**. The escape character is required on the dollar sign character ( $ ) because $ defines variables in PowerShell.
+For example, if you want the output `The price is $23`, enter the value **"The price is \`$23"**. The escape character is required on the dollar sign character ( $ ) because $ defines variables in PowerShell.
 
 If you enclose the string in single quotation marks, the only special character you need to worry about is the single quotation mark character itself, which requires two single quotation marks to escape ( `''` ).
 

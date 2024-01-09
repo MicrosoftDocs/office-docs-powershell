@@ -588,7 +588,7 @@ To disable the migration of the users in the original migration batch, use the D
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets:  Preexisting, PreexistingUsers
+Parameter Sets: Preexisting, PreexistingUsers
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -624,7 +624,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets:  Abch, Analysis, FolderMove, Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery
+Parameter Sets: Abch, Analysis, FolderMove, Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
