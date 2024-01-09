@@ -229,7 +229,7 @@ Accept wildcard characters: False
 {{ Fill ExceptIfFrom Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 {{ Fill ExceptIfSentTo Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 {{ Fill From Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -405,7 +405,7 @@ Accept wildcard characters: False
 {{ Fill SentTo Description }}
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
