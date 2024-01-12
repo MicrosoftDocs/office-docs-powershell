@@ -17,6 +17,9 @@ description: "Admins can learn how to use PowerShell to find the permissions req
 
 You can use PowerShell to find the permissions required to run any Exchange or Exchange Online cmdlet. This procedure shows the role-based access control (RBAC) management roles and role groups that give you access to a specified cmdlet—even if your organization has custom roles, custom role groups, or custom role assignments.
 
+> [!TIP]
+> Currently, the procedures in this article don't work with Microsoft 365 Group cmdlets (**\*-UnifiedGroup**) in Exchange Online PowerShell.
+
 ## What do you need to know before you begin?
 
 - Estimated time to complete this procedure: less than 5 minutes.
