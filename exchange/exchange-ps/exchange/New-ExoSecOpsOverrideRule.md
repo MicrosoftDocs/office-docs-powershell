@@ -1,27 +1,27 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/new-secopsoverriderule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-ExoSecOpsOverrideRule
 applicable: Security & Compliance
-title: New-SecOpsOverrideRule
+title: New-ExoSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# New-SecOpsOverrideRule
+# New-ExoSecOpsOverrideRule
 
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-SecOpsOverrideRule cmdlet to create SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+Use the New-ExoSecOpsOverrideRule cmdlet to create SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-New-SecOpsOverrideRule [-Name] <String> -Policy <PolicyIdParameter>
+New-ExoSecOpsOverrideRule [-Name] <String> -Policy <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-SentTo <MultiValuedProperty>]
@@ -36,7 +36,7 @@ You need to be assigned permissions in the Security & Compliance before you can 
 
 ### Example 1
 ```powershell
-New-SecOpsOverrideRule -Name SecOpsOverrideRule -Policy SecOpsOverridePolicy
+New-ExoSecOpsOverrideRule -Name ExoSecOpsOverrideRule -Policy SecOpsOverridePolicy
 ```
 
 This example creates the SecOps mailbox override rule with the specified settings.
@@ -44,7 +44,7 @@ This example creates the SecOps mailbox override rule with the specified setting
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the name for the policy. Regardless of the value you specify, the name will be SecOpsOverrideRule\<GUID\> where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+The Name parameter specifies the name for the policy. Regardless of the value you specify, the name will be ExoSecOpsOverrideRule\<GUID\> where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
 ```yaml
 Type: String
