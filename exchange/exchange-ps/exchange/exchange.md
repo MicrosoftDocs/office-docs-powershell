@@ -222,6 +222,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EOPProtectionPolicyRule](Get-EOPProtectionPolicyRule.md)
 
+### [Get-ExoSecOpsOverrideRule](Get-ExoSecOpsOverrideRule.md)
+
 ### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
 
 ### [Get-HostedContentFilterPolicy](Get-HostedContentFilterPolicy.md)
@@ -294,6 +296,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-EOPProtectionPolicyRule](New-EOPProtectionPolicyRule.md)
 
+### [New-ExoSecOpsOverrideRule](New-ExoSecOpsOverrideRule.md)
+
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
 
 ### [New-HostedContentFilterRule](New-HostedContentFilterRule.md)
@@ -344,6 +348,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
 
+### [Remove-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
+
 ### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
 
 ### [Remove-HostedContentFilterRule](Remove-HostedContentFilterRule.md)
@@ -393,6 +399,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
 
 ### [Set-EOPProtectionPolicyRule](Set-EOPProtectionPolicyRule.md)
+
+### [Set-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
 
 ### [Set-HostedConnectionFilterPolicy](Set-HostedConnectionFilterPolicy.md)
 
