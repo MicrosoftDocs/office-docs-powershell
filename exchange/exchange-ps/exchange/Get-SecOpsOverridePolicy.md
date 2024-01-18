@@ -21,7 +21,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SecOpsOverridePolicy [[-Identity] <PolicyIdParameter>] [<CommonParameters>]
+Get-SecOpsOverridePolicy [[-Identity] <PolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-secopsoverridepolicy
-applicable: Security & Compliance
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Set-SecOpsOverridePolicy
 schema: 2.0.0
 author: chrisda
@@ -25,7 +25,9 @@ Set-SecOpsOverridePolicy [-Identity] <PolicyIdParameter>
  [-AddSentTo <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-DomainController <Fqdn>]
  [-Enabled <Boolean>]
+ [-Force]
  [-RemoveSentTo <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
@@ -57,7 +59,7 @@ The Identity parameter specifies the SecOps override policy that you want to mod
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: 0
@@ -75,7 +77,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -91,7 +93,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -110,7 +112,23 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -129,7 +147,25 @@ The Enabled parameter specifies whether the policy is enabled. Valid values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -147,7 +183,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
