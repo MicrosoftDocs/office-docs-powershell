@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-exosecopsoverriderule
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online, Exchange Online Protection
 title: New-ExOSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
@@ -57,6 +57,7 @@ The Policy parameter specifies the phishing simulation override policy that's as
 Type: PolicyIdParameter
 Parameter Sets: Default, PublishComplianceTag, ComplianceTag, SetRawXml
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -72,6 +73,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Default
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -87,6 +89,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -102,6 +105,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -117,6 +121,7 @@ The Name parameter specifies the name for the policy. Regardless of the value yo
 Type: String
 Parameter Sets: Default
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -132,6 +137,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
