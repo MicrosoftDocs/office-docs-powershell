@@ -12,6 +12,8 @@ ms.reviewer:
 # Get-SecOpsOverrideRule
 
 ## SYNOPSIS
+**Note**: The \*-SecOpsOverrideRule cmdlets in Security & Compliance PowerShell have been replaced by the \*-ExOSecOpsOverrideRule cmdlets in Exchange Online PowerShell.
+
 This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-SecOpsOverrideRule cmdlet to view SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).

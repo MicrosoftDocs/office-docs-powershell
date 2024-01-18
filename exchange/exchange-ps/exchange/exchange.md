@@ -324,8 +324,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
-### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
-
 ### [New-TeamsProtectionPolicy](New-TeamsProtectionPolicy.md)
 
 ### [New-TeamsProtectionPolicyRule](New-TeamsProtectionPolicyRule.md)
@@ -381,8 +379,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-ReportSubmissionRule](Remove-ReportSubmissionRule.md)
 
 ### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
-
-### [Remove-SecOpsOverrideRule](Remove-SecOpsOverrideRule.md)
 
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
@@ -447,8 +443,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ReportSubmissionRule](Set-ReportSubmissionRule.md)
 
 ### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
-
-### [Set-SecOpsOverrideRule](Set-SecOpsOverrideRule.md)
 
 ### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
 
