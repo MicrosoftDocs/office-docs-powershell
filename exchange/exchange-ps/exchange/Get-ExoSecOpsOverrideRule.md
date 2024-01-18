@@ -1,43 +1,42 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/get-secopsoverriderule
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-title: Get-SecOpsOverrideRule
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exosecopsoverriderule
+applicable: Exchange Online, Exchange Online Protection
+title: Get-ExOSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Get-SecOpsOverrideRule
+# Get-ExoSecOpsOverrideRule
 
 ## SYNOPSIS
-**Note**: The \*-SecOpsOverrideRule cmdlets in Security & Compliance PowerShell have been replaced by the \*-ExOSecOpsOverrideRule cmdlets in Exchange Online PowerShell.
+This cmdlet is available only in the cloud-based service.
 
-This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
-
-Use the Get-SecOpsOverrideRule cmdlet to view SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the Get-ExOSecOpsOverrideRule cmdlet to view SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Get-SecOpsOverrideRule [[-Identity] <ComplianceRuleIdParameter>]
+Get-ExoSecOpsOverrideRule [[-Identity] <ComplianceRuleIdParameter>]
  [-Confirm]
- [-Policy <PolicyIdParameter>]
+ [-DomainController <Fqdn>]
+ [-Policy <Object>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance](https://learn.microsoft.com/microsoft-365/security/office-365-security/scc-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-SecOpsOverrideRule
+Get-ExOSecOpsOverrideRule
 ```
 
 This example returns detailed information about the one and only SecOps mailbox override rule.
@@ -56,10 +55,10 @@ The Identity parameter specifies the SecOps override rule that you want to view.
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -72,7 +71,6 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -109,7 +107,7 @@ The Policy parameter filters the results by SecOps mailbox override policy. You 
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -125,7 +123,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
