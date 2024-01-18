@@ -71,6 +71,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

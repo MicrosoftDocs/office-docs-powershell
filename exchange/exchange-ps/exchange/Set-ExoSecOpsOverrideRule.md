@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-exosecopsoverriderule
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online, Exchange Online Protection
 title: set-ExOSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
@@ -55,6 +55,7 @@ The Identity parameter specifies the SecOps override rule that you want to modif
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -70,6 +71,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -85,6 +87,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -100,6 +103,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -115,6 +119,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
