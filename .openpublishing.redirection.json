@@ -6941,6 +6941,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "exchange/virtual-folder/exchange/Get-AdvancedThreatProtectionDocumentReport.md",
+      "redirect_url": "/powershell/module/exchange/get-contentmalwaremdoaggregatereport",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "exchange/virtual-folder/exchange/New-SecOpsOverrideRule.md",
       "redirect_url": "/powershell/module/exchange/new-exosecopsoverriderule",
       "redirect_document_id": false
