@@ -1335,7 +1335,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a name for the Inbox rule. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies the name of the Inbox rule. The maximum length is 512 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
