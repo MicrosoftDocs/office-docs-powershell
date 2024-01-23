@@ -133,7 +133,7 @@ An initial onboarding is required for authentication using application objects. 
 
 For a detailed visual flow about creating applications in Microsoft Entra ID, see <https://aka.ms/azuread-app>.
 
-1. [Register the application in Microsoft Entra ID](#step-1-register-the-application-in-azure-ad).
+1. [Register the application in Microsoft Entra ID](#step-1-register-the-application-in-microsoft-entra-id).
 
 2. [Assign API permissions to the application](#step-2-assign-api-permissions-to-the-application).
 
@@ -150,13 +150,11 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
      > [!NOTE]
      > Cryptography: Next Generation (CNG) certificates aren't supported for app-only authentication with Exchange. CNG certificates are created by default in modern versions of Windows. You must use a certificate from a CSP key provider. [This section](#step-3-generate-a-self-signed-certificate) section covers two supported methods to create a CSP certificate.
 
-4. [Attach the certificate to the Microsoft Entra application](#step-4-attach-the-certificate-to-the-azure-ad-application)
+4. [Attach the certificate to the Microsoft Entra application](#step-4-attach-the-certificate-to-the-microsoft-entra-application)
 
-5. [Assign Microsoft Entra roles to the application](#step-5-assign-azure-ad-roles-to-the-application)
+5. [Assign Microsoft Entra roles to the application](#step-5-assign-microsoft-entra-roles-to-the-application)
 
    The application needs to have the appropriate RBAC roles assigned. Because the apps are provisioned in Microsoft Entra ID, you can use any of the supported built-in roles.
-
-<a name='step-1-register-the-application-in-azure-ad'></a>
 
 ### Step 1: Register the application in Microsoft Entra ID
 
@@ -353,8 +351,6 @@ Create a self-signed x.509 certificate using one of the following methods:
   .\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2021-01-06 -EndDate 2022-01-06
   ```
 
-<a name='step-4-attach-the-certificate-to-the-azure-ad-application'></a>
-
 ### Step 4: Attach the certificate to the Microsoft Entra application
 
 After you register the certificate with your application, you can use the private key (`.pfx` file) or the thumbprint for authentication.
@@ -387,7 +383,7 @@ After you register the certificate with your application, you can use the privat
 
 ### Step 4b: Exchange Online delegated scenarios only: Grant admin consent for the multi-tenant app
 
-If you made the application multi-tenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-azure-ad), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. To do this, generate an admin consent URL for each customer tenant. Before anyone uses the multi-tenant application to connect to Exchange Online in the tenant organization, an admin in the customer tenant should open the following URL:
+If you made the application multi-tenant for **Exchange Online** delegated scenarios in [Step 1](#step-1-register-the-application-in-microsoft-entra-id), you need to grant admin consent to the Exchange.ManageAsApp permission so the application can run cmdlets in Exchange Online **in each tenant organization**. To do this, generate an admin consent URL for each customer tenant. Before anyone uses the multi-tenant application to connect to Exchange Online in the tenant organization, an admin in the customer tenant should open the following URL:
 
 `https://login.microsoftonline.com/<tenant-id>/adminconsent?client_id=<client-id>&scope=https://outlook.office365.com/.default`
 
@@ -396,8 +392,6 @@ If you made the application multi-tenant for **Exchange Online** delegated scena
 - The default scope is used to grant application permissions.
 
 For more information about the URL syntax, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-admin-consent#request-the-permissions-from-a-directory-admin).
-
-<a name='step-5-assign-azure-ad-roles-to-the-application'></a>
 
 ### Step 5: Assign Microsoft Entra roles to the application
 
@@ -410,8 +404,6 @@ You have two options:
 > You can also combine both methods to assign permissions. For example, you can use Microsoft Entra roles for the "Exchange Recipient Administrator" role and also assign your custom RBAC role to extend the permissions.
 >
 > For multi-tenant applications in **Exchange Online** delegated scenarios, you need to assign permissions in each customer tenant.
-
-<a name='assign-azure-ad-roles-to-the-application'></a>
 
 #### Assign Microsoft Entra roles to the application
 
@@ -466,7 +458,7 @@ For general instructions about assigning roles in Microsoft Entra ID, see [View 
 
      ![Select Add assignments on the role assignments page for Security & Compliance PowerShell.](media/exo-app-only-auth-role-assignments-click-add-assignments-scc.png)
 
-4. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-azure-ad).
+4. In the **Add assignments** flyout that opens, find and select the app that you created in [Step 1](#step-1-register-the-application-in-microsoft-entra-id).
 
    ![Find and select your app on the Add assignments flyout.](media/exo-app-only-auth-find-add-select-app-for-assignment.png)
 
@@ -493,7 +485,7 @@ For information about creating custom role groups, see [Create role groups in Ex
 
 To assign custom role groups to the application using service principals, do the following steps:
 
-1. In [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation), run the following commands to store the details of the Microsoft Entra application that you registered in [Step 1](#step-1-register-the-application-in-azure-ad) in a variable:
+1. In [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation), run the following commands to store the details of the Microsoft Entra application that you registered in [Step 1](#step-1-register-the-application-in-microsoft-entra-id) in a variable:
 
    ```powershell
    Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All,Application.Read.All

@@ -56,7 +56,7 @@ The rest of this section explains how to connect using supported Azure resources
 - A PowerShell runbook on the Azure Automation account with system-assigned managed identity.
 - An Azure VM with a system-assigned managed identity.
 
-After the resource is connected, the Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 5: Assign Microsoft Entra roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity)
+After the resource is connected, the Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 5: Assign Microsoft Entra roles to the managed identity](#step-5-assign-microsoft-entra-roles-to-the-managed-identity)
 
 ### Connect to Exchange Online PowerShell using Azure Automation accounts with system-assigned managed identity
 
@@ -104,7 +104,7 @@ The rest of this section explains how to connect using supported Azure resources
 - A PowerShell runbook on the Azure Automation account with user-assigned managed identity.
 - An Azure VM with a user-assigned managed identity.
 
-After the resource is connected, the Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 6: Assign Microsoft Entra roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity).
+After the resource is connected, the Exchange Online PowerShell cmdlets and parameters are available based on the RBAC role you assigned in [Step 6: Assign Microsoft Entra roles to the managed identity](#step-6-assign-microsoft-entra-roles-to-the-managed-identity).
 
 ### Connect to Exchange Online PowerShell using Azure Automation accounts with user-assigned managed identities
 
@@ -149,7 +149,7 @@ The steps are:
 2. [Store the system-assigned managed identity in a variable](#step-2-store-the-system-assigned-managed-identity-in-a-variable)
 3. [Add the Exchange Online PowerShell module to the managed identity](#step-3-add-the-exchange-online-powershell-module-to-the-managed-identity)
 4. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-4-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
-5. [Assign Microsoft Entra roles to the managed identity](#step-5-assign-azure-ad-roles-to-the-managed-identity)
+5. [Assign Microsoft Entra roles to the managed identity](#step-5-assign-microsoft-entra-roles-to-the-managed-identity)
 
 After you complete the steps, you're ready to [Connect to Exchange Online PowerShell using system-assigned managed identity](#connect-to-exchange-online-powershell-using-system-assigned-managed-identity).
 
@@ -333,8 +333,6 @@ For detailed syntax and parameter information, see the following articles:
 - [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal)
 - [New-MgServicePrincipalAppRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment)
 
-<a name='what-to-do-if-the-office-365-exchange-online-resource-is-not-available-in-azure-ad'></a>
-
 #### What to do if the Office 365 Exchange Online resource is not available in Microsoft Entra ID
 
 If the following command returns no results:
@@ -345,7 +343,7 @@ Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'"
 
 Do the following steps:
 
-1. Register an application in Microsoft Entra ID as described in [Step 1: Register the application in Microsoft Entra ID](app-only-auth-powershell-v2.md#step-1-register-the-application-in-azure-ad).
+1. Register an application in Microsoft Entra ID as described in [Step 1: Register the application in Microsoft Entra ID](app-only-auth-powershell-v2.md#step-1-register-the-application-in-microsoft-entra-id).
 2. Assign the Office 365 Exchange Online \> Exchange.ManageAsApp API permission to the application using the "Modify the app manifest" method as described in [Step 2: Assign API permissions to the application](app-only-auth-powershell-v2.md#step-2-assign-api-permissions-to-the-application).
 
 After you do these steps, run the **Get-MgServicePrincipal** command again to confirm that the Office 365 Exchange Online resource is available in Microsoft Entra ID.
@@ -357,8 +355,6 @@ Get-MgServicePrincipal -Filter "AppId eq '00000002-0000-0ff1-ce00-000000000000'"
 ```
 
 Now that the Office 365 Exchange Online resource is available, return to Step 4.3 in this section.
-
-<a name='step-5-assign-azure-ad-roles-to-the-managed-identity'></a>
 
 ### Step 5: Assign Microsoft Entra roles to the managed identity
 
@@ -445,7 +441,7 @@ The steps are:
 3. [Store the user-assigned managed identity in a variable](#step-3-store-the-user-assigned-managed-identity-in-a-variable)
 4. [Add the Exchange Online PowerShell module to the managed identity](#step-4-add-the-exchange-online-powershell-module-to-the-managed-identity)
 5. [Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online](#step-5-grant-the-exchangemanageasapp-api-permission-for-the-managed-identity-to-call-exchange-online)
-6. [Assign Microsoft Entra roles to the managed identity](#step-6-assign-azure-ad-roles-to-the-managed-identity)
+6. [Assign Microsoft Entra roles to the managed identity](#step-6-assign-microsoft-entra-roles-to-the-managed-identity)
 
 After you complete the steps, you're ready to [Connect to Exchange Online PowerShell using user-assigned managed identity](#connect-to-exchange-online-powershell-using-user-assigned-managed-identity).
 
@@ -588,11 +584,9 @@ The steps for user-assigned managed identity are the same as in [System-assigned
 
 Although the managed identity values were obtained differently for user-assigned vs. system-assigned, we're using the same variable name in the command (`$MI_ID`), so the command works for both types of managed identities.
 
-<a name='step-6-assign-azure-ad-roles-to-the-managed-identity'></a>
-
 ### Step 6: Assign Microsoft Entra roles to the managed identity
 
-The steps for user-assigned managed identity are basically the same as in [System-assigned managed identity Step 5](#step-5-assign-azure-ad-roles-to-the-managed-identity).
+The steps for user-assigned managed identity are basically the same as in [System-assigned managed identity Step 5](#step-5-assign-microsoft-entra-roles-to-the-managed-identity).
 
 In the Azure portal, be sure to select the [user-assigned managed identity](#step-2-create-a-resource-with-user-assigned-managed-identity) as the managed identity to assign the Microsoft Entra role to (not the automation account itself).
 
