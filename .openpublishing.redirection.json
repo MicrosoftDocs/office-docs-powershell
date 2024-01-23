@@ -6959,6 +6959,21 @@
       "source_path": "exchange/virtual-folder/exchange/Set-SecOpsOverrideRule.md",
       "redirect_url": "/powershell/module/exchange/set-exosecopsoverriderule",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/New-PhishSimOverrideRule.md",
+      "redirect_url": "/powershell/module/exchange/new-exophishsimoverriderule",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Remove-PhishSimOverrideRule.md",
+      "redirect_url": "/powershell/module/exchange/remove-exophishsimoverriderule",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "exchange/virtual-folder/exchange/Set-PhishSimOverrideRule.md",
+      "redirect_url": "/powershell/module/exchange/set-exophishsimoverriderule",
+      "redirect_document_id": false
     }
   ]
 }
