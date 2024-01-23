@@ -12,6 +12,8 @@ ms.reviewer:
 # Get-PhishSimOverrideRule
 
 ## SYNOPSIS
+**Note**: The \*-PhishSimOverrideRule cmdlets in Security & Compliance PowerShell have been replaced by the \*-ExoPhishSimOverrideRule cmdlets in Exchange Online PowerShell.
+
 This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Get-PhishSimOverrideRule cmdlet to view third-party phishing simulation override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).

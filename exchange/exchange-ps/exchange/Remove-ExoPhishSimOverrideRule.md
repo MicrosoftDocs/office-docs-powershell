@@ -1,30 +1,29 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/remove-secopsoverridepolicy
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-title: Remove-SecOpsOverridePolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-exophishsimoverriderule
+applicable: Exchange Online, Exchange Online Protection
+title: Remove-ExoPhishSimOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Remove-SecOpsOverridePolicy
+# Remove-ExoPhishSimOverrideRule
 
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-SecOpsOverridePolicy cmdlet to remove SecOps mailbox override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the Remove-ExoPhishSimOverrideRule cmdlet to remove third-party phishing simulation override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Remove-SecOpsOverridePolicy [-Identity] <PolicyIdParameter>
+Remove-ExoPhishSimOverrideRule [-Identity] <ComplianceRuleIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Force]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -36,29 +35,31 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-SecOpsOverridePolicy -Identity SecOpsOverridePolicy
+Get-ExoPhishSimOverrideRule | Remove-ExoPhishSimOverrideRule
 ```
 
-This example removes the SecOps mailbox override policy.
+This example removes the phishing simulation override rule.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the SecOps override policy that you want to remove. You can use any value that uniquely identifies the policy. For example:
+The Identity parameter specifies the phishing simulation override rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
 
 - Name
 - Id
 - Distinguished name (DN)
 - GUID
 
+Use the Get-ExoPhishSimOverrideRule cmdlet to find the values. The only available rule is named `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+
 ```yaml
-Type: PolicyIdParameter
+Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -74,7 +75,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -99,32 +100,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
-
-You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance PowerShell.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

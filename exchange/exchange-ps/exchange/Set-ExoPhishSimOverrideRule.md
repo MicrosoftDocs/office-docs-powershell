@@ -1,49 +1,46 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/set-phishsimoverriderule
-applicable: Security & Compliance
-title: Set-PhishSimOverrideRule
+online version: https://learn.microsoft.com/powershell/module/exchange/set-exophishsimoverriderule
+applicable: Exchange Online, Exchange Online Protection
+title: Set-ExoPhishSimOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-PhishSimOverrideRule
+# Set-ExoPhishSimOverrideRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in the cloud-based service.
 
-Use the Set-PhishSimOverrideRule cmdlet to modify third-party phishing simulation override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the Set-ExoPhishSimOverrideRule cmdlet to modify third-party phishing simulation override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-PhishSimOverrideRule [-Identity] <ComplianceRuleIdParameter>
+Set-ExoPhishSimOverrideRule [-Identity] <ComplianceRuleIdParameter>
  [-AddDomains <MultiValuedProperty>]
- [-AddSenderDomainIs <MultiValuedProperty>]
  [-AddSenderIpRanges <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-DomainController <Fqdn>]
  [-RemoveDomains <MultiValuedProperty>]
- [-RemoveSenderDomainIs <MultiValuedProperty>]
  [-RemoveSenderIpRanges <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-A phishing simulation requires at least one domain and at least one IP address.
-
-You need to be assigned permissions in the Security & Compliance before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance](https://learn.microsoft.com/microsoft-365/security/office-365-security/scc-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-PhishSimOverrideRule -Identity PhishSimOverrideRulea0eae53e-d755-4a42-9320-b9c6b55c5011 -AddDomains blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
+Get-ExoPhishSimOverrideRule | Set-ExoPhishSimOverrideRule -AddDomains blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
 ```
 
 This example modifies the phishing simulation override rule with the specified settings.
@@ -58,14 +55,16 @@ The Identity parameter specifies the phishing simulation override rule that you 
 - Distinguished name (DN)
 - GUID
 
+Use the Get-ExoPhishSimOverrideRule cmdlet to find the values. The only available rule is named `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -80,23 +79,7 @@ You can specify multiple values separated by commas. A maximum of 20 entries are
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AddSenderDomainIs
-This parameter has been replaced by the AddDomains parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -120,7 +103,7 @@ A maximum of 10 entries are allowed in the list.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -136,7 +119,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -155,7 +138,23 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -173,23 +172,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveSenderDomainIs
-This parameter has been replaced by the RemoveDomains parameter.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -211,7 +194,7 @@ You can specify multiple values separated by commas.
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -221,13 +204,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance PowerShell.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -237,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
