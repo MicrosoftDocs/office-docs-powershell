@@ -222,6 +222,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EOPProtectionPolicyRule](Get-EOPProtectionPolicyRule.md)
 
+### [Get-ExoPhishSimOverrideRule](Get-ExoPhishSimOverrideRule.md)
+
 ### [Get-ExoSecOpsOverrideRule](Get-ExoSecOpsOverrideRule.md)
 
 ### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
@@ -296,6 +298,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-EOPProtectionPolicyRule](New-EOPProtectionPolicyRule.md)
 
+### [New-ExoPhishSimOverrideRule](New-ExoPhishSimOverrideRule.md)
+
 ### [New-ExoSecOpsOverrideRule](New-ExoSecOpsOverrideRule.md)
 
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
@@ -311,8 +315,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-MalwareFilterRule](New-MalwareFilterRule.md)
 
 ### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
-
-### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
 
 ### [New-QuarantinePermissions](New-QuarantinePermissions.md)
 
@@ -346,6 +348,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
 
+### [Remove-ExoPhishSimOverrideRule](Remove-ExoPhishSimOverrideRule.md)
+
 ### [Remove-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
 
 ### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
@@ -370,8 +374,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
 
-### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
-
 ### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
 
 ### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
@@ -395,6 +397,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
 
 ### [Set-EOPProtectionPolicyRule](Set-EOPProtectionPolicyRule.md)
+
+### [Set-ExoPhishSimOverrideRule](Set-ExoPhishSimOverrideRule.md)
 
 ### [Set-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
 
@@ -429,8 +433,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-MalwareFilterRule](Set-MalwareFilterRule.md)
 
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
-
-### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
 
 ### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
 

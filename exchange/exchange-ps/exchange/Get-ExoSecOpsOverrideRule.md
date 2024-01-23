@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-exosecopsoverriderule
 applicable: Exchange Online, Exchange Online Protection
-title: Get-ExOSecOpsOverrideRule
+title: Get-ExoSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-ExOSecOpsOverrideRule cmdlet to view SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the Get-ExoSecOpsOverrideRule cmdlet to view SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -36,10 +36,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-ExOSecOpsOverrideRule
+Get-ExoSecOpsOverrideRule
 ```
 
-This example returns detailed information about the one and only SecOps mailbox override rule.
+This example returns detailed information about the SecOps mailbox override rule (there should be only one).
+
+### Example 2
+```powershell
+Get-ExoSecOpsOverrideRule | Format-Table Name,Mode
+```
+
+This example identifies the valid rule (one) and any invalid rules.
+
+Although the previous command should return only one rule, a rule that's pending deletion might also be included in the results.
 
 ## PARAMETERS
 
@@ -50,6 +59,8 @@ The Identity parameter specifies the SecOps override rule that you want to view.
 - Id
 - Distinguished name (DN)
 - GUID
+
+The name of the rule uses the following syntax: `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977efb).
 
 ```yaml
 Type: ComplianceRuleIdParameter
