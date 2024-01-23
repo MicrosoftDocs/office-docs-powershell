@@ -43,7 +43,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ExoPhishSimOverrideRule | Set-ExoPhishSimOverrideRule -AddDomains blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
 ```
 
+This example modifies the (presumably only) phishing simulation override rule with the specified settings.
+
 This example modifies the phishing simulation override rule with the specified settings.
+
+### Example 2
+```powershell
+Set-ExoPhishSimOverrideRule -Identity "_Exe:PhishSimOverr:6fed4b63-3563-495d-a481-b24a311f8329" -AddDomains blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
+```
+
+This example modifies the specified phishing simulation override rule with the specified settings.
 
 ## PARAMETERS
 
@@ -55,7 +64,7 @@ The Identity parameter specifies the phishing simulation override rule that you 
 - Distinguished name (DN)
 - GUID
 
-Use the Get-ExoPhishSimOverrideRule cmdlet to find the values. The only available rule is named `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+Use the Get-ExoPhishSimOverrideRule cmdlet to find the values. The name of the rule uses the following syntax: `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
 ```yaml
 Type: ComplianceRuleIdParameter

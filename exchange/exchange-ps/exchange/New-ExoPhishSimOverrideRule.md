@@ -29,7 +29,7 @@ New-ExoPhishSimOverrideRule -Policy <PolicyIdParameter> -SenderIpRanges <MultiVa
  [-Domains <Fqdn>]
  [-Name <String>]
  [-WhatIf]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-ExoPhishSimOverrideRule -Policy PhishSimOverridePolicy -Domains fabrikam.com,wingtiptoys.com -SenderIpRanges 192.168.1.55
 ```
 
-This example creates a new phishing simulation override rule with the specified settings.
+This example creates a new phishing simulation override rule with the specified settings. Regardless of the Name value specified, the rule name will be `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
 ## PARAMETERS
 

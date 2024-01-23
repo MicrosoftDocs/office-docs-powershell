@@ -35,10 +35,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Remove-ExoSecOpsOverrideRule -Identity SecOpsOverrideRule6fed4b63-3563-495d-a481-b24a311f8329
+Get-ExoSecOpsOverrideRule| Remove-ExoSecOpsOverrideRule
 ```
 
-This example removes the SecOps mailbox override rule.
+This example removes any SecOps mailbox override rules.
+
+### Example 2
+```powershell
+Remove-ExoSecOpsOverrideRule -Identity "_Exe:SecOpsOverrid:312c23cf-0377-4162-b93d-6548a9977efb"
+```
+
+This example removes the specified SecOps mailbox override rule.
 
 ## PARAMETERS
 
@@ -49,6 +56,8 @@ The Identity parameter specifies the SecOps override rule that you want to remov
 - Id
 - Distinguished name (DN)
 - GUID
+
+Use the Get-ExoSecOpsMailboxRule cmdlet to find these values. The name of the rule uses the following syntax: `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977efb).
 
 ```yaml
 Type: ComplianceRuleIdParameter

@@ -39,7 +39,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ExoPhishSimOverrideRule
 ```
 
-This example returns detailed information about the one and only phishing simulation override rule.
+This example returns detailed information about the phishing simulation override (there should be only one).
+
+### Example 2
+```powershell
+Get-ExoPhishSimOverrideRule | Format-Table Name,Mode
+```
+
+This example identifies the valid rule (one) and any invalid rules.
+
+Although the previous command should return only one rule, a rule that's pending deletion might also be included in the results.
 
 ## PARAMETERS
 
@@ -51,7 +60,7 @@ The Identity parameter specifies the phishing simulation override rule that you 
 - Distinguished name (DN)
 - GUID
 
-The only available rule is named `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+The name of the rule uses the following syntax: `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
 ```yaml
 Type: ComplianceRuleIdParameter
