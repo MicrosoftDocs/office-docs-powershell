@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 ```powershell
-Get-ExoPhishSimOverrideRule | Set-ExOPhishSimOverrideRule -AddDomains blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
+Get-ExoPhishSimOverrideRule | Set-ExoPhishSimOverrideRule -AddDomains blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
 ```
 
 This example modifies the phishing simulation override rule with the specified settings.

@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-exosecopsoverriderule
 applicable: Exchange Online, Exchange Online Protection
-title: New-ExOSecOpsOverrideRule
+title: New-ExoSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-ExOSecOpsOverrideRule cmdlet to create SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the New-ExoSecOpsOverrideRule cmdlet to create SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -38,7 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ExOSecOpsOverrideRule -Policy SecOpsOverridePolicy
+New-ExoSecOpsOverrideRule -Policy SecOpsOverridePolicy
 ```
 
 This example creates the SecOps mailbox override rule with the specified settings.

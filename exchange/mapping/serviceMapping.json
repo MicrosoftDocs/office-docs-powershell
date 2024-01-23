@@ -187,7 +187,7 @@
   "Set-ContentFilterConfig": "antispam-antimalware",
   "Set-DkimSigningConfig": "antispam-antimalware",
   "Set-EOPProtectionPolicyRule": "antispam-antimalware",
-  "Set-ExOPhishSimOverrideRule": "antispam-antimalware",
+  "Set-ExoPhishSimOverrideRule": "antispam-antimalware",
   "Set-ExoSecOpsOverrideRule": "antispam-antimalware",
   "Set-HostedConnectionFilterPolicy": "antispam-antimalware",
   "Set-HostedContentFilterPolicy": "antispam-antimalware",

@@ -2,7 +2,7 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-exosecopsoverriderule
 applicable: Exchange Online, Exchange Online Protection
-title: set-ExOSecOpsOverrideRule
+title: set-ExoSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
@@ -36,7 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ExOSecOpsOverrideRule -Identity _Exe:SecOpsOverrid:6fed4b63-3563-495d-a481-b24a311f8329 -Comment "Contact IT Management before modifying or removing this rule."
+Set-ExoSecOpsOverrideRule -Identity _Exe:SecOpsOverrid:6fed4b63-3563-495d-a481-b24a311f8329 -Comment "Contact IT Management before modifying or removing this rule."
 ```
 
 This example modifies the SecOps mailbox override rule \[sic\] with the specified settings.

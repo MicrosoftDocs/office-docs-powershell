@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-SecOpsOverrideRule
 
 ## SYNOPSIS
-**Note**: The \*-SecOpsOverrideRule cmdlets in Security & Compliance PowerShell have been replaced by the \*-ExOSecOpsOverrideRule cmdlets in Exchange Online PowerShell.
+**Note**: The \*-SecOpsOverrideRule cmdlets in Security & Compliance PowerShell have been replaced by the \*-ExoSecOpsOverrideRule cmdlets in Exchange Online PowerShell.
 
 This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 

@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-PhishSimOverrideRule
 
 ## SYNOPSIS
-**Note**: The \*-PhishSimOverrideRule cmdlets in Security & Compliance PowerShell have been replaced by the \*-ExOPhishSimOverrideRule cmdlets in Exchange Online PowerShell.
+**Note**: The \*-PhishSimOverrideRule cmdlets in Security & Compliance PowerShell have been replaced by the \*-ExoPhishSimOverrideRule cmdlets in Exchange Online PowerShell.
 
 This cmdlet is functional only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
