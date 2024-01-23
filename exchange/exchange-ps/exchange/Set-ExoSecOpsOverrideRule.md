@@ -16,6 +16,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-ExoSecOpsOverrideRule cmdlet to modify SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
+**Tip**: This cmdlet doesn't modify email addresses in the SecOps override rule. To modify the email addresses in the SecOps override rule, use the Set-SecOpsOverridePolicy cmdlet.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -36,10 +38,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-ExoSecOpsOverrideRule -Identity _Exe:SecOpsOverrid:6fed4b63-3563-495d-a481-b24a311f8329 -Comment "Contact IT Management before modifying or removing this rule."
+Get-ExoSecOpsOverrideRule| Set-ExoSecOpsOverrideRule -Comment "Contact IT Management before modifying or removing this rule."
 ```
 
-This example modifies the SecOps mailbox override rule \[sic\] with the specified settings.
+This example adds a comment to the (presumably only) SecOps mailbox override rule with the specified settings.
+
+### Example 2
+```powershell
+Set-ExoSecOpsOverrideRule -Identity "_Exe:SecOpsOverrid:312c23cf-0377-4162-b93d-6548a9977efb" -Comment "Contact IT Management before modifying or removing this rule."
+```
+
+This example adds a comment to the specified SecOps mailbox override rule.
 
 ## PARAMETERS
 
@@ -50,6 +59,8 @@ The Identity parameter specifies the SecOps override rule that you want to modif
 - Id
 - Distinguished name (DN)
 - GUID
+
+Use the Get-ExoSecOpsMailboxRule cmdlet to find these values. The name of the rule uses the following syntax: `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977efb).
 
 ```yaml
 Type: ComplianceRuleIdParameter
@@ -81,7 +92,10 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-This parameter is reserved for internal Microsoft use.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

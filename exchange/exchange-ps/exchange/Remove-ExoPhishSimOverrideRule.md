@@ -38,7 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ExoPhishSimOverrideRule | Remove-ExoPhishSimOverrideRule
 ```
 
-This example removes the phishing simulation override rule.
+This example removes any phishing simulation override rules.
+
+### Example 2
+```powershell
+Remove-ExoPhishSimOverrideRule -Identity "_Exe:PhishSimOverr:6fed4b63-3563-495d-a481-b24a311f8329"
+```
+
+This example removes the specified phishing simulation override rule.
 
 ## PARAMETERS
 
@@ -50,7 +57,7 @@ The Identity parameter specifies the phishing simulation override rule that you 
 - Distinguished name (DN)
 - GUID
 
-Use the Get-ExoPhishSimOverrideRule cmdlet to find the values. The only available rule is named `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+Use the Get-ExoPhishSimOverrideRule cmdlet to find the values. The rule name syntax is `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
 ```yaml
 Type: ComplianceRuleIdParameter

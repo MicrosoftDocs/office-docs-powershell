@@ -38,10 +38,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ExoSecOpsOverrideRule -Policy SecOpsOverridePolicy
+New-ExoSecOpsOverrideRule -Name SecOpsOverrideRule -Policy SecOpsOverridePolicy
 ```
 
-This example creates the SecOps mailbox override rule with the specified settings.
+This example creates the SecOps mailbox override rule with the specified settings. Regardless of the Name value specified, the rule name will be `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977efb).
 
 ## PARAMETERS
 
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies the name for the policy. Regardless of the value you specify, the name will be `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+The Name parameter specifies the name for the policy. Regardless of the value you specify, the name will be `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977ef).
 
 ```yaml
 Type: String
