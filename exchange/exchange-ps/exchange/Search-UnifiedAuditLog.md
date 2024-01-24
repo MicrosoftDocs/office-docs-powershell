@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -HighCompleteness
-{{ Fill HighCompleteness Description }}
+The HighCompleteness parameter allows you to switch between performance and completeness of query results. When true, the query returns more complete search results but may take significantly longer to run. When false, the query runs faster but may have missing search results.
 
 ```yaml
 Type: SwitchParameter
