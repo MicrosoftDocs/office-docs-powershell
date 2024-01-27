@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/skype/set-csteamse
 applicable: Microsoft Teams
 title: Set-CsTeamsEmergencyCallingPolicy
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 manager: roykuntz
 ms.reviewer: chenc
 schema: 2.0.0
