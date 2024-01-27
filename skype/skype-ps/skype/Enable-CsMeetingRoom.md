@@ -47,7 +47,7 @@ Note that, for Skype for Business Server, there are no cmdlets for creating or r
 Instead, you use the Enable-CsMeetingRoom cmdlet to enable meeting rooms and the Disable-CsMeetingRoom cmdlet to disable meeting rooms.
 The resource account must already exist in order for you to enable the meeting room, and disabling a meeting room only removes that room from your collection of meeting rooms; it does not delete the resource mailbox account.
 
-The process for creating and updating meeting rooms differs depending on your deployment of Skype for Business Online and Skype for Business Server. Make sure you are following the guidance here to set up your meeting rooms properly: [Manage conferencing in Skype for Business Server](https://learn.microsoft.com/skypeforbusiness/manage/conferencing/conferencing).
+The process for creating and updating meeting rooms differs depending on your deployment of Skype for Business Server. Make sure you are following the guidance here to set up your meeting rooms properly: [Manage conferencing in Skype for Business Server](https://learn.microsoft.com/skypeforbusiness/manage/conferencing/conferencing).
 
 The functions carried out by the Enable-CsMeetingRoom cmdlet are not available in the Skype for Business Server Control Panel.
 
