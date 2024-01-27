@@ -461,7 +461,7 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.ADConnect
 
 [Move users between on-premises and cloud](https://learn.microsoft.com/skypeforbusiness/hybrid/move-users-between-on-premises-and-cloud)
 
-[Skype for Business Hybrid Solutions](https://learn.microsoft.com/SkypeForBusiness/skype-for-business-hybrid-solutions/skype-for-business-hybrid-solutions)
+[Configure Skype for Business hybrid](https://learn.microsoft.com/SkypeForBusiness/hybrid/configure-federation-with-skype-for-business-online)
 
 [Migration and interoperability guidance for organizations using Teams together with Skype for Business](https://learn.microsoft.com/MicrosoftTeams/migration-interop-guidance-for-teams-with-skype)
 
