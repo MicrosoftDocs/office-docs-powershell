@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/skype/new-csteamse
 applicable: Microsoft Teams
 title: New-CsTeamsEmergencyCallingExtendedNotification 
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 manager: roykuntz
 ms.reviewer:
 schema: 2.0.0

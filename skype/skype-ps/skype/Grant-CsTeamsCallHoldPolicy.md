@@ -6,7 +6,7 @@ title: Grant-CsTeamsCallHoldPolicy
 schema: 2.0.0
 ms.reviewer:
 manager: abnair
-ms.author: jenstr
+ms.author: serdars
 author: jenstrier
 ---
 
