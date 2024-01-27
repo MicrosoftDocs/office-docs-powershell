@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csphonenumberassignment
 applicable: Microsoft Teams
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer: 
 manager:
 schema: 2.0.0
