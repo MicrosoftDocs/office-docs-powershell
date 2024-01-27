@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Remove-CsOnlineLisSwitch
 schema: 2.0.0
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 ---
 
