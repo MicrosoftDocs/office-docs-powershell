@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsenhancedencryptionpolicy
 title: New-CsTeamsEnhancedEncryptionPolicy
 author: xinawang
-ms.author: xinawang
+ms.author: serdars
 manager: mdress
 schema: 2.0.0
 ---
