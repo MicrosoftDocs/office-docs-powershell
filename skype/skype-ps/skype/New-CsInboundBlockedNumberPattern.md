@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/skype/new-csinboun
 applicable: Microsoft Teams, Skype for Business Online 
 title: New-CsInboundBlockedNumberPattern
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 manager: bulenteg
 schema: 2.0.0 
