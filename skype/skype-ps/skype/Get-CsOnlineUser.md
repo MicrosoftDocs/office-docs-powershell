@@ -129,6 +129,8 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `SfBOnPremUser` - to query for users that are hosted on-premises (available from January 31, 2023, in the latest TPM versions at that time).
 - `Unknown` - to query for a user type that is not known.
 
+Note:  A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
+
 ```yaml
 Type: UserIdParameter
 Parameter Sets: (All)
@@ -212,7 +214,7 @@ The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. 
 
 **Updates in Teams PowerShell Module version 5.9.0 and later**
 
-The following updates will be applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments and will be rolled out in GCC High and DoD environments from new Teams PowerShell Module version 5.9.0 targeted to release on 17th January 2024). These updates will be applicable to remaining Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments). These updates will be applicable to older Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
 
 _Performance_
 
@@ -503,6 +505,8 @@ Sorting will now be enabled in Teams PowerShell Module 5.9.0 and later by using 
 - Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
 - Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
 
+**Note**: Sorting on few attributes like LineURI can be case-sensitive.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -560,18 +564,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 **Updates in Teams PowerShell Module version 5.9.0 and later**
 
-The following updates will be applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments and will be rolled out in GCC High and DoD environments from new Teams PowerShell Module version 5.9.0 targeted to release on 17th January 2024). These updates will be applicable to remaining Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments). These updates will be applicable to older Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
 
-The following attributes will be populated with correct values in the output of Get-CsOnlineUser when not using the "-identity" parameter:
+The following attributes are populated with correct values in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
 - CountryAbbreviation
 - UserValidationErrors
 - WhenCreated
 
-The following updates will be applicable to the output in scenarios where "-identity" parameter is not used:
+The following updates are applicable to the output in scenarios where "-identity" parameter is not used:
 
 - Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
-- Guest would be available in the output.
+- Guest are available in the output
 - Unlicensed Users: Unlicensed users would show up in the output of Get-CsOnlineUser (note Unlicensed users in commercial clouds would show up in the output for only 30 days post-license removal.)
 - Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
 - AccountType as Unknown will be renamed to AccountType as IneligibleUser in GCC High and DoD environments. IneligibleUser will include users who do not have any valid Teams licenses (except Guest, SfbOnPremUser, ResourceAccount).
