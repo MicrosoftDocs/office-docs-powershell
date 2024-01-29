@@ -245,7 +245,7 @@ Choose **one** of the following methods in this section to assign API permission
 #### Modify the app manifest to assign API permissions
 
 > [!NOTE]
-> The procedures in this section _append_ the existing default permissions on the app (delegated **User.Read** permissions in **Microsoft Graph**) with the required application **Exchange.Manage.AsApp** permissions in **Office 365 Exchange Online**.
+> The procedures in this section _append_ the existing default permissions on the app (delegated **User.Read** permissions in **Microsoft Graph**) with the required application **Exchange.ManageAsApp** permissions in **Office 365 Exchange Online**.
 
 1. On the app **Overview** page, select **Manifest** from the **Manage** section.
 
