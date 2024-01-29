@@ -129,7 +129,8 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `SfBOnPremUser` - to query for users that are hosted on-premises (available from January 31, 2023, in the latest TPM versions at that time).
 - `Unknown` - to query for a user type that is not known.
 
-Note:  A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
+> [!NOTE]
+> A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
 
 ```yaml
 Type: UserIdParameter
