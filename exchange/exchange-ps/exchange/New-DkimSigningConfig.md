@@ -160,9 +160,12 @@ Accept wildcard characters: False
 ```
 
 ### -KeySize
-The KeySize parameter specifies the size in bits of the public key that's used in the DKIM signing policy. Valid values are 1024 or 2048.
+The KeySize parameter specifies the size in bits of the public key that's used in the DKIM signing policy. Valid values are:
 
-RSA keys are supported; Ed25519 keys aren't supported.
+- 1024 (this is the default value)
+- 2048
+
+RSA keys are supported. Ed25519 keys aren't supported.
 
 ```yaml
 Type: UInt16
