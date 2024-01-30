@@ -4,9 +4,9 @@ online version: https://learn.microsoft.com/powershell/module/skype/get-csonline
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
-manager: bulenteg
-author: isrumnon
-ms.author: isrumnon
+manager: sshastri
+author: praspatil
+ms.author: praspatil
 ms.reviewer:
 ---
 
