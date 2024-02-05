@@ -14,9 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 Use the Import-RecipientDataProperty cmdlet to add a picture or a spoken name audio file to a mailbox or mail contact.
 
-> [!IMPORTANT]
->
-> Please note that profile cards across Microsoft apps and services do not support imported pictures for Mail Contacts.
+**Note**: Profile cards across Microsoft apps and services don't support imported pictures for mail contacts.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
