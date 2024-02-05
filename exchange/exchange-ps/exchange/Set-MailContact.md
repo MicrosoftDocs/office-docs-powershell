@@ -1530,13 +1530,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserCertificate
+This parameter is available only in the cloud-based service.
+
 The UserCertificate parameter specifies the digital certificate used to sign a user's email messages.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable:  Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1546,13 +1548,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserSMimeCertificate
+This parameter is available only in the cloud-based service.
+
 The UserSMimeCertificate parameter specifies the S/MIME certificate that's used to sign a user's email messages.
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
