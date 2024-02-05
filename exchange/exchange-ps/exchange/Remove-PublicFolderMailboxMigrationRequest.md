@@ -65,8 +65,6 @@ Get-PublicFolderMailboxMigrationRequest | group TargetMailbox | ?{$_.Count -gt 1
 
 This example returns duplicate public folder migration requests (requests created for the same target mailbox). If the command returns no results, then there are no duplicate migration requests.
 
-The sample script [Remove Duplicate public folder MRS Requests](https://gallery.technet.microsoft.com/scriptcenter/Remove-Duplicate-public-055f0e5e) detects duplicate or orphaned public folder mailbox migration requests and also removes them.
-
 ## PARAMETERS
 
 ### -Identity
