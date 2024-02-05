@@ -12,6 +12,9 @@ ms.reviewer:
 # New-AdminAuditLogSearch
 
 ## SYNOPSIS
+> [!NOTE]
+> This cmdlet will be deprecated in the cloud-based service. To access audit log data, use the Search-UnifiedAuditLog cmdlet. For more information, see this blog post: <https://aka.ms/AuditCmdletBlog>.
+
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-AdminAuditLogSearch cmdlet to search the contents of the administrator audit log and send the results to one or more mailboxes that you specify.
