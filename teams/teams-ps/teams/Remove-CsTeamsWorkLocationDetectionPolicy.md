@@ -1,14 +1,17 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
-online version:
+Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsworklocationdetectionpolicy
 schema: 2.0.0
+ms.author: arkozlov
+manager: prashibadkur
+author: artemiykozlov
 ---
 
 # Remove-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet is used to delete an instance of TeamsWorkLocationDetectionPolicy.
 
 ## SYNTAX
 
@@ -18,16 +21,18 @@ Remove-CsTeamsWorkLocationDetectionPolicy [-Identity] <String> [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Deletes an instance of TeamsWorkLocationDetectionPolicy. The `Identity` parameter accepts the identity of the policy instance to delete.
+
+## EXAMPLES
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\>Remove-CsTeamsWorkLocationDetectionPolicy -Identity Foobar
 ```
 
-{{ Add example description here }}
+Deletes a given policy instance with the Identity Foobar.
 
 ## PARAMETERS
 
@@ -47,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -62,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Name of the new policy instance to be created.
 
 ```yaml
 Type: String
@@ -106,3 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsTeamsWorkLocationDetectionPolicy](Get-CsTeamsWorkLocationDetectionPolicy.md)
+
+[New-CsTeamsWorkLocationDetectionPolicy](New-CsTeamsWorkLocationDetectionPolicy.md)
+
+[Set-CsTeamsWorkLocationDetectionPolicy](Set-CsTeamsWorkLocationDetectionPolicy.md)
+
+[Grant-CsTeamsWorkLocationDetectionPolicy](Grant-CsTeamsWorkLocationDetectionPolicy.md)
