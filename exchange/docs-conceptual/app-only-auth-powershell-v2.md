@@ -129,7 +129,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
 ## Set up app-only authentication
 
-An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. For more information, see [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals).
+An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. For more information, see [Application and service principal objects in Microsoft Entra ID](/entra/identity-platform/app-objects-and-service-principals).
 
 For a detailed visual flow about creating applications in Microsoft Entra ID, see <https://aka.ms/azuread-app>.
 
@@ -159,7 +159,7 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 ### Step 1: Register the application in Microsoft Entra ID
 
 > [!NOTE]
-> If you encounter problems, check the [required permissions](/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions) to verify that your account can create the identity.
+> If you encounter problems, check the [required permissions](/entra/identity-platform/howto-create-service-principal-portal#permissions-required-for-registering-an-app) to verify that your account can create the identity.
 
 1. Open the Microsoft Entra admin center at <https://portal.azure.com/>.
 
@@ -187,7 +187,7 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
      - **URI**: Enter the URI where the access token is sent.
 
      > [!NOTE]
-     > You can't create credentials for [native applications](/azure/active-directory/manage-apps/application-proxy-configure-native-client-application), because you can't use native applications for automated applications.
+     > You can't create credentials for [native applications](/entra/identity/app-proxy/application-proxy-configure-native-client-application), because you can't use native applications for automated applications.
 
      ![Register an application.](media/exo-app-only-auth-register-app.png)
 
@@ -391,7 +391,7 @@ If you made the application multi-tenant for **Exchange Online** delegated scena
 - `<client-id>` is the ID of the multi-tenant application.
 - The default scope is used to grant application permissions.
 
-For more information about the URL syntax, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-admin-consent#request-the-permissions-from-a-directory-admin).
+For more information about the URL syntax, see [Request the permissions from a directory admin](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin).
 
 ### Step 5: Assign Microsoft Entra roles to the application
 
@@ -411,14 +411,14 @@ The supported Microsoft Entra roles are described in the following table:
 
 |Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
 |---|:---:|:---:|
-|[Compliance Administrator](/azure/active-directory/roles/permissions-reference#compliance-administrator)|✔|✔|
-|[Exchange Administrator](/azure/active-directory/roles/permissions-reference#exchange-administrator)<sup>\*</sup>|✔||
-|[Exchange Recipient Administrator](/azure/active-directory/roles/permissions-reference#exchange-recipient-administrator)|✔||
-|[Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator)<sup>\*</sup>|✔|✔|
-|[Global Reader](/azure/active-directory/roles/permissions-reference#global-reader)|✔|✔|
-|[Helpdesk Administrator](/azure/active-directory/roles/permissions-reference#helpdesk-administrator)|✔||
-|[Security Administrator](/azure/active-directory/roles/permissions-reference#security-administrator)<sup>\*</sup>|✔|✔|
-|[Security Reader](/azure/active-directory/roles/permissions-reference#security-reader)|✔|✔|
+|[Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator)|✔|✔|
+|[Exchange Administrator](/entra/identity/role-based-access-control/permissions-reference#exchange-administrator)<sup>\*</sup>|✔||
+|[Exchange Recipient Administrator](/entra/identity/role-based-access-control/permissions-reference#exchange-recipient-administrator)|✔||
+|[Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)<sup>\*</sup>|✔|✔|
+|[Global Reader](/entra/identity/role-based-access-control/permissions-reference#global-reader)|✔|✔|
+|[Helpdesk Administrator](/entra/identity/role-based-access-control/permissions-reference#helpdesk-administrator)|✔||
+|[Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)<sup>\*</sup>|✔|✔|
+|[Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)|✔|✔|
 
 > <sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
 >
@@ -427,7 +427,7 @@ The supported Microsoft Entra roles are described in the following table:
 >
 > The Security Administrator role does not have the necessary permissions for those same tasks.
 
-For general instructions about assigning roles in Microsoft Entra ID, see [View and assign administrator roles in Microsoft Entra ID](/azure/active-directory/roles/manage-roles-portal).
+For general instructions about assigning roles in Microsoft Entra ID, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal).
 
 > [!NOTE]
 > The following steps are slightly different for Exchange Online PowerShell vs. Security & Compliance PowerShell. The steps for both environments are shown. To configure roles for both environments, repeat the steps in this section.
@@ -481,7 +481,7 @@ For general instructions about assigning roles in Microsoft Entra ID, see [View 
 >
 >  This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
-For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-365-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
+For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
 To assign custom role groups to the application using service principals, do the following steps:
 
