@@ -39,7 +39,7 @@ To run this cmdlet, you need to be a member of one of the following directory ro
 - Exchange Administrator
 - Insights Administrator
 
-For more information, see [Microsoft Entra built-in roles](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference).
+For more information, see [Microsoft Entra built-in roles](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference).
 
 ## EXAMPLES
 
