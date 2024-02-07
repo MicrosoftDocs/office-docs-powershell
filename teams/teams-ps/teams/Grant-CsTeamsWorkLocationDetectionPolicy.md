@@ -1,41 +1,137 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
-online version:
+Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsworklocationdetectionpolicy
 schema: 2.0.0
+ms.author: arkozlov
+manager: prashibadkur
+author: artemiykozlov
 ---
 
 # Grant-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet applies an instance of the TeamsWorkLocationDetectionPolicy to users or groups in a tenant.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsTeamsWorkLocationDetectionPolicy -Identity <String> -PolicyName <String> [<CommonParameters>]
+Grant-CsTeamsWorkLocationDetectionPolicy [<CommonParameters>]
+```
+
+### GrantToUser
+```
+Grant-CsTeamsWorkLocationDetectionPolicy -Identity <String> [[-PolicyName] <String>] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsWorkLocationDetectionPolicy [[-PolicyName] <String>] [-Group] <String> -Rank <Int32>
+ [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsWorkLocationDetectionPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet applies an instance of the TeamsWorkLocationDetectionPolicy to users or groups in a tenant.
+
+Passes in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -PolicyName sms-enabled -Identity testuser@test.onmicrosoft.com
 ```
 
-{{ Add example description here }}
+Assigns a given policy to a user.
+
+### Example 2
+```powershell
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName wld-enabled
+```
+
+Assigns a given policy to a group.
+
+
+### Example 3
+```powershell
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName wld-enabled
+```
+
+Assigns a given policy to the tenant.
+
+### Example 3
+```powershell
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName wld-enabled
+```
+
+Note: _Using $null in place of a policy name can be used to unassigned a policy instance._
 
 ## PARAMETERS
 
-### -Identity
-{{ Fill Identity Description }}
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+This is the equivalent to `-Identity Global`.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+This is the identifier of the group that the policy should be assigned to.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Specifies the identity of the target user.
+
+Example: testuser@test.onmicrosoft.com
+
+Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+Use the "Global" Identity if you wish to set the policy for the entire tenant.
+
+```yaml
+Type: String
+Parameter Sets: GrantToUser
 Aliases:
 
 Required: True
@@ -46,11 +142,26 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-{{ Fill PolicyName Description }}
+Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), for example, a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: GrantToUser, GrantToGroup, GrantToTenant
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: True
@@ -65,11 +176,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
-### System.Object
+### System.Void
+
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsTeamsWorkLocationDetectionPolicy](Get-CsTeamsWorkLocationDetectionPolicy.md)
+
+[New-CsTeamsWorkLocationDetectionPolicy](New-CsTeamsWorkLocationDetectionPolicy.md)
+
+[Set-CsTeamsWorkLocationDetectionPolicy](Set-CsTeamsWorkLocationDetectionPolicy.md)
+
+[Remove-CsTeamsWorkLocationDetectionPolicy](Remove-CsTeamsWorkLocationDetectionPolicy.md)
