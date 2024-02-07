@@ -29,7 +29,7 @@ Set-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>]
 ### Instance
 ```
 Set-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>]
- [-AllowPrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>]
+ [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>]
  [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -43,7 +43,7 @@ This cmdlet allows you to update existing policies of this type.
 
 ### Example 1
 ```powershell
-PS C:\> Set-CsTeamsChannelsPolicy -Identity StudentPolicy -AllowPrivateTeamDiscovery $true
+PS C:\> Set-CsTeamsChannelsPolicy -Identity StudentPolicy -EnablePrivateTeamDiscovery $true
 ```
 
 This example shows updating an existing policy with name "StudentPolicy" and enabling Private Team Discovery.
