@@ -1,14 +1,17 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
-online version:
+Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsworklocationdetectionpolicy
 schema: 2.0.0
+ms.author: arkozlov
+manager: prashibadkur
+author: artemiykozlov
 ---
 
 # New-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPolicy.
 
 ## SYNTAX
 
@@ -18,16 +21,31 @@ New-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] 
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the work location detection experience. The parameter `EnableWorkLocationDetection` lets organizations collect the work location information of users using users plugging into hotdesks (unassigned desks) or rooms using tenant admin managed devices, using M365 in proximity of tenant managed device as MTRs, and sharing geographic geo location of mobile phone. The users can consent to use this information to set their workplace location.  The location information will be stored in the cloud and will be used for M365 hybrid work location scenarios. This information will also be used by M365 to drive analytics on workplace utilization and enhance the hybrid work experience.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-enabled -EnableWorkLocationDetection $true
 ```
+```output
+Identity                 EnableWorkLocationDetection                                                                          
+--------                 ----------------------                                                                          
+Tag:wld-enabled                            True
+```
+Creates a new policy instance with the identity wld-enabled. `EnableWorkLocationDetection` is set to the value specified in the command.
 
-{{ Add example description here }}
+### Example 2
+```powershell
+PS C:\> New-CsTeamsWorkLocationDetectionPolicy -Identity wld-disable
+```
+```output
+Identity                 EnableWorkLocationDetection                                                                          
+--------                 ----------------------                                                                          
+Tag:wld-disable                            False
+```
+Creates a new policy instance with the identity wld-disable. `EnableWorkLocationDetection` will default to false if it is not specified.
 
 ## PARAMETERS
 
@@ -47,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWorkLocationDetection
-{{ Fill EnableWorkLocationDetection Description }}
+This property lets organizations collect the work location information of users using users plugging into hotdesks (unassigned desks) or rooms using tenant admin managed devices, using M365 in proximity of tenant managed device as MTRs, and sharing geographic geo location of mobile phone. The users can consent to use this information to set their workplace location.  The location information will be stored in the cloud and will be used for M365 hybrid work location scenarios. This information will also be used by M365 to drive analytics on workplace utilization and enhance the hybrid work experience.
 
 ```yaml
 Type: Boolean
@@ -62,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+Suppresses the display of any non-fatal error message that might arise when running the command.
 
 ```yaml
 Type: SwitchParameter
@@ -77,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+Name of the new policy instance to be created.
 
 ```yaml
 Type: String
@@ -112,7 +130,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
 
 ## OUTPUTS
 
@@ -121,3 +139,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-CsTeamsWorkLocationDetectionPolicy](Get-CsTeamsWorkLocationDetectionPolicy.md)
+
+[Remove-CsTeamsWorkLocationDetectionPolicy](Remove-CsTeamsWorkLocationDetectionPolicy.md)
+
+[Set-CsTeamsWorkLocationDetectionPolicy](Set-CsTeamsWorkLocationDetectionPolicy.md)
+
+[Grant-CsTeamsWorkLocationDetectionPolicy](Grant-CsTeamsWorkLocationDetectionPolicy.md)
