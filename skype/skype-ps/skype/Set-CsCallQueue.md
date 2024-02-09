@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionCallPriority --- Private Preview customers only
-If the OverflowAction is set to Forward, and the OverflowActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is optional.
+If the OverflowAction is set to Forward, and the OverflowActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
 - 1 = Very High
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionCallPriority --- Private Preview customers only
-If the TimeoutAction is set to Forward, and the TimeoutActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is optional.
+If the TimeoutAction is set to Forward, and the TimeoutActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
 - 1 = Very High
@@ -400,7 +400,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentActionCallPriority --- Private Preview customers only
-If the NoAgentAction is set to Forward, and the NoAgentActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is optional.
+If the NoAgentAction is set to Forward, and the NoAgentActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
 
 PARAMVALUE: 1 | 2 | 3 | 4 | 5
 - 1 = Very High
