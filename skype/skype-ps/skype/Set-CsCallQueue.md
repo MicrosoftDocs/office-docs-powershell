@@ -62,6 +62,13 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -NoAgentRedirectPhoneNumberAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
+> 
+> While any customer may use the following configuration parameters, the functionality will only work for customers that are participating in the private preview. General Availability for this functionality has not been determined at this time.
+>
+> - -OverflowActionCallPriority
+> - -TimeoutActionCallPriority
+> - -NoAgentActionCallPriority
+
 
 ## EXAMPLES
 
