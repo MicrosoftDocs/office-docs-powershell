@@ -18,7 +18,7 @@ Use the New-CsOnlineApplicationInstanceAssociation cmdlet to associate either a 
 ## SYNTAX
 
 ```
-New-CsOnlineApplicationInstanceAssociation -Identities <String[]> -ConfigurationId <String> -ConfigurationType <Object> [-Tenant <Guid>] [<CommonParameters>]
+New-CsOnlineApplicationInstanceAssociation -Identities <String[]> -ConfigurationId <String> -ConfigurationType <Object> [-CallPriority <Int16>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -161,6 +161,30 @@ Applicable: Skype for Business Online
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallPriority --- Private Preview customers only
+The call priority assigned to calls arriving on this application instance if a priority has not already been assigned.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+
+1 = Very High
+2 = High
+3 = Normal / Default
+4 = Low
+5 = Very Low
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: 3
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
