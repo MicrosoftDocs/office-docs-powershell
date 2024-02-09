@@ -57,6 +57,12 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -NoAgentRedirectPhoneNumberAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
+>
+> While any customer may use the following configuration parameters, the functionality will only work for customers that are participating in the private preview. General Availability for this functionality has not been determined at this time.
+>
+> - -OverflowActionCallPriority
+> - -TimeoutActionCallPriority
+> - -NoAgentActionCallPriority
 
 ## EXAMPLES
 
@@ -240,6 +246,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OverflowActionCallPriority --- Private Preview customers only
+If the OverFlowAction is set to Forward, and the OverflowActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is optional.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+- 1 = Very High
+- 2 = High
+- 3 = Normal / Default
+- 4 = Low
+- 5 = Very Low
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OverflowThreshold
 The OverflowThreshold parameter defines the number of calls that can be in the queue at any one time before the overflow action is triggered. The OverflowThreshold can be any integer value between 0 and 200, inclusive. A value of 0 causes calls not to reach agents and the overflow action to be taken immediately
 
@@ -279,6 +308,29 @@ The TimeoutActionTarget represents the target of the timeout action. If the Time
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutActionCallPriority --- Private Preview customers only
+If the TimeoutAction is set to Forward, and the TimeoutActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is optional.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+- 1 = Very High
+- 2 = High
+- 3 = Normal / Default
+- 4 = Low
+- 5 = Very Low
+
+```yaml
+Type: Int16
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -330,6 +382,29 @@ The NoAgentActionTarget represents the target of the no agent action. If the NoA
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentActionCallPriority --- Private Preview customers only
+If the NoAgentAction is set to Forward, and the NoAgentActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is optional.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+- 1 = Very High
+- 2 = High
+- 3 = Normal / Default
+- 4 = Low
+- 5 = Very Low
+
+```yaml
+Type: Int16
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
