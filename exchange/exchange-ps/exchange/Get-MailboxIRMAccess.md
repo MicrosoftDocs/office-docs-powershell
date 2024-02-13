@@ -51,7 +51,7 @@ This example returns information about delegate access to IRM-protected messages
 Get-MailboxIRMAccess -Identity lynette@contoso.onmicrosoft.com -User chris@contoso.onmicrosoft.com
 ```
 
-This example returns information about delegate Chris' access access to IRM-protected messages in Lynette's mailbox.
+This example returns information about delegate Chris' access to IRM-protected messages in Lynette's mailbox.
 
 ## PARAMETERS
 

@@ -274,7 +274,7 @@ All versions of the module are supported in Windows PowerShell 5.1.
 
 PowerShell 7 on Windows requires version 2.0.4 or later.
 
-Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.2 or later to connect. Otherwise, you'll get an `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.2, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472).
+Version 2.0.5 or later of the module requires the Microsoft .NET Framework 4.7.2 or later to connect. Otherwise, you'll get a `System.Runtime.InteropServices.OSPlatform` error. This requirement shouldn't be an issue in current versions of Windows. For more information about versions of Windows that support the .NET Framework 4.7.2, see [this article](/dotnet/framework/migration-guide/versions-and-dependencies#net-framework-472).
 
 Windows PowerShell requirements and module support **in older versions of Windows** are described in the following list:
 
@@ -370,7 +370,7 @@ To install the module for the first time, complete the following steps:
 
 3. Now you can use the **Install-Module** cmdlet to install the module from the PowerShell Gallery. Typically, you'll want the latest public version of the module, but you can also install a Preview version if any are available.
 
-   - To install **the latest public version** of the module, run **one** of the the following commands:
+   - To install **the latest public version** of the module, run **one** of the following commands:
 
      - In an elevated PowerShell window (all users):
 

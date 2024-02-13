@@ -33,7 +33,7 @@ This cmdlet allows you to create new policies of this type, which can later be a
 
 ### Example 1
 ```powershell
-PS C:\> New-CsTeamsChannelsPolicy -Identity StudentPolicy -AllowPrivateTeamDiscovery $false
+PS C:\> New-CsTeamsChannelsPolicy -Identity StudentPolicy -EnablePrivateTeamDiscovery $false
 ```
 
 This example shows creating a new policy with name "StudentPolicy" where Private Team Discovery is disabled.

@@ -1,46 +1,54 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/set-secopsoverriderule
-applicable: Security & Compliance
-title: Set-SecOpsOverrideRule
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exosecopsoverriderule
+applicable: Exchange Online, Exchange Online Protection
+title: set-ExoSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Set-SecOpsOverrideRule
+# Set-ExoSecOpsOverrideRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in the cloud-based service.
 
-Use the Set-SecOpsOverrideRule cmdlet to modify SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+Use the Set-ExoSecOpsOverrideRule cmdlet to modify SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+
+**Tip**: This cmdlet doesn't modify email addresses in the SecOps override rule. To modify the email addresses in the SecOps override rule, use the Set-SecOpsOverridePolicy cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-SecOpsOverrideRule [-Identity] <ComplianceRuleIdParameter>
- [-AddSentTo <MultiValuedProperty>]
+Set-ExoSecOpsOverrideRule [-Identity] <ComplianceRuleIdParameter>
  [-Comment <String>]
  [-Confirm]
- [-RemoveSentTo <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance](https://learn.microsoft.com/microsoft-365/security/office-365-security/scc-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Set-SecOpsOverrideRule -Identity SecOpsOverrideRule6fed4b63-3563-495d-a481-b24a311f8329 -RemoveSentTo sceops2@contoso.com
+Get-ExoSecOpsOverrideRule| Set-ExoSecOpsOverrideRule -Comment "Contact IT Management before modifying or removing this rule."
 ```
 
-This example modifies the SecOps mailbox override rule with the specified settings.
+This example adds a comment to the (presumably only) SecOps mailbox override rule with the specified settings.
+
+### Example 2
+```powershell
+Set-ExoSecOpsOverrideRule -Identity "_Exe:SecOpsOverrid:312c23cf-0377-4162-b93d-6548a9977efb" -Comment "Contact IT Management before modifying or removing this rule."
+```
+
+This example adds a comment to the specified SecOps mailbox override rule.
 
 ## PARAMETERS
 
@@ -52,34 +60,18 @@ The Identity parameter specifies the SecOps override rule that you want to modif
 - Distinguished name (DN)
 - GUID
 
+Use the Get-ExoSecOpsMailboxRule cmdlet to find these values. The name of the rule uses the following syntax: `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977efb).
+
 ```yaml
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -AddSentTo
-The AddSentTo parameter specifies an entry to add to the existing list of SecOps mailbox email addresses. Groups are not allowed.
-
-You can specify multiple values separated by commas.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -90,7 +82,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -109,7 +101,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -118,16 +110,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveSentTo
-The RemoveSentTo parameter specifies an entry to remove from the existing list of SecOps mailbox email addresses. Groups are not allowed.
-
-You can specify multiple values separated by commas.
+### -DomainController
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: MultiValuedProperty
+Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -137,13 +127,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance PowerShell.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

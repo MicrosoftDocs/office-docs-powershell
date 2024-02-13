@@ -4,9 +4,9 @@ online version: https://learn.microsoft.com/powershell/module/skype/get-csonline
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineUser
 schema: 2.0.0
-manager: bulenteg
-author: isrumnon
-ms.author: isrumnon
+manager: sshastri
+author: praspatil
+ms.author: praspatil
 ms.reviewer:
 ---
 
@@ -43,7 +43,7 @@ Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that m
 
 `Get-CsOnlineUser -TenantId "bf19b7db-6960-41e5-a139-2aa373474354"`
 
-However, if you have multiple you can return users from a specified tenant by using the Filter parameter and a command similar to this:
+However, if you have multiple tenants you can return users from a specified tenant by using the Filter parameter and a command similar to this:
 
 `Get-CsOnlineUser -Filter "TenantId -eq 'bf19b7db-6960-41e5-a139-2aa373474354'"`
 
@@ -210,9 +210,9 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
-**Updates in Teams PowerShell Module version 5.0.0 and later**
+**Updates in Teams PowerShell Module version 5.9.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 or later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments). These updates will be applicable to older Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
 
 _Performance_
 
@@ -498,10 +498,12 @@ Accept wildcard characters: False
 
 ### -Sort
 
-Sorting is now enabled in Teams PowerShell Module 5.1.0 and later by using the "-Sort" or "-OrderBy" parameters. This parameter is currently rolled out in commercial environments only. For example:
+Sorting will now be enabled in Teams PowerShell Module 5.9.0 and later by using the "-Sort" or "-OrderBy" parameters in GCC High and DoD environments. These updates will be applicable to older Teams PowerShell versions starting from 15th March 2024 in GCC High and DoD environments(note that this parameter is already rolled out in commercial environments). For example:
 
 - Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
 - Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
+
+**Note**: Sorting on few attributes like LineURI can be case-sensitive.
 
 ```yaml
 Type: String
@@ -558,31 +560,33 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Notes
 
-**Updates in Teams PowerShell Module version 5.0.0 and later**
+A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.0.0 and later (note that these changes are only rolled out in commercial environments at present). These updates will be applicable to remaining Teams PowerShell versions by 15th April 2023:
+**Updates in Teams PowerShell Module version 5.9.0 and later**
 
-New attributes have now been introduced in the output of Get-CsOnlineUser when not using the "-identity" parameter:
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments). These updates will be applicable to older Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
+
+The following attributes are populated with correct values in the output of Get-CsOnlineUser when not using the "-identity" parameter:
 
 - CountryAbbreviation
-- SipProxyAddress
-- TeamsMediaLoggingPolicy
 - UserValidationErrors
 - WhenCreated
 
-The following updates are now applicable to the output in scenarios where "-identity" parameter is not used:
+The following updates are applicable to the output in scenarios where "-identity" parameter is not used:
 
 - Only valid OnPrem users would be available in the output: These are users that are DirSyncEnabled and have a valid OnPremSipAddress or SIP address in ShadowProxyAddresses.
-- Guest users are now available in the output.
-- Unlicensed Users: Unlicensed users would show up in the output for 30 days post-license removal.
+- Guest are available in the output
+- Unlicensed Users: Unlicensed users would show up in the output of Get-CsOnlineUser (note Unlicensed users in commercial clouds would show up in the output for only 30 days post-license removal.)
 - Soft deleted users: These users will be displayed in the output of Get-CsOnlineUser and the TAC Manage Users page by default with SoftDeletionTimestamp set to a value.
+- AccountType as Unknown will be renamed to AccountType as IneligibleUser in GCC High and DoD environments. IneligibleUser will include users who do not have any valid Teams licenses (except Guest, SfbOnPremUser, ResourceAccount).
 
 If any information is required for a user that is not available in the output (when not using "-identity" parameter) then it can be obtained using the "-identity" parameter. Information for all users would be available using the "-identity" parameter until they are hard deleted.
 
-If Guest users and SoftDeletedUsers are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp respectively. For example:
+If Guest, Soft Deleted Users, IneligibleUser are not required in the output then they can be filtered out by using filter on AccountType and SoftDeletionTimestamp. For example:
 
 - Get-CsOnlineUser -Filter {AccountType -ne 'Guest'}
 - Get-CsOnlineUser -Filter {SoftDeletionTimestamp -eq $null}
+- Get-CsOnlineUser -Filter {AccountType -ne 'IneligibleUser'}
 
 **Updates in Teams PowerShell Module version 3.0.0 and above**
 

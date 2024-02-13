@@ -12,6 +12,9 @@ ms.reviewer:
 # Search-AdminAuditLog
 
 ## SYNOPSIS
+> [!NOTE]
+> This cmdlet will be deprecated in the cloud-based service. To access audit log data, use the Search-UnifiedAuditLog cmdlet. For more information, see this blog post: <https://aka.ms/AuditCmdletBlog>.
+
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Search-AdminAuditLog cmdlet to search the contents of the administrator audit log. Administrator audit logging records when a user or administrator makes a change in your organization (in the Exchange admin center or by using cmdlets).

@@ -402,6 +402,8 @@ The ReleaseStatus parameter filters the results by the release status of the mes
 
 You can specify multiple values separated by commas.
 
+**Note**: Messages that were quarantined and released by Microsoft due to a service issue have the SystemReleased property value TRUE. To filter the results by system released messages, run the following command: `Get-QuarantineMessage | where {$_.systemreleased -like "True"}`.
+
 ```yaml
 Type: ReleaseStatus[]
 Parameter Sets: Summary
