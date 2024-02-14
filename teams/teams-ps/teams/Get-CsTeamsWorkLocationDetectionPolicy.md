@@ -26,7 +26,8 @@ Get-CsTeamsWorkLocationDetectionPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Fetches instances of TeamsWorkLocationDetectionPolicy. Each policy object contains a property called `EnableWorkLocationDetection`. This property lets organizations collect the work location information of users using users plugging into hotdesks (unassigned desks) or rooms using tenant admin managed devices, using M365 in proximity of tenant managed device as MTRs, and sharing geographic geo location of mobile phone. The users can consent to use this information to set their workplace location.  The location information will be stored in the cloud and will be used for M365 hybrid work location scenarios. This information will also be used by M365 to drive analytics on workplace utilization and enhance the hybrid work experience.
+Fetches instances of TeamsWorkLocationDetectionPolicy. Each policy object contains a property called `EnableWorkLocationDetection`. This setting allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices.
+This gives users the ability to consent to the use of this location data to set their current work location.Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
 
 ## EXAMPLES
 
