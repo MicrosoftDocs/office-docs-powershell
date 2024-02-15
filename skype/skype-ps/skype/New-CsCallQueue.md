@@ -18,7 +18,7 @@ Creates new Call Queue in your Skype for Business Online organization.
 ## SYNTAX
 
 ```
-New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowThreshold <Int16>] [-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutThreshold <Int16>] [-NoAgentAction <Object>] [-NoAgentActionTarget <Guid>] [-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-User <List>] [-LanguageId <String>] [-LineUri <String>] [-OboResourceAccountIds <List>] [-OverflowDisconnectTextToSpeechPrompt <String>][-OverflowDisconnectAudioFilePrompt <Guid>] [-OverflowRedirectPersonTextToSpeechPrompt <String>][-OverflowRedirectPersonAudioFilePrompt <Guid>] [-OverflowRedirectVoiceAppTextToSpeechPrompt <String>] [-OverflowRedirectVoiceAppAudioFilePrompt <Guid>] [-OverflowRedirectPhoneNumberTextToSpeechPrompt <String>] [-OverflowRedirectPhoneNumberAudioFilePrompt <Guid>] [-OverflowRedirectVoicemailTextToSpeechPrompt <String>] [-OverflowRedirectVoicemailAudioFilePrompt <Guid>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-EnableOverflowSharedVoicemailSystemPromptSuppression <Boolean>] [-TimeoutDisconnectTextToSpeechPrompt <String>][-TimeoutDisconnectAudioFilePrompt <Guid>] [-TimeoutRedirectPersonTextToSpeechPrompt <String>] [-TimeoutRedirectPersonAudioFilePrompt <Guid>] [-TimeoutRedirectVoiceAppTextToSpeechPrompt <String>] [-TimeoutRedirectVoiceAppAudioFilePrompt <Guid>] [-TimeoutRedirectPhoneNumberTextToSpeechPrompt <String>] [-TimeoutRedirectPhoneNumberAudioFilePrompt <Guid>] [-TimeoutRedirectVoicemailTextToSpeechPrompt <String>] [-TimeoutRedirectVoicemailAudioFilePrompt <Guid>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] [-EnableTimeoutSharedVoicemailSystemPromptSuppression <Boolean>] [-NoAgentDisconnectTextToSpeechPrompt <String>][-NoAgentDisconnectAudioFilePrompt <Guid>] [-NoAgentRedirectPersonTextToSpeechPrompt <String>] [-NoAgentRedirectPersonAudioFilePrompt <Guid>] [-NoAgentRedirectVoiceAppTextToSpeechPrompt <String>] [-NoAgentRedirectVoiceAppAudioFilePrompt <Guid>] [-NoAgentRedirectPhoneNumberTextToSpeechPrompt <String>] [-NoAgentRedirectPhoneNumberAudioFilePrompt <Guid>] [-NoAgentRedirectVoicemailTextToSpeechPrompt <String>] [-NoAgentRedirectVoicemailAudioFilePrompt <Guid>] [-NoAgentSharedVoicemailTextToSpeechPrompt <String>] [-NoAgentSharedVoicemailAudioFilePrompt <Guid>] [-EnableNoAgentSharedVoicemailTranscription <Boolean>] [-EnableNoAgentSharedVoicemailSystemPromptSuppression <Boolean>] [-ChannelId <String>] [-ChannelUserObjectId <Guid>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-WelcomeTextToSpeechPrompt <String>] [<CommonParameters>]
+New-CsCallQueue -Name <String> [-AgentAlertTime <Int16>] [-AllowOptOut <Boolean>] [-DistributionLists <List>] [-Tenant <Guid>] [-UseDefaultMusicOnHold <Boolean>] [-WelcomeMusicAudioFileId <Guid>] [-MusicOnHoldAudioFileId <Guid>] [-OverflowAction <Object>] [-OverflowActionTarget <Guid>] [-OverflowActionCallPriority <Int16>] [-OverflowThreshold <Int16>] [-TimeoutAction <Object>] [-TimeoutActionTarget <Guid>] [-TimeoutActionCallPriority <Int16>] [-TimeoutThreshold <Int16>] [-NoAgentAction <Object>] [-NoAgentActionTarget <Guid>] [-NoAgentActionCallPriority <Int16>] [-RoutingMethod <Object>] [-PresenceBasedRouting <Boolean>] [-ConferenceMode <Boolean>] [-User <List>] [-LanguageId <String>] [-LineUri <String>] [-OboResourceAccountIds <List>] [-OverflowDisconnectTextToSpeechPrompt <String>][-OverflowDisconnectAudioFilePrompt <Guid>] [-OverflowRedirectPersonTextToSpeechPrompt <String>][-OverflowRedirectPersonAudioFilePrompt <Guid>] [-OverflowRedirectVoiceAppTextToSpeechPrompt <String>] [-OverflowRedirectVoiceAppAudioFilePrompt <Guid>] [-OverflowRedirectPhoneNumberTextToSpeechPrompt <String>] [-OverflowRedirectPhoneNumberAudioFilePrompt <Guid>] [-OverflowRedirectVoicemailTextToSpeechPrompt <String>] [-OverflowRedirectVoicemailAudioFilePrompt <Guid>] [-OverflowSharedVoicemailTextToSpeechPrompt <String>] [-OverflowSharedVoicemailAudioFilePrompt <Guid>] [-EnableOverflowSharedVoicemailTranscription <Boolean>] [-EnableOverflowSharedVoicemailSystemPromptSuppression <Boolean>] [-TimeoutDisconnectTextToSpeechPrompt <String>][-TimeoutDisconnectAudioFilePrompt <Guid>] [-TimeoutRedirectPersonTextToSpeechPrompt <String>] [-TimeoutRedirectPersonAudioFilePrompt <Guid>] [-TimeoutRedirectVoiceAppTextToSpeechPrompt <String>] [-TimeoutRedirectVoiceAppAudioFilePrompt <Guid>] [-TimeoutRedirectPhoneNumberTextToSpeechPrompt <String>] [-TimeoutRedirectPhoneNumberAudioFilePrompt <Guid>] [-TimeoutRedirectVoicemailTextToSpeechPrompt <String>] [-TimeoutRedirectVoicemailAudioFilePrompt <Guid>] [-TimeoutSharedVoicemailTextToSpeechPrompt <String>] [-TimeoutSharedVoicemailAudioFilePrompt <Guid>] [-EnableTimeoutSharedVoicemailTranscription <Boolean>] [-EnableTimeoutSharedVoicemailSystemPromptSuppression <Boolean>] [-NoAgentDisconnectTextToSpeechPrompt <String>][-NoAgentDisconnectAudioFilePrompt <Guid>] [-NoAgentRedirectPersonTextToSpeechPrompt <String>] [-NoAgentRedirectPersonAudioFilePrompt <Guid>] [-NoAgentRedirectVoiceAppTextToSpeechPrompt <String>] [-NoAgentRedirectVoiceAppAudioFilePrompt <Guid>] [-NoAgentRedirectPhoneNumberTextToSpeechPrompt <String>] [-NoAgentRedirectPhoneNumberAudioFilePrompt <Guid>] [-NoAgentRedirectVoicemailTextToSpeechPrompt <String>] [-NoAgentRedirectVoicemailAudioFilePrompt <Guid>] [-NoAgentSharedVoicemailTextToSpeechPrompt <String>] [-NoAgentSharedVoicemailAudioFilePrompt <Guid>] [-EnableNoAgentSharedVoicemailTranscription <Boolean>] [-EnableNoAgentSharedVoicemailSystemPromptSuppression <Boolean>] [-ChannelId <String>] [-ChannelUserObjectId <Guid>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-WelcomeTextToSpeechPrompt <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,6 +57,12 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -NoAgentRedirectPhoneNumberAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
+>
+> While any customer may use the following configuration parameters, the functionality will only work for customers that are participating in the private preview. General Availability for this functionality has not been determined at this time.
+>
+> - -OverflowActionCallPriority
+> - -TimeoutActionCallPriority
+> - -NoAgentActionCallPriority
 
 ## EXAMPLES
 
@@ -240,8 +246,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OverflowActionCallPriority --- Private Preview customers only
+If the OverFlowAction is set to Forward, and the OverflowActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+- 1 = Very High
+- 2 = High
+- 3 = Normal / Default
+- 4 = Low
+- 5 = Very Low
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OverflowThreshold
-The OverflowThreshold parameter defines the number of calls that can be in the queue at any one time before the overflow action is triggered. The OverflowThreshold can be any integer value between 0 and 200, inclusive. A value of 0 causes calls not to reach agents and the overflow action to be taken immediately
+The OverflowThreshold parameter defines the number of calls that can be in the queue at any one time before the overflow action is triggered. The OverflowThreshold can be any integer value between 0 and 200, inclusive. A value of 0 causes calls not to reach agents and the overflow action to be taken immediately.
 
 ```yaml
 Type: Int16
@@ -279,6 +308,29 @@ The TimeoutActionTarget represents the target of the timeout action. If the Time
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutActionCallPriority --- Private Preview customers only
+If the TimeoutAction is set to Forward, and the TimeoutActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+- 1 = Very High
+- 2 = High
+- 3 = Normal / Default
+- 4 = Low
+- 5 = Very Low
+
+```yaml
+Type: Int16
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -330,6 +382,29 @@ The NoAgentActionTarget represents the target of the no agent action. If the NoA
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoAgentActionCallPriority --- Private Preview customers only
+If the NoAgentAction is set to Forward, and the NoAgentActionTarget is set to an Auto attendant or Call queue resource account Guid, this parameter must be set to indicate the priority that will be assigned to the call. Otherwise, this parameter is not applicable.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+- 1 = Very High
+- 2 = High
+- 3 = Normal / Default
+- 4 = Low
+- 5 = Very Low
+
+```yaml
+Type: Int16
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
