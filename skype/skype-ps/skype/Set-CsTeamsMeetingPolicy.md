@@ -40,7 +40,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] [-AutomaticallyStartCopilot <String>] [-Copilot <String>]
 [-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowWatermarkCustomizationForCameraVideo <Boolean>]  [-WatermarkForCameraVideoOpacity <Int32>]  [-WatermarkForCameraVideoPattern <String>]
-[-AllowWatermarkCustomizationForScreenSharing <Boolean>]  [-WatermarkForScreenSharingOpacity <Int32>]  [-WatermarkForScreenSharingPattern <String>] [-WatermarkForAnonymousUsers <String>]
+[-AllowWatermarkCustomizationForScreenSharing <Boolean>]  [-WatermarkForScreenSharingOpacity <Int32>]  [-WatermarkForScreenSharingPattern <String>] [-WatermarkForAnonymousUsers <String>]   [-ConnectToMeetingControls <String>]
 [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>] [-VoiceIsolation <String>]
 [-ContentSharingInExternalMeetings <String>] 
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -1256,6 +1256,26 @@ Default value: EnabledWithTranscript
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -ConnectToMeetingControls
+Allows external connections of thirdparty apps to teams
+
+Possible values are:
+- Enabled 
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -AutomaticallyStartCopilot
 
