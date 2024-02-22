@@ -180,7 +180,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HighCompleteness
+### -HighCompleteness (Preview)
 The HighCompleteness switch specifies completeness instead performance in the results. You don't need to specify a value with this switch.
 
 When you use this switch, the query returns more complete search results but might take significantly longer to run. If you don't use this switch, the query runs faster but might have missing search results.
