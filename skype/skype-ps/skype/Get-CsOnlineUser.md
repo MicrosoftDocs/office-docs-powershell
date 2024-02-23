@@ -562,6 +562,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
 
+**Updates in Teams PowerShell Module version 6.0.0 and later**
+
+The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 6.0.0 or later.
+
+- GracePeriodExpiryDate: GracePeriodExpiryDate attribute is being introduced within the AssignedPlan JSON array. It specifies the date when the grace period of a previously deleted license expires, and the license will be permanently deleted. The attribute remains empty/null for active licenses. (Note: The attribute is currently in private preview and will display valid values only for private preview)
+
+- IsInGracePeriod: IsInGracePeriod attribute is a boolean flag that indicates that the associated plan is in grace period after deletion. (Note: The attribute is currently in private preview and will display valid values only for private preview)
+  
 **Updates in Teams PowerShell Module version 5.9.0 and later**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments). These updates will be applicable to older Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
