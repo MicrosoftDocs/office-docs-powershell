@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -HighCompleteness
-**Note**: This parameter is currently in Preview, isn't available in all organizations, and is subject to chage.
+**Note**: This parameter is currently in Preview, isn't available in all organizations, and is subject to change.
 
 The HighCompleteness switch specifies completeness instead performance in the results. You don't need to specify a value with this switch.
 
