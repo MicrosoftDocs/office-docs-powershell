@@ -48,14 +48,14 @@ Set-CsTeamsEducationConfiguration -ParentGuardianPreferredContactMethod SMS
 ```
 
 ### Example 3
-In this example, updating parents contact info is enabled by educators across the organization.
+In this example, updating parents contact information is enabled by educators across the organization.
 
 ```powershell
 Set-CsTeamsEducationConfiguration -UpdateParentInformation Enabled
 ```
 
 ### Example 4
-In this example, updating parents contact info is disabled by educators across the organization.
+In this example, updating parents contact information is disabled by educators across the organization.
 
 ```powershell
 Set-CsTeamsEducationConfiguration -UpdateParentInformation Disabled
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateParentInformation
-Indicates whether updating parents contact info is Enabled/Disabled by educators. Possible values are 'Enabled' and 'Disabled'.
+Indicates whether updating parents contact information is Enabled/Disabled by educators. Possible values are 'Enabled' and 'Disabled'.
 
 ```yaml
 Type: String
