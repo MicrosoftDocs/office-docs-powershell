@@ -2,8 +2,8 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsEducationConfiguration
-author: prrathna
-ms.author: prrathna
+author: SaritaBehera
+ms.author: saritabehera
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseducationconfiguration
 schema: 2.0.0
 ---
