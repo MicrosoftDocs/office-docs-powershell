@@ -29,7 +29,7 @@ You must be a Teams Service Administrator or a Global Administrator for your org
 ## Examples
 
 ### Example 1
-In this example, the organization has Email selected as the preferred contact method used for parent communication invitations, also the parents contact info updation is Enabled by educators.
+In this example, the organization has Email selected as the preferred contact method used for parent communication invitations, also the parents contact information is Enabled by educators.
 
 ```powershell
 Get-CsTeamsEducationConfiguration
