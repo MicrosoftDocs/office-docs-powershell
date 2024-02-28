@@ -1352,7 +1352,9 @@ Accept wildcard characters: False
 ```
 
 ### -WaitTimeBeforeOfferingCallbackInSecond
-The number of seconds a call must wait before becoming eligible for callback. This condition applies to calls at the front of the call queue. Set to null ($null) to disable this condition. This parameter becomes a required parameter when IsCallbackEnabled is set to `True`.
+The number of seconds a call must wait before becoming eligible for callback. This condition applies to calls at the front of the call queue. Set to null ($null) to disable this condition. 
+
+At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when when `-IsCallbackEnabled` is `True`.
 
 ```yaml
 Type: Int16
@@ -1367,7 +1369,9 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfCallsInQueueBeforeOfferingCallback
-The number of calls in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Set to null ($null) to disable this condition. This parameter becomes a required parameter when IsCallbackEnabled is set to `True`.
+The number of calls in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Set to null ($null) to disable this condition. 
+
+At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when when `-IsCallbackEnabled` is `True`.
 
 ```yaml
 Type: Int16
@@ -1382,7 +1386,9 @@ Accept wildcard characters: False
 ```
 
 ### -CallToAgentRatioThresholdBeforeOfferingCallback
-The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition. This parameter becomes a required parameter when IsCallbackEnabled is set to `True`.
+The ratio of calls to agents that must be in queue before a call becomes eligible for callback. This conditon applies to calls arriving at the call queue. Minimum value of one (1).  Set to null ($null) to disable this condition. 
+
+At least one of `-WaitTimeBeforeOfferingCallbackInSecond`, `-NumberOfCallsInQueueBeforeOfferingCallback`, or `-CallToAgentRatioThresholdBeforeOfferingCallback` must be set to a value other than null when when `-IsCallbackEnabled` is `True`.
 
 ```yaml
 Type: Int16
