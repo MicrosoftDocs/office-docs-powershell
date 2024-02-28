@@ -1,0 +1,885 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Set-ReportSubmissionPolicy cmdlet to modify the report submission policy in your cloud-based organization.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
+
+   [-Confirm]
+
+   [-DisableQuarantineReportingOption <Boolean>]
+
+   [-DisableUserSubmissionOptions <Boolean>]
+
+   [-EnableCustomizedMsg <Boolean>]
+
+   [-EnableCustomNotificationSender <Boolean>]
+
+   [-EnableOrganizationBranding <Boolean>]
+
+   [-EnableReportToMicrosoft <Boolean>]
+
+   [-EnableThirdPartyAddress <Boolean>]
+
+   [-EnableUserEmailNotification <Boolean>]
+
+   [-JunkReviewResultMessage <String>]
+
+   [-NotJunkReviewResultMessage <String>]
+
+   [-NotificationFooterMessage <String>]
+
+   [-NotificationSenderAddress <MultiValuedProperty>]
+
+   [-NotificationsForCleanSubmissionAirInvestigationsEnabled <Boolean>]
+
+   [-NotificationsForPhishMalwareSubmissionAirInvestigationsEnabled <Boolean>]
+
+   [-NotificationsForSpamSubmissionAirInvestigationsEnabled <Boolean>]
+
+   [-NotificationsForSubmissionAirInvestigationsEnabled <Boolean>]
+
+   [-OnlyShowPhishingDisclaimer <Boolean>]
+
+   [-PhishingReviewResultMessage <String>]
+
+   [-PostSubmitMessage <String>]
+
+   [-PostSubmitMessageEnabled <Boolean>]
+
+   [-PostSubmitMessageForJunk <String>]
+
+   [-PostSubmitMessageForNotJunk <String>]
+
+   [-PostSubmitMessageForPhishing <String>]
+
+   [-PostSubmitMessageTitle <String>]
+
+   [-PostSubmitMessageTitleForJunk <String>]
+
+   [-PostSubmitMessageTitleForNotJunk <String>]
+
+   [-PostSubmitMessageTitleForPhishing <String>]
+
+   [-PreSubmitMessage <String>]
+
+   [-PreSubmitMessageEnabled <Boolean>]
+
+   [-PreSubmitMessageForJunk <String>]
+
+   [-PreSubmitMessageForNotJunk <String>]
+
+   [-PreSubmitMessageForPhishing <String>]
+
+   [-PreSubmitMessageTitle <String>]
+
+   [-PreSubmitMessageTitleForJunk <String>]
+
+   [-PreSubmitMessageTitleForNotJunk <String>]
+
+   [-PreSubmitMessageTitleForPhishing <String>]
+
+   [-ReportChatMessageEnabled <Boolean>]
+
+   [-ReportChatMessageToCustomizedAddressEnabled <Boolean>]
+
+   [-ReportJunkAddresses <MultiValuedProperty>]
+
+   [-ReportJunkToCustomizedAddress <Boolean>]
+
+   [-ReportNotJunkAddresses <MultiValuedProperty>]
+
+   [-ReportNotJunkToCustomizedAddress <Boolean>]
+
+   [-ReportPhishAddresses <MultiValuedProperty>]
+
+   [-ReportPhishToCustomizedAddress <Boolean>]
+
+   [-ThirdPartyReportAddresses <MultiValuedProperty>]
+
+   [-UserSubmissionOptions <Int32>]
+
+   [-UserSubmissionOptionsMessage <String>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReportToMicrosoft $true -EnableThirdPartyAddress $false -ThirdPartyReportAddresses $null -ReportJunkToCustomizedAddress $false -ReportJunkAddresses $null -ReportNotJunkToCustomizedAddress $false -ReportNotJunkAddresses $null -ReportPhishToCustomizedAddress $false -ReportPhishAddresses $null
+
+    Get-ReportSubmissionRule | Remove-ReportSubmissionRule
+  description: |-
+    This example turns on reporting in Outlook, uses Microsoft reporting tools in Outlook, but allows users to report messages to Microsoft only. The reporting mailbox is not used.
+
+    **Notes**:
+
+    - You can use this example (and the other examples) without concern for the existing values of the specified parameters. Depending on your current configuration, some of the parameters might already be set to the required values and therefore might not be required.
+    - If the report submission rule doesn't already exist (the Get-ReportSubmissionRule command returns no output), you don't need to run the second command to remove it.
+  summary: ""
+- title: Example 2
+  code: |-
+    $usersub = "reportedmessages@contoso.com"
+
+    Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReportToMicrosoft $true -EnableThirdPartyAddress $false -ThirdPartyReportAddresses $null -ReportJunkToCustomizedAddress $true -ReportJunkAddresses $usersub -ReportNotJunkToCustomizedAddress $true -ReportNotJunkAddresses $usersub -ReportPhishToCustomizedAddress $true -ReportPhishAddresses $usersub
+
+    New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
+  description: |-
+    This example turns on reporting in Outlook, uses Microsoft reporting tools in Outlook, allows users to report messages to Microsoft, and sends reported messages to the specified reporting mailbox.
+
+    The required third command is different based on whether you already have a report submission rule:
+
+    - If you don't already have a report submission rule (the Get-ReportSubmissionRule cmdlet returns nothing), run the New-ReportSubmissionRule command as described.
+    - If you already have a report submission rule (the Get-ReportSubmissionRule cmdlet returns output), run the following command instead: `Set-ReportSubmissionRule -Name DefaultReportSubmissionRule -SentTo $usersub`.
+  summary: ""
+- title: Example 3
+  code: |-
+    $usersub = "userreportedmessages@fabrikam.com"
+
+    Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReportToMicrosoft $false -EnableThirdPartyAddress $false -ThirdPartyReportAddresses $null -ReportJunkToCustomizedAddress $true -ReportJunkAddresses $usersub -ReportNotJunkToCustomizedAddress $true -ReportNotJunkAddresses $usersub -ReportPhishToCustomizedAddress $true -ReportPhishAddresses $usersub
+
+    New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
+  description: |-
+    This example turns on reporting in Outlook, uses Microsoft reporting tools in Outlook, and sends reported messages to the specified reporting mailbox only (users can't report messages to Microsoft).
+
+    The required third command is different based on whether you already have a report submission rule:
+
+    - If you don't already have a report submission rule (the Get-ReportSubmissionRule cmdlet returns nothing), run the New-ReportSubmissionRule command as described.
+    - If you already have a report submission rule (the Get-ReportSubmissionRule cmdlet returns output), run the following command instead: `Set-ReportSubmissionRule -Name DefaultReportSubmissionRule -SentTo $usersub`.
+  summary: ""
+- title: Example 4
+  code: |-
+    $usersub = "thirdpartyreporting@wingtiptoys.com"
+
+    Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ThirdPartyReportAddresses $usersub -ReportJunkToCustomizedAddress $false -ReportJunkAddresses $null -ReportNotJunkToCustomizedAddress $false -ReportNotJunkAddresses $null -ReportPhishToCustomizedAddress $false -ReportPhishAddresses $null
+
+    New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
+  description: |-
+    This example turns on reporting in Outlook, but uses third-party reporting tools in Outlook to send reported messages to the specified reporting mailbox in Exchange Online.
+
+    The required third command is different based on whether you already have a report submission rule:
+
+    - If you don't already have a report submission rule (the Get-ReportSubmissionRule cmdlet returns nothing), run the New-ReportSubmissionRule command as described.
+    - If you already have a report submission rule (the Get-ReportSubmissionRule cmdlet returns output), run the following command instead: `Set-ReportSubmissionRule -Name DefaultReportSubmissionRule -SentTo $usersub`.
+  summary: ""
+- title: Example 5
+  code: |-
+    Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReportToMicrosoft $false -EnableThirdPartyAddress $true -ThirdPartyReportAddresses $usersub -ReportJunkToCustomizedAddress $false -ReportJunkAddresses $null -ReportNotJunkToCustomizedAddress $false -ReportNotJunkAddresses $null -ReportPhishToCustomizedAddress $false -ReportPhishAddresses $null
+
+    Get-ReportSubmissionRule | Remove-ReportSubmissionRule
+  description: |-
+    This example turns off the Microsoft integrated reporting. Microsoft reporting tools in Outlook are not available to users and messages reported by third-party tools in Outlook are not available on the Submissions page in the Microsoft Defender portal.
+
+    If the report submission rule doesn't already exist (the Get-ReportSubmissionRule command returns no output), you don't need to run the second command to remove it.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisableQuarantineReportingOption
+  description: |+
+    The DisableQuarantineReportingOption parameter allows or prevents users from reporting messages in quarantine. Valid values are:
+
+    - $true: Users can't report quarantined messages from quarantine.
+    - $false: Users can report quarantined messages from quarantine. This is the default value.
+
+    This parameter is meaningful only reporting in Outlook is enabled as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisableUserSubmissionOptions
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableCustomizedMsg
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableCustomNotificationSender
+  description: |+
+    The EnableCustomNotificationSender parameter specifies whether a custom sender email address is used for result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. Valid values are:
+
+    - $true: Use a custom Microsoft 365 sender email address.
+    - $false: Use the default sender email address. This is the default value.
+
+    You specify the sender email address using the NotificationSenderAddress parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableOrganizationBranding
+  description: |+
+    The EnableOrganizationBranding parameter specifies whether to show the company logo in the footer of result messages that users receive after an admin reviews and marks the reported messages as junk, not junk, or phishing. Valid values are:
+
+    - $true: Use the company logo in the footer text instead of the Microsoft logo.
+    - $false: Don't use the company logo in the footer text. Use the Microsoft logo.
+
+    This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableReportToMicrosoft
+  description: |+
+    The EnableReportToMicrosoft parameter specifies whether Microsoft integrated reporting experience is enabled or disabled. Valid values are $true or $false.
+
+    The value $true for this parameter enables reporting in Outlook. The following configurations are possible:
+
+    - **Microsoft reporting tools are available in Outlook for users to report messages to Microsoft only (the reporting mailbox isn't used)**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false. This is the default result.
+    - **Microsoft reporting tools are available in Outlook for users to report messages to Microsoft and reported messages are sent to the specified reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+
+    The value $false for this parameter disables reporting in Outlook. The following configurations are possible:
+
+    - **Microsoft reporting tools are available in Outlook, but reported messages are sent only to the reporting mailbox**: The ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $true. To create the policy, use the same email address in the ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhisAddresses parameters, and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet.
+    - **Reporting in Outlook is disabled. Microsoft reporting tools are not available in Outlook. Any messages reported by users in Outlook with third-party reporting tools aren't visible on the Submissions page in the Microsoft Defender portal**: The EnableThirdPartyAddress, ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameter values are $false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableThirdPartyAddress
+  description: |+
+    The EnableThirdPartyAddress parameter specifies whether you're using third-party reporting tools in Outlook instead of Microsoft tools to send messages to the reporting mailbox in Exchange Online. Valid values are:
+
+    - $true: Reporting in Outlook is enabled, but third-party tools in Outlook send reported messages to the reporting mailbox in Exchange Online. You also need to set the EnableReportToMicrosoft parameter value to $false. To create the policy, use the same email address in the ThirdPartyReportAddresses parameter and also in the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlets.
+    - $false: Third-party reporting tools in Outlook aren't used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableUserEmailNotification
+  description: |+
+    The EnableUserEmailNotification parameter species whether users receive result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. Valid values are:
+
+    - $true: Customized admin review result messages are sent. This value is required when user reported messages go only to the reporting mailbox (the value of the EnableReportToMicrosoft parameter is $false).
+    - $false: Customized admin review result messages are not sent.
+
+    Use the JunkReviewResultMessage, NotJunkReviewResultMessage, PhishingReviewResultMessage parameters to configure the message body text that's used for each verdict.
+
+    Use the NotificationFooterMessage parameter for the footer that's used for all verdicts (junk, not junk, and phishing).
+
+    This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="ReportSubmissionPolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the report submission policy that you want to modify. The only available policy is named DefaultReportSubmissionPolicy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: JunkReviewResultMessage
+  description: |+
+    The JunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as junk. If the value contains spaces, enclose the value in quotation marks (").
+
+    This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+    Use the NotificationFooterMessage parameter to customize the footer text of result messages.
+
+    Use the NotificationSenderAddress parameter to customize the sender email address of result messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NotificationFooterMessage
+  description: |+
+    The NotificationFooterMessage parameter specifies the custom footer text to use in email notifications after an admin reviews and marks the reported messages as junk, not junk, or phishing. If the value contains spaces, enclose the value in quotation marks.
+
+    You can use the EnableOrganizationBranding parameter to include your company logo in the message footer.
+
+    This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: NotificationSenderAddress
+  description: |+
+    The NotificationSenderAddress parameter specifies the sender email address to use in result messages after an admin reviews and marks the reported messages as junk, not junk, or phishing. The email address must be in Exchange Online.
+
+    This parameter is meaningful only when reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NotificationsForCleanSubmissionAirInvestigationsEnabled
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NotificationsForPhishMalwareSubmissionAirInvestigationsEnabled
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NotificationsForSpamSubmissionAirInvestigationsEnabled
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NotificationsForSubmissionAirInvestigationsEnabled
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NotJunkReviewResultMessage
+  description: |+
+    The NotJunkReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as not junk. If the value contains spaces, enclose the value in quotation marks (").
+
+    This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+    Use the NotificationFooterMessage parameter to customize the footer text of result messages.
+
+    Use the NotificationSenderAddress parameter to customize the sender email address of result messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OnlyShowPhishingDisclaimer
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhishingReviewResultMessage
+  description: |+
+    The PhishingReviewResultMessage parameter specifies the custom text to use in result messages after an admin reviews and marks the reported messages as phishing. If the value contains spaces, enclose the value in quotation marks (").
+
+    This parameter is meaningful only when the value of the EnableUserEmailNotification parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+    Use the NotificationFooterMessage parameter to customize the footer text of result messages.
+
+    Use the NotificationSenderAddress parameter to customize the sender email address of result messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessage
+  description: |+
+    The PostSubmitMessage parameter specifies the custom pop-up message text to use in Outlook notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
+
+    You specify the custom pop-up message title using the PostSubmitMessageTitle parameter.
+
+    This parameter is meaningful only when the value of the PostSubmitMessageEnabled parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageEnabled
+  description: |+
+    The PostSubmitMessageEnabled parameter enables or disables the pop-up Outlook notifications that users see after they report messages using Microsoft reporting tools. Valid values are:
+
+    - $true: Users receive pop-up notifications in Outlook after they report messages. This is the default value.
+    - $false: Users don't receive pop-up notifications in Outlook after they report messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageForJunk
+  description: |+
+    Don't use this parameter. Use the PostSubmitMessage parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageForNotJunk
+  description: |+
+    Don't use this parameter. Use the PostSubmitMessage parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageForPhishing
+  description: |+
+    Don't use this parameter. Use the PostSubmitMessage parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageTitle
+  description: |+
+    The PostSubmitMessage parameter parameter specifies the custom pop-up message title to use in Outlook notifications after users report messages. If the value contains spaces, enclose the value in quotation marks (").
+
+    You specify the custom pop-up message text using the PostSubmitMessage parameter.
+
+    This parameter is meaningful only when the value of the PostSubmitMessageEnabled parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageTitleForJunk
+  description: |+
+    Don't use this parameter. Use the PostSubmitMessageTitle parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageTitleForNotJunk
+  description: |+
+    Don't use this parameter. Use the PostSubmitMessageTitle parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostSubmitMessageTitleForPhishing
+  description: |+
+    Don't use this parameter. Use the PostSubmitMessageTitle parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessage
+  description: |+
+    The PreSubmitMessage parameter specifies the custom pop-up message text to use in Outlook notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
+
+    You specify the custom pop-up message title using the PreSubmitMessageTitle parameter.
+
+    This parameter is meaningful only when the value of the PreSubmitMessageEnabled parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageEnabled
+  description: |+
+    The PreSubmitMessageEnabled parameter enables or disables the pop-up Outlook notifications that users see before they report messages using Microsoft reporting tools. Valid values are:
+
+    - $true: Users receive pop-up notifications in Outlook before they report messages. This is the default value.
+    - $false: Users don't receive pop-up notifications in Outlook before they report messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageForJunk
+  description: |+
+    Don't use this parameter. Use the PreSubmitMessage parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageForNotJunk
+  description: |+
+    Don't use this parameter. Use the PreSubmitMessage parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageForPhishing
+  description: |+
+    Don't use this parameter. Use the PreSubmitMessage parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageTitle
+  description: |+
+    The PreSubmitMessage parameter parameter specifies the custom pop-up message title to use in Outlook notifications before users report messages. If the value contains spaces, enclose the value in quotation marks (").
+
+    You specify the pop-up message text using the PreSubmitMessage parameter.
+
+    This parameter is meaningful only when the value of the PreSubmitMessageEnabled parameter is $true and reporting in Outlook is enabled for Microsoft reporting tools in Outlook as described in the EnableReportToMicrosoft parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageTitleForJunk
+  description: |+
+    Don't use this parameter. Use the PreSubmitMessageTitle parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageTitleForNotJunk
+  description: |+
+    Don't use this parameter. Use the PreSubmitMessageTitle parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreSubmitMessageTitleForPhishing
+  description: |+
+    Don't use this parameter. Use the PreSubmitMessageTitle parameter instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReportChatMessageEnabled
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReportChatMessageToCustomizedAddressEnabled
+  description: |+
+    {{ Fill ReportChatMessageToCustomizedAddressEnabled Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ReportJunkAddresses
+  description: |+
+    **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
+
+    The ReportJunkAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or third-party reporting tools in Outlook.
+
+    If you change the ReportJunkToCustomizedAddress parameter value to $false, you should set the value $null (blank) for this parameter.
+
+    You can't use this parameter by itself. You need to specify the same value for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReportJunkToCustomizedAddress
+  description: |+
+    The ReportJunkToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or third-party reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
+
+    - $true: User reported messages are sent to the reporting mailbox.
+    - $false: User reported messages are not sent to the reporting mailbox.
+
+    You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters in the same command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ReportNotJunkAddresses
+  description: |+
+    **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
+
+    The ReportNotJunkAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or third-party reporting tools in Outlook.
+
+    If you change the ReportNotJunkToCustomizedAddress parameter value to $false, you should set the value $null (blank) for this parameter.
+
+    You can't use this parameter by itself. You need to specify the same value for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReportNotJunkToCustomizedAddress
+  description: |+
+    The ReportNotJunkToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or third-party reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
+
+    - $true: User reported messages are sent to the reporting mailbox.
+    - $false: User reported messages are not sent to the reporting mailbox.
+
+    You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ReportPhishAddresses
+  description: |+
+    **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
+
+    The ReportPhishAddresses parameter specifies the email address of the reporting mailbox in Exchange Online to receive user reported messages in reporting in Outlook using Microsoft or third-party reporting tools in Outlook.
+
+    If you change the ReportPhishToCustomizedAddress parameter value to $false, you should set the value $null (blank) for this parameter.
+
+    You can't use this parameter by itself. You need to specify the same value for the ReportJunkAddresses, ReportNotJunkAddresses and ReportPhishAddresses parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReportPhishToCustomizedAddress
+  description: |+
+    The ReportPhishToCustomizedAddress parameter specifies whether to send user reported messages from Outlook (using Microsoft or third-party reporting tools) to the reporting mailbox as part of reporting in Outlook. Valid values are:
+
+    - $true: User reported messages are sent to the reporting mailbox.
+    - $false: User reported messages are not sent to the reporting mailbox.
+
+    You can't use this parameter by itself. You need to specify the same value for the ReportJunkToCustomizedAddress, ReportNotJunkToCustomizedAddress, and ReportPhishToCustomizedAddress parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ThirdPartyReportAddresses
+  description: |+
+    **Note**: You aren't absolutely required to use this parameter. You specify the email address of the reporting mailbox using the SentTo parameter on the New-ReportSubmissionRule or Set-ReportSubmissionRule cmdlet. To reduce confusion, set this parameter to the same value.
+
+    Use the ThirdPartyReportAddresses parameter to specify the email address of the reporting mailbox when you're using a third-party product for user submissions instead of reporting in Outlook.
+
+    If you change the EnableThirdPartyAddress parameter value to $false, you should set the value $null (blank) for this parameter.
+
+    For more information about using third-party reporting tools with or without reporting in Outlook in favor of a third-party product, see the EnableThirdPartyAddress parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: UserSubmissionOptions
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSubmissionOptionsMessage
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+uid: ExchangePowerShell.Set-ReportSubmissionPolicy
+name: Set-ReportSubmissionPolicy
+description: |-
+  The report submission policy controls most of the settings for user submissions in the Microsoft Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
+
+  The report submission rule (the SentTo parameter \*-ReportSubmissionRule cmdlets) controls the email address of the reporting mailbox where user reported messages are sent.
+
+  When you set the email address of the reporting mailbox in the Microsoft Defender portal, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
+
+  - Microsoft integrated reporting using Microsoft reporting tools in Outlook: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
+  - Microsoft integrated reporting using third-party tools in Outlook: The ThirdPartyReportAddresses parameter.
+
+  Although it's not absolutely required, it makes sense to keep the email address consistent in the related parameters in the \*-ReportSubmissionPolicy and \*-ReportSubmissionRule cmdlets.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/set-reportsubmissionpolicy
+  applicable: Exchange Online
+  title: Set-ReportSubmissionPolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

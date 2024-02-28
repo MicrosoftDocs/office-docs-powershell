@@ -1,0 +1,239 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the New-CsOnlineSchedule cmdlet to create a new schedule.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.Schedule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsOnlineTimeRange
+  href: New-CsOnlineTimeRange.yml
+- text: New-CsOnlineDateTimeRange
+  href: New-CsOnlineDateTimeRange.yml
+- text: New-CsAutoAttendantCallFlow
+  href: New-CsAutoAttendantCallFlow.yml
+- text: New-CsAutoAttendantCallHandlingAssociation
+  href: New-CsAutoAttendantCallHandlingAssociation.yml
+- text: New-CsAutoAttendant
+  href: New-CsAutoAttendant.yml
+syntaxes:
+- New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List>] [-TuesdayHours <List>] [-WednesdayHours <List>] [-ThursdayHours <List>] [-FridayHours <List>] [-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [-CommonParameters]
+- New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Tenant <Guid>] [-CommonParameters]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    $tr1 = New-CsOnlineTimeRange -Start 09:00 -End 12:00
+    $tr2 = New-CsOnlineTimeRange -Start 13:00 -End 17:00
+    $businessHours = New-CsOnlineSchedule -Name "Business Hours" -WeeklyRecurrentSchedule -MondayHours @($tr1, $tr2) -TuesdayHours @($tr1, $tr2) -WednesdayHours @($tr1, $tr2) -ThursdayHours @($tr1, $tr2) -FridayHours @($tr1, $tr2)
+  description: |-
+    This example creates a weekly recurrent schedule that is active on Monday-Friday from 9AM-12PM and 1PM-5PM.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    $tr1 = New-CsOnlineTimeRange -Start 09:00 -End 12:00
+    $tr2 = New-CsOnlineTimeRange -Start 13:00 -End 17:00
+    $afterHours = New-CsOnlineSchedule -Name " After Hours" -WeeklyRecurrentSchedule -MondayHours @($tr1, $tr2) -TuesdayHours @($tr1, $tr2) -WednesdayHours @($tr1, $tr2) -ThursdayHours @($tr1, $tr2) -FridayHours @($tr1, $tr2) -Complement
+  description: |-
+    This example creates a weekly recurrent schedule that is active at all times except Monday-Friday, 9AM-12PM and 1PM-5PM.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    $dtr = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+    $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
+  description: |-
+    This example creates a fixed schedule that is active from December 24, 2017 to December 26, 2017.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    $dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+    $dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
+    $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr1, $dtr2)
+  description: |-
+    This example creates a fixed schedule that is active from December 24, 2017 to December 26, 2017 and then from December 24, 2018 to December 26, 2018.
+  summary: ""
+- title: '-------------------------- Example 5 --------------------------'
+  code: |-
+    $notInEffectSchedule = New-CsOnlineSchedule -Name "NotInEffect" -FixedSchedule
+  description: |-
+    This example creates a fixed schedule that is never active.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Complement
+  description: |+
+    The Complement parameter indicates how the schedule is used.
+    When Complement is enabled, the schedule is used as the inverse of the provided configuration.
+    For example, if Complement is enabled and the schedule only contains time ranges of Monday to Friday from 9AM to 5PM, then the schedule is active at all times other than the specified time ranges.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: DateTimeRanges
+  description: |+
+    List of date-time ranges for a fixed schedule. At most, 10 date-time ranges can be specified using this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FixedSchedule
+  isRequired: true
+  description: |+
+    The FixedSchedule parameter indicates that a fixed schedule is to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: FridayHours
+  description: |+
+    List of time ranges for that day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: MondayHours
+  description: |+
+    List of time ranges for that day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The Name parameter represents a unique friendly name for the schedule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: SaturdayHours
+  description: |+
+    List of time ranges for that day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: SundayHours
+  description: |+
+    List of time ranges for that day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: ThursdayHours
+  description: |+
+    List of time ranges for that day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: TuesdayHours
+  description: |+
+    List of time ranges for that day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: WednesdayHours
+  description: |+
+    List of time ranges for that day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WeeklyRecurrentSchedule
+  isRequired: true
+  description: |+
+    The WeeklyRecurrentSchedule parameter indicates that a weekly recurrent schedule is to be created. This parameter is mandatory when a weekly recurrent schedule is to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.New-CsOnlineSchedule
+name: New-CsOnlineSchedule
+description: |-
+  The New-CsOnlineSchedule cmdlet creates a new schedule for the Auto Attendant (AA) service. The AA service uses schedules to conditionally execute call flows when a specific schedule is in effect.
+
+  **NOTES**:
+
+  - The type of the schedule cannot be altered after the schedule is created.
+  - Currently, only two types of schedules can be created: WeeklyRecurrentSchedule or FixedSchedule.
+  - The schedule types are mutually exclusive. So a weekly recurrent schedule cannot be a fixed schedule and vice versa.
+  - For a weekly recurrent schedule, at least one day should have time ranges specified.
+  - You can create a new time range by using New-CsOnlineTimeRange cmdlet.
+  - A fixed schedule can be created without any date-time ranges. In this case, it would never be in effect.
+  - For a fixed schedule, at most 10 date-time ranges can be specified.
+  - You can create a new date-time range for a fixed schedule by using the New-CsOnlineDateTimeRange cmdlet.
+  - The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday's time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property. Similarly, date-time ranges of a fixed schedule can be modified by using the Schedule.FixedSchedule.DateTimeRanges property.
+  - Schedules can then be used by [New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.yml).
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csonlineschedule
+  applicable: Skype for Business Online
+  title: New-CsOnlineSchedule
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

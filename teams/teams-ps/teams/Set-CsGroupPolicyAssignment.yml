@@ -1,0 +1,22 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!NOTE]
+  > The cmdlet Set-CsGroupPolicyAssignment is not yet available. In the meantime, to change a group policy assignment you can first remove the current policy assignment from the group and then add a new policy assignment.
+module: MicrosoftTeamsPowerShell
+links:
+- text: New-CsGroupPolicyAssignment
+  href: New-CsGroupPolicyAssignment.yml
+- text: Get-CsGroupPolicyAssignment
+  href: Get-CsGroupPolicyAssignment.yml
+- text: Remove-CsGroupPolicyAssignment
+  href: Remove-CsGroupPolicyAssignment.yml
+uid: MicrosoftTeamsPowerShell.Set-CsGroupPolicyAssignment
+name: Set-CsGroupPolicyAssignment
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/set-csgrouppolicyassignment
+  schema: 2.0.0
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

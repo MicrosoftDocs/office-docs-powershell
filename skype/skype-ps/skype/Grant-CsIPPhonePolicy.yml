@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Grant-CsIPPhonePolicy cmdlet to assign an Internet Protocol (IP) phone policy to a user or a group of users.
+  IP phone policies determine the features of Microsoft Teams, Skype for Business Online, or Skype for Business Server 2019 that are available to users.
+  For example, you might enable the Better Together Over Ethernet feature for some users while disabling it for others.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The Grant-CsIPPhonePolicy cmdlet accepts pipelined input of Microsoft.Rtc.Management.ADConnect.Schema.ADUser objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    By default, the Grant-CsIPPhonePolicy cmdlet returns no objects or values.
+    However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
+links:
+- text: Get-CsIPPhonePolicy
+  href: Get-CsIPPhonePolicy.yml
+- text: Set-CsIPPhonePolicy
+  href: Set-CsIPPhonePolicy.yml
+syntaxes:
+- >-
+  Grant-CsIPPhonePolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String> [-Tenant <Guid>]
+
+   [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-CsIPPhonePolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>] [-PassThru]
+
+   [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName SkypePolicy
+  description: |-
+    This example assigns the IP phone policy "SkypePolicy" to the user with the identity "Ken Myer".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsIPPhonePolicy -PolicyName SalesPolicy
+  description: |-
+    This example assigns all the users in the "Sales" department to the "SalesPolicy" IP phone policy.
+    The command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who are members of the "Sales" department.
+    This collection of users is piped to the Grant-CsIPPhonePolicy cmdlet, which assigns "SalesPolicy" to each user in the collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the identity of the target user.
+    Acceptable values include:
+
+    Example: jphillips@contoso.com
+
+    Example: sip:jphillips@contoso.com
+
+    Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Including this switch enables you to pass a user object through the pipeline that represents the user account being assigned the voice routing policy.
+    By default, the Grant-CsIPPhonePolicy cmdlet does not pass objects through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Specifies the name of the policy to be assigned.
+    The PolicyName is the policy Identity minus the policy scope ("tag:").
+    For example, a policy that has the identity "tag:Redmond" has a PolicyName equal to "Redmond".
+    If you set PolicyName to a null value, then the command will unassign any per-user policy assigned to the user.
+    For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Grant-CsIPPhonePolicy, Skype for Business Server 2019
+name: Grant-CsIPPhonePolicy, Skype for Business Server 2019
+description: |-
+  Microsoft Teams or Skype for Business Online uses IP phone policies to determine the features and capabilities that are available to users.
+  IP phone policies are applied each time a user accesses the system, regardless of where the user logs on from.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the policies configured to customize the call hold experience for Teams clients.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsCallHoldPolicy
+  href: New-CsTeamsCallHoldPolicy.yml
+- text: Set-CsTeamsCallHoldPolicy
+  href: Set-CsTeamsCallHoldPolicy.yml
+- text: Grant-CsTeamsCallHoldPolicy
+  href: Grant-CsTeamsCallHoldPolicy.yml
+- text: Remove-CsTeamsCallHoldPolicy
+  href: Remove-CsTeamsCallHoldPolicy.yml
+syntaxes:
+- Get-CsTeamsCallHoldPolicy [[-Identity] <string>] [<CommonParameters>]
+- Get-CsTeamsCallHoldPolicy [-Filter <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsCallHoldPolicy
+  description: |-
+    The command shown in Example 1 returns information for all the Teams call hold policies configured for use in the tenant.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTeamsCallHoldPolicy -Identity 'ContosoPartnerCallHoldPolicy'
+  description: |-
+    In Example 2, information is returned for a single Teams call hold policy: the policy with the Identity ContosoPartnerCallHoldPolicy.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-CsTeamsCallHoldPolicy -Filter 'Tag:*'
+  description: |-
+    The command shown in Example 3 returns information about all the Teams call hold policies configured at the per-user scope.
+    To do this, the command uses the Filter parameter and the filter value "Tag:\*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "Tag:".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcards when retrieving one or more Teams call hold policies.
+    For example, to return all the policies configured at the per-user scope, use this syntax:
+
+    -Filter "Tag:\*"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier of the Teams call hold policy to be retrieved.
+
+    To return the global policy, use this syntax:
+
+    `-Identity "Global"`
+
+    To return a policy configured at the per-user scope, use syntax like this:
+
+    `-Identity "ContosoPartnerCallHoldPolicy"`
+
+    You cannot use wildcard characters when specifying the Identity.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Get-CsTeamsCallHoldPolicy
+name: Get-CsTeamsCallHoldPolicy
+description: |-
+  Teams call hold policies are used to customize the call hold experience for teams clients.
+  When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
+
+  Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamscallholdpolicy
+  applicable: Microsoft Teams
+  title: Get-CsTeamsCallHoldPolicy
+  schema: 2.0.0
+  ms.reviewer: ""
+  manager: abnair
+  ms.author: serdars
+  author: jenstrier

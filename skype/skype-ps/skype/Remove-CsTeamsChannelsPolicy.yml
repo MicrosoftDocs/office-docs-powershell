@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The CsTeamsChannelsPolicy allows you to manage features related to the Teams & Channels experience within the Teams application.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-CsTeamsChannelsPolicy [-Identity] <XdsIdentity> [-Confirm] [-Force] [-Tenant <Guid>] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTeamsChannelsPolicy -Identity SalesPolicy
+  description: |-
+    Deletes a custom policy that has already been created in the organization.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses all non-fatal errors.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The name of the policy to be removed. Wildcards are not supported.
+
+    To remove a custom policy, use syntax similar to this: `-Identity "Student Policy"`.
+
+    To "remove" the global policy, use the following syntax: `-Identity Global`. You can't actually remove the global policy. Instead, all properties will be reset to their default values as shown in the default policy (`Tag:Default`).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Remove-CsTeamsChannelsPolicy
+name: Remove-CsTeamsChannelsPolicy
+description: |-
+  The CsTeamsChannelsPolicy allows you to manage features related to the Teams & Channels experience within the Teams application.  The Remove-CsTeamsChannelsPolicy cmdlet lets you delete a custom policy that has been configured in your organization.
+
+  If you run Remove-CsTeamsChannelsPolicy on the Global policy, it will be reset to the defaults provided for new organizations.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamschannelspolicy
+  applicable: Skype for Business Online
+  title: Remove-CsTeamsChannelsPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

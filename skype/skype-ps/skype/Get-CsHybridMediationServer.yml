@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the external FQDN of an Edge server access proxy that serves as a hosting provider to a user.
+
+  **Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Set-CsHybridMediationServer
+  href: Set-CsHybridMediationServer.yml
+syntaxes:
+- >-
+  Get-CsHybridMediationServer [-Identity] <String> [-Tenant <Guid>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 -------------------------- (Skype for Business Online)'
+  code: |-
+    Get-CsHybridMediationServer -Fqdn MediationServer.Contoso.com
+  description: |-
+    This example gets the FQDN of a mediation server access proxy.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the identity of the hybrid public switched telephone network (PSTN) site.
+    For example: -Identity "SeattlePSTN".
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+    For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+    You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online, you do not have to include the Tenant parameter.
+    The tenant ID will be determined by your connection and credentials.
+    The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsHybridMediationServer
+name: Get-CsHybridMediationServer
+description: |-
+  A user whose name equals to the FQDN parameter will be retrieved.
+  The HostingProvider property of that user will be returned and renamed as AccessProxyExternalFqdn.
+  The returned user will act as a mediation server in PSTN Hybrid deployment, whose sip address is sip:{MediationServerFqdn}@{SipDomain} and HostingProvider targets to Edge server access proxy external FQDN.
+
+  If the user has licenses assigned, the warning message will be shown as guidance to ask admin remove all the licenses for it or re-create a new user without any license and try again.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cshybridmediationserver
+  applicable: Skype for Business Online
+  title: Get-CsHybridMediationServer
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

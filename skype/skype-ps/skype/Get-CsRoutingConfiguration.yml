@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the routing configuration object, which contains a list of all voice routes defined within a Skype for Business Server deployment.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Writable.Policy.Voice.PSTNRoutingSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsRoutingConfiguration
+  href: New-CsRoutingConfiguration.yml
+- text: Remove-CsRoutingConfiguration
+  href: Remove-CsRoutingConfiguration.yml
+- text: Set-CsRoutingConfiguration
+  href: Set-CsRoutingConfiguration.yml
+- text: Get-CsVoiceRoute
+  href: Get-CsVoiceRoute.yml
+syntaxes:
+- Get-CsRoutingConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsRoutingConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsRoutingConfiguration
+  description: |-
+    This example retrieves the routing configuration.
+    To retrieve individual voice routes, use the Get-CsVoiceRoute cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    There can be only one instance of this object, so this parameter does nothing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The scope of the routing configuration to retrieve.
+    The only possible value is Global.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the routing configuration from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsRoutingConfiguration
+name: Get-CsRoutingConfiguration
+description: |-
+  Voice routes contain instructions that tell Skype for Business Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+  This cmdlet is used to retrieve the global instance that holds a list of all voice routes defined within the Skype for Business Server deployment.
+  To retrieve individual voice routes or to retrieve them as individual objects rather than as a list, use the Get-CsVoiceRoute cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csroutingconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsRoutingConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

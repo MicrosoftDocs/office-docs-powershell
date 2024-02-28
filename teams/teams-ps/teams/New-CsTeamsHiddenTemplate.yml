@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is used to create a `HiddenTemplate` object for use with the [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.yml) and [Set-CsTeamsTemplatePermissionPolicy](Set-CsTeamsTemplatePermissionPolicy.yml) cmdlets.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="HiddenTemplate.Cmdlets.HiddenTemplate" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsTemplatePermissionPolicy
+  href: New-CsTeamsTemplatePermissionPolicy.yml
+- text: Set-CsTeamsTemplatePermissionPolicy
+  href: Set-CsTeamsTemplatePermissionPolicy.yml
+syntaxes:
+- New-CsTeamsHiddenTemplate -Id <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS >$manageProjectTemplate = New-CsTeamsHiddenTemplate -Id com.microsoft.teams.template.ManageAProject
+  description: |-
+    Creates a new hidden Teams template object. For more examples of how this can be used, see the examples for [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.yml).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    ID of the Teams template to hide.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-CsTeamsHiddenTemplate
+name: New-CsTeamsHiddenTemplate
+description: |-
+  Creates an object that can be supplied as `HiddenTemplate` to the [New-CsTeamsTemplatePermissionPolicy](New-CsTeamsTemplatePermissionPolicy.yml) and [Set-CsTeamsTemplatePermissionPolicy](Set-CsTeamsTemplatePermissionPolicy.yml) cmdlets.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csteamshiddentemplate
+  title: New-CsTeamsHiddenTemplate
+  author: yishuaihuang4
+  ms.author: yishuaihuang
+  ms.reviewer: ""
+  manager: weiliu2
+  schema: 2.0.0

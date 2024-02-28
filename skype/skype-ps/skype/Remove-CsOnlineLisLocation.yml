@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Remove-CsOnlineLisLocation cmdlet to remove an existing emergency location from the Location Information Service (LIS). 
+
+  You can only remove locations that have no assigned users or phone numbers. You can't remove the default location, you will have to delete the associated
+  civic address which will delete the default location.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="This cmdlet supports pipelined input from the Get-CsOnlineLisLocation cmdlet." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlineLisLocation
+  href: Set-CsOnlineLisLocation.yml
+- text: Get-CsOnlineLisLocation
+  href: Get-CsOnlineLisLocation.yml
+- text: New-CsOnlineLisLocation
+  href: New-CsOnlineLisLocation.yml
+syntaxes:
+- Remove-CsOnlineLisLocation -LocationId <Guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsOnlineLisLocation -LocationId 788dd820-c136-4255-9f61-24b880ad0763
+  description: |-
+    This example removes the location specified by its identity.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: LocationId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the location to be deleted.
+    Location identities can be discovered by using the Get-CsOnlineLisLocation cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Remove-CsOnlineLisLocation
+name: Remove-CsOnlineLisLocation
+description: |-
+  If the location specified for removal is assigned to users, the cmdlet will fail until the users assignments are removed.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinelislocation
+  applicable: Microsoft Teams
+  title: Remove-CsOnlineLisLocation
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves one or more network regions.
+  Network regions represent network hubs or backbones in an enterprise network.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkRegionType" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsNetworkRegion
+  href: New-CsNetworkRegion.yml
+- text: Remove-CsNetworkRegion
+  href: Remove-CsNetworkRegion.yml
+- text: Set-CsNetworkRegion
+  href: Set-CsNetworkRegion.yml
+syntaxes:
+- Get-CsNetworkRegion [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsNetworkRegion [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsNetworkRegion
+  description: |-
+    Example 1 retrieves all network regions defined for the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsNetworkRegion -Identity NorthAmerica
+  description: |-
+    Example 2 retrieves the network regions with the Identity NorthAmerica.
+    Because identities are unique, this command retrieves at most one network region.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsNetworkRegion | Where-Object {$_.CentralSite -eq "site:Redmond"}
+  description: |-
+    This example retrieves all network regions with identities that end with the string "America." This would retrieve regions with identities such as NorthAmerica, SouthAmerica, and CentralAmerica.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsNetworkRegion | Where-Object {$_.CentralSite -eq "site:Redmond"}
+  description: |-
+    This example retrieves all network regions associated with the central site Redmond.
+    The command begins by calling the Get-CsNetworkRegion cmdlet, with no parameters, to retrieve a collection of all network regions defined for the Skype for Business Server deployment.
+    This collection is then piped to the Where-Object cmdlet.
+    The Where-Object cmdlet filters this collection to return only those items (network regions) where the CentralSite value is equal to (-eq) site:Redmond.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter allows you to perform a wildcard search on the Identity of all network regions configured for the organization.
+    Use the wildcard character to filter on any part of the Identity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier of the network region you want to retrieve.
+    The Identity will be in the form of a string that uniquely identifies that region.
+    (Note that the Identity is the same as the NetworkRegionID.)
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the network region information from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsNetworkRegion
+name: Get-CsNetworkRegion
+description: |-
+  A network region interconnects various parts of a network across multiple geographic areas.
+  Every network region must be associated with a central site.
+  Use this cmdlet to retrieve information about one or more network regions, including the associated central site and settings that determine whether alternate paths are allowed for audio and video connections, and that associate the sites within the region with a media bypass configuration.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csnetworkregion
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsNetworkRegion
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

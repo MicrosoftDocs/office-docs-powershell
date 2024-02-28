@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a teams messaging policy at the per-user scope. Teams messaging policies determine the features and capabilities that can be used in messaging within the teams client.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.AD.UserIdParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Grant-CsTeamsMessagingPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-CsTeamsMessagingPolicy [-PassThru] [[-PolicyName] <String>]
+
+   [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-CsTeamsMessagingPolicy [-PassThru] [[-PolicyName] <String>]
+
+   -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Grant-CsTeamsMessagingPolicy -identity "Ken Myer" -PolicyName StudentMessagingPolicy
+  description: |-
+    In this example, a user with identity "Ken Myer" is being assigned the StudentMessagingPolicy
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsOnlineUser -Filter {Department -eq 'Executive Management'} | Grant-CsTeamsMessagingPolicy -PolicyName "ExecutivesPolicy"
+  description: |-
+    In this example, the ExecutivesPolicy is being assigned to a whole department by piping the result of Get-CsOnlineUser cmdlet
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the group used for the group policy assignment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the user account the policy should be assigned to. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    The name of the custom policy that is being assigned to the user.    To remove a specific assignment and fall back to the default tenant policy, you can assign to $Null.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Grant-CsTeamsMessagingPolicy
+name: Grant-CsTeamsMessagingPolicy
+description: |-
+  Granular control over which messaging features your users can or cannot use is an important feature for many organizations.  This cmdlet lets you assign a teams messaging policy at the per-user scope. Teams messaging policies determine the features and capabilities that can be used in messaging within the teams client.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsmessagingpolicy
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Grant-CsTeamsMessagingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

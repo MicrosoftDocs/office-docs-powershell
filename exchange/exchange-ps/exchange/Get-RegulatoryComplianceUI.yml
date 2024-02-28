@@ -1,0 +1,31 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell)
+  .
+
+  Use the Get-RegulatoryComplianceUI cmdlet to view the status of the regulatory compliance UI in the Microsoft Purview compliance portal (whether the preservation lock checkbox is displayed for retention policies and the immutable label checkbox is displayed for retention labels).
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- Get-RegulatoryComplianceUI [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-RegulatoryComplianceUI
+  description: |-
+    This example returns the status of regulatory compliance UI.
+  summary: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-RegulatoryComplianceUI
+name: Get-RegulatoryComplianceUI
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-regulatorycomplianceui
+  applicable: Security & Compliance
+  title: Get-RegulatoryComplianceUI
+  schema: 2.0.0

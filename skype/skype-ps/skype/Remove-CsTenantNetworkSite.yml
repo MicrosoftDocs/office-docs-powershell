@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsTenantNetworkSite` cmdlet to remove a tenant network site.
+module: SkypeForBusiness
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTenantNetworkSite
+  href: New-CsTenantNetworkSite.yml
+- text: Get-CsTenantNetworkSite
+  href: Get-CsTenantNetworkSite.yml
+- text: Set-CsTenantNetworkSite
+  href: Set-CsTenantNetworkSite.yml
+syntaxes:
+- Remove-CsTenantNetworkSite [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTenantNetworkSite -Identity "site1"
+  description: |-
+    The command shown in Example 1 removes 'site1'.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the network site to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Remove-CsTenantNetworkSite
+name: Remove-CsTenantNetworkSite
+description: |-
+  The `Remove-CsTenantNetworkSite` cmdlet removes an existing tenant network site.
+
+  A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus. Network sites are defined as a collection of IP subnets.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-cstenantnetworksite
+  applicable: Microsoft Teams
+  title: Remove-CsTenantNetworkSite
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

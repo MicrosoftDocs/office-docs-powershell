@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the default tenant information for Auto Attendant (AA) feature.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.OAA.Models.TenantInformation" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsAutoAttendantTenantInformation [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsAutoAttendantTenantInformation
+  description: |-
+    Gets the default auto attendant information for the logged in tenant.
+  summary: ""
+parameters:
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsAutoAttendantTenantInformation
+name: Get-CsAutoAttendantTenantInformation
+description: |-
+  The Get-CsAutoAttendantTenantInformation cmdlet gets the default tenant information for Auto Attendant (AA) feature.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csautoattendanttenantinformation
+  applicable: Skype for Business Online
+  title: Get-CsAutoAttendantTenantInformation
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

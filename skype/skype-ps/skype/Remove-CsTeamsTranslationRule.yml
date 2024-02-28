@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cmdlet to remove an existing number manipulation rule (or list of rules).
+module: SkypeForBusiness
+notes: ""
+links:
+- text: New-CsTeamsTranslationRule
+  href: New-CsTeamsTranslationRule.yml
+- text: Get-CsTeamsTranslationRule
+  href: Get-CsTeamsTranslationRule.yml
+- text: Set-CsTeamsTranslationRule
+  href: Set-CsTeamsTranslationRule.yml
+- text: Test-CsTeamsTranslationRule
+  href: Test-CsTeamsTranslationRule.yml
+syntaxes:
+- Remove-CsTeamsTranslationRule [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsTeamsTranslationRule -Identity AddPlus1
+  description: |-
+    This example removes the "AddPlus1" translation rule. As the rule can be used in some places, integrity check is preformed to ensure that the rule is not in use. If the rule is in use an error thrown with specifying which SBC use this rule.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsTeamsTranslationRule -Filter 'tst*' | Remove-CsTeamsTranslationRule
+  description: |-
+    This example removes all translation rules with Identifier starting with tst.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identifier of the rule. This parameter is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Remove-CsTeamsTranslationRule
+name: Remove-CsTeamsTranslationRule
+description: |-
+  You can use this cmdlet to remove an existing number manipulation rule (or list of rules). The rule can be used, for example, in the settings of your SBC (Set-CsOnlinePSTNGateway) to convert a callee or caller number to a desired format before entering or leaving Microsoft Phone System.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamstranslationrule
+  applicable: Microsoft Teams
+  title: Remove-CsTeamsTranslationRule
+  schema: 2.0.0
+  manager: nmurav
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

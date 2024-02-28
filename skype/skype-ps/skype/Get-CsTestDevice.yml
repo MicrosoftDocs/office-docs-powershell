@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves information about the device update management test devices that have been configured for use in your organization.
+  Test devices provide a way for administrators to test firmware updates before those updates are distributed to all the devices in an organization.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.TestDevice" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTestDevice
+  href: New-CsTestDevice.yml
+- text: Remove-CsTestDevice
+  href: Remove-CsTestDevice.yml
+- text: Set-CsTestDevice
+  href: Set-CsTestDevice.yml
+syntaxes:
+- Get-CsTestDevice [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsTestDevice [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsTestDevice
+  description: |-
+    Example 1 returns all the test devices in the organization.
+    Calling the Get-CsTestDevice cmdlet without any additional parameters will return all the test devices currently in use.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsTestDevice -Identity site:Redmond/UCPhone
+  description: |-
+    This example returns the test device named UCPhone that was assigned to the Redmond site.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsTestDevice -Identity site:Redmond
+  description: |-
+    In Example 3, the command returns all the test devices configured for the Redmond site.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsTestDevice -Filter site:*
+  description: |-
+    Example 4 returns all the test devices that have been configured at the site scope.
+    To do this, the command uses the Filter parameter; the filter value "site:*" limits the returned data to test devices that have an Identity that begins with the string value "site:".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Provides a way for you to use wildcard characters when specifying the test device (or devices) to be returned.
+    For example, to return all the test device collections that have been configured at the site scope, use this syntax:
+
+    `-Filter "site:*"`
+
+    To return all the devices that have the term "EMEA" in their Identity, use this syntax:
+
+    `-Filter "*EMEA*"`
+
+    Note that Filter acts only on the Identity of the test device collection; you cannot filter on other collection properties.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the test device to be returned.
+    To refer to an individual device named UCPhone (stored in the global collection), use this syntax:
+
+    `-Identity global/UCPhone`
+
+    To refer to a device found in a site collection, use syntax similar to this:
+
+    `-Identity site:Redmond/UCPhone`
+
+    To refer to an entire collection, leave off the device name.
+    For example, this syntax returns all the test devices configured for the Redmond site:
+
+    `-Identity site:Redmond`
+
+    Note that you cannot use wildcards when specifying an Identity.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the test device data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsTestDevice
+name: Get-CsTestDevice
+description: |-
+  By identifying specific phones compatible with Skype for Business or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to all the relevant devices in the organization.
+  When device update rules are imported to Skype for Business Server, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
+
+  Instead, these pending rules will be downloaded and installed by any relevant test devices.
+  That's what test devices are for: new device update rules are automatically applied to test devices, giving administrators the opportunity to verify that the firmware updates work as expected.
+  If they do, those administrators can then mark the rules as approved; approved rules are then downloaded and installed by all the relevant devices in the organization.
+
+  Test devices can be assigned to either the global or the site scope.
+  You can use the Get-CsTestDevice cmdlet to retrieve information about the test devices currently configured for use in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cstestdevice
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsTestDevice
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

@@ -1,0 +1,213 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in on-premises Exchange.
+
+  Use the Import-UMPrompt cmdlet to copy or upload a custom audio file to be used by Unified Messaging (UM) dial plans and auto attendants.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter>
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Import-UMPrompt -PromptFileData <Byte[]> -PromptFileName <String> -UMAutoAttendant <UMAutoAttendantIdParameter>
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMAutoAttendant <UMAutoAttendantIdParameter>
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Import-UMPrompt -PromptFileName <String> -PromptFileStream <Stream> -UMDialPlan <UMDialPlanIdParameter>
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\welcomegreeting.wav'))
+  description: |-
+    This example imports the welcome greeting file welcomegreeting.wav from D:\\UMPrompts into the UM dial plan MyUMDialPlan.
+  summary: ""
+- title: Example 2
+  code: |-
+    Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\welcomegreeting.wav'))
+  description: |-
+    This example imports the welcome greeting file welcomegreeting.wav from D:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
+  summary: ""
+- title: Example 3
+  code: |-
+    Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\AfterHoursWelcomeGreeting.wav'))
+  description: |-
+    This example imports the welcome greeting file AfterHoursWelcomeGreeting.wav from D:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PromptFileData
+  isRequired: true
+  description: |+
+    The PromptFileData parameter specifies the byte array of the custom prompt.
+
+    A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PromptFileName
+  isRequired: true
+  description: |+
+    The PromptFileName parameter specifies the name of the custom prompt.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+- type: <xref href="Stream" data-throw-if-not-resolved="False" />
+  name: PromptFileStream
+  isRequired: true
+  description: |+
+    The PromptFileStream parameter specifies whether the audio file will be uploaded or imported as an audio stream and not a byte array. The default setting is for the audio file to imported as a byte array.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+- type: <xref href="UMAutoAttendantIdParameter" data-throw-if-not-resolved="False" />
+  name: UMAutoAttendant
+  isRequired: true
+  description: |+
+    The UMAutoAttendant parameter specifies the UM auto attendant ID. This parameter specifies the directory object identifier for the UM auto attendant.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+- type: <xref href="UMDialPlanIdParameter" data-throw-if-not-resolved="False" />
+  name: UMDialPlan
+  isRequired: true
+  description: |+
+    The UMDialPlan parameter specifies the UM dial plan ID. This parameter specifies the directory object identifier for the UM dial plan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2010
+- Exchange Server 2013
+- Exchange Server 2016
+uid: ExchangePowerShell.Import-UMPrompt
+name: Import-UMPrompt
+description: |-
+  The Import-UMPrompt cmdlet imports custom greeting audio files into UM dial plans and auto attendants. There are many custom greetings used by UM dial plans and auto attendants including welcome greetings for dial plans and after hours welcome greetings and menus, business hours and non-business hours welcome greetings and menus, and key mappings for UM auto attendants.
+
+  After this task is completed, the custom audio file can be used by a UM dial plan or auto attendant.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/import-umprompt
+  applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
+  title: Import-UMPrompt
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

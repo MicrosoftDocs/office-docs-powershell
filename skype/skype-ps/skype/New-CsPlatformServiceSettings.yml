@@ -1,0 +1,241 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Skype for Business on Mac configuration in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsPlatformServiceSettings
+  href: https://learn.microsoft.com/powershell/module/skype/set-csplatformservicesettings?view=skype-ps
+- text: Get-CsPlatformServiceSettings
+  href: https://learn.microsoft.com/powershell/module/skype/get-csplatformservicesettings?view=skype-ps
+- text: Remove-CsPlatformServiceSettings
+  href: https://learn.microsoft.com/powershell/module/skype/remove-csplatformservicesettings?view=skype-ps
+syntaxes:
+- >-
+  New-CsPlatformServiceSettings [-EnableDelegateManagement <Boolean>] [-EnableExternalAccessCheck <Boolean>]
+
+   [-EnablePushNotifications <Boolean>] [-UseLegacyPushNotifications <Boolean>] [-EnableE911 <Boolean>]
+
+   [-EnableFileTransfer <Boolean>] [-EnableCORS <Boolean>] [-EnableUcwaScopeCheck <Boolean>]
+
+   [-MaxRegistrationsPerPublicApplication <Int32>] [-Identity] <XdsIdentity> [-InMemory] [-Force] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    PS C:\> New-CsPlatformServiceSettings -Identity NewPSS -EnableDelegateManagement $True -EnableExternalAccessCheck $True
+  description: |-
+    This example creates a new Platform Service Settings configuration and enables delegate management and external access check.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableCORS
+  description: |+
+    This parameter is reserved for Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDelegateManagement
+  description: |+
+    Enables the ability to manage delegates from the Skype for Business on Mac client.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableE911
+  description: |+
+    Allows Skype for Business on Mac users to call 911.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableExternalAccessCheck
+  description: |+
+    Enables administrators to use external access policies to block external access to Skype for Business on Mac users.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableFileTransfer
+  description: |+
+    Enables Skype for Business on Mac users send files in peer-to-peer chats.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePushNotifications
+  description: |+
+    Enables Skype for Business on Mac clients to use push notifications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableUcwaScopeCheck
+  description: |+
+    This parameter is reserved for Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before testing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the Platform Service Settings to be created.
+
+    To create a new collection of settings at the site scope, use syntax similar to this:
+
+    `-Identity site:Redmond`
+
+    To create new settings at the service scope, use syntax like this:
+
+    `-Identity service:WebServer:atl-cs-001.litwareinc.com`
+
+    Privacy settings can only be created for the WebServer service. 
+    An error will occur if you try to apply these settings to any other service.
+
+    Note that your command will fail if Platform Service Settings already exist for the specified site or service.
+    Likewise, your command will fail if you attempt to create a new collection of global settings.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Creates an object reference without actually committing the object as a permanent change.
+    If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-CsPlatformServiceSettings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxRegistrationsPerPublicApplication
+  description: |+
+    This parameter is reserved for Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseLegacyPushNotifications
+  description: |+
+    This parameter is reserved for Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.New-CsPlatformServiceSettings
+name: New-CsPlatformServiceSettings
+description: |-
+  Skype for Business Server 2015 Cumulative Update 6 introduces new features for Skype for Business on Mac users like support for E-911 calls, send files in peer-to-peer chats, block external access by policy and more.
+
+  The `New-CsPlatformServiceSettings` cmdlet gives you the ability to create a new configuration for these settings.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csplatformservicesettings
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: New-CsPlatformServiceSettings
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

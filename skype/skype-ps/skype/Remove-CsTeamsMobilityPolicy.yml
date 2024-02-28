@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTeamsMobilityPolicy -Identity SalesPolicy
+  description: |-
+    Deletes a custom policy that has already been created in the organization.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses all non-fatal errors.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the client policy to be removed. To "remove" the global policy, use the following syntax: -Identity global. (Note that the global policy cannot actually be removed. Instead, all the properties in that policy will be reset to their default values.) To remove a per-user policy, use syntax similar to this: -Identity "SalesDepartmentPolicy". You cannot use wildcards when specifying a policy Identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Remove-CsTeamsMobilityPolicy
+name: Remove-CsTeamsMobilityPolicy
+description: |-
+  The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+
+  The Remove-CsTeamsMobilityPolicy cmdlet lets an Admin delete a custom teams mobility policy that has been created.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsmobilitypolicy
+  applicable: Skype for Business Online
+  title: Remove-CsTeamsMobilityPolicy
+  schema: 2.0.0
+  manager: ritikag
+  ms.reviewer: ritikag

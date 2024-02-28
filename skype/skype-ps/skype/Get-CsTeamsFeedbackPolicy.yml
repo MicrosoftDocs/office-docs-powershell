@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this cmdlet to retrieve the current Teams Feedback policies (the ability to send feedback about Teams to Microsoft and whether they receive the survey) in the organization.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsTeamsFeedbackPolicy [-LocalStore] [[-Identity] <Object>] [-Tenant <Object>] [-Filter <Object>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsFeedbackPolicy
+  description: |-
+    In this example, we retrieve all the existing Teams feedback policies in the organization.
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Internal Microsoft use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier of the policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsTeamsFeedbackPolicy
+name: Get-CsTeamsFeedbackPolicy
+description: |-
+  Retrieves the current Teams Feedback policies (the ability to send feedback about Teams to Microsoft and whether they receive the survey) in the organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsfeedbackpolicy
+  applicable: Skype for Business Online
+  title: Get-CsTeamsFeedbackPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  ms.author: tomkau
+  author: tomkau
+  ms.reviewer: ""

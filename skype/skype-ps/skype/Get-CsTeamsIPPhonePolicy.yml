@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get-CsTeamsIPPhonePolicy allows IT Admins to view policies for IP Phone experiences in Microsoft Teams
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsTeamsIPPhonePolicy [-LocalStore] [[-Identity] <XdsIdentity>] [-Tenant <Guid>] [-Filter <String>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsIPPhonePolicy -identity CommonAreaPhone
+  description: |-
+    Retrieves the IP Phone Policy with name "CommonAreaPhone".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the policies, use this syntax: -Filter "tag:*".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specify the unique name of the TeamsIPPhonePolicy that you would like to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal Microsoft Use Only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsTeamsIPPhonePolicy
+name: Get-CsTeamsIPPhonePolicy
+description: |-
+  Returns information about the Teams IP Phone Policies configured for use in your organization. Teams IP phone policies enable you to configure the different sign-in experiences based upon the function the device is performing; example: common area phone.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  Module Name: Skype for Business Online
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsipphonepolicy
+  applicable: Skype for Business Online
+  title: Get-CsTeamsIPPhonePolicy
+  author: tonywoodruff
+  ms.author: anwoodru
+  ms.reviewer: kponnus
+  manager: sandrao
+  schema: 2.0.0

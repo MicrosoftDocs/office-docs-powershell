@@ -1,0 +1,244 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new collection of dial-in conferencing configuration settings.
+  These settings determine how Skype for Business Server responds when users join or leave a dial-in conference.
+  In particular, information is returned regarding whether or not participants are required to record their name when joining a conference, and how (or if) the system announces that someone has joined or left the call.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The New-CsDialInConferencingConfiguration cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DialInConferencingSettings.DialInConferencingConfiguration object.
+links:
+- text: Get-CsDialInConferencingConfiguration
+  href: Get-CsDialInConferencingConfiguration.yml
+- text: Remove-CsDialInConferencingConfiguration
+  href: Remove-CsDialInConferencingConfiguration.yml
+- text: Set-CsDialInConferencingConfiguration
+  href: Set-CsDialInConferencingConfiguration.yml
+syntaxes:
+- >-
+  New-CsDialInConferencingConfiguration [-Identity] <XdsIdentity> [-EnableNameRecording <Boolean>]
+
+   [-EntryExitAnnouncementsEnabledByDefault <Boolean>] [-EntryExitAnnouncementsType <EntryExitAnnouncementsType>]
+
+   [-Force] [-InMemory] [-WhatIf] [-Confirm] [-AllowAnonymousPstnActivation <Boolean>] [-PinAuthType <String>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    New-CSDialInConferencingConfiguration -Identity site:Redmond -EnableNameRecording $False
+  description: |-
+    The command shown in Example 1 creates a new collection of dial-in conferencing configuration settings that are applied to the Redmond site.
+    In addition, the optional parameter EnableNameRecording is included in order to set the EnableNameRecording property to False.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    $x = New-CSDialInConferencingConfiguration -Identity site:Redmond -InMemory
+
+    $x.EnableNameRecording = $False
+
+    Set-CSDialInConferencingConfiguration -Instance $x
+  description: |-
+    In Example 2 the InMemory parameter is used to create a new collection of dial-in conferencing configuration settings that initially exist only in memory.
+    To do this, the example first calls the New-CSDialInConferencingConfiguration cmdlet, and the InMemory parameter to create a virtual settings collection that is stored in the variable $x.
+    (Note that this collection is given the Identity site:Redmond.) After creating the virtual collection, line 2 is used to modify the value of the EnableNameRecording property.
+    Finally, line 3 in the example calls the Set-CSDialInConferencingConfiguration cmdlet to transform the virtual configuration settings stored in $x into an actual collection of settings applied to the Redmond site.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAnonymousPstnActivation
+  description: |+
+    Specifies whether unauthenticated callers can start a meeting if they are the first person to join.
+    An unauthenticated caller is defined as a participant who joins a meeting over the phone and doesn't provide a PIN when joining the meeting.
+    $True to allow anonymous activation, otherwise $False.
+    The default is $False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableNameRecording
+  description: |+
+    Determines whether or not users are asked to record their name before entering the conference.
+    Set to True ($True) to require name recording; set to False ($False) to bypass name recording.
+    The default value is True.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EntryExitAnnouncementsEnabledByDefault
+  description: |+
+    If set to True announcements will be played each time a participant enters or exits a conference.
+    If set to False (the default value), entry and exit announcements will not be played.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="EntryExitAnnouncementsType" data-throw-if-not-resolved="False" />
+  name: EntryExitAnnouncementsType
+  description: |+
+    Indicates the action taken by the system any time a participant enters or leaves a conference.
+    Valid values are:
+
+    UseNames.
+    The person's name is announced any time he or she enters or leaves a conference (for example, "Ken Myer is exiting the conference").
+
+    ToneOnly.
+    A tone is played any time a participant enters or leaves a conference.
+
+    The default value is UseNames.
+    Note that announcements are played only if the EntryExitAnnouncementsEnabledByDefault property is set to True.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Indicates the Identity of the dial-in conferencing configuration settings to be created.
+    Because these settings can only be created at the site scope, use syntax similar to this, with the prefix "site:" followed by the name of the site: `-Identity site:Redmond.`
+
+    Note that there can only be one set of dial-in conferencing configuration settings per site.
+    The sample command will fail if a collection of settings with the Identity site:Redmond already exists.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Creates an object reference without actually committing the object as a permanent change.
+    If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PinAuthType
+  description: |+
+    Specifies which users are allowed to use PIN authentication.
+    Allowed values are:
+
+    Everyone
+
+    OrganizerOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.New-CsDialInConferencingConfiguration
+name: New-CsDialInConferencingConfiguration
+description: |-
+  When users join (or leave) a dial-in conference, Skype for Business Server can respond in different ways.
+  For example, participants might be asked to record their name before they can enter the conference.
+  Likewise, administrators can decide whether they want to have Skype for Business Server announce that dial-in participants have either left or joined a conference.
+
+  These conference "join behaviors" are managed using dial-in conferencing configuration settings; these settings can be configured at the global scope or at the site scope.
+  (Settings configured at the site scope take precedence over settings configured at the global scope.) When you first install Skype for Business Server, the only dial-in conferencing configuration settings you will have are the ones at the global scope; however, you can create new settings at the site scope by using the New-CSDialInConferencingConfiguration cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csdialinconferencingconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: New-CsDialInConferencingConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

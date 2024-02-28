@@ -1,0 +1,351 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Set-CsIPPhonePolicy cmdlet to modify the settings of the Skype for Business Online and Skype for Business Server 2019 global IP phone policy. IP phone policies define the Skype for Business features that are available to users.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    System.Management.Automation.PSObject
+
+    Microsoft.Rtc.Management.ADConnect.Schema.ADUser
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsIPPhonePolicy` cmdlet does not return a value or object. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
+syntaxes:
+- >-
+  Set-CsIPPhonePolicy [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-KeyboardLockMaxPinRetry <UInt64>]
+
+   [-PrioritizedCodecsList <String>] [-EnablePowerSaveMode <Boolean>]
+
+   [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
+
+   [-EnableOneTouchVoicemail <Boolean>] [-DateTimeFormat <Int32>] [-EnableDeviceUpdate <Boolean>]
+
+   [-EnableExchangeCalendaring <Boolean>] [-EnableBetterTogetherOverEthernet <Boolean>]
+
+   [-BetterTogetherOverEthernetPairingMode <String>] [-LocalProvisioningServerUser <String>]
+
+   [-LocalProvisioningServerPassword <String>] [-LocalProvisioningServerAddress <String>]
+
+   [-LocalProvisioningServerType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-CsIPPhonePolicy [-Tenant <Guid>] [-UserDialTimeoutMS <UInt64>] [-KeyboardLockMaxPinRetry <UInt64>]
+
+   [-PrioritizedCodecsList <String>] [-EnablePowerSaveMode <Boolean>]
+
+   [-PowerSaveDuringOfficeHoursTimeoutMS <UInt64>] [-PowerSavePostOfficeHoursTimeoutMS <UInt64>]
+
+   [-EnableOneTouchVoicemail <Boolean>] [-DateTimeFormat <Int32>] [-EnableDeviceUpdate <Boolean>]
+
+   [-EnableExchangeCalendaring <Boolean>] [-EnableBetterTogetherOverEthernet <Boolean>]
+
+   [-BetterTogetherOverEthernetPairingMode <String>] [-LocalProvisioningServerUser <String>]
+
+   [-LocalProvisioningServerPassword <String>] [-LocalProvisioningServerAddress <String>]
+
+   [-LocalProvisioningServerType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsIPPhonePolicy -UserDialTimeoutMS 10000
+  description: |-
+    This example modifies the global IP phone policy UserDialTimeoutMS parameter to 10 seconds (10000 ms).
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Set-CsIPPhonePolicy -EnablePowerSaveMode $False -EnableOneTouchVoicemail $False -EnableDeviceUpdate $False
+  description: |-
+    This example sets the EnablePowerSaveMode, EnableOneTouchVoicemail and EnableDeviceUpdate parameters to $false.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BetterTogetherOverEthernetPairingMode
+  description: |+
+    Valid values are:
+    Auto - The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code.
+    Manual - The user needs to enter the pairing code manually to pair with the BTOE app. 
+
+  defaultValue: Manual
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DateTimeFormat
+  description: |+
+    Specifies the time format to be used. The acceptable values are "24" for a 24 hour time format, or "12" for a 12 hour format. The default is "24".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableBetterTogetherOverEthernet
+  description: |+
+    Specifies whether the Better Together Over Ethernet (BTOE) feature is enabled for users. If $true, and if the BTOE plugin is installed on the IP device, the user can tether the device to a PC and sign in to Skype for Business. The default is $true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDeviceUpdate
+  description: |+
+    Specifies whether the IP device will be updated by the Skype for Business service. If set to $true, IP devices will get firmware updates from the service, if $false the device will not be updated. The default is $true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableExchangeCalendaring
+  description: |+
+    Specifies whether an IP device is enabled to connect to the Exchange Online calendaring service. If $true, users are able to connect to their Exchange calendars. If $false, users will not be able to connect to their calendars. The default is $true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableOneTouchVoicemail
+  description: |+
+    Specifies whether the Visual Voicemail feature in Skype for Business Online is enabled. If set to $true, the feature is enabled, otherwise $false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePowerSaveMode
+  description: |+
+    If enabled, phone goes to power saving mode (display turns off) based on values of the PowerSaveDuringOfficeHoursTimeoutMS and PowerSavePostOfficeHoursTimeoutMS parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: KeyboardLockMaxPinRetry
+  description: |+
+    Specifies the maximum number of retries allowed for phone unlock. The default is 5.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalProvisioningServerAddress
+  description: |+
+    Specifies the address of the provisioning server for your organization. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalProvisioningServerPassword
+  description: |+
+    Specifies the password for the provisioning server. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalProvisioningServerType
+  description: |+
+    Specifies the server type for the phone. The default is FTP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalProvisioningServerUser
+  description: |+
+    Specifies a username for the provisioning server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: PowerSaveDuringOfficeHoursTimeoutMS
+  description: |+
+    Specifies the time in milliseconds to wait during office hours before turning on Power Save mode. The default is 900,000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: PowerSavePostOfficeHoursTimeoutMS
+  description: |+
+    Specifies the time in milliseconds to wait after office hours before turning on Power Save mode. The default is 300,000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrioritizedCodecsList
+  description: |+
+    Specifies the order in which to prioritize codecs. The default is: "G722_8000;PCMU;PCMA;G729"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: UserDialTimeoutMS
+  description: |+
+    Specifies the time in milliseconds to wait in On-Hook mode before dialing out automatically. If a user enters a phone number and does not click Dial, the system will dial the number after the number of milliseconds specified. The default is 5000. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    System.Management.Automation.SwitchParameter
+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsIPPhonePolicy
+name: Set-CsIPPhonePolicy
+description: |-
+  IP phone policies are applied each time a user accesses the system via an IP phone device. The Set-CsIPPhonePolicy cmdlet enables you to modify the global IP phone policy that has been configured in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csipphonepolicy
+  applicable: Skype for Business Online, Skype for Business Server 2019
+  title: Set-CsIPPhonePolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

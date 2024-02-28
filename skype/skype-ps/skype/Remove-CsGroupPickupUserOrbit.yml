@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsGroupPickupUserOrbit` cmdlet to remove the associated group pickup orbit number for an Enterprise Voice user.
+  This effectively disables the user for group call pickup.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet supports pipelined input from the Get-CsUser cmdlet.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+syntaxes:
+- Remove-CsGroupPickupUserOrbit [-User] <String> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsGroupPickupUserOrbit sip:ken.myer@contoso.com
+  description: |-
+    This example removes the group pickup orbit number and disables group pickup for a user specified by the SIP address.
+    User is a positional parameter.
+    The first parameter after the cmdlet is assumed to be the User parameter value.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error messages and completes the cmdlet operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies the user whose group pickup orbit number will be removed.
+    Because User is a positional parameter, the -User syntax is not required.
+    The first parameter after the cmdlet is assumed to be the User parameter value.
+
+    Users can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer).
+    You can also reference a user account by using the user's Active Directory distinguished name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DisplayName, SipAddress, Identity
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsGroupPickupUserOrbit
+name: Remove-CsGroupPickupUserOrbit
+description: |-
+  This cmdlet will throw an exception if the user does not have an assigned group pickup orbit number.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csgrouppickupuserorbit
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsGroupPickupUserOrbit
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

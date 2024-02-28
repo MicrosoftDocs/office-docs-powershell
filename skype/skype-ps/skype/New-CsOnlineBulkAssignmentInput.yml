@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Provide the topic introduction here.
+
+  **Note**: This cmdlet will be deprecated.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  New-CsOnlineBulkAssignmentInput [-Identity] <UserIdParameter> [-TelephoneNumber <String>]
+
+   [-LocationID <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Insert example commands for example 1.
+  description: |-
+    Insert descriptive text for example 1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    PARAMVALUE: Fqdn
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    PARAMVALUE: UserIdParameter
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: LocationID
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TelephoneNumber
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.New-CsOnlineBulkAssignmentInput
+name: New-CsOnlineBulkAssignmentInput
+description: |-
+  Provide the detailed description here.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csonlinebulkassignmentinput
+  applicable: Skype for Business Online
+  title: New-CsOnlineBulkAssignmentInput
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

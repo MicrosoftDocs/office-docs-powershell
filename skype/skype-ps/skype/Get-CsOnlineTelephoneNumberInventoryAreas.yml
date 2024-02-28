@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Get-CsOnlineTelephoneNumberInventoryAreas` cmdlet to retrieve the geographical areas where specified inventory types are supported.
+
+  **Note**:
+
+  As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no longer be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.InventoryArea" data-throw-if-not-resolved="False" />
+  description: |-
+    Instance or array of the objects.
+syntaxes:
+- >-
+  Get-CsOnlineTelephoneNumberInventoryAreas [-Tenant <Guid>] -RegionalGroup <String>
+
+   -CountryOrRegion <String> [-Area <String>] -InventoryType <String> [-DomainController <Fqdn>] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineTelephoneNumberInventoryAreas -InventoryType Subscriber -RegionalGroup NOAM -CountryOrRegion US
+  description: |-
+    This example returns the areas with Subscriber inventory in the specified region and country.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Area
+  description: |+
+    Specifies the target geographical area for the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CountryOrRegion
+  description: |+
+    Specifies the target country for the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: Country
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InventoryType
+  description: |+
+    Specifies the target telephone number type for the cmdlet.
+    Acceptable values are:
+
+    "Service" for numbers assigned to conferencing support.
+
+    "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RegionalGroup
+  description: |+
+    Specifies the target geographical region for the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: Region
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineTelephoneNumberInventoryAreas
+name: Get-CsOnlineTelephoneNumberInventoryAreas
+description: |-
+  Following is an example of the console output for the Get-CsOnlineTelephoneNumberInventoryAreas cmdlet.
+
+  Get-CsOnlineTelephoneNumberInventoryAreas -InventoryType Subscriber -RegionalGroup NOAM -CountryOrRegion US
+
+  RunspaceId : 8fa40044-7bcf-465b-b7c8-76e54f124c8d
+
+  Id : IL
+
+  DefaultName : Illinois
+
+  Cities : {}
+
+  RunspaceId : 8fa40044-7bcf-465b-b7c8-76e54f124c8d
+
+  Id : MA
+
+  DefaultName : Massachusetts
+
+  Cities : {}
+
+  RunspaceId : 8fa40044-7bcf-465b-b7c8-76e54f124c8d
+
+  Id : NY
+
+  DefaultName : New York
+
+  Cities : {}
+
+  RunspaceId : 8fa40044-7bcf-465b-b7c8-76e54f124c8d
+
+  Id : OR
+
+  DefaultName : Oregon
+
+  Cities : {}
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinetelephonenumberinventoryareas
+  applicable: Skype for Business Online
+  title: Get-CsOnlineTelephoneNumberInventoryAreas
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

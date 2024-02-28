@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves information about the application meeting configuration settings configured for the tenant.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.PlatformApplications.ApplicationMeetingConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsApplicationMeetingConfiguration
+  href: Set-CsApplicationMeetingConfiguration.yml
+syntaxes:
+- Get-CsApplicationMeetingConfiguration [-Identity <XdsIdentity>]
+examples:
+- title: Retrieve application meeting configuration settings for the tenant.
+  code: |-
+    PS C:\> Get-CsApplicationMeetingConfiguration
+  description: |-
+    The command shown above returns application meeting configuration settings that have been configured for the tenant.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcards when specifying the application meeting configuration settings to be returned.
+    Because you can only have a single, global instance of these settings there is little reason to use the Filter parameter.
+    However, if you prefer, you can use syntax similar to this to retrieve the global settings: -Identity "g*".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Teams
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the application meeting configuration settings to be returned.
+    Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling the Get-CsApplicationMeetingConfiguration cmdlet.
+    However, you can use the following syntax to retrieve the global settings: -Identity global.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the application meeting configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Teams
+  parameterValueGroup: ""
+applicable:
+- Teams
+uid: SkypeForBusiness.Get-CsApplicationMeetingConfiguration
+name: Get-CsApplicationMeetingConfiguration
+description: |-
+  This cmdlet retrieves information about the application meeting configuration settings configured for the tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-CsApplicationMeetingConfiguration
+  applicable: Teams
+  title: Get-CsApplicationMeetingConfiguration
+  schema: 2.0.0
+  manager: zhengni
+  author: jackry6350
+  ms.author: yoren
+  ms.reviewer: ""

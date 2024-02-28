@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Transfer ownership of all whiteboards owned by a user to another user.
+module: MicrosoftWhiteboardAdmin
+notes: |-
+  For details on user IDs, see the [overview page](../../docs-conceptual/overview.md).
+syntaxes:
+- Invoke-TransferAllWhiteboards [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-ForceAuthPrompt] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhatIf
+  description: |-
+    Check how many whiteboards will be transferred without transferring them.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Invoke-TransferAllWhiteboards -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002
+  description: |-
+    Transfer (and prompt before performing any write actions).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceAuthPrompt
+  description: |+
+    Optional. Always prompt for auth. Use to ignore cached credentials.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: NewOwnerId
+  isRequired: true
+  description: |+
+    The ID of the new owner.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: OldOwnerId
+  isRequired: true
+  description: |+
+    The ID of the previous owner.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Execute the command without making any actual changes. Only calls read methods on the REST service.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+applicable:
+- Microsoft Whiteboard
+uid: MicrosoftWhiteboardAdmin.Invoke-TransferAllWhiteboards
+name: Invoke-TransferAllWhiteboards
+description: |-
+  Transfer ownership of all whiteboards owned by a user to another user.
+metadata:
+  external help file: WhiteboardAdmin-help.xml
+  Module Name: WhiteboardAdmin
+  online version: https://learn.microsoft.com/powershell/module/whiteboard/invoke-transferallwhiteboards
+  applicable: Microsoft Whiteboard
+  title: Invoke-TransferAllWhiteboards
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

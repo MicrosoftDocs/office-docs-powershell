@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the network subnet setting in the tenant. Tenant network subnet is used for Location Based Routing.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTenantNetworkSubnet
+  href: New-CsTenantNetworkSubnet.yml
+- text: Remove-CsTenantNetworkSubnet
+  href: Remove-CsTenantNetworkSubnet.yml
+- text: Set-CsTenantNetworkSubnet
+  href: Set-CsTenantNetworkSubnet.yml
+syntaxes:
+- Get-CsTenantNetworkSubnet [[-Identity] <string>] [<CommonParameters>]
+- Get-CsTenantNetworkSubnet [-Filter <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTenantNetworkSubnet
+  description: |-
+    The command shown in Example 1 returns the list of network subnets for the current tenant.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTenantNetworkSubnet -Identity '2001:4898:e8:25:844e:926f:85ad:dd70'
+  description: |-
+    The command shown in Example 2 returns the IPv6 format network subnet within the scope of '2001:4898:e8:25:844e:926f:85ad:dd70'.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    The Filter parameter allows you to limit the number of results based on filters you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter is a unique identifier that designates the scope. It specifies the collection of tenant network subnets to be returned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Get-CsTenantNetworkSubnet
+name: Get-CsTenantNetworkSubnet
+description: |-
+  IP subnets at the location where Teams endpoints can connect to the network must be defined and associated to a defined network in order to enforce toll bypass.
+
+  Multiple subnets may be associated with the same network site, but multiple sites may not be associated with a same subnet. This association of subnets enables Location-Based routing to locate the endpoints geographically to determine if a given PSTN call should be allowed. Both IPv4 and IPv6 subnets are supported. When determining if a Teams endpoint is located at a site an IPv6 address will be checked for a match first.
+
+  Location Based Routing is a feature which allows PSTN toll bypass to be restricted for users based upon policy and the user's geographic location at the time of an incoming or outgoing PSTN call. 
+
+  Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. It is now available in O365 for Teams clients. For toll bypass restricted locations, each IP subnet and PSTN gateway for that location are associated to a network site by the administrator. A user's location is determined by the IP subnet which the user's Teams endpoint(s) is connected to at the time of a PSTN call. A user may have multiple Teams clients located at different sites, in which case Location-Based Routing will enforce each client's routing separately depending on the location of its endpoint.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantnetworksubnet
+  applicable: Microsoft Teams
+  title: Get-CsTenantNetworkSubnet
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

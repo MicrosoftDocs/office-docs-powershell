@@ -1,0 +1,1005 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the New-AutoSensitivityLabelRule cmdlet to create auto-labeling rules and associate then with auto-labeling policies in your organization.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  New-AutoSensitivityLabelRule [-Name] <String> -Policy <PolicyIdParameter> -Workload <Workload>
+
+   [-AccessScope <AccessScope>]
+
+   [-ActivationDate <System.DateTime>]
+
+   [-AnyOfRecipientAddressContainsWords <MultiValuedProperty>]
+
+   [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
+
+   [-Comment <String>]
+
+   [-Confirm]
+
+   [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+
+   [-ContentExtensionMatchesWords <MultiValuedProperty>]
+
+   [-ContentPropertyContainsWords <MultiValuedProperty>]
+
+   [-Disabled <Boolean>]
+
+   [-DocumentCreatedBy <MultiValuedProperty>]
+
+   [-DocumentIsPasswordProtected <Boolean>]
+
+   [-DocumentIsUnsupported <Boolean>]
+
+   [-DocumentNameMatchesWords <MultiValuedProperty>]
+
+   [-DocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
+
+   [-ExceptIfAccessScope <AccessScope>]
+
+   [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
+
+   [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
+
+   [-ExceptIfContentContainsSensitiveInformation <PswsHashtable[]>]
+
+   [-ExceptIfContentExtensionMatchesWords <MultiValuedProperty>]
+
+   [-ExceptIfContentPropertyContainsWords <MultiValuedProperty>]
+
+   [-ExceptIfDocumentCreatedBy <MultiValuedProperty>]
+
+   [-ExceptIfDocumentIsPasswordProtected <Boolean>]
+
+   [-ExceptIfDocumentIsUnsupported <Boolean>]
+
+   [-ExceptIfDocumentNameMatchesWords <MultiValuedProperty>]
+
+   [-ExceptIfDocumentSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
+
+   [-ExceptIfFrom <RecipientIdParameter[]>]
+
+   [-ExceptIfFromAddressContainsWords <MultiValuedProperty>]
+
+   [-ExceptIfFromAddressMatchesPatterns <MultiValuedProperty>]
+
+   [-ExceptIfFromMemberOf <SmtpAddress[]>]
+
+   [-ExceptIfHeaderMatchesPatterns <PswsHashtable>]
+
+   [-ExceptIfProcessingLimitExceeded <Boolean>]
+
+   [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+
+   [-ExceptIfSenderDomainIs <MultiValuedProperty>]
+
+   [-ExceptIfSenderIPRanges <MultiValuedProperty>]
+
+   [-ExceptIfSentTo <MultiValuedProperty>]
+
+   [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
+
+   [-ExceptIfSubjectMatchesPatterns <MultiValuedProperty>]
+
+   [-ExpiryDate <System.DateTime>]
+
+   [-From <RecipientIdParameter[]>]
+
+   [-FromAddressContainsWords <MultiValuedProperty>]
+
+   [-FromAddressMatchesPatterns <MultiValuedProperty>]
+
+   [-FromMemberOf <SmtpAddress[]>]
+
+   [-HeaderMatchesPatterns <PswsHashtable>]
+
+   [-ImmutableId <System.Guid>]
+
+   [-Priority <System.Int32>]
+
+   [-ProcessingLimitExceeded <Boolean>]
+
+   [-RecipientDomainIs <MultiValuedProperty>]
+
+   [-ReportSeverityLevel <RuleSeverity>]
+
+   [-RuleErrorAction <PolicyRuleErrorAction>]
+
+   [-SenderDomainIs <MultiValuedProperty>]
+
+   [-SenderIPRanges <MultiValuedProperty>]
+
+   [-SentTo <MultiValuedProperty>]
+
+   [-SentToMemberOf <RecipientIdParameter[]>]
+
+   [-SubjectMatchesPatterns <MultiValuedProperty>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    New-AutoSensitivityLabelRule -Name "SocialSecurityRule" -Policy "SSNPolicy" -ContentContainsSensitiveInformation @{"name"="U.S. Social Security Number (SSN)";"mincount"="1"} -Workload SharePoint
+  description: |-
+    This example creates an autolabeling rule named "SocialSecurityRule" that is assigned to the policy "SSNPolicy." This rule looks for Social Security Numbers on documents with a minimum count of 1 on SharePoint sites.
+  summary: ""
+parameters:
+- type: <xref href="AccessScope" data-throw-if-not-resolved="False" />
+  name: AccessScope
+  description: |+
+    The AccessScope parameter specifies a condition for the auto-labeling policy rule that's based on the access scope of the content. The rule is applied to content that matches the specified access scope. Valid values are:
+
+    - InOrganization: The rule is applied to content that's accessible inside the organization.
+    - NotInOrganization: The rule is applied to content that's accessible outside the organization.
+    - None: The condition isn't used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: InOrganization, NotInOrganization, None
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: ActivationDate
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AnyOfRecipientAddressContainsWords
+  description: |+
+    The AnyOfRecipientAddressContainsWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in recipient email addresses. You can specify multiple words or phrases separated by commas.
+
+    - Single word: `"no_reply"`
+    - Multiple words: `no_reply,urgent,...`
+    - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+    The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 600.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: AnyOfRecipientAddressMatchesPatterns
+  description: |+
+    The AnyOfRecipientAddressMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+    The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PswsHashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ContentContainsSensitiveInformation
+  description: |+
+    The ContentContainsSensitiveInformation parameter specifies a condition for the rule that's based on a sensitive information type match in content. The rule is applied to content that contains the specified sensitive information type.
+
+    This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"; minCount="1"; minConfidence="85"})`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ContentExtensionMatchesWords
+  description: |+
+    The ContentExtensionMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for words in file name extensions. You can specify multiple words separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ContentPropertyContainsWords
+  description: |+
+    The ContentPropertyContainsWords parameter specifies a condition for the auto-labeling policy rule that's based on a property match in content. The rule is applied to content that contains the specified property.
+
+    This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    The Disabled parameter specifies whether the auto-labeling policy rule is enabled or disabled. Valid values are:
+
+    - $true: The rule is disabled.
+    - $false: The rule is enabled. This is the default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: DocumentCreatedBy
+  description: |+
+    {{ Fill DocumentCreatedBy Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DocumentIsPasswordProtected
+  description: |+
+    The DocumentIsPasswordProtected parameter specifies a condition for the auto-labeling policy rule that looks for password protected files (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
+
+    - $true: Look for password protected files.
+    - $false: Don't look for password protected files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DocumentIsUnsupported
+  description: |+
+    The DocumentIsUnsupported parameter specifies a condition for the auto-labeling policy rule that looks for files that can't be scanned. Valid values are:
+
+    - $true: Look for unsupported files that can't be scanned.
+    - $false: Don't look for unsupported files that can't be scanned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: DocumentNameMatchesWords
+  description: |+
+    The DocumentNameMatchesWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
+
+    - Single word: `"no_reply"`
+    - Multiple words: `no_reply,urgent,...`
+    - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+    The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Exchange.Data.ByteQuantifiedSize" data-throw-if-not-resolved="False" />
+  name: DocumentSizeOver
+  description: |+
+    The DocumentSizeOver parameter specifies a condition for the auto-labeling policy rule that looks for messages where any attachment is greater than the specified size.
+
+    When you enter a value, qualify the value with one of the following units:
+
+    - B (bytes)
+    - KB (kilobytes)
+    - MB (megabytes)
+    - GB (gigabytes)
+    - TB (terabytes)
+
+    Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+    You can use this condition in auto-labeling policy rules that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="AccessScope" data-throw-if-not-resolved="False" />
+  name: ExceptIfAccessScope
+  description: |+
+    The ExceptIfAccessScopeAccessScope parameter specifies an exception for the auto-labeling policy rule that's based on the access scope of the content. The rule isn't applied to content that matches the specified access scope. Valid values are:
+
+    - InOrganization: The rule isn't applied to content that's accessible inside the organization.
+    - NotInOrganization: The rule isn't applied to content that's accessible outside the organization.
+    - None: The exception isn't used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: InOrganization, NotInOrganization, None
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfAnyOfRecipientAddressContainsWords
+  description: |+
+    The ExceptIfAnyOfRecipientAddressContainsWords parameter specifies an exception for the auto-labeling policy rule that looks for words or phrases in recipient email addresses. You can specify multiple words separated by commas.
+
+    - Single word: `"no_reply"`
+    - Multiple words: `no_reply,urgent,...`
+    - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+    The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 600.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfAnyOfRecipientAddressMatchesPatterns
+  description: |+
+    The ExceptIfAnyOfRecipientAddressMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+    The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PswsHashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExceptIfContentContainsSensitiveInformation
+  description: |+
+    The ExceptIfContentContainsSensitiveInformation parameter specifies an exception for the auto-labeling policy rule that's based on a sensitive information type match in content. The rule isn't applied to content that contains the specified sensitive information type.
+
+    This parameter uses the basic syntax `@(@{Name="SensitiveInformationType1";[minCount="Value"],@{Name="SensitiveInformationType2";[minCount="Value"],...)`. For example, `@(@{Name="U.S. Social Security Number (SSN)"; minCount="2"},@{Name="Credit Card Number"})`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfContentExtensionMatchesWords
+  description: |+
+    The ExceptIfContentExtensionMatchesWords parameter specifies an exception for the auto-labeling policy rule that looks for words in file name extensions. You can specify multiple words separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfContentPropertyContainsWords
+  description: |+
+    The ExceptIfContentPropertyContainsWords parameter specifies an exception for the auto-labeling policy rule that's based on a property match in content. The rule is not applied to content that contains the specified property.
+
+    This parameter accepts values in the format: `"Property1:Value1,Value2","Property2:Value3,Value4",..."PropertyN:ValueN,ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfDocumentCreatedBy
+  description: |+
+    {{ Fill ExceptIfDocumentCreatedBy Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ExceptIfDocumentIsPasswordProtected
+  description: |+
+    The ExceptIfDocumentIsPasswordProtected parameter specifies an exception for the auto-labeling policy rule that looks for password protected files (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z, .rar, .tar, etc.), and .pdf files. Valid values are:
+
+    - $true: Look for password protected files.
+    - $false: Don't look for password protected files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ExceptIfDocumentIsUnsupported
+  description: |+
+    The ExceptIfDocumentIsUnsupported parameter specifies an exception for the auto-labeling policy rule that looks for files that can't be scanned. Valid values are:
+
+    - $true: Look for unsupported files that can't be scanned.
+    - $false: Don't look for unsupported files that can't be scanned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfDocumentNameMatchesWords
+  description: |+
+    The ExceptIfDocumentNameMatchesWords parameter specifies an exception for the auto-labeling policy rule that looks for words or phrases in the name of message attachments. You can specify multiple words or phrases separated by commas.
+
+    - Single word: `"no_reply"`
+    - Multiple words: `no_reply,urgent,...`
+    - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+    The maximum individual word or phrase length is 128 characters. The maximum number of words or phrases is 50.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Exchange.Data.ByteQuantifiedSize" data-throw-if-not-resolved="False" />
+  name: ExceptIfDocumentSizeOver
+  description: |+
+    The ExceptIfDocumentSizeOver parameter specifies an exception for the auto-labeling policy rule that looks for messages where any attachment is greater than the specified size.
+
+    When you enter a value, qualify the value with one of the following units:
+
+    - B (bytes)
+    - KB (kilobytes)
+    - MB (megabytes)
+    - GB (gigabytes)
+    - TB (terabytes)
+
+    Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
+
+    You can use this exception in auto-labeling policy rules that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExceptIfFrom
+  description: |+
+    The ExceptIfFrom parameter specifies an exception for the auto-labeling policy rule that looks for messages from specific senders. You can use any value that uniquely identifies the sender. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Email address
+    - GUID
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfFromAddressContainsWords
+  description: |+
+    The ExceptIfFromAddressContainsWords parameter specifies an exception for the auto-labeling policy rule that looks for words or phrases in the sender's email address. You can specify multiple words or phrases separated by commas.
+
+    - Single word: `"no_reply"`
+    - Multiple words: `no_reply,urgent,...`
+    - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+    The maximum individual word length is 128 characters. The maximum number of words or phrases is 50.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfFromAddressMatchesPatterns
+  description: |+
+    The ExceptIfFromAddressMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+    The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SmtpAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExceptIfFromMemberOf
+  description: |+
+    The ExceptIfFromMemberOf parameter specifies an exception for the auto-labeling policy rule that looks for messages sent by group members. You identify the group members by their email addresses.
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PswsHashtable" data-throw-if-not-resolved="False" />
+  name: ExceptIfHeaderMatchesPatterns
+  description: |+
+    The HeaderMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ExceptIfProcessingLimitExceeded
+  description: |+
+    The ExceptIfProcessingLimitExceeded parameter specifies an exception for the auto-labeling policy rule that looks for files where scanning couldn't complete. Valid values are:
+
+    - $true: Look for files where scanning couldn't complete.
+    - $false: Don't look for files where scanning couldn't complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfRecipientDomainIs
+  description: |+
+    The ExceptIfRecipientDomainIs parameter specifies an exception for the auto-labeling policy rule that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfSenderDomainIs
+  description: |+
+    The ExceptIfSenderDomainIs parameter specifies an exception for the auto-labeling policy rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfSenderIPRanges
+  description: |+
+    The ExceptIfSenderIpRanges parameter specifies an exception for the auto-labeling policy rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+    - Single IP address: For example, 192.168.1.1.
+    - IP address range: For example, 192.168.0.1-192.168.0.254.
+    - Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+    You can specify multiple values separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfSentTo
+  description: |+
+    The ExceptIfSentTo parameter specifies an exception for the auto-labeling policy rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Email address
+    - GUID
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExceptIfSentToMemberOf
+  description: |+
+    The ExceptIfSentToMemberOf parameter specifies an exception for the auto-labeling policy rule that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You identify the groups by email address. You can specify multiple values separated by commas.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExceptIfSubjectMatchesPatterns
+  description: |+
+    The ExceptIfSubjectMatchesPatterns parameter specifies an exception for the auto-labeling policy rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+    The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+    You can use this exception in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: ExpiryDate
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: From
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: FromAddressContainsWords
+  description: |+
+    The FromAddressContainsWords parameter specifies a condition for the auto-labeling policy rule that looks for words or phrases in the sender's email address. You can specify multiple words or phrases separated by commas.
+
+    - Single word: `"no_reply"`
+    - Multiple words: `no_reply,urgent,...`
+    - Multiple words and phrases: `"phrase 1",word1,"phrase with , or spaces",word2,...`
+
+    The maximum individual word length is 128 characters. The maximum number of words or phrases is 50.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: FromAddressMatchesPatterns
+  description: |+
+    The FromAddressMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+    The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SmtpAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FromMemberOf
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PswsHashtable" data-throw-if-not-resolved="False" />
+  name: HeaderMatchesPatterns
+  description: |+
+    The HeaderMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in a header field by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1","regular expression2",..."regular expressionN"`.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: ImmutableId
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The Name parameter specifies a unique name for the auto-labeling policy rule. If the value contains spaces, enclose the value with quotation marks (").
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    The Policy parameter specifies the auto-labeling policy that contains the auto-labeling policy rule. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ProcessingLimitExceeded
+  description: |+
+    The ProcessingLimitExceeded parameter specifies a condition for the auto-labeling policy rule that looks for files where scanning couldn't complete. You can use this condition to create rules that work together to identify and process messages where the content couldn't be fully scanned. Valid values are:
+
+    - $true: Look for files where scanning couldn't complete.
+    - $false: Don't look for files where scanning couldn't complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RecipientDomainIs
+  description: |+
+    The RecipientDomainIs parameter specifies a condition for the auto-labeling policy rule that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="RuleSeverity" data-throw-if-not-resolved="False" />
+  name: ReportSeverityLevel
+  description: |+
+    The ReportSeverityLevel parameter specifies the severity level of the incident report for content detections based on the rule. Valid values are:
+
+    - None: You can't select this value if the rule has no actions configured.
+    - Low: This is the default value.
+    - Medium
+    - High
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: Low, Medium, High, None, Informational, Information
+- type: <xref href="PolicyRuleErrorAction" data-throw-if-not-resolved="False" />
+  name: RuleErrorAction
+  description: |+
+    The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
+
+    - Ignore
+    - RetryThenBlock
+    - Blank (the value $null): This is the default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: Ignore, RetryThenBlock
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: SenderDomainIs
+  description: |+
+    The SenderDomainIs parameter specifies a condition for the auto-labeling policy rule that looks for messages from senders with email address in the specified domains. You can specify multiple values separated by commas.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: SenderIPRanges
+  description: |+
+    The SenderIpRanges parameter specifies a condition for the auto-sensitivity policy rule that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
+
+    - Single IP address: For example, 192.168.1.1.
+    - IP address range: For example, 192.168.0.1-192.168.0.254.
+    - Classless Inter-Domain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
+
+    You can specify multiple values separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: SentTo
+  description: |+
+    The SentTo parameter specifies a condition for the auto-sensitivity policy rule that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Email address
+    - GUID
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+    You can use this condition in auto-sensitivity policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SentToMemberOf
+  description: |+
+    The SentToMemberOf parameter specifies a condition for the auto-labeling policy rule that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You identify the groups by email address. You can specify multiple values separated by commas.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: SubjectMatchesPatterns
+  description: |+
+    The SubjectMatchesPatterns parameter specifies a condition for the auto-labeling policy rule that looks for text patterns in the Subject field of messages by using regular expressions. You can specify multiple text patterns by using the following syntax: `"regular expression1"|"regular expression2"|..."regular expressionN"`.
+
+    The maximum individual regular expression length is 128 characters. The maximum number of regular expressions is 10.
+
+    You can use this condition in auto-labeling policies that are scoped only to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch doesn't work in Security & Compliance PowerShell.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Workload" data-throw-if-not-resolved="False" />
+  name: Workload
+  isRequired: true
+  description: |+
+    The Workload parameter specifies the workload. Valid values are:
+
+    - Exchange
+    - OneDriveForBusiness
+    - SharePoint
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: Exchange, SharePoint, OneDriveForBusiness
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.New-AutoSensitivityLabelRule
+name: New-AutoSensitivityLabelRule
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/new-autosensitivitylabelrule
+  applicable: Security & Compliance
+  title: New-AutoSensitivityLabelRule
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the network site setting in the tenant. Tenant network site is used for Location Based Routing.
+module: SkypeForBusiness
+notes: |-
+  The parameter IncludePhoneNumbers was introduced in Teams PowerShell Module 5.5.0.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Identity" data-throw-if-not-resolved="False" />
+  description: |-
+    The Identity of the site.
+- name: <xref href="Description" data-throw-if-not-resolved="False" />
+  description: |-
+    The description of the site.
+- name: <xref href="NetworkRegionID" data-throw-if-not-resolved="False" />
+  description: |-
+    The network region ID of the site.
+- name: <xref href="LocationPolicyID" data-throw-if-not-resolved="False" />
+  description: |-
+    The ID of the locaton policy assigned to the site.
+- name: <xref href="SiteAddress" data-throw-if-not-resolved="False" />
+  description: |-
+    This parameter is reserved for internal Microsoft use.
+- name: <xref href="NetworkSiteID" data-throw-if-not-resolved="False" />
+  description: |-
+    The ID of the network site.
+- name: <xref href="OnlineVoiceRoutingPolicyTagID" data-throw-if-not-resolved="False" />
+  description: |-
+    The ID of the online voice routing policy assigned to the site.
+- name: <xref href="EnableLocationBasedRouting" data-throw-if-not-resolved="False" />
+  description: |-
+    Boolean stating whether Location-Based Routing is enabled on the site.
+- name: <xref href="EmergencyCallRoutingPolicyTagID" data-throw-if-not-resolved="False" />
+  description: |-
+    The ID of the Teams emergency call routing policy assigned to the site.
+- name: <xref href="EmergencyCallingPolicyTagID" data-throw-if-not-resolved="False" />
+  description: |-
+    The ID of the Teams emergency calling policy assigned to the site.
+- name: <xref href="NetworkRoamingPolicyTagID" data-throw-if-not-resolved="False" />
+  description: |-
+    The ID of the Teams network roaming policy assigned to the site.
+- name: <xref href="EmergencyCallRoutingPolicyName" data-throw-if-not-resolved="False" />
+  description: |-
+    The name of the Teams emergency call routing policy assigned to the site.
+- name: <xref href="EmergencyCallingPolicyName" data-throw-if-not-resolved="False" />
+  description: |-
+    The name of the Teams emergency calling policy assigned to the site.
+- name: <xref href="NetworkRoamingPolicyName" data-throw-if-not-resolved="False" />
+  description: |-
+    The name of the Teams network roaming policy assigned to the site.
+- name: <xref href="PhoneNumbers" data-throw-if-not-resolved="False" />
+  description: |-
+    This parameter is reserved for internal Microsoft use.
+links:
+- text: New-CsTenantNetworkSite
+  href: New-CsTenantNetworkSite.yml
+- text: Remove-CsTenantNetworkSite
+  href: Remove-CsTenantNetworkSite.yml
+- text: Set-CsTenantNetworkSite
+  href: Set-CsTenantNetworkSite.yml
+syntaxes:
+- Get-CsTenantNetworkSite [[-Identity] <string>] [-IncludePhoneNumbers <bool>] [<CommonParameters>]
+- Get-CsTenantNetworkSite [-IncludePhoneNumbers <bool>] [-Filter <string>] [<CommonParameters>]
+- Get-CsTenantNetworkSite [-IncludePhoneNumbers <bool>] [-Filter <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTenantNetworkSite
+  description: |-
+    The command shown in Example 1 returns the list of network sites for the current tenant.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTenantNetworkSite -Identity siteA
+  description: |-
+    The command shown in Example 2 returns the network site within the scope of siteA.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-CsTenantNetworkSite -Filter "Los Angeles"
+  description: |-
+    The command shown in Example 3 returns the network site that matches the specified filter.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when indicating the site (or sites) to be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter is a unique identifier for the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludePhoneNumbers
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Get-CsTenantNetworkSite
+name: Get-CsTenantNetworkSite
+description: |-
+  A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus. Network sites are defined as a collection of IP subnets.
+
+  A best practice for Location Bsed Routing (LBR) is to create a separate site for each location which has unique PSTN connectivity.  Each network site must be associated with a network region. Sites may be created as LBR or non-LBR enabled. A non-LBR enabled site may be created to allow LBR enabled users to make PSTN calls when they roam to that site. Note that network sites may also be used for emergency calling enablement and configuration.
+
+  Location Based Routing is a feature which allows PSTN toll bypass to be restricted for users based upon policy and the user's geographic location at the time of an incoming or outgoing PSTN call. 
+
+  Location-Based Routing leverages the same network regions, sites, and subnets concept that is available in Skype for Business Server. It is now available in O365 for Teams clients. For toll bypass restricted locations, each IP subnet and PSTN gateway for that location are associated to a network site by the administrator. A user's location is determined by the IP subnet which the user's Teams endpoint(s) is connected to at the time of a PSTN call. A user may have multiple Teams clients located at different sites, in which case Location-Based Routing will enforce each client's routing separately depending on the location of its endpoint.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantnetworksite
+  applicable: Microsoft Teams
+  title: Get-CsTenantNetworkSite
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

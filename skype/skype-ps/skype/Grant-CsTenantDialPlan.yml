@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to a user, to a group of users, or to set the Global policy instance.
+module: SkypeForBusiness
+notes: |-
+  The ExternalAccessPrefix and OptimizeDeviceDialing parameters have been removed from New-CsTenantDialPlan and Set-CsTenantDialPlan cmdlet since they are no longer used. External access dialing is now handled implicitly using normalization rules of the dial plans.
+  The Get-CsTenantDialPlan will still show the external access prefix in the form of a normalization rule of the dial plan.
+links:
+- text: Set-CsTenantDialPlan
+  href: set-cstenantdialplan.yml
+- text: New-CsTenantDialPlan
+  href: new-cstenantdialplan.yml
+- text: Remove-CsTenantDialPlan
+  href: remove-cstenantdialplan.yml
+- text: Get-CsTenantDialPlan
+  href: get-cstenantdialplan.yml
+syntaxes:
+- Grant-CsTenantDialPlan [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTenantDialPlan [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity Ken.Myer@contoso.com
+  description: |-
+    This example grants the Vt1tenantDialPlan9 dial plan to Ken.Meyer@contoso.com.
+  summary: ""
+- title: Example 2
+  code: |-
+    Grant-CsTenantDialPlan -Identity Ken.Myer@contoso.com -PolicyName $Null
+  description: |-
+    In Example 2, any dial plan previously assigned to the user Ken Myer is unassigned from that user; as a result, Ken Myer will be managed by the global dial plan.
+    To unassign a custom tenant dial plan, set the PolicyName to a null value ($Null).
+  summary: ""
+- title: Example 3
+  code: |-
+    Grant-CsTenantDialPlan -Group sales@contoso.com -Rank 10 -PolicyName Vt1tenantDialPlan9
+  description: |-
+    This example grants the Vt1tenantDialPlan9 dial plan to members of the group sales@contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Sets the parameters of the Global policy instance to the values in the specified policy instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the group used for the group policy assignment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter identifies the user to whom the policy should be assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    The PolicyName parameter is the name of the tenant dial plan to be assigned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Grant-CsTenantDialPlan
+name: Grant-CsTenantDialPlan
+description: |-
+  The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user, a group of users, or sets the Global policy instance.
+  Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
+  Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
+  A tenant dial plan determines such things as how normalization rules are applied.
+
+  You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsUserPolicyAssignment -Identity "<user name>" -PolicyType TenantDialPlan.`
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/grant-cstenantdialplan
+  applicable: Microsoft Teams
+  title: Grant-CsTenantDialPlan
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

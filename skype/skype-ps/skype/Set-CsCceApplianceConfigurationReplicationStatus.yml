@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{Fill in the Synopsis}}
+
+  **Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsCceApplianceConfigurationReplicationStatus [-Identity] <XdsGlobalRelativeIdentity>
+
+   [-Tenant <Guid>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsCceApplianceConfigurationReplicationStatus [-Identity] <XdsGlobalRelativeIdentity>
+
+   [-Tenant <Guid>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    {{Fill Force Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    {{Fill Identity Description}}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    {{Fill Instance Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    {{Fill Tenant Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsCceApplianceConfigurationReplicationStatus
+name: Set-CsCceApplianceConfigurationReplicationStatus
+description: |-
+  {{Fill in the Description}}
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cscceapplianceconfigurationreplicationstatus
+  applicable: Skype for Business Online
+  title: Set-CsCceApplianceConfigurationReplicationStatus
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

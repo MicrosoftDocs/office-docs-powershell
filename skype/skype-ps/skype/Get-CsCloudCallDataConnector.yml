@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about your Call Data Connector.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsCloudCallDataConnector [[-LocalStore] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsCloudCallDataConnector
+  description: |-
+    This example returns the CloudCallDataConnector settings stored on-premises. Note that there is only a single, global instance of CloudCallDataConnector settings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the Call Data Connector data from the local replica of the Central Management store, rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsCloudCallDataConnector
+name: Get-CsCloudCallDataConnector
+description: |-
+  Call Data Connector provides a single view in a hybrid environment where you can view the on-premises and online call quality data in one place.
+
+  The Get-CsCloudCallDataConnector cmdlet provides a way for you to view the on-premises copy of the cloud connection information created by the New-CsCloudCallDataConnection cmdlet. This outputs the Office 365 TenantID and the data ingestion token for Call Data Connector telemetry endpoint.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cscloudcalldataconnector
+  applicable: Skype for Business Server 2019
+  title: Get-CsCloudCallDataConnector
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

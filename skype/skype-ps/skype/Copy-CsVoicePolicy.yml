@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet has been deprecated for use with Lync Server 2013 and Lync Online. Administrators should use the `Grant-CsVoicePolicy` cmdlet to assign voice policies to Lync Online tenant accounts.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- ""
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: BypassDualWrite
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: ""
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Online
+uid: SkypeForBusiness.Copy-CsVoicePolicy
+name: Copy-CsVoicePolicy
+description: |-
+  This cmdlet has been deprecated for use with Lync Server 2013 and Lync Online. Administrators should use the `Grant-CsVoicePolicy` cmdlet to assign voice policies to Lync Online tenant accounts.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/copy-csvoicepolicy
+  applicable: Lync Server 2013, Skype for Business Online
+  title: Copy-CsVoicePolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: rogupta

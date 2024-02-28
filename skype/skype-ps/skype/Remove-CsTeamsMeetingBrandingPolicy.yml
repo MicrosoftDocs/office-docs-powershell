@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+module: SkypeForBusiness
+notes: |-
+  Available in Teams PowerShell Module 4.9.3 and later.
+links:
+- text: Get-CsTeamsMeetingBrandingPolicy
+  href: Get-CsTeamsMeetingBrandingPolicy.yml
+- text: Grant-CsTeamsMeetingBrandingPolicy
+  href: Grant-CsTeamsMeetingBrandingPolicy.yml
+- text: New-CsTeamsMeetingBrandingPolicy
+  href: New-CsTeamsMeetingBrandingPolicy.yml
+- text: Remove-CsTeamsMeetingBrandingPolicy
+  href: Remove-CsTeamsMeetingBrandingPolicy.yml
+- text: Set-CsTeamsMeetingBrandingPolicy
+  href: Set-CsTeamsMeetingBrandingPolicy.yml
+syntaxes:
+- Remove-CsTeamsMeetingBrandingPolicy [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Remove meeting branding policy
+  code: |-
+    PS C:\> Remove-CsTeamsMeetingBrandingPolicy -Identity "policy test"
+  description: |-
+    In this example, the command deletes the `policy test` meeting branding policy from the organization's list of meeting branding policies and removes all assignments of this policy from users who have the policy assigned.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the policy to be deleted.
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SkypeForBusiness.Remove-CsTeamsMeetingBrandingPolicy
+name: Remove-CsTeamsMeetingBrandingPolicy
+description: |-
+  Deletes a previously created TeamsMeetingBrandingPolicy. Any users with no explicitly assigned policies will then fall back to the default policy in the organization. You cannot delete the global policy from the organization. If you want to remove policies currently assigned to one or more users, you should first assign a different policy to them.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsmeetingbrandingpolicy
+  schema: 2.0.0
+  title: Remove-CsTeamsMeetingBrandingPolicy
+  author: szymonkatraMSFT
+  ms.author: szymonkatra
+  ms.reviewer: ""
+  manager: stanlythomas

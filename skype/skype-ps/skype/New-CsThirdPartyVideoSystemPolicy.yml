@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new third-party video system policy for use with video teleconferencing (VTC) devices.
+  These policies determine whether or not the VTC is allowed to send low-resolution video.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `New-CsThirdPartyVideoSystemPolicy` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `New-CsThirdPartyVideoSystemPolicy` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ThirdPartyVideoSystem.ThirdPartyVideoSystemPolicy object.
+links:
+- text: Get-CsThirdPartyVideoSystemPolicy
+  href: Get-CsThirdPartyVideoSystemPolicy.yml
+- text: Grant-CsThirdPartyVideoSystemPolicy
+  href: Grant-CsThirdPartyVideoSystemPolicy.yml
+- text: Remove-CsThirdPartyVideoSystemPolicy
+  href: Remove-CsThirdPartyVideoSystemPolicy.yml
+- text: Set-CsThirdPartyVideoSystemPolicy
+  href: Set-CsThirdPartyVideoSystemPolicy.yml
+syntaxes:
+- >-
+  New-CsThirdPartyVideoSystemPolicy [-Identity] <XdsIdentity> [-Confirm] [-Force] [-InMemory]
+
+   [-SupportsSendingLowResolution <Boolean>] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    New-CsThirdPartyVideoSystemPolicy -Identity "site:Redmond" -SupportsSendingLowResolution $False
+  description: |-
+    The command shown in Example 1 creates a new third-party video system policy assigned to the Redmond site.
+    With this policy, VTCs will not be allowed to send low resolution video; that's because the SupportsSendingLowResolution parameter has been set to False ($False).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Indicates the unique Identity to be assigned to the policy.
+    Third party video system policies can be created at the site or per-user scope.
+    To create a policy at the site scope, use syntax similar to this: `-Identity "site:Redmond"`.
+    To create a policy at the per-user scope, use syntax similar to this: `-Identity "RedmondVideoSystemPolicy"`.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Creates an object reference without actually committing the object as a permanent change.
+    If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SupportsSendingLowResolution
+  description: |+
+    Indicates whether or not low-resolution video can be sent by a VTC device.
+    The default value is True ($True).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the Skype for Business Online tenant account for the third-party video system policy being created.
+    For example:
+
+    `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+    You can return the tenant ID for each of your tenants by running this command:
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.New-CsThirdPartyVideoSystemPolicy
+name: New-CsThirdPartyVideoSystemPolicy
+description: |-
+  Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
+  In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+  Associating each VTC device with a contact object makes it easy for administrators to track and to manage, these devices.
+
+  One key management task related to VTC devices is to enable (or disable) the ability of these devices to send low-resolution video.
+  By default, VTC devices are allowed to send low-resolution video.
+  However, administrators can create third-party video system policies that disable the use of low-resolution video.
+  This might be useful for devices located in conference rooms or other areas where low-resolution video is not considered acceptable.
+  The `New-CsThirdPartyVideoSystem` cmdlet provides a way for administrators to create these third-party video system policies.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csthirdpartyvideosystempolicy
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: New-CsThirdPartyVideoSystemPolicy
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

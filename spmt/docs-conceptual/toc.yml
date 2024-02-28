@@ -1,5 +1,8 @@
+items:
 - name: Overview
   href: index.md
   items:
   - name: Introduction
     href: intro.md
+metadata:
+  universal_ref_toc: /powershell/module/spmt-ps/toc.json

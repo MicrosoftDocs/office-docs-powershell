@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsOnlineTelephoneNumberInventoryTypes cmdlet to retrieve the telephone number inventory types that are defined.
+
+  **Note**:
+
+  As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no longer be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Inventory" data-throw-if-not-resolved="False" />
+  description: |-
+    Instance or array of the object.
+syntaxes:
+- >-
+  Get-CsOnlineTelephoneNumberInventoryTypes [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineTelephoneNumberInventoryTypes
+  description: |-
+    This example retrieves all the telephone number types for your organization.
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineTelephoneNumberInventoryTypes
+name: Get-CsOnlineTelephoneNumberInventoryTypes
+description: |-
+  This is an example of Get-CsOnlineTelephoneNumberInventoryTypes cmdlet's console output.
+
+  RunspaceId : af39ca40-06a7-473b-8963-668865d15e87
+
+  Id : Service
+
+  Description : Inventory of service telephone numbers
+
+  Regions : {}
+
+  Reservations : {}
+
+  RunspaceId : af39ca40-06a7-473b-8963-668865d15e87
+
+  Id : Subscriber
+
+  Description : Inventory of subscriber telephone numbers
+
+  Regions : {}
+
+  Reservations : {}
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinetelephonenumberinventorytypes
+  applicable: Skype for Business Online
+  title: Get-CsOnlineTelephoneNumberInventoryTypes
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

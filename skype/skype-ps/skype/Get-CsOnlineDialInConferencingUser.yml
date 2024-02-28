@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Get-CsOnlineDialInConferencingUser` cmdlet to view the properties and settings of users that are enabled for dial-in conferencing and are using Microsoft as their PSTN conferencing provider.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Enable-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps
+- text: Disable-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps
+- text: Set-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps
+syntaxes:
+- >-
+  Get-CsOnlineDialInConferencingUser [-BridgeName <String>] [-ServiceNumber <String>] [-TenantDomain <String>]
+
+   [-LdapFilter <String>] [[-Identity] <UserIdParameter>] [-Tenant <Guid>] [-BridgeId <Guid>] [-ResultSize <Int32>]
+
+   [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> Get-CsOnlineDialInConferencingUser -Identity Ken.Myer@contoso.com
+  description: |-
+    This example uses the User Principal Name (UPN) to retrieve the BridgeID and ServiceNumber information.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: BridgeId
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BridgeName
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    Specifies the name for the audio conferencing bridge.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the user to retrieve.
+    The user can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
+    You can also reference a user account by using the user's Active Directory distinguished name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapFilter
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
+    For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
+    The LdapFilter parameter uses the LDAP query language when creating filters.
+    For example, a filter that returns only users who work in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ResultSize
+  description: |+
+    Enables you to limit the number of records returned by the cmdlet.
+    For example, to return seven users (regardless of the number of users that are in your forest) include the ResultSize parameter and set the parameter value to 7.
+    Note that there is no way to guarantee which seven users will be returned.
+    The result size can be set to any whole number between 0 and 2147483647, inclusive.
+    If set to 0 the command will run, but no data will be returned.
+    If you set the ResultSize to 7 but you have only three users in your forest, the command will return those three users, and then complete without error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceNumber
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    Specifies a service number to serve as a filter for the returned user collection.
+    Only users who have been assigned the specified number will be returned.
+    The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    NOTE: This parameter is reserved for internal Microsoft use.
+
+    Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+    For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+    You can find your tenant ID by running this command: 
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineDialInConferencingUser
+name: Get-CsOnlineDialInConferencingUser
+description: |-
+  This cmdlet will only return users that have been enabled for audio conferencing using Microsoft as the audio conferencing provider.
+  Users that are enabled for audio conferencing using a third-party audio conferencing provider won't be returned.
+  If there are no users in the organization that have been enabled for audio conferencing, then the cmdlet will return no results.
+
+  The see a list of users with conferencing providers other than Microsoft use the Get-CsUserAcp cmdlet.
+
+  **NOTE**: In the Teams PowerShell Module version 3.0 or later, the following input parameters have been deprecated for TeamsOnly customers (removed or very low usage):
+
+  - BridgeId
+  - BridgeName
+  - DomainController
+  - Force
+  - LdapFilter
+  - ServiceNumber
+  - TenantDomain
+  - Common Parameters
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser
+  applicable: Skype for Business Online
+  title: Get-CsOnlineDialInConferencingUser
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

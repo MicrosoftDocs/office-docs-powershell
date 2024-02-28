@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  **Note:** This cmdlet is currently in private preview.
+
+  This cmdlet creates a custom policy package.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: Update-CsCustomPolicyPackage
+  href: Update-CsCustomPolicyPackage.yml
+- text: Remove-CsCustomPolicyPackage
+  href: Remove-CsCustomPolicyPackage.yml
+syntaxes:
+- New-CsCustomPolicyPackage -Identity <String> -PolicyList <String[]> [-Description <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList "TeamsMessagingPolicy, MyMessagingPolicy"
+  description: |-
+    Creates a custom package named "MyPackage" with one policy in the package: a messaging policy of name "MyMessagingPolicy".
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> New-CsCustomPolicyPackage -Identity "MyPackage" -PolicyList "TeamsMessagingPolicy, MyMessagingPolicy", "TeamsMeetingPolicy, MyMeetingPolicy" -Description "My package"
+  description: |-
+    Creates a custom package named "MyPackage" with description "My package" and two policies in the package: a messaging policy of name "MyMessagingPolicy" and a meeting policy of name "MyMeetingPolicy".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The description of the custom package.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The name of the custom package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PolicyList
+  isRequired: true
+  description: |+
+    A list of one or more policies to be added in the package. To specifiy the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy?view=skype-ps) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/skype/get-csteamsmessagingpolicy?view=skype-ps).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-CsCustomPolicyPackage
+name: New-CsCustomPolicyPackage
+description: |-
+  This cmdlet creates a custom policy package. It allows the admin to create their own policy packages for the tenant. For more information on policy packages and the policy types available, please review https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: New-CsCustomPolicyPackage
+  author: sunguchuan
+  ms.author: gucsun
+  manager: dasosby
+  online version: https://learn.microsoft.com/powershell/module/teams/new-cscustompolicypackage
+  schema: 2.0.0

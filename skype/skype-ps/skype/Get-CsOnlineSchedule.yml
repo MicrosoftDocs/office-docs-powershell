@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsOnlineSchedule cmdlet to get information about schedules that belong to your organization.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.Schedule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsOnlineTimeRange
+  href: New-CsOnlineTimeRange.yml
+- text: New-CsOnlineDateTimeRange
+  href: New-CsOnlineDateTimeRange.yml
+- text: New-CsAutoAttendantCallFlow
+  href: New-CsAutoAttendantCallFlow.yml
+syntaxes:
+- Get-CsOnlineSchedule -Id <String> [-CommonParameters]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineSchedule
+  description: |-
+    This example retrieves all schedules that belong to your organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsOnlineSchedule -Id "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+  description: |-
+    This example gets the schedules that has the Id of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    The Id for the schedule to be retrieved. If this parameter is not specified, then all schedules in the organization are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineSchedule
+name: Get-CsOnlineSchedule
+description: |-
+  The Get-CsOnlineSchedule cmdlet returns information about the schedules in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineschedule
+  applicable: Skype for Business Online
+  title: Get-CsOnlineSchedule
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

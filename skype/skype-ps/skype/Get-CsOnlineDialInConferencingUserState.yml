@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!NOTE]
+  > This cmdlet will be deprecated on December 31, 2021. To view the properties and settings of users that are enabled for Audio Conferencing, you can use the [Get-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps) cmdlet.
+
+  Use the `Get-CsOnlineDialInConferencingUserState` cmdlet to view the current Dial In Conferencing state of users in your Tenant.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  Get-CsOnlineDialInConferencingUserState [[-Identity] <UserIdParameter>] [-Tenant <Guid>]
+
+   [-TenantDomain <String>] [-Provider <ProviderType>] [-LicenseState <String[]>]
+
+   [-ResultSize <Unlimited>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsOnlineDialInConferencingUserState
+  description: |-
+    Gets the Dial In Conferencing state of every user.
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the user to retrieve. The user can be specified by using the user's SIP address, the user's user principal name (UPN) or the user's display name (for example, Ken Myer).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LicenseState
+  description: |+
+    License state of the user, possible values
+    - NoLicense
+    - Licensed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ProviderType" data-throw-if-not-resolved="False" />
+  name: Provider
+  description: |+
+    Audio Conferencing Provider name, possible values
+    - AllProviders
+    - NoProviders
+    - Microsoft
+    - ThirdParty
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Unlimited" data-throw-if-not-resolved="False" />
+  name: ResultSize
+  description: |+
+    PARAMVALUE: Unlimited
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineDialInConferencingUserState
+name: Get-CsOnlineDialInConferencingUserState
+description: |-
+  Use the `Get-CsOnlineDialInConferencingUserState` cmdlet to view the current Dial In Conferencing state of users in your Tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguserstate
+  applicable: Skype for Business Online
+  title: Get-CsOnlineDialInConferencingUserState
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about a specific or all uploaded audio files of a given application type.
+module: SkypeForBusiness
+notes: |-
+  The cmdlet is available in Teams PS module 2.4.0-preview or later.
+
+  If you call the cmdlet without having uploaded any audio files, with a non-existing Identity or with an illegal ApplicationId, you will receive a generic error message. In addition, the ApplicationId is case sensitive.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-CsOnlineAudioFile
+  href: Export-CsOnlineAudioFile.yml
+- text: Import-CsOnlineAudioFile
+  href: Import-CsOnlineAudioFile.yml
+- text: New-CsOnlineAudioFile
+  href: New-CsOnlineAudioFile.yml
+- text: Remove-CsOnlineAudioFile
+  href: Remove-CsOnlineAudioFile.yml
+syntaxes:
+- Get-CsOnlineAudioFile [[-Identity] <string>] [-ApplicationId <OrgAutoAttendant | HuntGroup | TenantGlobal>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsOnlineAudioFile
+
+    Id                : 85364afb59a143fc9466979e0f34f749
+    FileName          : CustomMoH.mp3
+    ApplicationId     : TenantGlobal
+    MarkedForDeletion : False
+  description: |-
+    This returns information about all uploaded audio files with ApplicationId = TenantGlobal.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsOnlineAudioFile -ApplicationId HuntGroup -Identity dcfcc31daa9246f29d94d0a715ef877e
+
+    Id                : dcfcc31daa9246f29d94d0a715ef877e
+    FileName          : SupportCQ.mp3
+    ApplicationId     : HuntGroup
+    MarkedForDeletion : False
+  description: |-
+    This cmdlet returns information about the audio file with Id dcfcc31daa9246f29d94d0a715ef877e and with ApplicationId = HuntGroup.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-CsOnlineAudioFile -ApplicationId OrgAutoAttendant
+
+    Id                : 58083ae8bc9e4a66a6b2810b2e1f4e4e
+    FileName          : MainAAAnnouncement.mp3
+    ApplicationId     : OrgAutoAttendant
+    MarkedForDeletion : False
+  description: |-
+    This cmdlet returns information about all uploaded audio files with ApplicationId = OrgAutoAttendant.
+  summary: ""
+parameters:
+- type: <xref href="System.string" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  description: |+
+    The ApplicationId parameter specifies the identifier for the application that was specified when audio file was uploaded. For example, if the audio file is used with an auto attendant, then it should specified as "OrgAutoAttendant".
+    If the audio file is used with a hunt group (call queue), then it needs to be specified as "HuntGroup". If the audio file is used for music on hold, the it needs to specified as "TenantGlobal".
+
+    If you are not specifying an ApplicationId it is assumed to be TenantGlobal.
+
+    Supported values:
+
+    - OrgAutoAttendant
+    - HuntGroup
+    - TenantGlobal
+
+  defaultValue: TenantGlobal
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Id of the specific audio file that you would like to see information about. If you are only specifying -Identity, the -ApplicationId it is assumed to be TenantGlobal. 
+
+    If you need to see the information of a specific audio file with ApplicationId of OrgAutoAttendant or HuntGroup, you need to specify -ApplicationId with the corresponding value and -Identity with the Id of the audio file.
+
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Get-CsOnlineAudioFile
+name: Get-CsOnlineAudioFile
+description: |-
+  This cmdlet returns information on a specific or all uploaded audio files of a given application type. If you are not specifying any parameters you will get information of all uploaded audio files with ApplicationId = TenantGlobal.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineaudiofile
+  applicable: Microsoft Teams
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

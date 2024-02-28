@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the external FQDN of an Edge server access proxy as the hosting provider for a user.
+
+  **Note**: This cmdlet will be deprecated from Teams PowerShell Module.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Get-CsHybridMediationServer
+  href: Get-CsHybridMediationServer.yml
+syntaxes:
+- >-
+  Set-CsHybridMediationServer -Fqdn <String> -AccessProxyExternalFqdn <String> [-Identity] <String>
+
+   [-Tenant <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsHybridMediationServer -Fqdn users.fabrikam.com -AccessProxyExternalFqdn mediationserver.Contoso.com
+  description: |-
+    This command sets the FQDN of a mediation server.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessProxyExternalFqdn
+  description: |+
+    The fully qualified domain name of the Edge server's access proxy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Fqdn
+  description: |+
+    Specifies the fully qualified domain name of the mediation server that includes the internal Active Directory domain, such as mediationserver.contoso.com
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the identity of the hybrid public switched telephone network (PSTN) site.
+    For example: `-Identity "SeattlePSTN"`.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+    For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+    You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+    If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online, you do not have to include the Tenant parameter.
+    The tenant ID will be determined by your connection and credentials.
+    The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsHybridMediationServer
+name: Set-CsHybridMediationServer
+description: |-
+  The `Set-CsHybridMediationServer` cmdlet provides FQDN settings for users.
+  Use this command to register mediation serviers from on-prem on O365 and point them to access proxy (Edge server) from on-prem.
+  Then the existing Skype for Business online call routing mechanism can establish the conference.
+
+  This cmdlet will set the Edge server Access Proxy external FQDN as the hosting provider of the user whose name equals to the FDQN parameter.
+  Users must be retrieved by their identity and they cannot already have assigned licenses.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cshybridmediationserver
+  applicable: Skype for Business Online
+  title: Set-CsHybridMediationServer
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

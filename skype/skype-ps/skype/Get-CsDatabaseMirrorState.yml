@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about whether database mirroring has been implemented for a specified database on a specified pool.
+  Database mirroring enables you to simultaneously maintain two copies of a database, with each copy residing on a different server.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Deployment.DatabaseMirrorState" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Install-CsMirrorDatabase
+  href: Install-CsMirrorDatabase.yml
+- text: Uninstall-CsMirrorDatabase
+  href: Uninstall-CsMirrorDatabase.yml
+syntaxes:
+- >-
+  Get-CsDatabaseMirrorState -PoolFqdn <Fqdn> [-DatabaseType <DatabaseNameType>] [-LocalStore] [-Report <String>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsDatabaseMirrorState -PoolFqdn "atl-cs-001.litwareinc.com" -DatabaseType Monitoring
+  description: |-
+    The command shown in Example 1 returns the state of the database mirror assigned to the monitoring database for the pool atl-cs-001.litwareinc.com.
+  summary: ""
+parameters:
+- type: <xref href="DatabaseNameType" data-throw-if-not-resolved="False" />
+  name: DatabaseType
+  description: |+
+    Type of database whose mirror state is being checked.
+
+    Allowed values for Lync Server 2013 are:
+    - App
+    - Archiving
+    - CMS
+    - Monitoring
+    - Provision
+    - User
+
+
+    Allowed values for Skype for Business Server 2015 are:
+    - ActiveMonitoring
+    - Application
+    - Archiving
+    - CentralMgmt
+    - Edge
+    - Lyss
+    - Monitoring
+    - PersistentChat
+    - PersistentChatCompliance
+    - Provision
+    - Registrar
+    - SigninTelemetry
+    - User
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the backup mirror state from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: PoolFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name of the pool whose database mirroring state is being checked.
+    For example:
+
+    `-PoolFqdn "atl-cs-001.litwareinc.com"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Report
+  description: |+
+    Enables you to specify a file path for the log file created when the cmdlet runs.
+    For example:
+
+    `-Report "C:\Logs\DatabaseMirrorState.html"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.Get-CsDatabaseMirrorState
+name: Get-CsDatabaseMirrorState
+description: |-
+  The Get-CsDatabaseMirrorState cmdlet returns information about the mirror databases configured for a pool; this includes information about the mirror databases that might (or might not) have been configured for the Front End server database, the Location Information Service database, the call detail recording and Quality of Experience databases, and so on.
+  For each database the cmdlet will report back the synchronization status for both the primary database and the mirror database.
+  In some cases you will see output similar to this, including the property value DatabaseInaccessibleOrMirroringNotEnabled:
+
+  DatabaseName : lcscdr
+
+  StateOnPrimary : DatabaseInaccessibleOrMirroringNotEnabled
+
+  StateOnMirror : DatabaseInaccessibleOrMirroringNotEnabled
+
+  MirroringStatusOnPrimary :
+
+  MirroringStatusOnSecondary :
+
+  That typically means that no mirror database has been assigned to the primary database (in this case, the database lcscdr, used for maintaining call detail data).
+
+  The functions carried out by the Get-CsDatabaseMirrorState cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csdatabasemirrorstate
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: Get-CsDatabaseMirrorState
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

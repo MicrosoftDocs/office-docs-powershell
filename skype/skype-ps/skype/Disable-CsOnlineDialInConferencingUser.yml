@@ -1,0 +1,185 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > This cmdlet will be deprecated on December 31, 2021. To disable Audio Conferencing for a user, please unassign the Audio Conferencing license from the user or disable the Audio Conferencing component from the license that is assigned to the user. For additional information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
+
+  Use the `Disable-CsOnlineDialInConferencingUser` cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Enable-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps
+- text: Get-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps
+- text: Set-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps
+syntaxes:
+- >-
+  Disable-CsOnlineDialInConferencingUser [-WhatIf] [-SendEmailFromDisplayName <String>] [-TenantDomain <String>]
+
+   [-SendEmailToAddress <String>] [-SendEmailFromAddress <String>] [-Confirm] [-SendEmail] [[-Identity] <UserIdParameter>]
+
+   [-Tenant <Guid>] [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
+  description: |-
+    This example disables user "Pilar Ackerman" from using audio conferencing and will prompt you to confirm the operation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the identity of the user account that will be disabled for Skype for Business Online.
+    A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
+    You can also reference a user account by using the user's Active Directory distinguished name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SendEmail
+  description: |+
+    Send an email to the user containing their Audio Conference information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailFromAddress
+  description: |+
+    You can specify the From Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromDisplayName and -SendEmail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailFromDisplayName
+  description: |+
+    You can specify the Display Name to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmailFromAddress and -SendEmail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailToAddress
+  description: |+
+    You can specify the To Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    NOTE: This parameter is reserved for internal Microsoft use.
+
+    Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+    For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+    You can find your tenant ID by running this command: 
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    NOTE: This parameter is reserved for internal Microsoft use.
+
+    Specifies the domain name for the tenant or organization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Disable-CsOnlineDialInConferencingUser
+name: Disable-CsOnlineDialInConferencingUser
+description: |-
+  The `Disable-CsOnlineDialInConferencingUser` cmdlet validates that the user is provisioned for audio conferencing using Microsoft as the audio conferencing provider and then disables audio conferencing which prevents the user from setting up audio conferences or meetings.
+
+  When a user is disabled, the conference ID or passcode that was assigned to the user is released so it can be used by another user that is enabled for dial-in or audio conferencing even if they have a license assigned to them.
+
+  When you disable the user for audio conferencing using this cmdlet, it will check that the user belongs to the specified tenant or domain and any audio conferencing information is removed.
+
+  If the user is enabled for a third-party audio conferencing provider (ACP) and the Active Directory information is set, the cmdlet will fail and you must use the Remove-CsUserACP cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser
+  applicable: Skype for Business Online
+  title: Disable-CsOnlineDialInConferencingUser
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

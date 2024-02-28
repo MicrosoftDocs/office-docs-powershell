@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!CAUTION]
+  > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+
+  The `Remove-CsOnlineApplicationEndpoint` is used to remove a Trusted Application Endpoint for a tenant.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Set-CsOnlineApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/set-csonlineapplicationendpoint
+- text: New-CsOnlineApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/new-csonlineapplicationendpoint
+- text: Get-CsOnlineApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/get-csonlineapplicationendpoint
+- text: Set up a Trusted Application Endpoint
+  href: https://learn.microsoft.com/skype-sdk/trusted-application-api/docs/trustedapplicationendpoint
+syntaxes:
+- >-
+  Remove-CsOnlineApplicationEndpoint [-Uri] <String> [-Audience <String>] [-Ring <String>]
+
+   [-PhoneNumber <String>] [-IsInternalRun <Boolean>] [-Tenant <Guid>]
+
+   [-RunFullProvisioningFlow <Boolean>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsOnlineApplicationEndpoint -Uri "sip:sample@domain.com"
+  description: |-
+    This exampes removes the "sample@domain.com" application endpoint.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Audience
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsInternalRun
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  description: |+
+    The service number assigned to the trusted application endpoint.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Ring
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RunFullProvisioningFlow
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+    -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+    You can return your tenant ID by running this command:
+
+    Get-CsTenant | Select-Object DisplayName, TenantID
+
+    If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Uri
+  description: |+
+    Sip Uri that identifies the tenant specific endpoint for the application.
+
+  defaultValue: None
+  position: "1"
+  aliases: SipUri
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Remove-CsOnlineApplicationEndpoint
+name: Remove-CsOnlineApplicationEndpoint
+description: |-
+  This cmdlet is used to remove a Trusted Application Endpoint for a tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlineapplicationendpoint
+  applicable: Skype for Business Online
+  title: Remove-CsOnlineApplicationEndpoint
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

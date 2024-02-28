@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing Teams call hold policy in your tenant. The Teams call hold policy is used to customize the call hold experience for Teams clients.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsCallHoldPolicy
+  href: Get-CsTeamsCallHoldPolicy.yml
+- text: New-CsTeamsCallHoldPolicy
+  href: New-CsTeamsCallHoldPolicy.yml
+- text: Grant-CsTeamsCallHoldPolicy
+  href: Grant-CsTeamsCallHoldPolicy.yml
+- text: Remove-CsTeamsCallHoldPolicy
+  href: Remove-CsTeamsCallHoldPolicy.yml
+- text: Import-CsOnlineAudioFile
+  href: Import-CsOnlineAudioFile.yml
+syntaxes:
+- Set-CsTeamsCallHoldPolicy [-Identity] <string> [-Description <string>] [-AudioFileId <string>] [-StreamingSourceUrl <string>] [-StreamingSourceAuthType <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -AudioFileId "c65233-ac2a27-98701b-123ccc"
+  description: |-
+    The command shown in Example 1 modifies an existing per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.
+
+    This policy is re-assigned the audio file ID to be used to: c65233-ac2a27-98701b-123ccc, which is the ID referencing an audio file that was uploaded using the Import-CsOnlineAudioFile cmdlet.
+
+    Any Microsoft Teams users who are assigned this policy will have their call holds customized such that the user being held will hear the audio file specified by AudioFileId.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-CsTeamsCallHoldPolicy -Identity "ContosoPartnerTeamsCallHoldPolicy" -Description "country music"
+  description: |-
+    The command shown in Example 2 modifies an existing per-user Teams call hold policy with the Identity ContosoPartnerTeamsCallHoldPolicy.
+
+    This policy is re-assigned the description from its existing value to "country music".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AudioFileId
+  description: |+
+    A string representing the ID referencing an audio file uploaded via the Import-CsOnlineAudioFile cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Enables administrators to provide explanatory text to accompany a Teams call hold policy.
+
+    For example, the Description might include information about the users the policy should be assigned to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the Teams call hold policy being modified.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StreamingSourceAuthType
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StreamingSourceUrl
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Set-CsTeamsCallHoldPolicy
+name: Set-CsTeamsCallHoldPolicy
+description: |-
+  Teams call hold policies are used to customize the call hold experience for teams clients.
+
+  When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
+
+  Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csteamscallholdpolicy
+  applicable: Microsoft Teams
+  title: Set-CsTeamsCallHoldPolicy
+  schema: 2.0.0
+  ms.reviewer: ""
+  manager: abnair
+  ms.author: serdars
+  author: jenstrier

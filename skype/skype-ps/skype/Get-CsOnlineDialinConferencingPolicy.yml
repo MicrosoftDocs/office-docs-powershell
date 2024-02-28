@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the available Dial-in Conferencing policies in the tenant.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- Get-CsOnlineDialinConferencingPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsOnlineDialinConferencingPolicy [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineDialinConferencingPolicy
+  description: |-
+    This example retrieves all the available Dial in Conferencing policies in the tenant.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter accepts a wildcard string and returns all policies with identities matching that string. For example, a Filter value of tag:* will return all policies defined at the per-user level.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    A unique identifier specifying the scope and, in some cases the name, of the policy. If this parameter is omitted, all policies for the organization are returned.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Reserved for Microsoft Internal use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineDialinConferencingPolicy
+name: Get-CsOnlineDialinConferencingPolicy
+description: |-
+  Retrieves the available Dial-in Conferencing policies in the tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingpolicy
+  applicable: Skype for Business Online
+  title: Get-CsOnlineDialinConferencingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

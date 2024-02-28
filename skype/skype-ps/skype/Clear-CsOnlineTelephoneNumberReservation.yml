@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Clear-CsOnlineTelephoneNumberReservation` cmdlet to clear a reserved list of telephone numbers before they are acquired.
+  The telephone numbers will then be available for search and reservation again.
+
+  **Note**:
+
+  As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no longer be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+syntaxes:
+- >-
+  Clear-CsOnlineTelephoneNumberReservation [-Tenant <Guid>] -ReservationId <String>
+
+   -InventoryType <String> [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Clear-CsOnlineTelephoneNumberReservation -ReservationId b1ae43f5-07ab-4b81-be32-4b8cc2d11f75 -InventoryType Service
+  description: |-
+    This example clears a reservation with an inventory type of "Service".
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InventoryType
+  description: |+
+    Specifies the target telephone number type for the cmdlet.
+    Acceptable values are:
+
+    - "Service" for numbers assigned to conferencing support.
+
+    - "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReservationId
+  description: |+
+    Specifies the identification of the reservation you want to clear.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Clear-CsOnlineTelephoneNumberReservation
+name: Clear-CsOnlineTelephoneNumberReservation
+description: |-
+  This cmdlet will fail if any of the numbers in the reservation have already been assigned.
+  An error message will identify the source of the failure.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/clear-csonlinetelephonenumberreservation
+  applicable: Skype for Business Online
+  title: Clear-CsOnlineTelephoneNumberReservation
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

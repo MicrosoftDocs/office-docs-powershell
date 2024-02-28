@@ -1,0 +1,257 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!NOTE]
+  > This cmdlet will be deprecated on December 31, 2021. To enable Audio Conferencing for a user, please assign an Audio Conferencing license to the user and the user will be automatically enabled. For additional information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
+
+  Use the `Enable-CsOnlineDialInConferencingUser` cmdlet to enable a Skype for Business user to access audio conferencing through Skype for Business Online.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Disable-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps
+- text: Get-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser?view=skype-ps
+- text: Set-CsOnlineDialInConferencingUser
+  href: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps
+- text: Get-CsTeamsAudioConferencingPolicy
+  href: Get-CsTeamsAudioConferencingPolicy.yml
+- text: New-CsTeamsAudioConferencingPolicy
+  href: New-CsTeamsAudioConferencingPolicy.yml
+syntaxes:
+- >-
+  Enable-CsOnlineDialInConferencingUser [-AllowPstnOnlyMeetings <Boolean>] [-ServiceNumber <String>]
+
+   [-SendEmailFromDisplayName <String>] [-ConferenceId <Int32>] [-TenantDomain <String>]
+
+   [-TollFreeServiceNumber <String>] [-SendEmailToAddress <String>] [-SendEmailFromAddress <String>] [-SendEmail]
+
+   [[-Identity] <UserIdParameter>] [-Tenant <Guid>] [-AllowTollFreeDialIn <Boolean>] [-DomainController <Fqdn>]
+
+   [-ReplaceProvider] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:> Enable-CsOnlineDialInConferencingUser -Identity "Ken Meyer" -AllowPstnOnlyMeetings $false -ConferenceId 3659305 -ReplaceProvider -ServiceNumber 14255551234
+  description: |-
+    This example enables a user named Ken Meyer to use audio conferencing and set up Skype for Business Online dial-in meetings.
+    When the cmdlet runs, it will replace Ken's existing audio conferencing provider information, set the default phone number to 14255551234 and the ConferenceId for meetings to 3659305.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowPstnOnlyMeetings
+  description: |+
+    If true, non-authenticated users can start meetings.
+    If false, non-authenticated callers wait in the lobby until an authenticated user joins, thereby starting the meeting.
+    An authenticated user is a user who joins the meeting using a Skype for Business client, or the organizer that joined the meeting via dial-in conferencing and was authenticated by a PIN number.
+    The default is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowTollFreeDialIn
+  description: |+
+    If true, specified toll-free number is used in meeting invitations.
+    If false, specified toll-free number is not allowed to be used in meeting invitations.
+    The default is true.
+    This setting can ONLY be managed using the TeamsAudioConferencingPolicy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ConferenceId
+  description: |+
+    Specifies the ConferenceId that will be used by the user for dial-in meetings. The cmdlet will fail if:
+
+    The ConferenceId is already being used in the bridge where the user is assigned, or to which the user would be assigned.
+
+    The ConferenceId doesn't meet the ConferenceId format requirements.
+
+  defaultValue: None
+  position: Named
+  aliases: Passcode
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
+    You can also reference a user account by using the user's Active Directory distinguished name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReplaceProvider
+  description: |+
+    If present, the ReplaceProvider switch causes the user's default conferencing provider information to be set to Microsoft.
+    If omitted, the Active Directory information will not be updated.
+
+    If the ReplaceProvider parameter is not used and the user is enabled for a 3rd party conferencing provider, the cmdlet will fail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SendEmail
+  description: |+
+    Send an email to the user that contains his Audio Conference information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailFromAddress
+  description: |+
+    This property has been deprecated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailFromDisplayName
+  description: |+
+    This property has been deprecated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailToAddress
+  description: |+
+    You can specify the To Address to send the email that contains the Audio Conference information. This parameter must be used together with -SendEmail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceNumber
+  description: |+
+    Specifies the default phone number to be used by the user.
+    The default number is used in meeting invitations.
+    The service number parameter overwrites the default service number assigned to the bridge for the user.
+    The service number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+    For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+    You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    Specifies the domain name for the tenant or organization.
+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TollFreeServiceNumber
+  description: |+
+    Specifies a toll-free phone number to be used by the user. This number is then used in meeting invitations.
+    The toll-free number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Enable-CsOnlineDialInConferencingUser
+name: Enable-CsOnlineDialInConferencingUser
+description: |-
+  The `Enable-CsOnlineDialInConferencingUser` cmdlet allows a Skype for Business user to access audio conferencing through Skype for Business Online.
+  The cmdlet will validate if the user has the correct license assigned.
+  If the user already uses Microsoft as the audio conferencing provider, the cmdlet will run without any errors but no changes are made to the user.
+  The user can be moved from a third-party audio conferencing provider to Microsoft as the PSTN conferencing provider by using the ReplaceProvider parameter.
+
+  If the bridge information (BridgeID or BridgeName) isn't provided and the tenant is just using one audio conferencing bridge, the user is assigned to the bridge.
+  If the bridge information isn't provided and the tenant uses multiple audio conferencing bridges, the user is then assigned to the default bridge.
+
+  The audio conferencing provider name and domain information is automatically set for the user when they are enabled for audio conferencing.
+
+  > [!NOTE]
+  > If your conferencing provider is Microsoft, your users' conference IDs are set to Dynamic Only. This cannot be changed. Conference IDs are automatically set only for Skype for Business users enabled for Audio Conferencing.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser
+  applicable: Skype for Business Online
+  title: Enable-CsOnlineDialInConferencingUser
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

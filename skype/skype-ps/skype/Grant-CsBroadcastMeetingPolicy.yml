@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Grant-CsBroadcastMeetingPolicy cmdlet to assign a broadcast meeting policy to a user.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+links:
+- text: Get-CsBroadcastMeetingPolicy
+  href: Get-CsBroadcastMeetingPolicy.yml
+- text: Grant-CsConferencingPolicy
+  href: Grant-CsConferencingPolicy.yml
+- text: New-CsConferencingPolicy
+  href: New-CsConferencingPolicy.yml
+- text: Set-CsConferencingPolicy
+  href: Set-CsConferencingPolicy.yml
+- text: Set-CsBroadcastMeetingConfiguration
+  href: Set-CsBroadcastMeetingConfiguration.yml
+syntaxes:
+- >-
+  Grant-CsBroadcastMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+
+   [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Grant-CsBroadcastMeetingPolicy -Identity jphillips@contoso.com -PolicyName BroadcastMeetingPolicyAllEnabled
+  description: |-
+    This example grants the BroadcastMeetingPolicyAllEnabled policy to a user identified by their User Principal Name (UPN).
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Grant-CsBroadcastMeetingPolicy -Identity jphillips@contoso.com -PolicyName $Null
+  description: |-
+    In Example 2, any per-user broadcast meeting policy previously assigned to the user jphillips is unassigned from that user; as a result, they will be managed by the global broadcast meeting policy.
+    To unassign a per-user policy, set the PolicyName to a null value ($Null).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the identity of the target user.
+    Acceptable values include:
+
+    Example: jphillips@contoso.com
+
+    Example: sip:jphillips@contoso.com
+
+    Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Enables you to pass a user object through the pipeline that represents the user account being assigned the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Specifies the name of the policy to be assigned to a user.
+    A list of the policies for your organization can be retrieved using Get-CsBroadcastMeetingPolicy.
+    The PolicyName is the policy identity minus the policy scope (the "tag:" prefix).
+    For example, a policy with the identity "Tag:BroadcastMeetingPolicyDisabled" has a PolicyName equal to "BroadcastMeetingPolicyDisabled".
+    To unassign a previously assigned policy, set PolicyName to $Null.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Grant-CsBroadcastMeetingPolicy
+name: Grant-CsBroadcastMeetingPolicy
+description: |-
+  Administrators can manage Broadcast meeting functionality in Microsoft Teams or Skype for Business Online using the following:
+
+  - Broadcast meeting configuration at the tenant level
+  - Broadcast meeting policy at the user level
+  - Conferencing  policy at the user level.
+
+  Broadcast meeting configuration and broadcast meeting policy govern broadcast-specific functionality. In addition, the settings of the conferencing policy assigned to the user producing the broadcast also general conferencing settings that are also relevant for broadcast meetings.  
+
+  This document describes how to specify which broadcast meeting policy is assigned to a user. Be sure to also review the following docs to manage conferencing policy:[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.yml), [New-CsConferencingPolicy](New-CsConferencingPolicy.yml), and [Set-CsConferencingPolicy](Set-CsConferencingPolicy.yml).
+
+  **NOTES**:
+
+  - Broadcast meeting policies are predefined in Microsoft Teams or Skype for Business. The defined settings for each policy can be displayed by using the Get-CsBroadcastMeetingPolicy cmdlet with no parameters.
+  - New broadcast meeting policy instance can't be created, and existing policies can't be modified. They can only be granted, or assigned to users.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/grant-csbroadcastmeetingpolicy
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Grant-CsBroadcastMeetingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

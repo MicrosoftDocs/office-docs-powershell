@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an existing Teams call hold policy in your tenant. The Teams call hold policy is used to customize the call hold experience for Teams clients.
+module: SkypeForBusiness
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsCallHoldPolicy
+  href: New-CsTeamsCallHoldPolicy.yml
+- text: Get-CsTeamsCallHoldPolicy
+  href: Get-CsTeamsCallHoldPolicy.yml
+- text: Set-CsTeamsCallHoldPolicy
+  href: Set-CsTeamsCallHoldPolicy.yml
+- text: Grant-CsTeamsCallHoldPolicy
+  href: Grant-CsTeamsCallHoldPolicy.yml
+syntaxes:
+- Remove-CsTeamsCallHoldPolicy [-Identity] <string> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTeamsCallHoldPolicy -Identity 'ContosoPartnerTeamsCallHoldPolicy'
+  description: |-
+    The command shown in Example 1 deletes the Teams call hold policy ContosoPartnerTeamsCallHoldPolicy.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTeamsCallHoldPolicy -Filter 'Tag:*' | Remove-CsTeamsCallHoldPolicy
+  description: |-
+    In Example 2, all the Teams call hold policies configured at the per-user scope are removed.
+    The Filter value "Tag:*" limits the returned data to Teams call hold policies configured at the per-user scope. Those per-user policies are then removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the Teams call hold policy to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Remove-CsTeamsCallHoldPolicy
+name: Remove-CsTeamsCallHoldPolicy
+description: |-
+  Teams call hold policies are used to customize the call hold experience for teams clients.
+  When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
+
+  Assigning a Teams call hold policy to a user sets an audio file to be played during the duration of the hold.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamscallholdpolicy
+  applicable: Microsoft Teams
+  title: Remove-CsTeamsCallHoldPolicy
+  schema: 2.0.0
+  ms.reviewer: ""
+  manager: abnair
+  ms.author: serdars
+  author: jenstrier

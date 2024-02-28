@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The Get-CsAutoAttendantSupportedTimeZone cmdlet gets supported time zones for the Auto Attendant (AA) service.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsAutoAttendantSupportedTimeZone cmdlet accepts a string as the Identity parameter.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.OAA.Models.TimeZone" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsAutoAttendantSupportedTimeZone [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsAutoAttendantSupportedTimeZone
+  description: |-
+    This example gets all supported time zones.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsAutoAttendantSupportedTimeZone -Identity "Pacific Standard Time"
+  description: |-
+    This example gets the timezone that the Identity parameter specifies (Pacific Standard Time).
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies a time zone to be retrieved. If this parameter is not used, then all supported time zones are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsAutoAttendantSupportedTimeZone
+name: Get-CsAutoAttendantSupportedTimeZone
+description: |-
+  The Get-CsAutoAttendantSupportedTimeZone cmdlet gets all the time zones that the AA service supports, or a specific time zone if its Identity is provided.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csautoattendantsupportedtimezone
+  applicable: Skype for Business Online
+  title: Get-CsAutoAttendantSupportedTimeZone
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

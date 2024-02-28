@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsOnlineDialinConferencingTenantConfiguration cmdlet to retrieve the tenant level configuration for dial-in conferencing.
+  The dial-in conferencing configuration specifies if dial-in conferencing is enabled for the tenant.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.OnLineDialInConferencing.OnLineDialInConferencingTenantConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsOnlineDialinConferencingTenantConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>]
+
+   [-LocalStore] [<CommonParameters>]
+- >-
+  Get-CsOnlineDialinConferencingTenantConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineDialinConferencingTenantConfiguration
+  description: |-
+    This example returns the configuration for the tenant administrator's organization.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the configuration from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineDialinConferencingTenantConfiguration
+name: Get-CsOnlineDialinConferencingTenantConfiguration
+description: |-
+  The dial-in conferencing configuration specifies only if dial-in conferencing is enabled for the tenant.
+  By contrast, the dial-in conferencing tenant settings specify what functions are available during a conference call.
+  For example, whether or not entries and exits from the call are announced.
+  The settings also manage some of the administrative functions, such as when users get notification of administrative actions, like a PIN change.
+  For more information on settings and their customization, see Set-CsOnlineDialInConferencingTenantSettings.
+
+  This cmdlet currently displays only the enabled or disabled status of your tenant configuration.
+  There is one configuration per tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingtenantconfiguration
+  applicable: Skype for Business Online
+  title: Get-CsOnlineDialinConferencingTenantConfiguration
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

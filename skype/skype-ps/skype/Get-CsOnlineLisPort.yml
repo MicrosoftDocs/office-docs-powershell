@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves one or more ports from the location configuration database. Each port can be associated with a location, in which case this cmdlet will also retrieve the location information of the ports. This location association is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlineLisPort
+  href: Set-CsOnlineLisPort.yml
+- text: Remove-CsOnlineLisPort
+  href: Remove-CsOnlineLisPort.yml
+syntaxes:
+- Get-CsOnlineLisPort [[-ChassisID] <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-PortID <string>] [-TargetStore <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsOnlineLisPort
+
+    PortID  ChassisID         LocationId                           Description
+    ------  ---------         ----------                           -----------
+    G1/0/30 B8-BE-BF-4A-A3-00 9905bca0-6fb0-11ec-84a4-25019013784a
+    S2/0/25 F6-26-79-B5-3D-49 d7714269-ee52-4635-97b0-d7c228801d24
+  description: |-
+    Example 1 retrieves all Location Information Server (LIS) ports and any associated locations.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsOnlineLisPort -ChassisID 'B8-BE-BF-4A-A3-00' -PortID 'G1/0/30'
+
+    PortID  ChassisID         LocationId                           Description
+    ------  ---------         ----------                           -----------
+    G1/0/30 B8-BE-BF-4A-A3-00 9905bca0-6fb0-11ec-84a4-25019013784a
+  description: |-
+    Example 2 retrieves the location information for port G1/0/30 with ChassisID B8-BE-BF-4A-A3-00.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ChassisID
+  description: |+
+    The Media Access Control (MAC) address of the port's switch. This value will be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsDebug
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NCSApiUrl
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PortID
+  description: |+
+    This parameter identifies the ID of the port.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Get-CsOnlineLisPort
+name: Get-CsOnlineLisPort
+description: |-
+  Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet retrieves information on associations between physical locations and the port through which the client is connected.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinelisport
+  applicable: Microsoft Teams
+  title: Get-CsOnlineLisPort
+  schema: 2.0.0
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

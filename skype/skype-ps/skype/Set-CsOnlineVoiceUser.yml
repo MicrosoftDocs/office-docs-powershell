@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Set-CsOnlineVoiceUser` cmdlet to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
+
+  **Note**: This cmdlet has been deprecated. Use the new
+  [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and
+  [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+syntaxes:
+- >-
+  Set-CsOnlineVoiceUser [-Identity] <UserIdParameter> [-Tenant <Guid>] [-TelephoneNumber <String>]
+
+   [-LocationID <Guid>] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneNumber +14255037311 -LocationID c7c5a17f-00d7-47c0-9ddb-3383229d606b
+  description: |-
+    This example sets the telephone number and location for a user identified by the user ObjectID.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Set-CsOnlineVoiceUser -Identity user@domain.com -TelephoneNumber $null
+  description: |-
+    This example removes the telephone number for a user identified by the user's SIP address.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the identity of the target user.
+    Acceptable values include:
+
+    Example: jphillips@contoso.com
+
+    Example: sip:jphillips@contoso.com
+
+    Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+    You can use the `Get-CsOnlineUser` cmdlet to identify the users you want to modify.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: LocationID
+  description: |+
+    Specifies the unique identifier of the emergency location to assign to the user.
+    Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmdlet.
+
+    This parameter is required for users based in the US.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TelephoneNumber
+  description: |+
+    Specifies the telephone number to be assigned to the user.
+    The value must be in E.164 format: +14255043920.
+    Setting the value to $Null clears the user's telephone number.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf parameter is not implemented for this cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsOnlineVoiceUser
+name: Set-CsOnlineVoiceUser
+description: ""
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceuser
+  applicable: Skype for Business Online
+  title: Set-CsOnlineVoiceUser
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

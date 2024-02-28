@@ -1,0 +1,350 @@
+items:
+- name: Reference
+  items:
+  - name: MicrosoftTeamsPowerShell
+    uid: MicrosoftTeamsPowerShell
+    items:
+    - name: Add-TeamChannelUser
+      uid: MicrosoftTeamsPowerShell.Add-TeamChannelUser
+    - name: Add-TeamsAppInstallation
+      uid: MicrosoftTeamsPowerShell.Add-TeamsAppInstallation
+    - name: Add-TeamUser
+      uid: MicrosoftTeamsPowerShell.Add-TeamUser
+    - name: Clear-CsOnlineTelephoneNumberOrder
+      uid: MicrosoftTeamsPowerShell.Clear-CsOnlineTelephoneNumberOrder
+    - name: Clear-TeamsEnvironmentConfig
+      uid: MicrosoftTeamsPowerShell.Clear-TeamsEnvironmentConfig
+    - name: Complete-CsOnlineTelephoneNumberOrder
+      uid: MicrosoftTeamsPowerShell.Complete-CsOnlineTelephoneNumberOrder
+    - name: Connect-MicrosoftTeams
+      uid: MicrosoftTeamsPowerShell.Connect-MicrosoftTeams
+    - name: Disable-CsTeamsShiftsConnectionErrorReport
+      uid: MicrosoftTeamsPowerShell.Disable-CsTeamsShiftsConnectionErrorReport
+    - name: Disconnect-MicrosoftTeams
+      uid: MicrosoftTeamsPowerShell.Disconnect-MicrosoftTeams
+    - name: Get-AssociatedTeam
+      uid: MicrosoftTeamsPowerShell.Get-AssociatedTeam
+    - name: Get-CsBatchPolicyAssignmentOperation
+      uid: MicrosoftTeamsPowerShell.Get-CsBatchPolicyAssignmentOperation
+    - name: Get-CsBatchTeamsDeploymentStatus
+      uid: MicrosoftTeamsPowerShell.Get-CsBatchTeamsDeploymentStatus
+    - name: Get-CsCloudCallDataConnection
+      uid: MicrosoftTeamsPowerShell.Get-CsCloudCallDataConnection
+    - name: Get-CsGroupPolicyAssignment
+      uid: MicrosoftTeamsPowerShell.Get-CsGroupPolicyAssignment
+    - name: Get-CsHybridTelephoneNumber
+      uid: MicrosoftTeamsPowerShell.Get-CsHybridTelephoneNumber
+    - name: Get-CsOnlineTelephoneNumberCountry
+      uid: MicrosoftTeamsPowerShell.Get-CsOnlineTelephoneNumberCountry
+    - name: Get-CsOnlineTelephoneNumberOrder
+      uid: MicrosoftTeamsPowerShell.Get-CsOnlineTelephoneNumberOrder
+    - name: Get-CsOnlineTelephoneNumberType
+      uid: MicrosoftTeamsPowerShell.Get-CsOnlineTelephoneNumberType
+    - name: Get-CsPhoneNumberAssignment
+      uid: MicrosoftTeamsPowerShell.Get-CsPhoneNumberAssignment
+    - name: Get-CsPolicyPackage
+      uid: MicrosoftTeamsPowerShell.Get-CsPolicyPackage
+    - name: Get-CsTeamsAcsFederationConfiguration
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsAcsFederationConfiguration
+    - name: Get-CsTeamsEducationConfiguration
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsEducationConfiguration
+    - name: Get-CsTeamsEnhancedEncryptionPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsEnhancedEncryptionPolicy
+    - name: Get-CsTeamsEventsPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsEventsPolicy
+    - name: Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+    - name: Get-CsTeamsMediaLoggingPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsMediaLoggingPolicy
+    - name: Get-CsTeamsMeetingTemplateConfiguration
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsMeetingTemplateConfiguration
+    - name: Get-CsTeamsMeetingTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsMeetingTemplatePermissionPolicy
+    - name: Get-CsTeamsSharedCallingRoutingPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsSharedCallingRoutingPolicy
+    - name: Get-CsTeamsShiftsConnection
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnection
+    - name: Get-CsTeamsShiftsConnectionConnector
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionConnector
+    - name: Get-CsTeamsShiftsConnectionErrorReport
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionErrorReport
+    - name: Get-CsTeamsShiftsConnectionInstance
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionInstance
+    - name: Get-CsTeamsShiftsConnectionOperation
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionOperation
+    - name: Get-CsTeamsShiftsConnectionSyncResult
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionSyncResult
+    - name: Get-CsTeamsShiftsConnectionTeamMap
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionTeamMap
+    - name: Get-CsTeamsShiftsConnectionWfmTeam
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionWfmTeam
+    - name: Get-CsTeamsShiftsConnectionWfmUser
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionWfmUser
+    - name: Get-CsTeamsShiftsPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsPolicy
+    - name: Get-CsTeamsSipDevicesConfiguration
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsSipDevicesConfiguration
+    - name: Get-CsTeamsTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsTemplatePermissionPolicy
+    - name: Get-CsTeamsUnassignedNumberTreatment
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsUnassignedNumberTreatment
+    - name: Get-CsTeamsVirtualAppointmentsPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsVirtualAppointmentsPolicy
+    - name: Get-CsTeamsVoiceApplicationsPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsVoiceApplicationsPolicy
+    - name: Get-CsTeamsWorkLocationDetectionPolicy
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamsWorkLocationDetectionPolicy
+    - name: Get-CsTeamTemplate
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamTemplate
+    - name: Get-CsTeamTemplateList
+      uid: MicrosoftTeamsPowerShell.Get-CsTeamTemplateList
+    - name: Get-CsUserCallingSettings
+      uid: MicrosoftTeamsPowerShell.Get-CsUserCallingSettings
+    - name: Get-CsUserPolicyAssignment
+      uid: MicrosoftTeamsPowerShell.Get-CsUserPolicyAssignment
+    - name: Get-CsUserPolicyPackage
+      uid: MicrosoftTeamsPowerShell.Get-CsUserPolicyPackage
+    - name: Get-CsUserPolicyPackageRecommendation
+      uid: MicrosoftTeamsPowerShell.Get-CsUserPolicyPackageRecommendation
+    - name: Get-LicenseReportForChangeNotificationSubscription
+      uid: MicrosoftTeamsPowerShell.Get-LicenseReportForChangeNotificationSubscription
+    - name: Get-SharedWithTeam
+      uid: MicrosoftTeamsPowerShell.Get-SharedWithTeam
+    - name: Get-SharedWithTeamUser
+      uid: MicrosoftTeamsPowerShell.Get-SharedWithTeamUser
+    - name: Get-Team
+      uid: MicrosoftTeamsPowerShell.Get-Team
+    - name: Get-TeamAllChannel
+      uid: MicrosoftTeamsPowerShell.Get-TeamAllChannel
+    - name: Get-TeamChannel
+      uid: MicrosoftTeamsPowerShell.Get-TeamChannel
+    - name: Get-TeamChannelUser
+      uid: MicrosoftTeamsPowerShell.Get-TeamChannelUser
+    - name: Get-TeamFunSettings
+      uid: MicrosoftTeamsPowerShell.Get-TeamFunSettings
+    - name: Get-TeamGuestSettings
+      uid: MicrosoftTeamsPowerShell.Get-TeamGuestSettings
+    - name: Get-TeamIncomingChannel
+      uid: MicrosoftTeamsPowerShell.Get-TeamIncomingChannel
+    - name: Get-TeamMemberSettings
+      uid: MicrosoftTeamsPowerShell.Get-TeamMemberSettings
+    - name: Get-TeamMessagingSettings
+      uid: MicrosoftTeamsPowerShell.Get-TeamMessagingSettings
+    - name: Get-TeamsApp
+      uid: MicrosoftTeamsPowerShell.Get-TeamsApp
+    - name: Get-TeamsAppInstallation
+      uid: MicrosoftTeamsPowerShell.Get-TeamsAppInstallation
+    - name: Get-TeamTargetingHierarchyStatus
+      uid: MicrosoftTeamsPowerShell.Get-TeamTargetingHierarchyStatus
+    - name: Get-TeamUser
+      uid: MicrosoftTeamsPowerShell.Get-TeamUser
+    - name: Grant-CsGroupPolicyPackageAssignment
+      uid: MicrosoftTeamsPowerShell.Grant-CsGroupPolicyPackageAssignment
+    - name: Grant-CsTeamsEnhancedEncryptionPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsEnhancedEncryptionPolicy
+    - name: Grant-CsTeamsEventsPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsEventsPolicy
+    - name: Grant-CsTeamsMediaLoggingPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsMediaLoggingPolicy
+    - name: Grant-CsTeamsMeetingTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsMeetingTemplatePermissionPolicy
+    - name: Grant-CsTeamsSharedCallingRoutingPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsSharedCallingRoutingPolicy
+    - name: Grant-CsTeamsShiftsPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsShiftsPolicy
+    - name: Grant-CsTeamsVirtualAppointmentsPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsVirtualAppointmentsPolicy
+    - name: Grant-CsTeamsVoiceApplicationsPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsVoiceApplicationsPolicy
+    - name: Grant-CsTeamsWorkLocationDetectionPolicy
+      uid: MicrosoftTeamsPowerShell.Grant-CsTeamsWorkLocationDetectionPolicy
+    - name: Grant-CsUserPolicyPackage
+      uid: MicrosoftTeamsPowerShell.Grant-CsUserPolicyPackage
+    - name: New-CsBatchPolicyAssignmentOperation
+      uid: MicrosoftTeamsPowerShell.New-CsBatchPolicyAssignmentOperation
+    - name: New-CsBatchPolicyPackageAssignmentOperation
+      uid: MicrosoftTeamsPowerShell.New-CsBatchPolicyPackageAssignmentOperation
+    - name: New-CsBatchTeamsDeployment
+      uid: MicrosoftTeamsPowerShell.New-CsBatchTeamsDeployment
+    - name: New-CsCloudCallDataConnection
+      uid: MicrosoftTeamsPowerShell.New-CsCloudCallDataConnection
+    - name: New-CsCustomPolicyPackage
+      uid: MicrosoftTeamsPowerShell.New-CsCustomPolicyPackage
+    - name: New-CsGroupPolicyAssignment
+      uid: MicrosoftTeamsPowerShell.New-CsGroupPolicyAssignment
+    - name: New-CsHybridTelephoneNumber
+      uid: MicrosoftTeamsPowerShell.New-CsHybridTelephoneNumber
+    - name: New-CsOnlineTelephoneNumberOrder
+      uid: MicrosoftTeamsPowerShell.New-CsOnlineTelephoneNumberOrder
+    - name: New-CsTeamsEnhancedEncryptionPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsEnhancedEncryptionPolicy
+    - name: New-CsTeamsEventsPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsEventsPolicy
+    - name: New-CsTeamsHiddenMeetingTemplate
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsHiddenMeetingTemplate
+    - name: New-CsTeamsHiddenTemplate
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsHiddenTemplate
+    - name: New-CsTeamsMeetingTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsMeetingTemplatePermissionPolicy
+    - name: New-CsTeamsSharedCallingRoutingPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsSharedCallingRoutingPolicy
+    - name: New-CsTeamsShiftsConnection
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsShiftsConnection
+    - name: New-CsTeamsShiftsConnectionBatchTeamMap
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsShiftsConnectionBatchTeamMap
+    - name: New-CsTeamsShiftsConnectionInstance
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsShiftsConnectionInstance
+    - name: New-CsTeamsShiftsPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsShiftsPolicy
+    - name: New-CsTeamsTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsTemplatePermissionPolicy
+    - name: New-CsTeamsUnassignedNumberTreatment
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsUnassignedNumberTreatment
+    - name: New-CsTeamsVirtualAppointmentsPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsVirtualAppointmentsPolicy
+    - name: New-CsTeamsVoiceApplicationsPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsVoiceApplicationsPolicy
+    - name: New-CsTeamsWorkLocationDetectionPolicy
+      uid: MicrosoftTeamsPowerShell.New-CsTeamsWorkLocationDetectionPolicy
+    - name: New-CsTeamTemplate
+      uid: MicrosoftTeamsPowerShell.New-CsTeamTemplate
+    - name: New-CsUserCallingDelegate
+      uid: MicrosoftTeamsPowerShell.New-CsUserCallingDelegate
+    - name: New-Team
+      uid: MicrosoftTeamsPowerShell.New-Team
+    - name: New-TeamChannel
+      uid: MicrosoftTeamsPowerShell.New-TeamChannel
+    - name: New-TeamsApp
+      uid: MicrosoftTeamsPowerShell.New-TeamsApp
+    - name: Remove-CsCustomPolicyPackage
+      uid: MicrosoftTeamsPowerShell.Remove-CsCustomPolicyPackage
+    - name: Remove-CsGroupPolicyAssignment
+      uid: MicrosoftTeamsPowerShell.Remove-CsGroupPolicyAssignment
+    - name: Remove-CsHybridTelephoneNumber
+      uid: MicrosoftTeamsPowerShell.Remove-CsHybridTelephoneNumber
+    - name: Remove-CsPhoneNumberAssignment
+      uid: MicrosoftTeamsPowerShell.Remove-CsPhoneNumberAssignment
+    - name: Remove-CsTeamsEnhancedEncryptionPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsEnhancedEncryptionPolicy
+    - name: Remove-CsTeamsEventsPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsEventsPolicy
+    - name: Remove-CsTeamsMeetingTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsMeetingTemplatePermissionPolicy
+    - name: Remove-CsTeamsSharedCallingRoutingPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsSharedCallingRoutingPolicy
+    - name: Remove-CsTeamsShiftsConnection
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsShiftsConnection
+    - name: Remove-CsTeamsShiftsConnectionInstance
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsShiftsConnectionInstance
+    - name: Remove-CsTeamsShiftsConnectionTeamMap
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsShiftsConnectionTeamMap
+    - name: Remove-CsTeamsShiftsPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsShiftsPolicy
+    - name: Remove-CsTeamsShiftsScheduleRecord
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsShiftsScheduleRecord
+    - name: Remove-CsTeamsTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsTemplatePermissionPolicy
+    - name: Remove-CsTeamsUnassignedNumberTreatment
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsUnassignedNumberTreatment
+    - name: Remove-CsTeamsVirtualAppointmentsPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsVirtualAppointmentsPolicy
+    - name: Remove-CsTeamsVoiceApplicationsPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsVoiceApplicationsPolicy
+    - name: Remove-CsTeamsWorkLocationDetectionPolicy
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamsWorkLocationDetectionPolicy
+    - name: Remove-CsTeamTemplate
+      uid: MicrosoftTeamsPowerShell.Remove-CsTeamTemplate
+    - name: Remove-CsUserCallingDelegate
+      uid: MicrosoftTeamsPowerShell.Remove-CsUserCallingDelegate
+    - name: Remove-SharedWithTeam
+      uid: MicrosoftTeamsPowerShell.Remove-SharedWithTeam
+    - name: Remove-Team
+      uid: MicrosoftTeamsPowerShell.Remove-Team
+    - name: Remove-TeamChannel
+      uid: MicrosoftTeamsPowerShell.Remove-TeamChannel
+    - name: Remove-TeamChannelUser
+      uid: MicrosoftTeamsPowerShell.Remove-TeamChannelUser
+    - name: Remove-TeamsApp
+      uid: MicrosoftTeamsPowerShell.Remove-TeamsApp
+    - name: Remove-TeamsAppInstallation
+      uid: MicrosoftTeamsPowerShell.Remove-TeamsAppInstallation
+    - name: Remove-TeamTargetingHierarchy
+      uid: MicrosoftTeamsPowerShell.Remove-TeamTargetingHierarchy
+    - name: Remove-TeamUser
+      uid: MicrosoftTeamsPowerShell.Remove-TeamUser
+    - name: Set-CsGroupPolicyAssignment
+      uid: MicrosoftTeamsPowerShell.Set-CsGroupPolicyAssignment
+    - name: Set-CsPhoneNumberAssignment
+      uid: MicrosoftTeamsPowerShell.Set-CsPhoneNumberAssignment
+    - name: Set-CsTeamsAcsFederationConfiguration
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsAcsFederationConfiguration
+    - name: Set-CsTeamsEducationConfiguration
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsEducationConfiguration
+    - name: Set-CsTeamsEnhancedEncryptionPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsEnhancedEncryptionPolicy
+    - name: Set-CsTeamsEventsPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsEventsPolicy
+    - name: Set-CsTeamsMeetingTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsMeetingTemplatePermissionPolicy
+    - name: Set-CsTeamsSharedCallingRoutingPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsSharedCallingRoutingPolicy
+    - name: Set-CsTeamsShiftsConnection
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsShiftsConnection
+    - name: Set-CsTeamsShiftsConnectionInstance
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsShiftsConnectionInstance
+    - name: Set-CsTeamsShiftsPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsShiftsPolicy
+    - name: Set-CsTeamsSipDevicesConfiguration
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsSipDevicesConfiguration
+    - name: Set-CsTeamsTemplatePermissionPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsTemplatePermissionPolicy
+    - name: Set-CsTeamsUnassignedNumberTreatment
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsUnassignedNumberTreatment
+    - name: Set-CsTeamsVirtualAppointmentsPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsVirtualAppointmentsPolicy
+    - name: Set-CsTeamsVoiceApplicationsPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsVoiceApplicationsPolicy
+    - name: Set-CsTeamsWorkLocationDetectionPolicy
+      uid: MicrosoftTeamsPowerShell.Set-CsTeamsWorkLocationDetectionPolicy
+    - name: Set-CsUserCallingDelegate
+      uid: MicrosoftTeamsPowerShell.Set-CsUserCallingDelegate
+    - name: Set-CsUserCallingSettings
+      uid: MicrosoftTeamsPowerShell.Set-CsUserCallingSettings
+    - name: Set-Team
+      uid: MicrosoftTeamsPowerShell.Set-Team
+    - name: Set-TeamArchivedState
+      uid: MicrosoftTeamsPowerShell.Set-TeamArchivedState
+    - name: Set-TeamChannel
+      uid: MicrosoftTeamsPowerShell.Set-TeamChannel
+    - name: Set-TeamFunSettings
+      uid: MicrosoftTeamsPowerShell.Set-TeamFunSettings
+    - name: Set-TeamGuestSettings
+      uid: MicrosoftTeamsPowerShell.Set-TeamGuestSettings
+    - name: Set-TeamMemberSettings
+      uid: MicrosoftTeamsPowerShell.Set-TeamMemberSettings
+    - name: Set-TeamMessagingSettings
+      uid: MicrosoftTeamsPowerShell.Set-TeamMessagingSettings
+    - name: Set-TeamPicture
+      uid: MicrosoftTeamsPowerShell.Set-TeamPicture
+    - name: Set-TeamsApp
+      uid: MicrosoftTeamsPowerShell.Set-TeamsApp
+    - name: Set-TeamsEnvironmentConfig
+      uid: MicrosoftTeamsPowerShell.Set-TeamsEnvironmentConfig
+    - name: Set-TeamTargetingHierarchy
+      uid: MicrosoftTeamsPowerShell.Set-TeamTargetingHierarchy
+    - name: Test-CsTeamsShiftsConnectionValidate
+      uid: MicrosoftTeamsPowerShell.Test-CsTeamsShiftsConnectionValidate
+    - name: Test-CsTeamsUnassignedNumberTreatment
+      uid: MicrosoftTeamsPowerShell.Test-CsTeamsUnassignedNumberTreatment
+    - name: Update-CsCustomPolicyPackage
+      uid: MicrosoftTeamsPowerShell.Update-CsCustomPolicyPackage
+    - name: Update-CsTeamsShiftsConnection
+      uid: MicrosoftTeamsPowerShell.Update-CsTeamsShiftsConnection
+    - name: Update-CsTeamsShiftsConnectionInstance
+      uid: MicrosoftTeamsPowerShell.Update-CsTeamsShiftsConnectionInstance
+    - name: Update-CsTeamTemplate
+      uid: MicrosoftTeamsPowerShell.Update-CsTeamTemplate
+    - name: Update-TeamsAppInstallation
+      uid: MicrosoftTeamsPowerShell.Update-TeamsAppInstallation
+metadata:
+  universal_conceptual_toc: /powershell/teams/teams-ps/toc.json

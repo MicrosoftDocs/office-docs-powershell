@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Designates what meeting features guests using Microsoft Teams will have available.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- >-
+  Get-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsTeamsGuestMeetingConfiguration
+  description: |-
+    Returns the TeamsGuestMeetingConfiguration set in your organization.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The only value accepted is Global
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal Microsoft use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsTeamsGuestMeetingConfiguration
+name: Get-CsTeamsGuestMeetingConfiguration
+description: |-
+  The TeamsGuestMeetingConfiguration designates which meeting features guests leveraging Microsoft Teams will have available.  This configuration will apply to all guests utilizing Microsoft Teams.  Use the Get-CsTeamsGuestMeetingConfiguration cmdlet to return what values are set for your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  Module Name: Skype for Business Online
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsguestmeetingconfiguration
+  applicable: Skype for Business Online
+  title: Get-CsTeamsGuestMeetingConfiguration
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

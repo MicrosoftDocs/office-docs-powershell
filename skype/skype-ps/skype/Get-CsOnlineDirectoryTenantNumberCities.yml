@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsOnlineDirectoryTenantNumberCities cmdlet to retrieve the cities for which telephone numbers have been acquired by your organization.
+
+  **Note**:
+
+  As of April 30, 2022, the existing Skype for Business PowerShell cmdlets for telephone number search and related activities will be deprecated and will no longer be available for use. The new Teams PowerShell cmdlets for telephone number search and related activities are already available. For more details, see [New-CsOnlineTelephoneNumberOrder](https://learn.microsoft.com/powershell/module/teams/new-csonlinetelephonenumberorder?view=teams-ps).
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="IList<string> containing the geocodes of the relevant cities." data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsOnlineDirectoryTenantNumberCities [[-Tenant] <Guid>] [-DomainController <Fqdn>] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineDirectoryTenantNumberCities
+  description: |-
+    This example returns all the cities for which telephone numbers have been acquired by your organization.
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineDirectoryTenantNumberCities
+name: Get-CsOnlineDirectoryTenantNumberCities
+description: |-
+  This cmdlet can be used to fetch all the cities for which your organization has already acquired telephone numbers.
+  It is mainly used to filter cities for which telephone numbers are acquired.
+
+  The console output will be in the form:
+
+  Get-CsOnlineDirectoryTenantNumberCities
+
+  NOAM-US-CA-LA
+
+  NOAM-US-IL-CH
+
+  NOAM-US-NY-NY
+
+  NOAM-US-TX-DA
+
+  NOAM-US-MA-BO
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedirectorytenantnumbercities
+  applicable: Skype for Business Online
+  title: Get-CsOnlineDirectoryTenantNumberCities
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

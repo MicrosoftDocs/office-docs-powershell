@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an instance of TeamsTemplatePermissionPolicy.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsTemplatePermissionPolicy
+  href: Get-CsTeamsTemplatePermissionPolicy.yml
+- text: New-CsTeamsTemplatePermissionPolicy
+  href: New-CsTeamsTemplatePermissionPolicy.yml
+- text: Set-CsTeamsTemplatePermissionPolicy
+  href: Set-CsTeamsTemplatePermissionPolicy.yml
+syntaxes:
+- Remove-CsTeamsTemplatePermissionPolicy [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS >Remove-CsTeamsTemplatePermissionPolicy -Identity Foobar
+  description: |-
+    Deletes a policy instance with the Identity *Foobar*.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS >Remove-CsTeamsTemplatePermissionPolicy -Identity Foobar
+
+    Remove-CsTeamsTemplatePermissionPolicy : The policy "Foobar" is currently assigned to one or more users or groups. Ensure policy is not assigned before removing. Please refer to documentation. CorrelationId: 8622aac5-00c3-4071-b6d0-d070db8f663f
+    At line:1 char:1
+    + Remove-CsTeamsTemplatePermissionPolicy -Identity Foobar ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : NotSpecified: (:) [Remove-CsTeamsTemplatePermissionPolicy], PolicyRpException
+        + FullyQualifiedErrorId : ClientError,Microsoft.Teams.Policy.Administration.Cmdlets.Core.RemoveTeamsTemplatePermissionPolicyCmdlet
+  description: |-
+    Attempting to delete a policy instance that is currently assigned to users will result in an error. Remove the assignment before attempting to delete it.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+    You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Name of the policy instance to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsTemplatePermissionPolicy
+name: Remove-CsTeamsTemplatePermissionPolicy
+description: |-
+  Deletes an instance of TeamsTemplatePermissionPolicy. The `Identity` parameter accepts the identity of the policy instance to delete.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamstemplatepermissionpolicy
+  title: Remove-CsTeamsTemplatePermissionPolicy
+  author: yishuaihuang4
+  ms.author: yishuaihuang
+  ms.reviewer: ""
+  manager: weiliu2
+  schema: 2.0.0

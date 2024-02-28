@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Set-MailboxIRMAccess cmdlet to block delegate access to IRM-protected messages in other mailboxes (shared mailboxes or user mailboxes where delegates have Full Access permission).
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- Set-MailboxIRMAccess -AccessLevel <IRMAccessLevel> [-Identity] <MailboxIdParameter> -User <SecurityPrincipalIdParameter> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-MailboxIRMAccess -Identity lynette@contoso.onmicrosoft.com -User chris@contoso.onmicrosoft.com -AccessLevel Block
+  description: |-
+    This example prevents delegate Chris from reading IRM-protected messages in Lynette's mailbox.
+  summary: ""
+parameters:
+- type: <xref href="IRMAccessLevel" data-throw-if-not-resolved="False" />
+  name: AccessLevel
+  isRequired: true
+  description: |+
+    The AccessLevel parameter specifies what delegates can do to IRM-protected messages in the mailbox that's specified by the Identity parameter.
+
+    The only value for this parameter is Block, which means you can only use this cmdlet to block delegate access to IRM-protected messages in the mailbox.
+
+    To allow access to IRM-protected messages in the mailbox, use the Remove-MailboxIRMAccess cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: Block
+- type: <xref href="MailboxIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox. For example
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Domain\\Username
+    - Email address
+    - GUID
+    - LegacyExchangeDN
+    - SamAccountName
+    - User ID or user principal name (UPN)
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SecurityPrincipalIdParameter" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    **Note**: Delegates that you specify with this parameter must already have Full Access permission to the mailbox. For more information, see [Manage permissions for recipients in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-permissions-for-recipients).
+
+    The User parameter specifies the delegate who is blocked from reading IRM-protected messages in the mailbox. The delegate must be a user mailbox or a mail user. You can use any value that uniquely identifies the delegate. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Domain\\Username
+    - Email address
+    - GUID
+    - LegacyExchangeDN
+    - SamAccountName
+    - User ID or user principal name (UPN)
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+uid: ExchangePowerShell.Set-MailboxIRMAccess
+name: Set-MailboxIRMAccess
+description: |-
+  > [!NOTE]
+  > This cmdlet works only for delegates who already have Full Access permission to the mailbox. For more information, see [Manage permissions for recipients in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-permissions-for-recipients).
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.ServerStatus-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxirmaccess
+  applicable: Exchange Online
+  title: Set-MailboxIRMAccess
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

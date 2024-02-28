@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies one or more parameters of an exempt number pattern in the tenant list.
+module: SkypeForBusiness
+notes: |-
+  You can use Test-CsInboundBlockedNumberPattern to test your block and exempt phone number ranges.
+links:
+- text: Get-CsInboundExemptNumberPattern
+  href: Get-CsInboundExemptNumberPattern.yml
+- text: New-CsInboundExemptNumberPattern
+  href: New-CsInboundExemptNumberPattern.yml
+- text: Remove-CsInboundExemptNumberPattern
+  href: Remove-CsInboundExemptNumberPattern.yml
+- text: Test-CsInboundBlockedNumberPattern
+  href: Test-CsInboundBlockedNumberPattern.yml
+- text: Get-CsTenantBlockedCallingNumbers
+  href: Get-CsTenantBlockedCallingNumbers.yml
+syntaxes:
+- >-
+  Set-CsInboundExemptNumberPattern [[-Identity] <string>] [-Description <string>] [-Enabled <boolean>] [-Pattern <string>]
+
+    [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS> Set-CsInboundExemptNumberPattern -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$"
+  description: |-
+    Sets the inbound exempt number pattern for AllowContoso1
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS> Set-CsInboundExemptNumberPattern -Identity "AllowContoso1" -Enabled $False
+  description: |-
+    Disables the exempt number pattern from usage in call blocking
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Sets the description of the number pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    This parameter determines whether the number pattern is enabled for exemption or not.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the exempt number pattern to be changed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Pattern
+  isRequired: true
+  description: |+
+    A regular expression that the calling number must match in order to be exempt from blocking. It is best pratice to start the regular expression with the hat character and end it with the dollar character. You can use various regular expression test sites on the Internet to validate the expression.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsInboundExemptNumberPattern
+name: Set-CsInboundExemptNumberPattern
+description: |-
+  This cmdlet modifies one or more parameters of a exempt number pattern in the tenant list.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csinboundexemptnumberpattern
+  applicable: Microsoft Teams, Skype for Business Online
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

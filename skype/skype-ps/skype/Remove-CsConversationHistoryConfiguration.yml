@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the conversation history configuration settings for the organization.
+  These settings manage conversation histories for mobile device users.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    `Remove-CsConversationHistoryConfiguration` accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, `Remove-CsConversationHistoryConfiguration` resets instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+links:
+- text: Get-CsConversationHistoryConfiguration
+  href: Get-CsConversationHistoryConfiguration.yml
+- text: Set-CsConversationHistoryConfiguration
+  href: Set-CsConversationHistoryConfiguration.yml
+syntaxes:
+- >-
+  Remove-CsConversationHistoryConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsConversationHistoryConfiguration -Identity "global"
+  description: |-
+    The command shown in Example 1 resets all the properties in the global collection of conversation history configuration settings to their default values.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the conversation history configuration settings to be deleted.
+    Because there is only a single, global collection of settings per deployment, the only allowed syntax is the following:
+
+    `-Identity "global"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsConversationHistoryConfiguration
+name: Remove-CsConversationHistoryConfiguration
+description: |-
+  Prior to the release of Skype for Business Server, conversation histories were stored in the Conversation History folder in users's mailbox, written by the Skype for Business rich client.
+  Unfortunately, that proved to be a problem for mobile device users, because the Conversation History folder is typically not replicated to mobile devices.
+  With Skype for Business Server, however, conversation histories, missed call notifications and missed IM notifications can be stored on the server in user mailboxes; this change makes these items readily available to mobile devices.
+  Administrators can manage the server-side storage of these conversation histories by using the conversation history configuration settings.
+  Just keep in mind that a single, global collection of these settings is used to manage conversation histories throughout your deployment.
+  There is no option for creating additional conversation history settings at the site, service, or per-user scope.
+
+  Despite the name, the `Remove-CsConversationHistoryConfiguration` cmdlet does not actually delete the global collection of settings; that's because the global collection cannot be deleted.
+  Instead, the `Remove-CsConversationHistoryConfiguration` cmdlet resets all the properties in the global collection to their default values.
+  For example, when you install Skype for Business Server the CachedUserThreshold property is set to 1000000.
+  Suppose you change this value to 500000.
+  If you run the `Remove-CsConversationHistoryConfiguration` cmdlet then CachedUserThreshold will revert back to its default value of 1000000.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csconversationhistoryconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsConversationHistoryConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

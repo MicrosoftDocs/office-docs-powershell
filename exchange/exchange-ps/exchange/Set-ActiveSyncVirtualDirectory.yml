@@ -1,0 +1,544 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in on-premises Exchange.
+
+  Use the Set-ActiveSyncVirtualDirectory cmdlet to modify existing Microsoft Exchange ActiveSync virtual directories that are used in Internet Information Services (IIS) on Exchange servers.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Set-ActiveSyncVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
+
+   [-ActiveSyncServer <String>]
+
+   [-BadItemReportingEnabled <Boolean>]
+
+   [-BasicAuthEnabled <Boolean>]
+
+   [-ClientCertAuth <ClientCertAuthTypes>]
+
+   [-CompressionEnabled <Boolean>]
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-ExtendedProtectionFlags <MultiValuedProperty>]
+
+   [-ExtendedProtectionSPNList <MultiValuedProperty>]
+
+   [-ExtendedProtectionTokenChecking <ExtendedProtectionTokenCheckingMode>]
+
+   [-ExternalAuthenticationMethods <MultiValuedProperty>]
+
+   [-ExternalUrl <Uri>]
+
+   [-InstallIsapiFilter <Boolean>]
+
+   [-InternalAuthenticationMethods <MultiValuedProperty>]
+
+   [-InternalUrl <Uri>]
+
+   [-MobileClientCertificateAuthorityURL <String>]
+
+   [-MobileClientCertificateProvisioningEnabled <Boolean>]
+
+   [-MobileClientCertTemplateName <String>]
+
+   [-Name <String>]
+
+   [-RemoteDocumentsActionForUnknownServers <RemoteDocumentsActions>]
+
+   [-RemoteDocumentsAllowedServers <MultiValuedProperty>]
+
+   [-RemoteDocumentsBlockedServers <MultiValuedProperty>]
+
+   [-RemoteDocumentsInternalDomainSuffixList <MultiValuedProperty>]
+
+   [-SendWatsonReport <Boolean>]
+
+   [-WhatIf]
+
+   [-WindowsAuthEnabled <Boolean>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync (Default Web Site)" -BasicAuthEnabled $false
+  description: |-
+    This example disables Basic authentication on the default Exchange ActiveSync virtual directory on the server Contoso.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync (Default Web Site)" -BadItemReportingEnabled $true -SendWatsonReport:$true
+  description: |-
+    This example enables bad item reporting and turns on the option to send Watson reports for errors on the server Contoso.
+  summary: ""
+- title: Example 3
+  code: |-
+    Set-ActiveSyncVirtualDirectory -Identity "contoso\Microsoft-Server-ActiveSync (Default Web Site)" -ExternalUrl "https://contoso.com/mail"
+  description: |-
+    This example configures the external URL on the default Exchange ActiveSync virtual directory on the server Contoso.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ActiveSyncServer
+  description: |+
+    The ActiveSyncServer parameter specifies the URL of the Mailbox server. This value is in the following format: https://servername/Microsoft-Server-ActiveSync.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: BadItemReportingEnabled
+  description: |+
+    The BadItemReportingEnabled parameter specifies whether items that can't be synchronized should be reported to the user. If set to $true, the user receives a notification when an item can't be synchronized to the mobile phone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: BasicAuthEnabled
+  description: |+
+    The BasicAuthentication parameter specifies whether Basic authentication is enabled on the virtual directory. Valid values are:
+
+    - $true: Basic authentication is enabled. This is the default value.
+    - $false: Basic authentication is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ClientCertAuthTypes" data-throw-if-not-resolved="False" />
+  name: ClientCertAuth
+  description: |+
+    The ClientCertAuth parameter specifies the status of client certificate authentication. By default, client certificate authentication is disabled. The default setting is Ignore.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CompressionEnabled
+  description: |+
+    The CompressionEnabled parameter is a Boolean value that identifies the compression applied to the specified Exchange ActiveSync virtual directory. The default setting is $true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExtendedProtectionFlags
+  description: |+
+    The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
+
+    - None: This is the default setting.
+    - AllowDotlessSPN: Required if you want to use Service Principal Name (SPN) values that don't contain FQDNs (for example, HTTP/ContosoMail instead of HTTP/mail.contoso.com). You specify SPNs with the ExtendedProtectionSPNList parameter. This setting makes Extended Protection for Authentication less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
+    - NoServiceNameCheck: The SPN list isn't checked to validate a channel binding token. This setting makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
+    - Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
+    - ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExtendedProtectionSPNList
+  description: |+
+    The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
+
+    - $null: This is the default value.
+    - Single SPN or comma delimited list of valid SPNs: The SPN value format is `Protocol\FQDN`. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ExtendedProtectionTokenCheckingMode" data-throw-if-not-resolved="False" />
+  name: ExtendedProtectionTokenChecking
+  description: |+
+    The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
+
+    - None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
+    - Allow: Extended Protection for Authentication is used for connections between clients and the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication will work, but may not be as secure as connections that use Extended Protection for Authentication.
+    - Require: Extended Protection for Authentication is used for all connections between clients and the virtual directory. If either the client or server doesn't support it, the connection will fail. If you use this value, you also need to set an SPN value for the ExtendedProtectionSPNList parameter.
+
+    **Note**: If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: ExternalAuthenticationMethods
+  description: |+
+    The ExternalAuthenticationMethods parameter restricts the authentication methods that can be used to connect to the virtual directory from outside the firewall. Valid values are:
+
+    - Adfs
+    - Basic
+    - Certificate
+    - Digest
+    - Fba
+    - Kerberos
+    - LiveIdBasic
+    - LiveIdFba
+    - LiveIdNegotiate
+    - NegoEx
+    - Negotiate
+    - Ntlm
+    - OAuth
+    - WindowsIntegrated
+    - WSSecurity
+
+    You can specify multiple values separated by commas.
+
+    Although you can specify any of these values, whether or not the authentication method actually works for external connections depends on other factors. For example:
+
+    - Is the authentication method available on the virtual directory?
+    - Is the authentication method available, but disabled on the virtual directory?
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ExternalUrl
+  description: |+
+    The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="VirtualDirectoryIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the ActiveSync virtual directory that you want to modify. You can use any value that uniquely identifies the virtual directory. For example:
+
+    - Name or Server\\Name
+    - Distinguished name (DN)
+    - GUID
+
+    The Name value uses the syntax `"VirtualDirectoryName (WebsiteName)"` from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax `VirtualDirectoryName*`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: InstallIsapiFilter
+  description: |+
+    The InstallIsapiFilter parameter specifies whether the Internet Server API (ISAPI) filter is installed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: InternalAuthenticationMethods
+  description: |+
+    The InternalAuthenticationMethods parameter specifies the authentication methods supported by the server that contains the virtual directory when access is requested from inside the network firewall. If this parameter isn't set, all authentication methods can be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: InternalUrl
+  description: |+
+    The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MobileClientCertificateAuthorityURL
+  description: |+
+    The MobileClientCertificateAuthorityURL parameter specifies the URL for the certification authority (CA) used by the mobile phone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MobileClientCertificateProvisioningEnabled
+  description: |+
+    The MobileClientCertificateProvisioningEnabled parameter specifies whether the Autodiscover service returns the Certificate Services server URL in the XML file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MobileClientCertTemplateName
+  description: |+
+    The MobileClientCertTemplateName parameter specifies the template name for the client certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The Name parameter specifies the name of the Exchange ActiveSync virtual directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="RemoteDocumentsActions" data-throw-if-not-resolved="False" />
+  name: RemoteDocumentsActionForUnknownServers
+  description: |+
+    The RemoteDocumentsActionForUnknownServers parameter specifies the action that occurs when a Microsoft Windows SharePoint Services or Microsoft Windows file share request comes in via Exchange ActiveSync. When a request arrives, Exchange ActiveSync looks for the requested host name in the Allow and Block lists. If the host name isn't found in either list, the action specified in this parameter, either Block or Allow, is performed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoteDocumentsAllowedServers
+  description: |+
+    The RemoteDocumentsAllowedServers parameter is a multivalued property that lists all the allowed servers for remote document access.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoteDocumentsBlockedServers
+  description: |+
+    The RemoteDocumentsBlockedServers parameter is a multivalued property that lists all the blocked servers for remote document access.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: RemoteDocumentsInternalDomainSuffixList
+  description: |+
+    The RemoteDocumentsInternalDomainSuffixList parameter is used in organizations that don't run Windows Internet Name Service (WINS) in their network. In these environments, you can specify one or more FQDNs that Exchange ActiveSync treats as internal when a request for remote file access is received.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SendWatsonReport
+  description: |+
+    The SendWatsonReport parameter specifies whether a Watson report is sent for errors and events.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: WindowsAuthEnabled
+  description: |+
+    The WindowsAuthEnabled parameter specifies whether Integrated Windows authentication is enabled. The default value is $false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2010
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+uid: ExchangePowerShell.Set-ActiveSyncVirtualDirectory
+name: Set-ActiveSyncVirtualDirectory
+description: |-
+  The Set-ActiveSyncVirtualDirectory cmdlet configures a variety of settings on the virtual directory used for Exchange ActiveSync including security, authentication, and internal and external URL settings.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/set-activesyncvirtualdirectory
+  applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+  title: Set-ActiveSyncVirtualDirectory
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

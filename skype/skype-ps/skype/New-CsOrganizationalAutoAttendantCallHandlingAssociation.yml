@@ -1,0 +1,21 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!CAUTION]
+  > This cmdlet has been deprecated and is no longer supported.
+  > 
+  > Please use [New-CsAutoAttendantCallHandlingAssociation](New-CsAutoAttendantCallHandlingAssociation.yml) cmdlet instead.
+module: SkypeForBusiness
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.New-CsOrganizationalAutoAttendantCallHandlingAssociation
+name: New-CsOrganizationalAutoAttendantCallHandlingAssociation
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csorganizationalautoattendantcallhandlingassociation
+  applicable: Skype for Business Online
+  title: New-CsOrganizationalAutoAttendantCallHandlingAssociation
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

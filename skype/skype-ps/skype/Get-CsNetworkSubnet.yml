@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves information about one or more network subnets.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.SubnetType" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsNetworkSubnet
+  href: New-CsNetworkSubnet.yml
+- text: Remove-CsNetworkSubnet
+  href: Remove-CsNetworkSubnet.yml
+- text: Set-CsNetworkSubnet
+  href: Set-CsNetworkSubnet.yml
+syntaxes:
+- Get-CsNetworkSubnet [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsNetworkSubnet [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsNetworkSubnet
+  description: |-
+    This example retrieves all subnets within the Skype for Business Server deployment.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsNetworkSubnet -Identity 172.11.15.0
+  description: |-
+    This example retrieves all information about the subnet with the Identity (the Subnet ID) 172.11.15.0.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsNetworkSubnet -Filter 172.11.*
+  description: |-
+    This example retrieves all subnets with identities that begin with 172.11.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsNetworkSubnet | Where-Object {$_.NetworkSiteID -eq "Vancouver"}
+  description: |-
+    Example 4 retrieves all subnets associated with the Vancouver site.
+    We first call the Get-CsNetworkSubnet cmdlet with no parameters, which, as we saw in Example 2, retrieves all defined subnets.
+    We then pipe this collection of subnets to the Where-Object cmdlet.
+    The Where-Object cmdlet takes that collection and narrows it down to only those subnets with a NetworkSiteID equal to (-eq) Vancouver.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Use this parameter to perform a wildcard search of all subnets based on Identity.
+    For example, the Filter value 172.11.* will retrieve all subnets with an Identity beginning with 172.11.
+    (such as 172.11.10.0, 172.11.25.0, etc.).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique subnet ID of the subnet you want to retrieve.
+    This value will be an IP address (such as 174.11.12.0).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the network subnet information from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsNetworkSubnet
+name: Get-CsNetworkSubnet
+description: |-
+  Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
+  Use this cmdlet to retrieve information about the subnet, including the Identity (the subnet ID), the number of mask bits, the associated network site, and the description of the subnet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csnetworksubnet
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsNetworkSubnet
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

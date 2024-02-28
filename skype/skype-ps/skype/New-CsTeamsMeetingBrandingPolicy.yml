@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+module: SkypeForBusiness
+notes: |-
+  Available in Teams PowerShell Module 4.9.3 and later.
+links:
+- text: Get-CsTeamsMeetingBrandingPolicy
+  href: Get-CsTeamsMeetingBrandingPolicy.yml
+- text: Grant-CsTeamsMeetingBrandingPolicy
+  href: Grant-CsTeamsMeetingBrandingPolicy.yml
+- text: New-CsTeamsMeetingBrandingPolicy
+  href: New-CsTeamsMeetingBrandingPolicy.yml
+- text: Remove-CsTeamsMeetingBrandingPolicy
+  href: Remove-CsTeamsMeetingBrandingPolicy.yml
+- text: Set-CsTeamsMeetingBrandingPolicy
+  href: Set-CsTeamsMeetingBrandingPolicy.yml
+syntaxes:
+- >-
+  New-CsTeamsMeetingBrandingPolicy
+
+   [-MeetingBackgroundImages <PSListModifier>]
+
+   [-MeetingBrandingThemes <PSListModifier>]
+
+   [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
+
+   [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Create empty meeting branding policy
+  code: |-
+    PS C:\> New-CsTeamsMeetingBrandingPolicy -Identity "test policy"
+  description: |-
+    In this example, the command will create an empty meeting branding policy with the identity `test policy`.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DefaultTheme
+  description: |+
+    *This parameter is reserved for Microsoft internal use only.*
+    Identity of default meeting theme.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableMeetingBackgroundImages
+  description: |+
+    Enable custom meeting backgrounds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableMeetingOptionsThemeOverride
+  description: |+
+    Allow organizer to control meeting theme.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity of meeting branding policy that will be created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSListModifier" data-throw-if-not-resolved="False" />
+  name: MeetingBackgroundImages
+  description: |+
+    *This parameter is reserved for Microsoft internal use only.*
+    List of meeting background images.
+    Image upload is not possible via cmdlets. You should upload background images via Teams Admin Center.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSListModifier" data-throw-if-not-resolved="False" />
+  name: MeetingBrandingThemes
+  description: |+
+    *This parameter is reserved for Microsoft internal use only.*
+    List of meeting branding themes.
+    Image upload is not possible via cmdlets. You should create meeting themes via Teams Admin Center.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SkypeForBusiness.New-CsTeamsMeetingBrandingPolicy
+name: New-CsTeamsMeetingBrandingPolicy
+description: |-
+  This cmdlet creates a new **TeamsMeetingBrandingPolicy**.  
+  You can only create an empty meeting branding policy with this cmdlet, image upload is not supported.
+  If you want to upload the images, you should use Teams Admin Center.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsmeetingbrandingpolicy
+  schema: 2.0.0
+  title: New-CsTeamsMeetingBrandingPolicy
+  author: szymonkatraMSFT
+  ms.author: szymonkatra
+  ms.reviewer: ""
+  manager: stanlythomas

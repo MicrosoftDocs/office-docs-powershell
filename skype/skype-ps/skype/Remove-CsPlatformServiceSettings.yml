@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Reset Skype for Business on Mac global settings in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsPlatformServiceSettings
+  href: https://learn.microsoft.com/powershell/module/skype/new-csplatformservicesettings?view=skype-ps
+- text: Get-CsPlatformServiceSettings
+  href: https://learn.microsoft.com/powershell/module/skype/get-csplatformservicesettings?view=skype-ps
+- text: Set-CsPlatformServiceSettings
+  href: https://learn.microsoft.com/powershell/module/skype/set-csplatformservicesettings?view=skype-ps
+syntaxes:
+- Remove-CsPlatformServiceSettings [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    PS C:\> Remove-CsPlatformServiceSettings -Identity Global
+  description: |-
+    This example reset the global configuration to default value. Global configuration cannot be removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before testing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Indicates the Identity of the Platform Service Settings to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsPlatformServiceSettings
+name: Remove-CsPlatformServiceSettings
+description: |-
+  Skype for Business Server 2015 Cumulative Update 6 introduces new features for Skype for Business on Mac users like support for E-911 calls, send files in peer-to-peer chats, block external access by policy and more.
+
+  The `Remove-CsPlatformServiceSettings` cmdlet reset the global configuration in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csplatformservicesettings
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsPlatformServiceSettings
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Note: This cmdlet is deprecated as of our 1.0 PowerShell release, and is not supported in our 1.0 release.  To set a Team's settings, run Set-Team.
+
+  Updates team member settings.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="GroupId" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="AllowCreateUpdateChannels" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="AllowDeleteChannels" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="AllowAddRemoveApps" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="AllowCreateUpdateRemoveTabs" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="AllowCreateUpdateRemoveConnectors" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-TeamMemberSettings -GroupId <String> [-AllowCreateUpdateChannels <String>] [-AllowDeleteChannels <String>]
+
+   [-AllowAddRemoveApps <String>] [-AllowCreateUpdateRemoveTabs <String>]
+
+   [-AllowCreateUpdateRemoveConnectors <String>]
+examples:
+- title: '--------------------------  Example 1  --------------------------'
+  code: |-
+    Set-TeamMemberSettings -GroupId 4ba546e6-e28d-4645-8cc1-d3575ef9d266 -AllowCreateUpdateChannels false
+  description: ""
+  summary: ""
+- title: '--------------------------  Example 2  --------------------------'
+  code: |-
+    Set-TeamMemberSettings -GroupId 4ba546e6-e28d-4645-8cc1-d3575ef9d266 -AllowDeleteChannels true -AllowAddRemoveApps false
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowAddRemoveApps
+  description: |+
+    Setting to add and remove apps to teams
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateChannels
+  description: |+
+    Setting to create and update channels
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateRemoveConnectors
+  description: |+
+    Setting to create, update and remove connectors
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateRemoveTabs
+  description: |+
+    Setting to create, update and remove tabs
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowDeleteChannels
+  description: |+
+    Setting to Delete channels
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    GroupId of the team
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-TeamMemberSettings
+name: Set-TeamMemberSettings
+description: ""
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  applicable: Microsoft Teams
+  title: Set-TeamMemberSettings
+  online version: https://learn.microsoft.com/powershell/module/teams/set-teammembersettings
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

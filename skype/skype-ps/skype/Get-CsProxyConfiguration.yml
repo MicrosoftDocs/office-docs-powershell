@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the proxy server configuration settings currently in use in your organization.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsProxyConfiguration
+  href: New-CsProxyConfiguration.yml
+- text: Remove-CsProxyConfiguration
+  href: Remove-CsProxyConfiguration.yml
+- text: Set-CsProxyConfiguration
+  href: Set-CsProxyConfiguration.yml
+syntaxes:
+- Get-CsProxyConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsProxyConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsProxyConfiguration
+  description: |-
+    The command shown in Example 1 returns a collection of all the proxy configuration settings currently in use in the organization.
+    This is done by calling the Get-CsProxyConfiguration cmdlet without any parameters.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsProxyConfiguration -Identity "service:EdgeServer:atl-cs-001.litwareinc.com"
+  description: |-
+    In Example 2, information about the proxy configuration settings that have the Identity service:EdgeServer:atl-cs-001.litwareinc.com is returned.
+    Because Identities must be unique, this command will never return more than one collection of settings.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsProxyConfiguration -Filter "service:*"
+  description: |-
+    Example 3 returns information about all of the proxy settings that have been configured at the service scope.
+    To do this, the command calls the Get-CsProxyConfiguration cmdlet along with the Filter parameter; the filter value "service:*" ensures that only those settings that have an Identity that begins with the string value "service:" will be returned.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsProxyConfiguration | Where-Object {$_.UseCertificateForClientToProxyAuth -eq $False}
+  description: |-
+    Example 4 returns information about the proxy configuration settings that do not allow the use of client certificates as an authentication mechanism.
+    To carry out this task, the command first uses the Get-CsProxyConfiguration cmdlet to return a collection of all the proxy configuration settings currently in use.
+    This collection is then piped to the Where-Object cmdlet, which selects only those settings where the UseCertificateForClientToProxyAuth property is equal to False.
+  summary: ""
+- title: '-------------------------- Example 5 --------------------------'
+  code: |-
+    Get-CsProxyConfiguration | Where-Object {$_.MaxClientMessageBodySizeKb -lt 5000}
+  description: |-
+    Example 5 returns all the proxy configuration settings where the maximum body size for a client message is less than 5000 kilobytes.
+    To do this, the command first calls the Get-CsProxyConfiguration cmdlet without any parameters; this returns a collection of all the proxy configuration settings currently in use.
+    This collection is then piped to the Where-Object cmdlet, which picks out those settings where the MaxClientMessageBodySizeKb property is less than 5000 kilobytes.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcards when specifying the proxy configuration settings to be returned.
+    For example, this syntax returns all the settings configured at the service scope:
+
+    `-Filter "service:*"`
+
+    You cannot use both the Filter and the Identity parameters in the same command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the proxy server configuration settings to be returned.
+    To return the global settings, use this syntax:
+
+    `-Identity global`
+
+    To return settings configured at the service scope, use syntax similar to this:
+
+    `-Identity "service:EdgeServer:atl-cs-001.litwareinc.com"`
+
+    Note that you cannot use wildcards when specifying an Identity.
+    If you want to (or need to) use wildcards, use the Filter parameter instead.
+
+    If this parameter is not included, the Get-CsProxyConfiguration cmdlet returns all of the proxy server settings currently in use in your organization.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the proxy configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsProxyConfiguration
+name: Get-CsProxyConfiguration
+description: |-
+  Skype for Business Server enables you to manage your proxy servers through proxy server configuration settings.
+  These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
+  When you install Skype for Business Server, a global collection of proxy server configuration settings is automatically created for you.
+  As noted, you can also create additional collections at the service scope.
+
+  The Get-CsProxyConfiguration cmdlet enables you to return information about any of the proxy server configuration settings currently in use in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csproxyconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsProxyConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

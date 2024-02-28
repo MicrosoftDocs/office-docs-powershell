@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!CAUTION]
+  > This cmdlet has been deprecated and is no longer supported.  This cmdlet will be removed in the near future.
+  > 
+  > Please use the [Get-CsOnlineApplicationInstance](Get-CsOnlineApplicationInstance.yml) cmdlet instead.
+
+  It is used to fetch the application endpoints for a tenant.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Set-CsOnlineApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/set-csonlineapplicationendpoint
+- text: New-CsOnlineApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/new-csonlineapplicationendpoint
+- text: Remove-CsOnlineApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/remove-csonlineapplicationendpoint
+- text: Set up a Trusted Application Endpoint
+  href: https://learn.microsoft.com/skype-sdk/trusted-application-api/docs/trustedapplicationendpoint
+syntaxes:
+- >-
+  Get-CsOnlineApplicationEndpoint [-Uri] <String> [-PhoneNumber <String>] [-Tenant <Guid>]
+
+   [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsOnlineApplicationEndpoint -Uri "sip:sample@domain.com"
+  description: |-
+    This example retrieves information about the specified application endpoint.
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  description: |+
+    The service number assigned to the trusted application endpoint.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+    -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+    You can return your tenant ID by running this command:
+
+    Get-CsTenant | Select-Object DisplayName, TenantID
+
+    If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Uri
+  isRequired: true
+  description: |+
+    Sip Uri that identifies the tenant specific endpoint for the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: SipUri
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsOnlineApplicationEndpoint
+name: Get-CsOnlineApplicationEndpoint
+description: |-
+  This cmdlet is used to fetch the application endpoints for a tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineapplicationendpoint
+  applicable: Skype for Business Online
+  title: Get-CsOnlineApplicationEndpoint
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

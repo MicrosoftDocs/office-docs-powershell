@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!Note]
+    > Skype for Business Online Connector is currently part of the latest Teams PowerShell module. If you're using the latest Teams PowerShell public release, you don't need to install the Skype for Business Online Connector.
+    > With Teams PowerShell Module New-CsOnlineSession has been deprecated and is no longer required to connect Skype for Business Online. It has been replaced with Connect-MicrosoftTeams.
+
+
+  Creates a persistent connection to Microsoft Skype for Business Online DataCenter.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- New-CsOnlineSession [[-Credential] <PSCredential>] [-OverrideAdminDomain <String>] [-OverridePowerShellUri <Uri>] [-TeamsEnvironmentName <String>]  [-SessionOption <PSSessionOption>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    $credential = get-credential
+    New-CsOnlineSession -Credential $credential
+  description: |-
+    Establishes a Skype for Business Online Remote PowerShell session, supplying the credentials of a Skype for Business Online administrator account.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    $credential = get-credential
+    New-CsOnlineSession -Credential $credential -OverrideAdminDomain fabrikam.onmicrosoft.com
+  description: |-
+    Establishes a Skype for Business Online Remote PowerShell session, with a Skype for Business Online administrator account that has permission to manage the tenant fabrikam.onmicrosoft.com that was specified using the optional OverrideAdminDomain parameter.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    $sfbSession = New-CsOnlineSession
+    Import-PSSession $sfbSession
+  description: |-
+    Establishes a Skype for Business Online Remote PowerShell session using multi-factor authentication, for more information, see [Connect using a Skype for Business Online administrator account with multi-factor authentication](https://learn.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication).
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a Skype for Business Online administrator, or Syndicated Partner administrator account.
+    Enter a PSCredential object, such as one returned by the Get-Credential cmdlet.
+
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OverrideAdminDomain
+  description: |+
+    Specifies the domain of the tenant to be managed. This is used when the administrator has permissions to manage more than one tenant. For example, Syndicated Partner administrators commonly manage several tenants.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: OverridePowerShellUri
+  description: |+
+    Specifies Skype for Business Remote Powershell URI.
+    Optional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSSessionOption" data-throw-if-not-resolved="False" />
+  name: SessionOption
+  description: |+
+    Sets advanced options for the session.
+    Enter a SessionOption object, such as one that you create by using the New-PSSessionOption cmdlet, or a hash table in which the keys are session option names and the values are session option values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeamsEnvironmentName
+  description: |+
+    Use this setting if your organization is in one of the Teams Government Cloud environments.
+
+    Specify "TeamsGCCH" if your organization is in the GCC High Environment. Specify "TeamsDOD" if your organization is in the DoD Environment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.New-CsOnlineSession
+name: New-CsOnlineSession
+description: |-
+  Enables you to create a remote Windows PowerShell session that connects to Skype for Business Online.
+  In this session, Skype for Business Online administrator can run Skype for Business cmdlets to manage users, policies and configurations.
+metadata:
+  external help file: SkypeOnlineConnectorStartup-help.xml
+  applicable: Skype for Business Online
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csonlinesession
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the owner for a whiteboard.
+module: MicrosoftWhiteboardAdmin
+notes: |-
+  For details on user IDs, see the [overview page](../../docs-conceptual/overview.md).
+syntaxes:
+- Set-WhiteboardOwner [-WhiteboardId] <Guid> [-OldOwnerId] <Guid> [-NewOwnerId] <Guid> [-ForceAuthPrompt] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-WhiteboardOwner -OldOwnerId 00000000-0000-0000-0000-000000000001 -NewOwnerId 00000000-0000-0000-0000-000000000002 -WhiteboardId 00000000-0000-0000-0000-000000000003
+  description: |-
+    Move whiteboard ownership from one user to another.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceAuthPrompt
+  description: |+
+    Optional. Always prompt for auth. Use to ignore cached credentials.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: NewOwnerId
+  isRequired: true
+  description: |+
+    The ID of the new owner.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: OldOwnerId
+  isRequired: true
+  description: |+
+    The ID of the previous owner.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: WhiteboardId
+  isRequired: true
+  description: |+
+    The whiteboard for which the owner is being changed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+applicable:
+- Microsoft Whiteboard
+uid: MicrosoftWhiteboardAdmin.Set-WhiteboardOwner
+name: Set-WhiteboardOwner
+description: |-
+  Sets the owner for a whiteboard.
+metadata:
+  external help file: WhiteboardAdmin-help.xml
+  Module Name: WhiteboardAdmin
+  online version: https://learn.microsoft.com/powershell/module/whiteboard/set-whiteboardowner
+  applicable: Microsoft Whiteboard
+  title: Set-WhiteboardOwner
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

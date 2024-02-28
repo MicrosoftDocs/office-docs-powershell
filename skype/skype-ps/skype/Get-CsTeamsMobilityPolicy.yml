@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- Get-CsTeamsMobilityPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsMobilityPolicy
+  description: |-
+    Retrieve all teams mobility policies that are available in your organization
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when indicating the policy (or policies) to be returned. For example, to return a collection of all the per-user policies, use this syntax: -Filter "tag:".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specify the unique name of a policy you would like to retrieve
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsTeamsMobilityPolicy
+name: Get-CsTeamsMobilityPolicy
+description: |-
+  The TeamsMobilityPolicy allows Admins to control Teams mobile usage for users. 
+
+  The Get-CsTeamsMobilityPolicy cmdlet allows administrators to get all teams mobility policies.
+
+  NOTE: Please note that this cmdlet was deprecated and then removed from this PowerShell module. This reference will continue to be listed here for legacy purposes.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsmobilitypolicy
+  applicable: Skype for Business Online
+  title: Get-CsTeamsMobilityPolicy
+  schema: 2.0.0
+  manager: ritikag
+  ms.reviewer: ritikag

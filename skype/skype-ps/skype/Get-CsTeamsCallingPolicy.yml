@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the teams calling policies configured for use in your organization.
+  Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsTeamsCallingPolicy
+  href: Set-CsTeamsCallingPolicy.yml
+- text: Remove-CsTeamsCallingPolicy
+  href: Remove-CsTeamsCallingPolicy.yml
+- text: Grant-CsTeamsCallingPolicy
+  href: Grant-CsTeamsCallingPolicy.yml
+- text: New-CsTeamsCallingPolicy
+  href: New-CsTeamsCallingPolicy.yml
+syntaxes:
+- Get-CsTeamsCallingPolicy [[-Identity] <string>] [<CommonParameters>]
+- Get-CsTeamsCallingPolicy [-Filter <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsTeamsCallingPolicy -Identity SalesCallingPolicy
+  description: |-
+    Retrieves the calling policy with the Identity "SalesCallingPolicy".
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsTeamsCallingPolicy -Filter "tag:Sales*"
+  description: |-
+    Retrieves the calling policies with Identity starting with Sales.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+    To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specify the TeamsCallingPolicy that you would like to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Get-CsTeamsCallingPolicy
+name: Get-CsTeamsCallingPolicy
+description: |-
+  Returns information about the teams calling policies configured for use in your organization.
+  Teams calling policies help determine which users are able to use calling functionality within Microsoft Teams and interoperability with Skype for Business.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  Module Name: Skype for Business Online
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamscallingpolicy
+  applicable: Microsoft Teams
+  title: Get-CsTeamsCallingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

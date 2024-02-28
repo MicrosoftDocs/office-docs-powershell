@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a voice test configuration that was used to test phone numbers against specified routes and rules.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Policy.Voice.TestConfiguration object.
+    Accepts pipelined input of voice test configuration objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.TestConfiguration.
+links:
+- text: New-CsVoiceTestConfiguration
+  href: New-CsVoiceTestConfiguration.yml
+- text: Set-CsVoiceTestConfiguration
+  href: Set-CsVoiceTestConfiguration.yml
+- text: Get-CsVoiceTestConfiguration
+  href: Get-CsVoiceTestConfiguration.yml
+- text: Test-CsVoiceTestConfiguration
+  href: Test-CsVoiceTestConfiguration.yml
+syntaxes:
+- >-
+  Remove-CsVoiceTestConfiguration [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsVoiceTestConfiguration -Identity TestConfig1
+  description: |-
+    This example removes the voice test configuration settings with the Identity TestConfig1.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsVoiceTestConfiguration -Filter *test* | Remove-CsVoiceTestConfiguration
+  description: |-
+    This example removes all voice test configuration settings for any configuration with an Identity containing the string test.
+    The command first calls the `Get-CsVoiceTestConfiguration` cmdlet with the Filter parameter to retrieve all voice test configurations that have an Identity with the string "test" anywhere in its value.
+    The resulting set of configurations is then piped to the `Remove-CsVoiceTestConfiguration` cmdlet and removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A string uniquely identifying the test configuration you want to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsVoiceTestConfiguration
+name: Remove-CsVoiceTestConfiguration
+description: |-
+  Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
+  When you're done with those tests and won't need them again, use this cmdlet to remove them.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csvoicetestconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsVoiceTestConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

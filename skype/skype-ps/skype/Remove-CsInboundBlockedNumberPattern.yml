@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a blocked number pattern from the tenant list.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: New-CsInboundBlockedNumberPattern
+  href: New-CsInboundBlockedNumberPattern.yml
+- text: Set-CsInboundBlockedNumberPattern
+  href: Set-CsInboundBlockedNumberPattern.yml
+- text: Get-CsInboundBlockedNumberPattern
+  href: Get-CsInboundBlockedNumberPattern.yml
+syntaxes:
+- Remove-CsInboundBlockedNumberPattern [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS> Remove-CsInboundBlockedNumberPattern -Identity "BlockAutomatic"
+  description: |-
+    This example removes a blocked number pattern identified as "BlockAutomatic".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A unique identifier specifying the blocked number pattern to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Remove-CsInboundBlockedNumberPattern
+name: Remove-CsInboundBlockedNumberPattern
+description: |-
+  This cmdlet removes a blocked number pattern from the tenant list.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csinboundblockednumberpattern
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Remove-CsInboundBlockedNumberPattern
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: bulenteg
+  schema: 2.0.0

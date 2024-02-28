@@ -1,0 +1,206 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your organization.
+module: SkypeForBusiness
+notes: ""
+links:
+- text: Get-CsCallingLineIdentity
+  href: Get-CsCallingLineIdentity.yml
+- text: Grant-CsCallingLineIdentity
+  href: Grant-CsCallingLineIdentity.yml
+- text: New-CsCallingLineIdentity
+  href: New-CsCallingLineIdentity.yml
+- text: Remove-CsCallingLineIdentity
+  href: Remove-CsCallingLineIdentity.yml
+syntaxes:
+- >-
+  Set-CsCallingLineIdentity [[-Identity] <string>] [-BlockIncomingPstnCallerID <boolean>] [-CallingIDSubstitute <string>] [-CompanyName <string>]
+
+  [-Description <string>] [-EnableUserOverride <boolean>] [-ResourceAccount <string>] [-ServiceNumber <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-CsCallingLineIdentity -Identity "MyBlockingPolicy" -BlockIncomingPstnCallerID $true
+  description: |-
+    This example blocks the incoming caller ID.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
+  description: |-
+    This example modifies the new Anonymous Caller ID policy to block the incoming Caller ID.
+  summary: ""
+- title: Example 3
+  code: |-
+    $ObjId = (Get-CsOnlineApplicationInstance -Identity dkcq@contoso.com).ObjectId
+    Set-CsCallingLineIdentity -Identity DKCQ -CallingIDSubstitute Resource -ResourceAccount $ObjId -CompanyName "Contoso"
+  description: |-
+    This example modifies the Caller ID policy that sets the Caller ID to the phone number of the specified resource account and sets the Calling party name to Contoso
+  summary: ""
+- title: Example 4
+  code: |-
+    Set-CsCallingLineIdentity -Identity AllowAnonymousForUsers -EnableUserOverride $true
+  description: |-
+    This example modifies the Caller ID policy and allows Teams users to make anonymous calls.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: BlockIncomingPstnCallerID
+  description: |+
+    The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID. The default value is false.
+
+    The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a Teams user, then Caller ID for incoming calls is suppressed/anonymous.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="CallingIDSubstituteType" data-throw-if-not-resolved="False" />
+  name: CallingIDSubstitute
+  description: |+
+    **Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+
+    The CallingIDSubstitute parameter lets you specify an alternate Caller ID.
+    The possible values are Anonymous, Service, LineUri and Resource.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompanyName
+  description: |+
+    This parameter sets the Calling party name (typically referred to as CNAM) on the outgoing PSTN call.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The Description parameter briefly describes the Caller ID policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableUserOverride
+  description: |+
+    The EnableUserOverride parameter gives Microsoft Teams users the option under Settings and Calls to hide their phone number when making outgoing calls. The CallerID will be Anonymous.
+
+    If CallingIDSubstitute is set to Anonymous, the EnableUserOverride parameter has no effect, and the caller ID is always set to Anonymous.
+
+    EnableUserOverride has precedence over other settings in the policy unless substitution is set to Anonymous. For example, assume the policy instance has substitution using a resource account and EnableUserOverride is set and enabled by the user. In this case, the outbound caller ID will be blocked and Anonymous will be used.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter identifies the Caller ID policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ResourceAccount
+  description: |+
+    This parameter specifies the ObjectId of a resource account/online application instance used for Teams Auto Attendant or Call Queue. The outgoing PSTN call will use the phone number defined on the resource account as caller id. For more information about resource accounts please see https://learn.microsoft.com/microsoftteams/manage-resource-accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceNumber
+  description: |+
+    The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute.
+
+    Note: Do not add '+' to the Service number.
+    For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsCallingLineIdentity
+name: Set-CsCallingLineIdentity
+description: |-
+  **Note**: The use of CallingIDSubstitute Service has been deprecated. Existing policies using CallingIDSubstitute Service are not being honored. You should use CallingIDSubstitute Resource instead.
+
+  You can either change or block the Caller ID (also called a Calling Line ID) for a user.
+  By default, the Microsoft Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.
+  You can modify a Caller ID policy to provide an alternate displayed number, or to block any number from being displayed.
+
+  Note:  
+  - Identity must be unique.
+  - ServiceNumber must be a valid Service Number in the tenant telephone number inventory.
+  - If CallerIdSubstitute is given as "Service", then ServiceNumber cannot be empty.
+  - If CallerIdSubstitute is given as "Resource", then ResourceAccount cannot be empty.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cscallinglineidentity
+  applicable: Microsoft Teams, Skype for Business Online
+  title: Set-CsCallingLineIdentity
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

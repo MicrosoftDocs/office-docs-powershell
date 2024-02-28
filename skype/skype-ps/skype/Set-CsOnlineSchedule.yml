@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Set-CsOnlineSchedule cmdlet to update a schedule.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.Schedule" data-throw-if-not-resolved="False" />
+  description: |-
+    The modified instance of the `Microsoft.Rtc.Management.Hosted.Online.Models.Schedule` object.
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsOnlineSchedule
+  href: New-CsOnlineSchedule.yml
+- text: Remove-CsOnlineSchedule
+  href: Remove-CsOnlineSchedule.yml
+syntaxes:
+- Set-CsOnlineSchedule -Instance <Object> [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    $schedule = Get-CsOnlineSchedule -Id "fa9081d6-b4f3-5c96-baec-0b00077709e5"
+    $schedule.Name = "Chrismas Holiday"
+    Set-CsOnlineSchedule -Instance $schedule
+  description: |-
+    This example modifies the name of the schedule that has a Id of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    $schedule = Get-CsOnlineSchedule -Id "fa9081d6-b4f3-5c96-baec-0b00077709e5"
+
+    $schedule
+
+            Id                      : 5d3e0315-533b-473d-8524-36c954d1fc93
+            Name                    : Thanksgiving
+            Type                    : Fixed
+            WeeklyRecurrentSchedule :
+            FixedSchedule           : 22/11/2018 00:00 - 23/11/2018 00:00, 28/11/2019 00:00 - 29/11/2019 00:00, 26/11/2020 00:00 - 27/11/2020 00:00
+
+    # Add a new Date Time Range
+    $schedule.FixedSchedule.DateTimeRanges += New-CsOnlineDateTimeRange -Start "25/11/2021" -End "26/11/2021"
+
+    Set-CsOnlineSchedule -Instance $schedule
+  description: |-
+    This example updates an existing holiday schedule, adding a new date/time range to it.
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Instance
+  isRequired: true
+  description: |+
+    The Instance parameter is the object reference to the schedule to be modified.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsOnlineSchedule
+name: Set-CsOnlineSchedule
+description: |-
+  The Set-CsOnlineSchedule cmdlet lets you modify the properties of a schedule.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineschedule
+  applicable: Skype for Business Online
+  title: Set-CsOnlineSchedule
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

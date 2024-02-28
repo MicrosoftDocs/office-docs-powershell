@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings. The CsVideoInteropServiceProvider cmdlets allow you to designate provider/tenant specific information about the connection to the provider.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsVideoInteropServiceProvider [-Tenant <System.Guid>] [-AadApplicationIds <String>] [-TenantKey <String>]
+
+   [-InstructionUri <String>] [-AllowAppGuestJoinsAsAuthenticated <Boolean>]
+
+   [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsVideoInteropServiceProvider [-Tenant <System.Guid>] [-AadApplicationIds <String>] [-TenantKey <String>]
+
+   [-InstructionUri <String>] [-AllowAppGuestJoinsAsAuthenticated <Boolean>] [-Instance <PSObject>] [-Force]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-CsVideoInteropServiceProvider -Identity cviprovider -AllowAppGuestJoinsAsAuthenticated $true
+  description: |-
+    This example enables a VTC device joining anonymously to shown in the meeting as authenticated, for a supported CVI partner your organization uses.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AadApplicationIds
+  description: |+
+    This is an optional parameter. A semicolon separated list of Microsoft Entra AppIds of the CVI partner bots can be specified in this parameter. This parameter works in conjunction with AllowAppGuestJoinsAsAuthenticated. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of these bots, is shown in the meeting as an authenticated tenant entity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAppGuestJoinsAsAuthenticated
+  description: |+
+    This is an optional parameter. Default = false.
+    This parameter works in conjunction with AadApplicationIds. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of the bots Microsoft Entra application ids specified in AadApplicationIds, is shown in the meeting as an authenticated tenant entity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Bypass all non-fatal errors.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specify the VideoInteropServiceProvider to be updated.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Pass an existing provider from Get-CsVideoInteropServiceProvider to update (use instead of specifying "Identity")
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstructionUri
+  description: |+
+    InstructionUri provides additional VTC dialin options. This field shows up in the Teams meeting when a CVI enabled user schedules a meeting. This TenantKey is used to dial into the partner's IVR for the partner CVI service. The partner will provide you this information when you sign up for CVI service through any of our partners
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantKey
+  description: |+
+    Tenantkey shows up in the Teams meeting when a CVI enabled user schedules a meeting. This TenantKey is used to dial into the partner's IVR for the partner CVI service. The partner will provide you this information when you sign up for CVI service through any of our partners.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsVideoInteropServiceProvider
+name: Set-CsVideoInteropServiceProvider
+description: |-
+  Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings. The CsVideoInteropServiceProvider cmdlets allow you to designate provider/tenant specific information about the connection to the provider.
+
+  Use the Set-CsVideoInteropServiceProvider to update information about a supported CVI partner your organization uses.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csvideointeropserviceprovider
+  applicable: Skype for Business Online
+  Module Name: Skype for Business Online
+  title: Set-CsVideoInteropServiceProvider
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an existing association between an application instance of a policy-based recording application and a Teams recording policy for administering automatic policy-based recording in your tenant.
+  Automatic policy-based recording is only applicable to Microsoft Teams users.
+module: SkypeForBusiness
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsComplianceRecordingPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingpolicy?view=skype-ps
+- text: New-CsTeamsComplianceRecordingPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpolicy?view=skype-ps
+- text: Set-CsTeamsComplianceRecordingPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingpolicy?view=skype-ps
+- text: Grant-CsTeamsComplianceRecordingPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/grant-csteamscompliancerecordingpolicy?view=skype-ps
+- text: Remove-CsTeamsComplianceRecordingPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingpolicy?view=skype-ps
+- text: Get-CsTeamsComplianceRecordingApplication
+  href: https://learn.microsoft.com/powershell/module/skype/get-csteamscompliancerecordingapplication?view=skype-ps
+- text: New-CsTeamsComplianceRecordingApplication
+  href: https://learn.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingapplication?view=skype-ps
+- text: Set-CsTeamsComplianceRecordingApplication
+  href: https://learn.microsoft.com/powershell/module/skype/set-csteamscompliancerecordingapplication?view=skype-ps
+- text: New-CsTeamsComplianceRecordingPairedApplication
+  href: https://learn.microsoft.com/powershell/module/skype/new-csteamscompliancerecordingpairedapplication?view=skype-ps
+syntaxes:
+- >-
+  Remove-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTeamsComplianceRecordingApplication -Identity 'Tag:ContosoPartnerComplianceRecordingPolicy/d93fefc7-93cc-4d44-9a5d-344b0fff2899'
+  description: |-
+    The command shown in Example 1 deletes an existing association between an application instance of a policy-based recording application with ObjectId d93fefc7-93cc-4d44-9a5d-344b0fff2899 and a Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTeamsComplianceRecordingApplication | Remove-CsTeamsComplianceRecordingApplication
+  description: |-
+    The command shown in Example 2 deletes all existing associations between application instances of policy-based recording applications and their corresponding Teams compliance recording policy.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A name that uniquely identifies the application instance of the policy-based recording application.
+
+    Application instances of policy-based recording applications must be associated with a Teams recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
+    To do this association correctly, the Identity of these application instances must be \<Identity of the associated Teams recording policy\>/\<ObjectId of the application instance\>.
+    For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams compliance recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose Teams recording policies are being queried.
+    For example:
+
+    -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+    You can return your tenant ID by running this command:
+
+    Get-CsTenant | Select-Object DisplayName, TenantID
+
+    If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
+    Instead, the tenant ID will automatically be filled in for you based on your connection information.
+    The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Remove-CsTeamsComplianceRecordingApplication
+name: Remove-CsTeamsComplianceRecordingApplication
+description: |-
+  Policy-based recording applications are used in automatic policy-based recording scenarios.
+  When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams recording policy are invited into the call or meeting to enforce compliance with the administrative set policy.
+
+  Instances of these applications are created using CsOnlineApplicationInstance cmdlets and are then associated with Teams recording policies.
+
+  Note that application instances of policy-based recording applications must be associated with a Teams recording policy using the CsTeamsComplianceRecordingApplication cmdlets.
+  Once the association is done, the Identity of these application instances becomes \<Identity of the associated Teams recording policy\>/\<ObjectId of the application instance\>.
+  For example, the Identity of an application instance can be \"Tag:ContosoPartnerComplianceRecordingPolicy/39dc3ede-c80e-4f19-9153-417a65a1f144\", which indicates that the application instance with ObjectId 39dc3ede-c80e-4f19-9153-417a65a1f144 is associated with the Teams recording policy with Identity ContosoPartnerComplianceRecordingPolicy.
+
+  Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
+  Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
+  Please also refer to the documentation of CsTeamsComplianceRecordingPolicy cmdlets for further information.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamscompliancerecordingapplication
+  applicable: Skype for Business Online
+  title: Remove-CsTeamsComplianceRecordingApplication
+  schema: 2.0.0
+  manager: nakumar
+  author: aditdalvi
+  ms.author: aditd
+  ms.reviewer: ""

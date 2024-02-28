@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsTeamsVoiceApplicationsPolicy cmdlet to get Teams voice applications policy information. TeamsVoiceApplications policy governs what permissions the supervisors/users have over auto attendants and call queues.
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsTeamsVoiceApplicationsPolicy
+  href: Set-CsTeamsVoiceApplicationsPolicy.yml
+- text: Grant-CsTeamsVoiceApplicationsPolicy
+  href: Grant-CsTeamsVoiceApplicationsPolicy.yml
+- text: Remove-CsTeamsVoiceApplicationsPolicy
+  href: Remove-CsTeamsVoiceApplicationsPolicy.yml
+- text: New-CsTeamsVoiceApplicationsPolicy
+  href: New-CsTeamsVoiceApplicationsPolicy.yml
+syntaxes:
+- >-
+  Get-CsTeamsVoiceApplicationsPolicy [[-Identity] <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-CsTeamsVoiceApplicationsPolicy [-Filter <String>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-CsTeamsVoiceApplicationsPolicy
+  description: |-
+    The command shown in Example 1 returns information for all the Teams voice applications policies configured for use in the tenant.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
+  description: |-
+    In Example 2, information is returned for a single Teams voice applications policy; the policy with the Identity SDA-Allow-All.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*"
+  description: |-
+    The command shown in Example 3 returns information about all the Teams voice applications policies configured at the per-user scope. To do this, the command uses the Filter parameter and the filter value "tag:*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcards when retrieving one or more Teams voice applications policies. For example, to return all the policies configured at the per-user scope, use this syntax:
+
+    -Filter "tag:*"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier of the Teams voice applications policy to be retrieved. To return the global policy, use this syntax:
+
+    -Identity global
+
+    To return a policy configured at the per-user scope, use syntax like this:
+
+    -Identity "SDA-Allow-All"
+
+    You cannot use wildcard characters when specifying the Identity.
+
+    If neither the Identity nor the Filter parameters are specified, then Get-CsTeamsVoiceApplicationsPolicy returns all the Teams voice applications policies configured for use in the tenant.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsVoiceApplicationsPolicy
+name: Get-CsTeamsVoiceApplicationsPolicy
+description: |-
+  TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations.
+metadata:
+  external help file: MicrosoftTeams-help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsvoiceapplicationspolicy
+  schema: 2.0.0

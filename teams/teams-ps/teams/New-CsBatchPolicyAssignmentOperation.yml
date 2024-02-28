@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is used to assign or unassign a policy to a batch of users.
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="OperationId" data-throw-if-not-resolved="False" />
+  description: |-
+    The ID of the operation that can be used with the Get-CsBatchPolicyAssignmentOperation cmdlet to get the status of the operation.
+links:
+- text: Get-CsBatchPolicyAssignmentOperation
+  href: Get-CsBatchPolicyAssignmentOperation.yml
+syntaxes:
+- >-
+  New-CsBatchPolicyAssignmentOperation [-OperationName <String>] -Identity <String[]> -PolicyType <String>
+
+   [-AdditionalParameters <Hashtable>] [-PolicyName <String>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+
+   [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+
+   [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    $users_ids = @("psmith@contoso.com","tsanchez@contoso.com","bharvest@contoso.com")
+    New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
+  description: |-
+    In this example, the batch of users is specified as an array of user SIP addresses.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    $users_ids = @("2bdb15a9-2cf1-4b27-b2d5-fcc1d13eebc9", "d928e0fc-c957-4685-991b-c9e55a3534c7", "967cc9e4-4139-4057-9b84-1af80f4856fc")
+    New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName $null -Identity $users_ids -OperationName "Batch unassign meeting policy"
+  description: |-
+    In this example, a policy is removed from a batch of users by passing $null as the policy name.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    $users_ids = Get-Content .\users_ids.txt
+    New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users_ids -OperationName "Batch assign Kiosk"
+  description: |-
+    In this example, the batch of users is read from a text file containing user object IDs (guids).
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Connect-AzureAD
+    $users = Get-AzureADUser
+    New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.SipProxyAddress -OperationName "batch assign kiosk"
+  description: |-
+    In this example, the batch of users is obtained by connecting to Microsoft Entra ID and retrieving a collection of users and then referencing the SipProxyAddress property.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: AdditionalParameters
+  description: |+
+    .
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Break
+  description: |+
+    Wait for .NET debugger to attach
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelineAppend
+  description: |+
+    SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelinePrepend
+  description: |+
+    SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    An array of users, specified either using object IDs (guid) or SIP addresses.  There is a maximum of 5,000 users per batch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OperationName
+  description: |+
+    An optional name for the batch assignment operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  isRequired: true
+  description: |+
+    The name of the policy to be assigned to the users. To remove the currently assigned policy, use $null or an empty string "".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyType
+  isRequired: true
+  description: |+
+    The type of the policy to be assigned to the users. For the list of current policy types accepted by this parameter, see the Description section at the beginning of this article.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Proxy
+  description: |+
+    The URI for the proxy server to use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ProxyCredential
+  description: |+
+    Credentials for a proxy server to use for the remote call
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxyUseDefaultCredentials
+  description: |+
+    Use the default credentials for the proxy
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-CsBatchPolicyAssignmentOperation
+name: New-CsBatchPolicyAssignmentOperation
+description: |-
+  When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation ID which can be used to track the progress and status of the assignments.
+
+  Users can be specified by their object ID (guid) or by their SIP address (user@contoso.com). Note that a user's SIP address often has the same value as the User Principal Name (UPN), but this is not required. If a user is specified using their UPN, but it has a different value than their SIP address, then the policy assignment will fail for the user.
+
+  A batch may contain up to 5,000 users. If a batch includes duplicate users, the duplicates will be removed from the batch before processing and status will only be provided for the unique users remaining in the batch. For best results, do not submit more than a few batches at a time.  Allow batches to complete processing before submitting more batches.
+
+  You must be a Teams service admin, a Teams communication admin, or Global Administrator to run the cmdlet.
+
+  Batch policy assignment is currently limited to the following policy types:
+  CallingLineIdentity, ExternalAccessPolicy, OnlineVoiceRoutingPolicy, TeamsAppSetupPolicy, TeamsAppPermissionPolicy, TeamsCallingPolicy, TeamsCallParkPolicy, TeamsChannelsPolicy, TeamsEducationAssignmentsAppPolicy, TeamsEmergencyCallingPolicy, TeamsMeetingBroadcastPolicy, TeamsEmergencyCallRoutingPolicy, TeamsMeetingPolicy, TeamsMessagingPolicy, TeamsTemplatePermissionPolicy, TeamsUpdateManagementPolicy, TeamsUpgradePolicy,  TeamsVerticalPackagePolicy, TeamsVideoInteropServicePolicy, TenantDialPlan
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csbatchpolicyassignmentoperation
+  schema: 2.0.0
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

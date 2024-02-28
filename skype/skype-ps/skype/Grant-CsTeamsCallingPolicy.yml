@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a specific Teams Calling Policy to a user, a group of users, or sets the Global policy instance.
+module: SkypeForBusiness
+notes: |-
+  The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsTeamsCallingPolicy
+  href: Set-CsTeamsCallingPolicy.yml
+- text: Remove-CsTeamsCallingPolicy
+  href: Remove-CsTeamsCallingPolicy.yml
+- text: Get-CsTeamsCallingPolicy
+  href: Get-CsTeamsCallingPolicy.yml
+- text: New-CsTeamsCallingPolicy
+  href: New-CsTeamsCallingPolicy.yml
+syntaxes:
+- Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTeamsCallingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTeamsCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Grant-CsTeamsCallingPolicy -identity user1@contoso.com -PolicyName SalesCallingPolicy
+  description: |-
+    Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to user1@contoso.com
+  summary: ""
+- title: Example 2
+  code: |-
+    Grant-CsTeamsCallingPolicy -Global -PolicyName SalesCallingPolicy
+  description: |-
+    Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the Global policy instance. This sets the parameters in the Global policy instance to the values found
+    in the SalesCallingPolicy instance.
+  summary: ""
+- title: Example 3
+  code: |-
+    Grant-CsTeamsCallingPolicy -Group sales@contoso.com -Rank 10 -PolicyName SalesCallingPolicy
+  description: |-
+    Assigns the TeamsCallingPolicy called "SalesCallingPolicy" to the members of the group sales@contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Sets the parameters of the Global policy instance to the values in the specified policy instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the group used for the group policy assignment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The user object to whom the policy is being assigned.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Enables you to pass a user object through the pipeline that represents the user being assigned the policy. By default, the Grant-CsTeamsCallingPolicy cmdlet does not pass objects through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    The name of the policy being assigned.  To remove an existing user level policy assignment, specify PolicyName as $null.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Grant-CsTeamsCallingPolicy
+name: Grant-CsTeamsCallingPolicy
+description: |-
+  The Teams Calling Policies designate how users are able to use calling functionality within Microsoft Teams. This cmdlet allows admins to grant user level policies to individual users, to members of a group, or to set the Global policy instance.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  Module Name: Skype for Business Online
+  online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamscallingpolicy
+  applicable: Microsoft Teams
+  title: Grant-CsTeamsCallingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

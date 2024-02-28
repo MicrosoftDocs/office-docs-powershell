@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  When you buy Audio Conferencing licenses, Microsoft is hosting your audio conferencing bridge for your organization. The audio conferencing bridge gives out dial-in phone numbers from different locations so that meeting organizers and participants can use them to join Microsoft Teams meetings using a phone.
+  In addition to the phone numbers already assigned to your conferencing bridge, you can get additional service numbers (toll and toll-free numbers used for audio conferencing) from other locations, and then assign them to the conferencing bridge so you can expand coverage for your users. The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  Register-CsOnlineDialInConferencingServiceNumber [-Identity] <String> [-BridgeId <Guid>]
+
+   [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>] [-DomainController <Fqdn>] [-Force]
+
+   [<CommonParameters>]
+- >-
+  Register-CsOnlineDialInConferencingServiceNumber [-Instance] <ConferencingServiceNumber>
+
+   [-BridgeId <Guid>] [-BridgeName <String>] [-Tenant <Guid>] [-TenantDomain <String>]
+
+   [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Register-CsOnlineDialinConferencingServiceNumber -Identity +1425555XXX -BridgeId fb91u3e9-5c2a-42c3-8yy5-ec02beexxx09
+  description: |-
+    This command registers the telephone number +1425555XXX to your conference bridge. To find the bridge ID associated with your conference bridge you can use the command Get-CsOnlineDialInConferencingBridge.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: BridgeId
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BridgeName
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    PARAMVALUE: Fqdn
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="ConferencingServiceNumber" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    PARAMVALUE: ConferencingServiceNumber
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Register-CsOnlineDialInConferencingServiceNumber
+name: Register-CsOnlineDialInConferencingServiceNumber
+description: |-
+  The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/register-csonlinedialinconferencingservicenumber
+  applicable: Skype for Business Online
+  title: Register-CsOnlineDialInConferencingServiceNumber
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

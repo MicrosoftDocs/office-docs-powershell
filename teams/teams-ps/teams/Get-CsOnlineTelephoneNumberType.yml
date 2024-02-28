@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country or region. The telephone numbers can then be used to set up calling features for users and services in your organization.
+module: MicrosoftTeamsPowerShell
+links:
+- text: Get-CsOnlineTelephoneNumberCountry
+  href: Get-CsOnlineTelephoneNumberCountry.yml
+- text: Get-CsOnlineTelephoneNumberType
+  href: Get-CsOnlineTelephoneNumberType.yml
+- text: New-CsOnlineTelephoneNumberOrder
+  href: New-CsOnlineTelephoneNumberOrder.yml
+- text: Get-CsOnlineTelephoneNumberOrder
+  href: Get-CsOnlineTelephoneNumberOrder.yml
+- text: Complete-CsOnlineTelephoneNumberOrder
+  href: Complete-CsOnlineTelephoneNumberOrder.yml
+- text: Clear-CsOnlineTelephoneNumberOrder
+  href: Clear-CsOnlineTelephoneNumberOrder.yml
+syntaxes:
+- Get-CsOnlineTelephoneNumberType [-Country] <CountryCode> [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> Get-CsOnlineTelephoneNumberType -Country US
+
+    AllowedSearchType    : {CivicAddress, Prefix}
+    AreaCode             :
+    AvailabilityInfo     : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.AvailabilityInfo
+    Id                   : 470316bd-815e-459d-80e7-d7332f00fcb9
+    NumberType           : UserSubscriber
+    OfferModel           : DirectStock
+    PrefixSearchOption   : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.PrefixSearchOptions
+    RequiresCivicAddress : True
+
+    AllowedSearchType    : {CivicAddress, Prefix}
+    AreaCode             :
+    AvailabilityInfo     : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.AvailabilityInfo
+    Id                   : 25444938-a335-4a85-b64d-d445b45f04e3
+    NumberType           : UserSubscriberVoiceAndSms
+    OfferModel           : DirectStock
+    PrefixSearchOption   : Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.PrefixSearchOptions
+    RequiresCivicAddress : True
+  description: |-
+    This example returns the list of supported number offerings in United States.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    PS C:\> Get-CsOnlineTelephoneNumberType -Country CA | ft NumberType
+
+    NumberType
+    ----------
+    UserSubscriber
+    UserSubscriberVoiceAndSms
+    ConferenceToll
+    ConferenceTollFree
+    CallQueueToll
+    CallQueueTollFree
+    AutoAttendantToll
+    AutoAttendantTollFree
+  description: |-
+    This example returns the list of supported NumberTypes in Canada.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Country
+  isRequired: true
+  description: |+
+    Specifies the country or region that the number offerings belong. The country code uses ISO 3166 standard and the list of supported countries or regions can be found by calling `Get-CsOnlineTelephoneNumberCountry`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsOnlineTelephoneNumberType
+name: Get-CsOnlineTelephoneNumberType
+description: |-
+  Use the `Get-CsOnlineTelephoneNumberType` cmdlet to get the list of supported telephone number offerings in a given country or region. The `NumberType` field in the response is used to indicate the capabilities of a given offering. The telephone numbers can then be used to set up calling features for users and services in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinetelephonenumbertype
+  Module Name: MicrosoftTeams
+  title: Get-CsOnlineTelephoneNumberType
+  schema: 2.0.0
+  manager: mreddy
+  author: TristanChen-msft
+  ms.author: jiaych
+  ms.reviewer: julienp

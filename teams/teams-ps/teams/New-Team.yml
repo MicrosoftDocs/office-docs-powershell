@@ -1,0 +1,357 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team. 
+  Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default. 
+
+  If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
+
+
+  Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="GroupId" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-Team
+  href: remove-team.yml
+- text: Get-Team
+  href: get-team.yml
+- text: Set-Team
+  href: set-team.yml
+syntaxes:
+- >-
+  New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] [-Classification <String>]
+
+   [-Visibility <String>] [-Template <String>] [-Owner <String>] [-AllowGiphy <Boolean>]
+
+   [-GiphyContentRating <String>] [-AllowStickersAndMemes <Boolean>] [-AllowCustomMemes <Boolean>]
+
+   [-AllowGuestCreateUpdateChannels <Boolean>] [-AllowGuestDeleteChannels <Boolean>]
+
+   [-AllowCreateUpdateChannels <Boolean>] [-AllowDeleteChannels <Boolean>] [-AllowAddRemoveApps <Boolean>]
+
+   [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
+
+   [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
+
+   [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] 
+
+   [-RetainCreatedGroup <SwitchParameter>] [-AllowCreatePrivateChannels <Boolean>] [<CommonParameters>]
+- >-
+  New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyContentRating <String>]
+
+   [-AllowStickersAndMemes <Boolean>] [-AllowCustomMemes <Boolean>] [-AllowGuestCreateUpdateChannels <Boolean>]
+
+   [-AllowGuestDeleteChannels <Boolean>] [-AllowCreateUpdateChannels <Boolean>] [-AllowDeleteChannels <Boolean>]
+
+   [-AllowAddRemoveApps <Boolean>] [-AllowCreateUpdateRemoveTabs <Boolean>]
+
+   [-AllowCreateUpdateRemoveConnectors <Boolean>] [-AllowUserEditMessages <Boolean>]
+
+   [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>] [-AllowTeamMentions <Boolean>]
+
+   [-AllowChannelMentions <Boolean>][-ShowInTeamsSearchAndSuggestions <Boolean>] [-RetainCreatedGroup <SwitchParameter>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    New-Team -DisplayName "Tech Reads"
+  description: |-
+    This example creates a team with all parameters with their default values.
+  summary: ""
+- title: Example 2
+  code: |-
+    New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -Visibility Public
+  description: |-
+    This example creates a team with a specific description and public visibility.
+  summary: ""
+- title: Example 3
+  code: |-
+    $group = New-Team -MailNickname "TestTeam" -displayname "Test Teams" -Visibility "private"
+    Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
+    Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
+    Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
+    New-TeamChannel -GroupId $group.GroupId -DisplayName "Q4 planning"
+    New-TeamChannel -GroupId $group.GroupId -DisplayName "Exec status"
+    New-TeamChannel -GroupId $group.GroupId -DisplayName "Contracts"
+  description: |-
+    This example creates a team, adds three members to it, and creates three channels within it.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAddRemoveApps
+  description: |+
+    Boolean value that determines whether or not members (not only owners) are allowed to add apps to the team.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowChannelMentions
+  description: |+
+    Boolean value that determines whether or not channels in the team can be @ mentioned so that all users who follow the channel are notified.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreatePrivateChannels
+  description: |+
+    Determines whether private channel creation is allowed for the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateChannels
+  description: |+
+    Setting that determines whether or not members (and not just owners) are allowed to create channels.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateRemoveConnectors
+  description: |+
+    Setting that determines whether or not members (and not only owners) can manage connectors in the team.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateRemoveTabs
+  description: |+
+    Setting that determines whether or not members (and not only owners) can manage tabs in channels.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCustomMemes
+  description: |+
+    Setting that determines whether or not members can use the custom memes functionality in teams.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowDeleteChannels
+  description: |+
+    Setting that determines whether or not members (and not only owners) can delete channels in the team.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowGiphy
+  description: |+
+    Setting that determines whether or not giphy can be used in the team.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowGuestCreateUpdateChannels
+  description: |+
+    Setting that determines whether or not guests can create channels in the team.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowGuestDeleteChannels
+  description: |+
+    Setting that determines whether or not guests can delete in the team.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowOwnerDeleteMessages
+  description: |+
+    Setting that determines whether or not owners can delete messages that they or other members of the team have posted.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowStickersAndMemes
+  description: |+
+    Setting that determines whether stickers and memes usage is allowed in the team.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowTeamMentions
+  description: |+
+    Setting that determines whether the entire team can be @ mentioned (which means that all users will be notified)
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowUserDeleteMessages
+  description: |+
+    Setting that determines whether or not members can delete messages that they have posted.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowUserEditMessages
+  description: |+
+    Setting that determines whether or not users can edit messages that they have posted.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Classification
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Team description. Characters Limit - 1024.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Team display name. Characters Limit - 256.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GiphyContentRating
+  description: |+
+    Setting that determines the level of sensitivity of giphy usage that is allowed in the team.  Accepted values are "Strict" or "Moderate"
+
+  defaultValue: Moderate
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    Specify a GroupId to convert to a Team.  If specified, you cannot provide the other values that are already specified by the existing group, namely: Visibility, Alias, Description, or DisplayName.
+    If, for example, you need to create a Team from an existing Microsoft 365 Group, use the _ExternalDirectoryObjectId_ property value returned by [Get-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/get-unifiedgroup?view=exchange-ps).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MailNickName
+  description: |+
+    The MailNickName parameter specifies the alias for the associated Office 365 Group.
+    This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group.
+    The value of the MailNickName parameter has to be unique across your tenant.
+    Note: If Microsoft 365 groups naming policies are enabled in your tenant, this parameter is required and must also comply with the naming policy.
+
+    For more details about the naming conventions see here: [New-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/new-unifiedgroup#parameters), Parameter: -Alias.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    An admin who is allowed to create on behalf of another user should use this flag to specify the desired owner of the group. 
+    This user will be added as both a member and an owner of the group. 
+    If not specified, the user who creates the team will be added as both a member and an owner.
+    Please note: This parameter is mandatory, if connected using Certificate Based Authentication.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetainCreatedGroup
+  description: |+
+    Switch Parameter allowing toggle of group cleanup if team creation fails. The default value of this parameter is $false to retain with current functionality where the unified group is deleted if the step of adding a team to the group fails. Set it to $true to retain the unified group created even if team creation fails to allow self-retry of team creation or self-cleanup of group as appropriate.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ShowInTeamsSearchAndSuggestions
+  description: |+
+    Setting that determines whether or not private teams should be searchable from Teams clients for users who do not belong to that team.  Set to $false to make those teams not discoverable from Teams clients.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    If you have an EDU license, you can use this parameter to specify which template you'd like to use for creating your group.
+    Do not use this parameter when converting an existing group.
+
+    Valid values are: "EDU_Class" or "EDU_PLC"
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Visibility
+  description: |+
+    Set to Public to allow all users in your organization to join the group by default. Set to Private to require that an owner approve the join request.
+
+  defaultValue: Private
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-Team
+name: New-Team
+description: |-
+  Creates a new team with user specified settings, and returns a Group object with a GroupID property.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/new-team
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

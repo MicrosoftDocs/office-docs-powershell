@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The CsTeamsChannelsPolicy allows you to manage features related to the Teams & Channels experience within the Teams application.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsTeamsChannelsPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <System.Guid>] [<CommonParameters>]
+- Get-CsTeamsChannelsPolicy [-Filter <String>] [-LocalStore] [-Tenant <System.Guid>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsChannelsPolicy
+  description: |-
+    Retrieves all policies related to Teams & Channels that are available in your organization.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when indicating the policy (or policies) to be returned. For example, to return a collection of all the per-user policies, use this syntax: -Filter "tag:".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specify the unique name of a policy you would like to retrieve. Use one of the following values:
+
+    - `Global`
+    - The name of a custom policy you've created. If the value contains spaces, enclose the value in quotation marks ("). Note that the Identity value shows as `Tag:<Name>`, but the `<Name>` value also works.
+    - `Default`: This is a template that's used to populate the default property values when you create a new policy or to reset the property values in the global policy in case you delete it. Note that the Identity value shows as `Tag:Default`, but the `Default` value also works.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsTeamsChannelsPolicy
+name: Get-CsTeamsChannelsPolicy
+description: |-
+  The CsTeamsChannelsPolicy allows you to manage features related to the Teams & Channels experience within the Teams application.  The Get-CsTeamsChannelsPolicy returns policies that are available for use within your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csteamschannelspolicy
+  applicable: Skype for Business Online
+  title: Get-CsTeamsChannelsPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

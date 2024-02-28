@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsIPPhonePolicy cmdlet to get all the settings of the Skype for Business Online and Skype for Business Server 2019 global IP phone policy. IP phone policies define the Skype for Business features that are available to users.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-CsIPPhonePolicy
+  href: https://learn.microsoft.com/powershell/module/skype/grant-csipphonepolicy?view=skype-ps
+- text: Set-CsIPPhonePolicy
+  href: https://learn.microsoft.com/powershell/module/skype/set-csipphonepolicy?view=skype-ps
+syntaxes:
+- Get-CsIPPhonePolicy [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    PS C:\> Get-CsIPPhonePolicy
+  description: |-
+    This example returns the global IP phone policy along with all their settings.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsIPPhonePolicy
+name: Get-CsIPPhonePolicy
+description: |-
+  IP phone policies are applied each time a user accesses the system via an IP phone device. The Get-CsIPPhonePolicy cmdlet retrieves the global IP phone policy that has been configured in your organization along with all their settings.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csipphonepolicy
+  applicable: Skype for Business Online, Skype for Business Server 2019
+  title: Get-CsIPPhonePolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""
