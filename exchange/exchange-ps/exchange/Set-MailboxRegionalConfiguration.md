@@ -20,12 +20,37 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Default
 ```
-Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter>
- [-Archive]
+Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter> [-DomainController <Fqdn>]
  [-Confirm]
  [-DateFormat <String>]
- [-DomainController <Fqdn>]
+ [-Language <CultureInfo>]
+ [-LocalizeDefaultFolderName]
+ [-TimeFormat <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Set-MailboxRegionalConfiguration [-Identity] <MailboxIdParameter> [-Archive] [-UseCustomRouting]
+ [-Confirm]
+ [-DateFormat <String>]
+ [-Language <CultureInfo>]
+ [-LocalizeDefaultFolderName]
+ [-TimeFormat <String>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### MailboxLocation
+```
+Set-MailboxRegionalConfiguration [-MailboxLocation <MailboxLocationIdParameter>] [-UseCustomRouting]
+ [-Confirm]
+ [-DateFormat <String>]
  [-Language <CultureInfo>]
  [-LocalizeDefaultFolderName]
  [-TimeFormat <String>]
@@ -50,7 +75,7 @@ This example sets Marcelo Teixeira's mailbox language to Brazilian Portuguese, a
 
 ### Example 2
 ```powershell
-Set-MailboxRegionalConfiguration -Identity "Ella Lack's" -DateFormat "d/m/yyyy"
+Set-MailboxRegionalConfiguration -Identity "Ella Lack's" -DateFormat "d/M/yyyy"
 ```
 
 This example sets the date format for Ella Lack's mailbox.
@@ -94,7 +119,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 
 ```yaml
 Type: MailboxIdParameter
-Parameter Sets: (All)
+Parameter Sets: Default, Identity
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -112,7 +137,7 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
@@ -175,7 +200,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -196,6 +221,24 @@ Type: CultureInfo
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailboxLocation
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailboxLocation Description }}
+
+```yaml
+Type: MailboxLocationIdParameter
+Parameter Sets: MailboxLocation
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -257,6 +300,24 @@ Type: ExTimeZoneValue
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

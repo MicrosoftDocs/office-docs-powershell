@@ -34,6 +34,7 @@ Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
  [-IncludeSoftDeletedRecipients]
  [-ResultSize <Unlimited>]
  [-SkipCount <Int32>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -105,6 +106,7 @@ This example uses the IncludeAnalysis switch to view the statistics of Tony's Re
 ### Example 5
 ```powershell
 $All = Get-Mailbox -ResultSize Unlimited
+
 $All | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize}
 ```
 
@@ -375,6 +377,24 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

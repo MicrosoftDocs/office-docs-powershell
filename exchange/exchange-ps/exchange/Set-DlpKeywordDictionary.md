@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
  [-Confirm]
  [-Description <String>]
+ [-DoNotPersistKeywords]
  [-FileData <Byte[]>]
  [-Name <String>]
  [-WhatIf]
@@ -31,14 +32,16 @@ Set-DlpKeywordDictionary [-Identity] <SensitiveInformationTypeIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $Keywords = "Aarskog's syndrome, Abandonment, Abasia, Abderhalden-Kaufmann-Lignac, Abdominalgia, Abduction contracture, Abetalipo proteinemia, Abiotrophy, Ablatio, ablation, Ablepharia, Abocclusion, Abolition, Aborter, Abortion, Abortus, Aboulomania, Abrami's disease, Abramo"
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($keywords)
+
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -47,10 +50,15 @@ This example replaces the existing terms in the DLP keyword dictionary named Dis
 ### Example 2
 ```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
+
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
+
 $Terms += "Achylia","Acidemia","Acidocytopenia","Acidocytosis","Acidopenia","Acidosis","Aciduria","Acladiosis","Aclasis"
+
 $Keywords = $Terms -Join ", "
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
+
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -59,11 +67,17 @@ This example adds the specified terms to the DLP keyword dictionary named Diseas
 ### Example 3
 ```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Diseases"
+
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
+
 $TermsToRemove = @('abandonment', 'ablatio')
+
 $UpdatedTerms = $Terms | Where-Object {$_ -NotIn $TermsToRemove}
+
 $Keywords = $UpdatedTerms -Join ", "
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
+
 Set-DlpKeywordDictionary -Identity "Diseases" -FileData $EncodedKeywords
 ```
 
@@ -72,11 +86,17 @@ This example removes the specified terms from the DLP keyword dictionary named D
 ### Example 4
 ```powershell
 $Dictionary = Get-DlpKeywordDictionary -Name "Inappropriate Language"
+
 $Terms = $Dictionary.KeywordDictionary.split(',').trim()
+
 Set-Content $Terms -Path "C:\My Documents\InappropriateTerms.txt"
+
 $UpdatedTerms = Get-Content -Path "C:\My Documents\InappropriateTerms.txt"
+
 $Keywords = $UpdatedTerms -Join ", "
+
 $EncodedKeywords = [System.Text.Encoding]::Unicode.GetBytes($Keywords)
+
 Set-DlpKeywordDictionary -Identity "Inappropriate Language" -FileData $EncodedKeywords
 ```
 
@@ -126,6 +146,22 @@ The Description parameter specifies descriptive text for the DLP keyword diction
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DoNotPersistKeywords
+{{ Fill DoNotPersistKeywords Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

@@ -14,8 +14,8 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 ## SYNTAX
 
 ```
-New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-Description <String>]
- [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-AllowEmailEditing <String>] [-Description <String>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,12 +59,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseMicrosoftECDN
+This setting governs whether the global admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTownhalls
+This setting governs if a user can create town halls using Teams Events. 
+Possible values are:
+ - **Enabled**: Enables creating town halls.
+ - **Disabled**: Disables creating town hall.
+
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEmailEditing
+This setting governs if a user is allowed to edit the communication emails in Teams Town Hall or Teams Webinar events. 
+Possible values are:
+ - **Enabled**: Enables editing of communication emails.
+ - **Disabled**: Disables editing of communication emails.
+
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EventAccessType
-This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
+This setting governs which users can access the Town hall event and access the event registration page or the event site to register for a Webinar. It also governs which user type is allowed to join the session or sessions in the event for both event types. 
+
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
 
- - **EveryoneInCompanyExcludingGuests**: Enables creating events to allow only in-tenant users to register and join the event.
+ - **EveryoneInCompanyExcludingGuests**: For Webinar - enables creating events to allow only in-tenant users to register and join the event. For Town hall - enables creating events to allow only in-tenant users to join the event (Note: for Town hall, in-tenant users include guests; this parameter will disable public Town halls). 
+
 
 
 ```yaml
@@ -80,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+The Confirm switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -127,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
+The WhatIf switch does not work with this cmdlet.
 The cmdlet is not run.
 
 ```yaml

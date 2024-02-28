@@ -18,7 +18,7 @@ Use the New-CsAutoAttendantCallFlow cmdlet to create a new call flow.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [-ForceListenMenuEnabled <Boolean>] [<CommonParameters>]
+New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [-ForceListenMenuEnabled] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +41,7 @@ This example creates a new call flow that renders the "Default Menu" menu.
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign."
 $menu = New-CsAutoAttendantMenu -Name "Default Menu" -Prompts $menuPrompt -EnableDialByName
 $greeting = New-CsAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
-$callFlow = New-CsAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting -ForceListenMenuEnabled $True
+$callFlow = New-CsAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu -Greetings $greeting -ForceListenMenuEnabled
 ```
 
 This example creates a new call flow that plays a greeting before rendering the "Default Menu" menu with Force listen menu enabled.
@@ -119,10 +119,10 @@ Accept wildcard characters: False
 
 ### -ForceListenMenuEnabled
 
-If True, DTMF and speech inputs will not be processed while the greeting or menu prompt is playing. It will enforce callers to listen to all menu options before making a selection.
+If specified, DTMF and speech inputs will not be processed while the greeting or menu prompt is playing. It will enforce callers to listen to all menu options before making a selection.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Skype for Business Online

@@ -78,15 +78,12 @@ New-MailUser [-Name] <String> -ExternalEmailAddress <ProxyAddress> -Password <Se
  [<CommonParameters>]
 ```
 
-### MicrosoftOnlineServicesID
+### EnableRoomMailboxAccount
 ```
-New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString>
- [-ExternalEmailAddress <ProxyAddress>]
+New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>]
  [-Alias <String>]
- [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
  [-DisplayName <String>]
- [-DomainController <Fqdn>]
  [-FirstName <String>]
  [-ImmutableId <String>]
  [-Initials <String>]
@@ -97,8 +94,6 @@ New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Passwo
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RemotePowerShellEnabled <Boolean>]
- [-ResetPasswordOnNextLogon <Boolean>]
- [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf]
  [<CommonParameters>]
@@ -130,6 +125,27 @@ New-MailUser [-Name] <String> -FederatedIdentity <String>
  [<CommonParameters>]
 ```
 
+### LOBAppAccount
+```
+New-MailUser [-Name] <String> -Password <SecureString> [-LOBAppAccount]
+ [-Alias <String>]
+ [-Confirm]
+ [-DisplayName <String>]
+ [-FirstName <String>]
+ [-ImmutableId <String>]
+ [-Initials <String>]
+ [-LastName <String>]
+ [-MailboxRegion <String>]
+ [-ModeratedBy <MultiValuedProperty>]
+ [-ModerationEnabled <Boolean>]
+ [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
+ [-RemotePowerShellEnabled <Boolean>]
+ [-SendModerationNotifications <TransportModerationNotificationFlags>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### MicrosoftOnlineServicesFederatedUser
 ```
 New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServicesID <WindowsLiveId>
@@ -155,13 +171,15 @@ New-MailUser [-Name] <String> -FederatedIdentity <String> -MicrosoftOnlineServic
  [<CommonParameters>]
 ```
 
-### EnableRoomMailboxAccount
+### MicrosoftOnlineServicesID
 ```
-New-MailUser [-Name] <String>
- [-MicrosoftOnlineServicesID <WindowsLiveId>]
+New-MailUser [-Name] <String> -MicrosoftOnlineServicesID <WindowsLiveId> -Password <SecureString>
+ [-ExternalEmailAddress <ProxyAddress>]
  [-Alias <String>]
+ [-ArbitrationMailbox <MailboxIdParameter>]
  [-Confirm]
  [-DisplayName <String>]
+ [-DomainController <Fqdn>]
  [-FirstName <String>]
  [-ImmutableId <String>]
  [-Initials <String>]
@@ -170,7 +188,10 @@ New-MailUser [-Name] <String>
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
+ [-PrimarySmtpAddress <SmtpAddress>]
  [-RemotePowerShellEnabled <Boolean>]
+ [-ResetPasswordOnNextLogon <Boolean>]
+ [-SamAccountName <String>]
  [-SendModerationNotifications <TransportModerationNotificationFlags>]
  [-WhatIf]
  [<CommonParameters>]
@@ -228,7 +249,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: ProxyAddress
-Parameter Sets: MicrosoftOnlineServicesID, FederatedUser
+Parameter Sets: FederatedUser, MicrosoftOnlineServicesID
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -297,7 +318,7 @@ You can use the following methods as a value for this parameter:
 
 ```yaml
 Type: SecureString
-Parameter Sets: EnabledUser, MicrosoftOnlineServicesID
+Parameter Sets: EnabledUser, LOBAppAccount, MicrosoftOnlineServicesID
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -332,7 +353,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -502,6 +523,24 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LOBAppAccount
+This parameter is available only in the cloud-based service.
+
+{{ Fill LOBAppAccount Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: LOBAppAccount
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -687,7 +726,7 @@ If you use the PrimarySmtpAddress parameter to specify the primary email address
 
 ```yaml
 Type: SmtpAddress
-Parameter Sets: DisabledUser, EnabledUser, FederatedUser, MicrosoftOnlineServicesID
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 

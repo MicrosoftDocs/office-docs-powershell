@@ -764,11 +764,14 @@ New-Mailbox [-Name] <String> [-SupervisoryReviewPolicy]
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
+In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216) InformationVariable and InformationAction don't work.
+
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $password = Read-Host "Enter password" -AsSecureString
+
 New-Mailbox -UserPrincipalName chris@contoso.com -Alias chris -Database "Mailbox Database 1" -Name ChrisAshton -OrganizationalUnit Users -Password $password -FirstName Chris -LastName Ashton -DisplayName "Chris Ashton" -ResetPasswordOnNextLogon $true
 ```
 
@@ -791,7 +794,9 @@ This example creates an enabled user account in Active Directory and a room mail
 ### Example 4
 ```powershell
 New-Mailbox -Shared -Name "Sales Department" -DisplayName "Sales Department" -Alias Sales
+
 Set-Mailbox -Identity Sales -GrantSendOnBehalfTo MarketingSG
+
 Add-MailboxPermission -Identity Sales -User MarketingSG -AccessRights FullAccess -InheritanceType All
 ```
 
@@ -803,6 +808,8 @@ This example assumes that you've already created a mail-enabled security group n
 
 ### -Name
 The Name parameter specifies the unique name of the mailbox. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+In the cloud-based service, many special characters aren't allowed in the Name value (for example, ö, ü, or ä). For more information, see [Error when you try to create a username that contains a special character in Microsoft 365](https://learn.microsoft.com/office/troubleshoot/office-suite-issues/username-contains-special-character).
 
 ```yaml
 Type: String
@@ -922,7 +929,7 @@ You need to enable the account for features like the Skype for Business Room Sys
 
 You need to use this parameter with the Room switch.
 
-A room mailbox in Exchange Online is created with associated an account that has an unknown password. This account is active and visible in Azure Active Directory PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. If the password is known or changed, the account can be used to log in and access the mailbox or other resources. To prevent this account from being able to log in after you create the mailbox, use the Set-AzureADUser cmdlet in Azure Active Directory PowerShell. For instructions, see [Block Microsoft 365 user accounts with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/block-user-accounts-with-microsoft-365-powershell).
+A room mailbox in Exchange Online is created with associated an account that has a random, unknown password. This account is active and visible in Microsoft Graph PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. To prevent this account from being able to log in after you create the mailbox, use the AccountEnabled parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: Boolean
@@ -1070,7 +1077,7 @@ Accept wildcard characters: False
 ### -MicrosoftOnlineServicesID
 This parameter is available only in the cloud-based service.
 
-The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter applies only to objects in the cloud-based service and is used instead of the  UserPrincipalName parameter. The MicrosoftOnlineServicesID parameter isn't available in on-premises deployments.
+The MicrosoftOnlineServicesID parameter specifies the user ID for the object. This parameter applies only to objects in the cloud-based service and is used instead of the UserPrincipalName parameter. The MicrosoftOnlineServicesID parameter isn't available in on-premises deployments.
 
 ```yaml
 Type: WindowsLiveId
@@ -1194,7 +1201,7 @@ Room mailboxes are resource mailboxes that are associated with a specific locati
 
 When you use this switch in on-premises Exchange, a disabled account is created with the room mailbox. The account can't be used to sign in to the mailbox or anywhere in the organization. To enable the associated account, use the EnableRoomMailboxAccount and RoomMailboxPassword parameters.
 
-When you use this switch in Exchange Online, an account with an unknown password is created with the room mailbox. If the password is known or changed, the account can be used to log in to the mailbox or anywhere in the organization. To prevent this account from being able to log in after you create the room mailbox, use the Set-AzureADUser cmdlet in Azure Active Directory PowerShell. For instructions, see [Block Microsoft 365 user accounts with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/block-user-accounts-with-microsoft-365-powershell).
+When you use this switch in Exchange Online, an account with a random, unknown password is created for the room mailbox. If the password is known or changed, the account can be used to log in to the mailbox or anywhere in the organization. To prevent this account from being able to log in after you create the room mailbox, use the AccountEnabled parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: SwitchParameter
@@ -1312,7 +1319,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -2028,7 +2035,7 @@ You can use the following methods as a value for this parameter:
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-To configure the password for a room mailbox account in Exchange Online, use Set-AzureADUserPassword cmdlet in Azure Active Directory PowerShell. For instructions, see [Manage passwords with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/manage-passwords-with-microsoft-365-powershell).
+To configure the password for a room mailbox account in Exchange Online, use [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: SecureString

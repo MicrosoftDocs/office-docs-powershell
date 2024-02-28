@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/skype/grant-cstenantdialplan
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Grant-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -36,7 +36,7 @@ Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThr
 The Grant-CsTenantDialPlan cmdlet assigns an existing tenant dial plan to a user, a group of users, or sets the Global policy instance.
 Tenant dial plans provide information that is required for Enterprise Voice users to make telephone calls.
 Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
-A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as how normalization rules are applied.
 
 You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsUserPolicyAssignment -Identity "<user name>" -PolicyType TenantDialPlan.`
 
@@ -75,7 +75,7 @@ Sets the parameters of the Global policy instance to the values in the specified
 Type: SwitchParameter
 Parameter Sets: (GrantToTenant)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ The PolicyName parameter is the name of the tenant dial plan to be assigned.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -122,7 +122,7 @@ Specifies the group used for the group policy assignment.
 Type: String
 Parameter Sets: (GrantToGroup)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -138,7 +138,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: (GrantToGroup)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ The Identity parameter identifies the user to whom the policy should be assigned
 Type: String
 Parameter Sets: (Identity)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -170,7 +170,7 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -203,6 +203,8 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## OUTPUTS
 
 ## NOTES
+The ExternalAccessPrefix and OptimizeDeviceDialing parameters have been removed from New-CsTenantDialPlan and Set-CsTenantDialPlan cmdlet since they are no longer used. External access dialing is now handled implicitly using normalization rules of the dial plans.
+The Get-CsTenantDialPlan will still show the external access prefix in the form of a normalization rule of the dial plan.
 
 ## RELATED LINKS
 

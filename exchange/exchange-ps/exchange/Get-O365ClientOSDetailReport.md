@@ -52,10 +52,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-O365ClientOSDetailReport -WindowsLiveID john@contoso.com -StartDate 05/01/2016 -EndDate 05/03/2016
+Get-O365ClientOSDetailReport -WindowsLiveID john@contoso.com -StartDate 05/01/2017 -EndDate 05/03/2017
 ```
 
-This example retrieves the operating system details for user John between May 1, 2016 and May 3, 2016.
+This example retrieves the operating system details for user John between May 1, 2017 and May 3, 2017.
 
 ### Example 2
 ```powershell

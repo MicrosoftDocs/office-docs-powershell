@@ -39,7 +39,7 @@ After a migration batch for a local or cross-forest move has successfully run an
 - Configures the user's Microsoft Outlook profile to point to the new target domain.
 - Converts the source mailbox to a mail-enabled user in the source domain.
 
-In the cloud-based service, this cmdlet sets the value of CompleteAfter to the current time.  It is important to remember that any CompleteAfter setting that has been applied to the individual users within the batch will override the setting on the batch, so the completion for some users may be delayed until their configured time.
+In the cloud-based service, this cmdlet sets the value of CompleteAfter to the current time. It is important to remember that any CompleteAfter setting that has been applied to the individual users within the batch will override the setting on the batch, so the completion for some users may be delayed until their configured time.
 
 When the finalization process is complete, you can remove the batch by using the Remove-MigrationBatch cmdlet.
 
@@ -97,6 +97,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
 
 ```yaml
 Type: SwitchParameter

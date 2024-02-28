@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-ComplianceTag [-Name] <String>
+ [-AutoApprovalPeriod <System.Int32>]
  [-Comment <String>]
  [-ComplianceTagForNextStage <String>]
  [-Confirm]
@@ -43,7 +44,7 @@ New-ComplianceTag [-Name] <String>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -71,6 +72,22 @@ Applicable: Security & Compliance
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoApprovalPeriod
+{{ Fill AutoApprovalPeriod Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

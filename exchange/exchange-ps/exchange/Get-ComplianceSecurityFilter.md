@@ -32,7 +32,7 @@ Get-ComplianceSecurityFilter [-Action <ComplianceSecurityFilterActionType>]
 ## DESCRIPTION
 Compliance security filters work with compliance searches in the Microsoft Purview compliance portal (\*-ComplianceSearch cmdlets), not In-Place eDiscovery searches in Exchange Online (\*-MailboxSearch cmdlets).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -55,11 +55,11 @@ This example returns detailed information about the compliance security filter n
 ### -Action
 The Action parameter filters the results by the type of search action that a filter is applied to. Valid values are:
 
-- All
-- Export
-- Preview
-- Purge
-- Search
+- Export: The filter is applied when exporting search results, or preparing them for analysis in eDiscovery Premium.
+- Preview: The filter is applied when previewing search results.
+- Purge: The filter is applied when purging search results. How the items are deleted is controlled by the PurgeType parameter value on the New-ComplianceSearchAction cmdlet. The default value is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
+- Search: The filter is applied when running a search.
+- All: The filter is applied to all search actions.
 
 ```yaml
 Type: ComplianceSecurityFilterActionType

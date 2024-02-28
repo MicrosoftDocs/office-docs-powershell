@@ -147,6 +147,8 @@ The following roles apply specifically to calendar folders:
 - AvailabilityOnly: View only availability data
 - LimitedDetails: View availability data with subject and location
 
+When the Editor role is applied to calendar folders, delegates can accept or decline meetings by manually selecting the meeting request in the mailbox. In Exchange Online, to send meeting requests to delegates where they can accept or decline meetings, also use the SharingPermissionFlags parameter with the value Delegate.
+
 ```yaml
 Type: MailboxFolderAccessRight[]
 Parameter Sets: (All)
@@ -161,7 +163,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
+The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias

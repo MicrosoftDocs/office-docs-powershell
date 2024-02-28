@@ -46,6 +46,7 @@ Get-MailboxStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
  [-IncludeQuarantineDetails]
  [-IncludeSoftDeletedRecipients]
  [-NoADLookup]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -70,6 +71,8 @@ The Get-MailboxStatistics cmdlet requires at least one of the following paramete
 You can use the Get-MailboxStatistics cmdlet to return detailed move history and a move report for completed move requests to troubleshoot a move request. To view the move history, you must pass this cmdlet as an object. Move histories are retained in the mailbox database and are numbered incrementally and the last executed move request is always numbered 0. For more information, see "Example 7," "Example 8," and "Example 9" in this topic.
 
 You can only see move reports and move history for completed move requests.
+
+**Note**: We're deprecating the LastUserActionTime property in Exchange Online PowerShell. Don't use the value of that property as the last active time for a mailbox.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -127,6 +130,7 @@ This example returns the summary move history for the completed move request for
 ### Example 8
 ```powershell
 $temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveHistory
+
 $temp.MoveHistory[0]
 ```
 
@@ -135,6 +139,7 @@ This example returns the detailed move history for the completed move request fo
 ### Example 9
 ```powershell
 $temp=Get-MailboxStatistics -Identity AylaKol -IncludeMoveReport
+
 $temp.MoveHistory[0] | Export-CSV C:\MoveReport_AylaKol.csv
 ```
 
@@ -440,6 +445,24 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Identity
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

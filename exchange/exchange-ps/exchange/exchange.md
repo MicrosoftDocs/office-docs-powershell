@@ -69,10 +69,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Enable-SafeLinksRule](Enable-SafeLinksRule.md)
 
-### [Get-AdvancedThreatProtectionDocumentDetail](Get-AdvancedThreatProtectionDocumentDetail.md)
-
-### [Get-AdvancedThreatProtectionDocumentReport](Get-AdvancedThreatProtectionDocumentReport.md)
-
 ### [Get-AntiPhishPolicy](Get-AntiPhishPolicy.md)
 
 ### [Get-AntiPhishRule](Get-AntiPhishRule.md)
@@ -202,6 +198,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AgentLog](Get-AgentLog.md)
 
+### [Get-AggregateZapReport](Get-AggregateZapReport.md)
+
+### [Get-ArcConfig](Get-ArcConfig.md)
+
 ### [Get-AttachmentFilterEntry](Get-AttachmentFilterEntry.md)
 
 ### [Get-AttachmentFilterListConfig](Get-AttachmentFilterListConfig.md)
@@ -216,9 +216,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ContentFilterPhrase](Get-ContentFilterPhrase.md)
 
+### [Get-DetailZapReport](Get-DetailZapReport.md)
+
 ### [Get-DkimSigningConfig](Get-DkimSigningConfig.md)
 
 ### [Get-EOPProtectionPolicyRule](Get-EOPProtectionPolicyRule.md)
+
+### [Get-ExoPhishSimOverrideRule](Get-ExoPhishSimOverrideRule.md)
+
+### [Get-ExoSecOpsOverrideRule](Get-ExoSecOpsOverrideRule.md)
 
 ### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
 
@@ -280,6 +286,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-SenderReputationConfig](Get-SenderReputationConfig.md)
 
+### [Get-TeamsProtectionPolicy](Get-TeamsProtectionPolicy.md)
+
+### [Get-TeamsProtectionPolicyRule](Get-TeamsProtectionPolicyRule.md)
+
 ### [Get-TenantAllowBlockListItems](Get-TenantAllowBlockListItems.md)
 
 ### [Get-TenantAllowBlockListSpoofItems](Get-TenantAllowBlockListSpoofItems.md)
@@ -287,6 +297,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-DkimSigningConfig](New-DkimSigningConfig.md)
 
 ### [New-EOPProtectionPolicyRule](New-EOPProtectionPolicyRule.md)
+
+### [New-ExoPhishSimOverrideRule](New-ExoPhishSimOverrideRule.md)
+
+### [New-ExoSecOpsOverrideRule](New-ExoSecOpsOverrideRule.md)
 
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
 
@@ -302,8 +316,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
 
-### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
-
 ### [New-QuarantinePermissions](New-QuarantinePermissions.md)
 
 ### [New-QuarantinePolicy](New-QuarantinePolicy.md)
@@ -314,7 +326,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
 
-### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
+### [New-TeamsProtectionPolicy](New-TeamsProtectionPolicy.md)
+
+### [New-TeamsProtectionPolicyRule](New-TeamsProtectionPolicyRule.md)
 
 ### [New-TenantAllowBlockListItems](New-TenantAllowBlockListItems.md)
 
@@ -333,6 +347,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-ContentFilterPhrase](Remove-ContentFilterPhrase.md)
 
 ### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
+
+### [Remove-ExoPhishSimOverrideRule](Remove-ExoPhishSimOverrideRule.md)
+
+### [Remove-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
 
 ### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
 
@@ -356,8 +374,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
 
-### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
-
 ### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
 
 ### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
@@ -366,13 +382,13 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
 
-### [Remove-SecOpsOverrideRule](Remove-SecOpsOverrideRule.md)
-
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
 ### [Remove-TenantAllowBlockListSpoofItems](Remove-TenantAllowBlockListSpoofItems.md)
 
 ### [Rotate-DkimSigningConfig](Rotate-DkimSigningConfig.md)
+
+### [Set-ArcConfig](Set-ArcConfig.md)
 
 ### [Set-AttachmentFilterListConfig](Set-AttachmentFilterListConfig.md)
 
@@ -381,6 +397,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
 
 ### [Set-EOPProtectionPolicyRule](Set-EOPProtectionPolicyRule.md)
+
+### [Set-ExoPhishSimOverrideRule](Set-ExoPhishSimOverrideRule.md)
+
+### [Set-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
 
 ### [Set-HostedConnectionFilterPolicy](Set-HostedConnectionFilterPolicy.md)
 
@@ -414,8 +434,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
 
-### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
-
 ### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
 
 ### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
@@ -428,13 +446,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
 
-### [Set-SecOpsOverrideRule](Set-SecOpsOverrideRule.md)
-
 ### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
 
 ### [Set-SenderIdConfig](Set-SenderIdConfig.md)
 
 ### [Set-SenderReputationConfig](Set-SenderReputationConfig.md)
+
+### [Set-TeamsProtectionPolicy](Set-TeamsProtectionPolicy.md)
+
+### [Set-TeamsProtectionPolicyRule](Set-TeamsProtectionPolicyRule.md)
 
 ### [Set-TenantAllowBlockListItems](Set-TenantAllowBlockListItems.md)
 
@@ -1047,6 +1067,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-MailboxServer](Set-MailboxServer.md)
 
 ### [Set-SearchDocumentFormat](Set-SearchDocumentFormat.md)
+
+### [Start-MailboxAssistant](Start-MailboxAssistant.md)
 
 ### [Test-AssistantHealth](Test-AssistantHealth.md)
 
@@ -1709,6 +1731,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-AutoSensitivityLabelRule](Get-AutoSensitivityLabelRule.md)
 
+### [Get-EtrLimits](Get-EtrLimits.md)
+
 ### [Get-ExoInformationBarrierPolicy](Get-ExoInformationBarrierPolicy.md)
 
 ### [Get-ExoInformationBarrierSegment](Get-ExoInformationBarrierSegment.md)
@@ -2094,6 +2118,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## policy-and-compliance-retention Cmdlets
 ### [Enable-ComplianceTagStorage](Enable-ComplianceTagStorage.md)
 
+### [Export-ContentExplorerData](Export-ContentExplorerData.md)
+
 ### [Export-FilePlanProperty](Export-FilePlanProperty.md)
 
 ### [Get-AdaptiveScope](Get-AdaptiveScope.md)
@@ -2151,6 +2177,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-RetentionPolicyTag](Get-RetentionPolicyTag.md)
 
 ### [Import-FilePlanProperty](Import-FilePlanProperty.md)
+
+### [Invoke-HoldRemovalAction](Invoke-HoldRemovalAction.md)
 
 ### [New-AdaptiveScope](New-AdaptiveScope.md)
 
@@ -2286,7 +2314,7 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Validate-RetentionRuleQuery](Validate-RetentionRuleQuery.md)
 
-## powershell-v2-module Cmdlets
+## powershell-v3-module Cmdlets
 ### [Add-VivaModuleFeaturePolicy](Add-VivaModuleFeaturePolicy.md)
 
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
@@ -2296,6 +2324,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Disconnect-ExchangeOnline](Disconnect-ExchangeOnline.md)
 
 ### [Get-ConnectionInformation](Get-ConnectionInformation.md)
+
+### [Get-DefaultTenantBriefingConfig](Get-DefaultTenantBriefingConfig.md)
 
 ### [Get-DefaultTenantMyAnalyticsFeatureConfig](Get-DefaultTenantMyAnalyticsFeatureConfig.md)
 
@@ -2330,6 +2360,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-VivaModuleFeaturePolicy](Get-VivaModuleFeaturePolicy.md)
 
 ### [Remove-VivaModuleFeaturePolicy](Remove-VivaModuleFeaturePolicy.md)
+
+### [Set-DefaultTenantBriefingConfig](Set-DefaultTenantBriefingConfig.md)
 
 ### [Set-DefaultTenantMyAnalyticsFeatureConfig](Set-DefaultTenantMyAnalyticsFeatureConfig.md)
 

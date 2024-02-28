@@ -228,6 +228,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -296,8 +297,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -360,6 +359,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -428,8 +428,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -492,6 +490,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -560,8 +559,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -624,6 +621,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -692,8 +690,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -755,6 +751,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
  [-CustomAttribute10 <String>]
@@ -821,8 +818,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -885,6 +880,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -952,8 +948,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -1016,6 +1010,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-BypassModerationFromSendersOrMembers <MultiValuedProperty>]
  [-CalendarRepairDisabled <Boolean>]
  [-CalendarVersionStoreDisabled <Boolean>]
+ [-ClearThrottlingPolicyAssignment]
  [-Confirm]
  [-CreateDTMFMap <Boolean>]
  [-CustomAttribute1 <String>]
@@ -1033,7 +1028,7 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-CustomAttribute7 <String>]
  [-CustomAttribute8 <String>]
  [-CustomAttribute9 <String>]
- [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>
+ [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
  [-DefaultAuditSet <MultiValuedProperty>]
  [-DefaultPublicFolderMailbox <RecipientIdParameter>]
  [-DeliverToMailboxAndForward <Boolean>]
@@ -1084,8 +1079,6 @@ Set-Mailbox [-Identity] <MailboxIdParameter>
  [-NonCompliantDevices <MultiValuedProperty>]
  [-Office <String>]
  [-Password <SecureString>]
- [-PitrCopyIntervalInSeconds <Int16>]
- [-PitrEnabled <Boolean>]
  [-ProhibitSendQuota <Unlimited>]
  [-ProhibitSendReceiveQuota <Unlimited>]
  [-ProvisionedForOfficeGraph]
@@ -1165,6 +1158,7 @@ This example sets the MailTip translation in French and Chinese.
 ### Example 5
 ```powershell
 $password = Read-Host "Enter password" -AsSecureString
+
 Set-Mailbox florencef -Password $password -ResetPasswordOnNextLogon $true
 ```
 
@@ -1173,6 +1167,7 @@ In on-premises Exchange, this example resets the password for Florence Flipo's m
 ### Example 6
 ```powershell
 Set-Mailbox -Arbitration -Identity "SystemMailbox{bb558c35-97f1-4cb9-8ff7-d53741dc928c}" -MessageTracking $false
+
 Set-Mailbox -Arbitration -Identity "SystemMailbox{1f05a927-b864-48a7-984d-95b1adfbfe2d}" -MessageTracking $true
 ```
 
@@ -1190,7 +1185,7 @@ This example adds a secondary email address to John's mailbox.
 Set-Mailbox -Identity asraf@contoso.com -RemoveDelayReleaseHoldApplied
 ```
 
-In Exchange Online, this example removes the delay hold that's applied to Asraf's mailbox so an offboarding migration (that is, a mailbox migration from Exchange Online back to on-premises Exchange) can continue successfully. For more information about delay holds, see [Managing mailboxes on delay hold](https://learn.microsoft.com/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
+In Exchange Online, this example removes the delay hold that's applied to Asraf's mailbox so an offboarding migration (that is, a mailbox migration from Exchange Online back to on-premises Exchange) can continue successfully. For more information about delay holds, see [Managing mailboxes on delay hold](https://learn.microsoft.com/purview/ediscovery-identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
 
 ## PARAMETERS
 
@@ -1371,7 +1366,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -1742,7 +1737,7 @@ The AuditEnabled parameter specifies whether to enable or disable mailbox audit 
 - $true: Mailbox audit logging is enabled.
 - $false: Mailbox audit logging is disabled. This is the default value.
 
-**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://learn.microsoft.com/microsoft-365/compliance/enable-mailbox-auditing).
+**Note**: In Exchange Online, mailbox auditing on by default was enabled for all organizations in January, 2019. For more information, see [Manage mailbox auditing](https://learn.microsoft.com/purview/audit-mailboxes).
 
 ```yaml
 Type: Boolean
@@ -1957,6 +1952,26 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearThrottlingPolicyAssignment
+This parameter is available only in the cloud-based service.
+
+The ClearThrottlingPolicyAssignment switch specifies whether to clear any throttling policy assignments for the mailbox. You don't need to specify a value with this switch.
+
+Admins can contact Microsoft Support to assign a throttling policy to a mailbox, which changes the default throttling limits for various protocols. To revert those changes, use this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -2322,7 +2337,7 @@ The DefaultAuditSet parameter specifies whether to revert the mailbox operations
 - Delegate: Reverts the mailbox operations to log for delegate users back to the default list of operations.
 - Owner: Reverts the mailbox operations to log for mailbox owners back to the default list of operations.
 
-With on-by-default mailbox auditing in the cloud-based service, a set of mailbox operations are logged by default for each logon type. This list of operations is managed by Microsoft, who will automatically add new operations to be audited when they are released. If you change the list of mailbox operations for any logon type (by using the AuditAdmin, AuditDelegate, or AuditOwner parameters), any new mailbox operation released by Microsoft will not be audited; you'll need to explicitly add new mailbox operations to the list of operations for a logon type. Use this parameter to revert the mailbox back to the Microsoft-managed list of mailbox operations that are audited for a logon type. For more information about on-by-default mailbox auditing, see [Manage mailbox auditing](https://learn.microsoft.com/microsoft-365/compliance/enable-mailbox-auditing).
+With on-by-default mailbox auditing in the cloud-based service, a set of mailbox operations are logged by default for each logon type. This list of operations is managed by Microsoft, who will automatically add new operations to be audited when they are released. If you change the list of mailbox operations for any logon type (by using the AuditAdmin, AuditDelegate, or AuditOwner parameters), any new mailbox operation released by Microsoft will not be audited; you'll need to explicitly add new mailbox operations to the list of operations for a logon type. Use this parameter to revert the mailbox back to the Microsoft-managed list of mailbox operations that are audited for a logon type. For more information about on-by-default mailbox auditing, see [Manage mailbox auditing](https://learn.microsoft.com/purview/audit-mailboxes).
 
 ```yaml
 Type: MultiValuedProperty
@@ -2539,7 +2554,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
 Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
@@ -2548,7 +2563,7 @@ Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
@@ -2606,7 +2621,7 @@ The EnableRoomMailboxAccount parameter specifies whether to enable the disabled 
 
 You need to enable the account for features like the Skype for Business Room System or Microsoft Teams Rooms.
 
-A room mailbox in Exchange Online is created with associated an account that has an unknown password. This account is active and visible in Azure Active Directory PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. If the password is known or changed, the account can be used to log in and access the mailbox or other resources. To prevent this account from being able to log in, use the Set-AzureADUser cmdlet in Azure Active Directory PowerShell. For instructions, see [Block Microsoft 365 user accounts with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/block-user-accounts-with-microsoft-365-powershell).
+A room mailbox in Exchange Online is created with associated an account that has a random, unknown password. This account is active and visible in Microsoft Graph PowerShell and the Microsoft 365 admin center just like a regular user account, but it consumes no licenses. To prevent this account from being able to log in after you create the mailbox, use the AccountEnabled parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: Boolean
@@ -3965,6 +3980,8 @@ Accept wildcard characters: False
 ### -Name
 The Name parameter specifies the unique name of the mailbox. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
+In the cloud-based service, many special characters aren't allowed in the Name value (for example, ö, ü, or ä). For more information, see [Error when you try to create a username that contains a special character in Microsoft 365](https://learn.microsoft.com/office/troubleshoot/office-suite-issues/username-contains-special-character).
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -4141,10 +4158,10 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, you need to be a member of one of the following role groups:
+The Password parameter resets the password of the user account that's associated with the mailbox to the value you specify. To use this parameter on a mailbox other than your own, consider the following options:
 
-- Exchange Online: You can't use this parameter to change another user's password. To change another user's password, use the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell). To change a another user's password in the Microsoft 365 admin center, see [Reset Microsoft 365 for business passwords](https://learn.microsoft.com/microsoft-365/admin/add-users/reset-passwords).
-- On-premises Exchange: The Organization Management or Help Desk role groups via the User Options role. The Reset Password role also allows you to use this parameter, but it isn't assigned to any role groups by default.
+- Exchange Online: You can't use this parameter to change another user's password. Use the PasswordProfile parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
+- On-premises Exchange: You need the User Options or Reset Password role. The User Options role is assigned to the Organization Management or Help Desk role groups. The Reset Password role it isn't assigned to any role groups by default.
 
 You can use the following methods as a value for this parameter:
 
@@ -4157,42 +4174,6 @@ Type: SecureString
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PitrCopyIntervalInSeconds
-This parameter is available only in the cloud-based service.
-
-{{ Fill PitrCopyIntervalInSeconds Description }}
-
-```yaml
-Type: Int16
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PitrEnabled
-This parameter is available only in the cloud-based service.
-
-{{ Fill PitrEnabled Description }}
-
-```yaml
-Type: Boolean
-Parameter Sets: ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailbox, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveOrphanedHolds
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -4596,7 +4577,7 @@ The RemoveDelayHoldApplied switch specifies whether to remove delay holds on ema
 The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace `<MailboxIdentity>` with the name, email address, or alias of the mailbox, and run this command: `Export-MailboxDiagnosticLogs -Identity <MailboxIdentity> -ComponentName HoldTracking`.
 
 You can use this switch with the GroupMailbox or InactiveMailbox switch to remove delay holds from group mailboxes or inactive mailboxes.
-For more information, see [Managing mailboxes on delay hold](https://learn.microsoft.com/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
+For more information, see [Managing mailboxes on delay hold](https://learn.microsoft.com/purview/ediscovery-identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
 
 ```yaml
 Type: SwitchParameter
@@ -4614,13 +4595,13 @@ Accept wildcard characters: False
 ### -RemoveDelayReleaseHoldApplied
 This parameter is available only in the cloud-based service.
 
-The RemoveDelayReleaseHoldApplied switch specifies whether to remove delay holds on cloud data generated by non-Exchange apps (such as Teams, Forms, and Yammer) from the mailbox. Data generated by a non-Exchange cloud-based app is typically stored in a hidden folder in the mailbox. You don't need to specify a value with this switch.
+The RemoveDelayReleaseHoldApplied switch specifies whether to remove delay holds on cloud data generated by non-Exchange apps (such as Teams, Forms, and Viva Engage) from the mailbox. Data generated by a non-Exchange cloud-based app is typically stored in a hidden folder in the mailbox. You don't need to specify a value with this switch.
 
 The removal of a hold from a mailbox is temporarily delayed to prevent the accidental purge of content that's no longer affected by the hold. This temporary delay in the removal of the hold is known as a delay hold. To see the hold history on a mailbox, replace `<MailboxIdentity>` with the name, email address, or alias of the mailbox, and run this command: `Export-MailboxDiagnosticLogs -Identity <MailboxIdentity> -ComponentName SubstrateHoldTracking`.
 
 You can use this switch with the GroupMailbox or InactiveMailbox switch to remove delay holds from group mailboxes or inactive mailboxes.
 
-For more information, see [Managing mailboxes on delay hold](https://learn.microsoft.com/microsoft-365/compliance/identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
+For more information, see [Managing mailboxes on delay hold](https://learn.microsoft.com/purview/ediscovery-identify-a-hold-on-an-exchange-online-mailbox#managing-mailboxes-on-delay-hold).
 
 ```yaml
 Type: SwitchParameter
@@ -5018,7 +4999,7 @@ You can use the following methods as a value for this parameter:
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-To configure the password for a room mailbox account in Exchange Online, use Set-AzureADUserPassword cmdlet in Azure Active Directory PowerShell. For instructions, see [Manage passwords with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/manage-passwords-with-microsoft-365-powershell).
+To configure the password for a room mailbox account in Exchange Online, use the PasswordProfile parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: SecureString
@@ -5371,10 +5352,10 @@ Accept wildcard characters: False
 ```
 
 ### -SingleItemRecoveryEnabled
-The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recovery Items folder from being purged. Valid values are:
+The SingleItemRecoveryEnabled parameter specifies whether to prevent the Recoverable Items folder from being purged. Valid values are:
 
-- $true: Single item recovery is enabled. The Recovery Items folder can't be purged. and items that have been deleted or edited can't be removed.
-- $false: Single item recovery isn't enabled. The Recovery Items folder can be purged, and, items that have been deleted or edited can be removed. This is the default value.
+- $true: Single item recovery is enabled. The Recoverable Items folder can't be purged, and deleted or edited items can't be removed. This is the default value in Exchange Online. For more information, see [Enable or disable single item recovery for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
+- $false: Single item recovery isn't enabled. The Recoverable Items folder can be purged, and deleted or edited items can be removed. This is the default value in Exchange Server. For more information, see [Enable or disable single item recovery for a mailbox](https://learn.microsoft.com/exchange/recipients/user-mailboxes/single-item-recovery).
 
 ```yaml
 Type: Boolean

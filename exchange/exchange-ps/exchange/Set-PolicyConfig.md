@@ -28,24 +28,34 @@ Set-PolicyConfig [[-Identity] <OrganizationIdParameter>]
  [-Confirm]
  [-DlpAppGroups <PswsHashtable[]>]
  [-DlpAppGroupsPsws <PswsHashtable[]>]
+ [-DlpNetworkShareGroups <PswsHashtable>]
+ [-DlpPrinterGroups <PswsHashtable>]
+ [-DlpRemovableMediaGroups <PswsHashtable>]
  [-DocumentIsUnsupportedSeverity <RuleSeverity>]
+ [-EnableAdvancedRuleBuilder <Boolean>]
  [-EnableLabelCoauth <Boolean>]
  [-EnableSpoAipMigration <Boolean>]
  [-EndpointDlpGlobalSettings <PswsHashtable[]>]
  [-EndpointDlpGlobalSettingsPsws <PswsHashtable[]>]
  [-ExtendTeamsDlpPoliciesToSharePointOneDrive <Boolean>]
+ [-InformationBarrierMode <InformationBarrierMode>]
+ [-InformationBarrierPeopleSearchRestriction <InformationBarrierPeopleSearchRestriction>]
+ [-IsDlpSimulationOptedIn <Boolean>]
  [-OnPremisesWorkload <Workload>]
  [-ProcessingLimitExceededSeverity <RuleSeverity>]
  [-PurviewLabelConsent <Boolean>]
+ [-ReservedForFutureUse <Boolean>]
  [-RetentionForwardCrawl <Boolean>]
  [-RuleErrorAction <PolicyRuleErrorAction>]
  [-SenderAddressLocation <PolicySenderAddressLocation>]
+ [-SiteGroups <PswsHashtable[]>]
+ [-SiteGroupsPsws <PswsHashtable[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -59,7 +69,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+You don't need to use this parameter. The only endpoint restrictions object in the organization is named Settings.
 
 ```yaml
 Type: OrganizationIdParameter
@@ -174,6 +184,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DlpNetworkShareGroups
+{{ Fill DlpNetworkShareGroups Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpPrinterGroups
+{{ Fill DlpPrinterGroups Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DlpRemovableMediaGroups
+{{ Fill DlpRemovableMediaGroups Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DocumentIsUnsupportedSeverity
 {{ Fill DocumentIsUnsupportedSeverity Description }}
 
@@ -182,6 +240,22 @@ Type: RuleSeverity
 Parameter Sets: (All)
 Aliases:
 Accepted values: Low, Medium, High, None, Informational, Information
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAdvancedRuleBuilder
+{{ Fill EnableAdvancedRuleBuilder Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False
@@ -285,7 +359,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendTeamsDlpPoliciesToSharePointOneDrive
-{{ Fill ExtendTeamsDlpPoliciesToSharePointOneDrive Description }}
+The ExtendTeamsDlpPoliciesToSharePointOneDrive parameter enables the Teams DLP Policy to automatically extend protection to the content stored in OneDrive shared in 1:1 chats and content stored in SharePoint associated with Teams teams shared through channel chats. Valid values are:
+
+- $true
+- $false
 
 ```yaml
 Type: Boolean
@@ -296,6 +373,59 @@ Applicable: Security & Compliance
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationBarrierMode
+The InformationBarrierMode parameter specifies the mode that controls the total number of segments and how many segments a user can be part of. Valid values are:
+
+- SingleSegment: Users in the organization can have 5000 segments but can only be assigned to one segment.
+- MultiSegment: Users in the organization can have 5000 segments and can be assigned up to 10 segments. For more information, see [Use multi-segment support in information barriers](https://learn.microsoft.com/purview/information-barriers-multi-segment).
+
+```yaml
+Type: InformationBarrierMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: SingleSegment, MultiSegment
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationBarrierPeopleSearchRestriction
+{{ Fill InformationBarrierPeopleSearchRestriction Description }}
+
+```yaml
+Type: InformationBarrierPeopleSearchRestriction
+Parameter Sets: (All)
+Aliases:
+Accepted values: Enabled, Disabled
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDlpSimulationOptedIn
+{{ Fill IsDlpSimulationOptedIn Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -336,6 +466,22 @@ Accept wildcard characters: False
 
 ### -PurviewLabelConsent
 {{ Fill PurviewLabelConsent Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReservedForFutureUse
+{{ Fill ReservedForFutureUse Description }}
 
 ```yaml
 Type: Boolean
@@ -398,6 +544,38 @@ Type: PolicySenderAddressLocation
 Parameter Sets: (All)
 Aliases:
 Accepted values: Header, Envelope, HeaderOrEnvelope
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteGroups
+{{ Fill SiteGroups Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteGroupsPsws
+{{ Fill SiteGroupsPsws Description }}
+
+```yaml
+Type: PswsHashtable[]
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

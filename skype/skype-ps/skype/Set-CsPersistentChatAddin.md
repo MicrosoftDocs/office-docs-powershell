@@ -54,7 +54,7 @@ Set-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatA
 ```
 
 Example 1 modifies the URL assigned to the Persistent Chat add-in ITPersistentChatAddin.
-In this case, the URL is changed to https://atl-cs-001.litwareinc.com/itchat2.
+In this case, the URL is changed to `https://atl-cs-001.litwareinc.com/itchat2`.
 
 
 ## PARAMETERS

@@ -26,7 +26,7 @@ New-CsBatchPolicyAssignmentOperation [-OperationName <String>] -Identity <String
 ## DESCRIPTION
 When a policy is assigned to a batch of users, the assignments are performed as an asynchronous operation.  The cmdlet returns the operation ID which can be used to track the progress and status of the assignments.
 
-Users can be specified by their object ID (guid) or by their SIP address (user@contoso.com). Note that a user's SIP address often has the same value as the User Principal Name (UPN), but this is not required. If a user is specified using their UPN, but it has a different value than their SIP address, then then policy assignment will fail for the user.
+Users can be specified by their object ID (guid) or by their SIP address (user@contoso.com). Note that a user's SIP address often has the same value as the User Principal Name (UPN), but this is not required. If a user is specified using their UPN, but it has a different value than their SIP address, then the policy assignment will fail for the user.
 
 A batch may contain up to 5,000 users. If a batch includes duplicate users, the duplicates will be removed from the batch before processing and status will only be provided for the unique users remaining in the batch. For best results, do not submit more than a few batches at a time.  Allow batches to complete processing before submitting more batches.
 
@@ -68,7 +68,7 @@ $users = Get-AzureADUser
 New-CsBatchPolicyAssignmentOperation -PolicyType TeamsMeetingPolicy -PolicyName Kiosk -Identity $users.SipProxyAddress -OperationName "batch assign kiosk"
 ```
 
-In this example, the batch of users is obtained by connecting to Azure AD and retrieving a collection of users and then referencing the SipProxyAddress property.
+In this example, the batch of users is obtained by connecting to Microsoft Entra ID and retrieving a collection of users and then referencing the SipProxyAddress property.
 
 ## PARAMETERS
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
-The name of the policy to be assigned to the users.
+The type of the policy to be assigned to the users. For the list of current policy types accepted by this parameter, see the Description section at the beginning of this article.
 
 ```yaml
 Type: String

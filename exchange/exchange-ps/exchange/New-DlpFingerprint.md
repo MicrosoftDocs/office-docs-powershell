@@ -22,7 +22,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-DlpFingerprint [[-FileData] <Byte[]>] -Description <String>
+ [-IsExact <Boolean>]
  [-Confirm]
+ [-ThresholdConfig <PswsHashtable>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -30,13 +32,14 @@ New-DlpFingerprint [[-FileData] <Byte[]>] -Description <String>
 ## DESCRIPTION
 Sensitive information type rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $Patent_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Patent Template.docx)'
+
 $Patent_Fingerprint = New-DlpFingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
 ```
 
@@ -88,6 +91,38 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExact
+{{ Fill IsExact Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThresholdConfig
+{{ Fill ThresholdConfig Description }}
+
+```yaml
+Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

@@ -6,17 +6,16 @@ title: Set-CsOnlineApplicationInstance
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 ---
 
 # Set-CsOnlineApplicationInstance
 
 ## SYNOPSIS
-Updates an application instance in Azure Active Directory. 
+Updates an application instance in Microsoft Entra ID. 
 
-**Note**: The use of this cmdlet for assigning phone numbers has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) 
-and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+**Note**: The use of this cmdlet for assigning phone numbers in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
 
@@ -25,7 +24,7 @@ Set-CsOnlineApplicationInstance [-Identity] <string> [[-OnpremPhoneNumber] <stri
 ```
 
 ## DESCRIPTION
-This cmdlet is used to update an application instance in Azure Active Directory.
+This cmdlet is used to update an application instance in Microsoft Entra ID.
 
 ## EXAMPLES
 
@@ -55,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnpremPhoneNumber
-**Note**: Using this parameter has been deprecated. Use the new Set-CsPhoneNumberAssignment cmdlet instead.
+**Note**: Using this parameter has been deprecated in commercial and GCC cloud instances. Use the new Set-CsPhoneNumberAssignment cmdlet instead.
 
 Assigns a hybrid (on-premise) telephone number to the application instance.
 

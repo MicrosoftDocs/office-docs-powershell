@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Tenant Allow/Block List in the Microsoft 365 Defender portal.
+Use the Set-TenantAllowBlockListItems cmdlet to modify entries in the Tenant Allow/Block List in the Microsoft Defender portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -47,7 +47,7 @@ Set-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType>
 ```
 
 ## DESCRIPTION
-In most cases, you can't modify the URL, file, or sender values of an existing entry. The only exception is allow URL entries for phishing simulations (Action = Allow, ListType = URL, and ListSubType = AdvancedDelivery). For more information about allowing URLs for phishing simulations, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+In most cases, you can't modify the URL, file, or sender values of an existing entry. The only exception is allow URL entries for phishing simulations (Action = Allow, ListType = URL, and ListSubType = AdvancedDelivery). For more information about allowing URLs for phishing simulations, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ### -ListSubType
 The ListSubType parameter further specifies the entry that you want to modify. Valid values are:
 
-- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 - Tenant: This is the default value.
 
 ```yaml

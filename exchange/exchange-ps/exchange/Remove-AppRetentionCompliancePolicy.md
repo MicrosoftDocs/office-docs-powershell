@@ -29,16 +29,16 @@ Remove-AppRetentionCompliancePolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-AppRetentionCompliancePolicy -Identity "Contoso Yammer"
+Remove-AppRetentionCompliancePolicy -Identity "Contoso Viva Engage"
 ```
 
-This example removes the app retention compliance policy named Contoso Yammer.
+This example removes the app retention compliance policy named Contoso Viva Engage.
 
 ## PARAMETERS
 

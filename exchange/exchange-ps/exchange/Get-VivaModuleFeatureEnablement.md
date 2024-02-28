@@ -13,9 +13,7 @@ ms.reviewer:
 # Get-VivaModuleFeatureEnablement
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module v3.2.0-Preview2 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
-
-**Note**: This cmdlet is part of a feature that's currently in a closed Private Preview. The cmdlet won't work unless your organization is a member of the Private Preview.
+This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-VivaModuleFeatureEnablement cmdlet to view whether or not a feature in a Viva module is enabled for a specific user or group. Whether or not the feature is enabled is referred to as the feature's "enablement state". The enablement state returned by this cmdlet is based on the access policies set by the admin.
 
@@ -38,7 +36,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later.
 
 Currently, you need to be a member of the Global administrators role to run this cmdlet.
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
@@ -79,7 +77,7 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the user principal name (UPN) of the user or the SMTP address (email address) of the group that you want to view the feature enablement status of.
 
-[Mail-enabled AAD groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported.
+[Mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported.
 
 ```yaml
 Type: String
@@ -139,6 +137,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Exchange PowerShell](https://learn.microsoft.com/powershell/module/exchange)
 
-[About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#updates-for-the-exo-v3-module)
+[About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2)
 
-[Role template IDs](https://learn.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids)
+[Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids)

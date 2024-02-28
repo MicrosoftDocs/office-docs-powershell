@@ -338,16 +338,16 @@ Accept wildcard characters: False
 ### -EmailAddresses
 This parameter is available only in on-premises Exchange.
 
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
@@ -935,10 +935,10 @@ Accept wildcard characters: False
 ```
 
 ### -OWAEnabled
-The OWAEnabled parameter enables or disables access to the mailbox using Outlook on the web (formerly known as Outlook Web App or OWA). Valid values are:
+The OWAEnabled parameter enables or disables access to the mailbox using Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
 
 - $true: Access to the mailbox using Outlook on the web is enabled. This is the default value.
-- $false: Access to the mailbox using Outlook on the web is disabled. The other Outlook on the web settings in this cmdlet are ignored.
+- $false: Access to the mailbox using Outlook on the web and the new Outlook for Windows is disabled. The other Outlook on the web settings in this cmdlet are ignored.
 
 For more information, see [Enable or disable Outlook on the web for a mailbox in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-outlook-web-app), or [Enable or disable Outlook on the web access to mailboxes in Exchange Server](https://learn.microsoft.com/exchange/clients/outlook-on-the-web/mailbox-access).
 

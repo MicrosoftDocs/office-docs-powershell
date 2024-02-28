@@ -33,6 +33,7 @@ Get-MobileDeviceStatistics [-Identity] <MobileDeviceIdParameter>
  [-ShowRecoveryPassword]
  [-RestApi]
  [-UniversalOutlook]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -47,6 +48,7 @@ Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter>
  [-ShowRecoveryPassword]
  [-RestApi]
  [-UniversalOutlook]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -67,6 +69,7 @@ This example retrieves the statistics for the specified mobile phone.
 ### Example 2
 ```powershell
 $UserList = Get-CASMailbox -ResultSize unlimited -Filter "HasActiveSyncDevicePartnership -eq `$true -and -not DisplayName -like 'CAS_{*'"
+
 $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_.Identity}
 ```
 
@@ -258,6 +261,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

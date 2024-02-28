@@ -39,7 +39,7 @@ Set-HostedContentFilterRule [-Identity] <RuleIdParameter>
 
 ## DESCRIPTION
 > [!IMPORTANT]
-> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Use the Microsoft 365 Defender portal to create anti-spam policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spam-policies-configure#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies).
+> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Use the Microsoft Defender portal to create anti-spam policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-spam-policies-configure#use-the-microsoft-defender-portal-to-create-anti-spam-policies).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-The ExceptIfRecipientDomainIs parameter specifies an exception for the rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The ExceptIfRecipientDomainIs parameter specifies an exception for the rule that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDomainIs
-The RecipientDomainIs parameter specifies a condition for the rule that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The RecipientDomainIs parameter specifies a condition for the rule that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]

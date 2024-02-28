@@ -58,6 +58,7 @@ This example deletes the quarantined message with the specified Identity value.
 ### Example 2
 ```powershell
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity
+
 Delete-QuarantineMessage -Identity $ids[4]
 ```
 
@@ -66,6 +67,7 @@ This example deletes the 5th quarantined message in the list of results from Get
 ### Example 3
 ```powershell
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity
+
 Delete-QuarantineMessage -Identities $ids -Identity 000
 ```
 
@@ -147,9 +149,9 @@ Accept wildcard characters: False
 The EntityType parameter filters the results by EntityType. Valid values are:
 
 - Email
-- SharePoint
+- SharePointOnline
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
+- DataLossPrevention
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
@@ -173,7 +175,7 @@ If you don't use this switch, the message is deleted, but is potentially recover
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -199,9 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-The WhatIf switch doesn't work in Security & Compliance PowerShell.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

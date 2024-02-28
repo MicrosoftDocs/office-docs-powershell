@@ -25,6 +25,7 @@ Get-RetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-DistributionDetail]
  [-ErrorPolicyOnly]
  [-ExcludeTeamsPolicy]
+ [-IncludeTestModeResults]
  [-RetentionRuleTypes]
  [-TeamsPolicyOnly]
  [<CommonParameters>]
@@ -38,7 +39,7 @@ This list describes the properties that are displayed by default.
 - Enabled: The value True means the policy is enabled.
 - Mode: The current operating mode of the policy. The possible values are Test (the content is tested, but no rules are enforced), AuditAndNotify (when content matches the conditions specified by the policy, the rule is not enforced, but notification emails are sent) or Enforce (all aspects of the policy are enabled and enforced).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -114,6 +115,24 @@ Accept wildcard characters: False
 
 ### -ExcludeTeamsPolicy
 The ExcludeTeamsPolicy switch specifies whether to exclude Teams policies from the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeTestModeResults
+The IncludeTestModeResults switch specifies whether to include the status of test mode in the policy details. You don't need to specify a value with this switch.
+
+For more information about simulation mode, see [Learn about simulation mode](https://learn.microsoft.com/purview/apply-retention-labels-automatically#learn-about-simulation-mo).
 
 ```yaml
 Type: SwitchParameter

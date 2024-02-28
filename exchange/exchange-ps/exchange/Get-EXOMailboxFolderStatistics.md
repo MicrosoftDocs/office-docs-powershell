@@ -85,11 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticInfo
-Typically, you use the DiagnosticInfo parameter only at the request of Microsoft Customer Service and Support to troubleshoot problems. Valid values are:
-
-- ExternalDirectoryObjectId
-- Identity
-- UserPrincipalName
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: String
@@ -105,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDirectoryObjectId
-The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Azure Active Directory.
+The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Microsoft Entra ID.
 
 You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
 

@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-cstenantnetworksite
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsTenantNetworkSite
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -19,18 +19,9 @@ As an Admin, you can use the Windows PowerShell command, Set-CsTenantNetworkSite
 
 ### Identity (Default)
 ```powershell
-Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>]
- [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>]
- [-NetworkRoamingPolicy <String>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### Instance
-```powershell
-Set-CsTenantNetworkSite [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-LocationPolicy <String>] [-EnableLocationBasedRouting <Boolean>] [-OnlineVoiceRoutingPolicy <String>]
- [-EmergencyCallRoutingPolicy <String>] [-EmergencyCallingPolicy <String>]
- [-NetworkRoamingPolicy <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTenantNetworkSite [[-Identity] <string>] [-Description <string>] [-EmergencyCallingPolicy <string>] [-EmergencyCallRoutingPolicy <string>]
+ [-EnableLocationBasedRouting <bool>] [-LocationPolicy <string>] [-NetworkRegionID <string>] [-NetworkRoamingPolicy <string>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,7 +31,7 @@ A best practice for Location Based Routing (LBR) is to create a separate site fo
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> Set-CsTenantNetworkSite -Identity "MicrosoftSite1" -NetworkRegionID "RegionRedmond" -Description "Microsoft site 1"
 ```
@@ -49,14 +40,14 @@ The command shown in Example 1 set the network site 'MicrosoftSite1' with descri
 
 The network region 'RegionRedmond' is created beforehand and 'MicrosoftSite1' will be associated with 'RegionRedmond'.
 
-###-------------------------- Example 2 --------------------------
+### Example 2
 ```powershell
 PS C:\> Set-CsTenantNetworkSite -Identity "site2" -Description "site 2" -NetworkRegionID "RedmondRegion" -EnableLocationBasedRouting $true
 ```
 
 The command shown in Example 2 sets the network site 'site2' with description 'site 2'. This site is enabled for LBR. The example associates the site with network region 'RedmondRegion'.
 
-###-------------------------- Example 3 --------------------------
+### Example 3
 ```powershell
 PS C:\> Set-CsTenantNetworkSite -Identity "site3" -Description "site 3" -NetworkRegionID "RedmondRegion" -NetworkRoamingPolicy "TestNetworkRoamingPolicy"
 ```
@@ -65,13 +56,13 @@ The command shown in Example 3 sets the network site 'site3' with description 's
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -Identity
+Unique identifier for the network site to be set.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
@@ -95,8 +86,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EmergencyCallingPolicy
+This parameter is used to assign a custom emergency calling policy to a network site. For more information, see [Assign a custom emergency calling policy to a network site](/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmergencyCallRoutingPolicy
+This parameter is used to assign a custom emergency call routing policy to a network site. For more information, see [Assign a custom emergency call routing policy to a network site](/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableLocationBasedRouting
-This parameter determines whether the current site is enabled for location based routing.
+This parameter determines whether the current site is enabled for Location-Based Routing.
 
 ```yaml
 Type: Boolean
@@ -107,52 +128,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Unique identifier for the network site to be set.
-
-```yaml
-Type: XdsGlobalRelativeIdentity
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
-You can retrieve this object reference by calling the `Get-CsTenantNetworkSite` cmdlet.
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -186,21 +161,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OnlineVoiceRoutingPolicy
-This parameter is deprecated and should not be used.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -NetworkRoamingPolicy
 NetworkRoamingPolicy is the identifier for the network roaming policy to which the network site will associate to.
 
@@ -216,19 +176,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose network sites are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
@@ -238,8 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -253,39 +206,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EmergencyCallRoutingPolicy
-This parameter is used to assign a custom emergency call routing policy to a network site. For more information, see [Assign a custom emergency call routing policy to a network site](/microsoftteams/manage-emergency-call-routing-policies#assign-a-custom-emergency-call-routing-policy-to-a-network-site).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmergencyCallingPolicy
-This parameter is used to assign a custom emergency calling policy to a network site. For more information, see [Assign a custom emergency calling policy to a network site](/microsoftteams/manage-emergency-calling-policies#assign-a-custom-emergency-calling-policy-to-a-network-site).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -297,3 +220,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
+[New-CsTenantNetworkSite](New-CsTenantNetworkSite.md)
+
+[Remove-CsTenantNetworkSite](Remove-CsTenantNetworkSite.md)
+
+[Get-CsTenantNetworkSite](Get-CsTenantNetworkSite.md)

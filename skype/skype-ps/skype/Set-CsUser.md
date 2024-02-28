@@ -17,7 +17,7 @@ Modifies Skype for Business properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Skype for Business.
 This cmdlet was introduced in Lync Server 2010.
 
-**Note**: Using this cmdlet for Microsoft Teams users has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
+**Note**: Using this cmdlet for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Set-CsUser [-DomainController <Fqdn>] [-Identity] <UserIdParameter> [-PassThru] 
 ```
 
 ## DESCRIPTION
-The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Azure Active Directory.
+The `Set-CsUser` cmdlet enables you to modify the Skype for Business related user account attributes that are stored in Active Directory Domain Services or modify a subset of Skype for Business online user attributes that are stored in Microsoft Entra ID.
 For example, you can disable or re-enable a user for Skype for Business Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers. For Skype for Business online enable or disable a user for enterprise voice, hosted voicemail, or modify the user's on premise line uri.
 The `Set-CsUser` cmdlet can be used only for users who have been enabled for Skype for Business.
 
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
-**Note**: Using this parameter for Microsoft Teams users has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
 
 ```yaml
 Type: Boolean
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server.
 In addition, setting this option to True enables Skype for Business users to directly place a call to another user's voice mail.
 
-**Note**: It is not required to set this parameter for Microsoft Teams users.
+**Note**: It is not required to set this parameter for Microsoft Teams users. Using this parameter has been deprecated for Microsoft Teams users in commercial and GCC cloud instances.
 
 ```yaml
 Type: Boolean
@@ -191,16 +191,18 @@ Accept wildcard characters: False
 ```
 
 ### -LineURI
-Phone number assigned to the user.
-The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "tel:" prefix.
-For example: tel:+14255551297.
+Phone number to be assigned to the user in Skype for Business Server or Direct Routing phone number to be assigned to a Microsoft Teams user in GCC High and DoD cloud instances only.
+
+The line Uniform Resource Identifier (URI) must be specified using the E.164 format and the "tel:" prefix, for example: tel:+14255551297.
 Any extension number should be added to the end of the line URI, for example: tel:+14255551297;ext=51297.
 
 It is important to note that Skype for Business Server treats tel:+14255551297 and tel:+14255551297;ext=51297 as two different numbers.
-If you assign Ken Myer the line URI tel:+14255551297 and later try to assign Pilar Ackerman the line URI tel:+14255551297;ext=51297, that assignment will succeed; the number assigned to Pilar will not be flagged as a duplicate number.
-This is due to the fact that, depending on your setup, those two numbers could actually be different.
-For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
-Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
+If you assign Ken Myer the line URI tel:+14255551297 and later try to assign Pilar Ackerman the line URI tel:+14255551297;ext=51297, that assignment will succeed; the number assigned to Pilar will not
+be flagged as a duplicate number. This is due to the fact that, depending on your setup, those two numbers could actually be different. For example, in some organizations dialing 1-425-555-1297
+routes your call to an Exchange Auto Attendant. Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call
+directly to the user.
+
+For Direct Routing phone numbers in GCC High and DoD cloud instances, assigning a base phone number to a user or resource account is not supported if you already have other users or resource accounts assigned phone numbers with the same base phone number and extensions or vice versa. For instance, if you have a user with the assigned phone number +14255551200;ext=123 you can't assign the phone number +14255551200 to another user or resource account or if you have a user or resource account with the assigned phone number +14255551200 you can't assign the phone number +14255551200;ext=123 to another user or resource account. Assigning phone numbers with the same base number but different extensions to users and resource accounts is supported. For instance, you can have a user with +14255551200;ext=123 and another user with +14255551200;ext=124.
 
 Note: Extension should be part of the E164 Number. For example if you have 5 digit Extensions then the last 5 digits of the E164 Number should always match the 5 digit extension tel:+14255551297;ext=51297
 
@@ -208,7 +210,7 @@ Note: Extension should be part of the E164 Number. For example if you have 5 dig
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
 Position: Named
@@ -402,7 +404,9 @@ Depending on your setup, those two numbers could actually be different.
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
-**Note**: Using this parameter for Microsoft Teams users has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+**Note**: Using this parameter for Microsoft Teams users in commercial and GCC cloud instances has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) cmdlet instead.
+
+**Note**: Using this parameter for Microsoft Teams users in GCC High and DoD cloud instances has been deprecated. Use the -LineURI parameter instead.
 
 ```yaml
 Type: String

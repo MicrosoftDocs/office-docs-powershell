@@ -26,6 +26,7 @@ Get-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-RecipientAddress <String[]>]
  [-SenderAddress <String[]>]
+ [-TeamsConversationTypes <Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]>]
  [<CommonParameters>]
 ```
 
@@ -52,6 +53,7 @@ Get-QuarantineMessage
  [-StartExpiresDate <System.DateTime>]
  [-StartReceivedDate <System.DateTime>]
  [-Subject <String>]
+ [-TeamsConversationTypes <Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]>]
  [-Type <Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageTypeEnum>]
  [<CommonParameters>]
 ```
@@ -63,10 +65,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-QuarantineMessage -StartReceivedDate 06/13/2016 -EndReceivedDate 06/15/2016
+Get-QuarantineMessage -StartReceivedDate 06/13/2017 -EndReceivedDate 06/15/2017
 ```
 
-This example returns a summary list of messages quarantined between June 13, 2016 and June 15, 2016.
+This example returns a summary list of messages quarantined between June 13, 2017 and June 15, 2017.
 
 ### Example 2
 ```powershell
@@ -117,7 +119,12 @@ Accept wildcard characters: False
 ```
 
 ### -Direction
-The Direction parameter filters the results by incoming or outgoing messages. Valid are Inbound and Outbound.
+The Direction parameter filters the results by incoming or outgoing messages. Valid values are:
+
+- Inbound
+- Outbound
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.QuarantineMessageDirectionEnum
@@ -190,9 +197,9 @@ Accept wildcard characters: False
 The EntityType parameter filters the results by EntityType. Valid values are:
 
 - Email
-- SharePoint
+- SharePointOnline
 - Teams (currently in Preview)
-- DataLossPrevention (currently in Preview)
+- DataLossPrevention
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
@@ -299,7 +306,7 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 - DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
-- SafeAttachmentPolicy
+- SafeAttachmentPolicy (Microsoft Defender for Office 365 only)
 
 You can specify multiple values separated by commas.
 
@@ -321,8 +328,9 @@ The QuarantineTypes parameter filters the results by what caused the message to 
 
 - Bulk
 - DataLossPrevention
+- FileTypeBlock (common attachments filter in anti-malware policies in EOP)
 - HighConfPhish
-- Malware
+- Malware (anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365)
 - Phish
 - Spam
 - SPOMalware (Microsoft Defender for Office 365 only)
@@ -332,7 +340,7 @@ You can specify multiple values separated by commas.
 
 You don't need to use this parameter with the Type parameter.
 
-For files protected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
+For files quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, the detection information can be found in CustomData field in the output.
 
 ```yaml
 Type: QuarantineMessageTypeEnum[]
@@ -393,6 +401,8 @@ The ReleaseStatus parameter filters the results by the release status of the mes
 - Requested
 
 You can specify multiple values separated by commas.
+
+**Note**: Messages that were quarantined and released by Microsoft due to a service issue have the SystemReleased property value TRUE. To filter the results by system released messages, run the following command: `Get-QuarantineMessage | where {$_.systemreleased -like "True"}`.
 
 ```yaml
 Type: ReleaseStatus[]
@@ -490,6 +500,29 @@ Type: String
 Parameter Sets: Summary
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsConversationTypes
+This parameter is available only in Security & Compliance PowerShell.
+
+The TeamsConversationTypes parameters filters the results by Microsoft Teams conversation types. Valid values are:
+
+- Channel
+- Chat
+
+You can specify multiple values separated by commas.
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.TeamsConversationType[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

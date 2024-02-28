@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-SafeLinksDetailReport [-Action <MultiValuedProperty>]
+Get-SafeLinksDetailReport
  [-Action <MultiValuedProperty>]
  [-AppNameList <MultiValuedProperty>]
  [-Domain <MultiValuedProperty>]
@@ -77,18 +77,18 @@ This example returns filters the results by the following information:
 ### -Action
 The Action parameter filters the results by action. Valid values are:
 
-- Allowed
-- Blocked
-- ClickedDuringScan
-- ClickedEvenBlocked
-- Scanning
-- TenantAllowed
-- TenantBlocked
-- TenantBlockedAndClickedThrough
+- Allowed: URL was allowed due to a "Good" verdict.
+- Blocked: URL was blocked due to a "Bad" verdict.
+- ClickedDuringScan: User skipped verification of the URL and proceeded to the destination URL before Safe Links finished scanning.
+- ClickedEvenBlocked: User was blocked at time of click from accessing URL.
+- Scanning: URL is being scanned.
+- TenantAllowed: URL allow entry in the Tenant Allow/Block List.
+- TenantBlocked: URL block entry in the Tenant Allow/Block List.
+- TenantBlockedAndClickedThrough: URL was blocked due to a block entry in the Tenant Allow/Block List, and the user clicked through the block page to access the URL.
 
 You can specify multiple values separated by commas.
 
-Note that the values for this parameter are case sensitive.
+**Note**: Values for this parameter are case sensitive. No data returned for an action implies that the action didn't occur.
 
 ```yaml
 Type: MultiValuedProperty

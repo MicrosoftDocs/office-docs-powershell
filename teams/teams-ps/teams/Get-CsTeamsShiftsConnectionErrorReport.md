@@ -18,7 +18,7 @@ This cmdlet returns the list of all the team mapping error reports. It can also 
 ## SYNTAX
 
 ```
-Get-CsTeamsShiftsConnectionErrorReport [[-Activeness] <String>] [[-ConnectorInstanceId] <String>] [[-TeamId] <String>] [[-Operation] <String>] [[-Code] <String>] [[-Procedure] <String>] [[-Before] <String>] [[-After] <String>] [<CommonParameters>]
+Get-CsTeamsShiftsConnectionErrorReport [-Activeness <string>] [-After <string>] [-Before <string>] [-Code <string>] [-ConnectionId <string>] [-ConnectorInstanceId <string>] [-Operation <string>] [-Procedure <string>] [-TeamId <string>] [<CommonParameters>]
 ```
 
 ```
@@ -36,25 +36,47 @@ This cmdlet returns the list of existing team mapping error reports. It can also
 PS C:\> Get-CsTeamsShiftsConnectionErrorReport
 ```
 ```output
-Code               CreatedAt              Culture Id                                   IntermediateIncident Message                                                                                         Operation                            Parameter   Procedure       ResolvedAt revisitIntervalInMinutes
-----               ---------              ------- --                                   -------------------- -------                                                                                         ---------                            ---------   ---------       ---------- --
-UserMappingError   11/30/2021 11:54:47 PM en-US   ec58cf47-0bb3-4c89-b9a6-e724278b57c9 2215                 Unable to map all users: 10 succeeded, 1 failed for Graph users, and 15 failed for Wfm users.   UserMappingHandler                   {9, 0, 39}  MapUsers                   15
-UserMappingError   11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users.   UserMappingHandler                   {5, 0, 19}  MapUsers                   15
-UserMappingError   11/30/2021 11:54:54 PM en-US   52f6e9bf-1258-4c2b-8af2-3aca159e98b3 740                  Unable to map all users: 12 succeeded, 3 failed for Graph users, and 11 failed for Wfm users.   UserMappingHandler                   {1, 2, 24}  MapUsers                   15
-UserMappingError   11/30/2021 11:55:43 PM en-US   d0b7311f-823d-44e0-9171-f30eb6869335 2219                 Unable to map all users: 9 succeeded, 5 failed for Graph users, and 18 failed for Wfm users.    UserMappingHandler                   {7, 1, 37}  MapUsers                   15
-UserMappingError   11/30/2021 11:55:46 PM en-US   e980e667-65b3-4b00-b756-fbf974537ee9 2218                 Unable to map all users: 22 succeeded, 4 failed for Graph users, and 19 failed for Wfm users.   UserMappingHandler                   {11, 2, 1}  MapUsers                   15
+Code                  ConnectionId CreatedAt           Culture ErrorNotificationSent ErrorType                        Id                                   IntermediateIncident Message
+----                  ------------ ---------           ------- --------------------- ---------                        --                                   -------------------- -------
+WFMAuthError                       30/09/2022 14:14:08 en-US   False                 WFMAuthErrorMessageType          74091f69-29b7-4884-aab9-ee5d705f36e3 1042                 The workforce management system account credentials you've ...
+WFMAuthError                       17/10/2022 19:42:15 en-US   False                 WFMAuthErrorMessageType          b0d04444-d80b-490a-a573-ae3bb7f871bc 40                   The workforce management system account credentials you've ...
+WFMAuthError                       17/10/2022 20:27:31 en-US   False                 WFMAuthErrorMessageType          91ca35d9-1abc-4ded-bcda-dbf58a155930 94                   The workforce management system account credentials you've ...
+GraphUserAuthError                 18/10/2022 04:46:57 en-US   False                 GraphUserAuthErrorMessageType    4d26df1c-7133-4477-9266-5d7ffb70aa88 0                    Authentication failed. Ensure that you've entered valid cre...
+UserMappingError                   18/10/2022 04:47:15 en-US   False                 UserMappingErrorMessageType      6a90b796-9cda-4cc9-a74c-499de91073f9 0                    Mapping failed for some users: 3 succeeded, 0 failed AAD us...
+BatchTeamMappingError              06/04/2023 15:24:22 en-US   False                 BatchTeamMappingErrorMessageType bf1bc3ea-1e40-483b-b6cc-669f22f24c48 1                    This designated actor profile doesn't have team ownership p...
 ```
 
 Returns the list of all the error reports.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionErrorReport -ErrorReportId 18b3e490-e6ed-4c2e-9925-47e36609dff3
+PS C:\> Get-CsTeamsShiftsConnectionErrorReport -ErrorReportId 74091f69-29b7-4884-aab9-ee5d705f36e3 | Format-List
 ```
 ```output
-Code             CreatedAt              Culture Id                                   IntermediateIncident Message                                                                                        Operation          Parameter  Procedure ResolvedAt RevisitIntervalInMinute RevisitedAt
-----             ---------              ------- --                                   -------------------- -------                                                                                        ---------          ---------  --------- ---------- ----------------------- -------
-UserMappingError 11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users.  UserMappingHandler {5, 0, 19} MapUsers             15
+Code                       : WFMAuthError
+ConnectionId               :
+CreatedAt                  : 30/09/2022 14:14:08
+Culture                    : en-US
+ErrorNotificationSent      : False
+ErrorType                  : WFMAuthErrorMessageType
+Id                         : 74091f69-29b7-4884-aab9-ee5d705f36e3
+IntermediateIncident       : 1042
+Message                    : The workforce management system account credentials you've provided are invalid or this account doesn't have the required permissions.
+Operation                  : SyncSwapShiftRequestCommand
+Parameter                  :
+Procedure                  : ExecuteAsync
+ReferenceLink              :
+ResolvedAt                 :
+ResolvedNotificationSentOn :
+RevisitIntervalInMinute    : 1440
+RevisitedAt                :
+ScheduleSequenceNumber     : 310673843
+Severity                   : Critical
+TeamId                     :
+TenantId                   : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
+TotalIncident              : 1042
+Ttl                        : 2505600
+WfmConnectorInstanceId     : WCI-6f8eb424-c347-46b4-a50b-118af8d3d546
 ```
 
 Returns the error report with ID `18b3e490-e6ed-4c2e-9925-47e36609dff3`.
@@ -64,12 +86,12 @@ Returns the error report with ID `18b3e490-e6ed-4c2e-9925-47e36609dff3`.
 PS C:\> Get-CsTeamsShiftsConnectionErrorReport -Code UserMappingError
 ```
 ```output
-Code             CreatedAt              Culture Id                                   IntermediateIncident Message
-----             ---------              ------- --                                   -------------------- -------
-UserMappingError 11/30/2021 11:54:47 PM en-US   ec58cf47-0bb3-4c89-b9a6-e724278b57c9 2217                 Unable to map all users: 9 succeeded, 5 failed for Graph users, and 8 failed for Wfm users.
-UserMappingError 11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users.
-UserMappingError 11/30/2021 11:54:54 PM en-US   52f6e9bf-1258-4c2b-8af2-3aca159e98b3 1776                 Unable to map all users: 6 succeeded, 2 failed for Graph users, and 3 failed for Wfm users.
-UserMappingError 11/30/2021 11:55:43 PM en-US   d0b7311f-823d-44e0-9171-f30eb6869335 5319                 Unable to map all users: 7 succeeded, 3 failed for Graph users, and 2 failed for Wfm users.
+Code             ConnectionId CreatedAt           Culture ErrorNotificationSent ErrorType                   Id                                   IntermediateIncident Message
+----             ------------ ---------           ------- --------------------- ---------                   --                                   -------------------- -------
+UserMappingError              18/10/2022 04:47:15 en-US   False                 UserMappingErrorMessageType 6a90b796-9cda-4cc9-a74c-499de91073f9 0                    Mapping failed for some users: 3 succeeded, 0 failed AAD user(s) and ...
+UserMappingError              18/10/2022 04:47:28 en-US   False                 UserMappingErrorMessageType 005c4a9d-552e-4ea1-9d6a-c0316d272bc9 0                    Mapping failed for some users: 3 succeeded, 0 failed AAD user(s) and ...
+UserMappingError              18/10/2022 04:48:25 en-US   False                 UserMappingErrorMessageType 841e00b5-c4e5-4e24-89d2-703d79250516 0                    Mapping failed for some users: 4 succeeded, 0 failed AAD user(s) and ...
+UserMappingError              18/10/2022 04:54:05 en-US   False                 UserMappingErrorMessageType 0e10d036-c071-4db2-9cac-22e520f929d9 0                    Mapping failed for some users: 5 succeeded, 0 failed AAD user(s) and ...
 ```
 
 Returns the error report with error code `UserMappingError`.
@@ -79,28 +101,28 @@ Returns the error report with error code `UserMappingError`.
 PS C:\> Get-CsTeamsShiftsConnectionErrorReport -Operation UserMappingHandler
 ```
 ```output
-Code             CreatedAt              Culture Id                                   IntermediateIncident Message                                                                                       Operation          Parameter   Procedure ResolvedAt           RevisitIntervalInMinute
-----             ---------              ------- --                                   -------------------- -------                                                                                       ---------          ---------   --------- ----------           --------------------
-UserMappingError 11/30/2021 11:54:47 PM en-US   ec58cf47-0bb3-4c89-b9a6-e724278b57c9 2217                 Unable to map all users: 9 succeeded, 5 failed for Graph users, and 8 failed for Wfm users.   UserMappingHandler {9, 0, 39}  MapUsers  12/3/2021 8:00:20 PM 15
-UserMappingError 11/30/2021 11:54:47 PM en-US   18b3e490-e6ed-4c2e-9925-47e36609dff3 938                  Unable to map all users: 15 succeeded, 2 failed for Graph users, and 12 failed for Wfm users. UserMappingHandler {5, 0, 19}  MapUsers                       15
-UserMappingError 11/30/2021 11:54:54 PM en-US   52f6e9bf-1258-4c2b-8af2-3aca159e98b3 1776                 Unable to map all users: 6 succeeded, 2 failed for Graph users, and 3 failed for Wfm users.   UserMappingHandler {1, 2, 24}  MapUsers                       15
+Code             ConnectionId CreatedAt           Culture ErrorNotificationSent ErrorType                   Id                                   IntermediateIncident Message
+----             ------------ ---------           ------- --------------------- ---------                   --                                   -------------------- -------
+UserMappingError              18/10/2022 04:47:15 en-US   False                 UserMappingErrorMessageType 6a90b796-9cda-4cc9-a74c-499de91073f9 0                    Mapping failed for some users: 3 succeeded, 0 failed AAD user(s) and ...
+UserMappingError              18/10/2022 04:47:28 en-US   False                 UserMappingErrorMessageType 005c4a9d-552e-4ea1-9d6a-c0316d272bc9 0                    Mapping failed for some users: 3 succeeded, 0 failed AAD user(s) and ...
+UserMappingError              18/10/2022 04:48:25 en-US   False                 UserMappingErrorMessageType 841e00b5-c4e5-4e24-89d2-703d79250516 0                    Mapping failed for some users: 4 succeeded, 0 failed AAD user(s) and ...
+UserMappingError              18/10/2022 04:54:05 en-US   False                 UserMappingErrorMessageType 0e10d036-c071-4db2-9cac-22e520f929d9 0                    Mapping failed for some users: 5 succeeded, 0 failed AAD user(s) and ...
 ```
 
 Returns the error report with operation `UserMappingHandler`.
 
 ### Example 5
 ```powershell
-PS C:\> Get-CsTeamsShiftsConnectionErrorReport -After 2021-12-01T19:11:39.073Z
+PS C:\> Get-CsTeamsShiftsConnectionErrorReport -After 2022-12-12T19:11:39.073Z
 ```
 ```output
-Code                CreatedAt             Culture Id                                   IntermediateIncident Message                                                                                       Operation                            Parameter   Procedure                ResolvedAt
-----                ---------             ------- --                                   -------------------- -------                                                                                       ---------                            ---------   ---------                ----
-UserMappingError    12/1/2021 3:47:55 PM  en-US   82e59bc0-fb69-49f4-830b-19ac3b1f66d7 4796                 Unable to map all users: 6 succeeded, 2 failed for Graph users, and 3 failed for Wfm users.   UserMappingHandler                   {4, 0, 20}  MapUsers
-UserMappingError    12/1/2021 11:04:34 PM en-US   f5423691-4fc7-46db-b962-fbcad322c56d 12                   Unable to map all users: 9 succeeded, 3 failed for Graph users, and 5 failed for Wfm users.   UserMappingHandler                   {13, 2, 12} MapUsers
-UserMappingError    12/2/2021 4:33:06 AM  en-US   595f7789-0254-4a11-841d-d9b062515d2f 4383                 Unable to map all users: 4 succeeded, 5 failed for Graph users, and 8 failed for Wfm users.   UserMappingHandler                   {4, 0, 20}  MapUsers
+Code                  ConnectionId CreatedAt           Culture ErrorNotificationSent ErrorType                        Id                                   IntermediateIncident Message
+----                  ------------ ---------           ------- --------------------- ---------                        --                                   -------------------- -------
+UserMappingError                   26/01/2023 14:42:27 en-US   True                  UserMappingErrorMessageType      d7ab9ab4-b60c-44d3-8c12-d8ee64a67ce8 172                  Mapping failed for some users: 1 succeeded, 2 failed AAD us...
+WFMAuthError                       26/01/2023 16:08:31 en-US   False                 WFMAuthErrorMessageType          7adc3e4e-124e-4613-855c-9ac1b338400a 1                    The workforce management system account credentials you've ...
 ```
 
-Returns the error report created after `2021-12-01T19:11:39.073Z`.
+Returns the error report created after `2022-12-12T19:11:39.073Z`.
 
 ## PARAMETERS
 
@@ -126,6 +148,22 @@ The flag indicating results should have which activeness.
 Set this to `ActiveOnly` to get Error reports that are not resolved.
 Set this to `InactiveOnly` to get Error reports that are resolved.
 Set this to `Both` to get both active and inactive Error reports.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectionId
+
+The UUID of a WFM connection.
 
 ```yaml
 Type: String

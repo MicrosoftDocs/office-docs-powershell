@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-cstenantnetworksite
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTenantNetworkSite
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -19,13 +19,17 @@ Returns information about the network site setting in the tenant. Tenant network
 
 ### Identity (Default)
 ```
-Get-CsTenantNetworkSite [-Tenant <System.Guid>] [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
- [<CommonParameters>]
+Get-CsTenantNetworkSite [[-Identity] <string>] [-IncludePhoneNumbers <bool>] [<CommonParameters>]
+```
+
+### QueryParameter
+```
+Get-CsTenantNetworkSite [-IncludePhoneNumbers <bool>] [-Filter <string>] [<CommonParameters>]
 ```
 
 ### Filter
 ```
-Get-CsTenantNetworkSite [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+Get-CsTenantNetworkSite [-IncludePhoneNumbers <bool>] [-Filter <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,7 +64,7 @@ The command shown in Example 3 returns the network site that matches the specifi
 ## PARAMETERS
 
 ### -Filter
-The Filter parameter allows you to limit the number of results based on filters you specify.
+Enables you to use wildcard characters when indicating the site (or sites) to be returned.
 
 ```yaml
 Type: String
@@ -75,26 +79,26 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter is a unique identifier that designates the scope. It specifies the collection of tenant network site to be returned.
+The Identity parameter is a unique identifier for the site.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: Identity
 Aliases:
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
-PARAMVALUE: SwitchParameter
+### -IncludePhoneNumbers
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: Boolean
+Parameter Sets: All
 Aliases:
 
 Required: False
@@ -103,22 +107,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose network sites are being returned.
-
-```yaml
-Type: System.Guid
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -129,7 +117,57 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## OUTPUTS
 
-### System.Object
+### Identity
+The Identity of the site.
+
+### Description
+The description of the site.
+
+### NetworkRegionID
+The network region ID of the site.
+
+### LocationPolicyID
+The ID of the locaton policy assigned to the site.
+
+### SiteAddress
+This parameter is reserved for internal Microsoft use.
+
+### NetworkSiteID
+The ID of the network site.
+
+### OnlineVoiceRoutingPolicyTagID
+The ID of the online voice routing policy assigned to the site.
+
+### EnableLocationBasedRouting
+Boolean stating whether Location-Based Routing is enabled on the site.
+
+### EmergencyCallRoutingPolicyTagID
+The ID of the Teams emergency call routing policy assigned to the site.
+
+### EmergencyCallingPolicyTagID
+The ID of the Teams emergency calling policy assigned to the site.
+
+### NetworkRoamingPolicyTagID
+The ID of the Teams network roaming policy assigned to the site.
+
+### EmergencyCallRoutingPolicyName
+The name of the Teams emergency call routing policy assigned to the site.
+
+### EmergencyCallingPolicyName
+The name of the Teams emergency calling policy assigned to the site.
+
+### NetworkRoamingPolicyName
+The name of the Teams network roaming policy assigned to the site.
+
+### PhoneNumbers
+This parameter is reserved for internal Microsoft use.
+
 ## NOTES
+The parameter IncludePhoneNumbers was introduced in Teams PowerShell Module 5.5.0.
 
 ## RELATED LINKS
+[New-CsTenantNetworkSite](New-CsTenantNetworkSite.md)
+
+[Remove-CsTenantNetworkSite](Remove-CsTenantNetworkSite.md)
+
+[Set-CsTenantNetworkSite](Set-CsTenantNetworkSite.md)

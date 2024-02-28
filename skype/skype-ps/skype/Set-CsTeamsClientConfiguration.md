@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictedSenderList
-Senders domains can be further restricted to ensure that only allowed SMTP domains can send emails to the Teams channels.  This is a comma-separated string of the domains you'd like to *allow* to send emails to Teams channels.
+Senders domains can be further restricted to ensure that only allowed SMTP domains can send emails to the Teams channels.  This is a semicolon-separated string of the domains you'd like to *allow* to send emails to Teams channels.
 
 ```yaml
 Type: String
@@ -379,8 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter

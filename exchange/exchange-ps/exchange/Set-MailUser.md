@@ -103,7 +103,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### EnableLitigationHoldForMigration
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-EnableLitigationHoldForMigration]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -130,7 +130,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DataEncryptionPolicy <DataEncryptionPolicyIdParameter>]
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
- [-EnableLitigationHoldForMigration]
  [-ExchangeGuid <Guid>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
@@ -144,6 +143,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -179,7 +179,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### ExcludeFromAllOrgHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromAllOrgHolds]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -207,7 +207,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExchangeGuid <Guid>]
- [-ExcludeFromAllOrgHolds]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -220,6 +219,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -255,7 +255,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### ExcludeFromOrgHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-ExcludeFromOrgHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -283,7 +283,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-DisplayName <String>]
  [-EmailAddresses <ProxyAddressCollection>]
  [-ExchangeGuid <Guid>]
- [-ExcludeFromOrgHolds <String[]>]
  [-ExtensionCustomAttribute1 <MultiValuedProperty>]
  [-ExtensionCustomAttribute2 <MultiValuedProperty>]
  [-ExtensionCustomAttribute3 <MultiValuedProperty>]
@@ -296,6 +295,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -331,7 +331,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RecalculateInactiveMailUser
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RecalculateInactiveMailUser]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -371,6 +371,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -383,7 +384,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-Name <String>]
  [-Password <SecureString>]
  [-PrimarySmtpAddress <SmtpAddress>]
- [-RecalculateInactiveMailUser]
  [-RecipientLimits <MultiValuedProperty>]
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
@@ -407,7 +407,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveComplianceTagHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveComplianceTagHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -447,6 +447,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -463,7 +464,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveComplianceTagHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -483,7 +483,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveDelayHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -523,6 +523,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -539,7 +540,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveDelayHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -559,7 +559,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveDelayReleaseHoldApplied
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDelayReleaseHoldApplied]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -599,6 +599,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -615,7 +616,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveDelayReleaseHoldApplied]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -674,6 +674,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailboxRegion <String>]
  [-MailTip <String>]
@@ -707,7 +708,7 @@ Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveDisabledArchive]
 
 ### RemoveLitigationHoldEnabled
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveLitigationHoldEnabled]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -747,6 +748,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -763,7 +765,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFrom <MultiValuedProperty>]
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
- [-RemoveLitigationHoldEnabled]
  [-RemoveMailboxProvisioningConstraint]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
@@ -783,7 +784,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
 
 ### RemoveOrphanedHolds
 ```
-Set-MailUser [-Identity] <MailUserIdParameter>
+Set-MailUser [-Identity] <MailUserIdParameter> [-RemoveOrphanedHolds <String[]>]
  [-AcceptMessagesOnlyFrom <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromDLMembers <MultiValuedProperty>]
  [-AcceptMessagesOnlyFromSendersOrMembers <MultiValuedProperty>]
@@ -823,6 +824,7 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-HiddenFromAddressListsEnabled <Boolean>]
  [-ImmutableId <String>]
  [-JournalArchiveAddress <SmtpAddress>]
+ [-LOBAppAccount]
  [-MacAttachmentFormat <MacAttachmentFormat>]
  [-MailTip <String>]
  [-MailTipTranslations <MultiValuedProperty>]
@@ -840,7 +842,6 @@ Set-MailUser [-Identity] <MailUserIdParameter>
  [-RejectMessagesFromDLMembers <MultiValuedProperty>]
  [-RejectMessagesFromSendersOrMembers <MultiValuedProperty>]
  [-RemoveMailboxProvisioningConstraint]
- [-RemoveOrphanedHolds <String[]>]
  [-RequireSenderAuthenticationEnabled <Boolean>]
  [-ResetPasswordOnNextLogon <Boolean>]
  [-SecondaryAddress <String>]
@@ -1001,7 +1002,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -1462,16 +1463,16 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
@@ -1868,6 +1869,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LOBAppAccount
+This parameter is available only in the cloud-based service.
+
+{{ Fill LOBAppAccount Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EnableLitigationHoldForMigration, ExcludeFromAllOrgHolds, ExcludeFromOrgHolds, RecalculateInactiveMailUser, RemoveComplianceTagHoldApplied, RemoveDelayHoldApplied, RemoveDelayReleaseHoldApplied, RemoveDisabledArchive, RemoveLitigationHoldEnabled, RemoveOrphanedHolds
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MacAttachmentFormat
 The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format to use for messages sent to the mail contact or mail user. Valid values are:
 
@@ -2159,7 +2178,7 @@ The Password parameter allows users to change their own password. You can use th
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-You can't use this parameter to change another user's password (the parameter is available only via the MyBaseOptions user role). To change another user's password, use the NewPassword parameter on the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell).
+You can't use this parameter to change another user's password (the parameter is available only via the MyBaseOptions user role). To change another user's password, use the PasswordProfile parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: SecureString
@@ -2596,7 +2615,7 @@ The ResetPasswordOnNextLogon parameter allows users to require themselves to cha
 - $true: The user is required to change their password then next time they successfully log on.
 - $false: The user isn't required to change their password then next time they successfully log on. This is the default value.
 
-You can't use this parameter to require another user to change their password (the parameter is available only via the MyBaseOptions user role). You need to use the ForceChangePasswordNextLogin parameter on the Set-AzureADUserPassword cmdlet in Azure AD PowerShell. For connection instructions, see [Connect to Microsoft 365 with PowerShell](https://learn.microsoft.com/microsoft-365/enterprise/connect-to-microsoft-365-powershell).
+You can't use this parameter to require another user to change their password (the parameter is available only via the MyBaseOptions user role). You need to use the ForceChangePasswordNextSignIn value in the PasswordProfile parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: Boolean

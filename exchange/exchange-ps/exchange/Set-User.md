@@ -45,6 +45,7 @@ Set-User [-Identity] <UserIdParameter>
  [-GeoCoordinates <GeoCoordinates>]
  [-HomePhone <String>]
  [-IgnoreDefaultScope]
+ [-IsShadowMailbox <Boolean>]
  [-Initials <String>]
  [-LastName <String>]
  [-LinkedCredential <PSCredential>]
@@ -52,6 +53,7 @@ Set-User [-Identity] <UserIdParameter>
  [-LinkedMasterAccount <UserIdParameter>]
  [-MailboxRegion <String>]
  [-MailboxRegionSuffix <MailboxRegionSuffixValue>]
+ [-ManagedOnboardingType <ManagedOnboardingType>]
  [-Manager <UserContactIdParameter>]
  [-MobilePhone <String>]
  [-Name <String>]
@@ -575,6 +577,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsShadowMailbox
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsShadowMailbox Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LastName
 The LastName parameter specifies the user's last name.
 
@@ -700,6 +720,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ManagedOnboardingType
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManagedOnboardingType Description }}
+
+```yaml
+Type: ManagedOnboardingType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Manager
 The Manager parameter specifies the user's manager.
 
@@ -719,7 +757,7 @@ Accept wildcard characters: False
 ### -MobilePhone
 The MobilePhone parameter specifies the user's primary mobile phone number.
 
-**Note**: In Exchange Online, you can't use this parameter. Instead, use the Mobile parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the MobilePhone parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: String
@@ -847,7 +885,7 @@ Accept wildcard characters: False
 ```
 
 ### -PermanentlyClearPreviousMailboxInfo
-This parameter is not available or functional in on-premises Exchange. It is only available in Exchange Online.
+This parameter is functional only in the cloud-based service.
 
 The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Exchange Online mailbox attributes on a user. You don't need to specify a value with this switch.
 
@@ -871,7 +909,7 @@ Accept wildcard characters: False
 ### -Phone
 The Phone parameter specifies the user's office telephone number.
 
-**Note**: In Exchange Online, you can't use this parameter. Instead, use the TelephoneNumber parameter on the Set-AzureAdUser cmdlet in Azure AD PowerShell.
+**Note**: In Exchange Online, you can't use this parameter. Instead, use the BusinessPhones parameter on the [Update-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguser) cmdlet in Microsoft Graph PowerShell.
 
 ```yaml
 Type: String

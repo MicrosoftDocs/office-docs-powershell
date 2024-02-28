@@ -33,7 +33,7 @@ Remove-HoldComplianceRule [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 Removing a preservation rule causes the release of all Exchange mailbox and SharePoint site preservations that are associated with the rule. Removing a preservation rule also causes the corresponding preservation policy to become invalid, so you should remove it by using the Remove-HoldCompliancePolicy cmdlet.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

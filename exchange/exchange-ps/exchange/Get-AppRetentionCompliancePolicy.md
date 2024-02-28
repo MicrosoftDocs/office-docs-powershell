@@ -29,9 +29,9 @@ Get-AppRetentionCompliancePolicy [[-Identity] <PolicyIdParameter>]
 ```
 
 ## DESCRIPTION
-\*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Yammer chats, and Yammer community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
+\*-AppRetentionCompliance\* cmdlets are used for policies with adaptive policy scopes and all static policies that cover Teams private channels, Viva Engage chats, and Viva Engage community messages. Eventually, you'll use these cmdlets for most retention locations and policy types. The \*-RetentionCompliance\* cmdlets will continue to support Exchange and SharePoint locations primarily. For policies created with the \*-AppRetentionCompliance\* cmdlets, you can only set the list of included or excluded scopes for all included workloads, which means you'll likely need to create one policy per workload.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -44,10 +44,10 @@ This example returns a summary list of all app retention compliance policies.
 
 ### Example 1
 ```powershell
-Get-AppRetentionCompliancePolicy -Identity "Contoso Yammer"
+Get-AppRetentionCompliancePolicy -Identity "Contoso Viva Engage"
 ```
 
-This example returns detailed information for the app retention compliance policy named Contoso Yammer.
+This example returns detailed information for the app retention compliance policy named Contoso Viva Engage.
 
 ## PARAMETERS
 

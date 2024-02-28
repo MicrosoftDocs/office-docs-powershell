@@ -215,9 +215,11 @@ Accept wildcard characters: False
 ### -BodyContainsWords
 The BodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfBodyContainsWords.
 
@@ -367,9 +369,11 @@ Accept wildcard characters: False
 ### -ExceptIfBodyContainsWords
 The ExceptIfBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is BodyContainsWords.
 
@@ -417,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example: For example:
+The ExceptIfFrom parameter specifies an exception for the Inbox rule that looks for the specified sender in messages. You can use any value that uniquely identifies the sender. For example:
 
 - Name
 - Alias
@@ -446,9 +450,11 @@ Accept wildcard characters: False
 ### -ExceptIfFromAddressContainsWords
 The ExceptIfFromAddressContainsWords parameter specifies an exception for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is FromAddressContainsWords.
 
@@ -507,9 +513,11 @@ Accept wildcard characters: False
 ### -ExceptIfHeaderContainsWords
 The HeaderContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is HeaderContainsWords.
 
@@ -687,6 +695,8 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
+The maximum length of this parameter is 255 characters.
+
 The corresponding condition parameter to this exception is RecipientAddressContainsWords.
 
 ```yaml
@@ -753,9 +763,11 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectContainsWords
 The ExceptIfSubjectContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding condition parameter to this exception is SubjectContainsWords.
 
@@ -775,11 +787,13 @@ Accept wildcard characters: False
 ### -ExceptIfSubjectOrBodyContainsWords
 The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-The corresponding condition parameter to this exception is ExceptIfSubjectOrBodyContainsWords.
+The maximum length of this parameter is 255 characters.
+
+The corresponding condition parameter to this exception is SubjectOrBodyContainsWords.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1025,9 +1039,11 @@ Accept wildcard characters: False
 ### -FromAddressContainsWords
 The FromAddressContainsWords parameter specifies a condition for the Inbox rule that looks for messages where the specified words are in the sender's email address.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfFromAddressContainsWords.
 
@@ -1086,9 +1102,11 @@ Accept wildcard characters: False
 ### -HeaderContainsWords
 The HeaderContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the header fields of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfHeaderContainsWords.
 
@@ -1317,7 +1335,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a name for the Inbox rule. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
+The Name parameter specifies a name for the Inbox rule. The maximum length is 512 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
 Type: String
@@ -1413,6 +1431,8 @@ The RecipientAddressContainsWords parameter specifies a condition for the Inbox 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfRecipientAddressContainsWords.
 
@@ -1564,9 +1584,11 @@ Accept wildcard characters: False
 ### -SubjectContainsWords
 The SubjectContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfSubjectContainsWords.
 
@@ -1586,9 +1608,11 @@ Accept wildcard characters: False
 ### -SubjectOrBodyContainsWords
 The SubjectOrBodyContainsWords parameter specifies a condition for the Inbox rule that looks for the specified words or phrases in the Subject field or body of messages.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+To specify multiple words or phrases that overwrite any existing entries, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+The maximum length of this parameter is 255 characters.
 
 The corresponding exception parameter to this condition is ExceptIfSubjectOrBodyContainsWords.
 

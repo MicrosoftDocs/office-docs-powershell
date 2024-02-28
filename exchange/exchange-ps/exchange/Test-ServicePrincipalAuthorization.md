@@ -23,7 +23,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Test-ServicePrincipalAuthorization [-Identity] <ServicePrincipalIdParameter>
  [-Confirm]
- [-Organization <OrganizationIdParameter>]
  [-Resource <UserIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
@@ -97,22 +96,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

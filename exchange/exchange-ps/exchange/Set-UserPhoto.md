@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-userphoto
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-UserPhoto
 schema: 2.0.0
 author: chrisda
@@ -12,9 +12,11 @@ ms.reviewer:
 # Set-UserPhoto
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
-Use the Set-UserPhoto cmdlet to configure the user photos feature that allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web, Lync, Skype for Business, and SharePoint.
+Use the Set-UserPhoto cmdlet to configure the user photos feature that allows users to associate a picture with their account. User photos appear in client applications, such as Outlook, Microsoft Teams, and SharePoint.
+
+**Note**: In Microsoft 365, you can manage user photos in Microsoft Graph PowerShell. For instructions, see [Manage user photos in Microsoft Graph PowerShell](https://learn.microsoft.com/microsoft-365/admin/add-users/change-user-profile-photos#manage-user-photos-in-microsoft-graph-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -29,6 +31,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -41,6 +44,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureData <Byte[]>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -56,6 +60,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -68,6 +73,7 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> -PictureStream <Stream>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -81,19 +87,17 @@ Set-UserPhoto [-Identity] <MailboxIdParameter>
  [-GroupMailbox]
  [-IgnoreDefaultScope]
  [-PhotoType <String>]
+ [-UseCustomRouting]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. Administrators use the Set-UserPhoto cmdlet to configure user photos. Users can upload, preview, and save a user photo to their account by using the Outlook on the web Options page. When a user uploads a photo, a preview of the photo is displayed on the Outlook on the web Options page. This is the preview state, and creates the same result as running the Set-UserPhoto cmdlet using the Preview parameter. If the user clicks Save, the preview photo is saved as the user's photo. This is the same result as running the Set-UserPhoto -Save command or running both the Set-UserPhoto -Preview and Set-UserPhoto -Save commands. If the user cancels the preview photo on the Outlook on the web Options page, then the Set-UserPhoto -Cancel command is called.
+The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. Administrators use the Set-UserPhoto cmdlet to configure user photos. Users can upload, preview, and save a user photo to their account in the Options page in Outlook on the web. When a user uploads a photo, a preview of the photo is displayed on the Options page in Outlook on the web. This is the preview state, and creates the same result as running the Set-UserPhoto cmdlet using the Preview parameter. If the user clicks Save, the preview photo is saved as the user's photo. This is the same result as running the `Set-UserPhoto -Save` command or running both the `Set-UserPhoto -Preview` and `Set-UserPhoto -Save` commands. If the user cancels the preview photo on the Options page in Outlook on the web, then the `Set-UserPhoto -Cancel` command is called.
 
 A user photo must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you'll get an error message saying the user photo doesn't exist for the specified user. Alternatively, you can run the `Get-UserPhoto -Preview` command to view information about a preview photo.
 
-**Notes**:
-
-- Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
-- In Microsoft Graph, the [Update-MgUserPhoto](https://learn.microsoft.com/powershell/module/microsoft.graph.users/update-mguserphoto) and [Set-MgUserPhotoContent](https://learn.microsoft.com/powershell/module/microsoft.graph.users/set-mguserphotocontent) cmdlets are also available.
+**Notes**: Changes to the user photo won't appear in SharePoint until the affected user visits their profile page (My Site) or any SharePoint page that shows their large thumbnail image.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -109,6 +113,7 @@ This example uploads and saves a photo to Paul Cannon's user account using a sin
 ### Example 2
 ```powershell
 Set-UserPhoto -Identity "Ann Beebe" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\AnnBeebe.jpg")) -Preview
+
 Set-UserPhoto "Ann Beebe" -Save
 ```
 
@@ -141,7 +146,7 @@ The Identity parameter specifies the identity of the user. You can use any value
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: 1
@@ -159,7 +164,7 @@ To delete the photo that's currently associated with a user's account, use the R
 Type: SwitchParameter
 Parameter Sets: CancelPhoto
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -177,7 +182,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 Type: Byte[]
 Parameter Sets: UploadPhotoData
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -190,7 +195,7 @@ Accept wildcard characters: False
 Type: Byte[]
 Parameter Sets: UploadPreview
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -206,7 +211,7 @@ The PictureStream parameter specifies the photo that will be uploaded to the use
 Type: Stream
 Parameter Sets: UploadPhotoStream
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -219,7 +224,7 @@ Accept wildcard characters: False
 Type: Stream
 Parameter Sets: UploadPreview
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -237,7 +242,7 @@ A preview photo is the photo object that is uploaded to the user's account, but 
 Type: SwitchParameter
 Parameter Sets: UploadPreview
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -253,7 +258,7 @@ The Save switch specifies that the photo that's uploaded to the user's account w
 Type: SwitchParameter
 Parameter Sets: SavePhoto
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: True
 Position: Named
@@ -268,11 +273,13 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -282,8 +289,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -306,7 +311,7 @@ The GroupMailbox switch is required to modify Microsoft 365 Groups. You don't ne
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -327,7 +332,7 @@ This switch enables the command to access Active Directory objects that aren't c
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -343,7 +348,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -359,7 +364,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

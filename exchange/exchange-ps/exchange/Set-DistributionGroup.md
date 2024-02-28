@@ -254,7 +254,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -314,7 +314,10 @@ Accept wildcard characters: False
 ### -BccBlocked
 This parameter is available only in the cloud-based service.
 
-{{ Fill BccBlocked Description }}
+The BccBlocked parameter specifies whether members of the group don't receive messages if the group is used in the Bcc line. Valid values are:
+
+- $true: If the group is used in the Bcc line, members of the group don't receive the message, and the sender receives a non-delivery report (also known as an NDR or bounce message). Other recipients of the message aren't blocked. If an external sender uses the group in the Bcc line, members of the group aren't blocked. For nested groups, the message is blocked only for members of the top-level group.
+- $false: There are no restrictions for using the group in the Bcc line of messages. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -735,16 +738,16 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
 - X400: X.400 addresses in on-premises Exchange.
 - X500: X.500 addresses in on-premises Exchange.
 
-If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
@@ -1110,7 +1113,11 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 - Approve member depart or join requests (if available)
 - Approve messages sent to the group if moderation is enabled, but no moderators are specified.
 
-The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
+The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned).
+
+**Note**: Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
+
+You can use any value that uniquely identifies the owner. For example:
 
 - Name
 - Alias
@@ -1128,11 +1135,6 @@ To enter multiple owners and overwrite all existing entries, use the following s
 To add or remove owners without affecting other existing entries, use the following syntax: `@{Add="Owner1","Owner2",...; Remove="Owner3","Owner4"...}`.
 
 Owners that you specify with this parameter are not added as group members. You need to manually add the owner as a member.
-
-> [!NOTE]
-> Group management in Outlook doesn't work when the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user.
->
-> If the _DL managed by_ or _owner_ is assigned to a security group, and when the owner login to `OWA options -> Distribution group`, they will not see the distribution list under "Distribution groups I own". If the _managed by_ or _owner_ is a normal user instead of a security group, they will be able to see it under "Distribution groups I own".
 
 ```yaml
 Type: MultiValuedProperty

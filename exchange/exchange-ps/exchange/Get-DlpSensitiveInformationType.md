@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>]
+ [-Capability <ClassificationCapabilityType>]
  [-IncludeDetails]
  [-IncludeElements <ClassificationPrimitiveElementType>]
  [-Organization <OrganizationIdParameter>]
@@ -31,7 +32,7 @@ Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParamete
 ## DESCRIPTION
 The RecommendedConfidence property of the returned objects contains a value that represents the default (or recommended) confidence level that should be used with the corresponding sensitive information type.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -67,6 +68,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Capability
+{{ Fill Capability Description }}
+
+```yaml
+Type: ClassificationCapabilityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

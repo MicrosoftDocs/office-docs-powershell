@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-UnifiedGroup cmdlet to modify Microsoft 365 Groups in your cloud-based organization. To modify members, owners, and subscribers of Microsoft 365 Groups, use the Add-UnifiedGroupLinks and Remove-UnifiedGroupLinks cmdlets.
 
-**Important**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the Microsoft 365 Group. There must be at least one MOERA address attached to a group. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357).
-
-**Note**: You can't use this cmdlet to modify Microsoft 365 Groups if you connect using certificate based authentication (also known as CBA or app-only authentication for unattended scripts) or Azure managed identity.
+**Important**: You can't use this cmdlet to remove all Microsoft Online Email Routing Address (MOERA) addresses from the Microsoft 365 Group. There must be at least one MOERA address attached to a group. To learn more about MOERA addresses, see [How the proxyAddresses attribute is populated in Microsoft Entra ID](https://support.microsoft.com/help/3190357).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -87,7 +85,8 @@ Set-UnifiedGroup [-Identity] <UnifiedGroupIdParameter>
 ## DESCRIPTION
 Microsoft 365 Groups are group objects that are available across Microsoft 365 services.
 
-The HiddenGroupMembershipEnabled parameter is only available on the New-UnifiedGroup cmdlet. You can't change this setting on an existing Microsoft 365 Group.
+> [!NOTE]
+> You can't change the HiddenGroupMembershipEnabled setting on an existing Microsoft 365 Group. The setting is available only during new group creation.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -170,7 +169,7 @@ Accept wildcard characters: False
 The AccessType parameter specifies the privacy type for the Microsoft 365 Group. Valid values are:
 
 - Public: The group content and conversations are available to everyone, and anyone can join the group without approval from a group owner.
-- Private: The group content and conversations are only available to members of the group, and joining the group requires approval from a group owner.
+- Private: The group content and conversations are available only to members of the group, and joining the group requires approval from a group owner.
 
 **Note**: Although a user needs to be a member to participate in a private group, anyone can send email to a private group, and receive replies from the private group.
 
@@ -193,7 +192,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -298,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
-The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Azure Active Directory before you can specify a value for this parameter. For more information, see [Azure Active Directory cmdlets for configuring group settings](https://learn.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
+The Classification parameter specifies the classification for the Microsoft 365 Group. You need to configure the list of available classifications in Microsoft Entra ID before you can specify a value for this parameter. For more information, see [Microsoft Entra cmdlets for configuring group settings](https://learn.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets).
 
 ```yaml
 Type: String
@@ -634,16 +633,15 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see [Email address policies in Exchange Server](https://learn.microsoft.com/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
+The EmailAddresses parameter specifies all email addresses (proxy addresses) for the Microsoft 365 Group, including the primary SMTP address. In cloud-based organizations, the primary SMTP address and other proxy addresses for Microsoft 365 Groups are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the Microsoft 365 Group.
 
-Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type value specifies the type of email address. Examples of valid values include:
+Valid syntax for this parameter is `"Type:EmailAddress1","Type:EmailAddress2",..."Type:EmailAddressN"`. The optional `Type` value specifies the type of email address. Examples of valid values include:
 
 - SMTP: The primary SMTP address. You can use this value only once in a command.
 - smtp: Other SMTP email addresses.
-- X400: X.400 addresses in on-premises Exchange.
-- X500: X.500 addresses in on-premises Exchange.
+- SPO: SharePoint Online email address.
 
-If you don't include a Type value for an email address, the value smtp is assumed. Note that Exchange doesn't validate the syntax of custom address types (including X.400 addresses). Therefore, you need to verify that any custom addresses are formatted correctly.
+If you don't include a Type value for an email address, the address is assumed to be an SMTP email address. The syntax of SMTP email addresses is validated, but the syntax of other email address types isn't validated. Therefore, you need to verify that any custom addresses are formatted correctly.
 
 To specify the primary SMTP email address, you can use any of the following methods:
 
@@ -841,9 +839,9 @@ Accept wildcard characters: False
 ### -HiddenFromExchangeClientsEnabled
 The HiddenFromExchangeClientsEnabled switch specifies whether the Microsoft 365 Group is hidden from Outlook clients connected to Microsoft 365.
 
-- To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't be visible in the global address list (GAL). The group name won't resolve during the creation a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users also can't find the group by using the Discover option in Outlook on the web. Additionally, the HiddenFromAddressListsEnabled property will also be set to true to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
-- To disable this setting, use this exact syntax: `-HiddenFromExchangeClientsEnabled:$false`. The Microsoft 365 Group is not hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
-- If Microsoft 365 Groups are hidden from Exchange clients, users cannot view the option to subscribe or unsubscribe to a Microsoft 365 Group.
+- To enable this setting, you don't need to specify a value with this switch. The Microsoft 365 Group is hidden from Outlook experiences. The group isn't visible in the Outlook left-hand navigation and isn't visible in the global address list (GAL). The group name doesn't resolve during the creation of a new message in Outlook. The group can still receive messages, but users can't search for or browse to the group in Outlook or Outlook on the web. Users can't find the group by using the Discover option in Outlook on the web. The HiddenFromAddressListsEnabled property is set to the value True to prevent the group from showing in the GAL and in the Offline Address Book (OAB).
+- To disable this setting, use this exact syntax: `-HiddenFromExchangeClientsEnabled:$false`. The Microsoft 365 Group isn't hidden from Outlook experiences. The group will be visible in the GAL and other address lists. This is the default value.
+- If Microsoft 365 Groups are hidden from Exchange clients, users don't see the option to subscribe or unsubscribe to a Microsoft 365 Group.
 
 ```yaml
 Type: SwitchParameter
@@ -1213,7 +1211,7 @@ The UnifiedGroupWelcomeMessageEnabled switch specifies whether to enable or disa
 - To enable this setting, you don't need to specify a value with this switch.
 - To disable this setting, use this exact syntax: `-UnifiedGroupWelcomeMessageEnabled:$false`.
 
-This setting only controls email send by the Microsoft 365 Group. It doesn't control email sent by connected products (for example, Teams or Yammer).
+This setting only controls email send by the Microsoft 365 Group. It doesn't control email sent by connected products (for example, Teams or Viva Engage).
 
 This setting is enabled by default.
 

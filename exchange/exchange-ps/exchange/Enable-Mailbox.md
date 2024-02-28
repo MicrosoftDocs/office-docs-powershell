@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Enable-Mailbox cmdlet to create mailboxes for existing users who don't already have mailboxes. You can also use this cmdlet to create In-Place archives for existing mailboxes.
 
-**Note**: In Exchange Online, you use this cmdlet to add archive mailboxes for existing users and to enable auto-expanding archives. To add a mailbox for an existing Azure AD account, you need to add a license to the account as described in [Assign licenses to user accounts](https://learn.microsoft.com/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell).
+**Note**: In Exchange Online, you use this cmdlet to add archive mailboxes for existing users and to enable auto-expanding archives. To add a mailbox for an existing Microsoft Entra account, you need to add a license to the account as described in [Assign licenses to user accounts](https://learn.microsoft.com/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -125,7 +125,7 @@ Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -L
 
 ### Linked
 ```
-Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String>  -LinkedMasterAccount <UserIdParameter>
+Enable-Mailbox [-Identity] <UserIdParameter> -LinkedDomainController <String> -LinkedMasterAccount <UserIdParameter>
  [-LinkedCredential <PSCredential>]
  [-ActiveSyncMailboxPolicy <MailboxPolicyIdParameter>]
  [-Alias <String>]
@@ -273,6 +273,8 @@ The Enable-Mailbox cmdlet mailbox-enables existing users, public folders, or Ine
 When mailbox-enabling an existing user, beware of non-supported characters in the user account or Name property. If you don't specify an Alias value when you mailbox-enable the user, Exchange converts all non-supported characters to question marks (?). To avoid question marks in the Alias, verify that the user account and Name properties have only supported ASCII or Unicode characters or specify an Alias value when you mailbox-enable the user.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+
+In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216) InformationVariable and InformationAction don't work.
 
 ## EXAMPLES
 
@@ -423,7 +425,7 @@ Accept wildcard characters: False
 ### -LinkedMasterAccount
 This parameter is available only in on-premises Exchange.
 
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example: For example:
+The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if the mailbox is a linked mailbox. The master account is the account that the mailbox is linked to. The master account grants access to the mailbox. You can use any value that uniquely identifies the master account. For example:
 
 - Name
 - Distinguished name (DN)
@@ -581,7 +583,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 

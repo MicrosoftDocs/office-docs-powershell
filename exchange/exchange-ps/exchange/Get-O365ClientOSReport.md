@@ -53,10 +53,10 @@ This example gets the summary report of client Windows use for the 366 day data 
 
 ### Example 2
 ```powershell
-Get-O365ClientOSReport -StartDate 06/13/2013 -EndDate 06/15/2013
+Get-O365ClientOSReport -StartDate 06/13/2014 -EndDate 06/15/2014
 ```
 
-This example retrieves the client operating system information between June 13, 2013 and June 15, 2013.
+This example retrieves the client operating system information between June 13, 2014 and June 15, 2014.
 
 ## PARAMETERS
 

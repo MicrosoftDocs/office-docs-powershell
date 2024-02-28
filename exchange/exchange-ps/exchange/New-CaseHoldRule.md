@@ -33,7 +33,7 @@ New-CaseHoldRule [-Name] <String> -Policy <PolicyIdParameter>
 ## DESCRIPTION
 You need to add the case hold rule to an existing case hold policy using the Policy parameter. Only one rule can be added to each case hold policy.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -46,10 +46,10 @@ This example creates a new case hold rule named 2016 Budget Spreadsheets and add
 
 ### Example 2
 ```powershell
-New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2016..12/31/2018"
+New-CaseHoldRule -Name "Contoso Case 07172018 Hold 1" -Policy "Contoso Case 07172018" -ContentMatchQuery "received:12/01/2017..12/31/2018"
 ```
 
-This example places email messages received by the recipients between December 1, 2016 and December 31, 2018 on hold.
+This example places email messages received by the recipients between December 1, 2018 and December 31, 2018 on hold.
 
 ## PARAMETERS
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ### -ContentMatchQuery
 The ContentMatchQuery parameter specifies a content search filter. Use this parameter to create a query-based hold so only the content that matches the specified search query is placed on hold.
 
-This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://learn.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions).
+This parameter uses a text search string or a query that's formatted by using the Keyword Query Language (KQL). For more information, see [Keyword Query Language (KQL) syntax reference](https://learn.microsoft.com/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) and [Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/purview/ediscovery-keyword-queries-and-search-conditions).
 
 ```yaml
 Type: String

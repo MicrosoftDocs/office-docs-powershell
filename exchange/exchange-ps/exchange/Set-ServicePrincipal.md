@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/set-serviceprincipal
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Set-ServicePrincipal
 schema: 2.0.0
 author: chrisda
@@ -29,7 +29,7 @@ Set-ServicePrincipal [-Identity] <ServicePrincipalIdParameter>
 ```
 
 ## DESCRIPTION
-You can use this cmdlet to change the DisplayName only. If AppId/ServiceId is wrong, delete the service principal and create a new one.
+You can use this cmdlet to change the DisplayName only. If AppId/ObjectId is wrong, delete the service principal and create a new one.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -51,13 +51,13 @@ The Identity parameter specifies the service principal that you want to modify. 
 - Distinguished name (DN)
 - GUID
 - AppId
-- ServiceId
+- ObjectId
 
 ```yaml
 Type: ServicePrincipalIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ The DisplayName parameter specifies the friendly name of the service principal. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

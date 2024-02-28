@@ -49,7 +49,7 @@ Set-CaseHoldPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 **Note**: Don't use a piped Foreach-Object command when adding or removing scope locations: `"Value1","Value2",..."ValueN" | Foreach-Object {Set-CaseHoldPolicy -Identity "Regulation 123 Compliance" -RemoveExchangeLocation $_}`.
 
@@ -119,7 +119,7 @@ To specify a mailbox or distribution group, you can use the following values:
 
 - Name
 - SMTP address. To specify an inactive mailbox, precede the address with a period (.).
-- Azure AD ObjectId (You can use the [Get-AzureADUser](https://learn.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
+- Microsoft Entra ObjectId. Use the [Get-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/get-mguser) or [Get-MgGroup](https://learn.microsoft.com/powershell/module/microsoft.graph.groups/get-mggroup) cmdlets in Microsoft Graph PowerShell to find this value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -254,7 +254,7 @@ To specify a mailbox or distribution group, you can use any value that uniquely 
 
 - Name
 - SMTP address. To specify an inactive mailbox, precede the address with a period (.).
-- Azure AD ObjectId (You can use the [Get-AzureADUser](https://learn.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
+- Microsoft Entra ObjectId. Use the [Get-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/get-mguser) or [Get-MgGroup](https://learn.microsoft.com/powershell/module/microsoft.graph.groups/get-mggroup) cmdlets in Microsoft Graph PowerShell to find this value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

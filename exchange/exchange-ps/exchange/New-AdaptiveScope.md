@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Default
 ```
 New-AdaptiveScope -Name <String> -FilterConditions <PswsHashtable> -LocationType <DynamicBoundaryLocationType>
+ [-AdministrativeUnit <Guid>]
  [-Comment <String>]
  [<CommonParameters>]
 ```
@@ -30,14 +31,15 @@ New-AdaptiveScope -Name <String> -FilterConditions <PswsHashtable> -LocationType
 ### AdaptiveScopeRawQuery
 ```
 New-AdaptiveScope -Name <String> -LocationType <DynamicBoundaryLocationType> -RawQuery <String>
+ [-AdministrativeUnit <Guid>]
  [-Comment <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-For more information about the properties to use in adaptive scopes, see [Configuration information for adaptive scopes](https://learn.microsoft.com/microsoft-365/compliance/retention-settings#configuration-information-for-adaptive-scopes).
+For more information about the properties to use in adaptive scopes, see [Configuration information for adaptive scopes](https://learn.microsoft.com/purview/retention-settings#configuration-information-for-adaptive-scopes).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -123,6 +125,22 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AdministrativeUnit
+{{ Fill AdministrativeUnit Description }}
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -10,9 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an owner or member to the private channel.
 
-Note: the command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
+The command will return immediately, but the Teams application will not reflect the update immediately. To see the update you should refresh the members page.
 
-To turn an existing Member into an Owner,  first Add-TeamChannelUser -User foo to add them to the members list, then Add-TeamChannelUser -User foo -Role Owner to add them to owner list.
+Note: Technical limitations of private channels apply. To add a user as a member to a channel, they need to first be a member of the team. To make a user an owner of a channel, they need to first be a member of the channel.
 
 ## SYNTAX
 
@@ -40,7 +40,7 @@ Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "
 
 Promote user dmx@example.com to an owner of private channel with name "Engineering" under the given group.
 
-### Example 2
+### Example 3
 ```
 Add-TeamChannelUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -DisplayName "Engineering" -User 0e4249a7-6cfd-8c93-a510-91cda44c8c73 -TenantId dcd143cb-c4ae-4364-9faf-e1c3242bf4ff
 ```

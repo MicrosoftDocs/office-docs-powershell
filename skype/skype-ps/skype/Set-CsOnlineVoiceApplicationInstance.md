@@ -7,13 +7,13 @@ ms.reviewer:
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ---
 
 # Set-CsOnlineVoiceApplicationInstance
 
 ## SYNOPSIS
-The `Set-CsOnlineVoiceApplicationInstance` modifies an application instance in Azure Active Directory.
+The `Set-CsOnlineVoiceApplicationInstance` modifies an application instance in Microsoft Entra ID.
 
 **Note**: This cmdlet has been deprecated. Use the new [Set-CsPhoneNumberAssignment](/powershell/module/teams/set-csphonenumberassignment) and 
 [Remove-CsPhoneNumberAssignment](/powershell/module/teams/remove-csphonenumberassignment) cmdlets instead.
@@ -25,7 +25,7 @@ Set-CsOnlineVoiceApplicationInstance [-WhatIf] [-Confirm] [-TelephoneNumber <Str
 ```
 
 ## DESCRIPTION
-This cmdlet is used to modify an application instance in Azure Active Directory.
+This cmdlet is used to modify an application instance in Microsoft Entra ID.
 
 ## EXAMPLES
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The user principal name (UPN) of the resource account in Azure Active Directory.
+The user principal name (UPN) of the resource account in Microsoft Entra ID.
 
 ```yaml
 Type: Object

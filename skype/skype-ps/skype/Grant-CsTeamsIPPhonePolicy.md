@@ -20,9 +20,22 @@ Use the Grant-CsTeamsIPPhonePolicy cmdlet to assign a set of Teams phone policie
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Grant-CsTeamsIPPhonePolicy [-PassThru] [-Confirm] [[-PolicyName] <XdsIdentity>] [[-Identity] <Object>] [-Global]
- [-Tenant <Guid>] [-DomainController <Object>] [-WhatIf]
+Grant-CsTeamsIPPhonePolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToTenant
+```
+Grant-CsTeamsIPPhonePolicy [-PassThru] [[-PolicyName] <String>]
+ [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsIPPhonePolicy [-PassThru] [[-PolicyName] <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +90,7 @@ Use this parameter to make the specified policy in -PolicyName the new effective
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
@@ -92,7 +105,7 @@ Indicates the identity of the user account the policy should be assigned to.
 
 ```yaml
 Type: Object
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -127,6 +140,36 @@ Aliases:
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

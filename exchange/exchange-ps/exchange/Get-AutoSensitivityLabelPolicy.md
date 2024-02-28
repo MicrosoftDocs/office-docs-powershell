@@ -30,7 +30,7 @@ Get-AutoSensitivityLabelPolicy [[-Identity] <PolicyIdParameter>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -66,6 +66,8 @@ Accept wildcard characters: False
 ### -DistributionDetail
 The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
 
+**Note**: You can ignore errors about distribution in policy for SharePoint and OneDrive workloads.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -80,7 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForceValidate
-{{ Fill ForceValidate Description }}
+The ForceValidate parameter specifies whether to include details related to the AdminUnits of users, groups, or sites in the policy. Valid values are:
+
+- $true: Various properties in the policy include details of the AdminUnits that are associated with current set of selected users, groups, or sites.
+- $false: The output doesn't contain the information. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -96,7 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeProgressFeedback
-{{ Fill IncludeProgressFeedback Description }}
+IncludeProgressFeedback specifies whether to include the labeling progress of files in SharePoint Online or OneDrive for Business. You don't need to specify a value with this switch.
+
+If you use this switch, the command shows the progress of files to be labeled, files labeled in the last 7 days, and total files labeled for enabled auto-labeling policies.
 
 ```yaml
 Type: SwitchParameter

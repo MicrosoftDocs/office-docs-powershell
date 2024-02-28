@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. This cmdlet works for MFA or non-MFA enabled accounts.
+Use the Connect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to connect to Exchange Online PowerShell or standalone Exchange Online Protection PowerShell using modern authentication. This cmdlet works for accounts with or without multi-factor authentication (MFA).
 
 To connect to Security & Compliance PowerShell, use the [Connect-IPPSSession](https://learn.microsoft.com/powershell/module/exchange/connect-ippssession) cmdlet.
 
@@ -52,6 +52,8 @@ Connect-ExchangeOnline
  [-PageSize <UInt32>]
  [-ShowBanner]
  [-ShowProgress <Boolean>]
+ [-SigningCertificate <X509Certificate2>]
+ [-SkipLoadingCmdletHelp]
  [-SkipLoadingFormatData]
  [-TrackPerformance <Boolean>]
  [-UseMultithreading <Boolean>]
@@ -61,7 +63,7 @@ Connect-ExchangeOnline
 ```
 
 ## DESCRIPTION
-This cmdlet creates a PowerShell connection to your Exchange Online organization. You can use this cmdlet to authenticate for REST API-backed cmdlets in the Exchange Online PowerShell V3 module and also for all existing Exchange Online PowerShell cmdlets (remote PowerShell cmdlets).
+This cmdlet creates a PowerShell connection to your Exchange Online organization.
 
 Connect commands will likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 
@@ -72,46 +74,32 @@ Connect commands will likely fail if the profile path of the account that you us
 Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 ```
 
-This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). We aren't using the UseRPSSession parameter, so the connection uses REST and doesn't require Basic authentication to be enabled in WinRM on the local computer.
+This example connects to Exchange Online PowerShell using modern authentication, with or without multi-factor authentication (MFA). The connection uses REST API mode and doesn't require Basic authentication to be enabled in WinRM on the local computer.
 
 ### Example 2
-```powershell
-Connect-ExchangeOnline -UserPrincipalName chris@contoso.com -UseRPSSession
-```
-
-This example connects to Exchange Online PowerShell using modern authentication, with or without MFA. We're using the UseRPSSession parameter, so the connection requires Basic authentication to be enabled in WinRM on the local computer.
-
-### Example 3
-```powershell
-Connect-ExchangeOnline -AppId <%App_id%> -CertificateFilePath "C:\users\navin\Documents\TestCert.pfx" -Organization "contoso.onmicrosoft.com"
-```
-
-This example connects to Exchange Online PowerShell in an unattended scripting scenario using the public key of a certificate.
-
-### Example 4
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -CertificateThumbprint <%Thumbprint string of certificate%> -Organization "contoso.onmicrosoft.com"
 ```
 
 This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate thumbprint.
 
-### Example 5
+### Example 3
 ```powershell
 Connect-ExchangeOnline -AppId <%App_id%> -Certificate <%X509Certificate2 object%> -Organization "contoso.onmicrosoft.com"
 ```
 
 This example connects to Exchange Online PowerShell in an unattended scripting scenario using a certificate file. This method is best suited for scenarios where the certificate is stored in remote machines and fetched at runtime. For example, the certificate is stored in the Azure Key Vault.
 
-### Example 6
+### Example 4
 ```powershell
 Connect-ExchangeOnline -Device
 ```
 
 In PowerShell 7.0.3 or later using version 2.0.4 or later of the module, this example connects to Exchange Online PowerShell in interactive scripting scenarios on computers that don't have web browsers.
 
-The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Azure AD authentication flow, and the Exchange Online cmdlets are imported after few seconds.
+The command returns a URL and unique code that's tied to the session. You need to open the URL in a browser on any computer, and then enter the unique code. After you complete the login in the web browser, the session in the Powershell 7 window is authenticated via the regular Microsoft Entra authentication flow, and the Exchange Online cmdlets are imported after few seconds.
 
-### Example 7
+### Example 6
 ```powershell
 Connect-ExchangeOnline -InlineCredential
 ```
@@ -123,7 +111,7 @@ In PowerShell 7.0.3 or later using version 2.0.4 or later of the module, this ex
 ### -ConnectionUri
 **Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
-The ConnectionUri parameter specifies the connection endpoint for the remote Exchange Online PowerShell session. The following Exchange Online PowerShell environments and related values are supported:
+The ConnectionUri parameter specifies the connection endpoint for the PowerShell session. The following Exchange Online PowerShell environments and related values are supported:
 
 - Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://outlook.office365.com/powershell-liveid/`, but that's also the default value, so you don't need to use this parameter.
 - Office 365 Germany: `https://outlook.office.de/PowerShell-LiveID`
@@ -147,7 +135,7 @@ Accept wildcard characters: False
 ### -AzureADAuthorizationEndpointUri
 **Note**: If you use the ExchangeEnvironmentName parameter, you don't need to use the AzureADAuthorizationEndpointUri or ConnectionUri parameters.
 
-The AzureADAuthorizationEndpointUri parameter specifies the Azure AD Authorization endpoint that can issue OAuth2 access tokens. The following Exchange Online PowerShell environments and related values are supported:
+The AzureADAuthorizationEndpointUri parameter specifies the Microsoft Entra Authorization endpoint that can issue OAuth2 access tokens. The following Exchange Online PowerShell environments and related values are supported:
 
 - Microsoft 365 or Microsoft 365 GCC: Don't use this parameter. The required value is `https://login.microsoftonline.com/common`, but that's also the default value, so you don't need to use this parameter.
 - Office 365 Germany: `https://login.microsoftonline.de/common`
@@ -193,6 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -PSSessionOption
+**Note**: This parameter doesn't work in REST API connections.
+
 The PSSessionOption parameter specifies the PowerShell session options to use in your connection to Exchange Online. This parameter works only if you also use the UseRPSSession switch in the same command.
 
 Store the output of the [New-PSSessionOption](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/new-pssessionoption) command in a variable (for example, `$PSOptions = New-PSSessionOption <Settings>`), and use the variable name as the value for this parameter (for example, `$PSOptions`).
@@ -283,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccessToken
-**Note**: This parameter is available in version 3.1.0-Preview1 or later of the module.
+**Note**: This parameter is available in version 3.1.0 or later of the module.
 
 The AccessToken parameter specifies the OAuth JSON Web Token (JWT) that's used to connect to ExchangeOnline.
 
@@ -357,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateFilePath
-The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file.
+The CertificateFilePath parameter specifies the certificate that's used for CBA. A valid value is the complete public path to the certificate file. Use the CertificatePassword parameter with this parameter.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
 
@@ -386,6 +376,8 @@ You can use the following methods as a value for this parameter:
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
 For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+
+**Note**: Using a **ConvertTo-SecureString** command to store the password of the certificate locally defeats the purpose of a secure connection method for automation scenarios. Using a **Get-Credential** command to prompt you for the password of the certificate securely isn't ideal for automation scenarios. In other words, there's really no automated _and_ secure way to connect using a local certificate.
 
 ```yaml
 Type: SecureString
@@ -539,8 +531,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentity
-**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
-
 The ManagedIdentity switch specifies that you're using managed identity to connect. You don't need to specify a value with this switch.
 
 Managed identity connections are currently supported for the following types of Azure resources:
@@ -570,8 +560,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedIdentityAccountId
-**Note**: This parameter is available in version 2.0.6-Preview7 or later of the module.
-
 The ManagedIdentityAccountId parameter specifies the user-assigned managed identity that you're using to connect. A valid value for this parameter is the application ID (GUID) of the service principal that corresponds to the user-assigned managed identity in Azure.
 
 You must use this parameter with the Organization parameter and the ManagedIdentity switch.
@@ -665,14 +653,58 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SkipLoadingFormatData
-**Note**: This parameter is available in version 2.0.6-Preview8 or later of the module.
+### -SigningCertificate
+**Note**: This parameter is available in version 3.2.0 or later of the module.
 
+The SigningCertificate parameter specifies the client certificate that's used to sign the format files (\*.Format.ps1xml) or script module files (.psm1) in the temporary module that Connect-ExchangeOnline creates.
+
+A valid value for this parameter is a variable that contains the certificate, or a command or expression that gets the certificate.
+
+To find the certificate, use the Get-PfxCertificate cmdlet in the Microsoft.PowerShell.Security module or use the Get-ChildItem cmdlet in the certificate (Cert:) drive. If the certificate isn't valid or doesn't have sufficient authority, the command will fail.
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingCmdletHelp
+**Note**: This parameter is available in version 3.3.0 or later of the module.
+
+The SkipLoadingCmdletHelp switch avoids downloading the cmdlet help files for REST API connections. You don't need to specify a value with this switch.
+
+When you use this switch, you don't get local help files for any cmdlet.
+
+This switch doesn't work with the UseRPSSession switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipLoadingFormatData
 The SkipLoadingFormatData switch avoids downloading the format data for REST API connections. You don't need to specify a value with this switch.
 
 When you use this switch, the output of any Exchange cmdlet will be unformatted.
 
-This switch does not work with the UseRPSSession switch.
+Use this switch to avoid errors when connecting to Exchange Online PowerShell from within a Windows service or the Windows PowerShell SDK.
+
+This switch doesn't work with the UseRPSSession switch.
 
 ```yaml
 Type: SwitchParameter
@@ -693,7 +725,7 @@ The TrackPerformance parameter measures additional events (for example, CPU load
 - $true: Performance tracking is enabled.
 - $false: Performance tracking is disabled. This is the default value.
 
-This parameter only when works when logging is enabled.
+This parameter works only when logging is enabled.
 
 ```yaml
 Type: Boolean
@@ -746,13 +778,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseRPSSession
-This parameter is available in version 2.0.6-Preview3 or later of the module.
+**Note**: Remote PowerShell connections to Exchange Online PowerShell are deprecated. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692). 
 
 The UseRPSSession switch allows you to connect to Exchange Online PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 
-This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Prerequisites in the Exchange Online PowerShell module](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
+This switch requires that Basic authentication is enabled in WinRM on the local computer. For more information, see [Turn on Basic authentication in WinRM](https://aka.ms/exov3-module#turn-on-basic-authentication-in-winrm).
 
-If you don't use this switch, Basic authentication in WinRM is not required.
+If you don't use this switch, REST API mode is used for the connection, so Basic authentication in WinRM isn't required.
 
 ```yaml
 Type: SwitchParameter

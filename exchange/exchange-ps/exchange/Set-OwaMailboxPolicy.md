@@ -32,6 +32,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AllowedMimeTypes <MultiValuedProperty>]
  [-AllowedOrganizationAccountDomains <String[]>]
  [-AllowOfflineOn <AllowOfflineOnEnum>]
+ [-BizBarEnabled <Boolean>]
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
  [-BookingsMailboxCreationEnabled <Boolean>]
@@ -53,6 +54,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-DisplayPhotosEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-DropboxAttachmentsEnabled <Boolean>]
+ [-EmptyStateEnabled <Boolean>]
  [-ExplicitLogonEnabled <Boolean>]
  [-ExternalImageProxyEnabled <Boolean>]
  [-ExternalSPMySiteHostURL <String>]
@@ -84,13 +86,14 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-Name <String>]
  [-NotesEnabled <Boolean>]
  [-NpsSurveysEnabled <Boolean>]
- [-OrganizationEnabled <Boolean>]
+ [-OfflineEnabledWeb <Boolean>]
+ [-OfflineEnabledWin <Boolean>]
  [-OneDriveAttachmentsEnabled <Boolean>]
  [-OneWinNativeOutlookEnabled <System.Boolean>]
  [-OnSendAddinsEnabled <Boolean>]
+ [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
- [<CommonParameters>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -152,7 +155,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ## DESCRIPTION
 In on-premises Exchange, the default Outlook on the web mailbox policy is named Default. In Exchange Online, the default Outlook on the web mailbox policy is named OwaMailboxPolicy-Default.
 
-Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (Stop-Service WAS -Force and Start-Service W3SVC).
+Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by restarting IIS (`Stop-Service WAS -Force` and `Start-Service W3SVC`).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -423,6 +426,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BizBarEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BizBarEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockedFileTypes
 The BlockedFileTypes parameter specifies a list of attachment file types (file extensions) that can't be saved locally or viewed from Outlook on the web. The default values are:
 
@@ -620,7 +641,7 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 This parameter is available only in the cloud-based service.
 
-The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Azure Active Directory Portal.
+The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy for limited access. For this feature to work properly, you also need to configure a Conditional Access policy in the Microsoft Entra admin center.
 
 **Note**: When you enable a Conditional Access policy, users will no longer be able to access the light version of Outlook on the web. An error message will direct them to use the default premium experience.
 
@@ -852,6 +873,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EmptyStateEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill EmptyStateEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1491,6 +1530,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OfflineEnabledWeb
+This parameter is available only in the cloud-based service.
+
+{{ Fill OfflineEnabledWeb Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OfflineEnabledWin
+This parameter is available only in the cloud-based service.
+
+{{ Fill OfflineEnabledWin Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OneDriveAttachmentsEnabled
 This parameter has been deprecated and is no longer used.
 
@@ -1669,7 +1744,10 @@ Accept wildcard characters: False
 ### -PersonalAccountsEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill PersonalAccountsEnabled Description }}
+The PersonalAccountsEnabled parameter specifies whether to allow users to add their personal accounts (for example, Outlook.com, Gmail, or Yahoo!) in the new Outlook for Windows. Valid values are:
+
+- $true: Users can add their personal accounts in the new Outlook for Windows. This is the default value.
+- $false: Users can't add their personal accounts in the new Outlook for Windows.
 
 ```yaml
 Type: System.Boolean
@@ -1867,7 +1945,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft 365 Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
+**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 

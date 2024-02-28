@@ -26,7 +26,7 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-AllowClickThrough <Boolean>]
  [-Confirm]
  [-CustomNotificationText <String>]
- [-DeliverMessageAfterScan <Boolean>
+ [-DeliverMessageAfterScan <Boolean>]
  [-DisableUrlRewrite <Boolean>]
  [-DoNotRewriteUrls <MultiValuedProperty>]
  [-EnableForInternalSenders <Boolean>]
@@ -99,7 +99,7 @@ The AllowClickThrough parameter specifies whether to allow users to click throug
 $true: The user is allowed to click through to the original URL.
 $false: The user isn't allowed to click through to the original URL.
 
-In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft 365 Defender portal, the default value is $true.
+In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft Defender portal, the default value is $true.
 
 ```yaml
 Type: Boolean
@@ -174,7 +174,7 @@ The DisableUrlRewrite parameter specifies whether to rewrite (wrap) URLs in emai
 - $true: URLs in messages are not rewritten, but messages are still scanned by Safe Links prior to delivery. Time of click checks on links are done using the Safe Links API in supported Outlook clients (currently, Outlook for Windows and Outlook for Mac).
 - $false: URLs in messages are rewritten. API checks still occur on unwrapped URLs in supported clients if the user is in a valid Safe Links policy.
 
-In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft 365 Defender portal, the default value is $true.
+In PowerShell, the default value is $false. In new Safe Links policies created in the Microsoft Defender portal, the default value is $true.
 
 ```yaml
 Type: Boolean

@@ -38,8 +38,11 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowBreakoutRooms <Boolean>] [-TeamsCameraFarEndPTZMode <String>] [-AllowMeetingReactions <Boolean>] 
 [-AllowMeetingRegistration <Boolean>] [-AllowScreenContentDigitization <Boolean>] [-AllowTrackingInReport <Boolean>] [-RoomAttributeUserOverride <String>] 
 [-SpeakerAttributionMode <String>] [-WhoCanRegister <String>] [-ChannelRecordingDownload <String>] [-NewMeetingRecordingExpirationDays <Int32>] 
-[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] 
-[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>]
+[-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] [-AutomaticallyStartCopilot <String>] [-Copilot <String>]
+[-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowWatermarkCustomizationForCameraVideo <Boolean>]  [-WatermarkForCameraVideoOpacity <Int32>]  [-WatermarkForCameraVideoPattern <String>]
+[-AllowWatermarkCustomizationForScreenSharing <Boolean>]  [-WatermarkForScreenSharingOpacity <Int32>]  [-WatermarkForScreenSharingPattern <String>] [-WatermarkForAnonymousUsers <String>]
+[-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>] [-VoiceIsolation <String>]
+[-ContentSharingInExternalMeetings <String>] 
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -80,6 +83,38 @@ In Example 3, the Set-CsTeamsMeetingPolicy cmdlet is used to update an existing 
 This policy will use all the existing values except one: AllowNetworkConfigurationSettingsLookup; in this example, we will fetch network roaming policy for the non-EV user with NonEVNetworkRoamingPolicy based on his current network location. 
 
 ## PARAMETERS
+
+### -AutomaticallyStartCopilot
+
+This policy gives admins the ability to auto-start Copilot.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Copilot
+
+This policy gives admins the ability to choose if Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowAnonymousUsersToJoinMeeting
 
@@ -210,6 +245,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContentSharingInExternalMeetings
+This policy allows admins to determine whether the user can share content in meetings organized by external organizations. The user should have a Teams Premium license to be protected under this policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IPAudioMode
 Determines whether audio can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming audio in the meeting. Set this to DISABLED to prohibit outgoing and incoming audio in the meeting.
 
@@ -277,6 +327,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowLocalRecording
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowMeetNow
 Determines whether a user can start ad-hoc meetings. Set this to TRUE to allow a user to start ad-hoc meetings. Set this to FALSE to prohibit the user from starting ad-hoc meetings. 
@@ -840,7 +904,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Enabled
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1134,6 +1198,101 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CopyRestriction
+This parameter enables a setting that controls a meeting option which allows users to disable right-click or Ctrl+C to copy, Copy link, Forward message, and Share to Outlook for meeting chat messages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -ExternalMeetingJoin
+Determines whether the user is allowed to join external meetings.
+
+Possible values are:
+- EnabledForAnyone 
+- EnabledForTrustedOrgs
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledForAnyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Copilot
+This setting allows the admin to choose whether Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+
+Possible values are:
+- Enabled
+- EnabledWithTranscript
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledWithTranscript
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutomaticallyStartCopilot
+
+*Note: This feature has not been fully released yet, so the setting will have no effect.*
+
+This setting gives admins the ability to auto-start Copilot.
+
+Possible values are:
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoiceIsolation
+Determines whether you provide support for your users to enable voice isolation in Teams meeting calls.
+
+Possible values are: 
+- Enabled (default)
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

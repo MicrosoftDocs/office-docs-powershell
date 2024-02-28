@@ -118,10 +118,9 @@ Accept wildcard characters: False
 ### -DetailLevel
 The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Valid values are:
 
-- AvailabilityOnly (This is the default value)
+- AvailabilityOnly (default)
 - LimitedDetails
 - FullDetails
-- Editor
 
 This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
@@ -294,7 +293,7 @@ To specify a date/time value for this parameter, use either of the following opt
 
 **Notes**:
 
-- You use this parameter on the shared calendar in delegate's mailbox. For example, `Set-MailboxCalendarFolder -Identity "delegate@contoso.com:\Calendar\Name of shared calendar" -SharedCalendarSyncStartDate`. The word `...\Calendar\...` is in the language that the user sees in Outlook (for example, in German, the word is `...\Kalendar\...`).
+- You use this parameter on the shared calendar in the delegate's mailbox. For example, `Set-MailboxCalendarFolder -Identity delegate@contoso.onmicrosoft.com:DelegateSharedCalendarFolderId" -SharedCalendarSyncStartDate (Get-Date "5/6/2023 9:30 AM").ToUniversalTime()`. DelegateSharedCalendarFolderId is the FolderId of the shared calendar in the delegate's mailbox (for example, `Get-MailboxFolderStatistics -Identity delegate@contoso.onmicrosoft.com -FolderScope Calendar | Format-List Name,FolderId`).
 - Users need to have FullDetails, Editor, or Delegate access to the specified shared calendar.
 - Setting this parameter might cause events in the shared calendar to briefly disappear from view while the calendar is resynchronized.
 - The value of this parameter is used when initializing the calendar folder sync. After that, every new, updated, and deleted item is processed and synced, regardless of the SharedCalendarSyncStartDate parameter value.

@@ -18,7 +18,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [-CallPriority <Int16>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +53,7 @@ $operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
 ```
 
-This example gets a user object using Get-CsOnlineUser cmdlet. We then use the AAD ObjectId of that user object to create a user callable entity.
+This example gets a user object using Get-CsOnlineUser cmdlet. We then use the Microsoft Entra ObjectId of that user object to create a user callable entity.
 
 ### Example 4
 ```powershell
@@ -61,7 +61,7 @@ $callableEntityId = Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Att
 $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId.Id -Type ApplicationEndpoint
 ```
 
-This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the AAD ObjectId of that application instance to create an application endpoint callable entity.
+This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the Microsoft Entra ObjectId of that application instance to create an application endpoint callable entity.
 
 ### Example 5
 ```powershell
@@ -156,6 +156,30 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallPriority --- Private Preview customers only
+The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint`.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+
+1 = Very High
+2 = High
+3 = Normal / Default
+4 = Low
+5 = Very Low
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: 3
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

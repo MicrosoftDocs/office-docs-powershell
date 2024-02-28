@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/remove-cstenantnetworkregion
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsTenantNetworkRegion
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -15,12 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 Use the `Remove-CsTenantNetworkRegion` cmdlet to remove a tenant network region.
 
-
 ## SYNTAX
-
 ```
-Remove-CsTenantNetworkRegion [-Tenant <System.Guid>] [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-CsTenantNetworkRegion [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +27,7 @@ A network region contains a collection of network sites.
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> Remove-CsTenantNetworkRegion -Identity "RedmondRegion"
 ```
@@ -39,41 +36,11 @@ The command shown in Example 1 removes 'RedmondRegion'.
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 Unique identifier for the network region to be removed.
 
 ```yaml
-Type: XdsGlobalRelativeIdentity
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -84,19 +51,13 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose network regions are being removed. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
@@ -127,11 +88,14 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.Xds.XdsGlobalRelativeIdentity
-
 ## OUTPUTS
 
 ### System.Object
 ## NOTES
 
 ## RELATED LINKS
+[New-CsTenantNetworkRegion](New-CsTenantNetworkRegion.md)
+
+[Get-CsTenantNetworkRegion](Get-CsTenantNetworkRegion.md)
+
+[Set-CsTenantNetworkRegion](Set-CsTenantNetworkRegion.md)

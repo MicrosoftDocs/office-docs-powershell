@@ -6,7 +6,7 @@ title: Get-CsOnlineVoiceUser
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ### -GetFromAAD
 *This parameter has been deprecated from Teams PowerShell Modules 3.0 and above due to limited usage*.
 
-Use this switch to get the users from Azure Active Directory.
+Use this switch to get the users from Microsoft Entra ID.
 
 ```yaml
 Type: SwitchParameter

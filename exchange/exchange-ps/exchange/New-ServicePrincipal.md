@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-serviceprincipal
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: New-ServicePrincipal
 schema: 2.0.0
 author: chrisda
@@ -21,7 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-ServicePrincipal -AppId <String> -ServiceId <String>
+New-ServicePrincipal -AppId <String> -ObjectId <String>
+ -ServiceId <String>
  [-Confirm]
  [-DisplayName <String>]
  [-Organization <OrganizationIdParameter>]
@@ -30,9 +31,9 @@ New-ServicePrincipal -AppId <String> -ServiceId <String>
 ```
 
 ## DESCRIPTION
-Service principals exist in Azure Active Directory to define what apps can do, who can access the apps, and what resources the apps can access. In Exchange Online, service principals are references to the service principals in Azure AD. To assign Exchange Online role-based access control (RBAC) roles to service principals in Azure AD, you use the service principal references in Exchange Online. The **\*-ServicePrincipal** cmdlets in Exchange Online PowerShell let you view, create, and remove these service principal references.
+Service principals exist in Microsoft Entra ID to define what apps can do, who can access the apps, and what resources the apps can access. In Exchange Online, service principals are references to the service principals in Microsoft Entra ID. To assign Exchange Online role-based access control (RBAC) roles to service principals in Microsoft Entra ID, you use the service principal references in Exchange Online. The **\*-ServicePrincipal** cmdlets in Exchange Online PowerShell let you view, create, and remove these service principal references.
 
-For more information, see [Application and service principal objects in Azure Active Directory](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+For more information, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -40,10 +41,10 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-New-ServicePrincipal -AppId 71487acd-ec93-476d-bd0e-6c8b31831053 -ServiceId 6233fba6-0198-4277-892f-9275bf728bcc
+New-ServicePrincipal -AppId 71487acd-ec93-476d-bd0e-6c8b31831053 -ObjectId 6233fba6-0198-4277-892f-9275bf728bcc
 ```
 
-This example create a new service principal in Exchange Online with the specified AppId and ServiceId values.
+This example create a new service principal in Exchange Online with the specified AppId and ObjectId values.
 
 ## PARAMETERS
 
@@ -52,14 +53,35 @@ The AppId parameter specifies the unique AppId GUID value for the service princi
 
 A valid value for this parameter is available in the following locations:
 
-- The AppId property in the output of the Get-AzureADServicePrincipal cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
-- The Application ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
+- The AppId property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
+- The Application ID property from Enterprise applications in the Microsoft Entra admin center: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ObjectId
+The ObjectId parameter specifies the unique ObjectId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
+
+A valid value for this parameter is available in the following locations:
+
+- The Id property in the output of the [Get-MgServicePrincipal](https://learn.microsoft.com/powershell/module/microsoft.graph.applications/get-mgserviceprincipal) cmdlet in Microsoft Graph PowerShell.
+- The Object ID property from Enterprise applications in the Microsoft Entra admin center: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -69,16 +91,13 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceId
-The ServiceId parameter specifies the unique ServiceId GUID value for the service principal. For example, 7c7599b2-23af-45e3-99ff-0025d148e929.
-
-- The ObjectId property in the output of the Get-AzureADServicePrincipal cmdlet in the AzureAD PowerShell module. For installation instructions, see [Install Azure Active Directory PowerShell for Graph](https://learn.microsoft.com/powershell/azure/active-directory/install-adv2).
-- The Object ID property from Enterprise applications in the Azure AD portal: <https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview/menuId~/null>.
+This parameter is being deprecated. Use the ObjectId parameter instead.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -97,7 +116,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -113,7 +132,7 @@ The DisplayName parameter specifies the friendly name of the service principal. 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -129,7 +148,7 @@ This parameter is reserved for internal Microsoft use.
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -145,7 +164,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named

@@ -12,6 +12,9 @@ ms.reviewer:
 # Search-MailboxAuditLog
 
 ## SYNOPSIS
+> [!NOTE]
+> This cmdlet will be deprecated in the cloud-based service. To access audit log data, use the Search-UnifiedAuditLog cmdlet. For more information, see this blog post: <https://aka.ms/AuditCmdletBlog>.
+
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Search-MailboxAuditLog cmdlet to search mailbox audit log entries matching the specified search terms.
@@ -78,10 +81,10 @@ This example retrieves mailbox audit log entries for Ken Kwok and Ben Smith's ma
 
 ### Example 3
 ```powershell
-Search-MailboxAuditLog -Identity kwok -LogonTypes Owner -ShowDetails -StartDate 1/1/2016 -EndDate 3/1/2016 | Where-Object {$_.Operation -eq "HardDelete"}
+Search-MailboxAuditLog -Identity kwok -LogonTypes Owner -ShowDetails -StartDate 1/1/2017 -EndDate 3/1/2017 | Where-Object {$_.Operation -eq "HardDelete"}
 ```
 
-This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by the mailbox owner between 1/1/2016 and 3/1/2016. The results are piped to the Where-Object cmdlet and filtered to return only entries with the HardDelete action.
+This example retrieves mailbox audit log entries for Ken Kwok's mailbox for actions performed by the mailbox owner between 1/1/2017 and 3/1/2017. The results are piped to the Where-Object cmdlet and filtered to return only entries with the HardDelete action.
 
 ## PARAMETERS
 
@@ -208,9 +211,7 @@ Accept wildcard characters: False
 ### -IncludeInactiveMailbox
 This parameter is available only in the cloud-based service.
 
-The IncludeInactiveMailbox switch is required to include inactive mailboxes in the search. You don't need to specify a value with this switch.
-
-An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+{{ Fill IncludeInactiveMailbox Description }}
 
 ```yaml
 Type: SwitchParameter

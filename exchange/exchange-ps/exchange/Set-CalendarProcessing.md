@@ -52,7 +52,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-MinimumDurationInMinutes <Int32>]
  [-OrganizerInfo <Boolean>]
  [-ProcessExternalMeetingMessages <Boolean>]
- [-RemoveCanceledMeetings <Boolean>
+ [-RemoveCanceledMeetings <Boolean>]
  [-RemoveForwardedMeetingNotifications <Boolean>]
  [-RemoveOldMeetingMessages <Boolean>]
  [-RemovePrivateProperty <Boolean>]
@@ -115,7 +115,9 @@ This example allows a list of users to submit in-policy meeting requests to the 
 ### Example 7
 ```powershell
 $group = New-DistributionGroup "Room 221 Booking Allowed"
+
 Update-DistributionGroupMember -Identity $group.Identity -Members karina@contoso.com,tony@contoso.com -BypassSecurityGroupManagerCheck:$true
+
 Set-CalendarProcessing -Identity "Room 221" -AutomateProcessing AutoAccept -BookInPolicy $group.Identity -AllBookInPolicy $false
 ```
 
@@ -221,6 +223,8 @@ The AddOrganizerToSubject parameter specifies whether the meeting organizer's na
 
 This parameter is used only on resource mailboxes where the AutomateProcessing parameter is set to AutoAccept.
 
+**Note**: Default Calendar folder permissions use the AvailabilityOnly role, which doesn't allow viewing Subject fields in meeting requests. At a minimum, the LimitedDetails role is required to view Subject fields in meeting requests. Use the **\*-MailboxFolderPermission** cmdlets to manage mailbox folder permissions.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -257,7 +261,11 @@ Accept wildcard characters: False
 The AllowConflicts parameter specifies whether to allow conflicting meeting requests. Valid values are:
 
 - $true: Conflicts are allowed. A recurring meeting series is accepted regardless of whether any occurrences conflict with existing bookings. The values of the ConflictPercentageAllowed or MaximumConflictInstances parameters are ignored.
-- $false: Conflicts aren't allowed. This is the default value. Whether an entire series is declined depends on the amount of conflicts in the series: <br> • The series is declined if the number or percentage of conflicts is higher than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. <br> • The series is accepted, but conflicting occurrences are declined if the number or percentage of conflicts is lower than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. If the EnableResponseDetails parameter value is $true, the organizer will receive a notification email for each declined occurrence.
+- $false: Conflicts aren't allowed. This is the default value. Whether an entire series is declined depends on the amount of conflicts in the series:
+
+  • The series is declined if the number or percentage of conflicts is higher than the ConflictPercentageAllowed or MaximumConflictInstances parameter values.
+
+  • The series is accepted, but conflicting occurrences are declined if the number or percentage of conflicts is lower than the ConflictPercentageAllowed or MaximumConflictInstances parameter values. If the EnableResponseDetails parameter value is $true, the organizer will receive a notification email for each declined occurrence.
 
 ```yaml
 Type: Boolean
@@ -401,6 +409,8 @@ The BookInPolicy parameter specifies users or groups who are allowed to submit i
 - Canonical DN
 - Email address
 - GUID
+
+Query-based groups (for example, dynamic distribution groups) aren't supported.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -576,7 +586,7 @@ Accept wildcard characters: False
 ### -EnforceCapacity
 This parameter is available only in the cloud-based service.
 
-The EnforceCapacity parameter specifies whether to restrict the number of attendees to the capacity of the workspace.  For example, if capacity is set to 10, then only 10 people can book the workspace. Valid values are:
+The EnforceCapacity parameter specifies whether to restrict the number of attendees to the capacity of the workspace. For example, if capacity is set to 10, then only 10 people can book the workspace. Valid values are:
 
 - $true: Capacity is enforced.
 - $false: Capacity is not enforced. This is the default value.
@@ -752,7 +762,10 @@ Accept wildcard characters: False
 ### -RemoveCanceledMeetings
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveCanceledMeetings Description }}
+The RemoveCanceledMeetings parameter specifies whether to automatically delete meetings that were cancelled by the organizer from the resource mailbox's calendar. Valid values are:
+
+- $true: Canceled meetings are deleted.
+- $false: Canceled meetings aren't deleted. This is the default value.
 
 ```yaml
 Type: Boolean

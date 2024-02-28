@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpKeywordDictionary -Name <String>
  [-Confirm]
  [-Description <String>]
+ [-DoNotPersistKeywords]
  [-FileData <Byte[]>]
  [-Organization <OrganizationIdParameter>]
  [-WhatIf]
@@ -33,14 +34,16 @@ New-DlpKeywordDictionary -Name <String>
 ## DESCRIPTION
 After you create a custom sensitive information type that specifies the identity (GUID value) of the DLP keyword dictionary, the dictionary will appear in your list of sensitive information types, and you can use it in policies.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $Keywords = @("Aarskog's syndrome","Abandonment","Abasia","Abderhalden-Kaufmann-Lignac","Abdominalgia","Abduction contracture","Abetalipo proteinemia","Abiotrophy","Ablatio","ablation","Ablepharia","Abocclusion","Abolition","Aborter","Abortion","Abortus","Aboulomania","Abrami's disease","Abramo")
+
 $EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
+
 New-DlpKeywordDictionary -Name "Diseases" -Description "Names of diseases and injuries from ICD-10-CM lexicon" -FileData $EncodedKeywords
 ```
 
@@ -49,7 +52,9 @@ This example creates a DLP keyword dictionary named Diseases by using the specif
 ### Example 2
 ```powershell
 $Keywords = Get-Content "C:\My Documents\InappropriateTerms.txt"
+
 $EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
+
 New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $EncodedKeywords
 ```
 
@@ -97,6 +102,22 @@ The Description parameter specifies descriptive text for the DLP keyword diction
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DoNotPersistKeywords
+{{ Fill DoNotPersistKeywords Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

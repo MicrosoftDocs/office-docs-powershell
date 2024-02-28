@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Remove-UnifiedAuditLogRetentionPolicy cmdlet to delete audit log retention policies from the Microsoft 365 Defender portal or the Microsoft Purview compliance portal.
+Use the Remove-UnifiedAuditLogRetentionPolicy cmdlet to delete audit log retention policies from the Microsoft Defender portal or the Microsoft Purview compliance portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -30,9 +30,9 @@ Remove-UnifiedAuditLogRetentionPolicy [-Identity] <PolicyIdParameter>
 ```
 
 ## DESCRIPTION
-It might take up to 30 minutes for the policy to be completely removed. For more information, see [Manage audit log retention policies](https://learn.microsoft.com/microsoft-365/compliance/audit-log-retention-policies).
+It might take up to 30 minutes for the policy to be completely removed. For more information, see [Manage audit log retention policies](https://learn.microsoft.com/purview/audit-log-retention-policies).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ This example deletes the audit log retention policy named "SearchQueryPerformed 
 The Identity parameter specifies the audit log retention policy that you want to delete. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-- Distingished name (DN)
+- Distinguished name (DN)
 - GUID
 
 ```yaml

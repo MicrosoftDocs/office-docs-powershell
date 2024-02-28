@@ -48,6 +48,7 @@ This example returns the list of senders that appear to be sending spoofed email
 ### Example 2
 ```powershell
 $file = "C:\My Documents\Spoof Insights.csv"
+
 Get-SpoofIntelligenceInsight | Export-Csv $file
 ```
 

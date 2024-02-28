@@ -1,33 +1,26 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-cstenantnetworkregion
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsTenantNetworkRegion
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: serdars
 ms.reviewer:
 ---
 
 # Set-CsTenantNetworkRegion
 
 ## SYNOPSIS
-As an Admin, you can use the Windows PowerShell command, Set-CsTenantNetworkRegion to define network regions. A network region interconnects various parts of a network across multiple geographic areas. The RegionID parameter is a logical name that represents the geography of the region, and has no dependencies or restrictions. Tenant network region is used for Location Based Routing.
+As an admin, you can use the Teams PowerShell command, Set-CsTenantNetworkRegion to define network regions. A network region interconnects various parts of a network across multiple geographic areas. The RegionID parameter is a logical name that represents the geography of the region and has no dependencies or restrictions. The organization's network region is used for Location-Based Routing.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Set-CsTenantNetworkRegion [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-CentralSite <String>] [[-Identity] <XdsGlobalRelativeIdentity>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### Instance
-```
-Set-CsTenantNetworkRegion [-Tenant <System.Guid>] [-Description <String>] [-NetworkRegionID <String>]
- [-CentralSite <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTenantNetworkRegion [[-Identity] <string>] [-CentralSite <string>] [-Description <string>]
+  [-NetworkRegionID <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,30 +28,21 @@ Location-Based Routing leverages the same network regions, sites, and subnets co
 
 ## EXAMPLES
 
-###-------------------------- Example 1 --------------------------
+### Example 1
 ```powershell
 PS C:\> Set-CsTenantNetworkRegion -Identity "RegionA" -Description "Region A"
 ```
 
-The command shown in Example 1 set the network region 'RegionA' with description 'Region A'.
-
-###-------------------------- Example 2 --------------------------
-```powershell
-PS C:\> Set-CsTenantNetworkRegion -Identity "RegionRedmond" -Description "Redmond region" -CentralSite "Central site 1"
-```
-
-The command shown in Example 2 set the network region 'RegionRedmond' with description 'Redmond region'. CentralSite is set to "Central site 1".
-
-Previously in Skype for Business there was an additional required parameter `-CentralSite <site ID>`, however it is now optional.
+The command shown in Example 1 sets the network region 'RegionA' with the description 'Region A'.
 
 ## PARAMETERS
 
-### -CentralSite
-This parameter is optional.
+### -Identity
+Unique identifier for the network region to be set.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -68,13 +52,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -CentralSite
+This parameter is not used.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
@@ -98,52 +82,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Unique identifier for the network region to be set.
-
-```yaml
-Type: XdsGlobalRelativeIdentity
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Instance
-The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
-You can retrieve this object reference by calling the `Get-CsTenantNetworkRegion` cmdlet.
-
-```yaml
-Type: PSObject
-Parameter Sets: Instance
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -NetworkRegionID
 The name of the network region. Not required in this PowerShell command.
 
@@ -159,19 +97,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose network regions are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
 Position: Named
@@ -210,3 +142,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
+[New-CsTenantNetworkRegion](New-CsTenantNetworkRegion.md)
+
+[Remove-CsTenantNetworkRegion](Remove-CsTenantNetworkRegion.md)
+
+[Get-CsTenantNetworkRegion](Get-CsTenantNetworkRegion.md)

@@ -86,7 +86,7 @@ The cmdlets in Basic Mobility and Security are described in the following list:
 
 For more information about Basic Mobility and Security, see [Overview of Basic Mobility and Security for Microsoft 365](https://learn.microsoft.com/microsoft-365/admin/basic-mobility-security/overview).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -862,7 +862,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoviesRating
-The MoviesRating parameter species the maximum or most restrictive rating of movies that are allowed on devices. You specify the country rating system to use with the RegionRatings parameter.
+The MoviesRating parameter species the maximum or most restrictive rating of movies that are allowed on devices. You specify the country/region rating system to use with the RegionRatings parameter.
 
 Valid values for the MoviesRating parameter are:
 
@@ -1177,7 +1177,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegionRatings
-The RegionRatings parameter specifies the rating system (country) to use for movie and television ratings with the MoviesRating and TVShowsRating parameters.
+The RegionRatings parameter specifies the rating system (country/region) to use for movie and television ratings with the MoviesRating and TVShowsRating parameters.
 
 Valid values for the RegionRating parameter are:
 
@@ -1272,7 +1272,7 @@ Accept wildcard characters: False
 ```
 
 ### -TVShowsRating
-The TVShowsRating parameter species the maximum or most restrictive rating of television shows that are allowed on devices. You specify the country rating system to use with the RegionRatings parameter.
+The TVShowsRating parameter species the maximum or most restrictive rating of television shows that are allowed on devices. You specify the country/region rating system to use with the RegionRatings parameter.
 
 Valid values for the TVShowsRating parameter are:
 

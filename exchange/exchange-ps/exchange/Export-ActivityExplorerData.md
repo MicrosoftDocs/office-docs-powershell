@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata
-applicable: Exchange Online, Security & Compliance
+applicable: Security & Compliance
 title: Export-ActivityExplorerData
 schema: 2.0.0
 author: chrisda
@@ -33,7 +33,7 @@ Export-ActivityExplorerData -EndTime <DateTime> -OutputFormat <String> -StartTim
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -53,10 +53,18 @@ This example exports up to 100 records for the specified date range in Json form
 
 ### Example 3
 ```powershell
-Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -OutputFormat Json -PageCookie 'JZDRkpowAEV%2fZYfn6hIQCr4tCwEdoQWT4OalAyQVJEAKUtRO%2f31ZvM%2fnnjtz%2fyneTVb9HVUNV7bK91frVVM17cXaaputAV7eQuWbEmZFWbU8yham002jkqxqs0Y1V3xgq2lcqWA98eE6Dtq6EN3IMinX2WPs%2bbromllxLPpOiJ07990WAnraG8QvRV5Twfyoe3%2f7itOO00rCNvmJsfiDvOmKBbsyYNeFb7gUwzKsvYX0urPNHKpyLNNEdxxM4DUjyQWJ0mB%2bskMqdJ7KR3ojQ3pSuyk87VGcAoQacCUtxQWCQe6Rmk0LCLP9jsBWxETsKUkTF5%2fYiT3KmHvgB65hEAbFonxfyYPu0JoHSYhg0hUkGnJUlhG0jBRTk7el%2fgQPpe2H6YF8qDGgt%2bhBk7zxjNw9qxglkqCoi%2bOF7P0dl7CBAgOWRb74i5ubSC%2bJ%2bQG6eyxgE7XP7fAC6S9n3kjl7yOQPYb7KdYsIwJ2gC5n4%2bjZzvx2kA0lZ%2fHI%2b%2ft8uK5urM3Gtk1L%2bf8J'
+$res = Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json
+
+#Run the below steps in loop until all results are fetched
+
+while ($res.LastPage -ne $true)
+{
+  $pageCookie = $res.WaterMark
+  $res = Export-ActivityExplorerData -StartTime "07/08/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -PageSize 5000 -OutputFormat Json -PageCookie $pageCookie
+}
 ```
 
-This example is related to the previous example where more than 100 records were available (the value of the LastPage property from that command was False). We're using the same date range, but this time we're using the value of the Watermark property from the previous command for the PageCookie parameter in this command to get the remaining results.
+This example is related to the previous example where more than 100 records were available (the value of the LastPage property from that command was False). We're using the same date range, but this time we're using the value of the Watermark property from the previous command for the PageCookie parameter in this command to get the remaining results in a loop. ResultData from each iteration can be used as needed.
 
 ### Example 4
 ```powershell
@@ -90,7 +98,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -110,7 +118,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Accepted values: csv, json
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -128,7 +136,7 @@ Use the short date format that's defined in the Regional Options settings on the
 Type: DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -144,13 +152,13 @@ If you specify multiple filter values for the same parameter, OR behavior is use
 
 If you use this parameter with other filter parameters, AND behavior is used across parameters. For example:
 
-`-Filter1 =  @("Activity", "LabelApplied", "LabelRemoved") -Filter2 = @("Workload", "Exchange")` returns records with the activity values `LabelApplied` or `LabelRemoved` for the `Exchange` workload. In other words, ((`Activity eq LabelApplied`) OR (`Activity eq LabelRemoved`)) AND (`Workload eq Exchange`).
+`-Filter1 @("Activity", "LabelApplied", "LabelRemoved") -Filter2 = @("Workload", "Exchange")` returns records with the activity values `LabelApplied` or `LabelRemoved` for the `Exchange` workload. In other words, ((`Activity eq LabelApplied`) OR (`Activity eq LabelRemoved`)) AND (`Workload eq Exchange`).
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -168,7 +176,7 @@ Use this parameter only if you're also using the Filter1 parameter in the same c
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -186,7 +194,7 @@ Use this parameter only if you're also using the Filter2 and Filter1 parameters 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -204,7 +212,7 @@ Use this parameter only if you're also using the Filter3, Filter2, and Filter1 p
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -222,7 +230,7 @@ Use this parameter only if you're also using the Filter4, Filter3, Filter2, and 
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -232,13 +240,13 @@ Accept wildcard characters: False
 ```
 
 ### -PageCookie
-The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters.
+The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. The PageCookie value is valid for 120 seconds to fetch the next set of records for same query. 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -248,13 +256,13 @@ Accept wildcard characters: False
 ```
 
 ### -PageSize
-The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 100.
+The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 100. Consider using a smaller PageSize value to avoid PageCookie expiry when exporting large datasets.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

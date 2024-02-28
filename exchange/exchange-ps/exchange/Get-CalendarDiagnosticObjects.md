@@ -22,7 +22,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
- [-AutoRequeryOnMeetingId <Boolean>
+ [-AnalyzeExceptionWithOriginalStartDate <ExDateTime>]
+ [-AutoRequeryOnMeetingId <Boolean>]
  [-ConfigurationName <String>]
  [-CustomPropertyNames <String[]>]
  [-EndDate <ExDateTime>]
@@ -69,8 +70,8 @@ This example retrieves the calendar diagnostic logs from Pedro Pizarro's mailbox
 ### Example 2
 ```powershell
 $A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true
-$A | Select-Object *,@{n='OLMT'
-e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
+
+$A | Select-Object *,@{n='OLMT'; e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
 ```
 
 This is the same as the previous example, but now the results are sorted by original last modified time.
@@ -115,6 +116,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AnalyzeExceptionWithOriginalStartDate
+{{ Fill AnalyzeExceptionWithOriginalStartDate Description }}
+
+```yaml
+Type: ExDateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

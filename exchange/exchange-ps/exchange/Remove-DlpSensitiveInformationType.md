@@ -32,7 +32,7 @@ Sensitive information type rule packages are used by data loss prevention (DLP) 
 
 **Note**: A "ManagementObjectNotFoundException" error means there was a synchronization problem between the Microsoft Purview compliance portal and Exchange Online. This happens when you try to remove data classifications that are being used in mail flow rules (also known as transport rules). You can remove the mail flow rule, wait for synchronization to finish, and then add the rule back.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 

@@ -25,7 +25,7 @@ Get-PolicyConfig [[-Identity] <OrganizationIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -39,7 +39,7 @@ This example returns the endpoint restrictions that are available in the organiz
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+You don't need to use this parameter. The only endpoint restrictions object in the organization is named Settings.
 
 ```yaml
 Type: OrganizationIdParameter

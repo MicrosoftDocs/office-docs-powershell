@@ -6,7 +6,7 @@ title: Set-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -25,7 +25,7 @@ Set-CsCallingLineIdentity [[-Identity] <string>] [-BlockIncomingPstnCallerID <bo
 
 ## DESCRIPTION
 
-**Note**: The use of CallingIDSubstitute Service will be deprecated. You should start using CallingIDSubstitute Resource as soon as possible.
+**Note**: The use of CallingIDSubstitute Service has been deprecated. Existing policies using CallingIDSubstitute Service are not being honored. You should use CallingIDSubstitute Resource instead.
 
 You can either change or block the Caller ID (also called a Calling Line ID) for a user.
 By default, the Microsoft Teams or Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in.
@@ -45,14 +45,13 @@ PS C:\> Set-CsCallingLineIdentity -Identity "MyBlockingPolicy" -BlockIncomingPst
 ```
 
 This example blocks the incoming caller ID.
-The user can override this setting.
 
 ### Example 2
 ```
 PS C:\> Set-CsCallingLineIdentity -Identity Anonymous -Description "anonymous policy" -CallingIDSubstitute Anonymous -EnableUserOverride $false -BlockIncomingPstnCallerID $true
 ```
 
-This example modifies the new Anonymous Caller ID policy that blocks the incoming Caller ID.
+This example modifies the new Anonymous Caller ID policy to block the incoming Caller ID.
 
 ### Example 3
 ```
@@ -72,11 +71,9 @@ This example modifies the Caller ID policy and allows Teams users to make anonym
 ## PARAMETERS
 
 ### -BlockIncomingPstnCallerID
-The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID.
-The default value is false.
+The BlockIncomingPstnCallerID switch determines whether to block the incoming Caller ID. The default value is false.
 
-The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user.
-If this is set to True and if this policy is assigned to a Lync user, then Caller ID for incoming calls is suppressed/anonymous.
+The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN caller to a user. If this is set to True and if this policy is assigned to a Teams user, then Caller ID for incoming calls is suppressed/anonymous.
 
 ```yaml
 Type: Boolean

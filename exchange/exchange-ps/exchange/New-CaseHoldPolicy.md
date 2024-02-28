@@ -16,6 +16,8 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the New-CaseHoldPolicy cmdlet to create new case hold policies in the Microsoft Purview compliance portal.
 
+**Note**: Running this cmdlet causes a full synchronization across your organization, which is a significant operation. If you need to create multiple policies, wait until the policy distribution is successful before running the cmdlet again for the next policy. For information about the distribution status, see [Get-CaseHoldPolicy](https://learn.microsoft.com/powershell/module/exchange/get-caseholdpolicy).
+
 After you use the New-CaseHoldPolicy cmdlet to create a case hold policy, you need to use the New-CaseHoldRule cmdlet to create a case hold rule and assign the rule to the policy. If you don't create a rule for the policy, the hold won't be created, and content locations won't be placed on hold.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
@@ -36,7 +38,7 @@ New-CaseHoldPolicy [-Name] <String> -Case <String>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -152,7 +154,7 @@ To specify a mailbox or distribution group, you can use the following values:
 
 - Name
 - SMTP address. To specify an inactive mailbox, precede the address with a period (.).
-- Azure AD ObjectId (You can use the [Get-AzureADUser](https://learn.microsoft.com/powershell/module/azuread/get-azureaduser) cmdlet to obtain this value.)
+- Microsoft Entra ObjectId. Use the [Get-MgUser](https://learn.microsoft.com/powershell/module/microsoft.graph.users/get-mguser) or [Get-MgGroup](https://learn.microsoft.com/powershell/module/microsoft.graph.groups/get-mggroup) cmdlets in Microsoft Graph PowerShell to find this value.
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 

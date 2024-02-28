@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/skype/remove-cstenantdialplan
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
-author: tomkau
-ms.author: tomkau
+author: jenstrier
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -18,15 +18,14 @@ Use the `Remove-CsTenantDialPlan` cmdlet to remove a tenant dial plan.
 ## SYNTAX
 
 ```
-Remove-CsTenantDialPlan [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CsTenantDialPlan [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The `Remove-CsTenantDialPlan` cmdlet removes an existing tenant dial plan (also known as a location profile).
 Tenant dial plans provide required information to allow Enterprise Voice users to make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied.
 
 Removing a tenant dial plan also removes any associated normalization rules.
 If no tenant dial plan is assigned to an organization, the Global dial plan is used.
@@ -47,13 +46,13 @@ This example removes the Vt1TenantDialPlan2.
 The Identity parameter is the unique identifier of the tenant dial plan to remove.
 
 ```yaml
-Type: XdsIdentity
+Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
-Required: False
-Position: 2
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -66,41 +65,7 @@ The Confirm parameter prompts you for confirmation before the command is execute
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-The Force parameter suppresses any confirmation prompts that are otherwise displayed before the changes are made.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
-You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -116,7 +81,7 @@ The WhatIf parameter describes what would happen if you executed the command, wi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -133,5 +98,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+The ExternalAccessPrefix and OptimizeDeviceDialing parameters have been removed from New-CsTenantDialPlan and Set-CsTenantDialPlan cmdlet since they are no longer used. External access dialing is now handled implicitly using normalization rules of the dial plans.
+The Get-CsTenantDialPlan will still show the external access prefix in the form of a normalization rule of the dial plan.
 
 ## RELATED LINKS
+
+[Grant-CsTenantDialPlan](Grant-CsTenantDialPlan.md)
+
+[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
+
+[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
+
+[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)

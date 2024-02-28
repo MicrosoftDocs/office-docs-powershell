@@ -2,7 +2,7 @@
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: MicrosoftTeams
 title: New-CsTeamsShiftsConnectionInstance
-author: lespina
+author: leonardospina
 ms.author: lespina
 manager: valk
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsshiftsconnectioninstance
@@ -18,19 +18,12 @@ This cmdlet creates a Shifts connection instance.
 
 ### New (Default)
 ```
-New-CsTeamsShiftsConnectionInstance -Body <IConnectorInstanceRequest> [-Break]
- [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
- [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsShiftsConnectionInstance -Body <IConnectorInstanceRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewExpanded
 ```
-New-CsTeamsShiftsConnectionInstance -ConnectorId <String>
- -ConnectorSpecificSettings <IConnectorInstanceRequestConnectorSpecificSettings> -DesignatedActorId <String>
- -EnabledConnectorScenario <String[]> -EnabledWfiScenario <String[]> -Name <String> -SyncFrequencyInMin <Int32>
- [-ConnectorAdminEmail <String[]>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
- [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsShiftsConnectionInstance [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Name <string>] [-State <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>][-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>][-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,79 +32,54 @@ This cmdlet creates a Shifts connection instance. It allows the admin to set up 
 ## EXAMPLES
 
 
-### Example WFM 1 Connection
+### Example 1
 
 ```powershell
-   PS C:\> $result = New-CsTeamsShiftsConnectionInstance -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E00000" -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -Name "My Connector Instance" -SyncFrequencyInMin 10 -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificBlueYonderSettingsRequest -Property @{ AdminApiUrl = "https://contoso.com/retail/data/wfmadmin/api/v1-beta3"; SiteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta4"; EssApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta2"; RetailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1"; CookieAuthUrl = "https://contoso.com/retail/data/login"; FederatedAuthUrl = "https://contoso.com/retail/data/login"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" })
-
-   PS C:\> $result.ToJsonString()
-```
-```output
-{
-    "id": "WCI-45500ca4-b392-4f0c-8703-3618fc6ddc9f",
-    "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
-    "name": "My Connector Instance",
-    "connector": {
-        "id": "6A51B888-FF44-4FEA-82E1-839401E00000",
-        "name": "WFM 1"
-    },
-    "connectorSpecificSettings": {
-        "adminApiUrl ": "https://contoso.com/retail/data/wfmadmin/api/v1-beta2",
-        "siteManagerUrl": "https://contoso.com/retail/data/wfmsm/api/v1-beta2",
-        "essApiUrl": "https://contoso.com/retail/data/wfmess/api/v1-beta1",
-        "retailWebApiUrl": "https://contoso.com/retail/data/retailwebapi/api/v1",
-        "cookieAuthUrl": "https://contoso.com/retail/data/login",
-        "federatedAuthUrl": "https://contoso.com/retail/data/login"
-    },
-    "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" ],
-    "workforceIntegrationId": "WFI_8dbddbb0-6cba-4861-a541-192320cc0e88",
-    "enabledWfiScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" ],
-    "syncFrequencyInMin": 10,
-    "designatedActorId": "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8",
-    "etag": "\"0a005fd6-0000-0d00-0000-60a76dbf0000\"",
-    "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
-}
-```
-
-
-Returns the object of created connector instance.
-
-In case of an error, we can capture the error response as follows:
-
-* Hold the cmdlet output in a variable: `$result=<CMDLET>`
-
-* To get the entire error message in Json: `$result.ToJsonString()`
-
-* To get the error object and object details: `$result, $result.Detail`
-
-### Example WFM 2 Connection
-
-```powershell
-PS C:\> $result = New-CsTeamsShiftsConnectionInstance -ConnectorId "95BF2848-2DDA-4425-B0EE-D62AEED00000" -ConnectorAdminEmail "admin@contoso.com", "superadmin@contoso.com" -DesignatedActorId "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8" -EnabledConnectorScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -EnabledWfiScenario "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard" -Name "My Connector Instance" -SyncFrequencyInMin 10 -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest -Property @{ apiUrl = "https://contoso.com/api"; ssoUrl = "https://contoso.com/sso"; appKey = "myAppKey"; clientId = "myClientId"; clientSecret = "PlaceholderForClientSecret"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" })
-
+PS C:\> $result = New-CsTeamsShiftsConnectionInstance `
+-connectionId  "79964000-286a-4216-ac60-c795a426d61a" `
+-name "Cmdlet test instance" `
+-connectorAdminEmail @("admin@contoso.com", "superadmin@contoso.com") `
+-designatedActorId "93f85765-47db-412d-8f06-9844718762a1" `
+-State "Active" `
+-syncFrequencyInMin "10" `
+-SyncScenarioOfferShiftRequest "FromWfmToShifts" `
+-SyncScenarioOpenShift "FromWfmToShifts" `
+-SyncScenarioOpenShiftRequest "FromWfmToShifts" `
+-SyncScenarioShift "FromWfmToShifts" `
+-SyncScenarioSwapRequest "FromWfmToShifts" `
+-SyncScenarioTimeCard "FromWfmToShifts" `
+-SyncScenarioTimeOff "FromWfmToShifts" `
+-SyncScenarioTimeOffRequest "FromWfmToShifts" `
+-SyncScenarioUserShiftPreference "Disabled"
 PS C:\> $result.ToJsonString()
 ```
+
 ```output
 {
-    "id": "WCI-45500ca4-b392-4f0c-8703-3618fc6ddc9f",
-    "tenantId": "113B4CBF-77D6-4456-AC4B-6A17EBD07EF8",
-    "name": "My Connector Instance",
-    "connector": {
-        "id": "95BF2848-2DDA-4425-B0EE-D62AEED00000",
-        "name": "WFM 2"
-    },
-    "connectorSpecificSettings": {
-        apiUrl = "https://contoso.com/api"
-        ssoUrl = "https://contoso.com/sso"
-        clientId = "myClientId"
-    },
-    "enabledConnectorScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"  ],
-    "workforceIntegrationId": "WFI_8dbddbb0-6cba-4861-a541-192320cc0e88",
-    "enabledWfiScenarios": [ "shift", "swapRequest", "openShift", "openShiftRequest", "timeOff", "timeOffRequest", "timeCard"   ],
-    "syncFrequencyInMin": 10,
-    "designatedActorId": "C5A60335-9FBD-4E4E-B3AE-1F2E7E5E92E8",
-    "etag": "\"0a005fd6-0000-0d00-0000-60a76dbf0000\""
-    "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ]
+  "syncScenarios": {
+    "offerShiftRequest": "FromWfmToShifts",
+    "openShift": "FromWfmToShifts",
+    "openShiftRequest": "FromWfmToShifts",
+    "shift": "FromWfmToShifts",
+    "swapRequest": "FromWfmToShifts",
+    "timeCard": "FromWfmToShifts",
+    "timeOff": "FromWfmToShifts",
+    "timeOffRequest": "FromWfmToShifts",
+    "userShiftPreferences": "Disabled"
+  },
+  "id": "WCI-eba2865f-6cac-46f9-8733-e0631a4536e1",
+  "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+  "connectionId": "79964000-286a-4216-ac60-c795a426d61a",
+  "connectorAdminEmails": [ "admin@contoso.com", "superadmin@contoso.com" ],
+  "connectorId": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+  "designatedActorId": "ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231",
+  "name": "Cmdlet test instance",
+  "syncFrequencyInMin": 10,
+  "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
+  "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
+  "createdDateTime": "2023-04-07T10:54:01.8170000Z",
+  "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z",
+  "state": "Active"
 }
 ```
 
@@ -129,7 +97,8 @@ In case of an error, we can capture the error response as follows:
 ## PARAMETERS
 
 ### -Body
-The request body 
+
+The request body
 
 ```yaml
 Type: IConnectorInstanceRequest
@@ -188,29 +157,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectorId
-The connector id
+### -ConnectionId
+Gets or sets the WFM connection ID for the new instance. This can be retrieved by running [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md).
 
 ```yaml
 Type: String
 Parameter Sets: NewExpanded
 Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ConnectorSpecificSettings
-The connector specific settings
-
-```yaml
-Type: IConnectorInstanceRequestConnectorSpecificSettings
-Parameter Sets: NewExpanded
-Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -219,13 +172,12 @@ Accept wildcard characters: False
 ```
 
 ### -DesignatedActorId
-Gets or sets the designated actor id that App acts as for Shifts Graph Api calls.
+Gets or sets the designated actor ID that App acts as for Shifts Graph Api calls.
 
 ```yaml
 Type: String
 Parameter Sets: NewExpanded
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -233,14 +185,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnabledConnectorScenario
-The connector enabled scenarios that are synced from WFM system to Shifts in MS Teams.
+### -SyncScenarioOfferShiftRequest
+The sync state for the offer shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: NewExpanded
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -248,14 +199,111 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnabledWfiScenario
-The WFI enabled scenarios that are synced from Shifts in MS Teams to WFM system.
+### -SyncScenarioOpenShift
+The sync state for the open shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: NewExpanded
 Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
+### -SyncScenarioOpenShiftRequest
+The sync state for the open shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioShift
+The sync state for the shift scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioSwapRequest
+The sync state for the swap shift request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeCard
+The sync state for the time card scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeOff
+The sync state for the time off scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioTimeOffRequest
+The sync state for the time off request scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncScenarioUserShiftPreference
+The sync state for the user shift preferences scenario. Valid values are "Disabled", "FromWfmToShifts", and "TwoWay".
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
 Required: True
 Position: Named
 Default value: None
@@ -264,13 +312,12 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelineAppend
-SendAsync Pipeline Steps to be appended to the front of the pipeline
+SendAsync Pipeline Steps to be appended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -279,13 +326,12 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelinePrepend
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
+SendAsync Pipeline Steps to be prepended to the front of the pipeline.
 
 ```yaml
 Type: SendAsyncStep[]
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -300,7 +346,6 @@ The connector instance name.
 Type: String
 Parameter Sets: NewExpanded
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -309,12 +354,11 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-The URI for the proxy server to use
+The URI for the proxy server to use.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -323,13 +367,12 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Credentials for a proxy server to use for the remote call
+Credentials for a proxy server to use for the remote call.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -338,14 +381,27 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUseDefaultCredentials
-Use the default credentials for the proxy
+Use the default credentials for the proxy.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -State
+The state of the connection instance. Valid values are "Active" and "Disabled". A third value, "ErrorDisabled", signifies an error in the connection instance.
+
+```yaml
+Type: String
+Parameter Sets: NewExpanded
+Aliases:
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -359,7 +415,6 @@ The sync frequency in minutes.
 Type: Int32
 Parameter Sets: NewExpanded
 Aliases:
-
 Required: True
 Position: Named
 Default value: None
@@ -375,7 +430,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 Required: False
 Position: Named
 Default value: None

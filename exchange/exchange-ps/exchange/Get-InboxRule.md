@@ -28,14 +28,17 @@ Get-InboxRule [[-Identity] <InboxRuleIdParameter>]
  [-DomainController <Fqdn>]
  [-IncludeHidden]
  [-Mailbox <MailboxIdParameter>]
+ [-ResultSize <Unlimited>]
+ [-SkipCount <Int32>]
  [-SweepRules]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
-**Note**: This cmdlet doesn't work for members of View-Only Organization Management role group in Exchange Online or the Global Reader role in Azure Active Directory.
+**Note**: This cmdlet doesn't work for members of View-Only Organization Management role group in Exchange Online or the Global Reader role in Microsoft Entra ID.
 
 ## EXAMPLES
 
@@ -193,6 +196,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResultSize
+This parameter is available only in the cloud-based service.
+
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCount
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipCount Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SweepRules
 This parameter is available only in on-premises Exchange.
 
@@ -205,6 +244,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

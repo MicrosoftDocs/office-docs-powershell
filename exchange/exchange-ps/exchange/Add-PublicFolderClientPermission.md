@@ -112,7 +112,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the user principal name (UPN), domain\\user, or alias of the user for whom rights are being added.
+The User parameter specifies the user for whom rights are being added.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
 
 ```yaml
 Type: PublicFolderUserIdParameter
@@ -165,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-This parameter is available only in on-premises Exchange 2010.
+This parameter is available only in Exchange Server 2010.
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 

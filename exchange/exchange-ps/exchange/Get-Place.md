@@ -20,8 +20,18 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Identity
 ```
-Get-Place [-Identity] <RecipientIdParameter>
+Get-Place [[-Identity] <RecipientIdParameter>]
+ [-Confirm]
+ [-ResultSize <Unlimited>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### AllPlaces
+```
+Get-Place [-Type <GetPlaceType>]
  [-Confirm]
  [-ResultSize <Unlimited>]
  [-WhatIf]
@@ -47,6 +57,13 @@ Get-Place -Identity "Conference Room 01" | Format-List
 
 This example returns detailed metadata for Conference Room 1.
 
+### Example 3
+```powershell
+Get-Place -Type Room
+```
+
+This example returns all room mailboxes. 
+
 ## PARAMETERS
 
 ### -Identity
@@ -59,13 +76,15 @@ The Identity parameter specifies the room mailbox that you want to view. You can
 - Email address
 - GUID
 
+You can't use this parameter with the Type parameter.
+
 ```yaml
 Type: RecipientIdParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Online
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
@@ -94,6 +113,28 @@ This parameter is reserved for internal Microsoft use.
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+The Type parameter filters the results by the type of room mailbox. Valid values are:
+
+- Room
+- RoomList
+- Space 
+
+You can't use this parameter with the Identity parameter.
+
+```yaml
+Type: GetPlaceType
+Parameter Sets: AllPlaces
 Aliases:
 Applicable: Exchange Online
 

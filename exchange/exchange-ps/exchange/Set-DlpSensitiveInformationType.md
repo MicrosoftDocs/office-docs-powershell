@@ -24,9 +24,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-DlpSensitiveInformationType [-Identity] <SensitiveInformationTypeIdParameter>
  [-Confirm]
  [-Description <String>]
+ [-FileData <Byte[]>]
  [-Fingerprints <MultiValuedProperty>]
+ [-IsExact <Boolean>]
  [-Locale <CultureInfo>]
  [-Name <String>]
+ [-Threshold <UInt32>]
+ [-ThresholdConfig <PswsHashtable>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -55,10 +59,15 @@ This example removes the existing Spanish translation from the sensitive informa
 ### Example 3
 ```powershell
 $Benefits_Template = [System.IO.File]::ReadAllBytes('C:\My Documents\Contoso Benefits Template.docx')
+
 $Benefits_Fingerprint = New-DlpFingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"
+
 $Contoso_Confidential = Get-DlpSensitiveInformationType "Contoso Confidential"
+
 $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints)
+
 $Array.Add($Benefits_FingerPrint[0])
+
 Set-DlpSensitiveInformationType $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
@@ -67,9 +76,13 @@ This example modifies the existing sensitive information type rule named "Contos
 ### Example 4
 ```powershell
 $cc = Get-DlpSensitiveInformationType "Contoso Confidential"
+
 $a = [System.Collections.ArrayList]($cc.Fingerprints)
+
 $a
+
 $a.RemoveAt(0)
+
 Set-DlpSensitiveInformationType $cc.Identity -FingerPrints $a
 ```
 
@@ -105,6 +118,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -134,11 +149,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FileData
+{{ Fill FileData Description }}
+
+```yaml
+Type: Byte[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Fingerprints
 The Fingerprints parameter specifies the byte-encoded document files that are used as fingerprints by the sensitive information type rule. For instructions on how to import documents to use as templates for fingerprints, see [New-DlpFingerprint](https://learn.microsoft.com/powershell/module/exchange/new-dlpfingerprint) or the Examples section. For instructions on how to add and remove document fingerprints from an existing sensitive information type rule, see the Examples section.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsExact
+{{ Fill IsExact Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -179,6 +226,38 @@ The value of the Name parameter is used in the Policy Tip that's presented to us
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Threshold
+{{ Fill Threshold Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThresholdConfig
+{{ Fill ThresholdConfig Description }}
+
+```yaml
+Type: PswsHashtable
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

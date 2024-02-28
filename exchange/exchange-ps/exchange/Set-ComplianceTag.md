@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
+ [-AutoApprovalPeriod <System.Int32>]
  [-Comment <String>]
  [-ComplianceTagForNextStage <String>]
  [-Confirm]
@@ -38,7 +39,7 @@ Set-ComplianceTag [-Identity] <ComplianceRuleIdParameter>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -68,6 +69,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AutoApprovalPeriod
+{{ Fill AutoApprovalPeriod Description }}
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -188,7 +205,14 @@ Accept wildcard characters: False
 ```
 
 ### -FlowId
-{{ Fill FlowId Description }}
+**Note**: This parameter is currently in Preview, is not available in all organizations, and is subject to change.
+
+The FlowId parameter specifies the Power Automate flow to run at the end of the retention period. A valid value for this parameter is the GUID value of the flow.
+
+You can find the GUID value of the flow by using either of the following methods:
+
+- Navigate to the flow from the Power Automate portal. The GUID value of the flow is in the URL.
+- Use the Power Automate action named 'List flows as admin'.
 
 ```yaml
 Type: System.Guid

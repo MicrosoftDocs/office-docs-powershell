@@ -20,6 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### Identity
 ```
 Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter>
  [-CcsiDataModelOperator <String>]
@@ -28,7 +29,6 @@ Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter>
  [-ContentContainsSensitiveInformation <PswsHashtable[]>]
  [-ContentMatchesDataModel <String>]
  [-ContentSources <String[]>]
- [-DayXInsights <Boolean>]
  [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
  [-ExceptIfRevieweeIs <MultiValuedProperty>]
  [-ExceptIfSenderDomainIs <MultiValuedProperty>]
@@ -41,8 +41,34 @@ Set-SupervisoryReviewRule [-Identity] <ComplianceRuleIdParameter>
  [<CommonParameters>]
 ```
 
+### Default
+```
+Set-SupervisoryReviewRule
+ [-CcsiDataModelOperator <String>]
+ [-Condition <String>]
+ [-Confirm]
+ [-ContentContainsSensitiveInformation <PswsHashtable[]>]
+ [-ContentMatchesDataModel <String>]
+ [-ContentSources <String[]>]
+ [-DayXInsights <Boolean>]
+ [-ExceptIfFrom <MultiValuedProperty>]
+ [-ExceptIfRecipientDomainIs <MultiValuedProperty>]
+ [-ExceptIfRevieweeIs <MultiValuedProperty>]
+ [-ExceptIfSenderDomainIs <MultiValuedProperty>]
+ [-ExceptIfSentTo <MultiValuedProperty>]
+ [-ExceptIfSubjectOrBodyContainsWords <MultiValuedProperty>]
+ [-From <MultiValuedProperty>]
+ [-IncludeAdaptiveScopes <String[]>]
+ [-InPurviewFilter <String>]
+ [-Ocr <Boolean>]
+ [-SamplingRate <Int32>]
+ [-SentTo <MultiValuedProperty>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -67,7 +93,7 @@ The Identity parameter specifies the supervisory review rule that you want to mo
 
 ```yaml
 Type: ComplianceRuleIdParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance
 
@@ -192,7 +218,23 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfFrom
+{{ Fill ExceptIfFrom Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance
 
@@ -251,12 +293,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExceptIfSentTo
+{{ Fill ExceptIfSentTo Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfSubjectOrBodyContainsWords
 {{ Fill ExceptIfSubjectOrBodyContainsWords Description }}
 
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -From
+{{ Fill From Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance
 
@@ -321,6 +395,22 @@ The SamplingRate parameter specifies the percentage of communications for review
 ```yaml
 Type: Int32
 Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SentTo
+{{ Fill SentTo Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: Default
 Aliases:
 Applicable: Security & Compliance
 

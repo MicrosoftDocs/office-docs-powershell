@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
 
-The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange Server and Exchange Online. For more information about Exchange Online, see [Restore an inactive mailbox](https://learn.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox).
+The properties used to find disconnected mailboxes and restore a mailbox are different in Exchange Server and Exchange Online. For more information about Exchange Online, see [Restore an inactive mailbox](https://learn.microsoft.com/purview/restore-an-inactive-mailbox).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -59,6 +59,8 @@ New-MailboxRestoreRequest -SourceEndpoint <MigrationEndpointIdParameter> -Source
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
  [-CrossTenantRestore]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
@@ -88,6 +90,8 @@ New-MailboxRestoreRequest -SourceDatabase <DatabaseIdParameter> -SourceStoreMail
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -120,6 +124,8 @@ New-MailboxRestoreRequest -SourceStoreMailbox <StoreMailboxIdParameter> -TargetM
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -182,6 +188,8 @@ New-MailboxRestoreRequest -RemoteDatabaseGuid <Guid> -RemoteHostName <Fqdn> -Rem
  [-CompletedRequestAgeLimit <Unlimited>]
  [-Confirm]
  [-ConflictResolutionOption <ConflictResolutionOption>]
+ [-ContentFilter <String>]
+ [-ContentFilterLanguage <CultureInfo>]
  [-DomainController <Fqdn>]
  [-ExcludeDumpster]
  [-ExcludeFolders <String[]>]
@@ -226,6 +234,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ### Example 1
 ```powershell
 Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyExchangeDN,DisplayName,MailboxGUID, DisconnectReason
+
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
 ```
 
@@ -504,7 +513,7 @@ The AllowLegacyDNMismatch switch specifies that the operation should continue if
 
 By default, this cmdlet checks to make sure that the LegacyExchangeDN on the source physical mailbox is present on the target user in the form of the LegacyExchangeDN or an X500 proxy address that corresponds to the LegacyExchangeDN. This check prevents you from accidentally restoring a source mailbox into the incorrect target mailbox.
 
-**Note**: This parameter is being deprecated in the cloud-based service. To complete a mailbox restore request for mailboxes with a LegacyExchangeDN that doesn't match, you need to obtain the LegacyExchangeDN value for the source mailbox and add it to the target mailbox as an X500 proxy address. For detailed instructions, see [Restore an inactive mailbox](https://learn.microsoft.com/microsoft-365/compliance/restore-an-inactive-mailbox#restore-inactive-mailboxes).
+**Note**: This parameter is being deprecated in the cloud-based service. To complete a mailbox restore request for mailboxes with a LegacyExchangeDN that doesn't match, you need to obtain the LegacyExchangeDN value for the source mailbox and add it to the target mailbox as an X500 proxy address. For detailed instructions, see [Restore an inactive mailbox](https://learn.microsoft.com/purview/restore-an-inactive-mailbox#restore-inactive-mailboxes).
 
 ```yaml
 Type: SwitchParameter
@@ -633,6 +642,53 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Ex
 Required: False
 Position: Named
 Default value: KeepSourceItem
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentFilter
+This parameter is available only in the cloud-based service.
+
+The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be restored. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+- Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://learn.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
+- ComparisonOperator is an OPATH comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values in quotation marks (for example, use `500`, `$true`, `$false`, or `$null` instead).
+
+You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
+
+For detailed information about OPATH filters in Exchange, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
+
+```yaml
+Type: String
+Parameter Sets: CrossTenantRestore, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, SourceMailbox
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentFilterLanguage
+This parameter is available only in the cloud-based service.
+
+The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
+
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+
+```yaml
+Type: CultureInfo
+Parameter Sets: CrossTenantRestore, MigrationLocalMailboxRestore, RemoteMailboxRestoreMailboxLocationId, SourceMailbox
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

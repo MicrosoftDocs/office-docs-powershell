@@ -16,7 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-ATPProtectionPolicyRule cmdlet to create rules for Microsoft Defender for Office 365 protections in preset security policies. The rules specify recipient conditions and exceptions for the protection, and also allow you to turn on and turn off the associated preset security policies.
 
-**Note**: Unless you manually removed a rule using the Remove-ATPProtectionPolicyRule cmdlet, we don't recommend using this cmdlet to create rules. To create the rule, you need to specify the existing individual security policies that are associated with the preset security policy. We never recommend creating these required individual security policies manually. Turning on the preset security policy for the first time in the Microsoft 365 Defender portal automatically creates the required individual security policies, but also creates the associated rules using this cmdlet. So, if the rules already exist, you don't need to use this cmdlet to create them.
+**Note**: Unless you manually removed a rule using the Remove-ATPProtectionPolicyRule cmdlet, we don't recommend using this cmdlet to create rules. To create the rule, you need to specify the existing individual security policies that are associated with the preset security policy. We never recommend creating these required individual security policies manually. Turning on the preset security policy for the first time in the Microsoft Defender portal automatically creates the required individual security policies, but also creates the associated rules using this cmdlet. So, if the rules already exist, you don't need to use this cmdlet to create them.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ### -SafeAttachmentPolicy
 The SafeAttachmentPolicy parameter specifies the existing Safe Attachments policy that's associated with the preset security policy.
 
-If you ever turned on the preset security policy in the Microsoft 365 Defender portal, the name of the Safe Attachments policy will be one of the following values:
+If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the Safe Attachments policy will be one of the following values:
 
 - Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650008019`.
 - Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034872546`.
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ### -SafeLinksPolicy
 The SafeLinksPolicy parameter specifies the existing Safe Links policy that's associated with the preset security policy.
 
-If you ever turned on the preset security policy in the Microsoft 365 Defender portal, the name of the Safe Attachments policy will be one of the following values:
+If you ever turned on the preset security policy in the Microsoft Defender portal, the name of the Safe Attachments policy will be one of the following values:
 
 - Standard Preset Security Policy\<13-digit number\>. For example, `Standard Preset Security Policy1622650008534`.
 - Strict Preset Security Policy\<13-digit number\>. For example, `Strict Preset Security Policy1642034873192`.
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientDomainIs
-The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The RecipientDomainIs parameter specifies a condition that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
 ```yaml
 Type: Word[]

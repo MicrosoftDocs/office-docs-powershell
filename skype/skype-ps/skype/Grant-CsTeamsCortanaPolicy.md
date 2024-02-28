@@ -5,8 +5,8 @@ applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsCortanaPolicy
 schema: 2.0.0
 manager: amehta
-author: akshbhat
-ms.author: akshbhat
+author: akshbhat-msft
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -27,6 +27,12 @@ Grant-CsTeamsCortanaPolicy [[-Identity] <UserIdParameter>] [-PolicyName] <String
 ```
 Grant-CsTeamsCortanaPolicy [-PolicyName] <String> [-Tenant <System.Guid>] [-DomainController <Fqdn>]
  [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### GrantToGroup
+```
+Grant-CsTeamsCortanaPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
+ -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,6 +137,36 @@ Aliases:
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+Specifies the group used for the group policy assignment.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

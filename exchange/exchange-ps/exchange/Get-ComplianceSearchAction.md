@@ -27,6 +27,7 @@ Get-ComplianceSearchAction [[-Identity] <ComplianceSearchActionIdParameter>]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -38,6 +39,7 @@ Get-ComplianceSearchAction [-Preview]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -49,6 +51,7 @@ Get-ComplianceSearchAction [-Purge]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -60,6 +63,7 @@ Get-ComplianceSearchAction [-Export]
  [-Details]
  [-DomainController <Fqdn>]
  [-IncludeCredential]
+ [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -71,7 +75,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 In on-premises Exchange, this cmdlet is available in the Mailbox Search role. By default, this role is assigned only to the Discovery Management role group.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -103,7 +107,7 @@ When you use the Identity parameter, more details are returned in the results. F
 
 - In the Results line, the values of the Item count, Total size, and Details properties are populated.
 - Location lines are added to the results.
-- The NumBinding property value is populated.
+- The NumBindings property value is populated. This property includes the primary mailbox, the main archive, and any additional archives for users included in the search. NumBindings is not the number of users included in the search, because each included user could have or not have a combination of a primary mailbox, a main archive, and additional archives.
 - The affected location properties (for example, ExchangeLocation) are populated.
 - The CaseName property value is populated.
 
@@ -155,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -163,7 +167,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
 
 Required: False
 Position: Named
@@ -198,6 +202,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+This parameter is available only in the cloud-based organization.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named

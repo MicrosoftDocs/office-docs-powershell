@@ -33,7 +33,7 @@ New-ComplianceSecurityFilter -Action <ComplianceSecurityFilterActionType> -Filte
 ## DESCRIPTION
 Compliance security filters work with compliance searches in the Microsoft Purview compliance portal (\*-ComplianceSearch cmdlets), not In-Place eDiscovery searches in Exchange Online (\*-MailboxSearch cmdlets).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -75,7 +75,13 @@ This example prevents the user from performing any compliance search actions on 
 ## PARAMETERS
 
 ### -Action
-The Action parameter specifies that type of search action that the filter is applied to. A valid value for this parameter is All, which means the filter is applied to all search actions.
+The Action parameter specifies that type of search action that the filter is applied to. Valid values are:
+
+- Export: The filter is applied when exporting search results, or preparing them for analysis in eDiscovery Premium.
+- Preview: The filter is applied when previewing search results.
+- Purge: The filter is applied when purging search results. How the items are deleted is controlled by the PurgeType parameter value on the New-ComplianceSearchAction cmdlet. The default value is SoftDelete, which means the purged items are recoverable by users until the deleted items retention period expires.
+- Search: The filter is applied when running a search.
+- All: The filter is applied to all search actions.
 
 ```yaml
 Type: ComplianceSecurityFilterActionType
@@ -167,7 +173,7 @@ Accept wildcard characters: False
 The Filters parameter specifies the search criteria for the compliance security filter. The filters are applied to the users specified by the Users parameter. You can create three different types of filters:
 
 - Mailbox filter: Specifies the mailboxes that can be searched by the assigned users. Valid syntax is `Mailbox_<MailboxPropertyName>`, where `<MailboxPropertyName>` is a mailbox property value. For example,`"Mailbox_CustomAttribute10 -eq 'OttawaUsers'"` allows users to only search mailboxes that have the value OttawaUsers in the CustomAttribute10 property. For a list of supported mailbox properties, see [Filterable properties for the RecipientFilter parameter](https://learn.microsoft.com/powershell/exchange/recipientfilter-properties).
-- Mailbox content filter: Specifies the mailbox content the assigned users can search for. Valid syntax is `MailboxContent_<SearchablePropertyName>`, where `<SearchablePropertyName>` specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, `"MailboxContent_Recipients -like 'contoso.com'"` allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable email properties, see [Keyword queries for eDiscovery](https://learn.microsoft.com/microsoft-365/compliance/keyword-queries-and-search-conditions#searchable-email-properties).
+- Mailbox content filter: Specifies the mailbox content the assigned users can search for. Valid syntax is `MailboxContent_<SearchablePropertyName>`, where `<SearchablePropertyName>` specifies a Keyword Query Language (KQL) property that can be specified in a compliance search. For example, `"MailboxContent_Recipients -like 'contoso.com'"` allows users to only search for messages sent to recipients in the contoso.com domain. For a list of searchable email properties, see [Keyword queries for eDiscovery](https://learn.microsoft.com/purview/ediscovery-keyword-queries-and-search-conditions#searchable-email-properties).
 - Site and site content filter: There are two SharePoint Online and OneDrive for Business site-related filters that you can create: `Site_<SearchableSiteProperty>` (specifies site-related properties. For example,`"Site_Path -eq 'https://contoso.sharepoint.com/sites/doctors'"` allows users to only search for content in the `https://contoso.sharepoint.com/sites/doctors` site collection) and `SiteContent_<SearchableSiteProperty>` (specifies content-related properties. For example, `"SiteContent_FileExtension -eq 'docx'"` allows users to only search for Word documents). For a list of searchable site properties, see [Overview of crawled and managed properties in SharePoint Server](https://learn.microsoft.com/SharePoint/technical-reference/crawled-and-managed-properties-overview). Properties marked with a Yes in the Queryable column can be used to create a site or site content filter.
 
 You can specify multiple filters of the same type. For example, `"Mailbox_CustomAttribute10 -eq 'FTE' -and Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'"`.

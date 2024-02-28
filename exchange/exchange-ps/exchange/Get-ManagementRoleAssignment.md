@@ -34,6 +34,7 @@ Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <RecipientWriteScopeType>]
  [-RoleAssigneeType <RoleAssigneeType>]
@@ -58,6 +59,7 @@ Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <RecipientWriteScopeType>]
  [-RoleAssignee <RoleAssigneeIdParameter>]
@@ -362,13 +364,31 @@ This parameter is functional only in the cloud-based service.
 
 The RecipientAdministrativeUnitScope parameter returns only the role assignments that include the specified administrative unit.
 
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+Administrative units are Microsoft Entra containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
 
 ```yaml
 Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientGroupScope
+This parameter is available only in the cloud-based service.
+
+The RecipientGroupScope parameter returns only the role assignments that are scoped to groups. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
+
+```yaml
+Type: GroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

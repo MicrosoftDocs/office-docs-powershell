@@ -13,8 +13,12 @@ This cmdlet allows you to configure options for customizing Teams events experie
 ## SYNTAX
 
 ```
-Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-Description <String>] [-EventAccessType <String>]
- [[-Identity] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>]
+ [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
+ [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
+ [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
+ [-UseMicrosoftECDN <String>]
+ [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,8 +54,93 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+Enables administrators to provide explanatory text to accompany a Teams Events policy.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseMicrosoftECDN
+This setting governs whether the global admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTownhalls
+This setting governs if a user can create town halls using Teams Events.
+Possible values are:
+ - **Enabled**: Enables creating town halls.
+ - **Disabled**: Disables creating town halls.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Enables administrators to provide explanatory text to accompany a Teams Events policy.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEmailEditing
+This setting governs if a user is allowed to edit the communication emails in Teams Town Hall or Teams Webinar events.
+Possible values are:
+ - **Enabled**: Enables editing of communication emails.
+ - **Disabled**: Disables editing of communication emails.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+The Confirm switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -116,8 +205,113 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowedQuestionTypesInRegistrationForm
+This setting governs which users in a tenant can add which registration form questions to an event registration page for attendees to answer when registering for the event.
+
+Possible values are:
+DefaultOnly, DefaultAndPredefinedOnly, AllQuestions.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTownhallTypesForRecordingPublish
+This setting describes how IT admins can control which types of Town Hall attendees can have their recordings published.
+
+Possible values are:
+None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedWebinarTypesForRecordingPublish
+This setting describes how IT admins can control which types of webinar attendees can have their recordings published.
+
+Possible values are:
+None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEventIntegrations
+This setting governs access to the integrations tab in the event creation workflow.
+
+Possible values
+true, false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TownhallChatExperience
+This setting governs whether the user can enable the Comment Stream chat experience for Town Halls.
+
+Possible values are: Optimized, None.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch does not work with this cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
+The WhatIf switch does not work with this cmdlet.
 The cmdlet is not run.
 
 ```yaml

@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Move-OfflineAddressBook cmdlet to designate a new server responsible for generating the offline address book (OAB) in Exchange Server 2010. This cmdlet isn't used on OABs in Exchange Server 2016 or Exchange Server 2013. To perform this task in Exchange 2016 or Exchange 2013, use the Set-OfflineAddressBook cmdlet with the GeneratingMailbox parameter.
+Use the Move-OfflineAddressBook cmdlet to designate a new server that's responsible for generating the offline address book (OAB) in Exchange Server 2010. This cmdlet isn't used on OABs in Exchange Server 2016 or Exchange Server 2013. To perform this task in Exchange 2016 or Exchange 2013, use the Set-OfflineAddressBook cmdlet with the GeneratingMailbox parameter.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -66,6 +66,8 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
 
 ```yaml
 Type: SwitchParameter

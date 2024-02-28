@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-TenantAllowBlockListItems cmdlet to add entries to the Tenant Allow/Block List in the Microsoft 365 Defender portal.
+Use the New-TenantAllowBlockListItems cmdlet to add entries to the Tenant Allow/Block List in the Microsoft Defender portal.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -26,6 +26,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
  [-Allow]
  [-Block]
  [-ListSubType <ListSubType>]
+ [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
  [-SubmissionID <String>]
@@ -38,6 +39,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpir
  [-Allow]
  [-Block]
  [-ListSubType <ListSubType>]
+ [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
  [-SubmissionID <String>]
@@ -68,7 +70,7 @@ This example adds a file block entry for the specified files that never expires.
 New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
 ```
 
-This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 ## PARAMETERS
 
@@ -175,7 +177,7 @@ You can't use this switch with the Block switch.
 
 **Note**: See [Allow entries in the Tenant Allow/Block List](https://learn.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list-about#allow-entries-in-the-tenant-allowblock-list), before you try to create an allow entry.
 
-You can also use allow entries for third-party phishing simulation URLs with no expiration. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+You can also use allow entries for third-party phishing simulation URLs with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 ```yaml
 Type: SwitchParameter
@@ -211,7 +213,7 @@ Accept wildcard characters: False
 ### -ListSubType
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
-- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 - Tenant: This is the default value.
 
 ```yaml
@@ -219,6 +221,22 @@ Type: ListSubType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LogExtraDetails
+{{ Fill LogExtraDetails Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

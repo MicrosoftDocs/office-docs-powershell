@@ -61,6 +61,8 @@ Distribution groups are used to consolidate groups of recipients into a single p
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
+In Exchange Server, the [CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216) InformationVariable and InformationAction don't work.
+
 ## EXAMPLES
 
 ### Example 1
@@ -105,7 +107,7 @@ The Alias parameter specifies the Exchange alias (also known as the mail nicknam
 The Alias value can contain letters, numbers and the following characters:
 
 - !, #, %, \*, +, -, /, =, ?, ^, \_, and ~.
-- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Azure AD Connect synchronization.
+- $, &, ', \`, {, }, and \| need to be escaped (for example ``-Alias what`'snew``) or the entire value enclosed in single quotation marks (for example, `-Alias 'what'snew'`). The & character is not supported in the Alias value for Microsoft Entra Connect synchronization.
 - Periods (.) must be surrounded by other valid characters (for example, `help.desk`).
 - Unicode characters U+00A1 to U+00FF.
 
@@ -165,7 +167,10 @@ Accept wildcard characters: False
 ### -BccBlocked
 This parameter is available only in the cloud-based service.
 
-{{ Fill BccBlocked Description }}
+The BccBlocked parameter specifies whether members of the group don't receive messages if the group is used in the Bcc line. Valid values are:
+
+- $true: If the group is used in the Bcc line, members of the group don't receive the message, and the sender receives a non-delivery report (also known as an NDR or bounce message). Other recipients of the message aren't blocked. If an external sender uses the group in the Bcc line, members of the group aren't blocked. For nested groups, the message is blocked only for members of the top-level group.
+- $false: There are no restrictions for using the group in the Bcc line of messages. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -295,7 +300,7 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from members of the group and users who aren't members of the group. You don't need to specify a value with this switch.
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from users who aren't members of the group. You don't need to specify a value with this switch.
 
 You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
 
@@ -427,6 +432,8 @@ You can enter multiple values separated by commas. If the values contain spaces 
 After you create the group, you use the Get-DistributionGroupMember cmdlet to view the group members, and the Add-DistributionGroupMember, Remove-DistributionGroupMember, and Update-DistributionGroupMember cmdlets to manage group membership.
 
 Although it isn't required, it's a good idea to add only security principals (for example, mailboxes and mail users with user accounts or other mail-enabled security groups) to mail-enabled security groups. If you assign permissions to a mail-enabled security group, any members that aren't security principals (for example, mail contacts or distribution groups) won't have the permissions assigned.
+
+The maximum number of entries for this parameter is 10000.
 
 ```yaml
 Type: MultiValuedProperty

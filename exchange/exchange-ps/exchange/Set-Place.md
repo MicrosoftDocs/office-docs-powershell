@@ -16,9 +16,9 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-Place cmdlet to update room mailboxes with additional metadata, which provides a better search and room suggestion experience.
 
-**Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, and Street. To modify these properties except GeoCoordinates on synchronized room mailboxes, use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
+**Note**: In hybrid environments, this cmdlet doesn't work on the following properties on synchronized room mailboxes: City, CountryOrRegion, GeoCoordinates, Phone, PostalCode, State, or Street. To modify these properties (except GeoCoordinates on synchronized room mailboxes), use the Set-User or Set-Mailbox cmdlets in on-premises Exchange.
 
-**Note**: We recommend using this cmdlet with the EXO V3 module. Commands using Set-Place to change certain combinations of properties together can fail in older versions of the module. For more information about the EXO V3 module, see [Updates for the EXO V3 module)](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#updates-for-the-exo-v3-module).
+**Note**: We recommend using this cmdlet with the EXO V3 module. Commands using Set-Place to change certain combinations of properties together can fail in older versions of the module. For more information about the EXO V3 module, see [About the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -40,6 +40,8 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-IsWheelChairAccessible <Boolean>]
  [-Label <String>]
  [-MTREnabled <Boolean>]
+ [-ParentId <String>]
+ [-ParentType <Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -330,6 +332,49 @@ For more information about Microsoft Teams Rooms, see [Microsoft Teams Rooms](ht
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentId
+**Note**: This feature is experimental and is available only for organizations using Microsoft Places.
+
+The ParentId parameter specifies the ID of a Place in the parent location hierarchy in Microsoft Places.
+
+Organizations that are onboarding Rooms and Workspaces to Microsoft Places need to use the ParentId and ParentType parameters in a Set-Place command so Microsoft Places works properly.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParentType
+**Note**: This feature is experimental and is available only for organizations using Microsoft Places.
+
+The ParentType parameter specifies the parent type of the ParentId in Microsoft Places. Valid values are:
+
+- Floor
+- Section
+
+Organizations that are onboarding Rooms and Workspaces to Microsoft Places need to use the ParentId and ParentType parameters in a Set-Place command so Microsoft Places works properly.
+
+```yaml
+Type: Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

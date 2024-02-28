@@ -27,6 +27,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -App <Se
  [-Delegating]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -42,6 +43,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> 
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -60,6 +62,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Policy <MailboxPolicyIdParamete
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -79,6 +82,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -Securit
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -98,6 +102,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <U
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -126,6 +131,7 @@ This example assigns the Mail Recipients role to the Tier 2 Help Desk role group
 ### Example 2
 ```powershell
 Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole
+
 New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
 ```
 
@@ -189,9 +195,9 @@ Accept wildcard characters: False
 ### -App
 This parameter is available only in the cloud-based service.
 
-The App parameter specifies the service principal to assign the management role to. Specifically, the ServiceId GUID value from the output of the Get-ServicePrincipal cmdlet (for example, 6233fba6-0198-4277-892f-9275bf728bcc).
+The App parameter specifies the service principal to assign the management role to. Specifically, the ObjectId GUID value from the output of the Get-ServicePrincipal cmdlet (for example, 6233fba6-0198-4277-892f-9275bf728bcc).
 
-For more information about service principals, see [Application and service principal objects in Azure Active Directory](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
 
 You can't use this parameter with the SecurityGroup, Policy, or User cmdlets.
 
@@ -291,7 +297,12 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the name or alias of the user to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
+The User parameter specifies the user to assign the management role to.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
 
 You can't use this parameter with the App, SecurityGroup, Computer, or Policy parameters.
 
@@ -372,7 +383,7 @@ The CustomResourceScope parameter specifies the custom management scope to assoc
 
 If the value contains spaces, enclose the value in quotation marks (").
 
-You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Azure Active Directory](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -476,15 +487,35 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAdministrativeUnitScope
+This parameter is functional only in the cloud-based service.
+
 The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the new role assignment to.
 
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+Administrative units are Microsoft Entra containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
 
 ```yaml
 Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientGroupScope
+This parameter is available only in the cloud-based service.
+
+The RecipientGroupScope parameter specifies a group to consider for scoping the role assignment. Individual members of the specified group (not nested groups) are considered as in scope for the assignment. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, or DisplayName.
+
+```yaml
+Type: GroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -530,7 +561,7 @@ Accept wildcard characters: False
 ### -UnScopedTopLevel
 This parameter is available only in on-premises Exchange.
 
-By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+By default, this parameter is available only in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
 The UnScopedTopLevel switch specifies that the role provided with the Role parameter is an unscoped top-level management role. You don't need to specify a value with this switch.
 

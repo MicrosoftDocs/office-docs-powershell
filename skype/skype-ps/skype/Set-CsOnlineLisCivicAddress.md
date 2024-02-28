@@ -6,7 +6,7 @@ title: Set-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 ---
 
@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 Use the \`Set-CsOnlineLisCivicAddress\` cmdlet to modify an existing civic address which has not been validated.
 Validated civic addresses cannot be modified.
+
+**Note:** This cmdlet is only available for Microsoft internal use.
 
 ## SYNTAX
 

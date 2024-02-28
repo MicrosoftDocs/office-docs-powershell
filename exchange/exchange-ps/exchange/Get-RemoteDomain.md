@@ -23,6 +23,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RemoteDomain [[-Identity] <RemoteDomainIdParameter>]
  [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -54,6 +55,26 @@ This example returns all domains where Transport Neutral Encapsulation Format (T
 
 ## PARAMETERS
 
+### -Identity
+The Identity parameter specifies the remote domain that you want to view. You can use any value that uniquely identifies the remote domain. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: RemoteDomainIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -74,23 +95,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
-The Identity parameter specifies the remote domain that you want to view. You can use any value that uniquely identifies the remote domain. For example:
+### -ResultSize
+This parameter is available only in the cloud-based service.
 
-- Name
-- Distinguished name (DN)
-- GUID
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
 ```yaml
-Type: RemoteDomainIdParameter
+Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

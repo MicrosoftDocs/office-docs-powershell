@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/Restore-RecoverableItems
+online version: https://learn.microsoft.com/powershell/module/exchange/restore-recoverableitems
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Restore-RecoverableItems
 schema: 2.0.0
@@ -77,6 +77,7 @@ After using the Get-RecoverableItems cmdlet to verify the existence of the item,
 ### Example 2
 ```powershell
 $mailboxes = Import-CSV "C:\My Documents\RestoreMessage.csv"
+
 $mailboxes | foreach {Restore-RecoverableItems -Identity $_.SMTPAddress -SubjectContains "Project X" -SourceFolder DeletedItems -FilterItemType IPM.Note}
 ```
 
@@ -319,7 +320,7 @@ This parameter is required for archives and optional for primary mailboxes. A de
 - `/folder1/folder2`
 - `folder1`
 - `folder1/folder2`
-```
+
 The preceding or trailing `/` will be ignored. Then, it will be treated as the relative path of the IPM sub-tree: `/Top Of Information Store`.
 
 ```yaml
@@ -358,29 +359,15 @@ The SourceFolder parameter specifies where to search for deleted items in the ma
 - RecoverableItems: The Recoverable Items\Deletions folder. This folder contains items that have been deleted from the Deleted Items folder (soft-deleted items).
 - PurgedItems: The Recoverable Items\Purges folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items).
 
-If you don't use this parameter, the command will search these three folders.
+If you don't use this parameter, the command searches those three folders.
 
-- DiscoveryHoldsItems: The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
+- DiscoveryHoldsItems (cloud-only): The Recoverable Items\DiscoveryHolds folder. This folder contains items that have been purged from the Recoverable Items folder (hard-deleted items) and are protected by a hold. To search for deleted items in this folder, use this parameter with the value DiscoveryHoldsItems.
 
 ```yaml
 Type: RecoverableItemsFolderType
 Parameter Sets: OnPrem
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: RecoverableItemsFolderType
-Parameter Sets: Cloud
-Aliases:
-Accepted values: DeletedItems | RecoverableItems | PurgedItems
-Applicable: Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

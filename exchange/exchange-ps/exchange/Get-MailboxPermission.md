@@ -30,6 +30,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Owner]
  [-GroupMailbox]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -43,6 +44,7 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-User <SecurityPrincipal
  [-IncludeUnresolvedPermissions]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -285,6 +287,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -User
 The User parameter filters the results by who has permissions to the mailbox that's specified by the Identity parameter. You can specify the following types of users or groups (security principals) for this parameter:
 
@@ -292,7 +312,12 @@ The User parameter filters the results by who has permissions to the mailbox tha
 - Mail users
 - Security groups
 
-You can use any value that uniquely identifies the user or group. For example:
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias

@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/skype/new-csteamse
 applicable: Microsoft Teams
 title: New-CsTeamsEmergencyCallRoutingPolicy
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 manger: roykuntz
 ms.reviewer: chenc, vaddank
 schema: 2.0.0

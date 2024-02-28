@@ -60,7 +60,7 @@ $Bridge.Name = "O365 Bridge"
 Set-CsOnlineDialInConferencingBridge -Instance $bridge
 ```
 
-This example changes the name of a conference bridge by creating an conference bridge instance, changing the instance's name and then setting the conference bridge to the instance.
+This example changes the name of a conference bridge by creating a conference bridge instance, changing the instance's name and then setting the conference bridge to the instance.
 
 
 ## PARAMETERS

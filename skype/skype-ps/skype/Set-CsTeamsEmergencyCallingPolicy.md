@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/skype/set-csteamse
 applicable: Microsoft Teams
 title: Set-CsTeamsEmergencyCallingPolicy
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 manager: roykuntz
 ms.reviewer: chenc
 schema: 2.0.0
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationGroup
-NotificationGroup is an email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 e-mail addresses can be specified and a maximum of 50 users in total can be notified.
+NotificationGroup is an email list of users and groups to be notified of an emergency call via Teams chat. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 e-mail addresses can be specified and a maximum of 50 users in total can be notified.
 
 ```yaml
 Type: String
@@ -151,6 +151,7 @@ Accept wildcard characters: False
 
 ### -NotificationMode
 The type of conference experience for security desk notification.
+Possible values are NotificationOnly, ConferenceMuted, and ConferenceUnMuted.
 
 ```yaml
 Type: Microsoft.Teams.Policy.Administration.Cmdlets.Core.NotificationMode
