@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Test-CsEffectiveTenantDialPlan cmdlet to test a tenant dial plan.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- >-
+  Test-CsEffectiveTenantDialPlan [-DialedNumber <PhoneNumber>] [-Identity <UserIdParameter>] [-TenantScopeOnly]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Test-CsEffectiveTenantDialPlan -DialedNumber <PhoneNumber> [-EffectiveTenantDialPlanName <String>]
+
+   [-TenantScopeOnly] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsEffectiveTenantDialPlan -Identity adelev | Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080
+  description: |-
+    This example gets the Identity of a dial plan that is associated with the identity of an user, and applies the retrieved tenant dial plan to normalize the dialed number.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity adelev@contoso.onmicrosoft.com
+  description: |-
+    This example tests the given dialed number against a specific identity.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="PhoneNumber" data-throw-if-not-resolved="False" />
+  name: DialedNumber
+  description: |+
+    The DialedNumber parameter is the phone number to be normalized with the effective tenant dial plan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EffectiveTenantDialPlanName
+  description: |+
+    The EffectiveTenantDialPlanName parameter is the effective tenant dial plan name in the form of TenantId_TenantDialPlan_GlobalVoiceDialPlan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the identity of the user account to be tested against. The user's SIP address, the user's user principal name (UPN) or the user's display name can be specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TenantScopeOnly
+  description: |+
+    Runs the test only against Tenant-level dial plans (does not take into account Service Level Dial Plans).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Test-CsEffectiveTenantDialPlan
+name: Test-CsEffectiveTenantDialPlan
+description: |-
+  The `Test-CsEffectiveTenantDialPlan` cmdlet normalizes the dialed number by applying the normalization rules from the effective tenant dial plan that is returned for the specified user.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-cseffectivetenantdialplan
+  applicable: Skype for Business Online
+  title: Test-CsEffectiveTenantDialPlan
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

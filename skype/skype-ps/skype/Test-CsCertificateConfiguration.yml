@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the Skype for Business Server certificates being used on the local computer.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Test-CsCertificateConfiguration` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Test-CsCertificateConfiguration` cmdlet returns instances of the Microsoft.Rtc.Management.Deployment,CertificateExists object.
+links:
+- text: Get-CsCertificate
+  href: Get-CsCertificate.yml
+syntaxes:
+- Test-CsCertificateConfiguration [-Report <String>] [-Verbose] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Test-CsCertificateConfiguration
+  description: |-
+    The command shown in Example 1 returns information about the certificates that are currently being used (on the local computer) by Skype for Business Server.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Test-CsCertificateConfiguration -Report "C:\Logs\Certificates.xml"
+  description: |-
+    The command shown in Example 2 is a variation of the command shown in Example 1.
+    In this case, however, the Report parameter is used to specify a file path (C:\Logs\Certificates.xml) for the output file generated when you run the `Test-CsCertificateConfiguration` cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Report
+  description: |+
+    Enables you to specify a file path for the log file created when the cmdlet runs.
+    For example: `-Report "C:\Logs\Certificates.html"`.
+    If this file already exists, it will be overwritten when you run the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Verbose
+  description: |+
+    Reports detailed activity to the screen as the cmdlet runs.
+
+  defaultValue: None
+  position: Named
+  aliases: vb
+  applicable:
+  - Lync Server 2010
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsCertificateConfiguration
+name: Test-CsCertificateConfiguration
+description: |-
+  The `Test-CsCertificateConfiguration` cmdlet is an example of a "synthetic transaction." Synthetic transactions are used in Skype for Business Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
+  These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
+
+  The `Test-CsCertificateConfiguration` cmdlet returns information about the certificates being used by Skype for Business Server.
+  The `Test-CsCertificateConfiguration` cmdlet is primarily intended for use by the Certificate wizard.
+  It is recommended that administrators use the `Get-CsCertificate` cmdlet to retrieve certificate information.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-cscertificateconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsCertificateConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

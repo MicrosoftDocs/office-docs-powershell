@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Allows admins to set values in the GuestCallingConfiguration, which specifies what options guest users have for calling within Teams.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsTeamsGuestCallingConfiguration [-Tenant <Guid>] [-AllowPrivateCalling <Boolean>]
+
+   [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsTeamsGuestCallingConfiguration [-Tenant <Guid>] [-AllowPrivateCalling <Boolean>]
+
+   [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-CsTeamsGuestCallingConfiguration -Identity Global -AllowPrivateCalling $false
+  description: |-
+    In this example, the admin has disabled private calling for guests in his organization.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowPrivateCalling
+  description: |+
+    Designates whether guests who have been enabled for Teams can use calling functionality.  If $false, guests cannot call.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Bypass confirmation
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The only option is Global
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Internal Microsoft use 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsTeamsGuestCallingConfiguration
+name: Set-CsTeamsGuestCallingConfiguration
+description: |-
+  Allows admins to set values in the GuestCallingConfiguration, which specifies what options guest users have for calling within Teams.  This policy primarily allows admins to disable calling for guest users within Teams.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  Module Name: Skype for Business Online
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsguestcallingconfiguration
+  applicable: Skype for Business Online
+  title: Set-CsTeamsGuestCallingConfiguration
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

@@ -1,0 +1,248 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables you to modify the properties of one or more Mediation Servers.
+  Mediation Servers are used to route traffic between your internal Enterprise Voice infrastructure and a public switched telephone network (PSTN) gateway or a SIP trunk.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Set-CsMediationServer` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsMediationServer` cmdlet does not return any objects or values.
+    Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.DisplayMediationServer object.
+links:
+- text: Get-CsService
+  href: Get-CsService.yml
+syntaxes:
+- >-
+  Set-CsMediationServer [[-Identity] <XdsGlobalRelativeIdentity>] [-AudioPortCount <UInt16>]
+
+   [-AudioPortStart <UInt16>] [-EdgeServer <String>] [-Registrar <String>] [-SipClientTcpPort <UInt16>]
+
+   [-SipClientTlsPort <UInt16>] [-SipServerPort <UInt16>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Set-CsMediationServer -Identity "MediationServer:atl-cs-001.litwareinc.com" -SipClientTcpPort 5072
+  description: |-
+    The command shown in Example 1 sets the SIP gateway TCP listening port to 5072 for the Mediation Server MediationServer:atl-cs-001.litwareinc.com.
+    After changing the port you will need to restart the Skype for Business Server Mediation service.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Set-CsMediationServer -Identity "MediationServer:atl-cs-001.litwareinc.com" -AudioPortStart 60000 -AudioPortCount 1000
+  description: |-
+    Example 2 configures audio port settings for the Mediation Server MediationServer:atl-cs-001.litwareinc.com.
+    In this example the starting audio port is set to 60000 and the total number of ports allocated for audio is 1000.
+  summary: ""
+parameters:
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: AudioPortCount
+  description: |+
+    Total number of ports allocated for sending and receiving audio traffic.
+    The actual ports to be opened will start with the value configured for AudioPortStart and continue through the number of ports specified for AudioPortCount.
+    For example, if the AudioPortStart is set to 60000 and the AudioPortCount is set to 100, then ports 60000 through 60099 inclusive will be used for audio traffic.
+
+    A minimum of seven media ports are needed for relaying a single audio call:
+
+    Two gateway ports.
+    One port is needed for real-time transport protocol (RTP) traffic and one for real-time transport control protocol (RTCP) traffic.
+
+    Two User Datagram Protocol (UDP) relay ports, one for RTP traffic and one for RTCP traffic.
+
+    One Transmission Control Protocol (TCP) relay port.
+    A single TCP relay port can handle both RTP and RTCP traffic.
+
+    Two local ports per network interface, one for RTP traffic and one for RTCP traffic
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: AudioPortStart
+  description: |+
+    First port in the range of ports allocated for sending and receiving audio traffic.
+    For example: `-AudioPortStart 60000`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EdgeServer
+  description: |+
+    Service identity of the Edge Server to be associated with the Mediation Server.
+    For example: `-EdgeServer "EdgeServer:atl-edge-001.litwareinc.com"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Service location of the Mediation Server to be modified.
+    For example: `-Identity "MediationServer:atl-cs-001.litwareinc.com"`.
+
+    Note that you can leave off the prefix "MediationServer:" when specifying a Mediation Server.
+    For example: `-Identity "atl-cs-001.litwareinc.com"`.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Registrar
+  description: |+
+    Service identity of the Registrar to be associated with the Mediation Server.
+    For example: `-Registrar "Registrar:atl-cs-001.litwareinc.com"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: SipClientTcpPort
+  description: |+
+    Listening port used for communicating with gateway peers using TCP.
+    By default, no TCP port is defined; however, a TCP port with the port number 5068 will automatically be created when a PSTN gateway is created.
+    If you change the SipClientTcpPort you will need to restart the Mediation Server service before the new port will actually be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: SipClientTlsPort
+  description: |+
+    Listening port used for communicating with gateway peers using the Transport Layer Security (TLS) protocol.
+    By default, SipClientTlsPort is configured to use port 5067.
+    If you change the SipClientTlsPort you will need to restart the Mediation Server service before the new port will actually be used.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: SipServerPort
+  description: |+
+    Listening port used for communicating with Front End Servers.
+    By default, SipServerPort is configured to use port 5070.
+    If you change the SipServerPort, you will need to restart the Mediation Server service before the new port will actually be used.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsMediationServer
+name: Set-CsMediationServer
+description: |-
+  Mediation Servers act as a bridge between your internal Enterprise Voice configuration and either a PSTN gateway, IP-PBX, or a SIP trunk; in turn, this provides a way for your Enterprise Voice users (who are using Voice over Internet Protocol (VoIP) devices) to communicate with people using standard land-line telephones or mobile phones.
+  The `Set-CsMediationServer` cmdlet provides a way for you to make changes to an existing Mediation Server.
+  In particular, you can modify the ports used for communicating with client devices, Front End Servers, and gateways peers.
+  If necessary, the `Set-CsMediationServer` cmdlet can also be used to associate a Mediation Server with a new Registrar or a new Edge Server.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csmediationserver
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsMediationServer
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

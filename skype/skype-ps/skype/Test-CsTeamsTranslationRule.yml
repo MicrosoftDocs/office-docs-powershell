@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule.
+module: SkypeForBusiness
+notes: |-
+  The cmdlet is available in Teams PowerShell Module 4.5.0 or later.
+
+  The matching logic used in the cmdlet is the same as when the manipulation rule has been associated with an SBC and a call is being routed.
+
+  If a match is found in two or more manipulation rules, the first one is returned.
+
+  There is a short delay before newly created manipulation rules are added to the evaluation.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsTranslationRule
+  href: New-CsTeamsTranslationRule.yml
+- text: Get-CsTeamsTranslationRule
+  href: Get-CsTeamsTranslationRule.yml
+- text: Set-CsTeamsTranslationRule
+  href: Set-CsTeamsTranslationRule.yml
+- text: Remove-CsTeamsTranslationRule
+  href: Remove-CsTeamsTranslationRule.yml
+syntaxes:
+- Test-CsTeamsTranslationRule [-PhoneNumber <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Test-CsTeamsTranslationRule -PhoneNumber 1234
+
+    Identity        Pattern PhoneNumberTranslated Translation
+    --------        ------- --------------------- -----------
+    rule1           ^1234$  4321                  4321
+  description: |-
+    This example displays information about the manipulation rule matching the phone number 1234.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: PhoneNumber
+  isRequired: true
+  description: |+
+    The phone number to test.
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: SkypeForBusiness.Test-CsTeamsTranslationRule
+name: Test-CsTeamsTranslationRule
+description: |-
+  This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-csteamstranslationrule
+  applicable: Microsoft Teams
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

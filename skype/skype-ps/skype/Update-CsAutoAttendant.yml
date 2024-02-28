@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use Update-CsAutoAttendant cmdlet to force an update of resources associated with an Auto Attendant (AA) provisioning.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Update-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsAutoAttendant
+  href: Get-CsAutoAttendant.yml
+- text: Get-CsAutoAttendantStatus
+  href: Get-CsAutoAttendantStatus.yml
+- text: Set-CsAutoAttendant
+  href: Set-CsAutoAttendant.yml
+- text: Remove-CsAutoAttendant
+  href: Remove-CsAutoAttendant.yml
+syntaxes:
+- Update-CsAutoAttendant -Identity <String> [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Update-CsAutoAttendant -Identity "6abea1cd-904b-520b-be96-1092cc096432"
+  description: |-
+    In Example 1, the Update-CsAutoAttendant cmdlet is used to update all resources of an auto attendant with Identity of 6abea1cd-904b-520b-be96-1092cc096432.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The identity for the AA whose resources are to be updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Update-CsAutoAttendant
+name: Update-CsAutoAttendant
+description: |-
+  This cmdlet provides a way to update the resources associated with an auto attendant configured for use in your organization. Currently, it repairs the Dial-by-Name recognition status of an auto attendant.
+
+  Note: This cmdlet only triggers the refresh of auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of auto attendant can be retrieved using [`Get-CsAutoAttendantStatus`](Get-CsAutoAttendantStatus.yml) cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/update-csautoattendant
+  applicable: Skype for Business Online
+  title: Update-CsAutoAttendant
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""
