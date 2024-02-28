@@ -63,7 +63,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -OverflowActionCallPriority
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
->
 > - -IsCallbackEnabled
 > - -CallbackRequestDtmf
 > - -WaitTimeBeforeOfferingCallbackInSecond
@@ -1314,8 +1313,13 @@ Accept wildcard characters: False
 ```
 
 ### -CallbackRequestDtmf
-The DTMF touch-tone key the caller will be told to press to select callback. This parameter becomes a required parameter when IsCallbackEnabled is set to `True`.
+The DTMF touch-tone key the caller will be told to press to select callback. The CallbackRequestDtmf must be set to one of the following values:
 
+- Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
+- ToneStar - Corresponds to DTMF tone *.
+- TonePound - Corresponds to DTMF tone #.
+
+This parameter becomes a required parameter when IsCallbackEnabled is set to `True`.
 
 ```yaml
 Type: String
