@@ -411,6 +411,9 @@ Accept wildcard characters: False
 ### -ContentFilter
 The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
+> [!IMPORTANT]
+  > It's impossible to export between 2 dates. You can only export from date A OR export until date B! Otherwise you'll run in system convert errors.
+
 - Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
 - Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://learn.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
 - ComparisonOperator is an OPATH comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
