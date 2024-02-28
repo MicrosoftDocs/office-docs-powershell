@@ -81,3 +81,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsTeamsMediaConnectivityPolicy](Remove-CsTeamsMediaConnectivityPolicy.yml)
 
 [Get-CsTeamsMediaConnectivityPolicy](Get-CsTeamsMediaConnectivityPolicy.yml)
+
+[Grant-CsTeamsMediaConnectivityPolicy](Grant-CsTeamsMediaConnectivityPolicy.yml)

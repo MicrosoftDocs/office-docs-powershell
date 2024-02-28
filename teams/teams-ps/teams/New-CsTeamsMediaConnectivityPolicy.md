@@ -64,3 +64,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CsTeamsMediaConnectivityPolicy](Get-CsTeamsMediaConnectivityPolicy.yml)
 
 [Set-CsTeamsMediaConnectivityPolicy](Set-CsTeamsMediaConnectivityPolicy.yml)
+
+[Grant-CsTeamsMediaConnectivityPolicy](Grant-CsTeamsMediaConnectivityPolicy.yml)
