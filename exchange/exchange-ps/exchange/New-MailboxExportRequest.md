@@ -409,6 +409,8 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilter
+**Important**: You can't use this parameter to export between two dates. If you try, you'll get system convert errors. You can export from a specific date, or export to a specific date, but not both.
+
 The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
 
 - Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
