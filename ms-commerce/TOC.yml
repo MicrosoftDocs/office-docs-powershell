@@ -25,6 +25,6 @@
   - name: Troubleshooting
     href:
     items:
-    - name: HandleError : Failed to retrieve policy
+    - name: HandleError &colon; Failed to retrieve policy
       href: handle-error-failed-retrieve-policy.md
   
