@@ -20,20 +20,34 @@ Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a spec
 - You can assign up to 10 policies per feature. An additional one policy per feature can be assigned to the entire tenant.
 - Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. If a user has multiple policies assigned for a feature (directly as a user or member of a group), the most restrictive policy applies. 
 
-Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for. 
+Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### FeaturePolicy
 ```
-Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String>
+Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String> [-IsUserControlEnabled <Boolean>]
  [-Confirm]
- [-GroupIds <String[]>]
- [-UserIds <String[]>]
  [-Everyone]
- [-IsUserControlEnabled <Boolean>]
+ [-GroupIds <String[]>]
+ [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
+ [-UserIds <String[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### CategoryPolicy
+```
+Add-VivaModuleFeaturePolicy -CategoryId <String> -IsCategoryEnabled <Boolean> -Name <String>
+ [-Confirm]
+ [-Everyone]
+ [-GroupIds <String[]>]
+ [-ProgressAction <ActionPreference>]
+ [-ResultSize <Unlimited>]
+ [-UserIds <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -81,6 +95,24 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 
 ## PARAMETERS
 
+### -CategoryId
+**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
+
+{{ Fill CategoryId Description }}
+
+```yaml
+Type: String
+Parameter Sets: CategoryPolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to add the policy for.
 
@@ -88,7 +120,23 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsCategoryEnabled
+{{ Fill IsCategoryEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: CategoryPolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -107,7 +155,7 @@ The IsFeatureEnabled parameter specifies whether or not the feature is enabled b
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -123,7 +171,7 @@ The ModuleId parameter specifies the Viva module that you want to add the featur
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -223,7 +271,7 @@ Only features that allow admins to enable and disable user controls by policy ca
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 

@@ -21,10 +21,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### FeaturePolicy
 ```
-Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
+Get-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String>
  [[-PolicyId] <String>]
- [-ResultSize <Microsoft.Exchange.Management.RestApiClient.Unlimited`1[System.UInt32]>]
+ [-ProgressAction <ActionPreference>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
+### CategoryPolicy
+```
+Get-VivaModuleFeaturePolicy -CategoryId <String>
+ [[-PolicyId] <String>]
+ [-ProgressAction <ActionPreference>]
+ [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
@@ -59,6 +70,24 @@ This example returns details about a specific policy added for the Reflection fe
 
 ## PARAMETERS
 
+### -CategoryId
+**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
+
+{{ Fill CategoryId Description }}
+
+```yaml
+Type: String
+Parameter Sets: CategoryPolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to view the policies for.
 
@@ -66,7 +95,7 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -82,7 +111,7 @@ The ModuleId parameter specifies the Viva module of the feature policies that yo
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -106,6 +135,24 @@ Applicable: Exchange Online
 
 Required: False
 Position: Positional
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
+
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+Applicable: Exchange Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

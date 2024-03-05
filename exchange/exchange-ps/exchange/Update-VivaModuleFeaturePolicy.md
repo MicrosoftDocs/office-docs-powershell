@@ -26,14 +26,28 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### FeaturePolicy
 ```
-Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
+Update-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId <String> [-IsFeatureEnabled <Boolean>] [-IsUserControlEnabled <Boolean>]
  [-Confirm]
- [-IsFeatureEnabled <Boolean>]
- [-IsUserControlEnabled <Boolean>]
- [-GroupIds <String[]>]
  [-Everyone <Boolean>]
+ [-GroupIds <String[]>]
  [-Name <String>]
+ [-ProgressAction <ActionPreference>]
+ [-ResultSize <Unlimited>]
+ [-UserIds <String[]>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### CategoryPolicy
+```
+Update-VivaModuleFeaturePolicy> -CategoryId <String> [-IsCategoryEnabled <Boolean>] -PolicyId <String>
+ [-Confirm]
+ [-Everyone <Boolean]
+ [-GroupIds <String[]>]
+ [-Name <String>]
+ [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-UserIds <String[]>]
  [-WhatIf]
@@ -94,6 +108,22 @@ This example updates the name of the specified policy, makes it so the policy en
 
 ## PARAMETERS
 
+### -CategoryId
+{{ Fill CategoryId Description }}
+
+```yaml
+Type: String
+Parameter Sets: CategoryPolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module of the policy that you want to update.
 
@@ -101,7 +131,7 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -117,7 +147,7 @@ The ModuleId parameter specifies the Viva module of the policy that you want to 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -212,6 +242,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsCategoryEnabled
+{{ Fill IsCategoryEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: CategoryPolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IsFeatureEnabled
 The IsFeatureEnabled parameter specifies whether the feature is enabled by the updated policy. Valid values are:
 
@@ -222,7 +268,7 @@ If you don't want to update whether the feature is enabled by the policy, don't 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -247,7 +293,7 @@ If you don't want to update whether the user control is enabled by the policy, d
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
