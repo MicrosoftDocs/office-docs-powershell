@@ -31,7 +31,7 @@ You must be a Teams Service Administrator or a Global Administrator for your org
 ### Example 1
 In this example, the organisation has set the defaults as folows:
   - Email is set as preferred contact method for the parent communication invites.
-  - Capability to edit parent contact information by educators is "enabled".
+  - Capability to edit parent contact information by educators is enabled.
 
 ```powershell
 Get-CsTeamsEducationConfiguration
