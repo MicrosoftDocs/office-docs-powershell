@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
+**Note**: There is no category available in Viva yet. Please be patient while we roll out new categories. 
+
 Use the Get-VivaFeatureCategory cmdlet to view all categories in Viva that support feature access controls. This cmdlet provides details about the categories, including the category identifiers, descriptions, and Viva module features that belong to the category.
 
 A category contains a group of features in the same or different Viva module.
@@ -26,12 +28,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-VivaFeatureCategory
  [-ResultSize <Unlimited>]
- [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Get-VivaFeatureCategory cmdlet to view the Viva categories that support feature access controls.
+Use the Get-VivaFeatureCategory cmdlet to view the categories in Viva that support feature access controls.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
@@ -55,21 +56,6 @@ This parameter is reserved for internal Microsoft use.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
 
 Required: False
 Position: Named
