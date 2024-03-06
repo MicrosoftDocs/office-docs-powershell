@@ -564,11 +564,11 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 
 **Updates in Teams PowerShell Module version 6.1.0 and later**
 
-The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 6.1.0 or later.
+The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.0 or later.
 
 - LocationPolicy: LocationPolicy attribute is being deprecated from the output of Get-CsOnlineUser in all clouds. Get-CsPhoneNumberAssignment -IsoCountryCode can be used to get the LocationPolicy information. (Note: LocationPolicy attribute will no longer be populated with value in the older Teams Powershell Module versions (<6.1.0) starting from 20th March 2024.)
 
-- OptionFlags: OptionFlags attribute will no longer be populated with value in the output of Get-CsOnlineUser in all clouds. It's important to note that other details besides EnterpriseVoiceEnabled, previously found in OptionFlags, are no longer relevant for Teams. Administrators can still utilize the EnterpriseVoiceEnabled attribute in the output of the Get-CsOnlineUser cmdlet to get this information. (Note: This change will be rolled out to older Teams Powershell Module versions (<6.1.0) starting from 20th March 2024.)
+- OptionFlags: OptionFlags attribute will no longer be populated with value in the output of Get-CsOnlineUser in all clouds. It's important to note that other details besides EnterpriseVoiceEnabled, previously found in OptionFlags, are no longer relevant for Teams. Administrators can still utilize the EnterpriseVoiceEnabled attribute in the output of the Get-CsOnlineUser cmdlet to get this information. (Note: This change will be rolled out to all Teams Powershell Module versions (=<6.1.0) starting from 20th March 2024.)
 
 **Updates in Teams PowerShell Module version 6.0.0 and later**
 
