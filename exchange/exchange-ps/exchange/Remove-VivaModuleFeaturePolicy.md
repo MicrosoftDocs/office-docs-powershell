@@ -27,7 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId <String>
  [-Confirm]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
@@ -38,7 +37,6 @@ Remove-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId 
 ```
 Remove-VivaModuleFeaturePolicy -CategoryId <String> -PolicyId <String>
  [-Confirm]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
