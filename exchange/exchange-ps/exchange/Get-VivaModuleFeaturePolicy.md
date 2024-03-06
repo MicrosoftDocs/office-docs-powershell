@@ -27,7 +27,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String>
  [[-PolicyId] <String>]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -37,7 +36,6 @@ Get-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String>
 ```
 Get-VivaModuleFeaturePolicy -CategoryId <String>
  [[-PolicyId] <String>]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
@@ -154,24 +152,6 @@ Applicable: Exchange Online
 
 Required: False
 Position: Positional
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-Applicable: Exchange Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
