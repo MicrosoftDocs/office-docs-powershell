@@ -12,7 +12,7 @@ ms.author: runli
 # New-CsTeamsMediaConnectivityPolicy
 
 ## SYNOPSIS
-This cmdlet creates an Teams media connectivity policy.
+This cmdlet creates a Teams media connectivity policy.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-CsTeamsMediaConnectivityPolicy -Identity <String>
 ```
 
 ## DESCRIPTION
-This cmdlet creates an Teams media connectivity policy. If you get an error that the policy already exists, it means that the policy already exists for your tenant. In this case, run Get-CsTeamsMediaConnectivityPolicy.
+This cmdlet creates a Teams media connectivity policy. If you get an error that the policy already exists, it means that the policy already exists for your tenant. In this case, run Get-CsTeamsMediaConnectivityPolicy.
 
 ## EXAMPLES
 

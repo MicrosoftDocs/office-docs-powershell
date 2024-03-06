@@ -12,7 +12,7 @@ ms.author: runli
 
 ## SYNOPSIS
 
-This cmdlet retrieves all Teams media connectivity policy for current tenant.
+This cmdlet retrieves all Teams media connectivity policies for current tenant.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Get-CsTeamsMediaConnectivityPolicy
 
 ## DESCRIPTION
 
-This cmdlet retrieves all Teams media connectivity policy for current tenant.
+This cmdlet retrieves all Teams media connectivity policies for current tenant.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ Identity DirectConnection
 Tag:Test Enabled
 ```
 
-retrieves Teams media connectivity policy, show the result as identity tag and "DirectConnection" value.
+retrieves Teams media connectivity policies, show the result as identity tag and "DirectConnection" value.
 
 ## PARAMETERS
 
