@@ -15,10 +15,13 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module. Note that:
+**Note**: While we support adding category policy in the Exchange Online PowerShell module v3.5.0-Preview??? or later, there is no category available in Viva yet. Please be patient while we roll out new categories.
+
+Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module or a category in Viva. Note that:
 
 - You can't update a policy for a particular user or group to include the entire tenant if a policy for the entire tenant already exists for the feature. Only one tenant-wide policy is supported.
-- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. If a user has multiple policies assigned for a feature (directly as a user or member of a group), the most restrictive policy applies.
+- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature/category is enabled. If a user has multiple policies assigned for a feature/category (directly as a user or member of a group), the most restrictive policy applies.
+- You can only update user controls at the feature policy level, not the category policy level.
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
@@ -41,6 +44,7 @@ Update-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId 
 ```
 
 ### CategoryPolicy
+**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
 ```
 Update-VivaModuleFeaturePolicy> -CategoryId <String> [-IsCategoryEnabled <Boolean>] -PolicyId <String>
  [-Confirm]
@@ -55,16 +59,16 @@ Update-VivaModuleFeaturePolicy> -CategoryId <String> [-IsCategoryEnabled <Boolea
 ```
 
 ## DESCRIPTION
-Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module.
+Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module or a category in Viva.
 
 This cmdlet updates the attributes of the policy that you specify. These attributes include:
 
 - The policy name (Name parameter).
-- Whether or not the policy enables the feature (IsFeatureEnabled parameter).
-- Whether or not the policy enables user controls (IsUserControlEnabled parameter).
+- Whether or not the policy enables the feature (IsFeatureEnabled parameter) or the category (IsCategoryEnabled parameter).
+- Whether or not the policy enables user controls (IsUserControlEnabled parameter, only applicable to a feature policy).
 - Who the policy applies to (the UserIds and GroupIds parameters or the Everyone parameter).
 
-You can update these attributes independently of each other. For example, if you specify the Name parameter but not the IsFeatureEnabled parameter, the name of the policy is updated but whether or not the policy enables the feature remains unchanged.
+You can update these attributes independently of each other. For example, if you specify the Name parameter but not the IsFeatureEnabled/IsCategoryEnabled parameter, the name of the policy is updated but whether or not the policy enables the feature/category remains unchanged.
 
 **Important**: Values that you specify for the UserIds and/or GroupIds parameters or the Everyone parameter **overwrite** any existing users or groups. To preserve the existing users and groups, you need to specify those existing users or groups **and** any additional users or groups that you want to add. Not including existing users or groups in the command effectively removes those specific users or groups from the policy. For more information, see the examples.
 
@@ -106,10 +110,43 @@ Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Pol
 
 This example updates the name of the specified policy, makes it so the policy enables the feature, and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
 
+### Example 5
+```powershell
+Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -Name NewPolicyName -IsCategoryEnabled $false
+```
+
+This example updates the name of the specified policy and makes it so the policy does not enable the category (effectively all features under the category).
+
+### Example 6
+```powershell
+Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -GroupIds group1@contoso.com,group2@contoso.com
+```
+
+This example updates who the specified policy applies to. The policy now applies **only** to the specified groups, overwriting the users and groups the policy used to apply to.
+
+### Example 7
+```powershell
+Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -UserIds user1@contoso.com,user2@contoso.com
+```
+
+This example updates who the specified policy applies to. The policy now applies **only** to the specified users, overwriting the users and groups the policy used to apply to.
+
+### Example 8
+```powershell
+Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -Name NewPolicyName -IsCategoryEnabled $true -GroupIds group1@contoso.com -UserIds user1@contoso.com
+```
+
+This example updates the name of the specified policy, makes it so the policy enables the category (effectively all features under the category), and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
+
+
 ## PARAMETERS
 
 ### -CategoryId
-{{ Fill CategoryId Description }}
+**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
+
+The CategoryId parameter specifies the category of the policy that you want to update.
+
+To view details about the categories that support feature access controls, use the Get-FeatureCategory cmdlet. The CategoryId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
@@ -243,7 +280,12 @@ Accept wildcard characters: False
 ```
 
 ### -IsCategoryEnabled
-{{ Fill IsCategoryEnabled Description }}
+The IsCategoryEnabled parameter specifies whether the category is enabled by the updated policy. Valid values are:
+
+- $true: The category (effectively all features under the category) is enabled by the policy.
+- $false: The category (effectively all features under the category) is not enabled by the policy.
+
+If you don't want to update whether the category is enabled by the policy, don't use this parameter.
 
 ```yaml
 Type: Boolean
