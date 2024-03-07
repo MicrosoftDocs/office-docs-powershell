@@ -4,7 +4,7 @@ title: Skype for Business Server cmdlet reference
 description: "Learn about Skype for Business Server cmdlets."
 ---
 
-# Skype for Business cmdlet reference
+# Skype for Business Server cmdlet reference
 
 Welcome to the Skype for Business Server PowerShell cmdlet help references. The Skype for Business Server cmdlets provide the command line interface for server administration and management.
 
