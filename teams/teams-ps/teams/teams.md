@@ -193,3 +193,13 @@ This cmdlet sets environment-specific configurations like endpoint URIs and Team
 
 ### [Clear-TeamsEnvironmentConfig](Clear-TeamsEnvironmentConfig.md)
 Clears environment-specific configurations from the local machine set by running Set-TeamsEnvironmentConfig.
+
+### [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md)
+
+### [Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
+
+### [Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
+
+### [Grant-CsTeamsCallHoldPolicy](Grant-CsTeamsCallHoldPolicy.md)
+
+### [Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)

@@ -19,7 +19,7 @@ zh-TW Version: 17.0.15229.2100
 
 # Skype for Business PowerShell
 ## Description
-The following cmdlet references are for Skype for Business and Microsoft Teams. You can find information on installing the module for Skype for Business Online here: https://learn.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell. If you are using Skype for Business Server then the cmdlets are available in the Skype for Business Server Management Shell and you can find information about it here: https://learn.microsoft.com/skypeforbusiness/manage/management-shell.
+The following cmdlet references are for Skype for Business Server Management Shell and you can find information about it here: https://learn.microsoft.com/skypeforbusiness/manage/management-shell.
 
 ## Skype for Business Cmdlets
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
@@ -3234,16 +3234,6 @@ The Set-CsTeamsMeetingBrandingPolicy cmdlet allows administrators to update exis
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 
 ### [Get-CsTeamsMobilityPolicy](Get-CsTeamsMobilityPolicy.md)
-
-### [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md)
-
-### [Get-CsTeamsCallHoldPolicy](Get-CsTeamsCallHoldPolicy.md)
-
-### [Set-CsTeamsCallHoldPolicy](Set-CsTeamsCallHoldPolicy.md)
-
-### [Grant-CsTeamsCallHoldPolicy](Grant-CsTeamsCallHoldPolicy.md)
-
-### [Remove-CsTeamsCallHoldPolicy](Remove-CsTeamsCallHoldPolicy.md)
 
 ### [Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
 
