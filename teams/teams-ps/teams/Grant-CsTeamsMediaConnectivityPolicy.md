@@ -66,7 +66,7 @@ PS C:\> Grant-CsTeamsMediaConnectivityPolicy -Global -PolicyName Test
 
 Assigns a given policy to the tenant.
 
-### Example 3
+### Example 4
 ```powershell
 PS C:\> Grant-CsTeamsMediaConnectivityPolicy -Global -PolicyName Test
 ```
