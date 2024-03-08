@@ -42,7 +42,7 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowWatermarkCustomizationForCameraVideo <Boolean>]  [-WatermarkForCameraVideoOpacity <Int32>]  [-WatermarkForCameraVideoPattern <String>]
 [-AllowWatermarkCustomizationForScreenSharing <Boolean>]  [-WatermarkForScreenSharingOpacity <Int32>]  [-WatermarkForScreenSharingPattern <String>] [-WatermarkForAnonymousUsers <String>]
 [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>] [-VoiceIsolation <String>]
-[-ContentSharingInExternalMeetings <String>] 
+[-ContentSharingInExternalMeetings <String>] [EnableAnonymousUserCaptcha <Boolean>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -1293,6 +1293,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAnonymousUserCaptcha
+This setting enforce captcha for anonymous user while meeting join.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
