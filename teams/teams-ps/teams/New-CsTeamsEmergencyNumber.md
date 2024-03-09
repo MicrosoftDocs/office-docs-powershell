@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsemergencynumber
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencynumber
 applicable: Microsoft Teams
 title: New-CsTeamsEmergencyNumber
 author: jenstrier

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/get-csinboundexemptnumberpattern
+online version: https://learn.microsoft.com/powershell/module/teams/get-csinboundexemptnumberpattern
 applicable: Microsoft Teams, Skype for Business Online
 author: jenstrier
 ms.author: serdars

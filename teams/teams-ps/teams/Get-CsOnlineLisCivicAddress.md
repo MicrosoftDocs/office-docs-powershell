@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csonlineliscivicaddress
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineliscivicaddress
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineLisCivicAddress
 schema: 2.0.0

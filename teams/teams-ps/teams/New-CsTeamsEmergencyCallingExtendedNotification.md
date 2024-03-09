@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsemergencycallingextendednotification 
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingextendednotification 
 applicable: Microsoft Teams
 title: New-CsTeamsEmergencyCallingExtendedNotification 
 author: jenstrier

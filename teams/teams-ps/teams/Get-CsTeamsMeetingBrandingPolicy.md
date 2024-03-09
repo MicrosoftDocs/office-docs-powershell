@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsmeetingbrandingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingbrandingpolicy
 schema: 2.0.0
 title: Get-CsTeamsMeetingBrandingPolicy
 author: szymonkatraMSFT

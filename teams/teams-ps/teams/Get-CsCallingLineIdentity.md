@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-cscallinglineidentity
+online version: https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsCallingLineIdentity
 schema: 2.0.0

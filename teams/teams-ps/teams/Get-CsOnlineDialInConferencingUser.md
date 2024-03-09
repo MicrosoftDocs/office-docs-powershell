@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencinguser
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencinguser
 applicable: Skype for Business Online
 title: Get-CsOnlineDialInConferencingUser
 schema: 2.0.0
@@ -268,8 +268,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/enable-csonlinedialinconferencinguser?view=skype-ps)
+[Enable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/enable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Disable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/disable-csonlinedialinconferencinguser?view=skype-ps)
+[Disable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/disable-csonlinedialinconferencinguser?view=skype-ps)
 
-[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguser?view=skype-ps)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser?view=skype-ps)

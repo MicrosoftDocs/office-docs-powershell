@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlineliscivicaddress
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress
 applicable: Microsoft Teams
 title: Remove-CsOnlineLisCivicAddress
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csautoattendantcallhandlingassociation
+online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation
 applicable: Skype for Business Online
 title: New-CsAutoAttendantCallHandlingAssociation
 schema: 2.0.0

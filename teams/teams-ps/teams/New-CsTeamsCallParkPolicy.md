@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csteamscallparkpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamscallparkpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsCallParkPolicy
 schema: 2.0.0

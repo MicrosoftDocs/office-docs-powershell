@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-csteamschannelspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamschannelspolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsChannelsPolicy
 schema: 2.0.0
@@ -244,10 +244,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[New-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/skype/new-csteamschannelspolicy)
+[New-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamschannelspolicy)
 
-[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csteamschannelspolicy)
+[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamschannelspolicy)
 
-[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csteamschannelspolicy)
+[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamschannelspolicy)
 
-[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/skype/get-csteamschannelspolicy)
+[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamschannelspolicy)

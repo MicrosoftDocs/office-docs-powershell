@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamscallingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamscallingpolicy
 applicable: Microsoft Teams
 title: Grant-CsTeamsCallingPolicy
 schema: 2.0.0

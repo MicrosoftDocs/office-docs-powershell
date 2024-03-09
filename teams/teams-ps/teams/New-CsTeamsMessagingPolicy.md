@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsmessagingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmessagingpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsMessagingPolicy
 schema: 2.0.0

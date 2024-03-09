@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/update-csautoattendant
+online version: https://learn.microsoft.com/powershell/module/teams/update-csautoattendant
 applicable: Skype for Business Online
 title: Update-CsAutoAttendant
 schema: 2.0.0

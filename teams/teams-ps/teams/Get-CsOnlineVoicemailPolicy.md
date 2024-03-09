@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineVoicemailPolicy
 schema: 2.0.0
@@ -104,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy?view=skype-ps)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy?view=skype-ps)
 
-[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy?view=skype-ps)
+[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy?view=skype-ps)
 
-[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy?view=skype-ps)

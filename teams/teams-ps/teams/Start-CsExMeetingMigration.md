@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/start-csexmeetingmigration
+online version: https://learn.microsoft.com/powershell/module/teams/start-csexmeetingmigration
 applicable: Skype for Business Online
 title: Start-CsExMeetingMigration
 schema: 2.0.0
@@ -157,8 +157,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 [Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Get-CsMeetingMigrationStatus](https://learn.microsoft.com/powershell/module/skype/get-csmeetingmigrationstatus)
+[Get-CsMeetingMigrationStatus](https://learn.microsoft.com/powershell/module/teams/get-csmeetingmigrationstatus)
 
-[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/skype/set-cstenantmigrationconfiguration)
+[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantmigrationconfiguration)
 
-[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/skype/get-cstenantmigrationconfiguration)
+[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration)

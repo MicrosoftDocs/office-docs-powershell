@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/get-csteamscortanapolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscortanapolicy
 applicable: Skype for Business Online
 title: Remove-CsTeamsCortanaPolicy
 schema: 2.0.0

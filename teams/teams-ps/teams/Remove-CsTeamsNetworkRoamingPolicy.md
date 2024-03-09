@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsnetworkroamingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsnetworkroamingpolicy
 applicable: Skype for Business Online
 title: Remove-CsTeamsNetworkRoamingPolicy
 author: TristanChen-msft

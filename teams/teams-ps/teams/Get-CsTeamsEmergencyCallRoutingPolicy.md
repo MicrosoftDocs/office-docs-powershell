@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsemergencycallroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallroutingpolicy
 applicable: Microsoft Teams
 title: Get-CsTeamsEmergencyCallRoutingPolicy
 author: jenstrier

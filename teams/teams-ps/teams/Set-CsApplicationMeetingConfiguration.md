@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-CsApplicationMeetingConfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-CsApplicationMeetingConfiguration
 applicable: Teams
 title: Set-CsApplicationMeetingConfiguration
 schema: 2.0.0

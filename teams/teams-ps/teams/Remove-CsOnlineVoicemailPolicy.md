@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinevoicemailpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Remove-CsOnlineVoicemailPolicy
 schema: 2.0.0
@@ -93,10 +93,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 You are not able to delete the pre-configured policy instances Default, TranscriptionProfanityMaskingEnabled and TranscriptionDisabled
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/get-csonlinevoicemailpolicy?view=skype-ps)
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy?view=skype-ps)
 
-[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/set-csonlinevoicemailpolicy?view=skype-ps)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy?view=skype-ps)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/new-csonlinevoicemailpolicy?view=skype-ps)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy?view=skype-ps)
 
-[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/skype/grant-csonlinevoicemailpolicy?view=skype-ps)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy?view=skype-ps)

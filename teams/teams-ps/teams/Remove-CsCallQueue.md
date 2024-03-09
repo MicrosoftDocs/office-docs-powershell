@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/remove-cscallqueue
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cscallqueue
 applicable: Skype for Business Online
 title: Remove-CsCallQueue
 schema: 2.0.0

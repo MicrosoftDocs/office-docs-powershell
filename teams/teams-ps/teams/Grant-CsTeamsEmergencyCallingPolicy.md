@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsemergencycallingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallingpolicy
 applicable: Microsoft Teams
 title: Grant-CsTeamsEmergencyCallingPolicy
 author: jenstrier

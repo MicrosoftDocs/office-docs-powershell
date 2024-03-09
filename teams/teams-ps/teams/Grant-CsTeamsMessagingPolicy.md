@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsmessagingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsmessagingpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsMessagingPolicy
 schema: 2.0.0

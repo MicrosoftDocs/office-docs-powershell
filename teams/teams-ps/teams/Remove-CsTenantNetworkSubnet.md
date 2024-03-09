@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/remove-cstenantnetworksubnet
+online version: https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksubnet
 applicable: Microsoft Teams
 title: Remove-CsTenantNetworkSubnet
 schema: 2.0.0

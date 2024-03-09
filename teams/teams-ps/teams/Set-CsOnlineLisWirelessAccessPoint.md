@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-csonlineliswirelessaccesspoint
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineliswirelessaccesspoint
 applicable: Microsoft Teams
 title: Set-CsOnlineLisWirelessAccessPoint
 schema: 2.0.0

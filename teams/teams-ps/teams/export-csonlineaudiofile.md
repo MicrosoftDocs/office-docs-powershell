@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/export-csonlineaudiofile
+online version: https://learn.microsoft.com/powershell/module/teams/export-csonlineaudiofile
 applicable: Microsoft Teams
 title: Export-CsOnlineAudioFile
 schema: 2.0.0

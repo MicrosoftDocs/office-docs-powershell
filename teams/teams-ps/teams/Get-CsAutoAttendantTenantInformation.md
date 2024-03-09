@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csautoattendanttenantinformation
+online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendanttenantinformation
 applicable: Skype for Business Online
 title: Get-CsAutoAttendantTenantInformation
 schema: 2.0.0

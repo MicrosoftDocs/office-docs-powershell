@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialoutpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialoutpolicy
 applicable: Microsoft Teams
 title: Get-CsOnlineDialOutPolicy
 schema: 2.0.0

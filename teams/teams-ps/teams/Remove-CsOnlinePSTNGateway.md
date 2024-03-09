@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csonlinepstngateway
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinepstngateway
 applicable: Microsoft Teams
 title: Remove-CsOnlinePSTNGateway
 schema: 2.0.0

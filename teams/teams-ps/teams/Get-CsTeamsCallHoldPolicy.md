@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csteamscallholdpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscallholdpolicy
 applicable: Microsoft Teams
 title: Get-CsTeamsCallHoldPolicy
 schema: 2.0.0

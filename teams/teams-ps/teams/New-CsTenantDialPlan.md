@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/new-cstenantdialplan
+online version: https://learn.microsoft.com/powershell/module/teams/new-cstenantdialplan
 applicable: Microsoft Teams
 title: New-CsTenantDialPlan
 schema: 2.0.0
@@ -27,7 +27,7 @@ You can use this cmdlet to create a new tenant dial plan. Tenant dial plans prov
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
 A tenant dial plan determines such things as which normalization rules are applied.
 
-You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/skype/New-CsVoiceNormalizationRule) cmdlet.
+You can add new normalization rules to a tenant dial plan by calling the [New-CsVoiceNormalizationRule](https://learn.microsoft.com/powershell/module/teams/New-CsVoiceNormalizationRule) cmdlet.
 
 ## EXAMPLES
 

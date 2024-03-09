@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-cscallqueue
+online version: https://learn.microsoft.com/powershell/module/teams/set-cscallqueue
 applicable: Skype for Business Online
 title: Set-CsCallQueue
 schema: 2.0.0
@@ -92,7 +92,7 @@ This example updates the Call Queue with identity e7e00636-47da-449c-a36b-1b3d6e
 Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldAudioFileId $audioFile.Id
 ```
 
-This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](https://learn.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
+This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
 ## PARAMETERS
 

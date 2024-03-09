@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinelisport
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinelisport
 applicable: Microsoft Teams
 title: Set-CsOnlineLisPort
 schema: 2.0.0

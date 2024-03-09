@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsmobilitypolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmobilitypolicy
 applicable: Skype for Business Online
 title: New-CsTeamsMobilityPolicy
 schema: 2.0.0

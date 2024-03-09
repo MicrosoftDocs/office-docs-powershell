@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinevoicemailusersettings
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailusersettings
 applicable: Microsoft Teams, Skype for Business Online
 title: Get-CsOnlineVoicemailUserSettings
 schema: 2.0.0

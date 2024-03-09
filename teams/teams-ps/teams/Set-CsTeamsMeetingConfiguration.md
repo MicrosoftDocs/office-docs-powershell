@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmeetingconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingconfiguration
 applicable: Skype for Business Online
 title: Set-CsTeamsMeetingConfiguration
 schema: 2.0.0

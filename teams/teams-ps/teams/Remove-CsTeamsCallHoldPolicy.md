@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamscallholdpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamscallholdpolicy
 applicable: Microsoft Teams
 title: Remove-CsTeamsCallHoldPolicy
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/test-csvoicenormalizationrule
+online version: https://learn.microsoft.com/powershell/module/teams/test-csvoicenormalizationrule
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 title: Test-CsVoiceNormalizationRule
 schema: 2.0.0

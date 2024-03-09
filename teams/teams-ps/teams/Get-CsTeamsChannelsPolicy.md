@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csteamschannelspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamschannelspolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsChannelsPolicy
 schema: 2.0.0

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csonlinevoiceroutingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoiceroutingpolicy
 applicable: Microsoft Teams
 title: Grant-CsOnlineVoiceRoutingPolicy
 schema: 2.0.0

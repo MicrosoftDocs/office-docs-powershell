@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsmeetingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingpolicy
 applicable: Skype for Business Online
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0

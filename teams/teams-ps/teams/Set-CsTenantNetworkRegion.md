@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-cstenantnetworkregion
+online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantnetworkregion
 applicable: Microsoft Teams
 title: Set-CsTenantNetworkRegion
 schema: 2.0.0

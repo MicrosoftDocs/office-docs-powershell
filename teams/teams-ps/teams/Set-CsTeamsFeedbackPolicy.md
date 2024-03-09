@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsfeedbackpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsfeedbackpolicy
 applicable: Skype for Business Online
 title: Set-CsTeamsFeedbackPolicy
 schema: 2.0.0

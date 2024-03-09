@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csteamsappsetuppolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsappsetuppolicy
 applicable: Skype for Business Online
 title: New-CsTeamsAppSetupPolicy
 schema: 2.0.0

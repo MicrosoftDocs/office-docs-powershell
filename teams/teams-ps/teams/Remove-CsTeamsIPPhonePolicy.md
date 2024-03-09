@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csteamsipphonepolicy
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsipphonepolicy
 applicable: Skype for Business Online
 title: Remove-CsTeamsIPPhonePolicy
 author: tonywoodruff

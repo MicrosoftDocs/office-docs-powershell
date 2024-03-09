@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamscallparkpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamscallparkpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsTeamsCallParkPolicy
 schema: 2.0.0

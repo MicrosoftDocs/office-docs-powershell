@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinevoiceuser
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceuser
 applicable: Skype for Business Online
 title: Get-CsOnlineVoiceUser
 schema: 2.0.0
@@ -398,6 +398,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineVoiceUser](https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceuser?view=skype-ps)
+[Set-CsOnlineVoiceUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceuser?view=skype-ps)
 
-[Set-CsOnlineVoiceUserBulk](https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceuserbulk?view=skype-ps)
+[Set-CsOnlineVoiceUserBulk](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceuserbulk?view=skype-ps)

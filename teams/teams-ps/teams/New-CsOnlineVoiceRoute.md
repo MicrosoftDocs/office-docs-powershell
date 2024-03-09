@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csonlinevoiceroute
+online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinevoiceroute
 applicable: Microsoft Teams
 title: New-CsOnlineVoiceRoute
 schema: 2.0.0
@@ -244,8 +244,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/skype/get-csonlinevoiceroute?view=skype-ps)
+[Get-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroute?view=skype-ps)
 
-[Set-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceroute?view=skype-ps)
+[Set-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroute?view=skype-ps)
 
-[Remove-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/skype/remove-csonlinevoiceroute?view=skype-ps)
+[Remove-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroute?view=skype-ps)

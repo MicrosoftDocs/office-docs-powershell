@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinepstngateway
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinepstngateway
 applicable: Microsoft Teams
 title: Set-CsOnlinePSTNGateway
 schema: 2.0.0

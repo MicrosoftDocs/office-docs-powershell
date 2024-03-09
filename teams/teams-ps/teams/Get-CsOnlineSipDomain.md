@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinesipdomain
 applicable: Skype for Business Online
 title: Get-CsOnlineSipDomain
 schema: 2.0.0

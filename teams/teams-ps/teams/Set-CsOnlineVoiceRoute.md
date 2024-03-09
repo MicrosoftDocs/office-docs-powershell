@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinevoiceroute
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroute
 applicable: Microsoft Teams
 title: Set-CsOnlineVoiceRoute
 schema: 2.0.0

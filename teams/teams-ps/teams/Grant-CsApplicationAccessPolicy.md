@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csapplicationaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csapplicationaccesspolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsApplicationAccessPolicy
 schema: 2.0.0

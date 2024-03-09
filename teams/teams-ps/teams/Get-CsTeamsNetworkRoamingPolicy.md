@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: Skype for Business Online
-online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsnetworkroamingpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsnetworkroamingpolicy
 applicable: Skype for Business Online
 title: Get-CsTeamsNetworkRoamingPolicy
 author: TristanChen-msft

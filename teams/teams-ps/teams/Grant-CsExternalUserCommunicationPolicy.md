@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csexternalusercommunicationpolicy
 applicable: Microsoft Teams, Skype for Business Online
 title: Grant-CsExternalUserCommunicationPolicy
 schema: 2.0.0

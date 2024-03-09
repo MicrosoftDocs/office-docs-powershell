@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/new-csapplicationaccesspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/new-csapplicationaccesspolicy
 applicable: Skype for Business Online
 title: New-CsApplicationAccessPolicy
 schema: 2.0.0

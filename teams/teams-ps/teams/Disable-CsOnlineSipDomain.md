@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-online version: https://learn.microsoft.com/powershell/module/skype/disable-csonlinesipdomain
+online version: https://learn.microsoft.com/powershell/module/teams/disable-csonlinesipdomain
 applicable: Skype for Business Online
 title: Disable-CsOnlineSipDomain
 schema: 2.0.0
