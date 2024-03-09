@@ -6976,11 +6976,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Disable-CsMeetingRoom.md",
-      "redirect_url": "/powershell/module/teams/Disable-CsMeetingRoom",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Disable-CsOnlineSipDomain.md",
       "redirect_url": "/powershell/module/teams/Disable-CsOnlineSipDomain",
       "redirect_document_id": false
@@ -7056,18 +7051,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Get-CsDialPlan.md",
-      "redirect_url": "/powershell/module/teams/Get-CsDialPlan",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Get-CsEffectiveTenantDialPlan.md",
       "redirect_url": "/powershell/module/teams/Get-CsEffectiveTenantDialPlan",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "skype/skype-ps/skype/Get-CsExternalAccessPolicy.md",
-      "redirect_url": "/powershell/module/teams/Get-CsExternalAccessPolicy",
       "redirect_document_id": false
     },
     {
@@ -7231,11 +7216,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Get-CsPrivacyConfiguration.md",
-      "redirect_url": "/powershell/module/teams/Get-CsPrivacyConfiguration",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Get-CsTeamsAppPermissionPolicy.md",
       "redirect_url": "/powershell/module/teams/Get-CsTeamsAppPermissionPolicy",
       "redirect_document_id": false
@@ -7376,16 +7356,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Get-CsTeamsUpgradeConfiguration.md",
-      "redirect_url": "/powershell/module/teams/Get-CsTeamsUpgradeConfiguration",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "skype/skype-ps/skype/Get-CsTeamsUpgradePolicy.md",
-      "redirect_url": "/powershell/module/teams/Get-CsTeamsUpgradePolicy",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Get-CsTeamsVideoInteropServicePolicy.md",
       "redirect_url": "/powershell/module/teams/Get-CsTeamsVideoInteropServicePolicy",
       "redirect_document_id": false
@@ -7458,11 +7428,6 @@
     {
       "source_path": "skype/skype-ps/skype/Grant-CsDialoutPolicy.md",
       "redirect_url": "/powershell/module/teams/Grant-CsDialoutPolicy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "skype/skype-ps/skype/Grant-CsExternalAccessPolicy.md",
-      "redirect_url": "/powershell/module/teams/Grant-CsExternalAccessPolicy",
       "redirect_document_id": false
     },
     {
@@ -7566,11 +7531,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Grant-CsTeamsUpgradePolicy.md",
-      "redirect_url": "/powershell/module/teams/Grant-CsTeamsUpgradePolicy",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Grant-CsTeamsVideoInteropServicePolicy.md",
       "redirect_url": "/powershell/module/teams/Grant-CsTeamsVideoInteropServicePolicy",
       "redirect_document_id": false
@@ -7658,11 +7618,6 @@
     {
       "source_path": "skype/skype-ps/skype/New-CsEdgeDomainPattern.md",
       "redirect_url": "/powershell/module/teams/New-CsEdgeDomainPattern",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "skype/skype-ps/skype/New-CsExternalAccessPolicy.md",
-      "redirect_url": "/powershell/module/teams/New-CsExternalAccessPolicy",
       "redirect_document_id": false
     },
     {
@@ -7881,11 +7836,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/New-CsVoiceNormalizationRule.md",
-      "redirect_url": "/powershell/module/teams/New-CsVoiceNormalizationRule",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Register-CsOnlineDialInConferencingServiceNumber.md",
       "redirect_url": "/powershell/module/teams/Register-CsOnlineDialInConferencingServiceNumber",
       "redirect_document_id": false
@@ -7908,11 +7858,6 @@
     {
       "source_path": "skype/skype-ps/skype/Remove-CsCallQueue.md",
       "redirect_url": "/powershell/module/teams/Remove-CsCallQueue",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "skype/skype-ps/skype/Remove-CsExternalAccessPolicy.md",
-      "redirect_url": "/powershell/module/teams/Remove-CsExternalAccessPolicy",
       "redirect_document_id": false
     },
     {
@@ -8161,11 +8106,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Set-CsExternalAccessPolicy.md",
-      "redirect_url": "/powershell/module/teams/Set-CsExternalAccessPolicy",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Set-CsInboundBlockedNumberPattern.md",
       "redirect_url": "/powershell/module/teams/Set-CsInboundBlockedNumberPattern",
       "redirect_document_id": false
@@ -8278,11 +8218,6 @@
     {
       "source_path": "skype/skype-ps/skype/Set-CsOnlineVoiceUser.md",
       "redirect_url": "/powershell/module/teams/Set-CsOnlineVoiceUser",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "skype/skype-ps/skype/Set-CsPrivacyConfiguration.md",
-      "redirect_url": "/powershell/module/teams/Set-CsPrivacyConfiguration",
       "redirect_document_id": false
     },
     {
@@ -8426,11 +8361,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Set-CsTeamsUpgradeConfiguration.md",
-      "redirect_url": "/powershell/module/teams/Set-CsTeamsUpgradeConfiguration",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Set-CsTenantBlockedCallingNumbers.md",
       "redirect_url": "/powershell/module/teams/Set-CsTenantBlockedCallingNumbers",
       "redirect_document_id": false
@@ -8471,11 +8401,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/skype-ps/skype/Set-CsUser.md",
-      "redirect_url": "/powershell/module/teams/Set-CsUser",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/skype-ps/skype/Set-CsVideoInteropServiceProvider.md",
       "redirect_url": "/powershell/module/teams/Set-CsVideoInteropServiceProvider",
       "redirect_document_id": false
@@ -8503,11 +8428,6 @@
     {
       "source_path": "skype/skype-ps/skype/Test-CsTeamsTranslationRule.md",
       "redirect_url": "/powershell/module/teams/Test-CsTeamsTranslationRule",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "skype/skype-ps/skype/Test-CsVoiceNormalizationRule.md",
-      "redirect_url": "/powershell/module/teams/Test-CsVoiceNormalizationRule",
       "redirect_document_id": false
     },
     {
