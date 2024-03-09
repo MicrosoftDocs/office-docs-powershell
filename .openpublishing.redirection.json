@@ -6991,6 +6991,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "skype/skype-ps/skype/export-csonlineaudiofile.md",
+      "redirect_url": "/powershell/module/teams/export-csonlineaudiofile",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/skype-ps/skype/Find-CsGroup.md",
       "redirect_url": "/powershell/module/teams/Find-CsGroup",
       "redirect_document_id": false
@@ -7421,13 +7426,28 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "skype/skype-ps/skype/Grant-CsBroadcastMeetingPolicy.md",
+      "redirect_url": "/powershell/module/teams/Grant-CsBroadcastMeetingPolicy",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/skype-ps/skype/Grant-CsCallingLineIdentity.md",
       "redirect_url": "/powershell/module/teams/Grant-CsCallingLineIdentity",
       "redirect_document_id": false
     },
     {
+      "source_path": "skype/skype-ps/skype/Grant-CsCloudMeetingPolicy.md",
+      "redirect_url": "/powershell/module/teams/Grant-CsCloudMeetingPolicy",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/skype-ps/skype/Grant-CsDialoutPolicy.md",
       "redirect_url": "/powershell/module/teams/Grant-CsDialoutPolicy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/skype-ps/skype/Grant-CsExternalUserCommunicationPolicy.md",
+      "redirect_url": "/powershell/module/teams/Grant-CsExternalUserCommunicationPolicy",
       "redirect_document_id": false
     },
     {
