@@ -229,5 +229,3 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 [Test-CsVoicePolicy](Test-CsVoicePolicy.md)
 
 [Get-CsUser](Get-CsUser.md)
-
-[Get-CsOnlineUser](Get-CsOnlineUser.md)
