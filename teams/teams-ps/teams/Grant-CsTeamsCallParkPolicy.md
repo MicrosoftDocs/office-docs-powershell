@@ -194,10 +194,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Set-CsTeamsCallParkPolicy](set-csteamscallparkpolicy.md)
+[Set-CsTeamsCallParkPolicy](Set-CsTeamsCallParkPolicy.md)
 
-[Get-CsTeamsCallParkPolicy](get-csteamscallparkpolicy.md)
+[Get-CsTeamsCallParkPolicy](Get-CsTeamsCallParkPolicy.md)
 
-[New-CsTeamsCallParkPolicy](new-csteamscallparkpolicy.md)
+[New-CsTeamsCallParkPolicy](New-CsTeamsCallParkPolicy.md)
 
-[Remove-CsTeamsCallParkPolicy](remove-csteamscallparkpolicy.md)
+[Remove-CsTeamsCallParkPolicy](Remove-CsTeamsCallParkPolicy.md)

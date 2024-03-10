@@ -398,6 +398,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineVoiceUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceuser?view=teams-ps)
+[Set-CsOnlineVoiceUser](Set-CsOnlineVoiceUser.md)
 
-[Set-CsOnlineVoiceUserBulk](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceuserbulk?view=teams-ps)
+[Set-CsOnlineVoiceUserBulk](Set-CsOnlineVoiceUserBulk.md)

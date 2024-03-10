@@ -201,6 +201,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineLisSwitch](Set-CsOnlineLisSwitch.md)
+[Get-CsOnlineLisSwitch](Get-CsOnlineLisSwitch.md)
 
 [Remove-CsOnlineLisSwitch](Remove-CsOnlineLisSwitch.md)

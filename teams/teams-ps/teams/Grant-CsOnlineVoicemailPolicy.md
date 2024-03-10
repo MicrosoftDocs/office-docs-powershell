@@ -191,10 +191,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy?view=teams-ps)
+[Get-CsOnlineVoicemailPolicy](Get-CsOnlineVoicemailPolicy.md)
 
-[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy?view=teams-ps)
+[Set-CsOnlineVoicemailPolicy](Set-CsOnlineVoicemailPolicy.md)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy?view=teams-ps)
+[New-CsOnlineVoicemailPolicy](New-CsOnlineVoicemailPolicy.md)
 
-[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy?view=teams-ps)
+[Remove-CsOnlineVoicemailPolicy](Remove-CsOnlineVoicemailPolicy.md)

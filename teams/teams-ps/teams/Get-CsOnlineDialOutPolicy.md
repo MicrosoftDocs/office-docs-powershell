@@ -98,4 +98,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsDialoutPolicy](grant-csdialoutpolicy.md)
+[Grant-CsDialoutPolicy](Grant-CsDialoutPolicy.md)

@@ -127,8 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisCivicAddress](set-csonlineliscivicaddress.md)
+[Set-CsOnlineLisCivicAddress](Set-CsOnlineLisCivicAddress.md)
 
-[New-CsOnlineLisCivicAddress](new-csonlineliscivicaddress.md)
+[New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md)
 
-[Get-CsOnlineLisCivicAddress](get-csonlineliscivicaddress.md)
+[Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md)

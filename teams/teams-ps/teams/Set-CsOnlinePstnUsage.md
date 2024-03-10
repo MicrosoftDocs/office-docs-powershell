@@ -135,4 +135,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlinePstnUsage](get-csonlinepstnusage.md)
+[Get-CsOnlinePstnUsage](Get-CsOnlinePstnUsage.md)

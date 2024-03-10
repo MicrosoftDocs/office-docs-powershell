@@ -208,4 +208,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 [New-CsOnlineSchedule](New-CsOnlineSchedule.md)
 
-[`Get-CsOnlineSchedule`](Get-CsOnlineSchedule.md)
+[Get-CsOnlineSchedule](Get-CsOnlineSchedule.md)

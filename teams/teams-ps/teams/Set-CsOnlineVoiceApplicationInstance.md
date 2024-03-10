@@ -162,4 +162,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstance)
+[New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)

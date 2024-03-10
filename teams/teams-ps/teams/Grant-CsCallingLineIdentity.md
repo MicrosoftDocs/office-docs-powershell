@@ -200,10 +200,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
 
 ## RELATED LINKS
-[Set-CsCallingLineIdentity](set-cscallinglineidentity.md)
+[Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 
-[Get-CsCallingLineIdentity](get-cscallinglineidentity.md)
+[Get-CsCallingLineIdentity](Get-CsCallingLineIdentity.md)
 
-[Remove-CsCallingLineIdentity](remove-cscallinglineidentity.md)
+[Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 
-[New-CsCallingLineIdentity](new-cscallinglineidentity.md)
+[New-CsCallingLineIdentity](New-CsCallingLineIdentity.md)

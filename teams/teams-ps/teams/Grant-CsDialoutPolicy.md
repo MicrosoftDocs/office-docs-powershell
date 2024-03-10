@@ -223,4 +223,4 @@ The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or
 The cmdlet is not supported for Teams resource accounts.
 
 ## RELATED LINKS
-[Get-CsOnlineDialOutPolicy](get-csonlinedialoutpolicy.md)
+[Get-CsOnlineDialOutPolicy](Get-CsOnlineDialOutPolicy.md)

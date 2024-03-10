@@ -244,8 +244,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceroute?view=teams-ps)
+[Get-CsOnlineVoiceRoute](Get-CsOnlineVoiceRoute.md)
 
-[Set-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoiceroute?view=teams-ps)
+[Set-CsOnlineVoiceRoute](Set-CsOnlineVoiceRoute.md)
 
-[Remove-CsOnlineVoiceRoute](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroute?view=teams-ps)
+[Remove-CsOnlineVoiceRoute](Remove-CsOnlineVoiceRoute.md)

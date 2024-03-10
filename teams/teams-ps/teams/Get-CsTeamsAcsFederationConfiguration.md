@@ -66,8 +66,8 @@ EnableAcsUsers       : False
 
 [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md)
 
-[New-CsExternalAccessPolicy](/powershell/module/teams/new-csexternalaccesspolicy?view=teams-ps)
+[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
 
-[Set-CsExternalAccessPolicy](/powershell/module/teams/set-csexternalaccesspolicy?view=teams-ps)
+[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
 
-[Grant-CsExternalAccessPolicy](/powershell/module/teams/grant-csexternalaccesspolicy?view=teams-ps)
+[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)

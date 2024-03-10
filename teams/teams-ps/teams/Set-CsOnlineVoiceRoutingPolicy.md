@@ -166,10 +166,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoutingPolicy](new-csonlinevoiceroutingpolicy.md)
+[New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 
-[Get-CsOnlineVoiceRoutingPolicy](get-csonlinevoiceroutingpolicy.md)
+[Get-CsOnlineVoiceRoutingPolicy](Get-CsOnlineVoiceRoutingPolicy.md)
 
-[Grant-CsOnlineVoiceRoutingPolicy](grant-csonlinevoiceroutingpolicy.md)
+[Grant-CsOnlineVoiceRoutingPolicy](Grant-CsOnlineVoiceRoutingPolicy.md)
 
-[Remove-CsOnlineVoiceRoutingPolicy](remove-csonlinevoiceroutingpolicy.md)
+[Remove-CsOnlineVoiceRoutingPolicy](Remove-CsOnlineVoiceRoutingPolicy.md)

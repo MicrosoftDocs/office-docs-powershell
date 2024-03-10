@@ -111,8 +111,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 ## NOTES
 
 ## RELATED LINKS
-[New-CsOnlineVoiceRoute](new-csonlinevoiceroute.md)
+[New-CsOnlineVoiceRoute](New-CsOnlineVoiceRoute.md)
 
-[Set-CsOnlineVoiceRoute](set-csonlinevoiceroute.md)
+[Set-CsOnlineVoiceRoute](Set-CsOnlineVoiceRoute.md)
 
-[Remove-CsOnlineVoiceRoute](remove-csonlinevoiceroute.md)
+[Remove-CsOnlineVoiceRoute](Remove-CsOnlineVoiceRoute.md)

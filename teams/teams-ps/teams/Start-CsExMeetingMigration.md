@@ -157,8 +157,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 [Using the Meeting Migration Service (MMS)](https://learn.microsoft.com/SkypeForBusiness/audio-conferencing-in-office-365/setting-up-the-meeting-migration-service-mms)
 
-[Get-CsMeetingMigrationStatus](https://learn.microsoft.com/powershell/module/teams/get-csmeetingmigrationstatus)
+[Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 
-[Set-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/set-cstenantmigrationconfiguration)
+[Set-CsTenantMigrationConfiguration](Set-CsTenantMigrationConfiguration.md)
 
-[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration)
+[Get-CsTenantMigrationConfiguration](Get-CsTenantMigrationConfiguration.md)

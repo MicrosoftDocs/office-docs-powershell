@@ -143,6 +143,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 [Get-CsTeamsTranslationRule](Get-CsTeamsTranslationRule.md)
 
-[Test-CsTeamsTranslationRule](Set-CsTeamsTranslationRule.md)
+[Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
 
 [Remove-CsTeamsTranslationRule](Remove-CsTeamsTranslationRule.md)

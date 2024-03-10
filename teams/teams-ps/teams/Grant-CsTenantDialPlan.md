@@ -208,10 +208,10 @@ The Get-CsTenantDialPlan will still show the external access prefix in the form 
 
 ## RELATED LINKS
 
-[Set-CsTenantDialPlan](set-cstenantdialplan.md)
+[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)
 
-[New-CsTenantDialPlan](new-cstenantdialplan.md)
+[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
 
-[Remove-CsTenantDialPlan](remove-cstenantdialplan.md)
+[Remove-CsTenantDialPlan](Remove-CsTenantDialPlan.md)
 
-[Get-CsTenantDialPlan](get-cstenantdialplan.md)
+[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)

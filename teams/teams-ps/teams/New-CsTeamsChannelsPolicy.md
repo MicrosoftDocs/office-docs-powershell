@@ -221,10 +221,10 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Set-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/set-csteamschannelspolicy)
+[Set-CsTeamsChannelsPolicy](Set-CsTeamsChannelsPolicy.md)
 
-[Remove-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csteamschannelspolicy)
+[Remove-CsTeamsChannelsPolicy](Remove-CsTeamsChannelsPolicy.md)
 
-[Grant-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csteamschannelspolicy)
+[Grant-CsTeamsChannelsPolicy](Grant-CsTeamsChannelsPolicy.md)
 
-[Get-CsTeamsChannelsPolicy](https://learn.microsoft.com/powershell/module/teams/get-csteamschannelspolicy)
+[Get-CsTeamsChannelsPolicy](Get-CsTeamsChannelsPolicy.md)

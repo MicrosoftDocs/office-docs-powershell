@@ -137,4 +137,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](https://learn.microsoft.com/powershell/module/teams/set-csonlineenhancedemergencyservicedisclaimer?view=teams-ps)
+[Set-CsOnlineEnhancedEmergencyServiceDisclaimer](Set-CsOnlineEnhancedEmergencyServiceDisclaimer.md)

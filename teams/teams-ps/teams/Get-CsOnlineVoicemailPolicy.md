@@ -104,10 +104,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 ## RELATED LINKS
-[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy?view=teams-ps)
+[Set-CsOnlineVoicemailPolicy](Set-CsOnlineVoicemailPolicy.md)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy?view=teams-ps)
+[New-CsOnlineVoicemailPolicy](New-CsOnlineVoicemailPolicy.md)
 
-[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy?view=teams-ps)
+[Remove-CsOnlineVoicemailPolicy](Remove-CsOnlineVoicemailPolicy.md)
 
-[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy?view=teams-ps)
+[Grant-CsOnlineVoicemailPolicy](Grant-CsOnlineVoicemailPolicy.md)

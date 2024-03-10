@@ -258,8 +258,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Set-CsOnlineLisCivicAddress](set-csonlineliscivicaddress.md)
+[Set-CsOnlineLisCivicAddress](Set-CsOnlineLisCivicAddress.md)
 
-[New-CsOnlineLisCivicAddress](new-csonlineliscivicaddress.md)
+[New-CsOnlineLisCivicAddress](New-CsOnlineLisCivicAddress.md)
 
-[Remove-CsOnlineLisCivicAddress](remove-csonlineliscivicaddress.md)
+[Remove-CsOnlineLisCivicAddress](Remove-CsOnlineLisCivicAddress.md)
