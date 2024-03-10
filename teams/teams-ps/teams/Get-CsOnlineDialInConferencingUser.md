@@ -268,8 +268,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-CsOnlineDialInConferencingUser](Enable-CsOnlineDialInConferencingUser.md)
-
-[Disable-CsOnlineDialInConferencingUser](Disable-CsOnlineDialInConferencingUser.md)
 
 [Set-CsOnlineDialInConferencingUser](Set-CsOnlineDialInConferencingUser.md)

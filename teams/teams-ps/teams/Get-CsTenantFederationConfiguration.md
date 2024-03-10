@@ -164,6 +164,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)
-
 [Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)

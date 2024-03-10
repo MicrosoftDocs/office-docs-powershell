@@ -399,5 +399,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 [Set-CsOnlineVoiceUser](Set-CsOnlineVoiceUser.md)
-
-[Set-CsOnlineVoiceUserBulk](Set-CsOnlineVoiceUserBulk.md)

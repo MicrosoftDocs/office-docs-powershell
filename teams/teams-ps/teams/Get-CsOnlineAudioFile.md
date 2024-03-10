@@ -127,6 +127,4 @@ If you call the cmdlet without having uploaded any audio files, with a non-exist
 
 [Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
 
-[New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
-
 [Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
