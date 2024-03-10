@@ -66,8 +66,8 @@ EnableAcsUsers       : False
 
 [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md)
 
-[New-CsExternalAccessPolicy](/powershell/module/teams/new-csexternalaccesspolicy?view=skype-ps)
+[New-CsExternalAccessPolicy](/powershell/module/teams/new-csexternalaccesspolicy?view=teams-ps)
 
-[Set-CsExternalAccessPolicy](/powershell/module/teams/set-csexternalaccesspolicy?view=skype-ps)
+[Set-CsExternalAccessPolicy](/powershell/module/teams/set-csexternalaccesspolicy?view=teams-ps)
 
-[Grant-CsExternalAccessPolicy](/powershell/module/teams/grant-csexternalaccesspolicy?view=skype-ps)
+[Grant-CsExternalAccessPolicy](/powershell/module/teams/grant-csexternalaccesspolicy?view=teams-ps)

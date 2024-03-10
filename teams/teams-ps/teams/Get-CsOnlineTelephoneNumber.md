@@ -351,4 +351,4 @@ An instance or array of the objects.
 ## NOTES
 
 ## RELATED LINKS
-[Remove-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-csonlinetelephonenumber?view=skype-ps)
+[Remove-CsOnlineTelephoneNumber](https://learn.microsoft.com/powershell/module/teams/remove-csonlinetelephonenumber?view=teams-ps)

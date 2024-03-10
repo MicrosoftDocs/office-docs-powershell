@@ -93,10 +93,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 You are not able to delete the pre-configured policy instances Default, TranscriptionProfanityMaskingEnabled and TranscriptionDisabled
 
 ## RELATED LINKS
-[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy?view=skype-ps)
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailpolicy?view=teams-ps)
 
-[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy?view=skype-ps)
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailpolicy?view=teams-ps)
 
-[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy?view=skype-ps)
+[New-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/new-csonlinevoicemailpolicy?view=teams-ps)
 
-[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy?view=skype-ps)
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy?view=teams-ps)

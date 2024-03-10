@@ -195,8 +195,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration?view=skype-ps)
+[Get-CsTenantMigrationConfiguration](https://learn.microsoft.com/powershell/module/teams/get-cstenantmigrationconfiguration?view=teams-ps)
 
-[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingtenantsettings?view=skype-ps)
+[Get-CsOnlineDialInConferencingTenantSettings](https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingtenantsettings?view=teams-ps)
 
-[Start-CsExMeetingMigration](https://learn.microsoft.com/powershell/module/teams/start-csexmeetingmigration?view=skype-ps)
+[Start-CsExMeetingMigration](https://learn.microsoft.com/powershell/module/teams/start-csexmeetingmigration?view=teams-ps)

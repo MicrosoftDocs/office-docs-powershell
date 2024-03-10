@@ -268,8 +268,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/enable-csonlinedialinconferencinguser?view=skype-ps)
+[Enable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/enable-csonlinedialinconferencinguser?view=teams-ps)
 
-[Disable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/disable-csonlinedialinconferencinguser?view=skype-ps)
+[Disable-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/disable-csonlinedialinconferencinguser?view=teams-ps)
 
-[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser?view=skype-ps)
+[Set-CsOnlineDialInConferencingUser](https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguser?view=teams-ps)
