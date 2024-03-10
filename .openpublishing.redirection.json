@@ -7426,11 +7426,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "skype/virtual-folder/skype/Grant-CsBroadcastMeetingPolicy.md",
-      "redirect_url": "/powershell/module/teams/Grant-CsBroadcastMeetingPolicy",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "skype/virtual-folder/skype/Grant-CsCallingLineIdentity.md",
       "redirect_url": "/powershell/module/teams/Grant-CsCallingLineIdentity",
       "redirect_document_id": false

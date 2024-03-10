@@ -154,10 +154,4 @@ Returns an object of type Microsoft.Rtc.Management.Voice.NormalizationRuleTestRe
 
 [New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
-
-[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
-
-[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
-
 [Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)

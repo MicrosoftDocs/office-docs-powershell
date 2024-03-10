@@ -32,7 +32,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\Hello.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt).
+This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md).
 
 ### Example 2
 ```powershell
@@ -40,7 +40,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](https://learn.microsoft.com/powershell/module/teams/set-cscallqueue) to provide the audio file id.
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](Set-CsCallQueue.md) to provide the audio file id.
 
 ### Example 3
 ```powershell
@@ -48,7 +48,7 @@ $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
 $audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH.wav" -Content $content
 ```
 
-This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](https://learn.microsoft.com/powershell/module/teams/new-csteamscallholdpolicy) to provide the audio file id.
+This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.md) to provide the audio file id.
 
 ## PARAMETERS
 
@@ -129,7 +129,5 @@ You are responsible for independently clearing and securing all necessary rights
 [Export-CsOnlineAudioFile](Export-CsOnlineAudioFile.md)
 
 [Get-CsOnlineAudioFile](Get-CsOnlineAudioFile.md)
-
-[New-CsOnlineAudioFile](New-CsOnlineAudioFile.md)
 
 [Remove-CsOnlineAudioFile](Remove-CsOnlineAudioFile.md)
