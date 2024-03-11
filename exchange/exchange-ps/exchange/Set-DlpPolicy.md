@@ -12,9 +12,11 @@ ms.reviewer:
 # Set-DlpPolicy
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+**Note**: This cmdlet has been retired from the cloud-based service. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-online-etrs-to-stop-supporting-dlp-policies/ba-p/3886713). Use the Set-DlpCompliancePolicy and Set-DlpComplianceRule cmdlets instead.
 
-Use the Set-DlpPolicy cmdlet to modify data loss prevention (DLP) policies in your organization.
+This cmdlet is functional only in on-premises Exchange.
+
+Use the Set-DlpPolicy cmdlet to modify data loss prevention (DLP) policies that are based on transport rules (mail flow rules) in your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -102,8 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
