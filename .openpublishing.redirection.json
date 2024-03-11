@@ -7816,6 +7816,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "skype/virtual-folder/skype/New-CsTeamsPinnedApp.md",
+      "redirect_url": "/powershell/module/teams/New-CsTeamsPinnedApp",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/virtual-folder/skype/New-CsTeamsTranslationRule.md",
       "redirect_url": "/powershell/module/teams/New-CsTeamsTranslationRule",
       "redirect_document_id": false
@@ -8058,6 +8063,11 @@
     {
       "source_path": "skype/virtual-folder/skype/Remove-CsTeamsNetworkRoamingPolicy.md",
       "redirect_url": "/powershell/module/teams/Remove-CsTeamsNetworkRoamingPolicy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Remove-CsTeamsPinnedApp.md",
+      "redirect_url": "/powershell/module/teams/Remove-CsTeamsPinnedApp",
       "redirect_document_id": false
     },
     {
@@ -8368,6 +8378,11 @@
     {
       "source_path": "skype/virtual-folder/skype/Set-CsTeamsNetworkRoamingPolicy.md",
       "redirect_url": "/powershell/module/teams/Set-CsTeamsNetworkRoamingPolicy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsTeamsPinnedApp.md",
+      "redirect_url": "/powershell/module/teams/Set-CsTeamsPinnedApp",
       "redirect_document_id": false
     },
     {
