@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsupgradepolicy
-applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams
 title: Get-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -136,7 +136,7 @@ If identity parameter is passed, this will return a specific instance. If no ide
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

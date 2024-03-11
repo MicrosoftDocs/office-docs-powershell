@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csexternalaccesspolicy
-applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Microsoft Teams
 title: New-CsExternalAccessPolicy
 schema: 2.0.0
 author: tomkau
@@ -368,7 +368,6 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-applicable: Microsoft Teams, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named

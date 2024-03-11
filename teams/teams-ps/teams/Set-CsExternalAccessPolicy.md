@@ -389,7 +389,6 @@ You can return the tenant ID for each of your Skype for Business Online tenants 
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-applicable: Microsoft Teams, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
