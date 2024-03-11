@@ -5,7 +5,7 @@ title: Set-CsTenantBlockedCallingNumbers
 schema: 2.0.0
 manager: roykuntz
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ---
 
 # Set-CsTenantBlockedCallingNumbers

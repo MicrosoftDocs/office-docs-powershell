@@ -149,7 +149,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>]  [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
+Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]

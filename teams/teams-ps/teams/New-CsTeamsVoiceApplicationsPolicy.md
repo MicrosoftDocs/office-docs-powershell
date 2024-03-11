@@ -487,8 +487,6 @@ Accept wildcard characters: False
 
 When set to `True`, users affected by the policy will be allowed to change an agent's opt-in status in the call queue. When set to `False` (the default value), users affected by the policy won't be allowed to change an agent's opt-in status in the call queue.
 
-Note that the call queue must be configured to allow agents to opt out in order for this option to work.
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

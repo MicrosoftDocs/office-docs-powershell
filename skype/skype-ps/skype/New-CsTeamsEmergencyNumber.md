@@ -4,7 +4,7 @@ online version: https://learn.microsoft.com/powershell/module/skype/new-csteamse
 applicable: Microsoft Teams
 title: New-CsTeamsEmergencyNumber
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 manager: roykuntz
 ms.reviewer: chenc, pthota
 schema: 2.0.0

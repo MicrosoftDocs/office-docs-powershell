@@ -6,7 +6,7 @@ title: Set-CsTeamsTranslationRule
 schema: 2.0.0
 manager: nmurav
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer:
 ---
 

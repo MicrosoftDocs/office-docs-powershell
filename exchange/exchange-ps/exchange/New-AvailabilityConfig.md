@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-AvailabilityConfig cmdlet to create an availability configuration. An availability configuration specifies the Microsoft 365 organizations to exchange free/busy information with. 
+Use the New-AvailabilityConfig cmdlet to create the availability configuration that specifies the Microsoft 365 organizations to exchange free/busy information with.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -44,7 +44,7 @@ This example creates a new availability configuration to share free/busy informa
 ## PARAMETERS
 
 ### -AllowedTenantIds
-The AllowedTenantIds parameter specifies the tenant ID values of Microsoft 365 organization that you want to share free/busy information with (for example, d6b0a40e-029b-43f2-9852-f3724f68ead9). You can specifiy multiple values separated by commas. A maximum of 25 values are allowed.
+The AllowedTenantIds parameter specifies the tenant ID values of Microsoft 365 organization that you want to share free/busy information with (for example, d6b0a40e-029b-43f2-9852-f3724f68ead9). You can specify multiple values separated by commas. A maximum of 25 values are allowed.
 
 ```yaml
 Type: MultiValuedProperty

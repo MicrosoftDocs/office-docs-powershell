@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Note: the command will return immediately, but the Teams application will not reflect the update immediately, please refresh the members page to see the update.
 
-To turn an existing Owner into an Member, specify role parameter as Owner.
+To turn an existing Owner into a Member, specify role parameter as Owner.
 
 Note: last owner cannot be removed from the private channel.
 

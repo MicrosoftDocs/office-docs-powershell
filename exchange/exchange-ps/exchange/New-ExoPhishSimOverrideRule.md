@@ -1,64 +1,50 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://learn.microsoft.com/powershell/module/exchange/new-phishsimoverriderule
-applicable: Security & Compliance
-title: New-PhishSimOverrideRule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-exophishsimoverriderule
+applicable: Exchange Online, Exchange Online Protection
+title: New-ExoPhishSimOverrideRule
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# New-PhishSimOverrideRule
+# New-ExoPhishSimOverrideRule
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in the cloud-based service.
 
-Use the New-PhishSimOverrideRule cmdlet to create third-party phishing simulation override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/skip-filtering-phising-simulations-sec-ops-mailboxes).
+Use the New-ExoPhishSimOverrideRule cmdlet to create third-party phishing simulation override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### Default
 ```
-New-PhishSimOverrideRule [-Name] <String> -Policy <PolicyIdParameter> -SenderIpRanges <MultiValuedProperty>
+New-ExoPhishSimOverrideRule -Policy <PolicyIdParameter> -SenderIpRanges <MultiValuedProperty> 
  [-Comment <String>]
  [-Confirm]
- [-Domains <MultiValuedProperty>]
- [-SenderDomainIs <MultiValuedProperty>]
+ [-DomainController <Fqdn>]
+ [-Domains <Fqdn>]
+ [-Name <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions in the Security & Compliance before you can use this cmdlet. For more information, see [Permissions in the Security & Compliance](https://learn.microsoft.com/microsoft-365/security/office-365-security/scc-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-PhishSimOverrideRule -Name PhishSimOverrideRule -Policy PhishSimOverridePolicy -Domains fabrikam.com,wingtiptoys.com -SenderIpRanges 192.168.1.55
+New-ExoPhishSimOverrideRule -Policy PhishSimOverridePolicy -Domains fabrikam.com,wingtiptoys.com -SenderIpRanges 192.168.1.55
 ```
 
-This example creates a new phishing simulation override rule with the specified settings.
+This example creates a new phishing simulation override rule with the specified settings. Regardless of the Name value specified, the rule name will be `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
 ## PARAMETERS
-
-### -Name
-The Name parameter specifies the name for the policy. Regardless of the value you specify, the name will be PhishSimOverrideRule\<GUID\> where \<GUID\> is a unique GUID value (for example, a0eae53e-d755-4a42-9320-b9c6b55c5011).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Policy
 The Policy parameter specifies the phishing simulation override policy that's associated with the rule. You can use any value that uniquely identifies the policy. For example:
@@ -70,9 +56,9 @@ The Policy parameter specifies the phishing simulation override policy that's as
 
 ```yaml
 Type: PolicyIdParameter
-Parameter Sets: (All))
+Parameter Sets: Default, PublishComplianceTag, ComplianceTag, SetRawXml
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -94,9 +80,9 @@ A phishing simulation entry requires at least one IP address in this parameter a
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -110,9 +96,9 @@ The Comment parameter specifies an optional comment. If you specify a value that
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -131,7 +117,23 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -152,9 +154,9 @@ A phishing simulation requires at least one domain from this parameter and at le
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -163,14 +165,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SenderDomainIs
-This parameter has been replaced by the Domains parameter.
+### -Name
+The Name parameter specifies the name for the policy. Regardless of the value you specify, the name will be `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
 ```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Default
 Aliases:
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -180,13 +182,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance PowerShell.
+The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

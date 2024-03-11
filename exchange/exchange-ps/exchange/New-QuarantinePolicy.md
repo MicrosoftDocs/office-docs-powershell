@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequency
-The EndUserSpamNotificationFrequency parameter species how often quarantine notifications are sent to users. Valid values are:
+The EndUserSpamNotificationFrequency parameter specifies how often quarantine notifications are sent to users. Valid values are:
 
 - 04:00:00 (4 hours)
 - 1.00:00:00 (1 day)
@@ -327,7 +327,7 @@ To modify an existing value and preserve other values, you need to specify all e
 This setting is available only in the built-in quarantine policy named DefaultGlobalTag that controls global quarantine policy settings. To access this quarantine policy, start your command with the following syntax: `Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy ...`.
 
 ```yaml
-Type:
+Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: MultiValuedProperty
 Applicable: Exchange Online, Exchange Online Protection

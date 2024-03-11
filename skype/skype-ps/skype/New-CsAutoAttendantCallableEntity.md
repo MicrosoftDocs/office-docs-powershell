@@ -18,7 +18,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [<CommonParameters>]
+New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [-CallPriority <Int16>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -156,6 +156,30 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallPriority --- Private Preview customers only
+The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint`.
+
+PARAMVALUE: 1 | 2 | 3 | 4 | 5
+
+1 = Very High
+2 = High
+3 = Normal / Default
+4 = Low
+5 = Very Low
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases:
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: 3
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

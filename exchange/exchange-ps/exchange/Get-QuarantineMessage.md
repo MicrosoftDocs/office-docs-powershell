@@ -199,6 +199,7 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePointOnline
 - Teams (currently in Preview)
+- DataLossPrevention
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
@@ -302,6 +303,7 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 
 - AntiMalwarePolicy
 - AntiPhishPolicy
+- DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
 - SafeAttachmentPolicy (Microsoft Defender for Office 365 only)
@@ -325,6 +327,7 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
+- DataLossPrevention
 - FileTypeBlock (common attachments filter in anti-malware policies in EOP)
 - HighConfPhish
 - Malware (anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365)
@@ -398,6 +401,8 @@ The ReleaseStatus parameter filters the results by the release status of the mes
 - Requested
 
 You can specify multiple values separated by commas.
+
+**Note**: Messages that were quarantined and released by Microsoft due to a service issue have the SystemReleased property value TRUE. To filter the results by system released messages, run the following command: `Get-QuarantineMessage | where {$_.systemreleased -like "True"}`.
 
 ```yaml
 Type: ReleaseStatus[]
@@ -530,6 +535,7 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
+- DataLossPrevention
 - HighConfPhish
 - Malware
 - Phish

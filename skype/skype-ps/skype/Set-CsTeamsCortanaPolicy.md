@@ -6,7 +6,7 @@ title: Set-CsTeamsCortanaPolicy
 schema: 2.0.0
 manager: amehta
 author: akshbhat-msft
-ms.author: akshbhat
+ms.author: serdars
 ms.reviewer:
 ---
 
