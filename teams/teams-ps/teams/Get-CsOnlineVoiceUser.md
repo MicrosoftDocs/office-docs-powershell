@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinevoiceuser
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsOnlineVoiceUser
 schema: 2.0.0
 manager: bulenteg
@@ -98,7 +98,7 @@ Specifies the identity of the civic address that is assigned to the target users
 Type: XdsCivicAddressId
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ Possible values are:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Displays the location parameter with its value.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ The default is 100.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ Use this switch to get the users from Microsoft Entra ID.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ Use this switch to get only the users in pending state.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ Example: 98403f08-577c-46dd-851a-f0460a13b03d
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -262,7 +262,7 @@ You can find location identifiers by using the `Get-CsOnlineLisLocation` cmdlet.
 Type: LocationID
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -278,7 +278,7 @@ If specified, the query will return users who have a phone number assigned.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -294,7 +294,7 @@ If specified, the query will return users who do not have a phone number assigne
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -314,7 +314,7 @@ Possible values are:
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -334,7 +334,7 @@ If this parameter is empty, all users are returned.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -352,7 +352,7 @@ The default is 0.
 Type: Unlimited
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -370,7 +370,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csexternalusercommunicationpolicy
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Grant-CsExternalUserCommunicationPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -51,7 +51,7 @@ PARAMVALUE: String
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -67,7 +67,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ PARAMVALUE: Fqdn
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ PARAMVALUE: UserIdParameter
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -115,7 +115,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

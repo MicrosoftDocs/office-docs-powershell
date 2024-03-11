@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinedialinconferencingpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsOnlineDialinConferencingPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -49,7 +49,7 @@ This parameter accepts a wildcard string and returns all policies with identitie
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -65,7 +65,7 @@ A unique identifier specifying the scope and, in some cases the name, of the pol
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -81,7 +81,7 @@ Reserved for Microsoft Internal use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

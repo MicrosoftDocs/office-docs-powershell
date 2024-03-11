@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csonlineschedule
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsOnlineSchedule
 schema: 2.0.0
 manager: bulenteg
@@ -96,7 +96,7 @@ The Name parameter represents a unique friendly name for the schedule.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -112,7 +112,7 @@ The WeeklyRecurrentSchedule parameter indicates that a weekly recurrent schedule
 Type: SwitchParameter
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ List of time ranges for that day.
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ List of time ranges for that day.
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -160,7 +160,7 @@ List of time ranges for that day.
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ List of time ranges for that day.
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ List of time ranges for that day.
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ List of time ranges for that day.
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -224,7 +224,7 @@ List of time ranges for that day.
 Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -242,7 +242,7 @@ For example, if Complement is enabled and the schedule only contains time ranges
 Type: SwitchParameter
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ The FixedSchedule parameter indicates that a fixed schedule is to be created.
 Type: SwitchParameter
 Parameter Sets: FixedSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -274,7 +274,7 @@ List of date-time ranges for a fixed schedule. At most, 10 date-time ranges can 
 Type: System.Collections.Generic.List
 Parameter Sets: FixedSchedule
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

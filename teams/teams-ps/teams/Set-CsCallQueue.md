@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-cscallqueue
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsCallQueue
 schema: 2.0.0
 ms.reviewer:
@@ -103,7 +103,7 @@ PARAMVALUE: Guid
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ The AgentAlertTime parameter represents the time (in seconds) that a call can re
 Type: Int16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ The AllowOptOut parameter indicates whether or not agents can opt in or opt out 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ The DistributionLists parameter lets you add all the members of the distribution
 Type: List
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ The MusicOnHoldFileContent parameter represents music to play when callers are p
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ The Name parameter specifies a unique name for the Call Queue.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ The OboResourceAccountIds parameter lets you add resource account with phone num
 Type: List
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ PARAMVALUE: DisconnectWithBusy | Forward | Voicemail | SharedVoicemail
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ The OverflowActionTarget parameter represents the target of the overflow action.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -256,7 +256,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 Type: Int16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ The OverflowThreshold parameter defines the number of calls that can be in the q
 Type: Int16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ PARAMVALUE: Attendant | Serial | RoundRobin | LongestIdle
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -308,7 +308,7 @@ PARAMVALUE: Disconnect | Forward | Voicemail | SharedVoicemail
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ The TimeoutActionTarget represents the target of the timeout action. If the Time
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -347,7 +347,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 Type: Int16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -364,7 +364,7 @@ The TimeoutThreshold can be any integer value between 0 and 2700 seconds (inclus
 Type: Int16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -382,7 +382,7 @@ PARAMVALUE: Queue | Disconnect | Forward | Voicemail | SharedVoicemail
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -398,7 +398,7 @@ The NoAgentActionTarget represents the target of the no agent action. If the NoA
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -421,7 +421,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 Type: Int16
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -437,7 +437,7 @@ The UseDefaultMusicOnHold parameter indicates that this Call Queue uses the defa
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -453,7 +453,7 @@ The WelcomeMusicAudioFileId parameter represents the audio file to play when cal
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -469,7 +469,7 @@ The PresenceBasedRouting parameter indicates whether or not presence based routi
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -489,7 +489,7 @@ The ConferenceMode parameter indicates whether or not Conference mode will be ap
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -505,7 +505,7 @@ The User parameter lets you add agents to the Call Queue. This parameter expects
 Type: List
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -521,7 +521,7 @@ This parameter is reserved for Microsoft internal use only.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -539,7 +539,7 @@ You can query the supported languages using the Get-CsAutoAttendantSupportedLang
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -555,7 +555,7 @@ This parameter is reserved for Microsoft internal use only.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -571,7 +571,7 @@ The OverflowDisconnectAudioFilePrompt parameter indicates the unique identifier 
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -587,7 +587,7 @@ The OverflowDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -603,7 +603,7 @@ The OverflowRedirectPersonAudioFilePrompt parameter indicates the unique identif
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -619,7 +619,7 @@ The OverflowRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Spe
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -635,7 +635,7 @@ The OverflowRedirectVoiceAppAudioFilePrompt parameter indicates the unique ident
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -651,7 +651,7 @@ The OverflowRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -667,7 +667,7 @@ The OverflowRedirectPhoneNumberAudioFilePrompt parameter indicates the unique id
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -683,7 +683,7 @@ The OverflowRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-t
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -699,7 +699,7 @@ The OverflowRedirectVoiceMailAudioFilePrompt parameter indicates the unique iden
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -715,7 +715,7 @@ The OverflowRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -731,7 +731,7 @@ The OverflowSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Sp
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -747,7 +747,7 @@ The OverflowSharedVoicemailAudioFilePrompt parameter indicates the unique identi
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -763,7 +763,7 @@ The EnableOverflowSharedVoicemailTranscription parameter is used to turn on tran
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -779,7 +779,7 @@ The EnableOverflowSharedVoicemailSystemPromptSuppress parameter is used to turn 
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -795,7 +795,7 @@ The TimeoutDisconnectAudioFilePrompt parameter indicates the unique identifier f
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -811,7 +811,7 @@ The TimeoutDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -827,7 +827,7 @@ The TimeoutRedirectPersonAudioFilePrompt parameter indicates the unique identifi
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -843,7 +843,7 @@ The TimeoutRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Spee
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -859,7 +859,7 @@ The TimeoutRedirectVoiceAppAudioFilePrompt parameter indicates the unique identi
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -875,7 +875,7 @@ The TimeoutRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-S
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -891,7 +891,7 @@ The TimeoutRedirectPhoneNumberAudioFilePrompt parameter indicates the unique ide
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -907,7 +907,7 @@ The TimeoutRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -923,7 +923,7 @@ The TimeoutRedirectVoiceMailAudioFilePrompt parameter indicates the unique ident
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -939,7 +939,7 @@ The TimeoutRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-S
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -955,7 +955,7 @@ The TimeoutSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Spe
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -971,7 +971,7 @@ The TimeoutSharedVoicemailAudioFilePrompt parameter indicates the unique identif
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -987,7 +987,7 @@ The EnableTimeoutSharedVoicemailTranscription parameter is used to turn on trans
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1003,7 +1003,7 @@ The EnableTimeoutSharedVoicemailSystemPromptSuppression parameter is used to tur
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1019,7 +1019,7 @@ The NoAgentDisconnectTextToSpeechPrompt parameter indicates the Text-to-Speech (
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1035,7 +1035,7 @@ The NoAgentDisconnectAudioFilePrompt parameter indicates the unique identifier f
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1051,7 +1051,7 @@ The NoAgentRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Spee
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1067,7 +1067,7 @@ The NoAgentRedirectPersonAudioFilePrompt parameter indicates the unique identifi
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1083,7 +1083,7 @@ The NoAgentRedirectVoiceAppsTextToSpeechPrompt parameter indicates the Text-to-S
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1099,7 +1099,7 @@ The NoAgentRedirectVoiceAppAudioFilePrompt parameter indicates the unique identi
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1115,7 +1115,7 @@ The NoAgentRedirectPhoneNumberTextToSpeechPrompt parameter indicates the Text-to
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1131,7 +1131,7 @@ The NoAgentRedirectPhoneNumberAudioFilePrompt parameter indicates the unique ide
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1147,7 +1147,7 @@ The NoAgentRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-S
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1163,7 +1163,7 @@ The NoAgentRedirectVoiceMailAudioFilePrompt parameter indicates the unique ident
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1179,7 +1179,7 @@ The NoAgentSharedVoicemailTextToSpeechPrompt parameter indicates the Text-to-Spe
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1195,7 +1195,7 @@ The NoAgentSharedVoicemailAudioFilePrompt parameter indicates the unique identif
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1211,7 +1211,7 @@ The EnableNoAgentSharedVoicemailTranscription parameter is used to turn on trans
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1227,7 +1227,7 @@ The EnableNoAgentSharedVoicemailSystemPromptSuppression parameter is used to tur
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1243,7 +1243,7 @@ Id of the channel to connect a call queue to.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1259,7 +1259,7 @@ The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1275,7 +1275,7 @@ This is a list of GUIDs for users who are authorized to make changes to this cal
 Type: List
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1291,7 +1291,7 @@ This is a list of GUIDs of authorized users who should not appear on the list of
 Type: List
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1409,7 +1409,7 @@ The CallbackOfferAudioFilePromptResourceId parameter indicates the unique identi
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1425,7 +1425,7 @@ The CallbackOfferTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS)
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -1441,7 +1441,7 @@ The CallbackEmailNotificationTarget parameter must be set to a group ID (Microso
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

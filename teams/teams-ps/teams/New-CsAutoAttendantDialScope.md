@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantdialscope
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendantDialScope
 schema: 2.0.0
 manager: bulenteg
@@ -53,7 +53,7 @@ Indicates that a dial-scope based on groups (distribution lists, security groups
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -71,7 +71,7 @@ Group IDs can be obtained by using the Find-CsGroup cmdlet.
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

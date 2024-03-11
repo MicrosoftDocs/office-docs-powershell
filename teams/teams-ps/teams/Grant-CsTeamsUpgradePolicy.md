@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/grant-csteamsupgradepolicy
-applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
 title: Grant-CsTeamsUpgradePolicy
 schema: 2.0.0
 manager: bulenteg
@@ -173,7 +173,7 @@ The user you want to grant policy to. This can be specified as SIP address, User
 Type: UserIdParameter
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
 
 Required: False
 Position: 0
@@ -190,7 +190,7 @@ The name of the policy instance.
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
 
 Required: False
 Position: 1
@@ -207,7 +207,7 @@ Use this switch if you want to grant the specified policy to be the default poli
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -224,7 +224,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online, Skype for Business Server 2019, Skype for Business Server 2015
+applicable: Microsoft Teams, Skype for Business Server 2019, Skype for Business Server 2015
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ Do not use.
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

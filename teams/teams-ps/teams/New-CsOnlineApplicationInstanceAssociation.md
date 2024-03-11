@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csonlineapplicationinstanceassociation
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsOnlineApplicationInstanceAssociation
 schema: 2.0.0
 manager: bulenteg
@@ -119,7 +119,7 @@ The Identities parameter is the identities of application instances to be associ
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -135,7 +135,7 @@ The ConfigurationId parameter is the identity of the configuration that would be
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -156,7 +156,7 @@ It can be one of two values:
 Type: System.string
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -180,7 +180,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 Type: Int16
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

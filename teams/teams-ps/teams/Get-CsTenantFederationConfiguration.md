@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantfederationconfiguration
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTenantFederationConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -73,7 +73,7 @@ However, this is valid syntax for the Get-CsTenantFederationConfiguration cmdlet
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ For example:
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -110,7 +110,7 @@ This parameter is not used with Skype for Business Online.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

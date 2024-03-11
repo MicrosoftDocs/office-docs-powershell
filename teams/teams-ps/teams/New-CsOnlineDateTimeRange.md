@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinedatetimerange
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsOnlineDateTimeRange
 schema: 2.0.0
 manager: bulenteg
@@ -58,7 +58,7 @@ The Start parameter represents the start bound of the date-time range.
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ If not present, the end bound of the date time range is set to 00:00 of the day 
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

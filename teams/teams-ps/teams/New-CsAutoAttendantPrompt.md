@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantprompt
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendantPrompt
 schema: 2.0.0
 manager: bulenteg
@@ -79,7 +79,7 @@ This is explicitly required if both Audio File and TTS prompts are specified. Ot
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ This parameter is required when audio file prompts are being created. You can cr
 Type: Object
 Parameter Sets: AudioFile, Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ This parameter is required when text to speech prompts are being created.
 Type: System.String
 Parameter Sets: TextToSpeech, Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

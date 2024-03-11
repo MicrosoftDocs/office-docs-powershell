@@ -8,7 +8,7 @@ author: szymonkatraMSFT
 ms.author: szymonkatra
 ms.reviewer:
 manager: stanlythomas
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 ---
 
 # Set-CsTeamsMeetingBrandingPolicy

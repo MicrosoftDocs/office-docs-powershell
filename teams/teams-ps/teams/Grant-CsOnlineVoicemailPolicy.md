@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csonlinevoicemailpolicy
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Grant-CsOnlineVoicemailPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -58,7 +58,7 @@ Sets the parameters of the Global policy instance to the values in the specified
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -74,7 +74,7 @@ Enables you to pass a user object through the pipeline that represents the user 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ A unique identifier(name) of the policy.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -106,7 +106,7 @@ Specifies the group used for the group policy assignment.
 Type: String
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -122,7 +122,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ The Identity parameter represents the ID of the specific user in your organizati
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

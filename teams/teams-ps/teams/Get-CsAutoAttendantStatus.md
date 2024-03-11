@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsAutoAttendantStatus
 schema: 2.0.0
 manager: bulenteg
@@ -52,7 +52,7 @@ Represents the identifier for the auto attendant whose provisioning status is to
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -72,7 +72,7 @@ Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
 Accepted values: AudioFile, DialByNameVoiceResponses, SipProvisioning
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

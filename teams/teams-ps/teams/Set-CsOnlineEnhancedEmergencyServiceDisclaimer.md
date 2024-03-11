@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineenhancedemergencyservicedisclaimer
-applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 title: Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
 manager: bulenteg
@@ -57,7 +57,7 @@ Specifies the region or country whose terms and conditions you wish to accept. Y
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named
@@ -73,7 +73,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: DC
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ This parameter is reserved for internal Microsoft use.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online, Microsoft Teams
+applicable: Microsoft Teams, Microsoft Teams
 
 Required: False
 Position: Named

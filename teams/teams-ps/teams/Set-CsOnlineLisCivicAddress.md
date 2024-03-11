@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineliscivicaddress
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsOnlineLisCivicAddress
 schema: 2.0.0
 manager: bulenteg
@@ -58,7 +58,7 @@ Specifies the unique identifier of the civic address to be modified.
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -74,7 +74,7 @@ Specifies a new city for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Short form of the city name.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ Specifies a new company name for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Used to store TaxId for regulatory reasons.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies a new country or region for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ Specifies a new description for the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ Specifies the new numeric portion of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ For example, if the property was multiplexed, the HouseNumberSuffix parameter wo
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ Specifies the new postal code of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ For example, "425 Smith Avenue NE".
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -271,7 +271,7 @@ For example, "425 NE Smith Avenue ".
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -287,7 +287,7 @@ Specifies the new state or province of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -303,7 +303,7 @@ Specifies the new street name of the civic address.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -320,7 +320,7 @@ The street suffix will typically be something like street, avenue, way, or boule
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -336,7 +336,7 @@ Microsoft internal use only
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -353,7 +353,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -385,7 +385,7 @@ This is used in Direct Routing EGW scenarios.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -401,7 +401,7 @@ Specifies the angular distance of a place north or south of the earth's equator 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -417,7 +417,7 @@ Specifies the angular distance of a place east or west of the meridian at Greenw
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

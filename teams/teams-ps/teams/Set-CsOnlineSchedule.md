@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlineschedule
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsOnlineSchedule
 schema: 2.0.0
 manager: bulenteg
@@ -66,7 +66,7 @@ The Instance parameter is the object reference to the schedule to be modified.
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

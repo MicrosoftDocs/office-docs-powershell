@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/get-cstenant
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTenant
 schema: 2.0.0
 manager: bulenteg
@@ -110,7 +110,7 @@ This parameter is not used with Skype for Business Online and will be deprecated
 Type: Fqdn
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ You cannot use both the Identity parameter and the Filter parameter in the same 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ If you do not include either the Identity or the Filter parameter then the `Get-
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -190,7 +190,7 @@ If you set the tenants to 7 but you have only three contacts in your forest, the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

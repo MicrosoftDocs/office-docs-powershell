@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/grant-cscallinglineidentity
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Grant-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
@@ -67,7 +67,7 @@ Sets the parameters of the Global policy instance to the values in the specified
 Type: SwitchParameter
 Parameter Sets: (GrantToTenant)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Enables you to pass a user object through the pipeline that represents the user 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ The name (Identity) of the Caller ID policy to be assigned. To remove an existin
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -115,7 +115,7 @@ Specifies the group used for the group policy assignment.
 Type: String
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -131,7 +131,7 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ the user's ObjectId/Identity.
 Type: String
 Parameter Sets: (Identity)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -163,7 +163,7 @@ The WhatIf switch causes the command to simulate its results. By using this swit
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenu
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendantMenu
 schema: 2.0.0
 manager: bulenteg
@@ -54,7 +54,7 @@ The Name parameter represents a friendly name for the menu.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -73,7 +73,7 @@ You can create menu options by using the New-CsAutoAttendantMenuOption cmdlet.
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ You can create new prompts by using the New-CsAutoAttendantPrompt cmdlet.
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ The EnableDialByName parameter lets users do a directory search by recipient nam
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ Possible values are
 Type: Microsoft.Rtc.Management.Hosted.OAA.Models.DirectorySearchMethod
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

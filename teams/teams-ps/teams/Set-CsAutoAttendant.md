@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csautoattendant
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsAutoAttendant
 schema: 2.0.0
 manager: bulenteg
@@ -127,7 +127,7 @@ You can retrieve an object reference to an existing AA by using the Get-CsAutoAt
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

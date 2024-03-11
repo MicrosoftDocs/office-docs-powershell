@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedlanguage
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsAutoAttendantSupportedLanguage
 schema: 2.0.0
 manager: bulenteg
@@ -49,7 +49,7 @@ The Identity parameter designates a specific language to be retrieved. If this p
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

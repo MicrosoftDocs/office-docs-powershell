@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/new-csedgeallowlist
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsEdgeAllowList
 schema: 2.0.0
 manager: bulenteg
@@ -113,7 +113,7 @@ For example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

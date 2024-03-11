@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendant
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendant
 schema: 2.0.0
 manager: bulenteg
@@ -266,7 +266,7 @@ The Name parameter is a friendly name that is assigned to the AA.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -284,7 +284,7 @@ You can query the supported languages using the [`Get-CsAutoAttendantSupportedLa
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -302,7 +302,7 @@ You can query the supported timezones using the [`Get-CsAutoAttendantSupportedTi
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -321,7 +321,7 @@ You can create the DefaultCallFlow by using the [`New-CsAutoAttendantCallFlow`](
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -340,7 +340,7 @@ You can create CallFlows by using the [`New-CsAutoAttendantCallFlow`](New-CsAuto
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -359,7 +359,7 @@ You can create CallHandlingAssociations by using the `New-CsAutoAttendantCallHan
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -378,7 +378,7 @@ You can create callable entities by using the `New-CsAutoAttendantCallableEntity
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -401,7 +401,7 @@ $defaultVoice = $language.Voices[0].Id
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -417,7 +417,7 @@ The EnableVoiceResponse parameter indicates whether voice response for AA is ena
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -437,7 +437,7 @@ Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](New-CsA
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -457,7 +457,7 @@ Dial scopes can be created by using the [`New-CsAutoAttendantDialScope`](New-CsA
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -472,7 +472,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

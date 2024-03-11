@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallflow
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendantCallFlow
 schema: 2.0.0
 manager: bulenteg
@@ -55,7 +55,7 @@ The Name parameter represents a unique friendly name for the call flow.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -74,7 +74,7 @@ You can create a new menu by using the [`New-CsAutoAttendantMenu`](New-CsAutoAtt
 Type: System.Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ You can create prompts by using the [`New-CsAutoAttendantPrompt`](New-CsAutoAtte
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ If specified, DTMF and speech inputs will not be processed while the greeting or
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

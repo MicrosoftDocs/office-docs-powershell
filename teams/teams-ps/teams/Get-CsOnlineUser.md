@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineuser
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsOnlineUser
 schema: 2.0.0
 manager: sshastri
@@ -133,7 +133,7 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -164,7 +164,7 @@ Using the Teams PowerShell Module version 2.6 or earlier only, you can use the f
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -180,7 +180,7 @@ This parameter has been deprecated from the Teams PowerShell Modules version 3.0
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ This parameter has been deprecated from the Teams PowerShell Modules version 3.0
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -380,7 +380,7 @@ The following filter syntaxes have been modified in Teams PowerShell Module 3.0.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -400,7 +400,7 @@ The LdapFilter parameter uses the LDAP query language when creating filters. The
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -418,7 +418,7 @@ When present, the cmdlet returns a collection of users homed on Microsoft Teams 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: OnLyncServer
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -434,7 +434,7 @@ This parameter has been deprecated from the Teams PowerShell Modules version 3.0
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -450,7 +450,7 @@ This parameter has been deprecated from the Teams PowerShell Modules version 3.0
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -471,7 +471,7 @@ The result size can be set to any whole number between 0 and 2147483647, inclusi
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -487,7 +487,7 @@ PARAMVALUE: SwitchParameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -528,7 +528,7 @@ Users are not allowed to log on to unless they are assigned to a Registrar pool.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

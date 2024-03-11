@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/new-csedgedomainpattern
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsEdgeDomainPattern
 schema: 2.0.0
 manager: bulenteg
@@ -74,7 +74,7 @@ Note that you cannot use wildcards when specifying a domain name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

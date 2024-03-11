@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/test-cseffectivetenantdialplan
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Test-CsEffectiveTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
@@ -59,7 +59,7 @@ The DialedNumber parameter is the phone number to be normalized with the effecti
 Type: PhoneNumber
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -75,7 +75,7 @@ Indicates the identity of the user account to be tested against. The user's SIP 
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ If the Force switch isn't provided in the command, you're prompted for administr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ The EffectiveTenantDialPlanName parameter is the effective tenant dial plan name
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ Runs the test only against Tenant-level dial plans (does not take into account S
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

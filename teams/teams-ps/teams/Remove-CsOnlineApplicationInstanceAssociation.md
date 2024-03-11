@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineapplicationinstanceassociation
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsOnlineApplicationInstanceAssociation
 schema: 2.0.0
 manager: bulenteg
@@ -44,7 +44,7 @@ The identities for the application instances whose configuration associations ar
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

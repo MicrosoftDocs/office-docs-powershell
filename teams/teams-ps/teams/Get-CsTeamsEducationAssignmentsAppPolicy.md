@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamseducationassignmentsapppolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTeamsEducationAssignmentsAppPolicy
 schema: 2.0.0
 ms.reviewer:

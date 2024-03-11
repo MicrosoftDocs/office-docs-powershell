@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/set-cstenantmigrationconfiguration
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsTenantMigrationConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -52,7 +52,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -68,7 +68,7 @@ The Force switch specifies whether to suppress warning and confirmation messages
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Unique identifier for the Migration Configuration.
 Type: XdsIdentity
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -101,7 +101,7 @@ You can retrieve this object reference by calling the `Get-CsTenantMigrationConf
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Set this to false to disable the Meeting Migration Service.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ Shows what would happen if the cmdlet runs.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsapppermissionpolicy
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsTeamsAppPermissionPolicy
 schema: 2.0.0
 ms.reviewer:

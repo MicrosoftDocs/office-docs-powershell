@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsclientconfiguration
-applicable: Skype for Business Online
-Module Name: Skype for Business Online
+applicable: Microsoft Teams
+Module Name: MicrosoftTeams
 title: Set-CsTeamsClientConfiguration
 schema: 2.0.0
 manager: bulenteg

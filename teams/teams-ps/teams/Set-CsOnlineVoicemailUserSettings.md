@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinevoicemailusersettings
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsOnlineVoicemailUserSettings
 schema: 2.0.0
 manager: bulenteg
@@ -76,7 +76,7 @@ The Identity parameter represents the ID of the specific user in your organizati
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -98,7 +98,7 @@ The CallAnswerRule parameter represents the value of the call answer rule, which
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ If the user's normal custom greeting is not set and DefaultGreetingPromptOverwri
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ If the user's out-of-office custom greeting is not set and DefaultOofGreetingPro
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ The OofGreetingEnabled parameter represents whether to play out-of-office greeti
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ The OofGreetingFollowAutomaticRepliesEnabled parameter represents whether to pla
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ The OofGreetingFollowCalendarEnabled parameter represents whether to play out-of
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -268,7 +268,7 @@ The following languages are supported:
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -284,7 +284,7 @@ Specifies whether voicemail and transcription data is shared with the service fo
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -302,7 +302,7 @@ For user with Enterprise Voice enabled, a valid telephone number could also be a
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -318,7 +318,7 @@ The VoicemailEnabled parameter represents whether to enable voicemail service. I
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -334,7 +334,7 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -350,7 +350,7 @@ Prompts you for confirmation before executing the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

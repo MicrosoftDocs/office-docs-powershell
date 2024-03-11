@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedtimezone
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsAutoAttendantSupportedTimeZone
 schema: 2.0.0
 manager: bulenteg
@@ -50,7 +50,7 @@ The Identity parameter specifies a time zone to be retrieved. If this parameter 
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

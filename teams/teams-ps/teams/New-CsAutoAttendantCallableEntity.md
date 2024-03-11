@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallableentity
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendantCallableEntity
 schema: 2.0.0
 manager: bulenteg
@@ -83,7 +83,7 @@ The Identity parameter represents the ID of the callable entity; this can be eit
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ The Type parameter represents the type of the callable entity, which can be any 
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Enables the email transcription of voicemail, this is only supported with shared
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Suppresses the "Please leave a message after the tone" system prompt when transf
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ PARAMVALUE: 1 | 2 | 3 | 4 | 5
 Type: Int16
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

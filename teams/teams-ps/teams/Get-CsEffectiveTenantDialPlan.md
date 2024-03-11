@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/get-cseffectivetenantdialplan
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsEffectiveTenantDialPlan
 schema: 2.0.0
 manager: bulenteg
@@ -45,7 +45,7 @@ The Identity parameter is the unique identifier of the user for whom to retrieve
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -61,7 +61,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -80,7 +80,7 @@ Only objects that exist in the specified location are returned.
 Type: OUIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ If set to 0, the command will run, but no data will be returned.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

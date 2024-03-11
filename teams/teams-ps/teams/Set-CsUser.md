@@ -412,7 +412,7 @@ Conversely, dialing just the extension (51297) or using Skype for Business to di
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

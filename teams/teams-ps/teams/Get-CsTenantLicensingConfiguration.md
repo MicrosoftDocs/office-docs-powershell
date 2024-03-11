@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantlicensingconfiguration
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTenantLicensingConfiguration
 schema: 2.0.0
 manager: bulenteg
@@ -58,7 +58,7 @@ Because each tenant is limited to a single, global collection of licensing confi
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -75,7 +75,7 @@ Because each tenant is limited to a single, global collection of licensing setti
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 2

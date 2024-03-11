@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinesipdomain
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsOnlineSipDomain
 schema: 2.0.0
 manager: bulenteg
@@ -49,7 +49,7 @@ A specific domain to get the status of.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -65,7 +65,7 @@ Type: DomainStatus
 Parameter Sets: (All)
 Aliases:
 Accepted values: All, Enabled, Disabled
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None

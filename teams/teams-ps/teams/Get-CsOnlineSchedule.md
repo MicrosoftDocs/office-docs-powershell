@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineschedule
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsOnlineSchedule
 schema: 2.0.0
 manager: bulenteg
@@ -49,7 +49,7 @@ The Id for the schedule to be retrieved. If this parameter is not specified, the
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 0

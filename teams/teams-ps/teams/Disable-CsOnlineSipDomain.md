@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/disable-csonlinesipdomain
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Disable-CsOnlineSipDomain
 schema: 2.0.0
 manager: bulenteg
@@ -67,7 +67,7 @@ The SIP domain to be disabled for online provisioning in Skype for Business Onli
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 Required: True
 Position: Named
 Default value: None
@@ -99,7 +99,7 @@ Suppresses all confirmation prompts that might occur when running the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None

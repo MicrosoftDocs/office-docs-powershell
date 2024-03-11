@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/remove-cscallqueue
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Remove-CsCallQueue
 schema: 2.0.0
 ms.reviewer:
@@ -43,7 +43,7 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -59,7 +59,7 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

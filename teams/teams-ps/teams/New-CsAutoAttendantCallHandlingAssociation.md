@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallhandlingassociation
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendantCallHandlingAssociation
 schema: 2.0.0
 manager: bulenteg
@@ -99,7 +99,7 @@ You can create a call flow by using the [`New-CsAutoAttendantCallFlow`](New-CsAu
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -118,7 +118,7 @@ You can create a schedule by using the [`New-CsOnlineSchedule`](New-CsOnlineSche
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -138,7 +138,7 @@ The Type parameter represents the type of the call handling association. Current
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -154,7 +154,7 @@ The Disable parameter, if set, establishes that the call handling association is
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ If you are using a remote session of Windows PowerShell and are connected only t
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

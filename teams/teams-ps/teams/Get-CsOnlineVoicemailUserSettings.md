@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailusersettings
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsOnlineVoicemailUserSettings
 schema: 2.0.0
 manager: bulenteg
@@ -43,7 +43,7 @@ The Identity parameter represents the ID of the specific user in your organizati
 Type: System.String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named

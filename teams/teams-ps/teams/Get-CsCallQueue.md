@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-cscallqueue
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsCallQueue
 schema: 2.0.0
 ms.reviewer:
@@ -50,7 +50,7 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -66,7 +66,7 @@ PARAMVALUE: Guid
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ The First parameter gets the first N Call Queues. The default behavior is to ret
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ The Skip parameter skips the first N Call Queues. It is intended to be used for 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ The ExcludeContent parameter only displays the Name and Id of the Call Queues
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ The Sort parameter specifies the property used to sort.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -146,7 +146,7 @@ The Descending parameter sorts Call Queues in descending order
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ The NameFilter parameter returns Call Queues where name contains specified strin
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named

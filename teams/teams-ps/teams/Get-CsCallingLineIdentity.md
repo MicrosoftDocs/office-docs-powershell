@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
@@ -55,7 +55,7 @@ The Identity parameter identifies the Caller ID policy.
 Type: String
 Parameter Sets: (Identity)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -71,7 +71,7 @@ The Filter parameter lets you insert a string through which your search results 
 Type: String
 Parameter Sets: (Filter)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

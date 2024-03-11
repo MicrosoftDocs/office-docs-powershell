@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: Skype for Business Online
+Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingbroadcastconfiguration
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTeamsMeetingBroadcastConfiguration
 schema: 2.0.0
 manager: bulenteg

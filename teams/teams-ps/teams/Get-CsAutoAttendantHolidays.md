@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantholidays
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsAutoAttendantHolidays
 schema: 2.0.0
 manager: bulenteg
@@ -63,7 +63,7 @@ Represents the identifier for the auto attendant whose holidays are to be retrie
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -79,7 +79,7 @@ The Force switch specifies whether to suppress warning and confirmation messages
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -94,7 +94,7 @@ The Years parameter represents the years for the holidays to be retrieved. If th
 Type: System.Collections.Generic.List[System.String]
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ The Names parameter represents the names for the holidays to be retrieved. If th
 Type: System.Collections.Generic.List[System.Int32]
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

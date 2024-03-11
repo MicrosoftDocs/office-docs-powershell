@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendant
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsAutoAttendant
 schema: 2.0.0
 manager: bulenteg
@@ -82,7 +82,7 @@ If you specify this parameter, you can't specify the other parameters.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 0
@@ -98,7 +98,7 @@ The First parameter indicates the maximum number of auto attendants to retrieve 
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ The Skip parameter indicates the number of initial auto attendants to skip in th
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ If specified, only auto attendants whose names match that value would be returne
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ If specified, the retrieved auto attendants would be sorted by the specified pro
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ If specified, the retrieved auto attendants would be sorted in descending order.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ If specified, the status records for each auto attendant in the result set are a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ If specified, only auto attendants' names, identities and associated application
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

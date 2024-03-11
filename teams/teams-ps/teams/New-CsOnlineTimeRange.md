@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinetimerange
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsOnlineTimeRange
 schema: 2.0.0
 manager: bulenteg
@@ -55,7 +55,7 @@ The Start parameter represents the start bound of the time range.
 Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -71,7 +71,7 @@ The End parameter represents the end bound of the time range.
 Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

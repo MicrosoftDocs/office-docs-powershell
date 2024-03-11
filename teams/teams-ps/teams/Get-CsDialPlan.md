@@ -149,7 +149,6 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
 
 Required: False
 Position: Named

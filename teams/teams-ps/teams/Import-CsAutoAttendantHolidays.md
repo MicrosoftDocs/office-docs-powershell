@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/import-csautoattendantholidays
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Import-CsAutoAttendantHolidays
 schema: 2.0.0
 manager: bulenteg
@@ -69,7 +69,7 @@ The identity for the AA whose holiday schedules are to be imported.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -85,7 +85,7 @@ The Input parameter specifies the holiday schedule information that is to be imp
 Type: System.Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csexternalaccesspolicy
-applicable: Microsoft Teams, Skype for Business Online, Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsExternalAccessPolicy
 schema: 2.0.0
 author: tomkau
@@ -220,7 +220,7 @@ This parameter is not intended for use with the on-premises version of Skype for
 Type: UserIdParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -236,7 +236,7 @@ PARAMVALUE: Automatic | All | SubscriptionDefaults | TenantDefinedOnly
 Type: PolicyFilter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenuoption
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: New-CsAutoAttendantMenuOption
 schema: 2.0.0
 manager: bulenteg
@@ -66,7 +66,7 @@ The Action parameter represents the action to be taken when the menu option is a
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ The DtmfResponse parameter indicates the key on the telephone keypad to be press
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ Voice responses are currently limited to one voice response per menu option.
 Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ Use the New-CsAutoAttendantCallableEntity cmdlet to create new callable entities
 Type: Object
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ This parameter is required if the **Action** is set to **Announcement**.
 Type: Microsoft.Rtc.Management.Hosted.OAA.Models.Prompt
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

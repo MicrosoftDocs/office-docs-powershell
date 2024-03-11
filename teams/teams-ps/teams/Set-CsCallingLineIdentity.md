@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/set-cscallinglineidentity
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Set-CsCallingLineIdentity
 schema: 2.0.0
 manager: bulenteg
@@ -79,7 +79,7 @@ The BlockIncomingPstnCallerID switch is specific to incoming calls from a PSTN c
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ The possible values are Anonymous, Service, LineUri and Resource.
 Type: CallingIDSubstituteType
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ This parameter sets the Calling party name (typically referred to as CNAM) on th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ The Description parameter briefly describes the Caller ID policy.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ EnableUserOverride has precedence over other settings in the policy unless subst
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ The Identity parameter identifies the Caller ID policy.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -182,7 +182,7 @@ This parameter specifies the ObjectId of a resource account/online application i
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxx
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ By using this switch, you can view what changes would occur without having to co
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ The Confirm switch causes the command to pause processing, and requires confirma
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

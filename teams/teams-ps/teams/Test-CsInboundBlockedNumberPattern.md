@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/test-csinboundblockednumberpattern
-applicable: Skype for Business Online 
+applicable: Microsoft Teams 
 title: Test-CsInboundBlockedNumberPattern
 author: tomkau
 ms.author: tomkau

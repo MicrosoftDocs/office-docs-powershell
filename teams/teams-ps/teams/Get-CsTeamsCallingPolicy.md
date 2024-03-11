@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
-Module Name: Skype for Business Online
+Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscallingpolicy
 applicable: Microsoft Teams
 title: Get-CsTeamsCallingPolicy

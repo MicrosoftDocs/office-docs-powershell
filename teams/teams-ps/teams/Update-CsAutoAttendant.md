@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/update-csautoattendant
-applicable: Skype for Business Online
+applicable: Microsoft Teams
 title: Update-CsAutoAttendant
 schema: 2.0.0
 manager: bulenteg
@@ -45,7 +45,7 @@ The identity for the AA whose resources are to be updated.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: True
 Position: 0
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
