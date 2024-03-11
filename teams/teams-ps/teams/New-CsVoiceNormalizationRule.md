@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-csvoicenormalizationrule
-applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
+applicable: Microsoft Teams
 title: New-CsVoiceNormalizationRule
 schema: 2.0.0
 manager: bulenteg
@@ -114,7 +114,6 @@ You cannot include the Identity parameter and the Parent parameter in the same c
 Type: XdsIdentity
 Parameter Sets: Identity
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: True
 Position: 2
@@ -134,7 +133,6 @@ The Name parameter and the Identity parameter cannot be used in the same command
 Type: String
 Parameter Sets: ParentAndRelativeKey
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: True
 Position: Named
@@ -157,7 +155,6 @@ If you include the Parent parameter, the Name parameter is also required.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
 Position: Named
@@ -175,7 +172,6 @@ Maximum string length: 512 characters.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019, Microsoft Teams
 
 Required: False
 Position: Named
