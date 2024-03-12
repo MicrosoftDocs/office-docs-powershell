@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csuserpolicyassignment
 schema: 2.0.0
 author: tomkau
-author: tomkau
+ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 

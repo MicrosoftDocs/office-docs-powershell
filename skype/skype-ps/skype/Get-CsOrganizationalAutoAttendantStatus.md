@@ -6,7 +6,7 @@ title: Get-CsOrganizationalAutoAttendantStatus
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
-author: tomkau
+ms.author: tomkau
 ms.reviewer: williamlooney
 ---
 
