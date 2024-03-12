@@ -7,7 +7,7 @@ schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Set-CsTenantFederationConfiguration
@@ -20,8 +20,9 @@ These settings are used to determine which domains (if any) your users are allow
 
 ### Identity (Default)
 ```
-Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
- [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
+Set-CsTenantFederationConfiguration [-Tenant <Guid>]
+ [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
+ [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
  [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -29,7 +30,7 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedD
 ### Instance
 ```
 Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedDomainsChoice>]
- [-BlockedDomains <List>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
+ [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
  [-AllowedDomainsAsAList <List>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -150,6 +151,22 @@ Set-CsTenantFederationConfiguration -AllowTeamsConsumer $True -AllowTeamsConsume
 
 The command shown in Example 9 enables communication with people using Teams with an account that's not managed by an organization, to only be initiated by people in your organization. This means that people using Teams with an account that's not managed by an organization will not be able to discover or start a conversation with people in your organization.
 
+### -------------------------- Example 10 -------------------------
+```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+Set-CsTenantFederationConfiguration -BlockedDomains $list
+
+Set-CsTenantFederationConfiguration -BlockAllSubdomains $True
+```
+
+Example 10 shows how you can block all subdomains of domains in BlockedDomains list.
+In this example, all users from contoso.com and fabrikam.com will be blocked.
+When the BlockAllSubdomains is enabled, all users from all subdomains of all domains in BlockedDomains list will also be blocked.
+So, users from subdomain.contoso.com and subdomain.fabrikam.com will be blocked.
+Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain of contoso.com.
+
 ## PARAMETERS
 
 ### -AllowedDomains
@@ -245,6 +262,25 @@ The BlockedDomains parameter can support up to 4,000 domains.
 
 ```yaml
 Type: List
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockAllSubdomains
+If the BlockedDomains parameter is used, then BlockAllSubdomains can be used to activate all subdomains blocking.
+If the BlockedDomains parameter is ignored, then BlockAllSubdomains is also ignored.
+Just like for BlockedDomains, users will be disallowed from communicating with users from blocked domains.
+But all subdomains for domains in this list will also be blocked.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
