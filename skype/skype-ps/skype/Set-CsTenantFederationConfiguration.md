@@ -162,7 +162,7 @@ Set-CsTenantFederationConfiguration -BlockAllSubdomains $True
 ```
 
 Example 10 shows how you can block all subdomains of domains in BlockedDomains list.
-In this example, contoso.com is on the BlockDomains list which blocks all users from contoso.com and fabrikam.com.
+In this example, all users from contoso.com and fabrikam.com will be blocked.
 When the BlockAllSubdomains is enabled, all users from subdomain.contoso.com and subdomain.fabrikam.com will also be blocked.
 Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain of contoso.com.
 
