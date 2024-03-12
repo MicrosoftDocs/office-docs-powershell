@@ -7096,6 +7096,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingBridge.md",
+      "redirect_url": "/powershell/module/teams/Get-CsOnlineDialInConferencingBridge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingLanguagesSupported.md",
+      "redirect_url": "/powershell/module/teams/Get-CsOnlineDialInConferencingLanguagesSupported",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialinConferencingPolicy.md",
       "redirect_url": "/powershell/module/teams/Get-CsOnlineDialinConferencingPolicy",
       "redirect_document_id": false
@@ -8163,6 +8173,11 @@
     {
       "source_path": "skype/virtual-folder/skype/Set-CsOnlineDialInConferencingUser.md",
       "redirect_url": "/powershell/module/teams/Set-CsOnlineDialInConferencingUser",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsOnlineDialInConferencingUserDefaultNumber.md",
+      "redirect_url": "/powershell/module/teams/Set-CsOnlineDialInConferencingUserDefaultNumber",
       "redirect_document_id": false
     },
     {
