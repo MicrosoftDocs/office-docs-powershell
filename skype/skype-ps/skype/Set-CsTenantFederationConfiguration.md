@@ -153,12 +153,18 @@ The command shown in Example 9 enables communication with people using Teams wit
 
 ### -------------------------- Example 10 -------------------------
 ```
+$list = New-Object Collections.Generic.List[String]
+$list.add("contoso.com")
+$list.add("fabrikam.com")
+Set-CsTenantFederationConfiguration -BlockedDomains $list
+
 Set-CsTenantFederationConfiguration -BlockAllSubdomains $True
 ```
 
-Example 10 shows how you can empower BlockedDomains to also block all subdomains.
-Let's say you block contoso.com. Then all users from subdomain.contoso.com will also be blocked.
-Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain.
+Example 10 shows how you can block all subdomains of domains in BlockedDomains list.
+In this example, contoso.com is on the BlockDomains list which blocks all users from contoso.com and fabrikam.com.
+When the BlockAllSubdomains is enabled, all users from subdomain.contoso.com and subdomain.fabrikam.com will also be blocked.
+Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain of contoso.com.
 
 ## PARAMETERS
 
