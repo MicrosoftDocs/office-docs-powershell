@@ -8,6 +8,7 @@ ms.reviewer:
 manager: bulenteg
 ms.author: tomkau
 author: tomkau
+ms.reviewer: williamlooney
 ---
 
 # Set-CsTeamsEducationAssignmentsAppPolicy

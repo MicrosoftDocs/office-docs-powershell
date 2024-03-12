@@ -6,8 +6,8 @@ title: Register-CsOnlineDialInConferencingServiceNumber
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
-ms.author: tomkau
-ms.reviewer:
+author: tomkau
+ms.reviewer: williamlooney
 ---
 
 # Register-CsOnlineDialInConferencingServiceNumber

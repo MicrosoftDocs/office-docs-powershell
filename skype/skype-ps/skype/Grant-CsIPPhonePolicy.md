@@ -6,8 +6,8 @@ title: Grant-CsIPPhonePolicy, Skype for Business Server 2019
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
-ms.author: tomkau
-ms.reviewer:
+author: tomkau
+ms.reviewer: williamlooney
 ---
 
 # Grant-CsIPPhonePolicy
