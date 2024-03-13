@@ -25,7 +25,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string> [-AllowPrivateCalling <boolean>] [
  [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
  [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
  [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
- [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>] [-SpamFilteringEnabledType <string>]
  [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
  [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -237,26 +237,6 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AutoAnswerEnabledType
-Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. This setting applies only to incoming meeting invites and does not include support for other call types.
-
-Valid options are:
-- Enabled: Auto-answer is enabled.
-- Disabled: Auto-answer is disabled. This is the default setting.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
