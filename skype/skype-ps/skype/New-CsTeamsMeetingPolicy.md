@@ -38,6 +38,7 @@ New-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-MeetingInviteLanguages <String>] [-AllowNetworkConfigurationSettingsLookup <Boolean>] [-LiveStreamingMode <String>] [-AllowedStreamingMediaInput <String>] [-AutomaticallyStartCopilot <String>] [-Copilot <String>]
 [-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowLocalRecording] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>] [-VoiceIsolation <String>]
 [-ContentSharingInExternalMeetings <String>]
+[-SmsNotifications <String>]
 [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -105,6 +106,22 @@ Accept wildcard characters: False
 ### -Copilot
 
 This policy gives admins the ability to choose if Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmsNotifications
+
+Participants can sign up for text message meeting reminders.
 
 ```yaml
 Type: String
