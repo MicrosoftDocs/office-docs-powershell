@@ -6974,6 +6974,11 @@
       "source_path": "exchange/virtual-folder/exchange/Set-PhishSimOverrideRule.md",
       "redirect_url": "/powershell/module/exchange/set-exophishsimoverriderule",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/skype-ps/skype/Disable-CsMeetingRoom.md",
+      "redirect_url": "/powershell/module/teams/Disable-CsMeetingRoom",
+      "redirect_document_id": false
     }
   ]
 }
