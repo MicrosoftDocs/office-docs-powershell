@@ -42,7 +42,8 @@ Set-CsTeamsMeetingPolicy [-Tenant <Guid>] [-Description <String>]
 [-AllowWatermarkForScreenSharing <Boolean>] [-AllowWatermarkForCameraVideo <Boolean>] [-AllowWatermarkCustomizationForCameraVideo <Boolean>]  [-WatermarkForCameraVideoOpacity <Int32>]  [-WatermarkForCameraVideoPattern <String>]
 [-AllowWatermarkCustomizationForScreenSharing <Boolean>]  [-WatermarkForScreenSharingOpacity <Int32>]  [-WatermarkForScreenSharingPattern <String>] [-WatermarkForAnonymousUsers <String>]
 [-AllowLocalRecording <Boolean>] [-ExternalMeetingJoin <String>] [-CopyRestriction <Boolean>] [-VoiceIsolation <String>]
-[-ContentSharingInExternalMeetings <String>] 
+[-ContentSharingInExternalMeetings <String>]
+[-SmsNotifications <String>]
 [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -101,6 +102,22 @@ Accept wildcard characters: False
 ```
 
 ### -Copilot
+
+This policy gives admins the ability to choose if Copilot will be enabled with a persisted transcript or a non-persisted transcript.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmsNotifications
 
 This policy gives admins the ability to choose if Copilot will be enabled with a persisted transcript or a non-persisted transcript.
 
