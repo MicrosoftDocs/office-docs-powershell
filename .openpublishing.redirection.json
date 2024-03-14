@@ -8484,5 +8484,310 @@
       "source_path": "skype/virtual-folder/skype/Update-CsAutoAttendant.md",
       "redirect_url": "/powershell/module/teams/Update-CsAutoAttendant",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Clear-CsOnlineTelephoneNumberReservation.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Disable-CsOnlineDialInConferencingUser.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Enable-CsOnlineDialInConferencingUser.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Export-CsOrganizationalAutoAttendantHolidays.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsHuntGroup.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsHuntGroupTenantInformation.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineApplicationEndpoint.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingUserInfo.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineDialInConferencingUserState.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineDirectoryTenantNumberCities.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineNumberPortInOrder.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineNumberPortOutOrderPin.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberAvailableCount.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryAreas.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryCities.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryCountries.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryRegions.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberInventoryTypes.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOnlineTelephoneNumberReservationsInformation.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendant.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantHolidays.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantStatus.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantSupportedLanguage.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantSupportedTimeZone.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsOrganizationalAutoAttendantTenantInformation.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsTeamsUpgradeStatus.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Get-CsTenantPublicProvider.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Grant-CsBroadcastMeetingPolicy.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Import-CsOrganizationalAutoAttendantHolidays.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsHuntGroup.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOnlineApplicationEndpoint.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOnlineAudioFile.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOnlineBulkAssignmentInput.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOnlineNumberPortInOrder.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOnlineSession.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendant.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantCallableEntity.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantCallFlow.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantCallHandlingAssociation.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantDialScope.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantMenu.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantMenuOption.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/New-CsOrganizationalAutoAttendantPrompt.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Remove-CsHuntGroup.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Remove-CsOnlineApplicationEndpoint.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Remove-CsOnlineNumberPortInOrder.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Remove-CsOrganizationalAutoAttendant.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Search-CsOnlineTelephoneNumberInventory.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Select-CsOnlineTelephoneNumberInventory.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsHuntGroup.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsOnlineApplicationEndpoint.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsOnlineDirectoryUser.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsOnlineNumberPortInOrder.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsOnlineNumberPortOutOrderPin.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsOnlineVoiceUserBulk.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsOrganizationalAutoAttendant.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Set-CsTenantPublicProvider.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Test-CsOnlineCarrierPortabilityIn.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Test-CsOnlineLisCivicAddress.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Test-CsOnlinePortabilityIn.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "skype/virtual-folder/skype/Update-CsOrganizationalAutoAttendant.md",
+      "redirect_url": "/powershell/module/teams/",
+      "redirect_document_id": false
     }
   ] }
