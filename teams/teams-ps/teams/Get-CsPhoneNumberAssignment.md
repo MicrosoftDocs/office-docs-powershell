@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -CivicAddressId
-Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](/powershell/module/teams/get-csonlineliscivicaddress).
+Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md).
 
 ```yaml
 Type: System.String
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](/powershell/module/teams/get-csonlinelislocation).
+Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md).
 
 ```yaml
 Type: System.String
