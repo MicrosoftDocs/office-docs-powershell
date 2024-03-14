@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsmedialoggingpolicy
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Grant-CsTeamsMediaLoggingPolicy
 author: LeoKuhorev
 ms.author: leokukharau
@@ -94,7 +94,7 @@ Use the "Global" Identity if you wish to set the policy for the entire tenant.
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 1
@@ -111,7 +111,7 @@ Enables passing a user object through the pipeline that represents the user bein
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ If you set PolicyName to a null value, the command will unassign any individual 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -149,7 +149,7 @@ When this cmdlet is used with `-Global` identity, the policy applies to all user
 Type: SwitchParameter
 Parameter Sets: GrantToTenant
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -239,4 +239,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTeamsMediaLoggingPolicy](/powershell/module/teams/get-csteamsmedialoggingpolicy)
+[Get-CsTeamsMediaLoggingPolicy](Get-CsTeamsMediaLoggingPolicy.md)

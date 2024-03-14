@@ -86,4 +86,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Set-TeamTargetingHierarchy](https://learn.microsoft.com/powershell/module/teams/set-teamtargetinghierarchy)
+[Set-TeamTargetingHierarchy](Set-TeamTargetingHierarchy.md)
