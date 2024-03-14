@@ -140,6 +140,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsPolicyPackage](https://learn.microsoft.com/powershell/module/teams/get-cspolicypackage)
+[Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 
-[New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment)
+[New-CsGroupPolicyAssignment](New-CsGroupPolicyAssignment.md)
