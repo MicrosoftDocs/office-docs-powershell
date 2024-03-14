@@ -1,8 +1,13 @@
-﻿---
-external help file: MicrosoftTeams-help.xml
-Module Name: MicrosoftTeams
+---
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/disable-csmeetingroom
+applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+title: Disable-CsMeetingRoom
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Disable-CsMeetingRoom
@@ -13,13 +18,15 @@ A meeting room is a conferencing device designed to address video conferencing a
 When you disable a meeting room object you remove all the Skype for Business Server-specific Active Directory attributes assigned to the user account that represents the meeting room.
 However, the Active Directory user account itself is not deleted.
 This cmdlet was introduced in Lync Server 2013.
-Note : This cmdlet is not supported for managing Microsoft Teams Rooms.
-You must use the methods described in the Microsoft Teams Rooms (/microsoftteams/rooms)documentation to manage Microsoft Teams Rooms.
+
+**Note**: This cmdlet is not supported for managing Microsoft Teams Rooms. You must use the methods described in the [Microsoft Teams Rooms](/microsoftteams/rooms) documentation to manage Microsoft Teams Rooms.
+
 
 ## SYNTAX
 
 ```
-Disable-CsMeetingRoom [-Identity] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Disable-CsMeetingRoom [-Identity] <UserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-PassThru] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,20 +45,21 @@ The resource account must already exist in order for you to enable the meeting r
 
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-\`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Disable-CsMeetingRoom"}\`
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Disable-CsMeetingRoom"}`
 
 The functions carried out by the Disable-CsMeetingRoom cmdlet are not available in the Skype for Business Server Control Panel.
 
+
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
 Disable-CsMeetingRoom -Identity "sip:RedmondMeetingRoom@litwareinc.com"
 ```
 
 The command shown in Example 1 disables the meeting room sip:RedmondMeetingRoom@litwareinc.com.
 
-### Example 2
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsMeetingRoom | Disable-CsMeetingRoom
 ```
@@ -59,6 +67,7 @@ Get-CsMeetingRoom | Disable-CsMeetingRoom
 In Example 2, all the meeting rooms currently in use in the organization are disabled.
 To do this, the Get-CsMeetingRoom cmdlet is first used to retrieve a collection of all the meeting rooms.
 That collection is then piped to the Disable-CsMeetingRoom cmdlet, which disables each meeting room in the collection.
+
 
 ## PARAMETERS
 
@@ -72,30 +81,15 @@ You can use the asterisk (*) wildcard character when using the Display Name as t
 For example, the Identity "* Smith" returns all the user who have a display name that ends with the string value " Smith".
 
 ```yaml
-Type: String
+Type: UserIdParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -PassThru
-Enables you to pass a meeting room object through the pipeline that represents the meeting room being disabled.
-By default, the Disable-CsMeetingRoom cmdlet does not pass objects through the pipeline.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -106,10 +100,45 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+Enables you to connect to the specified domain controller in order to disable a meeting room.
+To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-dc-001) or its fully qualified domain name (FQDN) (for example, atl-dc-001.litwareinc.com).
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Enables you to pass a meeting room object through the pipeline that represents the meeting room being disabled.
+By default, the Disable-CsMeetingRoom cmdlet does not pass objects through the pipeline.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -121,21 +150,25 @@ Describes what would happen if you executed the command without actually executi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom
+###  Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom
+
 ### Microsoft.Rtc.Management.AD.UserIdParameter
+
+
 ## OUTPUTS
 
 ### None
@@ -145,11 +178,10 @@ Instead, Disable-CsMeetingRoom deletes instance of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Enable-CsMeetingRoom]()
+[Enable-CsMeetingRoom](Enable-CsMeetingRoom.md)
 
-[Get-CsMeetingRoom]()
+[Get-CsMeetingRoom](Get-CsMeetingRoom.md)
 
-[Move-CsMeetingRoom]()
+[Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
-[Set-CsMeetingRoom]()
-
+[Set-CsMeetingRoom](Set-CsMeetingRoom.md)

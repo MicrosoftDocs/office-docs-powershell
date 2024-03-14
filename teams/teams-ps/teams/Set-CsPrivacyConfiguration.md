@@ -1,8 +1,13 @@
-﻿---
-external help file: MicrosoftTeams-help.xml
-Module Name: MicrosoftTeams
+---
+external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/set-csprivacyconfiguration
+applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+title: Set-CsPrivacyConfiguration
 schema: 2.0.0
+manager: bulenteg
+author: tomkau
+ms.author: tomkau
+ms.reviewer: rogupta
 ---
 
 # Set-CsPrivacyConfiguration
@@ -14,10 +19,20 @@ This cmdlet was introduced in Lync Server 2010.
 
 ## SYNTAX
 
+### Identity (Default)
 ```
-Set-CsPrivacyConfiguration [-AutoInitiateContacts <Boolean>] [-DisplayPublishedPhotoDefault <Boolean>]
- [-EnablePrivacyMode <Boolean>] [[-Identity] <String>] [-PublishLocationDataDefault <Boolean>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-CsPrivacyConfiguration [-EnablePrivacyMode <Boolean>]
+ [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
+ [-DisplayPublishedPhotoDefault <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### Instance
+```
+Set-CsPrivacyConfiguration [-EnablePrivacyMode <Boolean>]
+ [-AutoInitiateContacts <Boolean>] [-PublishLocationDataDefault <Boolean>]
+ [-DisplayPublishedPhotoDefault <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,11 +48,12 @@ For example, by default location data is published for users, although users do 
 By setting the PublishLocationDataByDefault property to False, administrators can change this behavior: in that case, location data will not be published by default, although users will still have the right to publish this data if they choose.
 
 Privacy configuration settings can be applied at the global scope, the site scope, and at the service scope (albeit only for the User Server service).
-The \`Set-CsPrivacyConfiguration\` cmdlet enables you to modify any of the privacy configuration settings currently in use in your organization.
+The `Set-CsPrivacyConfiguration` cmdlet enables you to modify any of the privacy configuration settings currently in use in your organization.
+
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsPrivacyConfiguration -Identity site:Redmond -EnablePrivacyMode $False -AutoInitiateContacts $True -PublishLocationDataDefault $True -DisplayPublishedPhotoDefault $True
 ```
@@ -45,35 +61,90 @@ Set-CsPrivacyConfiguration -Identity site:Redmond -EnablePrivacyMode $False -Aut
 The command shown in Example 1 modifies three property values for the privacy configuration settings with the Identity site:Redmond.
 The three property values modified are AutoInitiateContacts, PublishLocationDataDefault and DisplayPublishedPhotoDefault.
 
-### Example 2
+
+### -------------------------- Example 2 ------------------------
 ```
 Get-CsPrivacyConfiguration | Set-CsPrivacyConfiguration -EnablePrivacyMode $True
 ```
 
 Example 2 enables privacy mode for all the privacy configuration settings currently in use in the organization.
-To do this, the command first calls the \`Get-CsPrivacyConfiguration\` cmdlet without any parameters; this returns the complete collection of privacy settings.
-This collection is then piped to the \`Set-CsPrivacyConfiguration\` cmdlet, which takes each item in the collection and sets the EnablePrivacyMode property to True.
+To do this, the command first calls the `Get-CsPrivacyConfiguration` cmdlet without any parameters; this returns the complete collection of privacy settings.
+This collection is then piped to the `Set-CsPrivacyConfiguration` cmdlet, which takes each item in the collection and sets the EnablePrivacyMode property to True.
 
-### Example 3
+
+### -------------------------- Example 3 ------------------------
 ```
 Get-CsPrivacyConfiguration | Where-Object {$_.EnablePrivacyMode -eq $False} | Set-CsPrivacyConfiguration -AutoInitiateContacts $True -PublishLocationDataDefault $True -DisplayPublishedPhotoDefault $True
 ```
 
 In Example 3, modifications are made to all the privacy configuration settings that are not currently using privacy mode.
-To carry out this task, the \`Get-CsPrivacyConfiguration\` cmdlet is first used in order to return a collection of all the privacy configuration settings.
-This collection is piped to the \`Where-Object\` cmdlet, which selects only those settings where the EnablePrivacyMode property is equal to False.
-The filtered collection is then piped to the \`Set-CsPrivacyConfiguration\` cmdlet, which assigns values to the AutoInitiateContacts, PublishLocationDataDefault, and DisplayPublishedPhotoDefault properties for each item in the collection.
+To carry out this task, the `Get-CsPrivacyConfiguration` cmdlet is first used in order to return a collection of all the privacy configuration settings.
+This collection is piped to the `Where-Object` cmdlet, which selects only those settings where the EnablePrivacyMode property is equal to False.
+The filtered collection is then piped to the `Set-CsPrivacyConfiguration` cmdlet, which assigns values to the AutoInitiateContacts, PublishLocationDataDefault, and DisplayPublishedPhotoDefault properties for each item in the collection.
+
 
 ## PARAMETERS
+
+### -Identity
+Unique identifier for the privacy configuration settings to be modified.
+To modify the global settings, use this syntax:
+
+`-Identity global`
+
+To modify settings configured at the site scope, use syntax similar to this:
+
+`-Identity site:Redmond`
+
+To modify settings at the service level, use syntax like this:
+
+`-Identity service:Redmond-UserServices-1`
+
+Note that privacy settings can only be applied to the User Server service.
+An error will occur if you try to apply these settings to any other service.
+
+If this parameter is not specified then the global settings will be updated when you call the `Set-CsPrivacyConfiguration` cmdlet.
+
+
+```yaml
+Type: XdsIdentity
+Parameter Sets: Identity
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Instance
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+
+```yaml
+Type: PSObject
+Parameter Sets: Instance
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -AutoInitiateContacts
 If True, Skype for Business will automatically add your manager and your direct reports to your Contacts list.
 The default value is True.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -87,10 +158,12 @@ If True, the user's photo will automatically be published in Skype for Business.
 If False, the user's photo will not be available unless he or she explicitly selects the option Let others see my photo.
 The default value is True.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -105,46 +178,16 @@ In advanced privacy mode, only people on your Contacts list will be allowed to v
 If False, your presence information will be available to anyone in your organization.
 The default value is False.
 
-For information about privacy mode in Microsoft Teams, see User presence in Teams (/microsoftteams/presence-admins).
+For information about privacy mode in Microsoft Teams, see [User presence in Teams](/microsoftteams/presence-admins).
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-Unique identifier for the privacy configuration settings to be modified.
-To modify the global settings, use this syntax:
-
-\`-Identity global\`
-
-To modify settings configured at the site scope, use syntax similar to this:
-
-\`-Identity site:Redmond\`
-
-To modify settings at the service level, use syntax like this:
-
-\`-Identity service:Redmond-UserServices-1\`
-
-Note that privacy settings can only be applied to the User Server service.
-An error will occur if you try to apply these settings to any other service.
-
-If this parameter is not specified then the global settings will be updated when you call the \`Set-CsPrivacyConfiguration\` cmdlet.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -155,10 +198,46 @@ If True, location data will automatically be published in Skype for Business.
 If False, location data will not be available unless the user explicitly selects the option Show Contacts My Location.
 The default value is True.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might occur when running the command.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Describes what would happen if you executed the command without actually executing the command.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
@@ -170,55 +249,41 @@ Accept wildcard characters: False
 ### -Confirm
 Prompts you for confirmation before executing the command.
 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### 
+###  
 Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.PrivacyConfiguration object.
-The \`Set-CsPrivacyConfiguration\` cmdlet accepts pipelined input of the privacy configuration object.
+The `Set-CsPrivacyConfiguration` cmdlet accepts pipelined input of the privacy configuration object.
 
 ## OUTPUTS
 
-### 
-The \`Set-CsPrivacyConfiguration\` cmdlet does not return any objects or values.
+###  
+The `Set-CsPrivacyConfiguration` cmdlet does not return any objects or values.
 Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.PrivacyConfiguration object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsPrivacyConfiguration]()
+[Get-CsPrivacyConfiguration](Get-CsPrivacyConfiguration.md)
 
-[New-CsPrivacyConfiguration]()
+[New-CsPrivacyConfiguration](New-CsPrivacyConfiguration.md)
 
-[Remove-CsPrivacyConfiguration]()
-
+[Remove-CsPrivacyConfiguration](Remove-CsPrivacyConfiguration.md)
