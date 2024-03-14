@@ -5,9 +5,7 @@ applicable: Microsoft Teams
 title: Test-CsInboundBlockedNumberPattern
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
-manager: bulenteg
-schema: 2.0.0 
+ms.reviewer: williamlooney
 ---
 
 # Test-CsInboundBlockedNumberPattern
