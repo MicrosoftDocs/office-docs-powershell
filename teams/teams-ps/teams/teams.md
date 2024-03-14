@@ -502,7 +502,4 @@ The following cmdlet references are for Microsoft Teams.
 ### [Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
 ### [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
 ### [Update-TeamsAppInstallation](Update-TeamsAppInstallation.md)
-
-## Deprecated Teams Cmdlets
-
-### Clear-CsOnlineTelephoneNumberReservation (Deprecated)
+### Clear-CsOnlineTelephoneNumberReservation (Deprecated da da da )
