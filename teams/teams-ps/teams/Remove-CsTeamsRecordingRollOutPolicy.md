@@ -25,6 +25,8 @@ Remove-CsTeamsRecordingRollOutPolicy [-Identity] <String> [-Force] [-WhatIf] [-C
 
 Removes a previously created CsTeamsRecordingRollOutPolicy.
 
+This command is available from Teams powershell module 6.1.1-preview and above.
+
 ## EXAMPLES
 
 ### Example 1

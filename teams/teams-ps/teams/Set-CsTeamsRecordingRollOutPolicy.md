@@ -27,6 +27,8 @@ The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs t
 
 The Set-CsTeamsRecordingRollOutPolicy cmdlet allows administrators to update existing CsTeamsRecordingRollOutPolicy that can be assigned to particular users to control Teams recording storage place.
 
+This command is available from Teams powershell module 6.1.1-preview and above.
+
 ## EXAMPLES
 
 ### Example 1

@@ -24,7 +24,9 @@ Grant-CsTeamsRecordingRollOutPolicy -Identity <String> -PolicyName <String> [<Co
 ## DESCRIPTION
 The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings. This policy would be deprecated over time as this is only to allow IT admins to phase the roll out of this breaking change.
 
-The Grant-CsTeamsRecordingRollOutPolicy cmdlet allows administrators to assign a CsTeamsRecordingRollOutPolicy at the per-user scope. 
+The Grant-CsTeamsRecordingRollOutPolicy cmdlet allows administrators to assign a CsTeamsRecordingRollOutPolicy at the per-user scope.
+
+This command is available from Teams powershell module 6.1.1-preview and above.
 
 ## EXAMPLES
 

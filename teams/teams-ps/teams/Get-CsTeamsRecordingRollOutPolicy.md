@@ -34,6 +34,8 @@ The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs t
 
 The Get-CsTeamsRecordingRollOutPolicy cmdlet enables you to return information about all the CsTeamsRecordingRollOutPolicy that have been configured for use in your organization.
 
+This command is available from Teams powershell module 6.1.1-preview and above.
+
 ## EXAMPLES
 
 ### Example 1
