@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
 applicable: Skype for Business Online
-online version: https://learn.microsoft.com/powershell/module/skype/get-csprivacyconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/get-csprivacyconfiguration
 schema: 2.0.0
 ---
 

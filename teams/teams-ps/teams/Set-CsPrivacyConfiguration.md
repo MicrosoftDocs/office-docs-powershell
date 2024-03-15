@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/skype/set-csprivacyconfiguration
+online version: https://learn.microsoft.com/powershell/module/teams/set-csprivacyconfiguration
 schema: 2.0.0
 ---
 

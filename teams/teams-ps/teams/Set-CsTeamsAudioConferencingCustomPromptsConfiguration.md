@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsTeamsAudioConferencingCustomPromptsConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Sets configuration which controls tenant level settings for on-line dial-in conferencing prompts
 
 ## SYNTAX
 
@@ -16,11 +16,11 @@ schema: 2.0.0
 Set-CsTeamsAudioConferencingCustomPromptsConfiguration
  [-Prompts <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.CustomPrompt]>]
  [-Packages <System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.CustomPromptPackage]>]
- [-Identity] <String> [-Force] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Identity] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Sets configuration which controls tenant level settings for on-line dial-in conferencing prompts
 
 ## EXAMPLES
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Packages
-{{ Fill Packages Description }}
+Packages of prompts with mappings to various events.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.CustomPromptPackage]
@@ -94,43 +94,12 @@ Accept wildcard characters: False
 ```
 
 ### -Prompts
-{{ Fill Prompts Description }}
+Custom prompt messages to play on recording or other events.
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.CustomPrompt]
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
 
 Required: False
 Position: Named

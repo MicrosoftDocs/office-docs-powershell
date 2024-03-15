@@ -14,7 +14,7 @@ ms.reviewer: williamlooney
 # Get-CsOnlineAudioConferencingRoutingPolicy
 
 ## SYNOPSIS
-Gets the audio conferencing routing policy settings in your organization. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/en-us/microsoftteams/audio-conferencing-on-network).
+Returns information about the the audio conferencing routing policies configured for use in your tenant. Make sure you are following the guidance here to set up properly: [Manage On-network Conferencing for Audio Conferencing](https://learn.microsoft.com/en-us/microsoftteams/audio-conferencing-on-network).
 
 ## SYNTAX
 
