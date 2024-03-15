@@ -13,7 +13,7 @@ ms.author: ronwa
 # Remove-CsTeamsRecordingRollOutPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
 
 ## SYNTAX
 
