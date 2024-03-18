@@ -1,13 +1,13 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsmeetingpolicy
-applicable: Skype for Business Online
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+Module Name: MicrosoftTeams
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingpolicy
 title: Set-CsTeamsMeetingPolicy
 schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer: williamlooney
+ms.reviewer: wblocker
 ---
 
 # Set-CsTeamsMeetingPolicy
