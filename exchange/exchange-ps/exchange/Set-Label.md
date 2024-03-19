@@ -590,7 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### -Conditions
-The Conditions parameter is used for automatic labeling of files and emails for data in use. 
+The Conditions parameter is used for automatic labeling of files and email for data in use. 
 
 ```yaml
 Type: MultiValuedProperty
