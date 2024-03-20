@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: While we support adding category policy in the Exchange Online PowerShell module v3.5.0-Preview??? or later, there is no category available in Viva yet. Please be patient while we roll out new categories.
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, there is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
 
 Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature or a category in Viva. The attributes of the policy are defined using the cmdlet parameters. Policies are used to restrict or grant access to the specified feature or category for specific users, groups, or the entire tenant. Note that:
 
@@ -36,6 +36,7 @@ Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -Mod
  [-Confirm]
  [-Everyone]
  [-GroupIds <String[]>]
+ [-IsUserControlEnabled <Boolean>]
  [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-UserIds <String[]>]
@@ -44,7 +45,8 @@ Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -Mod
 ```
 
 ### CategoryPolicy
-**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
+**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. There is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
+
 ```
 Add-VivaModuleFeaturePolicy -CategoryId <String> -IsCategoryEnabled <Boolean> -Name <String>
  [-Confirm]
@@ -58,13 +60,15 @@ Add-VivaModuleFeaturePolicy -CategoryId <String> -IsCategoryEnabled <Boolean> -N
 ```
 
 ## DESCRIPTION
+**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. There is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
+
 Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature or category in Viva.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role to run this cmdlet.
+Currently, you need to be a member of the Global administrators role or the roles that have been permissioned at the feature level to run this cmdlet.
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
@@ -129,7 +133,7 @@ This example adds a policy for the <cateogry_id> category in Viva. The policy di
 ## PARAMETERS
 
 ### -CategoryId
-**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
+**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. There is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
 
 The CategoryId parameter specifies the Viva category that you want to add the policy for.
 
@@ -165,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCategoryEnabled
-**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
+**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. There is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
 
 The IsCategoryEnabled parameter specifies whether or not the category is enabled by the policy. Valid values are:
 
