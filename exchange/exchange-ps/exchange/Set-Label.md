@@ -590,7 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### -Conditions
-This parameter is reserved for internal Microsoft use.
+The Conditions parameter is used for automatic labeling of files and email for data in use. 
 
 ```yaml
 Type: MultiValuedProperty

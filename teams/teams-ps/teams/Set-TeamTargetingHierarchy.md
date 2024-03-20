@@ -67,4 +67,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Get-TeamTargetingHierarchyStatus](https://learn.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus)
+[Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)
