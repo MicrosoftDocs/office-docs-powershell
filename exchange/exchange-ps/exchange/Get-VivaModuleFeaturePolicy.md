@@ -15,7 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy's identifier, name, and creation date.
+**Note**: While we support viewing category policy in the Exchange Online PowerShell module v3.5.0-Preview??? or later, there is no category available in Viva yet. Please be patient while we roll out new categories.
+
+Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module or category in Viva. Policies are used to restrict or grant access to the specified feature or category for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy's identifier, name, and creation date.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -25,24 +27,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String>
  [[-PolicyId] <String>]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
 ### CategoryPolicy
+**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
 ```
 Get-VivaModuleFeaturePolicy -CategoryId <String>
  [[-PolicyId] <String>]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module.
+Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module or a category in Viva.
 
-You can view all policies for a specified feature in a Viva module. To view a specific policy, you can include the PolicyId parameter.
+You can view all policies for a specified feature in a Viva module or a category in Viva. To view a specific policy, you can include the PolicyId parameter.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
@@ -68,12 +69,28 @@ Get-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Policy
 
 This example returns details about a specific policy added for the Reflection feature in Viva Insights.
 
+### Example 3
+```powershell
+Get-VivaModuleFeaturePolicy -CategoryId <category_id>
+```
+
+This example returns details about all the policies added for the <category_id> category in Viva.
+
+### Example 4
+```powershell
+Get-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b
+```
+
+This example returns details about a specific policy added for the <category_id> category in Viva.
+
 ## PARAMETERS
 
 ### -CategoryId
 **Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
 
-{{ Fill CategoryId Description }}
+The CategoryId parameter specifies the category that you want to view the policies for.
+
+To view details about the categories in Viva that support feature access controls, refer to the Get-VivaFeatureCategory cmdlet. The details provided by the Get-VivaFeatureCategory cmdlet include the category identifier.
 
 ```yaml
 Type: String
@@ -123,9 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyId
-The PolicyId parameter specifies the specific policy for the feature in the Viva module that you want to view.
+The PolicyId parameter specifies the specific policy for the feature in the Viva module or the category that you want to view.
 
-To view details about all policies for a feature in a Viva module, run this cmdlet without the PolicyId parameter. These details include the identifiers of all the policies for a feature in a Viva module.
+To view details about all policies for a feature in a Viva module or a category, run this cmdlet without the PolicyId parameter. These details include the identifiers of all the policies for a feature in a Viva module or a category.
 
 ```yaml
 Type: String
@@ -135,24 +152,6 @@ Applicable: Exchange Online
 
 Required: False
 Position: Positional
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-**Note**: This parameter is available only in the Exchange Online PowerShell module v3.5.0-Preview??? or later.
-
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-Applicable: Exchange Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
