@@ -1,4 +1,4 @@
----
+Can we make this command to work for softdeleted mailboxes?---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/remove-calendarevents
 applicable: Exchange Server 2019, Exchange Online
