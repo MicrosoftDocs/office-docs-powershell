@@ -31,13 +31,12 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### FeaturePolicy
 ```
-Update-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId <String>  
+Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>  
  [-Confirm]
  [-Everyone <Boolean>]
  [-IsFeatureEnabled <Boolean>]
  [-IsUserControlEnabled <Boolean>]
  [-GroupIds <String[]>]
- [-IsUserControlEnabled <Boolean>]
  [-Name <String>]
  [-ResultSize <Unlimited>]
  [-UserIds <String[]>]
