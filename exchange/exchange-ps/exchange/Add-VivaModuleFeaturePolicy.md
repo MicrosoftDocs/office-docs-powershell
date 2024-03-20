@@ -32,12 +32,11 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### FeaturePolicy
 ```
-Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String> [-IsUserControlEnabled <Boolean>]
+Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String>
  [-Confirm]
  [-Everyone]
  [-GroupIds <String[]>]
  [-IsUserControlEnabled <Boolean>]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-UserIds <String[]>]
  [-WhatIf]
@@ -52,7 +51,6 @@ Add-VivaModuleFeaturePolicy -CategoryId <String> -IsCategoryEnabled <Boolean> -N
  [-Confirm]
  [-Everyone]
  [-GroupIds <String[]>]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-UserIds <String[]>]
  [-WhatIf]
