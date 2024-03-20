@@ -42,7 +42,7 @@ Get-VivaModuleFeaturePolicy -CategoryId <String>
 ```
 
 ## DESCRIPTION
-**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. There is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, there is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
 
 Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module or a category in Viva.
 
