@@ -21,9 +21,21 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
+### FeaturePolicy
 ```
-Remove-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
+Remove-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId <String>
  [-Confirm]
+ [-ProgressAction <ActionPreference>]
+ [-ResultSize <Unlimited>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### CategoryPolicy
+```
+Remove-VivaModuleFeaturePolicy -CategoryId <String> -PolicyId <String>
+ [-Confirm]
+ [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
@@ -51,6 +63,22 @@ This example deletes the specified policy for the Reflection feature in Viva Ins
 
 ## PARAMETERS
 
+### -CategoryId
+{{ Fill CategoryId Description }}
+
+```yaml
+Type: String
+Parameter Sets: CategoryPolicy
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FeatureId
 The FeatureId parameter specifies the feature in the Viva module that you want to remove the policy from.
 
@@ -58,7 +86,7 @@ To view details about the features in a Viva module that support feature access 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
@@ -74,7 +102,7 @@ The ModuleId parameter specifies the Viva module of the feature that you want to
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: FeaturePolicy
 Aliases:
 Applicable: Exchange Online
 
