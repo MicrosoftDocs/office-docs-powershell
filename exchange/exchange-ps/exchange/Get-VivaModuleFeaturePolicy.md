@@ -32,7 +32,7 @@ Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
 ```
 
 ### CategoryPolicy
-**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. There is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
 
 ```
 Get-VivaModuleFeaturePolicy -CategoryId <String>
@@ -91,7 +91,7 @@ This example returns details about a specific policy added for the <category_id>
 ## PARAMETERS
 
 ### -CategoryId
-**Note**: This option is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. There is no category available in Viva yet to set policies for. Please be patient while we roll out new categories.
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
 
 The CategoryId parameter specifies the category that you want to view the policies for.
 
