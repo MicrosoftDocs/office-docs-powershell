@@ -54,31 +54,7 @@ This example shows the top spam recipient statistics between June 13, 2015 and J
 ## PARAMETERS
 
 ### -Category
-The Category parameter filters the report by category. Valid values are:
-
-- InboundDLPHits
-- OutboundDLPHits
-- InboundTransportRuleHits
-- OutboundTransportRuleHits
-- InboundDLPPolicyRuleHits
-- OutboundDLPPolicyRuleHits
-- TopSpamRecipient
-- TopMailSender
-- TopMailRecipient
-- TopMalwareRecipient
-- TopMalwareAtpRecipient
-- TopMalware
-- TopPhishRecipient
-- TopPhishAtpRecipient
-- TopIntraOrgRecipient
-- TopIntraOrgSender
-- TopIntraOrgSpamRecipient
-- TopIntraOrgMalwareRecipient
-- TopIntraOrgPhishRecipient
-- TopIntraOrgPhishAtpRecipient
-- TopIntraOrgMalwareAtpRecipient
-- TopComplianceTagActivityCount
-- TopComplianceTagActivityCountByDay
+The Category parameter filters the report by category. Valid values for this parameter are: InboundDLPHits, OutboundDLPHits, InboundTransportRuleHits, OutboundTransportRuleHits, InboundDLPPolicyRuleHits, OutboundDLPPolicyRuleHits, TopSpamRecipient, TopMailSender, TopMailRecipient, TopMalwareRecipient or TopMalware.
 
 ```yaml
 Type: String

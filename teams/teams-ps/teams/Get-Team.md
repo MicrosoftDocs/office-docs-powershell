@@ -252,6 +252,6 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[New-Team](New-Team.md)
+[New-Team](new-team.md)
 
-[Set-Team](Set-Team.md)
+[Set-Team](set-team.md)

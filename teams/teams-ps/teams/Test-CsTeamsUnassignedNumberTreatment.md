@@ -64,10 +64,10 @@ The cmdlet is available in Teams PS module 3.2.0-preview or later.
 
 ## RELATED LINKS
 
-[New-CsTeamsUnassignedNumberTreatment](New-CsTeamsUnassignedNumberTreatment.md)
+[New-CsTeamsUnassignedNumberTreatment](new-csteamsunassignednumbertreatment.md)
 
-[Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
+[Get-CsTeamsUnassignedNumberTreatment](get-csteamsunassignednumbertreatment.md)
 
-[Set-CsTeamsUnassignedNumberTreatment](Set-CsTeamsUnassignedNumberTreatment.md)
+[Set-CsTeamsUnassignedNumberTreatment](set-csteamsunassignednumbertreatment.md)
 
-[Remove-CsTeamsUnassignedNumberTreatment](Remove-CsTeamsUnassignedNumberTreatment.md)
+[Remove-CsTeamsUnassignedNumberTreatment](remove-csteamsunassignednumbertreatment.md)

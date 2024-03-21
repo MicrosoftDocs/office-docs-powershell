@@ -160,3 +160,4 @@ Returns an object of type Microsoft.Rtc.Management.Voice.NormalizationRuleTestRe
 
 [Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
 
+[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)

@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserSpamNotificationFrequency
-The EndUserSpamNotificationFrequency parameter specifies how often quarantine notifications are sent to users. Valid values are:
+The EndUserSpamNotificationFrequency parameter species how often quarantine notifications are sent to users. Valid values are:
 
 - 04:00:00 (4 hours)
 - 1.00:00:00 (1 day)

@@ -383,3 +383,6 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 [Get-CsDialPlan](Get-CsDialPlan.md)
 
+[New-CsTenantDialPlan](New-CsTenantDialPlan.md)
+
+[Set-CsTenantDialPlan](Set-CsTenantDialPlan.md)

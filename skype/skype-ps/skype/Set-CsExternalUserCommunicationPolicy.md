@@ -7,7 +7,7 @@ schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer: williamlooney
+ms.reviewer:
 ---
 
 # Set-CsExternalUserCommunicationPolicy

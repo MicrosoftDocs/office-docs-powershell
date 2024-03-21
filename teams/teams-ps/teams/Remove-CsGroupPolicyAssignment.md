@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/remove-csgro
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer: williamlooney
+ms.reviewer:
 ---
 
 # Remove-CsGroupPolicyAssignment

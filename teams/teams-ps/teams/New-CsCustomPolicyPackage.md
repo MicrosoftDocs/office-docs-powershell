@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -PolicyList
 
-A list of one or more policies to be added in the package. To specifiy the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](Get-CsTeamsMeetingPolicy.md) and [Get-CsTeamsMessagingPolicy](Get-CsTeamsMessagingPolicy.md).
+A list of one or more policies to be added in the package. To specifiy the policy list, follow this format: "\<PolicyType\>, \<PolicyName\>". Delimiters of ' ', '.', ':', '\t' are also acceptable. Supported policy types are listed [here](https://learn.microsoft.com/MicrosoftTeams/manage-policy-packages#what-is-a-policy-package). To get the list of available policy names on your tenant, please use the SkypeForBusiness module and refer to cmdlets such as [Get-CsTeamsMeetingPolicy](https://learn.microsoft.com/powershell/module/skype/get-csteamsmeetingpolicy?view=skype-ps) and [Get-CsTeamsMessagingPolicy](https://learn.microsoft.com/powershell/module/skype/get-csteamsmessagingpolicy?view=skype-ps).
 
 ```yaml
 Type: String[]

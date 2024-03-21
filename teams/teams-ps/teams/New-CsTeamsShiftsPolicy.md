@@ -176,7 +176,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-CsTeamsShiftsPolicy](Get-CsTeamsShiftsPolicy.md)
 
-[Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
+[Set-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
 
 [Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
 

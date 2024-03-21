@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/skype/grant-csmobilitypolicy
-applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+applicable: Microsoft Teams, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsMobilityPolicy
 schema: 2.0.0
 manager: bulenteg
@@ -226,6 +226,7 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
+Applicable: Microsoft Teams, Skype for Business Online
 
 Required: False
 Position: Named

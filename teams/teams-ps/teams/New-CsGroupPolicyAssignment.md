@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/new-csgroupp
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer: williamlooney
+ms.reviewer:
 ---
 
 # New-CsGroupPolicyAssignment

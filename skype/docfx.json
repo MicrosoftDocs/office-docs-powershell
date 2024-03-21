@@ -43,14 +43,6 @@
         "src": "skype-ps",
         "version": "skype-ps",
         "dest": "module/skype-ps"
-      },
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "src": "virtual-folder",
-        "version": "skype-ps",
-        "dest": "module"
       }
     ],
     "resource": [

@@ -2,8 +2,8 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Get-CsTeamsEducationConfiguration
-author: SaritaBehera
-ms.author: saritabehera
+author: prrathna
+ms.author: prrathna
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamseducationconfiguration
 schema: 2.0.0
 ---
@@ -29,9 +29,7 @@ You must be a Teams Service Administrator or a Global Administrator for your org
 ## Examples
 
 ### Example 1
-In this example, the organization has set the defaults as follows:
-  - Email is set as the preferred contact method for the parent communication invites.
-  - Capability to edit parent contact information by educators is enabled.
+In this example, the organization has Email selected as the preferred contact method used for parent communication invitations.
 
 ```powershell
 Get-CsTeamsEducationConfiguration
@@ -39,7 +37,6 @@ Get-CsTeamsEducationConfiguration
 ```Output
 Identity                              : Global
 ParentGuardianPreferredContactMethod  : Email
-UpdateParentInformation               : Enabled
 ```
 
 ## PARAMETERS

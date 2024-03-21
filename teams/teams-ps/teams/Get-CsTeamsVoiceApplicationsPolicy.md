@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsvoiceapplicationspolicy
+online version: https://learn.microsoft.com/powershell/module/skype/get-csteamsvoiceapplicationspolicy
 schema: 2.0.0
 ---
 

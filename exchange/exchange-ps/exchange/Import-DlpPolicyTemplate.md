@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Import-DlpPolicyTemplate cmdlet to import data loss prevention (DLP) policy template files that are based on transport rules (mail flow rules) into your Exchange organization.
+Use the Import-DlpPolicyTemplate cmdlet to import a data loss prevention (DLP) policy template file into your Exchange organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

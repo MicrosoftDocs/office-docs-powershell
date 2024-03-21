@@ -2,8 +2,8 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsEducationConfiguration
-author: SaritaBehera
-ms.author: saritabehera
+author: prrathna
+ms.author: prrathna
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamseducationconfiguration
 schema: 2.0.0
 ---
@@ -19,7 +19,6 @@ This cmdlet is used to manage the organization-wide education configuration for 
 ```powershell
 Set-CsTeamsEducationConfiguration
    [-ParentGuardianPreferredContactMethod <String>]
-   [-UpdateParentInformation <String>]
    [-WhatIf]
    [-Confirm]
    [<CommonParameters>]
@@ -47,20 +46,6 @@ In this example, SMS is set as the preferred contact method used for parent comm
 Set-CsTeamsEducationConfiguration -ParentGuardianPreferredContactMethod SMS
 ```
 
-### Example 3
-In this example, updating parents contact information is enabled by educators across the organization.
-
-```powershell
-Set-CsTeamsEducationConfiguration -UpdateParentInformation Enabled
-```
-
-### Example 4
-In this example, updating parents contact information is disabled by educators across the organization.
-
-```powershell
-Set-CsTeamsEducationConfiguration -UpdateParentInformation Disabled
-```
-
 ## PARAMETERS
 
 ### -ParentGuardianPreferredContactMethod
@@ -73,18 +58,6 @@ Default value: Email
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -UpdateParentInformation
-Indicates whether updating parents contact information is Enabled/Disabled by educators. Possible values are 'Enabled' and 'Disabled'.
-
-```yaml
-Type: String
-Position: Named
-Default value: Enabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

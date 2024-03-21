@@ -233,12 +233,12 @@ INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter
 
 ## RELATED LINKS
 
-[Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
+[Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
 
-[Get-CsTeamTemplate](Get-CsTeamTemplate.md)
+[Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
 
-[New-CsTeamTemplate](New-CsTeamTemplate.md)
+[New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
 
-[Update-CsTeamTemplate](Update-CsTeamTemplate.md)
+[Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
 
-[Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)
+[Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)

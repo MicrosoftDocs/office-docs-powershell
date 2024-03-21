@@ -12,11 +12,9 @@ ms.reviewer:
 # Get-DlpPolicyTemplate
 
 ## SYNOPSIS
-**Note**: This cmdlet has been retired from the cloud-based service. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/exchange-online-etrs-to-stop-supporting-dlp-policies/ba-p/3886713).
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-This cmdlet is functional only in on-premises Exchange.
-
-Use the Get-DlpPolicyTemplate cmdlet to view existing data loss prevention (DLP) policy templates that are based on transport rules (mail flow rules) in your Exchange organization.
+Use the Get-DlpPolicyTemplate cmdlet to view existing data loss prevention (DLP) policy templates in your Exchange organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
