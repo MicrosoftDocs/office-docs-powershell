@@ -15,7 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module. Once you delete a policy, the policy is permanently deleted. You cannot undo the deletion.
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+
+Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module or a category in Viva. Once you delete a policy, the policy is permanently deleted. You cannot undo the deletion.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -23,32 +25,36 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### FeaturePolicy
 ```
-Remove-VivaModuleFeaturePolicy -ModuleId <String> -FeatureId <String> -PolicyId <String>
+Remove-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### CategoryPolicy
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+
 ```
 Remove-VivaModuleFeaturePolicy -CategoryId <String> -PolicyId <String>
  [-Confirm]
- [-ProgressAction <ActionPreference>]
  [-ResultSize <Unlimited>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module.
+Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module or a category in Viva.
+
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role to run this cmdlet.
+Currently, you need to be a member of the Global administrators role or the roles that have been permissioned at the feature level to run this cmdlet. 
+
+To learn more about permissioned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/en-us/viva/feature-access-management#features-available-for-feature-access-management).
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
@@ -61,10 +67,21 @@ Remove-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Pol
 
 This example deletes the specified policy for the Reflection feature in Viva Insights.
 
+### Example 2
+```powershell
+Remove-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da032w
+```
+
+This example deletes the specified policy for the <category_id> category in Viva.
+
 ## PARAMETERS
 
 ### -CategoryId
-{{ Fill CategoryId Description }}
+**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+
+The CategoryId parameter specifies the category that you want to remove the policy from.
+
+To view details about the categories that support feature access controls, use the Get-VivaFeatureCategory cmdlet. The CategoryId value is returned in the output of the cmdlet.
 
 ```yaml
 Type: String
