@@ -15,9 +15,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+**Note**: Support for categories is available in version 3.5.0-Preview1 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
 
-Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module or a category in Viva. Note that:
+Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module or a category in Viva.
 
 - You can't update a policy for a particular user or group to include the entire tenant if a policy for the entire tenant already exists for the feature. Only one tenant-wide policy is supported.
 - Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature/category is enabled. If a user has multiple policies assigned for a feature/category (directly as a user or member of a group), the most restrictive policy applies.
@@ -31,7 +31,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### FeaturePolicy
 ```
-Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>  
+Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId <String>
  [-Confirm]
  [-Everyone <Boolean>]
  [-IsFeatureEnabled <Boolean>]
@@ -45,8 +45,6 @@ Update-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String> -PolicyId 
 ```
 
 ### CategoryPolicy
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
-
 ```
 Update-VivaModuleFeaturePolicy> -CategoryId <String> -PolicyId <String>
  [-Confirm]
@@ -63,7 +61,7 @@ Update-VivaModuleFeaturePolicy> -CategoryId <String> -PolicyId <String>
 ## DESCRIPTION
 Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a feature in a Viva module or a category in Viva.
 
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+Support for categories is available in version 3.5.0-Preview1 or later of the module.
 
 This cmdlet updates the attributes of the policy that you specify. These attributes include:
 
@@ -80,8 +78,8 @@ You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role or the roles that have been permissioned at the feature level to run this cmdlet. 
-To learn more about permissioned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/en-us/viva/feature-access-management#features-available-for-feature-access-management).
+Currently, you need to be a member of the Global administrators role or the roles that have been assigned at the feature level to run this cmdlet.
+To learn more about assigned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/viva/feature-access-management#features-available-for-feature-access-management).
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
@@ -143,11 +141,12 @@ Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3
 
 This example updates the name of the specified policy, makes it so the policy enables the category (effectively all features under the category), and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
 
-
 ## PARAMETERS
 
 ### -CategoryId
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+This parameter is available in version 3.5.0-Preview1 or later of the module.
+
+**Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
 
 The CategoryId parameter specifies the category of the policy that you want to update.
 
@@ -285,7 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsCategoryEnabled
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+This parameter is available in version 3.5.0-Preview1 or later of the module.
+
+**Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
 
 The IsCategoryEnabled parameter specifies whether the category is enabled by the updated policy. Valid values are:
 
@@ -331,7 +332,7 @@ Accept wildcard characters: False
 ### -IsUserControlEnabled
 **Note**: This parameter is available in version 3.3.0 or later of the module.
 
-The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
+The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are:
 
 - $true: User control is enabled by the policy. Users can opt out of the feature.
 - $false: User control isn't enabled by the policy. Users can't opt of the feature.
