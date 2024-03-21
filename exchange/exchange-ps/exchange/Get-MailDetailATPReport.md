@@ -52,7 +52,7 @@ For the reporting period you specify, the cmdlet returns the following informati
 - Domain
 - Subject
 - Message Size
-- Direction: Values are Inbound, Outbound, Or Unknown. Unknown means the messages weren't processed by the filtering stack. In other words, the messages were dropped at the edge before they made it into our filtering stack, so we can't tell the direction for them.
+- Direction: Values are Inbound, Outbound, IntraOrg Or Unknown. Unknown means the messages weren't processed by the filtering stack. In other words, the messages were dropped at the edge before they made it into our filtering stack, so we can't tell the direction for them.
 - Sender Address
 - Recipient Address
 - Event Type
