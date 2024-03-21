@@ -512,8 +512,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Remove-Team](remove-team.md)
+[Remove-Team](Remove-Team.md)
 
-[Get-Team](get-team.md)
+[Get-Team](Get-Team.md)
 
-[Set-Team](set-team.md)
+[Set-Team](Set-Team.md)
