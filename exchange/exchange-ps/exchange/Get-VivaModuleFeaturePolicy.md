@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+**Note**: Support for categories is available in version 3.5.0-Preview1 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
 
 Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module or category in Viva. Policies are used to restrict or grant access to the specified feature or category for specific users, groups, or the entire tenant. This cmdlet provides details about the policies, including the policy's identifier, name, and creation date.
 
@@ -32,8 +32,6 @@ Get-VivaModuleFeaturePolicy -FeatureId <String> -ModuleId <String>
 ```
 
 ### CategoryPolicy
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
-
 ```
 Get-VivaModuleFeaturePolicy -CategoryId <String>
  [[-PolicyId] <String>]
@@ -44,7 +42,7 @@ Get-VivaModuleFeaturePolicy -CategoryId <String>
 ## DESCRIPTION
 Use the Get-VivaModuleFeaturePolicy cmdlet to view the access policies for a specified feature in a Viva module or a category in Viva.
 
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+Support for categories is available in version 3.5.0-Preview1 or later of the module.
 
 You can view all policies for a specified feature in a Viva module or a category in Viva. To view a specific policy, you can include the PolicyId parameter.
 
@@ -52,9 +50,9 @@ You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role or the roles that have been permissioned at the feature level to run this cmdlet. 
+Currently, you need to be a member of the Global administrators role or the roles that have been permissioned at the feature level to run this cmdlet.
 
-To learn more about permissioned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/en-us/viva/feature-access-management#features-available-for-feature-access-management).
+To learn more about permissioned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/viva/feature-access-management#features-available-for-feature-access-management).
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
@@ -79,19 +77,21 @@ This example returns details about a specific policy added for the Reflection fe
 Get-VivaModuleFeaturePolicy -CategoryId <category_id>
 ```
 
-This example returns details about all the policies added for the <category_id> category in Viva.
+This example returns details about all the policies added for the `<category_id>` category in Viva.
 
 ### Example 4
 ```powershell
 Get-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b
 ```
 
-This example returns details about a specific policy added for the <category_id> category in Viva.
+This example returns details about a specific policy added for the `<category_id>` category in Viva.
 
 ## PARAMETERS
 
 ### -CategoryId
-**Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
+This parameter is available in version 3.5.0-Preview1 or later of the module.
+
+**Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
 
 The CategoryId parameter specifies the category that you want to view the policies for.
 
