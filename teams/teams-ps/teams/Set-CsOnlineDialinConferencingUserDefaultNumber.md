@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
-online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguserdefaultnumber
+online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencinguserdefaultnumber
 applicable: Microsoft Teams
 title: Set-CsOnlineDialInConferencingUserDefaultNumber
 schema: 2.0.0
