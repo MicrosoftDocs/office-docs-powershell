@@ -127,7 +127,7 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
 - `SfBOnPremUser` - to query for users that are hosted on-premises (available from January 31, 2023, in the latest TPM versions at that time).
-- `Unknown` - to query for a user type that is not known.
+- `Unknown` - to query for a user type that is not known. (This AccountType is being renamed to IneligibleUser)
 
 ```yaml
 Type: UserIdParameter
@@ -561,6 +561,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Notes
 
 A recent fix has addressed an issue where some Guest users were being omitted from the output of the Get-CsOnlineUser cmdlet, resulting in an increase in the reported user count.
+
+**Updates in Teams PowerShell Module version 6.1.1 Preview and later**
+
+The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.1 (Targeted Release: April 15th, 2024) or later. These changes will be gradually rolled out for all tenants starting from April 26th, 2024. 
+
+When using the Get-CsOnlineUser cmdlet in Teams PowerShell Module without the -identity parameter, we are introducing these updates:
+- Before the rollout, unlicensed users who did not have a valid Teams license were displayed in the output of the Get-CsOnlineUser cmdlet for 30 days after license removal. After the rollout, Get-CsOnlineUser will show unlicensed users after the initial 30 days and also include unlicensed users who never had a valid Teams license.
+- The AccountType value Unknown is being renamed to IneligibleUser, and will include users who do not have a valid Teams license (exceptions: Guest, SfbOnPremUser, and ResourceAccount).
+- You can exclude users with the AccountType as IneligibleUser from the output with the AccountType filter. For example, Get-CsOnlineUser -Filter {AccountType -ne 'IneligibleUser'}
+
+When Get-CsOnlineUser is used with the -identity parameter, you can also use UPN, Alias, and SIP Address with the -identity parameter to obtain the information for a specific unlicensed user.
 
 **Updates in Teams PowerShell Module version 6.1.0 and later**
 
