@@ -711,8 +711,8 @@ The Mode parameter specifies the action and notification level of the DLP policy
 
 - Enable: The policy is enabled for actions and notifications. This is the default value.
 - Disable: The policy is disabled.
-- TestWithNotifications: No actions are taken, but notifications are sent.
-- TestWithoutNotifications: An audit mode where no actions are taken, and no notifications are sent.
+- TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
+- TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.
 
 ```yaml
 Type: PolicyMode
