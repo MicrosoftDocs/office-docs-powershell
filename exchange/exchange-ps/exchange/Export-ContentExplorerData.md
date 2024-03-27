@@ -2,16 +2,18 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/export-contentexplorerdata
 applicable: Security & Compliance
-title: Export-ContentExplorerData (preview)
+title: Export-ContentExplorerData
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Export-ContentExplorerData (preview)
+# Export-ContentExplorerData
 
 ## SYNOPSIS
+**Note**: This cmdlet is currently in Preview, isn't available in all organizations, and is subject to change.
+
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Export-ContentExplorerData cmdlet to export data classification file details in Microsoft Purview compliance.
