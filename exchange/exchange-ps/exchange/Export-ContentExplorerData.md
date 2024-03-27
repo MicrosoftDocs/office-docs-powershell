@@ -2,14 +2,14 @@
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/export-contentexplorerdata
 applicable: Security & Compliance
-title: Export-ContentExplorerData
+title: Export-ContentExplorerData (preview)
 schema: 2.0.0
 author: chrisda
 ms.author: chrisda
 ms.reviewer:
 ---
 
-# Export-ContentExplorerData
+# Export-ContentExplorerData (preview)
 
 ## SYNOPSIS
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
