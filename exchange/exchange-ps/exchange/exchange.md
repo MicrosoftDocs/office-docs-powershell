@@ -1624,6 +1624,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-ExchangeSettings](Get-ExchangeSettings.md)
 
+### [Get-FeatureConfiguration](Get-FeatureConfiguration.md)
+
 ### [Get-Notification](Get-Notification.md)
 
 ### [Get-OrganizationConfig](Get-OrganizationConfig.md)
@@ -1644,6 +1646,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-ExchangeSettings](New-ExchangeSettings.md)
 
+### [New-FeatureConfiguration](New-FeatureConfiguration.md)
+
 ### [New-PartnerApplication](New-PartnerApplication.md)
 
 ### [New-ServicePrincipal](New-ServicePrincipal.md)
@@ -1655,6 +1659,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-AuthenticationPolicy](Remove-AuthenticationPolicy.md)
 
 ### [Remove-AuthServer](Remove-AuthServer.md)
+
+### [Remove-FeatureConfiguration](Remove-FeatureConfiguration.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
 
@@ -1679,6 +1685,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ExchangeServer](Set-ExchangeServer.md)
 
 ### [Set-ExchangeSettings](Set-ExchangeSettings.md)
+
+### [Set-FeatureConfiguration](Set-FeatureConfiguration.md)
 
 ### [Set-Notification](Set-Notification.md)
 
