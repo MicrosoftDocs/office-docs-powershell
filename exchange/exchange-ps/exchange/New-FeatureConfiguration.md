@@ -9,13 +9,15 @@ schema: 2.0.0
 # New-FeatureConfiguration
 
 ## SYNOPSIS
+**Note**: Currently, this cmdlet is available only in Private Preview.
 
-## SYNTAX
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the New-FeatureConfiguration cmdlet to create Discovery policies.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+
+## SYNTAX
 
 ```
 New-FeatureConfiguration [-Name] <String> -Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode> -Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario> -ScenarioConfig <String>

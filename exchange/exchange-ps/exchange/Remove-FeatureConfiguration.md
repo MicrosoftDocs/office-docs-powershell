@@ -9,6 +9,8 @@ schema: 2.0.0
 # Remove-FeatureConfiguration
 
 ## SYNOPSIS
+**Note**: Currently, this cmdlet is available only in Private Preview.
+
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
 Use the Remove-FeatureConfiguration cmdlet to remove Discovery policies.
