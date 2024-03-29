@@ -13,9 +13,9 @@ author: tomkau
 # Remove-CsTeamsAppPermissionPolicy
 
 ## SYNOPSIS
-**NOTE**: You can use this cmdlet to remove a specific custom policy from a user. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experienc
+**NOTE**: You can use this cmdlet to remove a specific custom policy from a user. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience. This cmdlet is not supported for tenants that switch to app centric management feature as it replaces permission policies. While the cmdlet may return the results but the results aren't applicable for such tenants.
 
-As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Permission Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
+As an admin, you can use allow or block specific apps for your users. Learn more about the app permission policies at <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies> and about app centric management at <https://learn.microsoft.com/microsoftteams/app-centric-management>.
 
 This cmdlet allows you to remove app permission policies that have been created within your organization. If you run Remove-CsTeamsAppPermissionPolicy on the Global policy, it will be reset to the defaults provided for new organizations.
 

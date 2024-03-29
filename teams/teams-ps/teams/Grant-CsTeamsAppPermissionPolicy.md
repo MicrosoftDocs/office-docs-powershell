@@ -13,9 +13,11 @@ author: tomkau
 # Grant-CsTeamsAppPermissionPolicy
 
 ## SYNOPSIS
-**NOTE**: You can use this cmdlet to assign a specific custom policy to a user. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
+**NOTE**: You can use this cmdlet to assign a specific custom policy to a user. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience. This cmdlet is not supported for tenants that switch to app centric management feature as it replaces permission policies. While the cmdlet may return the results but the results aren't applicable for such tenants.
 
-As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the App Permission Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
+As an admin, you can use allow or block specific apps for your users. Learn more about the app permission policies at <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies> and about app centric management at <https://learn.microsoft.com/microsoftteams/app-centric-management>.
+
+As an admin, you can use app permission policies to enable or block specific apps for your users. Learn more about the app permission policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
 ## SYNTAX
 
