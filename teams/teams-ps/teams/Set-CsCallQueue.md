@@ -32,7 +32,8 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 
 > [!CAUTION]
 > The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items. 
-> 
+>
+> - -HideAuthorizedUsers
 > - -OverflowRedirectPersonTextToSpeechPrompt
 > - -OverflowRedirectPersonAudioFilePrompt
 > - -OverflowRedirectVoicemailTextToSpeechPrompt
@@ -1298,6 +1299,8 @@ Accept wildcard characters: False
 ```
 
 ### -HideAuthorizedUsers
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 This is a list of GUIDs of authorized users who should not appear on the list of supervisors for the agents who are members of this queue.  The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). 
 
 ```yaml
