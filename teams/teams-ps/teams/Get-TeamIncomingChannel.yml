@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet supports retrieving incoming channels of a team.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="GroupId" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Channel" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-TeamChannel
+  href: Get-TeamChannel.yml
+- text: Get-TeamAllChannel
+  href: Get-TeamAllChannel.yml
+syntaxes:
+- Get-TeamIncomingChannel -GroupId <String>
+examples:
+- title: Example 1
+  code: |-
+    Get-TeamIncomingChannel -GroupId 126b90a5-e65a-4fef-98e3-d9b49f4acf12
+  description: |-
+    Returns incoming channels of a team.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    Group ID of the team
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-TeamIncomingChannel
+name: Get-TeamIncomingChannel
+description: |-
+  This cmdlet supports retrieving incoming channels of a team.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-teamincomingchannel
+  schema: 2.0.0
+  author: zhongxlmicrosoft
+  ms.author: serdars
+  ms.reviewer: dedaniel, robharad

@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an existing collection of reporting configuration settings.
+  Reporting configuration settings are used to specify the URL for installations of Skype for Business Server Monitoring Reports.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Remove-CsReportingConfiguration` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Reporting.ReportingConfiguration object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Remove-CsReportingConfiguration` cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Reporting.ReportingConfiguration object.
+links:
+- text: Get-CsReportingConfiguration
+  href: Get-CsReportingConfiguration.yml
+- text: New-CsReportingConfiguration
+  href: New-CsReportingConfiguration.yml
+- text: Set-CsReportingConfiguration
+  href: Set-CsReportingConfiguration.yml
+syntaxes:
+- Remove-CsReportingConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsReportingConfiguration -Identity "service:MonitoringDatabase:atl-sql-002.litwareinc.com"
+  description: |-
+    In Example 1, the reporting configuration settings with the Identity service:MonitoringDatabase:atl-sql-002.litwareinc.com are removed.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsReportingConfiguration | Remove-CsReportingConfiguration
+  description: |-
+    In Example 2, all the reporting configuration settings currently in use in the organization are removed.
+    To do this, the command first uses the `Get-CsReportingConfiguration` cmdlet to return a collection of all the reporting configuration settings.
+    This collection is then piped to the `Remove-CsReportingConfiguration` cmdlet, which removes each item in the collection.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsReportingConfiguration | Where-Object {$_.ReportingUrl -eq "https://atl-sql-002.litwareinc.com/lync_reports" | Remove-CsReportingConfiguration
+  description: |-
+    The command shown in Example 3 deletes any reporting configuration settings where the reporting URL is set to `https://atl-sql-002.litwareinc.com/lync_reports`.
+
+    To carry out this task, the command first uses the `Get-CsReportingConfiguration` cmdlet to return all the reporting configuration settings currently in use.
+
+    This collection is then piped to the `Where-Object` cmdlet, which selects only those settings where the ReportingURL property is equal to `https://atl-sql-002.litwareinc.com/lync_reports`.
+
+    That filtered collection is then piped to the `Remove-CsReportingConfiguration` cmdlet, which removes each item in the collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Service Identity of the monitoring database whose reporting configuration settings are to be removed.
+    For example:
+
+    `-Identity "Service:MonitoringDatabase:atl-sql-001.litwareinc.com"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsReportingConfiguration
+name: Remove-CsReportingConfiguration
+description: |-
+  Reporting configuration settings are used to specify the home page for the Skype for Business Server Monitoring Reports; if you are not using Monitoring Reports then there is no reason for you to modify the reporting configuration settings.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Remove-CsReportingConfiguration` cmdlet are not available in the Skype for Business Server.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csreportingconfiguration
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsReportingConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

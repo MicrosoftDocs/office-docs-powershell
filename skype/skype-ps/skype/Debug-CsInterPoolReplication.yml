@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that replication is working between a Registrar pool and its assigned backup pool.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Debug-CsInterPoolReplication does not accept pipelined data.
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Debug-CsInterPoolReplication -PoolFqdn <Fqdn> [-BackupModule <BackupModules>] [-Force] [-Confirm]
+
+   [-DatabaseCommandTimeoutInSeconds <Int32>] [-ResyncSignatureMismatchItems] [-SuppressMultiMasterDetection]
+
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Debug-CsInterPoolReplication -PoolFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    The command shown in Example 1 verifies the full replication status between the pool atl-cs-001.litwareinc.com and its previously-assigned backup pool.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Debug-CsInterPoolReplication -PoolFqdn "atl-cs-001.litwareinc.com" -BackupModule DataConf
+  description: |-
+    In Example 2, only the replication of data conferencing data is verified between the pool atl-cs-001.litwareinc.com and its previously-assigned backup pool.
+  summary: ""
+parameters:
+- type: <xref href="BackupModules" data-throw-if-not-resolved="False" />
+  name: BackupModule
+  description: |+
+    Enables administrators to specify the data store to be verified.
+    Allowed values are:
+
+    * All
+    * CentralMgmt
+    * PresenceFocus
+    * DataConf
+
+    The default value is All.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DatabaseCommandTimeoutInSeconds
+  description: |+
+    PARAMVALUE: Int32
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: PoolFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name of the primary pool being tested.
+    For example:
+
+    `-PoolFqdn "atl-cs-001.litwareinc.com"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResyncSignatureMismatchItems
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressMultiMasterDetection
+  description: |+
+    When included in the command, Debug-CsInterPoolReplication will not verify whether or not the pool is part of a multi-master replication configuration before beginning its verification checks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Debug-CsInterPoolReplication
+name: Debug-CsInterPoolReplication
+description: |-
+  In Skype for Business Server each Registrar pool can be associated with a backup pool.
+  The backup pool maintains a copy of all the data stored on the primary pool.
+  Should the primary pool become unavailable then users of that pool can automatically be "failed over" to the backup pool.
+  This enables those users to continue to use Skype for Business Server even though their home pool is not available.
+  The Debug-CsInterPoolReplication cmdlet is used to compare the data stores on a primary pool and its backup pool, and thus verify that replication between the two pools is working as expected.
+
+  Note that this command will fail if the pool being tested has not been assigned a backup pool.
+
+  To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
+
+  `Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Debug-CsInterPoolReplication"}`
+
+  The functions carried out by the Debug-CsInterPoolReplication cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/debug-csinterpoolreplication
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Debug-CsInterPoolReplication
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

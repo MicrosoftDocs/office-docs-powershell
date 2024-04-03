@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes the specified whiteboard for the given user from the Microsoft Whiteboard service. If the user is the owner of the whiteboard, the entire whiteboard will be deleted. If the user has joined the whiteboard but does not own it, they will be removed and the whiteboard will still be accessible by others.
+module: MicrosoftWhiteboardAdmin
+notes: ""
+syntaxes:
+- Remove-Whiteboard [-UserId] <Guid> [-WhiteboardId] <Guid> [-ForceAuthPrompt] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
+  description: |-
+    Deletes the whiteboard.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceAuthPrompt
+  description: |+
+    (Optional) Always prompt for auth. Use to ignore cached credentials.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: UserId
+  isRequired: true
+  description: |+
+    The ID of the user account to delete the whiteboard from.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: WhiteboardId
+  isRequired: true
+  description: |+
+    The ID of a specific whiteboard to delete.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+applicable:
+- Microsoft Whiteboard
+uid: MicrosoftWhiteboardAdmin.Remove-Whiteboard
+name: Remove-Whiteboard
+description: |-
+  Removes the specified whiteboard (owner) or a joined user removes themselves from the specified whiteboard.
+metadata:
+  external help file: WhiteboardAdmin-help.xml
+  Module Name: WhiteboardAdmin
+  online version: https://learn.microsoft.com/powershell/module/whiteboard/remove-whiteboard
+  applicable: Microsoft Whiteboard
+  title: Remove-Whiteboard
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

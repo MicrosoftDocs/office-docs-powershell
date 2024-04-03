@@ -1,0 +1,156 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the Persistent Chat policies configured for use in your organization.
+  Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-CsPersistentChatPolicy
+  href: Grant-CsPersistentChatPolicy.yml
+- text: New-CsPersistentChatPolicy
+  href: New-CsPersistentChatPolicy.yml
+- text: Remove-CsPersistentChatPolicy
+  href: Remove-CsPersistentChatPolicy.yml
+- text: Set-CsPersistentChatPolicy
+  href: Set-CsPersistentChatPolicy.yml
+syntaxes:
+- Get-CsPersistentChatPolicy [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+- Get-CsPersistentChatPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsPersistentChatPolicy
+  description: |-
+    The command shown in Example 1 returns information about all the Persistent Chat policies configured for use in the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsPersistentChatPolicy -Identity "RedmondPersistentChatPolicy"
+  description: |-
+    In Example 2, information is returned only for the per-user Persistent Chat policy with the Identity RedmondPersistentChatPolicy.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsPersistentChatPolicy -Filter "site:*"
+  description: |-
+    In Example 3, information is returned for all the Persistent Chat policies configured at the site scope.
+    This is done by including the Filter parameter and the parameter value "site:*".
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsPersistentChatPolicy | Where-Object {$_.EnablePersistentChat -eq $True}
+  description: |-
+    In Example 4, information is returned only for those Persistent Chat policies in which Persistent Chat is enabled.
+    To do this, the Get-CsPersistentChatPolicy cmdlet is first called without any parameters in order to return a collection of all the Persistent Chat policies configured for use in the organization.
+    This collection is then piped to the Where-Object cmdlet, which picks out only those policies where the EnablePersistentChat property is equal to True ($True).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to do a wildcard search for Persistent Chat policies.
+    For example, to find all the policies configured at the site scope, use this syntax:
+
+    `-Filter "site:*"`
+
+    You cannot use both the Filter parameter and the Identity parameter in the same command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identity assigned to the policy when it was created.
+    Persistent Chat policies can be assigned at the global, site, or per-user scope.
+    To refer to the global instance, use this syntax:
+
+    `-Identity global`
+
+    To refer to a policy at the site scope, use this syntax:
+
+    `-Identity site:Redmond`
+
+    To refer to a policy at the per-user scope, use syntax similar to this:
+
+    `-Identity RedmondPersistentChatPolicy`
+
+    Wildcard characters such as the asterisk (*) cannot be used with the Identity parameter.
+    To do a wildcard search for policies, use the Filter parameter instead.
+
+    If neither the Identity nor the Filter parameter is specified the Get-CsPersistentChatPolicy cmdlet returns information about all the Persistent Chat policies configured for use in your organization.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the Persistent Chat policy data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the Skype for Business Online tenant account whose Persistent Chat policies are being returned.
+    For example:
+
+    `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+    You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.Get-CsPersistentChatPolicy
+name: Get-CsPersistentChatPolicy
+description: |-
+  The Persistent Chat service provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
+  Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
+  Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
+
+  By default, users are not granted access to the Persistent Chat service; that access can only be granted if the user is managed by a Persistent Chat policy that allows for the user of the service.
+  When you install Skype for Business Server, all your users are managed by a global Persistent Chat policy in which the use of Persistent Chat is disabled.
+  If you want to give all your users access to the service you can simply set the EnablePersistentChat property in this global policy to True.
+  Alternatively, you can create additional policies at the site or at the per-user scope, and thus provide Persistent Chat access to some users while denying this access to other users.
+
+  To view Persistent Chat policy information in the Skype for Business Server Control Panel, click Persistent Chat and then click Persistent Chat Policy.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cspersistentchatpolicy
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: Get-CsPersistentChatPolicy
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

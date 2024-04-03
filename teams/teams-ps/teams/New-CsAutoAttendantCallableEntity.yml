@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.OAA.Models.CallableEntity" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsOnlineUser
+  href: Get-CsOnlineUser.yml
+- text: Find-CsOnlineApplicationInstance
+  href: Find-CsOnlineApplicationInstance.yml
+syntaxes:
+- New-CsAutoAttendantCallableEntity -Identity <String> -Type <User | ApplicationEndpoint | ExternalPstn | SharedVoicemail> [-Tenant <Guid>] [-EnableTranscription] [-EnableSharedVoicemailSystemPromptSuppression] [-CallPriority <Int16>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $callableEntity = New-CsAutoAttendantCallableEntity -Identity "9bad1a25-3203-5207-b34d-1bd933b867a5" -Type User
+  description: |-
+    This example creates a user callable entity.
+  summary: ""
+- title: Example 2
+  code: |-
+    $callableEntity = New-CsAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type ExternalPSTN
+  description: |-
+    This example creates an ExternalPSTN callable entity.
+  summary: ""
+- title: Example 3
+  code: |-
+    $operatorObjectId = (Get-CsOnlineUser operator@contoso.com).ObjectId
+    $callableEntity = New-CsAutoAttendantCallableEntity -Identity $operatorObjectId -Type User
+  description: |-
+    This example gets a user object using Get-CsOnlineUser cmdlet. We then use the Microsoft Entra ObjectId of that user object to create a user callable entity.
+  summary: ""
+- title: Example 4
+  code: |-
+    $callableEntityId = Find-CsOnlineApplicationInstance -SearchQuery "Main Auto Attendant" -MaxResults 1 | Select-Object -Property Id
+    $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityId.Id -Type ApplicationEndpoint
+  description: |-
+    This example gets an application instance by name using Find-CsOnlineApplicationInstance cmdlet. We then use the Microsoft Entra ObjectId of that application instance to create an application endpoint callable entity.
+  summary: ""
+- title: Example 5
+  code: |-
+    $callableEntityGroup = Find-CsGroup -SearchQuery "Main Auto Attendant" -ExactMatchOnly $true -MailEnabledOnly $true
+    $callableEntity = New-CsAutoAttendantCallableEntity -Identity $callableEntityGroup -Type SharedVoicemail -EnableTranscription
+  description: |-
+    This example gets an Office 365 group by name using Find-CsGroup cmdlet. Then the Guid of that group is used to create a shared voicemail callable entity that supports transcription.
+  summary: ""
+parameters:
+- type: <xref href="Int16" data-throw-if-not-resolved="False" />
+  name: CallPriority --- Private Preview customers only
+  description: |+
+    The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint`.
+
+    PARAMVALUE: 1 | 2 | 3 | 4 | 5
+
+    1 = Very High
+    2 = High
+    3 = Normal / Default
+    4 = Low
+    5 = Very Low
+
+  defaultValue: "3"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSharedVoicemailSystemPromptSuppression
+  description: |+
+    Suppresses the "Please leave a message after the tone" system prompt when transferring to shared voicemail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableTranscription
+  description: |+
+    Enables the email transcription of voicemail, this is only supported with shared voicemail callable entities.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter represents the ID of the callable entity; this can be either a Object ID or a TEL URI.
+
+    - Only the Object IDs of users that have Enterprise Voice enabled are supported.
+    - Only PSTN numbers that are acquired and assigned through Skype for Business Online are supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    The Type parameter represents the type of the callable entity, which can be any of the following:
+
+    - User
+    - ApplicationEndpoint
+    - ExternalPstn
+    - SharedVoicemail
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsAutoAttendantCallableEntity
+name: New-CsAutoAttendantCallableEntity
+description: |-
+  The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Auto Attendant service. Callable entities can be created using either Object ID or TEL URIs and can refer to any of the following entities:
+
+  - User
+  - ApplicationEndpoint
+  - ExternalPstn
+  - SharedVoicemail
+
+  **NOTE**: In order to setup a shared voicemail, an Office 365 Group that can receive external emails is required.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantcallableentity
+  applicable: Microsoft Teams
+  title: New-CsAutoAttendantCallableEntity
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

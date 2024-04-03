@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the Skype for Business Server replication process; this includes information on whether replication is currently up to date for your Skype for Business Server computers.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.ReplicaState  or  Microsoft.Rtc.Management.Xds.CentralManagementStoreStatusResult" data-throw-if-not-resolved="False" />
+  description: |-
+    By default, the Get-CsManagementStoreReplicationStatus cmdlet returns instances of the Microsoft.Rtc.Management.Xds.ReplicaState object.
+    If the CentralManagementStoreStatus parameter is used, then the cmdlet returns instances of the Microsoft.Rtc.Management.Xds.CentralManagementStoreStatusResult object.
+links:
+- text: Invoke-CsManagementStoreReplication
+  href: Invoke-CsManagementStoreReplication.yml
+syntaxes:
+- >-
+  Get-CsManagementStoreReplicationStatus [[-ReplicaFqdn] <String>] [-CentralManagementStoreStatus]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsManagementStoreReplicationStatus
+  description: |-
+    In Example 1, the Get-CsManagementStoreReplicationStatus cmdlet is called without any parameters; that returns the replication status (up to date or not up to date) for all Skype for Business Server computers.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsManagementStoreReplicationStatus | Where-Object {$_.UpToDate -eq $False}
+  description: |-
+    Example 2 returns a collection of all the computers where replication is not up to date.
+    This is done by first using the Get-CsManagementStoreReplicationStatus cmdlet to retrieve a collection containing the replication status for all the servers.
+    This collection is then piped to the Where-Object cmdlet, which applies a filter that limits the returned data to computers where the UpToDate property is equal to False.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsManagementStoreReplicationStatus -ReplicaFqdn atl-cs-001.litwareinc.com
+  description: |-
+    In Example 3, returned data is limited to a single computer: atl-cs-001.litwareinc.com/
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsManagementStoreReplicationStatus | Where-Object {$_.LastUpdateCreation -lt "8/11/2018 8:00 PM"}
+  description: |-
+    Example 4 returns information about the computers that were last replicated prior to 8:00 P.M.
+    on August 11, 2018.
+    To do this, the Get-CsManagementStoreReplicationStatus cmdlet is first called to return replication information for all your Skype for Business Server computers.
+    This information is then piped to the Where-Object cmdlet, which selects only those computers where the LastUpdateCreation property is less than 8:00 P.M.
+    on August 11, 2018 (8/11/2018 8:00 P.M.).
+    To return information about computers that were last replicated after 8:00 P.M.
+    on August 11, 2018, use the -gt (greater than) operator:
+
+    `Where-Object {$_.LastUpdateCreation -gt "8/11/2018 8:00 PM"}`
+
+    The dates specified in this example use the U.S.
+    English format for date-time values.
+    Dates should be specified using a format compatible with your Regional and Language Options.
+  summary: ""
+- title: '-------------------------- Example 5 --------------------------'
+  code: |-
+    Get-CsManagementStoreReplicationStatus -CentralManagementStoreStatus
+  description: |-
+    The command shown in Example 5 uses the CentralManagementStoreStatus parameter to return detailed information about the current status of the Central Management store.
+    This includes the fully qualified domains names of the Active Master and the File Transfer Agent services as well as the date and time of the last heartbeat detected for each of those services.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CentralManagementStoreStatus
+  description: |+
+    Returns additional information about the current status of the Central Management store, including a list of active replicas and deleted replicas, as well as the location of the Active Master and the File Transfer Agent services.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicaFqdn
+  description: |+
+    Fully qualified domain name (FQDN) of the computer for which the replication status is to be checked.
+    For example: -ReplicaFqdn "atl-cs-001.litwareinc.com".
+
+    If this parameter is not included, then replication status information for all your Skype for Business Server computers will be returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsManagementStoreReplicationStatus
+name: Get-CsManagementStoreReplicationStatus
+description: |-
+  When an administrator makes a change of some kind to Skype for Business Server (for example, when an administrator creates a new voice policy or changes the Address Book Server configuration settings) that change is recorded in the Central Management store.
+  In turn, the change must then be replicated to all the computers running Skype for Business Server services or server roles.
+
+  In order to replicate data, the Master Replicator (running on the Central Management Server) creates a snapshot of the modified configuration data; a copy of this snapshot is then sent to each computer running Skype for Business Server services or server roles.
+  On those computers, a replication agent receives the snapshot and uploads the modified data; the agent then sends the Master Replicator a message reporting the latest replication status.
+
+  The Get-CsManagementStoreReplicationStatus cmdlet enables you to verify the replication status for any (or all) of the Skype for Business Server computers in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csmanagementstorereplicationstatus
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsManagementStoreReplicationStatus
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

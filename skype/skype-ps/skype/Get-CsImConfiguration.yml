@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations. This cmdlet was introduced in Skype for Business June 2016 Cumulative Update.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsImConfiguration
+  href: https://learn.microsoft.com/powershell/module/skype/new-csimconfiguration?view=skype-ps
+- text: Set-CsImConfiguration
+  href: https://learn.microsoft.com/powershell/module/skype/set-csimconfiguration?view=skype-ps
+- text: Remove-CsImConfiguration
+  href: https://learn.microsoft.com/powershell/module/skype/remove-csimconfiguration?view=skype-ps
+syntaxes:
+- Get-CsImConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsImConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsImConfiguration
+  description: |-
+    This example returns information for all Instant Messaging (IM) configurations in your organization.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters in order to return a collection of items. For instance the following usage specifies all the site scoped IM configurations: -Filter "site:*" . Filter and Identity are mutually exclusive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    A unique identifier specifying the scope and, in some cases the name, of the IM configuration. If this parameter is omitted, all IM configurations for the organization are returned.
+
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Presence of this switch causes the cmdlet to retrieve information from the local replica of the Central Management store, rather than from Central Management store itself. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsImConfiguration
+name: Get-CsImConfiguration
+description: |-
+  Use the Get-CsImConfiguration cmdlet to retrieve information about Instant Messaging (IM) configurations.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csimconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsImConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

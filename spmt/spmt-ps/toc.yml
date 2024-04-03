@@ -1,0 +1,24 @@
+items:
+- name: Reference
+  items:
+  - name: SharePointMigrationTool
+    uid: SharePointMigrationTool
+    items:
+    - name: Add-SPMTTask
+      uid: SharePointMigrationTool.Add-SPMTTask
+    - name: Get-SPMTMigration
+      uid: SharePointMigrationTool.Get-SPMTMigration
+    - name: Register-SPMTMigration
+      uid: SharePointMigrationTool.Register-SPMTMigration
+    - name: Remove-SPMTTask
+      uid: SharePointMigrationTool.Remove-SPMTTask
+    - name: Show-SPMTMigration
+      uid: SharePointMigrationTool.Show-SPMTMigration
+    - name: Start-SPMTMigration
+      uid: SharePointMigrationTool.Start-SPMTMigration
+    - name: Stop-SPMTMigration
+      uid: SharePointMigrationTool.Stop-SPMTMigration
+    - name: Unregister-SPMTMigration
+      uid: SharePointMigrationTool.Unregister-SPMTMigration
+metadata:
+  universal_conceptual_toc: /powershell/spmt/spmt-ps/toc.json

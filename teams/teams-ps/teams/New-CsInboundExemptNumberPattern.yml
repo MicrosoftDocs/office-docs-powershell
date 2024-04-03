@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet lets you configure a new number pattern that is exempt from tenant call blocking.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  You can use Test-CsInboundBlockedNumberPattern to test your block and exempt phone number ranges.
+links:
+- text: Get-CsInboundExemptNumberPattern
+  href: Get-CsInboundExemptNumberPattern.yml
+- text: Set-CsInboundExemptNumberPattern
+  href: Set-CsInboundExemptNumberPattern.yml
+- text: Remove-CsInboundExemptNumberPattern
+  href: Remove-CsInboundExemptNumberPattern.yml
+- text: Test-CsInboundBlockedNumberPattern
+  href: Test-CsInboundBlockedNumberPattern.yml
+- text: Get-CsTenantBlockedCallingNumbers
+  href: Get-CsTenantBlockedCallingNumbers.yml
+syntaxes:
+- >-
+  New-CsInboundExemptNumberPattern -Identity <String> -Pattern <String> [-Description <String>] [-Enabled <Boolean>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-CsInboundExemptNumberPattern -Pattern <string> -Name <string> [-Description <string>] [-Enabled <boolean>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS> New-CsInboundExemptNumberPattern -Identity "AllowContoso1" -Pattern "^\+?1312555888[2|3]$" -Description "Allow Contoso helpdesk" -Enabled $True
+  description: |-
+    Creates a new inbound exempt number pattern for the numbers 1 (312) 555-88882 and 1 (312) 555-88883 and enables it
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Sets the description of the number pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    This parameter determines whether the number pattern is enabled for exemption or not.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the exempt number pattern to be created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    A displayable name describing the exempt number pattern to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Pattern
+  isRequired: true
+  description: |+
+    A regular expression that the calling number must match in order to be exempt from blocking. It is best pratice to start the regular expression with the hat character and end it with the dollar character. You can use various regular expression test sites on the Internet to validate the expression.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsInboundExemptNumberPattern
+name: New-CsInboundExemptNumberPattern
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csinboundexemptnumberpattern
+  applicable: Microsoft Teams
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

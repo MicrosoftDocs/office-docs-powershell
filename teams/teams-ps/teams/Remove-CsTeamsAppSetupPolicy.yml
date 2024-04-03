@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  **NOTE**: You can use this cmdlet to remove custom app setup policies. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
+
+  As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
+
+  Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android). Learn more about the App Setup Policies: <https://learn.microsoft.com/MicrosoftTeams/teams-app-setup-policies>.
+
+  If you run Remove-CsTeamsAppSetupPolicy on the Global policy, it will be reset to the defaults provided for new organizations.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-CsTeamsAppSetupPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTeamsAppSetupPolicy -Identity SalesPolicy
+  description: |-
+    Deletes a custom policy that has already been created in the organization.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses all non-fatal errors.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the policy to be removed.
+    To "remove" the global policy, use the following syntax: `-Identity global`.
+    (Note that the global policy cannot actually be removed.  Instead, all the properties in that policy will be reset to their default values.) To remove a per-user policy, use syntax similar to this: `-Identity "SalesDepartmentPolicy"`.
+    You cannot use wildcards when specifying a policy Identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsAppSetupPolicy
+name: Remove-CsTeamsAppSetupPolicy
+description: |-
+  **NOTE**: You can use this cmdlet to remove custom app setup policies. We require that all creation and modification of app setup polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
+
+  As an admin, you can use app setup policies to customize Microsoft Teams to highlight the apps that are most important for your users. You choose the apps to pin and set the order that they appear. App setup policies let you showcase apps that users in your organization need, including ones built by third parties or by developers in your organization. You can also use app setup policies to manage how built-in features appear.
+
+  Apps are pinned to the app bar. This is the bar on the side of the Teams desktop client and at the bottom of the Teams mobile clients (iOS and Android). Learn more about the App Setup Policies: <https://learn.microsoft.com/MicrosoftTeams/teams-app-setup-policies>.
+
+  If you run Remove-CsTeamsAppSetupPolicy on the Global policy, it will be reset to the defaults provided for new organizations.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsappsetuppolicy
+  applicable: Microsoft Teams
+  title: Remove-CsTeamsAppSetupPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

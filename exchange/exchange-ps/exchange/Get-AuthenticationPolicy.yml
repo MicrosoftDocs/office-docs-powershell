@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
+  Use the Get-AuthenticationPolicy cmdlet to view authentication policies in your organization.
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-AuthenticationPolicy [[-Identity] <AuthPolicyIdParameter>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-AuthenticationPolicy | Format-Table -Auto Name
+  description: |-
+    This example returns a summary list of all authentication policies.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-AuthenticationPolicy -Identity "Engineering Group"
+  description: |-
+    This example returns detailed information for the authentication policy named Engineering Group.
+  summary: ""
+parameters:
+- type: <xref href="AuthPolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the authentication policy you want to view. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Exchange Server 2019
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2019
+- Exchange Online
+- Exchange Online Protection
+uid: ExchangePowerShell.Get-AuthenticationPolicy
+name: Get-AuthenticationPolicy
+description: |-
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-authenticationpolicy
+  applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+  title: Get-AuthenticationPolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Manages the list of active Persistent Chat servers.
+  An active server is Persistent Chat server (in a specified Persistent Chat service pool) that is fully operational and can accept new client connections.
+  Servers in the pool that have not been marked as active servers might be operational, but are currently unable to accept new client connections.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Set-CsPersistentChatActiveServer` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+links:
+- text: Set-CsPersistentChatState
+  href: Set-CsPersistentChatState.yml
+syntaxes:
+- >-
+  Set-CsPersistentChatActiveServer [[-Identity] <XdsGlobalRelativeIdentity>]
+
+   -ActiveServers <System.Management.Automation.PSListModifier`1[Microsoft.Rtc.Management.Deploy.Fqdn]>
+
+   [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-CsPersistentChatActiveServer [[-Identity] <XdsGlobalRelativeIdentity>] [-Swap] [-Confirm] [-Force]
+
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsPersistentChatActiveServer -Identity "PChatServerCollection" -ActiveServers @{Add="atl-gc-001.litwareinc.com"}
+  description: |-
+    The command shown in Example 1 adds the server atl-gc-001.litwareinc.com to the collection of active Persistent Chat Servers.
+
+    First, determine the identity of your server collection by running the `Get-CsService` cmdlet, which will return the identity of your Persistent Chat collection :
+
+    `Get-CsService -PersistentChatServer`
+
+    The cmdlet will return something similar to
+
+    Identity : PersistentChatServer:client.vdomain.com
+
+    To add the server to the Then run the following cmdlet to add the server, using the :
+
+    `Set-CsPersistentChatActiveServer -Identity "PChatServerCollection" -ActiveServers @{Add="atl-gc-001.litwareinc.com"}`
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Set-CsPersistentChatActiveServer -Identity "PChatServerCollection" -ActiveServers @{Remove="atl-gc-001.litwareinc.com"}
+  description: |-
+    Example 2 removes the server atl-gc-001.litwareinc.com from the collection of active Persistent Chat servers.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Set-CsPersistentChatActiveServer -Identity "PChatServerCollection" -ActiveServers $Null
+  description: |-
+    The command shown in Example 3 removes all the active Persistent Chat servers.
+    Removing all the active servers is typically done in a failback or failover scenario.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.PSListModifier`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Rtc.Management.Deploy.Fqdn" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ActiveServers
+  isRequired: true
+  description: |+
+    Collection of fully-qualified domain names representing the active Persistent Chat servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique Identity for the collection of active servers.
+    Note that you can only have a single collection of Persistent Chat servers.
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Swap
+  isRequired: true
+  description: |+
+    When specified, swaps the active state for all the Persistent Chat servers in the specified pool: active servers will be marked as inactive, and inactive servers will be marked as active.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.Set-CsPersistentChatActiveServer
+name: Set-CsPersistentChatActiveServer
+description: |-
+  The `Set-CsPersistentChatActiveServer` cmdlet allows administrators to essentially enable or disable the Persistent Chat service on one or more servers in a Persistent Chat pool.
+  Servers that appear on the active servers list are able to accept new client connections.
+  Servers that do not appear on the list are not able to accept new client connections.
+  (However, the server will continue to any client connections that were made before the server was removed from the list.) To enable the Persistent Chat service on a Persistent Chat server, add that server to the active server list.
+  To disable the service, remove the server from the active server list.
+
+  To enable/disable the Persistent Chat service on all the servers in a pool, use the `Set-CsPersistentChatState` cmdlet.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Set-CsPersistentChatActiveServer` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cspersistentchatactiveserver
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: Set-CsPersistentChatActiveServer
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

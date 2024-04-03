@@ -1,0 +1,231 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes the specified Skype for Business Server database.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Uninstall-CsDatabase cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Uninstall-CsDatabase` cmdlet does not return any values or objects.
+links:
+- text: Install-CsDatabase
+  href: Install-CsDatabase.yml
+syntaxes:
+- >-
+  Uninstall-CsDatabase -SqlServerFqdn <Fqdn> [-CentralManagementDatabase] [-Detach] [-SqlInstanceName <String>]
+
+   [-Force] [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Uninstall-CsDatabase -SqlServerFqdn <Fqdn> -DatabaseType <DatabaseNameType> [-Detach]
+
+   [-SqlInstanceName <String>] [-Force] [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Uninstall-CsDatabase -CentralManagementDatabase -SqlServerFqdn atl-sql-001.litwareinc.com
+  description: |-
+    The command shown in Example 1 deletes the Central Management store from the computer atl-sql-001.litwareinc.com.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Uninstall-CsDatabase -DatabaseType User -SqlServerFqdn atl-sql-001.litwareinc.com
+  description: |-
+    In Example 2, the User database is deleted from the computer atl-sql-001.litwareinc.com.
+    When you use the DatabaseType parameter, all stores related to the specified database are deleted.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CentralManagementDatabase
+  isRequired: true
+  description: |+
+    If present, uninstalls the Central Management store.
+    You cannot use both CentralManagementDatabase and DatabaseType in the same command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DatabaseNameType" data-throw-if-not-resolved="False" />
+  name: DatabaseType
+  isRequired: true
+  description: |+
+    Database to be deleted.
+    Valid values are:
+
+    ActiveMonitoring
+
+    Application
+
+    Archiving
+
+    CentralMgmt
+
+    Edge
+
+    Lyss
+
+    Monitoring
+
+    PersistentChat
+
+    PersistentChatCompliance
+
+    Provision
+
+    Registrar
+
+    SigninTelemetry
+
+    User
+
+    To delete the Central Management store, use the CentralManagementDatabase parameter.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Detach
+  description: |+
+    If present, detaches the specified database.
+    When a database is detached, all the file locks imposed by SQL Server are removed.
+    This enables you to directly access the database files in order to do such things as copy those files to another computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    If present, forces removal of the database even if that database is currently in use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Report
+  description: |+
+    Enables you to specify a file path for the log file created when the cmdlet runs.
+    For example: `-Report "C:\Logs\UninstallDatabase.html"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SqlInstanceName
+  description: |+
+    Name of the database instance containing the database to be removed.
+    A database instance is a set of running processes that provides access to database files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: SqlServerFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name (FQDN) of the computer or SQL Server cluster where the database is located.
+    For example: `-SqlServer atl-sql-001.litwareinc.com`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Uninstall-CsDatabase
+name: Uninstall-CsDatabase
+description: |-
+  Skype for Business Server makes extensive use of SQL Server databases such as the Central Management store and the Archiving database.
+  These databases are set up at the same time you install Skype for Business Server or at the same time you install a Skype for Business Server role that requires a database back end.
+  After the databases have been installed, you will rarely need to uninstall them.
+
+  However, it is possible that you might need to uninstall a Skype for Business Server database at some point; for example, a hardware failure or an issue with network connectivity might make an existing database unusable.
+  Regardless of the reason, the `Uninstall-CsDatabase` cmdlet provides a way for you to remove or detach any of the SQL Server databases used by Skype for Business Server.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/uninstall-csdatabase
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Uninstall-CsDatabase
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

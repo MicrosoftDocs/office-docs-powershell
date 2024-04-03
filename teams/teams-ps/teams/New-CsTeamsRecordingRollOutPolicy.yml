@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="TeamsRecordingRollOutPolicy.Cmdlets.TeamsRecordingRollOutPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-CsTeamsRecordingRollOutPolicy [-MeetingRecordingOwnership <String>] [-Identity] <String> [-Force] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-CsTeamsRecordingRollOutPolicy -Identity OrganizerPolicy -MeetingRecordingOwnership MeetingOrganizer
+  description: |-
+    The command shown in Example 1 uses the New-CsTeamsRecordingRollOutPolicy cmdlet to create a new TeamsRecordingRollOutPolicy with the Identity OrganizerPolicy.
+    This policy will set MeetingRecordingOwnership to MeetingOrganizer. Recordings for this policy group's users as organizer would get saved to organizers' own OneDrive.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specify the name of the policy being created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MeetingRecordingOwnership
+  description: |+
+    Specifies where the meeting recording get stored. Possible values are: 
+    - MeetingOrganizer
+    - RecordingInitiator
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsTeamsRecordingRollOutPolicy
+name: New-CsTeamsRecordingRollOutPolicy
+description: |-
+  The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs the storage for meeting recordings. This policy would be deprecated over time as this is only to allow IT admins to phase the roll out of this breaking change.
+
+  The New-CsTeamsRecordingRollOutPolicy cmdlet allows administrators to define new CsTeamsRecordingRollOutPolicy that can be assigned to particular users to control Teams features related to meetings.
+
+  This command is available from Teams powershell module 6.1.1-preview and above.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: Microsoft.Teams.Policy.Administration.Cmdlets.Core
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsrecordingrolloutpolicy
+  schema: 2.0.0
+  applicable: Microsoft Teams
+  title: New-CsTeamsRecordingRollOutPolicy
+  manager: yujin1
+  author: ronwa
+  ms.author: ronwa

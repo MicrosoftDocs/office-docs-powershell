@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsOnlineTelephoneNumber` cmdlet to remove one or more unassigned telephone numbers from your tenant.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  If one or more of the telephone numbers are assigned to a user or a service, the cmdlet will display an error message and none of the telephone numbers specified will be removed from your tenant.
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+links:
+- text: Get-CsOnlineTelephoneNumber
+  href: Get-CsOnlineTelephoneNumber.yml
+syntaxes:
+- Remove-CsOnlineTelephoneNumber -TelephoneNumber <String[]> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsOnlineTelephoneNumber -TelephoneNumber 14258884567
+
+    NumberIdsDeleted NumberIdsDeleteFailed NumberIdsNotOwnedByTenant NumberIdsManagedByServiceDesk
+    ---------------- --------------------- ------------------------- -----------------------------
+    {14258884567}    {}                    {}                        {}
+  description: |-
+    This example removes the specified telephone number from the tenant.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    [string[]]$tns="+14255551234","+14255551233"
+    Remove-CsOnlineTelephoneNumber -TelephoneNumber $tns
+
+    NumberIdsDeleted NumberIdsDeleteFailed NumberIdsNotOwnedByTenant NumberIdsManagedByServiceDesk
+    ---------------- --------------------- ------------------------- -----------------------------
+    {14255551234,     {}                    {}                        {}
+     14255551233}
+  description: |-
+    This example removes the specified list of telephone numbers from the tenant.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TelephoneNumber
+  isRequired: true
+  description: |+
+    Specifies the telephone number(s) to remove. The format can be withor without the prefixed +, but needs to include country code etc.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsOnlineTelephoneNumber
+name: Remove-CsOnlineTelephoneNumber
+description: |-
+  This cmdlet removes one or more unassigned telephone numbers from your tenant. If at least one of the telephone numbers is assigned to a user or resource account, the cmdlet will fail and will not remove any of the specified telephone numbers.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinetelephonenumber
+  applicable: Microsoft Teams
+  title: Remove-CsOnlineTelephoneNumber
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

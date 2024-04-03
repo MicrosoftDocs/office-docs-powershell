@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings. The CsVideoInteropServiceProvider cmdlets allow you to designate provider/tenant specific information about the connection to the provider.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-CsVideoInteropServiceProvider [-Tenant <System.Guid>] [-AadApplicationIds <String>] -TenantKey <String>
+
+   [-InstructionUri <String>] [-AllowAppGuestJoinsAsAuthenticated <Boolean>]
+
+   [-Identity] <XdsGlobalRelativeIdentity> [-InMemory] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-CsVideoInteropServiceProvider [-Tenant <System.Guid>] -Name <String> [-AadApplicationIds <String>]
+
+   -TenantKey <String> [-InstructionUri <String>] [-AllowAppGuestJoinsAsAuthenticated <Boolean>] [-InMemory]
+
+   [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-CsVideoInteropServiceProvider
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AadApplicationIds
+  description: |+
+    This is an optional parameter. A semicolon separated list of Microsoft Entra AppIds of the CVI partner bots can be specified in this parameter. This parameter works in conjunction with AllowAppGuestJoinsAsAuthenticated. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of these bots, is shown in the meeting as an authenticated tenant entity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAppGuestJoinsAsAuthenticated
+  description: |+
+    This is an optional parameter. Default = false.
+    This parameter works in conjunction with AadApplicationIds. When AllowAppGuestJoinsAsAuthenticated is set to true, a VTC device joining anonymously using any of the bots Microsoft Entra application ids specified in AadApplicationIds, is shown in the meeting as an authenticated tenant entity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Bypass all non-fatal errors.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: "This is mandatory parameter and can have only one of the 6 values\r\nPolycomServiceProviderEnabled\r\nPexipServiceProviderEnabled\r\nBlueJeansServiceProviderEnabled\r\n \r\nPolycomServiceProviderDisabled\r\nPexipServiceProviderDisabled\r\nBlueJeansServiceProviderDisabled\r\n\r\n"
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Create a provider object in memory without committing it to the service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstructionUri
+  description: |+
+    InstructionUri provides additional VTC dialin options. This field shows up in the Teams meeting when a CVI enabled user schedules a meeting. This TenantKey is used to dial into the partner's IVR for the partner CVI service. The partner will provide you this information when you sign up for CVI service through any of our partners
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    This is mandatory parameter and can have only one of the 4 values
+
+    Polycom
+    BlueJeans
+    Pexip
+    Cisco
+
+  defaultValue: DefaultProvider
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantKey
+  isRequired: true
+  description: |+
+    Tenantkey shows up in the Teams meeting when a CVI enabled user schedules a meeting. This TenantKey is used to dial into the partner's IVR for the partner CVI service. The partner will provide you this information when you sign up for CVI service through any of our partners.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsVideoInteropServiceProvider
+name: New-CsVideoInteropServiceProvider
+description: |-
+  Cloud Video Interop for Teams enables 3rd party VTC devices to be able to join Teams meetings. The CsVideoInteropServiceProvider cmdlets allow you to designate provider/tenant specific information about the connection to the provider.
+
+  Use the New-CsVideoInteropServiceProvider to specify information about a supported CVI partner your organization would like to use.
+
+  Important note: New-CsVideoInteropServiceProvider does not do a check on the -Identity to be one of the Identity (without tag:) from the Get-CsTeamsVideoInteropServicePolicy, however if this is not set to match, the VTC coordinates will not added to the meetings correctly.  Make sure that your "Identity" matches a valid policy identity.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csvideointeropserviceprovider
+  applicable: Microsoft Teams
+  Module Name: MicrosoftTeams
+  title: New-CsVideoInteropServiceProvider
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet supports retrieving the list of team mappings.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: Remove-CsTeamsShiftsConnectionTeamMap
+  href: Remove-CsTeamsShiftsConnectionTeamMap.yml
+- text: Get-CsTeamsShiftsConnectionInstance
+  href: Get-CsTeamsShiftsConnectionInstance.yml
+syntaxes:
+- Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionTeamMap -ConnectorInstanceId "WCI-d1addd70-2684-4723-b8f2-7fa2230648c9"
+
+    TeamId                               TeamName TimeZone            WfmTeamId WfmTeamName
+    ------                               -------- --------            --------- -----------
+    12344689-758c-4598-9206-3e23416da8c2          America/Los_Angeles 1000107
+  description: |-
+    Returns the list of team mappings in the instance with ID `WCI-d1addd70-2684-4723-b8f2-7fa2230648c9`.
+
+    In case of error, we can capture the error response as following:
+
+    * Hold the cmdlet output in a variable: `$result=<CMDLET>`
+
+    * To get the entire error message in Json: `$result.ToJsonString()`
+
+    * To get the error object and object details: `$result, $result.Detail`
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorInstanceId
+  isRequired: true
+  description: |+
+    The ID of the connection instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionTeamMap
+name: Get-CsTeamsShiftsConnectionTeamMap
+description: |-
+  Workforce management (WFM) systems have locations / sites that are mapped to a Microsoft Teams team for synchronization of shifts data.  This cmdlet shows the list of mapped teams inside the connection instance. Intance IDs can be found by running [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.yml).
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsShiftsConnectionTeamMap
+  author: gucsun
+  ms.author: gucsun
+  manager: navinth
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionteammap
+  schema: 2.0.0

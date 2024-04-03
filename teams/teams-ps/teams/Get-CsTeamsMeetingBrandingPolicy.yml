@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control the appearance in meetings by defining custom backgrounds, logos, and colors.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  Available in Teams PowerShell Module 4.9.3 and later.
+outputs:
+- name: <xref href="TeamsMeetingBrandingPolicy.Cmdlets.TeamsMeetingBrandingPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsMeetingBrandingPolicy
+  href: Get-CsTeamsMeetingBrandingPolicy.yml
+- text: Grant-CsTeamsMeetingBrandingPolicy
+  href: Grant-CsTeamsMeetingBrandingPolicy.yml
+- text: New-CsTeamsMeetingBrandingPolicy
+  href: New-CsTeamsMeetingBrandingPolicy.yml
+- text: Remove-CsTeamsMeetingBrandingPolicy
+  href: Remove-CsTeamsMeetingBrandingPolicy.yml
+- text: Set-CsTeamsMeetingBrandingPolicy
+  href: Set-CsTeamsMeetingBrandingPolicy.yml
+syntaxes:
+- Get-CsTeamsMeetingBrandingPolicy [[-Identity] <String>] [<CommonParameters>]
+- Get-CsTeamsMeetingBrandingPolicy [-Filter <String>] [<CommonParameters>]
+examples:
+- title: Return all branding policies
+  code: |-
+    PS C:\> Get-CsTeamsMeetingBrandingPolicy
+  description: |-
+    In this example, the command returns a collection of all the teams meeting branding policies configured for use in your organization.
+  summary: ""
+- title: Return specified policy
+  code: |-
+    PS C:\> CsTeamsMeetingBrandingPolicy -Identity "policy test2"
+  description: |-
+    In this example, the command returns the meeting branding policy that has an **Identity** `policy test 2`. Because identities are unique, this command will never return more than one item.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier of the policy to be returned. To refer to the global policy, use this syntax: `-Identity global`. If this parameter is omitted, then all the meeting branding policies configured for use in your organization will be returned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsMeetingBrandingPolicy
+name: Get-CsTeamsMeetingBrandingPolicy
+description: |-
+  The `Get-CsTeamsMeetingBrandingPolicy` cmdlet enables you to return information about all the meeting branding policies that have been configured for use in your organization.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmeetingbrandingpolicy
+  schema: 2.0.0
+  title: Get-CsTeamsMeetingBrandingPolicy
+  author: szymonkatraMSFT
+  ms.author: szymonkatra
+  ms.reviewer: ""
+  manager: stanlythomas

@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsTelemetryConfiguration` cmdlet to remove an existing telemetry configuration.
+  UNRESOLVED_TOKEN_VAL(PS_TelemetryDataStatement)
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet takes pipeline input of the `Get-CsTelemetryConfiguration` cmdlet as shown in Example 2.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+syntaxes:
+- Remove-CsTelemetryConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsTelemetryConfiguration -Identity Site:Redmond
+  description: |-
+    This example removes the telemetry configuration for the Redmond site.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsTelemetryConfiguration -Filter "Site:*" | Remove-CsTelemetryConfiguration
+  description: |-
+    This example uses the `Get-CsTelemetryConfiguration` cmdlet in combination with the Filter parameter to select the telemetry configurations that are configured at the site level and then pipelines them to the `Remove-CsTelemetryConfiguration` cmdlet for removal.
+    The result is that all "Site" scoped telemetry configurations are removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error messages and completes the cmdlet operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A unique identifier that includes the scope of the telemetry configuration.
+    Telemetry configurations can be scoped at the Global, Site, or Service level.
+    For example, "site:Redmond" (for site).
+    The format of the service scope is "Service:\<Identity\>", where identity is derived from the topology.
+    You can use the following commands to identify the relevant services.
+
+    `Get-CsService -WebServer | fl Identity`
+
+    `Get-CsService -PoolFqdn \<pool\> | fl Identity`
+
+    The first command will give you all of the WebServices in the topology, regardless of the pool.
+    The second will give you all of the services on the pool, regardless of their role.
+    You can combine the two commands to zero in on a single role in a single pool.
+
+    The Global configuration can't be deleted.
+    Specifying the Global configuration will return it to the default Global settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsTelemetryConfiguration
+name: Remove-CsTelemetryConfiguration
+description: |-
+  For privacy information, see the Skype for Business Privacy Statement (https://go.microsoft.com/fwlink/?LinkID=517480&clcid=0x409).
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-cstelemetryconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsTelemetryConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

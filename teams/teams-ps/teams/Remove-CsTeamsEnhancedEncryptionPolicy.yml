@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this cmdlet to remove an existing Teams enhanced encryption policy.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsEnhancedEncryptionPolicy
+  href: Get-CsTeamsEnhancedEncryptionPolicy.yml
+- text: New-CsTeamsEnhancedEncryptionPolicy
+  href: New-CsTeamsEnhancedEncryptionPolicy.yml
+- text: Set-CsTeamsEnhancedEncryptionPolicy
+  href: Set-CsTeamsEnhancedEncryptionPolicy.yml
+- text: Grant-CsTeamsEnhancedEncryptionPolicy
+  href: Grant-CsTeamsEnhancedEncryptionPolicy.yml
+syntaxes:
+- >-
+  Remove-CsTeamsEnhancedEncryptionPolicy [[-Identity] <Object>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Remove-CsTeamsEnhancedEncryptionPolicy -Identity 'ContosoPartnerTeamsEnhancedEncryptionPolicy'
+  description: |-
+    The command shown in Example 1 deletes the Teams enhanced encryption policy ContosoPartnerTeamsEnhancedEncryptionPolicy.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-CsTeamsEnhancedEncryptionPolicy -Filter 'Tag:*' | Remove-CsTeamsEnhancedEncryptionPolicy
+  description: |-
+    In Example 2, all the Teams enhanced encryption policies configured at the per-user scope are removed. The Filter value "Tag:*" limits the returned data to Teams enhanced encryption policies configured at the per-user scope. Those per-user policies are then removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses all non-fatal errors.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier assigned to the Teams enhanced encryption policy.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsEnhancedEncryptionPolicy
+name: Remove-CsTeamsEnhancedEncryptionPolicy
+description: |-
+  Use this cmdlet to remove an existing Teams enhanced encryption policy.
+
+  The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsenhancedencryptionpolicy
+  title: Remove-CsTeamsEnhancedEncryptionPolicy
+  author: xinawang
+  ms.author: serdars
+  manager: mdress
+  schema: 2.0.0

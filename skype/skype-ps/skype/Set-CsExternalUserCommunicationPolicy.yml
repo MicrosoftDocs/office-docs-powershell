@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing external user communication policy for use in your organization to block P2P file transfer with Federated partners only.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [-EnableFileTransfer <Boolean>]
+
+   [-EnableP2PFileTransfer <Boolean>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>]
+
+   [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsExternalUserCommunicationPolicy [-Tenant <Guid>] [-EnableFileTransfer <Boolean>]
+
+   [-EnableP2PFileTransfer <Boolean>] [-AllowPresenceVisibility <Boolean>] [-AllowTitleVisibility <Boolean>]
+
+   [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    PS C:\> Set-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
+  description: |-
+    This example modifies an existing policy to block external file transfer.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowPresenceVisibility
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowTitleVisibility
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableFileTransfer
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableP2PFileTransfer
+  description: |+
+    Indicates whether file transfers to Federated partners are allowed. The default value is True.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the external user communication policy to be modified.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Set-CsExternalUserCommunicationPolicy
+name: Set-CsExternalUserCommunicationPolicy
+description: |-
+  The following parameters are not applicable to Skype for Business Online: AllowPresenceVisibility, AllowTitleVisibility, EnableFileTransfer, Force, Identity, Instance, PipelineVariable, and Tenant
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy
+  applicable: Skype for Business Online
+  title: Set-CsExternalUserCommunicationPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

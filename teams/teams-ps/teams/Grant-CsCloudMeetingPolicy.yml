@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants Skype Meetings polices for a user.
+module: MicrosoftTeamsPowerShell
+notes: ""
+syntaxes:
+- >-
+  Grant-CsCloudMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainController <Fqdn>]
+
+   [-Identity] <UserIdParameter> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Grant-CsCloudMeetingPolicy -PolicyName AutoScheduleEnabled -Identity "JaneC"
+  description: |-
+    This example enables Skype Meetings automatic scheduling for a user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Specifies the domain controller that's used by the cmdlet to read or write the specified data.
+    Valid inputs for this parameter are either the fully qualified domain name (FQDN) or the computer name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the identity of the hybrid public switched telephone network (PSTN) site.
+    For example: `-Identity "SeattlePSTN".`
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    @{Text=}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Specifies the policy for all users automatic Skype Meeting Ready scheduling.
+    Can be either AutoScheduleEnabled or AutoScheduleDisabled.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+    For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
+    You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+    If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online, you do not have to include the Tenant parameter.
+    The tenant ID will be determined by your connection and credentials.
+    The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Grant-CsCloudMeetingPolicy
+name: Grant-CsCloudMeetingPolicy
+description: |-
+  The Grant-CsCloudMeetingPolicy cmdlet enables or disables automatic scheduling of Skype Meetings features for a specified user.
+  The default is disbaled.
+
+  To enable automatic scheduling for all users in a tenant, use the Set-CsCloudMeetingPolicy cmdlet.
+
+  Note that the policies to use this cmdlet are not available unless the Set-CsCloudMeetingConfiguration cmdlet has been run to enable Skype Meetings polices for a tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/grant-cscloudmeetingpolicy
+  applicable: Microsoft Teams
+  title: Grant-CsCloudMeetingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

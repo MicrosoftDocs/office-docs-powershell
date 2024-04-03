@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS). 
+
+  You can't remove a civic address if any of its associated locations are assigned to users or phone numbers.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="This cmdlet accepts pipelined input from the Get-CsOnlineLisCivicAddress cmdlet." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlineLisCivicAddress
+  href: Set-CsOnlineLisCivicAddress.yml
+- text: New-CsOnlineLisCivicAddress
+  href: New-CsOnlineLisCivicAddress.yml
+- text: Get-CsOnlineLisCivicAddress
+  href: Get-CsOnlineLisCivicAddress.yml
+syntaxes:
+- Remove-CsOnlineLisCivicAddress -CivicAddressId <guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsOnlineLisCivicAddress -CivicAddressId ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
+  description: |-
+    This example removes the emergency civic address with the specified identification.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsOnlineLisCivicAddress -City Redmond | Remove-CsOnlineLisCivicAddress
+  description: |-
+    This example removes all the emergency civic addresses in the city of Redmond.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: CivicAddressId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of the civic address to be deleted.
+    You can find civic address identifiers by using the Get-CsOnlineLisCivicAddress cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsOnlineLisCivicAddress
+name: Remove-CsOnlineLisCivicAddress
+description: |-
+  Removes the specified emergency address or addresses.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineliscivicaddress
+  applicable: Microsoft Teams
+  title: Remove-CsOnlineLisCivicAddress
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

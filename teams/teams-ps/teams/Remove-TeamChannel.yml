@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Delete a channel.
+  This will not delete content in associated tabs.
+
+  Note: The channel will be "soft deleted", meaning the contents are not permanently deleted for a time. 
+  So a subsequent call to Add-TeamChannel using the same channel name will fail if enough time has not passed.
+module: MicrosoftTeamsPowerShell
+notes: ""
+syntaxes:
+- Remove-TeamChannel -GroupId <String> -DisplayName <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-TeamChannel -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Tech Reads"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Channel name to be deleted
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    GroupId of the team
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Remove-TeamChannel
+name: Remove-TeamChannel
+description: |-
+  > [!IMPORTANT]
+  > Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here `https://www.poshtestgallery.com/packages/MicrosoftTeams`.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-teamchannel
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

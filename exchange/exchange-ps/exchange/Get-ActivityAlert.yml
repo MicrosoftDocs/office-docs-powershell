@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  **Note**: Activity alerts have been effectively replaced by alert policies and the corresponding **\*-ProtectionAlert** cmdlets. For more information about alert policies, see [Alert policies in Microsoft 365](https://learn.microsoft.com/purview/alert-policies).
+
+  Use the Get-ActivityAlert cmdlet to view activity alerts. Activity alerts send email notifications when users perform specific activities in Microsoft 365.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-ActivityAlert [[-Identity] <ComplianceRuleIdParameter>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-ActivityAlert | Format-List Disabled,Name,Description,Operation,UserId,NotifyUser
+  description: |-
+    This example returns a summary list of all activity alerts.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-ActivityAlert -Identity "All Mailbox Activities"
+  description: |-
+    This example returns detailed information about the activity alert named All Mailbox Activities.
+  summary: ""
+parameters:
+- type: <xref href="ComplianceRuleIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the activity alert that you want to view. You can use any value that uniquely identifies the activity alert. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-ActivityAlert
+name: Get-ActivityAlert
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-activityalert
+  applicable: Security & Compliance
+  title: Get-ActivityAlert
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

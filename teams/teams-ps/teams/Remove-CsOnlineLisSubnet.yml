@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a Location Information Server (LIS) subnet.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-CsOnlineLisSubnet [[-TenantId] <Guid>] [-Subnet] <String> [-IsDebug <Boolean>] [-TargetStore <String>]
+
+   [-NCSApiUrl <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsOnlineLisSubnet -Subnet 10.10.10.10
+  description: |-
+    Example 1 removes the Location Information Service subnet "10.10.10.10".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Remove-CsOnlineLisSubnet -Subnet 2001:4898:e8:6c:90d2:28d4:76a4:ec5e
+  description: |-
+    Example 1 removes the Location Information Service subnet "2001:4898:e8:6c:90d2:28d4:76a4:ec5e".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsDebug
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NCSApiUrl
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Subnet
+  isRequired: true
+  description: |+
+    The IP address of the subnet. This value can be either IPv4 or IPv6 format.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: TenantId
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsOnlineLisSubnet
+name: Remove-CsOnlineLisSubnet
+description: |-
+  Enhanced 9-1-1 (E9-1-1) allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet removes a subnet from the location configuration database. Removing the subnet will not remove the location associated with that subnet. Use the \`Remove-CsOnlineLisLocation\` cmdlet to remove a location.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinelissubnet
+  applicable: Microsoft Teams
+  title: Remove-CsOnlineLisSubnet
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

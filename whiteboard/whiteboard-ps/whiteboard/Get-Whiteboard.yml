@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more whiteboards from the Microsoft Whiteboard service and returns them as objects.
+module: MicrosoftWhiteboardAdmin
+notes: |-
+  For details on user IDs, see the [overview page](../../docs-conceptual/overview.md).
+syntaxes:
+- Get-Whiteboard [-UserId] <Guid> [[-WhiteboardId] <Guid>] [-ForceAuthPrompt] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001
+  description: |-
+    Get all of a user's whiteboards.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-Whiteboard -UserId 00000000-0000-0000-0000-000000000001 -WhiteboardId 00000000-0000-0000-0000-000000000002
+  description: |-
+    Get a user's specific whiteboard.
+  summary: ""
+- title: Output
+  code: |-
+    baseApi:                   baseApi-value
+    id:                        whiteboardId-value
+    userId:                    userId-value
+    folioId:                   folioId-value
+    title:                     title-value
+    createdBy:                 createdBy-value
+    ownerId:                   ownerId-value
+    ownerTenantId:             ownerTenantId-value
+    isShared:                  isShared-value
+    createdTime:               createdTime-value
+    invitedTime:               invitedTime-value
+    personalLastModifiedTime:  personalLastModifiedTime-value
+    lastModifiedTime:          lastModifiedTime-value
+    globalLastViewedTime:      globalLastViewedTime-value
+    lastViewedTime:            lastViewedTime-value
+    meetingId:                 meetingId-value
+    eTag:                      eTag-value
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceAuthPrompt
+  description: |+
+    Optional. Always prompt for auth. Use to ignore cached credentials.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: UserId
+  isRequired: true
+  description: |+
+    The ID of the user account to query whiteboards for. All whiteboards this account has access to will be returned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: WhiteboardId
+  description: |+
+    Optional. The ID of a specific whiteboard.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Whiteboard
+  parameterValueGroup: ""
+applicable:
+- Microsoft Whiteboard
+uid: MicrosoftWhiteboardAdmin.Get-Whiteboard
+name: Get-Whiteboard
+description: |-
+  Gets one or more whiteboards from the Microsoft Whiteboard service and returns them as objects.
+metadata:
+  external help file: WhiteboardAdmin-help.xml
+  Module Name: WhiteboardAdmin
+  online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboard
+  applicable: Microsoft Whiteboard
+  title: Get-Whiteboard
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

@@ -1,0 +1,278 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new range of unassigned numbers and the routing rules that apply to those numbers.
+  Running this cmdlet will add an entry to the unassigned number routing table.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Creates an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnnouncementVacantNumberRange.
+links:
+- text: Remove-CsUnassignedNumber
+  href: Remove-CsUnassignedNumber.yml
+- text: Set-CsUnassignedNumber
+  href: Set-CsUnassignedNumber.yml
+- text: Get-CsUnassignedNumber
+  href: Get-CsUnassignedNumber.yml
+- text: New-CsAnnouncement
+  href: New-CsAnnouncement.yml
+- text: Get-CsAnnouncement
+  href: Get-CsAnnouncement.yml
+- text: Get-CsExUmContact
+  href: Get-CsExUmContact.yml
+syntaxes:
+- >-
+  New-CsUnassignedNumber [-Identity] <XdsGlobalRelativeIdentity> [-NumberRangeStart] <String>
+
+   [-NumberRangeEnd] <String> [-AnnouncementService] <String> [-AnnouncementName] <String> [-Priority <Int32>]
+
+   [-Force] [-InMemory] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-CsUnassignedNumber [-Identity] <XdsGlobalRelativeIdentity> [-NumberRangeStart] <String>
+
+   [-NumberRangeEnd] <String> [-ExUmAutoAttendantPhoneNumber] <String> [-Priority <Int32>] [-Force] [-InMemory]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    New-CsUnassignedNumber -Identity UNSet1 -NumberRangeStart "+14255551000" -NumberRangeEnd "+14255551100" -AnnouncementService ApplicationServer:redmond.litwareinc.com -AnnouncementName "Welcome Announcement"
+  description: |-
+    This example creates an unassigned number range with the name UNSet1.
+    We use the NumberRangeStart (+14255551000) and NumberRangeEnd (+14255551100) parameters to define the range of unassigned numbers to which the specified announcement will apply.
+    Finally, we specify the Announcement by first supplying the AnnouncementService parameter with the service ID of the Announcement service and then passing the value "Welcome Announcement" to the parameter AnnouncementName.
+    Keep in mind that an Announcement with that name must already exist in the system.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    New-CsUnassignedNumber -Identity UNSet2 -NumberRangeStart "+14255552100" -NumberRangeEnd "+14255552200" -ExUmAutoAttendantPhoneNumber "+12065551234"
+  description: |-
+    This example creates an unassigned number range with the name UNSet2.
+    As in Example 1 we use the NumberRangeStart (+14255552100) and NumberRangeEnd (+14255552200) parameters to define the range of unassigned numbers to which the specified announcement will apply.
+    However, in this example, instead of using the Announcement service, this number range will use the Exchange Auto Attendant.
+    (The Auto Attendant is a single number designated as the organization's main number that guides users through voice prompts to help them reach the appropriate party.) We pass a phone number to the ExUmAutoAttendantPhoneNumber parameter to complete this command.
+    Note that Exchange must be set up and this number must be an existing contact object phone number in Active Directory Domain Services.
+    The contact must be an Auto Attendant contact (the AutoAttendant property for the contact must be True).
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    New-CsUnassignedNumber -Identity UNSet2 -NumberRangeStart "+14255552100" -NumberRangeEnd "+14255552200" -ExUmAutoAttendantPhoneNumber "+12065551234" -Priority 2
+  description: |-
+    Example 3 is almost identical to Example 2: It creates an unassigned number range with the name UNSet2.
+    The difference in this example is that we've added the Priority parameter, in this case with a value of 2.
+    This means that if an unassigned number range has been defined that overlaps this one and that number range has a higher priority (a lower priority number, such as 1), calls will be routed based on the settings for that range rather than this one.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AnnouncementName
+  isRequired: true
+  description: |+
+    The name of the Announcement that will be used to handle calls to this range of numbers.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AnnouncementService
+  isRequired: true
+  description: |+
+    The fully qualified domain name (FQDN) or service ID of the Announcement service.
+    This parameter is required only if you have not specified a value for the ExUmAutoAttendantPhoneNumber parameter.
+
+  defaultValue: None
+  position: "5"
+  aliases: AnnouncementServerFqdn
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ExUmAutoAttendantPhoneNumber
+  isRequired: true
+  description: |+
+    The phone number of the Exchange Auto Attendant to route calls in this range to.
+    This field is required only if you are not using an Announcement Service (in which case you do not supply values for the AnnouncementService or AnnouncementName parameters).
+    The Exchange Auto Attendant contact must already be set up in order to assign a value to this parameter.
+
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A unique name for the range of unassigned numbers being created.
+    All unassigned number ranges have a global scope, so the name specified here must be unique throughout the Skype for Business Server deployment.
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Creates an object reference without actually committing the object as a permanent change.
+    If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NumberRangeEnd
+  isRequired: true
+  description: |+
+    The last number in the range of unassigned numbers.
+    Must be greater than or equal to the number supplied for NumberRangeStart.
+    To specify a range of one number, use the same number for the NumberRangeStart and NumberRangeEnd.
+
+    The number must match the regular expression (tel:)?(\+)?\[1-9\]\d{0,17}(;ext=\[1-9\]\d{0,9})?.
+    This means the number may begin with the string tel: (if you don't specify that string it will be automatically added for you), a plus sign (+) and a digit 1 through 9.
+    The phone number can be up to 17 digits and may be followed by an extension in the format ;ext= followed by the extension number.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NumberRangeStart
+  isRequired: true
+  description: |+
+    The first number in the range of unassigned numbers.
+    Must be less than or equal to the value supplied for NumberRangeEnd.
+
+    The number must match the regular expression (tel:)?(\+)?\[1-9\]\d{0,17}(;ext=\[1-9\]\d{0,9})?.
+    This means the number may begin with the string tel: (if you don't specify that string it will be automatically added for you), a plus sign (+) and a digit 1 through 9.
+    The phone number can be up to 17 digits and may be followed by an extension in the format ;ext= followed by the extension number.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    It is possible for unassigned number ranges to overlap.
+    If a number falls within more than one range, the range with the highest priority will take effect.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.New-CsUnassignedNumber
+name: New-CsUnassignedNumber
+description: |-
+  Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
+  Skype for Business Server can be set up to route calls to appropriate destinations when an unassigned number is called.
+  This cmdlet creates the settings that define that routing.
+
+  Before running this cmdlet, your system must already either have Announcements defined or an Exchange Auto Attendant set up.
+  To determine whether you have Announcements, call the `Get-CsAnnouncement` cmdlet.
+  To create a new Announcement, call the `New-CsAnnouncement` cmdlet.
+  To check on Exchange Auto Attendant settings, run the `Get-CsExUmContact` cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csunassignednumber
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: New-CsUnassignedNumber
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

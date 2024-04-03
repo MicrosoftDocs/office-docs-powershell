@@ -1,0 +1,241 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the Windows Fabric state for a Skype for Business Server pool.
+  Windows Fabric is a Microsoft technology used for creating highly reliable, distributable, and scalable applications.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    String value representing the fabric state.
+syntaxes:
+- >-
+  Get-CsPoolFabricState -PoolFqdn <String> [-Confirm] [-Force] [-Type <FabricEnumerationType>] [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Get-CsPoolFabricState [-PoolFqdn] <String> [-Confirm] [-Force] [-HealthState <String>]
+
+   [-OutputCsvFile <String>] [-ServiceName <String>] [-ShowAll] [-WhatIf] [-Type <String>] [<CommonParameters>]
+- Get-CsPoolFabricState [-RoutingGroup] <String> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+- Get-CsPoolFabricState [-Tenant] <Guid> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+- Get-CsPoolFabricState [-UserUri] <UserIdParameter> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    The command shown in Example 1 returns the fabric state for the pool atl-cs-001.litwareinc.com.
+    Because the Type parameter was not included, state information for all the services on the pool will be returned.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com" -Type MCU
+  description: |-
+    Example 2 returns the fabric state for a single service on the pool atl-cs-001.litwareinc.com: the MCU factory service.
+    This is done by including the Type parameter and the parameter value "MCU".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HealthState
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputCsvFile
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PoolFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name of the pool being checked.
+    You must supply the FQDN of a pool when calling this cmdlet; for example:
+
+    `-PoolFqdn "atl-cs-001.litwareinc.com"`
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingGroup
+  isRequired: true
+  description: |+
+    Globally unique identifier (GUID) of the Windows Fabric routing group to be returned.
+    Routing groups are used to specify the servers that users log onto.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceName
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowAll
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  isRequired: true
+  description: |+
+    Globally unique identifier (GUID) of the Skype for Business Online tenant account whose Windows Fabric pool state is being returned.
+    For example:
+
+    `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+    You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="FabricEnumerationType" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the service type to be returned.
+    Allowed values are:
+
+    * All (returns information for all services)
+    * MCUFactory (returns information for the MCU factory service)
+    * ConferenceDirectory (returns information for the Conference Directory service)
+
+    LYSS (returns information for the Lync Server Storage service)
+
+    You can only specify a single type per command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: UserUri
+  isRequired: true
+  description: |+
+    Enables you to check the Windows fabric state for the pool used by a specific user.
+    For example, to check the Windows fabric state for the user Ken Myer use this syntax:
+
+    `-UserUri "sip:kenmyer@litwareinc.com"`
+
+    Note that you can only specify one user URI per command.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsPoolFabricState
+name: Get-CsPoolFabricState
+description: |-
+  The Get-CsPoolFabricState cmdlet returns the Windows Fabric state for a Skype for Business Server pool.
+  This includes information about Windows Fabric replica instances for any (or all) of the following services: MCU factory; Conference Directory; Routing; Skype for Business Server Storage Service.
+
+  The functions carried out by the Get-CsPoolFabricState cmdlet are not available in Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cspoolfabricstate
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsPoolFabricState
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

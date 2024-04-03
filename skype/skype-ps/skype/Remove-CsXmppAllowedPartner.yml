@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an existing XMPP allowed partner.
+  The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
+  An allowed partner is an IM and presence provider whose users are allowed to exchange instant messages and presence information with your Skype for Business Server users.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Remove-CsXmppAllowedPartner` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.XmppFederation.XmppAllowedPartner#Decorated object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Remove-CsXmppAllowedPartner` cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.XmppFederation.XmppAllowedPartner#Decorated object.
+links:
+- text: Get-CsXmppAllowedPartner
+  href: Get-CsXmppAllowedPartner.yml
+- text: New-CsXmppAllowedPartner
+  href: New-CsXmppAllowedPartner.yml
+- text: Set-CsXmppAllowedPartner
+  href: Set-CsXmppAllowedPartner.yml
+syntaxes:
+- >-
+  Remove-CsXmppAllowedPartner [-Identity] <XdsGlobalRelativeIdentity> [-Confirm] [-Force] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsXmppAllowedPartner -Identity "contoso.com"
+  description: |-
+    Example 1 deletes the XMPP allowed partner with the Identity "contoso.com".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsXmppAllowedPartner | Remove-CsXmppAllowedPartner
+  description: |-
+    The command shown in Example 2 deletes all the XMPP allowed partners.
+    To carry out this task the command first calls the `Get-CsXmppAllowedPartner` cmdlet to return a collection of all the XMPP allowed partners currently in use in the organization.
+    This collection is then piped to the `Remove-CsXmppAllowedPartner` cmdlet, which removes each partner in the collection.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsXmppAllowedPartner | Where-Object {$_.PartnerType -eq "PublicUnverified"} | Remove-CsXmppAllowedPartner
+  description: |-
+    In Example 3, all the XMPP allowed partners with a partner type of PublicUnverified are deleted.
+    To do this, the command first uses the `Get-CsXmppAllowedPartner` cmdlet to return a collection of all the allowed partners.
+    This collection is then piped to the `Where-Object` cmdlet, which picks out only those partners where the PartnerType property is equal to "PublicUnverified".
+    The partners that meet that criterion are then piped to and deleted by, the `Remove-CsXmppAllowedPartner` cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Fully qualified domain name (FQDN) of the XMPP allowed partner to be deleted.
+    For example:
+
+    `-Identity "fabrikam.com"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.Remove-CsXmppAllowedPartner
+name: Remove-CsXmppAllowedPartner
+description: |-
+  The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
+  XMPP was originally named Jabber and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
+
+  In order for your users to be able to exchange instant messages and presence information with users on an XMPP network, that network must be configured as an XMPP allowed partner.
+  (You must also assign your users an external access policy that allows XMPP access.) By design, your users will be allowed to communicate with users on any XMPP network that is listed on the allowed partners list.
+  If you do not want users communicating with users from a given network then you must delete that network from the allowed partners list.
+
+  Skype for Business Server Control Panel: To remove an XMPP allowed partner using the Skype for Business Server Control Panel, click External User Access and then click XMPP Federated Partners.
+  Select the partner to be removed, click Edit and then click Delete.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csxmppallowedpartner
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: Remove-CsXmppAllowedPartner
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

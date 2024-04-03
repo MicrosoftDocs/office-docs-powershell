@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is reserved for internal Microsoft use.
+module: SkypeForBusiness
+notes: ""
+syntaxes:
+- Get-CsImTranslationConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+- Get-CsImTranslationConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    This cmdlet is reserved for internal Microsoft use.
+  description: |-
+    This cmdlet is reserved for internal Microsoft use.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsImTranslationConfiguration
+name: Get-CsImTranslationConfiguration
+description: |-
+  This cmdlet is reserved for internal Microsoft use.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csimtranslationconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsImTranslationConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

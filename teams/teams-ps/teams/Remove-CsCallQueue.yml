@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The Remove-CsCallQueue cmdlet deletes an existing Call Queue.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="Identity" data-throw-if-not-resolved="False" />
+  description: |-
+    Represents the unique identifier of a Call Queue.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-CsCallQueue -Identity <Guid> [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsCallQueue -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
+  description: |-
+    This example removes the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Call Queue exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsCallQueue
+name: Remove-CsCallQueue
+description: |-
+  The Remove-CsCallQueue cmdlet deletes an existing Call Queue specified by the Identity parameter. The removal will fail if there are any ApplicationInstances still associated with the Call Queue.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-cscallqueue
+  applicable: Microsoft Teams
+  title: Remove-CsCallQueue
+  schema: 2.0.0
+  ms.reviewer: ""
+  manager: bulenteg
+  ms.author: tomkau

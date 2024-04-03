@@ -1,0 +1,1806 @@
+items:
+- name: Reference
+  items:
+  - name: SkypeForBusiness
+    uid: SkypeForBusiness
+    items:
+    - name: Add-CsSlaDelegates
+      uid: SkypeForBusiness.Add-CsSlaDelegates
+    - name: Approve-CsDeviceUpdateRule
+      uid: SkypeForBusiness.Approve-CsDeviceUpdateRule
+    - name: Backup-CsPool
+      uid: SkypeForBusiness.Backup-CsPool
+    - name: Clear-CsDeviceUpdateFile
+      uid: SkypeForBusiness.Clear-CsDeviceUpdateFile
+    - name: Clear-CsDeviceUpdateLog
+      uid: SkypeForBusiness.Clear-CsDeviceUpdateLog
+    - name: Clear-CsPersistentChatRoom
+      uid: SkypeForBusiness.Clear-CsPersistentChatRoom
+    - name: Convert-CsUserData
+      uid: SkypeForBusiness.Convert-CsUserData
+    - name: ConvertTo-JsonForPSWS
+      uid: SkypeForBusiness.ConvertTo-JsonForPSWS
+    - name: Copy-CsVoicePolicy
+      uid: SkypeForBusiness.Copy-CsVoicePolicy
+    - name: Debug-CsAddressBookReplication
+      uid: SkypeForBusiness.Debug-CsAddressBookReplication
+    - name: Debug-CsDataConference
+      uid: SkypeForBusiness.Debug-CsDataConference
+    - name: Debug-CsInterPoolReplication
+      uid: SkypeForBusiness.Debug-CsInterPoolReplication
+    - name: Debug-CsIntraPoolReplication
+      uid: SkypeForBusiness.Debug-CsIntraPoolReplication
+    - name: Debug-CsLisConfiguration
+      uid: SkypeForBusiness.Debug-CsLisConfiguration
+    - name: Debug-CsStorageServiceFailures
+      uid: SkypeForBusiness.Debug-CsStorageServiceFailures
+    - name: Debug-CsUnifiedContactStore
+      uid: SkypeForBusiness.Debug-CsUnifiedContactStore
+    - name: Disable-CsAdDomain
+      uid: SkypeForBusiness.Disable-CsAdDomain
+    - name: Disable-CsAdForest
+      uid: SkypeForBusiness.Disable-CsAdForest
+    - name: Disable-CsComputer
+      uid: SkypeForBusiness.Disable-CsComputer
+    - name: Disable-CsHostingProvider
+      uid: SkypeForBusiness.Disable-CsHostingProvider
+    - name: Disable-CsMeetingRoom
+      uid: SkypeForBusiness.Disable-CsMeetingRoom
+    - name: Disable-CsPublicProvider
+      uid: SkypeForBusiness.Disable-CsPublicProvider
+    - name: Disable-CsUser
+      uid: SkypeForBusiness.Disable-CsUser
+    - name: Enable-CsAdDomain
+      uid: SkypeForBusiness.Enable-CsAdDomain
+    - name: Enable-CsAdForest
+      uid: SkypeForBusiness.Enable-CsAdForest
+    - name: Enable-CsComputer
+      uid: SkypeForBusiness.Enable-CsComputer
+    - name: Enable-CsHostingProvider
+      uid: SkypeForBusiness.Enable-CsHostingProvider
+    - name: Enable-CsMeetingRoom
+      uid: SkypeForBusiness.Enable-CsMeetingRoom
+    - name: Enable-CsPublicProvider
+      uid: SkypeForBusiness.Enable-CsPublicProvider
+    - name: Enable-CsReplica
+      uid: SkypeForBusiness.Enable-CsReplica
+    - name: Enable-CsTopology
+      uid: SkypeForBusiness.Enable-CsTopology
+    - name: Enable-CsUser
+      uid: SkypeForBusiness.Enable-CsUser
+    - name: Export-CsArchivingData
+      uid: SkypeForBusiness.Export-CsArchivingData
+    - name: Export-CsConfiguration
+      uid: SkypeForBusiness.Export-CsConfiguration
+    - name: Export-CsLisConfiguration
+      uid: SkypeForBusiness.Export-CsLisConfiguration
+    - name: Export-CsPersistentChatData
+      uid: SkypeForBusiness.Export-CsPersistentChatData
+    - name: Export-CsRgsConfiguration
+      uid: SkypeForBusiness.Export-CsRgsConfiguration
+    - name: Export-CsUserData
+      uid: SkypeForBusiness.Export-CsUserData
+    - name: Get-CsAccessEdgeConfiguration
+      uid: SkypeForBusiness.Get-CsAccessEdgeConfiguration
+    - name: Get-CsAdContact
+      uid: SkypeForBusiness.Get-CsAdContact
+    - name: Get-CsAdditionalInternalDomain
+      uid: SkypeForBusiness.Get-CsAdditionalInternalDomain
+    - name: Get-CsAdDomain
+      uid: SkypeForBusiness.Get-CsAdDomain
+    - name: Get-CsAddressBookConfiguration
+      uid: SkypeForBusiness.Get-CsAddressBookConfiguration
+    - name: Get-CsAddressBookNormalizationConfiguration
+      uid: SkypeForBusiness.Get-CsAddressBookNormalizationConfiguration
+    - name: Get-CsAddressBookNormalizationRule
+      uid: SkypeForBusiness.Get-CsAddressBookNormalizationRule
+    - name: Get-CsAdForest
+      uid: SkypeForBusiness.Get-CsAdForest
+    - name: Get-CsAdminRole
+      uid: SkypeForBusiness.Get-CsAdminRole
+    - name: Get-CsAdminRoleAssignment
+      uid: SkypeForBusiness.Get-CsAdminRoleAssignment
+    - name: Get-CsAdPrincipal
+      uid: SkypeForBusiness.Get-CsAdPrincipal
+    - name: Get-CsAdServerSchema
+      uid: SkypeForBusiness.Get-CsAdServerSchema
+    - name: Get-CsAdUser
+      uid: SkypeForBusiness.Get-CsAdUser
+    - name: Get-CsAllowedDomain
+      uid: SkypeForBusiness.Get-CsAllowedDomain
+    - name: Get-CsAnalogDevice
+      uid: SkypeForBusiness.Get-CsAnalogDevice
+    - name: Get-CsAnnouncement
+      uid: SkypeForBusiness.Get-CsAnnouncement
+    - name: Get-CsApplicationEndpoint
+      uid: SkypeForBusiness.Get-CsApplicationEndpoint
+    - name: Get-CsArchivingConfiguration
+      uid: SkypeForBusiness.Get-CsArchivingConfiguration
+    - name: Get-CsArchivingPolicy
+      uid: SkypeForBusiness.Get-CsArchivingPolicy
+    - name: Get-CsAudioConferencingProvider
+      uid: SkypeForBusiness.Get-CsAudioConferencingProvider
+    - name: Get-CsAudioTestServiceApplication
+      uid: SkypeForBusiness.Get-CsAudioTestServiceApplication
+    - name: Get-CsAuthConfig
+      uid: SkypeForBusiness.Get-CsAuthConfig
+    - name: Get-CsAutodiscoverConfiguration
+      uid: SkypeForBusiness.Get-CsAutodiscoverConfiguration
+    - name: Get-CsAVEdgeConfiguration
+      uid: SkypeForBusiness.Get-CsAVEdgeConfiguration
+    - name: Get-CsBackupServiceConfiguration
+      uid: SkypeForBusiness.Get-CsBackupServiceConfiguration
+    - name: Get-CsBackupServiceStatus
+      uid: SkypeForBusiness.Get-CsBackupServiceStatus
+    - name: Get-CsBandwidthPolicyServiceConfiguration
+      uid: SkypeForBusiness.Get-CsBandwidthPolicyServiceConfiguration
+    - name: Get-CsBlockedDomain
+      uid: SkypeForBusiness.Get-CsBlockedDomain
+    - name: Get-CsBroadcastMeetingConfiguration
+      uid: SkypeForBusiness.Get-CsBroadcastMeetingConfiguration
+    - name: Get-CsBroadcastMeetingPolicy
+      uid: SkypeForBusiness.Get-CsBroadcastMeetingPolicy
+    - name: Get-CsBusyOptions
+      uid: SkypeForBusiness.Get-CsBusyOptions
+    - name: Get-CsCallParkOrbit
+      uid: SkypeForBusiness.Get-CsCallParkOrbit
+    - name: Get-CsCallViaWorkPolicy
+      uid: SkypeForBusiness.Get-CsCallViaWorkPolicy
+    - name: Get-CsCdrConfiguration
+      uid: SkypeForBusiness.Get-CsCdrConfiguration
+    - name: Get-CsCertificate
+      uid: SkypeForBusiness.Get-CsCertificate
+    - name: Get-CsClientAccessLicense
+      uid: SkypeForBusiness.Get-CsClientAccessLicense
+    - name: Get-CsClientCertificate
+      uid: SkypeForBusiness.Get-CsClientCertificate
+    - name: Get-CsClientPinInfo
+      uid: SkypeForBusiness.Get-CsClientPinInfo
+    - name: Get-CsClientPolicy
+      uid: SkypeForBusiness.Get-CsClientPolicy
+    - name: Get-CsClientVersionConfiguration
+      uid: SkypeForBusiness.Get-CsClientVersionConfiguration
+    - name: Get-CsClientVersionPolicy
+      uid: SkypeForBusiness.Get-CsClientVersionPolicy
+    - name: Get-CsClientVersionPolicyRule
+      uid: SkypeForBusiness.Get-CsClientVersionPolicyRule
+    - name: Get-CsCloudCallDataConnector
+      uid: SkypeForBusiness.Get-CsCloudCallDataConnector
+    - name: Get-CsCloudCallDataConnectorConfiguration
+      uid: SkypeForBusiness.Get-CsCloudCallDataConnectorConfiguration
+    - name: Get-CsCloudMeetingPolicy
+      uid: SkypeForBusiness.Get-CsCloudMeetingPolicy
+    - name: Get-CsClsAgentStatus
+      uid: SkypeForBusiness.Get-CsClsAgentStatus
+    - name: Get-CsClsConfiguration
+      uid: SkypeForBusiness.Get-CsClsConfiguration
+    - name: Get-CsClsRegion
+      uid: SkypeForBusiness.Get-CsClsRegion
+    - name: Get-CsClsScenario
+      uid: SkypeForBusiness.Get-CsClsScenario
+    - name: Get-CsClsSearchTerm
+      uid: SkypeForBusiness.Get-CsClsSearchTerm
+    - name: Get-CsClsSecurityGroup
+      uid: SkypeForBusiness.Get-CsClsSecurityGroup
+    - name: Get-CsCommonAreaPhone
+      uid: SkypeForBusiness.Get-CsCommonAreaPhone
+    - name: Get-CsComputer
+      uid: SkypeForBusiness.Get-CsComputer
+    - name: Get-CsConferenceDirectory
+      uid: SkypeForBusiness.Get-CsConferenceDirectory
+    - name: Get-CsConferenceDisclaimer
+      uid: SkypeForBusiness.Get-CsConferenceDisclaimer
+    - name: Get-CsConferencingConfiguration
+      uid: SkypeForBusiness.Get-CsConferencingConfiguration
+    - name: Get-CsConferencingPolicy
+      uid: SkypeForBusiness.Get-CsConferencingPolicy
+    - name: Get-CsConfigurationStoreLocation
+      uid: SkypeForBusiness.Get-CsConfigurationStoreLocation
+    - name: Get-CsConversationHistoryConfiguration
+      uid: SkypeForBusiness.Get-CsConversationHistoryConfiguration
+    - name: Get-CsCpsConfiguration
+      uid: SkypeForBusiness.Get-CsCpsConfiguration
+    - name: Get-CsDatabaseMirrorState
+      uid: SkypeForBusiness.Get-CsDatabaseMirrorState
+    - name: Get-CsDeviceUpdateConfiguration
+      uid: SkypeForBusiness.Get-CsDeviceUpdateConfiguration
+    - name: Get-CsDeviceUpdateRule
+      uid: SkypeForBusiness.Get-CsDeviceUpdateRule
+    - name: Get-CsDiagnosticConfiguration
+      uid: SkypeForBusiness.Get-CsDiagnosticConfiguration
+    - name: Get-CsDiagnosticHeaderConfiguration
+      uid: SkypeForBusiness.Get-CsDiagnosticHeaderConfiguration
+    - name: Get-CsDialInConferencingAccessNumber
+      uid: SkypeForBusiness.Get-CsDialInConferencingAccessNumber
+    - name: Get-CsDialInConferencingConfiguration
+      uid: SkypeForBusiness.Get-CsDialInConferencingConfiguration
+    - name: Get-CsDialInConferencingDtmfConfiguration
+      uid: SkypeForBusiness.Get-CsDialInConferencingDtmfConfiguration
+    - name: Get-CsDialInConferencingLanguageList
+      uid: SkypeForBusiness.Get-CsDialInConferencingLanguageList
+    - name: Get-CsDialPlan
+      uid: SkypeForBusiness.Get-CsDialPlan
+    - name: Get-CsEffectivePolicy
+      uid: SkypeForBusiness.Get-CsEffectivePolicy
+    - name: Get-CsEnhancedEmergencyServiceDisclaimer
+      uid: SkypeForBusiness.Get-CsEnhancedEmergencyServiceDisclaimer
+    - name: Get-CsExternalAccessPolicy
+      uid: SkypeForBusiness.Get-CsExternalAccessPolicy
+    - name: Get-CsExternalUserCommunicationPolicy
+      uid: SkypeForBusiness.Get-CsExternalUserCommunicationPolicy
+    - name: Get-CsExUmContact
+      uid: SkypeForBusiness.Get-CsExUmContact
+    - name: Get-CsFileTransferFilterConfiguration
+      uid: SkypeForBusiness.Get-CsFileTransferFilterConfiguration
+    - name: Get-CsFIPSConfiguration
+      uid: SkypeForBusiness.Get-CsFIPSConfiguration
+    - name: Get-CsGraphPolicy
+      uid: SkypeForBusiness.Get-CsGraphPolicy
+    - name: Get-CsGroupPickupUserOrbit
+      uid: SkypeForBusiness.Get-CsGroupPickupUserOrbit
+    - name: Get-CsHealthMonitoringConfiguration
+      uid: SkypeForBusiness.Get-CsHealthMonitoringConfiguration
+    - name: Get-CsHostedVoicemailPolicy
+      uid: SkypeForBusiness.Get-CsHostedVoicemailPolicy
+    - name: Get-CsHostingProvider
+      uid: SkypeForBusiness.Get-CsHostingProvider
+    - name: Get-CsHybridApplicationEndpoint
+      uid: SkypeForBusiness.Get-CsHybridApplicationEndpoint
+    - name: Get-CsHybridMediationServer
+      uid: SkypeForBusiness.Get-CsHybridMediationServer
+    - name: Get-CsHybridPSTNAppliance
+      uid: SkypeForBusiness.Get-CsHybridPSTNAppliance
+    - name: Get-CsHybridPSTNSite
+      uid: SkypeForBusiness.Get-CsHybridPSTNSite
+    - name: Get-CsImConfiguration
+      uid: SkypeForBusiness.Get-CsImConfiguration
+    - name: Get-CsImFilterConfiguration
+      uid: SkypeForBusiness.Get-CsImFilterConfiguration
+    - name: Get-CsImTranslationConfiguration
+      uid: SkypeForBusiness.Get-CsImTranslationConfiguration
+    - name: Get-CsIPPhonePolicy
+      uid: SkypeForBusiness.Get-CsIPPhonePolicy
+    - name: Get-CsKerberosAccountAssignment
+      uid: SkypeForBusiness.Get-CsKerberosAccountAssignment
+    - name: Get-CsLisCivicAddress
+      uid: SkypeForBusiness.Get-CsLisCivicAddress
+    - name: Get-CsLisLocation
+      uid: SkypeForBusiness.Get-CsLisLocation
+    - name: Get-CsLisPort
+      uid: SkypeForBusiness.Get-CsLisPort
+    - name: Get-CsLisServiceProvider
+      uid: SkypeForBusiness.Get-CsLisServiceProvider
+    - name: Get-CsLisSubnet
+      uid: SkypeForBusiness.Get-CsLisSubnet
+    - name: Get-CsLisSwitch
+      uid: SkypeForBusiness.Get-CsLisSwitch
+    - name: Get-CsLisWirelessAccessPoint
+      uid: SkypeForBusiness.Get-CsLisWirelessAccessPoint
+    - name: Get-CsLocationPolicy
+      uid: SkypeForBusiness.Get-CsLocationPolicy
+    - name: Get-CsManagementConnection
+      uid: SkypeForBusiness.Get-CsManagementConnection
+    - name: Get-CsManagementStoreReplicationStatus
+      uid: SkypeForBusiness.Get-CsManagementStoreReplicationStatus
+    - name: Get-CsMcxConfiguration
+      uid: SkypeForBusiness.Get-CsMcxConfiguration
+    - name: Get-CsMediaConfiguration
+      uid: SkypeForBusiness.Get-CsMediaConfiguration
+    - name: Get-CsMeetingConfiguration
+      uid: SkypeForBusiness.Get-CsMeetingConfiguration
+    - name: Get-CsMeetingRoom
+      uid: SkypeForBusiness.Get-CsMeetingRoom
+    - name: Get-CsMobilityPolicy
+      uid: SkypeForBusiness.Get-CsMobilityPolicy
+    - name: Get-CsNetworkBandwidthPolicyProfile
+      uid: SkypeForBusiness.Get-CsNetworkBandwidthPolicyProfile
+    - name: Get-CsNetworkConfiguration
+      uid: SkypeForBusiness.Get-CsNetworkConfiguration
+    - name: Get-CsNetworkInterface
+      uid: SkypeForBusiness.Get-CsNetworkInterface
+    - name: Get-CsNetworkInterRegionRoute
+      uid: SkypeForBusiness.Get-CsNetworkInterRegionRoute
+    - name: Get-CsNetworkInterSitePolicy
+      uid: SkypeForBusiness.Get-CsNetworkInterSitePolicy
+    - name: Get-CsNetworkRegion
+      uid: SkypeForBusiness.Get-CsNetworkRegion
+    - name: Get-CsNetworkRegionLink
+      uid: SkypeForBusiness.Get-CsNetworkRegionLink
+    - name: Get-CsNetworkSite
+      uid: SkypeForBusiness.Get-CsNetworkSite
+    - name: Get-CsNetworkSubnet
+      uid: SkypeForBusiness.Get-CsNetworkSubnet
+    - name: Get-CsOAuthConfiguration
+      uid: SkypeForBusiness.Get-CsOAuthConfiguration
+    - name: Get-CsOAuthServer
+      uid: SkypeForBusiness.Get-CsOAuthServer
+    - name: Get-CsOutboundCallingNumberTranslationRule
+      uid: SkypeForBusiness.Get-CsOutboundCallingNumberTranslationRule
+    - name: Get-CsOutboundTranslationRule
+      uid: SkypeForBusiness.Get-CsOutboundTranslationRule
+    - name: Get-CsPartnerApplication
+      uid: SkypeForBusiness.Get-CsPartnerApplication
+    - name: Get-CsPersistentChatAddin
+      uid: SkypeForBusiness.Get-CsPersistentChatAddin
+    - name: Get-CsPersistentChatCategory
+      uid: SkypeForBusiness.Get-CsPersistentChatCategory
+    - name: Get-CsPersistentChatComplianceConfiguration
+      uid: SkypeForBusiness.Get-CsPersistentChatComplianceConfiguration
+    - name: Get-CsPersistentChatConfiguration
+      uid: SkypeForBusiness.Get-CsPersistentChatConfiguration
+    - name: Get-CsPersistentChatEligiblePrincipal
+      uid: SkypeForBusiness.Get-CsPersistentChatEligiblePrincipal
+    - name: Get-CsPersistentChatEndpoint
+      uid: SkypeForBusiness.Get-CsPersistentChatEndpoint
+    - name: Get-CsPersistentChatPolicy
+      uid: SkypeForBusiness.Get-CsPersistentChatPolicy
+    - name: Get-CsPersistentChatRoom
+      uid: SkypeForBusiness.Get-CsPersistentChatRoom
+    - name: Get-CsPersistentChatState
+      uid: SkypeForBusiness.Get-CsPersistentChatState
+    - name: Get-CsPinPolicy
+      uid: SkypeForBusiness.Get-CsPinPolicy
+    - name: Get-CsPlatformServiceSettings
+      uid: SkypeForBusiness.Get-CsPlatformServiceSettings
+    - name: Get-CsPool
+      uid: SkypeForBusiness.Get-CsPool
+    - name: Get-CsPoolBackupRelationship
+      uid: SkypeForBusiness.Get-CsPoolBackupRelationship
+    - name: Get-CsPoolFabricState
+      uid: SkypeForBusiness.Get-CsPoolFabricState
+    - name: Get-CsPoolUpgradeReadinessState
+      uid: SkypeForBusiness.Get-CsPoolUpgradeReadinessState
+    - name: Get-CsPresenceManagementState
+      uid: SkypeForBusiness.Get-CsPresenceManagementState
+    - name: Get-CsPresencePolicy
+      uid: SkypeForBusiness.Get-CsPresencePolicy
+    - name: Get-CsPresenceProvider
+      uid: SkypeForBusiness.Get-CsPresenceProvider
+    - name: Get-CsPrivacyConfiguration
+      uid: SkypeForBusiness.Get-CsPrivacyConfiguration
+    - name: Get-CsProxyConfiguration
+      uid: SkypeForBusiness.Get-CsProxyConfiguration
+    - name: Get-CsPstnUsage
+      uid: SkypeForBusiness.Get-CsPstnUsage
+    - name: Get-CsPublicProvider
+      uid: SkypeForBusiness.Get-CsPublicProvider
+    - name: Get-CsPushNotificationConfiguration
+      uid: SkypeForBusiness.Get-CsPushNotificationConfiguration
+    - name: Get-CsQoEConfiguration
+      uid: SkypeForBusiness.Get-CsQoEConfiguration
+    - name: Get-CsRegistrarConfiguration
+      uid: SkypeForBusiness.Get-CsRegistrarConfiguration
+    - name: Get-CsReportingConfiguration
+      uid: SkypeForBusiness.Get-CsReportingConfiguration
+    - name: Get-CsRgsAgentGroup
+      uid: SkypeForBusiness.Get-CsRgsAgentGroup
+    - name: Get-CsRgsConfiguration
+      uid: SkypeForBusiness.Get-CsRgsConfiguration
+    - name: Get-CsRgsHolidaySet
+      uid: SkypeForBusiness.Get-CsRgsHolidaySet
+    - name: Get-CsRgsHoursOfBusiness
+      uid: SkypeForBusiness.Get-CsRgsHoursOfBusiness
+    - name: Get-CsRgsQueue
+      uid: SkypeForBusiness.Get-CsRgsQueue
+    - name: Get-CsRgsWorkflow
+      uid: SkypeForBusiness.Get-CsRgsWorkflow
+    - name: Get-CsRoutingConfiguration
+      uid: SkypeForBusiness.Get-CsRoutingConfiguration
+    - name: Get-CsServerApplication
+      uid: SkypeForBusiness.Get-CsServerApplication
+    - name: Get-CsServerPatchVersion
+      uid: SkypeForBusiness.Get-CsServerPatchVersion
+    - name: Get-CsServerVersion
+      uid: SkypeForBusiness.Get-CsServerVersion
+    - name: Get-CsService
+      uid: SkypeForBusiness.Get-CsService
+    - name: Get-CsSimpleUrlConfiguration
+      uid: SkypeForBusiness.Get-CsSimpleUrlConfiguration
+    - name: Get-CsSipDomain
+      uid: SkypeForBusiness.Get-CsSipDomain
+    - name: Get-CsSipResponseCodeTranslationRule
+      uid: SkypeForBusiness.Get-CsSipResponseCodeTranslationRule
+    - name: Get-CsSite
+      uid: SkypeForBusiness.Get-CsSite
+    - name: Get-CsSlaConfiguration
+      uid: SkypeForBusiness.Get-CsSlaConfiguration
+    - name: Get-CsStaticRoutingConfiguration
+      uid: SkypeForBusiness.Get-CsStaticRoutingConfiguration
+    - name: Get-CsStorageServiceConfiguration
+      uid: SkypeForBusiness.Get-CsStorageServiceConfiguration
+    - name: Get-CsTeamsUpgradeConfiguration
+      uid: SkypeForBusiness.Get-CsTeamsUpgradeConfiguration
+    - name: Get-CsTeamsUpgradePolicy
+      uid: SkypeForBusiness.Get-CsTeamsUpgradePolicy
+    - name: Get-CsTelemetryConfiguration
+      uid: SkypeForBusiness.Get-CsTelemetryConfiguration
+    - name: Get-CsTenantHybridConfiguration
+      uid: SkypeForBusiness.Get-CsTenantHybridConfiguration
+    - name: Get-CsTenantUpdateTimeWindow
+      uid: SkypeForBusiness.Get-CsTenantUpdateTimeWindow
+    - name: Get-CsTestDevice
+      uid: SkypeForBusiness.Get-CsTestDevice
+    - name: Get-CsTestUserCredential
+      uid: SkypeForBusiness.Get-CsTestUserCredential
+    - name: Get-CsThirdPartyVideoSystem
+      uid: SkypeForBusiness.Get-CsThirdPartyVideoSystem
+    - name: Get-CsThirdPartyVideoSystemPolicy
+      uid: SkypeForBusiness.Get-CsThirdPartyVideoSystemPolicy
+    - name: Get-CsTopology
+      uid: SkypeForBusiness.Get-CsTopology
+    - name: Get-CsTrunk
+      uid: SkypeForBusiness.Get-CsTrunk
+    - name: Get-CsTrunkConfiguration
+      uid: SkypeForBusiness.Get-CsTrunkConfiguration
+    - name: Get-CsTrustedApplication
+      uid: SkypeForBusiness.Get-CsTrustedApplication
+    - name: Get-CsTrustedApplicationComputer
+      uid: SkypeForBusiness.Get-CsTrustedApplicationComputer
+    - name: Get-CsTrustedApplicationEndpoint
+      uid: SkypeForBusiness.Get-CsTrustedApplicationEndpoint
+    - name: Get-CsTrustedApplicationPool
+      uid: SkypeForBusiness.Get-CsTrustedApplicationPool
+    - name: Get-CsUCPhoneConfiguration
+      uid: SkypeForBusiness.Get-CsUCPhoneConfiguration
+    - name: Get-CsUICulture
+      uid: SkypeForBusiness.Get-CsUICulture
+    - name: Get-CsUnassignedNumber
+      uid: SkypeForBusiness.Get-CsUnassignedNumber
+    - name: Get-CsUpgradeDomainInfo
+      uid: SkypeForBusiness.Get-CsUpgradeDomainInfo
+    - name: Get-CsUser
+      uid: SkypeForBusiness.Get-CsUser
+    - name: Get-CsUserAcp
+      uid: SkypeForBusiness.Get-CsUserAcp
+    - name: Get-CsUserCallForwardingSettings
+      uid: SkypeForBusiness.Get-CsUserCallForwardingSettings
+    - name: Get-CsUserDatabaseState
+      uid: SkypeForBusiness.Get-CsUserDatabaseState
+    - name: Get-CsUserDelegates
+      uid: SkypeForBusiness.Get-CsUserDelegates
+    - name: Get-CsUserLocationStatus
+      uid: SkypeForBusiness.Get-CsUserLocationStatus
+    - name: Get-CsUserPoolInfo
+      uid: SkypeForBusiness.Get-CsUserPoolInfo
+    - name: Get-CsUserPstnSettings
+      uid: SkypeForBusiness.Get-CsUserPstnSettings
+    - name: Get-CsUserReplicatorConfiguration
+      uid: SkypeForBusiness.Get-CsUserReplicatorConfiguration
+    - name: Get-CsUserServicesConfiguration
+      uid: SkypeForBusiness.Get-CsUserServicesConfiguration
+    - name: Get-CsUserServicesPolicy
+      uid: SkypeForBusiness.Get-CsUserServicesPolicy
+    - name: Get-CsUserSession
+      uid: SkypeForBusiness.Get-CsUserSession
+    - name: Get-CsUserSettingsPageConfiguration
+      uid: SkypeForBusiness.Get-CsUserSettingsPageConfiguration
+    - name: Get-CsUserTeamMembers
+      uid: SkypeForBusiness.Get-CsUserTeamMembers
+    - name: Get-CsVideoInteropServerConfiguration
+      uid: SkypeForBusiness.Get-CsVideoInteropServerConfiguration
+    - name: Get-CsVideoInteropServerSyntheticTransactionConfiguration
+      uid: SkypeForBusiness.Get-CsVideoInteropServerSyntheticTransactionConfiguration
+    - name: Get-CsVideoTrunk
+      uid: SkypeForBusiness.Get-CsVideoTrunk
+    - name: Get-CsVideoTrunkConfiguration
+      uid: SkypeForBusiness.Get-CsVideoTrunkConfiguration
+    - name: Get-CsVoiceConfiguration
+      uid: SkypeForBusiness.Get-CsVoiceConfiguration
+    - name: Get-CsVoicemailReroutingConfiguration
+      uid: SkypeForBusiness.Get-CsVoicemailReroutingConfiguration
+    - name: Get-CsVoiceNormalizationRule
+      uid: SkypeForBusiness.Get-CsVoiceNormalizationRule
+    - name: Get-CsVoicePolicy
+      uid: SkypeForBusiness.Get-CsVoicePolicy
+    - name: Get-CsVoiceRoute
+      uid: SkypeForBusiness.Get-CsVoiceRoute
+    - name: Get-CsVoiceRoutingPolicy
+      uid: SkypeForBusiness.Get-CsVoiceRoutingPolicy
+    - name: Get-CsVoiceTestConfiguration
+      uid: SkypeForBusiness.Get-CsVoiceTestConfiguration
+    - name: Get-CsWatcherNodeConfiguration
+      uid: SkypeForBusiness.Get-CsWatcherNodeConfiguration
+    - name: Get-CsWebServiceConfiguration
+      uid: SkypeForBusiness.Get-CsWebServiceConfiguration
+    - name: Get-CsWindowsService
+      uid: SkypeForBusiness.Get-CsWindowsService
+    - name: Get-CsXmppAllowedPartner
+      uid: SkypeForBusiness.Get-CsXmppAllowedPartner
+    - name: Get-CsXmppGatewayConfiguration
+      uid: SkypeForBusiness.Get-CsXmppGatewayConfiguration
+    - name: Grant-CsArchivingPolicy
+      uid: SkypeForBusiness.Grant-CsArchivingPolicy
+    - name: Grant-CsCallViaWorkPolicy
+      uid: SkypeForBusiness.Grant-CsCallViaWorkPolicy
+    - name: Grant-CsClientPolicy
+      uid: SkypeForBusiness.Grant-CsClientPolicy
+    - name: Grant-CsClientVersionPolicy
+      uid: SkypeForBusiness.Grant-CsClientVersionPolicy
+    - name: Grant-CsConferencingPolicy
+      uid: SkypeForBusiness.Grant-CsConferencingPolicy
+    - name: Grant-CsDialPlan
+      uid: SkypeForBusiness.Grant-CsDialPlan
+    - name: Grant-CsExternalAccessPolicy
+      uid: SkypeForBusiness.Grant-CsExternalAccessPolicy
+    - name: Grant-CsGraphPolicy
+      uid: SkypeForBusiness.Grant-CsGraphPolicy
+    - name: Grant-CsHostedVoicemailPolicy
+      uid: SkypeForBusiness.Grant-CsHostedVoicemailPolicy
+    - name: Grant-CsIPPhonePolicy, Skype for Business Server 2019
+      uid: SkypeForBusiness.Grant-CsIPPhonePolicy, Skype for Business Server 2019
+    - name: Grant-CsLocationPolicy
+      uid: SkypeForBusiness.Grant-CsLocationPolicy
+    - name: Grant-CsMobilityPolicy
+      uid: SkypeForBusiness.Grant-CsMobilityPolicy
+    - name: Grant-CsOUPermission
+      uid: SkypeForBusiness.Grant-CsOUPermission
+    - name: Grant-CsPersistentChatPolicy
+      uid: SkypeForBusiness.Grant-CsPersistentChatPolicy
+    - name: Grant-CsPinPolicy
+      uid: SkypeForBusiness.Grant-CsPinPolicy
+    - name: Grant-CsPresencePolicy
+      uid: SkypeForBusiness.Grant-CsPresencePolicy
+    - name: Grant-CsSetupPermission
+      uid: SkypeForBusiness.Grant-CsSetupPermission
+    - name: Grant-CsTeamsUpgradePolicy
+      uid: SkypeForBusiness.Grant-CsTeamsUpgradePolicy
+    - name: Grant-CsThirdPartyVideoSystemPolicy
+      uid: SkypeForBusiness.Grant-CsThirdPartyVideoSystemPolicy
+    - name: Grant-CsUserServicesPolicy
+      uid: SkypeForBusiness.Grant-CsUserServicesPolicy
+    - name: Grant-CsVoicePolicy
+      uid: SkypeForBusiness.Grant-CsVoicePolicy
+    - name: Grant-CsVoiceRoutingPolicy
+      uid: SkypeForBusiness.Grant-CsVoiceRoutingPolicy
+    - name: Import-CSAnnouncementFile
+      uid: SkypeForBusiness.Import-CSAnnouncementFile
+    - name: Import-CsCertificate
+      uid: SkypeForBusiness.Import-CsCertificate
+    - name: Import-CsCompanyPhoneNormalizationRules
+      uid: SkypeForBusiness.Import-CsCompanyPhoneNormalizationRules
+    - name: Import-CsConfiguration
+      uid: SkypeForBusiness.Import-CsConfiguration
+    - name: Import-CsDeviceUpdate
+      uid: SkypeForBusiness.Import-CsDeviceUpdate
+    - name: Import-CsLegacyConferenceDirectory
+      uid: SkypeForBusiness.Import-CsLegacyConferenceDirectory
+    - name: Import-CsLegacyConfiguration
+      uid: SkypeForBusiness.Import-CsLegacyConfiguration
+    - name: Import-CsLisConfiguration
+      uid: SkypeForBusiness.Import-CsLisConfiguration
+    - name: Import-CsPersistentChatData
+      uid: SkypeForBusiness.Import-CsPersistentChatData
+    - name: Import-CsRgsAudioFile
+      uid: SkypeForBusiness.Import-CsRgsAudioFile
+    - name: Import-CsRgsConfiguration
+      uid: SkypeForBusiness.Import-CsRgsConfiguration
+    - name: Import-CsUserData
+      uid: SkypeForBusiness.Import-CsUserData
+    - name: Install-CsAdServerSchema
+      uid: SkypeForBusiness.Install-CsAdServerSchema
+    - name: Install-CsDatabase
+      uid: SkypeForBusiness.Install-CsDatabase
+    - name: Install-CsMirrorDatabase
+      uid: SkypeForBusiness.Install-CsMirrorDatabase
+    - name: Invoke-CsArchivingDatabasePurge
+      uid: SkypeForBusiness.Invoke-CsArchivingDatabasePurge
+    - name: Invoke-CsBackupServiceSync
+      uid: SkypeForBusiness.Invoke-CsBackupServiceSync
+    - name: Invoke-CsCdrDatabasePurge
+      uid: SkypeForBusiness.Invoke-CsCdrDatabasePurge
+    - name: Invoke-CsComputerFailBack
+      uid: SkypeForBusiness.Invoke-CsComputerFailBack
+    - name: Invoke-CsComputerFailOver
+      uid: SkypeForBusiness.Invoke-CsComputerFailOver
+    - name: Invoke-CsDatabaseFailover
+      uid: SkypeForBusiness.Invoke-CsDatabaseFailover
+    - name: Invoke-CsManagementServerFailover
+      uid: SkypeForBusiness.Invoke-CsManagementServerFailover
+    - name: Invoke-CsManagementStoreReplication
+      uid: SkypeForBusiness.Invoke-CsManagementStoreReplication
+    - name: Invoke-CsPoolFailBack
+      uid: SkypeForBusiness.Invoke-CsPoolFailBack
+    - name: Invoke-CsPoolFailOver
+      uid: SkypeForBusiness.Invoke-CsPoolFailOver
+    - name: Invoke-CsQoEDatabasePurge
+      uid: SkypeForBusiness.Invoke-CsQoEDatabasePurge
+    - name: Invoke-CsRGSStoreReplicateData
+      uid: SkypeForBusiness.Invoke-CsRGSStoreReplicateData
+    - name: Invoke-CsStorageServiceFlush
+      uid: SkypeForBusiness.Invoke-CsStorageServiceFlush
+    - name: Invoke-CsUcsRollback
+      uid: SkypeForBusiness.Invoke-CsUcsRollback
+    - name: Lock-CsClientPin
+      uid: SkypeForBusiness.Lock-CsClientPin
+    - name: Merge-CsLegacyTopology
+      uid: SkypeForBusiness.Merge-CsLegacyTopology
+    - name: Move-CsAnalogDevice
+      uid: SkypeForBusiness.Move-CsAnalogDevice
+    - name: Move-CsApplicationEndpoint
+      uid: SkypeForBusiness.Move-CsApplicationEndpoint
+    - name: Move-CsCommonAreaPhone
+      uid: SkypeForBusiness.Move-CsCommonAreaPhone
+    - name: Move-CsConferenceDirectory
+      uid: SkypeForBusiness.Move-CsConferenceDirectory
+    - name: Move-CsExUmContact
+      uid: SkypeForBusiness.Move-CsExUmContact
+    - name: Move-CsLegacyUser
+      uid: SkypeForBusiness.Move-CsLegacyUser
+    - name: Move-CsManagementServer
+      uid: SkypeForBusiness.Move-CsManagementServer
+    - name: Move-CsMeetingRoom
+      uid: SkypeForBusiness.Move-CsMeetingRoom
+    - name: Move-CsRgsConfiguration
+      uid: SkypeForBusiness.Move-CsRgsConfiguration
+    - name: Move-CsThirdPartyVideoSystem
+      uid: SkypeForBusiness.Move-CsThirdPartyVideoSystem
+    - name: Move-CsUser
+      uid: SkypeForBusiness.Move-CsUser
+    - name: New-CsAdditionalInternalDomain
+      uid: SkypeForBusiness.New-CsAdditionalInternalDomain
+    - name: New-CsAddressBookConfiguration
+      uid: SkypeForBusiness.New-CsAddressBookConfiguration
+    - name: New-CsAddressBookNormalizationConfiguration
+      uid: SkypeForBusiness.New-CsAddressBookNormalizationConfiguration
+    - name: New-CsAddressBookNormalizationRule
+      uid: SkypeForBusiness.New-CsAddressBookNormalizationRule
+    - name: New-CsAdminRole
+      uid: SkypeForBusiness.New-CsAdminRole
+    - name: New-CsAllowedDomain
+      uid: SkypeForBusiness.New-CsAllowedDomain
+    - name: New-CsAnalogDevice
+      uid: SkypeForBusiness.New-CsAnalogDevice
+    - name: New-CsAnnouncement
+      uid: SkypeForBusiness.New-CsAnnouncement
+    - name: New-CsArchivingConfiguration
+      uid: SkypeForBusiness.New-CsArchivingConfiguration
+    - name: New-CsArchivingPolicy
+      uid: SkypeForBusiness.New-CsArchivingPolicy
+    - name: New-CsAutodiscoverConfiguration
+      uid: SkypeForBusiness.New-CsAutodiscoverConfiguration
+    - name: New-CsAVEdgeConfiguration
+      uid: SkypeForBusiness.New-CsAVEdgeConfiguration
+    - name: New-CsBandwidthPolicyServiceConfiguration
+      uid: SkypeForBusiness.New-CsBandwidthPolicyServiceConfiguration
+    - name: New-CsBlockedDomain
+      uid: SkypeForBusiness.New-CsBlockedDomain
+    - name: New-CsCallParkOrbit
+      uid: SkypeForBusiness.New-CsCallParkOrbit
+    - name: New-CsCallViaWorkPolicy
+      uid: SkypeForBusiness.New-CsCallViaWorkPolicy
+    - name: New-CsCdrConfiguration
+      uid: SkypeForBusiness.New-CsCdrConfiguration
+    - name: New-CsClientPolicy
+      uid: SkypeForBusiness.New-CsClientPolicy
+    - name: New-CsClientPolicyEntry
+      uid: SkypeForBusiness.New-CsClientPolicyEntry
+    - name: New-CsClientVersionConfiguration
+      uid: SkypeForBusiness.New-CsClientVersionConfiguration
+    - name: New-CsClientVersionPolicy
+      uid: SkypeForBusiness.New-CsClientVersionPolicy
+    - name: New-CsClientVersionPolicyRule
+      uid: SkypeForBusiness.New-CsClientVersionPolicyRule
+    - name: New-CsCloudCallDataConnectorConfiguration
+      uid: SkypeForBusiness.New-CsCloudCallDataConnectorConfiguration
+    - name: New-CsClsConfiguration
+      uid: SkypeForBusiness.New-CsClsConfiguration
+    - name: New-CsClsProvider
+      uid: SkypeForBusiness.New-CsClsProvider
+    - name: New-CsClsRegion
+      uid: SkypeForBusiness.New-CsClsRegion
+    - name: New-CsClsScenario
+      uid: SkypeForBusiness.New-CsClsScenario
+    - name: New-CsClsSecurityGroup
+      uid: SkypeForBusiness.New-CsClsSecurityGroup
+    - name: New-CsCommonAreaPhone
+      uid: SkypeForBusiness.New-CsCommonAreaPhone
+    - name: New-CsConferenceDirectory
+      uid: SkypeForBusiness.New-CsConferenceDirectory
+    - name: New-CsConferencingConfiguration
+      uid: SkypeForBusiness.New-CsConferencingConfiguration
+    - name: New-CsConferencingPolicy
+      uid: SkypeForBusiness.New-CsConferencingPolicy
+    - name: New-CsCpsConfiguration
+      uid: SkypeForBusiness.New-CsCpsConfiguration
+    - name: New-CsDeviceUpdateConfiguration
+      uid: SkypeForBusiness.New-CsDeviceUpdateConfiguration
+    - name: New-CsDiagnosticConfiguration
+      uid: SkypeForBusiness.New-CsDiagnosticConfiguration
+    - name: New-CsDiagnosticHeaderConfiguration
+      uid: SkypeForBusiness.New-CsDiagnosticHeaderConfiguration
+    - name: New-CsDiagnosticsFilter
+      uid: SkypeForBusiness.New-CsDiagnosticsFilter
+    - name: New-CsDialInConferencingAccessNumber
+      uid: SkypeForBusiness.New-CsDialInConferencingAccessNumber
+    - name: New-CsDialInConferencingConfiguration
+      uid: SkypeForBusiness.New-CsDialInConferencingConfiguration
+    - name: New-CsDialInConferencingDtmfConfiguration
+      uid: SkypeForBusiness.New-CsDialInConferencingDtmfConfiguration
+    - name: New-CsDialPlan
+      uid: SkypeForBusiness.New-CsDialPlan
+    - name: New-CsEmergencyNumber
+      uid: SkypeForBusiness.New-CsEmergencyNumber
+    - name: New-CsExtendedTest
+      uid: SkypeForBusiness.New-CsExtendedTest
+    - name: New-CsExternalAccessPolicy
+      uid: SkypeForBusiness.New-CsExternalAccessPolicy
+    - name: New-CsExternalUserCommunicationPolicy
+      uid: SkypeForBusiness.New-CsExternalUserCommunicationPolicy
+    - name: New-CsExUmContact
+      uid: SkypeForBusiness.New-CsExUmContact
+    - name: New-CsFileTransferFilterConfiguration
+      uid: SkypeForBusiness.New-CsFileTransferFilterConfiguration
+    - name: New-CsFIPSConfiguration
+      uid: SkypeForBusiness.New-CsFIPSConfiguration
+    - name: New-CsGroupPickupUserOrbit
+      uid: SkypeForBusiness.New-CsGroupPickupUserOrbit
+    - name: New-CsHealthMonitoringConfiguration
+      uid: SkypeForBusiness.New-CsHealthMonitoringConfiguration
+    - name: New-CsHostedVoicemailPolicy
+      uid: SkypeForBusiness.New-CsHostedVoicemailPolicy
+    - name: New-CsHostingProvider
+      uid: SkypeForBusiness.New-CsHostingProvider
+    - name: New-CsHybridApplicationEndpoint
+      uid: SkypeForBusiness.New-CsHybridApplicationEndpoint
+    - name: New-CsHybridPSTNSite
+      uid: SkypeForBusiness.New-CsHybridPSTNSite
+    - name: New-CsImConfiguration
+      uid: SkypeForBusiness.New-CsImConfiguration
+    - name: New-CsImFilterConfiguration
+      uid: SkypeForBusiness.New-CsImFilterConfiguration
+    - name: New-CsImTranslationConfiguration
+      uid: SkypeForBusiness.New-CsImTranslationConfiguration
+    - name: New-CsIssuedCertId
+      uid: SkypeForBusiness.New-CsIssuedCertId
+    - name: New-CsKerberosAccount
+      uid: SkypeForBusiness.New-CsKerberosAccount
+    - name: New-CsKerberosAccountAssignment
+      uid: SkypeForBusiness.New-CsKerberosAccountAssignment
+    - name: New-CsLocationPolicy
+      uid: SkypeForBusiness.New-CsLocationPolicy
+    - name: New-CsMcxConfiguration
+      uid: SkypeForBusiness.New-CsMcxConfiguration
+    - name: New-CsMediaConfiguration
+      uid: SkypeForBusiness.New-CsMediaConfiguration
+    - name: New-CsMeetingConfiguration
+      uid: SkypeForBusiness.New-CsMeetingConfiguration
+    - name: New-CsMobilityPolicy
+      uid: SkypeForBusiness.New-CsMobilityPolicy
+    - name: New-CsNetworkBandwidthPolicyProfile
+      uid: SkypeForBusiness.New-CsNetworkBandwidthPolicyProfile
+    - name: New-CsNetworkBWAlternatePath
+      uid: SkypeForBusiness.New-CsNetworkBWAlternatePath
+    - name: New-CsNetworkBWPolicy
+      uid: SkypeForBusiness.New-CsNetworkBWPolicy
+    - name: New-CsNetworkInterRegionRoute
+      uid: SkypeForBusiness.New-CsNetworkInterRegionRoute
+    - name: New-CsNetworkInterSitePolicy
+      uid: SkypeForBusiness.New-CsNetworkInterSitePolicy
+    - name: New-CsNetworkMediaBypassConfiguration
+      uid: SkypeForBusiness.New-CsNetworkMediaBypassConfiguration
+    - name: New-CsNetworkRegion
+      uid: SkypeForBusiness.New-CsNetworkRegion
+    - name: New-CsNetworkRegionLink
+      uid: SkypeForBusiness.New-CsNetworkRegionLink
+    - name: New-CsNetworkSite
+      uid: SkypeForBusiness.New-CsNetworkSite
+    - name: New-CsNetworkSubnet
+      uid: SkypeForBusiness.New-CsNetworkSubnet
+    - name: New-CsOAuthServer
+      uid: SkypeForBusiness.New-CsOAuthServer
+    - name: New-CsOutboundCallingNumberTranslationRule
+      uid: SkypeForBusiness.New-CsOutboundCallingNumberTranslationRule
+    - name: New-CsOutboundTranslationRule
+      uid: SkypeForBusiness.New-CsOutboundTranslationRule
+    - name: New-CsPartnerApplication
+      uid: SkypeForBusiness.New-CsPartnerApplication
+    - name: New-CsPersistentChatAddin
+      uid: SkypeForBusiness.New-CsPersistentChatAddin
+    - name: New-CsPersistentChatCategory
+      uid: SkypeForBusiness.New-CsPersistentChatCategory
+    - name: New-CsPersistentChatComplianceConfiguration
+      uid: SkypeForBusiness.New-CsPersistentChatComplianceConfiguration
+    - name: New-CsPersistentChatConfiguration
+      uid: SkypeForBusiness.New-CsPersistentChatConfiguration
+    - name: New-CsPersistentChatEndpoint
+      uid: SkypeForBusiness.New-CsPersistentChatEndpoint
+    - name: New-CsPersistentChatPolicy
+      uid: SkypeForBusiness.New-CsPersistentChatPolicy
+    - name: New-CsPersistentChatRoom
+      uid: SkypeForBusiness.New-CsPersistentChatRoom
+    - name: New-CsPinPolicy
+      uid: SkypeForBusiness.New-CsPinPolicy
+    - name: New-CsPlatformServiceSettings
+      uid: SkypeForBusiness.New-CsPlatformServiceSettings
+    - name: New-CsPresencePolicy
+      uid: SkypeForBusiness.New-CsPresencePolicy
+    - name: New-CsPresenceProvider
+      uid: SkypeForBusiness.New-CsPresenceProvider
+    - name: New-CsPrivacyConfiguration
+      uid: SkypeForBusiness.New-CsPrivacyConfiguration
+    - name: New-CsProxyConfiguration
+      uid: SkypeForBusiness.New-CsProxyConfiguration
+    - name: New-CsPublicProvider
+      uid: SkypeForBusiness.New-CsPublicProvider
+    - name: New-CsPushNotificationConfiguration
+      uid: SkypeForBusiness.New-CsPushNotificationConfiguration
+    - name: New-CsQoEConfiguration
+      uid: SkypeForBusiness.New-CsQoEConfiguration
+    - name: New-CsRegistrarConfiguration
+      uid: SkypeForBusiness.New-CsRegistrarConfiguration
+    - name: New-CsReportingConfiguration
+      uid: SkypeForBusiness.New-CsReportingConfiguration
+    - name: New-CsRgsAgentGroup
+      uid: SkypeForBusiness.New-CsRgsAgentGroup
+    - name: New-CsRgsAnswer
+      uid: SkypeForBusiness.New-CsRgsAnswer
+    - name: New-CsRgsCallAction
+      uid: SkypeForBusiness.New-CsRgsCallAction
+    - name: New-CsRgsHoliday
+      uid: SkypeForBusiness.New-CsRgsHoliday
+    - name: New-CsRgsHolidaySet
+      uid: SkypeForBusiness.New-CsRgsHolidaySet
+    - name: New-CsRgsHoursOfBusiness
+      uid: SkypeForBusiness.New-CsRgsHoursOfBusiness
+    - name: New-CsRgsPrompt
+      uid: SkypeForBusiness.New-CsRgsPrompt
+    - name: New-CsRgsQuestion
+      uid: SkypeForBusiness.New-CsRgsQuestion
+    - name: New-CsRgsQueue
+      uid: SkypeForBusiness.New-CsRgsQueue
+    - name: New-CsRgsTimeRange
+      uid: SkypeForBusiness.New-CsRgsTimeRange
+    - name: New-CsRgsWorkflow
+      uid: SkypeForBusiness.New-CsRgsWorkflow
+    - name: New-CsRoutingConfiguration
+      uid: SkypeForBusiness.New-CsRoutingConfiguration
+    - name: New-CsServerApplication
+      uid: SkypeForBusiness.New-CsServerApplication
+    - name: New-CsSimpleUrl
+      uid: SkypeForBusiness.New-CsSimpleUrl
+    - name: New-CsSimpleUrlConfiguration
+      uid: SkypeForBusiness.New-CsSimpleUrlConfiguration
+    - name: New-CsSimpleUrlEntry
+      uid: SkypeForBusiness.New-CsSimpleUrlEntry
+    - name: New-CsSipDomain
+      uid: SkypeForBusiness.New-CsSipDomain
+    - name: New-CsSipProxyCustom
+      uid: SkypeForBusiness.New-CsSipProxyCustom
+    - name: New-CsSipProxyRealm
+      uid: SkypeForBusiness.New-CsSipProxyRealm
+    - name: New-CsSipProxyTCP
+      uid: SkypeForBusiness.New-CsSipProxyTCP
+    - name: New-CsSipProxyTLS
+      uid: SkypeForBusiness.New-CsSipProxyTLS
+    - name: New-CsSipProxyTransport
+      uid: SkypeForBusiness.New-CsSipProxyTransport
+    - name: New-CsSipProxyUseDefault
+      uid: SkypeForBusiness.New-CsSipProxyUseDefault
+    - name: New-CsSipProxyUseDefaultCert
+      uid: SkypeForBusiness.New-CsSipProxyUseDefaultCert
+    - name: New-CsSipResponseCodeTranslationRule
+      uid: SkypeForBusiness.New-CsSipResponseCodeTranslationRule
+    - name: New-CsStaticRoute
+      uid: SkypeForBusiness.New-CsStaticRoute
+    - name: New-CsStaticRoutingConfiguration
+      uid: SkypeForBusiness.New-CsStaticRoutingConfiguration
+    - name: New-CsStorageServiceConfiguration
+      uid: SkypeForBusiness.New-CsStorageServiceConfiguration
+    - name: New-CsTeamsUpgradePolicy
+      uid: SkypeForBusiness.New-CsTeamsUpgradePolicy
+    - name: New-CsTelemetryConfiguration
+      uid: SkypeForBusiness.New-CsTelemetryConfiguration
+    - name: New-CsTenantUpdateTimeWindow
+      uid: SkypeForBusiness.New-CsTenantUpdateTimeWindow
+    - name: New-CsTestDevice
+      uid: SkypeForBusiness.New-CsTestDevice
+    - name: New-CsThirdPartyVideoSystem
+      uid: SkypeForBusiness.New-CsThirdPartyVideoSystem
+    - name: New-CsThirdPartyVideoSystemPolicy
+      uid: SkypeForBusiness.New-CsThirdPartyVideoSystemPolicy
+    - name: New-CsTrunkConfiguration
+      uid: SkypeForBusiness.New-CsTrunkConfiguration
+    - name: New-CsTrustedApplication
+      uid: SkypeForBusiness.New-CsTrustedApplication
+    - name: New-CsTrustedApplicationComputer
+      uid: SkypeForBusiness.New-CsTrustedApplicationComputer
+    - name: New-CsTrustedApplicationEndpoint
+      uid: SkypeForBusiness.New-CsTrustedApplicationEndpoint
+    - name: New-CsTrustedApplicationPool
+      uid: SkypeForBusiness.New-CsTrustedApplicationPool
+    - name: New-CsUCPhoneConfiguration
+      uid: SkypeForBusiness.New-CsUCPhoneConfiguration
+    - name: New-CsUnassignedNumber
+      uid: SkypeForBusiness.New-CsUnassignedNumber
+    - name: New-CsUserReplicatorConfiguration
+      uid: SkypeForBusiness.New-CsUserReplicatorConfiguration
+    - name: New-CsUserServicesConfiguration
+      uid: SkypeForBusiness.New-CsUserServicesConfiguration
+    - name: New-CsUserServicesPolicy
+      uid: SkypeForBusiness.New-CsUserServicesPolicy
+    - name: New-CsVideoInteropServerConfiguration
+      uid: SkypeForBusiness.New-CsVideoInteropServerConfiguration
+    - name: New-CsVideoInteropServerSyntheticTransactionConfiguration
+      uid: SkypeForBusiness.New-CsVideoInteropServerSyntheticTransactionConfiguration
+    - name: New-CsVideoTrunkConfiguration
+      uid: SkypeForBusiness.New-CsVideoTrunkConfiguration
+    - name: New-CsVoicemailReroutingConfiguration
+      uid: SkypeForBusiness.New-CsVoicemailReroutingConfiguration
+    - name: New-CsVoiceNormalizationRule
+      uid: SkypeForBusiness.New-CsVoiceNormalizationRule
+    - name: New-CsVoicePolicy
+      uid: SkypeForBusiness.New-CsVoicePolicy
+    - name: New-CsVoiceRegex
+      uid: SkypeForBusiness.New-CsVoiceRegex
+    - name: New-CsVoiceRoute
+      uid: SkypeForBusiness.New-CsVoiceRoute
+    - name: New-CsVoiceRoutingPolicy
+      uid: SkypeForBusiness.New-CsVoiceRoutingPolicy
+    - name: New-CsVoiceTestConfiguration
+      uid: SkypeForBusiness.New-CsVoiceTestConfiguration
+    - name: New-CsWatcherNodeConfiguration
+      uid: SkypeForBusiness.New-CsWatcherNodeConfiguration
+    - name: New-CsWebLink
+      uid: SkypeForBusiness.New-CsWebLink
+    - name: New-CsWebOrigin
+      uid: SkypeForBusiness.New-CsWebOrigin
+    - name: New-CsWebServiceConfiguration
+      uid: SkypeForBusiness.New-CsWebServiceConfiguration
+    - name: New-CsWebTrustedCACertificate
+      uid: SkypeForBusiness.New-CsWebTrustedCACertificate
+    - name: New-CsXmppAllowedPartner
+      uid: SkypeForBusiness.New-CsXmppAllowedPartner
+    - name: Publish-CsLisConfiguration
+      uid: SkypeForBusiness.Publish-CsLisConfiguration
+    - name: Publish-CsTopology
+      uid: SkypeForBusiness.Publish-CsTopology
+    - name: Register-CsHybridPSTNAppliance
+      uid: SkypeForBusiness.Register-CsHybridPSTNAppliance
+    - name: Remove-CsAdditionalInternalDomain
+      uid: SkypeForBusiness.Remove-CsAdditionalInternalDomain
+    - name: Remove-CsAddressBookConfiguration
+      uid: SkypeForBusiness.Remove-CsAddressBookConfiguration
+    - name: Remove-CsAddressBookNormalizationConfiguration
+      uid: SkypeForBusiness.Remove-CsAddressBookNormalizationConfiguration
+    - name: Remove-CsAddressBookNormalizationRule
+      uid: SkypeForBusiness.Remove-CsAddressBookNormalizationRule
+    - name: Remove-CsAdminRole
+      uid: SkypeForBusiness.Remove-CsAdminRole
+    - name: Remove-CsAllowedDomain
+      uid: SkypeForBusiness.Remove-CsAllowedDomain
+    - name: Remove-CsAnalogDevice
+      uid: SkypeForBusiness.Remove-CsAnalogDevice
+    - name: Remove-CsAnnouncement
+      uid: SkypeForBusiness.Remove-CsAnnouncement
+    - name: Remove-CsArchivingConfiguration
+      uid: SkypeForBusiness.Remove-CsArchivingConfiguration
+    - name: Remove-CsArchivingPolicy
+      uid: SkypeForBusiness.Remove-CsArchivingPolicy
+    - name: Remove-CsAutodiscoverConfiguration
+      uid: SkypeForBusiness.Remove-CsAutodiscoverConfiguration
+    - name: Remove-CsAVEdgeConfiguration
+      uid: SkypeForBusiness.Remove-CsAVEdgeConfiguration
+    - name: Remove-CsBackupServiceConfiguration
+      uid: SkypeForBusiness.Remove-CsBackupServiceConfiguration
+    - name: Remove-CsBandwidthPolicyServiceConfiguration
+      uid: SkypeForBusiness.Remove-CsBandwidthPolicyServiceConfiguration
+    - name: Remove-CsBlockedDomain
+      uid: SkypeForBusiness.Remove-CsBlockedDomain
+    - name: Remove-CsBusyOptions
+      uid: SkypeForBusiness.Remove-CsBusyOptions
+    - name: Remove-CsCallParkOrbit
+      uid: SkypeForBusiness.Remove-CsCallParkOrbit
+    - name: Remove-CsCallViaWorkPolicy
+      uid: SkypeForBusiness.Remove-CsCallViaWorkPolicy
+    - name: Remove-CsCdrConfiguration
+      uid: SkypeForBusiness.Remove-CsCdrConfiguration
+    - name: Remove-CsCertificate
+      uid: SkypeForBusiness.Remove-CsCertificate
+    - name: Remove-CsClientPolicy
+      uid: SkypeForBusiness.Remove-CsClientPolicy
+    - name: Remove-CsClientVersionConfiguration
+      uid: SkypeForBusiness.Remove-CsClientVersionConfiguration
+    - name: Remove-CsClientVersionPolicy
+      uid: SkypeForBusiness.Remove-CsClientVersionPolicy
+    - name: Remove-CsClientVersionPolicyRule
+      uid: SkypeForBusiness.Remove-CsClientVersionPolicyRule
+    - name: Remove-CsClsConfiguration
+      uid: SkypeForBusiness.Remove-CsClsConfiguration
+    - name: Remove-CsClsRegion
+      uid: SkypeForBusiness.Remove-CsClsRegion
+    - name: Remove-CsClsScenario
+      uid: SkypeForBusiness.Remove-CsClsScenario
+    - name: Remove-CsClsSecurityGroup
+      uid: SkypeForBusiness.Remove-CsClsSecurityGroup
+    - name: Remove-CsCommonAreaPhone
+      uid: SkypeForBusiness.Remove-CsCommonAreaPhone
+    - name: Remove-CsConferenceDirectory
+      uid: SkypeForBusiness.Remove-CsConferenceDirectory
+    - name: Remove-CsConferenceDisclaimer
+      uid: SkypeForBusiness.Remove-CsConferenceDisclaimer
+    - name: Remove-CsConferencingConfiguration
+      uid: SkypeForBusiness.Remove-CsConferencingConfiguration
+    - name: Remove-CsConferencingPolicy
+      uid: SkypeForBusiness.Remove-CsConferencingPolicy
+    - name: Remove-CsConfigurationStoreLocation
+      uid: SkypeForBusiness.Remove-CsConfigurationStoreLocation
+    - name: Remove-CsConversationHistoryConfiguration
+      uid: SkypeForBusiness.Remove-CsConversationHistoryConfiguration
+    - name: Remove-CsCpsConfiguration
+      uid: SkypeForBusiness.Remove-CsCpsConfiguration
+    - name: Remove-CsDeviceUpdateConfiguration
+      uid: SkypeForBusiness.Remove-CsDeviceUpdateConfiguration
+    - name: Remove-CsDeviceUpdateRule
+      uid: SkypeForBusiness.Remove-CsDeviceUpdateRule
+    - name: Remove-CsDiagnosticConfiguration
+      uid: SkypeForBusiness.Remove-CsDiagnosticConfiguration
+    - name: Remove-CsDiagnosticHeaderConfiguration
+      uid: SkypeForBusiness.Remove-CsDiagnosticHeaderConfiguration
+    - name: Remove-CsDialInConferencingAccessNumber
+      uid: SkypeForBusiness.Remove-CsDialInConferencingAccessNumber
+    - name: Remove-CsDialInConferencingConfiguration
+      uid: SkypeForBusiness.Remove-CsDialInConferencingConfiguration
+    - name: Remove-CsDialInConferencingDtmfConfiguration
+      uid: SkypeForBusiness.Remove-CsDialInConferencingDtmfConfiguration
+    - name: Remove-CsDialPlan
+      uid: SkypeForBusiness.Remove-CsDialPlan
+    - name: Remove-CsEnhancedEmergencyServiceDisclaimer
+      uid: SkypeForBusiness.Remove-CsEnhancedEmergencyServiceDisclaimer
+    - name: Remove-CsExternalAccessPolicy
+      uid: SkypeForBusiness.Remove-CsExternalAccessPolicy
+    - name: Remove-CsExternalUserCommunicationPolicy
+      uid: SkypeForBusiness.Remove-CsExternalUserCommunicationPolicy
+    - name: Remove-CsExUmContact
+      uid: SkypeForBusiness.Remove-CsExUmContact
+    - name: Remove-CsFileTransferFilterConfiguration
+      uid: SkypeForBusiness.Remove-CsFileTransferFilterConfiguration
+    - name: Remove-CsFIPSConfiguration
+      uid: SkypeForBusiness.Remove-CsFIPSConfiguration
+    - name: Remove-CsGroupPickupUserOrbit
+      uid: SkypeForBusiness.Remove-CsGroupPickupUserOrbit
+    - name: Remove-CsHealthMonitoringConfiguration
+      uid: SkypeForBusiness.Remove-CsHealthMonitoringConfiguration
+    - name: Remove-CsHostedVoicemailPolicy
+      uid: SkypeForBusiness.Remove-CsHostedVoicemailPolicy
+    - name: Remove-CsHostingProvider
+      uid: SkypeForBusiness.Remove-CsHostingProvider
+    - name: Remove-CsHybridApplicationEndpoint
+      uid: SkypeForBusiness.Remove-CsHybridApplicationEndpoint
+    - name: Remove-CsHybridPSTNSite
+      uid: SkypeForBusiness.Remove-CsHybridPSTNSite
+    - name: Remove-CsImConfiguration
+      uid: SkypeForBusiness.Remove-CsImConfiguration
+    - name: Remove-CsImFilterConfiguration
+      uid: SkypeForBusiness.Remove-CsImFilterConfiguration
+    - name: Remove-CsImTranslationConfiguration
+      uid: SkypeForBusiness.Remove-CsImTranslationConfiguration
+    - name: Remove-CsKerberosAccountAssignment
+      uid: SkypeForBusiness.Remove-CsKerberosAccountAssignment
+    - name: Remove-CsLisLocation
+      uid: SkypeForBusiness.Remove-CsLisLocation
+    - name: Remove-CsLisPort
+      uid: SkypeForBusiness.Remove-CsLisPort
+    - name: Remove-CsLisServiceProvider
+      uid: SkypeForBusiness.Remove-CsLisServiceProvider
+    - name: Remove-CsLisSubnet
+      uid: SkypeForBusiness.Remove-CsLisSubnet
+    - name: Remove-CsLisSwitch
+      uid: SkypeForBusiness.Remove-CsLisSwitch
+    - name: Remove-CsLisWirelessAccessPoint
+      uid: SkypeForBusiness.Remove-CsLisWirelessAccessPoint
+    - name: Remove-CsLocationPolicy
+      uid: SkypeForBusiness.Remove-CsLocationPolicy
+    - name: Remove-CsManagementConnection
+      uid: SkypeForBusiness.Remove-CsManagementConnection
+    - name: Remove-CsMcxConfiguration
+      uid: SkypeForBusiness.Remove-CsMcxConfiguration
+    - name: Remove-CsMediaConfiguration
+      uid: SkypeForBusiness.Remove-CsMediaConfiguration
+    - name: Remove-CsMeetingConfiguration
+      uid: SkypeForBusiness.Remove-CsMeetingConfiguration
+    - name: Remove-CsMobilityPolicy
+      uid: SkypeForBusiness.Remove-CsMobilityPolicy
+    - name: Remove-CsNetworkBandwidthPolicyProfile
+      uid: SkypeForBusiness.Remove-CsNetworkBandwidthPolicyProfile
+    - name: Remove-CsNetworkConfiguration
+      uid: SkypeForBusiness.Remove-CsNetworkConfiguration
+    - name: Remove-CsNetworkInterRegionRoute
+      uid: SkypeForBusiness.Remove-CsNetworkInterRegionRoute
+    - name: Remove-CsNetworkInterSitePolicy
+      uid: SkypeForBusiness.Remove-CsNetworkInterSitePolicy
+    - name: Remove-CsNetworkRegion
+      uid: SkypeForBusiness.Remove-CsNetworkRegion
+    - name: Remove-CsNetworkRegionLink
+      uid: SkypeForBusiness.Remove-CsNetworkRegionLink
+    - name: Remove-CsNetworkSite
+      uid: SkypeForBusiness.Remove-CsNetworkSite
+    - name: Remove-CsNetworkSubnet
+      uid: SkypeForBusiness.Remove-CsNetworkSubnet
+    - name: Remove-CsOAuthServer
+      uid: SkypeForBusiness.Remove-CsOAuthServer
+    - name: Remove-CsOutboundCallingNumberTranslationRule
+      uid: SkypeForBusiness.Remove-CsOutboundCallingNumberTranslationRule
+    - name: Remove-CsOutboundTranslationRule
+      uid: SkypeForBusiness.Remove-CsOutboundTranslationRule
+    - name: Remove-CsPartnerApplication
+      uid: SkypeForBusiness.Remove-CsPartnerApplication
+    - name: Remove-CsPersistentChatAddin
+      uid: SkypeForBusiness.Remove-CsPersistentChatAddin
+    - name: Remove-CsPersistentChatCategory
+      uid: SkypeForBusiness.Remove-CsPersistentChatCategory
+    - name: Remove-CsPersistentChatComplianceConfiguration
+      uid: SkypeForBusiness.Remove-CsPersistentChatComplianceConfiguration
+    - name: Remove-CsPersistentChatConfiguration
+      uid: SkypeForBusiness.Remove-CsPersistentChatConfiguration
+    - name: Remove-CsPersistentChatEndpoint
+      uid: SkypeForBusiness.Remove-CsPersistentChatEndpoint
+    - name: Remove-CsPersistentChatMessage
+      uid: SkypeForBusiness.Remove-CsPersistentChatMessage
+    - name: Remove-CsPersistentChatPolicy
+      uid: SkypeForBusiness.Remove-CsPersistentChatPolicy
+    - name: Remove-CsPersistentChatRoom
+      uid: SkypeForBusiness.Remove-CsPersistentChatRoom
+    - name: Remove-CsPinPolicy
+      uid: SkypeForBusiness.Remove-CsPinPolicy
+    - name: Remove-CsPlatformServiceSettings
+      uid: SkypeForBusiness.Remove-CsPlatformServiceSettings
+    - name: Remove-CsPresencePolicy
+      uid: SkypeForBusiness.Remove-CsPresencePolicy
+    - name: Remove-CsPresenceProvider
+      uid: SkypeForBusiness.Remove-CsPresenceProvider
+    - name: Remove-CsPrivacyConfiguration
+      uid: SkypeForBusiness.Remove-CsPrivacyConfiguration
+    - name: Remove-CsProxyConfiguration
+      uid: SkypeForBusiness.Remove-CsProxyConfiguration
+    - name: Remove-CsPublicProvider
+      uid: SkypeForBusiness.Remove-CsPublicProvider
+    - name: Remove-CsPushNotificationConfiguration
+      uid: SkypeForBusiness.Remove-CsPushNotificationConfiguration
+    - name: Remove-CsQoEConfiguration
+      uid: SkypeForBusiness.Remove-CsQoEConfiguration
+    - name: Remove-CsRegistrarConfiguration
+      uid: SkypeForBusiness.Remove-CsRegistrarConfiguration
+    - name: Remove-CsReportingConfiguration
+      uid: SkypeForBusiness.Remove-CsReportingConfiguration
+    - name: Remove-CsRgsAgentGroup
+      uid: SkypeForBusiness.Remove-CsRgsAgentGroup
+    - name: Remove-CsRgsHolidaySet
+      uid: SkypeForBusiness.Remove-CsRgsHolidaySet
+    - name: Remove-CsRgsHoursOfBusiness
+      uid: SkypeForBusiness.Remove-CsRgsHoursOfBusiness
+    - name: Remove-CsRgsQueue
+      uid: SkypeForBusiness.Remove-CsRgsQueue
+    - name: Remove-CsRgsWorkflow
+      uid: SkypeForBusiness.Remove-CsRgsWorkflow
+    - name: Remove-CsRoutingConfiguration
+      uid: SkypeForBusiness.Remove-CsRoutingConfiguration
+    - name: Remove-CsServerApplication
+      uid: SkypeForBusiness.Remove-CsServerApplication
+    - name: Remove-CsSimpleUrlConfiguration
+      uid: SkypeForBusiness.Remove-CsSimpleUrlConfiguration
+    - name: Remove-CsSipDomain
+      uid: SkypeForBusiness.Remove-CsSipDomain
+    - name: Remove-CsSipResponseCodeTranslationRule
+      uid: SkypeForBusiness.Remove-CsSipResponseCodeTranslationRule
+    - name: Remove-CsSlaConfiguration
+      uid: SkypeForBusiness.Remove-CsSlaConfiguration
+    - name: Remove-CsSlaDelegates
+      uid: SkypeForBusiness.Remove-CsSlaDelegates
+    - name: Remove-CsStaticRoutingConfiguration
+      uid: SkypeForBusiness.Remove-CsStaticRoutingConfiguration
+    - name: Remove-CsStorageServiceConfiguration
+      uid: SkypeForBusiness.Remove-CsStorageServiceConfiguration
+    - name: Remove-CsTeamsUpgradePolicy
+      uid: SkypeForBusiness.Remove-CsTeamsUpgradePolicy
+    - name: Remove-CsTelemetryConfiguration
+      uid: SkypeForBusiness.Remove-CsTelemetryConfiguration
+    - name: Remove-CsTenantUpdateTimeWindow
+      uid: SkypeForBusiness.Remove-CsTenantUpdateTimeWindow
+    - name: Remove-CsTestDevice
+      uid: SkypeForBusiness.Remove-CsTestDevice
+    - name: Remove-CsTestUserCredential
+      uid: SkypeForBusiness.Remove-CsTestUserCredential
+    - name: Remove-CsThirdPartyVideoSystem
+      uid: SkypeForBusiness.Remove-CsThirdPartyVideoSystem
+    - name: Remove-CsThirdPartyVideoSystemPolicy
+      uid: SkypeForBusiness.Remove-CsThirdPartyVideoSystemPolicy
+    - name: Remove-CsTrunkConfiguration
+      uid: SkypeForBusiness.Remove-CsTrunkConfiguration
+    - name: Remove-CsTrustedApplication
+      uid: SkypeForBusiness.Remove-CsTrustedApplication
+    - name: Remove-CsTrustedApplicationComputer
+      uid: SkypeForBusiness.Remove-CsTrustedApplicationComputer
+    - name: Remove-CsTrustedApplicationEndpoint
+      uid: SkypeForBusiness.Remove-CsTrustedApplicationEndpoint
+    - name: Remove-CsTrustedApplicationPool
+      uid: SkypeForBusiness.Remove-CsTrustedApplicationPool
+    - name: Remove-CsUCPhoneConfiguration
+      uid: SkypeForBusiness.Remove-CsUCPhoneConfiguration
+    - name: Remove-CsUnassignedNumber
+      uid: SkypeForBusiness.Remove-CsUnassignedNumber
+    - name: Remove-CsUserAcp
+      uid: SkypeForBusiness.Remove-CsUserAcp
+    - name: Remove-CsUserReplicatorConfiguration
+      uid: SkypeForBusiness.Remove-CsUserReplicatorConfiguration
+    - name: Remove-CsUserServicesConfiguration
+      uid: SkypeForBusiness.Remove-CsUserServicesConfiguration
+    - name: Remove-CsUserServicesPolicy
+      uid: SkypeForBusiness.Remove-CsUserServicesPolicy
+    - name: Remove-CsUserStoreBackupData
+      uid: SkypeForBusiness.Remove-CsUserStoreBackupData
+    - name: Remove-CsVideoInteropServerConfiguration
+      uid: SkypeForBusiness.Remove-CsVideoInteropServerConfiguration
+    - name: Remove-CsVideoInteropServerSyntheticTransactionConfiguration
+      uid: SkypeForBusiness.Remove-CsVideoInteropServerSyntheticTransactionConfiguration
+    - name: Remove-CsVideoTrunkConfiguration
+      uid: SkypeForBusiness.Remove-CsVideoTrunkConfiguration
+    - name: Remove-CsVoiceConfiguration
+      uid: SkypeForBusiness.Remove-CsVoiceConfiguration
+    - name: Remove-CsVoicemailReroutingConfiguration
+      uid: SkypeForBusiness.Remove-CsVoicemailReroutingConfiguration
+    - name: Remove-CsVoiceNormalizationRule
+      uid: SkypeForBusiness.Remove-CsVoiceNormalizationRule
+    - name: Remove-CsVoicePolicy
+      uid: SkypeForBusiness.Remove-CsVoicePolicy
+    - name: Remove-CsVoiceRoute
+      uid: SkypeForBusiness.Remove-CsVoiceRoute
+    - name: Remove-CsVoiceRoutingPolicy
+      uid: SkypeForBusiness.Remove-CsVoiceRoutingPolicy
+    - name: Remove-CsVoiceTestConfiguration
+      uid: SkypeForBusiness.Remove-CsVoiceTestConfiguration
+    - name: Remove-CsWatcherNodeConfiguration
+      uid: SkypeForBusiness.Remove-CsWatcherNodeConfiguration
+    - name: Remove-CsWebServiceConfiguration
+      uid: SkypeForBusiness.Remove-CsWebServiceConfiguration
+    - name: Remove-CsXmppAllowedPartner
+      uid: SkypeForBusiness.Remove-CsXmppAllowedPartner
+    - name: Request-CsCertificate
+      uid: SkypeForBusiness.Request-CsCertificate
+    - name: Reset-CsDeviceUpdateRule
+      uid: SkypeForBusiness.Reset-CsDeviceUpdateRule
+    - name: Reset-CsNotificationQueues
+      uid: SkypeForBusiness.Reset-CsNotificationQueues
+    - name: Reset-CsPoolRegistrarState
+      uid: SkypeForBusiness.Reset-CsPoolRegistrarState
+    - name: Reset-CsRoutingGroup
+      uid: SkypeForBusiness.Reset-CsRoutingGroup
+    - name: Restore-CsDeviceUpdateRule
+      uid: SkypeForBusiness.Restore-CsDeviceUpdateRule
+    - name: Revoke-CsClientCertificate
+      uid: SkypeForBusiness.Revoke-CsClientCertificate
+    - name: Revoke-CsOUPermission
+      uid: SkypeForBusiness.Revoke-CsOUPermission
+    - name: Revoke-CsSetupPermission
+      uid: SkypeForBusiness.Revoke-CsSetupPermission
+    - name: Search-CsClsLogging
+      uid: SkypeForBusiness.Search-CsClsLogging
+    - name: Set-CsAccessEdgeConfiguration
+      uid: SkypeForBusiness.Set-CsAccessEdgeConfiguration
+    - name: Set-CsAddressBookConfiguration
+      uid: SkypeForBusiness.Set-CsAddressBookConfiguration
+    - name: Set-CsAddressBookNormalizationConfiguration
+      uid: SkypeForBusiness.Set-CsAddressBookNormalizationConfiguration
+    - name: Set-CsAddressBookNormalizationRule
+      uid: SkypeForBusiness.Set-CsAddressBookNormalizationRule
+    - name: Set-CsAdminRole
+      uid: SkypeForBusiness.Set-CsAdminRole
+    - name: Set-CsAllowedDomain
+      uid: SkypeForBusiness.Set-CsAllowedDomain
+    - name: Set-CsAnalogDevice
+      uid: SkypeForBusiness.Set-CsAnalogDevice
+    - name: Set-CsAnnouncement
+      uid: SkypeForBusiness.Set-CsAnnouncement
+    - name: Set-CsApplicationServer
+      uid: SkypeForBusiness.Set-CsApplicationServer
+    - name: Set-CsArchivingConfiguration
+      uid: SkypeForBusiness.Set-CsArchivingConfiguration
+    - name: Set-CsArchivingPolicy
+      uid: SkypeForBusiness.Set-CsArchivingPolicy
+    - name: Set-CsArchivingServer
+      uid: SkypeForBusiness.Set-CsArchivingServer
+    - name: Set-CsAudioTestServiceApplication
+      uid: SkypeForBusiness.Set-CsAudioTestServiceApplication
+    - name: Set-CsAuthConfig
+      uid: SkypeForBusiness.Set-CsAuthConfig
+    - name: Set-CsAutodiscoverConfiguration
+      uid: SkypeForBusiness.Set-CsAutodiscoverConfiguration
+    - name: Set-CsAVEdgeConfiguration
+      uid: SkypeForBusiness.Set-CsAVEdgeConfiguration
+    - name: Set-CsBackupServiceConfiguration
+      uid: SkypeForBusiness.Set-CsBackupServiceConfiguration
+    - name: Set-CsBandwidthPolicyServiceConfiguration
+      uid: SkypeForBusiness.Set-CsBandwidthPolicyServiceConfiguration
+    - name: Set-CsBlockedDomain
+      uid: SkypeForBusiness.Set-CsBlockedDomain
+    - name: Set-CsBroadcastMeetingConfiguration
+      uid: SkypeForBusiness.Set-CsBroadcastMeetingConfiguration
+    - name: Set-CsBusyOptions
+      uid: SkypeForBusiness.Set-CsBusyOptions
+    - name: Set-CsCallParkOrbit
+      uid: SkypeForBusiness.Set-CsCallParkOrbit
+    - name: Set-CsCallParkServiceMusicOnHoldFile
+      uid: SkypeForBusiness.Set-CsCallParkServiceMusicOnHoldFile
+    - name: Set-CsCallViaWorkPolicy
+      uid: SkypeForBusiness.Set-CsCallViaWorkPolicy
+    - name: Set-CsCceApplianceConfigurationReplicationStatus
+      uid: SkypeForBusiness.Set-CsCceApplianceConfigurationReplicationStatus
+    - name: Set-CsCceApplianceDeploymentStatus
+      uid: SkypeForBusiness.Set-CsCceApplianceDeploymentStatus
+    - name: Set-CsCceApplianceStatus
+      uid: SkypeForBusiness.Set-CsCceApplianceStatus
+    - name: Set-CsCdrConfiguration
+      uid: SkypeForBusiness.Set-CsCdrConfiguration
+    - name: Set-CsCertificate
+      uid: SkypeForBusiness.Set-CsCertificate
+    - name: Set-CsClientPin
+      uid: SkypeForBusiness.Set-CsClientPin
+    - name: Set-CsClientPolicy
+      uid: SkypeForBusiness.Set-CsClientPolicy
+    - name: Set-CsClientVersionConfiguration
+      uid: SkypeForBusiness.Set-CsClientVersionConfiguration
+    - name: Set-CsClientVersionPolicy
+      uid: SkypeForBusiness.Set-CsClientVersionPolicy
+    - name: Set-CsClientVersionPolicyRule
+      uid: SkypeForBusiness.Set-CsClientVersionPolicyRule
+    - name: Set-CsCloudCallDataConnector
+      uid: SkypeForBusiness.Set-CsCloudCallDataConnector
+    - name: Set-CsCloudCallDataConnectorConfiguration
+      uid: SkypeForBusiness.Set-CsCloudCallDataConnectorConfiguration
+    - name: Set-CsClsConfiguration
+      uid: SkypeForBusiness.Set-CsClsConfiguration
+    - name: Set-CsClsRegion
+      uid: SkypeForBusiness.Set-CsClsRegion
+    - name: Set-CsClsScenario
+      uid: SkypeForBusiness.Set-CsClsScenario
+    - name: Set-CsClsSearchTerm
+      uid: SkypeForBusiness.Set-CsClsSearchTerm
+    - name: Set-CsClsSecurityGroup
+      uid: SkypeForBusiness.Set-CsClsSecurityGroup
+    - name: Set-CsCommonAreaPhone
+      uid: SkypeForBusiness.Set-CsCommonAreaPhone
+    - name: Set-CsConferenceDisclaimer
+      uid: SkypeForBusiness.Set-CsConferenceDisclaimer
+    - name: Set-CsConferenceServer
+      uid: SkypeForBusiness.Set-CsConferenceServer
+    - name: Set-CsConferencingConfiguration
+      uid: SkypeForBusiness.Set-CsConferencingConfiguration
+    - name: Set-CsConferencingPolicy
+      uid: SkypeForBusiness.Set-CsConferencingPolicy
+    - name: Set-CsConfigurationStoreLocation
+      uid: SkypeForBusiness.Set-CsConfigurationStoreLocation
+    - name: Set-CsConversationHistoryConfiguration
+      uid: SkypeForBusiness.Set-CsConversationHistoryConfiguration
+    - name: Set-CsCpsConfiguration
+      uid: SkypeForBusiness.Set-CsCpsConfiguration
+    - name: Set-CsDeviceUpdateConfiguration
+      uid: SkypeForBusiness.Set-CsDeviceUpdateConfiguration
+    - name: Set-CsDiagnosticConfiguration
+      uid: SkypeForBusiness.Set-CsDiagnosticConfiguration
+    - name: Set-CsDiagnosticHeaderConfiguration
+      uid: SkypeForBusiness.Set-CsDiagnosticHeaderConfiguration
+    - name: Set-CsDialInConferencingAccessNumber
+      uid: SkypeForBusiness.Set-CsDialInConferencingAccessNumber
+    - name: Set-CsDialInConferencingConfiguration
+      uid: SkypeForBusiness.Set-CsDialInConferencingConfiguration
+    - name: Set-CsDialInConferencingDtmfConfiguration
+      uid: SkypeForBusiness.Set-CsDialInConferencingDtmfConfiguration
+    - name: Set-CsDialPlan
+      uid: SkypeForBusiness.Set-CsDialPlan
+    - name: Set-CsDirector
+      uid: SkypeForBusiness.Set-CsDirector
+    - name: Set-CsEdgeServer
+      uid: SkypeForBusiness.Set-CsEdgeServer
+    - name: Set-CsEnhancedEmergencyServiceDisclaimer
+      uid: SkypeForBusiness.Set-CsEnhancedEmergencyServiceDisclaimer
+    - name: Set-CsExternalAccessPolicy
+      uid: SkypeForBusiness.Set-CsExternalAccessPolicy
+    - name: Set-CsExternalUserCommunicationPolicy
+      uid: SkypeForBusiness.Set-CsExternalUserCommunicationPolicy
+    - name: Set-CsExUmContact
+      uid: SkypeForBusiness.Set-CsExUmContact
+    - name: Set-CsFileTransferFilterConfiguration
+      uid: SkypeForBusiness.Set-CsFileTransferFilterConfiguration
+    - name: Set-CsFIPSConfiguration
+      uid: SkypeForBusiness.Set-CsFIPSConfiguration
+    - name: Set-CsGroupPickupUserOrbit
+      uid: SkypeForBusiness.Set-CsGroupPickupUserOrbit
+    - name: Set-CsHealthMonitoringConfiguration
+      uid: SkypeForBusiness.Set-CsHealthMonitoringConfiguration
+    - name: Set-CsHostedVoicemailPolicy
+      uid: SkypeForBusiness.Set-CsHostedVoicemailPolicy
+    - name: Set-CsHostingProvider
+      uid: SkypeForBusiness.Set-CsHostingProvider
+    - name: Set-CsHybridApplicationEndpoint
+      uid: SkypeForBusiness.Set-CsHybridApplicationEndpoint
+    - name: Set-CsHybridMediationServer
+      uid: SkypeForBusiness.Set-CsHybridMediationServer
+    - name: Set-CsHybridPSTNAppliance
+      uid: SkypeForBusiness.Set-CsHybridPSTNAppliance
+    - name: Set-CsHybridPSTNSite
+      uid: SkypeForBusiness.Set-CsHybridPSTNSite
+    - name: Set-CsImConfiguration
+      uid: SkypeForBusiness.Set-CsImConfiguration
+    - name: Set-CsImFilterConfiguration
+      uid: SkypeForBusiness.Set-CsImFilterConfiguration
+    - name: Set-CsImTranslationConfiguration
+      uid: SkypeForBusiness.Set-CsImTranslationConfiguration
+    - name: Set-CsIPPhonePolicy
+      uid: SkypeForBusiness.Set-CsIPPhonePolicy
+    - name: Set-CsKerberosAccountAssignment
+      uid: SkypeForBusiness.Set-CsKerberosAccountAssignment
+    - name: Set-CsKerberosAccountPassword
+      uid: SkypeForBusiness.Set-CsKerberosAccountPassword
+    - name: Set-CsLisLocation
+      uid: SkypeForBusiness.Set-CsLisLocation
+    - name: Set-CsLisPort
+      uid: SkypeForBusiness.Set-CsLisPort
+    - name: Set-CsLisServiceProvider
+      uid: SkypeForBusiness.Set-CsLisServiceProvider
+    - name: Set-CsLisSubnet
+      uid: SkypeForBusiness.Set-CsLisSubnet
+    - name: Set-CsLisSwitch
+      uid: SkypeForBusiness.Set-CsLisSwitch
+    - name: Set-CsLisWirelessAccessPoint
+      uid: SkypeForBusiness.Set-CsLisWirelessAccessPoint
+    - name: Set-CsLocationPolicy
+      uid: SkypeForBusiness.Set-CsLocationPolicy
+    - name: Set-CsManagementConnection
+      uid: SkypeForBusiness.Set-CsManagementConnection
+    - name: Set-CsManagementServer
+      uid: SkypeForBusiness.Set-CsManagementServer
+    - name: Set-CsMcxConfiguration
+      uid: SkypeForBusiness.Set-CsMcxConfiguration
+    - name: Set-CsMediaConfiguration
+      uid: SkypeForBusiness.Set-CsMediaConfiguration
+    - name: Set-CsMediationServer
+      uid: SkypeForBusiness.Set-CsMediationServer
+    - name: Set-CsMeetingConfiguration
+      uid: SkypeForBusiness.Set-CsMeetingConfiguration
+    - name: Set-CsMeetingRoom
+      uid: SkypeForBusiness.Set-CsMeetingRoom
+    - name: Set-CsMobilityPolicy
+      uid: SkypeForBusiness.Set-CsMobilityPolicy
+    - name: Set-CsMonitoringServer
+      uid: SkypeForBusiness.Set-CsMonitoringServer
+    - name: Set-CsNetworkBandwidthPolicyProfile
+      uid: SkypeForBusiness.Set-CsNetworkBandwidthPolicyProfile
+    - name: Set-CsNetworkConfiguration
+      uid: SkypeForBusiness.Set-CsNetworkConfiguration
+    - name: Set-CsNetworkInterRegionRoute
+      uid: SkypeForBusiness.Set-CsNetworkInterRegionRoute
+    - name: Set-CsNetworkInterSitePolicy
+      uid: SkypeForBusiness.Set-CsNetworkInterSitePolicy
+    - name: Set-CsNetworkRegion
+      uid: SkypeForBusiness.Set-CsNetworkRegion
+    - name: Set-CsNetworkRegionLink
+      uid: SkypeForBusiness.Set-CsNetworkRegionLink
+    - name: Set-CsNetworkSite
+      uid: SkypeForBusiness.Set-CsNetworkSite
+    - name: Set-CsNetworkSubnet
+      uid: SkypeForBusiness.Set-CsNetworkSubnet
+    - name: Set-CsOAuthConfiguration
+      uid: SkypeForBusiness.Set-CsOAuthConfiguration
+    - name: Set-CsOAuthServer
+      uid: SkypeForBusiness.Set-CsOAuthServer
+    - name: Set-CsOutboundCallingNumberTranslationRule
+      uid: SkypeForBusiness.Set-CsOutboundCallingNumberTranslationRule
+    - name: Set-CsOutboundTranslationRule
+      uid: SkypeForBusiness.Set-CsOutboundTranslationRule
+    - name: Set-CsPartnerApplication
+      uid: SkypeForBusiness.Set-CsPartnerApplication
+    - name: Set-CsPersistentChatActiveServer
+      uid: SkypeForBusiness.Set-CsPersistentChatActiveServer
+    - name: Set-CsPersistentChatAddin
+      uid: SkypeForBusiness.Set-CsPersistentChatAddin
+    - name: Set-CsPersistentChatCategory
+      uid: SkypeForBusiness.Set-CsPersistentChatCategory
+    - name: Set-CsPersistentChatComplianceConfiguration
+      uid: SkypeForBusiness.Set-CsPersistentChatComplianceConfiguration
+    - name: Set-CsPersistentChatConfiguration
+      uid: SkypeForBusiness.Set-CsPersistentChatConfiguration
+    - name: Set-CsPersistentChatPolicy
+      uid: SkypeForBusiness.Set-CsPersistentChatPolicy
+    - name: Set-CsPersistentChatRoom
+      uid: SkypeForBusiness.Set-CsPersistentChatRoom
+    - name: Set-CsPersistentChatState
+      uid: SkypeForBusiness.Set-CsPersistentChatState
+    - name: Set-CsPinPolicy
+      uid: SkypeForBusiness.Set-CsPinPolicy
+    - name: Set-CsPlatformServiceSettings
+      uid: SkypeForBusiness.Set-CsPlatformServiceSettings
+    - name: Set-CsPresenceManagementState
+      uid: SkypeForBusiness.Set-CsPresenceManagementState
+    - name: Set-CsPresencePolicy
+      uid: SkypeForBusiness.Set-CsPresencePolicy
+    - name: Set-CsPresenceProvider
+      uid: SkypeForBusiness.Set-CsPresenceProvider
+    - name: Set-CsPrivacyConfiguration
+      uid: SkypeForBusiness.Set-CsPrivacyConfiguration
+    - name: Set-CsProxyConfiguration
+      uid: SkypeForBusiness.Set-CsProxyConfiguration
+    - name: Set-CsPstnGateway
+      uid: SkypeForBusiness.Set-CsPstnGateway
+    - name: Set-CsPstnUsage
+      uid: SkypeForBusiness.Set-CsPstnUsage
+    - name: Set-CsPublicProvider
+      uid: SkypeForBusiness.Set-CsPublicProvider
+    - name: Set-CsPushNotificationConfiguration
+      uid: SkypeForBusiness.Set-CsPushNotificationConfiguration
+    - name: Set-CsQoEConfiguration
+      uid: SkypeForBusiness.Set-CsQoEConfiguration
+    - name: Set-CsRegistrar
+      uid: SkypeForBusiness.Set-CsRegistrar
+    - name: Set-CsRegistrarConfiguration
+      uid: SkypeForBusiness.Set-CsRegistrarConfiguration
+    - name: Set-CsReportingConfiguration
+      uid: SkypeForBusiness.Set-CsReportingConfiguration
+    - name: Set-CsRgsAgentGroup
+      uid: SkypeForBusiness.Set-CsRgsAgentGroup
+    - name: Set-CsRgsConfiguration
+      uid: SkypeForBusiness.Set-CsRgsConfiguration
+    - name: Set-CsRgsHolidaySet
+      uid: SkypeForBusiness.Set-CsRgsHolidaySet
+    - name: Set-CsRgsHoursOfBusiness
+      uid: SkypeForBusiness.Set-CsRgsHoursOfBusiness
+    - name: Set-CsRgsQueue
+      uid: SkypeForBusiness.Set-CsRgsQueue
+    - name: Set-CsRgsWorkflow
+      uid: SkypeForBusiness.Set-CsRgsWorkflow
+    - name: Set-CsRoutingConfiguration
+      uid: SkypeForBusiness.Set-CsRoutingConfiguration
+    - name: Set-CsServerApplication
+      uid: SkypeForBusiness.Set-CsServerApplication
+    - name: Set-CsSimpleUrlConfiguration
+      uid: SkypeForBusiness.Set-CsSimpleUrlConfiguration
+    - name: Set-CsSipDomain
+      uid: SkypeForBusiness.Set-CsSipDomain
+    - name: Set-CsSipResponseCodeTranslationRule
+      uid: SkypeForBusiness.Set-CsSipResponseCodeTranslationRule
+    - name: Set-CsSite
+      uid: SkypeForBusiness.Set-CsSite
+    - name: Set-CsSlaConfiguration
+      uid: SkypeForBusiness.Set-CsSlaConfiguration
+    - name: Set-CsStaticRoutingConfiguration
+      uid: SkypeForBusiness.Set-CsStaticRoutingConfiguration
+    - name: Set-CsStorageServiceConfiguration
+      uid: SkypeForBusiness.Set-CsStorageServiceConfiguration
+    - name: Set-CsTeamsUpgradeConfiguration
+      uid: SkypeForBusiness.Set-CsTeamsUpgradeConfiguration
+    - name: Set-CsTeamsUpgradePolicy
+      uid: SkypeForBusiness.Set-CsTeamsUpgradePolicy
+    - name: Set-CsTelemetryConfiguration
+      uid: SkypeForBusiness.Set-CsTelemetryConfiguration
+    - name: Set-CsTenantHybridConfiguration
+      uid: SkypeForBusiness.Set-CsTenantHybridConfiguration
+    - name: Set-CsTenantUpdateTimeWindow
+      uid: SkypeForBusiness.Set-CsTenantUpdateTimeWindow
+    - name: Set-CsTestDevice
+      uid: SkypeForBusiness.Set-CsTestDevice
+    - name: Set-CsTestUserCredential
+      uid: SkypeForBusiness.Set-CsTestUserCredential
+    - name: Set-CsThirdPartyVideoSystem
+      uid: SkypeForBusiness.Set-CsThirdPartyVideoSystem
+    - name: Set-CsThirdPartyVideoSystemPolicy
+      uid: SkypeForBusiness.Set-CsThirdPartyVideoSystemPolicy
+    - name: Set-CsTrunkConfiguration
+      uid: SkypeForBusiness.Set-CsTrunkConfiguration
+    - name: Set-CsTrustedApplication
+      uid: SkypeForBusiness.Set-CsTrustedApplication
+    - name: Set-CsTrustedApplicationEndpoint
+      uid: SkypeForBusiness.Set-CsTrustedApplicationEndpoint
+    - name: Set-CsTrustedApplicationPool
+      uid: SkypeForBusiness.Set-CsTrustedApplicationPool
+    - name: Set-CsUCPhoneConfiguration
+      uid: SkypeForBusiness.Set-CsUCPhoneConfiguration
+    - name: Set-CsUICulture
+      uid: SkypeForBusiness.Set-CsUICulture
+    - name: Set-CsUnassignedNumber
+      uid: SkypeForBusiness.Set-CsUnassignedNumber
+    - name: Set-CsUser
+      uid: SkypeForBusiness.Set-CsUser
+    - name: Set-CsUserAcp
+      uid: SkypeForBusiness.Set-CsUserAcp
+    - name: Set-CsUserCallForwardingSettings
+      uid: SkypeForBusiness.Set-CsUserCallForwardingSettings
+    - name: Set-CsUserDatabaseState
+      uid: SkypeForBusiness.Set-CsUserDatabaseState
+    - name: Set-CsUserDelegates
+      uid: SkypeForBusiness.Set-CsUserDelegates
+    - name: Set-CsUserPstnSettings
+      uid: SkypeForBusiness.Set-CsUserPstnSettings
+    - name: Set-CsUserReplicatorConfiguration
+      uid: SkypeForBusiness.Set-CsUserReplicatorConfiguration
+    - name: Set-CsUserServer
+      uid: SkypeForBusiness.Set-CsUserServer
+    - name: Set-CsUserServicesConfiguration
+      uid: SkypeForBusiness.Set-CsUserServicesConfiguration
+    - name: Set-CsUserServicesPolicy
+      uid: SkypeForBusiness.Set-CsUserServicesPolicy
+    - name: Set-CsUserTeamMembers
+      uid: SkypeForBusiness.Set-CsUserTeamMembers
+    - name: Set-CsVideoGateway
+      uid: SkypeForBusiness.Set-CsVideoGateway
+    - name: Set-CsVideoInteropServer
+      uid: SkypeForBusiness.Set-CsVideoInteropServer
+    - name: Set-CsVideoInteropServerConfiguration
+      uid: SkypeForBusiness.Set-CsVideoInteropServerConfiguration
+    - name: Set-CsVideoInteropServerSyntheticTransactionConfiguration
+      uid: SkypeForBusiness.Set-CsVideoInteropServerSyntheticTransactionConfiguration
+    - name: Set-CsVideoTrunkConfiguration
+      uid: SkypeForBusiness.Set-CsVideoTrunkConfiguration
+    - name: Set-CsVoiceConfiguration
+      uid: SkypeForBusiness.Set-CsVoiceConfiguration
+    - name: Set-CsVoicemailReroutingConfiguration
+      uid: SkypeForBusiness.Set-CsVoicemailReroutingConfiguration
+    - name: Set-CsVoiceNormalizationRule
+      uid: SkypeForBusiness.Set-CsVoiceNormalizationRule
+    - name: Set-CsVoicePolicy
+      uid: SkypeForBusiness.Set-CsVoicePolicy
+    - name: Set-CsVoiceRoute
+      uid: SkypeForBusiness.Set-CsVoiceRoute
+    - name: Set-CsVoiceRoutingPolicy
+      uid: SkypeForBusiness.Set-CsVoiceRoutingPolicy
+    - name: Set-CsVoiceTestConfiguration
+      uid: SkypeForBusiness.Set-CsVoiceTestConfiguration
+    - name: Set-CsWatcherNodeConfiguration
+      uid: SkypeForBusiness.Set-CsWatcherNodeConfiguration
+    - name: Set-CsWebServer
+      uid: SkypeForBusiness.Set-CsWebServer
+    - name: Set-CsWebServiceConfiguration
+      uid: SkypeForBusiness.Set-CsWebServiceConfiguration
+    - name: Set-CsXmppAllowedPartner
+      uid: SkypeForBusiness.Set-CsXmppAllowedPartner
+    - name: Set-CsXmppGatewayConfiguration
+      uid: SkypeForBusiness.Set-CsXmppGatewayConfiguration
+    - name: Show-CsClsLogging
+      uid: SkypeForBusiness.Show-CsClsLogging
+    - name: Start-CsClsLogging
+      uid: SkypeForBusiness.Start-CsClsLogging
+    - name: Start-CsPool
+      uid: SkypeForBusiness.Start-CsPool
+    - name: Start-CsWindowsService
+      uid: SkypeForBusiness.Start-CsWindowsService
+    - name: Stop-CsClsLogging
+      uid: SkypeForBusiness.Stop-CsClsLogging
+    - name: Stop-CsWindowsService
+      uid: SkypeForBusiness.Stop-CsWindowsService
+    - name: Sync-CsClsLogging
+      uid: SkypeForBusiness.Sync-CsClsLogging
+    - name: Sync-CsUserData
+      uid: SkypeForBusiness.Sync-CsUserData
+    - name: Test-CsAddressBookService
+      uid: SkypeForBusiness.Test-CsAddressBookService
+    - name: Test-CsAddressBookWebQuery
+      uid: SkypeForBusiness.Test-CsAddressBookWebQuery
+    - name: Test-CsASConference
+      uid: SkypeForBusiness.Test-CsASConference
+    - name: Test-CsAudioConferencingProvider
+      uid: SkypeForBusiness.Test-CsAudioConferencingProvider
+    - name: Test-CsAVConference
+      uid: SkypeForBusiness.Test-CsAVConference
+    - name: Test-CsAVEdgeConnectivity
+      uid: SkypeForBusiness.Test-CsAVEdgeConnectivity
+    - name: Test-CsCertificateConfiguration
+      uid: SkypeForBusiness.Test-CsCertificateConfiguration
+    - name: Test-CsClientAuth
+      uid: SkypeForBusiness.Test-CsClientAuth
+    - name: Test-CsClientAuthentication
+      uid: SkypeForBusiness.Test-CsClientAuthentication
+    - name: Test-CsComputer
+      uid: SkypeForBusiness.Test-CsComputer
+    - name: Test-CsDatabase
+      uid: SkypeForBusiness.Test-CsDatabase
+    - name: Test-CsDataConference
+      uid: SkypeForBusiness.Test-CsDataConference
+    - name: Test-CsDialInConferencing
+      uid: SkypeForBusiness.Test-CsDialInConferencing
+    - name: Test-CsDialPlan
+      uid: SkypeForBusiness.Test-CsDialPlan
+    - name: Test-CsExStorageConnectivity
+      uid: SkypeForBusiness.Test-CsExStorageConnectivity
+    - name: Test-CsExStorageNotification
+      uid: SkypeForBusiness.Test-CsExStorageNotification
+    - name: Test-CsExUMConnectivity
+      uid: SkypeForBusiness.Test-CsExUMConnectivity
+    - name: Test-CsExUMVoiceMail
+      uid: SkypeForBusiness.Test-CsExUMVoiceMail
+    - name: Test-CsFederatedPartner
+      uid: SkypeForBusiness.Test-CsFederatedPartner
+    - name: Test-CsGroupExpansion
+      uid: SkypeForBusiness.Test-CsGroupExpansion
+    - name: Test-CsGroupIM
+      uid: SkypeForBusiness.Test-CsGroupIM
+    - name: Test-CsIM
+      uid: SkypeForBusiness.Test-CsIM
+    - name: Test-CsInterTrunkRouting
+      uid: SkypeForBusiness.Test-CsInterTrunkRouting
+    - name: Test-CsKerberosAccountAssignment
+      uid: SkypeForBusiness.Test-CsKerberosAccountAssignment
+    - name: Test-CsLisCivicAddress
+      uid: SkypeForBusiness.Test-CsLisCivicAddress
+    - name: Test-CsLisConfiguration
+      uid: SkypeForBusiness.Test-CsLisConfiguration
+    - name: Test-CsLocationPolicy
+      uid: SkypeForBusiness.Test-CsLocationPolicy
+    - name: Test-CsManagementServer
+      uid: SkypeForBusiness.Test-CsManagementServer
+    - name: Test-CsMcxConference
+      uid: SkypeForBusiness.Test-CsMcxConference
+    - name: Test-CsMcxP2PIM
+      uid: SkypeForBusiness.Test-CsMcxP2PIM
+    - name: Test-CsMcxPushNotification
+      uid: SkypeForBusiness.Test-CsMcxPushNotification
+    - name: Test-CsOUPermission
+      uid: SkypeForBusiness.Test-CsOUPermission
+    - name: Test-CsP2PAV
+      uid: SkypeForBusiness.Test-CsP2PAV
+    - name: Test-CsP2PVideoInteropServerSipTrunkAV
+      uid: SkypeForBusiness.Test-CsP2PVideoInteropServerSipTrunkAV
+    - name: Test-CsPersistentChatMessage
+      uid: SkypeForBusiness.Test-CsPersistentChatMessage
+    - name: Test-CsPhoneBootstrap
+      uid: SkypeForBusiness.Test-CsPhoneBootstrap
+    - name: Test-CsPresence
+      uid: SkypeForBusiness.Test-CsPresence
+    - name: Test-CsPstnOutboundCall
+      uid: SkypeForBusiness.Test-CsPstnOutboundCall
+    - name: Test-CsPstnPeerToPeerCall
+      uid: SkypeForBusiness.Test-CsPstnPeerToPeerCall
+    - name: Test-CsRegistration
+      uid: SkypeForBusiness.Test-CsRegistration
+    - name: Test-CsReplica
+      uid: SkypeForBusiness.Test-CsReplica
+    - name: Test-CsSetupPermission
+      uid: SkypeForBusiness.Test-CsSetupPermission
+    - name: Test-CsTopology
+      uid: SkypeForBusiness.Test-CsTopology
+    - name: Test-CsTrunkConfiguration
+      uid: SkypeForBusiness.Test-CsTrunkConfiguration
+    - name: Test-CsUcwaConference
+      uid: SkypeForBusiness.Test-CsUcwaConference
+    - name: Test-CsUnifiedContactStore
+      uid: SkypeForBusiness.Test-CsUnifiedContactStore
+    - name: Test-CsVoiceNormalizationRule
+      uid: SkypeForBusiness.Test-CsVoiceNormalizationRule
+    - name: Test-CsVoicePolicy
+      uid: SkypeForBusiness.Test-CsVoicePolicy
+    - name: Test-CsVoiceRoute
+      uid: SkypeForBusiness.Test-CsVoiceRoute
+    - name: Test-CsVoiceTestConfiguration
+      uid: SkypeForBusiness.Test-CsVoiceTestConfiguration
+    - name: Test-CsVoiceUser
+      uid: SkypeForBusiness.Test-CsVoiceUser
+    - name: Test-CsWatcherNodeConfiguration
+      uid: SkypeForBusiness.Test-CsWatcherNodeConfiguration
+    - name: Test-CsWebApp
+      uid: SkypeForBusiness.Test-CsWebApp
+    - name: Test-CsWebAppAnonymous
+      uid: SkypeForBusiness.Test-CsWebAppAnonymous
+    - name: Test-CsWebScheduler
+      uid: SkypeForBusiness.Test-CsWebScheduler
+    - name: Test-CsXmppIM
+      uid: SkypeForBusiness.Test-CsXmppIM
+    - name: Uninstall-CsDatabase
+      uid: SkypeForBusiness.Uninstall-CsDatabase
+    - name: Uninstall-CsMirrorDatabase
+      uid: SkypeForBusiness.Uninstall-CsMirrorDatabase
+    - name: Unlock-CsClientPin
+      uid: SkypeForBusiness.Unlock-CsClientPin
+    - name: Unpublish-CsLisConfiguration
+      uid: SkypeForBusiness.Unpublish-CsLisConfiguration
+    - name: Unregister-CsHybridPSTNAppliance
+      uid: SkypeForBusiness.Unregister-CsHybridPSTNAppliance
+    - name: Update-CsAddressBook
+      uid: SkypeForBusiness.Update-CsAddressBook
+    - name: Update-CsAdminRole
+      uid: SkypeForBusiness.Update-CsAdminRole
+    - name: Update-CsClsLogging
+      uid: SkypeForBusiness.Update-CsClsLogging
+    - name: Update-CsTenantMeetingUrl
+      uid: SkypeForBusiness.Update-CsTenantMeetingUrl
+    - name: Update-CsUserData
+      uid: SkypeForBusiness.Update-CsUserData
+    - name: Update-CsUserDatabase
+      uid: SkypeForBusiness.Update-CsUserDatabase
+metadata:
+  universal_conceptual_toc: /powershell/skype/skype-ps/toc.json

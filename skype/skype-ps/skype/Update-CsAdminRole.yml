@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the role-based access control (RBAC) definitions stored in the Central Management database without affecting any other database tables.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Update-CsAdminRole cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Update-CsAdminRole cmdlet does not return any data or objects.
+syntaxes:
+- Update-CsAdminRole [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Update-CsAdminRole
+  description: |-
+    The command shown in Example 1 updates the RBAC definitions stored in the Central Management database.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Update-CsAdminRole
+name: Update-CsAdminRole
+description: |-
+  The `Update-CsAdminRole` cmdlet provides a way for you to update the RBAC role definitions stored in the Central Management database.
+  This cmdlet is typically used in coexistence/migration.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Update-CsAdminRole` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/update-csadminrole
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Update-CsAdminRole
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

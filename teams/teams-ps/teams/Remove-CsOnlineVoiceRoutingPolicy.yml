@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an existing online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsOnlineVoiceRoutingPolicy
+  href: New-CsOnlineVoiceRoutingPolicy.yml
+- text: Get-CsOnlineVoiceRoutingPolicy
+  href: Get-CsOnlineVoiceRoutingPolicy.yml
+- text: Set-CsOnlineVoiceRoutingPolicy
+  href: Set-CsOnlineVoiceRoutingPolicy.yml
+- text: Grant-CsOnlineVoiceRoutingPolicy
+  href: Grant-CsOnlineVoiceRoutingPolicy.yml
+syntaxes:
+- Remove-CsOnlineVoiceRoutingPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> Remove-CsOnlineVoiceRoutingPolicy -Identity "RedmondOnlineVoiceRoutingPolicy"
+  description: |-
+    The command shown in Example 1 deletes the online voice routing policy RedmondOnlineVoiceRoutingPolicy.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    PS C:\> Get-CsOnlineVoiceRoutingPolicy -Filter "tag:*" | Remove-CsOnlineVoiceRoutingPolicy
+  description: |-
+    In Example 2, all the online voice routing policies configured at the per-user scope are removed. To do this, the command first calls the `Get-CsOnlineVoiceRoutingPolicy` cmdlet along with the Filter parameter; the filter value "tag:\*" limits the returned data to online voice routing policies configured at the per-user scope. Those per-user policies are then piped to and removed by, the `Remove-CsOnlineVoiceRoutingPolicy` cmdlet.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    PS C:\> Get-CsOnlineVoiceRoutingPolicy | Where-Object {$_.OnlinePstnUsages -contains "Long Distance"} | Remove-CsOnlineVoiceRoutingPolicy
+  description: |-
+    In Example 3, all the online voice routing polices that include the online PSTN usage "Long Distance" are removed. To carry out this task, the `Get-CsOnlineVoiceRoutingPolicy` cmdlet is first called without any parameters in order to return a collection of all the available online voice routing policies. That collection is then piped to the Where-Object cmdlet, which picks out only those policies where the OnlinePstnUsages property includes (-contains) the usage "Long Distance". Policies that meet that criterion are then piped to the `Remove-CsOnlineVoiceRoutingPolicy`, which removes each online voice routing policy that includes the online PSTN usage "Long Distance".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier assigned to the policy when it was created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsOnlineVoiceRoutingPolicy
+name: Remove-CsOnlineVoiceRoutingPolicy
+description: |-
+  Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Teams users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
+
+  Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoiceroutingpolicy
+  applicable: Microsoft Teams
+  title: Remove-CsOnlineVoiceRoutingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

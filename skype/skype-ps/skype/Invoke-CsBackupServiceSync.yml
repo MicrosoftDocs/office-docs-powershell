@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Manually invokes backup synchronization between a Skype for Business Server pool and its designated backup pool.
+  This allows administrators to synchronize data without waiting for Skype for Business Server replication.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    String value.
+    The Invoke-CsBackupServiceSync cmdlet can accept a pipelined string value representing the fully qualified domain name of a Skype for Business Server pool.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+links:
+- text: Backup-CsPool
+  href: Backup-CsPool.yml
+syntaxes:
+- Invoke-CsBackupServiceSync -PoolFqdn <Fqdn> [-BackupModule <String>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Invoke-CsBackupServiceSync -PoolFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    The command shown in Example 1 synchronizes the backup services for the pool atl-cs-001.litwareinc.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BackupModule
+  description: |+
+    Indicates the type of data to be synchronized.
+    Valid values are:
+
+    UserServices.PresenceFocus
+
+    ConfServices.DataConf
+
+    CentralMgmt.CMSMaster
+
+    ApplicationServer.RGSDataStore
+
+    ApplicationServer.RGSFileStore 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: PoolFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name of the pool where backup service synchronization is being invoked.
+    For example:
+
+    `-PoolFqdn "atl-cs-001.litwareinc.com"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Invoke-CsBackupServiceSync
+name: Invoke-CsBackupServiceSync
+description: |-
+  The Invoke-CsBackupServiceSync cmdlet enables administrators to synchronize the data between a Registrar pool and its backup pool.
+  The Invoke-CsBackupServiceSync cmdlet will only copy as much data as needed in order to bring the two pools into sync.
+
+  Skype for Business Server Control Panel: The functions carried out by the Invoke-CsBackupServiceSync cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/invoke-csbackupservicesync
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Invoke-CsBackupServiceSync
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

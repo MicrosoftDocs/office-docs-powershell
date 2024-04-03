@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Saves an on-premises copy of the connection information created by the New-CsCloudCallDataConnection cmdlet.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection. The \`Set-CsCloudCallDataConnector\` cmdlet accepts pipelined input of CloudCallDataConnection.
+outputs:
+- name: <xref href="The `Set-CsCloudCallDataConnector` cmdlet does not return a value or object. Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CloudCallDataConnection object." data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsCloudCallDataConnector [-Token <String>] [-TenantId <String>] [-Instance <PSObject>] [-Force] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-CsCloudCallDataConnection | Set-CsCloudCallDataConnector -TenantId &lt;tenant_id&gt;
+  description: |-
+    If you're logged in to Microsoft Teams PowerShell Module within the Skype for Business Server Management Shell 2019, this command in example 1 takes the output of the New-CsCloudCallDataConnection online cmdlet and passes it to the Set-CsCloudCallDataConnector cmdlet via pipeline so that the Token can be stored on premises. Along with the Token, the TenantId of your O365 tenant will get stored on premises as well.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-CsCloudCallDataConnector -Identity Global -TenantId <tenant_id> -Token <token-copied-from-online>
+  description: |-
+    Example showing the scenario when we aren't piping the output from online cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantId
+  description: |+
+    Office 365 TenantID of your tenant.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Token
+  description: |+
+    Data ingestion token for CloudCallDataConnector telemetry endpoint.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsCloudCallDataConnector
+name: Set-CsCloudCallDataConnector
+description: |-
+  Call Data Connector provides a single view in a hybrid environment where you can view the on-premises and online call quality data in one place.
+
+  The Set-CsCloudCallDataConnector cmdlet provides a way for you to store an on-premise copy of the cloud connection information created by the New-CsCloudCallDataConnection cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cscloudcalldataconnector
+  applicable: Skype for Business Server 2019
+  title: Set-CsCloudCallDataConnector
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

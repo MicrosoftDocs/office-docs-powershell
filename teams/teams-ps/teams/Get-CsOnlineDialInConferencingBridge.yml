@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsOnlineDialInConferencingBridge cmdlet to view the settings on an audio conferencing bridge that is used when Microsoft is the audio conferencing provider.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsOnlineDialInConferencingBridge [-Tenant <Guid>] [-TenantDomain <String>]
+
+   [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+- >-
+  Get-CsOnlineDialInConferencingBridge [-Identity] <Guid> [-Tenant <Guid>] [-TenantDomain <String>]
+
+   [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+- >-
+  Get-CsOnlineDialInConferencingBridge -Name <String> [-Tenant <Guid>] [-TenantDomain <String>]
+
+   [-DomainController <Fqdn>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineDialInConferencingBridge | fl
+  description: |-
+    This example shows how to return all of the audio conferencing bridges that are being used and returns the results in a formatted list.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsOnlineDialInConferencingBridge -Tenant 26efe125-c070-46f9-8ed0-fc02165a167c
+  description: |-
+    This example shows how to return all of the audio conferencing bridges for the given tenant.
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Specifies the domain controller that's used by the cmdlet to read or write the specified data.
+    Valid inputs for this parameter include:
+
+    Fully qualified domain name (FQDN): 
+
+    `-DomainController atl-cs-001.Contoso.com`
+
+    Computer name: 
+
+    `-DomainController atl-cs-001`
+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the globally-unique identifier (GUID) for the audio conferencing bridge.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the audio conferencing bridge.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsOnlineDialInConferencingBridge
+name: Get-CsOnlineDialInConferencingBridge
+description: |-
+  The Get-CsOnlineDialInConferencingBridge cmdlet is used to view all of the settings for all dial-in conferencing bridges or for a specific dial-in conferencing bridge.
+  However, if the PSTN conferencing service status of the tenant is Disabled, no results will be displayed.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge
+  applicable: Microsoft Teams
+  title: Get-CsOnlineDialInConferencingBridge
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

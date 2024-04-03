@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Remove-eDiscoveryCaseAdmin cmdlet to remove an eDiscovery Administrator from the Microsoft Purview compliance portal. To replace all eDiscovery Administrators, use the Update-eDiscoveryCaseAdmin cmdlet.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Remove-eDiscoveryCaseAdmin -User <String>
+
+   [-Confirm]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-eDiscoveryCaseAdmin -User chris@contoso.com
+  description: |-
+    This example removes an eDiscovery Administrator.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    The User parameter specifies the user that you want to remove from the list of eDiscovery Administrators. You can use any value that uniquely identifies the user. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - Canonical DN
+    - GUID
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch doesn't work in Security & Compliance PowerShell.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Remove-eDiscoveryCaseAdmin
+name: Remove-eDiscoveryCaseAdmin
+description: |-
+  An eDiscovery Administrator is member of the eDiscovery Manager role group who can also view and access all eDiscovery cases in your organization.
+
+  When you remove a user from the list of eDiscovery Administrators, the user isn't removed from the eDiscovery Manager role group. That means the user can still view and access the eDiscovery cases they are a member of and the eDiscovery cases they created. To remove all eDiscovery permissions, you can remove the user from the eDiscovery Manager role group by running the Remove-RoleGroupMember cmdlet.
+
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/remove-ediscoverycaseadmin
+  applicable: Security & Compliance
+  title: Remove-eDiscoveryCaseAdmin
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

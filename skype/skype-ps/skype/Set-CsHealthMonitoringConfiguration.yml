@@ -1,0 +1,236 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing collection of health monitoring configuration settings.
+  These settings enable administrators to run quality assurance tests without having to supply the user names and passwords for the required test accounts.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.HealthMonitoring.HealthMonitoringSettings object.
+    The `Set-CsHealthMonitoringConfiguration` cmdlet accepts pipelined instances of the health monitoring configuration object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Set-CsHealthMonitoringConfiguration` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.HealthMonitoring.HealthMonitoringSettings object.
+links:
+- text: Get-CsHealthMonitoringConfiguration
+  href: Get-CsHealthMonitoringConfiguration.yml
+- text: New-CsHealthMonitoringConfiguration
+  href: New-CsHealthMonitoringConfiguration.yml
+- text: Remove-CsHealthMonitoringConfiguration
+  href: Remove-CsHealthMonitoringConfiguration.yml
+syntaxes:
+- >-
+  Set-CsHealthMonitoringConfiguration [[-Identity] <XdsGlobalRelativeIdentity>]
+
+   [-FirstTestSamAccountName <String>] [-FirstTestUserSipUri <String>] [-SecondTestSamAccountName <String>]
+
+   [-SecondTestUserSipUri <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsHealthMonitoringConfiguration [-Instance <PSObject>] [-FirstTestSamAccountName <String>]
+
+   [-FirstTestUserSipUri <String>] [-SecondTestSamAccountName <String>] [-SecondTestUserSipUri <String>] [-Force]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Set-CsHealthMonitoringConfiguration -Identity atl-cs-001.litwareinc.com -FirstTestUserSipUri "sip:kenmyer@litwareinc.com" -FirstTestSamAccountName "litwareinc\kenmyer"
+  description: |-
+    The command shown in Example 1 configures the first test user assigned to the health monitoring configuration settings for the pool atl-cs-001.litwareinc.com.
+    In this example, the SIP address for the new test user is set to sip:kenmyer@litwareinc.com and the SamAccountName for the test user is set to kenmyer.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Get-CsHealthMonitoringConfiguration | Set-CsHealthMonitoringConfiguration -FirstTestUserSipUri "sip:kenmyer@litwareinc.com" -FirstTestSamAccountName "litwareinc\kenmyer"
+  description: |-
+    Example 2 is a variation of the command shown in Example 1.
+    In this case, however, the same test user is assigned to each collection of health monitoring configuration settings in use in the organization.
+    To carry out this task, the command first uses the `Get-CsHealthMonitoringConfiguration` cmdlet to return a collection of all the health monitoring configuration settings.
+    This collection is then piped to the `Set-CsHealthMonitoringConfiguration` cmdlet, which assigns the same first test user SIP address and SamAccountName to each item in the collection.
+  summary: ""
+- title: '-------------------------- Example 3 ------------------------'
+  code: |-
+    Get-CsHealthMonitoringConfiguration | Where-Object {$_.FirstTestUserSipUri -eq "sip:pilar@litwareinc.com"} | Set-CsHealthMonitoringConfiguration -FirstTestUserSipUri "sip:kenmyer@litwareinc.com" -FirstTestSamAccountName "litwareinc\kenmyer"
+  description: |-
+    Example 3 shows how you can do a search-and-replace for the first test user assigned to a collection of health configuration settings; in this example, the user with the SIP address sip:pilar@litwareinc.com is replaced any time that user appears as the first test user in a collection.
+
+    To do this, the command first calls the `Get-CsHealthMonitoringConfiguration` cmdlet without any additional parameters; that returns a collection of all the health monitoring configuration settings currently in use in the organization.
+    This collection is then piped to the `Where-Object` cmdlet, which picks out only those items where the FirstTestUserSipUri property is equal to (-eq) sip:pilar@litwareinc.com.
+    That filtered collection is then piped to the `Set-CsHealthMonitoringConfiguration` cmdlet, which takes each item in the collection and sets the value of the FirstTestUserSipUri property to sip:kenmyer@litwareinc.com and the value of the FirstTestSamAccountName property to kenmyer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FirstTestSamAccountName
+  description: |+
+    SamAccountName of the first test user.
+    The FirstTestSamAccountName must be entered using the format domain\username; for example:
+
+    `-FirstTestSamAccountName litwareinc\kenmyer`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FirstTestUserSipUri
+  description: |+
+    SIP address of the first test user to be configured for use by this collection of health monitoring settings.
+    Note that the SIP address must include the sip: prefix.
+    For example: `-FirstTestUserSipUri "sip:kenmyer@litwareinc.com"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Fully qualified domain name (FQDN) of the pool where the health monitoring configuration settings to be modified have been assigned.
+    For example: `-Identity atl-cs-001.litwareinc.com`.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondTestSamAccountName
+  description: |+
+    SamAccountName of the second test user.
+    The SecondTestSamAccountName must be entered using the format domain\username; for example:
+
+    `-SecondTestSamAccountName litwareinc\pilar`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondTestUserSipUri
+  description: |+
+    SIP address of the second test user to be configured for use by this collection of health monitoring settings.
+    Note that the SIP address must include the sip: prefix.
+    For example: `-FirstTestUserSipUri "sip:pilar@litwareinc.com"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsHealthMonitoringConfiguration
+name: Set-CsHealthMonitoringConfiguration
+description: |-
+  Synthetic transactions are used in Skype for Business Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
+  These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
+
+  Synthetic transactions can be conducted in two different ways.
+  Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test accounts for each of their Registrar pools.
+  These test accounts are a pair of user accounts that have been preconfigured for use with synthetic transactions.
+  (Typically these are test accounts and not accounts that belong to actual users.) When test accounts are configured for a pool, administrators can run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
+  Instead, the synthetic transaction will automatically use the preconfigured test accounts when performing its checks.
+
+  Alternatively, administrators can run a synthetic transaction using actual user accounts.
+  For example, if two users are unable to exchange instant messages, an administrator can run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts).
+  If you decide to conduct a synthetic transaction using actual user accounts that you will have to supply the credentials for each user.
+
+  After you have configured health monitoring configuration settings, you can modify those settings at any time by using the `Set-CsHealthMonitoringConfiguration` cmdlet.
+  This cmdlet provides a way for you to change either (or both) of the test accounts configured for use with a pool.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cshealthmonitoringconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsHealthMonitoringConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

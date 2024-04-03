@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsClsAgentStatus to return information about the ClsAgent service on the local machine.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Cls.AgentInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    Or an XmlDocument object if the DefaultXml parameter is used.
+syntaxes:
+- Get-CsClsAgentStatus [-CacheFileLocalFolders <String>] [-DefaultXml] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsClsAgentStatus
+  description: |-
+    Returns information about the ClsAgent service on the local machine.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsClsAgentStatus -DefaultXml
+  description: |-
+    Returns the default.xml file as an XmlDocument object.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CacheFileLocalFolders
+  description: |+
+    Specifies the path to search for log files stored on disk.
+    By default the CacheFileLocalFolders path from the Get-CsClsConfiguration cmdlet is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultXml
+  description: |+
+    If specified, the cmdlet will return the default.xml file as an XmlDocument object for debugging purposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsClsAgentStatus
+name: Get-CsClsAgentStatus
+description: |-
+  The Get-CsClsAgentStatus cmdlet returns information about the ClsAgent, including version, service status, log storage details, and disk free space.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csclsagentstatus
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsClsAgentStatus
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

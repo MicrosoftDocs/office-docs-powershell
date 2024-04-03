@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Get-DataEncryptionPolicy cmdlet to view data encryption policies in Exchange Online.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-DataEncryptionPolicy [[-Identity] <DataEncryptionPolicyIdParameter>]
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-DataEncryptionPolicy
+  description: |-
+    This example returns a summary list of all data encryption policies in the organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-DataEncryptionPolicy -Identity "Europe Mailboxes"
+  description: |-
+    The example returns detailed information for the data encryption policy named Europe Mailboxes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="DataEncryptionPolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the data encryption policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+- Exchange Online Protection
+uid: ExchangePowerShell.Get-DataEncryptionPolicy
+name: Get-DataEncryptionPolicy
+description: |-
+  Data encryption policy cmdlets are the Exchange Online part of Customer Key. For more information, see [Controlling your data in Microsoft 365 using Customer Key](https://aka.ms/customerkey).
+
+  You can assign a data encryption policy to a mailbox by using the DataEncryptionPolicy parameter on the Set-Mailbox cmdlet in Exchange Online PowerShell.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.WebClient-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-dataencryptionpolicy
+  applicable: Exchange Online, Exchange Online Protection
+  title: Get-DataEncryptionPolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

@@ -1,0 +1,445 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
+  Use the Remove-MailboxPermission cmdlet to remove permissions from a user's mailbox or from an Exchange Server 2016, Exchange Server 2019 or Exchange Online mail user.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Remove-MailboxPermission [-Identity] <MailboxIdParameter> -AccessRights <MailboxRights[]> -User <SecurityPrincipalIdParameter>
+
+   [-BypassMasterAccountSid]
+
+   [-Confirm]
+
+   [-Deny]
+
+   [-DomainController <Fqdn>]
+
+   [-GroupMailbox]
+
+   [-IgnoreDefaultScope]
+
+   [-InheritanceType <ActiveDirectorySecurityInheritance>]
+
+   [-SoftDeletedMailbox]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Remove-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePresentationObject>
+
+   [-AccessRights <MailboxRights[]>]
+
+   [-Confirm]
+
+   [-Deny]
+
+   [-DomainController <Fqdn>]
+
+   [-GroupMailbox]
+
+   [-IgnoreDefaultScope]
+
+   [-InheritanceType <ActiveDirectorySecurityInheritance>]
+
+   [-User <SecurityPrincipalIdParameter>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Remove-MailboxPermission [[-Identity] <MailboxIdParameter>]
+
+   [-BypassMasterAccountSid]
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-GroupMailbox]
+
+   [-IgnoreDefaultScope]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ClearAutoMapping]
+
+   [-BypassMasterAccountSid]
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-IgnoreDefaultScope]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-ResetDefault]
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-IgnoreDefaultScope]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-MailboxPermission -Identity "Yuuto Sasaki" -User "Pedro Pizarro" -AccessRights FullAccess -InheritanceType All
+  description: |-
+    This example removes Pedro Pizarro's full access permission to Yuuto Sasaki's mailbox.
+  summary: ""
+- title: Example 2
+  code: |-
+    Remove-MailboxPermission -Identity "HR Project" -ClearAutoMapping
+  description: |-
+    In Exchange Online, this example excludes the HR Project mailbox from auto-mapping in Outlook for all users who have Full Access permission to the mailbox.
+  summary: ""
+parameters:
+- type: <xref href="MailboxRights" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AccessRights
+  isRequired: true
+  description: |+
+    The AccessRights parameter specifies the permission that you want to remove from the user on the mailbox. Valid values are:
+
+    - FullAccess
+    - SendAs
+    - ExternalAccount
+    - DeleteItem
+    - ReadPermission
+    - ChangePermission
+    - ChangeOwner
+
+    You can specify multiple values separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BypassMasterAccountSid
+  description: |+
+    This parameter is available only in the cloud-based service.
+
+    The BypassMasterAccountSid switch suppresses the following error: `Can't remove the access control entry on the object "User" for the user account because the ACE doesn't exist on the object.` You don't need to specify a value with this switch.
+
+    Typically, you only need to use this switch in Office 365 Dedicated or ITAR legacy environments.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearAutoMapping
+  isRequired: true
+  description: |+
+    This parameter is functional only in the cloud-based service.
+
+    The ClearAutoMapping parameter excludes the mailbox from the auto-mapping feature in Microsoft Outlook. You don't need to specify a value with this switch.
+
+    Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. Use this switch to exclude this mailbox from auto-mapping for all users who have Full Access permission to the mailbox.
+
+    You can't use this switch with the User or AccessRights parameters.
+
+    **Note**: If you use this switch in a Remove-MailboxPermission command, but the mailbox is not excluded from auto-mapping for a user, remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet with the User parameter. Then, reassign the user's Full Access permission on the mailbox using the Add-MailboxPermission cmdlet with the AutoMapping parameter set to the value $false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Deny
+  description: |+
+    The Deny switch specifies that the permissions you're removing are Deny permissions. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GroupMailbox
+  description: |+
+    This parameter is available only in the cloud-based service.
+
+    The GroupMailbox switch is required to remove permissions from a Microsoft 365 Group mailbox. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MailboxIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the mailbox where you are removing permissions. You can use any value that uniquely identifies the mailbox: For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Domain\\Username
+    - Email address
+    - GUID
+    - LegacyExchangeDN
+    - SamAccountName
+    - User ID or user principal name (UPN)
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreDefaultScope
+  description: |+
+    The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
+
+    This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
+
+    - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
+    - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="ActiveDirectorySecurityInheritance" data-throw-if-not-resolved="False" />
+  name: InheritanceType
+  description: |+
+    The InheritanceType parameter specifies whether permissions are inherited to folders within the mailbox. Valid values are:
+
+    - None
+    - All (this is the default value)
+    - Children
+    - Descendents [sic]
+    - SelfAndChildren
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MailboxAcePresentationObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  isRequired: true
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The Instance parameter enables you to pass an entire object to the command to be processed. It's mainly used in scripts where an entire object must be passed to the command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResetDefault
+  isRequired: true
+  description: |+
+    This parameter is functional only in the cloud-based service.
+
+    The ResetDefault switch resets the default security descriptor of the mailbox. You don't need to specify a value with this switch.
+
+    Permissions on the mailbox are reset so only the mailbox owner has Full Access permission to the mailbox. The following types of permissions are not affected:
+
+    - Recipient permissions (for example, SendAs, SendOnBehalf and delegates).
+    - Mailbox folder permissions assigned using the MailboxFolderPermission cmdlets.
+    - Mailbox folder permissions assigned using Outlook or other MAPI clients.
+
+    Also, because this switch removes Full Access permission from other users on the mailbox, the mailbox is no longer auto-mapped by Autodiscover into the Outlook profiles of other users.
+
+    You can't use this switch with the User for AccessRights parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SoftDeletedMailbox
+  description: |+
+    This parameter is available only in the cloud-based service.
+
+    The SoftDeletedMailbox switch is required to remove permissions from a soft-deleted mailbox. You don't need to specify a value with this switch.
+
+    Soft-deleted mailboxes are deleted mailboxes that are still recoverable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SecurityPrincipalIdParameter" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    The User parameter specifies whose permissions are being removed from the specified mailbox. You can specify the following types of users or groups (security principals) for this parameter:
+
+    - Mailbox users
+    - Mail users
+    - Security groups
+
+    For the best results, we recommend using the following values:
+
+    - UPN: For example, `user@contoso.com` (users only).
+    - Domain\\SamAccountName: For example, `contoso\user`.
+
+    Otherwise, you can use any value that uniquely identifies the user or group. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Domain\\Username
+    - Email address
+    - GUID
+    - LegacyExchangeDN
+    - SamAccountName
+    - User ID or user principal name (UPN)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2010
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+- Exchange Online
+uid: ExchangePowerShell.Remove-MailboxPermission
+name: Remove-MailboxPermission
+description: |-
+  The Remove-MailboxPermission cmdlet allows you to remove permissions from a user's mailbox, for example, removing full access to another user's mailbox.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/remove-mailboxpermission
+  applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+  title: Remove-MailboxPermission
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""
