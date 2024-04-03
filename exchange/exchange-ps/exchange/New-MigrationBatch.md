@@ -167,6 +167,29 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
  [<CommonParameters>]
 ```
 
+### ManagedGmailTeams
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-ManagedGmailTeams]
+ [-AdoptPreexisting]
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-RemoveOnCopy]
+ [-ReportInterval <Timespan>]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipReports]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### Offboarding
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
@@ -596,6 +619,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ManagedGmailTeams
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManagedGmailTeams Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ManagedGmailTeams
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -1400,7 +1441,7 @@ The SkipCalendar switch specifies that you want to skip calendar migration durin
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, ManagedGmailTeams
 Aliases:
 Applicable: Exchange Online
 
@@ -1418,7 +1459,7 @@ The SkipContacts switch specifies that you want to skip contact migration during
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, ManagedGmailTeams
 Aliases:
 Applicable: Exchange Online
 

@@ -61,7 +61,6 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SpoAipIntegrationEnabled <Boolean>]
  [-StartSimulation <Boolean>]
- [-SystemOperation]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -878,22 +877,6 @@ Use the StartSimulation parameter to restart the simulation for updated results.
 
 ```yaml
 Type: Boolean
-Parameter Sets: Identity
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SystemOperation
-{{ Fill SystemOperation Description }}
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance

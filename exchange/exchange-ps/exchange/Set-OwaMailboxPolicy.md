@@ -94,6 +94,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -1669,6 +1670,24 @@ The OutlookBetaToggleEnabled parameter specifies whether to enable or disable th
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersAccessLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersAccessLevel Description }}
+
+```yaml
+Type: OutlookNewslettersAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
