@@ -12,7 +12,7 @@ ms.reviewer:
 # Export-ContentExplorerData
 
 ## SYNOPSIS
-**Note**: This cmdlet is currently in Preview and is subject to change. It is available in all organizations.
+**Note**: This cmdlet is currently in Preview and is subject to change.
 
 This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
