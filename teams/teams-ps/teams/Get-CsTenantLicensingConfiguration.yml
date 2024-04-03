@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Indicates whether licensing information for the specified tenant is available in the Teams admin center.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Deserialized.Microsoft.Rtc.Management.WritableConfig.Settings.TenantConfiguration.TenantLicensingConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTenant
+  href: Get-CsTenant.yml
+syntaxes:
+- >-
+  Get-CsTenantLicensingConfiguration [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-CsTenantLicensingConfiguration [-MsftInternalProcessingMode <String>] [-Filter <String>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsTenantLicensingConfiguration
+  description: |-
+    The command shown in Example 1 returns licensing configuration information for the current tenant:
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters in order to return a collection of tenant licensing configuration settings.
+    Because each tenant is limited to a single, global collection of licensing configuration settings there is no need to use the Filter parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the collection of tenant licensing configuration settings to be returned.
+    Because each tenant is limited to a single, global collection of licensing settings there is no need include this parameter when calling the Get-CsTenantLicensingConfiguration cmdlet.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsftInternalProcessingMode
+  description: |+
+    For internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsTenantLicensingConfiguration
+name: Get-CsTenantLicensingConfiguration
+description: |-
+  The Get-CsTenantLicensingConfiguration cmdlet indicates whether licensing information for the specified tenant is available in the Teams admin center.
+  The cmdlet returns information similar to this:
+
+  Identity : GlobalStatus : Enabled
+
+  If the Status is equal to Enabled then licensing information is available in the admin center.
+  If not, then licensing information is not available in the admin center.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-cstenantlicensingconfiguration
+  applicable: Microsoft Teams
+  title: Get-CsTenantLicensingConfiguration
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

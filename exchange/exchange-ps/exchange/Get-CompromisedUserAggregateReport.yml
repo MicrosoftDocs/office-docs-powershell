@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Get-CompromisedUserAggregateReport cmdlet to return general data about compromised users for the last 10 days.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-CompromisedUserAggregateReport
+
+   [-Action <MultiValuedProperty>]
+
+   [-EndDate <System.DateTime>]
+
+   [-Page <Int32>]
+
+   [-PageSize <Int32>]
+
+   [-StartDate <System.DateTime>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CompromisedUserAggregateReport -StartDate 06-01-2020 -EndDate 06-10-2020 -Action Restricted
+  description: |-
+    This example returns all restricted user accounts for the specified date range.
+  summary: ""
+parameters:
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: Action
+  description: |+
+    The Action parameter filters the results by the compromised user status. Valid values are:
+
+    - Restricted
+    - Suspicious
+
+    You can specify multiple values separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: EndDate
+  description: |+
+    The EndDate parameter specifies the end date of the date range.
+
+    Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Page
+  description: |+
+    The Page parameter specifies the page number of the results you want to view. Valid input for this parameter is an integer between 1 and 1000. The default value is 1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PageSize
+  description: |+
+    The PageSize parameter specifies the maximum number of entries per page. Valid input for this parameter is an integer between 1 and 5000. The default value is 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  name: StartDate
+  description: |+
+    The StartDate parameter specifies the start date of the date range.
+
+    Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+- Exchange Online Protection
+uid: ExchangePowerShell.Get-CompromisedUserAggregateReport
+name: Get-CompromisedUserAggregateReport
+description: |-
+  This cmdlet returns the following information:
+
+  - Date
+  - UserCount
+  - Action
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.ServerStatus-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-compromiseduseraggregatereport
+  applicable: Exchange Online, Exchange Online Protection
+  title: Get-CompromisedUserAggregateReport
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

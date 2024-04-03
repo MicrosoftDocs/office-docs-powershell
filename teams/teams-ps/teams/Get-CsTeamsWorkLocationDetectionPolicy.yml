@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is used to fetch policy instances of TeamsWorkLocationDetectionPolicy.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="TeamsWorkLocationDetectionPolicy.Cmdlets.TeamsWorkLocationDetectionPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsWorkLocationDetectionPolicy
+  href: New-CsTeamsWorkLocationDetectionPolicy.yml
+- text: Remove-CsTeamsWorkLocationDetectionPolicy
+  href: Remove-CsTeamsWorkLocationDetectionPolicy.yml
+- text: Set-CsTeamsWorkLocationDetectionPolicy
+  href: Set-CsTeamsWorkLocationDetectionPolicy.yml
+- text: Grant-CsTeamsWorkLocationDetectionPolicy
+  href: Grant-CsTeamsWorkLocationDetectionPolicy.yml
+syntaxes:
+- Get-CsTeamsWorkLocationDetectionPolicy [[-Identity] <String>] [<CommonParameters>]
+- Get-CsTeamsWorkLocationDetectionPolicy [-Filter <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsWorkLocationDetectionPolicy
+
+    Identity            EnableWorkLocationDetection                                                                          
+    --------                 ----------------------                                                                          
+    Global                                     False
+    Tag:wld-enabled                            True
+    Tag:wld-disabled                           False
+  description: |-
+    Fetches all the policy instances currently available.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Identity wld-enabled
+
+    Identity            EnableWorkLocationDetection                                                                          
+    --------                 ----------------------                                                                          
+    Tag:wld-enabled                            True
+  description: |-
+    Fetches an instance of a policy with a known identity.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-CsTeamsWorkLocationDetectionPolicy -Filter *wld*
+
+    Identity            EnableWorkLocationDetection                                                                          
+    --------                 ----------------------                                                                          
+    Tag:wld-enabled                            True
+    Tag:wld-disabled                          False
+  description: |-
+    The `Filter` parameter can be used to fetch policy instances based on partial matches on Identity.
+
+    Note: _The "Tag:" prefix can be ignored when specifying the identity._
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter can be used to fetch policy instances based on partial matches on the Identity field.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter can be used to fetch a specific instance of the policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsWorkLocationDetectionPolicy
+name: Get-CsTeamsWorkLocationDetectionPolicy
+description: |-
+  Fetches instances of TeamsWorkLocationDetectionPolicy. Each policy object contains a property called `EnableWorkLocationDetection`. This setting allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices.
+  This gives users the ability to consent to the use of this location data to set their current work location.Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsworklocationdetectionpolicy
+  schema: 2.0.0
+  ms.author: arkozlov
+  manager: prashibadkur
+  author: artemiykozlov

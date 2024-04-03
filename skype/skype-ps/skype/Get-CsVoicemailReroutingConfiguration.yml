@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves settings that provide public switched telephone network (PSTN) phone numbers to access Exchange Subscriber Access and Auto Attendant features.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Retrieves one or more objects of type Microsoft.Rtc.Management.WritableConfig.Settings.ExumRouting.VoicemailReroutingConfiguration.
+links:
+- text: New-CsVoicemailReroutingConfiguration
+  href: New-CsVoicemailReroutingConfiguration.yml
+- text: Remove-CsVoicemailReroutingConfiguration
+  href: Remove-CsVoicemailReroutingConfiguration.yml
+- text: Set-CsVoicemailReroutingConfiguration
+  href: Set-CsVoicemailReroutingConfiguration.yml
+syntaxes:
+- Get-CsVoicemailReroutingConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsVoicemailReroutingConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsVoicemailReroutingConfiguration
+  description: |-
+    This example retrieves all of the voice mail rerouting configuration settings defined in this deployment of Skype for Business Server 2015.
+    For example, if there are three branch offices where a Survivable Branch Appliance is deployed, this command will return three voice mail rerouting configuration sets.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsVoicemailReroutingConfiguration -Identity site:BranchOffice_Portland
+  description: |-
+    This example retrieves the voice mail rerouting configuration settings for the site BranchOffice_Portland.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsVoicemailReroutingConfiguration -Filter *:BranchOffice*
+  description: |-
+    This example retrieves all the voice mail rerouting settings for all sites with site names beginning with the string BranchOffice (for example, BranchOffice_Portland, BranchOffice_Sacramento).
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsVoicemailReroutingConfiguration | Where-Object {$_.Enabled -eq $False}
+  description: |-
+    This example retrieves all the voice mail rerouting configurations that are not enabled.
+    The first part of this command is a call to the Get-CsVoicemailReroutingConfiguration cmdlet, which retrieves a collection of all the voice mail rerouting configurations.
+    That collection is then piped to the Where-Object cmdlet.
+    The Where-Object cmdlet narrows that collection down to include only the configurations that have an Enabled property equal to (-eq) False.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    The Filter parameter allows you to retrieve configuration settings for a particular set of sites based on wildcard matching.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier of the configuration you want to retrieve.
+    For this cmdlet the Identity will be either Global or Site:\<site name\>, where \<site name\> is the name of the site to which the settings are applied.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the voice mail rerouting configuration from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsVoicemailReroutingConfiguration
+name: Get-CsVoicemailReroutingConfiguration
+description: |-
+  This cmdlet retrieves settings that determine where Auto Attendant and Subscriber Access calls are rerouted to when IP connectivity from Skype for Business Server in the branch site to the Exchange Server located in the data center is not available.
+
+  Auto Attendant and Subscriber Access are features of Exchange.
+  The Auto Attendant feature provides voice recognition and touch-tone control (dual-tone multifrequency, or DTMF) so that outside callers can navigate a company's phone system to reach the department or employee they want or, in Message Taking Mode, to accept messages for users.
+  (Voice rerouting for Message Taking Mode is recommended.) Subscriber Access allows internal users to access their Microsoft Outlook mailbox from a phone.
+  The numbers provided by these settings allow callers to leave voice mail messages for Enterprise Voice users (the AutoAttendantNumber setting) and for those users to retrieve voice mail even if the IP connectivity from the Skype for Business Server deployment at a remote site to Exchange in the data center is unavailable (the SubscriberAccessNumber setting).
+
+  Calling this cmdlet with no parameters will return all voice mail rerouting configurations.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csvoicemailreroutingconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsVoicemailReroutingConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

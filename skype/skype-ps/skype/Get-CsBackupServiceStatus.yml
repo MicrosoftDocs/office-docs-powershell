@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the current state of the backup service for a specified pool.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Returns information about the backup service.
+links:
+- text: Get-CsBackupServiceConfiguration
+  href: Get-CsBackupServiceConfiguration.yml
+syntaxes:
+- Get-CsBackupServiceStatus -PoolFqdn <Fqdn> [-Category <BackupCategory>] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsBackupServiceStatus -PoolFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    The preceding command returns the backup service status for the pool atl-cs-001.litwareinc.com.
+  summary: ""
+parameters:
+- type: <xref href="BackupCategory" data-throw-if-not-resolved="False" />
+  name: Category
+  description: |+
+    Type of backup whose status is being checked.
+    Allowed values are:
+
+    * CMS
+    * UserData
+    * RGS
+
+    If this parameter is not specified then all three backup types will be checked.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: PoolFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name of the pool whose backup service status is being checked.
+    For example:
+
+    `-PoolFqdn "atl-cs-001.litwareinc.com"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsBackupServiceStatus
+name: Get-CsBackupServiceStatus
+description: |-
+  The Get-CsBackupServiceStatus cmdlet enables administrators to verify that the backup service for a specified Registrar pool has been configured and is working properly.
+  Note that, by default, only users who belong to the RTCUniversalServerAdmins group are allowed to run this cmdlet and check the backup status for a pool.
+  To provide additional groups with permission to run the cmdlet, use the Set-CsBackupServiceConfiguration cmdlet to add those groups to the AuthorizedUniversalGroups property.
+
+  The functions carried out by the Get-CsBackupServiceStatus cmdlet are not available in the Skype for Business Server.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csbackupservicestatus
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsBackupServiceStatus
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

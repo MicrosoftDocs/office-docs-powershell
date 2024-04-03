@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a pool that contains the computers that host trusted applications.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.Xds.DisplayExternalServer object.
+    Accepts pipelined input of trusted application pool objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return a value.
+    It removes an object of type Microsoft.Rtc.Management.Xds.DisplayExternalServer.
+links:
+- text: New-CsTrustedApplicationPool
+  href: New-CsTrustedApplicationPool.yml
+- text: Set-CsTrustedApplicationPool
+  href: Set-CsTrustedApplicationPool.yml
+- text: Get-CsTrustedApplicationPool
+  href: Get-CsTrustedApplicationPool.yml
+syntaxes:
+- >-
+  Remove-CsTrustedApplicationPool [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Remove-CsTrustedApplicationPool -Identity TrustPool.litwareinc.com
+  description: |-
+    This example removes the pool with the FQDN TrustPool.litwareinc.com.
+    We use the Identity parameter to specify the FQDN of the pool we want to remove.
+    Because identities are unique, this command will remove, at most, one pool.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Get-CsTrustedApplicationPool | Where-Object {$_.PoolFqdn -match "trust*"} | Remove-CsTrustedApplicationPool
+  description: |-
+    This example removes all trusted pools where the FQDN of the pool begins with the string "trust".
+    The first part of the command is a call to the `Get-CsTrustedApplicationPool` cmdlet, which retrieves a collection of all trusted application pools in your Skype for Business Server infrastructure.
+    This collection is piped to the `Where-Object` cmdlet.
+    The `Where-Object` cmdlet checks each item in the collection to see whether the PoolFqdn matches the wildcard string trust*.
+    This will result in a collection of all trusted application pools with a PoolFqdn that begins with the string trust followed by any character or characters.
+    Finally, this collection is piped to the `Remove-CsTrustedApplicationPool` cmdlet, which removes every item in the collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The fully qualified domain name (FQDN) or service ID of the pool you want to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsTrustedApplicationPool
+name: Remove-CsTrustedApplicationPool
+description: |-
+  It is recommended that the computers that are running trusted applications within a Skype for Business Server deployment be added to a separate pool that is only for trusted applications.
+  However, you can add trusted application computers to an existing pool that is also used for other purposes.
+  This cmdlet removes an existing trusted application pool.
+  However, you cannot remove a trusted application pool that does not have a Registrar value.
+  If the trusted application pool has not been assigned a Registrar, you must add a Registrar value with the `Set-CsTrustedApplicationPool` cmdlet and then remove the pool.
+
+  Keep in mind that removing the pool also removes all computers, applications and application endpoints associated with that pool.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-cstrustedapplicationpool
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsTrustedApplicationPool
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

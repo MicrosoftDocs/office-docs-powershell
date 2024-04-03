@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Get-SafeAttachmentPolicy cmdlet to view safe attachment policies in your cloud-based organization.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-SafeAttachmentPolicy [[-Identity] <SafeAttachmentPolicyIdParameter>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SafeAttachmentPolicy
+  description: |-
+    This example shows a summary list of all safe attachment policies.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-SafeAttachmentPolicy -Identity Default | Format-List
+  description: |-
+    This example shows detailed information about the safe attachment policy named Default.
+  summary: ""
+parameters:
+- type: <xref href="SafeAttachmentPolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the safe attachment policy that you want to view.
+
+    You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+uid: ExchangePowerShell.Get-SafeAttachmentPolicy
+name: Get-SafeAttachmentPolicy
+description: |-
+  Safe Attachments is a feature in Microsoft Defender for Office 365 that opens email attachments in a special hypervisor environment to detect malicious activity. For more information, see [Safe Attachments in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/safe-attachments-about).
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-safeattachmentpolicy
+  applicable: Exchange Online
+  title: Get-SafeAttachmentPolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

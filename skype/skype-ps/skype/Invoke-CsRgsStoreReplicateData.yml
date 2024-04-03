@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Replicate existing RGS data present on the specified pool to the backup tables so that data can be picked up by RGSBackupService.
+module: SkypeForBusiness
+inputs:
+- name: <xref href="None. The Invoke-CsRGSStoreReplicateData cmdlet does not accept pipelined data." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Invoke-CsRGSStoreReplicateData -PoolFqdn <Fqdn> [-Force] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Invoke-CsRGSStoreReplicateData -PoolFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    The command shown in Example 1 replicates the RGS data for the pool atl-cs-001.litwareinc.com to the back up table.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2019CU1
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: PoolFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name of the pool whose data will be replicated.
+    For example:
+    `-PoolFqdn "atl-cs-001.litwareinc.com"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2019CU1
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Invoke-CsRGSStoreReplicateData
+name: Invoke-CsRGSStoreReplicateData
+description: |-
+  The Invoke-CsRGSStoreReplicateData cmdlet enables administrators to replicate existing RGS data(RGS entities created before CU1 installation) present on the specified pool to the backup tables so that data can be picked by backupservice. Backup service will sync RGS data to the paired pool if RGSBackupSerice in enabled.
+  Skype for Business Server Control Panel: The functions carried out by the Invoke- CsRGSStoreReplicateData cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/invoke-csrgsstorereplicatedata
+  applicable: Skype for Business Server 2019
+  title: Invoke-CsRGSStoreReplicateData
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

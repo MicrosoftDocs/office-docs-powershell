@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new SIP domain for use in your organization.
+  SIP domains are domains authorized to send and receive SIP traffic, and are used when assigning SIP addresses to users.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The New-CsSipDomain cmdlet does not accept pipelined data.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The New-CsSipDomain cmdlet creates new instances of the Microsoft.Rtc.Management.Xds.SipDomain object.
+links:
+- text: Get-CsSipDomain
+  href: Get-CsSipDomain.yml
+- text: Remove-CsSipDomain
+  href: Remove-CsSipDomain.yml
+- text: Set-CsSipDomain
+  href: Set-CsSipDomain.yml
+syntaxes:
+- >-
+  New-CsSipDomain [-Identity] <XdsGlobalRelativeIdentity> [-IsDefault <Boolean>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    New-CsSipDomain -Identity fabrikam.com
+  description: |-
+    The command shown in Example 1 creates a new SIP domain, one that has the Identity fabrikam.com.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    New-CsSipDomain -Identity fabrikam.com -IsDefault $True
+  description: |-
+    Example 2 creates a new SIP domain named fabrikam.com and makes this new domain the default SIP domain.
+    By making fabrikam.com the default domain, this command also "demotes" the domain that previously served as the default SIP domain.
+    That's because you can have only one default SIP domain.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Fully qualified domain name (FQDN) for the new SIP domain.
+    For example:
+
+    `-Identity fabrikam.com`
+
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsDefault
+  description: |+
+    Indicates whether the domain is the default SIP domain, the domain used by Skype for Business Server any time a domain name is not explicitly stated.
+    If set to True, the new domain will also become the new default domain
+
+    The default value for IsDefault is False.
+    If you do not want to make the new domain the default domain you can simply leave out the parameter.
+
+    If you change the default SIP domain you will need to restart the RTCCAA and RTCCAS services.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.New-CsSipDomain
+name: New-CsSipDomain
+description: |-
+  In order to configure SIP addresses for your users (and thus enable them to use SIP-related software such as Skype for Business), you need two pieces of information: a user ID (for example, Ken.Myer) and a SIP domain (for example, litwareinc.com).
+  The SIP domain used to construct a SIP address must be a domain, located within your Active Directory forest, that is authorized to send and receive SIP traffic.
+  For example, suppose you have domains named litwareinc.com, fabrikam.com, and contoso.com, but only litwareinc.com has been identified as being a SIP domain.
+  In that case, you cannot use a SIP address like sip:Ken.Myer@fabrikam.com or sip:Ken.Myer@contoso.com, at least not until fabrikam.com and contoso.com have been configured as valid SIP domains.
+  That is something you can do by running the New-CsSipDomain cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-cssipdomain
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: New-CsSipDomain
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

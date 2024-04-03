@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Remove-ExoSecOpsOverrideRule cmdlet to remove SecOps mailbox override rules to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Remove-ExoSecOpsOverrideRule [-Identity] <ComplianceRuleIdParameter>
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-ExoSecOpsOverrideRule| Remove-ExoSecOpsOverrideRule
+  description: |-
+    This example removes any SecOps mailbox override rules.
+  summary: ""
+- title: Example 2
+  code: |-
+    Remove-ExoSecOpsOverrideRule -Identity "_Exe:SecOpsOverrid:312c23cf-0377-4162-b93d-6548a9977efb"
+  description: |-
+    This example removes the specified SecOps mailbox override rule.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="ComplianceRuleIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the SecOps override rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
+
+    - Name
+    - Id
+    - Distinguished name (DN)
+    - GUID
+
+    Use the Get-ExoSecOpsMailboxRule cmdlet to find these values. The name of the rule uses the following syntax: `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977efb).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+- Exchange Online Protection
+uid: ExchangePowerShell.Remove-ExoSecOpsOverrideRule
+name: Remove-ExoSecOpsOverrideRule
+description: |-
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/remove-exosecopsoverriderule
+  applicable: Exchange Online, Exchange Online Protection
+  title: Remove-ExoSecOpsOverrideRule
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

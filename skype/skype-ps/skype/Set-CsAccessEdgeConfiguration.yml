@@ -1,0 +1,589 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the property values of an existing collection of Access Edge configuration settings for computers running the Access Edge service.
+  The Access Edge service running on these computers (also known as Edge servers) provides a way for users outside your internal network to communicate with users inside that internal network.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Set-CsAccessEdgeConfiguration` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsAccessEdgeConfiguration` cmdlet does not return any objects or values.
+links:
+- text: Get-CsAccessEdgeConfiguration
+  href: Get-CsAccessEdgeConfiguration.yml
+syntaxes:
+- >-
+  Set-CsAccessEdgeConfiguration [[-Identity] <XdsIdentity>] [-AllowAnonymousUsers <Boolean>]
+
+   [-AllowFederatedUsers <Boolean>] [-AllowOutsideUsers <Boolean>] [-EnableArchivingDisclaimer <Boolean>]
+
+   [-KeepCrlsUpToDateForPeers <Boolean>] [-MarkSourceVerifiableOnOutgoingMessages <Boolean>]
+
+   [-OutgoingTlsCountForFederatedPartners <UInt32>] [-Force] [-WhatIf] [-Confirm]
+
+   [-CertificatesDeletedPercentage <UInt32>] [-DiscoveredPartnerReportPeriodMinutes <UInt32>]
+
+   [-DiscoveredPartnerStandardRate <UInt32>] [-EnableDiscoveredPartnerContactsLimit <Boolean>]
+
+   [-EnableUserReplicator <Boolean>] [-MaxAcceptedCertificatesStored <UInt32>]
+
+   [-MaxContactsPerDiscoveredPartner <UInt32>] [-MaxRejectedCertificatesStored <UInt32>]
+
+   [-DnsSrvCacheRecordCount <UInt32>] [-SkypeSearchUrl <String>] [<CommonParameters>]
+- Set-CsAccessEdgeConfiguration [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsAccessEdgeConfiguration [-AllowAnonymousUsers <Boolean>] [-AllowFederatedUsers <Boolean>]
+
+   [-AllowOutsideUsers <Boolean>] [-DefaultRouteFqdn <String>] [-EnableArchivingDisclaimer <Boolean>]
+
+   [-IsPublicProvider <Boolean>] [-KeepCrlsUpToDateForPeers <Boolean>]
+
+   [-MarkSourceVerifiableOnOutgoingMessages <Boolean>] [-OutgoingTlsCountForFederatedPartners <UInt32>]
+
+   [-VerificationLevel <VerificationLevelType>] [-Force] [-WhatIf] [-Confirm] [-UseDefaultRouting]
+
+   [-CertificatesDeletedPercentage <UInt32>] [-DiscoveredPartnerReportPeriodMinutes <UInt32>]
+
+   [-DiscoveredPartnerStandardRate <UInt32>] [-EnableDiscoveredPartnerContactsLimit <Boolean>]
+
+   [-EnableUserReplicator <Boolean>] [-MaxAcceptedCertificatesStored <UInt32>]
+
+   [-MaxContactsPerDiscoveredPartner <UInt32>] [-MaxRejectedCertificatesStored <UInt32>]
+
+   [-DnsSrvCacheRecordCount <UInt32>] [-SkypeSearchUrl <String>] [<CommonParameters>]
+- >-
+  Set-CsAccessEdgeConfiguration [-AllowAnonymousUsers <Boolean>] [-AllowFederatedUsers <Boolean>]
+
+   [-AllowOutsideUsers <Boolean>] [-EnableArchivingDisclaimer <Boolean>] [-EnablePartnerDiscovery <Boolean>]
+
+   [-KeepCrlsUpToDateForPeers <Boolean>] [-MarkSourceVerifiableOnOutgoingMessages <Boolean>]
+
+   [-OutgoingTlsCountForFederatedPartners <UInt32>] [-UseDnsSrvRouting] [-Force] [-WhatIf] [-Confirm]
+
+   [-BeClearingHouse <Boolean>] [-CertificatesDeletedPercentage <UInt32>]
+
+   [-DiscoveredPartnerReportPeriodMinutes <UInt32>] [-DiscoveredPartnerStandardRate <UInt32>]
+
+   [-DiscoveredPartnerVerificationLevel <VerificationLevelType>]
+
+   [-EnableDiscoveredPartnerContactsLimit <Boolean>] [-EnableUserReplicator <Boolean>]
+
+   [-MaxAcceptedCertificatesStored <UInt32>] [-MaxContactsPerDiscoveredPartner <UInt32>]
+
+   [-MaxRejectedCertificatesStored <UInt32>] [-DnsSrvCacheRecordCount <UInt32>] [-SkypeSearchUrl <String>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Set-CsAccessEdgeConfiguration -AllowAnonymousUsers $True -VerificationLevel "UseSourceVerification"
+  description: |-
+    In Example 1, two properties of the Access Edge configuration settings are modified: the AllowAnonymousUsers property is set to True and the VerificationLevel property is set to UseSourceVerification.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Set-CsAccessEdgeConfiguration -UseDefaultRouting -DefaultRouteFqdn "atl-edge-001.litwareinc.com"
+  description: |-
+    The command shown in Example 2 changes the routing method for the Edge server to default routing.
+    In order to do this the command must include both the UseDefaultRouting parameter and the DefaultRouteFqdn parameter, along with a parameter value that specifies the fully qualified domain name of the Edge server.
+  summary: ""
+- title: '-------------------------- Example 3 ------------------------'
+  code: |-
+    Set-CsAccessEdgeConfiguration -UseDnsSrvRouting -EnablePartnerDiscovery $True
+  description: |-
+    Example 3 changes the routing method for the Edge server to DNS server routing.
+    This requires the use of two parameters: UseDnsSrvRouting (with no parameter value) and EnablePartnerDiscovery (with the parameter value $True).
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAnonymousUsers
+  description: |+
+    Indicates whether or not anonymous users (that is, unauthenticated users) are allowed to cross the firewall and join meetings and conferences.
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowFederatedUsers
+  description: |+
+    Indicates whether internal users are allowed to communicate with users from federated domains.
+    This property also determines whether internal users can communicate with users in a split domain scenario.
+    (In a split domain, some of your users have accounts hosted on-premises, while others have accounts hosted off-premises.) The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowOutsideUsers
+  description: |+
+    Indicates whether users can access Skype for Business Server across the Internet.
+    This includes both anonymous users and remote users who are trying to log on to the system.
+    The default value is True.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: BeClearingHouse
+  description: |+
+    Indicates whether your Edge servers are directly connected to other organizations.
+    The default value is False.
+    This parameter should not be changed unless you are instructed to do so by Microsoft support personnel.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: CertificatesDeletedPercentage
+  description: |+
+    The default value is 20.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DefaultRouteFqdn
+  description: |+
+    Fully qualified domain name (FQDN) of the server used for federation requests.
+    This parameter is required if you use default routing.
+
+    Note that you must delete all your hosting providers and all your public providers before you can assign a new default route.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DiscoveredPartnerReportPeriodMinutes
+  description: |+
+    The default value is 60.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DiscoveredPartnerStandardRate
+  description: |+
+    The default value is 20.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="VerificationLevelType" data-throw-if-not-resolved="False" />
+  name: DiscoveredPartnerVerificationLevel
+  description: |+
+    Sets the verification level for messages sent to and from the discovered partner.
+    Allowed values are:
+
+    * AlwaysVerifiable
+    * AlwaysUnverifiable
+    * UseSourceVerification
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DnsSrvCacheRecordCount
+  description: |+
+    Maximum number of DNS SRV records that can be maintained in the cache.
+    SRV records are used to specify service locations and port numbers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableArchivingDisclaimer
+  description: |+
+    If set to True, Edge Servers send an archiving notification header to federated and clearinghouse partners.
+    This notification (which informs people that instant messaging (IM) conversations might be archived) can be displayed in the conversation window of a federated or clearinghouse user.
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDiscoveredPartnerContactsLimit
+  description: |+
+    When set to True (the default value), enables user enumeration protection for Discovered Partner federated peers.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePartnerDiscovery
+  description: |+
+    If True, Skype for Business Server will use DNS records to try and discover partner domains not listed in the AllowedDomains list.
+    If False, Skype for Business Server will only federate with domains found on the AllowedDomains list.
+    This parameter is required if you use DNS service routing.
+    The default value is False.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableUserReplicator
+  description: |+
+    The default value is False ($False).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier of the Access Edge configuration settings to be returned.
+    Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling the `Set-CsAccessEdgeConfiguration` cmdlet.
+    However, if you prefer, you can use the following syntax to modify the global settings: `-Identity global`.
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsPublicProvider
+  description: |+
+    Must be set to True if the default route requires a public instant messaging license.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: KeepCrlsUpToDateForPeers
+  description: |+
+    Determines whether or not Edge servers periodically check the certificate revocation lists (CRLs) for federated domain certificates.
+    The default value is True.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MarkSourceVerifiableOnOutgoingMessages
+  description: |+
+    If True, outgoing messages are marked as verifiable; this enables federated domains to determine the verification level for each message.
+    If False, outgoing messages are all marked as unverifiable.
+    The default value is True.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxAcceptedCertificatesStored
+  description: |+
+    Maximum number of allowed certificates cached by the Edge Server.
+    The default value is 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxContactsPerDiscoveredPartner
+  description: |+
+    Maximum number of contacts allowed per discovered partner.
+    The default value is 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxRejectedCertificatesStored
+  description: |+
+    Maximum number of rejected certificates cached by the Edge Server.
+    The default value is 500.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OutgoingTlsCountForFederatedPartners
+  description: |+
+    Specifies the maximum number of Transport Layer Security (TLS) connections that can be used for each federated partner.
+    The minimum number of TLS connections is 1, and the maximum number is 4.
+    By default, OutgoingTlsCountForFederatedPartners is set to 4.
+    This parameter should not be changed unless you are instructed to do so by Microsoft support personnel.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SkypeSearchUrl
+  description: |+
+    URL for the Skype Graph Search service.
+    This service enables Skype for Business to search for Skype contacts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseDefaultRouting
+  description: |+
+    Indicates that administrators must specify the fully qualified domain name of the server used to send and receive federation requests.
+    If you include the UseDefaultRouting parameter then you must also include the DefaultRouteFqdn parameter.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseDnsSrvRouting
+  description: |+
+    Indicates that Edge servers should rely on DNS SRV records when sending and receiving federation requests.
+    This is the default routing method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="VerificationLevelType" data-throw-if-not-resolved="False" />
+  name: VerificationLevel
+  description: |+
+    If you are using default routing, the VerificationLevel property is used to monitor and assess the verification level of incoming messages.
+    Valid values are:
+
+    AlwaysVerifiable: All requests received on the default route are marked as verified.
+    If a verification header is not present it will automatically be added to the message.
+
+    AlwaysUnverifiable: Messages are passed only if the addressee (the user the message is intended for) has configured an Allow ACE (access control entry) for the person who sent the message.
+
+    UseSourceVerification: Message verification is based on the verification level included with the message.
+    If no verification header is present then the message will be marked as unverified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsAccessEdgeConfiguration
+name: Set-CsAccessEdgeConfiguration
+description: |-
+  Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Skype for Business Server to people who are not logged on to your internal network.
+  For example, if you have remote users, authenticated users who log on to Skype for Business Server over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
+  Likewise, Edge Servers are required if you want to establish federation with another organization, or if you want to give your users the right to communicate with people who have accounts with a public instant messaging service such as Yahoo!, AOL, or MSN.
+  Access Edge servers are located on the perimeter network and are used to make and validate SIP connections between users inside and users outside your internal network.
+
+  In Skype for Business Server, the Access Edge servers are managed using a single, global collection of configuration settings; the `Set-CsAccessEdgeConfiguration` cmdlet enables you to modify these global settings.
+  Note that the properties that can be modified depend on the routing type you choose for your Edge Servers.
+  For example, if you choose to use Domain Name System (DNS) service routing, you will see and be able to change the property values BeClearinghouse and EnablePartnerDiscovery.
+  If you use default routing, those two property values will not be available.
+  Instead, you will see and be able to change the property values VerificationLevel and IsPublicProvider.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csaccessedgeconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsAccessEdgeConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

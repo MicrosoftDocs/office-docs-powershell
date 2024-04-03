@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsVideoTrunk to list properties about the video trunks in your organization.
+  Video trunks are Session Initiation Protocol (SIP) trunks between the Video Interop Server and a Video Gateway that are used to setup video calls between 3rd party video teleconferencing systems (VTCs) connected to the Video Gateway and Skype conferences or Skype endpoints.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Get-CsVideoTrunk cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsVideoTrunk cmdlet returns instances of the Microsoft.Rtc.Management.Xds.DisplayVideoGateway#Decorated object.
+links:
+- text: Set-CsVideoGateway
+  href: Set-CsVideoGateway.yml
+syntaxes:
+- Get-CsVideoTrunk [-Filter <String>] [-PoolFqdn <String>] [<CommonParameters>]
+- Get-CsVideoTrunk [[-Identity] <XdsGlobalRelativeIdentity>] [-PoolFqdn <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsVideoTrunk
+  description: |-
+    This example returns information about all the video trunks configured for use in the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsVideoTrunk -Identity "VideoTrunk:192.168.0.240"
+  description: |-
+    This example returns information for a single video trunk with the identity "VideoTrunk:192.168.0.240".
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsVideoTrunk -Filter "VideoTrunk:192.168*"
+  description: |-
+    This example uses the Filter parameter to return all the video trunks located on the IP subnet 192.168.
+    The filter value "VideoTrunk:192.168*" limits the returned data to video trunks that having an Identity that begins with the string value "192.168".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters in order to return a video trunk (or a collection of video trunks).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the video trunk to be returned.
+    For example:
+
+    -Identity "VideoTrunk:192.168.0.240"
+
+    You cannot use wildcards when specifying an Identity.
+    Use the Filter parameter instead.
+
+    If this parameter is not specified, then all the video trunks in the organization are returned.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PoolFqdn
+  description: |+
+    Fully qualified domain name of the trunk as defined in the topology.
+    For example:
+
+    -PoolFqdn "atl-trunk-001.litwareinc.com"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsVideoTrunk
+name: Get-CsVideoTrunk
+description: |-
+  Video trunks are SIP trunks between the Video Interop Server and a Video Gateway that are used to setup video calls between 3rd party video teleconferencing systems (VTCs) connected to the Video Gateway and Skype conferences or Skype endpoints.
+
+  Trunk information is read-only.
+  You cannot create, delete or modify trunks by using Windows PowerShell.
+  Those operations can only be carried out by using Skype for Business Server Topology Builder.
+
+  To return a list of all the role-based access control (RBAC) roles that can run this cmdlet (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt.
+
+  `Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "Get-CsVideoTrunk"}`
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csvideotrunk
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsVideoTrunk
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

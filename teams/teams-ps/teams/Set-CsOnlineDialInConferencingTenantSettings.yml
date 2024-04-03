@@ -1,0 +1,380 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Set-CsOnlineDialInConferencingTenantSettings` to modify the tenant level settings of dial-in conferencing.
+  Dial-in conferencing tenant settings control the conference experience of users and manage some conferencing administrative functions.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+syntaxes:
+- >-
+  Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitNotifications <Boolean>]
+
+   [-EntryExitAnnouncementsType <EntryExitAnnouncementsType>] [-EnableNameRecording <Boolean>]
+
+   [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-PinLength <UInt32>]
+
+   [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
+
+   [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
+
+   [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
+
+   [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
+
+   [-EnableDialOutJoinConfirmation <Boolean>] [[-Identity] <XdsIdentity>] [-MaskPstnNumbersType <String>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-CsOnlineDialInConferencingTenantSettings [-Tenant <Guid>] [-EnableEntryExitNotifications <Boolean>]
+
+   [-EntryExitAnnouncementsType <EntryExitAnnouncementsType>] [-EnableNameRecording <Boolean>]
+
+   [-IncludeTollFreeNumberInMeetingInvites <Boolean>] [-PinLength <UInt32>]
+
+   [-AllowPSTNOnlyMeetingsByDefault <Boolean>] [-AutomaticallySendEmailsToUsers <Boolean>]
+
+   [-SendEmailFromOverride <Boolean>] [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>]
+
+   [-AutomaticallyReplaceAcpProvider <Boolean>] [-UseUniqueConferenceIds <Boolean>]
+
+   [-AutomaticallyMigrateUserMeetings <Boolean>] [-MigrateServiceNumbersOnCrossForestMove <Boolean>]
+
+   [-EnableDialOutJoinConfirmation <Boolean>] [-Instance <PSObject>] [-MaskPstnNumbersType <String>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsOnlineDialInConferencingTenantSettings -EnableEntryExitNotifications $True -EnableNameRecording $True -PinLength 7
+  description: |-
+    This example sets the tenant's conferencing settings to enable entry and exit notifications supported by name recording.
+    The PIN length is set to 7.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Set-CsOnlineDialInConferencingTenantSettings -SendEmailFromOverride $true -SendEmailFromAddress admin@contoso.com -SendEmailFromDisplayName "Conferencing Administrator"
+  description: |-
+    This example defines the contact information to be used in dial-in conferencing email notifications and enables the default address to be overridden.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowPSTNOnlyMeetingsByDefault
+  description: |+
+    Specifies the default value that gets assigned to the "AllowPSTNOnlyMeetings" setting of users when they are enabled for dial-in conferencing, or when a user's dial-in conferencing provider is set to Microsoft.
+    If set to $true, the "AllowPSTNOnlyMeetings" setting of the user will also be set to true.
+    If $false, the user setting will be false.
+    The default value for AllowPSTNOnlyMeetingsByDefault is $false.
+
+    When AllowPSTNOnlyMeetingsByDefault is changed, the value of the "AllowPSTNOnlyMeetings" setting of currently enabled users doesn't change.
+    The new default value will only be applied to users that are subsequently enabled for dial-in conferencing, or whose provider is changed to Microsoft.
+
+    The "AllowPSTNOnlyMeetings" setting of a user defines if unauthenticated callers can start a meeting if they are the first person to join.
+    An unauthenticated caller is defined as a participant who joins a meeting over the phone and doesn't provide the organizer PIN when joining the meeting.
+
+    For more information on the "AllowPSTNOnlyMeetings" user setting, see `Set-CsOnlineDialInConferencingUser`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutomaticallyMigrateUserMeetings
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutomaticallyReplaceAcpProvider
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutomaticallySendEmailsToUsers
+  description: |+
+    Specifies whether advisory emails will be sent to users when the events listed below occur.
+    Setting the parameter to $true enables the emails to be sent, $false disables the emails.
+    The default is $true.
+
+    User is enabled or disabled for dial-in conferencing.
+
+    The dial-in conferencing provider is changed either to Microsoft, or from Microsoft to another provider, or none.
+
+    The dial-in conferencing PIN is reset by the tenant administrator.
+
+    Changes to either the user's conference ID, or the user's default dial-in conference number.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableEntryExitNotifications
+  description: |+
+    Specifies if, by default, announcements are made as users enter and exit a conference call.
+    Set to $true to enable notifications, $false to disable notifications.
+    The default is $true.
+
+    This setting can be overridden on a meeting by meeting basis when a user joins a meeting via a Skype for Business client and modifies the Announce when people enter or leave setting on the Skype Meeting Options menu of a meeting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableNameRecording
+  description: |+
+    Specifies whether the name of a user is recorded on entry to the conference.
+    This recording is used during entry and exit notifications.
+    Set to $true to enable name recording, set to $false to bypass name recording.
+    The default is $true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="EntryExitAnnouncementsType" data-throw-if-not-resolved="False" />
+  name: EntryExitAnnouncementsType
+  description: |+
+    PARAMVALUE: UseNames | ToneOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludeTollFreeNumberInMeetingInvites
+  description: |+
+    This parameter is obsolete and not functional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MaskPstnNumbersType
+  description: |+
+    This parameter allows tenant administrators to configure masking of PSTN participant phone numbers in the roster view for Microsoft Teams meetings enabled for Audio Conferencing, scheduled within the organization.
+
+    Possible values are:
+    - MaskedForExternalUsers (masked to external users)
+    - MaskedForAllUsers (masked for everyone)
+    - NoMasking (visible to everyone)
+
+  defaultValue: MaskedForExternalUsers
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: MigrateServiceNumbersOnCrossForestMove
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PinLength
+  description: |+
+    Specifies the number of digits in the automatically generated PINs.
+    Organizers can enter their PIN to start a meeting they scheduled if they join via phone and are the first person to join.
+    The minimum value is 4, the maximum is 12, and the default is 5.
+
+    A user's PIN will only authenticate them as leaders for a meeting they scheduled.
+    The PIN of a user that did not schedule the meeting will not enable that user to lead the meeting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailFromAddress
+  description: |+
+    Specifies the email address to use in the "From" contact information on emails that are sent to users to notify them of their dial-in conferencing settings, or when their settings change.
+    The email address needs to be in the form \<UserAlias\>@\<Domain\>.
+    For example, "KenMyer@Contoso.com" or "Admin@Contoso.com".
+
+    The SendEmailFromAddress value is used only if the SendEmailFromDisplayName setting is specified, and the SendEmailFromOverride setting is $true.
+
+    Note: The parameter has been deprecated and may be removed in future versions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SendEmailFromDisplayName
+  description: |+
+    Specifies the display name to use in the "From" contact information on emails that are sent to users to notify them of their dial-in conferencing settings, or when their settings change.
+
+    The SendEmailFromDisplayName value is used only if the SendEmailFromDisplayName setting is specified, and the SendEmailFromOverride setting is $true.
+
+    Note: The parameter has been deprecated and may be removed in future versions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SendEmailFromOverride
+  description: |+
+    Specifies if the contact information on dial-in conferencing notifications will be the default generated by Office 365, or administrator defined values.
+    Setting SendEmailFromOverride to $true enables the system to use the SendEmailFromAddress and SendEmailFromDisplayName parameter inputs as the "From" contact information.
+    Setting this parameter to $false will cause email notifications to be sent with the system generated default.
+    The default is $false.
+
+    SendEmailFromOverride can't be $true if SendEmailFromAddress and SendEmailFromDisplayName aren't specified.
+
+    If you want to change the email address information, you need to make sure that your inbound email policies allow for emails that come from the address specified by the SendEmailFromAddress parameter.
+
+    Note: The parameter has been deprecated and may be removed in future versions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseUniqueConferenceIds
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsOnlineDialInConferencingTenantSettings
+name: Set-CsOnlineDialInConferencingTenantSettings
+description: |-
+  Dial-in conferencing tenant settings control what functions are available during a conference call.
+  For example, whether or not entries and exits from the call are announced.
+  The settings also manage some of the administrative functions, such as when users get notification of administrative actions, like a PIN change.
+  By contrast, the higher level dial-in conferencing configuration only maintains a flag for whether dial-in conferencing is enabled for your organization.
+  For more information, see `Get-CsOnlineDialinConferencingTenantConfiguration`.
+
+  There is always a single instance of the dial-in conferencing settings per tenant.
+  You can modify the settings using `Set-CsOnlineDialInConferencingTenantSettings` and revert those settings to their defaults by using `Remove-CsOnlineDialInConferencingTenantSettings`.
+
+  The following parameters are not applicable to Teams: EnableDialOutJoinConfirmation, IncludeTollFreeNumberInMeetingInvites, MigrateServiceNumbersOnCrossForestMove, and UseUniqueConferenceIds
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingtenantsettings
+  applicable: Microsoft Teams
+  title: Set-CsOnlineDialInConferencingTenantSettings
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

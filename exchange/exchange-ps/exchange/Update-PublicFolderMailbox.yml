@@ -1,0 +1,276 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
+  Use the Update-PublicFolderMailbox cmdlet to update the hierarchy for public folders.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Update-PublicFolderMailbox [-Identity] <MailboxIdParameter>
+
+   [-ForceOnlineSync]
+
+   [-FullSync]
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-InvokeSynchronizer]
+
+   [-ReconcileFolders]
+
+   [-SuppressStatus]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> -FolderId <PublicFolderIdParameter> -InvokeSynchronizer
+
+   [-CreateAssociatedDumpster]
+
+   [-Confirm]
+
+   [-DomainController <Fqdn>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Update-PublicFolderMailbox -Identity PF_marketing
+  description: |-
+    This example updates the public folder hierarchy on the public folder mailbox PF\_marketing.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-Mailbox -PublicFolder | Update-PublicFolderMailbox
+  description: |-
+    This example updates all public folder mailboxes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateAssociatedDumpster
+  description: |+
+    The CreateAssociatedDumpster switch specifies whether to create the associated dumpster before synchronizing the folder. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PublicFolderIdParameter" data-throw-if-not-resolved="False" />
+  name: FolderId
+  isRequired: true
+  description: |+
+    The FolderId parameter specifies the GUID or name of the public folder that you want to synchronize. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceOnlineSync
+  description: |+
+    The ForceOnlineSync switch specifies whether to force the secondary public folder mailbox to synchronize with the primary public folder mailbox. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FullSync
+  description: |+
+    The FullSync switch specifies that you want to perform a full synchronization of the public folder mailbox. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="MailboxIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the public folder mailbox that you want to update. You can use any value that uniquely identifies the mailbox. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Domain\\Username
+    - Email address
+    - GUID
+    - LegacyExchangeDN
+    - SamAccountName
+    - User ID or user principal name (UPN)
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InvokeSynchronizer
+  isRequired: true
+  description: |+
+    The InvokeSynchronizer switch can only be used on secondary hierarchy public folder mailboxes and triggers hierarchy synchronization from the primary public folder mailbox to the specified secondary public folder mailbox. You don't need to specify a value with this switch.
+
+    This switch should only be used for troubleshooting purposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReconcileFolders
+  description: |+
+    The ReconcileFolders switch specifies whether to look closely for differences in the folder hierarchy between the primary public folder mailbox and the secondary public folder mailbox. Folders that exist in the primary public folder mailbox and not in the secondary will be recreated. You don't need to specify a value with this switch.
+
+    In on-premises Exchange, folders that exist in the secondary public folder mailbox and not in the primary will be deleted.
+
+    In Exchange Online, folders that exist in the secondary public folder mailbox and not in the primary will be moved to \NON_IPM_SUBTREE\LOST_AND_FOUND. See [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-public-folder-8220-lost-and-found-8221-functionality/ba-p/604043) for more details about LOST_AND_FOUND functionality.
+
+    In both the scenarios, public folders that were deleted or moved to LOST_AND_FOUND can be restored using Set-PublicFolder command.
+
+    This example restores the public folder named "Marketing" from LOST_AND_FOUND to the folder named \South
+
+    `Get-PublicFolder \NON_IPM_SUBTREE\LOST_AND_FOUND\5773ba6a-9926-4d64-97db-63a2bdd94a5b\"Pesky Pole" | Set-PublicFolder -Path "\South"`
+
+    This example restores the public folder named "Documents" from LOST_AND_FOUND to the folder named \Engineering
+
+    `Set-PublicFolder -Identity \NON_IPM_SUBTREE\DUMPSTER_ROOT\DUMPSTER_EXTEND\RESERVED_1\RESERVED_1\9f32c468-4bc2-42aa-b979-16a057394b2f\Documents -Path \Engineering`
+
+    **Note**: You should use the ReconcileFolders switch only for repair or troubleshooting purposes to look for differences in the public folder hierarchy that aren't detected by a regular synchronization. These undetected differences may occur in database failover or disaster recovery scenarios. You must use this switch with the InvokeSynchronizer switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressStatus
+  description: |+
+    The SuppressStatus switch specifies that the output of this cmdlet is suppressed and that the command will run asynchronously in the background from the Exchange Management Shell. You don't need to specify a value with this switch.
+
+    You can only use this switch with the InvokeSynchronizer switch.
+
+    If you don't use this switch, the output will display status messages every 3 seconds for up to one minute. Until the minute passes, you can't use the PowerShell Window for other commands.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+- Exchange Online
+uid: ExchangePowerShell.Update-PublicFolderMailbox
+name: Update-PublicFolderMailbox
+description: |-
+  This cmdlet only needs to be used if you want to manually invoke the hierarchy synchronizer and the mailbox assistant. Both these are invoked at least once every 24 hours for each public folder mailbox in the organization. The hierarchy synchronizer is invoked every 15 minutes if any users are logged on to a secondary mailbox through Outlook or a Exchange Web Services client.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.WebClient-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/update-publicfoldermailbox
+  applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+  title: Update-PublicFolderMailbox
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

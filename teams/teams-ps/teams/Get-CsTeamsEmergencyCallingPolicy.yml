@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsEmergencyCallingPolicy
+  href: New-CsTeamsEmergencyCallingPolicy.yml
+- text: Grant-CsTeamsEmergencyCallingPolicy
+  href: Grant-CsTeamsEmergencyCallingPolicy.yml
+- text: Remove-CsTeamsEmergencyCallingPolicy
+  href: Remove-CsTeamsEmergencyCallingPolicy.yml
+- text: Set-CsTeamsEmergencyCallingPolicy
+  href: Set-CsTeamsEmergencyCallingPolicy.yml
+syntaxes:
+- Get-CsTeamsEmergencyCallingPolicy [[-Identity] <string>] [<CommonParameters>]
+- Get-CsTeamsEmergencyCallingPolicy [-Filter <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsTeamsEmergencyCallingPolicy
+  description: |-
+    Retrieves all emergency calling policies that are available in your scope.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsTeamsEmergencyCallingPolicy -Identity TestECP
+  description: |-
+    Retrieves an emergency calling policy with the identity TestECP
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-CsTeamsEmergencyCallingPolicy -Filter Test*
+  description: |-
+    Retrieves all emergency calling policies with Identity starting with Test.
+  summary: ""
+- title: Example 4
+  code: |-
+    (Get-CsTeamsEmergencyCallingPolicy -Identity TestECP).ExtendedNotifications
+
+    EmergencyDialString       : 112
+    NotificationGroup         : alert2@contoso.com
+    NotificationDialOutNumber :
+    NotificationMode          : ConferenceUnMuted
+
+    EmergencyDialString       : 911
+    NotificationGroup         : alert3@contoso.com
+    NotificationDialOutNumber : +14255551234
+    NotificationMode          : NotificationOnly
+  description: |-
+    This example displays extended notifications set on emergency calling policy with the identity TestECP.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    The Filter parameter allows you to limit the number of results based on filters on Identity you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specify the policy that you would like to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsEmergencyCallingPolicy
+name: Get-CsTeamsEmergencyCallingPolicy
+description: |-
+  This cmdlet returns one or more emergency calling policies. Emergency calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsemergencycallingpolicy
+  applicable: Microsoft Teams
+  title: Get-CsTeamsEmergencyCallingPolicy
+  author: jenstrier
+  ms.author: serdars
+  manager: roykuntz
+  ms.reviewer: chenc
+  schema: 2.0.0

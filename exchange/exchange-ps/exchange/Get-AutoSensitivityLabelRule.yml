@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Get-AutoSensitivityLabelPolicy cmdlet to view auto-labeling policy rules in your organization.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-AutoSensitivityLabelRule [[-Identity] <ComplianceRuleIdParameter>]
+
+   [-Confirm]
+
+   [-ForceValidate]
+
+   [-IncludeExecutionRuleGuids <Boolean>]
+
+   [-IncludeExecutionRuleInformation <Boolean>]
+
+   [-Policy <PolicyIdParameter>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-AutoSensitivityLabelRule
+  description: |-
+    This example displays summary information for all autolabeling rules in the Microsoft Purview compliance portal.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceValidate
+  description: |+
+    {{ Fill ForceValidate Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="ComplianceRuleIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the auto-labeling policy rule that you want to view. You can use any value that uniquely identifies the rule. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludeExecutionRuleGuids
+  description: |+
+    The IncludeExecutionRuleGuids parameter specifies whether to include the execution rule GUID in the rule details. Valid values are:
+
+    - $true: Include the execution rule GUID in the rule details.
+    - $false: Don't include the execution rule GUID in the rule details. This is the default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludeExecutionRuleInformation
+  description: |+
+    The IncludeExecutionRuleInformation parameter specifies whether to include the execution rule information in the rule details. Valid values are:
+
+    - $true: Include the execution rule information in the rule details.
+    - $false: Don't include the execution rule information in the rule details. This is the default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Policy
+  description: |+
+    The Policy parameter filters the auto-labeling policy rule results by the associated auto-labeling policy. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-AutoSensitivityLabelRule
+name: Get-AutoSensitivityLabelRule
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-autosensitivitylabelrule
+  applicable: Security & Compliance
+  title: Get-AutoSensitivityLabelRule
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

@@ -1,0 +1,183 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables or disables one or more Skype for Business Server user databases.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    String.
+    The `Set-CsUserDatabaseState` cmdlet accepts a string value representing the Identity of the user database to be updated.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Set-CsUserDatabaseState` cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.UserStoreState object.
+links:
+- text: Get-CsUserDatabaseState
+  href: Get-CsUserDatabaseState.yml
+- text: Update-CsUserDatabase
+  href: Update-CsUserDatabase.yml
+syntaxes:
+- >-
+  Set-CsUserDatabaseState [-Identity] <String> [-Online] <Boolean> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-CsUserDatabaseState [-Online] <Boolean> -RegistrarPool <Fqdn> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Set-CsUserDatabaseState -Identity "UserDatabase:atl-sql-001.litwareinc.com" -Online $False
+  description: |-
+    The command shown in Example 1 takes the user database UserDatabase:atl-sql-001.litwareinc.com offline.
+    This is done by setting the Online property to $False.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Set-CsUserDatabaseState -RegistrarPool atl-cs-001.litwareinc.com -Online $False
+  description: |-
+    In Example 2, all the user databases on the Registrar pool `atl-cs-001.litwareinc.com` are taken offline.
+  summary: ""
+- title: '-------------------------- Example 3 ------------------------'
+  code: |-
+    Get-CsUserDatabaseState | Where-Object {$_.Online -eq $False} | ForEach-Object {Set-CsUserDatabaseState -Identity $_.Identity -Online $True}
+  description: |-
+    Example 3 locates all the user databases that are currently offline and then brings them back online.
+    To do this, the command first calls the `Get-CsUserDatabaseState` cmdlet without any parameters in order to return a collection of all the user databases in the organization.
+    This collection is then piped to the `Where-Object` cmdlet, which picks out only those databases where the Online property is equal to False.
+    The filtered collection is then piped to the `ForEach-Object` cmdlet, which takes each database in the collection and sets the Online property to True.
+    Note that the collection of offline databases must be piped to the `ForEach-Object` cmdlet rather than the `Set-CsUserDatabaseState` cmdlet.
+    That is because the latter cmdlet cannot directly accept pipelined information.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the user database whose online status is to be modified.
+    For example:
+
+    `-Identity "UserDatabase:atl-sql-001.litwareinc.com"`
+
+    You cannot use both Identity and RegistrarPool in the same command, nor can you use wildcards with either parameter.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Online
+  isRequired: true
+  description: |+
+    When set to True ($True), makes a database available online.
+    When set to False ($False), takes a database offline.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: RegistrarPool
+  isRequired: true
+  description: |+
+    Fully qualified domain name (FQDN) of the Registrar pool hosting the user databases whose online status is to be modified.
+    For example:
+
+    `-RegistrarPool atl-cs-001.litwareinc.com`
+
+    You cannot use both -Identity and -RegistrarPool in the same command, nor can you use wildcards with either parameter.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsUserDatabaseState
+name: Set-CsUserDatabaseState
+description: |-
+  Skype for Business Server employs the user database (also known as the user store) to maintain presence and routing information for Skype for Business Server users.
+  The `Set-CsUserDatabaseState` cmdlet provides a way for you change the state of one or more user databases: you can use the cmdlet to take a database offline or to bring a disabled database back online.
+
+  Note that, by default, the firewall exceptions for SQL Server Express are not enabled when you install the Standard Edition of Skype for Business Server.
+  In turn, that means that you will not be able to run the `Set-CsUserDatabaseState` cmdlet from a remote instance of Windows PowerShell.
+  That's because your command will not be able to traverse the firewall and access the SQL Server Express database.
+  You can still run the cmdlet locally (that is, on the Standard Edition server itself).
+  However, to run the `Set-CsUserDatabaseState` cmdlet remotely you will need to manually enable the firewall exceptions for SQL Server Express.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csuserdatabasestate
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsUserDatabaseState
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

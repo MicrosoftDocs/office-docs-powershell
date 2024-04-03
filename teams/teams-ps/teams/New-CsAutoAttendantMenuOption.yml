@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.OAA.Models.MenuOption" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsAutoAttendantCallableEntity
+  href: New-CsAutoAttendantCallableEntity.yml
+syntaxes:
+- New-CsAutoAttendantMenuOption -Action <DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <List>] [-CallTarget <Object>] [-Prompt <Object>] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    $menuOption = New-CsAutoAttendantMenuOption -Action TransferCallToOperator -DtmfResponse Tone0
+  description: |-
+    This example creates a menu option to call the operator when the 0 key is pressed.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    $troubleShootObjectId = (Get-CsOnlineUser troubleShoot@contoso.com).ObjectId
+    $troubleShootEntity = New-CsAutoAttendantCallableEntity -Identity $troubleShootObjectId -Type ApplicationEndpoint
+    $menuOption = New-CsAutoAttendantMenuOption -Action TransferCallToTarget -DtmfResponse Tone1 -VoiceResponses "Sales" -CallTarget $troubleShootEntity
+  description: |-
+    This example creates a menu option to transfer the call to an application endpoint when the caller speaks the word "Sales" or presses the 1 key.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    $Prompt = New-CsAutoAttendantPrompt -ActiveType TextToSpeech -TextToSpeechPrompt "Our Office is open from Monday to Friday from 9 AM to 5 PM"
+    $menuOption = New-CsAutoAttendantMenuOption -Action Announcement -DtmfResponse Tone2 -VoiceResponses "Hours" -Prompt $Prompt
+  description: |-
+    This example creates a menu option to play an announcement for the defined prompt. After playing the announcement, the **Menu Prompt** is repeated.
+  summary: ""
+parameters:
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Action
+  isRequired: true
+  description: |+
+    The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
+
+    - Announcement - plays a defined prompt then returns to the menu
+    - DisconnectCall - The call is disconnected.
+    - TransferCallToOperator - the call is transferred to the operator.
+    - TransferCallToTarget - The call is transferred to the menu option's call target.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: CallTarget
+  description: |+
+    The CallTarget parameter represents the target for call transfer after the menu option is selected.
+
+    CallTarget is required if the action of the menu option is TransferCallToTarget.
+
+    Use the New-CsAutoAttendantCallableEntity cmdlet to create new callable entities.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: DtmfResponse
+  isRequired: true
+  description: |+
+    The DtmfResponse parameter indicates the key on the telephone keypad to be pressed to activate the menu option. The DtmfResponse must be set to one of the following values:
+
+    - Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
+    - ToneStar - Corresponds to DTMF tone *.
+    - TonePound - Corresponds to DTMF tone #.
+    - Automatic - The action is executed without user response.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Rtc.Management.Hosted.OAA.Models.Prompt" data-throw-if-not-resolved="False" />
+  name: Prompt
+  description: |+
+    The **Prompt** parameter reflects the prompts to play when the menu option is activated.
+
+    You can create new prompts by using the **New-CsAutoAttendantPrompt** cmdlet.
+
+    This parameter is required if the **Action** is set to **Announcement**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: VoiceResponses
+  description: |+
+    The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the auto attendant.
+
+    Voice responses are currently limited to one voice response per menu option.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsAutoAttendantMenuOption
+name: New-CsAutoAttendantMenuOption
+description: |-
+  The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto Attendant (AA) service. The AA service uses the menu options to respond to a caller with the appropriate action.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csautoattendantmenuoption
+  applicable: Microsoft Teams
+  title: New-CsAutoAttendantMenuOption
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

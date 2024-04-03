@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.FindApplicationInstanceResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsOnlineApplicationInstance
+  href: Get-CsOnlineApplicationInstance.yml
+- text: New-CsOnlineApplicationInstance
+  href: New-CsOnlineApplicationInstance.yml
+- text: Find-CsOnlineApplicationInstance
+  href: Find-CsOnlineApplicationInstance.yml
+- text: Set-CsOnlineApplicationInstance
+  href: Set-CsOnlineApplicationInstance.yml
+syntaxes:
+- Find-CsOnlineApplicationInstance [-SearchQuery] <string> [[-MaxResults] <uint>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test"
+  description: |-
+    This example returns up to 10 application instances whose name starts with "Test".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test" -MaxResults 5
+  description: |-
+    This example returns up to 5 application instances whose name starts with "Test".
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test Auto Attendant" -ExactMatchOnly
+  description: |-
+    This example returns up to 10 application instances whose name is "Test Auto Attendant".
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Find-CsOnlineApplicationInstance -SearchQuery "Test Auto Attendant" -AssociatedOnly
+  description: |-
+    This example returns up to 10 application instances whose name is "Test Auto Attendant", and who are associated with an application configuration, like auto attendant or call queue.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AssociatedOnly
+  description: |+
+    The AssociatedOnly parameter instructs the cmdlet to return only application instances that are associated to a configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExactMatchOnly
+  description: |+
+    The ExactMatchOnly parameter instructs the cmdlet to return exact matches only. The default value is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    This switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If it isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxResults
+  description: |+
+    The MaxResults parameter identifies the maximum number of results to return. If this parameter is not provided, the default is value is 10. Max allowed value is 20.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SearchQuery
+  isRequired: true
+  description: |+
+    The SearchQuery parameter defines a query for application instances by display name, telephone number, or GUID of the application instance. This parameter accepts partial queries for display names and telephone numbers. The search is not case sensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UnAssociatedOnly
+  description: |+
+    The UnAssociatedOnly parameter instructs the cmdlet to return only application instances that are not associated to any configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Find-CsOnlineApplicationInstance
+name: Find-CsOnlineApplicationInstance
+description: |-
+  Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
+
+  If MaxResults is not specified, the number of returned applications instances is limited to 10 application instances.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/find-csonlineapplicationinstance
+  applicable: Microsoft Teams
+  title: Find-CsOnlineApplicationInstance
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

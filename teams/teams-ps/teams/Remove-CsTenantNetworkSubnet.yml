@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsTenantNetworkSubnet` cmdlet to remove a tenant network subnet.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsTenantNetworkSubnet
+  href: New-CsTenantNetworkSubnet.yml
+- text: Get-CsTenantNetworkSubnet
+  href: Get-CsTenantNetworkSubnet.yml
+- text: Set-CsTenantNetworkSubnet
+  href: Set-CsTenantNetworkSubnet.yml
+syntaxes:
+- Remove-CsTenantNetworkSubnet [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTenantNetworkSubnet -Identity "192.168.0.1"
+  description: |-
+    The command shown in Example 1 removes '192.168.0.1'.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the network subnet to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsTenantNetworkSubnet
+name: Remove-CsTenantNetworkSubnet
+description: |-
+  The `Remove-CsTenantNetworkSubnet` cmdlet removes an existing tenant network subnet.
+
+  IP subnets at the location where Teams endpoints can connect to the network must be defined and associated to a defined network in order to enforce toll bypass. Multiple subnets may be associated with the same network site, but multiple sites may not be associated with a same subnet. This association of subnets enables Location-Based routing to locate the endpoints geographically to determine if a given PSTN call should be allowed.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-cstenantnetworksubnet
+  applicable: Microsoft Teams
+  title: Remove-CsTenantNetworkSubnet
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

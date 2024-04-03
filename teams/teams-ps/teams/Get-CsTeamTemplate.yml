@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet supports retrieving details of a team template available to your tenant given the team template uri.
+
+  NOTE: The returned template definition is a PowerShell object formatted as a JSON for readability. Please refer to the examples for suggested interaction flows for template management.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+  INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter
+    - `[Bssid <String>]`: 
+    - `[ChassisId <String>]`: 
+    - `[CivicAddressId <String>]`: Civic address id.
+    - `[Country <String>]`: 
+    - `[GroupId <String>]`: The ID of a group whose policy assignments will be returned.
+    - `[Id <String>]`: 
+    - `[Identity <String>]`: 
+    - `[Locale <String>]`: 
+    - `[LocationId <String>]`: Location id.
+    - `[OdataId <String>]`: A composite URI of a template.
+    - `[OperationId <String>]`: The ID of a batch policy assignment operation.
+    - `[OrderId <String>]`: 
+    - `[PackageName <String>]`: The name of a specific policy package
+    - `[PolicyType <String>]`: The policy type for which group policy assignments will be returned.
+    - `[Port <String>]`: 
+    - `[PortInOrderId <String>]`: 
+    - `[PublicTemplateLocale <String>]`: Language and country code for localization of publicly available templates.
+    - `[SubnetId <String>]`: 
+    - `[TenantId <String>]`: 
+    - `[UserId <String>]`: UserId. Supports Guid. Eventually UPN and SIP.
+inputs:
+- name: <xref href="Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ITeamTemplate" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamTemplateList
+  href: Get-CsTeamTemplateList.yml
+- text: Get-CsTeamTemplate
+  href: Get-CsTeamTemplate.yml
+- text: New-CsTeamTemplate
+  href: New-CsTeamTemplate.yml
+- text: Update-CsTeamTemplate
+  href: Update-CsTeamTemplate.yml
+- text: Remove-CsTeamTemplate
+  href: Remove-CsTeamTemplate.yml
+syntaxes:
+- >-
+  Get-CsTeamTemplate -OdataId <String> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+
+   [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+
+   [-ProxyUseDefaultCredentials] [<CommonParameters>]
+- >-
+  Get-CsTeamTemplate -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
+
+   [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+
+   [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Get-CsTeamTemplate -OdataId $_.OdataId}
+  description: |-
+    Within the universe of templates the admin's tenant has access to, returns a template definition object (displayed as a JSON by default) for every custom and every Microsoft en-US template which names include 'test'.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:> Get-CsTeamTemplate -OdataId '/api/teamtemplates/v1.0/cefcf333-91a9-43d0-919f-bbca5b7d2b24/Tenant/en-US' > 'config.json'
+  description: |-
+    Saves the template with specified template ID as a JSON file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Break
+  description: |+
+    Wait for .NET debugger to attach
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelineAppend
+  description: |+
+    SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelinePrepend
+  description: |+
+    SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IConfigApiBasedCmdletsIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+    To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OdataId
+  isRequired: true
+  description: |+
+    A composite URI of a template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Proxy
+  description: |+
+    The URI for the proxy server to use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ProxyCredential
+  description: |+
+    Credentials for a proxy server to use for the remote call
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxyUseDefaultCredentials
+  description: |+
+    Use the default credentials for the proxy
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamTemplate
+name: Get-CsTeamTemplate
+description: |-
+  This cmdlet supports retrieving details of a team template available to your tenant given the team template uri.
+metadata:
+  external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
+  Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate
+  title: Get-CsTeamTemplate
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: farahf
+  schema: 2.0.0

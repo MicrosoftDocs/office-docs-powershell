@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Get-Label cmdlet to view sensitivity labels in your organization.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-Label [[-Identity] <ComplianceRuleIdParameter>]
+
+   [-IncludeDetailedLabelActions]
+
+   [-SkipValidations]
+
+   [-ValidateContentTypeRemoval]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-Label
+  description: |-
+    This example returns a summary list of all sensitivity labels in the organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-Label -Identity "Engineering Group" | Format-List
+  description: |-
+    This example returns detailed information for the sensitivity label named Engineering Group.
+  summary: ""
+parameters:
+- type: <xref href="ComplianceRuleIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the sensitivity label that you want to view. You can use any value that uniquely identifies the label. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeDetailedLabelActions
+  description: |+
+    The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipValidations
+  description: |+
+    {{ Fill SkipValidations Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidateContentTypeRemoval
+  description: |+
+    {{ Fill ValidateContentTypeRemoval Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-Label
+name: Get-Label
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-label
+  applicable: Security & Compliance
+  title: Get-Label
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

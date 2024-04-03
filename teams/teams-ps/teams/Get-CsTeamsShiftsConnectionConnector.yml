@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet supports retrieving the available Shifts Connectors.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsTeamsShiftsConnection
+  href: New-CsTeamsShiftsConnection.yml
+- text: New-CsTeamsShiftsConnectionInstance
+  href: New-CsTeamsShiftsConnectionInstance.yml
+- text: Set-CsTeamsShiftsConnectionInstance
+  href: Set-CsTeamsShiftsConnectionInstance.yml
+- text: Test-CsTeamsShiftsConnectionValidate
+  href: Test-CsTeamsShiftsConnectionValidate.yml
+syntaxes:
+- Get-CsTeamsShiftsConnectionConnector [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionConnector | Format-List
+
+    Id                                       : 6A51B888-FF44-4FEA-82E1-839401E9CD74
+    Name                                     : Contoso V1
+    SupportedSyncScenarioOfferShiftRequest   : {Disabled, FromWfmToShifts, TwoWay}
+    SupportedSyncScenarioOpenShift           : {Disabled, FromWfmToShifts}
+    SupportedSyncScenarioOpenShiftRequest    : {Disabled, FromWfmToShifts, TwoWay}
+    SupportedSyncScenarioShift               : {Disabled, FromWfmToShifts}
+    SupportedSyncScenarioSwapRequest         : {Disabled, FromWfmToShifts, TwoWay}
+    SupportedSyncScenarioTimeCard            : {Disabled, FromWfmToShifts, TwoWay}
+    SupportedSyncScenarioTimeOff             : {Disabled, FromWfmToShifts}
+    SupportedSyncScenarioTimeOffRequest      : {Disabled, FromWfmToShifts, TwoWay}
+    SupportedSyncScenarioUserShiftPreference : {Disabled, FromWfmToShifts, TwoWay}
+    Version                                  : 2020.3 - 2021.1
+  description: |-
+    Get the list of Shifts Connectors available on the tenant.
+  summary: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionConnector
+name: Get-CsTeamsShiftsConnectionConnector
+description: |-
+  This cmdlet shows the available list of Shifts Connectors that can be used to synchronize a third-party workforce management system with Teams and the types of data that can be synchronized.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsShiftsConnectionConnector
+  author: gucsun
+  ms.author: gucsun
+  manager: navinth
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionconnector
+  schema: 2.0.0

@@ -1,0 +1,163 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for Cortana voice assistant in Microsoft Teams.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsTeamsCortanaPolicy [-Tenant <System.Guid>] [-Description <String>] [-CortanaVoiceInvocationMode <String>]
+
+   [-AllowCortanaVoiceInvocation <Boolean>] [-AllowCortanaAmbientListening <Boolean>]
+
+   [-AllowCortanaInContextSuggestions <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-CsTeamsCortanaPolicy [-Tenant <System.Guid>] [-Description <String>] [-CortanaVoiceInvocationMode <String>]
+
+   [-AllowCortanaVoiceInvocation <Boolean>] [-AllowCortanaAmbientListening <Boolean>]
+
+   [-AllowCortanaInContextSuggestions <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-CsTeamsCortanaPolicy -Identity MyCortanaPolicy -CortanaVoiceInvocationMode Disabled
+  description: |-
+    In this example, Cortana voice asssitant is set to disabled.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCortanaAmbientListening
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCortanaInContextSuggestions
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCortanaVoiceInvocation
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CortanaVoiceInvocationMode
+  description: |+
+    The value of this field indicates if Cortana is enabled and mode of invocation.
+    * Disabled - Cortana voice assistant is turned off and cannot be used.
+    * PushToTalkUserOverride - Cortana voice assistant is enabled but without wake-word ("Hey Cortana") invocation
+    * WakeWordPushToTalkUserOverride - Cortana voice assistant is enabled with wake-word ("Hey Cortana") invocation on devices where wake-word is supported
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Provide a description of your policy to identify purpose of creating it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Identity for the policy you're modifying. To modify the global policy, use this syntax: -Identity global. To modify a per-user policy, use syntax similar to this: -Identity MyCortanaPolicy.
+    If you do not specify an Identity the Set-CsTeamsCortanaPolicy cmdlet will automatically modify the global policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+    -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+    You can return your tenant ID by running this command:
+    Get-CsTenant | Select-Object DisplayName, TenantID
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsTeamsCortanaPolicy
+name: Set-CsTeamsCortanaPolicy
+description: |-
+  The CsTeamsCortanaPolicy cmdlets enable administrators to control settings for Cortana voice assistant in Microsoft Teams. Specifically, these specify if a user can use Cortana voice assistant in Microsoft Teams and Cortana invocation behavior via CortanaVoiceInvocationMode parameter -
+  * Disabled - Cortana voice assistant is disabled
+  * PushToTalkUserOverride - Cortana voice assistant is enabled but without wake-word ("Hey Cortana") invocation
+  * WakeWordPushToTalkUserOverride - Cortana voice assistant is enabled with wake-word ("Hey Cortana") invocation on devices where wake-word is supported
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamscortanapolicy
+  applicable: Microsoft Teams
+  title: Set-CsTeamsCortanaPolicy
+  schema: 2.0.0
+  manager: amehta
+  author: akshbhat-msft
+  ms.author: serdars
+  ms.reviewer: ""

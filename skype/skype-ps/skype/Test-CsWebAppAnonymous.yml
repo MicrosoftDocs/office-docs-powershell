@@ -1,0 +1,305 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that anonymous users can use the Skype for Business Web App to join a Skype for Business Server conference.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Test-CsWebAppAnonymous` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+syntaxes:
+- >-
+  Test-CsWebAppAnonymous [-TargetFqdn] <String> [-External] [-Force] [-OutVerboseVariable <String>]
+
+   [-RegistrarPort <Int32>] [-UserSipAddress <String>] [-Authentication <AuthenticationMechanism>]
+
+   [-OutLoggerVariable <String>] [<CommonParameters>]
+- >-
+  Test-CsWebAppAnonymous [[-TargetFqdn] <String>] [-External] [-Force] [-OutVerboseVariable <String>]
+
+   [-RegistrarPort <Int32>] -UserCredential <PSCredential> -UserSipAddress <String>
+
+   [-Authentication <AuthenticationMechanism>] [-OutLoggerVariable <String>] [<CommonParameters>]
+- >-
+  Test-CsWebAppAnonymous [-Force] [-OutVerboseVariable <String>] -TargetUri <String> -UserSipAddress <String>
+
+   [-WebCredential <PSCredential>] [-Authentication <AuthenticationMechanism>] [-OutLoggerVariable <String>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Test-CsWebAppAnonymous -TargetFqdn atl-cs-001.litwareinc.com
+  description: |-
+    The command shown in Example 1 verifies whether or not a test user configured for the pool atl-cs-001.litwareinc.com can use Skype for Business Web App to anonymously join a conference.
+    This command will only succeed if you have configured a test user for the pool by using the `CsHealthMonitoringConfiguration` cmdlets.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    $cred1 = Get-Credential "litwareinc\kenmyer"
+
+    Test-CsWebAppAnonymous -TargetFqdn atl-cs-001.litwareinc.com -UserSipAddress "sip:kenmyer@litwareinc.com" -UserCredential $cred1
+  description: |-
+    The commands shown in Example 2 verify whether or not the user Ken Myer can use Skype for Business Web App to anonymously join a conference.
+    To use an actual user account, the first command in the example uses the `Get-Credential` cmdlet to create a Windows PowerShell credentials object for the user litwareinc\kenmyer.
+    That credentials object (stored in a variable named $cred1) is then passed to the UserCredential parameter in the second command in the example.
+    In addition to the UserCredential parameter, the UserSipAddress parameter is also included, along with Ken Myer's SIP address.
+  summary: ""
+parameters:
+- type: <xref href="AuthenticationMechanism" data-throw-if-not-resolved="False" />
+  name: Authentication
+  description: |+
+    Type of authentication used when running the test.
+    Allowed values are:
+
+    * TrustedServer
+    * Negotiate
+    * ClientCertificate
+    * LiveID
+
+  defaultValue: None
+  position: Named
+  aliases: Ath
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: External
+  description: |+
+    When present, causes the `Test-CsWebAppAnonymous` cmdlet to test the Reach server's external web relay.
+    If this parameter is not present, the cmdlet will test the internal web relay.
+    The web relay serves as an intermediary between the internal network and the Internet.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutLoggerVariable
+  description: |+
+    When present, detailed output from running the cmdlet will be stored in the specified variable.
+    This variable includes a pair of methods - ToHTML and ToXML - that can then be used to save that output to either an HTML or an XML file.
+
+    To store output in a logger variable named $TestOutput use the following syntax:
+
+    `-OutLoggerVariable TestOutput`
+
+    Note: Do not prepend a $ character when specifying the variable name.
+
+    To save the information stored in the logger variable to an HTML file, use a command similar to this:
+
+    `$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
+
+    To save the information stored in the logger variable to an XML file, use a command similar to this:
+
+    `$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
+
+  defaultValue: None
+  position: Named
+  aliases: olv
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutVerboseVariable
+  description: |+
+    When present, detailed output from running the cmdlet will be stored in the specified variable.
+    For example, to store output in a variable named $TestOutput use the following syntax:
+
+    `-OutVerboseVariable TestOutput`
+
+    Do not prepend a $ character when specifying the variable name.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ovv
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RegistrarPort
+  description: |+
+    SIP port used by the Registrar service.
+    This parameter is not required if the Registrar uses the default port 5061.
+
+
+  defaultValue: None
+  position: Named
+  aliases: rp
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name (FQDN) of the pool to be tested.
+    For example:
+
+    `-TargetFqdn atl-cs-001.litwareinc.com`
+
+
+  defaultValue: None
+  position: "1"
+  aliases: t
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetUri
+  isRequired: true
+  description: |+
+    Uniform Resource Identifier (URI) of the Reach server.
+    For example:
+
+    `-TargetUri "https://atl-cs-001.litwareinc.com/reach"`
+
+    You cannot use both the TargetUri parameter and the TargetFqdn parameter in the same command.
+
+
+  defaultValue: None
+  position: Named
+  aliases: twsu
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: UserCredential
+  isRequired: true
+  description: |+
+    User credentials object for the first of the two user accounts to be tested.
+    The value passed to UserCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
+    For example, this code returns a credentials object for the user litwareinc\pilar and stores that object in a variable named $x:
+
+    `$x = Get-Credential "litwareinc\pilar"`
+
+    You need to supply the user password when running this command.
+
+    This parameter is not required if you are running the test by using test users configured via the `CsHealthMonitoringConfiguration` cmdlets.
+
+
+  defaultValue: None
+  position: Named
+  aliases: uc
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSipAddress
+  isRequired: true
+  description: |+
+    SIP address for the first of the two user accounts to be tested.
+    For example:
+
+    `-UserSipAddress "sip:kenmyer@litwareinc.com"`
+
+    This parameter is not required if you are running the test by using test users configured via the `CsHealthMonitoringConfiguration` cmdlets.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ua
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: WebCredential
+  description: |+
+    User credential object for the user account to be used in the test.
+    The value passed to UserCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
+    For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
+
+    `$x = Get-Credential "litwareinc\kenmyer"`
+
+    This parameter is required if either the TargetUri parameter or the UserSipAddress parameters are specified and the computer on which the command is run does not have a server certificate.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsWebAppAnonymous
+name: Test-CsWebAppAnonymous
+description: |-
+  The `Test-CsWebAppAnonymous` cmdlet enables administrators to verify that anonymous users can employ Skype for Business Web App in order to join conferences.
+  When you run the `Test-CsWebAppAnonymous` cmdlet, the cmdlet attempts to obtain an anonymous web ticket by using the Web Ticket service.
+  If the ticket can be obtained, the `Test-CsWebAppAnonymous` cmdlet will then try to connect to by Skype for Business Server using Skype for Business Web App.
+  If the connection is made, the cmdlet will then attempt to establish separate conferences for instant messaging, application sharing, and data collaboration.
+
+  Many administrators will use the `CsHealthMonitoringConfiguration` cmdlets to set up test users for each of their Registrar pools.
+  These test users represent a pair of user accounts that have been preconfigured for use with synthetic transactions.
+  (Typically these are test accounts and not accounts that belong to actual users.) If test users are configured for a pool, administrators can run the `Test-CsWebAppAnonymous` cmdlet against that pool without having to specify the identity of (and supply the credentials for) the user account involved in the test.
+
+  Alternatively, administrators can run the `Test-CsWebAppAnonymous` cmdlet using an actual user account.
+  If you decide to conduct the test using an actual user account you will need to supply the logon name and password for that account.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-cswebappanonymous
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsWebAppAnonymous
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

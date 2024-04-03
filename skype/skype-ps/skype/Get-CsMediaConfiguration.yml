@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information regarding media settings, including the supported level of encryption, whether Siren can be used as a voice codec by the Mediation Server in its interactions with Skype for Business Server clients, and the maximum allowed video resolution.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsMediaConfiguration
+  href: New-CsMediaConfiguration.yml
+- text: Remove-CsMediaConfiguration
+  href: Remove-CsMediaConfiguration.yml
+- text: Set-CsMediaConfiguration
+  href: Set-CsMediaConfiguration.yml
+syntaxes:
+- Get-CsMediaConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsMediaConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsMediaConfiguration
+  description: |-
+    Example 1 returns all the media configurations in use in your organization; this is done simply by invoking the Get-CsMediaConfiguration cmdlet without any additional parameters.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsMediaConfiguration -Identity site:Redmond1
+  description: |-
+    Example 2 returns only the media configuration that has the Identity site:Redmond1.
+    Because identities must be unique, specifying an Identity ensures that you will never retrieve more than one item.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsMediaConfiguration -Filter site:*
+  description: |-
+    In Example 3, the Filter parameter is used to return all the media configurations at the site scope.
+    The wildcard string site:* ensures that Windows PowerShell will return only those media configurations that have identities beginning with the string value site:.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsMediaConfiguration | Where-Object {$_.EncryptionLevel -eq "SupportEncryption"}
+  description: |-
+    In this example, the Get-CsMediaConfiguration cmdlet and the Where-Object cmdlet are used to return all the media configurations that support (but do not require) encryption.
+    To do this, the command first uses the Get-CsMediaConfiguration cmdlet to retrieve all the media configurations in use in your organization.
+    This information is then piped to the Where-Object cmdlet, which applies a filter that restricts the returned data to those configurations where the EncryptionLevel property is equal to (-eq) SupportEncryption.
+  summary: ""
+- title: '-------------------------- Example 5 --------------------------'
+  code: |-
+    Get-CsMediaConfiguration -Filter *:*med*
+  description: |-
+    This example retrieves all media configurations defined for sites and services with names that contain the string "med".
+    For example, this command will retrieve media configuration settings defined for the site medford1, the site TwoMedfordPlace, and the service MediationServer:redmond.litwareinc.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter filters the results of the Get operation based on the wildcard value passed to this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier of the media configuration you want to retrieve.
+    This identifier specifies the scope at which this configuration is applied (global, site, or service).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the media configuration information from the local replica of the Central Management store, rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsMediaConfiguration
+name: Get-CsMediaConfiguration
+description: |-
+  This cmdlet retrieves one or more collections of settings that define media interactions.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csmediaconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsMediaConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

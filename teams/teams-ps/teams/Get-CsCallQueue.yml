@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The Get-CsCallQueue cmdlet returns the identified Call Queues.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="Identity" data-throw-if-not-resolved="False" />
+  description: |-
+    Represents the unique identifier of a Call Queue.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsCallQueue [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-ExcludeContent <Switch>] [-Sort <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsCallQueue
+  description: |-
+    This example gets all Call Queues in the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsCallQueue -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
+  description: |-
+    This example gets the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Call Queue exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Descending
+  description: |+
+    The Descending parameter sorts Call Queues in descending order
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExcludeContent
+  description: |+
+    The ExcludeContent parameter only displays the Name and Id of the Call Queues
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The First parameter gets the first N Call Queues. The default behavior is to return the first 100 number of queues. It is intended to be used for pagination purposes.
+
+  defaultValue: "100"
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NameFilter
+  isRequired: true
+  description: |+
+    The NameFilter parameter returns Call Queues where name contains specified string
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    The Skip parameter skips the first N Call Queues. It is intended to be used for pagination purposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Sort
+  isRequired: true
+  description: |+
+    The Sort parameter specifies the property used to sort.
+
+  defaultValue: Name
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    PARAMVALUE: Guid
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsCallQueue
+name: Get-CsCallQueue
+description: |-
+  The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues in your organization. Call Queue output contains statistical data on the number of active calls that are in the queue.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-cscallqueue
+  applicable: Microsoft Teams
+  title: Get-CsCallQueue
+  schema: 2.0.0
+  ms.reviewer: ""
+  manager: bulenteg
+  ms.author: tomkau

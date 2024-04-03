@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables you to modify the culture (that is, the language and regional settings) used by the Skype for Business Server Management Shell.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Set-CsUICulture` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsUICulture` cmdlet does not return any values or objects.
+    Instead, the cmdlet modifies existing instances of the System.Globalization.CultureInfo class.
+links:
+- text: Get-CsUICulture
+  href: Get-CsUICulture.yml
+syntaxes:
+- Set-CsUICulture [-Culture] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Set-CsUICulture -Culture "en-US"
+  description: |-
+    The command shown in Example 1 sets the culture for the Lync Server Management Shell to U.S.
+    English.
+    This is done by using the language code en-US.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Set-CsUICulture -Culture "default"
+  description: |-
+    Example 2 sets the culture for the Skype for Business Server Management Shell to the default culture value.
+    The default value is the culture setting used when you originally installed Skype for Business Server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Culture
+  isRequired: true
+  description: |+
+    Enables you to specify the culture used for the Lync Server Management Shell.
+    Set the culture to "en-US" for U.S.
+    English, or set the culture to "default" to use the language used when you originally installed Skype for Business Server.
+
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsUICulture
+name: Set-CsUICulture
+description: |-
+  Although Skype for Business Server is available in multiple languages, the software is not a true Multilingual User Interface (MUI) application.
+  Among other things, this means that the user interface for the Skype for Business Server Management Shell does not change languages any time you change the operating system language.
+  For example, suppose you have installed the U.S.
+  English version of Skype for Business Server and are also running the Windows operating system under U.S.
+  English.
+  If you change the operating system culture (that is, the language and regional settings) to Danish, the Skype for Business Server Management Shell will not automatically follow suit; instead, the Skype for Business Server Management Shell user interface (including error messages and help text) will remain in U.S.
+  English.
+  If you need to change the culture for the Skype for Business Server Management Shell, you must run the `Set-CsUICulture` cmdlet.
+
+  There are two things to keep in mind when using the `Set-CsUICulture` cmdlet.
+  First, the cmdlet can only be used to modify Skype for Business Server Management Shell settings on the local computer; the `Set-CsUICulture` cmdlet cannot change a remote instance of Skype for Business Server Management Shell.
+  This is due to the fact that all the users of a computer share the same instance of the Skype for Business Server Management Shell: allowing a remote user to change the culture would instantly change the culture for any other users of the Skype for Business Server Management Shell, including the local user.
+
+  Second, you can only set the language to U.S.
+  English ("en-US") or to the language used when you initially installed Skype for Business Server ("default").
+  For example, if you originally installed an Italian version of Skype for Business Server, then you have two choices for configuring the UI culture: English or Italian.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csuiculture
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsUICulture
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

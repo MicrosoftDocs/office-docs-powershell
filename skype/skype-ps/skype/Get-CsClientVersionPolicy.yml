@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about which clients are supported in your Skype for Business Server environment.
+  Client version policies enable you to specify which clients will be able to log on to your Skype for Business Server system.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Policy.ClientVersion.ClientVersion policy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-CsClientVersionPolicy
+  href: Grant-CsClientVersionPolicy.yml
+- text: New-CsClientVersionPolicy
+  href: New-CsClientVersionPolicy.yml
+- text: Remove-CsClientVersionPolicy
+  href: Remove-CsClientVersionPolicy.yml
+- text: Set-CsClientVersionPolicy
+  href: Set-CsClientVersionPolicy.yml
+syntaxes:
+- Get-CsClientVersionPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+- Get-CsClientVersionPolicy [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsClientVersionPolicy
+  description: |-
+    In the first example, the Get-CsClientVersionPolicy cmdlet is called without specifying any additional parameters.
+    This causes the Get-CsClientVersionPolicy cmdlet to return a collection of all the client version policies configured for use in your organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsClientVersionPolicy -Identity site:Redmond
+  description: |-
+    In Example 2, the Get-CsClientVersionPolicy cmdlet returns all the client version policies that have the Identity site:Redmond.
+    Because Identities must be unique, this command will never return more than one item.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsClientVersionPolicy -Filter site:*
+  description: |-
+    Example 3 returns all the client version policies that have been configured at the site scope.
+    This is done by including the Filter parameter and the filter value "site:*"; that value instructs the Get-CsClientVersionPolicy cmdlet to return only those policies that have an Identity beginning with the string value "site:".
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsClientVersionPolicy | Select-Object -ExpandProperty Rules
+  description: |-
+    The command used in Example 4 displays detailed information about the individual rules configured for each client version policy.
+    To do this, the Get-CsClientVersionPolicy cmdlet is first used to retrieve a collection of all the client version policies configured for use in the organization.
+    That collection is then piped to the Select-Object cmdlet, which uses the ExpandProperty filter to expand the property values for the Rules property.
+    When this property is expanded, detailed information about each rule (including such property values as build number, major version, and minor version) is displayed on the screen.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcards when specifying the policy (or policies) to be retrieved.
+    For example, this syntax returns all the policies that have been configured at the site scope: -Filter "site:*".
+    This syntax returns all the policies that have been configured at the per-user scope: -Filter "tag:*".
+
+    You cannot use both the Filter and the Identity parameters in the same command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the policy to be returned.
+    To return the global policy, use this syntax: -Identity global.
+    To return a policy configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
+    To return a policy configured at the service scope, use syntax similar to this: -Identity "Registrar:atl-cs-001.litwareinc.com".
+    The Registrar service is the only service that can host a client version policy.
+
+    Policies can also be configured at the per-user scope.
+    To return one of these policies, use syntax similar to this: -Identity "SalesDepartmentPolicy".
+
+    If this parameter is not included then all of the client version policies configured for use in your organization will be returned.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the client version policy data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the Skype for Business Online tenant account whose client version policies are being returned.
+    For example:
+
+    `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+    You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsClientVersionPolicy
+name: Get-CsClientVersionPolicy
+description: |-
+  Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Skype for Business Server.
+  When a user attempts to log on to Skype for Business Server, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
+  The version information included in the SIP header is then checked against a collection of client version rules to see if any rules apply to that particular application.
+  If such a rule exists, Skype for Business Server will then take the action specified by the rule.
+  For example, the rule might tell Skype for Business Server to allow the logon, to block it, or to allow the logon but then silently upgrade the client application to the latest version (for example, upgrade Lync to Skype for Business).
+
+  Client version policies, which can be applied at the global scope, the site scope, the service scope (Registrar service only), or the per-user scope, give you flexibility in determining which client applications can be used to access the system.
+  For example, you might want to prevent users from logging on to Skype for Business Server by using Lync because it does not support the same features and capabilities as Skype for Business.
+
+  The Get-CsClientVersionPolicy cmdlet provides a way for you to retrieve all of the client version policies currently in use in your organization, as well as to view the individual rules that make up each of those policies.
+
+  It's important to note that client version policies do not apply to federated users; instead, federated users are bound by the client version policies used in their own organization.
+  For example, suppose a federated user uses client A, a client allowed by the federated organization.
+  As long as the federated organization allows the use of client A, this user will be able to communicate with your organization using that client.
+  This will be true even if your client version policy blocks the use of client A.
+  Client version policies enforced in your organization do not override the client version policies used in a federated organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csclientversionpolicy
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsClientVersionPolicy
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

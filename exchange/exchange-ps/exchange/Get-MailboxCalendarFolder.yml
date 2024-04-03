@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
+  Use the Get-MailboxCalendarFolder cmdlet to retrieve the publishing or sharing settings for a specified mailbox calendar folder.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Get-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter>
+
+   [-UseCustomRouting]
+
+   [-DomainController <Fqdn>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-MailboxCalendarFolder -Identity kai:\Calendar
+  description: |-
+    This example returns all provided publishing information for the specified calendar folder in Kai's mailbox. In this example, the Identity parameter specifies the mailbox with the alias format.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-MailboxCalendarFolder -Identity kai:\Calendar -DomainController DC1
+  description: |-
+    This example returns all provided publishing information for the specified calendar folder in Kai's mailbox. This example also specifies DC1 as the domain controller to retrieve this information from Active Directory.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-MailboxCalendarFolder -Identity contoso\kai:\Calendar
+  description: |-
+    This example returns all provided publishing information for the specified calendar folder in Kai's mailbox. In this example, the Identity parameter specifies the mailbox with the domain\\account format.
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MailboxFolderIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the calendar folder that you want to view. The syntax is `MailboxID:\ParentFolder[\SubFolder]`.
+
+    For the value of `MailboxID`, you can use any value that uniquely identifies the mailbox. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Domain\\Username
+    - Email address
+    - GUID
+    - LegacyExchangeDN
+    - SamAccountName
+    - User ID or user principal name (UPN)
+
+    Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Calendar`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseCustomRouting
+  description: |+
+    This parameter is available only in the cloud-based service.
+
+    {{ Fill UseCustomRouting Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2010
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+- Exchange Online
+uid: ExchangePowerShell.Get-MailboxCalendarFolder
+name: Get-MailboxCalendarFolder
+description: |-
+  The Get-MailboxCalendarFolder cmdlet retrieves information for the specified calendar folder. This information includes the calendar folder name, whether the folder is currently published or shared, the start and end range of calendar days published, the level of details published for the calendar, whether the published URL of the calendar can be searched on the web and the published URL for the calendar.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxcalendarfolder
+  applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+  title: Get-MailboxCalendarFolder
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

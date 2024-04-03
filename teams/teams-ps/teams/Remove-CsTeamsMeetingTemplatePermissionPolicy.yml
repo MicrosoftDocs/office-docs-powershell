@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an instance of TeamsMeetingTemplatePermissionPolicy.
+module: MicrosoftTeamsPowerShell
+links:
+- text: Set-CsTeamsMeetingTemplatePermissionPolicy
+  href: Set-CsTeamsMeetingTemplatePermissionPolicy.yml
+- text: Get-CsTeamsMeetingTemplatePermissionPolicy
+  href: Get-CsTeamsMeetingTemplatePermissionPolicy.yml
+- text: New-CsTeamsMeetingTemplatePermissionPolicy
+  href: New-CsTeamsMeetingTemplatePermissionPolicy.yml
+- text: Grant-CsTeamsMeetingTemplatePermissionPolicy
+  href: Grant-CsTeamsMeetingTemplatePermissionPolicy.yml
+syntaxes:
+- Remove-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-Force] [-WhatIf] [-Confirm]  [<CommonParameters>]
+examples:
+- title: Example 1 - Deleting a meeting template permission policy
+  code: |-
+    Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy
+  description: |-
+    Deletes a policy instance with the Identity *Test_Policy*.
+  summary: ""
+- title: Example 2 - Deleting a policy when its assigned to a user
+  code: |-
+    Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+
+    Remove-CsTeamsMeetingTemplatePermissionPolicy : The policy "Foobar" is currently assigned to one or more users. Assign a different policy to the users before removing
+    this one. Please refer to documentation. CorrelationId: 8698472b-f441-423b-8ee3-0469c7e07528
+    At line:1 char:1
+    + Remove-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : NotSpecified: (:) [Remove-CsTeamsM...ermissionPolicy], PolicyRpException
+        + FullyQualifiedErrorId : ClientError,Microsoft.Teams.Policy.Administration.Cmdlets.Core.RemoveTeamsMeetingTemplatePermissionPolicyCmdlet
+  description: ""
+  summary: |+
+    Attempting to delete a policy instance that is currently assigned to users will result in an error. Remove the assignment before attempting to delete it.
+
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Identity of the policy instance to be deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsMeetingTemplatePermissionPolicy
+name: Remove-CsTeamsMeetingTemplatePermissionPolicy
+description: |-
+  Deletes an instance of TeamsMeetingTemplatePermissionPolicy. The `Identity` parameter accepts the identity of the policy instance to delete.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Remove-CsTeamsMeetingTemplatePermissionPolicy
+  author: boboPD
+  ms.author: pradas
+  online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsMeetingTemplatePermissionPolicy
+  schema: 2.0.0

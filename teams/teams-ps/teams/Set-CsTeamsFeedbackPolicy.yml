@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this cmdlet to modify a Teams feedback policy (the ability to send feedback about Teams to Microsoft and whether they receive the survey).
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsTeamsFeedbackPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>]
+
+   [-ReceiveSurveysMode <String>] [-UserInitiatedMode <String>] [-AllowEmailCollection <Boolean>]
+
+   [-AllowLogCollection <Boolean>] [-AllowScreenshotCollection <Boolean>]
+
+   [-Force] [-Instance <Object>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-CsTeamsFeedbackPolicy -identity "New Hire Feedback Policy" -userInitiatedMode enabled -receiveSurveysMode disabled
+  description: |-
+    In this example, the policy "New Hire Feedback Policy" is modified, sets the userInitiatedMode parameter to enabled and the receiveSurveysMode parameter to disabled.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowEmailCollection
+  description: |+
+    Set this to TRUE to enable Email collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowLogCollection
+  description: |+
+    Set this to TRUE to enable log collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowScreenshotCollection
+  description: |+
+    Set this to TRUE to enable Screenshot collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes and suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier of the policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReceiveSurveysMode
+  description: |+
+    Set the receiveSurveysMode parameter to enabled to allow users who are assigned the policy to receive the survey.
+    Set it to EnabledUserOverride to have users receive the survey and allow them to opt out.
+
+    Possible values:
+     - Enabled
+     - Disabled
+     - EnabledUserOverride
+
+  defaultValue: Enabled
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserInitiatedMode
+  description: |2+
+     Set the userInitiatedMode parameter to enabled to allow users who are assigned the policy to give feedback.
+     Setting the parameter to disabled turns off the feature and users who are assigned the policy don't have the option to give feedback.
+
+    Possible values:
+     - Enabled
+     - Disabled
+
+  defaultValue: Enabled
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsTeamsFeedbackPolicy
+name: Set-CsTeamsFeedbackPolicy
+description: |-
+  Modifies a Teams feedback policy (the ability to send feedback about Teams to Microsoft and whether they receive the survey).
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsfeedbackpolicy
+  applicable: Microsoft Teams
+  title: Set-CsTeamsFeedbackPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  ms.author: tomkau
+  ms.reviewer: ""

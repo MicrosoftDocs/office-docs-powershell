@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is functional only in on-premises Exchange.
+
+  In Exchange Online, this cmdlet has been replaced by the [Get-DlpSensitiveInformationType](https://learn.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype) cmdlet in Security & Compliance PowerShell.
+
+  Use the Get-DataClassification cmdlet to view the data classification rules in your organization. This cmdlet shows built-in data classification rules and rules that you created that use document fingerprints.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Get-DataClassification [[-ClassificationRuleCollectionIdentity] <ClassificationRuleCollectionIdParameter>]
+
+   [-DomainController <Fqdn>]
+
+   [<CommonParameters>]
+- >-
+  Get-DataClassification [[-Identity] <DataClassificationIdParameter>]
+
+   [-DomainController <Fqdn>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-DataClassification
+  description: |-
+    This example returns a summary list of all data classification rules in the organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-DataClassification -ClassificationRuleCollectionIdentity "Fingerprint Classification Collection"
+  description: |-
+    This example returns a summary list of all new data classification rules based on document fingerprints that you created.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-DataClassification "SWIFT Code" | Format-List
+  description: |-
+    This example returns details of the built-in data classification rule named SWIFT Code.
+  summary: ""
+parameters:
+- type: <xref href="ClassificationRuleCollectionIdParameter" data-throw-if-not-resolved="False" />
+  name: ClassificationRuleCollectionIdentity
+  description: |+
+    The ClassificationRuleCollectionIdentity parameter filters the results by the name of the data classification rule collection. The data classification rule collection that contains the built-in data classification rules is named Microsoft Rule Package. The data classification that contains new data classification rules that you create that use document fingerprints is named Fingerprint Classification Collection.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DataClassificationIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the data classification rule that you want to view. You can use any value that uniquely identifies the data classification rule. For example:
+
+    - Name
+    - LocalizedName
+    - Identity GUID value
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+- Exchange Online
+uid: ExchangePowerShell.Get-DataClassification
+name: Get-DataClassification
+description: |-
+  Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.RemoteConnections-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-dataclassification
+  applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+  title: Get-DataClassification
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

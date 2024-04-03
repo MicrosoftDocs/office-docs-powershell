@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a set of strings that identify the allowed public switched telephone network (PSTN) usages.
+  This cmdlet can be used to add usages to the list of PSTN usages or remove usages from the list.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Policy.Voice.PstnUsages object.
+    Accepts pipelined input of PSTN usage objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return a value or object.
+    Instead, it configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.PstnUsages object.
+links:
+- text: Get-CsPstnUsage
+  href: Get-CsPstnUsage.yml
+syntaxes:
+- >-
+  Set-CsPstnUsage [[-Identity] <XdsIdentity>] [-Usage <PSListModifier>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-CsPstnUsage [-Instance <PSObject>] [-Usage <PSListModifier>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsPstnUsage -Identity global -Usage @{add="International"}
+  description: |-
+    This command adds the string "International" to the current list of available PSTN usages.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Set-CsPstnUsage -Identity global -Usage @{remove="Local"}
+  description: |-
+    This command removes the string "Local" from the list of available PSTN usages.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Set-CsPstnUsage -Usage @{remove="Local"}
+  description: |-
+    The command in this example performs the exact same action as the command in Example 2: it removes the "Local" PSTN usage.
+    This example shows the command without the Identity parameter specified.
+    The only Identity available to the `Set-CsPstnUsage` cmdlet is the Global identity; omitting the Identity parameter defaults to Global.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Set-CsPstnUsage -Usage @{replace="International","Restricted"}
+  description: |-
+    This command replaces everything in the usage list with the values International and Restricted.
+    All previously existing usages are removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The scope at which these settings are applied.
+    The Identity for this cmdlet is always Global.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    A reference to a PSTN usage object.
+    This object must be of type PstnUsages and can be retrieved by calling the `Get-CsPstnUsage` cmdlet.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSListModifier" data-throw-if-not-resolved="False" />
+  name: Usage
+  description: |+
+    Contains a list of allowable usage strings.
+    These entries can be any string value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsPstnUsage
+name: Set-CsPstnUsage
+description: |-
+  PSTN usages are string values that are used for call authorization.
+  A PSTN usage links a voice policy to a route.
+  The `Set-CsPstnUsage` cmdlet is used to add or remove phone usages to or from the usage list.
+  This list is global so it can be used by policies and routes throughout the Skype for Business Server deployment.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cspstnusage
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsPstnUsage
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

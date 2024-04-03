@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an existing Teams voice applications policy.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsVoiceApplicationsPolicy
+  href: Get-CsTeamsVoiceApplicationsPolicy.yml
+- text: Grant-CsTeamsVoiceApplicationsPolicy
+  href: Grant-CsTeamsVoiceApplicationsPolicy.yml
+- text: Set-CsTeamsVoiceApplicationsPolicy
+  href: Set-CsTeamsVoiceApplicationsPolicy.yml
+- text: New-CsTeamsVoiceApplicationsPolicy
+  href: New-CsTeamsVoiceApplicationsPolicy.yml
+syntaxes:
+- >-
+  Remove-CsTeamsVoiceApplicationsPolicy [-Identity] <String> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
+  description: |-
+    The command shown in Example 1 deletes the Teams voice applications policy SDA-Allow-All.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*" | Remove-CsTeamsVoiceApplicationsPolicy
+  description: |-
+    In Example 2, all Teams voice applications policies configured at the per-user scope are removed. To do this, the command first calls the Get-CsTeamsVoiceApplicationsPolicy cmdlet along with the Filter parameter; the filter value "tag:*" limits the returned data to Teams voice applications policies configured at the per-user scope. Those per-user policies are then piped to and removed by the Remove-CsTeamsVoiceApplicationsPolicy cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier assigned to the policy when it was created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsVoiceApplicationsPolicy
+name: Remove-CsTeamsVoiceApplicationsPolicy
+description: |-
+  TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration which allows tenant admins to permit certain users to make changes to auto attendant and call queue configurations.
+metadata:
+  external help file: MicrosoftTeams-help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsvoiceapplicationspolicy
+  schema: 2.0.0

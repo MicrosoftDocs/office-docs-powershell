@@ -1,0 +1,256 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies connectivity through the A/V Edge server.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Test-CsAVEdgeConnectivity` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Test-CsAVEdgeConnectivity` cmdlet returns instances of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+links:
+- text: Get-CsAVEdgeConfiguration
+  href: Get-CsAVEdgeConfiguration.yml
+syntaxes:
+- >-
+  Test-CsAVEdgeConnectivity [-TargetFqdn] <String> [-Authentication <AuthenticationMechanism>] [-Force]
+
+   [-OutLoggerVariable <String>] [-OutVerboseVariable <String>] [-RegistrarPort <Int32>]
+
+   [-UserSipAddress <String>] [-AVEdgeAddress <String>] [-AVEdgeTCPPort <UInt16>] [-AVEdgeUDPPort <UInt16>]
+
+   [<CommonParameters>]
+- >-
+  Test-CsAVEdgeConnectivity [[-TargetFqdn] <String>] -UserCredential <PSCredential>
+
+   [-Authentication <AuthenticationMechanism>] [-Force] [-OutLoggerVariable <String>]
+
+   [-OutVerboseVariable <String>] [-RegistrarPort <Int32>] -UserSipAddress <String> [-AVEdgeAddress <String>]
+
+   [-AVEdgeTCPPort <UInt16>] [-AVEdgeUDPPort <UInt16>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Test-CsAVEdgeConnectivity -TargetFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    The command shown in Example 1 verifies that a preconfigured test user can connect to the A/V Edge server configured for the pool atl-cs-001.litwareinc.com Note that this command will fail if you have not defined at least one health monitoring test user for atl-cs-001.litwareinc.com.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    $cred = Get-Credential "litwareinc\kenmyer"
+
+    Test-CsAVEdgeConnectivity -TargetFqdn "atl-cs-001.litwareinc.com" -UserSipAddress "sip:kenmyer@litwareinc.com" -UserCredential $cred
+  description: |-
+    In Example 2, the `Test-CsAVEdgeConnectivity` cmdlet verifies that the user with the SIP address sip:kenmyer@litwareinc.com is able to connect to the AV Edge server.
+    To do this, the first command in the example uses the `Get-Credential` cmdlet to retrieve a Windows PowerShell credentials object for the user litwareinc\kenmyer; note that you supply the password for this account when obtaining this object.
+    After the credentials object has been obtained, the second command uses the `Test-CsAVEdgeConnectivity` cmdlet to verify that the user can connect to the AV Edge server.
+  summary: ""
+parameters:
+- type: <xref href="AuthenticationMechanism" data-throw-if-not-resolved="False" />
+  name: Authentication
+  description: |+
+    Type of authentication used in the test.
+    Allowed values are:
+
+    * TrustedServer
+    * Negotiate
+    * ClientCertificate
+    * LiveID
+
+  defaultValue: None
+  position: Named
+  aliases: Ath
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AVEdgeAddress
+  description: |+
+    IP address of the Edge server being tested.
+    Specifying the IP address enables you to test the internal side of the Edge server; in turn, this allows you to verify the connection between the test client and the internal Edge server.
+    Note that the internal side often has multiple IP addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: AVEdgeTCPPort
+  description: |+
+    Transmission Control Protocol (TCP) of the Edge server being tested.
+
+    The default value is 443.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: AVEdgeUDPPort
+  description: |+
+    User Datagram Protocol (UDP) port of the Edge server being tested.
+
+    The default value is 3478.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutLoggerVariable
+  description: |+
+    When present, detailed output from running the cmdlet will be stored in the specified variable.
+    This variable includes a pair of methods - ToHTML and ToXML - that can then be used to save that output to either an HTML or an XML file.
+
+    To store output in a logger variable named $TestOutput use the following syntax:
+
+    `-OutLoggerVariable TestOutput`
+
+    Note: Do not use prepend a $ character when specifying the variable name. To save the information stored in the logger variable to an HTML file, use a command similar to this:
+
+    `$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
+
+    To save the information stored in the logger variable to an XML file, use a command similar to this:
+
+    `$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
+
+  defaultValue: None
+  position: Named
+  aliases: olv
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutVerboseVariable
+  description: |+
+    When present, detailed output from running the cmdlet will be stored in the specified variable.
+    For example, to store output in a variable named $TestOutput use the following syntax:
+
+    `-OutVerboseVariable TestOutput`
+
+    Do not use prepend a $ character when specifying the variable name.
+
+  defaultValue: None
+  position: Named
+  aliases: ovv
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RegistrarPort
+  description: |+
+    SIP port used by the Registrar service.
+    This parameter is not required if the Registrar uses the default port 5061.
+
+  defaultValue: None
+  position: Named
+  aliases: rp
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name (FQDN) of the pool to be tested.
+
+  defaultValue: None
+  position: "2"
+  aliases: t
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: UserCredential
+  isRequired: true
+  description: |+
+    User credentials object for the account to be tested.
+    The value passed to UserCredential must be an object reference obtained by using the `Get-Credential` cmdlet.
+    For example, this code returns a credential object for the user litwareinc\kenmyer and stores that object in a variable named
+
+    `$x: $x = Get-Credential "litwareinc\kenmyer"`
+
+    You need to supply the user password when running this command.
+    This parameter is not required if you are conducting the test under the health monitoring configuration settings for the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: uc
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserSipAddress
+  isRequired: true
+  description: |+
+    SIP address for user account to be tested; for example: `-UserSipAddress "sip:kenmyer@litwareinc.com"`.
+    The UserSipAddress parameter must reference the same user account as UserCredential.
+    This parameter is not required if you are conducting the test under the health monitoring configuration settings for the pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ua
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsAVEdgeConnectivity
+name: Test-CsAVEdgeConnectivity
+description: |-
+  The `Test-CsAVEdgeConnectivity` cmdlet verifies that a user can connect to the AV Edge Server assigned to a Registrar pool.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Test-CsAVEdgeConnectivity` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-csavedgeconnectivity
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsAVEdgeConnectivity
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""
