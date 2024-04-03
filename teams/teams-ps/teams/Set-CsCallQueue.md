@@ -47,7 +47,7 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
 > 
-> The following configuration parameters will only work for customers that are participating in the private preview. General Availability for this functionality has not been determined at this time.
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -OverflowActionCallPriority
 > - -TimeoutActionCallPriority
@@ -60,7 +60,7 @@ Note that this cmdlet is in the Skype for Business Online PowerShell module and 
 > - -CallbackOfferAudioFilePromptResourceId
 > - -CallbackOfferTextToSpeechPrompt
 > - -CallbackEmailNotificationTarget
-
+> - -ServiceLevelThresholdResponseTimeInSecond
 
 ## EXAMPLES
 
@@ -1474,6 +1474,25 @@ Type: Guid
 Parameter Sets: (All)
 Aliases: 
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceLevelThresholdResponseTimeInSecond
+_Private Preview customers only_
+
+The target number of seconds calls should be answered in. This number is used to calculate the call queue service level percentage.
+
+A value of `$null` indicates that a service level percentage will not be calculated for this call queue.
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
