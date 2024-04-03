@@ -586,6 +586,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectPersonAudioFilePrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The OverflowRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
 
 ```yaml
@@ -602,6 +604,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectPersonTextToSpeechPrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The OverflowRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to overflow. 
 
 ```yaml
@@ -682,6 +686,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectVoicemailAudioFilePrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The OverflowRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
 
 ```yaml
@@ -698,6 +704,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowRedirectVoicemailTextToSpeechPrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The OverflowRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to overflow. 
 
 ```yaml
@@ -826,6 +834,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectPersonTextToSpeechPrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The TimeoutRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to timeout. 
 
 ```yaml
@@ -842,6 +852,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectVoiceAppAudioFilePrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The TimeoutRedirectVoiceAppAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a voice application due to timeout. 
 
 ```yaml
@@ -906,6 +918,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectVoicemailAudioFilePrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The TimeoutRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to timeout. 
 
 ```yaml
@@ -922,6 +936,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutRedirectVoicemailTextToSpeechPrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The TimeoutRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to timeout. 
 
 ```yaml
@@ -1034,6 +1050,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectPersonTextToSpeechPrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The NoAgentRedirectPersonTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person in the organization due to no agents. 
 
 ```yaml
@@ -1050,6 +1068,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectPersonAudioFilePrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The NoAgentRedirectPersonAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person in the organization due to no agents. 
 
 ```yaml
@@ -1130,6 +1150,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectVoicemailTextToSpeechPrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The NoAgentRedirectVoicemailTextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt which is played to the caller when being redirected to a person's voicemail due to no agent. 
 
 ```yaml
@@ -1146,6 +1168,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoAgentRedirectVoicemailAudioFilePrompt
+_Saving a call queue configuration through Teams admin center will *remove* this setting._
+
 The NoAgentRedirectVoiceMailAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to a person's voicemail due to no agent. 
 
 ```yaml
