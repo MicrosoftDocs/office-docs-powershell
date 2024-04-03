@@ -805,7 +805,7 @@ Accept wildcard characters: False
 ### -ServiceSafetyConfiguration
 This parameter is available only in the cloud-based service.
 
-{{ Fill ServiceSafetyConfiguration Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
