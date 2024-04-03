@@ -27,34 +27,16 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > [!CAUTION]
 > The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items:
 > 
-> - -OverflowDisconnectTextToSpeechPrompt
-> - -OverflowDisconnectAudioFilePrompt
 > - -OverflowRedirectPersonTextToSpeechPrompt
 > - -OverflowRedirectPersonAudioFilePrompt
-> - -OverflowRedirectVoiceAppTextToSpeechPrompt
-> - -OverflowRedirectVoiceAppAudioFilePrompt
-> - -OverflowRedirectPhoneNumberTextToSpeechPrompt
-> - -OverflowRedirectPhoneNumberAudioFilePrompt
 > - -OverflowRedirectVoicemailTextToSpeechPrompt
 > - -OverflowRedirectVoicemailAudioFilePrompt
-> - -TimeoutDisconnectTextToSpeechPrompt
-> - -TimeoutDisconnectAudioFilePrompt
 > - -TimeoutRedirectPersonTextToSpeechPrompt
 > - -TimeoutRedirectPersonAudioFilePrompt
-> - -TimeoutRedirectVoiceAppTextToSpeechPrompt
-> - -TimeoutRedirectVoiceAppAudioFilePrompt
-> - -TimeoutRedirectPhoneNumberTextToSpeechPrompt
-> - -TimeoutRedirectPhoneNumberAudioFilePrompt
 > - -TimeoutRedirectVoicemailTextToSpeechPrompt
 > - -TimeoutRedirectVoicemailAudioFilePrompt
-> - -NoAgentDisconnectTextToSpeechPrompt
-> - -NoAgentDisconnectAudioFilePrompt
 > - -NoAgentRedirectPersonTextToSpeechPrompt
 > - -NoAgentRedirectPersonAudioFilePrompt
-> - -NoAgentRedirectVoiceAppTextToSpeechPrompt
-> - -NoAgentRedirectVoiceAppAudioFilePrompt
-> - -NoAgentRedirectPhoneNumberTextToSpeechPrompt
-> - -NoAgentRedirectPhoneNumberAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
 >
