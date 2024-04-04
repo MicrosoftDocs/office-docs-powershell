@@ -1,5 +1,2 @@
-items:
 - name: Overview
   href: index.md
-metadata:
-  universal_ref_toc: /powershell/module/teams-ps/toc.json
