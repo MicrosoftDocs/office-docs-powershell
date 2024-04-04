@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-publicfoldermoverequeststatistics
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolderMoveRequestStatistics
 schema: 2.0.0
 author: chrisda
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-PublicFolderMoveRequestStatistics
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-PublicFolderMoveRequestStatistics cmdlet to view detailed information about public folder move requests.
 
@@ -25,20 +25,23 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-PublicFolderMoveRequestStatistics [-Identity] <PublicFolderMoveRequestIdParameter>
  [-Diagnostic]
  [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
+ [-IncludeSkippedItems]
  [-ReportOnly]
  [<CommonParameters>]
 ```
 
 ### MigrationRequestQueue
 ```
-Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter>
- [-RequestGuid <Guid>]
+Get-PublicFolderMoveRequestStatistics -RequestQueue <DatabaseIdParameter> [-RequestGuid <Guid>]
  [-Diagnostic]
  [-DiagnosticArgument <String>]
+ [-DiagnosticInfo <String>]
  [-DomainController <Fqdn>]
  [-IncludeReport]
+ [-IncludeSkippedItems]
  [-ReportOnly]
  [<CommonParameters>]
 ```
@@ -73,7 +76,7 @@ This parameter can't be used with the RequestQueue parameter.
 Type: PublicFolderMoveRequestIdParameter
 Parameter Sets: Identity
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: 1
@@ -97,7 +100,7 @@ You can't use this parameter with the Identity parameter.
 Type: DatabaseIdParameter
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: True
 Position: Named
@@ -140,14 +143,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DiagnosticInfo
+This parameter is available only in the cloud-based service.
+
+{{ Fill DiagnosticInfo Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
+This parameter is functional only in on-premises Exchange.
+
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -163,7 +186,41 @@ The IncludeReport switch specifies whether to return additional details, which c
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSkippedItems
+This parameter is available only in the cloud-based service.
+
+{{ Fill IncludeSkippedItems Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportOnly
+The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -181,23 +238,7 @@ This parameter can't be used with the Identity parameter.
 Type: Guid
 Parameter Sets: MigrationRequestQueue
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReportOnly
-The ReportOnly switch returns the results as an array of report entries (encoded strings). You don't need to specify a value with this switch.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

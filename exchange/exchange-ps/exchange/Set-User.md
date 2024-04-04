@@ -39,6 +39,7 @@ Set-User [-Identity] <UserIdParameter>
  [-DesiredWorkloads <MailboxWorkloadFlags>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
+ [-EXOModuleEnabled <Boolean>]
  [-Fax <String>]
  [-FirstName <String>]
  [-Force]
@@ -441,6 +442,24 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EXOModuleEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill EXOModuleEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

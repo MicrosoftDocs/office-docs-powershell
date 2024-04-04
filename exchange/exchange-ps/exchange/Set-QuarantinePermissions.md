@@ -22,13 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-QuarantinePermissions -QuarantinePermissionsObject <QuarantinePermissions>
- [-PermissionToBlockSender <Boolean>]
- [-PermissionToDelete <Boolean>]
- [-PermissionToDownload <Boolean>]
- [-PermissionToPreview <Boolean>]
- [-PermissionToRelease <Boolean>]
- [-PermissionToRequestRelease <Boolean>]
- [-PermissionToViewHeader <Boolean>]
+ [[-PermissionToAllowSender] <Boolean>]
+ [[-PermissionToBlockSender] <Boolean>]
+ [[-PermissionToDelete] <Boolean>]
+ [[-PermissionToDownload] <Boolean>]
+ [[-PermissionToPreview] <Boolean>]
+ [[-PermissionToRelease] <Boolean>]
+ [[-PermissionToRequestRelease] <Boolean>]
+ [[-PermissionToViewHeader] <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -60,8 +61,24 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
-Position: Named
+Position: 9
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PermissionToAllowSender
+{{ Fill PermissionToAllowSender Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -79,7 +96,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -98,7 +115,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -119,7 +136,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -138,7 +155,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -159,7 +176,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -180,7 +197,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -201,7 +218,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
