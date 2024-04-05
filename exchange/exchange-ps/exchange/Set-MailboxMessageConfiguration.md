@@ -37,6 +37,9 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultFontName <String>]
  [-DefaultFontSize <Int32>]
  [-DefaultFormat <MailFormat>]
+ [-DefaultSignature <String>]
+ [-DefaultSignatureOnReply <String>]
+ [-DeleteSignatureName <String>]
  [-DisplayDensityMode <DisplayDensityMode>]
  [-DomainController <Fqdn>]
  [-EchoGroupMessageBackToSubscribedSender <Boolean>]
@@ -73,6 +76,8 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-ShowSenderOnTopInListView <Boolean>]
  [-ShowUpNext <Boolean>]
  [-SignatureHtml <String>]
+ [-SignatureHtmlBody <String>]
+ [-SignatureName <String>]
  [-SignatureText <String>]
  [-SignatureTextOnMobile <String>]
  [-SigningCertificateId <String>]
@@ -426,6 +431,60 @@ Type: MailFormat
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultSignature
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultSignature Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultSignatureOnReply
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultSignatureOnReply Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteSignatureName
+This parameter is available only in the cloud-based service.
+
+{{ Fill DeleteSignatureName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1135,6 +1194,42 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureHtmlBody
+This parameter is available only in the cloud-based service.
+
+{{ Fill SignatureHtmlBody Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureName
+This parameter is available only in the cloud-based service.
+
+{{ Fill SignatureName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
