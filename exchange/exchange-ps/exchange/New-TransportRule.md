@@ -4028,8 +4028,8 @@ This parameter is available only in the cloud-based service.
 
 The RecipientAddressType parameter specifies how conditions and exceptions check recipient email addresses. Valid values are:
 
-- Original: Checks the original address in the To field of the mail.
-- Resolved: The rule checks the recipient's primary SMTP email address (not checking proxy addresses). This is the default value.
+- Original: The rule checks the original address in the To field of the message.
+- Resolved: The rule checks the recipient's primary SMTP email address without checking any proxy addresses. This is the default value.
 
 ```yaml
 Type: RecipientAddressType
