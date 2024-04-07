@@ -127,7 +127,7 @@ The description of the site.
 The network region ID of the site.
 
 ### LocationPolicyID
-The ID of the locaton policy assigned to the site.
+The ID of the location policy assigned to the site.
 
 ### SiteAddress
 This parameter is reserved for internal Microsoft use.

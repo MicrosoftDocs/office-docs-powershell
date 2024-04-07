@@ -58,7 +58,7 @@ This example modifies an audit log retention policy and changes to retention dur
 The Identity parameter specifies the unified audit log retention policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-- Distingished name (DN)
+- Distinguished name (DN)
 - GUID
 
 ```yaml
