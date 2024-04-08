@@ -275,7 +275,7 @@ The RecipientDomainIs parameter specifies a condition that looks for recipients 
 Type: Word[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Onlinen
+Applicable: Exchange Online
 
 Required: False
 Position: Named

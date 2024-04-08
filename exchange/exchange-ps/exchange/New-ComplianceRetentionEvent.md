@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventTags
-The EventTags parameter specifies the GUID value of the labels tha are associated with the compliance retention event. Run the following command to see the available GUID values: `Get-ComplianceTag | Format-Table Name,GUID`.
+The EventTags parameter specifies the GUID value of the labels that are associated with the compliance retention event. Run the following command to see the available GUID values: `Get-ComplianceTag | Format-Table Name,GUID`.
 
 You can specify multiple values separated by commas.
 

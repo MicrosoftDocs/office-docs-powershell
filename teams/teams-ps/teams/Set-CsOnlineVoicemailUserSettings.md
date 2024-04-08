@@ -246,7 +246,7 @@ The following languages are supported:
 - "ko-KR" (Korean - Korea)
 - "lt-LT" (Lithuanian - Lithuania)
 - "lv-LV" (Latvian - Latvia)
-- "nl-BE" (Dutch - Begium)
+- "nl-BE" (Dutch - Belgium)
 - "nl-NL" (Dutch - Netherlands)
 - "nb-NO" (Norwegian, Bokmål - Norway)
 - "pl-PL" (Polish - Poland)
