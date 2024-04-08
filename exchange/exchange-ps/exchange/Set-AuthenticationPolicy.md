@@ -34,6 +34,7 @@ Set-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-AllowBasicAuthRpc]
  [-AllowBasicAuthSmtp]
  [-AllowBasicAuthWebServices]
+ [-AllowLegacyExchangeTokens]
  [-BlockLegacyAuthActiveSync]
  [-BlockLegacyAuthAutodiscover]
  [-BlockLegacyAuthImap]
