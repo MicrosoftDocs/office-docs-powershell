@@ -19,17 +19,17 @@ Assigns a per-user online voice routing policy to one user, a group of users, or
 
 ### Identity (Default)
 ```
-Grant-CsOnlineVoiceRoutingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsOnlineVoiceRoutingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToTenant
 ```
-Grant-CsOnlineVoiceRoutingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsOnlineVoiceRoutingPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToGroup
 ```
-Grant-CsOnlineVoiceRoutingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsOnlineVoiceRoutingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -166,24 +166,8 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+
 ```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
