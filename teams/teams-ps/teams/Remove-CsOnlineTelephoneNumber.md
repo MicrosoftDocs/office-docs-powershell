@@ -56,7 +56,7 @@ This example removes the specified list of telephone numbers from the tenant.
 ## PARAMETERS
 
 ### -TelephoneNumber
-Specifies the telephone number(s) to remove. The format can be withor without the prefixed +, but needs to include country code etc.
+Specifies the telephone number(s) to remove. The format can be with or without the prefixed +, but needs to include country code etc.
 
 ```yaml
 Type: String[]

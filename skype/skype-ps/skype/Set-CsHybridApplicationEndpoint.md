@@ -23,7 +23,7 @@ Set-CsHybridApplicationEndpoint [-Identity] <HybridApplicationEndpointIdParamete
 ```
 
 ## DESCRIPTION
-The `Set-CsHybridApplicationEndpoint` cmdlet enables you to modify the Skype for Business Server related hybrid application endpoint attributes that are stored in Active Directory Domain Services. For example, you can modify an enpoint's line URI number; or modify an enpoint's display name.
+The `Set-CsHybridApplicationEndpoint` cmdlet enables you to modify the Skype for Business Server related hybrid application endpoint attributes that are stored in Active Directory Domain Services. For example, you can modify an endpoint's line URI number; or modify an endpoint's display name.
 
 ## EXAMPLES
 

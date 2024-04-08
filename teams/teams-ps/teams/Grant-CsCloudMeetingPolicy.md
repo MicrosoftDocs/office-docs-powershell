@@ -24,7 +24,7 @@ Grant-CsCloudMeetingPolicy [-PolicyName] <String> [-Tenant <Guid>] [-DomainContr
 
 ## DESCRIPTION
 The Grant-CsCloudMeetingPolicy cmdlet enables or disables automatic scheduling of Skype Meetings features for a specified user.
-The default is disbaled.
+The default is disabled.
 
 To enable automatic scheduling for all users in a tenant, use the Set-CsCloudMeetingPolicy cmdlet.
 
