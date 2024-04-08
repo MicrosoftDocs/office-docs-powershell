@@ -2,7 +2,6 @@
 Module Name: SkypeForBusiness
 Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
 Help Version:  17.0.15229.2100
-Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/skype/
 title: skype
 Additional Locale: de-DE,es-ES,fr-FR,it-IT,ja-JP,ko-KR,pt-BR,ru-RU,zh-CN,zh-TW
 de-DE Version: 17.0.15229.2100
