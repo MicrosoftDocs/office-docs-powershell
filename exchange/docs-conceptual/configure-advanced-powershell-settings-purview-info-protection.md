@@ -109,7 +109,7 @@ However, for labels, the Microsoft 365 compliance center show both a **Name** an
 
 For example, to identify the label in the following picture, use the following syntax in your PowerShell command: `-Identity "All Company"`:
 
-![Use 'Name' rather than 'Display name' to identify a sensitivity label](../media/labelname_scc.png)
+![Use 'Name' rather than 'Display name' to identify a sensitivity label](./media/labelname_scc.png)
 
 If you prefer to specify the label **GUID**, this value is *not* shown in the Microsoft 365 compliance center. Use the [Get-Label](/powershell/module/exchange/get-label) command to find this value, as follows:
 

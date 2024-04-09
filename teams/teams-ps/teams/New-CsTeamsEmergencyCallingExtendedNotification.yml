@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The use of extended notifications for emergency calling and this cmdlet is currently not supported.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsTeamsEmergencyCallingPolicy
+  href: Set-CsTeamsEmergencyCallingPolicy.yml
+- text: New-CsTeamsEmergencyCallingPolicy
+  href: New-CsTeamsEmergencyCallingPolicy.yml
+syntaxes:
+- >-
+  New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString <string> [-NotificationGroup <string>] 
+
+   [-NotificationDialOutNumber <string>] [-NotificationMode <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:>  $en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
+  description: |-
+    Creates an extended emergency calling notification for the emergency phone number 911 and stores it in the variable $en1. The variable should be added afterward to a TeamsEmergencyCallingPolicy instance.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EmergencyDialString
+  description: |+
+    Specifies the emergency phone number.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NotificationDialOutNumber
+  description: |+
+    This parameter represents the PSTN number which can be dialed out if NotificationMode is set to either of the two Conference values. The PSTN phone cannot be unmuted even when the NotificationMode is set to ConferenceUnMuted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NotificationGroup
+  description: |+
+    NotificationGroup is an email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 50 users can be notified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Microsoft.Rtc.Management.WritableConfig.Policy.Teams.NotificationMode" data-throw-if-not-resolved="False" />
+  name: NotificationMode
+  description: |+
+    The type of conference experience for security desk notification.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotificationOnly, ConferenceMuted, ConferenceUnMuted
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsTeamsEmergencyCallingExtendedNotification
+name: New-CsTeamsEmergencyCallingExtendedNotification
+description: |-
+  **Note**: The use of extended notifications for emergency calling and this cmdlet is currently not supported.
+
+  This cmdlet supports creating specific emergency calling notification settings per emergency phone number. It is used with TeamsEmergencyCallingPolicy.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencycallingextendednotification
+  applicable: Microsoft Teams
+  title: New-CsTeamsEmergencyCallingExtendedNotification
+  author: jenstrier
+  ms.author: serdars
+  manager: roykuntz
+  ms.reviewer: ""
+  schema: 2.0.0

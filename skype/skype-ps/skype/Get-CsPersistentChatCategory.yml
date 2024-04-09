@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the Persistent Chat categories in use in your organization.
+  A Persistent Chat category represents a collection of Persistent Chat chat rooms.
+  Each chat room must be associated with a category.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.PersistentChat.Cmdlets.CategoryObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsPersistentChatCategory
+  href: New-CsPersistentChatCategory.yml
+- text: Remove-CsPersistentChatCategory
+  href: Remove-CsPersistentChatCategory.yml
+- text: Set-CsPersistentChatCategory
+  href: Set-CsPersistentChatCategory.yml
+syntaxes:
+- Get-CsPersistentChatCategory [-Identity] <String> [-AsObject] [<CommonParameters>]
+- Get-CsPersistentChatCategory [-AsObject] [-PersistentChatPoolFqdn <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsPersistentChatCategory
+  description: |-
+    The command shown in Example 1 returns information for all the Persistent Chat categories configured for use in the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsPersistentChatCategory -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    In Example 2, information is returned for all the Persistent Chat categories configured for use on the pool atl-cs-001.litwareinc.com.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsPersistentChatCategory | Where-Object {$_.Invites -eq $False}
+  description: |-
+    Example 3 returns information for all the Persistent Chat categories where the Invites property has been set to False.
+    To do this, the command first uses the Get-CsPersistentChatCategory cmdlet to return a collection of all the Persistent Chat categories.
+    This collection is then piped to the Where-Object cmdlet, which picks out only those categories where the Invites property is set to False ($False).
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsPersistentChatCategory | Where-Object {$_.Creators -contains "Ken Myer"}
+  description: |-
+    In Example 4, information is returned for all the Persistent Chat categories where Ken Myer is listed as one of the creators.
+    To do this, the Get-CsPersistentChatCategory cmdlet is first used to return a collection of all the Persistent Chat categories.
+    This collection is then piped to the Where-Object cmdlet, which picks out any category where the Creators property includes (-contains) the name "Ken Myer".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsObject
+  description: |+
+    When specified, Active Directory display names are used when showing users who are on the AllowedMembers, DeniedMembers, or Creators lists.
+    When not specified, SIP addresses are used when showing these users.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the chat room category.
+    The Identity consists of the Persistent Chat pool were the category is located followed by the category Name; for example:
+
+    `-Identity "atl-gc-001.litwareinc.com\ITChat"`
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PersistentChatPoolFqdn
+  description: |+
+    Fully qualified domain name of the Persistent Chat pool that hosts Persistent Chat categories.
+    If you use the PoolFqdn parameter without including the Name parameter, information will be returned for all the Persistent Chat categories on the specified pool.
+    If you leave off both the Name and PoolFqdn parameters, then information will be returned for all your Persistent Chat categories.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.Get-CsPersistentChatCategory
+name: Get-CsPersistentChatCategory
+description: |-
+  The Persistent Chat serviceprovides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
+  Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
+  Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
+
+  Persistent Chat categories provide a way for administrators to organize, and manage, Persistent Chat chat rooms.
+  Categories provide a way for administrators to group related chat rooms; for example, all chat rooms used by the finance department can be grouped in the same category.
+  Likewise, categories provide a way for administrators to manage permissions to these rooms, dictating which users are allowed access to the rooms, which users are denied access to the rooms, and which users are allowed to create new chat rooms within the category.
+
+  Note that all chat rooms must belong to a category; you cannot create a chat room without assigning that room to a category.
+  That means that you must create at least one category before you can add any chat rooms to your Persistent Chat implementation.
+
+  To view Persistent Chat categories in Skype for Business Server Control Panel, click Persistent Chat and then click Category.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cspersistentchatcategory
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: Get-CsPersistentChatCategory
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

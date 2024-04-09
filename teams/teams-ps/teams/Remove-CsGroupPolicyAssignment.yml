@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is used to remove a group policy assignment.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsGroupPolicyAssignment
+  href: New-CsGroupPolicyAssignment.yml
+- text: Get-CsGroupPolicyAssignment
+  href: Get-CsGroupPolicyAssignment.yml
+- text: Set-CsGroupPolicyAssignment
+  href: Set-CsGroupPolicyAssignment.yml
+syntaxes:
+- >-
+  Remove-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> [-Break]
+
+   [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-PassThru] [-Proxy <Uri>]
+
+   [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
+
+    GroupId                              PolicyType         PolicyName Rank CreatedTime           CreatedBy
+    -------                              ----------         ---------- ---- -----------           ---------
+    d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/2019 3:57:27 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+    e050ce51-54bc-45b7-b3e6-c00343d31274 TeamsMeetingPolicy AllOff     2    11/2/2019 12:20:41 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+    566b8d39-5c5c-4aaa-bc07-4f36278a1b38 TeamsMeetingPolicy Kiosk      3    11/2/2019 12:14:41 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+
+    Remove-CsGroupPolicyAssignment -GroupId e050ce51-54bc-45b7-b3e6-c00343d31274 -PolicyType TeamsMeetingPolicy 
+
+    Get-CsGroupPolicyAssignment -PolicyType TeamsMeetingPolicy
+
+    GroupId                              PolicyType         PolicyName Rank CreatedTime           CreatedBy
+    -------                              ----------         ---------- ---- -----------           ---------
+    d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 TeamsMeetingPolicy AllOn      1    10/29/2019 3:57:27 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+    566b8d39-5c5c-4aaa-bc07-4f36278a1b38 TeamsMeetingPolicy Kiosk      2    11/2/2019 12:14:41 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
+  description: |-
+    In this example, the policy assignment with rank 2 is removed.  As a result, the policy assignment with rank 3 is updated to rank 2.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Break
+  description: |+
+    Wait for .NET debugger to attach
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    The ID of the group from which the assignment will be removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelineAppend
+  description: |+
+    SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelinePrepend
+  description: |+
+    SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns true when the command succeeds
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyType
+  isRequired: true
+  description: |+
+    The policy type of the assignment to be removed from the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Proxy
+  description: |+
+    The URI for the proxy server to use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ProxyCredential
+  description: |+
+    Credentials for a proxy server to use for the remote call
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxyUseDefaultCredentials
+  description: |+
+    Use the default credentials for the proxy
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Remove-CsGroupPolicyAssignment
+name: Remove-CsGroupPolicyAssignment
+description: |-
+  This cmdlet removes the policy of a specific type from a group.  A group can only be assigned one policy of a given type, so the name of the policy to be removed does not need to be specified.
+
+  When a policy assignment is removed from a group, any other group policy assignments of the same type that have lower rank will be updated.  For example, if the policy assignment with rank 2 is removed, then the rank 3 and 4 policy assignments will be updated to rank  2 and 3 respectively.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment
+  schema: 2.0.0
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves information about the application access policy configured for use in the tenant.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsApplicationAccessPolicy
+  href: New-CsApplicationAccessPolicy.yml
+- text: Grant-CsApplicationAccessPolicy
+  href: Grant-CsApplicationAccessPolicy.yml
+- text: Set-CsApplicationAccessPolicy
+  href: Set-CsApplicationAccessPolicy.yml
+- text: Remove-CsApplicationAccessPolicy
+  href: Remove-CsApplicationAccessPolicy.yml
+syntaxes:
+- Get-CsApplicationAccessPolicy [-Identity <XdsIdentity>]
+examples:
+- title: Retrieve all application access policies
+  code: |-
+    PS C:\> Get-CsApplicationAccessPolicy
+  description: |-
+    The command shown above returns information of all application access policies that have been configured for use in the tenant.
+  summary: ""
+- title: Retrieve specific application access policy
+  code: |-
+    PS C:\> Get-CsApplicationAccessPolicy -Identity "ASimplePolicy"
+  description: |-
+    In the command shown above, information is returned for a single application access policy: the policy with the Identity ASimplePolicy.
+  summary: ""
+parameters:
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier assigned to the policy when it was created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsApplicationAccessPolicy
+name: Get-CsApplicationAccessPolicy
+description: |-
+  This cmdlet retrieves information about the application access policy configured for use in the tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csapplicationaccesspolicy
+  applicable: Microsoft Teams
+  title: Get-CsApplicationAccessPolicy
+  schema: 2.0.0
+  manager: zhengni
+  author: frankpeng7
+  ms.author: frpeng
+  ms.reviewer: ""

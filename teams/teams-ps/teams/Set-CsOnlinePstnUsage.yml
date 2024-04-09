@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a set of strings that identify the allowed online public switched telephone network (PSTN) usages. This cmdlet can be used to add usages to the list of online PSTN usages or remove usages from the list.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsOnlinePstnUsage
+  href: Get-CsOnlinePstnUsage.yml
+syntaxes:
+- Set-CsOnlinePstnUsage [[-Identity] <string>] [-Usage <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> Set-CsOnlinePstnUsage -Identity global -Usage @{add="International"}
+  description: |-
+    This command adds the string "International" to the current list of available PSTN usages.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    PS C:\> Set-CsOnlinePstnUsage -Identity global -Usage @{remove="Local"}
+  description: |-
+    This command removes the string "Local" from the list of available PSTN usages.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    PS C:\> Set-CsOnlinePstnUsage -Usage @{remove="Local"}
+  description: |-
+    The command in this example performs the exact same action as the command in Example 2: it removes the "Local" PSTN usage. This example shows the command without the Identity parameter specified. The only Identity available to the Set-CsOnlinePstnUsage cmdlet is the Global identity; omitting the Identity parameter defaults to Global.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    PS C:\> Set-CsOnlinePstnUsage -Usage @{replace="International","Restricted"}
+  description: |-
+    This command replaces everything in the usage list with the values International and Restricted. All previously existing usages are removed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The scope at which these settings are applied. The Identity for this cmdlet is always Global.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Usage
+  description: |+
+    Contains a list of allowable usage strings. These entries can be any string value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsOnlinePstnUsage
+name: Set-CsOnlinePstnUsage
+description: |-
+  Online PSTN usages are string values that are used for call authorization. An online PSTN usage links an online voice policy to a route. The `Set-CsOnlinePstnUsage` cmdlet is used to add or remove phone usages to or from the usage list. This list is global so it can be used by policies and routes throughout the tenant.
+
+  This cmdlet is used when configuring Microsoft Phone System Direct Routing.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinepstnusage
+  applicable: Microsoft Teams
+  title: Set-CsOnlinePstnUsage
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

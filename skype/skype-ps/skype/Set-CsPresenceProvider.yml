@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a presence provider configured for use in the organization.
+  Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsPresenceProvider` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.PresenceProvider#Decorated object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Set-CsPresenceProvider` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.PresenceProvider#Decorated object.
+links:
+- text: Get-CsPresenceProvider
+  href: Get-CsPresenceProvider.yml
+- text: Get-CsUserServicesConfiguration
+  href: Get-CsUserServicesConfiguration.yml
+- text: New-CsPresenceProvider
+  href: New-CsPresenceProvider.yml
+- text: Remove-CsPresenceProvider
+  href: Remove-CsPresenceProvider.yml
+syntaxes:
+- Set-CsPresenceProvider [[-Identity] <XdsIdentity>] [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+- Set-CsPresenceProvider [-Confirm] [-Force] [-Instance <PSObject>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    $x = Get-CsPresenceProvider -Identity "global/contoso.com"
+
+    $x.Fqdn = "contoso2.com"
+
+    Set-CsPresenceProvider -Instance $x
+  description: |-
+    The commands shown in Example 1 demonstrate how you can use the `Set-CsPresenceProvider` cmdlet to modify the FQDN of an existing presence provider.
+    To do this, the first command in the example uses the `Get-CsPresenceProvider` cmdlet to create an object reference to the presence provider with the Identity "global/contoso.com".
+    This object reference is stored in the variable $x.
+
+    In the second command, the FQDN property of the object reference is set to contoso2.com, the new FQDN for the presence provider.
+    After the FQDN property has been configured, the `Set-CsPresenceProvider` cmdlet is used, along with the Instance property, to write these changes to the global collection of User Services configuration settings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the presence provider to be modified.
+    The Identity of a presence provider is composed of two parts: the scope (Parent) where the rule has been applied (for example, service:UserServer:atl-cs-001.litwareinc.com) and the provider Fqdn.
+    To modify a presence provider at the global scope use syntax similar to this:
+
+    `-Identity "global/fabrikam.com"`
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsPresenceProvider
+name: Set-CsPresenceProvider
+description: |-
+  The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
+  Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.
+  That collection is stored in the PresenceProviders property.
+
+  The `Set-CsPresenceProvider` cmdlet can be used to modify the FQDN of a presence provider currently configured for use in the organization.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Set-CsPresenceProvider` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cspresenceprovider
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsPresenceProvider
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

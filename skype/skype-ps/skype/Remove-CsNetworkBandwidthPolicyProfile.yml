@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a network bandwidth policy profile.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.BWPolicyProfileType object.
+    Accepts pipelined input of network bandwidth policy profile objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return a value.
+    It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.BWPolicyProfileType.
+links:
+- text: New-CsNetworkBandwidthPolicyProfile
+  href: New-CsNetworkBandwidthPolicyProfile.yml
+- text: Set-CsNetworkBandwidthPolicyProfile
+  href: Set-CsNetworkBandwidthPolicyProfile.yml
+- text: Get-CsNetworkBandwidthPolicyProfile
+  href: Get-CsNetworkBandwidthPolicyProfile.yml
+syntaxes:
+- >-
+  Remove-CsNetworkBandwidthPolicyProfile [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsNetworkBandwidthPolicyProfile -Identity LowBWProfile
+  description: |-
+    This example removes the bandwidth policy profile with the Identity LowBWProfile.
+    Because identities must be unique this will remove, at most, one profile.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsNetworkSite | Where-Object {$_.BWPolicyProfileID -eq "LowBWProfile"} | Set-CsNetworkSite -BWPolicyProfileID $null
+
+    Remove-CsNetworkBandwidthPolicyProfile -Identity LowBWProfile
+  description: |-
+    Example 2 removes all references to the bandwidth policy profile with the Identity LowBWProfile from all sites to which it has been assigned and then removes that profile.
+    The first line of this example begins with a call to the `Get-CsNetworkSite` cmdlet to retrieve all sites configured for call admission control (CAC).
+    This collection of sites is then piped to the `Where-Object` cmdlet, which looks for only those sites with a BWPolicyProfileID that is equal to (-eq) LowBWProfile.
+    This narrowed-down collection, containing only sites with a BWPolicyProfileID value of LowBWProfile, is piped to the `Set-CSNetworkSite` cmdlet, which modifies each of these sites to change the BWPolicyProfileID to Null ($null).
+    What we've just done is to find all sites with a BWPolicyProfileID of LowBWProfile and set that value to Null.
+    At this point there are no sites using the LowBWProfile profile.
+    We now call the `Remove-CsNetworkBandwidthPolicyProfile` cmdlet on the profile LowBWProfile to remove the profile, knowing that the profile is not in use by any sites.
+
+    To ensure that the profile is not in use anywhere in the network configuration, perform the same steps in Line 1 against inter-site policies and network region links.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A string value that uniquely identifies the bandwidth policy profile you want to remove.
+    Specifying an Identity will remove, at most, one profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsNetworkBandwidthPolicyProfile
+name: Remove-CsNetworkBandwidthPolicyProfile
+description: |-
+  As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
+  (In Skype for Business Server, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet removes a container profile for these policies.
+
+  IMPORTANT: If a profile has been assigned to a site (by using the `New-CsNetworkSite` cmdlet or the `Set-CsNetworkSite` cmdlet), to an inter-site policy (by using the `New-CsNetworkInterSitePolicy` cmdlet or the `Set-CsNetworkInterSitePolicy` cmdlet), or to a network region link (by using the `New-CsNetworkRegionLink` cmdlet or the `Set-CsNetworkRegionLink` cmdlet) it cannot be removed.
+  You will receive an error if you try to remove the profile by calling the `Remove-CsNetworkBandwidthPolicyProfile` cmdlet.
+  You must first remove the profile from all sites, inter-site policies and network region links, and then you can remove the profile.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csnetworkbandwidthpolicyprofile
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsNetworkBandwidthPolicyProfile
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

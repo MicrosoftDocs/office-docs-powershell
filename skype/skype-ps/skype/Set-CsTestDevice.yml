@@ -1,0 +1,197 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies one or more of the device update management test devices that have been configured for use in your organization.
+  Test devices provide a way for administrators to test firmware updates before those updates are distributed to all the devices in an organization.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.TestDevice object.
+    The `Set-CsTestDevice` cmdlet accepts pipelined input of the test device object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsTestDevice` cmdlet does not return a value or object.
+    Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.TestDevice object.
+links:
+- text: Get-CsTestDevice
+  href: Get-CsTestDevice.yml
+- text: New-CsTestDevice
+  href: New-CsTestDevice.yml
+- text: Remove-CsTestDevice
+  href: Remove-CsTestDevice.yml
+syntaxes:
+- >-
+  Set-CsTestDevice [[-Identity] <XdsIdentity>] [-Identifier <String>] [-IdentifierType <IdentifierType>] [-Force]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsTestDevice [-Instance <PSObject>] [-Identifier <String>] [-IdentifierType <IdentifierType>] [-Force]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Set-CsTestDevice -Identity site:Redmond/UCPhone -Identifier "09768-ABDR-83295"
+  description: |-
+    Example 1 modifies the Identifier property for the test device named UCPhone assigned to the Redmond site.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Set-CsTestDevice -Identity site:Redmond/UCPhone -IdentifierType SerialNumber -Identifier "09768-ABDR-83295"
+  description: |-
+    The command shown in Example 2 also modifies the test device named UCPhone assigned to the Redmond site.
+    In this case, however, the command not only specifies a new Identifier but also assigns a new IdentifierType: SerialNumber.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identifier
+  description: |+
+    Based on the IdentifierType, indicates the Media Access Control (MAC) address or serial number of the new test device.
+    Serial numbers can be specified using numbers, letters, hyphens and underscores; for example:
+
+    `-Identifier "AB37_679e"`
+
+    MAC addresses must be specified as six or more two-character pairs; depending on the MAC address, these pairs can be a single string value or they can be separated using hyphens or colons.
+    (Note that MAC addresses can include both letters and/or numbers.) Each of the following are valid MAC addresses:
+
+    010203040506
+
+    01-02-03-04-05-06
+
+    01:02:03:04:05:06
+
+    A MAC address such as 01-02-03-04-05 will not be accepted because it does not have at least six two-character pairs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="IdentifierType" data-throw-if-not-resolved="False" />
+  name: IdentifierType
+  description: |+
+    Indicates whether the test device will be uniquely identified by its MAC address or by its serial number.
+    To identify a device by its MAC address, set the IdentifierType to MACAddress.
+    To identify a device by its serial number, set the IdentifierType to SerialNumber.
+    MACAddress and SerialNumber are the only allowed values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the test device to be modified.
+    For example:
+
+    `-Identity site:Redmond/UCPhoneTestDevice`
+
+    Note that you cannot use wildcards when specifying an Identity.
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsTestDevice
+name: Set-CsTestDevice
+description: |-
+  By identifying specific phones running Skype for Business or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to all the relevant devices in the organization.
+  When device update rules are imported to Skype for Business Server, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
+
+  Instead, these pending rules will be downloaded and installed by any relevant test devices.
+  That's the idea behind test devices: new device update rules are automatically applied to test devices, giving administrators the opportunity to verify that the firmware updates work as expected.
+  If they do, those administrators can then mark the rules as approved; approved rules are then downloaded and installed by all the relevant devices in the organization.
+
+  Test devices are created by using the `New-CsTestDevice` cmdlet.
+  After a test device has been created, you can then use the `Set-CsTestDevice` cmdlet to change the Identifier and the IdentifierType of that device, or any other test device.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-cstestdevice
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsTestDevice
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

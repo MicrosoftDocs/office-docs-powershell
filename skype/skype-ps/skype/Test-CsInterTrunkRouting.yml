@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies the route and the PSTN usage used when routing a phone call made from a specified SIP trunk.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    `Test-CsInterTrunkRouting` does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    `Test-CsInterTrunkRouting` returns instances of the Microsoft.Rtc.Management.Voice.InterTrunkRoutingTestResult object.
+links:
+- text: Get-CsTrunk
+  href: Get-CsTrunk.yml
+- text: Get-CsTrunkConfiguration
+  href: Get-CsTrunkConfiguration.yml
+syntaxes:
+- >-
+  Test-CsInterTrunkRouting -TargetNumber <PhoneNumber> -TrunkConfiguration <TrunkConfiguration> [-Force]
+
+   [-RouteSettings <PstnRoutingSettings>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    $trunk = Get-CsTrunkConfiguration -Identity "site:Redmond"
+
+    Test-CsInterTrunkRouting -TargetNumber "tel:+12065551219" -TrunkConfiguration $trunk
+  description: |-
+    The commands shown in Example 1 return the matching routes and matching phone usages that enable users to call the phone number 1-206-555-1219 using the trunk configuration settings for the Redmond site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PstnRoutingSettings" data-throw-if-not-resolved="False" />
+  name: RouteSettings
+  description: |+
+    Object reference that enables you to specify a collection of voice routing configuration settings when calling `Test-CsInterTrunkRouting`.
+    To create this object reference, use a command similar to this:
+
+    `$route = Get-CsRoutingConfiguration -Identity "global"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PhoneNumber" data-throw-if-not-resolved="False" />
+  name: TargetNumber
+  isRequired: true
+  description: |+
+    PSTN telephone number to be called when conducting the test.
+    The target phone number should specified using the E.164 format, which means that the number will look something like this:
+
+    `-TargetNumber "tel:+12065551219"`
+
+    The phone number should include the "tel:" prefix followed by a plus sign (+), the country/region calling code (1), the area code (206) and the phone number (5551219).
+    Do not use dashes, parentheses, or any other characters when specifying the phone number.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="TrunkConfiguration" data-throw-if-not-resolved="False" />
+  name: TrunkConfiguration
+  isRequired: true
+  description: |+
+    Object reference to the trunk configuration being tested.
+    To create this object reference, use a command similar to this:
+
+    `$trunk = Get-CsTrunkConfiguration -Identity "site:Redmond"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsInterTrunkRouting
+name: Test-CsInterTrunkRouting
+description: |-
+  The `Test-CsInterTrunkRouting` verifies that calls can be routed from one SIP to another.
+  To do this, the cmdlet is given a phone number and a trunk configuration; `Test-CsInterTrunkRouting` will then report back matching routes and matching PSTN usages for the specified number.
+  Note that calls can be routed between trunks only if the trunks have a number pattern that matches the specified phone number and only if the trunks share at least one PSTN usage.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Test-CsInterTrunkRouting` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-csintertrunkrouting
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsInterTrunkRouting
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

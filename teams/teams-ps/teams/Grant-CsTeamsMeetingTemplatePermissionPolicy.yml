@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet applies an instance of the TeamsMeetingTemplatePermissionPolicy to users or groups in a tenant.
+module: MicrosoftTeamsPowerShell
+links:
+- text: Get-CsTeamsMeetingTemplatePermissionPolicy
+  href: Get-CsTeamsMeetingTemplatePermissionPolicy.yml
+- text: New-CsTeamsMeetingTemplatePermissionPolicy
+  href: New-CsTeamsMeetingTemplatePermissionPolicy.yml
+- text: Set-CsTeamsMeetingTemplatePermissionPolicy
+  href: Set-CsTeamsMeetingTemplatePermissionPolicy.yml
+- text: Remove-CsTeamsMeetingTemplatePermissionPolicy
+  href: Remove-CsTeamsMeetingTemplatePermissionPolicy.yml
+syntaxes:
+- Grant-CsTeamsMeetingTemplatePermissionPolicy [<CommonParameters>]
+- Grant-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
+- >-
+  Grant-CsTeamsMeetingTemplatePermissionPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32>
+
+   [<CommonParameters>]
+- Grant-CsTeamsMeetingTemplatePermissionPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
+examples:
+- title: Example 1 - Assign a policy to a user
+  code: |-
+    PS> Grant-CsTeamsMeetingTemplatePermissionPolicy -PolicyName Foobar -Identity testuser@test.onmicrosoft.com
+  description: |-
+    Assigns a given policy to a user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the policy assignment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    This is the equivalent to `-Identity Global`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    This is the identifier of the group that the policy should be assigned to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    This is the identifier of the user that the policy should be assigned to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Specifies the Identity of the policy to assign to the user or group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  isRequired: true
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Grant-CsTeamsMeetingTemplatePermissionPolicy
+name: Grant-CsTeamsMeetingTemplatePermissionPolicy
+description: |-
+  This cmdlet applies an instance of the TeamsMeetingTemplatePermissionPolicy to users or groups in a tenant.
+
+  Pass in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Grant-CsTeamsMeetingTemplatePermissionPolicy
+  author: boboPD
+  ms.author: pradas
+  online version: https://learn.microsoft.com/powershell/module/teams/Grant-CsTeamsMeetingTemplatePermissionPolicy
+  schema: 2.0.0

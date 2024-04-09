@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves one or more wireless access points (WAPs) from the location configuration database. Each WAP can be associated with a location, in which case this cmdlet will also retrieve the location information of the WAPs. This location association is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlineLisWirelessAccessPoint
+  href: Set-CsOnlineLisWirelessAccessPoint.yml
+- text: Remove-CsOnlineLisWirelessAccessPoint
+  href: Remove-CsOnlineLisWirelessAccessPoint.yml
+syntaxes:
+- Get-CsOnlineLisWirelessAccessPoint [[-BSSID] <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsOnlineLisWirelessAccessPoint
+
+    BSSID             LocationId                           Description
+    -----             ----------                           -----------
+    F0-6E-0B-C2-03-23 d7714269-ee52-4635-97b0-d7c228801d24 USWAP1
+    34-E3-80-D5-AB-60 9905bca0-6fb0-11ec-84a4-25019013784a DKWAP1
+    F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+  description: |-
+    Example 1 retrieves all Location Information Server (LIS) wireless access points and any associated locations.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-23
+
+    BSSID             LocationId                           Description
+    -----             ----------                           -----------
+    F0-6E-0B-C2-03-23 d7714269-ee52-4635-97b0-d7c228801d24 USWAP1
+  description: |-
+    Example 2 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-23" and associated location.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-*
+
+    BSSID             LocationId                           Description
+    -----             ----------                           -----------
+    F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+  description: |-
+    Example 3 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-*" and associated location.
+  summary: ""
+- title: Example 4
+  code: |-
+    Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-12
+
+    BSSID             LocationId                           Description
+    -----             ----------                           -----------
+    F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+  description: |-
+    Example 4 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-12" and associated location.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BSSID
+  description: |+
+    The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsDebug
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NCSApiUrl
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsOnlineLisWirelessAccessPoint
+name: Get-CsOnlineLisWirelessAccessPoint
+description: |-
+  Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet retrieves information on associations between physical locations and the WAP through which the client is connected.
+
+  The BSSID (Basic Service Set Identifiers) is used to describe sections of a wireless local area network. It is the MAC of the 802.11 side of the access point. The BSSID parameter in this command also supports the wildcard format to cover all BSSIDs in the range which are sharing the same description and Location ID. The wildcard '*' can be on either the last one or two character(s).
+
+  If a BSSID with a wildcard format is already exists, a location request with a WAP which is within this wildcard range will return the access point that is configured with the wildcard format.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineliswirelessaccesspoint
+  applicable: Microsoft Teams
+  title: Get-CsOnlineLisWirelessAccessPoint
+  schema: 2.0.0
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

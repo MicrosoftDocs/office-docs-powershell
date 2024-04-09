@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing application meeting configuration for the tenant.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Set-CsApplicationMeetingConfiguration` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsApplicationMeetingConfiguration` cmdlet does not return any objects or values.
+links:
+- text: Get-CsApplicationMeetingConfiguration
+  href: Get-CsApplicationMeetingConfiguration.yml
+syntaxes:
+- Set-CsApplicationMeetingConfiguration [-Identity <XdsIdentity>] [-AllowRemoveParticipantAppIds <PSListModifier>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-CsApplicationMeetingConfiguration [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Add new app ID to the configuration to allow remove participant for the tenant
+  code: |-
+    PS C:\> Set-CsApplicationMeetingConfiguration -AllowRemoveParticipantAppIds @{Add="5817674c-81d9-4adb-bfb2-8f6a442e4622"}
+  description: |-
+    The command shown above adds a new app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" to the application meeting configuration settings for the tenant to allow it to remove participant.
+  summary: ""
+- title: Remove app IDs from the configuration to allow remove participant for the tenant
+  code: |-
+    PS C:\> Set-CsApplicationMeetingConfiguration -AllowRemoveParticipantAppIds @{Remove="5817674c-81d9-4adb-bfb2-8f6a442e4622"}
+  description: |-
+    The command shown above removes the app ID "5817674c-81d9-4adb-bfb2-8f6a442e4622" from the application meeting configuration settings for the tenant to disallow it to remove participant.
+  summary: ""
+parameters:
+- type: <xref href="PSListModifier" data-throw-if-not-resolved="False" />
+  name: AllowRemoveParticipantAppIds
+  description: |+
+    A list of application (client) IDs. For details of application (client) ID, refer to: [Get tenant and app ID values for signing in](https://learn.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Teams
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the application meeting configuration settings to be returned.
+    Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling the Set-CsApplicationMeetingConfiguration cmdlet.
+    However, you can use the following syntax to retrieve the global settings: -Identity global.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Teams
+  parameterValueGroup: ""
+applicable:
+- Teams
+uid: MicrosoftTeamsPowerShell.Set-CsApplicationMeetingConfiguration
+name: Set-CsApplicationMeetingConfiguration
+description: |-
+  This cmdlet modifies an existing application meeting configuration for the tenant.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/set-CsApplicationMeetingConfiguration
+  applicable: Teams
+  title: Set-CsApplicationMeetingConfiguration
+  schema: 2.0.0
+  manager: zhengni
+  author: jackry6350
+  ms.author: yoren
+  ms.reviewer: ""

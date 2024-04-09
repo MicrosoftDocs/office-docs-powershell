@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Test-ServicePrincipalAuthorization cmdlet to test the access granted by role-based access control (RBAC) for Applications. For more information, see [Role Based Access Control for Applications in Exchange Online](https://learn.microsoft.com/Exchange/permissions-exo/application-rbac).
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Test-ServicePrincipalAuthorization [-Identity] <ServicePrincipalIdParameter>
+
+   [-Confirm]
+
+   [-Resource <UserIdParameter>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Test-ServicePrincipalAuthorization -Identity "DemoB" -Resource "Mailbox A" | Format-Table
+
+    RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope
+    --------                      ------------------          --------------------        ---------                 ------
+    Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     True
+    Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       False
+    Application Contacts.Read     Contacts.Read               Organization                 Organization             True
+  description: |-
+    This example tests if this service principal (the app named "DemoB") can exercise each of its assigned permissions against the target mailbox named "Mailbox A." The membership in the scope is indicated by the InScope column.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Test-ServicePrincipalAuthorization -Identity "DemoB" | Format-Table
+
+    RoleName                      GrantedPermissions          AllowedResourceScope        ScopeType                 InScope
+    --------                      ------------------          --------------------        ---------                 ------
+    Application Mail.Read         Mail.Read                   Canadian Employees           CustomRecipientScope     Not Run
+    Application Calendars.Read    Calendars.Read              4d819ce9-9257-44..           AdministrativeUnit       Not Run
+    Application Contacts.Read     Contacts.Read               Organization                 Organization             Not Run
+  description: |-
+    This example tests the entitlement of the app named "DemoB", including which permissions it has at which scopes. Because the command doesn't use the Resource parameter, the scope membership check is not run.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="ServicePrincipalIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the service principal that you want to test. You can use any value that uniquely identifies the service principal. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+    - AppId
+    - ServiceId
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Resource
+  description: |+
+    The Resource parameter specifies the target mailbox where the scoped permissions apply. You can use any value that uniquely identifies the mailbox. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - Canonical DN
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+- Exchange Online Protection
+uid: ExchangePowerShell.Test-ServicePrincipalAuthorization
+name: Test-ServicePrincipalAuthorization
+description: |-
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/test-serviceprincipalauthorization
+  applicable: Exchange Online, Exchange Online Protection
+  title: Test-ServicePrincipalAuthorization
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

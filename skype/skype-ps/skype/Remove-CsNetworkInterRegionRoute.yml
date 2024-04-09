@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a route that connects network regions within a call admission control (CAC) configuration.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkRegionRouteType object.
+    Accepts pipelined input of network inter-region route objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return a value.
+    It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkRegionRouteType.
+links:
+- text: New-CsNetworkInterRegionRoute
+  href: New-CsNetworkInterRegionRoute.yml
+- text: Set-CsNetworkInterRegionRoute
+  href: Set-CsNetworkInterRegionRoute.yml
+- text: Get-CsNetworkInterRegionRoute
+  href: Get-CsNetworkInterRegionRoute.yml
+syntaxes:
+- >-
+  Remove-CsNetworkInterRegionRoute [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsNetworkInterRegionRoute -Identity NA_APAC_Route
+  description: |-
+    Example 1 removes the route with the Identity NA_APAC_Route.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsNetworkInterRegionRoute | Where-Object {$_.NetworkRegionID1 -eq "NorthAmerica" -or $_.NetworkRegionID2 -eq "NorthAmerica"} | Remove-CsNetworkInterRegionRoute
+  description: |-
+    Example 2 removes all region routes that include the NorthAmerica region.
+    The first part of the command is a call to the `Get-CsNetworkInterRegionRoute` cmdlet.
+    This cmdlet, called with no parameters, will retrieve all region routes.
+    Next, this collection of routes is piped to the `Where-Object` cmdlet.
+    The `Where-Object` cmdlet will narrow the collection down to only those routes that have NorthAmerica defined as one of the regions in the route.
+    It does this by checking to see if the route has a NetworkRegionID1 value equal to (-eq) NorthAmerica, or (-or) a NetworkRegionID2 value equal to NorthAmerica.
+    Once the collection contains only the routes that include the NorthAmerica region, we pipe the collection to the `Remove-CsNetworkInterRegionRoute` cmdlet, which removes each of those routes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The unique identifier for the network region route you want to remove.
+    Network region routes are created only at the global scope, so this identifier does not need to specify a scope.
+    Instead, it contains a string that is a unique name that identifies that route.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsNetworkInterRegionRoute
+name: Remove-CsNetworkInterRegionRoute
+description: |-
+  Every region within a CAC configuration must have some way to access every other region.
+  While region links set bandwidth limitations on the connections between regions and also represent the physical links, a route determines which linked path the connection will traverse from one region to another.
+  This cmdlet removes one of these route associations.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csnetworkinterregionroute
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsNetworkInterRegionRoute
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

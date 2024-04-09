@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Get-HoldCompliancePolicy to view existing preservation policies in the Microsoft Purview compliance portal.
+
+  **Note**: The Get-HoldCompliancePolicy cmdlet has been replaced by the Get-RetentionCompliancePolicy cmdlet. If you have scripts that use Get-HoldCompliancePolicy, update them to use Get-RetentionCompliancePolicy.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-HoldCompliancePolicy [[-Identity] <PolicyIdParameter>]
+
+   [-DistributionDetail]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-HoldCompliancePolicy
+  description: |-
+    This example displays summary information for all preservation policies in your organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-HoldCompliancePolicy -Identity "Regulation 123 Compliance" | Format-List
+  description: |-
+    This example displays detailed information for the policy named "Regulation 123 Compliance".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DistributionDetail
+  description: |+
+    The DistributionDetail switch returns detailed policy distribution information in the DistributionResults property. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the preservation policy that you want to view. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-HoldCompliancePolicy
+name: Get-HoldCompliancePolicy
+description: |-
+  This list describes the properties displayed by default.
+
+  - Name: The unique name of the policy.
+  - Workload: Where the policy is applied. For example, SharePoint or Exchange.
+  - Enabled: The value True means the policy is enabled.
+  - Mode: The current operating mode of the policy. The possible values are Test (the content is tested, but no rules are enforced), AuditAndNotify (when content matches the conditions specified by the policy, the rule is not enforced, but notification emails are sent) or Enforce (all aspects of the policy are enabled and enforced).
+
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-holdcompliancepolicy
+  applicable: Security & Compliance
+  title: Get-HoldCompliancePolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

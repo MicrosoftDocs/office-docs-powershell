@@ -1,0 +1,161 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a per-user Teams call hold policy to one or more users. The Teams call hold policy is used to customize the call hold experience for Teams clients.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsCallHoldPolicy
+  href: New-CsTeamsCallHoldPolicy.yml
+- text: Get-CsTeamsCallHoldPolicy
+  href: Get-CsTeamsCallHoldPolicy.yml
+- text: Set-CsTeamsCallHoldPolicy
+  href: Set-CsTeamsCallHoldPolicy.yml
+- text: Remove-CsTeamsCallHoldPolicy
+  href: Remove-CsTeamsCallHoldPolicy.yml
+syntaxes:
+- Grant-CsTeamsCallHoldPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTeamsCallHoldPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTeamsCallHoldPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Grant-CsTeamsCallHoldPolicy -Identity 'KenMyer@contoso.com' -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+  description: |-
+    The command shown in Example 1 assigns the per-user Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, to the user with the user principal name (UPN) "KenMyer@contoso.com".
+  summary: ""
+- title: Example 2
+  code: |-
+    Grant-CsTeamsCallHoldPolicy -Identity 'Ken Myer' -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+  description: |-
+    The command shown in Example 2 assigns the per-user Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, to the user with the display name "Ken Myer".
+  summary: ""
+- title: Example 3
+  code: |-
+    Grant-CsTeamsCallHoldPolicy -Identity 'Ken Myer' -PolicyName $null
+  description: |-
+    In Example 3, any per-user Teams call hold policy previously assigned to the user "Ken Myer" is revoked.
+    As a result, the user will be managed by the global Teams call hold policy.
+  summary: ""
+- title: Example 4
+  code: |-
+    Grant-CsTeamsCallHoldPolicy -Global -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+  description: |-
+    The command shown in Example 4 sets the Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, as the Global policy which will apply to all users in your tenant.
+  summary: ""
+- title: Example 5
+  code: |-
+    Grant-CsTeamsCallHoldPolicy -Group sales@contoso.com -Rank 10 -PolicyName 'ContosoPartnerTeamsCallHoldPolicy'
+  description: |-
+    The command shown in Example 5 sets the Teams call hold policy, ContosoPartnerTeamsCallHoldPolicy, to the members of the group sales@contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant. To skip a warning when you do this operation, specify "-Global".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the group used for the group policy assignment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the user account to be assigned the per-user Teams call hold policy.
+    User Identities can be specified using one of the following formats:
+
+    - The user's SIP address;
+    - The user's user principal name (UPN);
+    - The user's Active Directory display name (for example, Ken Myer).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams call hold policy.
+
+    By default, the Grant-CsTeamsCallHoldPoly cmdlet does not pass objects through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  isRequired: true
+  description: |+
+    Name of the policy to be assigned. The PolicyName is simply the policy Identity without the policy scope, i.e. the "Tag:" prefix.
+
+    For example, a policy with the Identity Tag:ContosoPartnerCallHoldPolicy has a PolicyName equal to ContosoPartnerCallHoldPolicy.
+
+    To revoke a per-user policy previously assigned to a user, set the PolicyName to a null value ($null).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Grant-CsTeamsCallHoldPolicy
+name: Grant-CsTeamsCallHoldPolicy
+description: |-
+  Teams call hold policies are used to customize the call hold experience for teams clients.
+  When Microsoft Teams users participate in calls, they have the ability to hold a call and have the other entity in the call listen to an audio file during the duration of the hold.
+
+  Assigning a teams call hold policy to a user sets an audio file to be played during the duration of the hold.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamscallholdpolicy
+  applicable: Microsoft Teams
+  title: Grant-CsTeamsCallHoldPolicy
+  schema: 2.0.0
+  ms.reviewer: ""
+  manager: abnair
+  ms.author: serdars
+  author: jenstrier

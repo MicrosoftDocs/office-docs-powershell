@@ -1,0 +1,322 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new XMPP allowed partner.
+  The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
+  An allowed partner is an IM and presence provider whose users have been authorized to exchange instant messages and presence information with your Skype for Business Server users.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `New-CsXmppAllowedPartner` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `New-CsXmppAllowedPartner` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.XmppFederation.XmppAllowedPartner#Decorated object.
+links:
+- text: Get-CsXmppAllowedPartner
+  href: Get-CsXmppAllowedPartner.yml
+- text: Remove-CsXmppAllowedPartner
+  href: Remove-CsXmppAllowedPartner.yml
+- text: Set-CsXmppAllowedPartner
+  href: Set-CsXmppAllowedPartner.yml
+syntaxes:
+- >-
+  New-CsXmppAllowedPartner -Domain <String> [-AdditionalDomains <PSListModifier>] [-Confirm]
+
+   [-ConnectionLimit <UInt32>] [-Description <String>] [-EnableKeepAlive <Boolean>] [-Force] [-InMemory]
+
+   [-PartnerType <PartnerType>] [-ProxyFqdn <String>] [-SaslNegotiation <SaslNegotiation>]
+
+   [-SupportDialbackNegotiation <Boolean>] [-TlsNegotiation <TlsNegotiation>] [-WhatIf] [<CommonParameters>]
+- >-
+  New-CsXmppAllowedPartner [-Identity] <XdsGlobalRelativeIdentity> [-AdditionalDomains <PSListModifier>]
+
+   [-Confirm] [-ConnectionLimit <UInt32>] [-Description <String>] [-EnableKeepAlive <Boolean>] [-Force]
+
+   [-InMemory] [-PartnerType <PartnerType>] [-ProxyFqdn <String>] [-SaslNegotiation <SaslNegotiation>]
+
+   [-SupportDialbackNegotiation <Boolean>] [-TlsNegotiation <TlsNegotiation>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    New-CsXmppAllowedPartner -Identity "contoso.com" -PartnerType "PublicVerified"
+  description: |-
+    The command shown in Example 1 creates a new XMPP allowed partner: contoso.com.
+    In this example, the PartnerType property is set to "PublicVerified".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    New-CsXmppAllowedPartner -Identity "fabrikam.com" -AdditionalDomains "research.fabrikam2.com"
+  description: |-
+    Example 2 creates a new XMPP allowed partner with the Identity fabrikam.com.
+    In addition to the root domain (fabrikam.com), the AdditionalDomains property is included to allow support for the child domain research.fabrikam2.com.
+  summary: ""
+parameters:
+- type: <xref href="PSListModifier" data-throw-if-not-resolved="False" />
+  name: AdditionalDomains
+  description: |+
+    Additional XMPP domains belonging to the allowed partner.
+    Multiple domains can be specified by separated domain names by using commas; for example:
+
+    `-AdditionalDomains "fabrikam2.com","fabrikam3.com"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ConnectionLimit
+  description: |+
+    Specifies the maximum number of simultaneous connections allowed to a specific partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Enables administrators to provide additional text regarding the XMPP allowed partner.
+    For example, the Description might include contact information for the partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  isRequired: true
+  description: |+
+    Primary domain of the XMPP allowed partner; for example:
+
+    `-Domain "fabrikam.com"`
+
+    You can specify the primary domain by using either the Domain parameter or the Identity parameter.
+    However, you cannot use both parameters in the same command.
+
+    Additional domains can be specified by using the AdditionalDomains parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableKeepAlive
+  description: |+
+    Indicates whether or not the XMPP partner should periodically transmit "keep alive" packets in order to verify that the connection is still active.
+
+    The default value is True.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Primary domain of the XMPP allowed partner; for example:
+
+    ``-Identity "fabrikam.com"`
+
+    You can specify the primary domain by using either the Identity parameter or the Domain parameter.
+    However, you cannot use both parameters in the same command.
+
+    Additional domains can be specified by using the AdditionalDomains parameter.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Creates an object reference without actually committing the object as a permanent change.
+    If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="PartnerType" data-throw-if-not-resolved="False" />
+  name: PartnerType
+  description: |+
+    Specifies the relationship between Skype for Business Server and the XMPP partner.
+    Allowed values are:
+
+    Federated (the XMPP partner is from a federated domain)
+
+    PublicVerified
+
+    PublicUnverified
+
+    The default value is PublicUnverified.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProxyFqdn
+  description: |+
+    Full qualified domain name of the proxy server used by the XMPP partner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SaslNegotiation" data-throw-if-not-resolved="False" />
+  name: SaslNegotiation
+  description: |+
+    Indicates support for the Simple Authentication and Security Layer protocol, a protocol used for server authentication.
+
+    Allowed values are:
+
+    Required (SASL negotiation must be supported)
+
+    Optional (SASL will be used if available)
+
+    NotSupported (SASL negotiation will not be supported)
+
+    The default value is Required.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SupportDialbackNegotiation
+  description: |+
+    Indicates whether dialback negotiation will be supported.
+    With dialback negotiation, when Server A contacts Server B communication is not immediately established.
+    Instead, Server B first attempts to verify the identity of Server A by contacting the authoritative DNS server for the domain that Server A claims to be from.
+
+    Note that dialback negotiation is not as secure as SASL or TLS.
+    Instead, it is primarily used in situations where certificates cannot be used to verify a server's identity.
+
+    The default value is True.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="TlsNegotiation" data-throw-if-not-resolved="False" />
+  name: TlsNegotiation
+  description: |+
+    Indicates support for the Transport Layer Security protocol, a protocol used to encrypt server-to-server data streams.
+
+    Allowed values are:
+
+    Required (TLS negotiation must be supported)
+
+    Optional (TLS will be used if available)
+
+    NotSupported (TLS negotiation will not be support The default value is Required.)
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.New-CsXmppAllowedPartner
+name: New-CsXmppAllowedPartner
+description: |-
+  The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
+  XMPP was originally named Jabber and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
+
+  In order for your users to be able to exchange instant messages and presence information with users on an XMPP network, that network must be configured as an XMPP allowed partner.
+  (You must also assign your users an external access policy that allows XMPP access.) By design, your users will be allowed to communicate with users on any XMPP network that is listed on the allowed partners list.
+  If you do not want users communicating with users from a given network then you must delete that network from the allowed partners list.
+
+  Skype for Business Server Control Panel: To create a new XMPP allowed partner using Skype for Business Server Control Panel, click External User Access, click XMPP Federated Partners and then click New.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csxmppallowedpartner
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: New-CsXmppAllowedPartner
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

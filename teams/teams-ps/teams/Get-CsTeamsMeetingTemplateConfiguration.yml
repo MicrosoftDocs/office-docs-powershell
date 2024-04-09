@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet fetches the custom meeting templates stored on the tenant.
+module: MicrosoftTeamsPowerShell
+links:
+- text: Get-CsTeamsFirstPartyMeetingTemplateConfiguration
+  href: Get-CsTeamsFirstPartyMeetingTemplateConfiguration.yml
+syntaxes:
+- Get-CsTeamsMeetingTemplateConfiguration [[-Identity] <string>] [<CommonParameters>]
+examples:
+- title: Example 1 - Fetching all custom meeting templates on the tenant
+  code: |-
+    Get-CsTeamsMeetingTemplateConfiguration
+
+    Identity              : Global
+    TeamsMeetingTemplates : {default, customtemplate_1cb7073a-8b19-4b5d-a3a6-14737d006969,
+                            customtemplate_21ecf22c-eb1a-4f05-93e0-555b994ebeb5,
+                            customtemplate_0b9c1f57-01ec-4b8a-b4c2-08bd1c01e6ba...}
+    Description           : The `TeamsMeetingTemplates` property contains the meeting template details:
+
+    TeamsMeetingOptions : {SelectedSensitivityLabel, AutoAdmittedUsers, AllowPstnUsersToBypassLobby,
+                          EntryExitAnnouncementsEnabled...}
+    Description         : Custom Template 1
+    Name                : customtemplate_1cb7073a-8b19-4b5d-a3a6-14737d006969
+    Category            :
+
+    TeamsMeetingOptions : {AutoRecordingEnabled, AllowMeetingChat, PresenterOption}
+    Description         : Custom Template 2
+    Name                : customtemplate_21ecf22c-eb1a-4f05-93e0-555b994ebeb5
+    Category            :
+  description: |-
+    Fetches all the custom templates on the tenant.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter can be used to fetch a specific instance of the configuration.
+
+    Note: This configuration is read only and will only have the Global instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsMeetingTemplateConfiguration
+name: Get-CsTeamsMeetingTemplateConfiguration
+description: |-
+  Fetches the list of custom templates on the tenant. Each template object contains its list of meeting options, the name of the template, and its ID.
+metadata:
+  external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsMeetingTemplateConfiguration
+  author: boboPD
+  ms.author: pradas
+  online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsMeetingTemplateConfiguration
+  schema: 2.0.0

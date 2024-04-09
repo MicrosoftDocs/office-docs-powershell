@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use Get-CsAutoAttendantStatus cmdlet to get the status of an Auto Attendant (AA) provisioning.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsAutoAttendantStatus cmdlet accepts a string as the Identity parameter.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.OAA.Models.StatusRecord" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsAutoAttendant
+  href: Get-CsAutoAttendant.yml
+syntaxes:
+- Get-CsAutoAttendantStatus -Identity <String> [-IncludeResources <List>] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsAutoAttendantStatus -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+  description: |-
+    In Example 1, the Get-CsAutoAttendantStatus cmdlet is used to get status records for all resources of an auto attendant with identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsAutoAttendantStatus -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093" -IncludeResources @("AudioFile")
+  description: |-
+    In Example 2, the Get-CsAutoAttendantStatus cmdlet is used to get status records pertaining to audio files only of an auto attendant with identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Represents the identifier for the auto attendant whose provisioning status is to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List" data-throw-if-not-resolved="False" />
+  name: IncludeResources
+  description: |+
+    The IncludeResources parameter identities the auto attendant resources whose status is to be retrieved. Available resources are:
+    - AudioFile: Indicates status for audio files used by AA.
+    - DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with AA.
+    - SipProvisioning: Indicates status for calling AA through its SIP (Primary) URI.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: AudioFile, DialByNameVoiceResponses, SipProvisioning
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsAutoAttendantStatus
+name: Get-CsAutoAttendantStatus
+description: |-
+  This cmdlet provides a way to return the provisioning status of an auto attendant configured for use in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantstatus
+  applicable: Microsoft Teams
+  title: Get-CsAutoAttendantStatus
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

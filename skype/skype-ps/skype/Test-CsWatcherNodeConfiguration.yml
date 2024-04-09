@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies the watcher node configuration settings in use in your organization.
+  Watcher nodes are computers that periodically use Microsoft System Center Operations Manager and Skype for Business Server synthetic transactions to verify that Skype for Business Server components are working as expected.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Test-CsWatcherNodeConfiguration` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Test-CsWatcherNodeConfiguration` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+links:
+- text: Get-CsWatcherNodeConfiguration
+  href: Get-CsWatcherNodeConfiguration.yml
+- text: New-CsWatcherNodeConfiguration
+  href: New-CsWatcherNodeConfiguration.yml
+- text: Remove-CsWatcherNodeConfiguration
+  href: Remove-CsWatcherNodeConfiguration.yml
+- text: Set-CsWatcherNodeConfiguration
+  href: Set-CsWatcherNodeConfiguration.yml
+syntaxes:
+- >-
+  Test-CsWatcherNodeConfiguration [-FileName <String>] [-ReadCredentialsFromCurrentUserStore]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Test-CsWatcherNodeConfiguration
+  description: |-
+    The command shown in Example 1 verifies the configuration settings for each watcher node in use in the organization.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  description: |+
+    Enables you to specify a file path for the log file created when the cmdlet runs.
+    For example:
+
+    `-Report "C:\Logs\WatcherNode.html"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReadCredentialsFromCurrentUserStore
+  description: |+
+    When present, instructs the `Test-CsWatcherNodeConfiguration` cmdlet to retrieve the user credentials from the user's credentials store.
+    By default, the `Test-CsWatcherNodeConfiguration` cmdlet looks for credentials in the network service account's credentials store.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsWatcherNodeConfiguration
+name: Test-CsWatcherNodeConfiguration
+description: |-
+  If you are using Microsoft System Center Operations Manager to monitor Skype for Business Server then you have the option of setting up "watcher nodes": computers that periodically, and automatically, run synthetic transactions in order to verify that Skype for Business Server is working as expected.
+  Watcher nodes are assigned to pools, and are managed using the `CsWatcherNodeConfiguration` cmdlets.
+  Note that you do not need to install watcher nodes if you are using System Center Operations Manager.
+  You can still monitor your system without using watcher nodes; the only difference is that any synthetic transactions you want to run will need to be invoked manually rather than automatically invoked by Operations Manager.
+
+  The `Test-CsWatcherNodeConfiguration` cmdlet provides a way for you to verify that a watcher node has been correctly configured and is assigned to a valid Skype for Business Server pool.
+  Note that the `Test-CsWatcherNodeConfiguration` cmdlet must be run on the watcher node itself; the cmdlet cannot be run against remote computers.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Test-CsWatcherNodeConfiguration` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-cswatchernodeconfiguration
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsWatcherNodeConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

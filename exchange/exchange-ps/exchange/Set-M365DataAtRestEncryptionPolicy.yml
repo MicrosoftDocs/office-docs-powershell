@@ -1,0 +1,191 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Set-M365DataAtRestEncryptionPolicy cmdlet to modify Microsoft 365 data-at-rest encryption policies in Exchange Online.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Confirm]
+
+   [-Description <String>]
+
+   [-DomainController <Fqdn>]
+
+   [-Enabled <Boolean>]
+
+   [-Force]
+
+   [-Name <String>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> [-Confirm]
+
+   [-Description <String>]
+
+   [-DomainController <Fqdn>]
+
+   [-Enabled <Boolean>]
+
+   [-Name <String>]
+
+   [-Refresh]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-M365DataAtRestEncryptionPolicy -Identity "Tenant Default Policy" -Enabled $false
+  description: |-
+    This example disabled the Microsoft 365 data-at-rest encryption policy named Tenant Default Policy.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-M365DataAtRestEncryptionPolicy -Identity "Tenant Default Policy" -Refresh
+  description: |-
+    This example updates the Microsoft 365 data-at-rest encryption policy named Tenant Default Policy after one of the associated keys has been rotated in the Azure Key Vault.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The Description parameter specifies an optional description for the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    The Enabled parameter specifies whether the policy is enabled or disabled. Valid values are:
+
+    - $true: The policy is enabled. This is the default value.
+    - $false: The policy is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+    You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+- type: <xref href="DataEncryptionPolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the data-at-rest encryption policy that you want to modify. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The Name parameter specifies a unique name for the Microsoft 365 data-at-rest encryption policy. If the value contains spaces, enclose the value in quotation marks (").
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Refresh
+  isRequired: true
+  description: |+
+    Use the Refresh switch to update the Microsoft 365 data-at-rest encryption policy in Exchange Online after you rotate any of the associated keys in the Azure Key Vault. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+- Exchange Online Protection
+uid: ExchangePowerShell.Set-M365DataAtRestEncryptionPolicy
+name: Set-M365DataAtRestEncryptionPolicy
+description: |-
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.WebClient-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/set-m365dataatrestencryptionpolicy
+  applicable: Exchange Online, Exchange Online Protection
+  title: Set-M365DataAtRestEncryptionPolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

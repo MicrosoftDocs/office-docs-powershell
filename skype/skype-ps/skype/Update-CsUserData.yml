@@ -1,0 +1,218 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uses previously-exported user information to update Skype for Business Server user data.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Update-CsUserData cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The Update-CsUserData cmdlet updates Skype for Business Server 2015 user information.
+links:
+- text: Convert-CsUserData
+  href: Convert-CsUserData.yml
+- text: Export-CsUserData
+  href: Export-CsUserData.yml
+- text: Import-CsUserData
+  href: Import-CsUserData.yml
+- text: Sync-CsUserData
+  href: Sync-CsUserData.yml
+syntaxes:
+- >-
+  Update-CsUserData [-FileName] <String> [-Confirm] [-DomainController <Fqdn>] [-Force]
+
+   [-RoutingGroupFilter <String>] [-UserFilter <String>] [-WhatIf] [-TargetPoolFqdn <Fqdn>] [-TestMode]
+
+   [-ThreadCount <Int32>] [-UserFileFilter <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Update-CsUserData -Filename "C:\Logs\ExportedUserData.zip"
+  description: |-
+    The command shown in Example 1 updates Skype for Business Server user data based on information stored in the file C:\Logs\ExportedUserData.zip.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Update-CsUserData -Filename "C:\Logs\ExportedUserData.zip" -UserFilter "kenmyer@litwareinc.com"
+  description: |-
+    In Example 2, user data is updated for a single user: the user with the SIP address kenmyer@litwareinc.com.
+    This is done by including the UserFilter parameter followed by the user's SIP address (minus the sip: prefix).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Enables administrators to specify the FQDN of the domain controller to be used when running the `Update-CsUserData` cmdlet.
+    If not specified, the cmdlet will use the first available domain controller.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  isRequired: true
+  description: |+
+    Full path to the .ZIP file or .XML file containing the user data to be updated.
+    For example:
+
+    `-FileName "C:\Data\Lync2010.zip"`
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingGroupFilter
+  description: |+
+    Enables you to update data only for the specified routing groups.
+    Routing groups are used to indicate the Front End server that users register with.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: TargetPoolFqdn
+  description: |+
+    Registrar pool containing the user accounts to be updated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TestMode
+  description: |+
+    When included in a command, `Update-CsUserData` will verify that the data can be updated, but will not actually update that data.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThreadCount
+  description: |+
+    Number of threads that can be devoted to the update task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserFileFilter
+  description: |+
+    Full path to a text file containing a list of user URIs for whom data should be exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserFilter
+  description: |+
+    Enables you to update data for a single user.
+    That user specified by using his or her SIP address, minus the sip: prefix.
+    For example:
+
+    `-UserFilter "kenmyer@litwareinc.com"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Update-CsUserData
+name: Update-CsUserData
+description: |-
+  The `Update-CsUserData` cmdlet enables administrators to update user data for a specified user or set of users.
+  (Note that this data must have previously been exported by using the `Export-CsUserData` cmdlet.) This updating is typically done in order to restore lost data to a logged-on user.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Update-CsUserData` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/update-csuserdata
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Update-CsUserData
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

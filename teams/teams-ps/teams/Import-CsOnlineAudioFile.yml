@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Import-CsOnlineAudioFile cmdlet to upload a new audio file.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  When you import an audio file to be used for Auto Attendant or Call Queue, the audio file will automatically be marked for deletion (as seen by running
+  Get-CsOnlineAudioFile) and it will be deleted after 48 to 72 hours from the time of import, unless the audio file is associated to an
+  Auto Attendant and Call Queue before 48 hours after it was imported.
+
+  You are responsible for independently clearing and securing all necessary rights and permissions to use any music or audio file with your Microsoft Teams service, which may include intellectual property and other rights in any music, sound effects, audio, brands, names, and other content in the audio file from all relevant rights holders, which may include artists, actors, performers, musicians, songwriters, composers, record labels, music publishers, unions, guilds, rights societies, collective management organizations and any other parties who own, control or license the music copyrights, sound effects, audio and other intellectual property rights.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.AudioFile" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-CsOnlineAudioFile
+  href: Export-CsOnlineAudioFile.yml
+- text: Get-CsOnlineAudioFile
+  href: Get-CsOnlineAudioFile.yml
+- text: Remove-CsOnlineAudioFile
+  href: Remove-CsOnlineAudioFile.yml
+syntaxes:
+- Import-CsOnlineAudioFile -ApplicationId <OrgAutoAttendant | HuntGroup | TenantGlobal> -FileName <string> -Content <byte[]>
+examples:
+- title: Example 1
+  code: |-
+    $content = [System.IO.File]::ReadAllBytes('C:\Media\Hello.wav')
+    $audioFile = Import-CsOnlineAudioFile -ApplicationId "OrgAutoAttendant" -FileName "Hello.wav" -Content $content
+  description: |-
+    This example creates a new audio file using the WAV content that has a filename of Hello.wav to be used with organizational auto attendants. The stored variable, $audioFile, will be used when running other cmdlets to update the audio file for Auto Attendant, for example [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.yml).
+  summary: ""
+- title: Example 2
+  code: |-
+    $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
+    $audioFile = Import-CsOnlineAudioFile -ApplicationId "HuntGroup" -FileName "MOH.wav" -Content $content
+  description: |-
+    This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as a Music On Hold file with a Call Queue. The stored variable, $audioFile, will be used with [Set-CsCallQueue](Set-CsCallQueue.yml) to provide the audio file id.
+  summary: ""
+- title: Example 3
+  code: |-
+    $content = [System.IO.File]::ReadAllBytes('C:\Media\MOH.wav')
+    $audioFile = Import-CsOnlineAudioFile -ApplicationId TenantGlobal -FileName "MOH.wav" -Content $content
+  description: |-
+    This example creates a new audio file using the WAV content that has a filename of MOH.wav to be used as Music On Hold for Microsoft Teams. The stored variable, $audioFile, will be used with [New-CsTeamsCallHoldPolicy](New-CsTeamsCallHoldPolicy.yml) to provide the audio file id.
+  summary: ""
+parameters:
+- type: <xref href="System.string" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  isRequired: true
+  description: |+
+    The ApplicationId parameter is the identifier for the application which will use this audio file. For example, if the audio file will be used with an Auto Attendant, then it needs to be set to "OrgAutoAttendant". If the audio file will be used with a Call Queue, then it needs to be set to "HuntGroup". If the audio file will be used with Microsoft Teams, then it needs to be set to "TenantGlobal".
+
+    Supported values:
+
+    - OrgAutoAttendant
+    - HuntGroup
+    - TenantGlobal
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Content
+  isRequired: true
+  description: |+
+    The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more 5MB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.string" data-throw-if-not-resolved="False" />
+  name: FileName
+  isRequired: true
+  description: |+
+    The FileName parameter is the name of the audio file. For example, the file name for the file C:\Media\Welcome.wav is Welcome.wav.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Import-CsOnlineAudioFile
+name: Import-CsOnlineAudioFile
+description: |-
+  The Import-CsOnlineAudioFile cmdlet uploads a new audio file for use with the Auto Attendant (AA), Call Queue (CQ) service or Music on Hold for Microsoft Teams.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile
+  applicable: Microsoft Teams
+  title: Import-CsOnlineAudioFile
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

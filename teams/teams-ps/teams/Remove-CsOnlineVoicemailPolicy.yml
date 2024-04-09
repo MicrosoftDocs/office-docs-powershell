@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an existing Online Voicemail policy or resets the Global policy instance to the default values.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  You are not able to delete the pre-configured policy instances Default, TranscriptionProfanityMaskingEnabled and TranscriptionDisabled
+links:
+- text: Get-CsOnlineVoicemailPolicy
+  href: Get-CsOnlineVoicemailPolicy.yml
+- text: Set-CsOnlineVoicemailPolicy
+  href: Set-CsOnlineVoicemailPolicy.yml
+- text: New-CsOnlineVoicemailPolicy
+  href: New-CsOnlineVoicemailPolicy.yml
+- text: Grant-CsOnlineVoicemailPolicy
+  href: Grant-CsOnlineVoicemailPolicy.yml
+syntaxes:
+- Remove-CsOnlineVoicemailPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsOnlineVoicemailPolicy -Identity "CustomOnlineVoicemailPolicy"
+  description: |-
+    The command shown in Example 1 deletes a per-user online voicemail policy CustomOnlineVoicemailPolicy.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    A unique identifier specifying the scope, and in some cases the name, of the policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsOnlineVoicemailPolicy
+name: Remove-CsOnlineVoicemailPolicy
+description: |-
+  Deletes an existing Online Voicemail policy or resets the Global policy instance to the default values.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinevoicemailpolicy
+  applicable: Microsoft Teams
+  title: Remove-CsOnlineVoicemailPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

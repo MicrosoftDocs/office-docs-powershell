@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the voice routes configured for use in an organization.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route object.
+links:
+- text: New-CsVoiceRoute
+  href: New-CsVoiceRoute.yml
+- text: Remove-CsVoiceRoute
+  href: Remove-CsVoiceRoute.yml
+- text: Set-CsVoiceRoute
+  href: Set-CsVoiceRoute.yml
+- text: Test-CsVoiceRoute
+  href: Test-CsVoiceRoute.yml
+syntaxes:
+- Get-CsVoiceRoute [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsVoiceRoute [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsVoiceRoute
+  description: |-
+    Retrieves the properties for all voice routes defined within the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsVoiceRoute -Identity Route1
+  description: |-
+    Retrieves the properties for the Route1 voice route.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsVoiceRoute -Filter *test*
+  description: |-
+    This command displays voice route settings where the Identity contains the string "test" anywhere within the value.
+    To find the string test only at the end of the Identity, use the value \*test.
+    Similarly, to find the string test only if it occurs at the beginning of the Identity, specify the value test\*.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsVoiceRoute | Where-Object {$_.PstnGatewayList.Count -eq 0}
+  description: |-
+    This command retrieves all voice routes that have not had any PSTN gateways assigned.
+    First all voice routes are retrieved using the Get-CsVoiceRoute cmdlet.
+    These voice routes are then piped to the Where-Object cmdlet.
+    The Where-Object cmdlet narrows down the results of the Get operation.
+    In this case we look at each voice route (that's what the $_ represents) and check the Count property of the PstnGatewayList property.
+    If the count of PSTN gateways is 0, the list is empty and no gateways have been defined for the route.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter filters the results of the Get operation based on the wildcard value passed to this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    A string that uniquely identifies the voice route.
+    If no identity is provided, all voice routes for the organization are returned.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the voice route from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsVoiceRoute
+name: Get-CsVoiceRoute
+description: |-
+  Use this cmdlet to retrieve one or more existing voice routes.
+  Voices routes contain instructions that tell Skype for Business Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+
+  This cmdlet can be used to retrieve voice route information such as which PSTN gateways the route is associated with (if any), which PSTN usages are associated with the route, the pattern (in the form of a regular expression) that identifies the phone numbers to which the route applies, and caller ID settings.
+  The PSTN usage associates the voice route to a voice policy.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csvoiceroute
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsVoiceRoute
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

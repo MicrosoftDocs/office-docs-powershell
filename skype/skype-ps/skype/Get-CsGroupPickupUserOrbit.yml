@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsGroupPickupUserOrbit cmdlet to get the group pickup orbit number for an Enterprise Voice user.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Get-CsUser" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Voice.Helpers.GroupPickup.DisplayGroupPickupUserOrbit" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsGroupPickupUserOrbit [-User] <String> [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsGroupPickupUserOrbit -User sip:ken.myer@contoso.com
+  description: |-
+    The following example gets the group pickup orbit number of a user specified by SIP address.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsGroupPickupUserOrbit "Ken Myer"
+  description: |-
+    The following example gets the group pickup orbit number by using the display name.
+    User is a positional parameter.
+    The first parameter after the cmdlet is assumed to be the User parameter value.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsUser "Ken Myer" | Get-CsGroupPickupUserOrbit
+  description: |-
+    The following example gets the group pickup orbit numbers by piping the output of Get-CsUser to the Get-CsGroupPickupUserOrbit.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error messages and completes the cmdlet operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies the user whose group pickup orbit number will be retrieved.
+    Because User is a positional parameter, the -User syntax is not required.
+    The first parameter after the cmdlet is assumed to be the User parameter value.
+
+    Users can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
+    You can also reference a user account by using the user's Active Directory distinguished name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: DisplayName, SipAddress, Identity
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsGroupPickupUserOrbit
+name: Get-CsGroupPickupUserOrbit
+description: ""
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csgrouppickupuserorbit
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsGroupPickupUserOrbit
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

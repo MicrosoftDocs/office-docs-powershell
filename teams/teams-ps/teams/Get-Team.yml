@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="UPN, UserID" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Team" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-Team
+  href: New-Team.yml
+- text: Set-Team
+  href: Set-Team.yml
+syntaxes:
+- >-
+  Get-Team -GroupId <String> [-User <String>] [-Archived <Boolean>] [-Visibility <String>]
+
+   [-DisplayName <String>] [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
+- >-
+  Get-Team [-User <String>] [-Archived <Boolean>] [-Visibility <String>] [-DisplayName <String>]
+
+   [-MailNickName <String>] [<CommonParameters>] [-NumberOfThreads <Int32>]
+examples:
+- title: Example 1
+  code: |-
+    PS> Get-Team -User dmx1@example.com
+  description: |-
+    Returns all teams that a user (dmx1@example.com) belongs to
+  summary: ""
+- title: Example 2
+  code: |-
+    PS> Get-Team -Archived $true -Visibility Private
+  description: |-
+    Returns all teams that are private and have been archived.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS> Get-Team -MailNickName "BusinessDevelopment"
+  description: |-
+    Returns the team with the specified MailNickName. (This acts as a filter rather than an exact match.)
+  summary: ""
+- title: Example 4
+  code: |-
+    PS> Get-Team -DisplayName "Sales and Marketing"
+  description: |-
+    Returns the team that includes the specified text in its DisplayName. (This acts as a filter rather than an exact match).
+  summary: ""
+- title: Example 5
+  code: |-
+    PS> $team=[uri]::EscapeDataString('AB&C')
+    PS> Get-Team -DisplayName $team
+  description: |-
+    Returns the team that includes the specified escaped representation of its DisplayName, useful when the DisplayName has special characters. (This acts as a filter rather than an exact match.)
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Archived
+  description: |+
+    If $true, filters to return teams that have been archived.  If $false, filters to return teams that have not been archived.  Do not specify any value to return teams that match filter regardless of archived state.  This is a filter rather than an exact match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specify this parameter to return teams with the provided display name as a filter.  As the display name is not unique, multiple values can be returned. Note that this filter value is case-sensitive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    Specify the specific GroupId (as a string) of the team to be returned.  This is a unique identifier and returns exact match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MailNickName
+  description: |+
+    Specify the mailnickname of the team that is being returned. This acts as a filter instead of being an exact match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NumberOfThreads
+  description: |+
+    Specifies the number of threads to use. If you have sufficient network bandwidth and want to decrease the time required to retrieve the list of teams, use the -NumberOfThreads parameter, which supports a value from 1 through 20.
+
+  defaultValue: "20"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    User's UPN (user principal name - e.g.
+    johndoe@example.com)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Visibility
+  description: |+
+    Filters to return teams with a set "visibility" value.  Accepted values are "Public", "Private" or "HiddenMembership".  Do not specify any value to return teams that match filter regardless of visibility.  This is a filter rather than an exact match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-Team
+name: Get-Team
+description: |-
+  This cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization.
+
+  > [!NOTE]
+  > Get-Team may return multiple results matching the input and not just the exact match for attributes like DisplayName/MailNickName. This is known behavior.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-team
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

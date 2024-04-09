@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes any rejected device update files that are no longer associated with a device.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Clear-CsDeviceUpdateFile` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Clear-CsDeviceUpdateFile` cmdlet does not return any values.
+links:
+- text: Clear-CsDeviceUpdateLog
+  href: Clear-CsDeviceUpdateLog.yml
+- text: Get-CsDeviceUpdateConfiguration
+  href: Get-CsDeviceUpdateConfiguration.yml
+syntaxes:
+- Clear-CsDeviceUpdateFile [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Clear-CsDeviceUpdateFile -Identity "service:WebServer:atl-cs-001.litwareinc.com"
+  description: |-
+    The command shown in Example 1 deletes all the device update files from the service WebServer:atl-cs-001.litwareinc.com that are no longer associated with a device.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the service hosting the device update files.
+    For example, this syntax clears device update files from the Web Services service for the pool atl-cs-001.litwareinc.com: -Identity "service:WebServer:atl-cs-001.litwareinc.com".
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Clear-CsDeviceUpdateFile
+name: Clear-CsDeviceUpdateFile
+description: |-
+  Each time new device updates are uploaded to the system, a corresponding device update rule is created.
+  By default, these new device update rules are assigned to the Pending state; that means that the rules can be downloaded and installed on test devices, but not on production devices.
+  In turn, this gives you an opportunity to test the updates before making them available to users.
+  If testing is successful, you can then run the `Approve-CsDeviceUpdateRule` cmdlet to make these device updates available to users.
+
+  If testing is not successful then you can use the `Reset-CsDeviceUpdateRule` cmdlet or the `Restore-CsDeviceUpdateRule` cmdlet to reject an update.
+  When these cmdlets are run, the device update is disassociated from its device update rule.
+  At that point, administrators can then use the `Clear-CsDeviceUpdateFile` cmdlet to remove the disassociated updates from the server.
+
+  Who can run this cmdlet: By default, members of the following groups are authorized to run the `Clear-CsDeviceUpdateFile` cmdlet locally: RTCUniversalServerAdmins.
+  To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
+
+  Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Clear-CsDeviceUpdateFile"}
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/clear-csdeviceupdatefile
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Clear-CsDeviceUpdateFile
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

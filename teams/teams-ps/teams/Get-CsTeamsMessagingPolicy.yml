@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsTeamsMessagingPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- Get-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    powershell
+    PS C:\> Get-CsTeamsMessagingPolicy
+  description: |-
+    In this example all teams messaging policies that have been configured in the organization will be returned.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters when specifying the policy (or policies) to be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the policy to be retrieved. To retrieve the global policy, use this syntax: -Identity global. To retrieve a per-user policy use syntax similar to this: -Identity StudentMessagingPolicy.
+
+    If this parameter is not included, the Get-CsTeamsMessagingPolicy cmdlet will return a collection of all the teams messaging policies configured for use in your organization.
+
+    Note that wildcards are not allowed when specifying an Identity. Use the Filter parameter if you need to use wildcards when specifying a messaging policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsMessagingPolicy
+name: Get-CsTeamsMessagingPolicy
+description: |-
+  The CsTeamsMessagingPolicy cmdlets enable administrators to control if a user is enabled to exchange messages. These also help determine the type of messages users can create and modify.  This cmdlet lets you retrieve messaging policies that are available for use within your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmessagingpolicy
+  applicable: Microsoft Teams
+  title: Get-CsTeamsMessagingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

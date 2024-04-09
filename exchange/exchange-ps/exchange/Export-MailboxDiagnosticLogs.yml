@@ -1,0 +1,309 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
+  Use the Export-MailboxDiagnosticLogs cmdlet to export diagnostic data from user and system mailboxes in your organization.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter> -ComponentName <String>
+
+   [-Archive]
+
+   [-Confirm]
+
+   [-Credential <PSCredential>]
+
+   [-DomainController <Fqdn>]
+
+   [-IncludeInactiveMailboxes]
+
+   [-ReadFromDomainController]
+
+   [-ResultSize <Unlimited>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Export-MailboxDiagnosticLogs [-Identity] <GeneralMailboxIdParameter>
+
+   [-ExtendedProperties]
+
+   [-Archive]
+
+   [-Confirm]
+
+   [-Credential <PSCredential>]
+
+   [-DomainController <Fqdn>]
+
+   [-IncludeInactiveMailboxes]
+
+   [-ReadFromDomainController]
+
+   [-ResultSize <Unlimited>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Export-MailboxDiagnosticLogs -ComponentName OOF -Identity JohnSmith
+  description: |-
+    In Exchange Server 2010 and 2013, this example retrieves the out-of-office diagnostic log for the user John Smith.
+  summary: ""
+- title: Example 2
+  code: |-
+    Export-MailboxDiagnosticLogs -ComponentName CalendarPermissions -Identity "Yuuto Sasaki"
+  description: |-
+    This example retrieves the calendar permissions diagnostic log for the mailbox named Yuuto Sasaki.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Archive
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The Archive switch retrieves the diagnostics logs of the archive mailbox instead of the primary mailbox. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComponentName
+  isRequired: true
+  description: |+
+    The ComponentName parameter specifies the component that you want to retrieve the diagnostic logs for. Valid values depend on the type and location of the mailbox (on-premises Exchange or Exchange Online). Valid values include:
+
+    - AcceptCalendarSharingInvite
+    - ActionProcessingAgent
+    - BirthdayAssistant
+    - CalendarPermissions
+    - CalendarSharingInvite
+    - CalendarSharingLocalFolder
+    - DefaultViewIndexer
+    - FreeBusyPublishingAssistantQuickLog
+    - HoldTracking
+    - InternetCalendar
+    - InternalCalendarSharingMigration
+    - MRM
+    - OnlineMeetings
+    - OOFRules
+    - RBA
+    - RemindersAssistant
+    - Sharing
+    - SharingMigrationAssistant
+    - SharingSyncAssistant
+    - SubstrateHoldTracking
+    - SweepRules
+    - TimeProfile
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
+
+    A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExtendedProperties
+  isRequired: true
+  description: |+
+    The ExtendedProperties switch specifies whether to retrieve all of the well-known properties from the mailbox table that are useful for troubleshooting. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="GeneralMailboxIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies that mailbox that contains the diagnostics logs that you want to view. You can use any value that uniquely identifies the mailbox. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Domain\\Username
+    - Email address
+    - GUID
+    - LegacyExchangeDN
+    - SamAccountName
+    - User ID or user principal name (UPN)
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeInactiveMailboxes
+  description: |+
+    This parameter is available only in the cloud-based service.
+
+    The IncludeInactiveMailboxes switch specifies whether to include inactive mailboxes in the results. You don't need to specify a value with this switch.
+
+    An inactive mailbox is a mailbox that's placed on Litigation Hold or In-Place Hold before it's soft-deleted. The contents of an inactive mailbox are preserved until the hold is removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReadFromDomainController
+  description: |+
+    This parameter is available only in on-premises Exchange.
+
+    The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. You don't need to specify a value with this switch.
+
+    The command: `Set-AdServerSettings -ViewEntireForest $true` to include all objects in the forest requires the ReadFromDomainController switch. Otherwise, the command might use a global catalog that contains outdated information. Also, you might need to run multiple iterations of the command with the ReadFromDomainController switch to get the information.
+
+    By default, the recipient scope is set to the domain that hosts your Exchange servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Unlimited" data-throw-if-not-resolved="False" />
+  name: ResultSize
+  description: |+
+    The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2010
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+- Exchange Online
+uid: ExchangePowerShell.Export-MailboxDiagnosticLogs
+name: Export-MailboxDiagnosticLogs
+description: |-
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/export-mailboxdiagnosticlogs
+  applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+  title: Export-MailboxDiagnosticLogs
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

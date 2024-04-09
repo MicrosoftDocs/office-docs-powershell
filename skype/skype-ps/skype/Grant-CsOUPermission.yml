@@ -1,0 +1,244 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants Skype for Business Server management rights on an Active Directory organizational unit (OU).
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Grant-CsOUPermission cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The Grant-CsOUPermission cmdlet does not return any objects or values.
+links:
+- text: Revoke-CsOUPermission
+  href: Revoke-CsOUPermission.yml
+- text: Test-CsOUPermission
+  href: Test-CsOUPermission.yml
+syntaxes:
+- >-
+  Grant-CsOUPermission -ObjectType <ObjectType> -OU <String> [-Domain <Fqdn>] [-DomainController <Fqdn>]
+
+   [-GlobalCatalog <Fqdn>] [-Force] [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    Grant-CsOUPermission -OU "ou=Redmond,dc=litwareinc,dc=com" -ObjectType "user"
+  description: |-
+    The command shown in Example 1 grants user management rights (-ObjectType "user") to the Redmond OU in the domain litwareinc.com.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    Grant-CsOUPermission -OU "ou=Redmond,dc=litwareinc,dc=com" -ObjectType "user","contact","inetOrgPerson"
+  description: |-
+    In Example 2, management rights are granted for three different objects (user, contact, inetOrgPerson) for the Redmond OU in the domain litwareinc.com.
+  summary: ""
+- title: '-------------------------- EXAMPLE 3 --------------------------'
+  code: |-
+    $x = "ou=Redmond,dc=litwareinc,dc=com", "ou=Dublin,dc=litwareinc,dc=com", "ou=Tokyo,dc=litwareinc,dc=com"
+
+    foreach ($i in $x) {Grant-CsOUPermission -OU $i -ObjectType "user"}
+  description: |-
+    In Example 3, user management rights are simultaneously granted for three different OUs: Redmond, Dublin, and Tokyo.
+    To carry out this task, the first command in the example creates an array variable named $x; this variable holds the distinguished names of the three Active Directory OUs where rights will be granted.
+    In the second command, a foreach loop is created that takes each OU stored in the array and runs the Grant-CsOUPermission cmdlet against that organizational unit.
+    In turn, that command grants user management rights for each OU in the array.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Name of the domain where the OU is located.
+    If this parameter is not included, then the Grant-CsOUPermission cmdlet will look for the OU on the current domain.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Enables administrators to specify the fully qualified domain name (FQDN) of the domain controller to be used when running the Grant-CsOUPermission cmdlet.
+    If not specified, the cmdlet will use the first available domain controller.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: GlobalCatalog
+  description: |+
+    FQDN of a global catalog server in your domain.
+    This parameter is not required if you are running the Grant-CsOUPermission cmdlet on a computer with an account in your domain.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ObjectType" data-throw-if-not-resolved="False" />
+  name: ObjectType
+  isRequired: true
+  description: |+
+    Type of object covered by these rights.
+    Valid values are:
+
+    User
+
+    Computer
+
+    Contact
+
+    AppContact
+
+    InetOrgPerson
+
+    Device (required for creating common area phones)
+
+    To assign multiple object types in the same command, separate the object types by using commas: `-ObjectType "user","computer","contact".`
+    Note, however, that you can only specify a maximum of three object types per command.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OU
+  isRequired: true
+  description: |+
+    Distinguished name of the OU where rights are to be granted.
+    For example:
+
+    `-OU "ou=Redmond,dc=litwareinc,dc=com"`
+
+    Note that you can only grant rights to a single OU per command.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Report
+  description: |+
+    Enables you to specify a file path for the log file created when the cmdlet runs.
+    For example:
+
+    `-Report "C:\Logs\OUPermissions.html"`
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Grant-CsOUPermission
+name: Grant-CsOUPermission
+description: |-
+  If you have locked down your Active Directory domain (that is, if you have disabled permission inheritance) then the domain preparation that takes place when you install Skype for Business Server will not be able to add the rights needed to manage users, computers, contacts, application contacts, and InetOrg persons.
+  (Domain administrators will still be able to manage these objects, but no one else, including members of the RTCUniversalUserAdmins group, will have management rights.) In that case, you will need to use the Grant-CsOUPermission cmdlet to give the required security groups the required rights.
+  This must be done on a container-by-container basis.
+
+  Note that this cmdlet only grants rights to a set of predefined security groups; the cmdlet cannot be used to grant rights to arbitrary security groups or to individual users.
+
+  Rights granted by using the Grant-CsOUPermission cmdlet can later be removed by using the Revoke-CsOUPermission cmdlet.
+  If you run that cmdlet, then the groups initially granted the OU rights will no longer have those Skype for Business Server management rights for the specified Active Directory container.
+  In that case, you will need to be an enterprise administrator or a domain administrator in order to manage Skype for Business Server or one of its components.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/grant-csoupermission
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Grant-CsOUPermission
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

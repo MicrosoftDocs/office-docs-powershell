@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Set-CsTeamsIPPhonePolicy enables you to modify the properties of an existing Teams phone policy settings.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-CsTeamsIPPhonePolicy [-Description <String>] [-HotDeskingIdleTimeoutInMinutes <Int>]
+
+   [-SearchOnCommonAreaPhoneMode <String>] [-AllowHotDesking <Boolean>] [-AllowHomeScreen <String>] [-AllowBetterTogether <String>] [[-Identity] <XdsIdentity>] [-Tenant <Guid>]
+
+   [-SignInMode <String>] [-WhatIf] [-Confirm] [-Force] [-Instance <Object>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>  Set-CsTeamsIPPhonePolicy -Identity CommonAreaPhone -SignInMode CommonAreaPhoneSignin
+  description: |-
+    This example shows the SignInMode "CommonAreaPhoneSignIn" being set against the policy named "CommonAreaPhone".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowBetterTogether
+  description: |+
+    Determines whether Better Together mode is enabled, phones can lock and unlock in an integrated fashion when connected to their Windows PC running a 64-bit Teams desktop client.
+    Possible values this parameter can take:
+
+    - Enabled
+    - Disabled
+
+  defaultValue: Enabled
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowHomeScreen
+  description: |+
+    Determines whether the Home Screen feature of the Teams IP Phones is enabled.
+    Possible values this parameter can take:
+
+    - Enabled
+    - EnabledUserOverride
+    - Disabled
+
+  defaultValue: EnabledUserOverride
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowHotDesking
+  description: |+
+    Determines if the hot desking feature is enabled or not. Set this to TRUE to enable. Set this to FALSE to disable hot desking mode. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Free form text that can be used by administrators as desired. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes and suppresses the display of any non-fatal error message that might arise when running the command.
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int" data-throw-if-not-resolved="False" />
+  name: HotDeskingIdleTimeoutInMinutes
+  description: |+
+    Determines the idle timeout value in minutes for the signed in user account. When the timeout is reached, the account is logged out. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The identity of the policy. To specify the global policy for the organization, use "global". To specify any other policy provide the name of that policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SearchOnCommonAreaPhoneMode
+  description: |+
+    Determines whether a user can look up contacts from the tenant's global address book when the phone is signed into the Common Area Phone Mode. Set this to ENABLED to enable the feature. Set this to DISABLED to disable the feature.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignInMode
+  description: |+
+    Determines the sign in mode for the device when signing in to Teams.
+    Possible Values: 
+    - 'UserSignIn: Enables the individual user's Teams experience on the phone'
+    - 'CommonAreaPhoneSignIn: Enables a Common Area Phone experience on the phone'
+    - 'MeetingSignIn: Enables the meeting/conference room experience on the phone'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsTeamsIPPhonePolicy
+name: Set-CsTeamsIPPhonePolicy
+description: |-
+  Set-CsTeamsIPPhonePolicy enables you to modify the properties of an existing TeamsIPPhonePolicy.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsipphonepolicy
+  applicable: Microsoft Teams
+  title: Set-CsTeamsIPPhonePolicy
+  author: tonywoodruff
+  ms.author: anwoodru
+  ms.reviewer: kponnus
+  manager: sandrao
+  schema: 2.0.0

@@ -1,0 +1,147 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Grant-CsCallViaWorkPolicy cmdlet to assign call via work policies to a user or group of users.
+  Call via work policies enable and manage the characteristics of outbound calls placed through the Skype for Business client.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+links:
+- text: Remove-CsCallViaWorkPolicy
+  href: Remove-CsCallViaWorkPolicy.yml
+- text: Set-CsCallViaWorkPolicy
+  href: Set-CsCallViaWorkPolicy.yml
+- text: New-CsCallViaWorkPolicy
+  href: New-CsCallViaWorkPolicy.yml
+- text: Get-CsCallViaWorkPolicy
+  href: Get-CsCallViaWorkPolicy.yml
+syntaxes:
+- >-
+  Grant-CsCallViaWorkPolicy [-Identity] <UserIdParameter> [-PolicyName] <String> [-Confirm]
+
+   [-DomainController <Fqdn>] [-PassThru] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 -------------------------- (Skype for Business Server 2015)'
+  code: |-
+    Grant-CsCallViaWorkPolicy -Identity "Ken Myer" -PolicyName StandardUserCvW
+  description: |-
+    This example assigns the policy named "StandardUserCvW" to "Ken Myer".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
+    If this parameter is not specified, then the Grant-CsCallViaWorkPolicy cmdlet will contact the first available domain controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies a unique identifier of the user account the policy should be assigned to.
+    User identities can be specified by using one of four formats.
+
+    SIP address
+
+    User Principal Name (UPN)
+
+    Domain name and logon name, in the form domain\logon
+
+    Active Directory display name (Ken Myer), or distinguished name
+
+    In addition, you can use the asterisk (\*) wildcard character when using the display name as the user Identity.
+    For example, the Identity "\* Smith" grants the policy all users who have a display name that ends in the string value " Smith".
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
+    By default, the Grant-CsCallViaWorkPolicy cmdlet does not pass objects through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  isRequired: true
+  description: |+
+    Specifies the name of the policy to be assigned.
+    The PolicyName is the policy identity minus the policy scope ("tag:").
+    A policy that has an identity of "Tag:Redmond" has a PolicyName of "Redmond".
+    A policy with the identity "Tag:RedmondCalloutPolicy" has a PolicyName of "RedmondCalloutPolicy".
+    If you set PolicyName to a null value, then the command will unassign any individual policy assigned to the user.
+    For example: `Grant-CsCallViaWorkPolicy -Identity "Ken Myer" -PolicyName $Null`
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Grant-CsCallViaWorkPolicy
+name: Grant-CsCallViaWorkPolicy
+description: |-
+  This cmdlet assigns an existing per-user call via work policy to a user. Call via work policies are used to control access to the feature and manage the characteristics of outbound calls placed through the Skype for Business client.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/grant-cscallviaworkpolicy
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Grant-CsCallViaWorkPolicy
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

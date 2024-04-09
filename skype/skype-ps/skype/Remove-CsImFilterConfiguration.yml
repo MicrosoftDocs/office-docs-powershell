@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the specified instant messaging (IM) filter configuration.
+  (IM filter settings are used to prevent users from sending instant messages that contain hyperlinks.) This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.ImFilterConfiguration object.
+    Accepts pipelined input of IM filter configuration objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.ImFilterConfiguration.
+links:
+- text: New-CsImFilterConfiguration
+  href: New-CsImFilterConfiguration.yml
+- text: Set-CsImFilterConfiguration
+  href: Set-CsImFilterConfiguration.yml
+- text: Get-CsImFilterConfiguration
+  href: Get-CsImFilterConfiguration.yml
+syntaxes:
+- Remove-CsImFilterConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsImFilterConfiguration -Identity site:Redmond
+  description: |-
+    In Example 1, the `Remove-CsImFilterConfiguration` cmdlet is used to remove the IM filter configuration with the Identity site:Redmond.
+    When an IM filter configuration is removed from a site, that site will automatically begin using the global settings in its place.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsImFilterConfiguration -Filter site:* | Remove-CsImFilterConfiguration
+  description: |-
+    In Example 2, all the IM filter configurations at the site scope are removed.
+    To carry out this task, the command first uses the `Get-CsImFilterConfiguration` cmdlet and the Filter parameter to return all the configurations at the site scope; the wildcard string site:* tells the `Get-CsImFilterConfiguration` cmdlet to return only those configurations that have an Identity that begins with the string value site:.
+    The filtered collection of configurations is then piped to the `Remove-CsImFilterConfiguration` cmdlet, which deletes each configuration in the collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The unique identity of the configuration to be removed.
+    This will be either Global or Site:\<site name\> (where \<site name\> represents the name of the site to which the settings apply).
+
+    Full Data Type: Microsoft.Rtc.Management.Xds.XdsIdentity
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsImFilterConfiguration
+name: Remove-CsImFilterConfiguration
+description: |-
+  When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular website or share.
+  Skype for Business Server can be configured so that hyperlinks with certain prefixes are blocked or are not active.
+  (In other words, the participants can't simply click the link and be taken to the site the URI refers to; they must copy and paste the link manually into a browser.)
+
+  The `Remove-CsImFilterConfiguration` cmdlet removes the IM filter configuration for a specified identity (such as a specific site).
+  Running this cmdlet against the Global identity will simply reset the global configuration to the default settings.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csimfilterconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsImFilterConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

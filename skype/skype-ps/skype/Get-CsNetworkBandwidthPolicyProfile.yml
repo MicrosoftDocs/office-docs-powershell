@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves one or more network bandwidth policy profiles.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.BWPolicyProfileType" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsNetworkBandwidthPolicyProfile
+  href: New-CsNetworkBandwidthPolicyProfile.yml
+- text: Remove-CsNetworkBandwidthPolicyProfile
+  href: Remove-CsNetworkBandwidthPolicyProfile.yml
+- text: Set-CsNetworkBandwidthPolicyProfile
+  href: Set-CsNetworkBandwidthPolicyProfile.yml
+syntaxes:
+- >-
+  Get-CsNetworkBandwidthPolicyProfile [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- Get-CsNetworkBandwidthPolicyProfile [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsNetworkBandwidthPolicyProfile
+  description: |-
+    Calling the Get-CsNetworkBandwidthPolicyProfile cmdlet without any parameters will retrieve all bandwidth policy profiles defined within the Skype for Business Server deployment.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsNetworkBandwidthPolicyProfile -Identity LowBWProfile
+  description: |-
+    This example retrieves the bandwidth policy profile with the Identity LowBWProfile.
+    Because identities must be unique this will return, at most, one profile.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsNetworkBandwidthPolicyProfile -Filter *50MB*
+  description: |-
+    In this example we use the Filter parameter to specify one or more profiles to retrieve based on a wildcard string.
+    We've used the string *50MB*, which indicates that we want to retrieve all the bandwidth policy profiles with Identity values that contain the string 50MB anywhere within the value.
+    For example, this would retrieve profiles with identities such as "BW profile for 50MB links", "50MB audio limit", and "video limits of 50MB".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    A string containing wildcards that is used to retrieve bandwidth policy profiles that have Identity values that match the wildcard pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    A string value that uniquely identifies the bandwidth policy profile you want to retrieve.
+    Specifying an Identity will retrieve, at most, one profile.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the network bandwidth policy profile from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsNetworkBandwidthPolicyProfile
+name: Get-CsNetworkBandwidthPolicyProfile
+description: |-
+  As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
+  (In Skype for Business Server, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet retrieves one or more container profiles for these policies.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csnetworkbandwidthpolicyprofile
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsNetworkBandwidthPolicyProfile
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

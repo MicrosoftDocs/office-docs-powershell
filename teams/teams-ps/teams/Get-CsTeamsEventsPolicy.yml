@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the Teams Events policy. Note that this policy is currently still in preview.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsTeamsEventsPolicy [[-Identity] <String>] [<CommonParameters>]
+- Get-CsTeamsEventsPolicy [-Filter <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsEventsPolicy
+  description: |-
+    Returns information for all Teams Events policies available for use in the tenant.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsTeamsEventsPolicy -Identity Global
+  description: |-
+    Returns information for Teams Events policy with identity "Global".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables using wildcards when specifying the policy (or policies) to be retrieved. Note that you cannot use both the Filter and the Identity parameters in the same command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier assigned to the Teams Events policy.
+
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsEventsPolicy
+name: Get-CsTeamsEventsPolicy
+description: |-
+  Returns information about the Teams Events policy. TeamsEventsPolicy is used to configure options for customizing Teams Events experiences.
+metadata:
+  external help file: MicrosoftTeams-help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamseventspolicy
+  schema: 2.0.0

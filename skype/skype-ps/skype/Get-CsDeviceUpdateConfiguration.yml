@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the device update configuration settings currently deployed in your organization.
+  These settings help manage the Device Update Web service, a Skype for Business Server component that enables administrators to distribute firmware updates to telephones and other devices running Skype for Business.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdateConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsDeviceUpdateConfiguration
+  href: New-CsDeviceUpdateConfiguration.yml
+- text: Remove-CsDeviceUpdateConfiguration
+  href: Remove-CsDeviceUpdateConfiguration.yml
+- text: Set-CsDeviceUpdateConfiguration
+  href: Set-CsDeviceUpdateConfiguration.yml
+syntaxes:
+- Get-CsDeviceUpdateConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsDeviceUpdateConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsDeviceUpdateConfiguration
+  description: |-
+    The command shown in Example 1 returns a collection of all the device update configuration settings currently in use in the organization.
+    Calling the Get-CsDeviceUpdateConfiguration cmdlet without any additional parameters returns all the device update settings currently in use.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsDeviceUpdateConfiguration -Identity Global
+  description: |-
+    In Example 2, information is returned for the global device update configuration settings.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsDeviceUpdateConfiguration -Filter site:*
+  description: |-
+    Example 3 demonstrates the use of the Filter parameter.
+    The filter value "site:*" returns a collection of all the device update configuration settings applied at the site scope; that's because these settings all have an Identity that begins with the string value "site:".
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsDeviceUpdateConfiguration | Where-Object {$_.MaxLogFileSize -gt 2048000}
+  description: |-
+    Example 4 returns all the device update configuration settings where the MaxLogFileSize property is greater than 2048000 bytes.
+    To do this, the Get-CsDeviceUpdateConfiguration cmdlet is used to return a collection of all the device update configuration settings currently in use.
+    That collection is then piped to the Where-Object cmdlet, which picks out only those settings where the MaxLogFileSize property is greater than 2048000.
+  summary: ""
+- title: '-------------------------- Example 5 --------------------------'
+  code: |-
+    Get-CsDeviceUpdateConfiguration | Where-Object {$_.ValidLogFileTypes -like "*Watson*"}
+  description: |-
+    The command shown in Example 5 returns all the device update configuration settings that include "Watson" as a valid log file type.
+    To accomplish this task, the Get-CsDeviceUpdateConfiguration cmdlet is used to return a collection of all the device update configuration settings.
+    That collection is then piped to the Where-Object cmdlet, which picks out only the device settings that include "Watson" in their set of valid log file types.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Provides a way for you to use wildcard characters when specifying device update configuration settings.
+    For example, to return a collection of all the configuration settings that have been applied at the site scope, use this syntax: -Filter "site:*".
+    To return all the settings that have the term "EMEA" in their Identity, use this syntax: -Filter "*EMEA*".
+    Note that the Filter parameter acts only on the Identity of the settings; you cannot filter on other device update configuration properties.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the device update configuration settings to be retrieved.
+    To refer to the global settings, use this syntax: -Identity global.
+    To refer to site settings, use syntax similar to this: -Identity site:Redmond.
+    Note that you cannot use wildcards when specifying an Identity.
+    If you need to use wildcards, use the Filter parameter instead.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the device update configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsDeviceUpdateConfiguration
+name: Get-CsDeviceUpdateConfiguration
+description: |-
+  The Device Update Web service provides a way for administrators to distribute firmware updates to devices that run Skype for Business.
+  Periodically, administrators upload a set of device update rules to Skype for Business Server.
+  After those rules have been tested and approved, they can then be applied to the appropriate devices as those devices connect to the system.
+  Devices check for updates when they are first powered on, then check again when a user logs on.
+  After that, devices check for updates every 24 hours.
+
+  The Device Update Web service is managed by using device configuration settings; these settings can be applied at the global scope or at the site scope.
+  You can use the Get-CsDeviceUpdateConfiguration cmdlet to return information about the device update configuration settings currently in use in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csdeviceupdateconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsDeviceUpdateConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

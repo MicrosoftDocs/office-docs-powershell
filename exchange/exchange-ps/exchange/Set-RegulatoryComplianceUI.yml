@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell)
+  .
+
+  Use the Set-RegulatoryComplianceUI cmdlet to display the UI option in retention label settings to mark content as a regulatory record.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-RegulatoryComplianceUI -Enabled <Boolean>
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-RegulatoryComplianceUI -Enabled $true
+  description: |-
+    This example displays the UI option in retention label settings to mark content as a regulatory record.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  isRequired: true
+  description: |+
+    The Enabled parameter specifies whether to show or hide the UI option in retention label settings to mark content as a regulatory record. Valid values are:
+
+    $true: The option to mark content as a regulatory record is visible in the UI for retention label settings.
+
+    $false: The option to mark content as a regulatory record is not visible in the UI for retention label settings. This is the default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Set-RegulatoryComplianceUI
+name: Set-RegulatoryComplianceUI
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/set-regulatorycomplianceui
+  applicable: Security & Compliance
+  title: Set-RegulatoryComplianceUI
+  schema: 2.0.0

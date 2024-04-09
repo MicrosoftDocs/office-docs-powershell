@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the configuration of the previously defined Session Border Controller(s) (SBC(s))  that describes the settings for the peer entity. This cmdlet was introduced with Microsoft Phone System Direct Routing.
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlinePSTNGateway
+  href: Set-CsOnlinePSTNGateway.yml
+- text: New-CsOnlinePSTNGateway
+  href: New-CsOnlinePSTNGateway.yml
+- text: Get-CsOnlinePSTNGateway
+  href: Get-CsOnlinePSTNGateway.yml
+syntaxes:
+- Remove-CsOnlinePSTNGateway [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsOnlinePSTNGateway -Identity sbc.contoso.com
+  description: |-
+    This example removes SBC with Identity (and FQDN) sbc.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The parameter is mandatory for the cmdlet. The Identity is the same as the SBC FQDN.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsOnlinePSTNGateway
+name: Remove-CsOnlinePSTNGateway
+description: |-
+  Use this cmdlet to remove the configuration of the previously created Session Border Controller(s) (SBC(s)) configuration. Note the SBC must be removed from all voice routes before executing this cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlinepstngateway
+  applicable: Microsoft Teams
+  title: Remove-CsOnlinePSTNGateway
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

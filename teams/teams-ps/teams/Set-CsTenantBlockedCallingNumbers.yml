@@ -1,0 +1,166 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Set-CsTenantBlockedCallingNumbers cmdlet to set tenant blocked calling numbers setting.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTenantBlockedCallingNumbers
+  href: Get-CsTenantBlockedCallingNumbers.yml
+- text: Test-CsInboundBlockedNumberPattern
+  href: Test-CsInboundBlockedNumberPattern.yml
+syntaxes:
+- >-
+  Set-CsTenantBlockedCallingNumbers [-Force] [-Name <Object>] [-WhatIf] [-Confirm] [[-Identity] <Object>]
+
+   [-InboundExemptNumberPatterns <Object>] [-Tenant <Object>] [-InboundBlockedNumberPatterns <Object>]
+
+   [-Enabled <Object>] [-Instance <Object>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsTenantBlockedCallingNumbers -Enabled $false
+  description: |-
+    This example turns off the tenant blocked calling numbers setting. No inbound number will be blocked from this feature.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Set-CsTenantBlockedCallingNumbers -Enabled $true
+  description: |-
+    This example turns on the tenant blocked calling numbers setting. Inbound calls will be blocked based on the list of blocked number patterns.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Set-CsTenantBlockedCallingNumbers -Name "MyCustomBlockedCallingNumbersName"
+  description: |-
+    This example renames the current blocked calling numbers with "MyCustomBlockedCallingNumbersName". No change is made besides the Name field change.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Set-CsTenantBlockedCallingNumbers -InboundBlockedNumberPatterns @((New-CsInboundBlockedNumberPattern -Name "AnonymousBlockedPattern" -Enabled $true -Pattern "^(?!)Anonymous"))
+  description: |-
+    This example sets the tenant blocked calling numbers with a new list of inbound blocked number patterns. There is a new InboundBlockedNumberPattern being created. The pattern name is "AnonymousBlockedPattern". The pattern is turned on. The pattern is a normalization rule which contains "Anonymous".
+
+    Note that if the current InboundBlockedNumberPatterns already contains a list of patterns while a new pattern needs to be created, this example will wipe out the existing patterns and only add the new one. Please save the current InboundBlockedNumberPatterns list before adding new patterns.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    The switch to turn on or turn off the blocked calling numbers setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch overrides the confirmation prompt displayed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter is a unique identifier which identifies the TenantBlockedCallingNumbers to set.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: InboundBlockedNumberPatterns
+  description: |+
+    The InboundBlockedNumberPatterns parameter contains the list of InboundBlockedNumberPatterns.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: InboundExemptNumberPatterns
+  description: |+
+    The InboundExemptNumberPatterns parameter contains the list of InboundExemptNumberPatterns.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    This parameter allows you to provide a name to the TenantBlockedCallingNumbers setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsTenantBlockedCallingNumbers
+name: Set-CsTenantBlockedCallingNumbers
+description: |-
+  Microsoft Direct Routing, Operator Connect and Calling Plans supports blocking of inbound calls from the public switched telephone network (PSTN). This feature allows a tenant-global list of number patterns to be defined so that the caller ID of every incoming PSTN call to the tenant can be checked against the list for a match. If a match is made, an incoming call is rejected.
+
+  The tenant blocked calling numbers includes a list of inbound blocked number patterns. Number patterns are managed through the CsInboundBlockedNumberPattern commands New, Get, Set, and Remove. You can manage a given pattern by using these cmdlets, including the ability to toggle the activation of a given pattern. 
+
+  The tenant blocked calling numbers also includes a list of number patterns exempt from call blocking. Exempt number patterns are managed through the CsInboundExemptNumberPattern commands New, Get, Set, and Remove. You can manage a given pattern by using these cmdlets, including the ability to toggle the activation of a given pattern. 
+
+  You can test your number blocking by using the Test-CsInboundBlockedNumberPattern command.
+
+  The scope of tenant blocked calling numbers is global across the given tenant. This command-let can also turn on/off the blocked calling numbers setting at the tenant level.
+
+  To get the current tenant blocked calling numbers setting, use Get-CsTenantBlockedCallingNumbers
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  applicable: Microsoft Teams
+  title: Set-CsTenantBlockedCallingNumbers
+  schema: 2.0.0
+  manager: roykuntz
+  author: jenstrier
+  ms.author: serdars

@@ -1,0 +1,30 @@
+### YamlMime:PowershellModule
+children:
+- title: OfficeOnlineServerPowerShell
+  cmdlets:
+  - OfficeOnlineServerPowerShell.Get-OfficeWebAppsExcelBIServer
+  - OfficeOnlineServerPowerShell.Get-OfficeWebAppsExcelUserDefinedFunction
+  - OfficeOnlineServerPowerShell.Get-OfficeWebAppsFarm
+  - OfficeOnlineServerPowerShell.Get-OfficeWebAppsHost
+  - OfficeOnlineServerPowerShell.Get-OfficeWebAppsMachine
+  - OfficeOnlineServerPowerShell.New-OfficeWebAppsExcelBIServer
+  - OfficeOnlineServerPowerShell.New-OfficeWebAppsExcelUserDefinedFunction
+  - OfficeOnlineServerPowerShell.New-OfficeWebAppsFarm
+  - OfficeOnlineServerPowerShell.New-OfficeWebAppsHost
+  - OfficeOnlineServerPowerShell.New-OfficeWebAppsMachine
+  - OfficeOnlineServerPowerShell.Remove-OfficeWebAppsExcelBIServer
+  - OfficeOnlineServerPowerShell.Remove-OfficeWebAppsExcelUserDefinedFunction
+  - OfficeOnlineServerPowerShell.Remove-OfficeWebAppsHost
+  - OfficeOnlineServerPowerShell.Remove-OfficeWebAppsMachine
+  - OfficeOnlineServerPowerShell.Repair-OfficeWebAppsFarm
+  - OfficeOnlineServerPowerShell.Set-OfficeWebAppsExcelUserDefinedFunction
+  - OfficeOnlineServerPowerShell.Set-OfficeWebAppsFarm
+  - OfficeOnlineServerPowerShell.Set-OfficeWebAppsMachine
+uid: OfficeOnlineServerPowerShell
+name: OfficeOnlineServerPowerShell
+description: |-
+  The following cmdlet references are for Office Online Server.
+metadata:
+  Module Name: Office Online Server PowerShell
+  Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+  title: officewebapps

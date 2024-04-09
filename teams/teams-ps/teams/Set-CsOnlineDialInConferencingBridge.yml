@@ -1,0 +1,191 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Set-CsOnlineDialInConferencingBridge` cmdlet to modify the settings of a Microsoft audio conferencing bridge.
+module: MicrosoftTeamsPowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-CsOnlineDialInConferencingBridge [-Identity] <Guid> [-Tenant <Guid>] [-TenantDomain <String>]
+
+   [-DefaultServiceNumber <String>] [-SetDefault] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-CsOnlineDialInConferencingBridge -Name <String> [-Tenant <Guid>] [-TenantDomain <String>]
+
+   [-DefaultServiceNumber <String>] [-SetDefault] [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-CsOnlineDialInConferencingBridge [-Instance] <ConferencingBridge> [-Tenant <Guid>]
+
+   [-TenantDomain <String>] [-DefaultServiceNumber <String>] [-SetDefault] [-DomainController <Fqdn>] [-Force]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsOnlineDialInConferencingBridge -Name "Conference Bridge" -DefaultServiceNumber 14255551234
+  description: |-
+    This example sets the default dial-in phone number to 14255551234 for the audio conferencing bridge named "Conference Bridge".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    $bridge = Get-CsOnlineDialInConferencingBridge -Name "Conference Bridge"
+
+    $Bridge.Name = "O365 Bridge"
+
+    Set-CsOnlineDialInConferencingBridge -Instance $bridge
+  description: |-
+    This example changes the name of a conference bridge by creating a conference bridge instance, changing the instance's name and then setting the conference bridge to the instance.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DefaultServiceNumber
+  description: |+
+    Specifies the default phone number to be used on the Microsoft audio conferencing bridge.
+    The default number is used in meeting invitations.
+
+    The DefaultServiceNumber must be assigned to the audio conferencing bridge.
+    Also, when the default service number is changed, the service number of existing users will not be changed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Specifies the domain controller that's used by the cmdlet to read or write the specified data.
+    Valid inputs for this parameter include:
+
+    Fully qualified domain name (FQDN): -DomainController atl-cs-001.Contoso.com.
+
+    Computer name: -DomainController atl-cs-001
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages.
+    It can be useful in scripting to suppress interactive prompts.
+    If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the globally-unique identifier (GUID) for the audio conferencing bridge to be modified.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="ConferencingBridge" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to a Microsoft audio conferencing bridge object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the audio conferencing bridge to be modified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SetDefault
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsOnlineDialInConferencingBridge
+name: Set-CsOnlineDialInConferencingBridge
+description: |-
+  The `Set-CsOnlineDialInConferencingBridge` cmdlet can be used to set the default dial-in service phone number for a given audio conferencing bridge.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/set-csonlinedialinconferencingbridge
+  applicable: Microsoft Teams
+  title: Set-CsOnlineDialInConferencingBridge
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

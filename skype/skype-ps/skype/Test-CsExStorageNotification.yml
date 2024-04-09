@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that the Skype for Business Server Storage Service running on a Front End server can subscribe to the Exchange mailbox notification service.
+  This is done by having the cmdlet subscribe to the service, create an item, verify that notification of the new item is received, and then, optionally, delete that item unsubscribe from the service.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Test-CsExStorageNotification` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Test-CsExStorageNotification` cmdlet returns instances of the Microsoft.Rtc.Management.ResourceData object.
+links:
+- text: Test-CsExStorageConnectivity
+  href: Test-CsExStorageConnectivity.yml
+syntaxes:
+- >-
+  Test-CsExStorageNotification -SipUri <String> [-Binding <String>] [-DeleteItem] [-Force]
+
+   [-HostNameStorageService <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Test-CsExStorageNotification -SipUri "sip:kenmyer@litwareinc.com" -Binding "NetNamedPipe"
+  description: |-
+    The command shown in Example 1 tests to see if the Skype for Business Server Storage Service can connect to the Exchange Server mailbox notification service for the user sip:kenmyer@litwareinc.com.
+    In this example, NetNamedPipe is used as the WCF binding.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Binding
+  description: |+
+    Windows Communication Foundation (WCF) binding.
+    A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
+    valid values are:
+
+    * NetNamedPipe
+    * NetTCP
+
+  defaultValue: None
+  position: Named
+  aliases: b
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteItem
+  description: |+
+    When present, the test item will be deleted from the Exchange mailbox at the end of the text.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostNameStorageService
+  description: |+
+    Fully qualified domain name of the server where the Skype for Business Server Storage Service is running.
+    This parameter is required if the Binding is set to NetTCP.
+
+
+  defaultValue: None
+  position: Named
+  aliases: h
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SipUri
+  isRequired: true
+  description: |+
+    SIP address of the Exchange Server mailbox where the test item should be created.
+
+  defaultValue: None
+  position: Named
+  aliases: s
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsExStorageNotification
+name: Test-CsExStorageNotification
+description: |-
+  The `Test-CsExStorageNotification` cmdlet is used to verify that the Exchange notification service is able to notify Skype for Business Server any time updates are made to a user's Contact List.
+  This cmdlet is valid only if you are using the unified contact store.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Test-CsExStorageNotification` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-csexstoragenotification
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsExStorageNotification
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

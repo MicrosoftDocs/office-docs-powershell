@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The `Remove-CsMeetingConfiguration` cmdlet enables you to delete an existing collection of meeting configuration settings.
+  Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, as well as control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.MeetingConfiguration object.
+    The `Remove-CsMeetingConfiguration` cmdlet accepts pipelined instances of the meeting configuration object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Remove-CsMeetingConfiguration` cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.MeetingConfiguration object.
+links:
+- text: Get-CsMeetingConfiguration
+  href: Get-CsMeetingConfiguration.yml
+- text: New-CsMeetingConfiguration
+  href: New-CsMeetingConfiguration.yml
+- text: Set-CsMeetingConfiguration
+  href: Set-CsMeetingConfiguration.yml
+syntaxes:
+- >-
+  Remove-CsMeetingConfiguration [-Identity] <XdsIdentity> [-Force] [-Tenant <Guid>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Remove-CsMeetingConfiguration -Identity site:Redmond
+  description: |-
+    In Example 1, the meeting configuration settings that have the Identity site:Redmond are removed.
+    When these settings are removed from the Redmond site users in that site will automatically inherit the global meeting configuration settings.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    Get-CsMeetingConfiguration -Filter "site:*" | Remove-CsMeetingConfiguration
+  description: |-
+    The command shown in Example 2 removes all the meeting settings that have been configured at the site scope.
+    To do this, the command first calls the `Get-CsMeetingConfiguration` cmdlet along with the Filter parameter; the filter value "site:*" ensures that only settings that have an Identity that begins with the characters "site:" are selected.
+    This filtered collection is then piped to the `Remove-CsMeetingConfiguration` cmdlet, which deletes each item in the collection.
+  summary: ""
+- title: '-------------------------- Example 3 ------------------------'
+  code: |-
+    Get-CsMeetingConfiguration | Where-Object {$_.AdmitAnonymousUsersByDefault -eq $True} | Remove-CsMeetingConfiguration
+  description: |-
+    Example 3 deletes each collection of meeting configuration settings where the AdmitAnonymousUsersByDefault property is True.
+    To carry out this task, the command first calls the `Get-CsMeetingConfiguration` cmdlet in order to return a collection of all the meeting configuration settings currently in use.
+    This collection is then piped to the `Where-Object` cmdlet, which picks out only those settings where the AdmitAnonymousUsersByDefault property is equal to True.
+    The filtered collection is then piped to the `Remove-CsMeetingConfiguration` cmdlet, which proceeds to remove each item in that collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the meeting configuration settings to be removed.
+    To "remove" the global settings, use this syntax: `-Identity global`.
+    (As noted previously, you cannot actually remove the global settings; all you can do is reset the properties to their default values.) To remove settings from the site scope, use syntax similar to this: `-Identity site:Redmond.`
+    Service settings can be removed using this syntax: `-Identity service:UserServer:atl-cs-001.litwareinc.com`.
+
+    Note that you cannot use wildcards when specifying an Identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the Skype for Business Online tenant account for the meeting configuration settings being deleted.
+    For example:
+
+    `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+    You can return the tenant ID for each of your tenants by running this command:
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsMeetingConfiguration
+name: Remove-CsMeetingConfiguration
+description: |-
+  Online meetings (also called conferences) are an integral part of Skype for Business Server.
+  The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create as well as determine how meetings deal with anonymous users and dial-in conferencing users.
+  For example, you can configure meetings so that anyone dialing in over the public switched telephone network (PSTN) is automatically admitted to the meeting.
+  Alternatively, you can configure meetings so that dial-in users are not automatically admitted the meeting, but are instead routed to the meeting lobby.
+  These dial-in users remain on hold in the lobby until a presenter admits them to the meeting.
+
+  Meeting configuration settings can be assigned to the global, site, or service scopes.
+  If you create new settings at the site or service scope, those settings can later be removed by using the `Remove-CsMeetingConfiguration` cmdlet.
+  The `Remove-CsMeetingConfiguration` cmdlet can also be run against the global meeting settings.
+  In that case, however, the settings will not be removed; that's because the global settings cannot be removed.
+  Instead, all the properties in the global collection will be reset to their default values.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csmeetingconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsMeetingConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""
