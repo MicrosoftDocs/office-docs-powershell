@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet removes an existing Teams Emergency Call Routing policy instance.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsTeamsEmergencyCallRoutingPolicy
+  href: New-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Grant-CsTeamsEmergencyCallRoutingPolicy
+  href: Grant-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Set-CsTeamsEmergencyCallRoutingPolicy
+  href: Set-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Get-CsTeamsEmergencyCallRoutingPolicy
+  href: Get-CsTeamsEmergencyCallRoutingPolicy.yml
+syntaxes:
+- Remove-CsTeamsEmergencyCallRoutingPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsTeamsEmergencyCallRoutingPolicy -Identity Test
+  description: |-
+    This example removes Teams Emergency Call Routing policy with identity Test.
+  summary: ""
+- title: Example 2
+  code: |-
+    Remove-CsTeamsEmergencyCallRoutingPolicy -Identity Global
+  description: |-
+    This example resets the Teams Emergency Call Routing Global policy instance to its default values.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter is the unique identifier of the Teams Emergency Call Routing policy to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsEmergencyCallRoutingPolicy
+name: Remove-CsTeamsEmergencyCallRoutingPolicy
+description: |-
+  This cmdlet removes an existing Teams Emergency Call Routing policy instance.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallroutingpolicy
+  applicable: Microsoft Teams
+  title: Remove-CsTeamsEmergencyCallRoutingPolicy
+  author: jenstrier
+  ms.author: serdars
+  manager: roykuntz
+  ms.reviewer: chenc
+  schema: 2.0.0

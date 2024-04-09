@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables administrators to reset a Windows Fabric routing group that is not working correctly.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Reset-CsRoutingGroup` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Reset-CsRoutingGroup` cmdlet does return objects or data.
+syntaxes:
+- >-
+  Reset-CsRoutingGroup [-RoutingGroup] <String> [-Binding <String>] [-Confirm] [-Force]
+
+   [-HostNameStorageService <String>] [-Lyss] [-ResetType <RgResetType>] [-TargetFqdn <Fqdn>] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -ResetType "Transient"
+  description: |-
+    The command shown in Example 1 performs a transient on the routing group with the identity bef5fa3b-3c97-4af0-abe7-611deee7616c.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Binding
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: b
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostNameStorageService
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: h
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Lyss
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="RgResetType" data-throw-if-not-resolved="False" />
+  name: ResetType
+  description: |+
+    Type of reset to be performed.
+    Allowed values are:
+
+    - Permanent. Takes everything back from Back End Servers and recreates the whole routing group.
+
+    - Transient. Resets the Windows Fabric service and fixes any issues, then syncs up any missing data from the RTCLocal Database.
+
+    - Recreate. Deletes existing data from Windows Fabric service about the routing group and reloads them from the RTCLocal Database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingGroup
+  isRequired: true
+  description: |+
+    Globally unique identifier (GUID) of the routing group that needs to be reset.
+    For example:
+
+    `-RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c"`
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: TargetFqdn
+  description: |+
+    Fully qualified domain name of the pool containing the routing group that needs to be reset.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Reset-CsRoutingGroup
+name: Reset-CsRoutingGroup
+description: |-
+  The `Reset-CsRoutingGroup` cmdlet provides a way for administrators to reset Windows Fabric routing groups that are "missing" or are otherwise not working correctly.
+  Missing routing groups can be identified by using the `Get-CsPoolFabricState` cmdlet and the FilterOnMissingReplicas parameter.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/reset-csroutinggroup
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Reset-CsRoutingGroup
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

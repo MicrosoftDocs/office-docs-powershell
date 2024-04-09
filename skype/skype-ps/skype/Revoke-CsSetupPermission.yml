@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Revokes the Skype for Business Server setup rights that have been granted on an Active Directory organizational unit (OU).
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Revoke-CsSetupPermission` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+links:
+- text: Grant-CsSetupPermission
+  href: Grant-CsSetupPermission.yml
+- text: Test-CsSetupPermission
+  href: Test-CsSetupPermission.yml
+syntaxes:
+- >-
+  Revoke-CsSetupPermission -ComputerOU <String> [-Domain <Fqdn>] [-DomainController <Fqdn>]
+
+   [-GlobalCatalog <Fqdn>] [-Force] [-Report <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    Revoke-CsSetupPermission -ComputerOU "ou=CsServers,dc=litwareinc,dc=com"
+  description: |-
+    The command shown in Example 1 revokes the setup rights applied to the CsServers OU in the domain litwareinc.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerOU
+  isRequired: true
+  description: |+
+    Distinguished name (DN) of the OU that contains the accounts for the computers where Skype for Business Server will be (or has been) installed.
+    For example:
+
+    `-ComputerOU "ou=CsServers,dc=litwareinc,dc=com"`
+
+    If you prefer you can leave off the domain portion of the distinguished name when specifying the OU.
+    For example:
+
+    `-ComputerOU "ou=CsServers"`
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Name of the domain where the OU is located.
+    If this parameter is not included, then the `Revoke-CsSetupPermission` cmdlet will look for the OU in the current domain.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Fully qualified name of the domain controller to be contacted when assigning the policy.
+    For example:
+
+    `-DomainController atl-dc-001.litwareinc.com`
+
+    If not specified, the `Revoke-CsSetupPermission` cmdlet will contact the nearest available domain controller when assigning the policy.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: GlobalCatalog
+  description: |+
+    Fully qualified name of the global catalog server to be contacted when assigning the policy.
+    For example:
+
+    `-GlobalCatalog atl-dc-001.litwareinc.com`
+
+    If not specified, the `Revoke-CsSetupPermission` cmdlet will contact the nearest available global catalog server when assigning the policy.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Report
+  description: |+
+    Enables you to specify a file path for the log file created when the cmdlet runs.
+    For example:
+
+    `-Report "C:\Logs\OUPermissions.html"`
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Revoke-CsSetupPermission
+name: Revoke-CsSetupPermission
+description: |-
+  The domain preparation that takes place when you install Skype for Business Server does not automatically add the rights that enable members of the RTCUniversalServerAdmins group to run the `Enable-CsTopology` cmdlet.
+  That means that, by default, you must be a domain administrator in order to enable a topology.
+  To give members of the RTCUniversalServerAdmins group the right to enable a topology, you must run the `Grant-CsSetupPermissions` cmdlet.
+  In addition, you will need to run this cmdlet against each Active Directory container that hosts computers running Skype for Business Server.
+
+  Rights granted by using the `Grant-CsSetupPermission` cmdlet can later be removed by using the `Revoke-CsSetupPermission` cmdlet.
+  If you run that cmdlet, the RTCUniversalServerAdmins group will no longer have Skype for Business Server setup rights for the specified Active Directory container.
+  In that case, you will need to be an enterprise administrator or a domain administrator in order to enable a Skype for Business Server topology.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/revoke-cssetuppermission
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Revoke-CsSetupPermission
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

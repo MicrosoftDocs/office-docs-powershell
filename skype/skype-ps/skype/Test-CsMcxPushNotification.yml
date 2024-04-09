@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that the push notification service is working.
+  The push notification service (Apple Push Notification Service and Microsoft Push Notification Service) provides a way to send notifications about events such as new instant messages or new voice mail to mobile devices like iPhones and Windows Phones, even if the Skype for Business application on those devices is currently suspended or running in the background.
+  This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Test-CsMcxPushNotification` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Test-CsMcxPushNotification` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+syntaxes:
+- >-
+  Test-CsMcxPushNotification [-AccessEdgeFqdn] <String> [-Certificate <X509Certificate2>] [-Force]
+
+   [-OutLoggerVariable <String>] [-OutVerboseVariable <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Test-CsMcxPushNotification -AccessEdgeFqdn "atl-edge-001.litwareinc.com"
+  description: |-
+    The command shown in Example 1 tests the push notification service accessed through the Edge server atl-edge-001.litwareinc.com.
+    The AccessEdgeFqdn must point to the internal edge of the proxy server to which push notification traffic is directed.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessEdgeFqdn
+  isRequired: true
+  description: |+
+    Fully qualified domain name of the Access Edge server used to connect to the push notification service.
+
+  defaultValue: None
+  position: "2"
+  aliases: fqdn
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  description: |+
+    Enables you to specify an X509 certificate to use for authentication purposes
+
+  defaultValue: None
+  position: Named
+  aliases: cert
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutLoggerVariable
+  description: |+
+    When present, detailed output from running the cmdlet will be stored in the specified variable.
+    This variable includes a pair of methods - ToHTML and ToXML - that can then be used to save that output to either an HTML or an XML file.
+
+    To store output in a logger variable named $TestOutput use the following syntax:
+
+    `-OutLoggerVariable TestOutput`
+
+    Note: Do not use prepend a $ character when specifying the variable name.
+
+    To save the information stored in the logger variable to an HTML file, use a command similar to this:
+
+    `$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
+
+    To save the information stored in the logger variable to an XML file, use a command similar to this:
+
+    `$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
+
+  defaultValue: None
+  position: Named
+  aliases: olv
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutVerboseVariable
+  description: |+
+    When present, detailed output from running the cmdlet will be stored in the specified variable.
+    For example, to store output in a variable named $TestOutput use the following syntax
+
+    `-OutVerboseVariable TestOutput`
+
+    Do not prepend a $ character when specifying the variable name.
+
+  defaultValue: None
+  position: Named
+  aliases: ovv
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.Test-CsMcxPushNotification
+name: Test-CsMcxPushNotification
+description: |-
+  The Apple Push Notification Service and the Skype for Business Server Push Notification Service enable users running Skype for Business on their Apple iPhone or Windows Phone to receive notifications about Skype for Business events even when the application is suspended or running in the background.
+  For example, users can receive notice for events such as these:
+
+  - Invitations to a new instant messaging session or conference
+  - New instant messages
+  - New voice mail
+
+  Without the push notification service, users would receive these notices only when Skype for Business was in the foreground and serving as the active application.
+
+  The `Test-CsMcxPushNotification` cmdlet provides a way for administrators to verify that the push notification service is working.
+  When using this cmdlet, make sure that the AccessEdgeFqdn parameter points to the internal edge of the proxy server to which push notification traffic is directed.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-csmcxpushnotification
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: Test-CsMcxPushNotification
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Add a new channel to a team.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="GroupId, DisplayName, Description, MembershipType, Owner" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Id" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- New-TeamChannel -GroupId <String> -DisplayName <String> [-Description <String>] [-MembershipType <String>] [-Owner <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    New-TeamChannel -GroupId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -DisplayName "Architecture"
+  description: |-
+    Create a standard channel with display name as "Architecture"
+  summary: ""
+- title: Example 2
+  code: |-
+    New-TeamChannel -GroupId 126b90a5-e65a-4fef-98e3-d9b49f4acf12 -DisplayName "Engineering" -MembershipType Private
+  description: |-
+    Create a private channel with display name as "Engineering"
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Channel description.
+    Channel description can be up to 1024 characters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Channel display name.
+    Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ? + | ' "
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    GroupId of the team
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MembershipType
+  description: |+
+    Channel membership type, Standard, Shared, or Private.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    UPN of owner that can be specified while creating a private channel.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-TeamChannel
+name: New-TeamChannel
+description: |-
+  Add a new channel to a team.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/new-teamchannel
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

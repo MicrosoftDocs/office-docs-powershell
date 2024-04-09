@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves one or more bandwidth policy service configurations.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.BandwidthPolicyServiceConfiguration.BandwidthPolicyServiceConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsBandwidthPolicyServiceConfiguration
+  href: New-CsBandwidthPolicyServiceConfiguration.yml
+- text: Remove-CsBandwidthPolicyServiceConfiguration
+  href: Remove-CsBandwidthPolicyServiceConfiguration.yml
+- text: Set-CsBandwidthPolicyServiceConfiguration
+  href: Set-CsBandwidthPolicyServiceConfiguration.yml
+syntaxes:
+- Get-CsBandwidthPolicyServiceConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsBandwidthPolicyServiceConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsBandwidthPolicyServiceConfiguration
+  description: |-
+    Example 1 retrieves all bandwidth policy service configurations defined within the Skype for Business Server implementation.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsBandwidthPolicyServiceConfiguration -Identity site:Redmond
+  description: |-
+    This example retrieves the bandwidth policy service configuration defined for the Redmond site (-Identity site:Redmond).
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsBandwidthPolicyServiceConfiguration -Filter site:*
+  description: |-
+    In this example we use the Filter parameter to retrieve all bandwidth policy service configurations defined at the site level.
+    We do this by passing the value site:* to the Filter parameter.
+    This will search the Identity property of all bandwidth policy service configurations for values that begin with site: and are followed by any other characters.
+    Because all site-level configurations have Identity values beginning with site: and followed by the name of the site, this filter will find all configurations for all sites.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsBandwidthPolicyServiceConfiguration | Where-Object {$_.MaxLogFileSizeMb -gt 4}
+  description: |-
+    Example 4 retrieves all bandwidth policy service configurations that allow log files to reach sizes greater than four megabytes.
+    The example begins with a call to the Get-CsBandwidthPolicyServiceConfiguration cmdlet.
+    As in Example 1, this cmdlet retrieves a collection of all configurations defined within the Skype for Business Server deployment.
+    This collection is then piped to the Where-Object cmdlet.
+    The Where-Object cmdlet cycles through the collection one item at a time.
+    For each item in the collection, the Where-Object cmdlet checks to see whether the value of the MaxLogFileSizeMb property is greater than (-gt) 4.
+    If it is, that item remains part of the collection and is part of the command output.
+    If the value of MaxLogFileSizeMb is not greater than 4, the item is ignored and will not be returned.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    A string containing one or more wildcard characters that will be used to search the Identity property of all bandwidth policy service configurations to find every configuration with an Identity that matches the wildcard pattern.
+    For example, the Filter value site:* will retrieve all configurations with Identity values that begin with the string site: and end with any set of characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier of the configuration you want to retrieve.
+    This identifier will consist of the scope (for the global configuration) or the scope and name (for a site-level configuration, such as site:Redmond).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the bandwidth policy service configuration from the local replica of the Central Management store, rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsBandwidthPolicyServiceConfiguration
+name: Get-CsBandwidthPolicyServiceConfiguration
+description: |-
+  Call admission control (CAC) is a way of determining whether to allow real-time communications sessions, such as voice or video calls, to be established based on bandwidth constraints.
+  Within the Skype for Business Server implementation of CAC, regions, sites, and subnets are defined within a network along with the relationships and links between those entities in order to place bandwidth constraints between them.
+  Bandwidth Policy service is the component that performs CAC functionality in the Skype for Business Server deployment, enabling the decision as to whether sufficient bandwidth exists for a call to be established.
+  The Get-CsBandwidthPolicyServiceConfiguration cmdlet retrieves settings for one or more bandwidth policy services.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csbandwidthpolicyserviceconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsBandwidthPolicyServiceConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

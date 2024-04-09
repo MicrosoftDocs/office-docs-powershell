@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the management connection to the Central Management store.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.ManagementConnection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-CsManagementConnection
+  href: Remove-CsManagementConnection.yml
+- text: Set-CsManagementConnection
+  href: Set-CsManagementConnection.yml
+syntaxes:
+- Get-CsManagementConnection [-Verbose] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsManagementConnection
+  description: |-
+    The command in Example 1 returns information about the management connection to the Central Management store.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Verbose
+  description: |+
+    Reports detailed activity to the screen as the cmdlet runs.
+
+  defaultValue: None
+  position: Named
+  aliases: vb
+  applicable:
+  - Lync Server 2010
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsManagementConnection
+name: Get-CsManagementConnection
+description: |-
+  Configuration data for Skype for Business Server is stored in the Central Management store; it is crucial that both Windows PowerShell and the management replica services be able to locate this database.
+  When you install Skype for Business Server, a service control point is created in Active Directory Domain Services that provides location information for this database.
+  Typically, computers rely on this service control point in order to connect to the Central Management store.
+  To see the details behind this connection (that is, if you want to know which computer the Central Management store is running on, as well information about the SQL Server connection to that Central Management store) you can run the Get-CsManagementConnection cmdlet.
+
+  If you have used the Set-CsManagementConnection cmdlet to set up a temporary management connection for your current instance of Windows PowerShell (for example, in order to work from the local replica), the Get-CsManagementConnection cmdlet will report back information for that temporary connection.
+  By comparison, the Get-CsConfigurationStoreLocation cmdlet always returns information for the service control point in Active Directory, regardless of where the local management connection is pointed.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csmanagementconnection
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsManagementConnection
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

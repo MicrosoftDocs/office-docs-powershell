@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates a trunk configuration against a phone number.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.TrunkConfiguration object.
+    Accepts pipelined input of a trunk configuration object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Returns a value of type Microsoft.Rtc.Management.Voice.TrunkConfigurationTestResult.
+links:
+- text: New-CsTrunkConfiguration
+  href: New-CsTrunkConfiguration.yml
+- text: Remove-CsTrunkConfiguration
+  href: Remove-CsTrunkConfiguration.yml
+- text: Set-CsTrunkConfiguration
+  href: Set-CsTrunkConfiguration.yml
+- text: Get-CsTrunkConfiguration
+  href: Get-CsTrunkConfiguration.yml
+syntaxes:
+- >-
+  Test-CsTrunkConfiguration -DialedNumber <PhoneNumber> -TrunkConfiguration <TrunkConfiguration>
+
+   [-CallingNumber <PhoneNumber>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    $tc = Get-CsTrunkConfiguration -Identity Site:Redmond
+
+    Test-CsTrunkConfiguration -DialedNumber 4255551212 -TrunkConfiguration $tc
+  description: |-
+    This example runs a test against the trunk configuration defined for the Redmond site.
+    The first line in this example calls the `Get-CsTrunkConfiguration` cmdlet to retrieve the configuration for the Redmond site (the configuration with the Identity site:Redmond).
+    The trunk configuration object retrieved is assigned to the variable $tc.
+
+    In line 2 we call the `Test-CsTrunkConfiguration` cmdlet, passing the phone number to test to the DialedNumber parameter, and the trunk configuration we retrieved in line 1 (stored in $tc) to the TrunkConfiguration parameter.
+  summary: ""
+parameters:
+- type: <xref href="PhoneNumber" data-throw-if-not-resolved="False" />
+  name: CallingNumber
+  description: |+
+    When specified, returns the matched outbound translation rules for the specified phone number.
+    For example:
+
+    `-CallingNumber "tel:+14255551219"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PhoneNumber" data-throw-if-not-resolved="False" />
+  name: DialedNumber
+  isRequired: true
+  description: |+
+    The phone number against which to test the configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="TrunkConfiguration" data-throw-if-not-resolved="False" />
+  name: TrunkConfiguration
+  isRequired: true
+  description: |+
+    A reference to a trunk configuration object against which to run the test.
+    Trunk configuration objects can be retrieved by calling the `Get-CsTrunkConfiguration` cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsTrunkConfiguration
+name: Test-CsTrunkConfiguration
+description: |-
+  Use this cmdlet to verify that a trunking configuration performs as expected against a dialed phone number.
+  Each configuration contains specific settings defining the relationship and capabilities between the Mediation Server and the public switched telephone network (PSTN) gateway, IP-public branch exchange (PBX), or Session Border Controller (SBC) at the service provider.
+  These settings configure such things as whether media bypass is enabled on this trunk, whether real-time transport control protocol (RTCP) packets are sent under certain conditions, and whether to require secure real-time protocol (SRTP) encryption.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-cstrunkconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsTrunkConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

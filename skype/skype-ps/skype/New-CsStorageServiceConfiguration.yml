@@ -1,0 +1,183 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates new instances of the Skype for Business Server Storage Service.
+  The storage service provides a common infrastructure that enables Skype for Business Server components to use Exchange as a backend data store.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `New-CsStorageServiceConfiguration` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `New-CsStorageServiceConfiguration` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.StorageService.StorageServiceSettings object.
+links:
+- text: Get-CsStorageServiceConfiguration
+  href: Get-CsStorageServiceConfiguration.yml
+- text: Remove-CsStorageServiceConfiguration
+  href: Remove-CsStorageServiceConfiguration.yml
+- text: Set-CsStorageServiceConfiguration
+  href: Set-CsStorageServiceConfiguration.yml
+syntaxes:
+- >-
+  New-CsStorageServiceConfiguration [-Identity] <XdsIdentity> [-Confirm] [-EnableAsyncAdaptorTaskAbort <Boolean>]
+
+   [-EnableAutoImportFlushedData <Boolean>] [-EnableFabricReplicationSetReduction <Boolean>]
+
+   [-FabricInvalidStateTimeoutDuration <UInt64>] [-Force] [-InMemory] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    New-CsStorageServiceConfiguration -Identity "site:Redmond"
+  description: |-
+    The command shown in Example 1 creates a new collection of storage service configuration settings applied to the Redmond site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableAsyncAdaptorTaskAbort
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableAutoImportFlushedData
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableFabricReplicationSetReduction
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: FabricInvalidStateTimeoutDuration
+  description: |+
+    PARAMVALUE: UInt64
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any nonfatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the new collection of storage service configuration settings to be created.
+    Storage service settings can be created at the site scope or the service scope (but only for the Registrar service).
+    To create a new collections of settings at the site scope, use syntax similar to this:
+
+    `-Identity "site:Redmond"`
+
+    To create settings at the service scope, use syntax similar to this:
+
+    `-Identity "service:Registrar:atl-cs-001.litwareinc.com"`
+
+    Note that your command will fail if the specified site or service already hosts a collection of storage service configuration settings.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Creates an object reference without actually committing the object as a permanent change.
+    If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.New-CsStorageServiceConfiguration
+name: New-CsStorageServiceConfiguration
+description: |-
+  The Skype for Business Server Storage Service enables Skype for Business Server components, such as archiving, to use Exchange as a back-end data store.
+  This helps to reduce operating costs: for example, you do not need to have separate storage solutions for Exchange archiving and for Skype for Business Server archiving.
+  The Storage Service also enables Skype for Business Server to leverage the heavy investment that has been made in Exchange archiving and storage; and prevents administrators from having to use multiple tools to retrieve archived data.
+
+  Separate instances of the Skype for Business Server Storage Service can be configured at the global, site and service scope (for the Registrar service only).
+  By default, Skype for Business Server provides you with a single, global collection of Storage Service configuration settings.
+  However, administrators have the option of creating custom settings by using the `New-CsStorageServiceConfiguration` cmdlet.
+  Those custom settings can later be deleted by using the `Remove-CsStorageServiceConfiguration` cmdlet.
+
+  Skype for Business Server Control Panel: The functions carried out by the `New-CsStorageServiceConfiguration` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/new-csstorageserviceconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: New-CsStorageServiceConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

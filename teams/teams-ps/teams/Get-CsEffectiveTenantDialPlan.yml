@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsEffectiveTenantDialPlan cmdlet to retrieve an effective tenant dial plan.
+module: MicrosoftTeamsPowerShell
+notes: ""
+syntaxes:
+- Get-CsEffectiveTenantDialPlan [-Identity] <UserIdParameter> [-OU <OUIdParameter>] [-ResultSize <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsEffectiveTenantDialPlan -Identity Vt1_User1
+  description: |-
+    This example gets the effective tenant dial plan for the Vt1_User1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter is the unique identifier of the user for whom to retrieve the effective tenant dial plan.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="OUIdParameter" data-throw-if-not-resolved="False" />
+  name: OU
+  description: |+
+    **Note:** This parameter is not supported in Teams PowerShell Module version 3.0.0 or later.
+
+    The OrganizationalUnit parameter filters the results based on the object's location in Active Directory.
+    Only objects that exist in the specified location are returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ResultSize
+  description: |+
+    **Note:** This parameter is not supported in Teams PowerShell Module version 3.0.0 or later.
+
+    Specifies the number of records returned by the cmdlet.
+    The result size can be set to any whole number between 0 and 2147483647, inclusive.
+    If set to 0, the command will run, but no data will be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results.
+    By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsEffectiveTenantDialPlan
+name: Get-CsEffectiveTenantDialPlan
+description: |-
+  The Get-CsEffectiveTenantDialPlan cmdlet returns information about the effective tenant dial plan in an organization.
+  The returned effective Tenant Dial Plan contains the EffectiveTenantDialPlanName and the Normalization rules that are effective for the user while using 
+  the EnterpriseVoice features. The EffectiveTenantDialPlanName is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-cseffectivetenantdialplan
+  applicable: Microsoft Teams
+  title: Get-CsEffectiveTenantDialPlan
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

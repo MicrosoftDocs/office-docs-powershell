@@ -1,0 +1,556 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an existing collection of proxy server configuration settings.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings object.
+    The `Set-CsProxyConfiguration` cmdlet accepts pipelined instances of the proxy settings object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsProxyConfiguration` cmdlet does not return a value or object.
+    Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings object.
+links:
+- text: Get-CsProxyConfiguration
+  href: Get-CsProxyConfiguration.yml
+- text: New-CsProxyConfiguration
+  href: New-CsProxyConfiguration.yml
+- text: Remove-CsProxyConfiguration
+  href: Remove-CsProxyConfiguration.yml
+syntaxes:
+- >-
+  Set-CsProxyConfiguration [[-Identity] <XdsIdentity>] [-AcceptClientCompression <Boolean>]
+
+   [-AcceptServerCompression <Boolean>] [-EnableWhiteSpaceKeepAlive <Boolean>]
+
+   [-MaxClientCompressionCount <UInt32>] [-MaxServerCompressionCount <UInt32>] [-Realm <IRealmChoice>]
+
+   [-RequestServerCompression <Boolean>] [-TreatAllClientsAsRemote <Boolean>]
+
+   [-UseCertificateForClientToProxyAuth <Boolean>] [-UseKerberosForClientToProxyAuth <Boolean>]
+
+   [-UseNtlmForClientToProxyAuth <Boolean>] [-Force] [-WhatIf] [-Confirm]
+
+   [-DisableNtlmFor2010AndLaterClients <Boolean>] [-DnsCacheRecordCount <UInt32>]
+
+   [-MaxClientMessageBodySizeKb <UInt32>] [-MaxServerMessageBodySizeKb <UInt32>] [-OutgoingTlsCount <UInt32>]
+
+   [-AllowPartnerPollingSubscribes <Boolean>] [-EnableLoggingAllMessageBodies <Boolean>]
+
+   [-LoadBalanceEdgeServers <Boolean>] [-LoadBalanceInternalServers <Boolean>] [-MaxKeepAliveInterval <UInt32>]
+
+   [-SpecialConfigurationList <String>] [-TestFeatureList <String>] [-TestParameterList <String>]
+
+   [<CommonParameters>]
+- >-
+  Set-CsProxyConfiguration [-Instance <PSObject>] [-AcceptClientCompression <Boolean>]
+
+   [-AcceptServerCompression <Boolean>] [-EnableWhiteSpaceKeepAlive <Boolean>]
+
+   [-MaxClientCompressionCount <UInt32>] [-MaxServerCompressionCount <UInt32>] [-Realm <IRealmChoice>]
+
+   [-RequestServerCompression <Boolean>] [-TreatAllClientsAsRemote <Boolean>]
+
+   [-UseCertificateForClientToProxyAuth <Boolean>] [-UseKerberosForClientToProxyAuth <Boolean>]
+
+   [-UseNtlmForClientToProxyAuth <Boolean>] [-Force] [-WhatIf] [-Confirm]
+
+   [-DisableNtlmFor2010AndLaterClients <Boolean>] [-DnsCacheRecordCount <UInt32>]
+
+   [-MaxClientMessageBodySizeKb <UInt32>] [-MaxServerMessageBodySizeKb <UInt32>] [-OutgoingTlsCount <UInt32>]
+
+   [-AllowPartnerPollingSubscribes <Boolean>] [-EnableLoggingAllMessageBodies <Boolean>]
+
+   [-LoadBalanceEdgeServers <Boolean>] [-LoadBalanceInternalServers <Boolean>] [-MaxKeepAliveInterval <UInt32>]
+
+   [-SpecialConfigurationList <String>] [-TestFeatureList <String>] [-TestParameterList <String>]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsProxyConfiguration -Identity service:EdgeServer:atl-edge-001.litwareinc.com -AcceptServerCompression $True
+  description: |-
+    In Example 1, all the proxy configuration settings that have the Identity service:EdgeServer:atl-edge-001.litwareinc.com are modified to accept server compression.
+    This is done by calling the `Set-CsProxyConfiguration` cmdlet and the AcceptServerCompression parameter, and by setting the parameter value to True.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsProxyConfiguration | Where-Object {$_.AcceptServerCompression -eq $True} | Set-CsProxyConfiguration -AcceptClientCompression $True
+  description: |-
+    Example 2 locates all of the proxy configuration settings that accept server compression and then modifies these settings to accept client compression as well.
+    To do this, the command first calls the `Get-CsProxyConfiguration` cmdlet without any parameters in order to return a collection of all the proxy settings in use in the organization.
+    This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the AcceptServerCompression property is equal to True.
+    The filtered collection is then piped to the `Set-CsProxyConfiguration` cmdlet, which takes each item in the collection and sets the AcceptClientCompression property to True.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsProxyConfiguration -Filter service:* | Set-CsProxyConfiguration -UseNtlmForClientToProxyAuth $False
+  description: |-
+    Example 3 shows how you can modify all of the proxy settings that have been configured at the service scope.
+    In order to do this, the command first calls the `Get-CsProxyConfiguration` cmdlet and includes the Filter parameter; the filter value "service:*" ensures that only settings that have an Identity that begins with the string value "service:" are returned.
+    The filtered collection is then piped to the `Set-CsProxyConfiguration` cmdlet, which takes each item in the collection and sets the UseNtlmForClientToProxyAuth property to False.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AcceptClientCompression
+  description: |+
+    When set to True (the default value), the proxy server will accept all incoming compression requests from client endpoints.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AcceptServerCompression
+  description: |+
+    When set to True (the default value), the proxy server will accept all incoming compression requests from other servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowPartnerPollingSubscribes
+  description: |+
+    When set the True, partner applications are allowed to periodically poll the service for state changes.
+    The default value is False ($False).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisableNtlmFor2010AndLaterClients
+  description: |+
+    When set to True, users logging on from Skype for Business must use the Kerberos protocol for authentication.
+    The default value is False.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DnsCacheRecordCount
+  description: |+
+    Maximum number of records that can be maintained in the DNS record cache.
+    The default value is 3000.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLoggingAllMessageBodies
+  description: |+
+    When set to True, Skype for Business Server will log the actual content of all instant messages.
+    For privacy reasons, message content is typically deleted and only information about the communicating endpoints is included in the log files.
+
+    The default value is False.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableWhiteSpaceKeepAlive
+  description: |+
+    When set to True (the default value) the proxy server expects clients to periodically send a "whitespace message" (an empty message with no content) to indicate that the connection is still active.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the proxy server configuration settings to be modified.
+    To modify the global settings, use this syntax:
+
+    `-Identity global`
+
+    To modify settings configured at the service scope, use syntax similar to this:
+
+    `-Identity "service: EdgeServer:atl-edge-001.litwareinc.com"`
+
+    If this parameter is not included, the `Set-CsProxyConfiguration` cmdlet will automatically modify the global settings.
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: LoadBalanceEdgeServers
+  description: |+
+    When True, software load balancing is employed for requests to Edge Servers.
+    The default value is True ($True).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: LoadBalanceInternalServers
+  description: |+
+    When True, software load balancing is employed for requests to Registrars and other internal servers.
+    The default value is true ($True).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxClientCompressionCount
+  description: |+
+    Indicates the maximum number of client-to-server connections that can be compressed at any given time; additional connections beyond this limit will not be compressed.
+    The compression count can be set to any integer value between 0 and 65535, inclusive.
+    The default value is 15000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxClientMessageBodySizeKb
+  description: |+
+    The maximum-allowed size (in kilobytes) for the body of a message sent from a client endpoint.
+    The default value is 128, meaning that messages with a body size larger than 128 KB will be rejected.
+    The client message body size can be set to any integer value between 64 and 256, inclusive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxKeepAliveInterval
+  description: |+
+    Specifies the amount of time (in minutes) that can elapse before the server verifies that the connection with the client is still valid.
+    The default value is 20 minutes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxServerCompressionCount
+  description: |+
+    Indicates the maximum number of server-to-server connections that can be compressed at any given time; additional connections beyond this limit will not be compressed.
+    The server compression count can be set to any integer value between 0 and 65535, inclusive.
+    The default value is 1024.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxServerMessageBodySizeKb
+  description: |+
+    The maximum-allowed size (in kilobytes) for the body of a message sent from another server.
+    The default value is 5000, meaning that messages with a body size larger than 5000 KB will be rejected.
+    The server message body size can be set to any integer value between 1000 and 20000, inclusive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OutgoingTlsCount
+  description: |+
+    Specifies the maximum number of Transport Layer Security (TLS) connections that can be used for each internal server.
+    The minimum number of TLS connections is 1, and the maximum number is 4.
+    By default, OutgoingTlsCount is set to 4.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="IRealmChoice" data-throw-if-not-resolved="False" />
+  name: Realm
+  description: |+
+    Indicates whether or not security credentials are processed by the default proxy server realm (SIP Communication Services) or by a custom realm.
+    Custom realms must be specified (and created) by using the `New-CsSipProxyCustom` cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RequestServerCompression
+  description: |+
+    When set to True (the default value) the proxy server requests that compression be used on all outgoing connections to other servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SpecialConfigurationList
+  description: |+
+    PARAMVALUE: String
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TestFeatureList
+  description: |+
+    This parameter is not currently used by Skype for Business Server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TestParameterList
+  description: |+
+    This parameter is not currently used by Skype for Business Server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: TreatAllClientsAsRemote
+  description: |+
+    When set to True, the proxy server functions as if all client connections are external connections that pass through the Edge Server.
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseCertificateForClientToProxyAuth
+  description: |+
+    When set to True (the default value), client endpoints will be allowed to use certificates for authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseKerberosForClientToProxyAuth
+  description: |+
+    When set to True (the default value), client endpoints will be allowed to use the Kerberos protocol for authentication.
+    Although Kerberos is a more secure protocol than NTLM, it cannot be used if the client belongs to a different realm than the server.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseNtlmForClientToProxyAuth
+  description: |+
+    When set to True (the default value), client endpoints will be allowed to use the NTLM protocol for authentication.
+    Although NTLM is a less secure protocol than Kerberos, NTLM can be used if the client belongs to a different domain than the server.
+    That is not the case with Kerberos authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsProxyConfiguration
+name: Set-CsProxyConfiguration
+description: |-
+  Skype for Business Server enables you to manage your proxy servers through proxy server configuration settings.
+  These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
+  When you install Skype for Business Server, a global collection of proxy server configuration settings is automatically created for you.
+  As noted, you can also create additional collections at the service scope.
+
+  The `Set-CsProxyConfiguration` cmdlet provides a way for you to modify the property values of an existing collection of proxy server configuration settings.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csproxyconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsProxyConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsAudioConferencingPolicy
+  href: Get-CsTeamsAudioConferencingPolicy.yml
+- text: Set-CsTeamsAudioConferencingPolicy
+  href: Set-CsTeamsAudioConferencingPolicy.yml
+- text: Grant-CsTeamsAudioConferencingPolicy
+  href: Grant-CsTeamsAudioConferencingPolicy.yml
+syntaxes:
+- >-
+  New-CsTeamsAudioConferencingPolicy [-Identity] <String> [-AllowTollFreeDialin <Boolean>] [-Force] [-InMemory]
+
+   [-MeetingInvitePhoneNumbers <Object>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> New-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $False
+  description: |-
+    The command shown in Example 1 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity "EMEA users". This policy will use all the default values for a meeting policy except one: AllowTollFreeDialin; in this example, meetings created by users with this policy cannot include Toll Free phone numbers.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> New-CsTeamsAudioConferencingPolicy -Identity "EMEA Users" -AllowTollFreeDialin $True -MeetingInvitePhoneNumbers "+49695095XXXXX","+353156YYYYY","+1800856ZZZZZ"
+  description: |-
+    The command shown in Example 2 uses the New-CsTeamsAudioConferencingPolicy cmdlet to create a new audio-conferencing policy with the Identity "EMEA users". This policy will use all the default values for a meeting policy except one: MeetingInvitePhoneNumbers; in this example, meetings created by users with this policy will include the following toll and toll free phone numbers "+49695095XXXXX","+353156YYYYY","+1800856ZZZZZ".
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowTollFreeDialin
+  description: |+
+    Determines whether users of the Policy can have Toll free numbers
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specify the name of the policy that you are creating
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InMemory
+  description: |+
+    Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: MeetingInvitePhoneNumbers
+  description: |+
+    Determines the list of audio-conferencing Toll- and Toll-free telephone numbers that will be included in meetings invites created by users of this policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-CsTeamsAudioConferencingPolicy
+name: New-CsTeamsAudioConferencingPolicy
+description: |-
+  The New-CsTeamsAudioConferencingPolicy cmdlet enables administrators to control audio conferencing toll- and toll-free numbers to be displayed in meeting invites created by users within your organization. This cmdlet creates a new Teams audio conferencing policy. Custom policies can then be assigned to users using the Grant-CsTeamsAudioConferencingPolicy cmdlet.
+metadata:
+  external help file: MicrosoftTeams-help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsaudioconferencingpolicy
+  schema: 2.0.0

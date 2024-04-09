@@ -1,0 +1,215 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet returns the list of existing connection instances. It can also return the configuration details for a given connection instance.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConfigApiBasedCmdletsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IConnectorInstanceResponse" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.IErrorDetailsResponse" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsShiftsConnectionInstance
+  href: New-CsTeamsShiftsConnectionInstance.yml
+- text: Set-CsTeamsShiftsConnectionInstance
+  href: Set-CsTeamsShiftsConnectionInstance.yml
+- text: Remove-CsTeamsShiftsConnectionInstance
+  href: Remove-CsTeamsShiftsConnectionInstance.yml
+syntaxes:
+- >-
+  Get-CsTeamsShiftsConnectionInstance [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+
+   [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>] [-ProxyCredential <PSCredential>]
+
+   [-ProxyUseDefaultCredentials] [<CommonParameters>]
+- >-
+  Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <String> [-Break]
+
+   [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+
+   [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+- >-
+  Get-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
+
+   [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <Uri>]
+
+   [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionInstance | Format-List
+
+    ConnectionId                    : a2d1b091-5140-4dd2-987a-98a8b5338744
+    ConnectorAdminEmail             : {testAdmin@contoso.com}
+    ConnectorId                     : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
+    CreatedDateTime                 : 07/04/2023 10:53:59
+    DesignatedActorId               : ec1a4edb-1a5f-4b2d-b2a4-37aaf3acd231
+    Etag                            : "4f00c221-0000-0400-0000-642ff6480000"
+    Id                              : WCI-b58d7a98-ab2c-473f-99a5-e0627d54c062
+    LastModifiedDateTime            : 07/04/2023 10:53:59
+    Name                            : My connection instance 1
+    State                           : Active
+    SyncFrequencyInMin              : 10
+    SyncScenarioOfferShiftRequest   : FromWfmToShifts
+    SyncScenarioOpenShift           : FromWfmToShifts
+    SyncScenarioOpenShiftRequest    : FromWfmToShifts
+    SyncScenarioShift               : FromWfmToShifts
+    SyncScenarioSwapRequest         : FromWfmToShifts
+    SyncScenarioTimeCard            : FromWfmToShifts
+    SyncScenarioTimeOff             : FromWfmToShifts
+    SyncScenarioTimeOffRequest      : FromWfmToShifts
+    SyncScenarioUserShiftPreference : FromWfmToShifts
+    TenantId                        : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
+    WorkforceIntegrationId          : WFI_2ab21992-b9b1-464a-b9cd-e0de1fac95b1
+
+    ConnectionId                    : a2d1b091-5140-4dd2-987a-98a8b5338744
+    ConnectorAdminEmail             : {}
+    ConnectorId                     : 95BF2848-2DDA-4425-B0EE-D62AEED4C0A0
+    CreatedDateTime                 : 07/04/2023 10:54:01
+    DesignatedActorId               : ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231
+    Etag                            : "4f005d22-0000-0400-0000-642ff64a0000"
+    Id                              : WCI-eba2865f-6cac-46f9-8733-e0631a4536e1
+    LastModifiedDateTime            : 07/04/2023 10:54:01
+    Name                            : My connection instance 2
+    State                           : Active
+    SyncFrequencyInMin              : 30
+    SyncScenarioOfferShiftRequest   : FromWfmToShifts
+    SyncScenarioOpenShift           : FromWfmToShifts
+    SyncScenarioOpenShiftRequest    : FromWfmToShifts
+    SyncScenarioShift               : FromWfmToShifts
+    SyncScenarioSwapRequest         : Disabled
+    SyncScenarioTimeCard            : Disabled
+    SyncScenarioTimeOff             : FromWfmToShifts
+    SyncScenarioTimeOffRequest      : FromWfmToShifts
+    SyncScenarioUserShiftPreference : Disabled
+    TenantId                        : dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a
+    WorkforceIntegrationId          : WFI_6b225907-b476-4d40-9773-08b86db7b11b
+  description: |-
+    Returns the list of connection instances.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> $ci = Get-CsTeamsShiftsConnectionInstance -ConnectorInstanceId WCI-78F5116E-9098-45F5-B595-1153DF9D6F70
+    PS C:\> $ci.ToJsonString()
+
+    {
+      "syncScenarios": {
+        "offerShiftRequest": "FromWfmToShifts",
+        "openShift": "FromWfmToShifts",
+        "openShiftRequest": "FromWfmToShifts",
+        "shift": "FromWfmToShifts",
+        "swapRequest": "Disabled",
+        "timeCard": "Disabled",
+        "timeOff": "FromWfmToShifts",
+        "timeOffRequest": "FromWfmToShifts",
+        "userShiftPreferences": "Disabled"
+      },
+      "id": "WCI-78F5116E-9098-45F5-B595-1153DF9D6F70",
+      "tenantId": "dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a",
+      "connectionId": "a2d1b091-5140-4dd2-987a-98a8b5338744",
+      "connectorAdminEmails": [ ],
+      "connectorId": "95BF2848-2DDA-4425-B0EE-D62AEED4C0A0",
+      "designatedActorId": "ec1a4edb-1a5f-4b2d-b2a4-37aab6ebd231",
+      "name": "My connection instance 2",
+      "syncFrequencyInMin": 30,
+      "workforceIntegrationId": "WFI_6b225907-b476-4d40-9773-08b86db7b11b",
+      "etag": "\"4f005d22-0000-0400-0000-642ff64a0000\"",
+      "createdDateTime": "2023-04-07T10:54:01.8170000Z",
+      "lastModifiedDateTime": "2023-04-07T10:54:01.8170000Z",
+      "state": "Active"
+    }
+  description: |-
+    Returns the connection instance with the specified -ConnectorInstanceId.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Break
+  description: |+
+    Wait for .NET debugger to attach
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorInstanceId
+  isRequired: true
+  description: |+
+    The connector instance id
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelineAppend
+  description: |+
+    SendAsync Pipeline Steps to be appended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SendAsyncStep" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HttpPipelinePrepend
+  description: |+
+    SendAsync Pipeline Steps to be prepended to the front of the pipeline
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IConfigApiBasedCmdletsIdentity" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Identity Parameter
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Proxy
+  description: |+
+    The URI for the proxy server to use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ProxyCredential
+  description: |+
+    Credentials for a proxy server to use for the remote call
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxyUseDefaultCredentials
+  description: |+
+    Use the default credentials for the proxy
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionInstance
+name: Get-CsTeamsShiftsConnectionInstance
+description: |-
+  This cmdlet returns the list of existing connections. It can also return the configuration details for a given connection instance.
+metadata:
+  external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsShiftsConnectionInstance
+  author: leonardospina
+  ms.author: lespina
+  manager: valk
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectioninstance
+  schema: 2.0.0

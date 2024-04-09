@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the disclaimer text that is used globally to prompt for location information for an Enhanced 9-1-1 (E9-1-1) implementation.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Policy.Location.EnhancedEmergencyServiceDisclaimer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-CsEnhancedEmergencyServiceDisclaimer
+  href: Remove-CsEnhancedEmergencyServiceDisclaimer.yml
+- text: Set-CsEnhancedEmergencyServiceDisclaimer
+  href: Set-CsEnhancedEmergencyServiceDisclaimer.yml
+- text: Get-CsLocationPolicy
+  href: Get-CsLocationPolicy.yml
+syntaxes:
+- Get-CsEnhancedEmergencyServiceDisclaimer [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsEnhancedEmergencyServiceDisclaimer [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsEnhancedEmergencyServiceDisclaimer
+  description: |-
+    This command retrieves the text of the enhanced emergency service disclaimer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter allows for wildcard searches of the Identity.
+    However, since the only valid value for Identity is Global, this parameter is not useful for this cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This will always be Global.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the disclaimer information from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsEnhancedEmergencyServiceDisclaimer
+name: Get-CsEnhancedEmergencyServiceDisclaimer
+description: |-
+  In order for an Enterprise Voice implementation to provide E9-1-1 service, locations must be mapped to ports, subnets, switches, and wireless access points to identify the caller's location.
+  When the caller is connecting from outside one of these mapped points, he must enter his location manually in order for it to be received by emergency services.
+  This cmdlet retrieves a text string that will be displayed to users who decide not to enter their location information.
+  This message will be displayed only if the LocationRequired property of the user's location policy is set to Disclaimer.
+  (You can retrieve location policy settings by calling the Get-CsLocationPolicy cmdlet.)
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csenhancedemergencyservicedisclaimer
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsEnhancedEmergencyServiceDisclaimer
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

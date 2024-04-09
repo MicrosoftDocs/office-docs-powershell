@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet gets the requested batch mapping operation. The batch mapping operation can be submitted by running [New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.yml).
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsTeamsShiftsConnectionBatchTeamMap
+  href: New-CsTeamsShiftsConnectionBatchTeamMap.yml
+syntaxes:
+- Get-CsTeamsShiftsConnectionOperation -OperationId <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsShiftsConnectionOperation -OperationId c79131b7-9ecb-484b-a8df-2959c7c1e5f2
+
+    CreatedDateTime      LastActionDateTime   Id                                     Status     TenantId                             Type                  WfmConnectorInstanceId
+    ---------------      ------------------   -----------                                     ------     --------                             ----                  ----------------------
+    12/6/2021 7:28:51 PM 12/6/2021 7:28:51 PM c79131b7-9ecb-484b-a8df-2959c7c1e5f2            NotStarted dfd24b34-ccb0-47e1-bdb7-e49db9c7c14a TeamsMappingOperation WCI-2afeb8ec-a0f6-4580-8f1e-85fd4a113e01
+  description: |-
+    Returns the details of batch mapping operation with ID `c79131b7-9ecb-484b-a8df-2959c7c1e5f2`.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    The ID of the batch mapping operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsShiftsConnectionOperation
+name: Get-CsTeamsShiftsConnectionOperation
+description: |-
+  This cmdlet returns the details of a specific batch team mapping operation.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsShiftsConnectionOperation
+  author: gucsun
+  ms.author: gucsun
+  manager: navinth
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsshiftsconnectionoperation
+  schema: 2.0.0

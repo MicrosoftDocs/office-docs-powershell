@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet assigns a Teams Emergency Call Routing policy.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-preview or later.
+links:
+- text: New-CsTeamsEmergencyCallRoutingPolicy
+  href: New-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Set-CsTeamsEmergencyCallRoutingPolicy
+  href: Set-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Get-CsTeamsEmergencyCallRoutingPolicy
+  href: Get-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: Remove-CsTeamsEmergencyCallRoutingPolicy
+  href: Remove-CsTeamsEmergencyCallRoutingPolicy.yml
+syntaxes:
+- >-
+  Grant-CsTeamsEmergencyCallRoutingPolicy [[-PolicyName] <string>] [-Global]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-CsTeamsEmergencyCallRoutingPolicy [-Group] <string> [[-PolicyName] <string>]
+
+   [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-CsTeamsEmergencyCallRoutingPolicy [[-Identity] <string>] [[-PolicyName] <string>]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Grant-CsTeamsEmergencyCallRoutingPolicy -Identity user1 -PolicyName Test
+  description: |-
+    This example assigns a Teams Emergency Call Routing policy (Test) to a user (user1).
+  summary: ""
+- title: Example 2
+  code: |-
+    Grant-CsTeamsEmergencyCallRoutingPolicy -Group sales@contoso.com -Rank 10 -PolicyName Test
+  description: |-
+    This example assigns the Teams Emergency Call Routing policy (Test) to the members of the group sales@contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Sets the parameters of the Global policy instance to the values in the specified policy instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the group used for the group policy assignment.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the user account the policy should be assigned to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Including this parameter (which does not take a value) displays the user information when the cmdlet completes. Normally there is no output when this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  isRequired: true
+  description: |+
+    The Identity of the Teams Emergency Call Routing policy to apply.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Grant-CsTeamsEmergencyCallRoutingPolicy
+name: Grant-CsTeamsEmergencyCallRoutingPolicy
+description: |-
+  This cmdlet assigns a Teams Emergency Call Routing policy to a user, a group of users, or to the Global policy instance. Teams Emergency Call Routing policy is used for the life cycle of emergency call routing - emergency numbers and routing configuration.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallroutingpolicy
+  applicable: Microsoft Teams
+  title: Grant-CsTeamsEmergencyCallRoutingPolicy
+  author: jenstrier
+  ms.author: serdars
+  manager: roykuntz
+  ms.reviewer: chenc
+  schema: 2.0.0

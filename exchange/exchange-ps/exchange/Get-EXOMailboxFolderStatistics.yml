@@ -1,0 +1,229 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+
+  Use the Get-EXOMailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-EXOMailboxFolderStatistics
+
+   [-Archive]
+
+   [-DiagnosticInfo <String>]
+
+   [-ExternalDirectoryObjectId <Guid>]
+
+   [-Folderscope <ElcFolderType>]
+
+   [-Identity <String>]
+
+   [-IncludeAnalysis]
+
+   [-IncludeOldestAndNewestItems]
+
+   [-IncludeSoftDeletedRecipients]
+
+   [-PrimarySmtpAddress <String>]
+
+   [-UserPrincipalName <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-EXOMailboxFolderStatistics -Identity admin@contoso.com
+  description: |-
+    This example returns statistics for all mailbox folders. Default is FolderScope All.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-EXOMailboxFolderStatistics -Identity admin@contoso.com -FolderScope Calendar -IncludeOldestAndNewestItems
+  description: |-
+    This example returns statistics only for calendar folders.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-EXOMailbox -ResultSize Unlimited | Get-EXOMailboxFolderStatistics -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize
+  description: |-
+    This example uses the FolderScope parameter to view Inbox folder statistics for all mailboxes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Archive
+  description: |+
+    The Archive switch specifies whether to return the usage statistics of the archive mailbox that's associated with the mailbox or mail user. You don't need to specify a value with this switch.
+
+    If you use this switch on a mailbox that doesn't have archiving enabled, an error is returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DiagnosticInfo
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ExternalDirectoryObjectId
+  description: |+
+    The ExternalDirectoryObjectId parameter identifies the mailbox that you want to view by the ObjectId in Microsoft Entra ID.
+
+    You can't use this parameter with the Identity, PrimarySmtpAddress, or UserPrincipalName parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="ElcFolderType" data-throw-if-not-resolved="False" />
+  name: Folderscope
+  description: |+
+    The FolderScope parameter specifies the scope of the search by folder type. Valid values include:
+
+    - All
+    - Archive
+    - Calendar
+    - Clutter
+    - Contacts
+    - ConversationHistory
+    - DeletedItems
+    - Drafts
+    - Inbox
+    - Journal
+    - JunkEmail
+    - LegacyArchiveJournals
+    - ManagedCustomFolder
+    - NonIpmRoot
+    - Notes
+    - Outbox
+    - Personal
+    - RecoverableItems
+    - RssSubscriptions
+    - SentItems
+    - SyncIssues
+    - Tasks
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the identity of the mailbox or mail user. For the best performance, we recommend using the user ID or user principal name (UPN) to identify the mailbox.
+
+    Otherwise, you can use any value that uniquely identifies the mailbox or mail user. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - LegacyExchangeDN
+    - SamAccountName
+
+    You can't use this parameter with the ExternalDirectoryObjectId, PrimarySmtpAddress, or UserPrincipalName parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeAnalysis
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeOldestAndNewestItems
+  description: |+
+    The IncludeOldestAndNewestItems switch specifies whether to return the dates of the oldest and newest items in each folder. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeSoftDeletedRecipients
+  description: |+
+    The IncludeSoftDeletedRecipients switch specifies whether to include soft-deleted mailboxes in the results. You don't need to specify a value with this switch.
+
+    Soft-deleted mailboxes are mailboxes that have been deleted, but are still recoverable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimarySmtpAddress
+  description: |+
+    The PrimarySmtpAddress identifies the mailbox that you want to view by primary SMTP email address (for example, navin@contoso.com).
+
+    You can't use this parameter with the ExternalDirectoryObjectId, Identity, or UserPrincipalName parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserPrincipalName
+  description: |+
+    The UserPrincipalName parameter identifies the mailbox that you want to view by UPN (for example, navin@contoso.onmicrosoft.com).
+
+    You can't use this parameter with the ExternalDirectoryObjectId, Identity, or PrimarySmtpAddress parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+uid: ExchangePowerShell.Get-EXOMailboxFolderStatistics
+name: Get-EXOMailboxFolderStatistics
+description: |-
+  A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-EXOMailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder and ItemsInFolderAndSubfolders.
+
+  Don't confuse Get-EXOMailboxFolderStatistics cmdlet (folders) with the Get-EXOMailboxStatistics cmdlet (mailboxes).
+metadata:
+  external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
+  Module Name: ExchangeOnlineManagement
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-exomailboxfolderstatistics
+  applicable: Exchange Online
+  title: Get-EXOMailboxFolderStatistics
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

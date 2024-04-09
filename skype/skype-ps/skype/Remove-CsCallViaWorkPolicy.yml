@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsCallViaWorkPolicy` cmdlet to delete an existing call via work policy.
+  Call via work policies enable and manage the characteristics of outbound calls placed through the Skype for Business client.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+links:
+- text: Set-CsCallViaWorkPolicy
+  href: Set-CsCallViaWorkPolicy.yml
+- text: New-CsCallViaWorkPolicy
+  href: New-CsCallViaWorkPolicy.yml
+- text: Grant-CsCallViaWorkPolicy
+  href: Grant-CsCallViaWorkPolicy.yml
+- text: Get-CsCallViaWorkPolicy
+  href: Get-CsCallViaWorkPolicy.yml
+syntaxes:
+- >-
+  Remove-CsCallViaWorkPolicy [-Identity] <XdsIdentity> [-Confirm] [-Force] [-Tenant <Guid>] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsCallViaWorkPolicy -Identity CvWStandardPolicy
+  description: |-
+    This example removes a per-user scoped policy named "CvWStandardPolicy".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error messages and completes the cmdlet operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the identity of the policy to be removed.
+    Call via work policies can be specified at the global, site, or per-user scope.
+
+    The global policy will not be removed, but the parameters will be reset to the defaults.
+
+    Site syntax: `-Identity Site:Redmond`
+
+    Per-user syntax: `-Identity CallviaWorkStandard`
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsCallViaWorkPolicy
+name: Remove-CsCallViaWorkPolicy
+description: |-
+  Use this cmdlet to delete an existing call via work policy.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-cscallviaworkpolicy
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsCallViaWorkPolicy
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

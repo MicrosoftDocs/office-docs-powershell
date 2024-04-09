@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves one or more outbound translation rules.
+  An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems and public switched telephone network (PSTN) gateways.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.TranslationRule" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsOutboundTranslationRule
+  href: New-CsOutboundTranslationRule.yml
+- text: Remove-CsOutboundTranslationRule
+  href: Remove-CsOutboundTranslationRule.yml
+- text: Set-CsOutboundTranslationRule
+  href: Set-CsOutboundTranslationRule.yml
+syntaxes:
+- Get-CsOutboundTranslationRule [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsOutboundTranslationRule [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOutboundTranslationRule
+  description: |-
+    This example retrieves all outbound translation rules for the Skype for Business Server deployment.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsOutboundTranslationRule -Identity "site:Redmond/Prefix Redmond"
+  description: |-
+    This example retrieves a single outbound translation rule: the rule with Identity site:Redmond/Prefix Redmond.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsOutboundTranslationRule -Filter site:*
+  description: |-
+    This example retrieves all site-level outbound translation rules.
+    The command calls the Get-CsOutboundTranslationRule cmdlet with a Filter of site:*, which will return a collection of all rules with Identity values beginning with the string site:.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Performs a wildcard search on Identity that allows you to narrow down your results to only those outbound translation rules whose identities match the given wildcard string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier for the outbound translation rule you want to retrieve.
+    The Identity consists of the scope followed by a unique name within each scope (for example, site:Redmond/OutboundRule1).
+    Specifying a value for Identity will return at most one outbound translation rule.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the outbound translation rule from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsOutboundTranslationRule
+name: Get-CsOutboundTranslationRule
+description: |-
+  Call this cmdlet to retrieve an existing outbound translation rule.
+  Skype for Business Server normalizes phone numbers to E.164 format.
+  However, many private branch exchange (PBX) systems aren't able to work with this format.
+  Outbound translations rules translate the number to the local dialing format prior to sending the number to the Mediation Server or gateway.
+
+  Each outbound translation rule is associated with a trunk configuration.
+  More than one outbound translation rule can be associated with each trunk configuration.
+  Therefore, the Identity for each rule consists of a scope along with a name that is unique within the scope (in the format scope/name, for example site:Redmond/OBR1).
+  The rule is automatically associated with the trunk configuration with the same scope.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csoutboundtranslationrule
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsOutboundTranslationRule
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about all the Persistent Chat add-ins configured for use in the organization.
+  A Persistent Chat add-in is a customized web page that can be embedded within a Persistent Chat client.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.PersistentChat.Cmdlets.AddinObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsPersistentChatAddin
+  href: New-CsPersistentChatAddin.yml
+- text: Remove-CsPersistentChatAddin
+  href: Remove-CsPersistentChatAddin.yml
+- text: Set-CsPersistentChatAddin
+  href: Set-CsPersistentChatAddin.yml
+syntaxes:
+- Get-CsPersistentChatAddin [-Identity] <String> [<CommonParameters>]
+- Get-CsPersistentChatAddin [-PersistentChatPoolFqdn <String>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsPersistentChatAddin
+  description: |-
+    Example 1 returns information about all the Persistent Chat add-ins configured for use in the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsPersistentChatAddin -Identity "atl-cs-001.litwareinc.com\ITPersistentChatAddin"
+  description: |-
+    In Example 2, information is returned for a specific Persistent Chat add-in: the add-in with the Identity atl-cs-001.litwareinc.com\ITPersistentChatAddin.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsPersistentChatAddin -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com"
+  description: |-
+    Example 3 returns information for all the Persistent Chat add-ins configured for use on the pool atl-cs-001.litwareinc.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier for the Persistent Chat add-in to be returned.
+    The Identity is composed of the fully qualified domain name of the Persistent Chat pool where the add-in is located, a "\" character, and the add-in name.
+    For example:
+
+    `-Identity "atl-gc-001.litwareincom\ITPersistentChatAddin"`
+
+    If this parameter is not specified then the Get-CsPersistentChatAddin cmdlet returns information about all your Persistent Chat add-ins.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PersistentChatPoolFqdn
+  description: |+
+    Fully qualified domain name for the Persistent Chat pool.
+    If this parameter is used then only Persistent Chat add-ins found on the specified pool will be returned.
+    If this parameter is not used then the Get-CsPersistentChatAddin cmdlet will return add-ins from all your Persistent Chat pools.
+    For example:
+
+    `-PoolFqdn "atl-cs-001.litwareinc.com"`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+uid: SkypeForBusiness.Get-CsPersistentChatAddin
+name: Get-CsPersistentChatAddin
+description: |-
+  The Persistent Chat service provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
+  Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
+  Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
+
+  Add-ins serve as extensions to a Persistent Chat chat room.
+  Add-ins are external applications (that is, items not built into Persistent Chat itself) that are associated with a particular chat room.
+  For example, a help desk chat room might include a URL that links to a Web page or to an application that shows the status of the day's help requests.
+  The Skype for Business Server Windows PowerShell command-line interface cmdlets do not provide the ability to create these add-ins.
+  Instead, the CsPersistentChatAddin cmdlets are used to associate (or disassociate) an add-in from a chat room.
+
+  To view Persistent Chat add-in information in Skype for Business Server Control Panel, click Persistent Chat and then click Add-in.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cspersistentchataddin
+  applicable: Lync Server 2013, Skype for Business Server 2015
+  title: Get-CsPersistentChatAddin
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

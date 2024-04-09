@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves only the address portion of one or more locations in the location configuration database for Enhanced 9-1-1 (E9-1-1).
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Management.Automation.PSCustomObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Test-CsLisCivicAddress
+  href: Test-CsLisCivicAddress.yml
+- text: Get-CsLisLocation
+  href: Get-CsLisLocation.yml
+syntaxes:
+- Get-CsLisCivicAddress [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsLisCivicAddress
+  description: |-
+    This example retrieves all civic addresses from the location database.
+    The Get-CsLisCivicAddress cmdlet does not accept any parameters (other than the common Windows PowerShell parameters such as Verbose).
+    Therefore any call to the Get-CsLisCivicAddress cmdlet will always return all civic addresses.
+    See Example 2 for a command that will allow you to retrieve more specific results.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsLisCivicAddress | Where-Object {$_.City -eq "Redmond"}
+  description: |-
+    In this example, all the civic addresses in the city of Redmond are retrieved.
+    The example begins with a call to the Get-CsLisCivicAddress cmdlet, which retrieves a collection of all civic addresses in the location database.
+    This collection is then piped to the Where-Object cmdlet, which will return only those items in the collection with a City property value equal to (-eq) Redmond.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsLisCivicAddress | Where-Object {$_.MSAGValid -eq $true}
+  description: |-
+    Example 3 retrieves all Location Information Server (LIS) civic addresses that have been validated against the Master Street Address Guide (MSAG).
+  summary: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsLisCivicAddress
+name: Get-CsLisCivicAddress
+description: |-
+  E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
+  In Skype for Business Server, the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
+  This cmdlet retrieves one or more of the addresses associated with these locations.
+
+  This cmdlet differs from the Get-CsLisLocation cmdlet in that it returns only unique addresses.
+  It does not return the company name or a location name, it returns only address information.
+  It also returns a flag (MSAGValid) that specifies whether the address has been validated against the Master Street Address Guide.
+  This flag can be automatically updated by running the Test-CsLisCivicAddress cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csliscivicaddress
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsLisCivicAddress
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

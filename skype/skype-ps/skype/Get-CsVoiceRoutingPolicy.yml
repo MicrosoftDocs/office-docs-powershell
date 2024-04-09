@@ -1,0 +1,146 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the voice routing policies configured for use in your organization.
+  Voice routing policies manage PSTN usages for users of hybrid voice.
+  Hybrid voice enables users homed on Skype for Business Online to take advantage of the Enterprise Voice capabilities available in an on-premises installation of Skype for Business Server.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Get-CsVoiceRoutingPolicy cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsVoiceRoutingPolicy cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.VoiceRoutingPolicy object.
+links:
+- text: Grant-CsVoiceRoutingPolicy
+  href: Grant-CsVoiceRoutingPolicy.yml
+- text: New-CsVoiceRoutingPolicy
+  href: New-CsVoiceRoutingPolicy.yml
+- text: Remove-CsVoiceRoutingPolicy
+  href: Remove-CsVoiceRoutingPolicy.yml
+- text: Set-CsVoiceRoutingPolicy
+  href: Set-CsVoiceRoutingPolicy.yml
+syntaxes:
+- Get-CsVoiceRoutingPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsVoiceRoutingPolicy [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsVoiceRoutingPolicy
+  description: |-
+    The command shown in Example 1 returns information for all the voice routing policies configured for use in the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsVoiceRoutingPolicy -Identity "RedmondVoiceRoutingPolicy"
+  description: |-
+    In Example 2, information is returned for a single voice routing policy: the policy with the Identity RedmondVoiceRoutingPolicy.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsVoiceRoutingPolicy -Filter "tag:*"
+  description: |-
+    The command shown in Example 3 returns information about all the voice routing policies configured at the per-user scope.
+    To do this, the command uses the Filter parameter and the filter value "tag:*"; that filter value limits the returned data to policies that have an Identity that begins with the string value "tag:".
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsVoiceRoutingPolicy | Where-Object {$_.PstnUsages -contains "Long Distance"}
+  description: |-
+    In Example 4, information is returned only for those voice routing policies that include the PSTN usage "Long Distance".
+    To carry out this task, the command first calls Get-CsVoiceRoutingPolicy without any parameters; that returns a collection of all the voice routing policies configured for use in the organization.
+    This collection is then piped to the Where-Object cmdlet, which picks out only those policies where the PstnUsages property includes (-contains) the usage "Long Distance".
+  summary: ""
+- title: '-------------------------- Example 5 --------------------------'
+  code: |-
+    Get-CsVoiceRoutingPolicy | Where-Object {$_.PstnUsages -notcontains "Long Distance"}
+  description: |-
+    Example 5 is a variation on the command shown in Example 4; in this case, however, information is returned only for those voice routing policies that do not include the PSTN usage "Long Distance".
+    In order to do that, the Where-Object cmdlet uses the -notcontains operator, which limits returned data to policies that do not include the usage "Long Distance".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcards when retrieving one or more voice routing policies.
+    For example, to return all the policies configured at the per-user scope, use this syntax:
+
+    -Filter "tag:*"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier of the voice routing policy to be retrieved.
+    To return the global policy, use this syntax:
+
+    -Identity global
+
+    To return a policy configured at the per-user scope, use syntax like this:
+
+    -Identity "RedmondVoiceRoutingPolicy"
+
+    You cannot use wildcard characters when specifying the Identity.
+
+    If neither the Identity nor the Filter parameters are specified, then Get-CsVoiceRoutingPolicy returns all the voice routing policies configured for use in the organization.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the voice policy data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Online
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Online
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsVoiceRoutingPolicy
+name: Get-CsVoiceRoutingPolicy
+description: |-
+  Voice routing policies are used in "hybrid" scenarios: when some of your users are homed on the on-premises version of Skype for Business Server and other users are homed on Skype for Business Online.
+  Assigning your Skype for Business Online users a voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
+
+  Note that simply assigning a user a voice routing policy will not enable them to make PSTN calls via Skype for Business Online.
+  Among other things, you will also need to enable those users for Enterprise Voice and will need to assign them an appropriate voice policy and dial plan.
+
+  The functions carried out by the Get-CsVoiceRoutingPolicy cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csvoiceroutingpolicy
+  applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsVoiceRoutingPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: rogupta

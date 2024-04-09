@@ -1,0 +1,38 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is used to retrieve the organization-wide education configuration for Teams.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: Set-CsTeamsEducationConfiguration
+  href: Set-CsTeamsEducationConfiguration.yml
+syntaxes:
+- Get-CsTeamsEducationConfiguration
+examples:
+- title: Example 1
+  code: |-
+    Get-CsTeamsEducationConfiguration
+
+    Identity                              : Global
+    ParentGuardianPreferredContactMethod  : Email
+    UpdateParentInformation               : Enabled
+  description: ""
+  summary: |+
+    In this example, the organization has set the defaults as follows:
+      - Email is set as the preferred contact method for the parent communication invites.
+      - Capability to edit parent contact information by educators is enabled.
+
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsEducationConfiguration
+name: Get-CsTeamsEducationConfiguration
+description: |-
+  This cmdlet is used to retrieve the organization-wide education configuration for Teams which contains settings that are applicable to education organizations.
+
+  You must be a Teams Service Administrator or a Global Administrator for your organization to run the cmdlet.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsEducationConfiguration
+  author: SaritaBehera
+  ms.author: saritabehera
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamseducationconfiguration
+  schema: 2.0.0

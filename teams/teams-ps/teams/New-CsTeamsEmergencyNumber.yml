@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsTeamsEmergencyCallRoutingPolicy
+  href: Set-CsTeamsEmergencyCallRoutingPolicy.yml
+- text: New-CsTeamsEmergencyCallRoutingPolicy
+  href: New-CsTeamsEmergencyCallRoutingPolicy.yml
+syntaxes:
+- >-
+  New-CsTeamsEmergencyNumber [-EmergencyDialString <String>] [-EmergencyDialMask <String>]
+
+   [-OnlinePSTNUsage <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString 911 -EmergencyDialMask 933 -OnlinePSTNUsage "US911"
+  description: |-
+    Create a new Teams emergency number
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:>  New-CsTeamsEmergencyNumber -EmergencyDialString "112" -EmergencyDialMask "117;897" -OnlinePSTNUsage "EU112"
+  description: |-
+    Create a new Teams emergency number with multiple emergency dial masks.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EmergencyDialMask
+  description: |2+
+     For each Teams emergency number, you can specify zero or more emergency dial masks. A dial mask is a number that you want to translate into the value of the emergency dial number value when it is dialed. Dial mask must be list of numbers separated by semicolon. Each number string must be made of the digits 0 through 9 and can be from 1 to 10 digits in length.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EmergencyDialString
+  description: |2+
+     Specifies the emergency phone number
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OnlinePSTNUsage
+  description: |2+
+     Specify the online public switched telephone network (PSTN) usage
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsTeamsEmergencyNumber
+name: New-CsTeamsEmergencyNumber
+description: |-
+  This cmdlet supports creating multiple Teams emergency numbers. Used with TeamsEmergencyCallRoutingPolicy and only relevant for Direct Routing.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsemergencynumber
+  applicable: Microsoft Teams
+  title: New-CsTeamsEmergencyNumber
+  author: jenstrier
+  ms.author: serdars
+  manager: roykuntz
+  ms.reviewer: chenc, pthota
+  schema: 2.0.0

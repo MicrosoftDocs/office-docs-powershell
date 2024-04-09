@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet validates workforce management (WFM) connection settings.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsTeamsShiftsConnectionInstance
+  href: New-CsTeamsShiftsConnectionInstance.yml
+- text: Set-CsTeamsShiftsConnectionInstance
+  href: Set-CsTeamsShiftsConnectionInstance.yml
+syntaxes:
+- Test-CsTeamsShiftsConnectionValidate -ConnectorId <string> -ConnectorSpecificSettings <IConnectorInstanceRequestConnectorSpecificSettings> -Name <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> $InstanceName = "test instance name"
+    PS C:\> $WfmUserName = "WfmUserName"
+    PS C:\> $plainPwd = "plainPwd"
+    PS C:\> Test-CsTeamsShiftsConnectionValidate -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E00000" -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificBlueYonderSettingsRequest -Property @{ AdminApiUrl = "https://contoso.com/retail/data/wfmadmin/api/v1-beta3"; SiteManagerUrl = "https://contoso.com/retail/data/wfmsm/api/v1-beta4"; EssApiUrl = "https://contoso.com/retail/data/wfmess/api/v1-beta2"; RetailWebApiUrl = "https://contoso.com/retail/data/retailwebapi/api/v1"; CookieAuthUrl = "https://contoso.com/retail/data/login"; FederatedAuthUrl = "https://contoso.com/retail/data/login"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" }) -Name $InstanceName
+  description: |-
+    Returns the list of conflicts if there are any. Empty result means there's no conflict.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> $InstanceName = "test instance name"
+    PS C:\> $WfmUserName = "WfmUserName"
+    PS C:\> $plainPwd = "plainPwd"
+    PS C:\> Test-CsTeamsShiftsConnectionValidate -ConnectorId "6A51B888-FF44-4FEA-82E1-839401E00000" -ConnectorSpecificSettings (New-Object Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.ConnectorSpecificUkgDimensionsSettingsRequest -Property @{ apiUrl = "https://contoso.com/api"; ssoUrl = "https://contoso.com/sso"; appKey = "myAppKey"; clientId = "myClientId"; clientSecret = "PlaceholderForClientSecret"; LoginUserName = "PlaceholderForUsername"; LoginPwd = "PlaceholderForPassword" }) -Name $InstanceName
+  description: |-
+    Returns the list of conflicts if there are any. Empty result means there's no conflict.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectorId
+  isRequired: true
+  description: |+
+    The ID of the shifts connector.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="IConnectorInstanceRequestConnectorSpecificSettings" data-throw-if-not-resolved="False" />
+  name: ConnectorSpecificSettings
+  isRequired: true
+  description: |+
+    The connector specific settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The connector's instance name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Test-CsTeamsShiftsConnectionValidate
+name: Test-CsTeamsShiftsConnectionValidate
+description: |-
+  This cmdlet validates Workforce management (WFM) connection settings. It validates that the provided WFM account/password and required endpoints are set correctly.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  title: Test-CsTeamsShiftsConnectionValidate
+  author: gucsun
+  ms.author: gucsun
+  manager: navinth
+  online version: https://learn.microsoft.com/powershell/module/teams/test-csteamsshiftsconnectionvalidate
+  schema: 2.0.0

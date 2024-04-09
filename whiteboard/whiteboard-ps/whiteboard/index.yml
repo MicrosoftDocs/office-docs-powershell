@@ -1,0 +1,18 @@
+### YamlMime:PowershellModule
+children:
+- title: MicrosoftWhiteboardAdmin
+  cmdlets:
+  - MicrosoftWhiteboardAdmin.Get-Whiteboard
+  - MicrosoftWhiteboardAdmin.Get-WhiteboardOwners
+  - MicrosoftWhiteboardAdmin.Get-WhiteboardsForTenant
+  - MicrosoftWhiteboardAdmin.Invoke-TransferAllWhiteboards
+  - MicrosoftWhiteboardAdmin.Remove-Whiteboard
+  - MicrosoftWhiteboardAdmin.Set-WhiteboardOwner
+uid: MicrosoftWhiteboardAdmin
+name: MicrosoftWhiteboardAdmin
+description: |-
+  The following cmdlet references are for Microsoft Whiteboard. See [Overview](https://learn.microsoft.com/powershell/whiteboard/overview) for details on installing the module. The module can only be run by users with Global Administrator or SharePoint Administrator roles. The module described here is for Whiteboard content stored in Azure.
+metadata:
+  Module Name: Microsoft Whiteboard Admin
+  Module Guid: CC24F7D4-4CF7-46D3-BD87-30A3D44ECF96
+  title: Microsoft Whiteboard

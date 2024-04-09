@@ -1,0 +1,202 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in on-premises Exchange.
+
+  Use the Get-MailboxDatabaseCopyStatus cmdlet to view health and status information about one or more mailbox database copies.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Get-MailboxDatabaseCopyStatus -Server <MailboxServerIdParameter>
+
+   [-Active]
+
+   [-ConnectionStatus]
+
+   [-DomainController <Fqdn>]
+
+   [-ExtendedErrorInfo]
+
+   [-UseServerCache]
+
+   [<CommonParameters>]
+- >-
+  Get-MailboxDatabaseCopyStatus [[-Identity] <DatabaseCopyIdParameter>]
+
+   [-Local]
+
+   [-Active]
+
+   [-ConnectionStatus]
+
+   [-DomainController <Fqdn>]
+
+   [-ExtendedErrorInfo]
+
+   [-UseServerCache]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-MailboxDatabaseCopyStatus -Identity DB1 | Format-List
+  description: |-
+    This example returns status information for all copies of the database DB1. The status results are displayed in a list format.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-MailboxDatabaseCopyStatus -Server MBX1 | Format-List
+  description: |-
+    This example returns the status for all database copies on the Mailbox server MBX1. The status results are also displayed in a list format.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-MailboxDatabaseCopyStatus -Identity DB1\MBX2 | Format-List
+  description: |-
+    This example returns the status for the copy of database DB1 on the Mailbox server MBX2. The status results are also displayed in a list format.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Active
+  description: |+
+    The Active switch specifies whether to return mailbox database copy status for the active mailbox database copy only. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ConnectionStatus
+  description: |+
+    This parameter has been deprecated and is no longer used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExtendedErrorInfo
+  description: |+
+    The ExtendedErrorInfo switch specifies whether to return an output object containing any exception details. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DatabaseCopyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the name of the database copy for which the command should gather information. The Identity parameter can be specified in the form of `<Database>\<Server>`. Specifying just `<Database>` returns information for all copies of the database. This parameter can't be combined with the Server parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  description: |+
+    The Local switch specifies whether to return mailbox database copy status information from only the local Mailbox server. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="MailboxServerIdParameter" data-throw-if-not-resolved="False" />
+  name: Server
+  isRequired: true
+  description: |+
+    The Server parameter specifies that a Mailbox server returns status information for all of its mailbox database copies. This parameter can't be combined with the Identity parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2010
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseServerCache
+  description: |+
+    The UseServerCache switch specifies whether to enable a server-side remote procedure call (RPC) caching of status information for 5 seconds. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2010
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+uid: ExchangePowerShell.Get-MailboxDatabaseCopyStatus
+name: Get-MailboxDatabaseCopyStatus
+description: |-
+  If a database is specified by using the Identity parameter with the command, the status of all copies of the database is returned. If a server is specified by using the Server parameter with the command, information about all database copies on the server is returned. If neither parameter is specified with the command, information about all database copies in the organization is returned.
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.ServerStatus-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxdatabasecopystatus
+  applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+  title: Get-MailboxDatabaseCopyStatus
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

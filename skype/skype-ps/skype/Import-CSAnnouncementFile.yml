@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports an announcement file to the Announcement service audio library.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Byte\[\].
+    Accepts a byte array from an audio file.
+    Byte array must be piped as a single record.
+    See Example 3.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return a value.
+syntaxes:
+- >-
+  Import-CSAnnouncementFile [-Parent] <String> -FileName <String> -Content <Byte[]> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    $a = [System.IO.File]::ReadAllBytes('.\GreetingFile.wav')
+
+    Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav" -Content $a
+  description: |-
+    These commands import an audio file into the Announcement service File Store.
+    Because audio files must be imported as byte arrays, we first need to retrieve the audio file as an array of individual bytes. We assign that array to the variable $a.
+
+    In the second line we call the Import-CsAnnouncementFile cmdlet to actually import the file.
+    We pass the service Identity ApplicationServer:redmond.litwareinc.com to the Parent parameter, then we pass a name to the FileName parameter (WelcomeMessage.wav).
+    This can be any valid Windows operating system file name, but it should end with a .wav or .wma extension.
+    Finally, we pass the variable $a as the value to the Content parameter to read in our byte array.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav" -Content ([System.IO.File]::ReadAllBytes('.\GreetingFile.wav'))
+  description: |-
+    Example 2 is identical to Example 1 except that we included the command inside parentheses as a value to the Content parameter rather than calling that command on its own and assigning it to a variable.
+  summary: ""
+- title: '-------------------------- EXAMPLE 3 --------------------------'
+  code: |-
+    [System.IO.File]::ReadAllBytes('.\GreetingFile.wav') | Import-CsAnnouncementFile -Parent ApplicationServer:redmond.litwareinc.com -FileName "WelcomeMessage.wav"
+  description: |-
+    Example 3 is yet another variation of Example 1.
+    The difference in this example is that rather than use the Content parameter, we first call the command to read the file, then pipe the results to Import-CsAnnouncementFile.
+    This is the most reliable way of importing an announcement file from a remote session.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Content
+  isRequired: true
+  description: |+
+    The contents of the audio file as a byte array.
+
+    A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  isRequired: true
+  description: |+
+    The name that you want the file to have in the File Store.
+    You will use this name in the AudioFilePrompt parameter in the call to the New-CsAnnouncement or Set-CsAnnouncement cmdlet to assign the file to an announcement.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Parent
+  isRequired: true
+  description: |+
+    The service ID of the Application Server on which the associated Announcement service is running.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Import-CSAnnouncementFile
+name: Import-CSAnnouncementFile
+description: |-
+  This cmdlet imports an audio file as a byte array to the Announcement service audio library.
+  This makes the file available for playback as an announcement for unassigned numbers.
+
+  Running this cmdlet imports the audio file to the library.
+  After the file has been imported, the file can be used in an announcement by calling the New-CsAnnouncement cmdlet or the Set-CsAnnouncement cmdlet and passing the file name and associated service as parameters.
+  At that point the New-CsUnassignedNumber or Set-CsUnassignedNumber cmdlet can be called to assign the announcement to a specific range of numbers.
+
+  Imported files must be WAV or WMA files.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/import-csannouncementfile
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Import-CSAnnouncementFile
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

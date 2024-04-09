@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The `Remove-CsTeamsShiftsPolicy` cmdlet removes a previously created TeamsShiftsPolicy.
+
+  Note: A TeamsShiftsPolicy needs to be unassigned from all the users before it can be deleted.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsShiftsPolicy
+  href: Get-CsTeamsShiftsPolicy.yml
+- text: New-CsTeamsShiftsPolicy
+  href: New-CsTeamsShiftsPolicy.yml
+- text: Set-CsTeamsShiftsPolicy
+  href: Set-CsTeamsShiftsPolicy.yml
+- text: Grant-CsTeamsShiftsPolicy
+  href: Grant-CsTeamsShiftsPolicy.yml
+syntaxes:
+- Remove-CsTeamsShiftsPolicy [-Identity] <XdsIdentity> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTeamsShiftsPolicy -Identity OffShiftAccess_WarningMessage1_AlwaysShowMessage
+  description: |-
+    In this example, the policy instance to be removed is called "OffShiftAccess_WarningMessage1_AlwaysShowMessage".
+  summary: ""
+parameters:
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Policy instance name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsShiftsPolicy
+name: Remove-CsTeamsShiftsPolicy
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-teamsshiftspolicy
+  schema: 2.0.0

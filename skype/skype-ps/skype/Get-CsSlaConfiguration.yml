@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsSlaConfiguration cmdlet to return information about a configured shared number in Shared Line Appearance (SLA). A shared number in SLA is an Enterprise Voice user that is capable of receiving multiple calls at a time and forwarding them to its delegates, who answer the call.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.SlaConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsSlaConfiguration [-Identity] <UserIdParameter> [-PassThru] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsSlaConfiguration -Identity sip:emergency@contosohealth.com
+  description: |-
+    This example command returns information about the shared number with the Identity of "emergency@contosohealth.com".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsSlaConfiguration emergency@contosohealth.com
+  description: |-
+    This example command returns information about the shared number with the Identity of "emergency@contosohealth.com". This example specifies Identity by its position.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsSlaConfiguration -Identity emergency
+  description: |-
+    This example return information about the shared number using only the user id.
+  summary: ""
+parameters:
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    PARAMVALUE: UserIdParameter
+
+    Indicates the identity of the Enterprise Voice user whose shared number information will be retrieved. 
+    User identities can be specified using one of five formats:
+
+    SIP address
+
+    Example: sip:kenmyer@litwareinc.com
+
+    User principal name (UPN)
+
+    Example: kenmyer@litwareinc.com
+
+    Domain name and logon name in the form domain\logon
+
+    Example: litwareinc\kenmyer
+
+    Active Directory display name (this form typically requires quotes)
+
+    Example: "Ken Myer"
+
+    Active Directory distinguished name
+
+    Example: CN=KenMyer,CN=Users,DC=Atlanta,DC=Corp,DC=litware,DC=com
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    PARAMVALUE: SwitchParameter
+
+    The presence of the passthru switch causes the cmdlet to pass the current objects through the pipeline. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsSlaConfiguration
+name: Get-CsSlaConfiguration
+description: |-
+  SLA is a feature in Skype for Business (SfB) for handling multiple calls on a specific number called a shared number. SLA can configure any enterprise voice enabled SfB user as a shared number with multiple lines to respond to multiple calls. The calls are not actually received on the shared number, instead they are forwarded to users that act as delegates for the shared number. Any one of the delegates can pick up the call while the rest of the delegates get a notification on their phone about who picked up the call and which line has become busy as a result. Both the number of lines and the delegates are configurable for a shared number in SLA. In addition, advanced options such as BusyOption (what happens in a situation when all lines are busy) and MissedCallOption (the case in which none of the delegates pick up a call) etc. can also be configured for a shared number.
+  The Get-CsSlaConfiguration cmdlet provides a way to retrieve a shared number configuration.
+  Note: 
+  Logging in with the account created for the SLA number is not supported. Using the SLA number account with any device or Desktop Client can result in unpredictable behavior. It is not necessary to use that account for the Shared Line Appearance feature to function. 
+  By default, members of the RTCUniversalServerAdmins group are authorized to run the Get-CsSlaConfiguration cmdlet: RTCUniversalServerAdmins. To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
+
+
+  Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsSlaConfiguration"}
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csslaconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsSlaConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

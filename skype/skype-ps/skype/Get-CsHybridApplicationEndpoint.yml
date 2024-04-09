@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about one or more hybrid application endpoints in your organization along with their settings.
+
+  This cmdlet was introduced in the July 2017 cumulative update for the Lync Server 2013 and May 2017 cumulative update for Skype Business Server 2015.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.AD.UserIdParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsHybridApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/new-cshybridapplicationendpoint?view=skype-ps
+- text: Set-CsHybridApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/set-cshybridapplicationendpoint?view=skype-ps
+- text: Remove-CsHybridApplicationEndpoint
+  href: https://learn.microsoft.com/powershell/module/skype/remove-cshybridapplicationendpoint?view=skype-ps
+syntaxes:
+- Get-CsHybridApplicationEndpoint [-Filter <String>] [-LdapFilter <String>] [-OU <OUIdParameter>] [-DomainController <Fqdn>] [-Credential <PSCredential>] [[-Identity] <UserIdParameter>] [-ResultSize <UInt32>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> Get-CsHybridApplicationEndpoint
+  description: |-
+    This example displays all the hybrid application endpoints that have been defined for an organization along with the settings for each.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    PS C:\> Get-CsHybridApplicationEndpoint -Identity "CN={4f6c99fe-7999-4088-ac4d-e88e0b3d3820},OU=Redmond,DC=litwareinc,DC=com"
+  description: |-
+    This example uses the Identity parameter to retrieve the hybrid application endpoint settings for a specific endpoint.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    PS C:\> Get-CsHybridApplicationEndpoint -Filter {DisplayName -like "*bot*"}
+  description: |-
+    This example uses the Filter parameter to retrieve all the hybrid application endpoints with the word "bot" in their DisplayName attribute along with the configuration for each one.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Enables you to run the Get-CsHybridApplicationEndpoint cmdlet under alternate credentials. This might be required if the account you used to log on to the Windows does not have the necessary privileges required to work with user objects.
+
+    To use the Credential parameter you must first create a PSCredential object by using the [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) cmdlet. For details, see the Get-Credential cmdlet help topic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    Enables you to connect to the specified domain controller in order to retrieve user information. To connect to a particular domain controller, include the DomainController parameter followed by the fully qualified domain name (FQDN) (for example, atl-cs-001.litwareinc.com).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes. For example, you can limit returned data to endpoints with specific word in their DisplayName attribute.
+
+    The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet. For example, a filter that returns only endpoints with a value in their LineURI attribute would look like this, with LineURI representing the Active Directory attribute, -ne representing the comparison operator (not equal to), and $null (a built-in Windows PowerShell variable) representing the filter value:
+
+    {LineURI -ne $null}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique application Id for the endpoint you want to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapFilter
+  description: |+
+    Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015). For example, you can limit returned data to endpoints which work in a specific department, or endpoints which have a specified manager or job title.
+
+    The LdapFilter parameter uses the LDAP query language when creating filters. For example, a filter that returns only endpoints which belongs in the city of Redmond would look like this: "l=Redmond", with "l" (a lowercase L) representing the Active Directory attribute (locality); "=" representing the comparison operator (equal to); and "Redmond" representing the filter value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="OUIdParameter" data-throw-if-not-resolved="False" />
+  name: OU
+  description: |+
+    Enables you to return information about endpoints in a specific organizational unit (OU) or container. The OU parameter returns data from both the specified OU and any of its child OUs. For example, if the Finance OU has two child OUs--AccountsPayable and AccountsReceivable--endpoints will be returned from each of these three OUs.
+
+    When specifying an OU, use the distinguished name (DN) of that container; for example: -OU "OU=Finance,dc=litwareinc,dc=com". To return endpoints accounts from the Users container, use this syntax:
+
+    -OU "cn=Users,dc=litwareinc,dc=com"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ResultSize
+  description: |+
+    Enables you to limit the number of records returned by the cmdlet. For example, to return seven endpoints (regardless of the number of endpoints that are in your forest) include the ResultSize parameter and set the parameter value to 7. Note that there is no way to guarantee which seven endpoints will be returned.
+
+    The result size can be set to any whole number between 0 and 2147483647, inclusive. If set to 0 the command will run, but no data will be returned. If you set the ResultSize to 7 but you have only three endpoints in your forest, the command will return those three endpoints, and then complete without error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsHybridApplicationEndpoint
+name: Get-CsHybridApplicationEndpoint
+description: |-
+  This cmdlet returns information about one or more hybrid application endpoints in your organization along with their settings. Some of this settings are SipAddress, DisplayName and LineURI.
+
+  The `Get-CsHybridApplicationEndpoint` cmdlet provides numerous ways for you to filter the collection of endpoints actually returned when you run the cmdlet. For example, if you don't want to return all your Skype for Business Server endpoints you can apply the optional parameters Filter or LdapFilter. (These parameters are mutually exclusive: if you use Filter in a command you cannot use LdapFilter in that same command, and vice-versa.) The Filter parameter enables you to limit the returned data to endpoints who meet the specified Skype for Business Server criteria; for example, you might decide to return only enabled endpoints, or only endpoints with a LineURI assigned. The LdapFilter parameter enables you to limit the returned data to users who fit other Active Directory-based criteria.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cshybridapplicationendpoint
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsHybridApplicationEndpoint
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

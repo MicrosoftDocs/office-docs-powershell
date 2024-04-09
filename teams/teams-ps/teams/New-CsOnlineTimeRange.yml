@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The New-CsOnlineTimeRange cmdlet creates a new time range.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.TimeRange" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- New-CsOnlineTimeRange -Start <TimeSpan> -End <TimeSpan> [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    $workdayTimeRange = New-CsOnlineTimeRange -Start 09:00 -End 17:00
+  description: |-
+    This example creates a time range for a 9AM to 5PM work day.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    $allDayTimeRange = New-CsOnlineTimeRange -Start 00:00 -End 1.00:00
+  description: |-
+    This example creates a 24-hour time range.
+  summary: ""
+parameters:
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: End
+  isRequired: true
+  description: |+
+    The End parameter represents the end bound of the time range.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+  name: Start
+  isRequired: true
+  description: |+
+    The Start parameter represents the start bound of the time range.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsOnlineTimeRange
+name: New-CsOnlineTimeRange
+description: |-
+  The New-CsOnlineTimeRange cmdlet creates a new time range to be used with the Auto Attendant (AA) service. Time ranges are used to form schedules.
+
+  **NOTES**:
+
+  - The start bound of the range must be less than its end bound.
+  - Time ranges within a weekly recurrent schedule must align with 15-minute boundaries.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinetimerange
+  applicable: Microsoft Teams
+  title: New-CsOnlineTimeRange
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

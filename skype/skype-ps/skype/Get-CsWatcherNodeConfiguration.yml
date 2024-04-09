@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the watcher node configuration settings in use in your organization.
+  Watcher nodes are computers that periodically use Microsoft System Center Operations Manager and Skype for Business Server synthetic transactions to verify that Skype for Business Server components are working as expected.
+  The watcher node configuration settings let you know which pools have been associated with a watcher node.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Get-CsWatcherNodeConfiguration cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsWatcherNodeConfiguration cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.WatcherNode.TargetPool#Decorated object.
+links:
+- text: New-CsWatcherNodeConfiguration
+  href: New-CsWatcherNodeConfiguration.yml
+- text: Remove-CsWatcherNodeConfiguration
+  href: Remove-CsWatcherNodeConfiguration.yml
+- text: Set-CsWatcherNodeConfiguration
+  href: Set-CsWatcherNodeConfiguration.yml
+- text: Test-CsWatcherNodeConfiguration
+  href: Test-CsWatcherNodeConfiguration.yml
+syntaxes:
+- Get-CsWatcherNodeConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+- Get-CsWatcherNodeConfiguration [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsWatcherNodeConfiguration
+  description: |-
+    The command shown in Example 1 returns information about all the watcher nodes currently configured for use in the organization.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsWatcherNodeConfiguration -Identity "atl-cs-001.litwareinc.com"
+  description: |-
+    In Example 2, information is returned for the watcher node associated with the pool.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsWatcherNodeConfiguration | Where-Object {$_.TestUsers -contains "sip:kenmyer@litwareinc.com"}
+  description: |-
+    The command shown in Example 3 returns information about all the watcher nodes where the test users include the user with the SIP address sip:kenmyer@litwareinc.com.
+    To do this, the command first uses the Get-CsWatcherNodeConfiguration cmdlet to return a collection of all the watcher nodes in the organization.
+    That collection is then piped to the Where-Object cmdlet, which picks out only those nodes where the TestUsers property contains the SIP address sip:kenmyer@litwareinc.com.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsWatcherNodeConfiguration | Where-Object {$_.ExtendedTests -match "TestType=PSTN"}
+  description: |-
+    In Example 4, information is returned for all the watcher nodes that include the PSTN test type.
+    To carry out this task, the command first calls the Get-CsWatcherNodeConfiguration cmdlet in order to return a collection of all the watcher nodes in the organization.
+    That collection is then piped to the Where-Object cmdlet, which selects only those watcher nodes where the ExtendedTests property includes (-matches) the string value "TestType=PSTN".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard characters in order to return one or more watcher nodes.
+    For example, to return all of the watcher nodes for the domain litwareinc.com use this syntax:
+
+    -Filter "*.litwareinc.com"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Fully qualified domain name of the pool that the watcher node has been assigned to.
+    For example:
+
+    -Identity "atl-cs-001.litwareinc.com"
+
+    If this parameter is not specified then the Get-CsWatcherNodeConfiguration cmdlet will return information about all the watcher nodes configured for use in your organization.
+
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the watcher node configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsWatcherNodeConfiguration
+name: Get-CsWatcherNodeConfiguration
+description: |-
+  If you are using Microsoft System Center Operations Manager to monitor Skype for Business Server then you have the option of setting up "watcher nodes": computers that periodically, and automatically, run synthetic transactions in order to verify that Skype for Business Server is working as expected.
+  Watcher nodes are assigned to pools, and are managed using the CsWatcherNodeConfiguration cmdlets.
+  Note that you do not need to install watcher nodes if you are using System Center Operations Manager.
+  You can still monitor your system without using watcher nodes; the only difference is that any synthetic transactions you want to run will need to be invoked manually rather than automatically invoked by Operations Manager.
+
+  The Get-CsWatcherNodeConfiguration cmdlet returns information about all the watcher nodes that have been configured for use in your organization.
+
+  Skype for Business Server Control Panel: The functions carried out by the Get-CsWatcherNodeConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cswatchernodeconfiguration
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsWatcherNodeConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

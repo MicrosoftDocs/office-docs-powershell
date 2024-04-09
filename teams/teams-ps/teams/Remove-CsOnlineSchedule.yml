@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Remove-CsOnlineSchedule cmdlet to remove a schedule.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Remove-CsOnlineSchedule cmdlet accepts a string as the Id parameter.
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsOnlineSchedule
+  href: New-CsOnlineSchedule.yml
+- text: Set-CsOnlineSchedule
+  href: Set-CsOnlineSchedule.yml
+syntaxes:
+- Remove-CsOnlineSchedule -Id <String> [-Tenant <Guid>] [-CommonParameters]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsOnlineSchedule -Id "fa9081d6-b4f3-5c96-baec-0b00077709e5"
+  description: |-
+    This example deletes the schedule that has an Id of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    The Id for the schedule to be removed.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsOnlineSchedule
+name: Remove-CsOnlineSchedule
+description: |-
+  The Remove-CsOnlineSchedule cmdlet deletes a schedule that is specified by using the Id parameter.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csonlineschedule
+  applicable: Microsoft Teams
+  title: Remove-CsOnlineSchedule
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney
