@@ -161,7 +161,7 @@ The following sections list the advanced settings described on this page by prod
 |**File Explorer settings**     | - [Always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) <br>  - [Turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer) <br>- [Hide the Classify and Protect menu option in Windows File Explorer](#hide-the-classify-and-protect-menu-option-in-windows-file-explorer)     |
 |**Performance improvements settings**     | - [Limit CPU consumption](#limit-cpu-consumption) <br>- [Limit the number of threads used by the scanner](#limit-the-number-of-threads-used-by-the-scanner) <br>- [Prevent Outlook performance issues with S/MIME emails](#prevent-outlook-performance-issues-with-smime-emails)        |
 |**Settings for integrations with other labeling solutions**     | - [Migrate labels from Secure Islands and other labeling solutions](#migrate-labels-from-secure-islands-and-other-labeling-solutions) <br> - [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions)    |
-|**AIP analytics settings**     |   - [Prevent audit data from being sent to Purview Information Protection  and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-purview-information-protection-and-microsoft-365-analytics) <br>- [Send information type matches to Purview Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)      |
+|**AIP analytics settings**     |  - [Prevent audit data from being sent to AIP and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics) <br>- [Send information type matches to Purview Information Protection analytics](#send-information-type-matches-to-purview-information-protection-analytics)     |
 |**General settings**     | - [Add "Report an Issue" for users](#add-report-an-issue-for-users) <br>- [Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied) <br>-  [Change the local logging level](#change-the-local-logging-level) <br>- [Change which file types to protect](#change-which-file-types-to-protect)<br>- [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) <br>- [Configure SharePoint timeouts](#configure-sharepoint-timeouts)<br>- [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels)<br>-  [Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps) <br>- [Enable removal of protection from compressed files](#enable-removal-of-protection-from-compressed-files) <br>-  [Preserve NTFS owners during labeling (public preview)](#preserve-ntfs-owners-during-labeling-public-preview) <br> -  [Remove "Not now" for documents when you use mandatory labeling](#remove-not-now-for-documents-when-you-use-mandatory-labeling) <br>-  [Skip or ignore files during scans depending on file attributes](#skip-or-ignore-files-during-scans-depending-on-file-attributes) <br>-  [Specify a color for the label](#specify-a-color-for-the-label)<br>-  [Specify a default sub-label for a parent label](#specify-a-default-sub-label-for-a-parent-label)<br>-  [Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)  <br>-  [Support for disconnected computers](#support-for-disconnected-computers)     <br>-  [Turn on classification to run continuously in the background](#turn-on-classification-to-run-continuously-in-the-background) <br>- [Turn off document tracking features](#turn-off-document-tracking-features)  <br>- [Turn off the Revoke option for end-users in Office apps](#turn-off-the-revoke-option-for-end-users-in-office-apps) <br>- [Turn on classification globalization features](#turn-on-classification-globalization-features-public-preview)|
 |     |         |
 
@@ -175,8 +175,8 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |**AttachmentAction**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |**AttachmentActionTip**|[For email messages with attachments, apply a label that matches the highest classification of those attachments](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |**DisableMandatoryInOutlook**|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
-|**EnableAudit**|[Prevent audit data from being sent to Purview Information Protection and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-purview-information-protection-and-microsoft-365-analytics)|
-|**EnableContainerSupport**|[Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
+|**EnableAudit**| [Prevent audit data from being sent to AIP and Microsoft 365 analytics](#prevent-audit-data-from-being-sent-to-aip-and-microsoft-365-analytics)
+|**EnableContainerSupport**| [Enable removal of protection from PST, rar, 7zip, and MSG files](#enable-removal-of-protection-from-compressed-files)
 |**EnableCustomPermissions**|[Turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer)|
 |**EnableCustomPermissionsForCustomProtectedFiles**|[For files protected with custom permissions, always display custom permissions to users in File Explorer](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |**EnableGlobalization** |[Turn on classification globalization features](#turn-on-classification-globalization-features-public-preview) |
@@ -187,7 +187,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 | **EnableTrackAndRevoke** | [Turn off document tracking features](#turn-off-document-tracking-features) |
 |**HideBarByDefault**|[Display the Information Protection bar in Office apps](#display-the-information-protection-bar-in-office-apps)|
 |**JustificationTextForUserText** | [Customize justification prompt texts for modified labels](#customize-justification-prompt-texts-for-modified-labels) |
-|**LogMatchedContent**|[Send information type matches to Purview Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
+|**LogMatchedContent**| [Send information type matches to Purview Information Protection analytics](#send-information-type-matches-to-purview-information-protection-analytics) |
 |**OfficeContentExtractionTimeout** | [Configure the autolabeling timeout on Office files](#configure-the-autolabeling-timeout-on-office-files) |
 |**OutlookBlockTrustedDomains**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |**OutlookBlockUntrustedCollaborationLabel**|[Implement pop-up messages in Outlook that warn, justify, or block emails being sent](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -240,11 +240,9 @@ To hide the **Classify and Protect** menu option in the Windows File Explorer, c
 
 **HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\Microsoft.Azip.RightClick\LegacyDisable**
 
-For more information, see [Using File Explorer to classify files](clientv2-classify.md#using-file-explorer-to-classify-files).
-
 ## Display the Information Protection bar in Office apps
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, users must select the **Show Bar** option from the **Sensitivity** button to display the Information Protection bar in Office apps. Use the **HideBarByDefault** key and set the value to **False** to automatically display this bar for users so that they can select labels from either the bar or the button. 
 
@@ -262,7 +260,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
 
 ## Exempt Outlook messages from mandatory labeling
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, when you enable the label policy setting of **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
 
@@ -280,7 +278,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="
 
 ## Enable recommended classification in Outlook
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 When you configure a label for recommended classification, users are prompted to accept or dismiss the recommended label in Word, Excel, and PowerPoint. This setting extends this label recommendation to also display in Outlook.
 
@@ -298,9 +296,9 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnable
 
 ## Enable removal of protection from compressed files
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
-When you configure this setting, the  [PowerShell](./clientv2-admin-guide-powershell.md) cmdlet **Set-FileLabel** is enabled to allow removal of protection from PST, rar, and 7zip files.
+When you configure this setting, the  [PowerShell cmdlet](https://go.microsoft.com/fwlink/?linkid=2259827) **Set-FileLabel** is enabled to allow removal of protection from PST, rar, and 7zip files.
 
 - Key: **EnableContainerSupport**
 
@@ -314,7 +312,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="Tru
 
 ## Set a different default label for Outlook
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 When you configure this setting, Outlook doesn't apply the default label that is configured as a policy setting for the option **Apply this label by default to documents and emails**. Instead, Outlook can apply a different default label, or no label.
 
@@ -332,7 +330,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
 ## Change which file types to protect
 
-These configurations use a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+These configurations use a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the Purview Information Protection unified labeling client protects all file types, and the scanner from the client protects only Office file types and PDF files.
 
@@ -408,7 +406,7 @@ Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =ConvertTo-Json
 
 ## Remove "Not now" for documents when you use mandatory labeling
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 When you use the label policy setting of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email from Outlook.
 
@@ -591,7 +589,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove
 
 ##### Extend external marking removal to custom layouts
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the logic used to remove external content markings ignores custom layouts configured in PowerPoint. To extend this logic to custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **True**.
 
@@ -658,7 +656,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkin
 
 ##### Remove external content marking from custom layouts in PowerPoint
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the logic used to remove external content markings ignores custom layouts configured in PowerPoint. To extend this logic to custom layouts, set the **RemoveExternalMarkingFromCustomLayouts** advanced property to **True**.
 
@@ -674,7 +672,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalMarkingFromCu
 
 ## Turn off custom permissions in File Explorer
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, users see an option named **Protect with custom permissions** when they right-click in File Explorer and choose **Classify and protect**. This option lets them set their own protection settings that can override any protection settings that you might have included with a label configuration. Users can also see an option to remove protection. When you configure this setting, users do not see these options.
 
@@ -692,7 +690,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="Fa
 
 ## For files protected with custom permissions, always display custom permissions to users in File Explorer
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 When you configure the advanced client setting to [turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer), by default, users are not able to see or change custom permissions that are already set in a protected document.
 
@@ -747,7 +745,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic
 
 ## Add "Report an Issue" for users
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 When you specify the following advanced client setting, users see a **Report an Issue** option that they can select from the **Help and Feedback** client dialog box. Specify an HTTP string for the link. For example, a customized web page that you have for users to report issues, or an email address that goes to your help desk. 
 
@@ -951,7 +949,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborati
 
 ## Expand Outlook distribution lists when searching for email recipients
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 To extend support from other advanced settings to recipients inside Outlook distribution lists, set the **EnableOutlookDistributionListExpansion** advanced setting to **true**.
 
@@ -985,7 +983,7 @@ By default, the Purview Information Protection unified labeling client supports 
 
 To change this behavior, so that audit data is not sent, do the following:
 
-1. Add the following policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) using the Office 365 Security & Compliance Center PowerShell:
+1. Add the following policy advanced setting using the Office 365 Security & Compliance Center PowerShell:
 
     - Key: **EnableAudit**
 
@@ -1007,7 +1005,7 @@ To enable the client to send audit log data again, change the advanced setting v
 
 ## Send information type matches to Purview Information Protection analytics
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the unified labeling client does not send content matches for sensitive info types to [Purview Information Protection analytics](../reports-aip.md). For more information about this additional information that can be sent, see the [Content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis) section from the central reporting documentation.
 
@@ -1030,7 +1028,7 @@ Starting from scanner version 2.7.x.x, we recommend limiting CPU consumption usi
 > [!IMPORTANT]
 > When the following thread limiting policy is in use, **ScannerMaxCPU** and **ScannerMinCPU** advanced settings are ignored. To limit CPU consumption using **ScannerMaxCPU** and **ScannerMinCPU** advanced settings, cancel the use of policies that limit the number of threads. 
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 To limit CPU consumption on the scanner machine, it is manageable by creating two advanced settings: 
 
@@ -1054,7 +1052,7 @@ To limit CPU consumption on the scanner machine, it is manageable by creating tw
 > [!IMPORTANT]
 > When the following thread limiting policy is in use, **ScannerMaxCPU** and **ScannerMinCPU** advanced settings are ignored. To limit CPU consumption using **ScannerMaxCPU** and **ScannerMinCPU** advanced settings, cancel use of policies that limit the number of threads. 
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the scanner uses all available processor resources on the computer running the scanner service. If you need to limit the CPU consumption while this service is scanning, create the following advanced setting in a label policy. 
 
@@ -1074,7 +1072,7 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8
 
 ## Migrate labels from Secure Islands and other labeling solutions
 
-This configuration uses a label [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a label advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 This configuration is not compatible with protected PDF files that have a .ppdf file name extension. These files cannot be opened by the client using File Explorer or PowerShell.
 
@@ -1222,7 +1220,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProp
 
 ## Apply a custom property when a label is applied
 
-This configuration uses a label [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a label advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 There might be some scenarios when you want to apply one or more custom properties to a document or email message in addition to the metadata that's applied by a sensitivity label.
 
@@ -1317,7 +1315,7 @@ Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
 
 ## Specify a default sub-label for a parent label
 
-This configuration uses a label [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a label advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 When you add a sub-label to a label, users can no longer apply the parent label to a document or email. By default, users select the parent label to see the sub-labels that they can apply, and then select one of those sub-labels. If you configure this advanced setting, when users select the parent label, a sub-label is automatically selected and applied for them: 
 
@@ -1333,7 +1331,7 @@ Set-Label -Identity "Confidential" -AdvancedSettings @{Defaultsub-labelId="8faca
 
 ## Turn on classification to run continuously in the background
 
-This configuration uses a label [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell. 
+This configuration uses a label advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell. 
 
 When you configure this setting, it changes the default behavior of how the information protection client applies automatic and recommended labels to documents:
 
@@ -1465,7 +1463,7 @@ This registry setting does not change the information that's sent to Microsoft P
 
 ## Skip or ignore files during scans depending on file attributes
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, the information protection scanner scans all relevant files. However, you may want to define specific files to be skipped, such as for archived files or files that have been moved. 
 
@@ -1502,7 +1500,7 @@ For a list of all file attributes that can be defined in the **ScannerFSAttribut
 
 ## Preserve NTFS owners during labeling (public preview)
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 By default, scanner, PowerShell, and File Explorer extension labeling do not preserve the NTFS owner that was defined before the labeling. 
 
@@ -2034,7 +2032,7 @@ After setting this value to **False**, track and revoke is turned off as follows
 
 However, protected documents that are already registered for tracking will continue to be track, and administrators can still revoke access from PowerShell. To fully turn off track and revoke features, also run the [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet.
 
-This configuration uses a policy [advanced setting](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses a policy advanced setting that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 > [!TIP]
 > To turn track and revoke back on, set the **EnableTrackAndRevoke** to **True**, and also run the [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature) cmdlet.
