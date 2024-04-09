@@ -1527,7 +1527,7 @@ Customize the justification prompts that are displayed in both Office and the in
 
 For example, as an administrator, you may want to remind your users not to add any customer identifying information into this field:
 
-:::image type="content" source="../media/justification-office.png" alt-text="Customized justification prompt text":::
+:::image type="content" source="./media/justification-office.png" alt-text="Customized justification prompt text":::
 
 To modify the default **Other** text that's displayed, use the **JustificationTextForUserText** advanced property with the [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) cmdlet. Set the value to the text you want to use instead.
 
