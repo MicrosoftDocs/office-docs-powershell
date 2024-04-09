@@ -433,7 +433,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave
 
 ## Remove headers and footers from other labeling solutions
 
-This configuration uses policy [advanced settings](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses policy advanced settings that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 There are two methods to remove classifications from other labeling solutions:
 
@@ -710,7 +710,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForC
 
 ## For email messages with attachments, apply a label that matches the highest classification of those attachments
 
-This configuration uses policy [advanced settings](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses policy advanced settings that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 This setting is for when users attach labeled documents to an email, and do not label the email message itself. In this scenario, a label is automatically selected for them, based on the classification labels that are applied to the attachments. The highest classification label is selected.
 
@@ -767,7 +767,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:h
 
 ## Implement pop-up messages in Outlook that warn, justify, or block emails being sent
 
-This configuration uses policy [advanced settings](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses policy advanced settings that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 When you create and configure the following advanced client settings, users see pop-up messages in Outlook that can warn them before sending an email, or ask them to provide justification why they are sending an email, or prevent them from sending an email for either of the following scenarios:
 
@@ -1288,7 +1288,7 @@ Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertT
 
 ## Configure a label to apply S/MIME protection in Outlook
 
-This configuration uses label [advanced settings](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses label advanced settings that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 Use these settings only when you have a working [S/MIME deployment](/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from information protection. The resulting protection is the same as when a user manually selects S/MIME options from Outlook.
 
@@ -1360,7 +1360,7 @@ Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground =
 
 ## Specify a color for the label
 
-This configuration uses label [advanced settings](#configuring-advanced-settings-for-the-client-via-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+This configuration uses label advanced settings that you must configure by using Office 365 Security & Compliance Center PowerShell.
 
 Use this advanced setting to set a color for a label. To specify the color, enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example, #40e0d0 is the RGB hex value for turquoise.
 
@@ -2103,8 +2103,7 @@ To turn off support again and revert to the default, set the **EnableGlobalizati
 
 Now that you've customized the information protection client, see the following resources for additional information that you might need to support this client:
 
-- [Client files and usage logging](clientv2-admin-guide-files-and-logging.md)
+- [Client files and usage logging](/azure-docs-powershell-aip/use-powershell-with-purview-info-protection-client)
 
-- [File types supported](clientv2-admin-guide-file-types.md)
-
-- [PowerShell commands](clientv2-admin-guide-powershell.md)
+- [File types supported](/purview/information-protection-extend-sensitivity-labeling-on-windows#supported-file-types)
+- [PowerShell commands](/azure-docs-powershell-aip/azureinformationprotection.md)
