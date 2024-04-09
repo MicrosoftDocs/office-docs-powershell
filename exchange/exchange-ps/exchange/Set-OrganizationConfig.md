@@ -206,6 +206,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-MitigationsEnabled <Boolean>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -290,6 +291,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-MitigationsEnabled <Boolean>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -352,6 +354,7 @@ Set-OrganizationConfig
  [-MicrosoftExchangeRecipientEmailAddressPolicyEnabled <Boolean>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PermanentlyDeleteDisabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -2845,6 +2848,24 @@ Type: Boolean
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OabShadowDistributionOldestFileAgeLimit
+This parameter is available only in on-premises Exchange.
+
+{{ Fill OabShadowDistributionOldestFileAgeLimit Description }}
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
+Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
