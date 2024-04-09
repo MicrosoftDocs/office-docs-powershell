@@ -109,7 +109,7 @@ In on-premises Exchange, this example removes John Rodman's mailbox from the mai
 
 ### Example 4
 ```powershell
-Get-Mailbox -Identity Laura -SoftDeletedMailbox | Remove-Mailbox -PermanentlyDelete.
+Get-Mailbox -Identity Laura -SoftDeletedMailbox | Remove-Mailbox -PermanentlyDelete
 ```
 
 In Exchange Online, this example removes the specified soft-deleted mailbox.

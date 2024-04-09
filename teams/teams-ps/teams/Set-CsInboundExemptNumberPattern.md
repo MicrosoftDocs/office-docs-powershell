@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Pattern
 
-A regular expression that the calling number must match in order to be exempt from blocking. It is best pratice to start the regular expression with the hat character and end it with the dollar character. You can use various regular expression test sites on the Internet to validate the expression.
+A regular expression that the calling number must match in order to be exempt from blocking. It is best practice to start the regular expression with the hat character and end it with the dollar character. You can use various regular expression test sites on the Internet to validate the expression.
 
 ```yaml
 Type: System.String

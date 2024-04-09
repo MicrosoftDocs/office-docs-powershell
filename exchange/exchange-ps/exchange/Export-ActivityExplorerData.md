@@ -85,7 +85,7 @@ This example exports up to 100 records for the specified date range in JSON form
 Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/2022 11:08 AM" -Filter1 @("Activity", "FileArchived", "ArchiveCreated") -Filter2 @("Workload","Endpoint") -OutputFormat Json
 ```
 
-This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Workload value Enpoint for FileArchived or ArchiveCreated activities.
+This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Workload value Endpoint for FileArchived or ArchiveCreated activities.
 
 ## PARAMETERS
 
