@@ -6,8 +6,8 @@
           "**/*.md"
         ],
         "src": "docs-conceptual",
-        "version": "officewebapps-ps",
-        "dest": "officewebapps",
+        "version": "purviewinformationprotection-ps",
+        "dest": "purviewinformationprotection",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -22,8 +22,8 @@
           "toc.yml"
         ],
         "src": "docs-conceptual",
-        "version": "officewebapps-ps",
-        "dest": "officewebapps/officewebapps-ps"
+        "version": "purviewinformationprotection-ps",
+        "dest": "purviewinformationprotection/purviewinformationprotection-ps"
       },
       {
         "files": [
@@ -32,17 +32,17 @@
         "exclude": [
           "toc.yml"
         ],
-        "src": "officewebapps-ps",
-        "version": "officewebapps-ps",
+        "src": "purviewinformationprotection-ps",
+        "version": "purviewinformationprotection-ps",
         "dest": "module"
       },
       {
         "files": [
           "toc.yml"
         ],
-        "src": "officewebapps-ps",
-        "version": "officewebapps-ps",
-        "dest": "module/officewebapps-ps"
+        "src": "purviewinformationprotection-ps",
+        "version": "purviewinformationprotection-ps",
+        "dest": "module/purviewinformationprotection-ps"
       }
     ],
     "resource": [
@@ -58,19 +58,19 @@
       }
     ],
     "versions": {
-      "officewebapps-ps": {
-        "dest": "officewebapps-ps"
+      "purviewinformationprotection-ps": {
+        "dest": "purviewinformationprotection-ps"
       }
     },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "ms.service": "office-online-server-powershell",
+      "ms.service": "purview",
       "uhfHeaderId": "MSDocsHeader-Dev_Office",
-      "author": "serdarsoysal",
-      "ms.author": "mikeplum",
+      "author": "kccross",
+      "ms.author": "krowley",
       "manager": "laurawi",
-      "ms.date": "11/28/2017",
+      "ms.date": "04/10/2024",
       "ms.topic": "reference",
       "products": [
         "https://authoring-docs-microsoft.poolparty.biz/devrel/e87e9701-158d-46fb-8165-fb54b7c45d88",
@@ -82,6 +82,6 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "officewebapps-ps"
+    "dest": "purviewinformationprotection-ps"
   }
 }
