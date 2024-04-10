@@ -51,7 +51,7 @@
     },
     {
       "docset_name": "purviewinformationprotection-ps",
-      "build_source_folder": "purviewinformationprotection-ps",
+      "build_source_folder": "purviewinformationprotection",
       "build_output_subfolder": "purviewinformationprotection-ps",
       "locale": "en-us",
       "monikers": [],
