@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsUserControlEnabled
-**Note**: This parameter is available in version 3.3.0 or later of the module.
+**Note**: This parameter is available in version 3.3.0 or later of the module. If your feature supports user controls for opt out, make sure you set the *IsUserControlEnabled* parameter when you create the policy. If you don't, user controls for the policy uses the default state for the feature.
 
 The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
 
