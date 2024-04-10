@@ -1,0 +1,87 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "docs-conceptual",
+        "version": "officewebapps-ps",
+        "dest": "officewebapps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-conceptual",
+        "version": "officewebapps-ps",
+        "dest": "officewebapps/officewebapps-ps"
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "src": "officewebapps-ps",
+        "version": "officewebapps-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "officewebapps-ps",
+        "version": "officewebapps-ps",
+        "dest": "module/officewebapps-ps"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "officewebapps-ps": {
+        "dest": "officewebapps-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "ms.service": "office-online-server-powershell",
+      "uhfHeaderId": "MSDocsHeader-Dev_Office",
+      "author": "serdarsoysal",
+      "ms.author": "mikeplum",
+      "manager": "laurawi",
+      "ms.date": "11/28/2017",
+      "ms.topic": "reference",
+      "products": [
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/e87e9701-158d-46fb-8165-fb54b7c45d88",
+        "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
+      ],
+      "ms.devlang": "powershell",
+      "feedback_system": "Standard",
+            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "officewebapps-ps"
+  }
+}
