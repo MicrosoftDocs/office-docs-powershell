@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-exosecopsoverriderule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: Get-ExoSecOpsOverrideRule
 schema: 2.0.0
 author: chrisda
@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Get-ExoSecOpsOverrideRule [[-Identity] <ComplianceRuleIdParameter>]
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Policy <Object>]
+ [-Policy <PolicyIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -66,7 +66,7 @@ The name of the rule uses the following syntax: `_Exe:SecOpsOverrid:<GUID\>` \[s
 Type: ComplianceRuleIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: 1
@@ -82,7 +82,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ The Policy parameter filters the results by SecOps mailbox override policy. You 
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ This parameter is reserved for internal Microsoft use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

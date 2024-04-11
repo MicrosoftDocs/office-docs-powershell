@@ -26,6 +26,7 @@ Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-ForceValidate <Boolean>]
  [-IncludeExtendedProperties <Boolean>]
  [-IncludeRulesMetadata <Boolean>]
+ [-IncludeSimulationResults <Boolean>]
  [-IRMUserRiskConfiguredAnyRule]
  [-Summary]
  [<CommonParameters>]
@@ -156,6 +157,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSimulationResults
+{{ Fill IncludeSimulationResults Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

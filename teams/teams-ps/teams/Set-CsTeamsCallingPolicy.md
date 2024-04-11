@@ -382,7 +382,7 @@ Determines whether real-time captions are available for the user in Teams calls.
 
 Valid options are:
 - DisabledUserOverride: Allows the user to turn on live captions.
-- Disabled: Prohibts the user from turning on live captions.
+- Disabled: Prohibits the user from turning on live captions.
 
 ```yaml
 Type: String

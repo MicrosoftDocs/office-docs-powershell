@@ -94,6 +94,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -648,8 +649,8 @@ The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy fo
 Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
-- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser.
-- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
+- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser. This doesn't apply to in-line images.
+- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser. This doesn't apply to in-line images.
 
 ```yaml
 Type: PolicyEnum
@@ -1669,6 +1670,24 @@ The OutlookBetaToggleEnabled parameter specifies whether to enable or disable th
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersAccessLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersAccessLevel Description }}
+
+```yaml
+Type: OutlookNewslettersAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online

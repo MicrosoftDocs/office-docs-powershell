@@ -22,13 +22,14 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-QuarantinePermissions
- [-PermissionToBlockSender <Boolean>]
- [-PermissionToDelete <Boolean>]
- [-PermissionToDownload <Boolean>]
- [-PermissionToPreview <Boolean>]
- [-PermissionToRelease <Boolean>]
- [-PermissionToRequestRelease <Boolean>]
- [-PermissionToViewHeader <Boolean>]
+ [[-PermissionToAllowSender] <Boolean>]
+ [[-PermissionToBlockSender] <Boolean>]
+ [[-PermissionToDelete] <Boolean>]
+ [[-PermissionToDownload] <Boolean>]
+ [[-PermissionToPreview] <Boolean>]
+ [[-PermissionToRelease] <Boolean>]
+ [[-PermissionToRequestRelease] <Boolean>]
+ [[-PermissionToViewHeader] <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -68,6 +69,22 @@ In the same Windows PowerShell session, you can use `$FullAccess` for the _EndUs
 
 ## PARAMETERS
 
+### -PermissionToAllowSender
+{{ Fill PermissionToAllowSender Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: 1
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PermissionToBlockSender
 The PermissionToBlockSender parameter specifies whether users are allowed to add the quarantined message sender to their Blocked Senders list. Valid values are:
 
@@ -81,7 +98,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -100,7 +117,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -121,7 +138,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -140,7 +157,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -161,7 +178,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 6
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -182,7 +199,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -203,7 +220,7 @@ Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
-Position: Named
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
