@@ -4,18 +4,18 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsa
 applicable: Microsoft Teams
 title: Set-CsTeamsAppPermissionPolicy
 schema: 2.0.0
-ms.reviewer:
-manager: bulenteg
-ms.author: tomkau
-author: tomkau
+ms.reviewer: mhayrapetyan
+manager: prkosh
+ms.author: guptaashish
+author: ashishguptaiitb
 ---
 
 # Set-CsTeamsAppPermissionPolicy
 
 ## SYNOPSIS
-**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience. This cmdlet is not supported for tenants that switch to app centric management feature as it replaces permission policies. While the cmdlet may return the results but the results aren't applicable for such tenants.
+**NOTE**: The existence of this cmdlet is being documented for completeness, but do not use this cmdlet. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience. This cmdlet is not supported for tenants that migrated to app centric management feature as it replaced permission policies. While the cmdlet may succeed, the changes aren't applied to the tenant.
 
-As an admin, you can use allow or block specific apps for your users. Learn more about the app permission policies at <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies> and about app centric management at <https://learn.microsoft.com/microsoftteams/app-centric-management>.
+As an admin, you can use app permission policies to allow or block apps for your users. Learn more about the app permission policies at <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies> and about app centric management at <https://learn.microsoft.com/microsoftteams/app-centric-management>.
 
 ## SYNTAX
 
