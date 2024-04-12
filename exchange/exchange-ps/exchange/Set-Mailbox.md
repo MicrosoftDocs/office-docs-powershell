@@ -3507,7 +3507,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxMessagesPerFolderCountReceiveQuota
-This parameter is a available only in on-premises Exchange.
+This parameter is an available only in on-premises Exchange.
 
 The MailboxMessagesPerFolderCountReceiveQuota parameter specifies the maximum number of messages for a mailbox folder. When this limit is reached, the folder can't receive new messages.
 
@@ -3529,7 +3529,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxMessagesPerFolderCountWarningQuota
-This parameter is a available only in on-premises Exchange.
+This parameter is an available only in on-premises Exchange.
 
 The MailboxMessagesPerFolderCountWarningQuota parameter specifies the number of messages that a mailbox folder can hold before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
@@ -5084,7 +5084,7 @@ This parameter is available only in on-premises Exchange.
 
 The SCLDeleteEnabled parameter specifies whether to silently delete messages that meet or exceed the spam confidence level (SCL) specified by the SCLDeleteThreshold parameter. Valid values are:
 
-- $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending an non-delivery report (NDR).
+- $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending a non-delivery report (NDR).
 - $false: Messages that meet or exceed the SCLDeleteThreshold value aren't deleted.
 - $null (blank): The value isn't configured. This is the default value.
 

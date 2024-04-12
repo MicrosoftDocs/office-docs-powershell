@@ -359,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendTeamsDlpPoliciesToSharePointOneDrive
-The ExtendTeamsDlpPoliciesToSharePointOneDrive parameter enables the Teams DLP Policy to automatically extend protection to the content stored in OneDrive shared in 1:1 chats and content stored in SharePoint associated with Teams teams shared through channel chats. Valid values are:
+The ExtendTeamsDlpPoliciesToSharePointOneDrive parameter enables the Teams DLP Policy to automatically extend protection to the content stored in OneDrive shared in 1:1 chats and content stored in SharePoint associated with Teams shared through channel chats. Valid values are:
 
 - $true
 - $false
