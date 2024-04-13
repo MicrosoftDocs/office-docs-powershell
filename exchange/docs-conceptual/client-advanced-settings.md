@@ -223,6 +223,8 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserTex
 
 ## PFileSupportedExtensions
 
+With this setting, you can change which file types are encrypted but you cannot change the default encryption level from native to generic. For example, for users running the file labeler, you can change the default setting so that only Office files and PDF files are encrypted instead of all file types. But you cannot change these file types to be generically encrypted with a .pfile file name extension.
+
 - Key: **PFileSupportedExtensions**
 
 - Value: **\<string value>** 
@@ -231,7 +233,7 @@ Use the following table to identify the string value to specify:
 
 | String value| Client| Scanner|
 |-------------|-------|--------|
-|\*|Default value: Apply protection to all file types|Apply encryption to all file types|
+|\*|Default value: Apply encryption to all file types|Apply encryption to all file types|
 |ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply encryption to the specified file name extensions | In addition to Office file types and PDF files, apply encryption to the specified file name extensions
 
 **Example 1**:  PowerShell command for the scanner to encrypt all file types, where your label policy is named "Scanner":
@@ -245,8 +247,6 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="
 ```PowerShell
 Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 ```
-
-With this setting, you can change which file types are encrypted but you cannot change the default encryption level from native to generic. For example, for users running the file labeler, you can change the default setting so that only Office files and PDF files are encrypted instead of all file types. But you cannot change these file types to be generically encrypted with a .pfile file name extension.
 
 ## ReportAnIssueLink
 
