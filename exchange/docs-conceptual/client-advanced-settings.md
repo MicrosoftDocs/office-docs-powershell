@@ -87,7 +87,7 @@ With this setting, the following extensions always become **P\<EXT>**: ".txt", "
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions =""}
 ```
 
-**Example 2**:  PowerShell command to change all PFile extensions from generic encryption (dwg.pfile) to native encryption (.pdwg) when the files are protected:
+**Example 2**:  PowerShell command to change all PFile extensions from generic encryption to native encryption when the files are labeled and encrypted:
 
 ```PowerShell
 Set-LabelPolicy -AdvancedSettings @{ AdditionalPPrefixExtensions ="*"}
@@ -183,7 +183,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="Fa
 
 ## EnableCustomPermissionsForCustomProtectedFiles
 
-When you configure the advanced client setting to [turn off custom permissions in File Explorer](#turn-off-custom-permissions-in-file-explorer), by default, users are not able to see or change custom permissions that are already set in an encrypted document.
+When you configure the advanced client setting *EnableCustomPermissionsto* to turn off custom permissions in File Explorer, by default, users are not able to see or change custom permissions that are already set in an encrypted document.
 
 However, there's another advanced client setting that you can specify so that in this scenario, users can see and change custom permissions for an encrypted document when they use File Explorer and right-click the file.
 
@@ -219,17 +219,16 @@ To turn off support again and revert to the default, set the **EnableGlobalizati
 
 Customize the justification prompts that are displayed when end users change sensitivity labels on files.
 
-For example, as an administrator, you might want to remind your users not to add any customer identifying information into this field:
+For example, as an administrator, you might want to remind your users not to add any customer identifying information into this field.
 
-:::image type="content" source="../media/justification-office.png" alt-text="Customized justification prompt text":::
-
-To modify the default **Other** text that's displayed, use the *JustificationTextForUserText* advanced setting. Set the value to the text you want to use instead.
+To modify the default **Other** option that users can select in the dialog box, use the *JustificationTextForUserText* advanced setting. Set the value to the text you want to use instead.
 
 Example PowerShell command, where your label policy is named "Global":
 
 ``` PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
 ```
+
 
 ## PFileSupportedExtensions
 
@@ -289,7 +288,7 @@ Use this advanced setting in conjunction with *ScannerMinCPU* to limit CPU consu
 
 - Key: **ScannerMaxCPU**
 
-- Value: <number>**
+- Value: \<number>**
 
 The value is set to **100** by default, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates. 
 
