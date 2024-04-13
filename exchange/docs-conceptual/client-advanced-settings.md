@@ -289,7 +289,7 @@ If you set **ScannerMaxCPU** to less than 100, the scanner will monitor the CPU 
 
 The limit on the number of threads will continue as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
 
-## ScannerMinCPU**:
+## ScannerMinCPU
 
 > [!IMPORTANT]
 > We recommend limiting CPU consumption by using the advanced settings *ScannerMaxCPU* and *ScannerMinCPU* instead of *ScannerConcurrencyLevel* that's supported for backwards compatibility.
@@ -367,9 +367,9 @@ Specify a value to determine the timeout for all information protection client w
 
 For example, if your policy is named **Global**, the following sample PowerShell command updates the web request timeout to 5 minutes.
 
-    ```PowerShell
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointWebRequestTimeout="00:05:00"}
-    ```
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{SharepointWebRequestTimeout="00:05:00"}
+```
 
 ## SharepointFileWebRequestTimeout
 
