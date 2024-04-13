@@ -64,15 +64,15 @@ This advanced property to change \<EXT>.PFILE to P\<EXT> is supported by File Ex
 
 Use the following table to identify the string value to specify:
 
-| String value| Client and Scanner|
+| String value| Client and scanner|
 |-------------|---------------|
 |\*|All PFile extensions become P\<EXT>|
-|\<null value>| Default value behaves like the default protection value.|
+|\<null value>| Default value behaves like the default encryption value.|
 |ConvertTo-Json(".dwg", ".zip")|In addition to the previous list, ".dwg" and ".zip" become P\<EXT>| 
 
 With this setting, the following extensions always become **P\<EXT>**: ".txt", ".xml", ".bmp", ".jt", ".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".tif", ".tiff", ".gif"). Notable exclusion is that "ptxt" does not become "txt.pfile". 
 
-**AdditionalPPrefixExtensions** only works if protection of PFiles with the advanced property - [**PFileSupportedExtension**](#pfilesupportedextension) is enabled. 
+This setting requires the advanced setting *PFileSupportedExtension* to be enabled.
 
 **Example 1**: PowerShell command to behave like the default behavior where Protect ".dwg" becomes ".dwg.pfile":
 
@@ -126,7 +126,7 @@ Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7
 
 ## EnableAudit
 
-By default, the information protection clients sends audit data to Microsoft Purview where you can view this data in [activity explorer](/purview/data-classification-activity-explorer).
+By default, the information protection client sends audit data to Microsoft Purview where you can view this data in [activity explorer](/purview/data-classification-activity-explorer).
 
 To change this behavior, use the following advanced setting:
 
@@ -152,7 +152,7 @@ This setting enables the information protection client to remove encryption from
 
 - Value: **True**
 
-Example PowerShell command where your policy is enabled:
+For example, if your label policy is named "Global":
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
@@ -176,7 +176,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="Fa
 
 ## EnableCustomPermissionsForCustomProtectedFiles
 
-When you configure the advanced client setting *EnableCustomPermissionsto* to turn off custom permissions in File Explorer, by default, users are not able to see or change custom permissions that are already set in an encrypted document.
+When you configure the advanced client setting *EnableCustomPermissions* to turn off custom permissions in File Explorer, by default, users are not able to see or change custom permissions that are already set in an encrypted document.
 
 However, there's another advanced client setting that you can specify so that in this scenario, users can see and change custom permissions for an encrypted document when they use File Explorer and right-click the file.
 
@@ -184,7 +184,7 @@ However, there's another advanced client setting that you can specify so that in
 
 - Value: **True**
 
-Example PowerShell command:
+Example PowerShell command, where your label policy is named "Global":
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
