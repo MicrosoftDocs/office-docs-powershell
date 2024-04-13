@@ -21,29 +21,22 @@ description: "Security & Compliance PowerShell advanced settings for Microsoft P
 This article contains the [Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell) advanced settings that are supported by [Microsoft Purview Information Protection client](/purview/information-protection-client) when you use the following cmdlets:
 
 - [New-Label](/powershell/module/exchange/new-label) or [Set-Label](/powershell/module/exchange/set-label)
-- [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy).
+- [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy)
 
 The advanced settings that are supported by sensitivity labels that are built into Microsoft 365 apps and services are included on the cmdlet page itself.
 
 You might also find useful [PowerShell tips for specifying the advanced settings](/purview/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
 
-**Advanced settings for sensitivity labels:**
 
-Use the *AdvancedSettings* parameter with [New-Label](/powershell/module/exchange/policy-and-compliance/new-label) and [Set-Label](/powershell/module/exchange/policy-and-compliance/set-label).
-
-|Setting|Scenario and instructions|
+|Advanced settings for labels|Description|
 |----------------|---------------|
 [Color](#color)|Specify a color for the label|
 |[DefaultSubLabelId](#defaultsublbelid)|Specify a default sublabel for a parent label)
 
-**Advanced settings for sensitivity label policies:**
-
-Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/exchange/policy-and-compliance/new-labelpolicy) and [Set-LabelPolicy](/powershell/module/exchange/policy-and-compliance/set-labelpolicy).
-
-|Setting|Scenario and instructions|
+|Advanced settings for label policies|Description|
 |----------------|---------------|
 |[AdditionalPPrefixExtensions]((#additionalpprefixextensions))|Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)
-|[EnableAudit]((#enableaudit)|Prevent audit data from being sent to Microsoft Purview|
+|[EnableAudit](#enableaudit)|Prevent audit data from being sent to Microsoft Purview|
 |[EnableContainerSupport](#enablecontainersupport)|Enable removal of encryption from PST, rar, 7zip, and MSG files|
 |[EnableCustomPermissions](#enablecustompermissions)|Turn off custom permissions in File Explorer|
 |[EnableCustomPermissionsForCustomProtectedFiles](#enablecustompermissionsforcustomprotectedfiles)|For files encrypted with custom permissions, always display custom permissions to users in File Explorer|
@@ -58,7 +51,7 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](/powershell/module/e
 |[ScannerFSAttributesToSkip](#scannerfsattributestoskip) |Skip or ignore files during scans depending on file attributes)
 |[SharepointWebRequestTimeout](#sharepointwebrequesttimeout)|Configure SharePoint timeouts|
 |[SharepointFileWebRequestTimeout](#sharepointfilewebrequesttimeout )|Configure SharePoint timeouts|
-|[UseCopyAndPreserveNTFSOwner](#usecopyandpreserventfsowner) |Preserve NTFS owners during labeling)
+|[UseCopyAndPreserveNTFSOwner](#usecopyandpreserventfsowner) |Preserve NTFS owners during labeling|
 
 
 ## AdditionalPPrefixExtensions
