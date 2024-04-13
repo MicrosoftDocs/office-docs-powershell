@@ -29,7 +29,7 @@ The advanced settings that are supported by sensitivity labels that are built in
 |Advanced settings for labels|Description|
 |----------------|---------------|
 [Color](#color)|Specify a color for the label|
-|[DefaultSubLabelId](#defaultsublbelid)|Specify a default sublabel for a parent label)
+|[DefaultSubLabelId](#defaultsublabelid)|Specify a default sublabel for a parent label)
 
 |Advanced settings for label policies|Description|
 |----------------|---------------|
