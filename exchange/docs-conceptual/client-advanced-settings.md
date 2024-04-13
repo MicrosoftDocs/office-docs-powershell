@@ -23,9 +23,7 @@ This article contains the [Security & Compliance PowerShell](/powershell/exchang
 - [New-Label](/powershell/module/exchange/new-label) or [Set-Label](/powershell/module/exchange/set-label)
 - [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy)
 
-The advanced settings that are supported by sensitivity labels that are built into Microsoft 365 apps and services are included on the cmdlet page itself.
-
-You might also find useful [PowerShell tips for specifying the advanced settings](/purview/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
+The advanced settings that are supported by sensitivity labels that are built into Microsoft 365 apps and services are included on the cmdlet page itself. You might also find useful [PowerShell tips for specifying the advanced settings](/purview/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
 
 
 |Advanced settings for labels|Description|
@@ -35,7 +33,7 @@ You might also find useful [PowerShell tips for specifying the advanced settings
 
 |Advanced settings for label policies|Description|
 |----------------|---------------|
-|[AdditionalPPrefixExtensions]((#additionalpprefixextensions))|Support for changing \<EXT>.PFILE to P\<EXT>](#additionalpprefixextensions)
+|[AdditionalPPrefixExtensions]((#additionalpprefixextensions))|Support for changing \<EXT>.PFILE to P\<EXT>)
 |[EnableAudit](#enableaudit)|Prevent audit data from being sent to Microsoft Purview|
 |[EnableContainerSupport](#enablecontainersupport)|Enable removal of encryption from PST, rar, 7zip, and MSG files|
 |[EnableCustomPermissions](#enablecustompermissions)|Turn off custom permissions in File Explorer|
