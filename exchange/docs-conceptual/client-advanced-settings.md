@@ -33,7 +33,7 @@ The advanced settings that are supported by sensitivity labels that are built in
 
 |Advanced settings for label policies|Description|
 |----------------|---------------|
-|[AdditionalPPrefixExtensions]((#additionalpprefixextensions))|Support for changing \<EXT>.PFILE to P\<EXT>)
+|[AdditionalPPrefixExtensions](#additionalpprefixextensions)|Support for changing \<EXT>.PFILE to P\<EXT>)
 |[EnableAudit](#enableaudit)|Prevent audit data from being sent to Microsoft Purview|
 |[EnableContainerSupport](#enablecontainersupport)|Enable removal of encryption from PST, rar, 7zip, and MSG files|
 |[EnableCustomPermissions](#enablecustompermissions)|Turn off custom permissions in File Explorer|
