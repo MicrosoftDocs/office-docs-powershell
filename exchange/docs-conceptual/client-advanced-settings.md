@@ -40,7 +40,6 @@ The advanced settings that are supported by sensitivity labels built into Micros
 |[EnableCustomPermissionsForCustomProtectedFiles](#enablecustompermissionsforcustomprotectedfiles)|For files encrypted with custom permissions, always display custom permissions to users in File Explorer|
 |[EnableGlobalization](#enableglobalization) |Turn on classification globalization features|
 |[JustificationTextForUserText](#justificationtextforusertext) |Customize justification prompt texts for modified labels|
-|??**LogMatchedContent**|Send information type matches to Azure Information Protection analytics|
 |[PFileSupportedExtensions](#pfilesupportedextensions)|Change which file types to protect|
 |[ReportAnIssueLink](#reportanissuelink) |Add "Report an Issue" for users|
 |[ScannerMaxCPU](#scannermaxcpu) |Limit CPU consumption|
