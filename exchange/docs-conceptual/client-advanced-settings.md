@@ -10,8 +10,7 @@ ms.topic: article
 ms.service: purview
 ms.reviewer:
 ms.localizationpriority: high
-ms.collection: 
-ms.collection: 
+ms.collection:
 - tier3
 - purview-compliance
 search.appverid: 
