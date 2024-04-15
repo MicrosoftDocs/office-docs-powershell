@@ -1,17 +1,19 @@
 ---
 title: PowerShell advanced settings for Microsoft Purview Information Protection client
-ms.author: cabailey
-author: cabailey
+ms.author: yangczhang
+author: zhang-yangchen
 manager: aashishr
 ms.date: 04/15/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-online
+ms.service: purview
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: 
-ms.custom:
+ms.collection: 
+- tier3
+- purview-compliance
 search.appverid: 
 description: "Security & Compliance PowerShell advanced settings for Microsoft Purview Information Protection client."
 ---
