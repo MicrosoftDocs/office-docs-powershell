@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Set-CsTeamsMediaConnectivityPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
-author: lirunping_MSFT
+author: lirunping-MSFT
 ms.author: runli
 ---
 

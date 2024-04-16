@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Remove-CsTeamsMediaConnectivityPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
-author: lirunping_MSFT
+author: lirunping-MSFT
 ms.author: runli
 ---
 

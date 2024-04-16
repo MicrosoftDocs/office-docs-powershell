@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Grant-CsTeamsMediaConnectivityPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Grant-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
-author: lirunping_MSFT
+author: lirunping-MSFT
 ms.author: runli
 ---
 
