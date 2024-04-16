@@ -223,7 +223,7 @@ Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserTex
 
 ## LogMatchedContent
 
-By default, the information protection client and scanner doesn't send content matches for sensitive info types to Microsoft Purview, which can then be displayed in [activity explorer](/purview/data-classification-activity-explorer). For more information about this additional information that can be sent, see [Content matches for deeper analysis](/azure/information-protection/reports-aip#content-matches-for-deeper-analysis).
+By default, the information protection client doesn't send content matches for sensitive info types to Microsoft Purview, which can then be displayed in [activity explorer](/purview/data-classification-activity-explorer). The scanner always sends this information. For more information about this additional information that can be sent, see [Content matches for deeper analysis](/azure/information-protection/reports-aip#content-matches-for-deeper-analysis).
 
 To send content matches when sensitive information types are sent, use the following advanced setting in a label policy: 
 
