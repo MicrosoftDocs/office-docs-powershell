@@ -1,5 +1,5 @@
 ---
-Module Name: microsoftteams
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Remove-CsTeamsMediaConnectivityPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsMediaConnectivityPolicy
