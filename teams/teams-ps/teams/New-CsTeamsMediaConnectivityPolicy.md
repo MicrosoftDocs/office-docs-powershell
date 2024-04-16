@@ -1,10 +1,11 @@
 ---
-Module Name: microsoftteams
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: New-CsTeamsMediaConnectivityPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/New-CsTeamsMediaConnectivityPolicy
 schema: 2.0.0
-author: lirunping_MSFT
+author: lirunping-MSFT
 ms.author: runli
 ---
 

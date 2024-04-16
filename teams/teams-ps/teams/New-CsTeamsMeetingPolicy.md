@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingpolicy
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
