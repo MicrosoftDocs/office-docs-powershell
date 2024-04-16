@@ -41,6 +41,7 @@ The advanced settings that are supported by sensitivity labels built into Micros
 |[EnableCustomPermissionsForCustomProtectedFiles](#enablecustompermissionsforcustomprotectedfiles)|For files encrypted with custom permissions, always display custom permissions to users in File Explorer|
 |[EnableGlobalization](#enableglobalization) |Turn on classification globalization features|
 |[JustificationTextForUserText](#justificationtextforusertext) |Customize justification prompt texts for modified labels|
+|[LogMatchedContent](#logmatchedcontent)|Send information type matches to Microsoft Purview|
 |[PFileSupportedExtensions](#pfilesupportedextensions)|Change which file types to protect|
 |[ReportAnIssueLink](#reportanissuelink) |Add "Report an Issue" for users|
 |[ScannerMaxCPU](#scannermaxcpu) |Limit CPU consumption|
@@ -220,6 +221,21 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{JustificationTextForUserText="Other (please explain) - Do not enter sensitive info"}
 ```
 
+## LogMatchedContent
+
+By default, the information protection client doesn't send content matches for sensitive info types to Microsoft Purview, which can then be displayed in [activity explorer](/purview/data-classification-activity-explorer). For more information about this additional information that can be sent, see [Content matches for deeper analysis](/azure/information-protection/reports-aip#content-matches-for-deeper-analysis).
+
+To send content matches when sensitive information types are sent, use the following advanced setting in a label policy: 
+
+- Key: **LogMatchedContent**
+
+- Value: **True**
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
+```
 
 ## PFileSupportedExtensions
 
