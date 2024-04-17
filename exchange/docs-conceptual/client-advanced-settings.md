@@ -3,7 +3,7 @@ title: PowerShell advanced settings for Microsoft Purview Information Protection
 ms.author: yangczhang
 author: zhang-yangchen
 manager: aashishr
-ms.date: 04/15/2024
+ms.date: 04/17/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -42,6 +42,7 @@ The advanced settings that are supported by sensitivity labels built into Micros
 |[EnableGlobalization](#enableglobalization) |Turn on classification globalization features|
 |[JustificationTextForUserText](#justificationtextforusertext) |Customize justification prompt texts for modified labels|
 |[LogMatchedContent](#logmatchedcontent)|Send information type matches to Microsoft Purview|
+|[OfficeContentExtractionTimeout](#officecontentextractiontimeout)|Configure the auto-labeling timeout for Office files|
 |[PFileSupportedExtensions](#pfilesupportedextensions)|Change which file types to protect|
 |[ReportAnIssueLink](#reportanissuelink) |Add "Report an Issue" for users|
 |[ScannerMaxCPU](#scannermaxcpu) |Limit CPU consumption|
@@ -237,6 +238,27 @@ Example PowerShell command, where your label policy is named "Global":
 Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 ```
 
+## OfficeContentExtractionTimeout
+
+By default, the scanner's auto-labeling timeout on Office files is 3 seconds.
+
+If you have a complex Excel file with many sheets or rows, 3 seconds might not be enough to automatically apply labels. To increase this timeout for the selected label policy, specify the following strings:
+
+- Key: **OfficeContentExtractionTimeout**
+
+- Value: Seconds, in the following format: `hh:mm:ss`. 
+
+> [!IMPORTANT]
+> We recommend that you don't raise this timeout to higher than 15 seconds. 
+
+Example PowerShell command, where your label policy is named "Global":
+
+```PowerShell
+Set-LabelPolicy -Identity Global -AdvancedSettings @{OfficeContentExtractionTimeout="00:00:15"}
+```
+
+The updated timeout applies to auto-labeling on all Office files.
+
 ## PFileSupportedExtensions
 
 With this setting, you can change which file types are encrypted but you cannot change the default encryption level from native to generic. For example, for users running the file labeler, you can change the default setting so that only Office files and PDF files are encrypted instead of all file types. But you cannot change these file types to be generically encrypted with a .pfile file name extension.
@@ -283,6 +305,7 @@ Example PowerShell command, where your label policy is named "Global":
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
 ```
+
 
 ## ScannerMaxCPU
 
