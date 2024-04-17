@@ -25,8 +25,9 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-Allow [-ReadReceiptsEnabledType <String>]
  [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>]
- [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>] [-DesignerForBackgroundsAndImages <DesignerForBackgroundsAndImagesTypeEnum>]
- [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
+ [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>] [-ChatPermissionRole <String>] [-AllowSmartCompose] <Boolean>]
+ [-DesignerForBackgroundsAndImages <DesignerForBackgroundsAndImagesTypeEnum>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -36,7 +37,8 @@ Set-CsTeamsMessagingPolicy [-Tenant <Guid>] [-Description <String>] [-AllowUrlPr
  [-AllowUserChat <Boolean>] [-AllowUserDeleteChat <Boolean>] [-AllowGiphy <Boolean>] [-GiphyRatingType <String>] [-AllowMemes <Boolean>]
  [-AllowStickers <Boolean>] [-AllowUserTranslation <Boolean>] [-AllowImmersiveReader <Boolean>]
  [-AllowRemoveUser <Boolean>] [-AllowPriorityMessages <Boolean>] [-AllowSmartReply <Boolean>] [-ReadReceiptsEnabledType <String>]
- [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-AllowSmartCompose] <Boolean>] [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>] [-DesignerForBackgroundsAndImages <DesignerForBackgroundsAndImagesTypeEnum>]
+ [-AudioMessageEnabledType <AudioMessageEnabledTypeEnum>] [-ChannelsInChatListEnabledType <ChannelsInChatListEnabledTypeEnum>] [-AllowSmartCompose] <Boolean>]
+ [-CreateCustomEmojis <Boolean>] [-DeleteCustomEmojis <Boolean>] [-DesignerForBackgroundsAndImages <DesignerForBackgroundsAndImagesTypeEnum>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
