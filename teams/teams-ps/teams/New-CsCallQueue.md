@@ -1134,7 +1134,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NoAgentsRedirectPhoneNumberAudioFilePrompt
+### -NoAgentRedirectPhoneNumberAudioFilePrompt
 The NoAgentRedirectPhoneNumberAudioFilePrompt parameter indicates the unique identifier for the Audio file prompt which is played to the caller when being redirected to an external PSTN phone number due to no agents. 
 
 ```yaml
