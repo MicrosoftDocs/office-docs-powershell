@@ -28,7 +28,7 @@ Remove-CsTeamsAppSetupPolicy [-Tenant <Guid>] [-Identity] <XdsIdentity> [-Force]
 ```
 
 ## DESCRIPTION
-**NOTE**: You can use this cmdlet to remove a specific custom policy from a user. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experienc
+**NOTE**: You can use this cmdlet to remove a specific custom policy from a user. We require that all creation and modification of app permission polices (not including the assignment or removal of policies from users) happens in the Microsoft Teams & Skype for Business Admin Center to ensure that the policy matches your expectations for the end user experience.
 
 As an admin, you can use app permission policies to enable or block specific apps for your users.  Learn more about the App Permission Policies: <https://learn.microsoft.com/microsoftteams/teams-app-permission-policies>.
 
