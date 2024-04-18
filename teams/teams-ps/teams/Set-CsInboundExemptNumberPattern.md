@@ -25,7 +25,7 @@ Set-CsInboundExemptNumberPattern [[-Identity] <string>] [-Description <string>] 
 
 ## DESCRIPTION
 
-This cmdlet modifies one or more parameters of a exempt number pattern in the tenant list.
+This cmdlet modifies one or more parameters of an exempt number pattern in the tenant list.
 
 ## EXAMPLES
 

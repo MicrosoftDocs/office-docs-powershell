@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ### -Enabled
 The Enabled parameter specifies whether the rule is enabled. Valid values are:
 
-- $true: The rule is enabled. Ths is the default value.
+- $true: The rule is enabled. This is the default value.
 - $false: The rule is disabled.
 
 In the properties of the rule, the value of this parameter is visible in the State property.
