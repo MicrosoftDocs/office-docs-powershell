@@ -36,7 +36,7 @@ This example removes the hybrid phone number +1 (402) 555-1234.
 ## PARAMETERS
 
 ### -TelephoneNumber
-The telephone number to remove. The number should be specified without a prefixed "+". The phone number can not have "tel:" prefixed.
+The telephone number to remove. The number should be specified without a prefixed "+". The phone number can't have "tel:" prefixed.
 
 ```yaml
 Type: System.String

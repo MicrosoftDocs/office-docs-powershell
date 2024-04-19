@@ -43,7 +43,7 @@ They define the requirements for converting (or translating) numbers from an int
 An understanding of regular expressions is helpful in order to define number patterns that will be translated.
 
 For Lync or Skype for Business Server, rules that are created by using this cmdlet are part of the dial plan and in addition to being accessible through the 
-The `Get-CsVoiceNormalizationRule` cmdlet can also be accessed through the NormalizationRules property returned by a call to the `Get-CsDialPlan` cmdlet.
+`Get-CsVoiceNormalizationRule` cmdlet can also be accessed through the NormalizationRules property returned by a call to the `Get-CsDialPlan` cmdlet.
 You cannot create a normalization rule unless a dial plan with an Identity matching the scope specified in the normalization rule Identity already exists.
 For example, you can't create a normalization rule with the Identity site:Redmond/RedmondNormalizationRule unless a dial plan for site:Redmond already exists.
 

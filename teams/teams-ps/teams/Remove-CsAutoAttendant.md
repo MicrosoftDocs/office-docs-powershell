@@ -35,7 +35,7 @@ The Remove-CsAutoAttendant cmdlet deletes an AA that is specified by the Identit
 Remove-CsAutoAttendant -Identity "fa9081d6-b4f3-5c96-baec-0b00077709e5"
 ```
 
-This example deletes the AA that has a identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+This example deletes the AA that has an identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
 
 
 ## PARAMETERS

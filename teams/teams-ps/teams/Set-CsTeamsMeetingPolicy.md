@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsmeetingpolicy
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Set-CsTeamsMeetingPolicy
 schema: 2.0.0
@@ -291,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCartCaptionsScheduling
-Determines whether a user can add a URL for captions from a Communicatons Access Real-Time Translation (CART) captioner for providing real time captions in meetings.
+Determines whether a user can add a URL for captions from a Communications Access Real-Time Translation (CART) captioner for providing real time captions in meetings.
 Possible values are:
 - **EnabledUserOverride**, CART captions is available by default but a user can disable.
 - **DisabledUserOverride**, if you would like users to be able to use CART captions in meetings but by default it is disabled. 

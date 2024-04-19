@@ -649,8 +649,8 @@ The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy fo
 Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
-- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser.
-- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
+- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser. This doesn't apply to in-line images.
+- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser. This doesn't apply to in-line images.
 
 ```yaml
 Type: PolicyEnum
