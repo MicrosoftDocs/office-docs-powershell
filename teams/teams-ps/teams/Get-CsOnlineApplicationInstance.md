@@ -18,7 +18,7 @@ Get application instance for the tenant from Microsoft Entra ID.
 ## SYNTAX
 
 ```
-Get-CsOnlineApplicationInstance [[-Identity] <string>] [[-ResultSize] <int>] [[-Skip] <int>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-CsOnlineApplicationInstance [[-Identity] <string>] [[-Identities] <string>] [[-ResultSize] <int>] [[-Skip] <int>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,15 +32,21 @@ Get-CsOnlineApplicationInstance -Identity appinstance01@contoso.com
 ```
 
 This example returns the application instance with identity "appinstance01@contoso.com".
-
 ### -------------------------- Example 2 --------------------------
+```powershell
+Get-CsOnlineApplicationInstance -Identities appinstance01@contoso.com,appinstance02@contoso.com
+```
+
+This example returns the application instance with identities "appinstance01@contoso.com" and "appinstance02@contoso.com". Query with multiple comma separated Identity.
+
+### -------------------------- Example 3 --------------------------
 ```powershell
 Get-CsOnlineApplicationInstance -ResultSize 10
 ```
 
 This example returns the first 10 application instances.
 
-### -------------------------- Example 3 --------------------------
+### -------------------------- Example 4 --------------------------
 ```powershell
 Get-CsOnlineApplicationInstance
 ```
@@ -50,7 +56,23 @@ This example returns the details of all application instances.
 ## PARAMETERS
 
 ### -Identity
-The UPN or the object ID of the application instance to retrieve. If this parameter is not provided, it will retrieve all application instances in the tenant.
+The UPN or the object ID of the application instance to retrieve. If this parameter nor parameter Identities are not provided, it will retrieve all application instances in the tenant.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identities
+The UPNs or the object IDs of the application instances to retrieve, separated with comma. If this parameter nor parameter Identity are not provided, it will retrieve all application instances in the tenant.
 
 ```yaml
 Type: System.String
