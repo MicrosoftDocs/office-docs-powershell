@@ -258,9 +258,8 @@ These filtering operators have been reintroduced:
 
 `-contains` can now be used to filter properties that are an array of strings like FeatureTypes, ProxyAddresses, and ShadowProxyAddresses. For example:
 
-- Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}
-- Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}
-
+- `Get-CsOnlineUser -Filter {FeatureTypes -contains "PhoneSystem"}`
+- `Get-CsOnlineUser -Filter {ProxyAddresses -contains "SMTP:abc@xyz.com"}`
 
 `-gt` (greater than), `-lt` (less than), and `-le` (less than or equal to) can now be used for filtering all string properties. For example:
 
@@ -271,7 +270,6 @@ These filtering operators have been reintroduced:
 - Get-CsOnlineUser -Filter {ExternalAccessPolicy -ge "xyz_policy"}
 
 **Note**: Some comparison operators mentioned above including -ge, -le, -gt, and -lt are case-sensitive for Policies and capital letters are considered smaller than small letters.
-
 
 **Updates in Teams PowerShell Module version 3.0.0 and later**
 
@@ -564,7 +562,7 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 
 **Updates in Teams PowerShell Module version 6.1.1 Preview and later**
 
-The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.1 (Targeted Release: April 15th, 2024) or later. These changes will be gradually rolled out for all tenants starting from April 26th, 2024. 
+The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.1 (Targeted Release: April 15th, 2024) or later. These changes will be gradually rolled out for all tenants starting from April 26th, 2024.
 
 When using the Get-CsOnlineUser cmdlet in Teams PowerShell Module without the -identity parameter, we are introducing these updates:
 - Before the rollout, unlicensed users who did not have a valid Teams license were displayed in the output of the Get-CsOnlineUser cmdlet for 30 days after license removal. After the rollout, Get-CsOnlineUser will show unlicensed users after the initial 30 days and also include unlicensed users who never had a valid Teams license.
@@ -577,10 +575,9 @@ When Get-CsOnlineUser is used with the -identity parameter, you can also use UPN
 
 The following updates are applicable for organizations that use Microsoft Teams PowerShell version 6.1.0 or later.
 
-- LocationPolicy: LocationPolicy attribute is being deprecated from the output of Get-CsOnlineUser in all clouds. Get-CsPhoneNumberAssignment -IsoCountryCode can be used to get the LocationPolicy information. (Note: LocationPolicy attribute will no longer be populated with value in the older Teams Powershell Module versions (<6.1.0) starting from 20th March 2024.)
+- LocationPolicy: LocationPolicy attribute is being deprecated from the output of Get-CsOnlineUser in all clouds. Get-CsPhoneNumberAssignment -IsoCountryCode can be used to get the LocationPolicy information. (Note: LocationPolicy attribute will no longer be populated with value in the older Teams Powershell Module versions (<6.1.0) starting from 20th March 2024.)
 
-- OptionFlags: OptionFlags attribute will no longer be populated with value in the output of Get-CsOnlineUser in all clouds. It's important to note that other details besides EnterpriseVoiceEnabled, previously found in OptionFlags, are no longer relevant for Teams. Administrators can still utilize the EnterpriseVoiceEnabled attribute in the output of the Get-CsOnlineUser cmdlet to get this information. (Note: This change will be rolled out to all Teams Powershell Module versions (=<6.1.0) starting from 20th March 2024.)
-
+- OptionFlags: OptionFlags attribute will no longer be populated with value in the output of Get-CsOnlineUser in all clouds. It's important to note that other details besides EnterpriseVoiceEnabled, previously found in OptionFlags, are no longer relevant for Teams. Administrators can still utilize the EnterpriseVoiceEnabled attribute in the output of the Get-CsOnlineUser cmdlet to get this information. (Note: This change will be rolled out to all Teams Powershell Module versions (=<6.1.0) starting from 20th March 2024.)
 
 **Updates in Teams PowerShell Module version 6.0.0 and later**
 
@@ -589,7 +586,7 @@ The following updates are applicable for organizations having TeamsOnly users th
 - GracePeriodExpiryDate: GracePeriodExpiryDate attribute is being introduced within the AssignedPlan JSON array. It specifies the date when the grace period of a previously deleted license expires, and the license will be permanently deleted. The attribute remains empty/null for active licenses. (Note: The attribute is currently in private preview and will display valid values only for private preview)
 
 - IsInGracePeriod: IsInGracePeriod attribute is a boolean flag that indicates that the associated plan is in grace period after deletion. (Note: The attribute is currently in private preview and will display valid values only for private preview)
-  
+
 **Updates in Teams PowerShell Module version 5.9.0 and later**
 
 The following updates are applicable for organizations having TeamsOnly users that use Microsoft Teams PowerShell version 5.9.0 or later in GCC High and DoD environments (note that these changes are already rolled out in commercial environments). These updates will be applicable to older Teams PowerShell versions from 15th March 2024 in GCC High and DoD environments:
