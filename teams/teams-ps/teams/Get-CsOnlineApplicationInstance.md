@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/get-csonlineapplicationinstance
+Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Get-CsOnlineApplicationInstance
 schema: 2.0.0
