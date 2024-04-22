@@ -18,9 +18,9 @@ This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or
 Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva. The attributes of the policy are defined using the cmdlet parameters. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. Note that:
 
 - You can assign up to 10 policies per feature. An additional one policy per feature can be assigned to the entire tenant.
-- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. If a user has multiple policies assigned for a feature (directly as a user or member of a group), the most restrictive policy applies. 
+- Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. If a user has multiple policies assigned for a feature (directly as a user or member of a group), the most restrictive policy applies.
 
-Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for. 
+Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ### -IsUserControlEnabled
 **Note**: This parameter is available in version 3.3.0 or later of the module. If the feature supports user controls for opting out, make sure you set the *IsUserControlEnabled* parameter when you create the policy. Otherwise, user controls for the policy use the default state for the feature.
 
-The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are: 
+The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are:
 
 - $true: User control is enabled by the policy. Users can opt out of the feature.
 - $false: User control isn't enabled by the policy. Users can't opt of the feature.

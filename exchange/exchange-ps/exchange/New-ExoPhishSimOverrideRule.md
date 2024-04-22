@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default
 ```
-New-ExoPhishSimOverrideRule -Policy <PolicyIdParameter> -SenderIpRanges <MultiValuedProperty> 
+New-ExoPhishSimOverrideRule -Policy <PolicyIdParameter> -SenderIpRanges <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]

@@ -10,7 +10,6 @@ ms.author: chrisda
 ms.reviewer:
 ---
 
-
 # Get-VivaModuleFeature
 
 ## SYNOPSIS
