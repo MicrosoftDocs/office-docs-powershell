@@ -36,7 +36,7 @@ The Set-AvailabilityConfig cmdlet defines two accounts or security groups: a per
 
 For cross-forest availability services to retrieve free/busy information in the current forest, they must be using one of the specified accounts, belong to one of the specified security groups, or have a username and password for one of the specified accounts or security groups.
 
-In Exchange Online, this cmdlet lets you update the set of tenant ids that free/busy information sharing is allowed with. 
+In Exchange Online, this cmdlet lets you update the set of tenant ids that free/busy information sharing is allowed with.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
