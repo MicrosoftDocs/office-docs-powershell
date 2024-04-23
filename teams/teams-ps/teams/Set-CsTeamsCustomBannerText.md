@@ -1,4 +1,5 @@
 ---
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 title: Set-CsTeamsCustomBannerText
 author: saleens7
