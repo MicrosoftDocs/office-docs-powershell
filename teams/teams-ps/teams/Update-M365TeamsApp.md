@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet updates app state and app available values for the Microsoft 365 Teams app.
+This cmdlet updates app state and app available values for the Microsoft Teams app.
 
 ## SYNTAX
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Application ID of Microsoft 365 Teams app. 
+Application ID of Microsoft Teams app. 
 
 ```yaml
 Type: String
@@ -135,7 +135,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CommonParameters
+### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
