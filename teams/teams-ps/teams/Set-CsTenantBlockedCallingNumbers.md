@@ -1,5 +1,4 @@
 ---
-Module Name: MicrosoftTeams
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 applicable: Microsoft Teams
 title: Set-CsTenantBlockedCallingNumbers
