@@ -18,7 +18,7 @@ This cmdlet updates app state and app available values for M365 Teams app.
 
 ## SYNTAX
 
-```
+```powershell
 Update-M365TeamsApp -Id <String> [-IsBlocked <Boolean>] -AppAssignmentType <String> -OperationType <String>
  [-Users <String[]>] [-Groups <String[]>] [<CommonParameters>]
 ```
@@ -34,7 +34,7 @@ This cmdlet allows administrators to modify app state and availability by adding
 PS C:\> Update-M365TeamsApp -Id 3acac8f6-4e9e-4ee1-9c0e-0ea837d15ea3 -IsBlocked $true -AppAssignmentType UsersAndGroups -OperationType Add -Users eec823bd-0979-4cf8-9924-85bb6ffcb57d -Groups 37da2d58-fc14-453e-9a14-5065ebd63a1d
 ```
 
-Updates state and availablity assignment information of 3acac8f6-4e9e-4ee1-9c0e-0ea837d15ea3 app
+Updates state and availablity assignment information of 3acac8f6-4e9e-4ee1-9c0e-0ea837d15ea3 app.
 
 ## PARAMETERS
 
