@@ -14,28 +14,31 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet returns all M365 Teams apps in the app catalog, including Microsoft, custom and third-party apps. 
+This cmdlet returns all Microsoft Teams apps in the app catalog, including Microsoft, custom, and third-party apps. 
 
 ## SYNTAX
 
-```
+```powershell
 Get-AllM365TeamsApps [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Get-AllM365TeamsApps retrieves a complete list of all M365 Teams apps in an organization, its status and availability information. 
+
+Get-AllM365TeamsApps retrieves a complete list of all Teams apps in an organization, their statuses, and their availability information. 
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> Get-AllM365TeamsApps
 ```
-Returns a complete list of all M365 Teams apps in an organization, its status and availability information. 
+Returns a complete list of all Teams apps in an organization, their statuses, and their availability information. 
 
 ## PARAMETERS
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -45,16 +48,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-- Id – Application ID of M365 Teams app 
-- IsBlocked – The state of the app in the tenant. Values are: Blocked or Unblocked
-- AvailableTo: Provides available to properties for the app. 
-- Properties of AvailableTo:
-    - AssignmentType – App availability type. Values are: Everyone, UsersandGroups, Noone
-    - LastUpdatedTimestamp: Time and date when the app AvailableTo value was last updated
-    - AssignedBy: UserID of last user who updated the app available to value. 
-## NOTES
+
+#### Id
+
+Application ID of the Teams app.
+
+#### IsBlocked
+
+The state of the app in the tenant.  
+Values: 
+- Blocked
+- Unblocked
+
+#### AvailableTo
+
+Provides available to properties for the app.  
+AvailableTo properties:
+- AssignmentType: App availability type.  
+  Values:
+  - Everyone
+  - UsersandGroups
+  - Noone
+- LastUpdatedTimestamp: Time and date when the app AvailableTo value was last updated.
+- AssignedBy: UserID of the last user who updated the app available to value.
 
 ## RELATED LINKS
-[Get-M365TeamsApps](Get-M365TeamsApps.md)
 
+[Get-M365TeamsApps](Get-M365TeamsApps.md)
 [Update-M365TeamsApp](Update-M365TeamsApp.md)
