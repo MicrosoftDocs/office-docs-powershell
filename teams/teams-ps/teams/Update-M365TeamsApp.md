@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet updates app state and app available values for M365 Teams app.
+This cmdlet updates app state and app available values for the Microsoft 365 Teams app.
 
 ## SYNTAX
 
@@ -30,6 +30,7 @@ This cmdlet allows administrators to modify app state and availability by adding
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> Update-M365TeamsApp -Id 3acac8f6-4e9e-4ee1-9c0e-0ea837d15ea3 -IsBlocked $true -AppAssignmentType UsersAndGroups -OperationType Add -Users eec823bd-0979-4cf8-9924-85bb6ffcb57d -Groups 37da2d58-fc14-453e-9a14-5065ebd63a1d
 ```
@@ -39,6 +40,7 @@ Updates state and availablity assignment information of 3acac8f6-4e9e-4ee1-9c0e-
 ## PARAMETERS
 
 ### -AppAssignmentType
+
 App availability type. 
 
 ```yaml
@@ -54,7 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -Groups
-List of all the groups for whom the app is enabled or disabled
+
+List of all the groups for whom the app is enabled or disabled.
 
 ```yaml
 Type: String[]
@@ -69,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Application ID of M365 Teams app 
+
+Application ID of Microsoft 365 Teams app. 
 
 ```yaml
 Type: String
@@ -84,6 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsBlocked
+
 The state of the app in the tenant.
 
 ```yaml
@@ -99,6 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -OperationType
+
 Operation performed on the app assigment.
 
 ```yaml
@@ -114,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Users
-List of all the users for whom the app is enabled or disabled
+
+List of all the users for whom the app is enabled or disabled.
 
 ```yaml
 Type: String[]
@@ -128,7 +135,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
+### -CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -138,8 +146,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-## NOTES
 
 ## RELATED LINKS
+
 [Get-M365TeamsApps](Get-M365TeamsApps.md)
 [Get-ALLM365TeamsApps](Get-ALLM365TeamsApps.md)
