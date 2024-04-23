@@ -69,6 +69,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-CopyRestriction <Boolean>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
+ [EnableAnonymousUserCaptcha <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExternalMeetingJoin <String>]
  [-Force]
@@ -903,6 +904,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAnonymousUserCaptcha
+This setting enforce captcha for anonymous user while meeting join.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
