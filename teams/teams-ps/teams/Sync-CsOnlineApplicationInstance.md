@@ -18,7 +18,7 @@ Use the Sync-CsOnlineApplicationInstance cmdlet to sync the application instance
 ## SYNTAX
 
 ```
-Sync-CsOnlineApplicationInstance -ObjectId <guid> [-CallbackUri <string>] [-Force] [-ApplicationId <guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Sync-CsOnlineApplicationInstance -ObjectId <guid> [-CallbackUri <string>] [-Force] [-ApplicationId <guid>] [-AcsResourceId <guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,6 +76,21 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 The application ID. The Microsoft application Auto Attendant has the ApplicationId ce933385-9390-45d1-9512-c8d228074e07 and the Microsoft application Call Queue has the ApplicationId 11cd3e2e-fccb-42ad-ad00-878b93575e07. Third-party applications available in a tenant will use other ApplicationId's.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AcsResourceId
+The ACS Resource ID. The unique identifier assigned to an instance of Azure Communication Services within the Azure cloud infrastructure.
 
 ```yaml
 Type: System.Guid
