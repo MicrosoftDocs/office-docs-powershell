@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml 
+external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml 
 online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsmeetingpolicy
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
@@ -8,16 +8,17 @@ schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer: williamlooney
+ms.reviewer: wblocker
 ---
 
 # New-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
  The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
+
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowAnonymousUsersToDialOut <Boolean>]
  [-AllowAnonymousUsersToJoinMeeting <Boolean>]
@@ -79,6 +80,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
  [-ScreenSharingMode <String>]
+ [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
  [-StreamingAttendeeMode <String>] 
  [-TeamsCameraFarEndPTZMode <String>]
@@ -1103,6 +1105,21 @@ Accept wildcard characters: False
 
 ### -ScreenSharingMode
 Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmsNotifications
+Participants can sign up for text message meeting reminders.
 
 ```yaml
 Type: String
