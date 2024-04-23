@@ -66,21 +66,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Object
 
-#### ID
-
+**ID**
 Application ID of the Teams app.
 
-#### IsBlocked
-
+**IsBlocked**
 The state of the app in the tenant.  
 Values:
 - Blocked
 - Unblocked
 
-#### AvailableTo
-
+**AvailableTo**
 Provides available to properties for the app.  
-AvailableTo properties:
+Properties:
 - AssignmentType: App availability type.  
   Values:
   - Everyone
