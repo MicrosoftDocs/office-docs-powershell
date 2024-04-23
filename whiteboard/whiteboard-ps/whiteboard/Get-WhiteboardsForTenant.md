@@ -19,10 +19,10 @@ Gets all the whiteboards associated with a tenant in a specified geography.
 ## SYNTAX
 
 ```powershell
-Get-WhiteboardsForTenant [-Geography <String>] 
-  [-IncrementalRunName <String>]
-  [-ForceAuthPrompt]
-  [<CommonParameters>]
+Get-WhiteboardsForTenant [-Geography <String>]
+ [-IncrementalRunName <String>]
+ [-ForceAuthPrompt]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

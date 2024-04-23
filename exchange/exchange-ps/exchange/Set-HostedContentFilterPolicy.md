@@ -703,7 +703,7 @@ Accept wildcard characters: False
 The IntraOrgFilterState parameter specifies whether to enable anti-spam filtering for messages sent between internal users (users in the same organization). The action that's configured in the policy for the specified spam filter verdicts is taken on messages sent between internal users. Valid values are:
 
 - Default: This is the default value. Currently, HighConfidencePhish.
-- HighConfidencePhish 
+- HighConfidencePhish
 - Phish: Includes phishing and high confidence phishing.
 - HighConfidenceSpam: Includes high confidence spam, phishing, and high confidence phishing.
 - Spam: Includes spam, high confidence spam, phishing, and high confidence phishing.

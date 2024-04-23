@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -PageCookie
-The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. The PageCookie value is valid for 120 seconds to fetch the next set of records for same query. 
+The PageCookie parameter specifies whether to get more data when the value of the LastPage property in the command output is False. If you don't use the PageSize parameter, a maximum of 100 records are returned. If you use the PageSize parameter, a maximum of 5000 records can be returned. To get more records than what as returned in the current command, use the value of the Watermark property from the output of the current command as the value for the PageCookie parameter in a new command with the same date range and filters. The PageCookie value is valid for 120 seconds to fetch the next set of records for same query.
 
 ```yaml
 Type: String
