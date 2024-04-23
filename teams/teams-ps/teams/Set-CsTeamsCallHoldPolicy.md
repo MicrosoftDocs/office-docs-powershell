@@ -1,4 +1,5 @@
 ---
+Module Name: MicrosoftTeams
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/set-csteamscallholdpolicy
 applicable: Microsoft Teams

@@ -1,4 +1,5 @@
 ---
+Module Name: MicrosoftTeams
 external help file: Microsoft.Rtc.Management.dll-help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/remove-csexternalaccesspolicy
 applicable: Microsoft Teams

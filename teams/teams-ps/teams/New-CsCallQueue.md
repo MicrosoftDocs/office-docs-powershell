@@ -1,4 +1,5 @@
 ---
+Module Name: MicrosoftTeams
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 online version: https://learn.microsoft.com/powershell/module/teams/new-cscallqueue
 applicable: Microsoft Teams
