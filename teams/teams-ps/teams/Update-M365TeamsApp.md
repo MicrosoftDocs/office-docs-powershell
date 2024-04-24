@@ -149,5 +149,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-M365TeamsApps](Get-M365TeamsApps.md)
-[Get-ALLM365TeamsApps](Get-ALLM365TeamsApps.md)
+[Get-M365TeamsApps](/powershell/module/teams/get-m365teamsapps)
+
+[Get-ALLM365TeamsApps](/powershell/module/teams/Get-ALLM365TeamsApps)
