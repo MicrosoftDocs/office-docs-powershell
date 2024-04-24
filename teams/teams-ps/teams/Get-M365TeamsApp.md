@@ -96,5 +96,6 @@ Properties:
 
 ## RELATED LINKS
 
-[Get-ALLM365TeamsApps](Get-ALLM365TeamsApps.md)
-[Update-M365TeamsApp](Update-M365TeamsApp.md)
+[Update-M365TeamsApps](/powershell/module/teams/update-m365teamsapps)
+
+[Get-ALLM365TeamsApps](/powershell/module/teams/Get-ALLM365TeamsApps)
