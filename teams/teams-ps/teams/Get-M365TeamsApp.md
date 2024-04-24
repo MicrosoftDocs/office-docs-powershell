@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/Get-M365TeamsApp
 applicable: Microsoft Teams
 title: Get-M365TeamsApp
-author: satishtimiri
+author: lkueter
 ms.author: satishtimiri
 manager: rahulrgupta
 schema: 2.0.0
@@ -72,12 +72,14 @@ Application ID of the Teams app.
 **IsBlocked**  
 The state of the app in the tenant.  
 Values:
+
 - Blocked
 - Unblocked
 
 **AvailableTo**  
 Provides available to properties for the app.  
 Properties:
+
 - AssignmentType: App availability type.  
   Values:
   - Everyone
@@ -96,6 +98,5 @@ Properties:
 
 ## RELATED LINKS
 
-[Update-M365TeamsApps](/powershell/module/teams/update-m365teamsapps)
-
-[Get-ALLM365TeamsApps](/powershell/module/teams/Get-ALLM365TeamsApps)
+[Get-AllM365TeamsApps](Get-ALLM365TeamsApps.md)
+[Update-M365TeamsApp](Update-M365TeamsApp.md)
