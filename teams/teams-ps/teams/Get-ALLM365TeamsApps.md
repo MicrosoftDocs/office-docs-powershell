@@ -7,6 +7,7 @@ title: Get-ALLM365TeamsApps
 author: satishtimiri
 ms.author: satishtimiri
 manager: rahulrgupta
+ms.date: 04/24/2024
 schema: 2.0.0
 ---
 
@@ -14,7 +15,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet returns all Microsoft Teams apps in the app catalog, including Microsoft, custom, and third-party apps. 
+This cmdlet returns all Microsoft Teams apps in the app catalog, including Microsoft, custom, and non-Microsoft apps.
 
 ## SYNTAX
 
@@ -24,7 +25,7 @@ Get-AllM365TeamsApps [<CommonParameters>]
 
 ## DESCRIPTION
 
-Get-AllM365TeamsApps retrieves a complete list of all Teams apps in an organization, their statuses, and their availability information. 
+Get-AllM365TeamsApps retrieves a complete list of all Teams apps in an organization, their statuses, and their availability information.
 
 ## EXAMPLES
 
@@ -33,7 +34,8 @@ Get-AllM365TeamsApps retrieves a complete list of all Teams apps in an organizat
 ```powershell
 PS C:\> Get-AllM365TeamsApps
 ```
-Returns a complete list of all Teams apps in an organization, their statuses, and their availability information. 
+
+Returns a complete list of all Teams apps in an organization, their statuses, and their availability information.
 
 ## PARAMETERS
 
@@ -54,13 +56,15 @@ Application ID of the Teams app.
 
 **IsBlocked**  
 The state of the app in the tenant.  
-Values: 
+Values:
+
 - Blocked
 - Unblocked
 
 **AvailableTo**  
 Provides available to properties for the app.  
 Properties:
+
 - AssignmentType: App availability type.  
   Values:
   - Everyone
@@ -70,6 +74,6 @@ Properties:
 - AssignedBy: UserID of the last user who updated the app available to value.
 
 ## RELATED LINKS
-[Get-M365TeamsApps](/powershell/module/teams/get-m365teamsapps)
 
-[Get-ALLM365TeamsApps](/powershell/module/teams/update-M365TeamsApps)
+[Get-M365TeamsApp](Get-M365TeamsApp.md)
+[Update-M365TeamsApp](Update-M365TeamsApp.md)
