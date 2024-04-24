@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/Update-M365TeamsApp
 applicable: Microsoft Teams
 title: Update-M365TeamsApp
-author: satishtimiri
+author: lkueter
 ms.author: satishtimiri
 manager: rahulrgupta
 ms.date: 04/24/2024

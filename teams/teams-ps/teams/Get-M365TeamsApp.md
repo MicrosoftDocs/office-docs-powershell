@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/Get-M365TeamsApp
 applicable: Microsoft Teams
 title: Get-M365TeamsApp
-author: satishtimiri
+author: lkueter
 ms.author: satishtimiri
 manager: rahulrgupta
 schema: 2.0.0

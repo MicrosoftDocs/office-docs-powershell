@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/Get-ALLM365TeamsApps
 applicable: Microsoft Teams
 title: Get-ALLM365TeamsApps
-author: satishtimiri
+author: lkueter
 ms.author: satishtimiri
 manager: rahulrgupta
 ms.date: 04/24/2024
