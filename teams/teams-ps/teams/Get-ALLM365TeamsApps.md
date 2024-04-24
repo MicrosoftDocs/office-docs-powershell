@@ -70,6 +70,6 @@ Properties:
 - AssignedBy: UserID of the last user who updated the app available to value.
 
 ## RELATED LINKS
+[Get-M365TeamsApps](/powershell/module/teams/get-m365teamsapps)
 
-[Get-M365TeamsApps](Get-M365TeamsApps.md)
-[Update-M365TeamsApp](Update-M365TeamsApp.md)
+[Get-ALLM365TeamsApps](/powershell/module/teams/update-M365TeamsApps)
