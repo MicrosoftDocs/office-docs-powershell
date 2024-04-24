@@ -4,9 +4,10 @@ Module Name: MicrosoftTeams
 online version: https://docs.microsoft.com/powershell/module/teams/Update-M365TeamsApp
 applicable: Microsoft Teams
 title: Update-M365TeamsApp
-author: satishtimiri
+author: lkueter
 ms.author: satishtimiri
 manager: rahulrgupta
+ms.date: 04/24/2024
 schema: 2.0.0
 ---
 
@@ -41,7 +42,7 @@ Updates state and availablity assignment information of 3acac8f6-4e9e-4ee1-9c0e-
 
 ### -AppAssignmentType
 
-App availability type. 
+App availability type.
 
 ```yaml
 Type: String
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 
 ### -Id
 
-Application ID of Microsoft Teams app. 
+Application ID of Microsoft Teams app.
 
 ```yaml
 Type: String
@@ -149,6 +150,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-M365TeamsApps](/powershell/module/teams/get-m365teamsapps)
-
-[Get-ALLM365TeamsApps](/powershell/module/teams/Get-ALLM365TeamsApps)
+[Get-AllM365TeamsApps](Get-ALLM365TeamsApps.md)
+[Get-M365TeamsApp](Get-M365TeamsApp.md)
