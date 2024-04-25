@@ -35,7 +35,7 @@ links:
 - text: Update-M365TeamsApp
   href: Update-M365TeamsApp.yml
 syntaxes:
-- Get-AllM365TeamsApps [<CommonParameters>]
+- Get-AllM365TeamsApps [\<CommonParameters\>]
 examples:
 - title: Example 1
   code: |-
