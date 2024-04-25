@@ -1,0 +1,224 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Replace the default toll or toll-free number for all users.
+module: MicrosoftTeamsPowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+
+   -BridgeName <String> [-FromNumber <String>] -ToNumber <String> -NumberType <String>
+
+   [-CountryOrRegion <String>] [-AreaOrState <String>] [-CapitalOrMajorCity <String>] [-RescheduleMeetings]
+
+   [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+
+   [-BridgeName <String>] -BridgeId <Guid> -ToNumber <String> -NumberType <String>
+
+   -CountryOrRegion <String> [-AreaOrState <String>] [-CapitalOrMajorCity <String>] [-RescheduleMeetings]
+
+   [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-CsOnlineDialInConferencingUserDefaultNumber [-TenantDomain <String>] [-Tenant <Guid>]
+
+   -BridgeId <System.Guid> -FromNumber <String> -ToNumber <String> -NumberType <String> [-RescheduleMeetings]
+
+   [-DomainController <Fqdn>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsOnlineDialInConferencingUserDefaultNumber -FromNumber 14255550100 -ToNumber 14255550101 -NumberType Toll -RescheduleMeetings -BridgeId 9884626f-dcfb-49f4-8025-912f5bc68fdc
+  description: |-
+    This example replaces the default toll or toll-free number for all users who have the number 14255550100 as a default number to the number 14255550101 and starts the process of rescheduling their meetings.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AreaOrState
+  description: |+
+    A String representing the Area or State this Dial In Conferencing Default number belongs to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: BridgeId
+  description: |+
+    The Bridge Id results from running [Get-CsOnlineDialInConferencingBridge](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+    For example "9884626f-dcfb-49f4-8025-912f5bc68fdc". You can either specify BridgeName or BridgeId.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BridgeName
+  description: |+
+    The Bridge Name results from running [Get-CsOnlineDialInConferencingBridge](https://learn.microsoft.com/powershell/module/skype/get-csonlinedialinconferencingbridge)
+    For example "Conference Bridge". You can either specify BridgeName or BridgeId.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CapitalOrMajorCity
+  description: |+
+    A String representing the Capital or Major City this Dial In Conferencing Default number belongs to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CountryOrRegion
+  description: |+
+    A String representing the Country or Region this Dial In Conferencing Default number belongs to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FromNumber
+  description: |+
+    The current default number defined.
+    $null if no number defined.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NumberType
+  description: |+
+    The type of number this Dial In Conferencing Default number has.
+    Valid values are
+
+    - Toll
+    - TollFree
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RescheduleMeetings
+  description: |+
+    Sends e-mail notifications to Meeting attendees with the updated settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantDomain
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ToNumber
+  description: |+
+    The new number to assign, without the + sign, for example 14255550101.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsOnlineDialInConferencingUserDefaultNumber
+name: Set-CsOnlineDialInConferencingUserDefaultNumber
+description: |-
+  Provide the detailed description here.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csonlinedialinconferencinguserdefaultnumber
+  applicable: Microsoft Teams
+  title: Set-CsOnlineDialInConferencingUserDefaultNumber
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

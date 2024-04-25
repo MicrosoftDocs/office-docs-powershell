@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet retrieves all Teams media connectivity policies for current tenant.
+module: MicrosoftTeamsPowerShell
+links:
+- text: New-CsTeamsMediaConnectivityPolicy
+  href: New-CsTeamsMediaConnectivityPolicy.yml
+- text: Remove-CsTeamsMediaConnectivityPolicy
+  href: Remove-CsTeamsMediaConnectivityPolicy.yml
+- text: Set-CsTeamsMediaConnectivityPolicy
+  href: Set-CsTeamsMediaConnectivityPolicy.yml
+- text: Grant-CsTeamsMediaConnectivityPolicy
+  href: Grant-CsTeamsMediaConnectivityPolicy.yml
+syntaxes:
+- Get-CsTeamsMediaConnectivityPolicy
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsMediaConnectivityPolicy
+    Identity DirectConnection
+    -------- ----------------
+    Tag:Test Enabled
+  description: |-
+    retrieves Teams media connectivity policies, show the result as identity tag and "DirectConnection" value.
+  summary: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsMediaConnectivityPolicy
+name: Get-CsTeamsMediaConnectivityPolicy
+description: |-
+  This cmdlet retrieves all Teams media connectivity policies for current tenant.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  applicable: Microsoft Teams
+  title: Get-CsTeamsMediaConnectivityPolicy
+  online version: https://learn.microsoft.com/powershell/module/teams/Get-CsTeamsMediaConnectivityPolicy
+  schema: 2.0.0
+  author: lirunping-MSFT
+  ms.author: runli

@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the properties in the backup service configuration settings for Skype for Business Server to their default values.
+  These settings include information about the maximum number of simultaneous Windows Communication Framework calls that can be made to the backup service as well as the backup service synchronization interval.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Remove-CsBackupServiceConfiguration` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.BackupService.BackupServiceConfiguration object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Remove-CsBackupServiceConfiguration` cmdlet deletes instances of the Microsoft.Rtc.Management.WritableConfig.Settings.BackupService.BackupServiceConfiguration object.
+links:
+- text: Get-CsBackupServiceConfiguration
+  href: Get-CsBackupServiceConfiguration.yml
+- text: Set-CsBackupServiceConfiguration
+  href: Set-CsBackupServiceConfiguration.yml
+syntaxes:
+- >-
+  Remove-CsBackupServiceConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsBackupServiceConfiguration -Identity "global"
+  description: |-
+    Example 1 resets the backup service configuration settings for Skype for Business Server.
+    Note that even though Skype for Business Server only uses a single, global collection of backup settings you must still include the Identity parameter: if you do not, the `Remove-CsBackupServiceConfiguration` cmdlet will prompt you for the Identity before continuing.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique Identity of the backup service configuration settings.
+    Although you can only have a single, global instance of these settings, you still need to specify an Identity when calling the `Remove-CsBackupServiceConfiguration` cmdlet:
+
+    `-Identity global`
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsBackupServiceConfiguration
+name: Remove-CsBackupServiceConfiguration
+description: |-
+  The backup service configuration settings are used to manage pool backups in Skype for Business Server.
+  Note that Skype for Business Server allows only for a single, global collection of backup configuration settings.
+  Among other things, that means that all your pools must be backed up using the same synchronization schedule and that users and groups authorized to backup Pool A are also allowed to backup Pools B, C, D and E.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Remove-CsBackupServiceConfiguration` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csbackupserviceconfiguration
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsBackupServiceConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

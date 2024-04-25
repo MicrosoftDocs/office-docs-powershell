@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Remove-CsTenantDialPlan` cmdlet to remove a tenant dial plan.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The ExternalAccessPrefix and OptimizeDeviceDialing parameters have been removed from New-CsTenantDialPlan and Set-CsTenantDialPlan cmdlet since they are no longer used. External access dialing is now handled implicitly using normalization rules of the dial plans.
+  The Get-CsTenantDialPlan will still show the external access prefix in the form of a normalization rule of the dial plan.
+links:
+- text: Grant-CsTenantDialPlan
+  href: Grant-CsTenantDialPlan.yml
+- text: New-CsTenantDialPlan
+  href: New-CsTenantDialPlan.yml
+- text: Set-CsTenantDialPlan
+  href: Set-CsTenantDialPlan.yml
+- text: Get-CsTenantDialPlan
+  href: Get-CsTenantDialPlan.yml
+syntaxes:
+- Remove-CsTenantDialPlan [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsTenantDialPlan -Identity Vt1TenantDialPlan2
+  description: |-
+    This example removes the Vt1TenantDialPlan2.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm parameter prompts you for confirmation before the command is executed.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter is the unique identifier of the tenant dial plan to remove.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf parameter describes what would happen if you executed the command, without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsTenantDialPlan
+name: Remove-CsTenantDialPlan
+description: |-
+  The `Remove-CsTenantDialPlan` cmdlet removes an existing tenant dial plan (also known as a location profile).
+  Tenant dial plans provide required information to allow Enterprise Voice users to make telephone calls.
+  The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
+  A tenant dial plan determines such things as which normalization rules are applied.
+
+  Removing a tenant dial plan also removes any associated normalization rules.
+  If no tenant dial plan is assigned to an organization, the Global dial plan is used.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-cstenantdialplan
+  applicable: Microsoft Teams
+  title: Remove-CsTenantDialPlan
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

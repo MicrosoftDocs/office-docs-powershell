@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the backup service configuration settings for Skype for Business Server.
+  These settings include information about the maximum number of simultaneous Windows Communication Framework calls that can be made to the backup service, as well as the backup service synchronization interval.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.BackupService.BackupServiceConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-CsBackupServiceConfiguration
+  href: Remove-CsBackupServiceConfiguration.yml
+- text: Set-CsBackupServiceConfiguration
+  href: Set-CsBackupServiceConfiguration.yml
+syntaxes:
+- Get-CsBackupServiceConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+- Get-CsBackupServiceConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsBackupServiceConfiguration
+  description: |-
+    The command shown in Example 1 retrieves the backup service configuration information for Skype for Business Server.
+    Because there is only a single, global set of backup service configuration settings you do not need to include the Identity parameter when running this command.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard values when referencing a collection of backup service configuration settings.
+    Because you can only have a single, global instance of these settings there is no reason to use the Filter parameter.
+    However, if you prefer you can use the following syntax to reference the global settings:
+
+    `-Filter "g*"`
+
+    The preceding syntax returns all the conference backup service configuration settings that have an Identity that begins with the letter "g".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique Identity of the backup service configuration settings.
+    Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Get-CsBackupServiceConfiguration cmdlet.
+    You can, however, use the following syntax to reference the global settings:
+
+    `-Identity global`
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the backup service configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsBackupServiceConfiguration
+name: Get-CsBackupServiceConfiguration
+description: |-
+  The backup service configuration settings are used to manage pool backups in Skype for Business Server.
+  Note that Skype for Business Server allows only for a single, global collection of backup configuration settings.
+  Among other things, that means that all your pools must be backed up using the same synchronization schedule, and that users and groups authorized to backup Pool A are also allowed to backup Pools B, C, D, and E.
+
+  Get-CsBackupServiceConfiguration can be run from any computer running a Skype for Business Server server role or from a remote instance of Windows PowerShell.
+
+  The functions carried out by the Get-CsBackupServiceConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csbackupserviceconfiguration
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsBackupServiceConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

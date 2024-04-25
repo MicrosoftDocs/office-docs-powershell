@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsOnlineVoicemailUserSettings cmdlet to get information about online voicemail user settings of a specific user.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Voicemail.Models.VoicemailUserSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-CsOnlineVoicemailUserSettings
+  href: Set-CsOnlineVoicemailUserSettings.yml
+syntaxes:
+- Get-CsOnlineVoicemailUserSettings [-Identity] <string> [-Force] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsOnlineVoicemailUserSettings -Identity sip:user@contoso.com
+  description: |-
+    This example gets the online voicemail user settings of user with SIP URI sip:user@contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsOnlineVoicemailUserSettings
+name: Get-CsOnlineVoicemailUserSettings
+description: |-
+  The Get-CsOnlineVoicemailUserSettings cmdlet returns information about online voicemail user settings of a specific user in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csonlinevoicemailusersettings
+  applicable: Microsoft Teams
+  title: Get-CsOnlineVoicemailUserSettings
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the conference disclaimer used in your organization.
+  The conference disclaimer is a message that is displayed to users who join the conference by using a hyperlink (for example, users who paste a link to the conference into a browser such as Windows Internet Explorer).
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.WebConf.ConferenceDisclaimer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-CsConferenceDisclaimer
+  href: Remove-CsConferenceDisclaimer.yml
+- text: Set-CsConferenceDisclaimer
+  href: Set-CsConferenceDisclaimer.yml
+syntaxes:
+- Get-CsConferenceDisclaimer [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsConferenceDisclaimer [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CSConferenceDisclaimer
+  description: |-
+    The command shown in Example 1 returns information about the conference disclaimer configured for use in your organization.
+    Because you are limited to a single disclaimer (configured at the global scope), you do not need to specify an Identity when running this command.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Enables you to use wildcard values when referencing a conference disclaimer.
+    Because you can only have a single, global instance of the conference disclaimer, there is really no reason to ever use the Filter parameter.
+    However, you can use the following syntax to reference the global disclaimer: -Filter "g*".
+    That syntax brings back all the conference disclaimers that have an Identity that begins with the letter "g".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique Identity of the conference disclaimer.
+    Because you can only have a single, global instance of the conference disclaimer, you do not need to specify an Identity when calling the Get-CsConferenceDisclaimer cmdlet.
+    You can, however, use the following syntax to reference the global disclaimer: -Identity global.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the conference disclaimer data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsConferenceDisclaimer
+name: Get-CsConferenceDisclaimer
+description: |-
+  When configuring conferencing settings, administrators can include a legal disclaimer to display to participants at the time participants join conferences hosted by Skype for Business Server.
+  This disclaimer is typically used to explain legal and intellectual property laws regarding the conference, and users cannot join the conference without agreeing to the stipulations set forth in the disclaimer.
+  Note that this disclaimer is only shown to users who join a conference by using a hyperlink.
+
+  The Get-CsConferenceDisclaimer cmdlet enables you to view the body and header of your organization's disclaimer.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csconferencedisclaimer
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsConferenceDisclaimer
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

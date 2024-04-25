@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Get-CaseHoldRule to view case hold rules in the Microsoft Purview compliance portal.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-CaseHoldRule [[-Identity] <ComplianceRuleIdParameter>]
+
+   [-Policy <PolicyIdParameter>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CaseHoldRule -Identity "30 Day Rule"
+  description: |-
+    This example displays detailed information for the case hold rule named "30 Day Rule".
+  summary: ""
+parameters:
+- type: <xref href="ComplianceRuleIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the case hold rule you want to view. You can use any value that uniquely identifies the rule. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Policy
+  description: |+
+    The Policy parameter filters the case hold rule results by the associated case hold policy. You can use any value that uniquely identifies the policy. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - GUID
+
+    You can use this parameter with the Identity parameter in the same command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-CaseHoldRule
+name: Get-CaseHoldRule
+description: |-
+  In large environments, running this cmdlet without any parameters results in a timeout. As a workaround, you can run the following command:
+
+  `Get-ComplianceCase | foreach {Get-CaseHoldPolicy -Case $_.Identity | foreach {Get-CaseHoldRule -Policy $_.Guid}}`
+
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-caseholdrule
+  applicable: Security & Compliance
+  title: Get-CaseHoldRule
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

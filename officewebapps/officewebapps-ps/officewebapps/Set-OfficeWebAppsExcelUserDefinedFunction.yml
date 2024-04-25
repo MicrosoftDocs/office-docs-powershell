@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties on existing UDF definitions.
+module: OfficeOnlineServerPowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-OfficeWebAppsExcelUserDefinedFunction [-Identity] <UserDefinedFunction> [-Assembly <String>]
+
+   [-AssemblyLocation <AssemblyLocation>] [-Description <String>] [-Enable] [-WhatIf] [-Confirm]
+examples:
+- title: This example disables the UDF at c:\myudf.dll.
+  code: |-
+    Set-OfficeWebAppsExcelUserDefinedFunction -Identity c:\myudf.dll -Enable:$false
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Assembly
+  description: |+
+    The name of the assembly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AssemblyLocation" data-throw-if-not-resolved="False" />
+  name: AssemblyLocation
+  description: |+
+    The location of the assembly.
+    Values: LocalFile - a local directory; GAC - the Global Assembly Cache.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A description of the assembly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    Enables the UDF.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UserDefinedFunction" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The path and filename of the UDF.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: OfficeOnlineServerPowerShell.Set-OfficeWebAppsExcelUserDefinedFunction
+name: Set-OfficeWebAppsExcelUserDefinedFunction
+description: |-
+  Sets properties on existing UDF definitions.
+metadata:
+  external help file: ""
+  Module Name: officewebapps
+  title: Set-OfficeWebAppsExcelUserDefinedFunction
+  online version: ""
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

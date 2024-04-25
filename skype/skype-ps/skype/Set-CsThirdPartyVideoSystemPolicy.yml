@@ -1,0 +1,184 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new third-party video system policy for use with video teleconferencing (VTC) devices.
+  These policies determine whether or not the VTC is allowed to send low-resolution video.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Set-CsThirdPartyVideoSystemPolicy` cmdlet accepts pipelined instance of the Microsoft.Rtc.Management.WritableConfig.Policy.ThirdPartyVideoSystem.ThirdPartyVideoSystemPolicy object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Set-CsThirdPartyVideoSystemPolicy` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ThirdPartyVideoSystem.ThirdPartyVideoSystemPolicy object.
+links:
+- text: Get-CsThirdPartyVideoSystemPolicy
+  href: Get-CsThirdPartyVideoSystemPolicy.yml
+- text: Grant-CsThirdPartyVideoSystemPolicy
+  href: Grant-CsThirdPartyVideoSystemPolicy.yml
+- text: New-CsThirdPartyVideoSystemPolicy
+  href: New-CsThirdPartyVideoSystemPolicy.yml
+- text: Remove-CsThirdPartyVideoSystemPolicy
+  href: Remove-CsThirdPartyVideoSystemPolicy.yml
+syntaxes:
+- >-
+  Set-CsThirdPartyVideoSystemPolicy [[-Identity] <XdsIdentity>] [-Confirm] [-Force]
+
+   [-SupportsSendingLowResolution <Boolean>] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-CsThirdPartyVideoSystemPolicy [-Confirm] [-Force] [-Instance <PSObject>]
+
+   [-SupportsSendingLowResolution <Boolean>] [-Tenant <Guid>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsThirdPartyVideoSystemPolicy -Identity "RedmondVideoSystemPolicy" -SupportsSendingLowResolution $False
+  description: |-
+    The command shown in Example 1 modifies the per-user third-party video system policy RedmondVideoSystemPolicy.
+    In this example, the ability to send low-resolution video is disabled.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsThirdPartyVideoSystemPolicy -Filter "site:*" | Set-CsThirdPartyVideoSystemPolicy -SupportsSendingLowResolution $False
+  description: |-
+    In Example 2, the ability to send low-resolution video is disabled for all third-party video system policies configured at the site scope.
+    To do that, the command first calls `Get-CsThirdPartyVideoSystemPolicy` along with the Filter parameter; the filter value "site:*" limits returned data to policies configured at the site scope.
+    That collection of site-based policies is then piped to the `Set-CsThirdPartyVideoSystemPolicy` to set the SupportsSendingLowResolution property to False ($False).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identity assigned to the policy when it was created.
+    Third-party video system policies can be created at the global, site or per-user scope.
+    To refer to the global instance, use this syntax:
+
+    `-Identity "global"`
+
+    To refer to a policy at the site scope, use syntax similar to this:
+
+    `-Identity "site:Redmond"`
+
+    To refer to a policy at the per-user scope, use syntax similar to the following:
+
+    `-Identity "RedmondVideoSystemPolicy"`
+
+    Wildcard characters such as the asterisk (*) cannot be used with the Identity parameter.
+    If this parameter is not specified then `Set-CsThirdPartyVideoSystemPolicy` will modify the global video system policy.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SupportsSendingLowResolution
+  description: |+
+    Indicates whether or not low-resolution video can be used in conjunction with a VTC device.
+    The default value is True ($True).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the Skype for Business Online tenant account for the third-party video system policy being modified.
+    For example:
+
+    `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+    You can return the tenant ID for each of your tenants by running this command:
+
+    `Get-CsTenant | Select-Object DisplayName, TenantID`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsThirdPartyVideoSystemPolicy
+name: Set-CsThirdPartyVideoSystemPolicy
+description: |-
+  Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
+  In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+  Associating each VTC device with a contact object makes it easy for administrators to track, and to manage, these devices.
+
+  One key management task related to VTC devices is to enable (or disable) the ability of these devices to send low-resolution video.
+  By default, VTC devices are allowed to send low-resolution video.
+  However, administrators can create third-party video system policies that disable the use of low-resolution video.
+  This might be useful for devices located in conference rooms or other areas where low-resolution video is not considered acceptable.
+  The `New-CsThirdPartyVideoSystem` cmdlet provides a way for administrators to create these third-party video system policies.
+  Both the global policy and any custom policies you create can later be modified by using the `Set-CsThirdPartyVideoSystemPolicy` cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csthirdpartyvideosystempolicy
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsThirdPartyVideoSystemPolicy
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

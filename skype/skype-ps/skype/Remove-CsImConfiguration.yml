@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Remove-CsImConfiguration cmdlet to remove a new Instant Messaging (IM) configuration. This cmdlet was introduced in Skype for Business June 2016 Cumulative Update.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsImConfiguration
+  href: https://learn.microsoft.com/powershell/module/skype/get-csimconfiguration?view=skype-ps
+- text: New-CsImConfiguration
+  href: https://learn.microsoft.com/powershell/module/skype/new-csimconfiguration?view=skype-ps
+- text: Set-CsImConfiguration
+  href: https://learn.microsoft.com/powershell/module/skype/set-csimconfiguration?view=skype-ps
+syntaxes:
+- >-
+  Remove-CsImConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-Tenant <Guid>] [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    PS C:\> Remove-CsImConfiguration -Identity "Site:Redmond"
+  description: |-
+    This example removes the existing Redmond site IM configuration.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A unique identifier specifying the scope and, in some cases the name, of the IM configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsImConfiguration
+name: Remove-CsImConfiguration
+description: |-
+  Use the Remove-CsImConfiguration cmdlet to remove a new Instant Messaging (IM) configuration.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csimconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsImConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The TeamsClientConfiguration allows IT admins to control the settings that can be accessed via Teams clients across their organization.  This configuration includes settings like which third party cloud storage your organization allows, whether or not guest users can access the teams client, and how Surface Hub devices can interact with Skype for Business meetings.  This cmdlet allows IT admins to retrieve the effective configuration for their organization.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsTeamsClientConfiguration [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- Get-CsTeamsClientConfiguration [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsTeamsClientConfiguration
+  description: |-
+    Retrieves the effective client configuration in the tenant.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The only valid input is Global, as you can have only one effective configuration in your organization.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsClientConfiguration
+name: Get-CsTeamsClientConfiguration
+description: |-
+  The TeamsClientConfiguration allows IT admins to control the settings that can be accessed via Teams clients across their organization.  This configuration includes settings like which third party cloud storage your organization allows, whether or not guest users can access the teams client, and how Surface Hub devices can interact with Skype for Business meetings.  This cmdlet allows IT admins to retrieve the effective configuration for their organization.
+
+  Use in conjunction with Set-CsTeamsClientConfiguration to update the settings in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsclientconfiguration
+  applicable: Microsoft Teams
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsClientConfiguration
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

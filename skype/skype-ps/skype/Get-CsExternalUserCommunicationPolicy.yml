@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about one or more external user communication policies configured for your organization.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsExternalUserCommunicationPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/new-csexternalusercommunicationpolicy?view=skype-ps
+- text: Set-CsExternalUserCommunicationPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/set-csexternalusercommunicationpolicy?view=skype-ps
+- text: Remove-CsExternalUserCommunicationPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/remove-csexternalusercommunicationpolicy?view=skype-ps
+- text: Grant-CsExternalUserCommunicationPolicy
+  href: https://learn.microsoft.com/powershell/module/skype/grant-csexternalusercommunicationpolicy?view=skype-ps
+syntaxes:
+- Get-CsExternalUserCommunicationPolicy [[-Identity] <XdsIdentity>] [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 ------------------------'
+  code: |-
+    PS C:\> Get-CsExternalUserCommunicationPolicy
+  description: |-
+    This example displays all the external user communication policies that have been defined for an organization along with the settings for each.
+  summary: ""
+- title: '-------------------------- Example 2 ------------------------'
+  code: |-
+    PS C:\> Get-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer
+  description: |-
+    This example uses the Identity parameter to retrieve the external user communication policy settings for the policy named BlockExternalP2PFileTransfer.
+  summary: ""
+- title: '-------------------------- Example 3 ------------------------'
+  code: |-
+    PS C:\> Get-CsExternalUserCommunicationPolicy -Filter tag*
+  description: |-
+    This example uses the Filter parameter to retrieve all the external user communication policies along with the settings for each. All per-user external user communication policies have an Identity in the format `tag:<ExternalUserCommunicationPolicy>`.
+  summary: ""
+- title: '-------------------------- Example 4 ------------------------'
+  code: |-
+    PS C:\> Get-CsExternalUserCommunicationPolicy -Filter Block*
+  description: |-
+    This example uses the Filter parameter to retrieve all the external user communication policies which their name begins with the string "Block" along with the configuration for each one.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter accepts a wildcard string and returns all external user communication policies with identities matching that string. For example, a Filter value of tag:* will return all external user communication policies excluding Global policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier for the external user communication policy to be created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+
+    -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+    You can return your tenant ID by running this command:
+
+    Get-CsTenant | Select-Object DisplayName, TenantID
+
+    If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Online
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Online
+uid: SkypeForBusiness.Get-CsExternalUserCommunicationPolicy
+name: Get-CsExternalUserCommunicationPolicy
+description: |-
+  This cmdlet retrieves external user communication policy information. External user communication policies are used to block P2P file transfer with Federated partners.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csexternalusercommunicationpolicy
+  applicable: Skype for Business Online
+  title: Get-CsExternalUserCommunicationPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

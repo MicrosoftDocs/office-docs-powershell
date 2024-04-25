@@ -20,7 +20,7 @@ This cmdlet returns all Microsoft Teams apps in the app catalog, including Micro
 ## SYNTAX
 
 ```powershell
-Get-AllM365TeamsApps [<CommonParameters>]
+Get-AllM365TeamsApps [\<CommonParameters\>]
 ```
 
 ## DESCRIPTION

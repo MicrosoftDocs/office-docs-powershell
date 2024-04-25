@@ -1,0 +1,292 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in on-premises Exchange.
+
+  Use the Set-SiteMailbox cmdlet to change a site mailbox's settings, such as the Microsoft SharePoint URL. This cmdlet is primarily used by the SharePoint and Microsoft Exchange user interfaces, such as the SharePoint URL. This cmdlet should only be used for diagnostic and troubleshooting purposes.
+
+  Site mailboxes were deprecated in Exchange Online and SharePoint Online in 2017. For more information, see [Deprecation of Site Mailboxes](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/deprecation-of-site-mailboxes/ba-p/93028).
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+inputs:
+- name: <xref href="Input types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+outputs:
+- name: <xref href="Output types" data-throw-if-not-resolved="False" />
+  description: |-
+    To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+syntaxes:
+- >-
+  Set-SiteMailbox [-Identity] <RecipientIdParameter>
+
+   [-Active <Boolean>]
+
+   [-Confirm]
+
+   [-DisplayName <String>]
+
+   [-DomainController <Fqdn>]
+
+   [-Force]
+
+   [-Members <RecipientIdParameter[]>]
+
+   [-Owners <RecipientIdParameter[]>]
+
+   [-RemoveDuplicateMessages <Boolean>]
+
+   [-SharePointUrl <Uri>]
+
+   [-ShowInMyClient <Boolean>]
+
+   [-SyncEnabled <Boolean>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SiteMailbox -Identity "MarketingEvents 2013" -SharePointUrl "https://myserver/teams/marketing"
+  description: |-
+    This example changes the SharePoint URL for the MarketingEvents 2013 site mailbox.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SiteMailbox -Identity SMO_ContosoSales -RemoveDuplicateMessages $true
+  description: |-
+    This example disables the duplication of email messages in the site mailbox SMO\_ContosoSales.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Active
+  description: |+
+    The Active parameter specifies whether to change the site mailbox's lifecycle status. This parameter accepts $true or $false. This parameter is intended for use only by the user interface. We recommend that you don't use this parameter in the Exchange Management Shell.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    The DisplayName parameter specifies the display name of the site mailbox.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+    You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity parameter specifies the identity of the site mailbox. You can use any value that uniquely identifies the site mailbox. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Email address
+    - GUID
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Members
+  description: |+
+    This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
+
+    The Members parameter specifies the members of the site mailbox. You can add or remove members using this parameter.
+
+    You can use any value that uniquely identifies the member. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Email address
+    - GUID
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Owners
+  description: |+
+    This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
+
+    The Owners parameter specifies the owners of the site mailbox. You can add or remove owners using this parameter.
+
+    You can use any value that uniquely identifies the owner. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Email address
+    - GUID
+
+    You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RemoveDuplicateMessages
+  description: |+
+    The RemoveDuplicateMessages parameter specifies that when users post messages to a site mailbox, duplicate messages will be deleted. This parameter accepts the values of $true or $false. The default value is $false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: SharePointUrl
+  description: |+
+    The SharePointUrl parameter specifies the URL of the SharePoint site, for example, "https://myserver/teams/edu".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ShowInMyClient
+  description: |+
+    This parameter is intended for use only by the user interface. We recommend that you don't use this parameter.
+
+    The ShowInMyClient parameter specifies that the site mailbox folder will show in your email client.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SyncEnabled
+  description: |+
+    The SyncEnabled parameter specifies whether to enable or disable synchronization for the site mailbox. Valid values are:
+
+    - $true: Synchronization is enabled.
+    - $true: Synchronization is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Server 2013
+  - Exchange Server 2016
+  - Exchange Server 2019
+  parameterValueGroup: ""
+applicable:
+- Exchange Server 2013
+- Exchange Server 2016
+- Exchange Server 2019
+uid: ExchangePowerShell.Set-SiteMailbox
+name: Set-SiteMailbox
+description: |-
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/set-sitemailbox
+  applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+  title: Set-SiteMailbox
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

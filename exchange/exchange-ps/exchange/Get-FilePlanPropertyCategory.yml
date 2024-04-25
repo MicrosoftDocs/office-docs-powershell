@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Fet-FilePlanPropertyCategory cmdlet to view file plan property categories.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- Get-FilePlanPropertyCategory [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-FilePlanPropertyCategory | Format-Table Name,Workload,Policy
+  description: |-
+    This example returns a summary list of all file plan property authorities.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-FilePlanPropertyCategory -Identity "Contoso Category"
+  description: |-
+    This example returns detailed information about the custom file plan property category named Contoso Category.
+  summary: ""
+parameters:
+- type: <xref href="ComplianceRuleIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the custom file plan property category that you want to view. You can use any value that uniquely identifies the category. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-FilePlanPropertyCategory
+name: Get-FilePlanPropertyCategory
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in Security & Compliance](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  https: //learn.microsoft.com/powershell/module/exchange/get-fileplanpropertycategory
+  applicable: Security & Compliance
+  title: Get-FilePlanPropertyCategory
+  schema: 2.0.0

@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.Xds.XdsIdentity" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsEmergencyCallingPolicy
+  href: New-CsTeamsEmergencyCallingPolicy.yml
+- text: Grant-CsTeamsEmergencyCallingPolicy
+  href: Grant-CsTeamsEmergencyCallingPolicy.yml
+- text: Get-CsTeamsEmergencyCallingPolicy
+  href: Get-CsTeamsEmergencyCallingPolicy.yml
+- text: Set-CsTeamsEmergencyCallingPolicy
+  href: Set-CsTeamsEmergencyCallingPolicy.yml
+syntaxes:
+- Remove-CsTeamsEmergencyCallingPolicy [-Identity] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsTeamsEmergencyCallingPolicy -Identity testECP
+  description: |-
+    This example removes an existing Teams Emergency Calling policy with identity testECP.
+  summary: ""
+- title: Example 2
+  code: |-
+    Remove-CsTeamsEmergencyCallingPolicy -Identity Global
+  description: |-
+    This example resets the Global Policy instance to the default values.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |2+
+     The Identity parameter is the unique identifier of the Teams Emergency Calling policy to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsEmergencyCallingPolicy
+name: Remove-CsTeamsEmergencyCallingPolicy
+description: |-
+  This cmdlet removes an existing Teams Emergency Calling policy.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamsemergencycallingpolicy
+  applicable: Microsoft Teams
+  title: Remove-CsTeamsEmergencyCallingPolicy
+  author: jenstrier
+  ms.author: serdars
+  manager: roykuntz
+  ms.reviewer: chenc
+  schema: 2.0.0

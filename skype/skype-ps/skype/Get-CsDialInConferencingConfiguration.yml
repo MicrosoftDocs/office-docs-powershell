@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves information about how Skype for Business Server 2015 responds when users join or leave a dial-in conference.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Settings.DialInConferencingSettings.DialInConferencingConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsDialInConferencingConfiguration
+  href: New-CsDialInConferencingConfiguration.yml
+- text: Remove-CsDialInConferencingConfiguration
+  href: Remove-CsDialInConferencingConfiguration.yml
+- text: Set-CsDialInConferencingConfiguration
+  href: Set-CsDialInConferencingConfiguration.yml
+syntaxes:
+- Get-CsDialInConferencingConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsDialInConferencingConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsDialInConferencingConfiguration
+  description: |-
+    Example 1 returns a collection of all the dial-in conferencing configuration settings currently in use in the organization.
+    Calling the Get-CsDialInConferencingConfiguration cmdlet without any additional parameters always returns the complete collection of dial-in conferencing settings.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsDialInConferencingConfiguration -Identity site:Redmond
+  description: |-
+    Example 2 returns the dial-in conferencing configuration settings with the Identity site:Redmond.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsDialInConferencingConfiguration -Filter "site:*"
+  description: |-
+    In Example 3, the Filter parameter is used to return all the dial-in conferencing settings that have been configured at the site scope.
+    The filter value "site:*" instructs the Get-CsDialInConferencingConfiguration cmdlet to return only those settings where the Identity begins with the string value "site:".
+    By design, any dial-conferencing settings that have an Identity beginning with "site:" represent settings configured at the site scope.
+  summary: ""
+- title: '-------------------------- Example 4 --------------------------'
+  code: |-
+    Get-CsDialInConferencingConfiguration | Where-Object {$_.EnableNameRecording -eq $False}
+  description: |-
+    Example 4 uses the Get-CsDialInConferencingConfiguration cmdlet and the Where-Object cmdlet to return a collection of all the dial-in conferencing configuration settings where the EnableNameRecording property is set to False.
+    To do this, the Get-CsDialInConferencingConfiguration cmdlet is called without any parameters in order to return a collection of all the dial-in conferencing settings.
+    That collection is then piped to the Where-Object cmdlet, which picks out only those settings where the EnableNameRecording property is equal to False.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Provides a way for you to use wildcard characters when specifying dial-in conferencing configuration settings.
+    For example, to return a collection of all the configuration settings that have been applied at the site scope use this syntax: -Filter "site:*".
+    To return all the settings that have the term "EMEA" in their Identity use this syntax: -Filter "*EMEA*".
+    Note that the Filter parameter acts only on the Identity of the settings; you cannot filter on other dial-in conferencing configuration properties.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the dial-in conferencing configuration settings to be retrieved.
+    To refer to the global settings, use this syntax: -Identity global.
+    To refer to site settings, use syntax similar to this: -Identity site:Redmond.
+    You cannot use wildcards when specifying an Identity.
+    To do that, use the Filter parameter instead.
+
+    If called without any parameters the Get-CsDialInConferencingConfiguration cmdlet returns information about all the dial-in conferencing configuration settings in use in your organization.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the dial-in conferencing data from the local replica of the Central Management store rather than from the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsDialInConferencingConfiguration
+name: Get-CsDialInConferencingConfiguration
+description: |-
+  When users join (or leave) a dial-in conference, Skype for Business Server can respond in different ways.
+  For example, participants might be asked to record their name before they can enter the conference itself.
+  Likewise, administrators can decide whether they want to have Skype for Business Server announce that dial-in participants have either left or joined a conference.
+
+  These conference "join behaviors" are managed using dial-in conferencing configuration settings; these settings can be configured at the global scope or at the site scope.
+  (Settings configured at the site scope take precedence over settings configured at the global scope.) The Get-CsDialInConferencingConfiguration cmdlet enables you to retrieve information about the dial-in conferencing configuration settings currently in use in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-csdialinconferencingconfiguration
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsDialInConferencingConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

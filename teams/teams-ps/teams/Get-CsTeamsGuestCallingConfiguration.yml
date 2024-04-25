@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the GuestCallingConfiguration, which specifies what options guest users have for calling within Teams.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsTeamsGuestCallingConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- >-
+  Get-CsTeamsGuestCallingConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsTeamsGuestCallingConfiguration
+  description: |-
+    Returns the results
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Internal Microsoft use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Internal Microsoft use - customers can have only one TeamsGuestCallingConfiguration
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal Microsoft use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal Microsoft use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsGuestCallingConfiguration
+name: Get-CsTeamsGuestCallingConfiguration
+description: |-
+  Returns information about the GuestCallingConfiguration, which specifies what options guest users have for calling within Teams.  To set the configuration in your organization, use Set-CsTeamsGuestCallingConfiguration
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  Module Name: MicrosoftTeams
+  title: Get-CsTeamsGuestCallingConfiguration
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: ""

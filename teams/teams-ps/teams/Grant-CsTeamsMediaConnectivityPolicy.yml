@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet applies an instance of the Teams media connectivity policy to users or groups in a tenant.
+module: MicrosoftTeamsPowerShell
+links:
+- text: New-CsTeamsMediaConnectivityPolicy
+  href: New-CsTeamsMediaConnectivityPolicy.yml
+- text: Remove-CsTeamsMediaConnectivityPolicy
+  href: Remove-CsTeamsMediaConnectivityPolicy.yml
+- text: Get-CsTeamsMediaConnectivityPolicy
+  href: Get-CsTeamsMediaConnectivityPolicy.yml
+- text: Set-CsTeamsMediaConnectivityPolicy
+  href: Set-CsTeamsMediaConnectivityPolicy.yml
+syntaxes:
+- Grant-CsTeamsMediaConnectivityPolicy [<CommonParameters>]
+- Grant-CsTeamsMediaConnectivityPolicy -Identity <String> [[-PolicyName] <String>] [<CommonParameters>]
+- >-
+  Grant-CsTeamsMediaConnectivityPolicy [[-PolicyName] <String>] [-Group] <String> -Rank <Int32>
+
+   [<CommonParameters>]
+- Grant-CsTeamsMediaConnectivityPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Grant-CsTeamsMediaConnectivityPolicy -PolicyName Test -Identity testuser@test.onmicrosoft.com
+  description: |-
+    Assigns a given policy to a user.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Grant-CsTeamsMediaConnectivityPolicy -Group f13d6c9d-ce76-422c-af78-b6018b4d9c80 -PolicyName Test
+  description: |-
+    Assigns a given policy to a group.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Grant-CsTeamsMediaConnectivityPolicy -Global -PolicyName Test
+  description: |-
+    Assigns a given policy to the tenant.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Grant-CsTeamsMediaConnectivityPolicy -Global -PolicyName Test
+  description: |-
+    Note: _Using $null in place of a policy name can be used to unassigned a policy instance._
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  isRequired: true
+  description: |+
+    This is the equivalent to `-Identity Global`.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    This is the identifier of the group that the policy should be assigned to.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the identity of the target user.
+
+    Example: testuser@test.onmicrosoft.com
+
+    Example: 98403f08-577c-46dd-851a-f0460a13b03d
+
+    Use the "Global" Identity if you wish to set the policy for the entire tenant.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Specifies the name of the policy to be assigned. The PolicyName is the policy identity minus the policy scope ("tag:"), for example, a policy that has an identity of "Tag:Enabled" has a PolicyName of "Enabled".
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  isRequired: true
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Grant-CsTeamsMediaConnectivityPolicy
+name: Grant-CsTeamsMediaConnectivityPolicy
+description: |-
+  This cmdlet applies an instance of the Teams media connectivity policy to users or groups in a tenant.
+
+  Passes in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  applicable: Microsoft Teams
+  title: Grant-CsTeamsMediaConnectivityPolicy
+  online version: https://learn.microsoft.com/powershell/module/teams/Grant-CsTeamsMediaConnectivityPolicy
+  schema: 2.0.0
+  author: lirunping-MSFT
+  ms.author: runli

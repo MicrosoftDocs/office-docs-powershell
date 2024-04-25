@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a presence provider previously configured for use in the organization.
+  Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Remove-CsPresenceProvider` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.PresenceProvider#Decorated object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, the `Remove-CsPresenceProvider` cmdlet deletes instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.PresenceProvider#Decorated object.
+links:
+- text: Get-CsPresenceProvider
+  href: Get-CsPresenceProvider.yml
+- text: Get-CsUserServicesConfiguration
+  href: Get-CsUserServicesConfiguration.yml
+- text: New-CsPresenceProvider
+  href: New-CsPresenceProvider.yml
+- text: Set-CsPresenceProvider
+  href: Set-CsPresenceProvider.yml
+syntaxes:
+- Remove-CsPresenceProvider [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsPresenceProvider -Identity "global/fabrikam.com"
+  description: |-
+    The command shown in Example 1 removes the presence provider with the Identity "global/fabrikam.com".
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsPresenceProvider | Remove-CsPresenceProvider
+  description: |-
+    In Example 2, all the presence providers configured for use in the organization are removed.
+    To do this, the command first calls the `Get-CsPresenceProvider` cmdlet without any parameters; that returns a collection of all the configured presence providers.
+    That collection is then piped to the `Remove-CsPresenceProvider` cmdlet, which deletes each item (that is, each provider) in the collection.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsPresenceProvider | Where-Object {$_.Fqdn -match "fabrikam.com"} | Remove-CsPresenceProvider
+  description: |-
+    Example 3 shows how you can delete all the presence providers that have an Fqdn that includes the string value "fabrikam.com".
+    To carry out this task, the command first uses the `Get-CsPresenceProvider` cmdlet to return a collection of all the available presence providers.
+    That collection is then piped to the `Where-Object` cmdlet, which picks out only those providers where the Fqdn property includes (-match) the string value "fabrikam.com".
+    In turn, that filtered collection is then piped to the `Remove-CsPresenceProvider` cmdlet, which deletes each provider in the filtered collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier of the presence provider to be removed.
+    To remove a single provider, use the actual Identity of the provider, which includes both the scope and the provider Fqdn:
+
+    `-Identity "global/fabrikam.com"`
+
+    To remove all the presence providers configured at a particular scope, simply use the scope as the Identity.
+    This syntax removes all the providers configured at the global scope:
+
+    `-Identity "global"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsPresenceProvider
+name: Remove-CsPresenceProvider
+description: |-
+  The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
+  Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.
+  That collection is stored in the PresenceProviders property.
+
+  The `Remove-CsPresenceProvider` cmdlet enables you to remove a presence provider from the PresenceProviders property of one or more collections of User Services configuration settings.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Remove-CsPresenceProvider` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-cspresenceprovider
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsPresenceProvider
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

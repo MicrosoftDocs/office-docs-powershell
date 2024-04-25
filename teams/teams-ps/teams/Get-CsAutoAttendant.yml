@@ -1,0 +1,183 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Get-CsAutoAttendant cmdlet to get information about your Auto Attendants (AA).
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsAutoAttendant cmdlet accepts a string as the Identity parameter.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.OAA.Models.AutoAttendant" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsAutoAttendantStatus
+  href: Get-CsAutoAttendantStatus.yml
+- text: New-CsAutoAttendant
+  href: New-CsAutoAttendant.yml
+- text: Remove-CsAutoAttendant
+  href: Remove-CsAutoAttendant.yml
+- text: Set-CsAutoAttendant
+  href: Set-CsAutoAttendant.yml
+- text: Update-CsAutoAttendant
+  href: Update-CsAutoAttendant.yml
+syntaxes:
+- Get-CsAutoAttendant [-Identity <String>] [-First <UInt32>] [-Skip <UInt32>] [-NameFilter <String>] [-SortBy <String>] [-Descending] [-IncludeStatus] [-ExcludeContent] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsAutoAttendant
+  description: |-
+    This example gets all AAs in the organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsAutoAttendant -Identity "f7a821dc-2d69-5ae8-8525-bcb4a4556093"
+
+    # Id                       : f7a821dc-2d69-5ae8-8525-bcb4a4556093
+    # TenantId                 : 977c9d5b-2dae-5d82-aada-628bc1c14213
+    # Name                     : Main Auto Attendant
+    # LanguageId               : en-US
+    # VoiceId                  : Female
+    # DefaultCallFlow          : Default Call Flow
+    # Operator                 :
+    # TimeZoneId               : Pacific Standard Time
+    # VoiceResponseEnabled     : False
+    # CallFlows                :
+    # Schedules                :
+    # CallHandlingAssociations :
+    # Status                   :
+    # DialByNameResourceId     :
+    # DirectoryLookupScope     :
+    # ApplicationInstances     : {fa2f17ec-ebd5-43f8-81ac-959c245620fa, 56421bbe-5649-4208-a60c-24dbeded6f18, c7af9c3c-ae40-455d-a37c-aeec771e623d}
+  description: |-
+    This example gets the AA that has the identity of f7a821dc-2d69-5ae8-8525-bcb4a4556093.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-CsAutoAttendant -First 10
+  description: |-
+    This example gets the first ten auto attendants configured for use in the organization.
+  summary: ""
+- title: Example 4
+  code: |-
+    Get-CsAutoAttendant -Skip 5 -First 10
+  description: |-
+    This example skips initial 5 auto attendants and gets the next 10 AAs configured in the organization.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Descending
+  description: |+
+    If specified, the retrieved auto attendants would be sorted in descending order.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExcludeContent
+  description: |+
+    If specified, only auto attendants' names, identities and associated application instances will be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    The First parameter indicates the maximum number of auto attendants to retrieve as the result. It is intended to be used for pagination purposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The identity for the AA to be retrieved. If this parameter is not specified, then all created AAs in the organization are returned.
+    If you specify this parameter, you can't specify the other parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeStatus
+  description: |+
+    If specified, the status records for each auto attendant in the result set are also retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: NameFilter
+  description: |+
+    If specified, only auto attendants whose names match that value would be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  name: Skip
+  description: |+
+    The Skip parameter indicates the number of initial auto attendants to skip in the result. It is intended to be used for pagination purposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: SortBy
+  description: |+
+    If specified, the retrieved auto attendants would be sorted by the specified property.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsAutoAttendant
+name: Get-CsAutoAttendant
+description: |-
+  The Get-CsAutoAttendant cmdlet returns information about the AAs in your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendant
+  applicable: Microsoft Teams
+  title: Get-CsAutoAttendant
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

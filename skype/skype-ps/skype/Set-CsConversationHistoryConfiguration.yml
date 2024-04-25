@@ -1,0 +1,177 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the conversation history configuration settings for the organization.
+  These settings manage conversation histories for mobile device users.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    `Set-CsConversationHistoryConfiguration` accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    Instead, `Set-CsConversationHistoryConfiguration` modifies instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+links:
+- text: Get-CsConversationHistoryConfiguration
+  href: Get-CsConversationHistoryConfiguration.yml
+- text: Remove-CsConversationHistoryConfiguration
+  href: Remove-CsConversationHistoryConfiguration.yml
+syntaxes:
+- >-
+  Set-CsConversationHistoryConfiguration [[-Identity] <XdsIdentity>] [-Confirm]
+
+   [-EnableServerConversationHistory <Boolean>] [-Force] [-MaxContinuedConversationRetry <UInt32>] [-WhatIf]
+
+   [-EnableDisplayNameResolution <Boolean>] [<CommonParameters>]
+- >-
+  Set-CsConversationHistoryConfiguration [-Confirm] [-EnableServerConversationHistory <Boolean>] [-Force]
+
+   [-Instance <PSObject>] [-MaxContinuedConversationRetry <UInt32>] [-WhatIf]
+
+   [-EnableDisplayNameResolution <Boolean>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Set-CsConversationHistoryConfiguration -Identity "global" -EnableServerConversationHistory $True
+  description: |-
+    In Example 1, the EnableServerConversationHistory property is set to True ($True).
+    In turn, conversation histories, missed call notifications, and missed IM notifications will be stored on the server rather than in client mailboxes.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Set-CsConversationHistoryConfiguration -Identity "global" -CachedUserThreshold 2000000
+  description: |-
+    The command shown in Example 2 modifies the global collection of conversation history configuration settings.
+    (Each deployment is limited to a single, global collection of conversation history configuration settings.) In this example, the CachedUserThreshold property is set to 2000000.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDisplayNameResolution
+  description: |+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableServerConversationHistory
+  description: |+
+    When set to True ($True), conversation histories and related information will be stored on the server.
+    The default value is False, which means that this information is stored in user mailboxes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might occur when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique Identity of the conversation history configuration settings being modified.
+    Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the `Set-CsConversationHistoryConfiguration` cmdlet.
+    However, you can still use the following syntax to reference the global settings:
+
+    `-Identity "global"`
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxContinuedConversationRetry
+  description: |+
+    Specifies the maximum number of times the Skype for Business Server will search for a previous conversation item from Exchange to create a continued conversation.
+    If the previous conversation is not found in the specified number of attempts, a new conversation is created.
+    Increasing this value will present more continued conversations, but at the cost of decreased performance.
+    This parameter should not be used except in situations where Exchange connections are known to be unreliable.
+    The default value is 3.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Set-CsConversationHistoryConfiguration
+name: Set-CsConversationHistoryConfiguration
+description: |-
+  Prior to the release of Skype for Business Server, conversation histories were stored exclusively in the Conversation History folder, written by the Skype for Business rich client.
+  Unfortunately, that proved to be a problem for mobile device users, because the Conversation History folder is typically not replicated to mobile devices.
+  With Skype for Business Server, however, conversation histories, missed call notifications, and missed IM notifications can now be stored on the server instead of in client mailboxes; this change makes these items readily available to mobile devices.
+  That also means that administrators can manage the server-side storage of these conversation histories by using the conversation history configuration settings.
+  Keep in mind that a single, global collection of these settings is used to manage conversation history throughout your deployment; there is no option for creating additional conversation history.
+  However, the global settings can be modified by using the `Set-CsConversationHistoryConfiguration` cmdlet.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/set-csconversationhistoryconfiguration
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Set-CsConversationHistoryConfiguration
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

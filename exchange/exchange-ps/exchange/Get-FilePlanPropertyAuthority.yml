@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Get-FilePlanPropertyAuthority cmdlet to view file plan property authorities.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- Get-FilePlanPropertyAuthority [[-Identity] <ComplianceRuleIdParameter>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-FilePlanPropertyAuthority | Format-Table Name,Workload,Policy
+  description: |-
+    This example returns a summary list of all file plan property authorities.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-FilePlanPropertyAuthority -Identity "Contoso Authority"
+  description: |-
+    This example returns detailed information about the custom file plan property authority named Contoso Authority.
+  summary: ""
+parameters:
+- type: <xref href="ComplianceRuleIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the custom file plan property authority that you want to view. You can use any value that uniquely identifies the authority. For example:
+
+    - Name
+    - Distinguished name (DN)
+    - Id
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Get-FilePlanPropertyAuthority
+name: Get-FilePlanPropertyAuthority
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in Security & Compliance](https://go.microsoft.com/fwlink/p/?LinkId=511920).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-fileplanpropertyauthority
+  applicable: Security & Compliance
+  title: Get-FilePlanPropertyAuthority
+  schema: 2.0.0

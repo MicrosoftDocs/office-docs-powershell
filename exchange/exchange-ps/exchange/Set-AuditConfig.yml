@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Set-AuditConfig cmdlet to configure the auditing configuration in the Microsoft Purview compliance portal.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-AuditConfig [[-Identity] <PolicyIdParameter>] -Workload <MultiValuedProperty>
+
+   [-DomainController <Fqdn>]
+
+   [-Organization <OrganizationIdParameter>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-AuditConfig -Workload Exchange,SharePoint
+  description: |-
+    This example sets the auditing configuration for Exchange and SharePoint.
+  summary: ""
+parameters:
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="PolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="OrganizationIdParameter" data-throw-if-not-resolved="False" />
+  name: Organization
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="MultiValuedProperty" data-throw-if-not-resolved="False" />
+  name: Workload
+  isRequired: true
+  description: |+
+    The Workload parameter specifies where auditing is allowed. Valid values are:
+
+    - Exchange
+    - InTune
+    - OneDriveForBusiness
+    - SharePoint
+
+    You can specify multiple values separated by commas.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Security & Compliance
+uid: ExchangePowerShell.Set-AuditConfig
+name: Set-AuditConfig
+description: |-
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/set-auditconfig
+  applicable: Security & Compliance
+  title: Set-AuditConfig
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

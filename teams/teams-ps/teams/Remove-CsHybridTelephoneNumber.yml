@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet removes a hybrid telephone number.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The cmdlet is only available in GCC High and DoD cloud instances.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsHybridTelephoneNumber
+  href: New-CsHybridTelephoneNumber.yml
+- text: Get-CsHybridTelephoneNumber
+  href: Get-CsHybridTelephoneNumber.yml
+syntaxes:
+- Remove-CsHybridTelephoneNumber -TelephoneNumber <string> [-Force] [-WhatIf] [-Confirm][<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-CsHybridTelephoneNumber -TelephoneNumber 14025551234
+  description: |-
+    This example removes the hybrid phone number +1 (402) 555-1234.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TelephoneNumber
+  isRequired: true
+  description: |+
+    The telephone number to remove. The number should be specified without a prefixed "+". The phone number can't have "tel:" prefixed.
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsHybridTelephoneNumber
+name: Remove-CsHybridTelephoneNumber
+description: |-
+  This cmdlet removes a hybrid telephone number used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
+metadata:
+  external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-cshybridtelephonenumber
+  applicable: Microsoft Teams
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

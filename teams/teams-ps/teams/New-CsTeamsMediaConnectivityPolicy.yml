@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet creates a Teams media connectivity policy.
+module: MicrosoftTeamsPowerShell
+links:
+- text: Remove-CsTeamsMediaConnectivityPolicy
+  href: Remove-CsTeamsMediaConnectivityPolicy.yml
+- text: Get-CsTeamsMediaConnectivityPolicy
+  href: Get-CsTeamsMediaConnectivityPolicy.yml
+- text: Set-CsTeamsMediaConnectivityPolicy
+  href: Set-CsTeamsMediaConnectivityPolicy.yml
+- text: Grant-CsTeamsMediaConnectivityPolicy
+  href: Grant-CsTeamsMediaConnectivityPolicy.yml
+syntaxes:
+- New-CsTeamsMediaConnectivityPolicy -Identity <String>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-CsTeamsMediaConnectivityPolicy -Identity Test
+
+    Identity DirectConnection
+    -------------------------
+    Tag:Test Enabled
+  description: |-
+    Creates a new Teams media connectivity policy with the specified identity.
+    The newly created policy with value will be printed on success.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity of the Teams media connectivity policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsTeamsMediaConnectivityPolicy
+name: New-CsTeamsMediaConnectivityPolicy
+description: |-
+  This cmdlet creates a Teams media connectivity policy. If you get an error that the policy already exists, it means that the policy already exists for your tenant. In this case, run Get-CsTeamsMediaConnectivityPolicy.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  applicable: Microsoft Teams
+  title: New-CsTeamsMediaConnectivityPolicy
+  online version: https://learn.microsoft.com/powershell/module/teams/New-CsTeamsMediaConnectivityPolicy
+  schema: 2.0.0
+  author: lirunping-MSFT
+  ms.author: runli

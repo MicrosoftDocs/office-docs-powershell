@@ -1,0 +1,387 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Teams voice applications policy. `TeamsVoiceApplications` policy governs what permissions the supervisors/users have over auto attendants and call queues.
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsVoiceApplicationsPolicy
+  href: Get-CsTeamsVoiceApplicationsPolicy.yml
+- text: Grant-CsTeamsVoiceApplicationsPolicy
+  href: Grant-CsTeamsVoiceApplicationsPolicy.yml
+- text: Remove-CsTeamsVoiceApplicationsPolicy
+  href: Remove-CsTeamsVoiceApplicationsPolicy.yml
+- text: Set-CsTeamsVoiceApplicationsPolicy
+  href: Set-CsTeamsVoiceApplicationsPolicy.yml
+syntaxes:
+- "New-CsTeamsVoiceApplicationsPolicy [-Identity] <String> \r\n [-AllowAutoAttendantBusinessHoursGreetingChange <Boolean>]\r\n [-AllowAutoAttendantAfterHoursGreetingChange <Boolean>]\r\n [-AllowAutoAttendantHolidayGreetingChange <Boolean>]\r\n [-AllowAutoAttendantBusinessHoursChange <Boolean>]\r\n [-AllowAutoAttendantHolidaysChange <Boolean>] \r\n [-AllowAutoAttendantTimeZoneChange <Boolean>] \r\n [-AllowAutoAttendantLanguageChange <Boolean>] \r\n [-AllowAutoAttendantBusinessHoursRoutingChange <Boolean>] \r\n [-AllowAutoAttendantAfterHoursRoutingChange <Boolean>]\r\n [-AllowAutoAttendantHolidayRoutingChange <Boolean>] \r\n \r\n [-AllowCallQueueWelcomeGreetingChange <Boolean>] \r\n [-AllowCallQueueMusicOnHoldChange <Boolean>]\r\n [-AllowCallQueueOverflowSharedVoicemailGreetingChange <Boolean>]\r\n [-AllowCallQueueTimeoutSharedVoicemailGreetingChange <Boolean>]\r\n [-AllowCallQueueNoAgentSharedVoicemailGreetingChange <bool>]\r\n [-AllowCallQueueLanguageChange <Boolean>] \r\n [-AllowCallQueueMembershipChange <Boolean>] \r\n [-AllowCallQueueConferenceModeChange <Boolean>] \r\n [-AllowCallQueueRoutingMethodChange <Boolean>] \r\n [-AllowCallQueuePresenceBasedRoutingChange <Boolean>]\r\n [-AllowCallQueueOptOutChange <Boolean>] \r\n [-AllowCallQueueOverflowRoutingChange <Boolean>]\r\n [-AllowCallQueueTimeoutRoutingChange <Boolean>] \r\n [-AllowCallQueueNoAgentsRoutingChange <Boolean>]\r\n [-AllowCallQueueAgentOptChange <Boolean>] \r\n \r\n [-CallQueueAgentMonitorMode <Disabled | Monitor | Whisper | Barge | Takeover>]\r\n [-CallQueueAgentMonitorNotificationMode <Disabled | Agent>]\r\n \r\n [-RealTimeAutoAttendantMetricsPermission <string>]\r\n [-RealTimeCallQueueMetricsPermission <string>]\r\n [-RealTimeAgentMetricsPermission <string>]\r\n\r\n [-HistoricalAutoAttendantMetricsPermission <string>]\r\n [-HistoricalCallQueueMetricsPermission <string>]\r\n [-HistoricalAgentMetricsPermission <string>]\r\n \r\n [-WhatIf] \r\n [-Confirm]\r\n [<CommonParameters>]"
+examples:
+- title: EXAMPLE 1
+  code: |-
+    New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-CQ-Moh -AllowCallQueueMusicOnHoldChange $true
+  description: |-
+    The command shown in Example 1 creates a new per-user Teams voice applications policy with the Identity `SDA-Allow-Moh`. This policy allows delegated administrators to change the music on hold information.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    New-CsTeamsVoiceApplicationsPolicy -Identity SDA-Allow-AA-After-Hour -AllowAutoAttendantAfterHoursGreetingChange $true
+  description: |-
+    The command shown in Example 2 creates a new per-user Teams voice applications policy with the Identity `SDA-Allow-AA-After-Hour`. This policy allows delegated administrators to change after-hours greetings for auto attendants.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantAfterHoursGreetingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's after-hours greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's after-hours greeting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantAfterHoursRoutingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's after-hours call flow. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's after-hours call flow.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantBusinessHoursChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's business hours schedule. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's business hours schedule.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantBusinessHoursGreetingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's business hours greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's business hours greeting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantBusinessHoursRoutingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's business hours call flow. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's business hours call flow.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantHolidayGreetingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's holiday greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's holiday greeting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantHolidayRoutingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's holiday call flows. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's holiday call flows.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantHolidaysChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's holiday schedules. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's holiday schedules.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantLanguageChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's language.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAutoAttendantTimeZoneChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the auto attendant's time zone. When set to `False` (the default value), users affected by the policy won't be allowed to change the auto attendant's time zone.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueAgentOptChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change an agent's opt-in status in the call queue. When set to `False` (the default value), users affected by the policy won't be allowed to change an agent's opt-in status in the call queue.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueConferenceModeChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's conference mode. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's conference mode.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueLanguageChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's language.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueMembershipChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's users. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's users.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueMusicOnHoldChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's music on hold information. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's music on hold.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueNoAgentSharedVoicemailGreetingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's no agent shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no agent shared voicemail greeting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueNoAgentsRoutingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's no-agent handling properties. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no-agent handling properties.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueOptOutChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue opt-out setting that allows agents to opt out of receiving calls. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue opt-out setting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueOverflowRoutingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's overflow handling properties. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's overflow handling properties.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueOverflowSharedVoicemailGreetingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's overflow shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's overflow shared voicemail greeting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueuePresenceBasedRoutingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's presence-based routing option. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's presence-based routing option.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueRoutingMethodChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's routing method. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's routing method.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueTimeoutRoutingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's timeout handling properties. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's timeout handling properties.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueTimeoutSharedVoicemailGreetingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's timeout shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's timeout shared voicemail greeting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCallQueueWelcomeGreetingChange
+  description: |+
+    When set to `True`, users affected by the policy will be allowed to change the call queue's welcome greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's welcome greeting.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: CallQueueAgentMonitorMode
+  description: |+
+    PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
+
+    When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor call sessions.
+
+    When set to `Monitor`, users affected by the policy will be allowed to monitor and listen to call sessions.
+
+    When set to `Whisper`, users affected by the policy will be allowed to monitor call sessions and whisper to an agent in the call.
+
+    When set to `Barge`, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, or join the call session.
+
+    When set to `Takeover`, users affected by the policy will be allowed to monitor call sessions, whisper to an agent in the call, join the call session, or take over the call from an agent.
+
+  defaultValue: Disabled
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: CallQueueAgentMonitorNotificationMode
+  description: |+
+    PARAMVALUE: Disabled | Agent
+
+    When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor agents during call sessions.
+
+    When set to `Agent`, users affected by the policy will be allowed to monitor agents during call sessions.
+
+  defaultValue: Disabled
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: HistoricalAgentMetricsPermission
+  description: "PARAMVALUE: Disabled | AuthorizedOnly | All\r\n\r\nWhen set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for agents.\r\n\r\nWhen set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for agents who are members in the call queues they are authorized for.\r\n \r\nWhen set to `All`, users affected by the policy will receive historical metrics for all agents in all call queues in the organization.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: HistoricalAutoAttendantMetricsPermission
+  description: "PARAMVALUE: Disabled | AuthorizedOnly | All\r\n\r\nWhen set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for auto attendants.\r\n\r\nWhen set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for auto attendants they are authorized for.\r\n \r\nWhen set to `All`, users affected by the policy will receive historical metrics for all auto attendants in the organization.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: HistoricalCallQueueMetricsPermission
+  description: "PARAMVALUE: Disabled | AuthorizedOnly | All\r\n\r\nWhen set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for call queues.\r\n\r\nWhen set to `AuthorizedOnly`, users affected by the policy will receive historical metrics for call queues they are authorized for.\r\n \r\nWhen set to `All`, users affected by the policy will receive historical metrics for all call queues in the organization.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier assigned to the policy when it was created.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: RealTimeAgentMetricsPermission
+  description: "PARAMVALUE: Disabled | AuthorizedOnly | All\r\n\r\nWhen set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for agents.\r\n\r\nWhen set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.\r\n \r\nWhen set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: RealTimeAutoAttendantMetricsPermission
+  description: "PARAMVALUE: Disabled | AuthorizedOnly | All\r\n\r\nWhen set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for auto attendants.\r\n\r\nWhen set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for auto attendants they are authorized for.\r\n \r\nWhen set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: RealTimeCallQueueMetricsPermission
+  description: "PARAMVALUE: Disabled | AuthorizedOnly | All\r\n\r\nWhen set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for call queues.\r\n\r\nWhen set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for call queues they are authorized for.\r\n \r\nWhen set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.New-CsTeamsVoiceApplicationsPolicy
+name: New-CsTeamsVoiceApplicationsPolicy
+description: |-
+  `TeamsVoiceApplicationsPolicy` is used for **Supervisor Delegated Administration** which allows admins in the organization to permit certain users to make changes to auto attendant and call queue configurations.
+metadata:
+  external help file: MicrosoftTeams-help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csteamsvoiceapplicationspolicy
+  schema: 2.0.0
+  ROBOTS: NOINDEX

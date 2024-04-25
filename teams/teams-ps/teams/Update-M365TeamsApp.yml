@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet updates app state and app available values for the Microsoft Teams app.
+module: MicrosoftTeamsPowerShell
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AllM365TeamsApps
+  href: Get-ALLM365TeamsApps.yml
+- text: Get-M365TeamsApp
+  href: Get-M365TeamsApp.yml
+syntaxes:
+- >-
+  Update-M365TeamsApp -Id <String> [-IsBlocked <Boolean>] -AppAssignmentType <String> -OperationType <String>
+
+   [-Users <String[]>] [-Groups <String[]>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Update-M365TeamsApp -Id 3acac8f6-4e9e-4ee1-9c0e-0ea837d15ea3 -IsBlocked $true -AppAssignmentType UsersAndGroups -OperationType Add -Users eec823bd-0979-4cf8-9924-85bb6ffcb57d -Groups 37da2d58-fc14-453e-9a14-5065ebd63a1d
+  description: |-
+    Updates state and availablity assignment information of 3acac8f6-4e9e-4ee1-9c0e-0ea837d15ea3 app.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppAssignmentType
+  isRequired: true
+  description: |+
+    App availability type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Groups
+  description: |+
+    List of all the groups for whom the app is enabled or disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Application ID of Microsoft Teams app.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsBlocked
+  description: |+
+    The state of the app in the tenant.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OperationType
+  isRequired: true
+  description: |+
+    Operation performed on the app assigment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Users
+  description: |+
+    List of all the users for whom the app is enabled or disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Update-M365TeamsApp
+name: Update-M365TeamsApp
+description: |-
+  This cmdlet allows administrators to modify app state and availability by adding or removing users and groups or changing assignment type.
+metadata:
+  external help file: Microsoft.Teams.PowerShell.TeamsCmdlets.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://docs.microsoft.com/powershell/module/teams/Update-M365TeamsApp
+  applicable: Microsoft Teams
+  title: Update-M365TeamsApp
+  author: lkueter
+  ms.author: satishtimiri
+  manager: rahulrgupta
+  ms.date: 04/24/2024
+  schema: 2.0.0

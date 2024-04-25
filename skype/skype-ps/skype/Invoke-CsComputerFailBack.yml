@@ -1,0 +1,146 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the Invoke-CsComputerFailBack to flag a server as available for load balancing in a Skype for Business Server pool.
+  To successfully run this cmdlet you need to run it using an account that has administrator privileges on each server in the source and target pools.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The Invoke-CsComputerFailBack cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+links:
+- text: Invoke-CsComputerFailOver
+  href: Invoke-CsComputerFailOver.yml
+syntaxes:
+- >-
+  Invoke-CsComputerFailBack [[-ComputerName] <String>] [-Confirm] [-NoStart] [-Report <String>]
+
+   [-WaitTime <TimeSpan>] [-WhatIf] [-SkipFabricHealthCheck] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 -------------------------- (Skype for Business Server 2015)'
+  code: |-
+    Invoke-CsComputerFailBack -ComputerName "atl-mcs-001.litwareinc.com" -NoStart
+  description: |-
+    This example marks the computer "atl-mcs-001.litwareinc.com" as available to the pool and enables the services, but does not start them.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name to fail back.
+    The computer should be referenced by using its fully qualified domain name (FQDN).
+    For example, `-ComputerName "atl-mcs-001.litwareinc.com".`
+    The computer name used during failback must be the same name used during failover.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoStart
+  description: |+
+    If the NoStart parameter is specified, the Skype for Business server is added back into the pool and marked as available, but all the Skype for Business services are not started.
+    Only the Skype for Business service (rtcsrv) is verified by the cmdlet.
+    This allows for follow-up scripting to start the remaining services and configure the server for your environment before users and data are assigned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Report
+  description: |+
+    Specifies the file path for the log file created when the cmdlet runs.
+    For example: `-Report "C:\Logs\Server1FailbackLog.html".`
+    If this file already exists, it will be overwritten.
+    By default, reports are written to the AppData\Local\Temp folder in your user profile.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipFabricHealthCheck
+  description: |+
+    {{Fill SkipFabricHealthCheck Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: WaitTime
+  description: |+
+    Specifies the amount of time in TimeSpan format that the cmdlet will wait for a confirmation of failback success.
+    If the time is exceeded, the cmdlet will fail and Skype for Business services will not be started or enabled.
+    The default is one hour.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Invoke-CsComputerFailBack
+name: Invoke-CsComputerFailBack
+description: |-
+  The Invoke-CsComputerFailBack cmdlet functionality is not available in the Skype for Business Server Control Panel.
+
+  To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
+
+  `Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/invoke-cscomputerfailback
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Invoke-CsComputerFailBack
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

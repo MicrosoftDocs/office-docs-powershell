@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the New-CsOnlineDateTimeRange cmdlet to create a new date-time range.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.Online.Models.DateTimeRange" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsOnlineSchedule
+  href: New-CsOnlineSchedule.yml
+syntaxes:
+- New-CsOnlineDateTimeRange -Start <String> [-End <String>] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $dtr = New-CsOnlineDateTimeRange -Start "1/1/2017"
+  description: |-
+    This example creates a date-time range for spanning from January 1, 2017 12AM to January 2, 2017 12AM.
+  summary: ""
+- title: Example 2
+  code: |-
+    $dtr = New-CsOnlineDateTimeRange -Start "24/12/2017 09:00" -End "27/12/2017 00:00"
+  description: |-
+    This example creates a date-time range spanning from December 24, 2017 9AM to December 27, 2017 12AM.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: End
+  description: |+
+    The End parameter represents the end bound of the date-time range.
+
+    If not present, the end bound of the date time range is set to 00:00 of the day after the start date.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Start
+  isRequired: true
+  description: |+
+    The Start parameter represents the start bound of the date-time range. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsOnlineDateTimeRange
+name: New-CsOnlineDateTimeRange
+description: |-
+  The New-CsOnlineDateTimeRange cmdlet creates a new date-time range to be used with the Organizational Auto Attendant (OAA) service. Date time ranges are used to form schedules.
+
+  **NOTE**:
+
+  - The start bound of the range must be less than its end bound.
+  - The time part of the range must be aligned with 30/60-minutes boundaries.
+  - A date time range bound can only be input in the following formats:
+    - "d/m/yyyy H:mm"
+    - "d/m/yyyy" (the time component of the date-time range is set to 00:00)
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/new-csonlinedatetimerange
+  applicable: Microsoft Teams
+  title: New-CsOnlineDateTimeRange
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

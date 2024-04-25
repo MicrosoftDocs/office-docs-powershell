@@ -1,0 +1,244 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+
+  Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva. The attributes of the policy are defined using the cmdlet parameters. Policies are used to restrict or grant access to the specified feature for specific users, groups, or the entire tenant. Note that:
+
+  - You can assign up to 10 policies per feature. An additional one policy per feature can be assigned to the entire tenant.
+  - Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature is enabled. If a user has multiple policies assigned for a feature (directly as a user or member of a group), the most restrictive policy applies.
+
+  Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+links:
+- text: Exchange PowerShell
+  href: https://learn.microsoft.com/powershell/module/exchange
+- text: About the Exchange Online PowerShell module
+  href: https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2
+- text: Role template IDs
+  href: https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids
+syntaxes:
+- >-
+  Add-VivaModuleFeaturePolicy -FeatureId <String> -IsFeatureEnabled <Boolean> -ModuleId <String> -Name <String>
+
+   [-Confirm]
+
+   [-GroupIds <String[]>]
+
+   [-UserIds <String[]>]
+
+   [-Everyone]
+
+   [-IsUserControlEnabled <Boolean>]
+
+   [-ResultSize <Unlimited>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name DisableFeatureForAll -IsFeatureEnabled $false -Everyone
+  description: |-
+    This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for all users in the organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com
+  description: |-
+    This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for all users in the specified groups.
+  summary: ""
+- title: Example 3
+  code: |-
+    Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleUsers -IsFeatureEnabled $false -UserIds user1@contoso.com,user2@contoso.com
+  description: |-
+    This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for the specified users.
+  summary: ""
+- title: Example 4
+  code: |-
+    Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
+  description: |-
+    This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for the specified users and group members.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+    This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Everyone
+  description: |+
+    The Everyone switch specifies that the policy applies to all users in the organization. You don't need to specify a value with this switch.
+
+    Don't use this switch with the GroupIds or UserIds parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FeatureId
+  isRequired: true
+  description: |+
+    The FeatureId parameter specifies the feature in the Viva module that you want to add the policy for.
+
+    To view details about the features in a Viva module that support feature access controls, use the Get-VivaModuleFeature cmdlet. The FeatureId value is returned in the output of the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupIds
+  description: |+
+    The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled Microsoft Entra groups]( https://learn.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+
+    You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+    To have the policy apply to all users in the organization, use the Everyone switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsFeatureEnabled
+  isRequired: true
+  description: |+
+    The IsFeatureEnabled parameter specifies whether or not the feature is enabled by the policy. Valid values are:
+
+    - $true: The feature is enabled by the policy.
+    - $false: The feature is not enabled by the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsUserControlEnabled
+  description: |+
+    **Note**: This parameter is available in version 3.3.0 or later of the module. If the feature supports user controls for opting out, make sure you set the *IsUserControlEnabled* parameter when you create the policy. Otherwise, user controls for the policy use the default state for the feature.
+
+    The IsUserControlEnabled parameter specifies whether user control is enabled by the policy. Valid values are:
+
+    - $true: User control is enabled by the policy. Users can opt out of the feature.
+    - $false: User control isn't enabled by the policy. Users can't opt of the feature.
+
+    Only features that allow admins to enable and disable user controls by policy can use this parameter. If the feature doesn't support admins toggling user controls, the default value applies. See the feature documentation for more information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ModuleId
+  isRequired: true
+  description: |+
+    The ModuleId parameter specifies the Viva module that you want to add the feature policy for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The Name parameter specifies the name of the policy. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
+
+    Valid characters are English letters, numbers, commas, periods, and spaces.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Unlimited" data-throw-if-not-resolved="False" />
+  name: ResultSize
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserIds
+  description: |+
+    The UserIds parameter specifies the user principal names (UPNs) of the users that the policy applies to. You can enter multiple values separated by commas.
+
+    You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+    To have the policy apply to all users in the organization, use the Everyone switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+uid: ExchangePowerShell.Add-VivaModuleFeaturePolicy
+name: Add-VivaModuleFeaturePolicy
+description: |-
+  Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature in Viva.
+
+  You need to use the Connect-ExchangeOnline cmdlet to authenticate.
+
+  This cmdlet requires the .NET Framework 4.7.2 or later.
+
+  Currently, you need to be a member of the Global administrators role to run this cmdlet.
+
+  To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
+metadata:
+  external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
+  Module Name: ExchangeOnlineManagement
+  online version: https://learn.microsoft.com/powershell/module/exchange/add-vivamodulefeaturepolicy
+  applicable: Exchange Online
+  title: Add-VivaModuleFeaturePolicy
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

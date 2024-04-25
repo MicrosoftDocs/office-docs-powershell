@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet creates an online call data connection.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The New-CsCloudCallDataConnection cmdlet is only supported in commercial environments from Teams PowerShell Module versions 4.6.0 or later.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Configure Call Data Connector
+  href: /skypeforbusiness/hybrid/configure-call-data-connector
+- text: Get-CsCloudCallDataConnection
+  href: Get-CsCloudCallDataConnection.yml
+syntaxes:
+- New-CsCloudCallDataConnection
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-CsCloudCallDataConnection
+
+    Token
+    -----
+    00000000-0000-0000-0000-000000000000
+  description: |-
+    Returns a token value, which is needed when configuring your on-premises environment with Set-CsCloudCallDataConnector.
+  summary: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.New-CsCloudCallDataConnection
+name: New-CsCloudCallDataConnection
+description: |-
+  This cmdlet creates an online call data connection. If you get an error that the connection already exists, it means that the call data connection already exists for your tenant. In this case, run Get-CsCloudCallDataConnection.
+metadata:
+  external help file: MicrosoftTeams-help.xml
+  Module Name: MicrosoftTeams
+  applicable: Microsoft Teams
+  title: New-CsCloudCallDataConnection
+  online version: https://learn.microsoft.com/powershell/module/teams/new-cscloudcalldataconnection
+  schema: 2.0.0
+  author: 2012ucp1544
+  ms.author: uditagrawal
+  ms.reviewer: pbafna
+  manager: subadjat

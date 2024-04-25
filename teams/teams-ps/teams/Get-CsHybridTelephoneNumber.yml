@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet displays information about one or more hybrid telephone numbers.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The cmdlet is available in Teams PowerShell module 4.5.0 or later.
+
+  The cmdlet is only available in GCC High and DoD cloud instances.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsHybridTelephoneNumber
+  href: New-CsHybridTelephoneNumber.yml
+- text: Remove-CsHybridTelephoneNumber
+  href: Remove-CsHybridTelephoneNumber.yml
+syntaxes:
+- Get-CsHybridTelephoneNumber [-TelephoneNumber <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-CsHybridTelephoneNumber -TelephoneNumber 14025551234
+
+    Id              O365Region SourceType TargetType TelephoneNumber UserId
+    --              ---------- ---------- ---------- --------------- ------
+    14025551234    NOAM       Hybrid                14025551234     00000000-0000-0000-0000-000000000000
+  description: |-
+    This example displays information about the phone number +1 (402) 555-1234.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-CsHybridTelephoneNumber
+
+    Id              O365Region SourceType TargetType TelephoneNumber UserId
+    --              ---------- ---------- ---------- --------------- ------
+    14025551234                Hybrid                14025551234
+    14025551235                Hybrid                14025551235
+  description: |-
+    This example displays information about all hybrid telephone numbers in the tenant. Note that O365Region, TargetType, and UserId will not be populated.
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: TelephoneNumber
+  description: |+
+    Filters the returned results to a specific phone number. The number should be specified without a prefixed "+". The phone number can't have "tel:" prefixed.
+
+  defaultValue: None
+  position: named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsHybridTelephoneNumber
+name: Get-CsHybridTelephoneNumber
+description: |-
+  This cmdlet displays information about one or more hybrid telephone numbers used for Audio Conferencing with Direct Routing for GCC High and DoD clouds.
+
+  Returned results are sorted by telephone number in ascending order.
+metadata:
+  external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber
+  applicable: Microsoft Teams
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""
+  manager: ""
+  schema: 2.0.0

@@ -1,0 +1,177 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that the Skype for Business Server Storage Service is working on a Front End Server.
+  This is done by creating a test email message in the specified Exchange mailbox and then optionally deleting that message at the end of the text.
+  `Test-CsExStorageConnectivity` also verifies that Exchange archiving is working as expected.
+  This cmdlet was introduced in Lync Server 2013.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None.
+    The `Test-CsExStorageConnectivity` cmdlet does not accept pipelined input.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    The `Test-CsExStorageConnectivity` cmdlet returns instances of the Microsoft.Rtc.Management.ResourceData object.
+links:
+- text: Test-CsExStorageNotification
+  href: Test-CsExStorageNotification.yml
+syntaxes:
+- >-
+  Test-CsExStorageConnectivity [-SipUri] <String> [-Binding <String>] [-DeleteItem] [-Folder <ExchFolder>]
+
+   [-Force] [-HostNameStorageService <String>] [-UseCache] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Test-CsExStorageConnectivity -SipUri "sip:kenmyer@litwareinc.com" -Binding "NetNamedPipe"
+  description: |-
+    The command shown in Example 1 tests to see if the Skype for Business Server Storage Service can connect to the Exchange mailbox for the user sip:kenmyer@litwareinc.com.
+    In this example, NetNamedPipe is used as the WCF binding.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Test-CsExStorageConnectivity -SipUri "sip:kenmyer@litwareinc.com" -Binding "NetNamedPipe" -Folder Dumpster
+  description: |-
+    Example 2 verifies that the Skype for Business Server Storage Service can connect to the archiving store on Exchange.
+    (Note that this command will fail if the specified user has not been enabled for Exchange archiving.) In this example, a connection is made to the Dumpster folder: the Recoverable Items purge folder, a folder that stores deleted items and is not visible to end users.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Binding
+  description: |+
+    Windows Communication Foundation (WCF) binding.
+    A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
+    valid values are:
+
+    NetNamedPipe
+
+    NetTCP
+
+
+  defaultValue: None
+  position: Named
+  aliases: b
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteItem
+  description: |+
+    When present, the test item will be deleted from the Exchange mailbox at the end of the text.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ExchFolder" data-throw-if-not-resolved="False" />
+  name: Folder
+  description: |+
+    Specifies the Exchange archiving folder that the cmdlet should connect to.
+    Allowed values are:
+
+    ConversationHistory
+
+    Inbox
+
+    Dumpster
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses the display of any non-fatal error message that might arise when running the command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostNameStorageService
+  description: |+
+    Fully qualified domain name (FQDN) of the server where the Skype for Business Server Storage Service is running.
+    This parameter is required if the Binding is set to NetTCP.
+
+
+  defaultValue: None
+  position: Named
+  aliases: h
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SipUri
+  isRequired: true
+  description: |+
+    SIP address of the Exchange mailbox where the test item should be created.
+
+
+  defaultValue: None
+  position: "1"
+  aliases: s
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseCache
+  description: |+
+    When presents, instructs the cmdlet to used cached auto discovery results when attempting to connect to Exchange.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Test-CsExStorageConnectivity
+name: Test-CsExStorageConnectivity
+description: |-
+  The `Test-CsExStorageConnectivity` cmdlet is used to verify that server-to-server authentication is working between Skype for Business Server and Exchange.
+  To verify server-to-server authentication, the cmdlet logs on to Exchange writes an item to the Conversation History folder in the specified mailbox, and then deletes that item.
+
+  The `Test-CsExStorageConnectivity` cmdlet can also be used to verify that connections can be made to the archiving store on Exchange.
+
+  If you receive an "Access Denied" error message when running this cmdlet that typically means that you are not a member of the local group RTC Local User Administrators.
+  You can either be added to that group or to the Active Directory group RTCUniversalUserAdmins (which is a member of the RTC Local User Administrators) in order to get the required permissions to run the `Test-CsExStorageConnectivity` cmdlet.
+
+  Skype for Business Server Control Panel: The functions carried out by the `Test-CsExStorageConnectivity` cmdlet are not available in the Skype for Business Server Control Panel.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/test-csexstorageconnectivity
+  applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Test-CsExStorageConnectivity
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

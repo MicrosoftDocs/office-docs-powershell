@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the settings for processing of incoming calls for users who are already engaged in another communication stream. This cmdlet was introduced in Skype for Business Server 2015 June 2016 Cumulative Update.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.AD.UserIdParameter object.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return any objects.
+links:
+- text: Get-CsBusyOptions
+  href: https://learn.microsoft.com/powershell/module/skype/get-csbusyoptions?view=skype-ps
+- text: Set-CsBusyOptions
+  href: https://learn.microsoft.com/powershell/module/skype/set-csbusyoptions?view=skype-ps
+syntaxes:
+- Remove-CsBusyOptions [-Identity] <UserIdParameter> [-Confirm] [-PassThru] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsBusyOptions -Identity "Ken Myer"
+  description: |-
+    This example removes Busy Options for "Ken Myer".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Indicates the Identity of the user account to be modified. User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer). User Identities can also be referenced by using the user's Active Directory distinguished name.
+
+    You can use the asterisk (*) wildcard character when using the display name as the user Identity. For example, the Identity "*Smith" returns all the users who have a display name that ends with the string value "Smith".
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsBusyOptions
+name: Remove-CsBusyOptions
+description: |-
+  This cmdlet removes configuration information about Busy Options for a specific user.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csbusyoptions
+  applicable: Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsBusyOptions
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the teams enhanced encryption policies configured for use in your organization.
+module: MicrosoftTeamsPowerShell
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsEnhancedEncryptionPolicy
+  href: New-CsTeamsEnhancedEncryptionPolicy.yml
+- text: Set-CsTeamsEnhancedEncryptionPolicy
+  href: Set-CsTeamsEnhancedEncryptionPolicy.yml
+- text: Remove-CsTeamsEnhancedEncryptionPolicy
+  href: Remove-CsTeamsEnhancedEncryptionPolicy.yml
+- text: Grant-CsTeamsEnhancedEncryptionPolicy
+  href: Grant-CsTeamsEnhancedEncryptionPolicy.yml
+syntaxes:
+- >-
+  Get-CsTeamsEnhancedEncryptionPolicy [-LocalStore] [[-Identity] <Object>] [-Filter <Object>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Get-CsTeamsEnhancedEncryptionPolicy
+  description: |-
+    The command shown in Example 1 returns information for all the teams enhanced encryption policies configured for use in the tenant.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-CsTeamsEnhancedEncryptionPolicy -Identity 'ContosoPartnerEnhancedEncryptionPolicy'
+  description: |-
+    In Example 2, information is returned for a single teams enhanced encryption policy: the policy with the Identity ContosoPartnerEnhancedEncryptionPolicy.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    If you don't know what policies have been pre-constructed, you can use filter to identify all policies available. This is a regex string against the name (Identity) of the pre-constructed policies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Unique identifier assigned to the Teams enhanced encryption policy.
+
+    Use the "Global" Identity if you wish to retrieve the policy set for the entire tenant.
+
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal Microsoft use only.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsEnhancedEncryptionPolicy
+name: Get-CsTeamsEnhancedEncryptionPolicy
+description: |-
+  Returns information about the Teams enhanced encryption policies configured for use in your organization.
+  The TeamsEnhancedEncryptionPolicy enables administrators to determine which users in your organization can use the enhanced encryption settings in Teams, setting for End-to-end encryption in ad-hoc 1-to-1 VOIP calls is the parameter supported by this policy currently.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsenhancedencryptionpolicy
+  title: Get-CsTeamsEnhancedEncryptionPolicy
+  author: xinawang
+  ms.author: serdars
+  manager: mdress
+  schema: 2.0.0

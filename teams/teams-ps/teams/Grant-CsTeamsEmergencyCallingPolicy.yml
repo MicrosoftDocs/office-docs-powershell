@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet assigns a Teams Emergency Calling policy.
+module: MicrosoftTeamsPowerShell
+notes: |-
+  The GrantToGroup syntax is supported in Teams PowerShell Module version 4.5.1-preview or later.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsTeamsEmergencyCallingPolicy
+  href: New-CsTeamsEmergencyCallingPolicy.yml
+- text: Get-CsTeamsEmergencyCallingPolicy
+  href: Get-CsTeamsEmergencyCallingPolicy.yml
+- text: Remove-CsTeamsEmergencyCallingPolicy
+  href: Remove-CsTeamsEmergencyCallingPolicy.yml
+- text: Set-CsTeamsEmergencyCallingPolicy
+  href: Set-CsTeamsEmergencyCallingPolicy.yml
+syntaxes:
+- Grant-CsTeamsEmergencyCallingPolicy [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTeamsCallingPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Grant-CsTeamsEmergencyCallingPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Grant-CsTeamsEmergencyCallingPolicy -Identity user1 -PolicyName TestTECP
+  description: |-
+    This example assigns the Teams Emergency Calling policy TestTECP to a user
+  summary: ""
+- title: Example 2
+  code: |-
+    Grant-CsTeamsEmergencyCallingPolicy -Global -PolicyName SalesTECP
+  description: |-
+    Assigns the Teams Emergency Calling policy called "SalesTECP" to the Global policy instance. This sets the parameters in the Global policy instance to the values found in the SalesTECP instance.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    Sets the parameters of the Global policy instance to the values in the specified policy instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the group used for the group policy assignment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the user account the policy should be assigned to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Including this parameter (which does not take a value) displays the user information when the cmdlet completes. Normally there is no output when this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    The Identity of the Teams Emergency Calling policy to apply to the user. To remove an existing user level policy assignment, specify PolicyName as $null.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Grant-CsTeamsEmergencyCallingPolicy
+name: Grant-CsTeamsEmergencyCallingPolicy
+description: |-
+  This cmdlet assigns a Teams Emergency Calling policy to a user, a group of users, or to the Global policy instance. Emergency Calling policy is used for the life cycle of emergency calling experience for the security desk and Teams client location experience.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsemergencycallingpolicy
+  applicable: Microsoft Teams
+  title: Grant-CsTeamsEmergencyCallingPolicy
+  author: jenstrier
+  ms.author: serdars
+  manager: roykuntz
+  ms.reviewer: chenc, pthota
+  schema: 2.0.0

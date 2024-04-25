@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkSitePolicyType object.
+    Accepts pipelined input of network inter-site policy objects.
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return a value.
+    It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkSitePolicyType.
+links:
+- text: New-CsNetworkInterSitePolicy
+  href: New-CsNetworkInterSitePolicy.yml
+- text: Set-CsNetworkInterSitePolicy
+  href: Set-CsNetworkInterSitePolicy.yml
+- text: Get-CsNetworkInterSitePolicy
+  href: Get-CsNetworkInterSitePolicy.yml
+syntaxes:
+- >-
+  Remove-CsNetworkInterSitePolicy [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Remove-CsNetworkInterSitePolicy -Identity Reno_Portland
+  description: |-
+    This example removes the network site policy with the Identity Reno_Portland.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsNetworkInterSitePolicy | Remove-CsNetworkInterSitePolicy
+  description: |-
+    In Example 2, we remove all network site policies defined within the CAC configuration.
+    We begin by calling the `Get-CsNetworkInterSitePolicy` cmdlet to retrieve a collection of all network site policies.
+    That collection is then piped to the `Remove-CsNetworkInterSitePolicy` cmdlet, which removes each item in the collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses any confirmation prompts that would otherwise be displayed before making changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsGlobalRelativeIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The unique identifier of the network site policy you want to remove.
+    Network site policies are created only at the global scope, so this identifier does not need to specify a scope.
+    Instead, it contains a string that is a unique name that identifies that site policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Describes what would happen if you executed the command without actually executing the command.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Remove-CsNetworkInterSitePolicy
+name: Remove-CsNetworkInterSitePolicy
+description: |-
+  When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
+  This cmdlet removes a network site policy that associates a bandwidth limitation policy with two directly connected sites.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/remove-csnetworkintersitepolicy
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Remove-CsNetworkInterSitePolicy
+  schema: 2.0.0
+  manager: rogupta
+  author: hirenshah1
+  ms.author: hirshah
+  ms.reviewer: ""

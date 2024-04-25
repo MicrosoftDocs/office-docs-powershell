@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This policy is controlled by Global and Teams Service Administrators, and is used to turn on/off certain features only related to the Assignments Service, which runs for tenants with EDU licenses.  This cmdlet allows you to retrieve the current values of your Education Assignments App Policy.  At this time, you can only modify your global policy - this policy type does not support user-level custom policies.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-CsTeamsEducationAssignmentsAppPolicy [-Tenant <System.Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
+
+   [<CommonParameters>]
+- >-
+  Get-CsTeamsEducationAssignmentsAppPolicy [-Tenant <System.Guid>] [-Filter <String>] [-LocalStore]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsTeamsEducationAssignmentsAppPolicy
+  description: |-
+    Retrieves the policy in your organization
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Not applicable - you cannot create custom policies, so will always be retrieving the global policy for your organization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The only value supported is "Global"
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsTeamsEducationAssignmentsAppPolicy
+name: Get-CsTeamsEducationAssignmentsAppPolicy
+description: |-
+  This policy is controlled by Global and Teams Service Administrators, and is used to turn on/off certain features only related to the Assignments Service, which runs for tenants with EDU licenses.  This cmdlet allows you to retrieve the current values of your Education Assignments App Policy.  At this time, you can only modify your global policy - this policy type does not support user-level custom policies.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csteamseducationassignmentsapppolicy
+  applicable: Microsoft Teams
+  title: Get-CsTeamsEducationAssignmentsAppPolicy
+  schema: 2.0.0
+  ms.reviewer: ""
+  manager: bulenteg
+  ms.author: tomkau

@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+  Use the Get-DlpSensitiveInformationType cmdlet to list the sensitive information types that are defined for your organization in the Microsoft Purview compliance portal. Sensitive information types are used by data loss prevention (DLP) rules to check for sensitive information such as social security, passport, or credit card numbers.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>]
+
+   [-Capability <ClassificationCapabilityType>]
+
+   [-IncludeDetails]
+
+   [-IncludeElements <ClassificationPrimitiveElementType>]
+
+   [-Organization <OrganizationIdParameter>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-DlpSensitiveInformationType
+  description: |-
+    This example lists all the sensitive information types defined for your organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-DlpSensitiveInformationType -Identity "Credit Card Number" | Format-List
+  description: |-
+    This example lists all the properties of the sensitive information type named "Credit Card Number".
+  summary: ""
+parameters:
+- type: <xref href="ClassificationCapabilityType" data-throw-if-not-resolved="False" />
+  name: Capability
+  description: |+
+    {{ Fill Capability Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SensitiveInformationTypeIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the sensitive information type that you want to view. Valid values are:
+
+    - Name
+    - Id (GUID value)
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeDetails
+  description: |+
+    {{ Fill IncludeDetails Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="ClassificationPrimitiveElementType" data-throw-if-not-resolved="False" />
+  name: IncludeElements
+  description: |+
+    {{ Fill IncludeElements Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+- type: <xref href="OrganizationIdParameter" data-throw-if-not-resolved="False" />
+  name: Organization
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Security & Compliance
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+- Security & Compliance
+uid: ExchangePowerShell.Get-DlpSensitiveInformationType
+name: Get-DlpSensitiveInformationType
+description: |-
+  The RecommendedConfidence property of the returned objects contains a value that represents the default (or recommended) confidence level that should be used with the corresponding sensitive information type.
+
+  To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype
+  applicable: Exchange Online, Security & Compliance
+  title: Get-DlpSensitiveInformationType
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

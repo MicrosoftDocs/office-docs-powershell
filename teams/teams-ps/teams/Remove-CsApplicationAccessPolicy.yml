@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes an existing application access policy.
+module: MicrosoftTeamsPowerShell
+notes: ""
+links:
+- text: New-CsApplicationAccessPolicy
+  href: New-CsApplicationAccessPolicy.yml
+- text: Grant-CsApplicationAccessPolicy
+  href: Grant-CsApplicationAccessPolicy.yml
+- text: Get-CsApplicationAccessPolicy
+  href: Get-CsApplicationAccessPolicy.yml
+- text: Set-CsApplicationAccessPolicy
+  href: Set-CsApplicationAccessPolicy.yml
+syntaxes:
+- Remove-CsApplicationAccessPolicy [-Identity <XdsIdentity>]
+examples:
+- title: Remove an application access policy
+  code: |-
+    PS C:\> Remove-CsApplicationAccessPolicy -Identity "ASimplePolicy"
+  description: |-
+    The command shown above deletes the application access policy ASimplePolicy.
+  summary: ""
+parameters:
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Unique identifier assigned to the policy when it was created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsApplicationAccessPolicy
+name: Remove-CsApplicationAccessPolicy
+description: |-
+  This cmdlet deletes an existing application access policy.
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/remove-csapplicationaccesspolicy
+  applicable: Microsoft Teams
+  title: Remove-CsApplicationAccessPolicy
+  schema: 2.0.0
+  manager: zhengni
+  author: frankpeng7
+  ms.author: frpeng
+  ms.reviewer: ""

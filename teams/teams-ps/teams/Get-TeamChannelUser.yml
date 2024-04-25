@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns users of a channel.
+module: MicrosoftTeamsPowerShell
+notes: ""
+syntaxes:
+- Get-TeamChannelUser -GroupId <String> -DisplayName <String> [-Role <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-TeamChannelUser -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf -DisplayName "Engineering" -Role Owner
+  description: |-
+    Get owners of channel with display name as "Engineering"
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Display name of the channel
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    GroupId of the team
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Role
+  description: |+
+    Filter the results to only users with the given role: Owner or Member.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Get-TeamChannelUser
+name: Get-TeamChannelUser
+description: |-
+  Note: This cmdlet is part of the Public Preview version of Teams PowerShell Module, for more information see [Install Teams PowerShell public preview](https://learn.microsoft.com/microsoftteams/teams-powershell-install#install-teams-powershell-public-preview) and also see [Microsoft Teams PowerShell Release Notes](https://learn.microsoft.com/microsoftteams/teams-powershell-release-notes).
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/get-teamchanneluser
+  schema: 2.0.0

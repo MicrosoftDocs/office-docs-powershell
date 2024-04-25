@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The Get-CsAutoAttendantSupportedLanguage cmdlet gets languages that are supported by the Auto Attendant (AA) service.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-CsAutoAttendantSupportedLanguage cmdlet accepts a string as the Identity parameter.
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.Hosted.OAA.Models.Language" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-CsAutoAttendantSupportedLanguage [-Identity <String>] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsAutoAttendantSupportedLanguage
+  description: |-
+    This example gets all supported languages.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsAutoAttendantSupportedLanguage -Identity "en-US"
+  description: |-
+    This example gets the language that the Identity parameter specifies (en-US).
+  summary: ""
+parameters:
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter designates a specific language to be retrieved. If this parameter is not specified, then all supported languages are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsAutoAttendantSupportedLanguage
+name: Get-CsAutoAttendantSupportedLanguage
+description: |-
+  The Get-CsAutoAttendantSupportedLanguage cmdlet gets all languages (and their corresponding voices/speakers) that are supported by the AA service, or a specific language if its Identity is provided.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-csautoattendantsupportedlanguage
+  applicable: Microsoft Teams
+  title: Get-CsAutoAttendantSupportedLanguage
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: williamlooney

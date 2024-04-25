@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Update Team channels settings.
+module: MicrosoftTeamsPowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-TeamChannel -GroupId <String> -CurrentDisplayName <String> [-NewDisplayName <String>]
+
+   [-Description <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-TeamChannel -GroupId c58566a6-4bb4-4221-98d4-47677dbdbef6 -CurrentDisplayName TechReads -NewDisplayName "Technical Reads"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CurrentDisplayName
+  isRequired: true
+  description: |+
+    Current channel name
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Updated Channel description.
+    Channel Description Characters Limit - 1024.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    GroupId of the team
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDisplayName
+  description: |+
+    New Channel display name.
+    Names must be 50 characters or less, and can't contain the characters # % & * { } / \ : \< \> ?
+    + | ' "
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MicrosoftTeamsPowerShell.Set-TeamChannel
+name: Set-TeamChannel
+description: |-
+  > [!IMPORTANT]
+  > Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here `https://www.poshtestgallery.com/packages/MicrosoftTeams`.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  online version: https://learn.microsoft.com/powershell/module/teams/set-teamchannel
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

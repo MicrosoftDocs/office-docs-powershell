@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes all servers flagged as unhealthy from an Office Online Server farm.
+module: OfficeOnlineServerPowerShell
+notes: ""
+syntaxes:
+- Repair-OfficeWebAppsFarm [-Force] [-WhatIf] [-Confirm]
+examples:
+- title: '------------------EXAMPLE 1---------------------'
+  code: |-
+    (Get-OfficeWebAppsFarm).Machines
+  description: |-
+    This example displays the health status of all servers in the Office Online Server farm.
+  summary: ""
+- title: '------------------EXAMPLE 2---------------------'
+  code: |-
+    Repair-OfficeWebAppsFarm
+  description: |-
+    This example removes all unhealthy servers from the Office Online Server farm.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Assumes the answer to any user prompt is Yes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: OfficeOnlineServerPowerShell.Repair-OfficeWebAppsFarm
+name: Repair-OfficeWebAppsFarm
+description: |-
+  The Repair-OfficeWebAppsFarm cmdlet removes all servers flagged as unhealthy from an Office Online Server farm.
+  This cmdlet updates the farm topology but does not clean up services and web applications on the servers that are removed.
+  For this reason, we recommend making every effort to run the Remove-OfficeWebAppsMachine cmdlet from the unhealthy servers so that they are cleanly removed from the farm.
+  Use the Repair-OfficeWebAppsFarm cmdlet only if the unhealthy servers have failed and you cannot run the Remove-OfficeWebAppsMachine cmdlet directly on them.
+
+  If there are multiple unhealthy servers, you are prompted before each server is removed.
+  If there are no unhealthy servers, this cmdlet does nothing.
+metadata:
+  external help file: ""
+  Module Name: officewebapps
+  title: Repair-OfficeWebAppsFarm
+  online version: ""
+  schema: 2.0.0
+  author: serdarsoysal
+  ms.author: serdars
+  ms.reviewer: ""

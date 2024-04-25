@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Get-Place cmdlet to view the additional metadata that was configured on room mailboxes by using the Set-Place cmdlet. The additional metadata provides a better search and room suggestion experience.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- >-
+  Get-Place [[-Identity] <RecipientIdParameter>]
+
+   [-Confirm]
+
+   [-ResultSize <Unlimited>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+- >-
+  Get-Place [-Type <GetPlaceType>]
+
+   [-Confirm]
+
+   [-ResultSize <Unlimited>]
+
+   [-WhatIf]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-Place -Identity "Conference Room 01"
+  description: |-
+    This example returns summary metadata for the room mailbox named Conference Room 1.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-Place -Identity "Conference Room 01" | Format-List
+  description: |-
+    This example returns detailed metadata for Conference Room 1.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-Place -Type Room
+  description: |-
+    This example returns all room mailboxes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="RecipientIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter specifies the room mailbox that you want to view. You can use any value that uniquely identifies the room. For example:
+
+    - Name
+    - Alias
+    - Distinguished name (DN)
+    - Canonical DN
+    - Email address
+    - GUID
+
+    You can't use this parameter with the Type parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="Unlimited" data-throw-if-not-resolved="False" />
+  name: ResultSize
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="GetPlaceType" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    The Type parameter filters the results by the type of room mailbox. Valid values are:
+
+    - Room
+    - RoomList
+    - Space
+
+    You can't use this parameter with the Identity parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Exchange Online
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+uid: ExchangePowerShell.Get-Place
+name: Get-Place
+description: |-
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-place
+  applicable: Exchange Online
+  title: Get-Place
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""

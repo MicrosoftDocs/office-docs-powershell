@@ -1,0 +1,207 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a per-user Teams recording policy to one or more users.
+  This policy is used to govern automatic policy-based recording in your tenant.
+  Automatic policy-based recording is only applicable to Microsoft Teams users.
+module: MicrosoftTeamsPowerShell
+inputs:
+- name: <xref href="Microsoft.Rtc.Management.AD.UserIdParameter" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CsTeamsComplianceRecordingPolicy
+  href: Get-CsTeamsComplianceRecordingPolicy.yml
+- text: New-CsTeamsComplianceRecordingPolicy
+  href: New-CsTeamsComplianceRecordingPolicy.yml
+- text: Set-CsTeamsComplianceRecordingPolicy
+  href: Set-CsTeamsComplianceRecordingPolicy.yml
+- text: Remove-CsTeamsComplianceRecordingPolicy
+  href: Remove-CsTeamsComplianceRecordingPolicy.yml
+- text: Get-CsTeamsComplianceRecordingApplication
+  href: Get-CsTeamsComplianceRecordingApplication.yml
+- text: New-CsTeamsComplianceRecordingApplication
+  href: New-CsTeamsComplianceRecordingApplication.yml
+- text: Set-CsTeamsComplianceRecordingApplication
+  href: Set-CsTeamsComplianceRecordingApplication.yml
+- text: Remove-CsTeamsComplianceRecordingApplication
+  href: Remove-CsTeamsComplianceRecordingApplication.yml
+- text: New-CsTeamsComplianceRecordingPairedApplication
+  href: New-CsTeamsComplianceRecordingPairedApplication.yml
+syntaxes:
+- >-
+  Grant-CsTeamsComplianceRecordingPolicy [-Identity <UserIdParameter>] [-PolicyName <String>]
+
+   [-Tenant <System.Guid>] [-DomainController <Fqdn>]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-CsTeamsComplianceRecordingPolicy [-Global] [-PolicyName <String>]
+
+   [-Tenant <System.Guid>] [-DomainController <Fqdn>]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-CsTeamsComplianceRecordingPolicy [-PassThru] [[-PolicyName] <String>]
+
+   [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Grant-CsTeamsComplianceRecordingPolicy -Identity 'Ken Myer' -PolicyName 'ContosoPartnerComplianceRecordingPolicy'
+  description: |-
+    The command shown in Example 1 assigns the per-user Teams recording policy ContosoPartnerComplianceRecordingPolicy to the user with the display name "Ken Myer".
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Grant-CsTeamsComplianceRecordingPolicy -Identity 'Ken Myer' -PolicyName $null
+  description: |-
+    In Example 2, any per-user Teams recording policy previously assigned to the user "Ken Myer" is revoked.
+    As a result, the user will be managed by the global Teams recording policy.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Fqdn" data-throw-if-not-resolved="False" />
+  name: DomainController
+  description: |+
+    This parameter is reserved for internal Microsoft use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Global
+  description: |+
+    When you use this cmdlet without specifying a user identity, the policy applies to all users in your tenant.
+    To skip a warning when you do this operation, specify "-Global".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the group used for the group policy assignment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UserIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Indicates the Identity of the user account to be assigned the per-user Teams recording policy.
+    User Identities can be specified using one of the following formats:
+    1) the user's SIP address;
+    2) the user's user principal name (UPN);
+    3) the user's Active Directory display name (for example, Ken Myer).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Enables you to pass a user object through the pipeline that represents the user account being assigned the Teams recording policy.
+    By default, the Grant-CsTeamsComplianceRecordingPolicy cmdlet does not pass objects through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  isRequired: true
+  description: |+
+    Name of the policy to be assigned.
+    The PolicyName is simply the policy Identity without the policy scope i.e. the "Tag:" prefix.
+    For example, a policy with the Identity Tag:ContosoPartnerComplianceRecordingPolicy has a PolicyName equal to ContosoPartnerComplianceRecordingPolicy.
+
+    To revoke a per-user policy previously assigned to a user, set the PolicyName to a null value ($null).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Rank
+  description: |+
+    The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Globally unique identifier (GUID) of the tenant account whose Teams recording policies are being queried.
+    For example:
+
+    -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+
+    You can return your tenant ID by running this command:
+
+    Get-CsTenant | Select-Object DisplayName, TenantID
+
+    If you are using a remote session of Windows PowerShell and are connected only to Microsoft Teams or Skype for Business Online you do not have to include the Tenant parameter.
+    Instead, the tenant ID will automatically be filled in for you based on your connection information.
+    The Tenant parameter is primarily for use in a hybrid deployment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Grant-CsTeamsComplianceRecordingPolicy
+name: Grant-CsTeamsComplianceRecordingPolicy
+description: |-
+  Teams recording policies are used in automatic policy-based recording scenarios.
+  When Microsoft Teams users participate in meetings or make or receive calls, the policy-based recording applications i.e. bots associated with the user's Teams recording policy are invited into the call or meeting to record audio, video and video-based screen sharing activity.
+
+  Note that simply assigning a Teams recording policy to a Microsoft Teams user will not activate automatic policy-based recording for all Microsoft Teams calls and meetings that the user participates in.
+  Among other things, you will need to create an application instance of a policy-based recording application i.e. a bot in your tenant and will then need to assign an appropriate policy to the user.
+
+  Please work with your Microsoft certified policy-based recording application provider to obtain an instance of their recording application.
+  Please refer to the documentation of the CsOnlineApplicationInstance cmdlets for information on how to create an application instance of a policy-based recording application.
+
+  Assigning your Microsoft Teams users a Teams recording policy activates automatic policy-based recording for all new Microsoft Teams calls and meetings that the users participate in.
+  The system will load the recording application and join it to appropriate calls and meetings in order for it to enforce compliance with the administrative set policy.
+  Existing calls and meetings are unaffected.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamscompliancerecordingpolicy
+  applicable: Microsoft Teams
+  title: Grant-CsTeamsComplianceRecordingPolicy
+  schema: 2.0.0
+  manager: nakumar
+  author: aditdalvi
+  ms.author: aditd
+  ms.reviewer: ""

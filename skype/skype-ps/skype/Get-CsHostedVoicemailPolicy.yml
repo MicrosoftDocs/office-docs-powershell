@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a hosted voice mail policy.
+  This cmdlet was introduced in Lync Server 2010.
+module: SkypeForBusiness
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Rtc.Management.WritableConfig.Policy.Voice.HostedVoicemailPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CsHostedVoicemailPolicy
+  href: New-CsHostedVoicemailPolicy.yml
+- text: Remove-CsHostedVoicemailPolicy
+  href: Remove-CsHostedVoicemailPolicy.yml
+- text: Set-CsHostedVoicemailPolicy
+  href: Set-CsHostedVoicemailPolicy.yml
+- text: Grant-CsHostedVoicemailPolicy
+  href: Grant-CsHostedVoicemailPolicy.yml
+syntaxes:
+- Get-CsHostedVoicemailPolicy [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+- Get-CsHostedVoicemailPolicy [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
+examples:
+- title: '-------------------------- Example 1 --------------------------'
+  code: |-
+    Get-CsHostedVoicemailPolicy
+  description: |-
+    This command returns all defined hosted voice mail policies for the Skype for Business Server 2015 implementation.
+  summary: ""
+- title: '-------------------------- Example 2 --------------------------'
+  code: |-
+    Get-CsHostedVoicemailPolicy -Identity ExRedmond
+  description: |-
+    This command returns the policy settings for the per-user hosted voice mail policy ExRedmond.
+  summary: ""
+- title: '-------------------------- Example 3 --------------------------'
+  code: |-
+    Get-CsHostedVoicemailPolicy -Filter tag:*
+  description: |-
+    This command returns the policy settings for all per-user hosted voice mail policies (policies beginning with the tag scope).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    This parameter allows you to do a wildcard search on the Identity of the hosted voice mail policy.
+    This will retrieve all instances of a hosted voice mail policy where the Identity matches the wildcard pattern specified in the Filter value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="XdsIdentity" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The unique identifier for the hosted voice mail policy you want to retrieve.
+    The Identity includes the scope (in the case of global), the scope and site (for a site policy, such as site:Redmond), or the policy name (for a per-user policy, such as HVUserPolicy).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalStore
+  description: |+
+    Retrieves the hosted voice mail policy from the local replica of the Central Management store, rather than the Central Management store itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Lync Server 2010
+  - Lync Server 2013
+  - Skype for Business Server 2015
+  - Skype for Business Server 2019
+  parameterValueGroup: ""
+applicable:
+- Lync Server 2010
+- Lync Server 2013
+- Skype for Business Server 2015
+- Skype for Business Server 2019
+uid: SkypeForBusiness.Get-CsHostedVoicemailPolicy
+name: Get-CsHostedVoicemailPolicy
+description: |-
+  This cmdlet retrieves a policy that specifies how to route unanswered calls to a user to a hosted Exchange Unified Messaging (UM) service.
+
+  A user must be enabled for Exchange UM hosted voice mail for this policy to take effect.
+  You can call the Get-CsUser cmdlet and check the HostedVoiceMail property to determine whether a user is enabled for hosted voice mail.
+  (A value of True means the user is enabled.)
+metadata:
+  external help file: Microsoft.Rtc.Management.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/skype/get-cshostedvoicemailpolicy
+  applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+  title: Get-CsHostedVoicemailPolicy
+  schema: 2.0.0
+  manager: bulenteg
+  author: tomkau
+  ms.author: tomkau
+  ms.reviewer: rogupta

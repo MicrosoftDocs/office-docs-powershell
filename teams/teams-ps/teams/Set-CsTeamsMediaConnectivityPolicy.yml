@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet Set Teams media connectivity policy value for current tenant.
+module: MicrosoftTeamsPowerShell
+links:
+- text: New-CsTeamsMediaConnectivityPolicy
+  href: New-CsTeamsMediaConnectivityPolicy.yml
+- text: Remove-CsTeamsMediaConnectivityPolicy
+  href: Remove-CsTeamsMediaConnectivityPolicy.yml
+- text: Get-CsTeamsMediaConnectivityPolicy
+  href: Get-CsTeamsMediaConnectivityPolicy.yml
+- text: Grant-CsTeamsMediaConnectivityPolicy
+  href: Grant-CsTeamsMediaConnectivityPolicy.yml
+syntaxes:
+- Set-CsTeamsMediaConnectivityPolicy -Identity <string> -DirectConnection <Enabled/Disabled>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-CsTeamsMediaConnectivityPolicy -Identity Test -DirectConnection Disabled
+    Identity DirectConnection
+    -------- ----------------
+    Global   Enabled
+    Tag:Test Disabled
+  description: |-
+    Set Teams media connectivity policy "DirectConnection" value to "Disabled" for identity "Test".
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DirectConnection
+  isRequired: true
+  description: |+
+    Policy value of the Teams media connectivity DirectConnection policy.
+
+  defaultValue: Enabled
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity of the Teams media connectivity policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Set-CsTeamsMediaConnectivityPolicy
+name: Set-CsTeamsMediaConnectivityPolicy
+description: |-
+  This cmdlet Set Teams media connectivity policy DirectConnection value for current tenant. The value can be "Enabled" or "Disabled"
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  applicable: Microsoft Teams
+  title: Set-CsTeamsMediaConnectivityPolicy
+  online version: https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsMediaConnectivityPolicy
+  schema: 2.0.0
+  author: lirunping-MSFT
+  ms.author: runli

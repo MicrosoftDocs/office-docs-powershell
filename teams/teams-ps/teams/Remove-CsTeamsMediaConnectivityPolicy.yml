@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet deletes a Teams media connectivity policy.
+module: MicrosoftTeamsPowerShell
+links:
+- text: New-CsTeamsMediaConnectivityPolicy
+  href: New-CsTeamsMediaConnectivityPolicy.yml
+- text: Get-CsTeamsMediaConnectivityPolicy
+  href: Get-CsTeamsMediaConnectivityPolicy.yml
+- text: Set-CsTeamsMediaConnectivityPolicy
+  href: Set-CsTeamsMediaConnectivityPolicy.yml
+syntaxes:
+- Remove-CsTeamsMediaConnectivityPolicy  -Identity <String>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-CsTeamsMediaConnectivityPolicy -Identity "Test"
+  description: |-
+    Deletes a Teams media connectivity policy with the identify of "Test".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity of the Teams media connectivity policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Remove-CsTeamsMediaConnectivityPolicy
+name: Remove-CsTeamsMediaConnectivityPolicy
+description: |-
+  This cmdlet deletes a Teams media connectivity policy with the specified identity string.
+metadata:
+  external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
+  Module Name: MicrosoftTeams
+  applicable: Microsoft Teams
+  title: Remove-CsTeamsMediaConnectivityPolicy
+  online version: https://learn.microsoft.com/powershell/module/teams/Remove-CsTeamsMediaConnectivityPolicy
+  schema: 2.0.0
+  author: lirunping-MSFT
+  ms.author: runli

@@ -1,5 +1,8 @@
+items:
 - name: Home
   href: index.md
   items:
   - name: Overview
     href: overview.md
+metadata:
+  universal_ref_toc: /powershell/module/whiteboard-ps/toc.json

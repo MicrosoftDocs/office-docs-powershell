@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use the `Get-CsCallingLineIdentity` cmdlet to display the Caller ID policies for your organization.
+module: MicrosoftTeamsPowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-CsCallingLineIdentity
+  href: Grant-CsCallingLineIdentity.yml
+- text: Set-CsCallingLineIdentity
+  href: Set-CsCallingLineIdentity.yml
+- text: New-CsCallingLineIdentity
+  href: New-CsCallingLineIdentity.yml
+- text: Remove-CsCallingLineIdentity
+  href: Remove-CsCallingLineIdentity.yml
+syntaxes:
+- Get-CsCallingLineIdentity [[-Identity] <string>] [<CommonParameters>]
+- Get-CsCallingLineIdentity [-Filter <string>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-CsCallingLineIdentity
+  description: |-
+    The example gets and displays the Caller ID policies for your organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-CsCallingLineIdentity -Filter "tag:Sales*"
+  description: |-
+    The example gets and displays the Caller ID policies with Identity starting with Sales.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    The Filter parameter lets you insert a string through which your search results are filtered.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter identifies the Caller ID policy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - Microsoft Teams
+  parameterValueGroup: ""
+applicable:
+- Microsoft Teams
+uid: MicrosoftTeamsPowerShell.Get-CsCallingLineIdentity
+name: Get-CsCallingLineIdentity
+description: |-
+  Use the `Get-CsCallingLineIdentity` cmdlet to display the Caller ID policies for your organization.
+metadata:
+  external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+  online version: https://learn.microsoft.com/powershell/module/teams/get-cscallinglineidentity
+  applicable: Microsoft Teams
+  title: Get-CsCallingLineIdentity
+  schema: 2.0.0
+  manager: bulenteg
+  author: jenstrier
+  ms.author: serdars
+  ms.reviewer: ""

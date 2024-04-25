@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is available only in the cloud-based service.
+
+  Use the Get-SpoofIntelligenceInsight cmdlet to view spoofed senders that were allowed or blocked by spoof intelligence during the last 7 days.
+
+  For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+module: ExchangePowerShell
+notes: ""
+syntaxes:
+- Get-SpoofIntelligenceInsight [[-Identity] <HostedConnectionFilterPolicyIdParameter>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SpoofIntelligenceInsight
+  description: |-
+    This example returns the list of senders that appear to be sending spoofed email to your organization.
+  summary: ""
+- title: Example 2
+  code: |-
+    $file = "C:\My Documents\Spoof Insights.csv"
+
+    Get-SpoofIntelligenceInsight | Export-Csv $file
+  description: |-
+    This example exports the same list of spoofed senders to a CSV file.
+  summary: ""
+parameters:
+- type: <xref href="HostedConnectionFilterPolicyIdParameter" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity parameter is available but isn't used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - Exchange Online
+  - Exchange Online Protection
+  parameterValueGroup: ""
+applicable:
+- Exchange Online
+- Exchange Online Protection
+uid: ExchangePowerShell.Get-SpoofIntelligenceInsight
+name: Get-SpoofIntelligenceInsight
+description: |-
+  The Get-SpoofIntelligenceInsight cmdlet returns the following information:
+
+  - SpoofedUser: The sending email address if the domain is one of your organization's domains, or the sending domain if the domain is external.
+  - SendingInfrastructure: The true sending domain that's found in the DNS record of the source email server. If no domain is found, the source email server's IP address is shown.
+  - MessageCount: The number of messages.
+  - LastSeen: The date when the sending email address or domain was last seen by Microsoft 365.
+  - SpoofType: Indicates whether the domain is internal to your organization or external.
+  - Action: The two possible values are Allow (messages that contain any spoofed sender email addresses in your organization are allowed from the source email server), and Block (messages that contain any spoofed sender email addresses in your organization are not allowed from the source email server).
+
+  You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+metadata:
+  external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+  online version: https://learn.microsoft.com/powershell/module/exchange/get-spoofintelligenceinsight
+  applicable: Exchange Online, Exchange Online Protection
+  title: Get-SpoofIntelligenceInsight
+  schema: 2.0.0
+  author: chrisda
+  ms.author: chrisda
+  ms.reviewer: ""
