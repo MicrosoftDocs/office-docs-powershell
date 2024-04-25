@@ -196,9 +196,8 @@ When creating your own custom OPATH filters, consider the following items:
 
   - **Variables**: Enclose the whole OPATH filter in double quotation marks (for example, `"Name -eq '$User'"`).
 
-  - **Integer values**: Depends on how you enclosed (or didn't enclose) the integer to search for:
+  - **Integer values**: To ensure they work in all cases; enclose them in one  of the following ways.
 
-    - **Integer not enclosed**: Enclose the whole OPATH filter in double quotation marks, single quotation marks, or braces (for example `"CountryCode -eq 840"`).
     - **Integer enclosed in single quotation marks**: Enclose the whole OPATH filter in double quotation marks or braces `"CountryCode -eq '840'"`.
     - **Integer enclosed in double quotation marks**: Enclose the whole OPATH filter in braces (for example `{CountryCode -eq "840"}`).
 
