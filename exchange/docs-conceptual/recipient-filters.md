@@ -190,14 +190,12 @@ When creating your own custom OPATH filters, consider the following items:
 - You need to enclose the whole OPATH filter in double quotation marks " " or single quotation marks ' '. Although any OPATH filter object is technically a string and not a script block, you can still use braces { }, but only if the filter doesn't contain variables that require expansion. The characters that you can use to enclose the whole OPATH filter depend on types of values that you're searching for and the characters you used (or didn't use) to enclose those values:
 
   - **Text values**: Depends on how you enclosed the text to search for:
-
     - **Text enclosed in single quotation marks**: Enclose the whole OPATH filter in double quotation marks or braces.
     - **Text enclosed in double quotation marks**: Enclose the whole OPATH filter in braces.
 
   - **Variables**: Enclose the whole OPATH filter in double quotation marks (for example, `"Name -eq '$User'"`).
 
-  - **Integer values**: To ensure they work in all cases; enclose them in one  of the following ways.
-
+  - **Integer values**: To ensure they work in all cases, enclose them in one of the following ways:
     - **Integer enclosed in single quotation marks**: Enclose the whole OPATH filter in double quotation marks or braces `"CountryCode -eq '840'"`.
     - **Integer enclosed in double quotation marks**: Enclose the whole OPATH filter in braces (for example `{CountryCode -eq "840"}`).
 
