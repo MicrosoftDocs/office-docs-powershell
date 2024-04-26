@@ -49,6 +49,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
@@ -565,6 +566,58 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeletedResources
+The DeletedResources parameter specifies the Sharepoint sites to be removed from the list of included sites or excluded from a tenant level policy when the associated group has been deleted. It is used in conjunction with AddModernGroupLocationException and RemoveModernGroupLocation. Valid value is a JSON String.
+
+To specify a deleted resource, you must use the Modern Group mailbox address and the site ID. For example:
+ 
+```powershell
+$stringJson = @"
+[{ 
+     'EmailAddress': 'USSales@M365x20284988.onmicrosoft.com', 
+     'SiteId': '9b1a7116-b9ec-4e2c-bf31-4ebb83697c4b' 
+}]
+"@
+```
+
+#### Examples
+To remove deleted modern group (and site) from policy with explicit location:
+```powershell
+Set-RetentionCompliancePolicy -Identity "testModernGroupWithSiteId" -RemoveModernGroupLocation "USSales@M365x20284988.onmicrosoft.com"  -DeletedResources $stringJson
+```
+To exclude deleted modern group (and site) from a tenant level policy:
+```powershell
+ Set-RetentionCompliancePolicy -Identity "testModernGroupWithSiteId" -AddModernGroupLocationException "USSales@M365x20284988.onmicrosoft.com"  -DeletedResources $stringJson
+```
+
+You can enter multiple deleted resources at once separated by commas. 
+```powershell
+ $stringJson = @" 
+ [{ 
+     'EmailAddress': 'USSales2@M365x20284988.onmicrosoft.com', 
+     'SiteId': '9b1a7116-b9ec-4e2c-bf31-4ebb83697c4b' 
+ }, 
+[{ 
+     'EmailAddress': 'USSales2@M365x20284988.onmicrosoft.com', 
+     'SiteId': '4nfa7116-b9ec-4e2c-bf31-4ebb83697c4b' 
+ }] 
+ "@ 
+```
+For more information about this scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/en-us/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied). 
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
 Applicable: Security & Compliance
 
 Required: False
