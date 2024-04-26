@@ -51,7 +51,7 @@ This example retrieves all Inbox rules for the mailbox Joe@Contoso.com.
 
 ### Example 2
 ```powershell
-Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "mm/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
+Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "MM/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
 ```
 
 This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@contoso.com on which the ReceivedBeforeDate parameter was set when the rule was created. The DescriptionTimeFormat and DescriptionTimeZone parameters are used in this example to specify formatting of the time and the time zone used in the rule's Description property.
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ### -DescriptionTimeFormat
 The DescriptionTimeFormat parameter specifies the format for time values in the rule description. For example:
 
-mm/dd/yyyy, where mm is the 2-digit month, dd is the 2-digit day and yyyy is the 4-digit year.
+MM/dd/yyyy, where MM is the 2-digit month, dd is the 2-digit day and yyyy is the 4-digit year.
 
 ```yaml
 Type: String
