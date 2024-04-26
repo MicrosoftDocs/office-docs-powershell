@@ -561,7 +561,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
 - $true: The Calendar is available in Outlook Web App. This is the default value.
