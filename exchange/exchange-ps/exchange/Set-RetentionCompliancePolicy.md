@@ -627,7 +627,7 @@ Accept wildcard characters: False
 ### -DeletedResources
 The DeletedResources parameter specifies the Sharepoint sites to be removed from the list of included sites or excluded from a tenant level policy when the associated group has been deleted. You use this parameter with the AddModernGroupLocationException and RemoveModernGroupLocation parameters.
 
-A valid value is a JSON String. See the Examples section for syntax an examples using this parameter.
+A valid value is a JSON String. See the Examples section for syntax and examples using this parameter.
 
 For more information about this scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
 
