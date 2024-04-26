@@ -588,8 +588,6 @@ $stringJson = @"
 }]
 "@
 ```
-
-#### Examples
 To remove deleted modern group (and site) from policy with explicit location:
 ```powershell
 Set-RetentionCompliancePolicy -Identity "testModernGroupWithSiteId" -RemoveModernGroupLocation "USSales@M365x20284988.onmicrosoft.com"  -DeletedResources $stringJson
