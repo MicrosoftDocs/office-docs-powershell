@@ -12,8 +12,7 @@ ms.reviewer:
 # Get-DlpDetailReport
 
 ## SYNOPSIS
-
-**Note**: This cmdlet has been retired. Please, use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
+**Note**: This cmdlet has been retired. Use the [Export-ActivityExplorerData](https://learn.microsoft.com/powershell/module/exchange/export-activityexplorerdata) cmdlet to view DLP information. Data from Export-ActivityExplorerData is the same as the retired Get-DlpIncidentDetailReport cmdlet.
 
 This cmdlet is available only in the cloud-based service.
 
