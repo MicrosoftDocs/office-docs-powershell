@@ -171,10 +171,10 @@ $stringJson = @"
 }]
 "@
 
-Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocation "USSales@contoso.onmicrosoft.com" -DeletedResources $stringJson
+Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocation "USSales2@contoso.onmicrosoft.com" -DeletedResources $stringJson
 ```
 
-This example is the same as Example 2, except multiple deleted resources are specified.
+This example is similar to Example 2, except multiple deleted resources are specified.
 
 ## PARAMETERS
 
