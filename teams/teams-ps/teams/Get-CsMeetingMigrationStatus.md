@@ -132,33 +132,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### OUTPUTS
-```yaml
-CorrelationId     : 849d3e3b-3e1d-465f-8dde-785aa9e3f856
-CreateDate        : 2024-04-27T00:24:00.1442688Z
-FailedMeeting     : 0
-InvitesUpdate     : 0
-LastMessage       :
-MigrationType     : AllToTeams
-ModifiedDate      : 2024-04-27T00:24:00.1442688Z
-RetryCount        : 0
-State             : Pending
-SucceededMeeting  : 0
-TotalMeeting      : 0
-UserId            : 27c6ee67-c71d-4386-bf84-ebfdc7c3a171
-UserPrincipalName : syntest1-prod@TESTTESTMMSSYNTHETICUSWESTT.onmicrosoft.com
-```
-
-where **MigrationType** can have possible values as below:
-
- **SfbToTeams** (Skype for Business On-prem to Teams)
- 
- **TeamsToTeams** (Teams to Teams)
- 
- **ToSameType** (Same source and targer meeting types)
- 
- **AllToTeams** (All types to Teams)
- 
+## OUTPUTS
 
 ## NOTES
 
