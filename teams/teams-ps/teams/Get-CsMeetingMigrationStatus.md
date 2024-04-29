@@ -132,7 +132,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-## OUTPUTS
+### OUTPUTS
 ```yaml
 CorrelationId     : 849d3e3b-3e1d-465f-8dde-785aa9e3f856
 CreateDate        : 2024-04-27T00:24:00.1442688Z
