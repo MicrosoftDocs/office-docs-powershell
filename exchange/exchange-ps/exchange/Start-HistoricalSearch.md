@@ -428,11 +428,11 @@ Accept wildcard characters: False
 ```
 
 ### -TLSUsed
-The TLSUsed parameter filters the results by the TLS version. The supported report type is `ConnectorReport`.Valid values are: 
+The TLSUsed parameter filters the results by the TLS version. The supported report type is `ConnectorReport`. Valid values are: 
 
-- No Tls 
-- TLS1.2 
-- TLS1.3 
+- No Tls
+- TLS1.2
+- TLS1.3
 
 ```yaml
 Type: String
