@@ -57,7 +57,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
- [-CaptchaVerificationForAnonymousUsers <Boolean>]
+ [-CaptchaVerificationForAnonymousUsers <String>]
  [-Confirm]
  [-ContentSharingInExternalMeetings <String>]
  [-Copilot <String>]
