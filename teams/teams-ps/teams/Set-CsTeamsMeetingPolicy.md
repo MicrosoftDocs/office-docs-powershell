@@ -61,6 +61,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
+ [-CaptchaVerificationForAnonymousUsers <String>]
  [-ChannelRecordingDownload <String>]
  [-Confirm]
  [-ConnectToMeetingControls <String>]
@@ -69,7 +70,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-CopyRestriction <Boolean>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
- [EnableAnonymousUserCaptcha <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExternalMeetingJoin <String>]
  [-Force]
@@ -767,6 +767,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CaptchaVerificationForAnonymousUsers
+Require a verification check for anonymous users
+
+Possible values are:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ChannelRecordingDownload
 Controls how channel meeting recordings are saved, permissioned, and who can download them.
 
@@ -905,21 +925,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableAnonymousUserCaptcha
-This setting enforce captcha for anonymous user while meeting join.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
