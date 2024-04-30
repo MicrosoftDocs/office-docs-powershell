@@ -57,13 +57,13 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
+ [-CaptchaVerificationForAnonymousUsers <Boolean>]
  [-Confirm]
  [-ContentSharingInExternalMeetings <String>]
  [-Copilot <String>]
  [-CopyRestriction <Boolean>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
- [EnableAnonymousUserCaptcha <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExternalMeetingJoin <String>]
  [-Force]
@@ -732,6 +732,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CaptchaVerificationForAnonymousUsers
+This setting enforce captcha for anonymous user while meeting join.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -831,21 +846,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: EveryoneUserOverride
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableAnonymousUserCaptcha
-This setting enforce captcha for anonymous user while meeting join.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
