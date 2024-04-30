@@ -733,16 +733,21 @@ Accept wildcard characters: False
 ```
 
 ### -CaptchaVerificationForAnonymousUsers
-This setting enforce captcha for anonymous user while meeting join.
+Require a verification check for anonymous users
+
+Possible values are:
+
+- Disabled
+- Enabled
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
