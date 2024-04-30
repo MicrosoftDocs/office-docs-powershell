@@ -772,8 +772,8 @@ Require a verification check for anonymous users
 
 Possible values are:
 
-- Disabled
 - Enabled
+- Disabled
 
 ```yaml
 Type: String
