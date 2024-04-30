@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockStatus
-The BlockStatus parameter filters the result by the status of messages sent externally, blocked due to security check, or sent successfully. 
+The BlockStatus parameter filters the result by the status of messages sent externally, blocked due to security check, or sent successfully. The supported report type is `OutboundSecurityReport`.
 
 ```yaml
 Type: String
@@ -169,7 +169,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Supported report type: OutboundSecurityReport
 ```
 
 ### -CompressFile
@@ -189,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorType
-The ConnectorType parameter filters the results by the connector type. Valid values are:
+The ConnectorType parameter filters the results by the connector type. The supported report type is `ConnectorReport`.Valid values are:
 
 - OnPremises
 - Partner
@@ -206,7 +205,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Supported report type: ConnectorReport
 ```
 
 ### -DeliveryStatus
@@ -414,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpSecurityError
-The SmtpSecurityError parameter filters the result by the error type of blocked messages when sent externally.
+The SmtpSecurityError parameter filters the result by the error type of blocked messages when sent externally. The supported report type is `OutboundSecurityReport`.
 
 ```yaml
 Type: String
@@ -427,11 +425,10 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Supported report type: OutboundSecurityReport
 ```
 
 ### -TLSUsed
-The TLSUsed parameter filters the results by the TLS version. Valid values are: 
+The TLSUsed parameter filters the results by the TLS version. The supported report type is `ConnectorReport`.Valid values are: 
 
 - No Tls 
 - TLS1.2 
@@ -448,7 +445,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Supported report type: ConnectorReport
 ```
 
 ### -TransportRule
