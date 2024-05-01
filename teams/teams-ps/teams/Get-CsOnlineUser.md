@@ -29,6 +29,7 @@ Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-OU <OUIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
+ [-SoftDeletedUser]
  [-Sort]
  [-UnassignedUser]
  [-UsePreferredDC]
@@ -494,6 +495,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SoftDeletedUser
+PARAMVALUE: SwitchParameter
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Sort
 
 Sorting will now be enabled in Teams PowerShell Module 5.9.0 and later by using the "-Sort" or "-OrderBy" parameters in GCC High and DoD environments. These updates will be applicable to older Teams PowerShell versions starting from 15th March 2024 in GCC High and DoD environments(note that this parameter is already rolled out in commercial environments). For example:
@@ -506,7 +523,7 @@ Sorting will now be enabled in Teams PowerShell Module 5.9.0 and later by using 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: OrderBy
 Applicable: Microsoft Teams
 
 Required: False
