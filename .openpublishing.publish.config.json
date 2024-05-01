@@ -50,6 +50,18 @@
       ]
     },
     {
+      "docset_name": "purviewinformationprotection-ps",
+      "build_source_folder": "informationprotection",
+      "build_output_subfolder": "purviewinformationprotection-ps",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
       "docset_name": "sharepoint-ps",
       "build_source_folder": "sharepoint",
       "build_output_subfolder": "sharepoint-ps",
