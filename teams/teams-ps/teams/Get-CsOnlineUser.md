@@ -496,7 +496,8 @@ Accept wildcard characters: False
 ```
 
 ### -SoftDeletedUser
-PARAMVALUE: SwitchParameter
+
+This parameter enables you to return a collection of all the users who are deleted and can be restored within 30 days from their deletion time
 
 ```yaml
 Type: SwitchParameter
