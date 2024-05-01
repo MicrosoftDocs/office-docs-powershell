@@ -279,5 +279,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+- The date-time field exported via this cmdlet is in UTC timezone.
 
 ## RELATED LINKS
