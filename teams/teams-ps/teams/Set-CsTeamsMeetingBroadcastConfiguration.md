@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -SdnRuntimeConfiguration
-sdnRuntimeConfiguration is a group of parameters obtained from the SDN provider to configure the connection to 3P eCDN provider. 
+Specifies connection parameters used to connect with a 3rd party eCDN provider. These parameters should be obtained from the SDN provider to be used. 
 
 ```yaml
 Type: String
