@@ -123,8 +123,6 @@ Possible values are:
 
  - **EveryoneInCompanyExcludingGuests**: For Webinar - enables creating events to allow only in-tenant users to register and join the event. For Town hall - enables creating events to allow only in-tenant users to join the event (Note: for Town hall, in-tenant users include guests; this parameter will disable public Town halls). 
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -133,6 +131,57 @@ Aliases:
 Required: False
 Position: Named
 Default value: Everyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedQuestionTypesInRegistrationForm
+This setting governs which users in a tenant can add which registration form questions to an event registration page for attendees to answer when registering for the event.
+
+Possible values are: DefaultOnly, DefaultAndPredefinedOnly, AllQuestions.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedTownhallTypesForRecordingPublish
+This setting describes how IT admins can control which types of Town Hall attendees can have their recordings published.
+
+Possible values are: None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedWebinarTypesForRecordingPublish
+This setting describes how IT admins can control which types of webinar attendees can have their recordings published.
+
+Possible values are: None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
