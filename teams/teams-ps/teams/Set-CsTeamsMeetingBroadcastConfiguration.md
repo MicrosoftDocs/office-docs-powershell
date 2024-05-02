@@ -180,6 +180,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SdnRuntimeConfiguration
+sdnRuntimeConfiguration is a group of parameters obtained from the SDN provider to configure the connection to 3P eCDN provider. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SupportURL
 Specifies a URL where broadcast event attendees can find support information or FAQs specific to that event. The URL will be displayed to the attendees during the broadcast. 
 
