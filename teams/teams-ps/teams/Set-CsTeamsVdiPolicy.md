@@ -116,7 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -VDI2Optimization
-Determines whether a user can be VDI 2.0 optimized. Set this to TRUE to disallow a user to be VDI 2.0 optimized. Set this to FALSE to disallow a user to be VDI 2.0 optimized.
+Determines whether a user can be VDI 2.0 optimized. 
+* Enabled - allow a user to be VDI 2.0 optimized.
+* Disabled - disallow a user to be VDI 2.0 optimized.
 
 ```yaml
 Type: String
