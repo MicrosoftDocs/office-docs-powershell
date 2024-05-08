@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDnsValidation
-{{ Fill SkipDnsValidation Description }}
+The SkipDnsValidation switch specifies whether to skip the check for the DNSSEC-secured MX record in the domain. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipMtaStsValidation
-{{ Fill SkipMtaStsValidation Description }}
+The SkipMtaStsValidation switch specifies whether to skip the check for the DNSSEC-secured mail host in the MTA-STS Policy. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipMxValidation
-{{ Fill SkipMxValidation Description }}
+The SkipMxValidation switch specifies whether to skip the check for the priority value 10 in the DNSSEC-secured MX record. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
