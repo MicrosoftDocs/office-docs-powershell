@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/disable-smtpdaneinbound
 applicable: Exchange Online
 title: Disable-SmtpDaneInbound

@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-smtpdaneinboundstatus
 applicable: Exchange Online
 title: Get-SmtpDaneInboundStatus
