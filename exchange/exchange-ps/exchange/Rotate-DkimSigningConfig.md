@@ -40,6 +40,8 @@ Rotate-DkimSigningConfig -Identity contoso.com
 
 This example rotates the DKIM signing policy for the contoso.com domain.
 
+> [!NOTE]
+> If you are upgrading the key size to 2048, it will only upgrade the key for the selector that is not currently active. Once key rotation has taken place you will need to run the command again to upgrade the key size of the other selector.
 ## PARAMETERS
 
 ### -Identity
