@@ -146,7 +146,7 @@ The User parameter specifies who's granted permission to the mailbox folder. Val
 
 - User mailboxes
 - Mail users
-- Mail-enabled security groups
+- Mail-enabled security groups (Nested Mail-enabled security groups are also supported.)
 
 For the best results, we recommend using the following values:
 
