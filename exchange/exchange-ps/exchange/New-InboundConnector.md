@@ -18,6 +18,9 @@ Use the New-InboundConnector cmdlet to create a new Inbound connector in your cl
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
+> [!NOTE]
+> [Creation of inbound connector is restricted for Microsoft 365 E5 developer subscription](https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-faq#does-the-microsoft-365-e5-developer-subscription-include-the-same-capabilities-that-the-regular-microsoft-365-e5-subscription-includes-), opening a support ticket for this won't help. 
+
 ## SYNTAX
 
 ```
