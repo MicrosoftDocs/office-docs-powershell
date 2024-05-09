@@ -516,7 +516,7 @@ Accept wildcard characters: False
 ```
 
 ### -DesignerForBackgroundsAndImages
-This setting will enable or disable the MS Designer for all entry points: currently announcements feature.
+This setting determines whether a user is allowed to create custom AI-powered backgrounds and images with MS Designer.
 
 Possible values are: Enabled, Disabled.
 
