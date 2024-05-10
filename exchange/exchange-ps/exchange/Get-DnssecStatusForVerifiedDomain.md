@@ -99,7 +99,7 @@ This example contains the output from Example 1 and readable values for the DnsV
 ## PARAMETERS
 
 ### -DomainName
-{{ Fill DomainName Description }}
+The DomainName parameter specifies the accepted domain in the Exchange Online organization where you want to view information about DNSSEC (for example, contoso.com).
 
 ```yaml
 Type: String
@@ -115,10 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
@@ -182,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
