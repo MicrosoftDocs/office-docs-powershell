@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: Support for categories is available in version 3.5.0-Preview1 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
+**Note**: Support for categories is available in version 3.5.0-Preview2 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
 
 Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module or a category in Viva. Once you delete a policy, the policy is permanently deleted. You cannot undo the deletion.
 
@@ -44,7 +44,7 @@ Remove-VivaModuleFeaturePolicy -CategoryId <String> -PolicyId <String>
 ## DESCRIPTION
 Use the Remove-VivaModuleFeaturePolicy cmdlet to delete an access policy for a feature in a Viva module or a category in Viva.
 
-Support for categories is available in version 3.5.0-Preview1 or later of the module.
+Support for categories is available in version 3.5.0-Preview2 or later of the module.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
@@ -75,7 +75,7 @@ This example deletes the specified policy for the `<category_id>` category in Vi
 ## PARAMETERS
 
 ### -CategoryId
-This parameter is available in version 3.5.0-Preview1 or later of the module.
+This parameter is available in version 3.5.0-Preview2 or later of the module.
 
 **Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
 
