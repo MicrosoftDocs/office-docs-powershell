@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module v3.2.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-**Note**: Support for categories is available in version 3.5.0-Preview1 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
+**Note**: Support for categories is available in version 3.5.0-Preview2 or later of the module, but no categories are currently available in Viva. We'll update the documentation when categories are available.
 
 Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature or a category in Viva. The attributes of the policy are defined using the cmdlet parameters. Policies are used to restrict or grant access to the specified feature or category for specific users, groups, or the entire tenant.
 
@@ -58,7 +58,7 @@ Add-VivaModuleFeaturePolicy -CategoryId <String> -IsCategoryEnabled <Boolean> -N
 ## DESCRIPTION
 Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a specific feature or category in Viva.
 
-Support for categories is available in version 3.5.0-Preview1 or later of the module.
+Support for categories is available in version 3.5.0-Preview2 or later of the module.
 
 You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
@@ -138,7 +138,7 @@ This example adds a policy for the `<cateogry_id>` category in Viva where the po
 ## PARAMETERS
 
 ### -CategoryId
-This parameter is available in version 3.5.0-Preview1 or later of the module.
+This parameter is available in version 3.5.0-Preview2 or later of the module.
 
 **Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
 
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCategoryEnabled
-This parameter is available in version 3.5.0-Preview1 or later of the module.
+This parameter is available in version 3.5.0-Preview2 or later of the module.
 
 **Note**: Currently, no categories are available in Viva. We'll update the documentation when categories are available.
 
