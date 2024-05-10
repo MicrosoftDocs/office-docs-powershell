@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-VivaFeatureCategory
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell module v3.5.0-Preview1 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
+This cmdlet is available only in the Exchange Online PowerShell module v3.5.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 **Note**: While we are adding support for category policies in the Exchange Online PowerShell module v3.5.0-Preview1 or later, we have not yet released any categories in Viva. We will update when there are categories available. 
 
