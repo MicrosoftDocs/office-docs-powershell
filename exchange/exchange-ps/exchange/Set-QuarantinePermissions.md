@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Set-QuarantinePermissions cmdlet to modify quarantine permissions objects that are used in quarantine tags (the New-QuarantineTag or Set-QuarantineTag cmdlets). This cmdlet only works on permissions objects that were created by the New-QuarantinePermissions cmdlet and stored in a variable that's currently available in the Windows PowerShell session.
+Use the Set-QuarantinePermissions cmdlet to modify quarantine permissions objects that are used in quarantine tags (the New-QuarantinePolicy or Set-QuarantinePolicy cmdlets). This cmdlet only works on permissions objects that were created by the New-QuarantinePermissions cmdlet and stored in a variable that's currently available in the Windows PowerShell session.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -47,7 +47,7 @@ Set-QuarantinePermissions -QuarantinePermissionsObject $Perms -PermissionToReque
 
 This example modifies the specified quarantine tag permissions in the exiting `$Perms` permissions object that was created previously in the same Windows PowerShell session (the `$Perms` variable is still available and populated).
 
-In the same Windows PowerShell session, you can use `$Perms` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
+In the same Windows PowerShell session, you can use `$Perms` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ## PARAMETERS
 

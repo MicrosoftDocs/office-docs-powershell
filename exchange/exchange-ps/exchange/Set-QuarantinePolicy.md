@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-QuarantineTag [-Identity] <QuarantineTagIdParameter>
+Set-QuarantinePolicy [-Identity] <QuarantineTagIdParameter>
  [-AdminNotificationFrequencyInDays <Int32>]
  [-AdminNotificationLanguage <EsnLanguage>]
  [-AdminNotificationsEnabled <Boolean>]

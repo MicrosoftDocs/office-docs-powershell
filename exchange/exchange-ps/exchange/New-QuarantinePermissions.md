@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-QuarantinePermissions cmdlet to create quarantine permissions objects to use with the New-QuarantineTag cmdlet.
+Use the New-QuarantinePermissions cmdlet to create quarantine permissions objects to use with the New-QuarantinePolicy cmdlet.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -47,7 +47,7 @@ $NoAccess = New-QuarantinePermissions
 
 This example creates the same permissions that are used by the No access permissions group in quarantine tags in the Security & Compliance. The permissions object is stored in the variable named `$NoAccess`.
 
-In the same Windows PowerShell session, you can use `$NoAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
+In the same Windows PowerShell session, you can use `$NoAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ### Example 2
 ```powershell
@@ -56,7 +56,7 @@ $LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -Permi
 
 This example creates the same permissions that are used by the Limited access permissions group in quarantine tags in the Security & Compliance. The permissions object is stored in the variable named `$LimitedAccess`.
 
-In the same Windows PowerShell session, you can use `$LimitedAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
+In the same Windows PowerShell session, you can use `$LimitedAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ### Example 3
 ```powershell
@@ -65,7 +65,7 @@ $FullAccess = New-QuarantinePermissions -PermissionToBlockSender $true -Permissi
 
 This example creates the same permissions that are used by the Full access permissions group in quarantine tags in the Security & Compliance. The permissions object is stored in the variable named `$FullAccess`.
 
-In the same Windows PowerShell session, you can use `$FullAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantineTag or Set-QuarantineTag command.
+In the same Windows PowerShell session, you can use `$FullAccess` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ## PARAMETERS
 
