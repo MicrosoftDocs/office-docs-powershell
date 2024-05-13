@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockStatus
-{{ Fill BlockStatus Description }}
+The BlockStatus parameter filters the result by the status of messages sent externally, blocked due to security checks or sent successfully.
 
 ```yaml
 Type: String
