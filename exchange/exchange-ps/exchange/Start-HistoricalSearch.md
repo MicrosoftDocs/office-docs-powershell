@@ -412,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpSecurityError
-The SmtpSecurityError parameter filters the results of OutboundSecurityReport reports by the error type of blocked messages when sent externally.
+The SmtpSecurityError parameter filters the results in OutboundSecurityReport reports by the error type of blocked messages when sent externally.
 
 ```yaml
 Type: String
@@ -428,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -TLSUsed
-The TLSUsed parameter filters the results of ConnectorReport reports by the TLS version. Valid values are:
+The TLSUsed parameter filters the results in ConnectorReport reports by the TLS version. Valid values are:
 
 - No Tls
 - TLS1.2
