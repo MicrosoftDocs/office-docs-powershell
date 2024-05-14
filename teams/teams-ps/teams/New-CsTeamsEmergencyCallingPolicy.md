@@ -27,19 +27,36 @@ This cmdlet creates a new Teams Emergency Calling policy. Emergency calling poli
 
 ## EXAMPLES
 
-### Example 1
+### Emergency calling policy Example 1
+In the following example, ECP1, an emergency calling policy with identify ECP1 is configured with full security desk configuration. Extended notifications for the test emergency number, 933, are set to null.
+**ECP1**
+<ul>
+    <li>Notification group: alert@contoso.com</li>
+    <li>Notification Dial Out Number - 14255551234</li>
+    <li>Notification Mode - Conferenced in and are unmuted</li>
+    <li>External Lookup Mode - On</li>
+</ul>
+
 ```powershell
-New-CsTeamsEmergencyCallingPolicy -Identity TestECP -Description "Test ECP" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode NotificationOnly -ExternalLocationLookupMode Enabled
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "933"
+New-CsTeamsEmergencyCallingPolicy -Identity ECP1 -Description "Test ECP1" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode ConferenceUnMuted -ExternalLocationLookupMode Enabled -ExtendedNotifications @{add=$en1}
 ```
 
-This example creates a Teams Emergency Calling policy that has an identity of TestECP, where a notification group and number is being defined, the external location lookup mode is enabled and also the type of notification.
+### Emergency calling policy Example 2
+In the following example, ECP2, an emergency calling policy with identify ECP2 is configured with both 911 and 933 in the extended notification settings. Extended notifications for the test emergency number 911 are set to notify two groups separated by ";" and for 933 are set to null.
+**ECP2**
+<ul>
+    <li>Notification group: null</li>
+    <li>Notification Dial Out Number - null</li>
+    <li>Notification Mode - null</li>
+    <li>External Lookup Mode - On</li>
+</ul>
 
-### Example 2
 ```powershell
-New-CsTeamsEmergencyCallingPolicy -Identity "TestECP2" -NotificationGroup "123@contoso.com;567@contoso.com"
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert@contoso.com;567@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode ConferenceUnMuted
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "933"
+New-CsTeamsEmergencyCallingPolicy -Identity ECP2 -Description "Test ECP2" -ExternalLocationLookupMode Enabled -ExtendedNotifications @{add=$en1,$en2}
 ```
-
-This example creates a Teams Emergency Calling policy that has an identity of TestECP2, with default settings, except for the Notification Group. This parameter expects a single string with all users and groups separated by ";".
 
 ## PARAMETERS
 
