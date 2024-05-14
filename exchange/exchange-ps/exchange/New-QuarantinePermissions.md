@@ -51,7 +51,7 @@ In the same Windows PowerShell session, you can use `$NoAccess` for the _EndUser
 
 ### Example 2
 ```powershell
-$LimitedAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
+$LimitedAccess = New-QuarantinePermissions -PermissionToAllowSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRequestRelease $true
 ```
 
 This example creates the same permissions that are used by the Limited access permissions group in quarantine policies. The permissions object is stored in the variable named `$LimitedAccess`.
@@ -60,7 +60,7 @@ In the same Windows PowerShell session, you can use `$LimitedAccess` for the _En
 
 ### Example 3
 ```powershell
-$FullAccess = New-QuarantinePermissions -PermissionToBlockSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRelease $true
+$FullAccess = New-QuarantinePermissions -PermissionToAllowSender $true -PermissionToDelete $true -PermissionToPreview $true -PermissionToRelease $true
 ```
 
 This example creates the same permissions that are used by the Full access permissions group in quarantine policies. The permissions object is stored in the variable named `$FullAccess`.
