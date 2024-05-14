@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-mailboxfolderstatistics
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailboxfolderstatistics
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-MailboxFolderStatistics
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-MailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
 
-**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderStatistics cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
+**Note**: In Exchange Online PowerShell, we recommend that you use the Get-EXOMailboxFolderStatistics cmdlet instead of this cmdlet. For more information, see [Connect to Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,6 +32,9 @@ Get-MailboxFolderStatistics [-Identity] <GeneralMailboxOrMailUserIdParameter>
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
+ [-ResultSize <Unlimited>]
+ [-SkipCount <Int32>]
+ [-UseCustomRouting]
  [<CommonParameters>]
 ```
 
@@ -45,6 +48,8 @@ Get-MailboxFolderStatistics [[-Identity] <GeneralMailboxOrMailUserIdParameter>]
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
+ [-ResultSize <Unlimited>]
+ [-SkipCount <Int32>]
  [<CommonParameters>]
 ```
 
@@ -56,11 +61,13 @@ Get-MailboxFolderStatistics -Database <DatabaseIdParameter> -StoreMailboxIdentit
  [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
+ [-ResultSize <Unlimited>]
+ [-SkipCount <Int32>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-MailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder and ItemsInFolderAndSubfolders.
 
@@ -99,6 +106,7 @@ This example uses the IncludeAnalysis switch to view the statistics of Tony's Re
 ### Example 5
 ```powershell
 $All = Get-Mailbox -ResultSize Unlimited
+
 $All | foreach {Get-MailboxFolderStatistics -Identity $_.Identity -FolderScope Inbox | Format-Table Identity,ItemsInFolderAndSubfolders,FolderAndSubfolderSize -AutoSize}
 ```
 
@@ -344,17 +352,71 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResultSize
+This parameter is available only in the cloud-based service.
+
+The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
+
+```yaml
+Type: Unlimited
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipCount
+This parameter is available only in the cloud-based service.
+
+{{ Fill SkipCount Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseCustomRouting
+This parameter is available only in the cloud-based service.
+
+{{ Fill UseCustomRouting Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

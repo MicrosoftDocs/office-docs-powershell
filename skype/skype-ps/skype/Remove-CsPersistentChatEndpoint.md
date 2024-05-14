@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cspersistentchatendpoint
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cspersistentchatendpoint
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Remove-CsPersistentChatEndpoint
 schema: 2.0.0
@@ -162,4 +162,3 @@ The `Remove-CsPersistentChatEndpoint` cmdlet does not return objects or data.
 [Get-CsPersistentChatEndpoint](Get-CsPersistentChatEndpoint.md)
 
 [New-CsPersistentChatEndpoint](New-CsPersistentChatEndpoint.md)
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-online version: https://docs.microsoft.com/powershell/module/spmt/register-spmtmigration
+online version: https://learn.microsoft.com/powershell/module/spmt/register-spmtmigration
 applicable: SharePoint Migration Tool
 title: Register-SPMTMigration
 schema: 2.0.0
@@ -19,7 +19,7 @@ After a session is registered, the user can add a migration task to the migratio
 ## SYNTAX
 
 ```powershell
-Register-SPMTMigration [-SPOCredentials<PSCredential>] [-EnableMultiRound <bool>] [-ScanOnly <bool>] [-MigrateFilesAndFoldersWithInvalidChars <bool>] [-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-IgnoreUpdate <SwitchParameter>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtension <string>] [-IncludeHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>] [-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-MigrateAllSiteFieldsAndContentTypes<bool>] [-WorkingFolder <string>] [-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>] [-DuplicatePageBehavior <string>] [-MigrateNavigation <string>] [-MigrateTermGroups <string>] [-MigrateWithoutRootFolder] -Force
+Register-SPMTMigration [-SPOCredentials<PSCredential>] [-EnableMultiRound <bool>] [-ScanOnly <bool>] [-AzureActiveDirectoryLookup <bool>] [-CustomAzureAccessKey <string>] [-CustomAzureStorageAccount <bool>] [-DeleteTempFilesWhenMigrationDone <bool>] [-EnableEncryption <bool>] [-IgnoreUpdate <SwitchParameter>] [-KeepAllVersions <bool>] [-MigrateFileVersionHistory <bool>] [-MigrateOneNoteFolderAsOneNoteNoteBook <bool>] [-MigrateFilesCreatedAfter <DateTime>] [-MigrateFilesModifiedAfter <DateTime>] [-SkipFilesWithExtension <string>] [-IncludeHiddenFiles <bool>] [-NumberOfVersionToMigrate <int>] [-PreserveUserPermissionsForFileShare <bool>] [-PreserveUserPermissionsForSharePointSource <bool>] [-SkipListWithAudienceTargetingEnabled <bool>] [-StartMigrationAutomaticallyWhenNoScanIssue <bool>] [-UseCustomAzureStorage <bool>] [-UserMappingFile <string>] [-MigrateAllSiteFieldsAndContentTypes<bool>] [-WorkingFolder <string>] [-SkipSitesWithName <string>] [-SkipListsWithName <string>] [-SkipContentTypesWithName <string>] [-DuplicatePageBehavior <string>] [-MigrateNavigation <string>] [-MigrateTermGroups <string>] [-MigrateWithoutRootFolder] -Force
 ```
 
 ## DESCRIPTION
@@ -49,7 +49,7 @@ This example registers a migration session.
 
 ### -AzureActiveDirectoryLookup
 By default, this is set to On. 
-If no user mapping file is provided by the user, then Azure Active Directory is used as the default for user mapping.
+If no user mapping file is provided by the user, then Microsoft Entra ID is used as the default for user mapping.
 
 ```yaml
 Type: Boolean
@@ -206,23 +206,6 @@ Accept wildcard characters: False
 If set to No, only the most recent versions of the file will be migrated.
 If set to Yes, you can choose whether to keep all versions, or limit it to a specific number.
 By default, it is set to On.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MigrateFilesAndFoldersWithInvalidChars
-The default is On.
-Files and folders with invalid characters (for example:\<, \>, :, ", |, ?, *, /, \,\u007f) in the names will be migrated by default.
-If set to Off, files and folders with invalid characters in names will not be migrated.
 
 ```yaml
 Type: Boolean
@@ -449,8 +432,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserMappingFile
-By default, Azure AD lookup is used to map users when submitting migration jobs.
-If you choose to use a custom user mapping file and you want to preserve user permissions, turn off Azure Active Directory lookup.By doing so, if a user isn't found in the mapping file, the tool won't look it up in AAD.
+By default, Microsoft Entra lookup is used to map users when submitting migration jobs.
+If you choose to use a custom user mapping file and you want to preserve user permissions, turn off Microsoft Entra lookup.By doing so, if a user isn't found in the mapping file, the tool won't look it up in Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -617,7 +600,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

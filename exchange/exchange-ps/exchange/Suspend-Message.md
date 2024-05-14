@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/suspend-message
+online version: https://learn.microsoft.com/powershell/module/exchange/suspend-message
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Suspend-Message
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Suspend-Message cmdlet to prevent delivery of a particular message in a queue on a Mailbox server or an Edge Transport server.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -42,9 +42,9 @@ A message already in delivery won't be suspended. Delivery will continue and the
 
 A message being sent to multiple recipients might be located in multiple queues. If you specify an Identity parameter, the message is suspended in a single queue if that identity matches only a single message. If the identity matches more than one message, you receive an error. To suspend a message in more than one queue in a single operation, you must use the Filter parameter.
 
-For instructions on how to resume a suspended message, see [Resume-Message](https://docs.microsoft.com/powershell/module/exchange/resume-message).
+For instructions on how to resume a suspended message, see [Resume-Message](https://learn.microsoft.com/powershell/module/exchange/resume-message).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ This example prevents delivery of all messages for which the following condition
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see [Message identity](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#message-identity).
+The Identity parameter specifies the message. Valid input for this parameter uses the syntax Server\\Queue\\MessageInteger or Queue\\MessageInteger or MessageInteger, for example, Mailbox01\\contoso.com\\5 or 10. For details about message identity, see [Message identity](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell#message-identity).
 
 ```yaml
 Type: MessageIdentity
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter specifies one or more messages by using OPath filter syntax. The OPath filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://docs.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://docs.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
+The Filter parameter specifies one or more messages by using OPATH filter syntax. The OPATH filter includes a message property name followed by a comparison operator and value (for example, `"FromAddress -like '*@contoso.com'"`). For details about filterable message properties and comparison operators, see [Properties of messages in queues](https://learn.microsoft.com/Exchange/mail-flow/queues/message-properties) and [Find queues and messages in queues in the Exchange Management Shell](https://learn.microsoft.com/Exchange/mail-flow/queues/queues-and-messages-in-powershell).
 
 You can specify multiple criteria by using the and comparison operator. Property values that aren't expressed as an integer must be enclosed in quotation marks (").
 
@@ -159,12 +159,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

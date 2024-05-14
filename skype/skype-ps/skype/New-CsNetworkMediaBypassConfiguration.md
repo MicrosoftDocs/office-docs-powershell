@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csnetworkmediabypassconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-csnetworkmediabypassconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsNetworkMediaBypassConfiguration
 schema: 2.0.0
@@ -305,4 +305,3 @@ Creates an object reference of type Microsoft.Rtc.Management.WritableConfig.Sett
 [Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)
 
 [Set-CsNetworkConfiguration](Set-CsNetworkConfiguration.md)
-

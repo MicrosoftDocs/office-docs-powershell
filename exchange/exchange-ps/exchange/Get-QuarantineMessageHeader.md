@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-quarantinemessageheader
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+online version: https://learn.microsoft.com/powershell/module/exchange/get-quarantinemessageheader
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Get-QuarantineMessageHeader
 schema: 2.0.0
 author: chrisda
@@ -16,21 +16,21 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-QuarantineMessageHeader cmdlet to view the message header of a quarantined message. The command will fail if the specified message is not in quarantine.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-QuarantineMessageHeader -Identity <QuarantineMessageIdentity>
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-RecipientAddress <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Standard SMTP message header syntax is described in RFC 5322. This cmdlet displays the message header exactly as it appears in the message. Individual header fields are not unfolded.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -44,6 +44,7 @@ This example displays the message header of the quarantined message that has the
 ### Example 2
 ```powershell
 $qMessages = Get-QuarantineMessage
+
 Get-QuarantineMessageHeader $qMessages[0].Identity
 ```
 
@@ -60,7 +61,7 @@ You can find the Identity value for a quarantined message by using the Get-Quara
 Type: QuarantineMessageIdentity
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -69,16 +70,49 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -EntityType
+The EntityType parameter filters the results by EntityType. Valid values are:
+
+- Email
+- SharePointOnline
+- Teams (currently in Preview)
+- DataLossPrevention
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

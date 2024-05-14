@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-dlpkeyworddictionary
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/new-dlpkeyworddictionary
+applicable: Security & Compliance
 title: New-DlpKeywordDictionary
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,11 @@ ms.reviewer:
 # New-DlpKeywordDictionary
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the New-DlpKeywordDictionary cmdlet to create data loss prevention (DLP) keyword dictionaries in the Microsoft 365 compliance center.
+Use the New-DlpKeywordDictionary cmdlet to create data loss prevention (DLP) keyword dictionaries in the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -24,7 +24,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 New-DlpKeywordDictionary -Name <String>
  [-Confirm]
  [-Description <String>]
+ [-DoNotPersistKeywords]
  [-FileData <Byte[]>]
+ [-Organization <OrganizationIdParameter>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -32,14 +34,16 @@ New-DlpKeywordDictionary -Name <String>
 ## DESCRIPTION
 After you create a custom sensitive information type that specifies the identity (GUID value) of the DLP keyword dictionary, the dictionary will appear in your list of sensitive information types, and you can use it in policies.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $Keywords = @("Aarskog's syndrome","Abandonment","Abasia","Abderhalden-Kaufmann-Lignac","Abdominalgia","Abduction contracture","Abetalipo proteinemia","Abiotrophy","Ablatio","ablation","Ablepharia","Abocclusion","Abolition","Aborter","Abortion","Abortus","Aboulomania","Abrami's disease","Abramo")
+
 $EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
+
 New-DlpKeywordDictionary -Name "Diseases" -Description "Names of diseases and injuries from ICD-10-CM lexicon" -FileData $EncodedKeywords
 ```
 
@@ -48,7 +52,9 @@ This example creates a DLP keyword dictionary named Diseases by using the specif
 ### Example 2
 ```powershell
 $Keywords = Get-Content "C:\My Documents\InappropriateTerms.txt"
-$EncodedKeywords = $Keywords | ForEach-Object{[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
+
+$EncodedKeywords = $Keywords | ForEach-Object {[System.Text.Encoding]::Unicode.GetBytes($_+"`r`n")}
+
 New-DlpKeywordDictionary -Name "Inappropriate Language" -Description "Unprofessional and inappropriate terminology" -FileData $EncodedKeywords
 ```
 
@@ -63,7 +69,7 @@ The Name parameter specifies a unique name for the DLP keyword dictionary. If th
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -82,7 +88,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -98,7 +104,23 @@ The Description parameter specifies descriptive text for the DLP keyword diction
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DoNotPersistKeywords
+{{ Fill DoNotPersistKeywords Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -114,7 +136,23 @@ The FileData parameter specifies the terms that are used in the DLP keyword dict
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+{{ Fill Organization Description }}
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -124,13 +162,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -144,11 +182,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

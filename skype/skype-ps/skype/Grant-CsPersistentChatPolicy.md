@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-cspersistentchatpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-cspersistentchatpolicy
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Grant-CsPersistentChatPolicy
 schema: 2.0.0
@@ -227,4 +227,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)
 
 [Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)
-

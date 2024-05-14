@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-outlookprotectionrule
+online version: https://learn.microsoft.com/powershell/module/exchange/new-outlookprotectionrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-OutlookProtectionRule
 schema: 2.0.0
@@ -18,7 +18,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-OutlookProtectionRule cmdlet to create a Microsoft Outlook protection rule.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -40,11 +40,11 @@ New-OutlookProtectionRule [-Name] <String> -ApplyRightsProtectionTemplate <RmsTe
 ## DESCRIPTION
 Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook inspects message content and protects messages by applying Active Directory Rights Management Services (AD RMS) rights templates.
 
-For more information, see [Outlook protection rules](https://docs.microsoft.com/exchange/outlook-protection-rules-exchange-2013-help).
+For more information, see [Outlook protection rules](https://learn.microsoft.com/exchange/outlook-protection-rules-exchange-2013-help).
 
 Outlook protection rules created without a condition apply to all messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -53,25 +53,9 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 New-OutlookProtectionRule -Name "Project Contoso" -SentTo Joe@contoso.com -ApplyRightsProtectionTemplate "Template-Contoso"
 ```
 
-This example applies the AD RMS template Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
+This example applies the AD RMS template named Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
 
 ## PARAMETERS
-
-### -ApplyRightsProtectionTemplate
-The ApplyRightsProtectionTemplate parameter specifies the AD RMS template to apply to the message. An AD RMS template can be specified using the template name. Use the Get-RMSTemplate cmdlet to retrieve templates from your AD RMS server.
-
-```yaml
-Type: RmsTemplateIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
 
 ### -Name
 The Name parameter specifies a name for the rule.
@@ -86,6 +70,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyRightsProtectionTemplate
+The ApplyRightsProtectionTemplate parameter specifies the AD RMS template to apply to the message. An AD RMS template can be specified using the template name. Use the Get-RMSTemplate cmdlet to retrieve templates from your AD RMS server.
+
+```yaml
+Type: RmsTemplateIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -143,7 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress the confirmation prompt used to warn the administrator when rules are created without any conditions. Rules without any conditions specified apply to all messages. The Force switch doesn't require a value.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to hide the confirmation prompt when you create rules without any conditions (rules without conditions apply to all messages).
 
 ```yaml
 Type: SwitchParameter
@@ -277,12 +279,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-owaconnectivity
+online version: https://learn.microsoft.com/powershell/module/exchange/test-owaconnectivity
 applicable: Exchange Server 2010
 title: Test-OwaConnectivity
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Test-OwaConnectivity cmdlet to verify that Microsoft Office Outlook Web App is running as expected. The Test-OwaConnectivity cmdlet can be used to test Outlook Web App connectivity for all Microsoft Exchange Server 2010 virtual directories on a specified Client Access server for all mailboxes on servers running Exchange that are in the same Active Directory site. The Test-OwaConnectivity cmdlet can also be used to test the connectivity for an individual Exchange Outlook Web App URL.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -68,7 +68,7 @@ If the command encounters a virtual directory that doesn't require Secure Socket
 
 The Test-OwaConnectivity cmdlet can be run as a one-time interactive task or as a scheduled task under Microsoft System Center Operations Manager 2007 control. To run the Test-OwaConnectivity cmdlet as a System Center Operations Manager 2007 task, the Client Access test mailbox must be available on the Mailbox servers that the cmdlet tests against.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -88,23 +88,23 @@ This example tests the connectivity of a specific Client Access server Contoso12
 
 ## PARAMETERS
 
-### -MailboxCredential
-The MailboxCredential parameter specifies the mailbox credential for a single URL test.
+### -ClientAccessServer
+This parameter is available only in Exchange Server 2010
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+The ClientAccessServer parameter specifies the name of the Client Access server to test. If this parameter is included, all Exchange Outlook Web App virtual directories on the Client Access server are tested against all Exchange Mailbox servers in the local Active Directory site.
 
-The MailboxCredential parameter is required only when using the URL parameter.
+Don't use this parameter with the URL parameter.
 
 ```yaml
-Type: PSCredential
-Parameter Sets: URL
+Type: ServerIdParameter
+Parameter Sets: Identity
 Aliases:
 Applicable: Exchange Server 2010
 
-Required: True
-Position: Named
+Required: False
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -128,8 +128,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MailboxCredential
+The MailboxCredential parameter specifies the mailbox credential for a single URL test.
+
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+
+The MailboxCredential parameter is required only when using the URL parameter.
+
+```yaml
+Type: PSCredential
+Parameter Sets: URL
+Aliases:
+Applicable: Exchange Server 2010
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowUnsecureAccess
-The AllowUnsecureAccess parameter specifies whether virtual directories that don't require SSL are tested. If the AllowUnsecureAccess parameter is included, it enables virtual directories that don't require SSL to be tested. If this parameter isn't included, the command skips virtual directories that don't require SSL, and an error is generated.
+The AllowUnsecureAccess switch specifies whether virtual directories that don't require SSL are tested. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command skips virtual directories that don't require SSL, and an error is generated.
 
 ```yaml
 Type: SwitchParameter
@@ -141,26 +163,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClientAccessServer
-This parameter is available only in Exchange Server 2010
-
-The ClientAccessServer parameter specifies the name of the Client Access server to test. If this parameter is included, all Exchange Outlook Web App virtual directories on the Client Access server are tested against all Exchange Mailbox servers in the local Active Directory site.
-
-Don't use this parameter with the URL parameter.
-
-```yaml
-Type: ServerIdParameter
-Parameter Sets: Identity
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -234,7 +236,9 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext parameter shows you what information is returned to System Center Operations Manager 2007. When Operations Manager 2007 executes the Test-OwaConnectivity cmdlet, it requires additional information to be returned. By setting this parameter to $true, you can see exactly what would be returned to Operations Manager 2007. This parameter is informational only and has no effect on Operations Manager 2007.
+The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch.
+
+Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
 
 ```yaml
 Type: SwitchParameter
@@ -250,7 +254,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResetTestAccountCredentials
-The ResetTestAccountCredentials switch resets the password for the test account that's used to run this command. The password for the test account is typically reset every seven days. Use this switch to force a password reset any time it's required for security reasons.
+The ResetTestAccountCredentials switch resets the password for the test account that's used to run this command. You don't need to specify a value with this switch.
+
+The password for the test account is typically reset every seven days. Use this switch to force a password reset any time it's required for security reasons.
 
 ```yaml
 Type: SwitchParameter
@@ -314,7 +320,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-The TrustAnySSLCertificate parameter specifies whether to check an internal URL without generating an SSL certificate validation error. The TrustAnySSLCertificate parameter allows SSL certificate validation failures to not be reported. This is useful for testing internal URLs because Internet Information Services (IIS) doesn't support assigning multiple certificates for a single virtual directory. If a directory has different URLs for internal and external access and has a certificate, that certificate is usually for the external URL. This parameter lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
+
+This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
 
 ```yaml
 Type: SwitchParameter
@@ -366,12 +374,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-hybridconfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/set-hybridconfiguration
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-HybridConfiguration
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-HybridConfiguration cmdlet to modify the hybrid deployment between your on-premises Exchange organization and Exchange Online in a Microsoft 365 for enterprises organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -44,7 +44,7 @@ Set-HybridConfiguration
 ## DESCRIPTION
 The Set-HybridConfiguration cmdlet modifies the hybrid configuration features, such as enabling secure mail, designating a specific Mailbox server for hybrid functionality, or enabling or disabling free/busy information sharing and message tracking between the on-premises Exchange and Exchange Online organizations.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -72,7 +72,7 @@ This example specifies that the hybrid deployment uses a defined TLS certificate
 ## PARAMETERS
 
 ### -ClientAccessServers
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The ClientAccessServers parameter specifies the Exchange 2010 SP2 or later servers with the Client Access server role installed that will be configured to support the hybrid deployment features. At least one Client Access server must be defined and be externally accessible from the Internet on ports 80 and 443. The servers will be configured to enable the following:
 
@@ -362,12 +362,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

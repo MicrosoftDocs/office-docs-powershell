@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csgrouppolicyassignment
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Remove-CsGroupPolicyAssignment
@@ -236,4 +236,3 @@ For more information, see [About CommonParameters](https://go.microsoft.com/fwli
 [Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
 
 [Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
-

@@ -45,38 +45,6 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "sharepoint-ps",
-      "build_source_folder": "sharepoint",
-      "build_output_subfolder": "sharepoint-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
       "monikerPath": [
         "mapping/monikerMapping.json"
       ]
@@ -109,6 +77,28 @@
       ]
     },
     {
+      "docset_name": "spmt-ps",
+      "build_source_folder": "spmt",
+      "build_output_subfolder": "spmt-ps",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content",
+        "PowershellModule": "Content",
+        "PowershellCmdlet": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0,
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
+    },
+    {
       "docset_name": "staffhub-ps",
       "build_source_folder": "staffhub",
       "build_output_subfolder": "staffhub-ps",
@@ -125,47 +115,12 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
+      "version": 0
     },
     {
       "docset_name": "teams-ps",
       "build_source_folder": "teams",
       "build_output_subfolder": "teams-ps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ]
-    },
-    {
-      "docset_name": "spmt-ps",
-      "build_source_folder": "spmt",
-      "build_output_subfolder": "spmt-ps",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -220,16 +175,13 @@
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
-  "git_repository_branch_open_to_public_contributors": "master",
-  "skip_source_output_uploading": false,
+  "git_repository_branch_open_to_public_contributors": "main",
   "need_preview_pull_request": true,
-  "enable_incremental_build": false,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],
@@ -238,12 +190,16 @@
       "Publish"
     ]
   },
-  "need_generate_pdf_url_template": false,
   "targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"
     }
   },
+  "docs_build_engine": {},
+  "skip_source_output_uploading": false,
+  "enable_incremental_build": false,
+  "contribution_branch_mappings": {},
+  "need_generate_pdf_url_template": false,
   "need_generate_intellisense": false,
   "dependent_packages": [
     {
@@ -253,8 +209,5 @@
       "target_framework": "net45",
       "version": "latest"
     }
-  ],
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+  ]
 }

@@ -3,7 +3,7 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Set-TeamFunSettings
-online version: https://docs.microsoft.com/powershell/module/teams/set-teamfunsettings
+online version: https://learn.microsoft.com/powershell/module/teams/set-teamfunsettings
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -127,4 +127,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-

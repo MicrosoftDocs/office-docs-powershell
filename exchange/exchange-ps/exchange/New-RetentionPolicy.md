@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-retentionpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-retentionpolicy
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-RetentionPolicy
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-RetentionPolicy cmdlet to create a retention policy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ New-RetentionPolicy [-Name] <String>
 ## DESCRIPTION
 Retention policy tags are associated with a retention policy. When a retention policy is applied to a mailbox, tags associated with the policy are available to the mailbox user.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -113,9 +113,18 @@ Accept wildcard characters: False
 ### -IsDefault
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The IsDefault switch specifies that this retention policy is the default retention policy. You don't need to specify a value with this switch.
 
-To set the default retention policy for new mailboxes, use the RetentionPolicy parameter on the Set-MailboxPlan cmdlet.
+When you use this switch, you'll get a warning that this retention policy will replace the current default retention policy (the policy where the IsDefault property value is currently True) as the default. By default, the default retention policy is named Default MRM Policy.
+
+**Note**: Changing which retention policy is the default might or might not affect new and existing mailboxes based on the value of the RetentionPolicy parameter on all mailbox plans:
+
+- $null (blank): Changes to which retention policy is the default are continually reflected in new and existing mailboxes.
+- A retention policy is specified: The value of the RetentionPolicy parameter for all mailbox plans should be $null (blank) or match the Exchange retention policy that's configured as default policy for the organization. Otherwise, the experience might be inconsistent when creating new mailboxes, enabling disabled mailboxes, and changing licenses. For more information see [Mailbox plans in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/mailbox-plans).
+
+If a mailbox is assigned an Exchange retention policy that's not the default policy, the RetentionPolicy value of the mailbox will be overwritten when changing licenses and will need to be manually reset to the original value.
+
+Changes to the default retention policy that affect existing mailboxes can potentially saturate the network if there are hundreds or thousands of mailboxes that require updates.
 
 ```yaml
 Type: SwitchParameter
@@ -133,7 +142,7 @@ Accept wildcard characters: False
 ### -IsDefaultArbitrationMailbox
 This parameter is available only in the cloud-based service.
 
-The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization.
+The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -201,12 +210,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

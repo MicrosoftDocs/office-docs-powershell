@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-offlineaddressbook
+online version: https://learn.microsoft.com/powershell/module/exchange/new-offlineaddressbook
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-OfflineAddressBook
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-OfflineAddressBook cmdlet to create offline address books (OABs).
 
-In Exchange Online, this cmdlet is available only in the Address Lists role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Address Lists role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+In Exchange Online, this cmdlet is available only in the Address Lists role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Address Lists role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -43,13 +43,14 @@ New-OfflineAddressBook [-Name] <String> -AddressLists <AddressBookBaseIdParamete
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $a = Get-AddressList | Where {$_.Name -Like "*AgencyB*"}
+
 New-OfflineAddressBook -Name "OAB_AgencyB" -Server myserver.contoso.com -AddressLists $a -Schedule "Mon.01:00-Mon.02:00, Wed.01:00-Wed.02:00"
 ```
 
@@ -83,7 +84,7 @@ New-OfflineAddressBook -Name "Legacy OAB" -AddressLists "\Default Global Address
 
 In Exchange Server 2010, this example creates the OAB Legacy OAB that uses public folder distribution for Outlook 2003 Service Pack 1 (SP1) and Outlook 98 Service Pack 2 (SP2) clients on SERVER01.
 
-If you configure OABs to use public folder distribution, but your organization doesn't have any public folder infrastructure, an error will be returned. For more information, see [Managing Public Folders](https://docs.microsoft.com/previous-versions/office/exchange-server-2010/bb124411(v=exchg.141)).
+If you configure OABs to use public folder distribution, but your organization doesn't have any public folder infrastructure, an error will be returned. For more information, see [Managing Public Folders](https://learn.microsoft.com/previous-versions/office/exchange-server-2010/bb124411(v=exchg.141)).
 
 ## PARAMETERS
 
@@ -386,7 +387,9 @@ Accept wildcard characters: False
 ### -SkipPublicFolderInitialization
 This parameter is available only in Exchange Server 2010.
 
-The SkipPublicFolderInitialization parameter specifies whether to skip the immediate creation of the OAB public folders if you're creating an OAB that uses public folder distribution. The OAB isn't available for download until the next site folder maintenance cycle has completed. You don't have to specify a value with the SkipPublicFolderInitialization parameter. Omitting this parameter may cause the task to pause while it contacts the responsible public folder server to create the necessary public folders. If the server is presently unreachable, or is otherwise costly to contact, the pause could be significant.
+The SkipPublicFolderInitialization switch specifies whether to skip the immediate creation of the OAB public folders if you're creating an OAB that uses public folder distribution. You don't need to specify a value with this switch.
+
+The OAB isn't available for download until the next site folder maintenance cycle has completed. Omitting this switch might cause the task to pause while it contacts the responsible public folder server to create the necessary public folders. If the server is presently unreachable, or is otherwise costly to contact, the pause could be significant.
 
 ```yaml
 Type: SwitchParameter
@@ -404,12 +407,11 @@ Accept wildcard characters: False
 ### -Versions
 This parameter is available only in Exchange Server 2010.
 
-The Versions parameter specifies what version of OAB to generate. The allowed values are:
+The Versions parameter specifies the OAB versions that are generated for client download. Valid values are:
 
-- Version1
-- Version2
-- Version3
-- Version4
+- Version2 (requires public folder distribution)
+- Version3 (requires public folder distribution)
+- Version4 (default value)
 
 ```yaml
 Type: MultiValuedProperty
@@ -477,12 +479,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

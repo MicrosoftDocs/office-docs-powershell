@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-organizationconfig
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-organizationconfig
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-OrganizationConfig
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-OrganizationConfig cmdlet to configure various settings of an Exchange organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -26,22 +26,31 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
- [-AllowPlusAddressInRecipients <Boolean>]
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
  [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
+ [-AutomaticForcedReadReceiptEnabled <Boolean>]
+ [-BlockMoveMessagesForGroupFolders <Boolean>]
  [-BookingsAddressEntryRestricted <Boolean>]
  [-BookingsAuthEnabled <Boolean>]
+ [-BookingsBlockedWordsEnabled <Boolean>]
  [-BookingsCreationOfCustomQuestionsRestricted <Boolean>]
  [-BookingsEnabled <Boolean>]
  [-BookingsExposureOfStaffDetailsRestricted <Boolean>]
  [-BookingsMembershipApprovalRequired <Boolean>]
+ [-BookingsNamingPolicyEnabled <Boolean>]
+ [-BookingsNamingPolicyPrefix <String>]
+ [-BookingsNamingPolicyPrefixEnabled <Boolean>]
+ [-BookingsNamingPolicySuffix <String>]
+ [-BookingsNamingPolicySuffixEnabled <Boolean>]
  [-BookingsNotesEntryRestricted <Boolean>]
  [-BookingsPaymentsEnabled <Boolean>]
  [-BookingsPhoneNumberEntryRestricted <Boolean>]
+ [-BookingsSearchEngineIndexDisabled <Boolean>]
+ [-BookingsSmsMicrosoftEnabled <Boolean>]
  [-BookingsSocialSharingRestricted <Boolean>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-CalendarVersionStoreEnabled <Boolean>]
@@ -65,11 +74,13 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-DefaultPublicFolderMovedItemRetention <EnhancedTimeSpan>]
  [-DefaultPublicFolderProhibitPostQuota <Unlimited>]
  [-DirectReportsGroupAutoCreationEnabled <Boolean>]
+ [-DisablePlusAddressInRecipients <Boolean>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
  [-ElcProcessingDisabled <Boolean>]
  [-EnableForwardingAddressSyncForMailboxes <Boolean>]
+ [-EnableOutlookEvents <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
@@ -80,14 +91,17 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsEnabled <Boolean>]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
- [-ExternalInOutlookEnabled <Boolean>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
  [-FindTimeAutoScheduleDisabled <Boolean>]
+ [-FindTimeLockPollForAttendeesEnabled <Boolean>]
  [-FindTimeOnlineMeetingOptionDisabled <Boolean>]
  [-FocusedInboxOn <Boolean>]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
+ [-HybridRSVPEnabled <Boolean>]
  [-IPListBlocked <MultiValuedProperty>]
  [-IsAgendaMailEnabled <Boolean>]
+ [-IsGroupFoldersAndRulesEnabled <Boolean>]
+ [-IsGroupMemberAllowedToEditContent <Boolean>]
  [-LeanPopoutEnabled <Boolean>]
  [-LinkPreviewEnabled <Boolean>]
  [-MailTipsAllTipsEnabled <Boolean>]
@@ -97,6 +111,8 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MailTipsMailboxSourcedTipsEnabled <Boolean>]
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
+ [-MessageHighlightsEnabled <Boolean>]
+ [-MessageRecallEnabled <System.Boolean>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -108,15 +124,18 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-OutlookPayEnabled <Boolean>]
  [-OutlookTextPredictionDisabled <Boolean>]
  [-PerTenantSwitchToESTSEnabled <Boolean>]
+ [-PostponeRoamingSignaturesUntilLater <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
  [-PublicFolderShowClientControl <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
+ [-RecallReadMessagesEnabled <System.Boolean>]
  [-RefreshSessionEnabled <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
  [-SendFromAliasEnabled <Boolean>]
+ [-SharedDomainEmailAddressFlowEnabled <Boolean>]
  [-SiteMailboxCreationURL <Uri>]
  [-SmtpActionableMessagesEnabled <Boolean>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
@@ -130,10 +149,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
- [-AdfsEncryptCertificateThumbprint <String>]
- [-AdfsIssuer <Uri>]
- [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
+Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -189,6 +205,8 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
  [-MicrosoftExchangeRecipientEmailAddressPolicyEnabled <Boolean>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
+ [-MitigationsEnabled <Boolean>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -196,9 +214,9 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
  [-PublicFolderMailboxesLockedForNewConnections <Boolean>]
  [-PublicFolderMailboxesMigrationComplete <Boolean>]
  [-PublicFolderMigrationComplete <Boolean>]
+ [-PublicFolderShowClientControl <Boolean>]
  [-PublicFoldersEnabled <PublicFoldersDeployment>]
  [-PublicFoldersLockedForMigration <Boolean>]
- [-PublicFolderShowClientControl <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
  [-RefreshSessionEnabled <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
@@ -208,6 +226,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>]
  [-SmtpActionableMessagesEnabled <Boolean>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
+ [-UseIcsSyncStateStreaming]
  [-WACDiscoveryEndpoint <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -271,11 +290,12 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-MicrosoftExchangeRecipientEmailAddressPolicyEnabled <Boolean>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
+ [-MitigationsEnabled <Boolean>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
  [-PublicComputersDetectionEnabled <Boolean>]
- [-PublicFolderContentReplicationDisabled <Boolean>]
  [-PublicFolderMailboxesLockedForNewConnections <Boolean>]
  [-PublicFolderMailboxesMigrationComplete <Boolean>]
  [-PublicFolderMigrationComplete <Boolean>]
@@ -291,6 +311,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-SmtpActionableMessagesEnabled <Boolean>]
  [-UMAvailableLanguages <MultiValuedProperty>]
  [-UnblockUnsafeSenderPromptEnabled <Boolean>]
+ [-UseIcsSyncStateStreaming]
  [-WACDiscoveryEndpoint <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -302,9 +323,11 @@ Set-OrganizationConfig
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
+ [-BlockMoveMessagesForGroupFolders <Boolean>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-Confirm]
  [-CustomerFeedbackEnabled <Boolean>]
+ [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
@@ -319,6 +342,8 @@ Set-OrganizationConfig
  [-Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <IndustryType>]
+ [-IsGroupFoldersAndRulesEnabled <Boolean>]
+ [-IsGroupMemberAllowedToEditContent <Boolean>]
  [-MailTipsAllTipsEnabled <Boolean>]
  [-MailTipsExternalRecipientsTipsEnabled <Boolean>]
  [-MailTipsGroupMetricsEnabled <Boolean>]
@@ -329,6 +354,7 @@ Set-OrganizationConfig
  [-MicrosoftExchangeRecipientEmailAddressPolicyEnabled <Boolean>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PermanentlyDeleteDisabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -343,7 +369,7 @@ Set-OrganizationConfig
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -438,7 +464,12 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutEnabled
-The ActivityBasedAuthenticationTimeoutEnabled parameter specifies whether the timed logoff feature is enabled. The default value is $true.
+The ActivityBasedAuthenticationTimeoutEnabled parameter enables or disables the inactivity interval for automatic logoff in Outlook on the web (formerly known as Outlook Web App). Valid values are:
+
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes logoff in Outlook on the web. This is the default value.
+- $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled.
+
+If you're using single sign-on, use the ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -454,11 +485,15 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutInterval
-The ActivityBasedAuthenticationTimeoutInterval parameter specifies the time span for logoff.
+The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity that causes an automatic logoff in Outlook on the web.
 
 You enter this value as a time span: hh:mm:ss where hh = hours, mm = minutes and ss = seconds.
 
 Valid values for this parameter are from 00:05:00 to 08:00:00 (5 minutes to 8 hours). The default value is 06:00:00 (6 hours).
+
+The value of this parameter is meaningful only if the ActivityBasedAuthenticationTimeoutEnabled or ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter value is $true.
+
+For more information about the activity-based timeout in Outlook on the web, see [Description of the Activity-Based Authentication Timeout for OWA in Office 365](https://support.microsoft.com/topic/0c101e1b-020e-69c1-a0b0-26532d60c0a4).
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -474,7 +509,12 @@ Accept wildcard characters: False
 ```
 
 ### -ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled
-The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter specifies whether to keep single sign-on enabled. The default value is $true.
+The ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled parameter enables or disables the inactivity interval for automatic logoff for single sign-on in Outlook on the Web. Valid values are:
+
+- $true: The ActivityBasedAuthenticationTimeoutInterval parameter specifies the period of inactivity in Outlook on the web that causes logoff for single sign-on. This is the default value.
+- $false: Automatic logoff based on a period of inactivity in Outlook on the web is disabled for single sign-on.
+
+If you aren't using single sign-on, use the ActivityBasedAuthenticationTimeoutEnabled parameter.
 
 ```yaml
 Type: Boolean
@@ -498,7 +538,7 @@ To enter multiple values and overwrite any existing entries, use the following s
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
-For more information about configuring AD FS claims based authentication in Exchange, see [Use AD FS claims-based authentication with Outlook on the web](https://docs.microsoft.com/Exchange/clients/outlook-on-the-web/ad-fs-claims-based-auth).
+For more information about configuring AD FS claims based authentication in Exchange, see [Use AD FS claims-based authentication with Outlook on the web](https://learn.microsoft.com/Exchange/clients/outlook-on-the-web/ad-fs-claims-based-auth).
 
 ```yaml
 Type: MultiValuedProperty
@@ -574,7 +614,7 @@ This parameter is available only in on-premises Exchange.
 
 The AdfsSignCertificateThumbprints parameter specifies one or more X.509 token-signing certificates that are used for AD FS claims-based authentication. This parameter uses certificate thumbprint values (GUIDs) to identify the certificates.
 
-To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see [Get-ADFSCertificate](https://docs.microsoft.com/powershell/module/adfs/get-adfscertificate).
+To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see [Get-ADFSCertificate](https://learn.microsoft.com/powershell/module/adfs/get-adfscertificate).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -585,27 +625,6 @@ Type: MultiValuedProperty
 Parameter Sets: AdfsAuthenticationParameter
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowPlusAddressInRecipients
-This parameter is available only in the cloud-based service.
-
-The AllowPlusAddressInRecipients parameter enables or disables dynamic, disposable subaddressing as defined in RFC 5233. Valid values are:
-
-- $true: The plus sign in an email address indicates subaddressing. For example, mail sent to `jane+exampletag@contoso.com` is delivered to `jane@contoso.com`. If your Exchange Online organization was created after September 2020, this is the default value.
-- $false: The plus sign in an email address is treated as a literal character. For example, mail sent to `jane+exampletag@contoso.com` is delivered only if `jane+exampletag@contoso.com` is configured as the primary address or a proxy address on an existing recipient. If your Exchange Online organization was created before before September 2020, this is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -711,7 +730,7 @@ Accept wildcard characters: False
 ### -AutoExpandingArchive
 This parameter is available only in the cloud-based service.
 
-The AutoExpandingArchive switch enables the unlimited archiving feature (called auto-expanding archiving) in an Exchange Online organization. You don't need to specify a value with this switch.
+The AutoExpandingArchive switch enables the auto-expanding archiving feature in an Exchange Online organization. You don't need to specify a value with this switch.
 
 After you enable auto-expanding archiving, additional storage space is automatically added to a user's archive mailbox when it approaches the storage limit. Note that a user's archive mailbox has to be enabled before auto-expanding archiving can take effect. Also note that after you enable auto-expanding archiving for your organization, it can't be disabled.
 
@@ -728,10 +747,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AutomaticForcedReadReceiptEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutomaticForcedReadReceiptEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockMoveMessagesForGroupFolders
+This parameter is available only in the cloud-based service.
+
+{{ Fill BlockMoveMessagesForGroupFolders Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BookingsAddressEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsAddressEntryRestricted Description }}
+The BookingsAddressEntryRestricted parameter specifies whether addresses can be collected from Bookings customers. Valid values are:
+
+- $true: Addresses can't be collected from Bookings customers.
+- $false: Addresses can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -749,7 +807,28 @@ Accept wildcard characters: False
 ### -BookingsAuthEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsAuthEnabled Description }}
+The BookingsAuthEnabled parameter specifies whether to enforce authentication to access all published Bookings pages. Valid values are:
+
+- $true: All new and existing Bookings pages are forced to authenticate users before they can book the appointment.
+- $false: All bookings pages are not forced to authenticate users.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsBlockedWordsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsBlockedWordsEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -767,7 +846,10 @@ Accept wildcard characters: False
 ### -BookingsCreationOfCustomQuestionsRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsCreationOfCustomQuestionsRestricted Description }}
+The BookingsCreationOfCustomQuestionsRestricted parameter specifies whether Bookings admins can add custom questions. Valid values are:
+
+- $true: Bookings admins can't add custom questions.
+- $false: Bookings admins can add custom questions.
 
 ```yaml
 Type: Boolean
@@ -785,12 +867,12 @@ Accept wildcard characters: False
 ### -BookingsEnabled
 This parameter is available only in the cloud-based service.
 
-The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an Exchange Online organization. Valid values are:
+The BookingsEnabled parameter specifies whether to enable Microsoft Bookings in an organization. Valid values are:
 
-- $true: Bookings are enabled.
-- $false: Bookings are disabled. This is the default value.
+- $true: Bookings is enabled.
+- $false: Bookings is disabled. This is the default value.
 
-Microsoft Bookings is an online and mobile app for small businesses who provide services to customers on an appointment basis.
+Microsoft Bookings is an online and mobile app for small businesses who provide appointment services to customers.
 
 ```yaml
 Type: Boolean
@@ -808,7 +890,10 @@ Accept wildcard characters: False
 ### -BookingsExposureOfStaffDetailsRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsExposureOfStaffDetailsRestricted Description }}
+The BookingsExposureOfStaffDetailsRestricted parameter specifies whether the attributes of internal Bookings staff members (for example, email addresses) are visible to external Bookings customers. Valid values are:
+
+- $true: Internal Bookings staff member attributes aren't visible to external Bookings customers.
+- $false: Internal Bookings staff member attributes are visible to external Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -826,7 +911,100 @@ Accept wildcard characters: False
 ### -BookingsMembershipApprovalRequired
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsMembershipApprovalRequired Description }}
+The BookingsMembershipApprovalRequired parameter enables a membership approval requirement when new staff members are added to Bookings calendars. Valid values are:
+
+- $true: Newly added staff members need to accept membership in Bookings calendars before the resources are bookable.
+- $false: Newly added staff members do not need to accept membership in Bookings calendars to make the resources bookable.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicyEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicyEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicyPrefix
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicyPrefix Description }}
+
+```yaml
+Type: String
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicyPrefixEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicyPrefixEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicySuffix
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicySuffix Description }}
+
+```yaml
+Type: String
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsNamingPolicySuffixEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsNamingPolicySuffixEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -844,7 +1022,10 @@ Accept wildcard characters: False
 ### -BookingsNotesEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsNotesEntryRestricted Description }}
+The BookingsNotesEntryRestricted parameter specifies whether appointment notes can be collected from Bookings customers. Valid values are:
+
+- $true: Appointment notes can't be collected from Bookings customers.
+- $false: Appointment notes can be collected from Bookings customers.
 
 ```yaml
 Type: Boolean
@@ -862,7 +1043,7 @@ Accept wildcard characters: False
 ### -BookingsPaymentsEnabled
 This parameter is available only in the cloud-based service.
 
-The BookingsPaymentsEnabled parameter specifies whether to enable online payment node inside Bookings. Valid values are:
+The BookingsPaymentsEnabled parameter specifies whether to enable the online payment node inside Bookings. Valid values are:
 
 - $true: Online payments are enabled.
 - $false: Online payments are disabled. This is the default value.
@@ -883,7 +1064,46 @@ Accept wildcard characters: False
 ### -BookingsPhoneNumberEntryRestricted
 This parameter is available only in the cloud-based service.
 
-{{ Fill BookingsPhoneNumberEntryRestricted Description }}
+The BookingsPhoneNumberEntryRestricted parameter specifies whether phone numbers can be collected from Bookings customers. Valid values are:
+
+- $true: Appointment notes can't be collected from Bookings customers.
+- $false: Appointment notes can be collected from Bookings customers.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsSearchEngineIndexDisabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsSearchEngineIndexDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingsSmsMicrosoftEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill BookingsSmsMicrosoftEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -901,7 +1121,7 @@ Accept wildcard characters: False
 ### -BookingsSocialSharingRestricted
 This parameter is available only in the cloud-based service.
 
-The BookingsSocialSharingRestricted parameter allows you to control whether, or not, your users can see social sharing options inside Bookings. Valid values are:
+The BookingsSocialSharingRestricted parameter specifies whether users can see the social sharing options inside Bookings. Valid values are:
 
 - $true: Social sharing options are restricted.
 - $false: Users can see social sharing options inside Bookings. This is the default value.
@@ -991,7 +1211,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1027,7 +1247,7 @@ The ConnectorsEnabled parameter specifies whether to enable or disable all conne
 - $true: Connectors are enabled. This is the default value.
 - $false: Connectors are disabled.
 
-The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Yammer.
+The workloads that are affected by this parameter are Outlook, SharePoint, Teams, and Viva Engage.
 
 ```yaml
 Type: Boolean
@@ -1112,7 +1332,7 @@ Accept wildcard characters: False
 ### -ConnectorsEnabledForYammer
 This parameter is available only in the cloud-based service.
 
-The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Yammer. Valid values are:
+The ConnectorsEnabledForYammer parameter specifies whether to enable or disable connected apps on Viva Engage. Valid values are:
 
 - $true: Connectors are enabled. This is the default value.
 - $false: Connectors are disabled.
@@ -1197,9 +1417,9 @@ You create authentication policies with the New-AuthenticationPolicy cmdlet to b
 
 ```yaml
 Type: AuthPolicyIdParameter
-Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -1322,7 +1542,7 @@ The valid input range for this parameter is from 0 through 2199023254529 bytes(2
 
 ```yaml
 Type: Unlimited
-Parameter Sets:  ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -1364,7 +1584,7 @@ Accept wildcard characters: False
 ### -DefaultPublicFolderMovedItemRetention
 The DefaultPublicFolderMovedItemRetention parameter specifies how long items that have been moved between mailboxes are kept in the source mailbox for recovery purposes before being removed by the Public Folder Assistant.
 
-When you move folder contents between mailboxes, a copy of the original data is left on the source mailbox, inaccessible for users but available for recovery by system administrators. If the move process fails and you want to roll it back, use the Set-PublicFolder -OverrideContentMailbox command to recover data. For more information, see [Set-PublicFolder](https://docs.microsoft.com/powershell/module/exchange/set-publicfolder).
+When you move folder contents between mailboxes, a copy of the original data is left on the source mailbox, inaccessible for users but available for recovery by system administrators. If the move process fails and you want to roll it back, use the Set-PublicFolder -OverrideContentMailbox command to recover data. For more information, see [Set-PublicFolder](https://learn.microsoft.com/powershell/module/exchange/set-publicfolder).
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1428,6 +1648,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisablePlusAddressInRecipients
+This parameter is available only in the cloud-based service.
+
+The DisablePlusAddressInRecipients parameter specifies whether to enable or disable plus addressing (also known as subaddressing) for Exchange Online mailboxes. Valid values are:
+
+- $true: Plus addressing is disabled. You can no longer use the plus sign in regular email addresses. The plus sign is available only for plus addressing.
+- $false: Plus addressing is enabled. You can use the plus sign in regular email addresses.
+
+For more information about plus addressing, see [Plus addressing in Exchange Online](https://learn.microsoft.com/exchange/recipients-in-exchange-online/plus-addressing-in-exchange-online).
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DistributionGroupDefaultOU
 The DistributionGroupDefaultOU parameter specifies the container where distribution groups are created by default.
 
@@ -1470,7 +1713,7 @@ You can use the following user attributes. The actual values are determined by t
 - `<City>`
 - `<Company>`
 - `<CountryCode>`
-- `<CountryOrRegion>
+- `<CountryOrRegion>`
 - `<CustomAttribute1>` to `<CustomAttribute15>`
 - `<Department>`
 - `<ExtensionCustomAttribute1>` to `<ExtensionCustomAttribute5>`
@@ -1573,7 +1816,12 @@ Accept wildcard characters: False
 ### -EnableDownloadDomains
 This parameter is available only in on-premises Exchange.
 
-{{ Fill EnableDownloadDomains Description }}
+The EnableDownloadDomains parameter specifies that Outlook on the web downloads inline images from a different domain than the rest of Outlook on the web. Valid values are:
+
+- $true: Outlook on the web uses a different download domain for inline images (for example, downloads.contoso.com). Before you enable this setting, you need to create a CNAME record and certificate for this domain, and add the domain to the ExternalDownloadHostName and InternalDownloadHostName parameters on the Set-OwaVirtualDirectory cmdlet.
+- $false: The setting is disabled. This is the default value.
+
+For more information about the security vulnerability that's addressed by this parameter, and for detailed configuration instructions, see [CVE 2021 1730](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1730).
 
 ```yaml
 Type: Boolean
@@ -1591,7 +1839,7 @@ Accept wildcard characters: False
 ### -EnableForwardingAddressSyncForMailboxes
 This parameter is available only in the cloud-based service.
 
-{{ Fill EnableForwardingAddressSyncForMailboxes Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean
@@ -1616,6 +1864,27 @@ Type: SwitchParameter
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOutlookEvents
+This parameter is available only in the cloud-based service.
+
+The EnableOutlookEvents parameter specifies whether Outlook or Outlook on the web (formerly known as Outlook Web App) automatically discovers events from email messages and adds them to user calendars. Valid values are:
+
+- $true: Discovery of events from email messages is enabled.
+- $false: Discovery of events from email messages is disabled. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -1667,6 +1936,8 @@ The EwsAllowList parameter specifies the applications that are allowed to access
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+**Note**: If users receive an error when they try to run "Play My Emails" in Outlook Mobile, use this parameter to add the value "Cortana" to the list of allowed applications.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1812,24 +2083,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExternalInOutlookEnabled
-This parameter is available only in the cloud-based service.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Boolean
-Parameter Sets: ShortenEventScopeParameter
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FindTimeAttendeeAuthenticationEnabled
 This parameter is available only in the cloud-based service.
 
@@ -1837,6 +2090,8 @@ The FindTimeAttendeeAuthenticationEnabled parameter controls whether attendees a
 
 - $true: Attendees are required to validate their identity and the meeting organizer can't turn off this setting (Always On).
 - $false: By default, attendees are required to verify their identity, but the meeting organizer is allowed to turn this setting off.
+
+This setting overrides individual user settings.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -1858,8 +2113,35 @@ This parameter is available only in the cloud-based service.
 
 The FindTimeAutoScheduleDisabled parameter controls automatically scheduling the meeting once a consensus is reached in meeting polls using the FindTime Outlook add-in. Valid values are:
 
-- $true:  Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
+- $true: Reaching a consensus for the meeting time doesn't automatically schedule the meeting, and the meeting organizer can't change this setting (Off).
 - $false: By default, reaching a consensus for the meeting time doesn't automatically schedule the meeting, but meeting organizer is allowed to turn on this setting.
+
+This setting overrides individual user settings.
+
+For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FindTimeLockPollForAttendeesEnabled
+This parameter is available only in the cloud-based service.
+
+The FindTimeLockPollForAttendeesEnabled controls whether the **Lock poll for attendees** setting is managed by the organization. Valid values are:
+
+- $true: **Lock poll for attendees** is on. Attendees will not be able to suggest new times or edit other attendees. The meeting organizer can't turn off this setting (always on).
+- $false: By default, **Lock poll for attendees** is off (initial default) or on (the user saved settings from last poll), but the meeting organizer is allowed to turn the setting off or on to allow or prevent attendees from suggesting new times or editing attendees.
+
+This setting overrides individual user settings.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -1883,6 +2165,8 @@ The FindTimeOnlineMeetingOptionDisabled parameter controls the availability of t
 
 - $true: The **Online meeting** checkbox is not available in the meeting poll in FindTime, and the meeting organizer can't change this setting. If your organization uses a third-party online meeting provider, the meeting organizer can make the meeting online using the third-party provider while creating the meeting based on the FindTime poll results.
 - $false: The **Online meeting** checkbox is available in the meeting poll in FindTime, so the meeting organizer can choose to select or not select this setting.
+
+This setting overrides individual user settings.
 
 For more information about FindTime, see [How to create a FindTime poll](https://support.microsoft.com/office/4dc806ed-fde3-4ea7-8c5e-b5d1fddab4a6).
 
@@ -1927,7 +2211,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in Exchange Server 2010.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -1967,6 +2253,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HybridRSVPEnabled
+This parameter is available only in the cloud-based service.
+
+The HybridRSVPEnabled parameter enables or disables Hybrid RSVP for your organization. Hybrid RSVP allows users the option to indicate if they will attend a meeting in-person or virtually when responding to a meeting invitation on Outlook. Valid values are:
+
+- $true: Hybrid RSVP is enabled (this is the default value).
+- $false: Hybrid RSVP is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Industry
 This parameter is available only in on-premises Exchange.
 
@@ -1988,20 +2295,21 @@ Accept wildcard characters: False
 ### -IPListBlocked
 This parameter is available only in the cloud-based service.
 
-The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. These settings affect client connections that use Basic authentication where on-premises Active Directory Federation Services (ADFS) servers federate authentication with Azure Active Directory. Note that the new settings might take up to 4 hours to fully propagate across the service.
+This parameter only affects Basic authentication connections.
 
-This parameter accepts IPv4 or IPv6 addresses in the following formats:
+The IPListBlocked parameter specifies the blocked IP addresses that aren't allowed to connect to Exchange Online organization. Valid values are:
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
-- IP address range high-low: For example, 192.168.0.1-192.168.0.254.
-- IP address range with subnet mask: For example, 192.168.8.2(255.255.255.0).
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
+- IP address range: For example, 192.168.0.1-192.168.0.254 or 192.168.8.2(255.255.255.0).
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.3.1/24 or 2001:0DB8::CD3/60.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 This parameter has a limit of approximately 1200 entries.
+
+Changes to this parameter might take up to 4 hours to fully propagate across the service.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2078,6 +2386,42 @@ Type: Boolean
 Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsGroupFoldersAndRulesEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsGroupFoldersAndRulesEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsGroupMemberAllowedToEditContent
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsGroupMemberAllowedToEditContent Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -2322,6 +2666,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageHighlightsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageHighlightsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageRemindersEnabled
 This parameter is available only in the cloud-based service.
 
@@ -2430,6 +2810,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MitigationsEnabled
+This parameter is available only in on-premises Exchange.
+
+The MitigationsEnabled parameter specifies whether the Exchange Emergency Mitigation service (EM service) is enabled in the organization. Valid values are:
+
+- $true: The EM Service automatically applies mitigations on Exchange servers where the value of the _MitigationsEnabled_ parameter is $true on the **Set-ExchangeServer**.
+- $false: Mitigations are not automatically applied on Exchange servers.
+
+For more information, see [Exchange Emergency Mitigation (EM) service](https://learn.microsoft.com/exchange/exchange-emergency-mitigation-service).
+
+```yaml
+Type: Boolean
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MobileAppEducationEnabled
 This parameter is available only in the cloud-based service.
 
@@ -2445,6 +2848,24 @@ Type: Boolean
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OabShadowDistributionOldestFileAgeLimit
+This parameter is available only in on-premises Exchange.
+
+{{ Fill OabShadowDistributionOldestFileAgeLimit Description }}
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
+Aliases:
+Applicable: Exchange Server 2019
 
 Required: False
 Position: Named
@@ -2482,9 +2903,10 @@ This parameter is available only in the cloud-based service.
 The OnlineMeetingsByDefaultEnabled parameter specifies whether to set all meetings as Teams or Skype for Business by default during meeting creation. Valid values are:
 
 - $true: All meetings are online by default.
-- $false: All meetings are not online by default. This is the default value.
+- $false: All meetings are not online by default.
+- $null: If the organization value has not been specified, the default behavior is for meetings to be online.
 
-You can override this setting on individual mailboxes by using the OnlineMeetingsByDefaultEnabled parameter on the Set-MailboxCalendarConfiguration cmdlet.
+If a user has already directly interacted with this setting in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA), the value of this parameter is ignored. Eventually, this parameter will override the Outlook-configured setting.
 
 ```yaml
 Type: Boolean
@@ -2553,7 +2975,7 @@ The Outlook for iOS and Android feature and services that are not FedRAMP compli
 - HelpShift and in-app support
 - Any Microsoft services that are outside the Microsoft 365 US Government Community Cloud (for example, Bing and Cortana).
 
- For a full list of Features and services that are not FedRAMP compliant for GCC customers, see [Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
+ For a full list of Features and services that are not FedRAMP compliant for GCC customers, see [Services and features of Outlook for iOS and Android that aren't available for Government Community Cloud users](https://learn.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-in-the-government-cloud#services-and-features-not-available).
 
 ```yaml
 Type: Boolean
@@ -2684,6 +3106,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PostponeRoamingSignaturesUntilLater
+This parameter is available only in the cloud-based service.
+
+**Note**: This parameter is in the process of being rolled out. The rollout is expected to be completed by mid-November 2023.
+
+The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signatures are enabled or disabled in Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
+
+- $true: Roaming signatures are temporarily disabled for Outlook on the web and the new Outlook for Windows. For Windows, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15). When roaming signatures are disabled, admins can use the signature-related parameters on the Set-MailboxMessageConfiguration cmdlet (for example, AutoAddSignature, AutoAddSignatureOnReply, and SignatureHtml) to configure email signatures.
+- $false: This is the default value.
+
+We're working on API support so admins and ISVs can configure roaming signatures directly. When the new API is available (and after plenty of warning), this parameter will be deprecated. Admins will no longer need to disable roaming signatures or use the parameters on Set-MailboxMessageConfiguration to configure email signatures in Outlook on the web.
+
+Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket. With the introduction of this parameter, that process is discontinued as admins can now use this parameter to disable roaming signatures themselves.
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreferredInternetCodePageForShiftJis
 This parameter is reserved for internal Microsoft use.
 
@@ -2795,7 +3244,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFoldersEnabled
-The PublicFoldersEnabled parameter specifies how public folders are deployed in your organization. This parameter uses one of the following values.
+The PublicFoldersEnabled parameter specifies how public folders are deployed in your organization. Valid values are:
 
 - Local: The public folders are deployed locally in your organization.
 - Remote: The public folders are deployed in the remote forest.
@@ -2815,10 +3264,10 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolderShowClientControl
-The PublicFolderShowClientControl parameter enables or disables access to public folders in Microsoft Outlook. Valid values are:
+The PublicFolderShowClientControl parameter enables or disables the control access feature for public folders in Microsoft Outlook. Valid values are:
 
-- $true: Users can access public folders in Outlook if the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is set to the value $true (the default value is $false).
-- $false: User can't access public folders in Outlook. This is the default value.
+- $true: User access to public folders in Outlook is controlled by the value of the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet (the default value is $false).
+- $false: This is the default value. User access to public folders in Outlook is enabled (the control access feature is disabled). The value of the PublicFolderClientAccess parameter on the Set-CASMailbox cmdlet is meaningless.
 
 ```yaml
 Type: Boolean
@@ -2859,6 +3308,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecallReadMessagesEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill RecallReadMessagesEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -2936,14 +3403,30 @@ Accept wildcard characters: False
 ### -SendFromAliasEnabled
 This parameter is available only in the cloud-based service.
 
-The SendFromAliasEnabled parameter allows mailbox users to send messages and reply to messages in Outlook on the web using any of the proxy addresses (secondary email addresses) that are configured on the mailbox. Valid values are:
+The SendFromAliasEnabled parameter allows mailbox users to send messages using aliases (proxy addresses). Valid values are:
 
-- $true: Users in Outlook on the web get an option to send messages and reply to messages with a proxy addresses.
-- $false: Users can only send messages and reply to messages using their primary email address. This is the default value.
+- $true: Aliases on messages will no longer be rewritten to their primary SMTP addresses. Compatible Outlook clients will allow sending from aliases and replying to aliases. Even without an updated Outlook client, users might see changes in behavior because the setting affects all messages sent and received by a mailbox.
+- $false: Aliases on messages sent or received will be rewritten to their primary email address. This is the default value.
 
-For more information about the availability of this feature, see the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437).
+For more information about the availability of the feature in Outlook on the web, see the [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Exchange&searchterms=59437). For Outlook for Windows, see this [Microsoft 365 roadmap item](https://www.microsoft.com/microsoft-365/roadmap?filters=Outlook&searchterms=64123).
 
-**Note**: This feature doesn't work in Outlook for Windows or Mac.
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharedDomainEmailAddressFlowEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill SharedDomainEmailAddressFlowEnabled Description }}
 
 ```yaml
 Type: Boolean
@@ -3027,6 +3510,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UseIcsSyncStateStreaming
+This parameter is available only in on-premises Exchange.
+
+{{ Fill UseIcsSyncStateStreaming Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -VisibleMeetingUpdateProperties
 This parameter is available only in the cloud-based service.
 
@@ -3052,7 +3553,7 @@ If you don't specify a MeetingStartTimeWithinXMinutes value for the meeting prop
 
 The default value is `"Location,AllProperties:15"`: changes to the meeting location at any time, or changes to other meeting properties within 15 minutes of the meeting start time results in visible meeting update messages.
 
-There are three scenarios where meeting update messages are not auto-processed regardless of the values specified in this parameter (in these scenarios, attendees will always see meeting update messages in their Inbox):
+In the following scenarios, meeting update messages are not auto-processed, regardless of the values specified in this parameter. In these scenarios, attendees will always see meeting update messages in their Inbox:
 
 - The update contains a change to the meeting date, time, or recurrence pattern.
 - The meeting message is received for a delegated shared calendar.
@@ -3141,7 +3642,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -3176,12 +3677,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

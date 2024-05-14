@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-mailboxfolderpermission
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Remove-MailboxFolderPermission
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-MailboxFolderPermission cmdlet to remove folder-level permissions for users in mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ Remove-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> [-ResetDel
 ## DESCRIPTION
 You can't use this cmdlet to selectively remove permissions from a user on a mailbox folder. The cmdlet removes all permissions that are assigned to the user on the specified folder. To modify the permissions that are assigned to the user on a mailbox folder, use the Set-MailboxFolderPermission cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -102,7 +102,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group. For example:
+The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder.
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias
@@ -164,7 +171,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -180,15 +189,17 @@ Accept wildcard characters: False
 ```
 
 ### -ResetDelegateUserCollection
-This parameter is available only in the cloud-based service.
+The ResetDelegateUserCollection switch forces the removal of the LocalFreeBusy or the PR_FREEBUSY_ENTRYIDs files in case of corruption. You don't need to specify a value with this switch.
 
-The ResetDelegateUserCollection switch can only be used together with -Identity parameter, and the value of Identity should be the user's primary calendar folder, for example, kim@consoto.com:\Calendar. If you run into a problem when trying to add, change, or remove delegate permissions, it is possible that the delegate information stored in the LocalFreeBusy item or the PR_FREEBUSY_ENTRYIDS has become corrupted. Including this switch will delete those files and will downgrade any existing Delegates to Editor status. You will need to grant Delegate permissions again using -SharingPermissionFlag Delegate.
+Use this switch if you encounter problems trying add, change, or remove delegate permissions. Using this switch deletes those files and downgrades any existing delegates to Editor permissions. You'll need to grant delegate permissions again using `-SharingPermissionFlag Delegate`.
+
+When you use this switch, the value of Identity should be the user's primary calendar folder (for example, `kim@contoso.com:\Calendar`).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ResetDelegateUserCollection
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named
@@ -241,22 +252,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-MailboxFolderPermission](Get-MailboxFolderPermission.md)
+[Get-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-mailboxfolderpermission)
 
-[Set-MailboxFolderPermission](Set-MailboxFolderPermission.md)
+[Set-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/set-mailboxfolderpermission)
 
-[Add-MailboxFolderPermission](Add-MailboxFolderPermission.md)
+[Add-MailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/add-mailboxfolderpermission)
 
-[Get-EXOMailboxFolderPermission](Get-EXOMailboxFolderPermission.md)
+[Get-EXOMailboxFolderPermission](https://learn.microsoft.com/powershell/module/exchange/get-exomailboxfolderpermission)

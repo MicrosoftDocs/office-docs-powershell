@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-organizationalunit
+online version: https://learn.microsoft.com/powershell/module/exchange/get-organizationalunit
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-OrganizationalUnit
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-OrganizationalUnit cmdlet to view a list of organizational units (OUs) that exist in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Get-OrganizationalUnit [-SearchText <String>]
 ## DESCRIPTION
 The Get-OrganizationalUnit cmdlet is used by the Exchange admin center to populate fields that display OU information.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -53,7 +53,7 @@ Get-OrganizationalUnit "North America" -SingleNodeOnly | Format-Table Name, Dist
 
 This example retrieves a list of the first level child OUs beneath the North America OU and formats the output so that only the Name and DistinguishedName properties are displayed.
 
-For more information about pipelining and the Format-Table cmdlet, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines) and [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
+For more information about pipelining and the Format-Table cmdlet, see [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines) and [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ### Example 2
 ```powershell
@@ -62,7 +62,7 @@ Get-OrganizationalUnit -SearchText "Executives" | Format-Table Name, Distinguish
 
 This example retrieves a list of OUs that match the text string "Executives" and formats the output so that only the Name and DistinguishedName properties are displayed.
 
-For more information about pipelining and the Format-Table cmdlet, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines) and [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
+For more information about pipelining and the Format-Table cmdlet, see [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines) and [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ## PARAMETERS
 
@@ -178,12 +178,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/update-safelist
+online version: https://learn.microsoft.com/powershell/module/exchange/update-safelist
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Update-SafeList
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Update-SafeList cmdlet to update the safelist aggregation data in Active Directory. Safelist aggregation data is used in the built-in anti-spam filtering in Microsoft Exchange. EdgeSync replicates safelist aggregation data to Edge Transport servers in the perimeter network.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ The Update-SafeList cmdlet reads the safelist aggregation data stored on a Micro
 
 Be mindful of the network and replication traffic that may be generated when you run the Update-SafeList cmdlet. Running the command on multiple mailboxes where safelists are heavily used may generate a significant amount of traffic. We recommend that if you run the command on multiple mailboxes, you should run the command during off-peak, non-business hours.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -50,6 +50,7 @@ This example updates Safe Senders List data for the single user kim@contoso.com.
 ### Example 2
 ```powershell
 Set-AdServerSettings -ViewEntireForest $true
+
 Get-Mailbox -ResultSize Unlimited -RecipientTypeDetails UserMailbox | Update-Safelist
 ```
 
@@ -120,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnsureJunkEmailRule
-The EnsureJunkEmailRule parameter specifies whether to force the junk email rule to be turned on for the mailbox if the rule isn't turned on already.
+The EnsureJunkEmailRule switch forces the junk email rule to be turned on for the mailbox if the rule isn't turned on already. You don't need to specify a value with this switch.
 
 The junk email rule can only be created after the user logs on to the mailbox. If the user has never logged on to the mailbox, this parameter can't turn on the junk email rule.
 
@@ -138,7 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeDomains
-The IncludeDomains switch specifies whether to include the sender domains specified by users in Outlook in the safelist aggregation data. By default, domains specified by the senders aren't included.
+The IncludeDomains switch specifies whether to include the sender domains specified by users in Outlook in the safelist aggregation data. You don't need to specify a value with this switch.
+
+By default, domains specified by the senders aren't included.
 
 In most cases, we don't recommend that you include domains because users may include the domains of large Internet service providers (ISPs), which could unintentionally provide addresses that may be used or spoofed by spammers.
 
@@ -194,12 +197,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-cswebscheduler
+online version: https://learn.microsoft.com/powershell/module/skype/test-cswebscheduler
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Test-CsWebScheduler
 schema: 2.0.0
@@ -358,4 +358,3 @@ The `Test-CsWebScheduler` cmdlet returns instances of the Microsoft.Rtc.Syntheti
 ## RELATED LINKS
 
 [Set-CsWebServer](Set-CsWebServer.md)
-

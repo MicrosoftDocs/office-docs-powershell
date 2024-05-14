@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/set-teamchannel
+online version: https://learn.microsoft.com/powershell/module/teams/set-teamchannel
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -24,7 +24,7 @@ Set-TeamChannel -GroupId <String> -CurrentDisplayName <String> [-NewDisplayName 
 ## DESCRIPTION
 
 > [!IMPORTANT]
-> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here <https://www.poshtestgallery.com/packages/MicrosoftTeams>.
+> Modules in the PS INT gallery for Microsoft Teams run on the /beta version in Microsoft Graph and are subject to change. Int modules can be install from here `https://www.poshtestgallery.com/packages/MicrosoftTeams`.
 
 ## EXAMPLES
 

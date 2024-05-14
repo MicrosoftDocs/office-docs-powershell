@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-offlineaddressbook
+online version: https://learn.microsoft.com/powershell/module/exchange/set-offlineaddressbook
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OfflineAddressBook
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-OfflineAddressBook cmdlet to modify offline address book (OAB) settings.
 
-In Exchange Online, this cmdlet is available only in the Address Lists role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Address Lists role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+In Exchange Online, this cmdlet is available only in the Address Lists role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Address Lists role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ Set-OfflineAddressBook [-Identity] <OfflineAddressBookIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -403,9 +403,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-This parameter is available or functional only in Exchange 2010.
+This parameter is functional only in Exchange 2010.
 
-In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see [Change the offline address book generation schedule in Exchange](https://docs.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
+In Exchange 2013 or later, this parameter is no longer responsible for the OAB generation schedule. For more information, see [Change the offline address book generation schedule in Exchange](https://learn.microsoft.com/Exchange/plan-and-deploy/post-installation-tasks/change-oab-generation-schedule).
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
@@ -502,7 +502,11 @@ Accept wildcard characters: False
 ```
 
 ### -Versions
-The Versions parameter specifies the OAB versions that are generated for client download. In Exchange 2013 or later, the default and only supported value is Version4 (Version3 and Version2 require public folder distribution).
+The Versions parameter specifies the OAB versions that are generated for client download. Valid values are:
+
+- Version2 (requires public folder distribution)
+- Version3 (requires public folder distribution)
+- Version4 (default value in Exchange 2010 or later; the only available value in Exchange 2013 or later)
 
 ```yaml
 Type: MultiValuedProperty
@@ -589,12 +593,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

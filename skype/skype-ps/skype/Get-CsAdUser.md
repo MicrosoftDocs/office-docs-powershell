@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csaduser
+online version: https://learn.microsoft.com/powershell/module/skype/get-csaduser
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAdUser
 schema: 2.0.0
@@ -279,4 +279,3 @@ The Get-CsAdUser cmdlet accepts a pipelined string value representing the Identi
 ## RELATED LINKS
 
 [Get-CsUser](Get-CsUser.md)
-

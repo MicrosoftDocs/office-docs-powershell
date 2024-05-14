@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csclsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/set-csclsconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsClsConfiguration
 schema: 2.0.0
@@ -29,6 +29,7 @@ Set-CsClsConfiguration [[-Identity] <XdsIdentity>] [-CacheFileLocalFolders <Stri
  [-Force] [-MinimumClsAgentServiceVersion <UInt32>] [-Regions <PSListModifier>] [-Scenarios <PSListModifier>]
  [-SearchTerms <PSListModifier>] [-SecurityGroups <PSListModifier>] [-TmfFileSearchPath <String>] [-WhatIf]
  [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>]
+ [-ETLMinFreeSpaceInDiskInBytes<Int64>] [-ETLEnoughFreeSpaceInDiskInBytes<Int64>] [-ETLMinQuotaInBytes <Int64>] [-ETLMaxQuotaInBytes <Int64>] [-ETLEnoughQuotaInBytes <Int64>]  [EtlMaxRetentionInDays <UInt32>]
 ```
 
 ### Instance
@@ -40,6 +41,7 @@ Set-CsClsConfiguration [-CacheFileLocalFolders <String>] [-CacheFileLocalMaxDisk
  [-MinimumClsAgentServiceVersion <UInt32>] [-Regions <PSListModifier>] [-Scenarios <PSListModifier>]
  [-SearchTerms <PSListModifier>] [-SecurityGroups <PSListModifier>] [-TmfFileSearchPath <String>] [-WhatIf]
  [-NetworkUsagePacketSize <UInt32>] [-NetworkUsageThreshold <UInt32>] [-Version <String>] [<CommonParameters>]
+ [-ETLMinFreeSpaceInDiskInBytes<Int64>] [-ETLEnoughFreeSpaceInDiskInBytes<Int64>] [-ETLMinQuotaInBytes <Int64>] [-ETLMaxQuotaInBytes <Int64>] [-ETLEnoughQuotaInBytes <Int64>]  [EtlMaxRetentionInDays <UInt32>]
 ```
 
 ## DESCRIPTION
@@ -496,6 +498,105 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ETLMinFreeSpaceInDiskInBytes
+Minimum allowed free disk space to have on the ETL folder drive.
+If disk reaches this size and ETL Folder size is more than ETLMinQuotaInBytes, Purge executes. 
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: 2000000000
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ETLEnoughFreeSpaceInDiskInBytes
+Enough free disk space to make purge stop due low free disk space.
+If disk size reaches this size, purge stops.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: 4000000000
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ETLMinQuotaInBytes
+Min quota allowed for ETL files, even if disk size is less than ETLMinFreeSpaceInDiskInBytes.
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: 3221225472
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ETLMaxQuotaInBytes
+Max allowed quota used by ETL files before purge starts
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: 400000000000
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ETLEnoughQuotaInBytes
+Enough ETL usage quota to make purge stop due max quota condition reached
+
+```yaml
+Type: Int64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: 250000000000
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -ETLMaxRetentionInDays
+Maximum retention time in days for ETL files
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Server 2019
+
+Required: False
+Position: Named
+Default value: 14
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -519,4 +620,3 @@ Instead, the `Set-CsClsConfiguration` cmdlet modifies existing instances of the 
 [New-CsClsConfiguration](New-CsClsConfiguration.md)
 
 [Remove-CsClsConfiguration](Remove-CsClsConfiguration.md)
-

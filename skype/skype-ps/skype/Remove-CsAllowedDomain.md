@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csalloweddomain
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csalloweddomain
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAllowedDomain
 schema: 2.0.0
@@ -176,4 +176,3 @@ Deletes instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.A
 [Set-CsAccessEdgeConfiguration](Set-CsAccessEdgeConfiguration.md)
 
 [Set-CsAllowedDomain](Set-CsAllowedDomain.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticobjects
+online version: https://learn.microsoft.com/powershell/module/exchange/get-calendardiagnosticobjects
 applicable: Exchange Online
 title: Get-CalendarDiagnosticObjects
 schema: 2.0.0
@@ -16,14 +16,14 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-CalendarDiagnosticObjects cmdlet to collect a range of calendar logs. The calendar diagnostic logs track important calendar-related event data for each mailbox, and can be used to troubleshoot calendar issues that occur in mailboxes. The logs track all calendar items and meeting messages.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
+ [-AnalyzeExceptionWithOriginalStartDate <ExDateTime>]
+ [-AutoRequeryOnMeetingId <Boolean>]
  [-ConfigurationName <String>]
  [-CustomPropertyNames <String[]>]
  [-EndDate <ExDateTime>]
@@ -32,6 +32,7 @@ Get-CalendarDiagnosticObjects [-Identity] <UnifiedGroupOrUserMailboxIdParameter>
  [-ExactMatch <Boolean>]
  [-ItemClass <String[]>]
  [-ItemIds <String[]>]
+ [-MaxResults <Int32>]
  [-MeetingId <String>]
  [-ODataId <String>]
  [-ResultSize <Unlimited>]
@@ -55,7 +56,7 @@ Some of the more interesting properties that are returned in the results are:
 - ResponseType: 0 = The organizer hasn't received a response, 1 = The organizer's copy of the meeting, 2 = Tentative, 3 = Accept, 4 = Decline, or 5 = The attendee hasn't responded.
 - ResponsibleUserName: The LegacyExchangeDN value of the user who made the change (for example, `/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=BN6PR11MB1587/cn=Microsoft System Attendant` or `/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=696eea97d3c449eab648920d03385efb-admin`).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -69,8 +70,8 @@ This example retrieves the calendar diagnostic logs from Pedro Pizarro's mailbox
 ### Example 2
 ```powershell
 $A = Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Meeting" -ExactMatch $true
-$A | Select-Object *,@{n='OLMT'
-e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
+
+$A | Select-Object *,@{n='OLMT'; e={[DateTime]::Parse($_.OriginalLastModifiedTime.ToString())}} | sort OLMT | Format-Table OriginalLastModifiedTime,CalendarLogTriggerAction,ItemClass,ClientInfoString
 ```
 
 This is the same as the previous example, but now the results are sorted by original last modified time.
@@ -87,7 +88,7 @@ This example retrieves the calendar diagnostic logs for Pedro Pizarro's mailbox 
 Get-CalendarDiagnosticObjects -Identity "Pedro Pizarro" -Subject "Team Lunch" -StartDate 7/1/2018 -EndDate 7/31/2018 | Export-Csv "C:\My Documents\Team Lunch Meeting.csv" -NoTypeInformation
 ```
 
-This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox in the month of July, 2018, and exports the results to the file C:\\My Documents\\Team Lunch Meeting.csv.
+This example returns diagnostic information for meetings with the subject Team Lunch in Pedro Pizarro's mailbox that were modified in the month of July, 2018, and exports the results to the file C:\\My Documents\\Team Lunch Meeting.csv.
 
 ## PARAMETERS
 
@@ -118,6 +119,38 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -AnalyzeExceptionWithOriginalStartDate
+{{ Fill AnalyzeExceptionWithOriginalStartDate Description }}
+
+```yaml
+Type: ExDateTime
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoRequeryOnMeetingId
+{{ Fill AutoRequeryOnMeetingId Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConfigurationName
 {{ Fill ConfigurationName Description }}
 
@@ -135,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomPropertyNames
-The CustomPropertyNames parameter returns the specified calendar item custom property in the results. For valid values, see [Values for the CustomPropertyNames parameter in Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/values-for-custompropertynames-parameter).
+The CustomPropertyNames parameter returns the specified calendar item custom property in the results. For valid values, see [Values for the CustomPropertyNames parameter in Exchange Online PowerShell](https://learn.microsoft.com/powershell/exchange/values-for-custompropertynames-parameter).
 
 You can specify multiple values separated by commas.
 
@@ -153,9 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-The EndDate parameter specifies the end date of the date range.
+The EndDate parameter specifies the end date of the date range for the OriginalLastModifiedTime property (when the meeting was last modified, not created).
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -248,6 +281,22 @@ The ItemIds parameter filters the results by item ID. You can specify multiple v
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxResults
+{{ Fill MaxResults Description }}
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -378,9 +427,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-The StartDate parameter specifies the start date of the date range.
+The StartDate parameter specifies the start date of the date range for the OriginalLastModifiedTime property (when the meeting was last modified, not created).
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -416,11 +465,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

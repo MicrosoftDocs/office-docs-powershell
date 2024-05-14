@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csproxyconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-csproxyconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsProxyConfiguration
 schema: 2.0.0
@@ -615,5 +615,3 @@ The New-CsProxyConfiguration cmdlet creates new instances of the Microsoft.Rtc.M
 [Remove-CsProxyConfiguration](Remove-CsProxyConfiguration.md)
 
 [Set-CsProxyConfiguration](Set-CsProxyConfiguration.md)
-
-

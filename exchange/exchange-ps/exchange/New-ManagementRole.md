@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-managementrole
+online version: https://learn.microsoft.com/powershell/module/exchange/new-managementrole
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-ManagementRole
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ManagementRole cmdlet to create a management role based on an existing role or create an unscoped management role.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -49,19 +49,20 @@ You can either create a management role based on an existing role, or you can cr
 
 An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
 
-The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
+The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the management role named Unscoped Role Management to a role group you're a member of. For more information about how to create an unscoped management role, see [Create an unscoped role](https://learn.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 After you create a role, you can change the management role entries on the role and assign the role with a management scope to a user or universal security group (USG).
 
-For more information about management roles, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
+For more information about management roles, see [Understanding management roles](https://learn.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling
+
 Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
 ```
 
@@ -71,8 +72,8 @@ After the role is created, the Remove-ManagementRoleEntry cmdlet is used along w
 
 For more information about pipelining and the Where cmdlet, see the following topics:
 
-- [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
-- [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
+- [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines)
+- [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help)
 
 ### Example 2
 ```powershell
@@ -116,13 +117,13 @@ Accept wildcard characters: False
 ```
 
 ### -UnScopedTopLevel
-This parameter is available on in on-premises Exchange.
+This parameter is available only in on-premises Exchange.
 
-By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+By default, this parameter is available only in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
 The UnScopedTopLevel switch specifies that the role new role is an unscoped top-level management role (a custom, empty role). You don't need to specify a value with this switch.
 
-You can only add custom scripts or non-Exchange cmdlets to an unscoped top-level management role. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
+Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://learn.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 You can't use this switch with the Parent parameter.
 
@@ -213,7 +214,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -249,12 +252,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

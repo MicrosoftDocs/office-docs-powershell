@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/New-OMEConfiguration
+online version: https://learn.microsoft.com/powershell/module/exchange/new-omeconfiguration
 applicable: Exchange Online
 title: New-OMEConfiguration
 schema: 2.0.0
@@ -14,11 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-OMEConfiguration cmdlet to create a Microsoft 365 Message Encryption (OME) configuration.
+Use the New-OMEConfiguration cmdlet to create a Microsoft Purview Message Encryption configuration.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -41,13 +39,13 @@ New-OMEConfiguration [-Identity] <OrganizationIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-OMEConfiguration -Identity "Contoso Marketing" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image (Get-Content "C:\Temp\OME Logo.gif" -Encoding byte)
+New-OMEConfiguration -Identity "Contoso Marketing" -EmailText "Encrypted message enclosed." -PortalText "This portal is encrypted." -DisclaimerText "Encryption security disclaimer." -Image ([System.IO.File]::ReadAllBytes('C:\Temp\OME Logo.gif'))
 ```
 
 This example creates a new OME configuration named "Contoso Marketing" with the specified values specified. Unused parameters get the default values.
@@ -77,7 +75,7 @@ The BackgroundColor parameter specifies the background color. Valid values are:
 - An available text value (for example, `yellow` is 0x00FFFF00).
 - $null (blank). This is the default value.
 
-For more information, see [Add your organization's brand to your encrypted messages](https://docs.microsoft.com/microsoft-365/compliance/add-your-organization-brand-to-encrypted-messages).
+For more information, see [Add your organization's brand to your encrypted messages](https://learn.microsoft.com/purview/add-your-organization-brand-to-encrypted-messages).
 
 ```yaml
 Type: String
@@ -141,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalMailExpiryInDays
-This parameter is only available with a Microsoft 365 Advanced Message Encryption subscription.
+This parameter is available only with a Microsoft 365 Advanced Message Encryption subscription.
 
 The ExternalMailExpiryInDays parameter specifies the number of days that the encrypted message is available to external recipients in the Microsoft 365 portal. A valid value is an integer from 0 to 730. The value 0 means the messages will never expire. The default value is 0.
 
@@ -163,7 +161,7 @@ Accept wildcard characters: False
 ### -Image
 The Image parameter identifies and uploads an image that will be displayed in the email message and in the Microsoft 365 admin center.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet, for example, -Image (Get-Content "C:\\Temp\\OME Logo.gif" -Encoding byte)
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 - Supported file formats: .png, .jpg, .bmp, or .tiff
 - Optimal size of logo file: less than 40 KB
@@ -305,11 +303,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

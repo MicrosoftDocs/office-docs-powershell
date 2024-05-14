@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/test-csmcxp2pim
+online version: https://learn.microsoft.com/powershell/module/skype/test-csmcxp2pim
 applicable: Lync Server 2013, Skype for Business Server 2015
 title: Test-CsMcxP2PIM
 schema: 2.0.0
@@ -278,4 +278,3 @@ The `Test-CsMcxP2PIM` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 ## NOTES
 
 ## RELATED LINKS
-

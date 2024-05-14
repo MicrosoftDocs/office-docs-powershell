@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csimfilterconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/get-csimfilterconfiguration
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsImFilterConfiguration
 schema: 2.0.0
@@ -169,4 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CsImFilterConfiguration](Remove-CsImFilterConfiguration.md)
 
 [Set-CsImFilterConfiguration](Set-CsImFilterConfiguration.md)
-

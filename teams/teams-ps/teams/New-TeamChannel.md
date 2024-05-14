@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-teamchannel
+online version: https://learn.microsoft.com/powershell/module/teams/new-teamchannel
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -MembershipType
-Channel membership type, Standard or Private.
+Channel membership type, Standard, Shared, or Private.
 
 ```yaml
 Type: String

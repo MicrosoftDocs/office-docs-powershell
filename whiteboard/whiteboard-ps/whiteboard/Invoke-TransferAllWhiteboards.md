@@ -1,7 +1,7 @@
 ---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://docs.microsoft.com/powershell/module/whiteboard/invoke-transferallwhiteboards
+online version: https://learn.microsoft.com/powershell/module/whiteboard/invoke-transferallwhiteboards
 applicable: Microsoft Whiteboard
 title: Invoke-TransferAllWhiteboards
 schema: 2.0.0

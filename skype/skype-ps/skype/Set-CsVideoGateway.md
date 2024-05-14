@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csvideogateway
+online version: https://learn.microsoft.com/powershell/module/skype/set-csvideogateway
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsVideoGateway
 schema: 2.0.0
@@ -191,4 +191,3 @@ The `Set-CsVideoGateway` cmdlet does not return any objects or values.
 ## RELATED LINKS
 
 [Get-CsVideoTrunk](Get-CsVideoTrunk.md)
-

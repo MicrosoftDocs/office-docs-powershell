@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-smimeconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/set-smimeconfig
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-SmimeConfig
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-SmimeConfig cmdlet to modify the S/MIME configuration for Outlook on the web (formerly known as Outlook Web App).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -55,7 +55,7 @@ Set-SmimeConfig [[-Identity] <OrganizationIdParameter>]
 ## DESCRIPTION
 The Set-SmimeConfig cmdlet can change several important parameters than can reduce the overall level of message security. Review your organization's security policy before you make any changes.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -556,7 +556,7 @@ The OWAUseKeyIdentifier parameter specifies whether a certificate's key identifi
 
 Valid input for this parameter is $true or $false. The default is $false.
 
-By default, Outlook on the web encodes the asymmetrically encrypted token (sometimes called a lockbox) that's required to decrypt the rest of the message by indicating the issuer and serial number of each recipient's certificate. The issuer and serial number can then be used to locate the certificate and private key for decrypting the message.
+By default, Outlook on the web encodes the asymmetrically encrypted token (sometimes called a Lockbox) that's required to decrypt the rest of the message by indicating the issuer and serial number of each recipient's certificate. The issuer and serial number can then be used to locate the certificate and private key for decrypting the message.
 
 This parameter causes the use of a certificate's key identifier when encoding the asymmetrically encrypted token. Because a key pair can be reused in new certificates, using the key identifier for encrypted email messages means that users need to keep only the most recent certificate and associated private key, rather than all old certificates. Because some email clients do not support finding certificates with a key identifier, Outlook on the web uses the issuer and serial number of each recipient's certificate by default.
 
@@ -596,7 +596,7 @@ Accept wildcard characters: False
 ### -SMIMECertificateIssuingCA
 The SMIMECertificateIssuingCA parameter specifies the serialized certificate store (SST) that contains the Certificate Authority (CA) signing and intermediate certificate information.
 
-You need to read the file to a byte-encoded object using the Get-Content cmdlet. For example: `-SMIMECertificateIssuingCA $([byte[]](Get-Content -Encoding byte -Path "C:\Temp\CACertificateSerializedStore.sst" -ReadCount 0)`.
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 Each certificate is checked, and if any certificates are expired, the operation will fail.
 
@@ -634,12 +634,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

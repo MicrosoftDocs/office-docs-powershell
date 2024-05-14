@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-cspresenceprovider
+online version: https://learn.microsoft.com/powershell/module/skype/remove-cspresenceprovider
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsPresenceProvider
 schema: 2.0.0
@@ -164,4 +164,3 @@ Instead, the `Remove-CsPresenceProvider` cmdlet deletes instances of the Microso
 [New-CsPresenceProvider](New-CsPresenceProvider.md)
 
 [Set-CsPresenceProvider](Set-CsPresenceProvider.md)
-

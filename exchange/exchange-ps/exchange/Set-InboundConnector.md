@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-inboundconnector
+online version: https://learn.microsoft.com/powershell/module/exchange/set-inboundconnector
 applicable: Exchange Online, Exchange Online Protection
 title: Set-InboundConnector
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-InboundConnector cmdlet to change an existing Inbound connector in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -45,6 +43,7 @@ Set-InboundConnector [-Identity] <InboundConnectorIdParameter>
  [-SenderIPAddresses <MultiValuedProperty>]
  [-TlsSenderCertificateName <TlsCertificate>]
  [-TreatMessagesAsInternal <Boolean>]
+ [-TrustedOrganizations <MultiValuedProperty>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -52,7 +51,7 @@ Set-InboundConnector [-Identity] <InboundConnectorIdParameter>
 ## DESCRIPTION
 Inbound connectors accept email messages from remote domains that require specific configuration options.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -86,7 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedAcceptedDomains
-The AssociatedAcceptedDomains parameter specifies the accepted domains that the connector applies to, thereby limiting its scope. For example, you can apply the connector to a specific accepted domain in your organization, such as contoso.com.
+The AssociatedAcceptedDomains parameter restricts the source domains that use the connector to the specified accepted domains. A valid value is an SMTP domain that's configured as an accepted domain in your Microsoft 365 organization.
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -102,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudServicesMailEnabled
-**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://docs.microsoft.com/exchange/hybrid-configuration-wizard).
+**Note**: We recommend that you don't use this parameter unless you are directed to do so by Microsoft Customer Service and Support, or by specific product documentation. Instead, use the Hybrid Configuration wizard to configure mail flow between your on-premises and cloud organizations. For more information, see [Hybrid Configuration wizard](https://learn.microsoft.com/exchange/hybrid-configuration-wizard).
 
 The CloudServicesMailEnabled parameter specifies whether the connector is used for hybrid mail flow between an on-premises Exchange environment and Microsoft 365. Specifically, this parameter controls how certain internal X-MS-Exchange-Organization-\* message headers are handled in messages that are sent between accepted domains in the on-premises and cloud organizations. These headers are collectively known as cross-premises headers.
 
@@ -160,13 +161,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorSource
-The ConnectorSource parameter specifies how the connector was created. Valid input for this parameter includes the following values:
+The ConnectorSource parameter specifies how the connector is created. Valid input for this parameter includes the following values:
 
-- Default: The connector is manually created.
-- HybridWizard: The connector is created automatically by the Hybrid Configuration Wizard.
+- Default: The connector is manually created. This is the default value.
+- HybridWizard: The connector is automatically created by the Hybrid Configuration Wizard.
 - Migrated: The connector was originally created in Microsoft Forefront Online Protection for Exchange.
 
-The default value for connectors you create is Default. It isn't recommended that you change this value.
+We recommended that you don't change this value.
 
 ```yaml
 Type: TenantConnectorSource
@@ -203,11 +204,11 @@ Accept wildcard characters: False
 ### -EFSkipIPs
 the EFSkipIPs parameter specifies the source IP addresses to skip in Enhanced Filtering for Connectors when the EFSkipLastIP parameter value is $false. Valid values are:
 
-- A single IP address: For example, 192.168.1.1.
-- An IP address range: For example, 192.168.0.1-192.168.0.254.
-- Classless Inter-Domain Routing (CIDR) IP: For example, 192.168.3.1/24
+- Single IP address: For example, 192.168.1.1.
+- IP address range: For example, 192.168.0.1-192.168.0.254.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.3.1/24.
 
-You can specify multiple IP addresses or address range entries separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -292,7 +293,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-The Enabled parameter enables or disables the connector. Valid input for this parameter is $true or $false. The default value is $true.
+The Enabled parameter enables or disables the connector. Valid values are:
+
+- $true: The connector is enabled. This is the default value.
+- $false: The connector is disabled.
 
 ```yaml
 Type: Boolean
@@ -324,7 +328,10 @@ Accept wildcard characters: False
 ```
 
 ### -RequireTls
-The RequireTLS parameter specifies that all messages received by this connector require TLS transmission. Valid values for this parameter are $true or $false. The default value is $false. When the RequireTLS parameter is set to $true, all messages received by this connector require TLS transmission.
+The RequireTLS parameter specifies whether to require TLS transmission for all messages that are received by the connector. Valid values are:
+
+- $true: Reject messages if they aren't sent over TLS. This is the default value
+- $false: Allow messages if they aren't sent over TLS.
 
 ```yaml
 Type: Boolean
@@ -340,7 +347,10 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToCertificate
-The RestrictDomainsToCertificate parameter specifies that Microsoft 365 should identify incoming messages that are eligible for this connector by verifying that the remote server authenticates using a TLS certificate that has the TlsSenderCertificateName in the Subject. Valid values are $true or $false.
+The RestrictDomainsToCertificate parameter specifies whether the Subject value of the TLS certificate is checked before messages can use the connector. Valid values are:
+
+- $true: Mail is allowed to use the connector only if the Subject value of the TLS certificate that the source email server uses to authenticate matches the TlsSenderCertificateName parameter value.
+- $false: The Subject value of the TLS certificate that the source email server uses to authenticate doesn't control whether mail from that source uses the connector. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -356,9 +366,10 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToIPAddresses
-The RestrictDomainsToIPAddresses parameter, when set to $true, automatically rejects mail from the domains specified by the SenderDomains parameter if the mail originates from an IP address that isn't specified by the SenderIPAddresses parameter.
+The RestrictDomainsToIPAddresses parameter specifies whether to reject mail that comes from unknown source IP addresses. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Automatically reject mail from domains that are specified by the SenderDomains parameter if the source IP address isn't also specified by the SenderIPAddress parameter.
+- $false: Don't automatically reject mail from domains that are specified by the SenderDomains parameter based on the source IP address. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -390,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderDomains
-The SenderDomains parameter specifies the remote domains from which this connector accepts messages, thereby limiting its scope. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com. However, you can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com.
+The SenderDomains parameter specifies the source domains that the connector accepts messages for. A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, \*.contoso.com), but you can't embed the wildcard character (for example, domain.\*.contoso.com is not valid).
 
 You can specify multiple domains separated by commas.
 
@@ -408,12 +419,12 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPAddresses
-The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. You enter the IP addresses using the following syntax:
+The SenderIPAddresses parameter specifies the remote IPV4 IP addresses from which this connector accepts messages. IPv6 addresses are not supported. Valid values are:
 
-- Single IP: For example, 192.168.1.1.
-- CIDR IP: You can use Classless InterDomain Routing (CIDR). For example, 192.168.0.1/25.
+- Single IP address: For example, 192.168.1.1.
+- Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
 
-You can specify multiple IP addresses separated by commas.
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
@@ -429,9 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsSenderCertificateName
-The TlsSenderCertificateName parameter specifies the certificate used by the sender's domain when the RequireTls parameter is set to $true. Valid input for the TlsSenderCertificateName parameter is an SMTP domain. You can use a wildcard character to specify all subdomains of a specified domain, as shown in the following example: \*.contoso.com.
-
-You can't embed a wildcard character, as shown in the following example: domain.\*.contoso.com.
+The TlsSenderCertificateName parameter specifies the TLS certificate that's used when the value of the RequireTls parameter is $true. A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, \*.contoso.com), but you can't embed the wildcard character (for example, domain.\*.contoso.com is not valid).
 
 ```yaml
 Type: TlsCertificate
@@ -472,6 +481,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TrustedOrganizations
+The TrustedOrganizations parameter specifies other Microsoft 365 organizations that are trusted mail sources (for example, after acquisitions and mergers). This parameter works only for mail flow between two Microsoft 365 organizations, so no other parameters are used.
+
+To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
+
+To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -493,12 +522,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

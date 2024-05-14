@@ -1,17 +1,17 @@
 ---
-external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams
+online version: https://learn.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus
 schema: 2.0.0
-author: mbergamo
-ms.author: mbergamo
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 # Get-TeamTargetingHierarchyStatus
 
 ## SYNOPSIS
 
-Get the status of a hierarchy upload (see [Set-TeamTargetingHierarchy](https://docs.microsoft.com/powershell/module/teams/get-teamtargetinghierarchy))
+Get the status of a hierarchy upload (see [Set-TeamTargetingHierarchy](https://learn.microsoft.com/powershell/module/teams/set-teamtargetinghierarchy))
 
 ## SYNTAX
 
@@ -40,12 +40,12 @@ LastKnownStatus : Validating
 ErrorMessage    : 1 error(s) were found.
                   Error: InvalidTeamId
                   Descriptions:
-                  TeamID in row 2 doesn’t match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
-                  TeamID in row 3 doesn’t match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
-                  TeamID in row 4 doesn’t match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
-                  TeamID in row 5 doesn’t match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
-                  TeamID in row 6 doesn’t match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
-                  TeamID in row 7 doesn’t match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
+                  TeamID in row 2 doesn't match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
+                  TeamID in row 3 doesn't match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
+                  TeamID in row 4 doesn't match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
+                  TeamID in row 5 doesn't match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
+                  TeamID in row 6 doesn't match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
+                  TeamID in row 7 doesn't match a valid Group ID. Please view our documentation to learn how to get the proper Group ID for each team.
 
 LastUpdatedAt   : 2021-02-17T22:28:08.7832795+00:00
 LastModifiedBy  : a145d7eb-b70d-4591-9455-6c87382a22b7
@@ -86,4 +86,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-- [Set-TeamTargetingHierarchy](https://docs.microsoft.com/powershell/module/teams/get-teamtargetinghierarchy)
+[Set-TeamTargetingHierarchy](Set-TeamTargetingHierarchy.md)

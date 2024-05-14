@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/add-mailboxpermission
+online version: https://learn.microsoft.com/powershell/module/exchange/add-mailboxpermission
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Add-MailboxPermission
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Add-MailboxPermission cmdlet to add permissions to a mailbox or to an Exchange Server 2016, Exchange Server 2019, or Exchange Online mail user.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -62,9 +62,11 @@ Add-MailboxPermission [[-Identity] <MailboxIdParameter>] -Instance <MailboxAcePr
 ```
 
 ## DESCRIPTION
-This cmdlet updates the mailbox object that's specified by the Identity parameter.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+> [!NOTE]
+> You can use this cmdlet to add a maximum of 500 permission entries (ACEs) to a mailbox. To grant permissions to more than 500 users, use security groups instead of individual users for the User parameter. Security groups contain many members, but only count as one entry.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -238,9 +240,16 @@ The User parameter specifies who gets the permissions on the mailbox. You can sp
 
 - Mailbox users
 - Mail users
-- Security groups
+- Mail-enabled security groups (non-mail-enabled security groups are selectable, but they don't work)
 
-You can use any value that uniquely identifies the user or group. For example:
+**Note**: When a mail-enabled security group is used to specify Full Access permissions, the auto-mapping feature won't automatically add the mailbox in Outlook for the group member. For more information, see [Mailboxes to which your account has full access aren't automapped to Outlook profile](https://learn.microsoft.com/outlook/troubleshoot/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile).
+
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+Otherwise, you can use any value that uniquely identifies the user or group. For example:
 
 - Name
 - Alias
@@ -282,12 +291,12 @@ Accept wildcard characters: False
 ```
 
 ### -AutoMapping
-The AutoMapping parameter specifies whether to enable or disable the auto-mapping feature in Microsoft Outlook that uses Autodiscover to automatically open other mailboxes for the user. Valid values are:
+The AutoMapping parameter includes or excludes the mailbox from the auto-mapping feature in Microsoft Outlook. Auto-mapping uses Autodiscover to automatically add mailboxes to a user's Outlook profile if the user has Full Access permission to the mailbox. However, Autodiscover won't enumerate security groups that are given Full Access permission to the mailbox. Valid values are:
 
-- $true: Outlook automatically opens the mailbox where the user is assigned Full Access permission. This is the default value.
-- $false: Outlook doesn't automatically open the mailbox where the user is assigned Full Access permission.
+- $true: The mailbox is automatically added to the user's Outlook profile if the user has Full Access permission. This is the default value.
+- $false: The mailbox is not automatically added to the user's Outlook profile if the user has Full Access permission.
 
-If you've already assign the user Full Access to the mailbox, and you want to prevent the mailbox from automatically opening in the user's Outlook, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then assign the permission to the user on the mailbox again, but this time include -AutoMapping $false in the command.
+**Note**: To disable auto-mapping for a mailbox where the user was already assigned Full Access permission, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then reassign the user Full Access permission on the mailbox using the AutoMapping parameter with the value $false.
 
 ```yaml
 Type: Boolean
@@ -322,7 +331,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny switch specifies whether to deny the specified permissions to the user on the mailbox. You don't need to specify a value with this switch.
+The Deny switch specifies that the permissions you're adding are Deny permissions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -374,9 +383,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -397,9 +406,10 @@ Accept wildcard characters: False
 ### -InheritanceType
 The InheritanceType parameter specifies how permissions are inherited by folders in the mailbox. Valid values are:
 
-- All
+- None
+- All (this is the default value)
 - Children
-- Descendents[sic]
+- Descendents [sic]
 - SelfAndChildren
 
 ```yaml
@@ -436,12 +446,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

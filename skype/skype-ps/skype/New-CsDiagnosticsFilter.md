@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csdiagnosticsfilter
+online version: https://learn.microsoft.com/powershell/module/skype/new-csdiagnosticsfilter
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsDiagnosticsFilter
 schema: 2.0.0
@@ -26,6 +26,7 @@ This cmdlet was introduced in Lync Server 2010.
 New-CsDiagnosticsFilter [-Enabled <Boolean>] [-ExcludeConferenceMessages <Boolean>]
  [-ExcludePresenceNotifications <Boolean>] [-ExcludeRegisterMessages <Boolean>] [-Fqdn <PSListModifier>]
  [-Uri <PSListModifier>] [-ExcludeSubscribeMessages <Boolean>] [-ExcludeSuccessfulRequests <Boolean>]
+ [-ExcludeMidDialogRequests <Boolean>] [-ExcludeTypingNotifications <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -53,7 +54,7 @@ After creating one of these virtual filters, you will then need to use either th
 ## EXAMPLES
 
 
-### -------------------------- EXAMPLE 1 -------------------------- 
+### EXAMPLE 1
 ```
 $x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com" -Enabled $False
 
@@ -71,7 +72,7 @@ In this case, any existing values in the Filter property will be replaced by the
 
 
 
-### -------------------------- EXAMPLE 2 -------------------------- 
+### EXAMPLE 2
 ```
 $x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com","contoso.com" -Enabled $False
 
@@ -235,6 +236,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExcludeMidDialogRequests
+If set to True, information about mid-dialog SIP requests will not be recorded in the log files.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeTypingNotifications
+If set to True, information about typing notifications SIP messages will not be recorded in the log files.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
 
@@ -257,5 +288,3 @@ The New-CsDiagnosticsFilter cmdlet creates new instances of the Microsoft.Rtc.Ma
 [New-CsDiagnosticConfiguration](New-CsDiagnosticConfiguration.md)
 
 [Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)
-
-

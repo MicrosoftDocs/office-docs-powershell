@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-mailflow
+online version: https://learn.microsoft.com/powershell/module/exchange/test-mailflow
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Test-Mailflow
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Test-Mailflow cmdlet to diagnose whether mail can be successfully sent from and delivered to the system mailbox on a Mailbox server. You can also use this cmdlet to verify that email is sent between Mailbox servers within a defined latency threshold.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -112,9 +112,9 @@ The Test-Mailflow results are displayed on-screen. The interesting values in the
 - TestMailflowResult: The values returned are typically Success or \*FAILURE\*.
 - MessageLatencyTime: The time required to complete the test (deliver the test message). The value uses the syntax hh:mm:ss.ffff where hh = hours, mm = minutes, ss = seconds and ffff = fractions of a second.
 
-You can write the Test-Mailflow results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding `> <filename>` to the command. For example: `Test-Mailflow -AutoDiscoverTargetMailboxServer | ConvertTo-Csv > "C:\My Documents\test-mailflow 2020-05-01.csv"`.
+You can write the Test-Mailflow results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding ` > <filename>` to the command. For example: `Test-Mailflow -AutoDiscoverTargetMailboxServer | ConvertTo-Csv > "C:\My Documents\test-mailflow 2020-05-01.csv"`.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -158,7 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDiscoverTargetMailboxServer
-The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
+The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. You don't need to specify a value with this switch.
+
+The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
 
 When you use this switch, you can't use the CrossPremises, TargetDatabase, TargetEmailAddress or TargetMailboxServer parameters.
 
@@ -374,7 +376,10 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values are:
+
+- $true: Monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager (SCOM).
+- $false: Monitoring events and performance counters aren't included in the command results. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -428,12 +433,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

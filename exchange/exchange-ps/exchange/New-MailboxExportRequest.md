@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-mailboxexportrequest
+online version: https://learn.microsoft.com/powershell/module/exchange/new-mailboxexportrequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: New-MailboxExportRequest
 schema: 2.0.0
@@ -16,9 +16,9 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the New-MailboxExportRequest cmdlet to begin the process of exporting contents of a primary mailbox or archive to a .pst file.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -119,7 +119,7 @@ New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -ComplianceStor
 ## DESCRIPTION
 You can create more than one mailbox export request per mailbox, and each mailbox export request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox export request. However, to create more than 10 export requests for a mailbox, you need to specify a unique name when creating the export request. You can remove existing export requests with the Remove-MailboxExportRequest cmdlet before starting a new request with the default request name `<alias>\MailboxExportX` (where X = 0-9).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
 
@@ -159,45 +159,6 @@ New-MailboxExportRequest -Mailbox Kweku -IncludeFolders "#Inbox#" -FilePath \\SE
 This example exports all messages from Kweku's Inbox to the .pst file InPlaceHold.
 
 ## PARAMETERS
-
-### -ComplianceStorePath
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: MailboxComplianceExportRequest
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FilePath
-The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
-
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
-
-- To import PST files from the share: Read permission
-- To save exported PST files to the share: Read/Write permission.
-
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
-
-```yaml
-Type: LongPath
-Parameter Sets: Mailbox, MailboxExportRequest
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Mailbox
 The Mailbox parameter specifies the source mailbox where the contents are being exported from.
@@ -240,6 +201,45 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ComplianceStorePath
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: String
+Parameter Sets: MailboxComplianceExportRequest
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilePath
+The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
+
+You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
+
+- To import PST files from the share: Read permission
+- To save exported PST files to the share: Read/Write permission.
+
+If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
+
+```yaml
+Type: LongPath
+Parameter Sets: Mailbox, MailboxExportRequest
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -409,16 +409,18 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilter
-The ContentFilter parameter uses OPath filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+**Important**: You can't use this parameter to export between two dates. If you try, you'll get system convert errors. You can export from a specific date, or export to a specific date, but not both.
 
-- Enclose the whole OPath filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
-- Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://docs.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
-- ComparisonOperator is an OPath comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
-- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values (for example, `500`, `$true`, `$false`, or `$null`).
+The ContentFilter parameter uses OPATH filter syntax to filter the results by the specified properties and values. Only contents that match the ContentFilter parameter will be exported into the .pst file. The search criteria uses the syntax `"Property -ComparisonOperator 'Value'"`.
+
+- Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although this parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables.
+- Property is a filterable property. For filterable properties, see [Filterable properties for the ContentFilter parameter](https://learn.microsoft.com/exchange/filterable-properties-for-the-contentfilter-parameter).
+- ComparisonOperator is an OPATH comparison operator (for example `-eq` for equals and `-like` for string comparison). For more information about comparison operators, see [about_Comparison_Operators](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_comparison_operators).
+- Value is the property value to search for. Enclose text values and variables in single quotation marks (`'Value'` or `'$Variable'`). If a variable value contains single quotation marks, you need to identify (escape) the single quotation marks to expand the variable correctly. For example, instead of `'$User'`, use `'$($User -Replace "'","''")'`. Don't enclose integers or system values in quotation marks (for example, use `500`, `$true`, `$false`, or `$null` instead).
 
 You can chain multiple search criteria together using the logical operators `-and` and `-or`. For example, `"Criteria1 -and Criteria2"` or `"(Criteria1 -and Criteria2) -or Criteria3"`.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPATH filters in Exchange, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String
@@ -436,7 +438,7 @@ Accept wildcard characters: False
 ### -ContentFilterLanguage
 The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
 
-Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo).
+Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see [CultureInfo Class](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo).
 
 ```yaml
 Type: CultureInfo
@@ -468,7 +470,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeDumpster
-The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items folder. You don't have to include a value with this parameter. If you don't specify this parameter, the Recoverable Items folder is copied with the following subfolders:
+The ExcludeDumpster switch specifies whether to exclude the Recoverable Items folder. You don't need to specify a value with this switch.
+
+If you don't use this switch, the Recoverable Items folder is copied with the following subfolders:
 
 - Deletions
 - Versions
@@ -616,8 +620,8 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
+- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
@@ -784,7 +788,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -868,12 +874,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-transportrule
+online version: https://learn.microsoft.com/powershell/module/exchange/set-transportrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-TransportRule
 schema: 2.0.0
@@ -16,9 +16,13 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-TransportRule cmdlet to modify existing transport rules (mail flow rules) in your organization.
 
-If you delete all conditions and exceptions from a rule, the rule action is applied to all messages. This can have unintended consequences. For example, if the rule action is to delete the message, removing the conditions and exceptions could cause the rule to delete all inbound and outbound messages for the entire organization.
+**Note**:
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+- The action of a rule without conditions or exceptions is applied to all messages, which could have unintended consequences. For example, if the rule action deletes messages, the rule without conditions or exceptions might delete all inbound and outbound messages for the entire organization.
+
+- Rules that use Active Directory or Microsoft Entra ID properties as conditions or exceptions work only on senders or recipients in the organization.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -28,15 +32,15 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ADComparisonAttribute <ADAttribute>]
  [-ADComparisonOperator <Evaluation>]
  [-AddManagerAsRecipientType <AddedRecipientType>]
- [-AddToRecipients <RecipientIdParameter []>]
- [-AnyOfCcHeader <RecipientIdParameter []>]
- [-AnyOfCcHeaderMemberOf <RecipientIdParameter []>]
- [-AnyOfRecipientAddressContainsWords <Word []>]
- [-AnyOfRecipientAddressMatchesPatterns <Pattern []>]
- [-AnyOfToCcHeader <RecipientIdParameter []>]
- [-AnyOfToCcHeaderMemberOf <RecipientIdParameter []>]
- [-AnyOfToHeader <RecipientIdParameter []>]
- [-AnyOfToHeaderMemberOf <RecipientIdParameter []>]
+ [-AddToRecipients <RecipientIdParameter[]>]
+ [-AnyOfCcHeader <RecipientIdParameter[]>]
+ [-AnyOfCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-AnyOfRecipientAddressContainsWords <Word[]>]
+ [-AnyOfRecipientAddressMatchesPatterns <Pattern[]>]
+ [-AnyOfToCcHeader <RecipientIdParameter[]>]
+ [-AnyOfToCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-AnyOfToHeader <RecipientIdParameter[]>]
+ [-AnyOfToHeaderMemberOf <RecipientIdParameter[]>]
  [-ApplyClassification <String>]
  [-ApplyHtmlDisclaimerFallbackAction <DisclaimerFallbackAction>]
  [-ApplyHtmlDisclaimerLocation <DisclaimerLocation>]
@@ -44,93 +48,93 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-ApplyOME <Boolean>]
  [-ApplyRightsProtectionCustomizationTemplate <OMEConfigurationIdParameter>]
  [-ApplyRightsProtectionTemplate <RmsTemplateIdParameter>]
- [-AttachmentContainsWords <Word []>]
- [-AttachmentExtensionMatchesWords <Word []>]
+ [-AttachmentContainsWords <Word[]>]
+ [-AttachmentExtensionMatchesWords <Word[]>]
  [-AttachmentHasExecutableContent <Boolean>]
  [-AttachmentIsPasswordProtected <Boolean>]
  [-AttachmentIsUnsupported <Boolean>]
- [-AttachmentMatchesPatterns <Pattern []>]
- [-AttachmentNameMatchesPatterns <Pattern []>]
+ [-AttachmentMatchesPatterns <Pattern[]>]
+ [-AttachmentNameMatchesPatterns <Pattern[]>]
  [-AttachmentProcessingLimitExceeded <Boolean>]
- [-AttachmentPropertyContainsWords <Word []>]
+ [-AttachmentPropertyContainsWords <Word[]>]
  [-AttachmentSizeOver <ByteQuantifiedSize>]
- [-BetweenMemberOf1 <RecipientIdParameter []>]
- [-BetweenMemberOf2 <RecipientIdParameter []>]
- [-BlindCopyTo <RecipientIdParameter []>]
+ [-BetweenMemberOf1 <RecipientIdParameter[]>]
+ [-BetweenMemberOf2 <RecipientIdParameter[]>]
+ [-BlindCopyTo <RecipientIdParameter[]>]
  [-Comments <String>]
  [-Confirm]
- [-ContentCharacterSetContainsWords <Word []>]
- [-CopyTo <RecipientIdParameter []>]
+ [-ContentCharacterSetContainsWords <Word[]>]
+ [-CopyTo <RecipientIdParameter[]>]
  [-DeleteMessage <Boolean>]
  [-Disconnect <Boolean>]
  [-DlpPolicy <String>]
  [-DomainController <Fqdn>]
  [-ExceptIfADComparisonAttribute <ADAttribute>]
  [-ExceptIfADComparisonOperator <Evaluation>]
- [-ExceptIfAnyOfCcHeader <RecipientIdParameter []>]
- [-ExceptIfAnyOfCcHeaderMemberOf <RecipientIdParameter []>]
- [-ExceptIfAnyOfRecipientAddressContainsWords <Word []>]
- [-ExceptIfAnyOfRecipientAddressMatchesPatterns <Pattern []>]
- [-ExceptIfAnyOfToCcHeader <RecipientIdParameter []>]
- [-ExceptIfAnyOfToCcHeaderMemberOf <RecipientIdParameter []>]
- [-ExceptIfAnyOfToHeader <RecipientIdParameter []>]
- [-ExceptIfAnyOfToHeaderMemberOf <RecipientIdParameter []>]
- [-ExceptIfAttachmentContainsWords <Word []>]
- [-ExceptIfAttachmentExtensionMatchesWords <Word []>]
+ [-ExceptIfAnyOfCcHeader <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfRecipientAddressContainsWords <Word[]>]
+ [-ExceptIfAnyOfRecipientAddressMatchesPatterns <Pattern[]>]
+ [-ExceptIfAnyOfToCcHeader <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfToCcHeaderMemberOf <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfToHeader <RecipientIdParameter[]>]
+ [-ExceptIfAnyOfToHeaderMemberOf <RecipientIdParameter[]>]
+ [-ExceptIfAttachmentContainsWords <Word[]>]
+ [-ExceptIfAttachmentExtensionMatchesWords <Word[]>]
  [-ExceptIfAttachmentHasExecutableContent <Boolean>]
  [-ExceptIfAttachmentIsPasswordProtected <Boolean>]
  [-ExceptIfAttachmentIsUnsupported <Boolean>]
- [-ExceptIfAttachmentMatchesPatterns <Pattern []>]
- [-ExceptIfAttachmentNameMatchesPatterns <Pattern []>]
+ [-ExceptIfAttachmentMatchesPatterns <Pattern[]>]
+ [-ExceptIfAttachmentNameMatchesPatterns <Pattern[]>]
  [-ExceptIfAttachmentProcessingLimitExceeded <Boolean>]
- [-ExceptIfAttachmentPropertyContainsWords <Word []>]
+ [-ExceptIfAttachmentPropertyContainsWords <Word[]>]
  [-ExceptIfAttachmentSizeOver <ByteQuantifiedSize>]
- [-ExceptIfBetweenMemberOf1 <RecipientIdParameter []>]
- [-ExceptIfBetweenMemberOf2 <RecipientIdParameter []>]
- [-ExceptIfContentCharacterSetContainsWords <Word []>]
- [-ExceptIfFrom <RecipientIdParameter []>]
- [-ExceptIfFromAddressContainsWords <Word []>]
- [-ExceptIfFromAddressMatchesPatterns <Pattern []>]
- [-ExceptIfFromMemberOf <RecipientIdParameter []>]
+ [-ExceptIfBetweenMemberOf1 <RecipientIdParameter[]>]
+ [-ExceptIfBetweenMemberOf2 <RecipientIdParameter[]>]
+ [-ExceptIfContentCharacterSetContainsWords <Word[]>]
+ [-ExceptIfFrom <RecipientIdParameter[]>]
+ [-ExceptIfFromAddressContainsWords <Word[]>]
+ [-ExceptIfFromAddressMatchesPatterns <Pattern[]>]
+ [-ExceptIfFromMemberOf <RecipientIdParameter[]>]
  [-ExceptIfFromScope <FromUserScope>]
  [-ExceptIfHasClassification <String>]
  [-ExceptIfHasNoClassification <Boolean>]
  [-ExceptIfHasSenderOverride <Boolean>]
  [-ExceptIfHeaderContainsMessageHeader <HeaderName>]
- [-ExceptIfHeaderContainsWords <Word []>]
+ [-ExceptIfHeaderContainsWords <Word[]>]
  [-ExceptIfHeaderMatchesMessageHeader <HeaderName>]
- [-ExceptIfHeaderMatchesPatterns <Pattern []>]
- [-ExceptIfManagerAddresses <RecipientIdParameter []>]
+ [-ExceptIfHeaderMatchesPatterns <Pattern[]>]
+ [-ExceptIfManagerAddresses <RecipientIdParameter[]>]
  [-ExceptIfManagerForEvaluatedUser <EvaluatedUser>]
- [-ExceptIfMessageContainsDataClassifications <Hashtable []>]
+ [-ExceptIfMessageContainsDataClassifications <Hashtable[]>]
  [-ExceptIfMessageSizeOver <ByteQuantifiedSize>]
  [-ExceptIfMessageTypeMatches <MessageType>]
- [-ExceptIfRecipientADAttributeContainsWords <Word []>]
- [-ExceptIfRecipientADAttributeMatchesPatterns <Pattern []>]
- [-ExceptIfRecipientAddressContainsWords <Word []>]
- [-ExceptIfRecipientAddressMatchesPatterns <Pattern []>]
- [-ExceptIfRecipientDomainIs <Word []>]
- [-ExceptIfRecipientInSenderList <Word []>]
+ [-ExceptIfRecipientADAttributeContainsWords <Word[]>]
+ [-ExceptIfRecipientADAttributeMatchesPatterns <Pattern[]>]
+ [-ExceptIfRecipientAddressContainsWords <Word[]>]
+ [-ExceptIfRecipientAddressMatchesPatterns <Pattern[]>]
+ [-ExceptIfRecipientDomainIs <Word[]>]
+ [-ExceptIfRecipientInSenderList <Word[]>]
  [-ExceptIfSCLOver <SclValue>]
- [-ExceptIfSenderADAttributeContainsWords <Word []>]
- [-ExceptIfSenderADAttributeMatchesPatterns <Pattern []>]
- [-ExceptIfSenderDomainIs <Word []>]
- [-ExceptIfSenderInRecipientList <Word []>]
+ [-ExceptIfSenderADAttributeContainsWords <Word[]>]
+ [-ExceptIfSenderADAttributeMatchesPatterns <Pattern[]>]
+ [-ExceptIfSenderDomainIs <Word[]>]
+ [-ExceptIfSenderInRecipientList <Word[]>]
  [-ExceptIfSenderIpRanges <MultiValuedProperty>]
  [-ExceptIfSenderManagementRelationship <ManagementRelationship>]
- [-ExceptIfSentTo <RecipientIdParameter []>]
- [-ExceptIfSentToMemberOf <RecipientIdParameter []>]
+ [-ExceptIfSentTo <RecipientIdParameter[]>]
+ [-ExceptIfSentToMemberOf <RecipientIdParameter[]>]
  [-ExceptIfSentToScope <ToUserScope>]
- [-ExceptIfSubjectContainsWords <Word []>]
- [-ExceptIfSubjectMatchesPatterns <Pattern []>]
- [-ExceptIfSubjectOrBodyContainsWords <Word []>]
- [-ExceptIfSubjectOrBodyMatchesPatterns <Pattern []>]
+ [-ExceptIfSubjectContainsWords <Word[]>]
+ [-ExceptIfSubjectMatchesPatterns <Pattern[]>]
+ [-ExceptIfSubjectOrBodyContainsWords <Word[]>]
+ [-ExceptIfSubjectOrBodyMatchesPatterns <Pattern[]>]
  [-ExceptIfWithImportance <Importance>]
  [-ExpiryDate <DateTime>]
- [-From <RecipientIdParameter []>]
- [-FromAddressContainsWords <Word []>]
- [-FromAddressMatchesPatterns <Pattern []>]
- [-FromMemberOf <RecipientIdParameter []>]
+ [-From <RecipientIdParameter[]>]
+ [-FromAddressContainsWords <Word[]>]
+ [-FromAddressMatchesPatterns <Pattern[]>]
+ [-FromMemberOf <RecipientIdParameter[]>]
  [-FromScope <FromUserScope>]
  [-GenerateIncidentReport <RecipientIdParameter>]
  [-GenerateNotification <DisclaimerText>]
@@ -138,52 +142,53 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-HasNoClassification <Boolean>]
  [-HasSenderOverride <Boolean>]
  [-HeaderContainsMessageHeader <HeaderName>]
- [-HeaderContainsWords <Word []>]
+ [-HeaderContainsWords <Word[]>]
  [-HeaderMatchesMessageHeader <HeaderName>]
- [-HeaderMatchesPatterns <Pattern []>]
- [-IncidentReportContent <IncidentReportContent []>]
+ [-HeaderMatchesPatterns <Pattern[]>]
+ [-IncidentReportContent <IncidentReportContent[]>]
  [-IncidentReportOriginalMail <IncidentReportOriginalMail>]
  [-LogEventText <EventLogText>]
- [-ManagerAddresses <RecipientIdParameter []>]
+ [-ManagerAddresses <RecipientIdParameter[]>]
  [-ManagerForEvaluatedUser <EvaluatedUser>]
- [-MessageContainsDataClassifications <Hashtable []>]
+ [-MessageContainsDataClassifications <Hashtable[]>]
  [-MessageSizeOver <ByteQuantifiedSize>]
  [-MessageTypeMatches <MessageType>]
  [-Mode <RuleMode>]
  [-ModerateMessageByManager <Boolean>]
- [-ModerateMessageByUser <RecipientIdParameter []>]
+ [-ModerateMessageByUser <RecipientIdParameter[]>]
  [-Name <String>]
  [-NotifySender <NotifySenderType>]
  [-PrependSubject <SubjectPrefix>]
  [-Priority <Int32>]
  [-Quarantine <Boolean>]
- [-RecipientADAttributeContainsWords <Word []>]
- [-RecipientADAttributeMatchesPatterns <Pattern []>]
- [-RecipientAddressContainsWords <Word []>]
- [-RecipientAddressMatchesPatterns <Pattern []>]
+ [-RecipientADAttributeContainsWords <Word[]>]
+ [-RecipientADAttributeMatchesPatterns <Pattern[]>]
+ [-RecipientAddressContainsWords <Word[]>]
+ [-RecipientAddressMatchesPatterns <Pattern[]>]
  [-RecipientAddressType <RecipientAddressType>]
- [-RecipientDomainIs <Word []>]
- [-RecipientInSenderList <Word []>]
- [-RedirectMessageTo <RecipientIdParameter []>]
+ [-RecipientDomainIs <Word[]>]
+ [-RecipientInSenderList <Word[]>]
+ [-RedirectMessageTo <RecipientIdParameter[]>]
  [-RejectMessageEnhancedStatusCode <RejectEnhancedStatus>]
  [-RejectMessageReasonText <RejectText>]
  [-RemoveHeader <HeaderName>]
  [-RemoveOME <Boolean>]
  [-RemoveOMEv2 <Boolean>]
+ [-RemoveRMSAttachmentEncryption <Boolean>]
  [-RouteMessageOutboundConnector <OutboundConnectorIdParameter>]
  [-RouteMessageOutboundRequireTls <Boolean>]
  [-RuleErrorAction <RuleErrorAction>]
  [-RuleSubType <RuleSubType>]
  [-SCLOver <SclValue>]
- [-SenderADAttributeContainsWords <Word []>]
- [-SenderADAttributeMatchesPatterns <Pattern []>]
+ [-SenderADAttributeContainsWords <Word[]>]
+ [-SenderADAttributeMatchesPatterns <Pattern[]>]
  [-SenderAddressLocation <SenderAddressLocation>]
- [-SenderDomainIs <Word []>]
- [-SenderInRecipientList <Word []>]
+ [-SenderDomainIs <Word[]>]
+ [-SenderInRecipientList <Word[]>]
  [-SenderIpRanges <MultiValuedProperty>]
  [-SenderManagementRelationship <ManagementRelationship>]
- [-SentTo <RecipientIdParameter []>]
- [-SentToMemberOf <RecipientIdParameter []>]
+ [-SentTo <RecipientIdParameter[]>]
+ [-SentToMemberOf <RecipientIdParameter[]>]
  [-SentToScope <ToUserScope>]
  [-SetAuditSeverity <String>]
  [-SetHeaderName <HeaderName>]
@@ -192,10 +197,10 @@ Set-TransportRule [-Identity] <RuleIdParameter>
  [-SmtpRejectMessageRejectStatusCode <RejectStatusCode>]
  [-SmtpRejectMessageRejectText <RejectText>]
  [-StopRuleProcessing <Boolean>]
- [-SubjectContainsWords <Word []>]
- [-SubjectMatchesPatterns <Pattern []>]
- [-SubjectOrBodyContainsWords <Word []>]
- [-SubjectOrBodyMatchesPatterns <Pattern []>]
+ [-SubjectContainsWords <Word[]>]
+ [-SubjectMatchesPatterns <Pattern[]>]
+ [-SubjectOrBodyContainsWords <Word[]>]
+ [-SubjectOrBodyMatchesPatterns <Pattern[]>]
  [-WhatIf]
  [-WithImportance <Importance>]
  [<CommonParameters>]
@@ -206,7 +211,7 @@ In on-premises Exchange organizations, rules created on Mailbox servers are stor
 
 The search for words or text patterns in the subject or other header fields in the message occurs after the message has been decoded from the MIME content transfer encoding method that was used to transmit the binary message between SMTP servers in ASCII text. You can't use conditions or exceptions to search for the raw (typically, Base64) encoded values of the subject or other header fields in messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -216,8 +221,6 @@ Set-TransportRule "Sales Team Disclaimer" -FromMemberOf "Sales Department"
 ```
 
 This example modifies the existing rule named Sales Team Disclaimer transport rule by adding the condition that the sender of the message is a member of the Sales Department group.
-
-This example sets the FromMemberOf parameter to a value of Sales-Group, which specifies that the rule is applied if the sender of the message is a member of the Sales-Group distribution group.
 
 ## PARAMETERS
 
@@ -244,7 +247,7 @@ Accept wildcard characters: False
 ### -ActivationDate
 The ActivationDate parameter specifies when the rule starts processing messages. The rule won't take any action on messages until the specified date/time.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -262,7 +265,7 @@ Accept wildcard characters: False
 ### -ADComparisonAttribute
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The ADComparisonAttribute parameter specifies a condition that compares an Active Directory attribute between the sender and all recipients of the message. This parameter works when the recipients are individual users. This parameter doesn't work with distribution groups.
 
@@ -314,7 +317,7 @@ Accept wildcard characters: False
 ### -ADComparisonOperator
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The ADComparisonOperator parameter specifies the comparison operator for the ADComparisonAttribute parameter. Valid values are:
 
@@ -337,7 +340,7 @@ Accept wildcard characters: False
 ### -AddManagerAsRecipientType
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The AddManagerAsRecipientType parameter specifies an action that delivers or redirects messages to the user that's defined in the sender's Manager attribute. Valid values are:
 
@@ -393,7 +396,7 @@ Accept wildcard characters: False
 ### -AnyOfCcHeader
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AnyOfCcHeader parameter specifies a condition that looks for recipients in the Cc field of messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -426,7 +429,7 @@ Accept wildcard characters: False
 ### -AnyOfCcHeaderMemberOf
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AnyOfCcHeaderMemberOf parameter specifies a condition that looks for group members in the Cc field of messages. You can use any value that uniquely identifies the group. For example:
 
@@ -507,7 +510,7 @@ Accept wildcard characters: False
 ### -AnyOfToCcHeader
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AnyOfToCcHeader parameter specifies a condition that looks for recipients in the To or Cc fields of messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -540,7 +543,7 @@ Accept wildcard characters: False
 ### -AnyOfToCcHeaderMemberOf
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AnyOfToCcHeaderMemberOf parameter specifies a condition that looks for group members in the To and Cc fields of messages. You can use any value that uniquely identifies the group. For example:
 
@@ -573,7 +576,7 @@ Accept wildcard characters: False
 ### -AnyOfToHeader
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AnyOfToHeader parameter specifies a condition that looks for recipients in the To field of messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -606,7 +609,7 @@ Accept wildcard characters: False
 ### -AnyOfToHeaderMemberOf
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AnyOfToHeaderMemberOf parameter specifies a condition that looks for group members in the To field of messages. You can use any value that uniquely identifies the group. For example:
 
@@ -639,7 +642,7 @@ Accept wildcard characters: False
 ### -ApplyClassification
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The ApplyClassification parameter specifies an action that applies a message classification to messages. Use the Get-MessageClassification cmdlet to see the message classification objects that are available.
 
@@ -661,13 +664,18 @@ Accept wildcard characters: False
 ### -ApplyHtmlDisclaimerFallbackAction
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
-The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML disclaimer can't be added to a message. Valid values are:
+The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML disclaimer can't be applied to a message (for example, encrypted or signed messages where the contents can't be altered). Valid values are:
 
-- Wrap: The original message is wrapped in a new message envelope, and the disclaimer is used as the message body for the new message. This is the default value. Subsequent mail flow rules are applied to the new message envelope, not to the original message. Therefore, configure a rule with this action at a lower priority (a higher priority number) than other rules. If the original message can't be wrapped in a new message envelope, the original message isn't delivered. The message is returned to the sender in an non-delivery report (also known as an NDR or bounce message).
-- Ignore: The rule is ignored and the message is delivered without the disclaimer.
-- Reject: The message is rejected.
+- Wrap: This is the default value. A new message is created and the original message is added to it as an attachment. The disclaimer text is added to the new message, which is delivered to the recipients.
+
+  If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules.
+
+  If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
+
+- Ignore: The rule is ignored and the original message is delivered without the disclaimer.
+- Reject: The original message is returned to the sender in an NDR.
 
 If you don't use this parameter with the ApplyHtmlDisclaimerText parameter, the default value Wrap is used.
 
@@ -687,7 +695,7 @@ Accept wildcard characters: False
 ### -ApplyHtmlDisclaimerLocation
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The ApplyHtmlDisclaimerLocation parameter specifies where to insert the HTML disclaimer text in the body of messages. Valid values are:
 
@@ -712,9 +720,37 @@ Accept wildcard characters: False
 ### -ApplyHtmlDisclaimerText
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The ApplyHtmlDisclaimerText parameter specifies an action that adds the disclaimer text to messages. Disclaimer text can include HTML tags and inline cascading style sheet (CSS) tags. You can add images using the IMG tag.
+
+This parameter also supports the following tokens that use values from the sender:
+
+- %%City%%
+- %%Company%%
+- %%CountryOrRegion%%
+- %%Department%%
+- %%DisplayName%%
+- %%Fax%%
+- %%FirstName%%
+- %%HomePhone%%
+- %%Initials%%
+- %%LastName%%
+- %%Manager%%
+- %%MobilePhone%%
+- %%Notes%%
+- %%Office%%
+- %%Pager%%
+- %%Phone%%
+- %%PostalCode%%
+- %%PostOfficeBox%%
+- %%StateOrProvince%%
+- %%StreetAddress%%
+- %%Title%%
+- %%UserPrincipalName%%
+- %%WindowsEmailAddress%%
+
+The maximum number of characters is 5000.
 
 You use the ApplyHtmlDisclaimerLocation parameter to specify where to insert the text in the message body (the default value is Append), and the ApplyHtmlDisclaimerFallbackAction parameter to specify what to do if the disclaimer can't be added to the message (the default value is Wrap).
 
@@ -777,7 +813,7 @@ Accept wildcard characters: False
 ### -ApplyRightsProtectionTemplate
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The ApplyRightsProtectionTemplate parameter specifies an action that applies rights management service (RMS) templates to messages. You identify the RMS template by name. If the name contains spaces, enclose the name in quotation marks (").
 
@@ -785,7 +821,7 @@ To use this action, you need to have an Active Directory Rights Management Servi
 
 Use the Get-RMSTemplate cmdlet to see the RMS templates that are available.
 
-For more information, see [Transport protection rules](https://docs.microsoft.com/exchange/transport-protection-rules-exchange-2013-help).
+For more information, see [Transport protection rules](https://learn.microsoft.com/exchange/transport-protection-rules-exchange-2013-help).
 
 ```yaml
 Type: RmsTemplateIdParameter
@@ -803,7 +839,7 @@ Accept wildcard characters: False
 ### -AttachmentContainsWords
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentContainsWords parameter specifies a condition that looks for words in message attachments. Only supported attachment types are checked.
 
@@ -825,9 +861,11 @@ Accept wildcard characters: False
 ### -AttachmentExtensionMatchesWords
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentExtensionMatchesWords parameter specifies a condition that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
+
+**Note:** Nested attachment extensions (files inside the original attachments) are also inspected. To see all attachment extensions that were evaluated for a specific message, use the Test-TextExtraction cmdlet.
 
 ```yaml
 Type: Word[]
@@ -845,12 +883,14 @@ Accept wildcard characters: False
 ### -AttachmentHasExecutableContent
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
-The AttachmentHasExecutableContent parameter specifies a condition that looks for executable content in message attachments. Valid values are:
+The AttachmentHasExecutableContent parameter specifies a condition that inspects messages where an attachment is an executable file. Valid values are:
 
 - $true: Look for executable content in message attachments.
 - $false: Don't look for executable content in message attachments.
+
+The system inspects the file properties rather than relying on the file extension. For more information, see [Supported executable file types for mail flow rule inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-executable-file-types-for-mail-flow-rule-inspection).
 
 ```yaml
 Type: Boolean
@@ -868,9 +908,9 @@ Accept wildcard characters: False
 ### -AttachmentIsPasswordProtected
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
-The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The AttachmentIsPasswordProtected parameter specifies a condition that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -891,14 +931,18 @@ Accept wildcard characters: False
 ### -AttachmentIsUnsupported
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
-The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
+The AttachmentIsUnsupported parameter specifies a condition that looks for unsupported file types in messages. Valid values are:
 
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-For more information, see [Register Filter Pack IFilters with Exchange 2013](https://docs.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the AttachmentIsUnsupported condition is triggered.
+
+For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
+
+In Exchange 2010, to extend the list of supported file types, see [Register Filter Pack IFilters](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -916,7 +960,7 @@ Accept wildcard characters: False
 ### -AttachmentMatchesPatterns
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentMatchesPatterns parameter specifies a condition that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
 
@@ -940,7 +984,7 @@ Accept wildcard characters: False
 ### -AttachmentNameMatchesPatterns
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentNameMatchesPatterns parameter specifies a condition that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
@@ -960,7 +1004,7 @@ Accept wildcard characters: False
 ### -AttachmentProcessingLimitExceeded
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentProcessingLimitExceeded parameter specifies a condition that looks for messages where attachment scanning didn't complete. Valid values are:
 
@@ -985,7 +1029,7 @@ Accept wildcard characters: False
 ### -AttachmentPropertyContainsWords
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The AttachmentPropertyContainsWords parameter specifies a condition that looks for words in the properties of attached Office documents. This condition helps integrate mail flow rules (transport rules) with the File Classification Infrastructure (FCI) in Windows Server 2012 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
 
@@ -1056,7 +1100,7 @@ Accept wildcard characters: False
 ### -BetweenMemberOf1
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The BetweenMemberOf1 parameter specifies a condition that looks for messages that are sent between group members. You need to use this parameter with the BetweenMemberOf2 parameter. You can use any value that uniquely identifies the group. For example:
 
@@ -1085,7 +1129,7 @@ Accept wildcard characters: False
 ### -BetweenMemberOf2
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The BetweenMemberOf2 parameter specifies a condition that looks for messages that are sent between group members. You need to use this parameter with the BetweenMemberOf1 parameter. You can use any value that uniquely identifies the group. For example:
 
@@ -1178,7 +1222,7 @@ Accept wildcard characters: False
 ### -ContentCharacterSetContainsWords
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The ContentCharacterSetContainsWords parameter specifies a condition that looks for character set names in messages.
 
@@ -1250,7 +1294,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disconnect
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -1273,7 +1317,9 @@ Accept wildcard characters: False
 ```
 
 ### -DlpPolicy
-The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's associated with the rule. Each DLP policy is enforced using a set of mail flow rules (transport rules). To learn more about DLP, see [Data loss prevention in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/data-loss-prevention).
+**Note**: This parameter is functional only in on-premises Exchange.
+
+The DlpPolicy parameter specifies the data loss prevention (DLP) policy that's associated with the rule. Each DLP policy is enforced using a set of mail flow rules (transport rules). To learn more about DLP, see [Data loss prevention in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/data-loss-prevention).
 
 ```yaml
 Type: String
@@ -1309,9 +1355,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfADComparisonAttribute
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfADComparisonAttribute parameter specifies an exception that compares an Active Directory attribute between the sender and all recipients of the message. This parameter works when the recipients are individual users. This parameter doesn't work with distribution groups.
 
@@ -1361,9 +1407,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfADComparisonOperator
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfADComparisonOperator parameter specifies the comparison operator for the ExceptIfADComparisonAttribute parameter. Valid values are:
 
@@ -1384,9 +1430,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfCcHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAnyOfCcHeader parameter specifies an exception that looks for recipients in the Cc field of messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -1417,9 +1463,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfCcHeaderMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAnyOfCcHeaderMemberOf parameter specifies an exception that looks for group members in the Cc field of messages. You can use any value that uniquely identifies the group. For example:
 
@@ -1450,7 +1496,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -1474,7 +1520,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfRecipientAddressMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -1498,9 +1544,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToCcHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAnyOfToCcHeader parameter specifies an exception that looks for recipients in the To or Cc fields of messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -1531,9 +1577,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToCcHeaderMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAnyOfToCcHeaderMemberOf parameter specifies an exception that looks for group members in the To and Cc fields of messages. You can use any value that uniquely identifies the group. For example:
 
@@ -1564,9 +1610,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAnyOfToHeader parameter specifies an exception that looks for recipients in the To field of messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -1597,9 +1643,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAnyOfToHeaderMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAnyOfToHeaderMemberOf parameter specifies an exception that looks for group members in the To field of messages. You can use any value that uniquely identifies the group. For example:
 
@@ -1630,9 +1676,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentContainsWords parameter specifies an exception that looks for words in message attachments. Only supported attachment types are checked.
 
@@ -1652,11 +1698,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentExtensionMatchesWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentExtensionMatchesWords parameter specifies an exception that looks for words in the file name extensions of message attachments. You can specify multiple words separated by commas.
+
+**Note:** Nested attachment extensions (files inside the original attachments) are also inspected. To see all attachment extensions that were evaluated for a specific message, use the Test-TextExtraction cmdlet.
 
 ```yaml
 Type: Word[]
@@ -1672,14 +1720,16 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentHasExecutableContent
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
-The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that looks for executable content in message attachments. Valid values are:
+The ExceptIfAttachmentHasExecutableContent parameter specifies an exception that inspects messages where an attachment is an executable file. Valid values are:
 
 - $true: Look for executable content in message attachments.
 - $false: Don't look for executable content in message attachments.
+
+The system inspects the file properties rather than relying on the file extension. For more information, see [Supported executable file types for mail flow rule inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-executable-file-types-for-mail-flow-rule-inspection).
 
 ```yaml
 Type: Boolean
@@ -1695,11 +1745,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentIsPasswordProtected
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
-The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection only works for Office documents and .zip files. Valid values are:
+The ExceptIfAttachmentIsPasswordProtected parameter specifies an exception that looks for password protected files in messages (because the contents of the file can't be inspected). Password detection works for Office documents, compressed files (.zip, .7z), and .pdf files. Valid values are:
 
 - $true: Look for password protected attachments.
 - $false: Don't look for password protected attachments.
@@ -1718,16 +1768,20 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentIsUnsupported
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
-The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks for unsupported file types in messages. Unsupported file types are message attachments that aren't natively recognized by Exchange, and the required IFilter isn't installed. Valid values are:
+The ExceptIfAttachmentIsUnsupported parameter specifies an exception that looks for unsupported file types in messages. Valid values are:
 
 - $true: Look for unsupported file types in messages.
 - $false: Don't look for unsupported file types in messages.
 
-For more information, see [Register Filter Pack IFilters with Exchange 2013](https://docs.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
+Rules can inspect the content of supported file types only. If the rule finds an attachment file type that isn't supported, the ExceptIfAttachmentIsUnsupported exception is triggered.
+
+For the list of supported file types, see [Supported file types for mail flow rule content inspection](https://learn.microsoft.com/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments#supported-file-types-for-mail-flow-rule-content-inspection).
+
+In Exchange 2010, to extend the list of supported file types, see [Register Filter Pack IFilters](https://learn.microsoft.com/exchange/register-filter-pack-ifilters-with-exchange-2013-exchange-2013-help).
 
 ```yaml
 Type: Boolean
@@ -1743,9 +1797,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentMatchesPatterns parameter specifies an exception that looks for text patterns in the content of message attachments by using regular expressions. Only supported attachment types are checked.
 
@@ -1767,9 +1821,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentNameMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentNameMatchesPatterns parameter specifies an exception that looks for text patterns in the file name of message attachments by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
@@ -1787,9 +1841,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentProcessingLimitExceeded
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentProcessingLimitExceeded parameter specifies an exception that looks for messages where attachment scanning didn't complete. Valid values are:
 
@@ -1812,9 +1866,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentPropertyContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfAttachmentPropertyContainsWords parameter specifies an exception that looks for words in the properties of attached Office documents. This condition helps integrate rules with the File Classification Infrastructure (FCI) in Windows Server 2018 R2 or later, SharePoint, or a third-party classification system. Valid values are a built-in document property, or a custom property. The built-in document properties are:
 
@@ -1851,7 +1905,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfAttachmentSizeOver
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -1881,9 +1935,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfBetweenMemberOf1
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfBetweenMemberOf1 parameter specifies an exception that looks for messages that are sent between group members. You need to use this parameter with the ExceptIfBetweenMemberOf2 parameter. You can use any value that uniquely identifies the group. For example:
 
@@ -1910,9 +1964,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfBetweenMemberOf2
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfBetweenMemberOf2 parameter specifies an exception that looks for messages that are sent between group members. You need to use this parameter with the ExceptIfBetweenMemberOf1 parameter. You can use any value that uniquely identifies the group. For example:
 
@@ -1939,9 +1993,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentCharacterSetContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfContentCharacterSetContainsWords parameter specifies an exception that looks for character set names in messages.
 
@@ -1961,9 +2015,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFrom
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfFrom parameter specifies an exception that looks for messages from specific senders. You can use any value that uniquely identifies the sender. For example:
 
@@ -1992,7 +2046,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromAddressContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2014,13 +2068,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromAddressMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfFromAddressMatchesPatterns parameter specifies an exception that looks for text patterns in the sender's email address by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
+
+**Note**: Trying to search for empty From addresses using this parameter doesn't work.
 
 ```yaml
 Type: Pattern[]
@@ -2036,9 +2092,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfFromMemberOf parameter specifies an exception that looks for messages sent by group members. You can use any value that uniquely identifies the group. For example:
 
@@ -2067,13 +2123,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFromScope
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfFromScope parameter specifies an exception that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the sender meets at least one of the following criteria: The sender is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -2090,9 +2146,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHasClassification
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfHasClassification parameter specifies an exception that looks for messages with the specified message classification.
 
@@ -2116,9 +2172,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHasNoClassification
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfHasNoClassification parameter specifies an exception that looks for messages with or without any message classifications. Valid values are:
 
@@ -2139,9 +2195,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHasSenderOverride
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+**Note:** This parameter is functional only in on-premises Exchange.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfHasSenderOverride parameter specifies an exception that looks for messages where the sender chose to override a DLP policy. Valid values are:
 
@@ -2162,7 +2220,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderContainsMessageHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2182,7 +2240,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2206,7 +2264,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderMatchesMessageHeader
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2226,7 +2284,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfHeaderMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2248,9 +2306,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfManagerAddresses
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfManagerAddresses parameter specifies the users (managers) for the ExceptIfManagerForEvaluatedUser parameter. You can use any value that uniquely identifies the user. For example:
 
@@ -2279,9 +2337,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfManagerForEvaluatedUser
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfManagerForEvaluatedUser parameter specifies an exception that looks for users in the Manager attribute of senders or recipients. Valid values are:
 
@@ -2304,15 +2362,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfMessageContainsDataClassifications
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+**Note:** This parameter is functional only in on-premises Exchange.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
+
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfMessageContainsDataClassifications parameter specifies an exception that looks for sensitive information types in the body of messages, and in any attachments.
 
 This parameter uses the syntax `@{SensitiveInformationType1},@{SensitiveInformationType2},...@{SensitiveInformationTypeN}`. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
-For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
+For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
 
 ```yaml
 Type: Hashtable[]
@@ -2328,7 +2388,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfMessageSizeOver
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2358,17 +2418,17 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfMessageTypeMatches
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfMessageTypeMatches parameter specifies an exception that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
-- Encrypted: Encrypted messages.
+- AutoForward: Messages automatically forwarded to an alternative recipient. In Exchange Online, if the message has been forwarded using [mailbox forwarding](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as SMTP forwarding), this exception **will not** match during mail flow rule evaluation.
+- Encrypted: S/MIME encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
-- PermissionControlled: Messages that have specific permissions configured.
+- PermissionControlled: Messages that have specific permissions configured using Office 365 Message Encryption (OME), Rights Management, and sensitivity labels (with encryption).
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
 - Signed: Digitally signed messages.
 - ApprovalRequest: Moderation request messages sent to moderators.
@@ -2388,9 +2448,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientADAttributeContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfRecipientADAttributeContainsWords parameter specifies an exception that looks for words in the Active Directory attributes of recipients. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -2444,9 +2504,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientADAttributeMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfRecipientADAttributeMatchesPatterns parameter specifies an exception that looks for text patterns in the Active Directory attributes of recipients by using regular expressions. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -2498,9 +2558,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientAddressContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfRecipientAddressContainsWords parameter specifies an exception that looks for words in recipient email addresses. You can specify multiple words separated by commas. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -2518,9 +2578,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientAddressMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfRecipientAddressMatchesPatterns parameter specifies an exception that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
@@ -2540,13 +2600,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfRecipientDomainIs
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
-The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The ExceptIfRecipientDomainIs parameter specifies an exception that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the ExceptIfRecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This exception matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 ```yaml
 Type: Word[]
@@ -2580,11 +2640,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSCLOver
-This parameter is available or functional only in on-premises Exchange.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
-
-This condition is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
+In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
 
@@ -2607,9 +2665,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderADAttributeContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfSenderADAttributeContainsWords parameter specifies an exception that looks for words in Active Directory attributes of message senders.
 
@@ -2663,9 +2721,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderADAttributeMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfSenderADAttributeMatchesPatterns parameter specifies an exception that looks for text patterns in Active Directory attributes of message senders by using regular expressions.
 
@@ -2717,13 +2775,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderDomainIs
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfSenderDomainIs parameter specifies an exception that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This exception matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -2759,9 +2817,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderIpRanges
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfSenderIpRanges parameter specifies an exception that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
@@ -2769,7 +2827,9 @@ The ExceptIfSenderIpRanges parameter specifies an exception that looks for sende
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
+
+In Exchange Online, the IP address that's used during evaluation of this exception is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
@@ -2785,9 +2845,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSenderManagementRelationship
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfSenderManagementRelationship parameter specifies an exception that looks for the relationship between the sender and recipients in messages. Valid values are:
 
@@ -2808,9 +2868,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentTo
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfSentTo parameter specifies an exception that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -2837,7 +2897,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToMemberOf
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 The ExceptIfSentToMemberOf parameter specifies an exception that looks for messages sent to members of groups. You can use any value that uniquely identifies the group. For example:
 
@@ -2864,16 +2924,16 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSentToScope
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfSentToScope parameter specifies an exception that looks for the location of a recipient. Valid values are:
 
-- InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-- NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-- ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-- ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the recipient meets at least one of the following criteria: The recipient is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
+- NotInOrganization: The recipients are outside the organization. The recipient's email address isn't in an accepted domain or is in an accepted domain that's configured as an external relay domain in the organization.
+- ExternalPartner: This value is available only in on-premises Exchange. The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail.
+- ExternalNonPartner: This value is available only in on-premises Exchange. The recipients are external to your organization, and the organization isn't a partner organization.
 
 ```yaml
 Type: ToUserScope
@@ -2889,13 +2949,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfSubjectContainsWords parameter specifies an exception that looks for words in the Subject field of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
@@ -2911,7 +2973,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2931,13 +2993,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectOrBodyContainsWords
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
 The ExceptIfSubjectOrBodyContainsWords parameter specifies an exception that looks for words in the Subject field or body of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
@@ -2953,7 +3017,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfSubjectOrBodyMatchesPatterns
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
@@ -2973,9 +3037,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfWithImportance
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
-In on-premises Exchange, this exception is only available on Mailbox servers.
+In on-premises Exchange, this exception is available only on Mailbox servers.
 
 The ExceptIfWithImportance parameter specifies an exception that looks for messages with the specified importance level. Valid values are:
 
@@ -2997,11 +3061,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExpiryDate
-This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition doesn't include the ExceptIf prefix.
+This parameter specifies an exception or part of an exception for the rule. The name of the corresponding condition parameter doesn't include the ExceptIf prefix.
 
 The ExpiryDate parameter specifies when this rule will stop processing messages. The rule won't take any action on messages after the specified date/time.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -3019,7 +3083,7 @@ Accept wildcard characters: False
 ### -From
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The From parameter specifies a condition that looks for messages from specific senders. You can use any value that uniquely identifies the sender. For example:
 
@@ -3078,6 +3142,8 @@ The FromAddressMatchesPatterns parameter specifies a condition that looks for te
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
+**Note**: Trying to search for empty From addresses using this parameter doesn't work.
+
 ```yaml
 Type: Pattern[]
 Parameter Sets: (All)
@@ -3094,7 +3160,7 @@ Accept wildcard characters: False
 ### -FromMemberOf
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The FromMemberOf parameter specifies a condition that looks for messages sent by group members. You can use any value that uniquely identifies the group. For example:
 
@@ -3129,7 +3195,7 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The FromScope parameter specifies a condition that looks for the location of message senders. Valid values are:
 
-- InOrganization: The sender is a mailbox, mail user, group, or mail-enabled public folder in your organization or The sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the sender meets at least one of the following criteria: The sender is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the sender's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
 - NotInOrganization: The sender's email address isn't in an accepted domain or the sender's email address is in an accepted domain that's configured as an external relay domain.
 
 ```yaml
@@ -3148,7 +3214,7 @@ Accept wildcard characters: False
 ### -GenerateIncidentReport
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The GenerateIncidentReport parameter specifies where to send the incident report that's defined by the IncidentReportContent parameter. You can use any value that uniquely identifies the recipient. For example:
 
@@ -3159,7 +3225,7 @@ The GenerateIncidentReport parameter specifies where to send the incident report
 - Email address
 - GUID
 
-An incident report is generated for messages that violate a DLP policy in your organization.
+**Note**: An incident report isn't generated for notifications or other incident reports that are generated by DLP or mail flow rules.
 
 ```yaml
 Type: RecipientIdParameter
@@ -3177,7 +3243,7 @@ Accept wildcard characters: False
 ### -GenerateNotification
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The GenerateNotification parameter specifies an action that sends a notification message to recipients. For example, you can use this parameter to notify recipients that a message was rejected by the rule, or marked as spam and delivered to their Junk Email folder.
 
@@ -3189,6 +3255,8 @@ This parameter supports plain text, HTML tags and the following keywords that us
 - %%Subject%%
 - %%Headers%%
 - %%MessageDate%%
+
+The maximum number of characters is 5120.
 
 ```yaml
 Type: DisclaimerText
@@ -3206,7 +3274,7 @@ Accept wildcard characters: False
 ### -HasClassification
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The HasClassification parameter specifies a condition that looks for messages with the specified message classification.
 
@@ -3232,7 +3300,7 @@ Accept wildcard characters: False
 ### -HasNoClassification
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The HasNoClassification parameter specifies a condition that looks for messages with or without any message classifications. Valid values are:
 
@@ -3253,9 +3321,11 @@ Accept wildcard characters: False
 ```
 
 ### -HasSenderOverride
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The HasSenderOverride parameter specifies a condition that looks for messages where the sender chose to override a DLP policy. Valid values are:
 
@@ -3364,9 +3434,9 @@ Accept wildcard characters: False
 ### -IncidentReportContent
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
-The IncidentReportContent parameter specifies the message properties that are included in the incident report that's generated when a message violates a DLP policy. Valid values are:
+The IncidentReportContent parameter specifies the message properties that are included in the incident report. Valid values are:
 
 - Sender: The sender of the message.
 - Recipients: The recipients in the To field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
@@ -3374,10 +3444,8 @@ The IncidentReportContent parameter specifies the message properties that are in
 - CC: The recipients in the Cc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
 - BCC: The recipients in the Bcc field of the message. Only the first 10 recipients are displayed in the incident report. If there are more than 10 recipients, the remaining number of recipients will be displayed.
 - Severity: The audit severity of the rule that was triggered. If the message was processed by more than one rule, the highest severity is displayed.
-- Override: The override if the sender chose to override a PolicyTip. If the sender provided a justification, the first 100 characters of the justification is also included.
 - RuleDetections: The list of rules that the message triggered.
 - FalsePositive: The false positive if the sender marked the message as a false positive for a PolicyTip.
-- DataClassifications: The list of sensitive information types that were detected in the message.
 - IdMatch: The sensitive information type that was detected, the exact matched content from the message, and the 150 characters before and after the matched sensitive information.
 - AttachOriginalMail: The entire original message as an attachment.
 
@@ -3407,7 +3475,7 @@ This parameter has been deprecated and is no longer used. Use the IncidentReport
 
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The IncidentReportOriginalMail parameter specifies whether to include the original message with the incident report. This parameter is used together with the GenerateIncidentReport parameter. Valid values are:
 
@@ -3428,7 +3496,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogEventText
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -3458,7 +3526,7 @@ Accept wildcard characters: False
 ### -ManagerAddresses
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The ManagerAddresses parameter specifies the users (managers) for the ExceptIfManagerForEvaluatedUser parameter. You can use any value that uniquely identifies the user. For example:
 
@@ -3489,7 +3557,7 @@ Accept wildcard characters: False
 ### -ManagerForEvaluatedUser
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The ManagerForEvaluatedUser parameter specifies a condition that looks for users in the Manager attribute of senders or recipients. Valid values are:
 
@@ -3512,15 +3580,17 @@ Accept wildcard characters: False
 ```
 
 ### -MessageContainsDataClassifications
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The MessageContainsDataClassifications parameter specifies a condition that looks for sensitive information types in the body of messages, and in any attachments.
 
 This parameter uses the syntax `@{SensitiveInformationType1},@{SensitiveInformationType2},...@{SensitiveInformationTypeN}`. For example, to look for content that contains at least two credit card numbers, and at least one ABA routing number, use the value @{Name="Credit Card Number"; minCount="2"},@{Name="ABA Routing Number"; minCount="1"}.
 
-For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
+For a list of sensitive information types available, see [Sensitive information types in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types).
 
 You can specify the notification options by using the NotifySender parameter.
 
@@ -3570,15 +3640,15 @@ Accept wildcard characters: False
 ### -MessageTypeMatches
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The MessageTypeMatches parameter specifies a condition that looks for messages of the specified type. Valid values are:
 
 - OOF: Auto-reply messages configured by the user.
-- AutoForward: Messages automatically forwarded to an alternative recipient (by Exchange, not by auto-forwarding rules that users configure in Outlook on the web or Outlook).
-- Encrypted: Encrypted messages.
+- AutoForward: Messages automatically forwarded to an alternative recipient. In Exchange Online, if the message has been forwarded using [mailbox forwarding](https://learn.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as SMTP forwarding), this condition **will not** match during mail flow rule evaluation.
+- Encrypted: S/MIME encrypted messages. In thin clients like Outlook on the web, encryption as a message type is currently not supported.
 - Calendaring: Meeting requests and responses.
-- PermissionControlled: Messages that have specific permissions configured.
+- PermissionControlled: Messages that have specific permissions configured using Office 365 Message Encryption (OME), Rights Management, and sensitivity labels (with encryption).
 - Voicemail: Voice mail messages forwarded by Unified Messaging service.
 - Signed: Digitally signed messages.
 - ApprovalRequest: Moderation request messages sent to moderators.
@@ -3600,8 +3670,8 @@ Accept wildcard characters: False
 ### -Mode
 The Mode parameter specifies how the rule operates. Valid values are:
 
-- Audit: The actions that the rule would have taken are written to the message tracking log, but no any action is taken on the message that would impact delivery.
-- AuditAndNotify: The rule operates the same as in Audit mode, but notifications are also enabled.
+- Audit: The actions that the rule would have taken are written to the message tracking log, but no action that impacts message delivery is taken on the message. The GenerateIncidentReport action occurs.
+- AuditAndNotify: The actions that the rule would have taken are written to the message tracking log, but no action that impacts message delivery is taken on the message. The GenerateIncidentReport and GenerateNotification actions occur.
 - Enforce: All actions specified in the rule are taken. This is the default value.
 
 ```yaml
@@ -3620,7 +3690,7 @@ Accept wildcard characters: False
 ### -ModerateMessageByManager
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The ModerateMessageByManager parameter specifies an action that forwards messages for approval to the user that's specified in the sender's Manager attribute. After the manager approves the message, it's delivered to the recipients. Valid values are:
 
@@ -3645,7 +3715,7 @@ Accept wildcard characters: False
 ### -ModerateMessageByUser
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The ModerateMessageByUser parameter specifies an action that forwards messages for approval to the specified users. After one of the users approves the message, it's delivered to the recipients. You can use ay value that uniquely identifies the user. For example:
 
@@ -3690,9 +3760,11 @@ Accept wildcard characters: False
 ```
 
 ### -NotifySender
+**Note:** This parameter is functional only in on-premises Exchange.
+
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The NotifySender parameter specifies an action that notifies the sender when messages violate DLP policies. Valid values are:
 
@@ -3705,6 +3777,8 @@ The NotifySender parameter specifies an action that notifies the sender when mes
 For all values except NotifyOnly, you can specify an enhanced status code and a rejection reason by using the RejectMessageEnhancedStatusCode and RejectMessageReasonText parameters. The default enhanced status code is 5.7.1, and the default rejection reason is Delivery not authorized, message refused.
 
 If you use this parameter, you also need to specify a condition that looks for sensitive information types in messages by using the MessageContainsDataClassifications parameter.
+
+This action is applicable to messages sent by internal users only. External senders will not receive notifications.
 
 ```yaml
 Type: NotifySenderType
@@ -3775,6 +3849,8 @@ The Quarantine parameter specifies an action that quarantines messages.
 - In on-premises Exchange, messages are delivered to the quarantine mailbox that you've configured as part of Content filtering. If the quarantine mailbox isn't configured, the message is returned to the sender in an NDR.
 - In Microsoft 365, messages are delivered to the hosted quarantine.
 
+If this action is in a rule that's not the last rule in the list, rule evaluation stops after this rule is run. When the message is released from quarantine, the remaining rules in the list aren't evaluated.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -3791,7 +3867,7 @@ Accept wildcard characters: False
 ### -RecipientADAttributeContainsWords
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The RecipientADAttributeContainsWords parameter specifies a condition that looks for words in the Active Directory attributes of recipients. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -3847,7 +3923,7 @@ Accept wildcard characters: False
 ### -RecipientADAttributeMatchesPatterns
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The RecipientADAttributeMatchesPatterns parameter specifies a condition that looks for text patterns in the Active Directory attributes of recipients by using regular expressions. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -3901,7 +3977,7 @@ Accept wildcard characters: False
 ### -RecipientAddressContainsWords
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The RecipientAddressContainsWords parameter specifies a condition that looks for words in recipient email addresses. You can specify multiple words separated by commas. This parameter works when the recipient is an individual user. This parameter doesn't work with distribution groups.
 
@@ -3921,7 +3997,7 @@ Accept wildcard characters: False
 ### -RecipientAddressMatchesPatterns
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The RecipientAddressMatchesPatterns parameter specifies a condition that looks for text patterns in recipient email addresses by using regular expressions. You can specify multiple text patterns by using the following syntax: `"Regular expression1","Regular expression2",..."Regular expressionN"`.
 
@@ -3943,7 +4019,10 @@ Accept wildcard characters: False
 ### -RecipientAddressType
 This parameter is available only in the cloud-based service.
 
-{{ Fill RecipientAddressType Description }}
+The RecipientAddressType parameter specifies how conditions and exceptions check recipient email addresses. Valid values are:
+
+- Original: The rule checks the original address in the To field of the message.
+- Resolved: The rule checks the recipient's primary SMTP email address without checking any proxy addresses. This is the default value.
 
 ```yaml
 Type: RecipientAddressType
@@ -3961,11 +4040,11 @@ Accept wildcard characters: False
 ### -RecipientDomainIs
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
-The RecipientDomainIs parameter specifies a condition that looks for recipients with email address in the specified domains. You can specify multiple domains separated by commas.
+The RecipientDomainIs parameter specifies a condition that looks for recipients with email addresses in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for recipient email addresses that contain the specified domain (for example, any subdomain of a domain), use the RecipientAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This condition matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 ```yaml
 Type: Word[]
@@ -4030,7 +4109,7 @@ Accept wildcard characters: False
 ### -RejectMessageEnhancedStatusCode
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The RejectMessageEnhancedStatusCode parameter specifies the enhanced status code that's used when the rule rejects messages. Valid values are 5.7.1 or between 5.7.900 and 5.7.999.
 
@@ -4056,9 +4135,13 @@ Accept wildcard characters: False
 ### -RejectMessageReasonText
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The RejectMessageReasonText parameter specifies the explanation text that's used when the rule rejects messages. If the value contains spaces, enclose the value in quotation marks (").
+
+In Exchange 2013 or later, the maximum number of characters is 256.
+
+In the cloud-based service, the maximum number of characters is 1024.
 
 You can use this parameter with the NotifySender parameter for a custom non-delivery report (also known as an NDR or bounce message).
 
@@ -4145,6 +4228,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveRMSAttachmentEncryption
+This parameter is available only in the cloud-based service.
+
+This parameter specifies an action or part of an action for the rule.
+
+The RemoveRMSAttachmentEncryption parameter specifies an action that removes Microsoft Purview Message Encryption from encrypted attachments in email. The attachments were already encrypted before they were attached to the message. The message itself doesn't need to be encrypted. Valid values are:
+
+- $true: The encrypted attachments are decrypted.
+- $false: The encrypted attachments aren't decrypted.
+
+ This parameter also requires the value $true for the RemoveOMEv2 parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RouteMessageOutboundConnector
 This parameter is available only in the cloud-based service.
 
@@ -4172,7 +4280,7 @@ Accept wildcard characters: False
 ### -RouteMessageOutboundRequireTls
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The RouteMessageOutboundRequireTls parameter specifies an action that uses Transport Layer Security (TLS) encryption to deliver messages outside your organization. Valid values are:
 
@@ -4214,8 +4322,8 @@ Accept wildcard characters: False
 ### -RuleSubType
 The RuleSubType parameter specifies the rule type. Valid values are:
 
-- Dlp: The rule is associated with a DLP policy.
-- None: The rule is a regular rule that isn't associated with a DLP policy.
+- Dlp: The rule is associated with a DLP policy. This value is meaningful only in on-premises Exchange.
+- None: The rule is a regular transport rule. This is the default value.
 
 ```yaml
 Type: RuleSubType
@@ -4231,11 +4339,9 @@ Accept wildcard characters: False
 ```
 
 ### -SCLOver
-This parameter is available or functional only in on-premises Exchange.
-
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-This condition is available on Mailbox servers and Edge Transport servers. This condition is not available or functional in the cloud-based service due to how the service filtering stack works.
+In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
 The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
 
@@ -4260,7 +4366,7 @@ Accept wildcard characters: False
 ### -SenderADAttributeContainsWords
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SenderADAttributeContainsWords parameter specifies a condition that looks for words in Active Directory attributes of message senders.
 
@@ -4316,7 +4422,7 @@ Accept wildcard characters: False
 ### -SenderADAttributeMatchesPatterns
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SenderADAttributeMatchesPatterns parameter specifies a condition that looks for text patterns in Active Directory attributes of message senders by using regular expressions.
 
@@ -4370,11 +4476,11 @@ Accept wildcard characters: False
 ### -SenderAddressLocation
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers (for example, the From, Sender, or Reply-To fields). This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
+- Header: Only examine senders in the message headers. For example, in on-premises Exchange the the From, Sender, or Reply-To fields. In Exchange Online, the From field only. This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 
-Note that message envelope searching is only available for the following conditions and exceptions:
+Message envelope searching is available only for the following conditions and exceptions:
 
 - From and ExceptIfFrom
 - FromAddressContainsWords and ExceptIfFromAddressContainsWords
@@ -4398,11 +4504,11 @@ Accept wildcard characters: False
 ### -SenderDomainIs
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SenderDomainIs parameter specifies a condition that looks for senders with email address in the specified domains. You can specify multiple domains separated by commas.
 
-If you want to look for sender email addresses that contain the specified domain (for example, any subdomain of a domain), use the FromAddressMatchesPatterns parameter, and specify the domain by using the syntax '@domain\\.com$'.
+This condition matches domains and subdomains. For example, "contoso.com" matches both "contoso.com" and "subdomain.contoso.com".
 
 You can use SenderAddressLocation parameter to specify where to look for the sender's email address (message header, message envelope, or both).
 
@@ -4440,7 +4546,7 @@ Accept wildcard characters: False
 ### -SenderIpRanges
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SenderIpRanges parameter specifies a condition that looks for senders whose IP addresses matches the specified value, or fall within the specified ranges. Valid values are:
 
@@ -4448,7 +4554,9 @@ The SenderIpRanges parameter specifies a condition that looks for senders whose 
 - IP address range: For example, 192.168.0.1-192.168.0.254.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25.
 
-You can specify multiple IP addresses or ranges separated by commas.
+You can specify multiple values separated by commas.
+
+In Exchange Online, the IP address that's used during evaluation of this condition is the address of the last hop before reaching the service. This IP address is not guaranteed to be the original sender's IP address, especially if third-party software is used during message transport.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4466,7 +4574,7 @@ Accept wildcard characters: False
 ### -SenderManagementRelationship
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SenderManagementRelationship parameter specifies a condition that looks for the relationship between the sender and recipients in messages. Valid values are:
 
@@ -4489,7 +4597,7 @@ Accept wildcard characters: False
 ### -SentTo
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SentTo parameter specifies a condition that looks for recipients in messages. You can use any value that uniquely identifies the recipient. For example:
 
@@ -4518,7 +4626,7 @@ Accept wildcard characters: False
 ### -SentToMemberOf
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SentToMemberOf parameter specifies a condition that looks for messages sent to members of distribution groups, dynamic distribution groups, or mail-enabled security groups. You can use any value that uniquely identifies the group. For example:
 
@@ -4549,14 +4657,14 @@ Accept wildcard characters: False
 ### -SentToScope
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The SentToScope parameter specifies a condition that looks for the location of recipients. Valid values are:
 
-- InOrganization: The recipient is a mailbox, mail user, group, or mail-enabled public folder in your organization or the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain, and the message was sent or received over an authenticated connection.
-- NotInOrganization: The recipients are outside your organization. The recipient's email address isn't in an accepted domain or the recipient's email address is in an accepted domain that's configured as an external relay domain.
-- ExternalPartner: The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail. This value is only available in on-premises Exchange.
-- ExternalNonPartner: The recipients are external to your organization, and the organization isn't a partner organization. This value is only available in on-premises Exchange.
+- InOrganization: The message was sent or received over an authenticated connection **AND** the recipient meets at least one of the following criteria: The recipient is a mailbox, mail user, group, or mail-enabled public folder in the organization, **OR** the recipient's email address is in an accepted domain that's configured as an authoritative domain or an internal relay domain in the organization.
+- NotInOrganization: The recipients are outside the organization. The recipient's email address isn't in an accepted domain or is in an accepted domain that's configured as an external relay domain in the organization.
+- ExternalPartner: This value is available only in on-premises Exchange. The recipients are in a partner organization where you've configured Domain Security (mutual TLS authentication) to send mail.
+- ExternalNonPartner: This value is available only in on-premises Exchange. The recipients are external to your organization, and the organization isn't a partner organization.
 
 ```yaml
 Type: ToUserScope
@@ -4574,7 +4682,7 @@ Accept wildcard characters: False
 ### -SetAuditSeverity
 This parameter specifies an action or part of an action for the rule.
 
-In on-premises Exchange, this action is only available on Mailbox servers.
+In on-premises Exchange, this action is available only on Mailbox servers.
 
 The SetAuditSeverity parameter specifies an action that sets the severity level of the incident report and the corresponding entry that's written to the message tracking log when messages violate DLP policies. Valid values are:
 
@@ -4660,7 +4768,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectStatusCode
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4682,7 +4790,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpRejectMessageRejectText
-This parameter is available or functional only on Edge Transport servers in on-premises Exchange.
+This parameter is functional only on Edge Transport servers in on-premises Exchange.
 
 This parameter specifies an action or part of an action for the rule.
 
@@ -4733,7 +4841,9 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The SubjectContainsWords parameter specifies a condition that looks for words in the Subject field of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
@@ -4775,7 +4885,9 @@ In on-premises Exchange, this condition is available on Mailbox servers and Edge
 
 The SubjectOrBodyContainsWords parameter specifies a condition that looks for words in the Subject field or body of messages.
 
-To specify multiple words or phrases, this parameter uses the syntax: Word1,"Phrase with spaces",word2,...wordN. Don't use leading or trailing spaces.
+To specify multiple words or phrases, use the following syntax: `Word1,"Phrase with spaces",word2,...wordN`. Don't use leading or trailing spaces.
+
+The maximum length of this parameter is 128 characters.
 
 ```yaml
 Type: Word[]
@@ -4829,7 +4941,7 @@ Accept wildcard characters: False
 ### -WithImportance
 This parameter specifies a condition or part of a condition for the rule. The name of the corresponding exception parameter starts with ExceptIf.
 
-In on-premises Exchange, this condition is only available on Mailbox servers.
+In on-premises Exchange, this condition is available only on Mailbox servers.
 
 The WithImportance parameter specifies a condition that looks for messages with the specified importance level. Valid values are:
 
@@ -4855,12 +4967,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csbusyoptions
+online version: https://learn.microsoft.com/powershell/module/skype/get-csbusyoptions
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsBusyOptions
 schema: 2.0.0
@@ -96,6 +96,6 @@ Microsoft.Rtc.Management.AD.UserIdParameter object.
 
 
 ## RELATED LINKS
-[Remove-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
+[Remove-CsBusyOptions](https://learn.microsoft.com/powershell/module/skype/remove-csbusyoptions?view=skype-ps)
 
-[Set-CsBusyOptions](https://docs.microsoft.com/powershell/module/skype/set-csbusyoptions?view=skype-ps)
+[Set-CsBusyOptions](https://learn.microsoft.com/powershell/module/skype/set-csbusyoptions?view=skype-ps)

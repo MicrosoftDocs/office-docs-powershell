@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csrgsprompt
+online version: https://learn.microsoft.com/powershell/module/skype/new-csrgsprompt
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsRgsPrompt
 schema: 2.0.0
@@ -17,8 +17,6 @@ ms.reviewer:
 Creates a new workflow prompt for the Response Group application.
 A workflow prompt is either an audio file that is played or text that is read aloud in order to supply callers with additional information.
 This cmdlet was introduced in Lync Server 2010.
-
-
 
 ## SYNTAX
 
@@ -49,8 +47,6 @@ Each time you need to use a prompt it must be created from scratch; there is no 
 If you provide both a text-to-speech and an audio file prompt, the Response Group application will use the audio file by default, and will rely on the text-to-speech prompt only if the audio file is unavailable.
 After new prompts are created in memory, the corresponding object reference is then typically added to a Response Group call action.
 
-
-
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
@@ -73,16 +69,14 @@ The final command in the example uses New-CsRgsCallAction to create a new Respon
 When creating the call action, the object reference $prompt (which contains the newly-created workflow prompt) is used as the value for the Prompt parameter; the object reference $queue is likewise used in conjunction with the QueueID parameter.
 After running this command, the new call action and its new workflow prompt are ready to be added to a Response Group workflow.
 
-
 ### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 
 $queue = Get-CsRgsQueue -Identity service:ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk Queue"
 
-$audioFile = Import-CsRgsAudioFile -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -FileName "welcome.wav" -Content (Get-Content C:\Media\Welcome.wav -Encoding byte -ReadCount 0)
+$audioFile = Import-CsRgsAudioFile -Identity "service:ApplicationServer:atl-cs-001.litwareinc.com" -FileName "welcome.wav" -Content ([System.IO.File]::ReadAllBytes('C:\Media\Welcome.wav'))
 
-$prompt = New-CsRgsPrompt -AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to the help desk.
-Please hold."
+$prompt = New-CsRgsPrompt -AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to the help desk. Please hold."
 
 $z = New-CsRgsCallAction -Prompt $prompt -Action TransferToQueue -QueueID $queue.Identity
 ```
@@ -95,7 +89,6 @@ The imported file is then stored in a variable named $audioFile.
 After the audio file has been imported, both it and a text-to-speech prompt are added to a new workflow prompt ($prompt).
 To do this, the AudioFilePrompt parameter is set to $audioFile, and the TextToSpeechPrompt parameter is set to the text value "Welcome to the help desk.
 Please hold."
-
 
 ## PARAMETERS
 
@@ -154,5 +147,3 @@ New-CsRgsPrompt creates instances of the Microsoft.Rtc.Management.WritableSettin
 [Import-CsRgsAudioFile](Import-CsRgsAudioFile.md)
 
 [New-CsRgsCallAction](New-CsRgsCallAction.md)
-
-

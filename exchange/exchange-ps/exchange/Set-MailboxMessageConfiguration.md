@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxmessageconfiguration
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxmessageconfiguration
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-MailboxMessageConfiguration
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxMessageConfiguration cmdlet to configure the Outlook on the web settings that are applied to specific mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,6 +29,7 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-AutoAddSignatureOnMobile <Boolean>]
  [-AutoAddSignatureOnReply <Boolean>]
  [-CheckForForgottenAttachments <Boolean>]
+ [-CheckForReportJunkDialog <Boolean>]
  [-Confirm]
  [-ConversationSortOrder <ConversationSortOrder>]
  [-DefaultFontColor <String>]
@@ -36,42 +37,63 @@ Set-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultFontName <String>]
  [-DefaultFontSize <Int32>]
  [-DefaultFormat <MailFormat>]
+ [-DefaultSignature <String>]
+ [-DefaultSignatureOnReply <String>]
+ [-DeleteSignatureName <String>]
+ [-DisplayDensityMode <DisplayDensityMode>]
  [-DomainController <Fqdn>]
  [-EchoGroupMessageBackToSubscribedSender <Boolean>]
  [-EmailComposeMode <EmailComposeMode>]
  [-EmptyDeletedItemsOnLogoff <Boolean>]
+ [-FavoritesBitFlags <Int32>]
  [-GlobalReadingPanePosition <MailReadingPanePosition>]
  [-HideDeletedItems <Boolean>]
  [-IgnoreDefaultScope]
+ [-IsDarkModeTheme <Boolean>]
  [-IsFavoritesFolderTreeCollapsed <Boolean>]
+ [-IsFocusedInboxEnabled <Boolean>]
  [-IsMailRootFolderTreeCollapsed <Boolean>]
  [-IsReplyAllTheDefaultResponse <Boolean>]
  [-LinkPreviewEnabled <Boolean>]
  [-MailFolderPaneExpanded <Boolean>]
+ [-MailSendUndoInterval <Int32>]
+ [-ManuallyPickCertificate <Boolean>]
+ [-NavigationBarWidth <Int32>]
  [-NavigationPaneViewOption <NavigationPaneView>]
+ [-NewEnabledPonts <PontType>]
  [-NewItemNotification <NewItemNotification>]
  [-PreferAccessibleContent <Boolean>]
  [-PreviewMarkAsReadBehavior <PreviewMarkAsReadBehavior>]
  [-PreviewMarkAsReadDelaytime <Int32>]
  [-ReadReceiptResponse <ReadReceiptResponse>]
+ [-ReportJunkSelected <Boolean>]
  [-SendAddressDefault <String>]
  [-ShowConversationAsTree <Boolean>]
+ [-ShowInlinePreviews <Boolean>]
+ [-ShowNotificationBar <Boolean>]
  [-ShowPreviewTextInListView <Boolean>]
  [-ShowReadingPaneOnFirstLoad <Boolean>]
  [-ShowSenderOnTopInListView <Boolean>]
  [-ShowUpNext <Boolean>]
  [-SignatureHtml <String>]
+ [-SignatureHtmlBody <String>]
+ [-SignatureName <String>]
  [-SignatureText <String>]
  [-SignatureTextOnMobile <String>]
+ [-SigningCertificateId <String>]
+ [-SigningCertificateSubject <String>]
+ [-SmimeEncrypt <Boolean>]
+ [-SmimeSign <Boolean>]
  [-UseDefaultSignatureOnMobile <Boolean>]
+ [-WebSuggestedRepliesEnabledForUser <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-MailboxMessageConfiguration cmdlet configures Outlook on the web settings for the specified mailbox. These settings include email signature, message format, message options, read receipts, reading pane, and conversations. These settings are not used in Outlook, Exchange ActiveSync, or other email clients. These settings are applied in Outlook on the web only. Settings that contain the word Mobile are applied in Outlook on the web for devices only.
+The Set-MailboxMessageConfiguration cmdlet configures Outlook on the web settings for the specified mailbox. These settings include email signature, message format, message options, read receipts, reading pane, and conversations. These settings are not used in Outlook, Exchange ActiveSync, or other email clients. These settings are applied in Outlook on the web only. Some settings also apply to the new Outlook client. Settings that contain the word Mobile are applied in Outlook on the web for devices only.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -109,7 +131,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -177,6 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignature
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The AutoAddSignature parameter specifies whether to automatically add signatures to new email messages created in Outlook on the web. Valid values are:
 
 - $true: Email signatures are automatically added to new messages.
@@ -198,6 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAddSignatureOnMobile
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The AutoAddSignatureOnMobile parameter automatically adds the signature specified by the SignatureTextOnMobile parameter to messages when the user creates messages in Outlook on the web for devices.
 
 Valid input for this parameter is $true or $false. The default value is $false.
@@ -256,6 +282,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CheckForReportJunkDialog
+This parameter is available only in the cloud-based service.
+
+{{ Fill CheckForReportJunkDialog Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -266,7 +310,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -395,6 +439,78 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultSignature
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultSignature Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultSignatureOnReply
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultSignatureOnReply Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteSignatureName
+This parameter is available only in the cloud-based service.
+
+{{ Fill DeleteSignatureName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayDensityMode
+This parameter is available only in the cloud-based service.
+
+{{ Fill DisplayDensityMode Description }}
+
+```yaml
+Type: DisplayDensityMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 This parameter is available only in on-premises Exchange.
 
@@ -416,7 +532,10 @@ Accept wildcard characters: False
 ### -EchoGroupMessageBackToSubscribedSender
 This parameter is available only in the cloud-based service.
 
-{{ Fill EchoGroupMessageBackToSubscribedSender Description }}
+The EchoGroupMessageBackToSubscribedSender parameter controls whether subscribed members of Microsoft 365 Groups receive copies of messages that they send to those Groups. Valid values are:
+
+- $true: If a subscribed member of a Microsoft 365 Group sends a message to that Group, they'll receive a copy of the message in their Inbox.
+- $false: Subscribed members of a Microsoft 365 Group don't receive their own copies of messages that they send to the Group. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -432,7 +551,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailComposeMode
-This parameter is available or functional only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The EmailComposeMode parameter specifies how the user creates messages in Outlook on the web. You can use the following values:
 
@@ -470,7 +589,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FavoritesBitFlags
+This parameter is available only in the cloud-based service.
+
+{{ Fill FavoritesBitFlags Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GlobalReadingPanePosition
+This parameter is functional only in Exchange 2016 or later. It doesn't work in Exchange Online.
+
 The GlobalReadingPanePosition specifies the default location of the reading pane in Outlook on the web. Valid values are:
 
 - Off
@@ -509,9 +648,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -521,6 +660,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDarkModeTheme
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsDarkModeTheme Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -540,6 +697,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsFocusedInboxEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill IsFocusedInboxEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -626,6 +801,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MailSendUndoInterval
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailSendUndoInterval Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManuallyPickCertificate
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManuallyPickCertificate Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NavigationBarWidth
+This parameter is available only in the cloud-based service.
+
+{{ Fill NavigationBarWidth Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NavigationPaneViewOption
 The NavigationPaneViewOption parameter specifies the default navigation pane view in Outlook on the web. Valid values are:
 
@@ -640,6 +869,24 @@ Type: NavigationPaneView
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewEnabledPonts
+This parameter is available only in the cloud-based service.
+
+{{ Fill NewEnabledPonts Description }}
+
+```yaml
+Type: PontType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -756,6 +1003,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReportJunkSelected
+This parameter is available only in the cloud-based service.
+
+{{ Fill ReportJunkSelected Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SendAddressDefault
 This parameter is available only in the cloud-based service.
 
@@ -772,7 +1037,7 @@ By default, no default From address is specified on the mailbox. When no default
 - The primary email address on the mailbox is used for all new messages.
 - The To address of the incoming message is used as the From address for all replies or forwarded messages.
 
-You can find the available values for SendAddressDefault on a mailbox by running the command `Get-SendAddress -Mailbox <MailboxIdentity>`.
+You can find the available values for SendAddressDefault on a mailbox by running the command: `Get-MailboxMessageConfiguration -Mailbox <MailboxIdentity> | Format-List SendAddressDefault`.
 
 ```yaml
 Type: String
@@ -797,6 +1062,42 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowInlinePreviews
+This parameter is available only in the cloud-based service.
+
+{{ Fill ShowInlinePreviews Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowNotificationBar
+This parameter is available only in the cloud-based service.
+
+{{ Fill ShowNotificationBar Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -882,6 +1183,8 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureHtml
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The SignatureHtml parameter specifies the email signature that's available to the user in HTML-formatted messages in Outlook on the web. You can use plain text or text with HTML tags. However, any JavaScript code is removed.
 
 To automatically add this email signature to HTML-formatted messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to $true.
@@ -899,7 +1202,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SignatureHtmlBody
+This parameter is available only in the cloud-based service.
+
+{{ Fill SignatureHtmlBody Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureName
+This parameter is available only in the cloud-based service.
+
+{{ Fill SignatureName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SignatureText
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The SignatureText parameter specifies the email signature that's available to the user in plain text messages in Outlook on the web. This parameter supports all Unicode characters.
 
 To automatically add the email signature to plain text messages created by the user in Outlook on the web, the AutoAddSignature parameter must be set to the value $true.
@@ -918,6 +1259,8 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureTextOnMobile
+**Note**: This parameter doesn't work if the Outlook roaming signatures feature is enabled in your cloud-based organization. Admins can now temporarily disable roaming signatures without opening a support ticket by using the PostponeRoamingSignaturesUntilLater parameter on the Set-OrganizationConfig cmdlet.
+
 The SignatureTextOnMobile parameter specifies the email signature that's available in messages created by the user in Outlook on the web for devices. This parameter supports all Unicode characters.
 
 To automatically add the email signature to messages created by the user in Outlook on the web for devices, the AutoAddSignatureOnMobile parameter must be set to the value $true.
@@ -927,6 +1270,78 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SigningCertificateId
+This parameter is available only in the cloud-based service.
+
+{{ Fill SigningCertificateId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SigningCertificateSubject
+This parameter is available only in the cloud-based service.
+
+{{ Fill SigningCertificateSubject Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmimeEncrypt
+This parameter is available only in the cloud-based service.
+
+{{ Fill SmimeEncrypt Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmimeSign
+This parameter is available only in the cloud-based service.
+
+{{ Fill SmimeSign Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -953,6 +1368,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WebSuggestedRepliesEnabledForUser
+This parameter is available only in the cloud-based service.
+
+{{ Fill WebSuggestedRepliesEnabledForUser Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -960,7 +1393,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -974,12 +1407,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

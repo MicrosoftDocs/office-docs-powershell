@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/export-csrgsconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/export-csrgsconfiguration
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Export-CsRgsConfiguration
 schema: 2.0.0
@@ -163,4 +163,3 @@ The Export-CsRgsConfiguration cmdlet creates compressed files with the .ZIP file
 ## RELATED LINKS
 
 [Import-CsRgsConfiguration](Import-CsRgsConfiguration.md)
-

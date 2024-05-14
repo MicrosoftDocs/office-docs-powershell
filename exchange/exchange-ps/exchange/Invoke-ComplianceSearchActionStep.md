@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/invoke-compliancesearchactionstep
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 title: Invoke-ComplianceSearchActionStep
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 This cmdlet is reserved for internal Microsoft use.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: ComplianceSearchActionIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: 1
@@ -62,7 +62,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: PSObject
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -78,7 +78,7 @@ This cmdlet is reserved for internal Microsoft use.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -92,11 +92,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/test-dataclassification
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/test-dataclassification
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 title: Test-DataClassification
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Test-DataClassification cmdlet to find the confidence and count of a sensitive information type that's found in a specified text string.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Test-DataClassification
  [-ClassificationNames <String[]>]
  [-DomainController <Fqdn>]
+ [-FileExtension <String>]
  [-TestTextExtractionResults <TestTextExtractionResult[]>]
  [-TextToClassify <String>]
  [<CommonParameters>]
@@ -32,13 +33,14 @@ Test-DataClassification
 ## DESCRIPTION
 This cmdlet lets you know the classification results that are returned by the Microsoft classification engine in specific text. The classification results include the sensitive type, its count, and confidence.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-$r = Test-DataClassification -TextToClassify "Credit card information Visa: 4485 3647 3952 7352. Patient Identifier or SSN: 452-12-1232"
+$r = Test-DataClassification -TextToClassify "Credit card information Visa: xxxx xxxx xxxx xxxx. Patient Identifier or SSN: xxx-xx-xxxx"
+
 $r.ClassificationResults
 ```
 
@@ -58,7 +60,7 @@ You can specify multiple values separated by commas.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -68,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is available only in on-premises Exchange.
+This parameter is functional only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -76,7 +78,25 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileExtension
+This parameter is available only in the cloud-based service.
+
+{{ Fill FileExtension Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -92,7 +112,7 @@ The TestTextExtractionResults parameter specifies the extracted text from the Te
 Type: TestTextExtractionResult[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -108,7 +128,7 @@ The TextToClassify parameter specifies the text string for which classification 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance Center
+Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Security & Compliance
 
 Required: False
 Position: Named
@@ -122,11 +142,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

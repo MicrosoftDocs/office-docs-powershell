@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-administrativeunit
+online version: https://learn.microsoft.com/powershell/module/exchange/get-administrativeunit
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-AdministrativeUnit
 schema: 2.0.0
@@ -12,15 +12,13 @@ ms.reviewer:
 # Get-AdministrativeUnit
 
 ## SYNOPSIS
-This cmdlet is available or functional only in the cloud-based service.
+This cmdlet is functional only in the cloud-based service.
 
-Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Azure Active Directory containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
+Use the Get-AdministrativeUnit cmdlet to view administrative units, which are Microsoft Entra containers of resources. You can use administrative units to delegate administrative permissions and apply policies to different groups of users.
 
-**Note**: Administrative units are only available in Azure Active Directory Premium. You create and manage administrative units in Azure AD PowerShell.
+**Note**: Administrative units are available only in Microsoft Entra ID P1 or P2. You create and manage administrative units in Microsoft Graph PowerShell.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,7 +31,7 @@ Get-AdministrativeUnit [[-Identity] <AdministrativeUnitIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -42,7 +40,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-AdministrativeUnit
 ```
 
-This example returns a summary list of all Azure Active Directory administrative units.
+This example returns a summary list of all Microsoft Entra administrative units.
 
 ### Example 2
 ```powershell
@@ -56,8 +54,8 @@ This example returns detailed information about the administrative unit with the
 ### -Identity
 The Identity parameter specifies the administrative unit that you want to view. You can use any value that uniquely identifies the administrative unit. For example:
 
-- Display name (this value is the same in Azure AD PowerShell)
-- ExternalDirectoryObjectId (this GUID value is the same as the ObjectId property in Azure AD PowerShell)
+- Display name (this value is the same in Microsoft Graph PowerShell)
+- ExternalDirectoryObjectId (this GUID value is the same as the ObjectId property in Microsoft Graph PowerShell)
 - Name (GUID value)
 - Distinguished name (DN)
 - GUID (different value than Name)
@@ -133,11 +131,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

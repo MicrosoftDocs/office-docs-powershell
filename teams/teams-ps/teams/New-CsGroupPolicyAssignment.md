@@ -1,18 +1,16 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment
+online version: https://learn.microsoft.com/powershell/module/teams/new-csgrouppolicyassignment
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # New-CsGroupPolicyAssignment
 
 ## SYNOPSIS
-
-**Note:** Group policy assignment is currently not available in Microsoft 365 Government GCC High or DoD deployments.
 
 This cmdlet is used to assign a policy to a security group or distribution list.
 
@@ -20,29 +18,38 @@ This cmdlet is used to assign a policy to a security group or distribution list.
 
 ```
 New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <String> [-Rank <Int32>]
- [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-PassThru]
- [-Proxy <Uri>] [-ProxyCredential <PSCredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This is used to assign a policy to a security group or distribution list. The policy assignment will then be propagated to the members of the group (even if members are added to the group later) in accordance with the rules for group policy inheritance. If a user is directly assigned a policy of a specific type, then they will not inherit a policy of the same type from a group. If a user is a member of two or more groups that each have a policy of the same type assigned, then the user will inherit the policy based on the group policy assignment with the highest rank.
+> [!NOTE]
+> As of May 2023, group policy assignment functionality in Teams PowerShell Module has been extended to support all policy types used in Teams except for the following:
+> - Teams App Permission Policy
+> - Teams Network Roaming Policy
+> - Teams Emergency Call Routing Policy
+> - Teams Voice Applications Policy
+> - Teams Upgrade Policy
+>   
+> This cmdlet will be deprecated in the future. Going forward, group policy assignment can be performed by using the corresponding Grant-Cs[PolicyType] cmdlet with the '-Group' parameter. 
 
-The group policy assignment rank is set at the time a policy is being assigned to a group and is relative to other group policy assignments of the same policy type. For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be rank 1 while the other will be rank 2.
+This cmdlet is used to assign a policy to a Microsoft 365 group, a security group, or a distribution list. When creating a group policy assignment, you must specify a rank, which indicates the precedence of that assignment relative to any other group assignments for the same policy type that may exist. The assignment will be applied to users in the group for any user that does not have a direct policy assignment, provided the user does not have any higher-ranking assignments from other groups for the same policy type.
 
-It's helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank. In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank. When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be. If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list.
+The group policy assignment rank is set at the time a policy is assigned to a group and it is relative to other group policy assignments of the same policy type. For example, if there are two groups, each assigned a Teams Meeting policy, then one of the group assignments will be rank 1 while the other will be rank 2. It's helpful to think of rank as determining the position of each policy assignment in an ordered list, from highest rank to lowest rank. In fact, rank can be specified as any number, but these are converted into sequential values 1, 2, 3, etc. with 1 being the highest rank. When assigning a policy to a group, set the rank to be the position in the list where you want the new group policy assignment to be. If a rank is not specified, the policy assignment will be given the lowest rank, corresponding to the end of the list. Assignments applied directly to a user will be treated like rank 0, having precedence over all assignments applied via groups.
 
-Group policy assignment allows you to easily manage policies across different subsets of users within your organization. Group policy assignment is recommended for groups of up to 50000 users, but it will also work with larger groups up to 100000 users. Segment your users into smaller groups, or make use of default policies for the majority of users with the most common policies and only use groups for those users that require other policies.
+Once a group policy assignment is created, the policy assignment will be propagated to the members of the group, including users that are added to the group after the assignment was created. Propagation time of the policy assignments to members of the group varies based on the number of users in the group. Propagation time for subsequent group membership changes also varies based on the number of users being added or removed from the group. For large groups, propagation to all members may take 24 hours or more. When using group policy assignment, the recommended maximum group membership size is 50,000 users per group.
 
-Propagation of the policy assignments to members of the group can take up to 24 hours. Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups. 
+> [!NOTE]
+> - A given policy type can be assigned to at most 64 groups, across policy instances for that type.
+> - Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups. 
+> - Direct user assignments of policy take precedence over any group policy assignments for a given policy type. Group PolicyPolicy assignments only take effect to a user if that user does not have a direct policy assignment. 
+> - Get-CsOnlineUser only shows *direct* assignments of policy. It does not show the effect of group policy assignments. To view a specific user's effective policy, use `Get-CsUserPolicyAssignment`. This cmdlet shows whether the effective policy is from a direct assignment or from a group, as well as the ranked order of each group policy assignment in the case where a user is a member of more than 1 group with a group policy assignment of the same policy type. For example, to view all TeamsMeetingPolicy assignments for a given user, $user, run the following powershell cmdlet:  `Get-CsUserPolicyAssignment -Identity $user -PolicyType TeamsMeetingPolicy|select -ExpandProperty PolicySource`.  For details, see [Get-CsUserPolicyAssignment](Get-CsUserPolicyAssignment.md).
+> - Group policy assignment is currently not available in the Microsoft 365 DoD deployment.
 
-Group policy assignment is currently limited to the following policy types:
-TeamsAppSetupPolicy (App Setup policies), TeamsCallingPolicy (Calling policies), TeamsCallParkPolicy (Call park policies), TeamsChannelsPolicy, TeamsComplianceRecordingPolicy, TenantDialPlan, TeamsEducationAssignmentsAppPolicy, TeamsMeetingBroadcastPolicy (Live Events policies), TeamsMeetingPolicy (Meeting policies), TeamsMessagingPolicy (Messaging policies), TeamsShiftsPolicy, TeamsUpdateManagementPolicy.
 
 ## EXAMPLES
 
 ### Example 1
-In this example, a policy is assigned to a group specified by object id.
+In this example, a policy is assigned to a group specified by its object id.
 
 ```
 New-CsGroupPolicyAssignment -GroupId d8ebfa45-0f28-4d2d-9bcc-b158a49e2d17 -PolicyType TeamsMeetingPolicy -PolicyName AllOn -Rank 1
@@ -108,20 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
-The type of the policy to be assigned.
-Possible values:
-- TeamsAppSetupPolicy
-- TeamsCallingPolicy
-- TeamsCallParkPolicy
-- TeamsChannelsPolicy
-- TeamsComplianceRecordingPolicy
-- TenantDialPlan
-- TeamsEducationAssignmentsAppPolicy
-- TeamsMeetingBroadcastPolicy
-- TeamsMeetingPolicy
-- TeamsMessagingPolicy
-- TeamsShiftsPolicy
-- TeamsUpdateManagementPolicy
+The type of policy to be assigned.
 
 ```yaml
 Type: String
@@ -165,50 +159,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Break
-Wait for .NET debugger to attach
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelineAppend
-SendAsync Pipeline Steps to be appended to the front of the pipeline
-
-```yaml
-Type: SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPipelinePrepend
-SendAsync Pipeline Steps to be prepended to the front of the pipeline
-
-```yaml
-Type: SendAsyncStep[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -PassThru
 Returns true when the command succeeds
@@ -225,50 +175,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Proxy
-The URI for the proxy server to use
-
-```yaml
-Type: Uri
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyCredential
-Credentials for a proxy server to use for the remote call
-
-```yaml
-Type: PSCredential
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProxyUseDefaultCredentials
-Use the default credentials for the proxy
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
@@ -313,9 +219,8 @@ For more information, see [About CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
+[Get-CsUserPolicyAssignment](Get-CsUserPolicyAssignment.md)
+
 [Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
 
-[Set-CsGroupPolicyAssignment](Set-CsGroupPolicyAssignment.md)
-
 [Remove-CsGroupPolicyAssignment](Remove-CsGroupPolicyAssignment.md)
-

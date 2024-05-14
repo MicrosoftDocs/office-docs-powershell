@@ -1,5 +1,5 @@
 ---
-localization_priority: Normal
+ms.localizationpriority: medium
 title: Microsoft Teams cmdlet help reference
 description: "Learn about the Microsoft Teams PowerShell cmdlet help reference."
 ---
@@ -8,7 +8,7 @@ description: "Learn about the Microsoft Teams PowerShell cmdlet help reference."
 
 Welcome to the Microsoft Teams PowerShell cmdlet **Help** reference.
 
-This PowerShell module is used for provisioning and management of teams and their backing groups themselves. The module can be installed here: <https://www.powershellgallery.com/packages/MicrosoftTeams/>. To manage the policies and configurations that apply to the Microsoft Teams service, please see the reference documents for the Skype for Business module: `https://docs.microsoft.com/powershell/module/skype`. Skype for Business Online cmdlets are now integrated into the Teams PowerShell module.
+This PowerShell module is used for provisioning and management of teams and their backing groups themselves. The module can be installed here: <https://www.powershellgallery.com/packages/MicrosoftTeams/>.
 
 Here, you will find all of the Microsoft Teams PowerShell **Help** topics. These topics are 'open source' and open for contributions. If you are interested in contributing to this content, go to the source GitHub repo and look through the README.
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/undo-softdeletedunifiedgroup
+online version: https://learn.microsoft.com/powershell/module/exchange/undo-softdeletedunifiedgroup
 applicable: Exchange Online
 title: Undo-SoftDeletedUnifiedGroup
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Undo-SoftDeletedUnifiedGroup cmdlet to restore soft-deleted Microsoft 365 Groups in your cloud-based organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,9 +32,9 @@ Microsoft 365 Groups are group objects that are available across Microsoft 365 s
 
 Soft-deleted Microsoft 365 Groups are groups that have been deleted, but can be restored within 30 days of being deleted. All of the group contents can be restored within this period. After 30 days, soft-deleted Microsoft 365 Groups are marked for permanent deletion and can't be restored.
 
-To display all soft-deleted Microsoft 365 Groups in your organization, use the Get-AzureADMSDeletedGroup cmdlet in Azure Active Directory PowerShell. To permanently remove (purge) a soft-deleted Microsoft 365 Group, use the Remove-AzureADMSDeletedDirectoryObject cmdlet in Azure Active Directory PowerShell. For more information, see [Permanently delete a Microsoft 365 Group](https://docs.microsoft.com/microsoft-365/admin/create-groups/restore-deleted-group#permanently-delete-a-microsoft-365-group).
+To display all soft-deleted Microsoft 365 Groups in your organization, use the [Get-MgDirectoryDeletedItemAsGroup](https://learn.microsoft.com/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdirectorydeleteditemasgroup) cmdlet in Microsoft Graph PowerShell. To permanently remove (purge) a soft-deleted Microsoft 365 Group, use the [Remove-MgDirectoryDeletedItem](https://learn.microsoft.com/powershell/module/microsoft.graph.identity.directorymanagement/remove-mgdirectorydeleteditem) cmdlet in Microsoft Graph PowerShell.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -118,11 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

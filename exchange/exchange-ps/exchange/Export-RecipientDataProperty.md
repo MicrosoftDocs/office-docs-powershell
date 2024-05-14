@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/export-recipientdataproperty
+online version: https://learn.microsoft.com/powershell/module/exchange/export-recipientdataproperty
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Export-RecipientDataProperty
 schema: 2.0.0
@@ -14,9 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Export-RecipientDataProperty cmdlet to download a user's picture or spoken name sound file. The picture and audio files display in the Global Address List property dialog box, contact card, reading pane, and meeting requests in Outlook.
+Use the Export-RecipientDataProperty cmdlet to download the picture or spoken name audio file of a mailbox or mail contact.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -41,20 +41,24 @@ Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Export-RecipientDataProperty -Identity tony@contoso.com -SpokenName | ForEach { $_.FileData | Add-Content C:\tonysmith.wma -Encoding Byte}
+$SN = Export-RecipientDataProperty -Identity tonys@contoso.com -SpokenName
+
+[System.IO.File]::WriteAllBytes('C:\tonysmith.wma', $SN.FileData)
 ```
 
 This example exports Tony Smith's spoken name audio file and saves it to the local computer.
 
 ### Example 2
 ```powershell
-Export-RecipientDataProperty -Identity "Ayla" -Picture | ForEach { $_.FileData | Add-Content C:\aylakol.jpg -Encoding Byte}
+$Pic = Export-RecipientDataProperty -Identity "Ayla Kol" -Picture
+
+[System.IO.File]::WriteAllBytes('C:\Data\aylakol.jpg', $Pic.FileData)
 ```
 
 This example exports Ayla Kol's picture file to the local computer.
@@ -120,9 +124,11 @@ Accept wildcard characters: False
 ```
 
 ### -Picture
-The Picture switch specifies that the file you're exporting is the user's picture file. You don't need to specify a value with this switch.
+The Picture switch specifies that you're exporting the user's picture. You don't need to specify a value with this switch.
 
-You can't use this switch with the SpokenName switch. You can only export one file type at a time.
+The user's picture is exported as a JPEG file.
+
+You can't use this switch with the SpokenName switch.
 
 ```yaml
 Type: SwitchParameter
@@ -138,9 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### -SpokenName
-The SpokenName switch specifies that the file you're exporting is the user's audio file. You don't need to specify a value with this switch.
+The SpokenName switch specifies that you're exporting the user's spoken name. You don't need to specify a value with this switch.
 
-This cmdlet exports the WMA 9-voice format. You can't use this switch with the Picture switch. You can only export one file type at a time.
+The user's spoken name is exported as a WMA 9 file.
+
+You can't use this switch with the Picture switch.
 
 ```yaml
 Type: SwitchParameter
@@ -176,12 +184,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

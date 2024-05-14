@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/new-team
+online version: https://learn.microsoft.com/powershell/module/teams/new-team
 schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
@@ -14,12 +14,12 @@ ms.reviewer:
 This cmdlet lets you provision a new Team for use in Microsoft Teams and will create an O365 Unified Group to back the team. 
 Groups created through teams cmdlets, APIs, or clients will not show up in Outlook by default. 
 
-If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
+If you want these groups to appear in Outlook clients, you can use the [Set-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/set-unifiedgroup) cmdlet in the Exchange Powershell Module to disable the switch parameter `HiddenFromExchangeClientsEnabled` (-HiddenFromExchangeClientsEnabled:$false).
 
 
 Note: The Teams application may need to be open by an Owner for up to two hours before changes are reflected.
 
-IMPORTANT: Using this cmdlet to create a new team using a template is still in preview. You can install and use the preview module from the PowerShell test gallery. For instructions on installing and using the Teams PowerShell preview module, see [Install the pre-release version of the Teams PowerShell module](https://docs.microsoft.com/microsoftteams/install-prerelease-teams-powershell-module). 
+
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ New-Team -DisplayName <String> [-Description <String>] [-MailNickName <String>] 
  [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
  [-AllowUserEditMessages <Boolean>] [-AllowUserDeleteMessages <Boolean>] [-AllowOwnerDeleteMessages <Boolean>]
  [-AllowTeamMentions <Boolean>] [-AllowChannelMentions <Boolean>] [-ShowInTeamsSearchAndSuggestions <Boolean>] 
- [-RetainCreatedGroup <SwitchParameter>] [<CommonParameters>]
+ [-RetainCreatedGroup <SwitchParameter>] [-AllowCreatePrivateChannels <Boolean>] [<CommonParameters>]
 ```
 
 ### MigrateGroup
@@ -48,7 +48,7 @@ New-Team -GroupId <String> [-Owner <String>] [-AllowGiphy <Boolean>] [-GiphyCont
 ```
 
 ## DESCRIPTION
-Creates a new team with user specified settings, and returns a Group object with a GroupID property. Note that Templates are not yet supported in our 1.0 PowerShell release.
+Creates a new team with user specified settings, and returns a Group object with a GroupID property.
 
 ## EXAMPLES
 
@@ -85,8 +85,9 @@ This example creates a team, adds three members to it, and creates three channel
 The MailNickName parameter specifies the alias for the associated Office 365 Group.
 This value will be used for the mail enabled object and will be used as PrimarySmtpAddress for this Office 365 Group.
 The value of the MailNickName parameter has to be unique across your tenant.
+Note: If Microsoft 365 groups naming policies are enabled in your tenant, this parameter is required and must also comply with the naming policy.
 
-For more details about the naming conventions see here: [New-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/new-unifiedgroup#parameters), Parameter: -Alias.
+For more details about the naming conventions see here: [New-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/new-unifiedgroup#parameters), Parameter: -Alias.
 
 ```yaml
 Type: String
@@ -146,8 +147,6 @@ Accept wildcard characters: False
 ```
 
 ### -Template
-Note: this parameter is not supported in our 1.0 PowerShell release, only in Preview.
-
 If you have an EDU license, you can use this parameter to specify which template you'd like to use for creating your group.
 Do not use this parameter when converting an existing group.
 
@@ -425,7 +424,7 @@ Accept wildcard characters: False
 
 ### -GroupId
 Specify a GroupId to convert to a Team.  If specified, you cannot provide the other values that are already specified by the existing group, namely: Visibility, Alias, Description, or DisplayName.
-If, for example, you need to create a Team from an existing Microsoft 365 Group, use the _ExternalDirectoryObjectId_ property value returned by [Get-UnifiedGroup](https://docs.microsoft.com/powershell/module/exchange/get-unifiedgroup?view=exchange-ps).
+If, for example, you need to create a Team from an existing Microsoft 365 Group, use the _ExternalDirectoryObjectId_ property value returned by [Get-UnifiedGroup](https://learn.microsoft.com/powershell/module/exchange/get-unifiedgroup?view=exchange-ps).
 
 ```yaml
 Type: String
@@ -484,6 +483,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowCreatePrivateChannels
+Determines whether private channel creation is allowed for the team.
+
+```yaml
+Type: Boolean
+Parameter Sets: CreateTeam
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -498,8 +512,8 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-[Remove-Team](remove-team.md)
+[Remove-Team](Remove-Team.md)
 
-[Get-Team](get-team.md)
+[Get-Team](Get-Team.md)
 
-[Set-Team](set-team.md)
+[Set-Team](Set-Team.md)

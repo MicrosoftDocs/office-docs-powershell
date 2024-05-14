@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/import-cscompanyphonenormalizationrules
+online version: https://learn.microsoft.com/powershell/module/skype/import-cscompanyphonenormalizationrules
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Import-CsCompanyPhoneNormalizationRules
 schema: 2.0.0
@@ -190,5 +190,3 @@ None
 [New-CsAddressBookNormalizationConfiguration](New-CsAddressBookNormalizationConfiguration.md)
 
 [Get-CsAddressBookNormalizationConfiguration](Get-CsAddressBookNormalizationConfiguration.md)
-
-

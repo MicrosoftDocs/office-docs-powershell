@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csconversationhistoryconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csconversationhistoryconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsConversationHistoryConfiguration
 schema: 2.0.0
@@ -137,4 +137,3 @@ Instead, `Remove-CsConversationHistoryConfiguration` resets instances of the Mic
 [Get-CsConversationHistoryConfiguration](Get-CsConversationHistoryConfiguration.md)
 
 [Set-CsConversationHistoryConfiguration](Set-CsConversationHistoryConfiguration.md)
-

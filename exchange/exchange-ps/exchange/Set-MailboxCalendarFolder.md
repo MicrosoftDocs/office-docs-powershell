@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxcalendarfolder
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxcalendarfolder
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-MailboxCalendarFolder
 schema: 2.0.0
 author: chrisda
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxCalendarFolder cmdlet to configure calendar publishing or sharing settings on a mailbox for the visibility of calendar information to external users. To add or modify the permissions so internal users can access the calendar, use the Add-MailboxFolderPermission or Set-MailboxFolderPermission cmdlets.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -45,7 +45,7 @@ The Set-MailboxCalendarFolder cmdlet configures calendar publishing information.
 - Level of detail to publish for the calendar
 - Whether the published URL of the calendar is enabled for search on the web
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -87,7 +87,7 @@ Example values for this parameter are `john@contoso.com:\Calendar` or `John:\Cal
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -106,7 +106,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -118,10 +118,9 @@ Accept wildcard characters: False
 ### -DetailLevel
 The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Valid values are:
 
-- AvailabilityOnly (This is the default value)
+- AvailabilityOnly (default)
 - LimitedDetails
 - FullDetails
-- Editor
 
 This parameter is meaningful only when the PublishEnabled parameter value is $true.
 
@@ -285,17 +284,19 @@ This parameter is available only in the cloud-based service.
 
 **Note**: This parameter is supported only for shared calendars that have been upgraded as described in [Calendar sharing in Microsoft 365](https://support.microsoft.com/office/365-b576ecc3-0945-4d75-85f1-5efafb8a37b4), and is not applicable to any other type of calendar or mailbox folder.
 
-The SharedCalendarSyncStartDate parameter specifies the limit for past events that are visible to users who have access to the specified shared calendar. A copy of the shared calendar with events that go back as far as the value specified by this parameter is stored in the user's mailbox.
+The SharedCalendarSyncStartDate parameter specifies the limit for past events in the shared calendar that are visible to delegates. A copy of the shared calendar within the specified date range is stored in the delegate's mailbox.
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, "2021-05-06 14:30:00z".
-- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
+- Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2021 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
 **Notes**:
 
+- You use this parameter on the shared calendar in the delegate's mailbox. For example, `Set-MailboxCalendarFolder -Identity delegate@contoso.onmicrosoft.com:DelegateSharedCalendarFolderId" -SharedCalendarSyncStartDate (Get-Date "5/6/2023 9:30 AM").ToUniversalTime()`. DelegateSharedCalendarFolderId is the FolderId of the shared calendar in the delegate's mailbox (for example, `Get-MailboxFolderStatistics -Identity delegate@contoso.onmicrosoft.com -FolderScope Calendar | Format-List Name,FolderId`).
 - Users need to have FullDetails, Editor, or Delegate access to the specified shared calendar.
 - Setting this parameter might cause events in the shared calendar to briefly disappear from view while the calendar is resynchronized.
+- The value of this parameter is used when initializing the calendar folder sync. After that, every new, updated, and deleted item is processed and synced, regardless of the SharedCalendarSyncStartDate parameter value.
 
 ```yaml
 Type: DateTime
@@ -313,7 +314,7 @@ Accept wildcard characters: False
 ### -UseHttps
 The UseHttps switch specifies whether to use HTTPS for the published URL of the calendar folder. You don't need to specify a value with this switch.
 
-This parameter is meaningful only when the PublishEnabled parameter value is $true.
+This switch is meaningful only when the PublishEnabled parameter value is $true.
 
 ```yaml
 Type: SwitchParameter
@@ -335,7 +336,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -349,12 +350,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-publicfolder
+online version: https://learn.microsoft.com/powershell/module/exchange/get-publicfolder
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-PublicFolder
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-PublicFolder cmdlet to retrieve the attributes of a public folder or a set of public folders.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -69,7 +69,7 @@ Get-PublicFolder [[-Identity] <PublicFolderIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -116,6 +116,22 @@ Get-PublicFolder -Mailbox "Legal Department" -ResidentFolders
 This example returns the public folders that reside in the public folder content mailbox Legal Department.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
+
+```yaml
+Type: PublicFolderIdParameter
+Parameter Sets: GetChildren, Recurse, Identity
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -GetChildren
 The GetChildren switch specifies whether to return only the children of the folder specified by the Identity parameter. You don't need to specify a value with this switch.
@@ -168,22 +184,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name and path of the public folder you want to view. A valid value uses the syntax: `\Level1\Level2\...\LevenN\PublicFolder`. For example, `"\Customer Discussion"` or `"\Engineering\Customer Discussion"`.
-
-```yaml
-Type: PublicFolderIdParameter
-Parameter Sets: GetChildren, Recurse, Identity
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -253,7 +253,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResidentFolders
-The ResidentFolders specifies whether to return public folders that reside in a specific content public folder mailbox. If this parameter isn't specified, the command will only return public folders whose contents reside in the primary hierarchy public folder mailbox.
+The ResidentFolders switch specifies whether to return public folders that reside in a specific content public folder mailbox. You don't need to specify a value with this switch.
+
+If you don't use this switch, the command will return only public folders whose contents reside in the primary hierarchy public folder mailbox.
 
 ```yaml
 Type: SwitchParameter
@@ -312,12 +314,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

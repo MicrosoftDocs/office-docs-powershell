@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-externalinoutlook
+online version: https://learn.microsoft.com/powershell/module/exchange/set-externalinoutlook
 applicable: Exchange Online, Exchange Online Protection
 title: Set-ExternalInOutlook
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-ExternalInOutlook cmdlet to modify the configuration of external sender identification that's available in Outlook, Outlook for Mac, Outlook on the web, and Outlook for iOS and Android.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,7 +30,7 @@ Set-ExternalInOutlook [[-Identity] <OrganizationIdParameter>]
 ## DESCRIPTION
 If your organization already uses mail flow rules (also known as transport rules) to add text to the subject line of messages from external senders, you should disable those rules before you enable this feature to avoid duplication.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -76,7 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowList
-The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive native External sender identification. Valid values are domains (contoso.com) or email addresses (admin@contoso.com).
+The AllowList parameter specifies exceptions to external sender identification in supported versions of Outlook. Messages received from the specified senders or senders in the specified domains don't receive native External sender identification. The allow list uses the `5322.From` address (also known as the **From** address or P2 sender).
+
+Valid values are an individual domain (contoso.com), a domain and all subdomains (*.contoso.com) or email addresses (admin@contoso.com).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -84,7 +84,7 @@ To add or remove one or more values without affecting any existing entries, use 
 
 This parameter is meaningful only when the value of the Enabled parameter is $true.
 
-The maximum number of entries is 30, and the total size of all entries can't exceed one kilobyte.
+The maximum number of entries is 50, and the total size of all entries can't exceed one kilobyte.
 
 ```yaml
 Type: MultiValuedProperty
@@ -125,12 +125,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-OrganizationConfig](https://learn.microsoft.com/powershell/module/exchange/set-organizationconfig)

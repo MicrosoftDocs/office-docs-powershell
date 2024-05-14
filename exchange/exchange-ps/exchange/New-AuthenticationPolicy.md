@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-authenticationpolicy
+online version: https://learn.microsoft.com/powershell/module/exchange/new-authenticationpolicy
 applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-AuthenticationPolicy
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-AuthenticationPolicy cmdlet to create authentication policies in your organization.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -44,13 +42,21 @@ New-AuthenticationPolicy [[-Name] <String>]
  [-BlockLegacyAuthPop]
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
+ [-BlockModernAuthActiveSync]
+ [-BlockModernAuthAutodiscover]
+ [-BlockModernAuthImap]
+ [-BlockModernAuthMapi]
+ [-BlockModernAuthOfflineAddressBook]
+ [-BlockModernAuthPop]
+ [-BlockModernAuthRpc]
+ [-BlockModernAuthWebServices]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -297,7 +303,7 @@ By default, Basic authentication is blocked for the protocol. Use this switch to
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -534,6 +540,150 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockModernAuthActiveSync
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthActiveSync switch specifies whether to block modern authentication with Exchange ActiveSync in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthAutodiscover
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthAutodiscover switch specifies whether to block modern authentication with Autodiscover in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthImap
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthImap switch specifies whether to block modern authentication with IMAP in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthMapi
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthMapi switch specifies whether to block modern authentication with MAPI in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthOfflineAddressBook
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthOfflineAddressBook switch specifies whether to block modern authentication with Offline Address Books in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthPop
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthPop switch specifies whether to block modern authentication with POP in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthRpc
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthRpc switch specifies whether to block modern authentication with RPC in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthWebServices
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthWebServices switch specifies whether to block modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -574,11 +724,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

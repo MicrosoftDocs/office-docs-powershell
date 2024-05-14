@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-dataencryptionpolicy
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-dataencryptionpolicy
+applicable: Exchange Online, Exchange Online Protection
 title: Set-DataEncryptionPolicy
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-DataEncryptionPolicy cmdlet to modify data encryption policies in Exchange Online.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -63,7 +61,7 @@ Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -112,7 +110,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -125,7 +123,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -143,7 +141,7 @@ You need to use this parameter with the PermanentDataPurgeRequested and Permanen
 Type: String
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -163,7 +161,7 @@ After you use this switch, you can't assign the data encryption policy to other 
 Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -194,11 +192,13 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
 
+This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -230,7 +230,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ The Enabled parameter enables or disable the data encryption policy. Valid value
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -259,13 +259,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Use the Force switch when you're trying to initiate the deletion of all data that's encrypted by the data encryption policy (the PermanentDataPurgeRequested switch), but the associated Azure Key Vault has also been deleted. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to delete all data that's encrypted by the data encryption policy (the PermanentDataPurgeRequested switch), but the associated Azure Key Vault has also been deleted.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: TenantAdminPurgeKeyRequest, DCAdminPurgeKeyRequest
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -297,7 +299,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -311,11 +313,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

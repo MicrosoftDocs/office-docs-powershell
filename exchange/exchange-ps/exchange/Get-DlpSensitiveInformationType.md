@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype
-applicable: Exchange Online, Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-dlpsensitiveinformationtype
+applicable: Exchange Online, Security & Compliance
 title: Get-DlpSensitiveInformationType
 schema: 2.0.0
 author: chrisda
@@ -12,16 +12,17 @@ ms.reviewer:
 # Get-DlpSensitiveInformationType
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-DlpSensitiveInformationType cmdlet to list the sensitive information types that are defined for your organization in the Microsoft 365 compliance center. Sensitive information types are used by Data Loss Prevention (DLP) rules to check for sensitive information such as social security, passport, or credit card numbers.
+Use the Get-DlpSensitiveInformationType cmdlet to list the sensitive information types that are defined for your organization in the Microsoft Purview compliance portal. Sensitive information types are used by data loss prevention (DLP) rules to check for sensitive information such as social security, passport, or credit card numbers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
 Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParameter>]
+ [-Capability <ClassificationCapabilityType>]
  [-IncludeDetails]
  [-IncludeElements <ClassificationPrimitiveElementType>]
  [-Organization <OrganizationIdParameter>]
@@ -31,7 +32,7 @@ Get-DlpSensitiveInformationType [[-Identity] <SensitiveInformationTypeIdParamete
 ## DESCRIPTION
 The RecommendedConfidence property of the returned objects contains a value that represents the default (or recommended) confidence level that should be used with the corresponding sensitive information type.
 
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -61,12 +62,28 @@ The Identity parameter specifies the sensitive information type that you want to
 Type: SensitiveInformationTypeIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -Capability
+{{ Fill Capability Description }}
+
+```yaml
+Type: ClassificationCapabilityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -77,7 +94,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -93,7 +110,7 @@ Accept wildcard characters: False
 Type: ClassificationPrimitiveElementType
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -109,7 +126,7 @@ This parameter is reserved for internal Microsoft use.
 Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -123,11 +140,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mapivirtualdirectory
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mapivirtualdirectory
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-MapiVirtualDirectory
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MapiVirtualDirectory cmdlet to modify Messaging Application Programming Interface (MAPI) virtual directories that are used in Internet Information Services (IIS) on Microsoft Exchange servers. A MAPI virtual directory is used by supported versions of Microsoft Outlook to connect to mailboxes by using the MAPIHTTP protocol.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Set-MapiVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -128,8 +128,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionFlags
-This parameter is available only in Exchange Server 2013.
-
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - None: This is the default setting.
@@ -142,7 +140,7 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -152,8 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionSPNList
-This parameter is available only in Exchange Server 2013.
-
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
@@ -163,7 +159,7 @@ The ExtendedProtectionSPNList parameter specifies a list of valid Service Princi
 Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -173,8 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionTokenChecking
-This parameter is available only in Exchange Server 2013.
-
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
 - None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
@@ -187,7 +181,7 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 Type: ExtendedProtectionTokenCheckingMode
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -228,7 +222,7 @@ You can specify multiple values separated by commas.
 
 The default values are NTLM, OAuth, and Negotiate. We recommend that you always have the virtual directory configured for OAuth.
 
-For more information about the different authentication methods, see [Understanding HTTP Authentication](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication) and [What is OAuth authentication?](https://docs.microsoft.com/exchange/using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help#what-is-oauth-authentication).
+For more information about the different authentication methods, see [Understanding HTTP Authentication](https://learn.microsoft.com/dotnet/framework/wcf/feature-details/understanding-http-authentication) and [What is OAuth authentication?](https://learn.microsoft.com/exchange/using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help#what-is-oauth-authentication).
 
 ```yaml
 Type: MultiValuedProperty
@@ -284,12 +278,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

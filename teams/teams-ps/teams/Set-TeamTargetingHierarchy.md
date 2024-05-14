@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams
+online version: https://learn.microsoft.com/powershell/module/teams/connect-microsoftteams
 schema: 2.0.0
-author: mbergamo
-ms.author: mbergamo
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 # Set-TeamTargetingHierarchy
@@ -31,7 +31,7 @@ Based on the CSV file, the following hierarchy is created:
 - Apogee
 - &nbsp;&nbsp;&nbsp;New Jersey
 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basking Ridge
-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moutain Lakes
+- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mountain Lakes
 
 ## EXAMPLES
 
@@ -67,4 +67,4 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 ## RELATED LINKS
 
-- [Get-TeamTargetingHierarchyStatus](https://docs.microsoft.com/powershell/module/teams/get-teamtargetinghierarchystatus)
+[Get-TeamTargetingHierarchyStatus](Get-TeamTargetingHierarchyStatus.md)

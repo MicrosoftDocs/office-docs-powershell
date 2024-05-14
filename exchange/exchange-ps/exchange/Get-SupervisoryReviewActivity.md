@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-supervisoryreviewactivity
-applicable: Exchange Online, Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-supervisoryreviewactivity
+applicable: Exchange Online, Security & Compliance
 title: Get-SupervisoryReviewActivity
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-SupervisoryReviewActivity cmdlet to view all activities performed by a reviewer for a specific supervision policy. This information may be useful if reviewer activities are required in regulatory compliance audits or in litigation.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -28,14 +26,13 @@ Get-SupervisoryReviewActivity -EndDate <ExDateTime> -PolicyId <String> -StartDat
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | fl
-PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusAfterAction
+Get-SupervisoryReviewActivity -PolicyId $policyId -StartDate $startDate -EndDate $endDate | Sort-Object Timestamp -Descending | Format-List PolicyId,ItemSubject,ActivityId,Timestamp,ActionType,ActionAppliedBy,ItemStatusAfterAction
 ```
 
 This example returns all the supervisory review activities for specified supervision policy.
@@ -52,13 +49,13 @@ This example exports all the supervisory review activities for a policy to a .cs
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -74,7 +71,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -86,13 +83,13 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center
+Applicable: Exchange Online, Security & Compliance
 
 Required: True
 Position: Named
@@ -106,11 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

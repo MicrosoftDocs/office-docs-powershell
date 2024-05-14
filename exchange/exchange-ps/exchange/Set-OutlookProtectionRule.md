@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-outlookprotectionrule
+online version: https://learn.microsoft.com/powershell/module/exchange/set-outlookprotectionrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Set-OutlookProtectionRule
 schema: 2.0.0
@@ -18,7 +18,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-OutlookProtectionRule cmdlet to modify an existing Microsoft Outlook protection rule.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,11 +39,11 @@ Set-OutlookProtectionRule [-Identity] <RuleIdParameter>
 ```
 
 ## DESCRIPTION
-Outlook protection rules are used to automatically rights-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To rights-protect messages based on message content, use transport protection rules. For more information, see [Outlook protection rules](https://docs.microsoft.com/exchange/outlook-protection-rules-exchange-2013-help).
+Outlook protection rules are used to automatically rights-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To rights-protect messages based on message content, use transport protection rules. For more information, see [Outlook protection rules](https://learn.microsoft.com/exchange/outlook-protection-rules-exchange-2013-help).
 
 Not specifying any conditions results in an Outlook protection rule being applied to all messages.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -133,7 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress the confirmation prompt produced by the cmdlet when modifying a rule with no conditions, resulting in such rules being applied to all messages.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+Use this switch to suppress the confirmation prompt that appears when you modify a rule with no conditions (the rule applies to all messages).
 
 ```yaml
 Type: SwitchParameter
@@ -284,12 +286,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

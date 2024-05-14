@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csdialinconferencingaccessnumber
+online version: https://learn.microsoft.com/powershell/module/skype/new-csdialinconferencingaccessnumber
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsDialInConferencingAccessNumber
 schema: 2.0.0
@@ -391,5 +391,3 @@ The New-CsDialInConferencingAccessNumber cmdlet creates new instances of the Mic
 [Remove-CsDialInConferencingAccessNumber](Remove-CsDialInConferencingAccessNumber.md)
 
 [Set-CsDialInConferencingAccessNumber](Set-CsDialInConferencingAccessNumber.md)
-
-

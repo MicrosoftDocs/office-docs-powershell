@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.MigrationTool.PowerShell.dll-Help.xml
 Module Name: Microsoft.SharePoint.MigrationTool.PowerShell
-online version: https://docs.microsoft.com/powershell/module/spmt/stop-spmtmigration
+online version: https://learn.microsoft.com/powershell/module/spmt/stop-spmtmigration
 applicable: SharePoint Migration Tool
 title: Stop-SPMTMigration
 schema: 2.0.0
@@ -69,7 +69,7 @@ This example starts a migration first, then run "Stop-SPMTMigration" to cancel t
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

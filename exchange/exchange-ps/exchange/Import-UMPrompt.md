@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/import-umprompt
+online version: https://learn.microsoft.com/powershell/module/exchange/import-umprompt
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 title: Import-UMPrompt
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Import-UMPrompt cmdlet to copy or upload a custom audio file to be used by Unified Messaging (UM) dial plans and auto attendants.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -61,38 +61,37 @@ The Import-UMPrompt cmdlet imports custom greeting audio files into UM dial plan
 
 After this task is completed, the custom audio file can be used by a UM dial plan or auto attendant.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
-Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+Import-UMPrompt -UMDialPlan MyUMDialPlan -PromptFileName "welcomegreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\welcomegreeting.wav'))
 ```
 
-This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM dial plan MyUMDialPlan.
+This example imports the welcome greeting file welcomegreeting.wav from D:\\UMPrompts into the UM dial plan MyUMDialPlan.
 
 ### Example 2
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\welcomegreeting.wav" -Encoding Byte -ReadCount 0
-Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData $c
+Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "welcomegreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\welcomegreeting.wav'))
 ```
 
-This example imports the welcome greeting file welcomegreeting.wav from d:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
+This example imports the welcome greeting file welcomegreeting.wav from D:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
 
 ### Example 3
 ```powershell
-[byte[]]$c = Get-content -Path "d:\UMPrompts\AfterHoursWelcomeGreeting.wav" -Encoding Byte -ReadCount 0
-Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData $c
+Import-UMPrompt -UMAutoAttendant MyUMAutoAttendant -PromptFileName "AfterHoursWelcomeGreeting.wav" -PromptFileData ([System.IO.File]::ReadAllBytes('D:\UMPrompts\AfterHoursWelcomeGreeting.wav'))
 ```
 
-This example imports the welcome greeting file AfterHoursWelcomeGreeting.wav from d:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
+This example imports the welcome greeting file AfterHoursWelcomeGreeting.wav from D:\\UMPrompts into the UM auto attendant MyUMAutoAttendant.
 
 ## PARAMETERS
 
 ### -PromptFileData
 The PromptFileData parameter specifies the byte array of the custom prompt.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]
@@ -227,12 +226,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

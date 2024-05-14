@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/export-transportrulecollection
+online version: https://learn.microsoft.com/powershell/module/exchange/export-transportrulecollection
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Export-TransportRuleCollection
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Export-TransportRuleCollection cmdlet to export the transport rules in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -33,34 +33,38 @@ Export-TransportRuleCollection [[-Identity] <RuleIdParameter>]
 ## DESCRIPTION
 The Export-TransportRuleCollection cmdlet can be used to export the transport rule collection in your organization. The format of the exported transport rule collection changed in Exchange Server 2013. The new format can't be imported into Exchange Server 2010.
 
-Exporting the rules collection is a two-step process. You first export the rules collection to a variable, and then use the Set-Content cmdlet to write the data to an XML file. For more information, see [Set-Content](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-content).
+Exporting the rules collection is a two-step process. You first export the rules collection to a variable, and then use the Set-Content cmdlet to write the data to an XML file. For more information, see [Set-Content](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/set-content).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 $file = Export-TransportRuleCollection
-Set-Content -Path "C:\My Docs\Rules.xml" -Value $file.FileData -Encoding Byte
+
+[System.IO.File]::WriteAllBytes('C:\My Docs\Rules.xml', $file.FileData)
 ```
 
 This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\My Docs folder.
 
-**Note**: In PowerShell 6.0 or later, replace `-Encoding Byte` with `-AsByteStream`.
-
 ### Example 2
 ```powershell
 $file = Export-TransportRuleCollection -ExportLegacyRules
-Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
+
+[System.IO.File]::WriteAllBytes('C:\My Docs\LegacyRules.xml', $file.FileData)
 ```
 
-In Exchange Server 2010, this example exports legacy transport rules created in Exchange 2007 using the ExportLegacyRules switch. The cmdlet should be run from an Exchange 2010 Hub Transport server. The exported rules collection can then be imported to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
+In Exchange Server 2010, this example exports legacy transport rules that were created in Exchange 2007 to an XML file. The first command uses the ExportLegacyRules switch to export legacy transport rules to the variable named $file. The second step saves the exported data to the XML file named LegacyRules.xml.
+
+You can import the exported rules collection to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
+
+You need to run these commands in this example on an Exchange 2010 Hub Transport server.
 
 ## PARAMETERS
 
 ### -Identity
-This parameter is available or functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule that you want to export. You can use any value that uniquely identifies the rule. For example:
 
@@ -181,12 +185,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

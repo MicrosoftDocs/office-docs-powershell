@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-compliancecasemember
-applicable: Security & Compliance Center
+online version: https://learn.microsoft.com/powershell/module/exchange/get-compliancecasemember
+applicable: Security & Compliance
 title: Get-ComplianceCaseMember
 schema: 2.0.0
 author: chrisda
@@ -12,14 +12,15 @@ ms.reviewer:
 # Get-ComplianceCaseMember
 
 ## SYNOPSIS
-This cmdlet is available only in Security & Compliance Center PowerShell. For more information, see [Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/scc-powershell).
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
 
-Use the Get-ComplianceCaseMember cmdlet to view the members of eDiscovery cases in the Microsoft 365 compliance center.
+Use the Get-ComplianceCaseMember cmdlet to view the members of eDiscovery cases in the Microsoft Purview compliance portal.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### Identity
 ```
 Get-ComplianceCaseMember -Case <String>
  [-DomainController <Fqdn>]
@@ -28,8 +29,16 @@ Get-ComplianceCaseMember -Case <String>
  [<CommonParameters>]
 ```
 
+### AllCases
+```
+Get-ComplianceCaseMember
+ [-DomainController <Fqdn>]
+ [-ResultSize <Unlimited>]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance Center PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft 365 compliance center](https://docs.microsoft.com/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -47,9 +56,9 @@ The Case parameter specifies the name of the eDiscovery case that you want to vi
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -65,7 +74,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -81,7 +90,7 @@ The ResultSize parameter specifies the maximum number of results to return. If y
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -95,9 +104,9 @@ The ShowCaseAdmin switch specifies whether to return the eDiscovery case admin i
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
-Applicable: Security & Compliance Center
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -111,11 +120,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

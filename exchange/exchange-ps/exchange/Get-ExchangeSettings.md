@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-exchangesettings
+online version: https://learn.microsoft.com/powershell/module/exchange/get-exchangesettings
 applicable: Exchange Server 2016, Exchange Server 2019
 title: Get-ExchangeSettings
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ExchangeSettings cmdlet to view customized Exchange setting objects that are stored in Active Directory. Use the New-ExchangeSettings to create the settings object, and the Set-ExchangeSettings cmdlet to define the actual settings.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Get-ExchangeSettings [[-Identity] <ExchangeSettingsIdParameter>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -58,6 +58,26 @@ Get-ExchangeSettings -Identity Audit | Format-List
 This example returns a summary list of all Exchange setting objects.
 
 ## PARAMETERS
+
+### -Identity
+The Identity parameter specifies the name of the Exchange setting object. You can use any value that uniquely identifies the object. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+```yaml
+Type: ExchangeSettingsIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -ConfigName
 The ConfigName parameter filter the results by the specified property name. The value you specify is visible in the EffectiveSetting property.
@@ -99,9 +119,11 @@ Accept wildcard characters: False
 ```
 
 ### -Diagnostic
-The Diagnostic switch specifies whether to return extremely detailed information in the results. Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
+The Diagnostic switch specifies whether to return extremely detailed information in the results. You don't need to specify a value with this switch.
 
 The detailed information is visible in the DiagnosticInfo property.
+
+Typically, you use this switch only at the request of Microsoft Customer Service and Support to troubleshoot problems.
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -209,26 +233,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Identity parameter specifies the name of the Exchange setting object. You can use any value that uniquely identifies the object. For example:
-
-- Name
-- Distinguished name (DN)
-- GUID
-
-```yaml
-Type: ExchangeSettingsIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -306,11 +310,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

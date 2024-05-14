@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/get-csadminroleassignment
+online version: https://learn.microsoft.com/powershell/module/skype/get-csadminroleassignment
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Get-CsAdminRoleAssignment
 schema: 2.0.0
@@ -128,4 +128,3 @@ The Get-CsAdminRoleAssignment cmdlet returns string values representing the RBAC
 ## RELATED LINKS
 
 [Get-CsAdminRole](Get-CsAdminRole.md)
-

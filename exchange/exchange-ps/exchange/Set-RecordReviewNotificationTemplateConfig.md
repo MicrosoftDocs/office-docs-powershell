@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-recordreviewnotificationtemplateconfig
-applicable: Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-recordreviewnotificationtemplateconfig
+applicable: Security & Compliance
 title: Set-RecordReviewNotificationTemplateConfig
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Set-RecordReviewNotificationTemplateConfig cmdlet to set up the customized record review notification and reminder that's sent when an item requires review.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -30,7 +28,7 @@ Set-RecordReviewNotificationTemplateConfig -IsCustomizedNotificationTemplate <Bo
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -47,13 +45,13 @@ This example configures customized review notification text and review reminder 
 The IsCustomizedNotificationTemplate switch specifies whether to use a customized review notification instead of the system default notification. Valid values are:
 
 - $true: Use a customized review notification. You specify the notification text using the CustomizedNotificationDataString parameter.
-- $false: Use the the default system notification. This is the default value.
+- $false: Use the default system notification. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -66,13 +64,13 @@ Accept wildcard characters: False
 The IsCustomizedReminderTemplate switch specifies whether to use a customized review reminder instead of the system default reminder:
 
 - $true: Use a customized review reminder. You specify the reminder text using the CustomizedReminderDataString parameter.
-- $false: Use the the default system reminder. This is the default value.
+- $false: Use the default system reminder. This is the default value.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance
 
 Required: True
 Position: Named
@@ -90,7 +88,7 @@ The value of this parameter is meaningful only when the value of the IsCustomize
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -108,7 +106,7 @@ The value of this parameter is meaningful only when the value of the IsCustomize
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online
+Applicable: Security & Compliance
 
 Required: False
 Position: Named
@@ -122,11 +120,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

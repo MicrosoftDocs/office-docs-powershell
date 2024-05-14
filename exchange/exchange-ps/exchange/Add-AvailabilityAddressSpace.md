@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/add-availabilityaddressspace
+online version: https://learn.microsoft.com/powershell/module/exchange/add-availabilityaddressspace
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Add-AvailabilityAddressSpace
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Add-AvailabilityAddressSpace cmdlet to create availability address space
 
 The maximum number off Availability address spaces returned by Active Directory to Exchange is 100. We recommend using 100 or fewer address spaces in order for Availability lookups to work properly.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -29,6 +29,8 @@ Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod> -ForestNam
  [-DomainController <Fqdn>]
  [-ProxyUrl <Uri>]
  [-TargetAutodiscoverEpr <Uri>]
+ [-TargetServiceEpr <String>]
+ [-TargetTenantId <String>]
  [-UseServiceAccount <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -37,30 +39,37 @@ Add-AvailabilityAddressSpace -AccessMethod <AvailabilityAccessMethod> -ForestNam
 ## DESCRIPTION
 In Exchange Online, you need to run the New-AvailabilityConfig cmdlet before you run the Add-AvailabilityAddressSpace cmdlet.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod OrgWideFB -Credentials (Get-Credential)
+Add-AvailabilityAddressSpace -ForestName contoso.com -AccessMethod OrgWideFB -Credentials (Get-Credential)
 ```
 
-This example is useful with an untrusted cross-forest Availability service, or if detailed cross-forest free/busy service isn't desired. Enter a username and password when you're prompted by the command. For an untrusted cross-forest configuration, make sure that the user doesn't have a mailbox.
+In on-premises Exchange, this example is useful with an untrusted cross-forest Availability service, or if detailed cross-forest free/busy service isn't desired. Enter a username and password when you're prompted by the command. For an untrusted cross-forest configuration, make sure that the user doesn't have a mailbox.
 
 ### Example 2
 ```powershell
-Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod PerUserFB -Credentials (Get-Credential)
+Add-AvailabilityAddressSpace -ForestName contoso.com -AccessMethod PerUserFB -Credentials (Get-Credential)
 ```
 
-This example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest, and the specified account connects to the contoso.com forest. The specified account must be an existing account in the contoso.com forest.
+In on-premises Exchange, this example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest, and the specified account connects to the contoso.com forest. The specified account must be an existing account in the contoso.com forest.
 
 ### Example 3
 ```powershell
-Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod PerUserFB -UseServiceAccount $true
+Add-AvailabilityAddressSpace -ForestName contoso.com -AccessMethod PerUserFB -UseServiceAccount $true
 ```
 
-This example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest and uses the service account (typically the local system account or the computer account) to connect to the contoso.com forest. Because the service is trusted, there is no issue with authorization when the current forest tries to retrieve free/busy information from contoso.com.
+In on-premises Exchange, this example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest and uses the service account (typically the local system account or the computer account) to connect to the contoso.com forest. Because the service is trusted, there is no issue with authorization when the current forest tries to retrieve free/busy information from contoso.com.
+
+### Example 4
+```powershell
+Add-AvailabilityAddressSpace -ForestName contoso.onmicrosoft.com -AccessMethod OrgWideFBToken -TargetTenantId "9d341953-da1f-41b0-8810-76d6ef905273" -TargetServiceEpr "outlook.office.com"
+```
+
+In Exchange Online, this example sets up the sharing of free/busy information with contoso.onmicrosoft.com (tenant ID value 9d341953-da1f-41b0-8810-76d6ef905273), which is a regular Microsoft 365 organization.
 
 ## PARAMETERS
 
@@ -69,8 +78,8 @@ The AccessMethod parameter specifies how the free/busy data is accessed. Valid v
 
 - PerUserFB: Per-user free/busy information can be requested. The free/busy data is accessed in the defined per-user free/busy proxy account or group, or in the All Exchange Servers group. This value requires a trust between the two forests, and requires you to use either the UseServiceAccount parameter or Credentials parameter.
 - OrgWideFB: Only default free/busy for each user can be requested. The free/busy data is accessed in the per-user free/busy proxy account or group in the target forest. This value requires you to use either the UseServiceAccount parameter or Credentials parameter.
-- OrgWideFBBasic: This value is reserved for internal Microsoft use.
-- InternalProxy: The request is proxied to an Exchange in the site that has a later version of Exchange.
+- OrgWideFBBasic: Free/busy sharing between tenants that are all in Exchange Online.
+- InternalProxy: The request is proxied to an Exchange server in the site that's running a later version of Exchange.
 - PublicFolder: This value was used to access free/busy data on Exchange Server 2003 servers.
 
 ```yaml
@@ -87,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForestName
-The ForestName parameter specifies the SMTP domain name of the target forest for users whose free/busy data must be retrieved. If your users are distributed among multiple SMTP domains in the target forest, run the Add-AvailabilityAddressSpace command once for each SMTP domain.
+The ForestName parameter specifies the SMTP domain name of the target forest that contains the users you're trying to read free/busy information from. If users are distributed among multiple SMTP domains in the target forest, run the Add-AvailabilityAddressSpace command once for each SMTP domain.
 
 ```yaml
 Type: String
@@ -124,7 +133,7 @@ Accept wildcard characters: False
 ### -Credentials
 The Credentials parameter specifies the username and password that's used to access the Availability services in the target forest.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -160,9 +169,9 @@ Accept wildcard characters: False
 ### -ProxyUrl
 This parameter is available only in on-premises Exchange.
 
-The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy its free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the value of the AccessMethod parameter to InternalProxy.
+The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the AccessMethod parameter value to InternalProxy.
 
-This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://docs.microsoft.com/powershell/module/exchange/new-federationtrust).
+This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://learn.microsoft.com/powershell/module/exchange/new-federationtrust).
 
 ```yaml
 Type: Uri
@@ -178,13 +187,53 @@ Accept wildcard characters: False
 ```
 
 ### -TargetAutodiscoverEpr
-The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
+The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization that you're trying to read free/busy information from. For example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetServiceEpr
+This parameter is available only in the cloud-based service.
+
+The TargetServiceEpr parameter specifies the Exchange Online Calendar Service URL of the external Microsoft 365 organization that you're trying to read free/busy information from. Valid values are:
+
+- Microsoft 365 or Microsoft 365 GCC: outlook.office.com
+- Office 365 operated by 21Vianet: partner.outlook.cn
+- Microsoft 365 GCC High or DoD: outlook.office365.us
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetTenantId
+This parameter is available only in the cloud-based service.
+
+The TargetTenantID parameter specifies the tenant ID of the external Microsoft 365 organization that you're trying to read free/busy information from.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -235,12 +284,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

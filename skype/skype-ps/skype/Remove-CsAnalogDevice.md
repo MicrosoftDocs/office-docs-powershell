@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csanalogdevice
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csanalogdevice
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsAnalogDevice
 schema: 2.0.0
@@ -159,4 +159,3 @@ The `Remove-CsAnalogDevice` cmdlet deletes existing instances of the Microsoft.R
 [New-CsAnalogDevice](New-CsAnalogDevice.md)
 
 [Set-CsAnalogDevice](Set-CsAnalogDevice.md)
-

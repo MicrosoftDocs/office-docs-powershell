@@ -14,8 +14,6 @@
           href: find-exchange-cmdlet-permissions.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
-        - name: Use Update-ExchangeHelp to update Exchange PowerShell help topics on Exchange servers
-          href: use-update-exchangehelp.md
         - name: Recipient filters in Exchange Management Shell commands
           href: recipient-filters.md
           items:
@@ -28,16 +26,26 @@
     - name: Exchange Online PowerShell
       href: exchange-online-powershell.md
       items:
-        - name: About the Exchange Online PowerShell V2 module
+        - name: About the Exchange Online PowerShell module
           href: exchange-online-powershell-v2.md
         - name: Connect to Exchange Online PowerShell - modern auth and MFA
           href: connect-to-exchange-online-powershell.md
+        - name: Connect using app-only authentication for unattended scripts
+          href: app-only-auth-powershell-v2.md
+        - name: Connect using Azure managed identity
+          href: connect-exo-powershell-managed-identity.md
+        - name: Connect using C#
+          href: connect-to-exo-powershell-c-sharp.md
+        - name: Workarounds for Invoke-Command in REST API connections
+          href: invoke-command-workarounds-rest-api.md
         - name: Enable or disable access to Exchange Online PowerShell
           href: disable-access-to-exchange-online-powershell.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
         - name: Find the permissions required to run any Exchange cmdlet
           href: find-exchange-cmdlet-permissions.md
+        - name: What's new in the Exchange Online PowerShell module
+          href: whats-new-in-the-exo-module.md
         - name: Recipient filters in Exchange PowerShell commands
           href: recipient-filters.md
           items:
@@ -45,33 +53,33 @@
               href: filter-properties.md
             - name: Filterable properties for the RecipientFilter parameter
               href: recipientfilter-properties.md
-            - name: Filters in EXO V2 module cmdlets
+            - name: Filters in Exchange Online PowerShell module cmdlets
               href: filters-v2.md
-        - name: App-only authentication for unattended scripts
-          href: app-only-auth-powershell-v2.md
-        - name: Property sets in EXO V2 module cmdlets
+        - name: Property sets in Exchange Online PowerShell module cmdlets
           href: cmdlet-property-sets.md
-        - name: V1 module - Connect to Exchange Online PowerShell
-          href: v1-module-mfa-connect-to-exo-powershell.md
-        - name: Basic auth - Connect to Exchange Online PowerShell
-          href: basic-auth-connect-to-exo-powershell.md
-    - name: Security & Compliance Center PowerShell
+    - name: Security & Compliance PowerShell
       href: scc-powershell.md
       items:
-        - name: Connect to Security & Compliance Center PowerShell - modern auth and MFA
+        - name: About the Exchange Online PowerShell module
+          href: exchange-online-powershell-v2.md
+        - name: Connect to Security & Compliance PowerShell - modern auth and MFA
           href: connect-to-scc-powershell.md
+        - name: App-only authentication for unattended scripts
+          href: app-only-auth-powershell-v2.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
-        - name: V1 module - Connect to Security & Compliance Center PowerShell
-          href: v1-module-mfa-connect-to-scc-powershell.md
-        - name: Basic auth - Connect to Exchange Online Protection PowerShell
-          href: basic-auth-connect-to-scc-powershell.md
+        - name: Information protection client advanced settings
+          href: client-advanced-settings.md
+        - name: What's new in the Exchange Online PowerShell module
+          href: whats-new-in-the-exo-module.md
     - name: Exchange Online Protection PowerShell
       href: exchange-online-protection-powershell.md
       items:
+        - name: About the Exchange Online PowerShell module
+          href: exchange-online-powershell-v2.md
         - name: Connect to Exchange Online Protection PowerShell - modern auth and MFA
           href: connect-to-exchange-online-protection-powershell.md
         - name: Exchange cmdlet syntax
           href: exchange-cmdlet-syntax.md
-        - name: Basic auth - Connect to Exchange Online Protection PowerShell
-          href: basic-auth-connect-to-eop-powershell.md
+        - name: What's new in the Exchange Online PowerShell module
+          href: whats-new-in-the-exo-module.md

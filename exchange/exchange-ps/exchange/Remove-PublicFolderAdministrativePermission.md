@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.WebClient-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-publicfolderadministrativepermission
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-publicfolderadministrativepermission
 applicable: Exchange Server 2010
 title: Remove-PublicFolderAdministrativePermission
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in Exchange Server 2010.
 
 Use the Remove-PublicFolderAdministrativePermission cmdlet to remove administrative permissions for a public folder or a public folder hierarchy.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,7 +47,7 @@ Remove-PublicFolderAdministrativePermission [[-Identity] <PublicFolderIdParamete
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-The Deny parameter specifies whether to deny the permission specified.
+The Deny switch specifies that the permissions you're removing are Deny permissions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -250,10 +250,10 @@ Accept wildcard characters: False
 The InheritanceType parameter specifies the type of inheritance. Valid values are:
 
 - None
-- All
-- Descendents
-- SelfAndChildren
+- All (this is the default value)
 - Children
+- Descendents [sic]
+- SelfAndChildren
 
 ```yaml
 Type: ActiveDirectorySecurityInheritance
@@ -312,12 +312,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

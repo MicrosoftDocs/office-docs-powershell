@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-mailboxautoreplyconfiguration
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-MailboxAutoReplyConfiguration
 schema: 2.0.0
 search.appverid: MET150
@@ -17,7 +17,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-MailboxAutoReplyConfiguration cmdlet to configure Automatic Replies settings for a specific mailbox.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ Set-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter>
 ## DESCRIPTION
 You can disable Automatic Replies for a specified mailbox or organization.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -55,14 +55,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Scheduled -StartTime "7/10/2018 08:00:00" -EndTime "7/15/2018 17:00:00" -InternalMessage "Internal auto-reply message"
 ```
 
-This example configures Automatic Replies for Tony's mailbox to be sent between the specified start and end dates and includes an internal message.
+This example configures Automatic Replies for Tony's mailbox to be sent between the specified start and end dates and includes an internal reply.
 
 ### Example 2
 ```powershell
-Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Enabled -InternalMessage "Internal auto-reply message." -ExternalMessage "External auto-reply message."
+Set-MailboxAutoReplyConfiguration -Identity tony@contoso.com -AutoReplyState Enabled -InternalMessage "Internal auto-reply message." -ExternalMessage "External auto-reply message." -ExternalAudience All
 ```
 
-This example configures Automatic Replies for Tony's mailbox to be sent and includes an internal and an external message.
+This example configures Automatic Replies for Tony's mailbox to be sent, specifies the reply for messages from internal and external senders, and specifies the external reply is sent to any external address.
 
 ## PARAMETERS
 
@@ -84,7 +84,7 @@ The Identity parameter specifies the mailbox that you want to modify. You can us
 Type: MailboxIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDeclineFutureRequestsWhenOOF
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The AutoDeclineFutureRequestsWhenOOF parameter specifies whether to automatically decline new meeting requests that are sent to the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
@@ -151,7 +151,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -CreateOOFEvent
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The CreateOOFEvent parameter specifies whether to create a calendar event that corresponds to the scheduled time period when Automatic Replies are being sent for the mailbox. Valid values are:
 
@@ -182,11 +182,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineAllEventsForScheduledOOF
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The DeclineAllEventsForScheduledOOF parameter specifies whether to decline all existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
-- $true: Existing calendar events in the mailbox that occur during the scheduled time period are declined and removed from the calendar.
+- $true: Existing calendar events in the mailbox that occur during the scheduled time period are declined and removed from the calendar. If the mailbox is the meeting organizer, the events are cancelled for all other attendees.
 - $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This is the default value.
 
 You can use this parameter only when the DeclineEventsForScheduledOOF parameter is set to $true.
@@ -207,11 +207,14 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineEventsForScheduledOOF
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The DeclineEventsForScheduledOOF parameter specifies whether it's possible to decline existing calendar events in the mailbox during the scheduled time period when Automatic Replies are being sent. Valid values are:
 
-- $true: Existing calendar events in the mailbox that occur during the scheduled time period can be declined and removed from the calendar. To decline specific events during the scheduled time period, use the EventsToDeleteIDs parameter. To decline all events during the scheduled time period, use the DeclineAllEventsForScheduledOOF parameter.
+- $true: Existing calendar events in the mailbox that occur during the scheduled time period can be declined and removed from the calendar. If the mailbox is the meeting organizer, the events are cancelled for all other attendees.
+
+  To decline specific events during the scheduled time period, use the EventsToDeleteIDs parameter. To decline all events during the scheduled time period, use the DeclineAllEventsForScheduledOOF parameter.
+
 - $false: Existing calendar events in the mailbox that occur during the scheduled time period remain in the calendar. This is the default value.
 
 You can use this parameter only when the AutoReplyState parameter is set to Scheduled.
@@ -230,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeclineMeetingMessage
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The DeclineMeetingMessage parameter specifies the text in the message when meetings requests that are sent to the mailbox are automatically declined. For example:
 
@@ -275,7 +278,7 @@ Accept wildcard characters: False
 ### -EndTime
 The EndTime parameter specifies the end date and time that Automatic Replies are sent for the mailbox. You use this parameter only when the AutoReplyState parameter is set to Scheduled, and the value of this parameter is meaningful only when AutoReplyState is Scheduled.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -291,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventsToDeleteIDs
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The EventsToDeleteIDs parameter specifies the calendar events to delete from the mailbox when the DeclineEventsForScheduledOOF parameter is set to $true.
 
@@ -360,9 +363,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange PowerShell session, and to use the entire forest as the scope. You don't need to specify a value with this switch.
 
-Using the IgnoreDefaultScope switch introduces the following restrictions:
+This switch enables the command to access Active Directory objects that aren't currently available in the default scope, but also introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
@@ -403,7 +406,7 @@ Accept wildcard characters: False
 ```
 
 ### -OOFEventSubject
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The OOFEventSubject parameter specifies the subject for the calendar event that's automatically created when the CreateOOFEvent parameter is set to $true.
 
@@ -425,7 +428,7 @@ Accept wildcard characters: False
 ### -StartTime
 The StartTime parameter specifies the start date and time that Automatic Replies are sent for the specified mailbox. You use this parameter only when the AutoReplyState parameter is set to Scheduled, and the value of this parameter is meaningful only when AutoReplyState is Scheduled.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -447,7 +450,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -461,12 +464,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

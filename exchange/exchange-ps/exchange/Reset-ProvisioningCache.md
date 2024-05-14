@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/reset-provisioningcache
+online version: https://learn.microsoft.com/powershell/module/exchange/reset-provisioningcache
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Reset-ProvisioningCache
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 The Reset-ProvisioningCache cmdlet clears the Windows PowerShell provisioning cache of frequently used Active Directory objects. This cmdlet is only used for diagnostic purposes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ The Reset-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely
 
 The Reset-ProvisioningCache cmdlet clears the Windows PowerShell provisioning cache of frequently used Active Directory objects. To reduce Active Directory requests, a provisioning cache is initialized in each Windows PowerShell runspace and is used to cache common objects that are frequently used by cmdlets and provisioning handlers. During Exchange cmdlet execution, the provisioning cache loads configuration objects from Active Directory to help run a cmdlet. For example, when you create a mailbox, the New-Mailbox cmdlet obtains properties from Active Directory. When running cmdlets, configuration objects such as database containers, administrative role groups, and LegacyDNs are retrieved from Active Directory. Because these types of objects are stable and don't change for months or years after they're created, they're stored in the provisioning cache used by Windows PowerShell. This increases provisioning efficiency and significantly improves cmdlet performance.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -65,6 +65,22 @@ Reset-ProvisioningCache -Application Powershell-Proxy -Server datacenter1.adatum
 This example runs in a multi-tenant deployment by a data center administrator to reset the provisioning cache for Windows PowerShell for the adatum.com tenant and clear all cache keys.
 
 ## PARAMETERS
+
+### -Server
+The Server parameter specifies the fully qualified domain name (FQDN) of the server that the application you want to reset is running on.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
 
 ### -Application
 The Application parameter specifies the specific administrative application to reset the provisioning cache for. You can use the following values:
@@ -90,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCache
-The GlobalCache switch specifies that all cache keys are cleared.
+The GlobalCache switch clears all cache keys. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -102,22 +118,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Server
-The Server parameter specifies the fully qualified domain name (FQDN) of the server that the application you want to reset is running on.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentOrganization
-The CurrentOrganization switch specifies that the provision cache is reset for this organization.
+The CurrentOrganization switch resets the provision cache for the organization. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -211,12 +211,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

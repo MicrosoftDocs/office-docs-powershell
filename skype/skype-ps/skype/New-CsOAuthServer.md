@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-csoauthserver
+online version: https://learn.microsoft.com/powershell/module/skype/new-csoauthserver
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsOAuthServer
 schema: 2.0.0
@@ -51,7 +51,7 @@ New-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.mic
 ```
 
 Example 1 creates a new OAuth Server named "Office 365".
-The new server uses the metadata URL https://sts.office365.microsoft.com/metadata/json/1.
+The new server uses the metadata URL `https://sts.office365.microsoft.com/metadata/json/1`.
 
 
 ## PARAMETERS
@@ -277,5 +277,3 @@ The New-CsOAuthServer cmdlet creates new instances of the Microsoft.Rtc.Manageme
 [Remove-CsOAuthServer](Remove-CsOAuthServer.md)
 
 [Set-CsOAuthServer](Set-CsOAuthServer.md)
-
-

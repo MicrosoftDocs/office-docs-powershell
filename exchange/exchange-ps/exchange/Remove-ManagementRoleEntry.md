@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/remove-managementroleentry
+online version: https://learn.microsoft.com/powershell/module/exchange/remove-managementroleentry
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Remove-ManagementRoleEntry
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Remove-ManagementRoleEntry cmdlet to remove existing management role entries.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -32,9 +32,9 @@ Remove-ManagementRoleEntry [-Identity] <RoleEntryIdParameter>
 ## DESCRIPTION
 The Remove-ManagementRoleEntry cmdlet removes existing role entries. However, you can't remove role entries from built-in management roles.
 
-For more information about management role entries, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
+For more information about management role entries, see [Understanding management roles](https://learn.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -47,19 +47,21 @@ This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
 
 ### Example 2
 ```powershell
-Get-ManagementRoleEntry "Tier 1 Help Desk\*" | Where-Object {$_.Name -like 'New-*'} | %{Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
+Get-ManagementRoleEntry "Tier 1 Help Desk\*" | where {$_.Name -like 'New-*'} | foreach {Remove-ManagementRoleEntry -Identity "$($_.id)\$($_.name)"}
 ```
 
-This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Where-Object cmdlet which specifies the verb filter and then, these results are being piped to Remove-ManagementRoleEntry cmdlet.
+This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Where-Object cmdlet which specifies the verb filter, and then these results are piped to the Remove-ManagementRoleEntry cmdlet.
 
-This example forces you to acknowledge the command before proceeding.
+This example forces you to acknowledge the command before proceeding (we didn't use `-Confirm:$false` or `-Force`).
+
+**Note**: Exchange Online PowerShell requires the complex syntax as described, and the same command also works in the Exchange Management Shell in on-premises Exchange servers. The Exchange Management Shell supports much simpler syntax for the same result, but the command doesn't work in Exchange Online PowerShell: `Get-ManagementRoleEntry "Tier 1 Help Desk\New-* | Remove-ManagementRoleEntry`.
 
 ## PARAMETERS
 
 ### -Identity
 The Identity parameter specifies the role entry that you want to remove. This parameter uses the syntax: `<management role>\<role entry name>` (for example, `CustomRole\Set-Mailbox`).
 
-For more information about how management role entries work, see [Understanding management roles](https://docs.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
+For more information about how management role entries work, see [Understanding management roles](https://learn.microsoft.com/exchange/understanding-management-roles-exchange-2013-help).
 
 If the role entry name contains spaces, enclose the name in quotation marks (").
 
@@ -116,7 +118,9 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -152,12 +156,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/restore-mailbox
+online version: https://learn.microsoft.com/powershell/module/exchange/restore-mailbox
 applicable: Exchange Server 2010
 title: Restore-Mailbox
 schema: 2.0.0
@@ -18,7 +18,7 @@ Use the Restore-Mailbox cmdlet to extract mailbox content from a restored databa
 
 **Note**: In Exchange Server 2010 Service Pack 1 (SP1) or later, use the New-MailboxRestoreRequest cmdlet instead of the Restore-Mailbox cmdlet to extract mailbox content from a restored database.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ Restore-Mailbox [-Identity] <MailboxIdParameter> -RecoveryDatabase <DatabaseIdPa
 ## DESCRIPTION
 The Restore-Mailbox cmdlet copies end-user data from any server running Microsoft Exchange Server 2010 to a mailbox on an Exchange 2010 Mailbox server in the same organization that has adequate space and resources to support the mailbox. The Restore-Mailbox cmdlet can only use disconnected mailboxes on a server as a source of data, and the cmdlet can only use connected mailboxes as a target for data.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -164,7 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDuplicates
-The AllowDuplicates parameter specifies whether to copy mail items without checking if they're duplicates of existing items and without removing duplicate items. We recommend that you use the AllowDuplicates parameter together with the IncludeFolders parameter.
+The AllowDuplicates switch copies mail items without checking if they're duplicates of existing items and without removing duplicate items. You don't need to specify a value with this switch.
+
+We recommend that you use this switch with the IncludeFolders parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -269,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-The EndDate parameter specifies the end date for filtering content that will be exported from the source mailbox. Only items in the mailbox whose date is prior to the end date are exported. When you enter a specific date, use the short date format defined in the Regional Options settings configured on the local computer. For example, if your computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
+The EndDate parameter specifies the end date for filtering content that will be exported from the source mailbox. Only items in the mailbox whose date is prior to the end date are exported. When you enter a specific date, use the short date format defined in the Regional Options settings configured on the local computer. For example, if your computer is configured to use the short date format MM/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
 
 ```yaml
 Type: DateTime
@@ -429,7 +431,9 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateOnly
-The ValidateOnly switch tells the cmdlet to evaluate the conditions and requirements necessary to perform the operation and then reports whether the operation will succeed or fail. No changes are made when the ValidateOnly switch is used.
+The ValidateOnly switch tells the command to evaluate the conditions and requirements necessary to perform the operation, and then report whether the operation will succeed or fail. You don't need to specify a value with this switch.
+
+No changes are made when you use this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -465,12 +469,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=2081749). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

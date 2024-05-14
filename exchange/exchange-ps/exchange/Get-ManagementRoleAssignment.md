@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-managementroleassignment
+online version: https://learn.microsoft.com/powershell/module/exchange/get-managementroleassignment
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-ManagementRoleAssignment
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-ManagementRoleAssignment cmdlet to retrieve management role assignments.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,6 +34,7 @@ Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <RecipientWriteScopeType>]
  [-RoleAssigneeType <RoleAssigneeType>]
@@ -58,6 +59,7 @@ Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-GetEffectiveUsers]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <RecipientWriteScopeType>]
  [-RoleAssignee <RoleAssigneeIdParameter>]
@@ -71,9 +73,9 @@ Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
 ## DESCRIPTION
 You can retrieve role assignments in a variety of ways including by assignment type, scope type, or name, and whether the assignment is enabled or disabled. You can also view a list of role assignments that provide access to a specified recipient, server, or database.
 
-For more information about management role assignments, see [Understanding management role assignments](https://docs.microsoft.com/exchange/understanding-management-role-assignments-exchange-2013-help).
+For more information about management role assignments, see [Understanding management role assignments](https://learn.microsoft.com/exchange/understanding-management-role-assignments-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -82,7 +84,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
 ```
 
-This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
+This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ### Example 2
 ```powershell
@@ -340,7 +342,9 @@ Accept wildcard characters: False
 ```
 
 ### -GetEffectiveUsers
-The GetEffectiveUsers switch specifies that the command should show the list of users in the role groups, assignment policies, or USGs associated with a role assignment. The users are effectively assigned the role assignment through their role group, assignment policy, or USG.
+The GetEffectiveUsers switch specifies that the command should show the list of users in the role groups, role assignment policies, or USGs that are associated with the role assignment. You don't need to specify a value with this switch.
+
+Effectively, users are associated with the role assignment through their role group, role assignment policy, or USG memberships.
 
 ```yaml
 Type: SwitchParameter
@@ -356,17 +360,35 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAdministrativeUnitScope
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The RecipientAdministrativeUnitScope parameter returns only the role assignments that include the specified administrative unit.
 
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+Administrative units are Microsoft Entra containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
 
 ```yaml
 Type: AdministrativeUnitIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientGroupScope
+This parameter is available only in the cloud-based service.
+
+The RecipientGroupScope parameter returns only the role assignments that are scoped to groups. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, DisplayName.
+
+```yaml
+Type: GroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -533,12 +555,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

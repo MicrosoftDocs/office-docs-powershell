@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Module Name: ExchangeOnlineManagement
-online version: https://docs.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/get-myanalyticsfeatureconfig
 applicable: Exchange Online
 title: Get-MyAnalyticsFeatureConfig
 schema: 2.0.0
@@ -12,13 +12,13 @@ ms.author: chrisda
 # Get-MyAnalyticsFeatureConfig
 
 ## SYNOPSIS
-This cmdlet is available only in the Exchange Online PowerShell V2 module. For more information, see [About the Exchange Online PowerShell V2 module](https://docs.microsoft.com/powershell/exchange/exchange-online-powershell-v2).
+This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
 Use the Get-MyAnalyticsFeatureConfig cmdlet to view the availability and feature status of MyAnalytics for the specified user.
 
 **Note**: This cmdlet replaces the Get-UserAnalyticsConfig cmdlet.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you 
 - Exchange Administrator
 - Insights Administrator
 
-To learn more about administrator role permissions in Azure Active Directory, see [Role template IDs](https://docs.microsoft.com/azure/active-directory/roles/permissions-reference#role-template-ids).
+To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ c:\users\vikram Get-MyAnalyticsFeatureConfig -Identity vikram@contoso.com
 UserId : vikram@contoso.com
 PrivacyMode : opt-in
 IsDashboardEnabled : true
-IsAddInEnabled  : true
+IsAddInEnabled : true
 IsDigestEmailEnabled : false
 ```
 
@@ -91,11 +91,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

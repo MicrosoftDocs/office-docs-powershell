@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-transportrule
+online version: https://learn.microsoft.com/powershell/module/exchange/get-transportrule
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-TransportRule
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-TransportRule cmdlet to view transport rules (mail flow rules) in your organization.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Get-TransportRule [[-Identity] <RuleIdParameter>]
 ## DESCRIPTION
 On Mailbox servers, this cmdlet returns all rules in the Exchange organization that are stored in Active Directory. On an Edge Transport server, this cmdlet only returns rules that are configured on the local server.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -52,43 +52,23 @@ Get-TransportRule "Ethical Wall - Sales and Brokerage Departments" | Format-List
 
 This example returns detailed information for the rule named "Ethical Wall - Sales and Brokerage Departments".
 
-For more information about pipelining, see [About Pipelines](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines). For more information about how to work with the output of a command, see [Working with command output](https://docs.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
+For more information about pipelining, see [About Pipelines](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_pipelines). For more information about how to work with the output of a command, see [Working with command output](https://learn.microsoft.com/exchange/working-with-command-output-exchange-2013-help).
 
 ### Example 3
 ```powershell
 Get-TransportRule -DlpPolicy "PII (U.S.)"
 ```
 
-This example returns a summary list of the rules that enforce the DLP policy named PII (U.S.) in your organization.
+In on-premises Exchange, this example returns a summary list of the rules that enforce the DLP policy named PII (U.S.) in the organization.
 
 ### Example 4
 ```powershell
 Get-TransportRule | Where {$_.DlpPolicy -ne $null}
 ```
 
-This example returns a summary list of all rules that enforce DLP policies in your organization.
+In on-premises Exchange, this example returns a summary list of all rules that enforce DLP policies in the organization.
 
 ## PARAMETERS
-
-### -DomainController
-This parameter is available only in on-premises Exchange.
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter specifies the rule that you want to view. You can use any value that uniquely identifies the rule. For example:
@@ -107,6 +87,26 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
+
+The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
+
+```yaml
+Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -132,7 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -DlpPolicy
-The DlpPolicy parameter filters the results by the named of the specified data loss prevention (DLP) policy. If the value contains spaces, enclose the value in quotation marks (").
+**Note**: This parameter is functional only in on-premises Exchange.
+
+The DlpPolicy parameter filters the results by the name of the specified data loss prevention (DLP) policy. If the value contains spaces, enclose the value in quotation marks (").
 
 DLP policies in your organization allow you to prevent unintentional disclosure of sensitive information. Each DLP policy is enforced using a set of transport rules.
 
@@ -171,11 +173,11 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-The Filter parameter filters the results by using an OPath. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
+The Filter parameter filters the results by using an OPATH. This parameter searches the Description property, which includes the conditions, exceptions, actions and the associated values of a transport rule.
 
 This parameter uses the syntax `"Description -like 'Text*'"`. For example, `"Description -like '192.168.1.1*'"`.
 
-For detailed information about OPath filters in Exchange, see [Additional OPATH syntax information](https://docs.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
+For detailed information about OPATH filters in Exchange, see [Additional OPATH syntax information](https://learn.microsoft.com/powershell/exchange/recipient-filters#additional-opath-syntax-information).
 
 ```yaml
 Type: String
@@ -211,12 +213,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

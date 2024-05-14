@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Rgs.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/remove-csrgshoursofbusiness
+online version: https://learn.microsoft.com/powershell/module/skype/remove-csrgshoursofbusiness
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Remove-CsRgsHoursOfBusiness
 schema: 2.0.0
@@ -191,4 +191,3 @@ Deletes existing instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.
 [New-CsRgsHoursOfBusiness](New-CsRgsHoursOfBusiness.md)
 
 [Set-CsRgsHoursOfBusiness](Set-CsRgsHoursOfBusiness.md)
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/enable-csaddomain
+online version: https://learn.microsoft.com/powershell/module/skype/enable-csaddomain
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Enable-CsAdDomain
 schema: 2.0.0
@@ -248,4 +248,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-CsAdDomain](Disable-CsAdDomain.md)
 
 [Get-CsAdDomain](Get-CsAdDomain.md)
-

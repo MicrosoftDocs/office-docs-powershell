@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticlog
+online version: https://learn.microsoft.com/powershell/module/exchange/get-calendardiagnosticlog
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: Get-CalendarDiagnosticLog
 schema: 2.0.0
@@ -12,11 +12,11 @@ ms.reviewer:
 # Get-CalendarDiagnosticLog
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+Although this cmdlet is available in on-premises Exchange and in the cloud-based service, it only works in on-premises Exchange. In cloud-based service, use the Get-CalendarDiagnosticObjects cmdlet instead.
 
 Use the Get-CalendarDiagnosticLog cmdlet to collect a range of calendar logs. The Calendar Diagnostic logs track all calendar items and meeting requests in mailboxes. You can use this information to troubleshoot calendar issues that occur in mailboxes.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -70,9 +70,9 @@ The output of this cmdlet contains the following information:
 - NormalizedSubject: The Subject field of the calendar item.
 - CleanGlobalObjectId: The identifier that's constant throughout the lifetime of the calendar item. For example, 040000008200E00074C5B7101A82E00800000000B0225ABF0710C80100000000000000001000000005B27C05AA7C4646B0835D5EB4E41C55.
 
-After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see [Get-CalendarDiagnosticAnalysis](https://docs.microsoft.com/powershell/module/exchange/get-calendardiagnosticanalysis).
+After you run the Get-CalendarDiagnosticLog cmdlet, you can analyze the calendar data using the Get-CalendarDiagnosticAnalysis cmdlet. For more information, see [Get-CalendarDiagnosticAnalysis](https://learn.microsoft.com/powershell/module/exchange/get-calendardiagnosticanalysis).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -102,12 +102,13 @@ This example retrieves the Calendar Diagnostic log data only for the most recent
 Get-CalendarDiagnosticLog -Identity "Jasen Kozma" -Subject "Budget Meeting" -ExactMatch $true -LogLocation "C:\My Documents\Calendar Diagnostic Export"
 ```
 
-This example exports all calendar items in the Calendar Diagnostic log for Jasen Kozma's mailbox that have "Budget Meeting" anywhere in the subject to the specified folder.
+In **Exchange 2013**, this example exports all calendar items in the Calendar Diagnostic log for Jasen Kozma's mailbox that have "Budget Meeting" anywhere in the subject to the specified folder.
 
 **Notes**:
 
 - In this example, the message files are written to C:\\My Documents\\Calendar Diagnostic Export\\jkozma@contoso.com.
-- In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
+- In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet to analyze the exported .msg files.
+- This example doesn't work in Exchange 2016 or Exchange 2019 because the LogLocation parameter is not available.
 
 ## PARAMETERS
 
@@ -139,19 +140,23 @@ Accept wildcard characters: False
 ```
 
 ### -LogLocation
+**Note**: This parameter was removed from Exchange 2016 and Exchange 2019 by the [2022 H1 Cumulative Updates](https://techcommunity.microsoft.com/t5/exchange-team-blog/released-2022-h1-cumulative-updates-for-exchange-server/ba-p/3285026) because it accepts UNC path values. Usage of this cmdlet is now restricted to the local server.
+
+This parameter is functional only in Exchange 2010 and Exchange 2013.
+
 The LogLocation parameter specifies the location to export the calendar items to .msg files. You can specify a local path, or a UNC path (`\\Server\Share`). If the value contains spaces, enclose the value in quotation marks (").
 
 In the location you specify, a subfolder is automatically created for the specified mailbox that holds the exported calendar items. For example, if you specify the value "C:\\My Documents\\Calendar Export" to export calendar items from the mailbox of Shannon Steele, the .msg files are actually stored in C:\\My Documents\\Calendar Export\\ssteele@contoso.com.
 
-In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet with the LogLocation parameter to analyze the exported .msg files.
+In on-premises Exchange organizations, you can use the Get-CalendarDiagnosticAnalysis cmdlet to analyze the exported .msg files.
 
-**Note**: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (| Set-Content -Path "C:\\My Documents\\Calendar Export") or substitute the output to a PowerShell variable.
+**Note**: Commands that use this parameter might fail if the calendar item doesn't have a title. If you receive errors when you use this parameter, run the command again and replace this parameter with redirection to a file (`| Set-Content -Path "C:\My Documents\Calendar Export"`) or substitute the output to a PowerShell variable.
 
 ```yaml
 Type: String
 Parameter Sets: ExportToMsg
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Online
 
 Required: True
 Position: Named
@@ -164,7 +169,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: MeetingId, MeetingSubject
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Online
 
 Required: False
 Position: Named
@@ -242,7 +247,7 @@ This parameter is available only in on-premises Exchange.
 
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
-A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
+A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
 ```yaml
 Type: PSCredential
@@ -278,7 +283,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -387,7 +392,9 @@ Accept wildcard characters: False
 ### -ReadFromDomainController
 This parameter is available only in on-premises Exchange.
 
-The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. If you run the command Set-AdServerSettings -ViewEntireForest $true to include all objects in the forest and you don't use the ReadFromDomainController switch, it's possible that information will be read from a global catalog that has outdated information. When you use the ReadFromDomainController switch, multiple reads might be necessary to get the information. You don't have to specify a value with this switch.
+The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. You don't need to specify a value with this switch.
+
+The command: `Set-AdServerSettings -ViewEntireForest $true` to include all objects in the forest requires the ReadFromDomainController switch. Otherwise, the command might use a global catalog that contains outdated information. Also, you might need to run multiple iterations of the command with the ReadFromDomainController switch to get the information.
 
 By default, the recipient scope is set to the domain that hosts your Exchange servers.
 
@@ -423,7 +430,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: ExDateTime
@@ -443,12 +450,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

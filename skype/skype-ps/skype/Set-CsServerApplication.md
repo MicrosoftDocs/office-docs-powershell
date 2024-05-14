@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/set-csserverapplication
+online version: https://learn.microsoft.com/powershell/module/skype/set-csserverapplication
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Set-CsServerApplication
 schema: 2.0.0
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -Uri
 Unique Uniform Resource Identifier (URI) for the application.
-For example, the QoEAgent application has the URI http://www.microsoft.com/LCS/QoEAgent.
+For example, the QoEAgent application has the URI `http://www.microsoft.com/LCS/QoEAgent`.
 
 ```yaml
 Type: String
@@ -286,4 +286,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [New-CsServerApplication](New-CsServerApplication.md)
 
 [Remove-CsServerApplication](Remove-CsServerApplication.md)
-

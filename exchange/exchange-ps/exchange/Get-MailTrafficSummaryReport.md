@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/get-mailtrafficsummaryreport
+online version: https://learn.microsoft.com/powershell/module/exchange/get-mailtrafficsummaryreport
 applicable: Exchange Online, Exchange Online Protection
 title: Get-MailTrafficSummaryReport
 schema: 2.0.0
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Get-MailTrafficSummaryReport cmdlet to view summary information about message traffic in your organization for the last 90 days.
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -42,7 +40,7 @@ This cmdlet has C1, C2 and C3 as header names and the meaning of them depends on
 - TopSpamRecipient, TopMailSender, TopMailRecipient and TopMalwareRecipient: C1 is the recipient or sender and C2 the quantity of email messages.
 - TopMalware: C1 is the malware name and C2 the quantity of appearances.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -56,7 +54,31 @@ This example shows the top spam recipient statistics between June 13, 2015 and J
 ## PARAMETERS
 
 ### -Category
-The Category parameter filters the report by category. Valid values for this parameter are: InboundDLPHits, OutboundDLPHits, InboundTransportRuleHits, OutboundTransportRuleHits, InboundDLPPolicyRuleHits, OutboundDLPPolicyRuleHits, TopSpamRecipient, TopMailSender, TopMailRecipient, TopMalwareRecipient or TopMalware.
+The Category parameter filters the report by category. Valid values are:
+
+- InboundDLPHits
+- OutboundDLPHits
+- InboundTransportRuleHits
+- OutboundTransportRuleHits
+- InboundDLPPolicyRuleHits
+- OutboundDLPPolicyRuleHits
+- TopSpamRecipient
+- TopMailSender
+- TopMailRecipient
+- TopMalwareRecipient
+- TopMalwareAtpRecipient
+- TopMalware
+- TopPhishRecipient
+- TopPhishAtpRecipient
+- TopIntraOrgRecipient
+- TopIntraOrgSender
+- TopIntraOrgSpamRecipient
+- TopIntraOrgMalwareRecipient
+- TopIntraOrgPhishRecipient
+- TopIntraOrgPhishAtpRecipient
+- TopIntraOrgMalwareAtpRecipient
+- TopComplianceTagActivityCount
+- TopComplianceTagActivityCountByDay
 
 ```yaml
 Type: String
@@ -106,7 +128,7 @@ Accept wildcard characters: False
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -172,7 +194,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -208,12 +230,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

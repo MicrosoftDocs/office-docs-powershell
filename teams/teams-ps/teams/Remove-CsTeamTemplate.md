@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate
+online version: https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate
 title: Remove-CsTeamTemplate
-author: levdavid
-ms.author: legorbun
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer: 
 manager: farahf
 schema: 2.0.0
@@ -50,7 +50,7 @@ Removes template with OData Id '/api/teamtemplates/v1.0/b24f8ba6-0949-452e-ad4b-
 PS C:> (Get-CsTeamTemplateList -PublicTemplateLocale en-US) | where Name -like 'test' | ForEach-Object {Remove-CsTeamTemplate -OdataId $_.OdataId}
 ```
 
-Removes template that meets the following specifications: 1) Locale set to en-US. 2) Name contains ‘test’.
+Removes template that meets the following specifications: 1) Locale set to en-US. 2) Name contains 'test'.
 
 ## PARAMETERS
 
@@ -237,7 +237,7 @@ COMPLEX PARAMETER PROPERTIES
 
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
+INPUTOBJECT \<IConfigApiBasedCmdletsIdentity\>: Identity Parameter
 
 - `[Bssid <String>]`:
 - `[ChassisId <String>]`:
@@ -262,8 +262,12 @@ INPUTOBJECT <IConfigApiBasedCmdletsIdentity>: Identity Parameter
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://docs.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+[Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
+
+[Get-CsTeamTemplate](Get-CsTeamTemplate.md)
+
+[New-CsTeamTemplate](New-CsTeamTemplate.md)
+
+[Update-CsTeamTemplate](Update-CsTeamTemplate.md)
+
+[Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)

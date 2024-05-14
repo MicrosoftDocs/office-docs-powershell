@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-partnerapplication
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+online version: https://learn.microsoft.com/powershell/module/exchange/set-partnerapplication
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-PartnerApplication
 schema: 2.0.0
 author: chrisda
@@ -12,11 +12,11 @@ ms.reviewer:
 # Set-PartnerApplication
 
 ## SYNOPSIS
-This cmdlet is available or functional only in on-premises Exchange.
+This cmdlet is functional only in on-premises Exchange.
 
 Use the Set-PartnerApplication cmdlet to configure partner application configurations in on-premises Exchange organizations.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -77,9 +77,9 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
 ```
 
 ## DESCRIPTION
-You can configure partner applications such as SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see [Plan Exchange 2016 integration with SharePoint and Skype for Business](https://docs.microsoft.com/Exchange/plan-and-deploy/integration-with-sharepoint-and-skype/integration-with-sharepoint-and-skype). We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
+You can configure partner applications such as SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see [Plan Exchange 2016 integration with SharePoint and Skype for Business](https://learn.microsoft.com/Exchange/plan-and-deploy/integration-with-sharepoint-and-skype/integration-with-sharepoint-and-skype). We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -104,7 +104,7 @@ The Identity parameter specifies the partner application you want to modify. You
 Type: PartnerApplicationIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: True
 Position: 1
@@ -226,7 +226,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -340,7 +340,7 @@ Accept wildcard characters: False
 ### -RefreshAuthMetadata
 This parameter is available only in on-premises Exchange.
 
-The RefreshAuthMetadata switch specifies that the auth metadata should be refreshed from the authorization server.
+The RefreshAuthMetadata switch refreshes the auth metadata from the authorization server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -358,7 +358,9 @@ Accept wildcard characters: False
 ### -TrustAnySSLCertificate
 This parameter is available only in on-premises Exchange.
 
-The TrustAnySSLCertificate switch specifies whether Exchange should trust certificates issued by a certification authority (CA) not trusted by the server. We don't recommend using this switch in a production environment.
+The TrustAnySSLCertificate switch allows Exchange to accept certificates from untrusted certification authorities (CAs). You don't need to specify a value with this switch.
+
+We don't recommend using this switch in a production environment.
 
 ```yaml
 Type: SwitchParameter
@@ -380,7 +382,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -394,12 +396,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

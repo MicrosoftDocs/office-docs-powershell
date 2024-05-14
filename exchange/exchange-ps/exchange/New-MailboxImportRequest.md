@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-mailboximportrequest
+online version: https://learn.microsoft.com/powershell/module/exchange/new-mailboximportrequest
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 title: New-MailboxImportRequest
 schema: 2.0.0
@@ -16,11 +16,11 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-MailboxImportRequest cmdlet to begin the process of importing a .pst file to a mailbox or archive.
 
-**Note**: This cmdlet is no longer supported in Exchange Online. To import a .pst file in Exchange Online, see [Use network upload to import PST files](https://docs.microsoft.com/microsoft-365/compliance/use-network-upload-to-import-pst-files).
+**Note**: This cmdlet is no longer supported in Exchange Online. To import a .pst file in Exchange Online, see [Use network upload to import PST files](https://learn.microsoft.com/purview/use-network-upload-to-import-pst-files).
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+This cmdlet is available only in the Mailbox Import Export role, and by default, the role isn't assigned to any role groups. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -419,7 +419,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentCodePage
-The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst files are used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) topic.
+The ContentCodePage parameter specifies the specific code page to use for an ANSI pst file. ANSI pst files are used in Outlook 97 to Outlook 2002. You can find the valid values in the [Code Page Identifiers](https://learn.microsoft.com/windows/win32/intl/code-page-identifiers) topic.
 
 ```yaml
 Type: Int32
@@ -453,7 +453,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeDumpster
-The ExcludeDumpster parameter specifies whether to exclude the Recoverable Items folder. You don't have to include a value with this parameter. If you don't specify this parameter, the Recoverable Items folder is copied with the following subfolders:
+The ExcludeDumpster switch specifies whether to exclude the Recoverable Items folder. You don't need to specify a value with this switch.
+
+If you don't use this switch, the Recoverable Items folder is copied with the following subfolders:
 
 - Deletions
 - Versions
@@ -601,8 +603,8 @@ The LargeItemLimit parameter specifies the maximum number of large items that ar
 
 For more information about maximum message size values, see the following topics:
 
-- Exchange 2016: [Message size limits in Exchange Server](https://docs.microsoft.com/Exchange/mail-flow/message-size-limits)
-- Exchange Online: [Exchange Online Limits](https://docs.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
+- Exchange 2016: [Message size limits in Exchange Server](https://learn.microsoft.com/Exchange/mail-flow/message-size-limits)
+- Exchange Online: [Exchange Online Limits](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
@@ -835,7 +837,9 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
+The Suspend switch specifies whether to suspend the request. You don't need to specify a value with this switch.
+
+If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -921,12 +925,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

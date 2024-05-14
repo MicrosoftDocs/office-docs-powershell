@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/new-cstelemetryconfiguration
+online version: https://learn.microsoft.com/powershell/module/skype/new-cstelemetryconfiguration
 applicable: Skype for Business Server 2015, Skype for Business Server 2019
 title: New-CsTelemetryConfiguration
 schema: 2.0.0
@@ -164,4 +164,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-

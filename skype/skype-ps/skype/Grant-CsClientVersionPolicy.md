@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csclientversionpolicy
+online version: https://learn.microsoft.com/powershell/module/skype/grant-csclientversionpolicy
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
 title: Grant-CsClientVersionPolicy
 schema: 2.0.0
@@ -248,4 +248,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsClientVersionPolicy](Remove-CsClientVersionPolicy.md)
 
 [Set-CsClientVersionPolicy](Set-CsClientVersionPolicy.md)
-

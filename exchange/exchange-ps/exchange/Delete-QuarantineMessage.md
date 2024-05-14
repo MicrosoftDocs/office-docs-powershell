@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/delete-quarantinemessage
-applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+online version: https://learn.microsoft.com/powershell/module/exchange/delete-quarantinemessage
+applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 title: Delete-QuarantineMessage
 schema: 2.0.0
 author: chrisda
@@ -16,9 +16,7 @@ This cmdlet is available only in the cloud-based service.
 
 Use the Delete-QuarantineMessage cmdlet to delete quarantine messages from your cloud-based organization
 
-**Note**: We recommend that you use the Exchange Online PowerShell V2 module to connect to Exchange Online PowerShell. For instructions, see [Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/connect-to-exchange-online-powershell).
-
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -27,6 +25,9 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-Identity <QuarantineMessageIdentity>]
  [-Confirm]
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-HardDelete]
+ [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -35,12 +36,15 @@ Delete-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
 ```
 Delete-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-Confirm]
+ [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-HardDelete]
+ [-RecipientAddress <String[]>]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -54,14 +58,16 @@ This example deletes the quarantined message with the specified Identity value.
 ### Example 2
 ```powershell
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity
+
 Delete-QuarantineMessage -Identity $ids[4]
 ```
 
-This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1 and so on).
+This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1 and so on.
 
 ### Example 3
 ```powershell
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity
+
 Delete-QuarantineMessage -Identities $ids -Identity 000
 ```
 
@@ -70,9 +76,9 @@ This example deletes all quarantined messages. The Identity parameter is require
 ## PARAMETERS
 
 ### -Identities
-The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2...valueN`. The value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: `value1,value2...valueN`. Each value is a unique quarantined message identifier in the format `GUID1\GUID2` (for example `c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7`).
 
-You can find the identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
+You can find the Identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
 
 When you use this parameter, the Identity parameter is required, but the value is ignored. For example, use the value 000 for the Identity parameter.
 
@@ -80,7 +86,7 @@ When you use this parameter, the Identity parameter is required, but the value i
 Type: QuarantineMessageIdentity[]
 Parameter Sets: Identities
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -98,7 +104,7 @@ You can find the Identity value for a quarantined message by using the Get-Quara
 Type: QuarantineMessageIdentity
 Parameter Sets: Identities
 Aliases:
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -130,7 +136,62 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EntityType
+The EntityType parameter filters the results by EntityType. Valid values are:
+
+- Email
+- SharePointOnline
+- Teams (currently in Preview)
+- DataLossPrevention
+
+```yaml
+Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HardDelete
+The HardDelete switch specifies the message is permanently deleted and isn't recoverable. You don't need to specify a value with this switch.
+
+If you don't use this switch, the message is deleted, but is potentially recoverable.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientAddress
+The RecipientAddress parameter filters the results by the recipient's email address. You can specify multiple values separated by commas.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -140,15 +201,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-The WhatIf switch doesn't work in Security & Compliance Center PowerShell.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance Center, Exchange Online Protection
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -162,11 +221,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-
 ## OUTPUTS
-
-###  
 
 ## NOTES
 

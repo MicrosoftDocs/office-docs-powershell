@@ -47,11 +47,11 @@ It is highly recommended to turn on two-factor authentication for security, see 
 Fork the GitHub project into your own account so you have a place to work on it. To Fork the project, point your web browser to the repository at
 <https://github.com/MicrosoftDocs/office-docs-powershell> and then click the Fork button on the upper right corner of the repository page as shown in screenshot.
 
-![Image of Fork button on Github](../images/fork_button_on_github.png)
+![Image of Fork button on Github.](../images/fork_button_on_github.png)
 
 You now have your very own copy (fork) of the main Office PowerShell repository. You can see it by clicking on your profile drop-down in the upper right of the page and choosing Your Profile and then clicking the Repositories tab of your GitHub account as shown in the diagram.
 
-![View Your Forked Repos on Github](../images/view_your_forked_repos.png)
+![View Your Forked Repos on Github.](../images/view_your_forked_repos.png)
 
 Your repository is an exact copy of the original Office PowerShell repository and is located in your GitHub account. In GitHub terms the main Office PowerShell repository is the Upstream repository and your forked version is the Downstream repository.
 
@@ -61,7 +61,7 @@ You can update your repository with the Upstream repository at any time and it i
 
 Now that you have your own copy of the repository on GitHub the next step is to get the actual files on your local computer so you can work with them. To do this you clone your GitHub repository to your local computer. Here is a diagram:
 
-![Diagram of repository flow on Github](../images/github_flow.png)
+![Diagram of repository flow on Github.](../images/github_flow.png)
 
 > [!TIP]
 > You can clone your repository to multiple computers if you choose. You just have to make sure you save your local work by pushing it back up to your repository. And vice versa, when you start working on a new computer you have to remember to pull any changes down to your local work computer. This will be described in more detail later on.
@@ -155,13 +155,13 @@ To get your work back into the upstream repo you create a Pull Request. A Pull R
 
 The repo maintainers will be notified of your Pull Request. Your Pull Request will have its own page where you can discuss and modify your request if required.
 
-## Confirm your work shows up on docs.microsoft.com
+## Confirm your work shows up on learn.microsoft.com
 
-Once your Pull Request is approved and your branch merged into Master your changes will show up on the review.docs.microsoft.com site. Unfortunately this site requires a Microsoft login.
+Once your Pull Request is approved and your branch merged into Master your changes will show up on the review.learn.microsoft.com site. Unfortunately this site requires a Microsoft login.
 
-The next step is for a maintainer to merge the Master branch into the Live branch. Once this is done your work will show up on docs.microsoft.com.
+The next step is for a maintainer to merge the Master branch into the Live branch. Once this is done your work will show up on learn.microsoft.com.
 
-The easiest way to find a cmdlet on docs.microsoft.com is to use the PowerShell Browser here: <https://docs.microsoft.com/powershell/module>. If you know a cmdlet exists but doesn't show up in the PowerShell Browser search then open an Issue (link at top of this repo).
+The easiest way to find a cmdlet on learn.microsoft.com is to use the PowerShell Browser here: <https://learn.microsoft.com/powershell/module>. If you know a cmdlet exists but doesn't show up in the PowerShell Browser search then open an Issue (link at top of this repo).
 
 When the product team releases a new build your work will also show up in the Office products themselves when a user types Get-Help for the cmdlets that you worked on.
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/new-managementroleassignment
+online version: https://learn.microsoft.com/powershell/module/exchange/new-managementroleassignment
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: New-ManagementRoleAssignment
 schema: 2.0.0
@@ -16,9 +16,21 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the New-ManagementRoleAssignment cmdlet to assign a management role to a management role group, management role assignment policy, user, or universal security group (USG).
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
+
+### App
+```
+New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -App <ServicePrincipalIdParameter> [-CustomResourceScope <ManagementScopeIdParameter>]
+ [-Confirm]
+ [-Delegating]
+ [-Force]
+ [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
 
 ### Computer
 ```
@@ -29,7 +41,9 @@ New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> 
  [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
+ [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -48,6 +62,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Policy <MailboxPolicyIdParamete
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -67,6 +82,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -Securit
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -86,6 +102,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <U
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>]
  [-Force]
  [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
+ [-RecipientGroupScope <GroupIdParameter>]
  [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <RecipientWriteScopeType>]
  [-UnScopedTopLevel]
@@ -98,9 +115,9 @@ When you add a new role assignment, you can specify a built-in or custom role th
 
 You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, or predefined or custom scope, the implicit write scope of the role applies to the role assignment.
 
-For more information about management role assignments, see [Understanding management role assignments](https://docs.microsoft.com/exchange/understanding-management-role-assignments-exchange-2013-help).
+For more information about management role assignments, see [Understanding management role assignments](https://learn.microsoft.com/exchange/understanding-management-role-assignments-exchange-2013-help).
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -114,6 +131,7 @@ This example assigns the Mail Recipients role to the Tier 2 Help Desk role group
 ### Example 2
 ```powershell
 Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole
+
 New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
 ```
 
@@ -174,12 +192,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -App
+This parameter is available only in the cloud-based service.
+
+The App parameter specifies the service principal to assign the management role to. Specifically, the ObjectId GUID value from the output of the Get-ServicePrincipal cmdlet (for example, 6233fba6-0198-4277-892f-9275bf728bcc).
+
+For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
+
+You can't use this parameter with the SecurityGroup, Policy, or User cmdlets.
+
+```yaml
+Type: ServicePrincipalIdParameter
+Parameter Sets: App
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Computer
 This parameter is available only in on-premises Exchange.
 
 The Computer parameter specifies the name of the computer to assign the management role to.
 
-If you specify the Computer parameter, you can't specify the SecurityGroup, User, or Policy parameters.
+You can't use this parameter with the SecurityGroup, User, or Policy parameters.
 
 ```yaml
 Type: ComputerIdParameter
@@ -195,11 +235,11 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-The Policy parameter specifies the name of the management role assignment policy to assign the management role to.
+The Policy parameter specifies the name of the management role assignment policy to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
 
 The IsEndUserRole property of the role you specify using the Role parameter must be set to $true.
 
-If you specify the Policy parameter, you can't specify the SecurityGroup, Computer, or User parameters. If the policy name contains spaces, enclose the name in quotation marks (").
+You can't use this parameter with the App, SecurityGroup, Computer, or User parameters.
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -215,7 +255,15 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-The Role parameter specifies the existing role to assign. If the role name contains spaces, enclose the name in quotation marks (").
+The Role parameter specifies the existing role to assign. You can use any value that uniquely identifies the role. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If the value contains spaces, enclose the value in quotation marks (").
+
+If you use the App parameter, you can't specify admin or user roles; you can only specify application roles (for example, "Application Mail.Read").
 
 ```yaml
 Type: RoleIdParameter
@@ -231,9 +279,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroup
-The SecurityGroup parameter specifies the name of the management role group or universal USG to assign the management role to.
+The SecurityGroup parameter specifies the name of the management role group or mail-enabled universal security group to assign the management role to. If the value contains spaces, enclose the value in quotation marks (").
 
-If you specify the SecurityGroup parameter, you can't specify the Policy, Computer, or User parameters. If the role group or USG name contains spaces, enclose the name in quotation marks (").
+You can't use this parameter with the App, Policy, Computer, or User parameters.
 
 ```yaml
 Type: SecurityGroupIdParameter
@@ -249,9 +297,14 @@ Accept wildcard characters: False
 ```
 
 ### -User
-The User parameter specifies the name or alias of the user to assign the management role to.
+The User parameter specifies the user to assign the management role to.
 
-If you specify the User parameter, you can't specify the SecurityGroup, Computer, or Policy parameters. If the value contains spaces, enclose the name in quotation marks (").
+For the best results, we recommend using the following values:
+
+- UPN: For example, `user@contoso.com` (users only).
+- Domain\\SamAccountName: For example, `contoso\user`.
+
+You can't use this parameter with the App, SecurityGroup, Computer, or Policy parameters.
 
 ```yaml
 Type: UserIdParameter
@@ -292,7 +345,7 @@ The CustomConfigWriteScope parameter specifies the existing configuration scope 
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -308,7 +361,7 @@ The CustomRecipientWriteScope parameter specifies the existing recipient-based m
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -319,12 +372,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CustomResourceScope
+This parameter is available only in the cloud-based service.
+
+The CustomResourceScope parameter specifies the custom management scope to associate with this management role assignment. You can use any value that uniquely identifies the management scope. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+If the value contains spaces, enclose the value in quotation marks (").
+
+You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
+
+```yaml
+Type: ManagementScopeIdParameter
+Parameter Sets: App
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Delegating
-The Delegating parameter specifies whether the user or USG assigned to the role can delegate the role to other users or groups. You don't have to specify a value with the Delegating parameter.
+The Delegating switch specifies whether the user or USG assigned to the role can delegate the role to other users or groups. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: SecurityGroup, User
+Parameter Sets: SecurityGroup, User, App
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -342,7 +421,7 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -360,7 +439,7 @@ The ExclusiveConfigWriteScope parameter specifies the exclusive configuration-ba
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -376,7 +455,7 @@ The ExclusiveRecipientWriteScope parameter specifies the exclusive recipient-bas
 
 ```yaml
 Type: ManagementScopeIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -390,11 +469,13 @@ Accept wildcard characters: False
 ### -Force
 This parameter is available only in the cloud-based service.
 
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Policy, SecurityGroup, User
+Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Exchange Online Protection
 
@@ -406,9 +487,11 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientAdministrativeUnitScope
+This parameter is functional only in the cloud-based service.
+
 The RecipientAdministrativeUnitScope parameter specifies the administrative unit to scope the new role assignment to.
 
-Administrative units are Azure Active Directory containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
+Administrative units are Microsoft Entra containers of resources. You can view the available administrative units by using the Get-AdministrativeUnit cmdlet.
 
 ```yaml
 Type: AdministrativeUnitIdParameter
@@ -423,12 +506,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecipientGroupScope
+This parameter is available only in the cloud-based service.
+
+The RecipientGroupScope parameter specifies a group to consider for scoping the role assignment. Individual members of the specified group (not nested groups) are considered as in scope for the assignment. You can use any value that uniquely identifies the group: Name, DistinguishedName, GUID, or DisplayName.
+
+```yaml
+Type: GroupIdParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecipientOrganizationalUnitScope
 The RecipientOrganizationalUnitScope parameter specifies the OU to scope the new role assignment to. If you use the RecipientOrganizationalUnitScope parameter, you can't use the CustomRecipientWriteScope or ExclusiveRecipientWriteScope parameters. To specify an OU, use the syntax: domain/ou. If the OU name contains spaces, enclose the domain and OU in quotation marks (").
 
 ```yaml
 Type: OrganizationalUnitIdParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -446,7 +547,7 @@ Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExec
 
 ```yaml
 Type: RecipientWriteScopeType
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 
@@ -460,15 +561,15 @@ Accept wildcard characters: False
 ### -UnScopedTopLevel
 This parameter is available only in on-premises Exchange.
 
-By default, this parameter is only available in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://docs.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
+By default, this parameter is available only in the UnScoped Role Management role, and that role isn't assigned to any role groups. To use this parameter, you need to add the UnScoped Role Management role to a role group (for example, to the Organization Management role group). For more information, see [Add a role to a role group](https://learn.microsoft.com/Exchange/permissions/role-groups#add-a-role-to-a-role-group).
 
 The UnScopedTopLevel switch specifies that the role provided with the Role parameter is an unscoped top-level management role. You don't need to specify a value with this switch.
 
-Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://docs.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
+Unscoped top-level management roles can only contain custom scripts or non-Exchange cmdlets. For more information, see [Create an unscoped role](https://learn.microsoft.com/exchange/create-an-unscoped-role-exchange-2013-help).
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Computer, Policy, SecurityGroup, User
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 
@@ -500,12 +601,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

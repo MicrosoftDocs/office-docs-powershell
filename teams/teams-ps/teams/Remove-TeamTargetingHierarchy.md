@@ -1,10 +1,10 @@
 ---
-external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
-online version: https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams
+online version: https://learn.microsoft.com/powershell/module/teams/connect-microsoftteams
 schema: 2.0.0
-author: mbergamo
-ms.author: mbergamo
+author: serdarsoysal
+ms.author: serdars
 ms.reviewer:
 ---
 # Remove-TeamTargetingHierarchy
@@ -42,4 +42,4 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-- [Set-TeamTargetingHierarchy](https://docs.microsoft.com/powershell/module/teams/set-teamtargetinghierarchy)
+[Set-TeamTargetingHierarchy](Set-TeamTargetingHierarchy.md)

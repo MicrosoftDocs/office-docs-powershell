@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-transportservice
+online version: https://learn.microsoft.com/powershell/module/exchange/set-transportservice
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
 title: Set-TransportService
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-TransportService cmdlet to modify the settings of the Transport service on Exchange 2013 or later Mailbox servers or Edge Transport servers.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -164,7 +164,7 @@ Set-TransportService [-Identity] <ServerIdParameter>
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -1103,7 +1103,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPerDomainOutboundConnections
-The MaxPerDomainOutboundConnections parameter specifies the maximum number of concurrent connections to any single domain. The default value is 20. The valid input range for this parameter is from 1 through 2147483647. If you enter a value of unlimited, no limit is imposed on the number of outbound connections per domain. The value of the MaxPerDomainOutboundConnections parameter must be less than or equal to the value of the MaxOutboundConnections parameter.
+The MaxPerDomainOutboundConnections parameter specifies the maximum number of concurrent connections to any single domain. The default value is 40. The valid input range for this parameter is from 1 through 2147483647. If you enter a value of unlimited, no limit is imposed on the number of outbound connections per domain. The value of the MaxPerDomainOutboundConnections parameter must be less than or equal to the value of the MaxOutboundConnections parameter.
 
 ```yaml
 Type: Unlimited
@@ -1139,7 +1139,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageRetryInterval
-The MessageRetryInterval parameter specifies the retry interval for individual messages after a connection failure with a remote server. The default value is 15 minutes.
+The MessageRetryInterval parameter specifies the retry interval for individual messages after a connection failure with a remote server. The default value is 5 minutes.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
@@ -2066,7 +2066,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxAge
-This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxAge parameter specifies the maximum duration that the server statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -2088,7 +2088,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxDirectorySize
-This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the server statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB.
 
@@ -2118,7 +2118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxFileSize
-This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogMaxFileSize parameter specifies the maximum file size for the server statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
@@ -2148,7 +2148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogPath
-This parameter is available or functional only in Exchange Server 2013 CU6 or earlier.
+This parameter is functional only in Exchange Server 2013 CU6 or earlier.
 
 The ServerStatisticsLogPath parameter specifies the location of server statistics log storage. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ServerStats. Setting the value of this parameter to $null disables server statistics logging.
 
@@ -2850,12 +2850,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/set-adminauditlogconfig
+online version: https://learn.microsoft.com/powershell/module/exchange/set-adminauditlogconfig
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Set-AdminAuditLogConfig
 schema: 2.0.0
@@ -16,7 +16,7 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Set-AdminAuditLogConfig cmdlet to configure the administrator audit logging configuration settings.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
@@ -47,7 +47,7 @@ Administrator audit logging relies on Active Directory replication to replicate 
 
 Changes to the audit log configuration may take up to 60 minutes to be applied on computers that have the Exchange Management Shell open at the time a configuration change is made. If you want to apply the changes immediately, close and reopen the Exchange Management Shell on each computer.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://docs.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -139,7 +139,12 @@ Accept wildcard characters: False
 ### -AdminAuditLogEnabled
 This parameter is available only in on-premises Exchange.
 
-The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $true. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
+The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. Valid values are:
+
+- $true: Administrator audit logging is enabled. This is the default value.
+- $false: Administrator audit logging is disabled.
+
+You must specify an administrator audit log mailbox before you enable logging.
 
 Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
 
@@ -233,7 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
+The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
+
+You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
 
 ```yaml
 Type: SwitchParameter
@@ -250,9 +257,10 @@ Accept wildcard characters: False
 ### -LogLevel
 This parameter is available only in on-premises Exchange.
 
-The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are None and Verbose.
+The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are:
 
-By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
+- None: The CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. This is the default value.
+- Verbose: The ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are also included in log entries.
 
 ```yaml
 Type: AuditLogLevel
@@ -290,7 +298,10 @@ Accept wildcard characters: False
 ### -TestCmdletLoggingEnabled
 This parameter is available only in on-premises Exchange.
 
-The TestCmdletLoggingEnabled parameter specifies whether the execution of test cmdlets should be logged. Test cmdlets begin with the verb Test. Valid values are $true and $false. The default value is $false.
+The TestCmdletLoggingEnabled parameter specifies whether test cmdlets (cmdlet names that begin with the verb Test) results are included in admin audit logging. Valid values are:
+
+- $true: Test cmdlets are included in admin audit logging.
+- $false: Test cmdlets aren't included in admin audit logging. This is the default value.
 
 Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
 
@@ -308,12 +319,12 @@ Accept wildcard characters: False
 ```
 
 ### -UnifiedAuditLogIngestionEnabled
-This parameter is available or functional only in the cloud-based service.
+This parameter is functional only in the cloud-based service.
 
 The UnifiedAuditLogIngestionEnabled parameter specifies whether to enable or disable the recording of user and admin activities in the Microsoft 365 audit log. Valid values are:
 
-- $true: User and admin activities are recorded in the Microsoft 365 audit log, and you can search the Microsoft 365 audit log.
-- $false: User and admin activities aren't recorded in the Microsoft 365 audit log, and you can't search the Microsoft 365 audit log. This is the default value.
+- $true: User and admin activities are recorded in the Microsoft 365 audit log, and admins can search the Microsoft 365 audit log. This is the default value.
+- $false: User and admin activities aren't recorded in the Microsoft 365 audit log, and admins can't search the Microsoft 365 audit log.
 
 ```yaml
 Type: Boolean
@@ -347,12 +358,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### Input types
 To see the input types that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
 
 ## OUTPUTS
 
-###  
+### Output types
 To see the return types, which are also known as output types, that this cmdlet accepts, see [Cmdlet Input and Output Types](https://go.microsoft.com/fwlink/p/?LinkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
