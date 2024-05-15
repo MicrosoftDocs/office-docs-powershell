@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-Group cmdlet to view existing group objects in your organization. This cmdlet returns security groups, mail-enabled security groups, distribution groups, and role groups.
+Use the Get-Group cmdlet to view existing group objects in your organization. This cmdlet returns mail-enabled security groups, distribution groups, and role groups. This cmdlet does not return non mail-enabled security groups.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
