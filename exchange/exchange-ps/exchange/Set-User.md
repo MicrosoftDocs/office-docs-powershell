@@ -453,7 +453,12 @@ Accept wildcard characters: False
 ### -EXOModuleEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill EXOModuleEnabled Description }}
+The EXOModuleEnabled parameter specifies whether the user has access to login and run cmdlets through EXO V3 module. EXO Module access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. This parameter is a replacement for RemotePowerShellEnabled parameter that will be soon deprecated in Exchange Online. Valid values are:
+
+- $true: The user has access to EXO Module.
+- $false: The user doesn't have access to EXO Module.
+
+The default value depends on the management roles that are assigned to the user.
 
 ```yaml
 Type: Boolean
@@ -1016,6 +1021,8 @@ The RemotePowerShellEnabled parameter specifies whether the user has access to r
 - $false: The user doesn't have access to remote PowerShell.
 
 The default value depends on the management roles that are assigned to the user.
+
+This parameter will be soon deprecated in Exchange Online and users should switch to the EXOModuleEnabled parameter, which offers same functionality.
 
 ```yaml
 Type: Boolean
