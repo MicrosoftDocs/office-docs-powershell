@@ -453,12 +453,14 @@ Accept wildcard characters: False
 ### -EXOModuleEnabled
 This parameter is available only in the cloud-based service.
 
-The EXOModuleEnabled parameter specifies whether the user has access to login and run cmdlets through EXO V3 module. EXO Module access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. This parameter is a replacement for RemotePowerShellEnabled parameter that will be soon deprecated in Exchange Online. Valid values are:
+The EXOModuleEnabled parameter specifies whether the user can connect to Exchange Online PowerShell in Microsoft 365 organizations using the Exchange Online PowerShell V3 module. Valid values are:
 
-- $true: The user has access to EXO Module.
-- $false: The user doesn't have access to EXO Module.
+- $true: The user can connect to Exchange Online PowerShell.
+- $false: The user can't connect to Exchange Online PowerShell.
 
 The default value depends on the management roles that are assigned to the user.
+
+ Access to Exchange Online PowerShell is also required for other features (for example, the ability to open the Exchange admin center (EAC)).
 
 ```yaml
 Type: Boolean
@@ -1015,14 +1017,14 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
+**Note**: This parameter is being deprecated in cloud-based environments. In cloud-based environments, use the EXOModuleEnabled parameter instead.
+
 The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Remote PowerShell access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. Valid values are:
 
 - $true: The user has access to remote PowerShell.
 - $false: The user doesn't have access to remote PowerShell.
 
 The default value depends on the management roles that are assigned to the user.
-
-This parameter will be soon deprecated in Exchange Online and users should switch to the EXOModuleEnabled parameter, which offers same functionality.
 
 ```yaml
 Type: Boolean
