@@ -2,7 +2,7 @@
 title: "Control remote PowerShell access to Exchange servers"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 9/7/2023
 ms.audience: ITPro
 audience: ITPro
