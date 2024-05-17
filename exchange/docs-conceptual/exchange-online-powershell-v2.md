@@ -2,7 +2,7 @@
 title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 12/12/2023
 ms.audience: Admin
 audience: Admin
@@ -571,7 +571,7 @@ For detailed syntax and parameter information, see [Uninstall-Module](/powershel
 
 ## Properties and property sets in the Exchange Online PowerShell module
 
-Traditional Exchange Online cmdlets return all possible object properties in their output, including many properties that are often blank or aren't interesting in many scenarios. This behavior causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
+Traditional Exchange Online cmdlets return all possible object properties in their output, including many properties that are often blank or aren't interested in many scenarios. This behavior causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
 
 The **Get-EXO\*** cmdlets in the module have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into _property sets_. Simply put, these property sets are buckets of two or more related properties on the cmdlet.
 

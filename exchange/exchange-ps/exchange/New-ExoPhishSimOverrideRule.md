@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/new-exophishsimoverriderule
-applicable: Exchange Online, Exchange Online Protection
+applicable: Exchange Online
 title: New-ExoPhishSimOverrideRule
 schema: 2.0.0
 author: chrisda
@@ -22,7 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ### Default
 ```
-New-ExoPhishSimOverrideRule -Policy <PolicyIdParameter> -SenderIpRanges <MultiValuedProperty> 
+New-ExoPhishSimOverrideRule -Policy <PolicyIdParameter> -SenderIpRanges <MultiValuedProperty>
  [-Comment <String>]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -58,7 +58,7 @@ The Policy parameter specifies the phishing simulation override policy that's as
 Type: PolicyIdParameter
 Parameter Sets: Default, PublishComplianceTag, ComplianceTag, SetRawXml
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -82,7 +82,7 @@ A phishing simulation entry requires at least one IP address in this parameter a
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -98,7 +98,7 @@ The Comment parameter specifies an optional comment. If you specify a value that
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ A phishing simulation requires at least one domain from this parameter and at le
 Type: MultiValuedProperty
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ The Name parameter specifies the name for the policy. Regardless of the value yo
 Type: String
 Parameter Sets: Default
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

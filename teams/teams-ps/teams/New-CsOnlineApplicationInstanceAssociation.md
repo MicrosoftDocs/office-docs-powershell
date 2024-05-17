@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationId
-The ConfigurationId parameter is the identity of the configuration that would be associatied with the provided application instances.
+The ConfigurationId parameter is the identity of the configuration that would be associated with the provided application instances.
 
 ```yaml
 Type: System.string

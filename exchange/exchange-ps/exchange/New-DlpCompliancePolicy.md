@@ -36,6 +36,7 @@ New-DlpCompliancePolicy [-Name] <String>
  [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
+ [-IsFromSmartInsights <System.Boolean>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -379,6 +380,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsFromSmartInsights
+{{ Fill IsFromSmartInsights Description }}
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

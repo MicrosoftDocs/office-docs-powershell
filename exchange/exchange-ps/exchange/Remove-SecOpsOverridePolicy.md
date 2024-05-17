@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-SecOpsOverridePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Force]
+ [-ForceDeletion]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -99,10 +99,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
-
-You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+### -ForceDeletion
+The ForceDeletion switch forces the removal of the SecOps override policy. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
