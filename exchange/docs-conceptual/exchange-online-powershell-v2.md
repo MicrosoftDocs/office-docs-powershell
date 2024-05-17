@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 12/12/2023
+ms.date: 05/17/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -615,12 +615,18 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.5.0
+
+- New **Get-VivaFeatureCategory** cmdlet.
+- Added support for policy operations at the category level in Viva Feature Access Management (VFAM).
+- New IsFeatureEnabledByDefault property in the output of **Get-VivaModuleFeaturePolicy**. The value of this property shows the default enablement state for users in the tenant when no tenant or user/group policies have been created.
+
+### Previous releases
+
 #### Version 3.4.0
 
 - Bug fixes in **Connect-ExchangeOnline**, **Get-EXORecipientPermission** and **Get-EXOMailboxFolderPermission**.
 - THe _SigningCertificate_ parameter in **Connect-ExchangeOnline** now supports [Constrained Language Mode (CLM)](/powershell/module/microsoft.powershell.core/about/about_language_modes#constrainedlanguage-mode).
-
-### Previous releases
 
 #### Version 3.3.0
 
