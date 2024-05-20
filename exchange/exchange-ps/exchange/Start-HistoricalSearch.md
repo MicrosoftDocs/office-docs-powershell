@@ -70,7 +70,7 @@ This example starts a new historical search named "Fabrikam Search" that has the
 ### -EndDate
 The EndDate parameter specifies the end date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 If you don't specify the time of day, the default value 0:00 AM is used. For example, the value 12/31/2022 is really "12/31/2022 0:00 AM", which means no data from 12/31/2022 is included (only data from 12/30/2022 is included).
 
@@ -111,14 +111,16 @@ Accept wildcard characters: False
 The ReportType parameter specifies the type of historical search that you want to perform. You can use one of the following values:
 
 - ATPReport: Defender for Office 365 File types report and Defender for Office 365 Message disposition report
+- ConnectorReport: Inbound/Outbound Message Report.
 - DLP: Data Loss Prevention Report.
 - MessageTrace: Message Trace Report.
 - MessageTraceDetail: Message Trace Details Report.
+- OutboundSecurityReport: Outbound Message in Transit Security Report.
+- P2SenderAttribution: P2 Sender Attribution Report.
 - SPAM: SPAM Detections Report.
 - Spoof: Spoof Mail Report.
 - TransportRule: Transport or Mail Flow Rules Report.
 - UnifiedDLP: Unified Data Loss Prevention Report.
-- P2SenderAttribution: P2 Sender Attribution Report.
 
 You also need to use at least one of the following parameters in the command: MessageID, RecipientAddress, or SenderAddress.
 
@@ -138,7 +140,7 @@ Accept wildcard characters: False
 ### -StartDate
 The StartDate parameter specifies the start date of the date range.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -154,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockStatus
-{{ Fill BlockStatus Description }}
+The BlockStatus parameter filters the results in OutboundSecurityReport reports by the status of messages sent externally, messages blocked due to security checks, or messages sent successfully.
 
 ```yaml
 Type: String
@@ -186,10 +188,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectorType
-The ConnectorType parameter filters the results by the connector type. Valid values are:
+The ConnectorType parameter filters the results in ConnectorReport reports by the connector type. Valid values are:
 
 - OnPremises
 - Partner
+- NoConnector
 
 ```yaml
 Type: String
@@ -409,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmtpSecurityError
-{{ Fill SmtpSecurityError Description }}
+The SmtpSecurityError parameter filters the results in OutboundSecurityReport reports by the error type of blocked messages when sent externally.
 
 ```yaml
 Type: String
@@ -425,7 +428,11 @@ Accept wildcard characters: False
 ```
 
 ### -TLSUsed
-{{ Fill TLSUsed Description }}
+The TLSUsed parameter filters the results in ConnectorReport reports by the TLS version. Valid values are:
+
+- No Tls
+- TLS1.2
+- TLS1.3
 
 ```yaml
 Type: String

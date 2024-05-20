@@ -22,16 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### RetryDistribution
-```
-Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
- [-Confirm]
- [-EnforceSimulationPolicy <Boolean>]
- [-StartSimulation <Boolean>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
 ### Identity
 ```
 Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
@@ -49,6 +39,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
@@ -77,10 +68,22 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-AddAdaptiveScope
  [-Applications <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
  [-RemoveAdaptiveScopeLocation <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
+### RetryDistribution
+```
+Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter> [-RetryDistribution]
+ [-Confirm]
+ [-DeletedResources <String>]
+ [-EnforceSimulationPolicy <Boolean>]
  [-StartSimulation <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
@@ -95,6 +98,7 @@ Set-RetentionCompliancePolicy [-Identity] <PolicyIdParameter>
  [-AddTeamsChatLocationException <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-DeletedResources <String>]
  [-Enabled <Boolean>]
  [-EnforceSimulationPolicy <Boolean>]
  [-Force]
@@ -125,6 +129,52 @@ This example makes the following changes to the existing retention policy named 
 - Adds the SharePoint Online site `https://contoso.sharepoint.com/sites/teams/finance`.
 - Removes public folders.
 - Updates the comment.
+
+### Example 2
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'USSales@contoso.onmicrosoft.com',
+     'SiteId': '9b2a8116-b9ec-4e2c-bf31-7eaa83697c4b'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocation "USSales@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+The example removes the specified deleted Microsoft 365 Group and site from the specified policy. You identify the deleted resources using the Microsoft 365 Group email address and the related site ID.
+
+### Example 3
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'USSales@contoso.onmicrosoft.com',
+     'SiteId': '8b2a8345-b9ec-3b6a-bf31-6eaa83697c4b'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Tenant Level Policy" -AddModernGroupLocationException "USSales@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+The example excludes the specified deleted Microsoft 365 Group and site from the specified tenant level policy. You identify the deleted resources using the Microsoft 365 Group email address and the related site ID.
+
+### Example 4
+```powershell
+$stringJson = @"
+[{
+     'EmailAddress': 'USSales2@contoso.onmicrosoft.com',
+     'SiteId': '9b2a8116-b9ec-4e2c-bf31-7eaa83697c4b'
+ },
+[{
+     'EmailAddress': 'USSales2@contoso.onmicrosoft.com',
+     'SiteId': '4afb7116-b9ec-4b2c-bf31-4abb83697c4b'
+}]
+"@
+
+Set-RetentionCompliancePolicy -Identity "Sales Policy" -RemoveModernGroupLocation "USSales2@contoso.onmicrosoft.com" -DeletedResources $stringJson
+```
+
+This example is similar to Example 2, except multiple deleted resources are specified.
 
 ## PARAMETERS
 
@@ -565,6 +615,26 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeletedResources
+The DeletedResources parameter specifies the Sharepoint sites to be removed from the list of included sites or excluded from a tenant level policy when the associated group has been deleted. You use this parameter with the AddModernGroupLocationException and RemoveModernGroupLocation parameters.
+
+A valid value is a JSON String. See the Examples section for syntax and examples using this parameter.
+
+For more information about this scenario, see [Learn more about modern group deletion under retention hold](https://learn.microsoft.com/purview/retention-settings#what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied).
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
 Applicable: Security & Compliance
 
 Required: False

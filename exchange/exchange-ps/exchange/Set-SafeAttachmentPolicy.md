@@ -44,7 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-SafeAttachmentsPolicy -Identity "Engineering Block Attachments" -QuarantineTag ContosoLimitedAccess 
+Set-SafeAttachmentsPolicy -Identity "Engineering Block Attachments" -QuarantineTag ContosoLimitedAccess
 ```
 
 This example modifies the existing safe attachment policy named Engineering Block Attachments to set the quarantine policy to ContosoLimitedAccess.

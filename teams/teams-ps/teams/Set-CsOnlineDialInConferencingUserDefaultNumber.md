@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -RescheduleMeetings
-Sends e-mail notifications to Meeting attendes with the updated settings.
+Sends e-mail notifications to Meeting attendees with the updated settings.
 
 ```yaml
 Type: SwitchParameter

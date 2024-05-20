@@ -16,8 +16,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-AvailabilityConfig cmdlet to view information about the sharing of free/busy information between organizations:
 
-- In on-premises Exchange, the cmdlet returns the accounts that are trusted in the cross-forest sharing of free/busy information. 
-- In Exchange Online, the cmdlet returns the tenant IDs of organizations that free/busy information is being shared with. 
+- In on-premises Exchange, the cmdlet returns the accounts that are trusted in the cross-forest sharing of free/busy information.
+- In Exchange Online, the cmdlet returns the tenant IDs of organizations that free/busy information is being shared with.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -41,7 +41,7 @@ Get-AvailabilityConfig
 
 In on-premises Exchange, this example returns the accounts that are trusted in the cross-forest shared of free/busy information.
 
-In Exchange Online, this examples returns the tenant IDs that free/busy information is being shared with. 
+In Exchange Online, this examples returns the tenant IDs that free/busy information is being shared with.
 
 ## PARAMETERS
 

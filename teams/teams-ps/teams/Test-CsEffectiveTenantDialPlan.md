@@ -39,7 +39,7 @@ The `Test-CsEffectiveTenantDialPlan` cmdlet normalizes the dialed number by appl
 Get-CsEffectiveTenantDialPlan -Identity adelev | Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080
 ```
 
-This example gets the Identity of a dial plan that is associated with the identity of an user, and applies the retrieved tenant dial plan to normalize the dialed number.
+This example gets the Identity of a dial plan that is associated with the identity of a user, and applies the retrieved tenant dial plan to normalize the dialed number.
 
 
 ### -------------------------- Example 2 --------------------------

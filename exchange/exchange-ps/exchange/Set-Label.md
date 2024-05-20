@@ -81,7 +81,12 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-SiteExternalSharingControlType <Microsoft.Office.CompliancePolicy.Tasks.SiteExternalSharingControlType>]
  [-TeamsAllowedPresenters <Microsoft.Office.CompliancePolicy.PolicyConfiguration.AllowedPresenters>]
  [-TeamsAllowMeetingChat <Microsoft.Office.CompliancePolicy.PolicyConfiguration.MeetingChatMode>]
+ [-TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch <System.Boolean>]
  [-TeamsBypassLobbyForDialInUsers <System.Boolean>]
+ [-TeamsChannelProtectionEnabled <System.Boolean>]
+ [-TeamsChannelSharedWithExternalTenants <System.Boolean>]
+ [-TeamsChannelSharedWithPrivateTeamsOnly <System.Boolean>]
+ [-TeamsChannelSharedWithSameLabelOnly <System.Boolean>]
  [-TeamsCopyRestrictionEnforced <System.Boolean>]
  [-TeamsEndToEndEncryptionEnabled <System.Boolean>]
  [-TeamsLobbyBypassScope <Microsoft.Office.CompliancePolicy.PolicyConfiguration.LobbyBypassScope>]
@@ -142,7 +147,7 @@ The AdvancedSettings parameter enables specific features and capabilities for a 
 
 Specify this parameter with the identity (name or GUID) of the sensitivity label, with key/value pairs in a [hash table](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
 
-Some of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling. For a list of these and instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://learn.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+Some of the settings that you configure with this parameter are supported only by the Microsoft Purview Information Protection client and not by Office apps and services that support built-in labeling. For a list of these, see [Advanced settings for Microsoft Purview Information Protection client](https://learn.microsoft.com/powershell/exchange/client-advanced-settings).
 
 Supported settings for built-in labeling:
 
@@ -590,7 +595,7 @@ Accept wildcard characters: False
 ```
 
 ### -Conditions
-The Conditions parameter is used for automatic labeling of files and email for data in use. 
+The Conditions parameter is used for automatic labeling of files and email for data in use.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1278,12 +1283,92 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch
+{{ Fill TeamsAllowPrivateTeamsToBeDiscoverableUsingSearch Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TeamsBypassLobbyForDialInUsers
 The TeamsBypassLobbyForDialInUsers parameter controls the lobby experience for dial-in users who join Teams meetings. Valid values are:
 
 - $true: Dial in users bypass the lobby when joining Teams meetings.
 - $false: Dial in users don't bypass the lobby when joining Teams meetings.
 - $null (blank): Users configure this setting themselves in the Teams app.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelProtectionEnabled
+{{ Fill TeamsChannelProtectionEnabled Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithExternalTenants
+{{ Fill TeamsChannelSharedWithExternalTenants Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithPrivateTeamsOnly
+{{ Fill TeamsChannelSharedWithPrivateTeamsOnly Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TeamsChannelSharedWithSameLabelOnly
+{{ Fill TeamsChannelSharedWithSameLabelOnly Description }}
 
 ```yaml
 Type: System.Boolean

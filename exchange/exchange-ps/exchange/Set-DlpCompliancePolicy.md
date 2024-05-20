@@ -49,6 +49,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-ExchangeSenderMemberOf <RecipientIdParameter[]>]
  [-ExchangeSenderMemberOfException <RecipientIdParameter[]>]
  [-Force]
+ [-IsFromSmartInsights <System.Boolean>]
  [-Mode <PolicyMode>]
  [-OneDriveAdaptiveScopes <MultiValuedProperty>]
  [-OneDriveAdaptiveScopesException <MultiValuedProperty>]
@@ -74,6 +75,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-RemoveThirdPartyAppDlpLocationException <MultiValuedProperty>]
  [-SharePointAdaptiveScopes <MultiValuedProperty>]
  [-SharePointAdaptiveScopesException <MultiValuedProperty>]
+ [-StartSimulation <Boolean>]
  [-TeamsLocation <MultiValuedProperty>]
  [-TeamsLocationException <MultiValuedProperty>]
  [-WhatIf]
@@ -706,6 +708,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsFromSmartInsights
+{{ Fill IsFromSmartInsights Description }}
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Mode
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values are:
 
@@ -1194,6 +1212,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartSimulation
+{{ Fill StartSimulation Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: Identity
 Aliases:
 Applicable: Security & Compliance

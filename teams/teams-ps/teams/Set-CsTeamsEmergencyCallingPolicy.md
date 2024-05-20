@@ -34,7 +34,24 @@ This cmdlet modifies an existing Teams Emergency Calling policy. Emergency calli
 Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -NotificationGroup "123@contoso.com;567@contoso.com"
 ```
 
-This example modifies an existing policy instance with identity TestECP.
+This example modifies NotificationGroup of an existing policy instance with identity TestECP.
+
+### Example 2
+```powershell
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert2@contoso.com" -NotificationMode ConferenceUnMuted
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{remove=$en1}
+```
+
+This example first creates a new Teams Emergency Calling Extended Notification object and then removes that Teams Emergency Calling Extended Notification from an existing Teams Emergency Calling policy.
+
+### Example 3
+```powershell
+$en1 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "911" -NotificationGroup "alert@contoso.com" -NotificationDialOutNumber "+14255551234" -NotificationMode ConferenceUnMuted
+$en2 = New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString "933"
+Set-CsTeamsEmergencyCallingPolicy -Identity "TestECP" -ExtendedNotifications @{add=$en1,$en2}
+```
+
+This example first creates two new Teams Emergency Calling Extended Notification objects and then adds them to an existing Teams Emergency Calling policy with identity TestECP.
 
 ## PARAMETERS
 

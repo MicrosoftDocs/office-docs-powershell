@@ -42,6 +42,14 @@ New-AuthenticationPolicy [[-Name] <String>]
  [-BlockLegacyAuthPop]
  [-BlockLegacyAuthRpc]
  [-BlockLegacyAuthWebServices]
+ [-BlockModernAuthActiveSync]
+ [-BlockModernAuthAutodiscover]
+ [-BlockModernAuthImap]
+ [-BlockModernAuthMapi]
+ [-BlockModernAuthOfflineAddressBook]
+ [-BlockModernAuthPop]
+ [-BlockModernAuthRpc]
+ [-BlockModernAuthWebServices]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -518,6 +526,150 @@ This switch disables the following legacy authentication methods with EWS:
 - Windows authentication (NTLM and Kerberos)
 
 Before you disable the legacy authentication methods for this protocol, verify that hybrid modern authentication is enabled and working in your Exchange hybrid environment, and that your email clients support modern authentication.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthActiveSync
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthActiveSync switch specifies whether to block modern authentication with Exchange ActiveSync in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthAutodiscover
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthAutodiscover switch specifies whether to block modern authentication with Autodiscover in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthImap
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthImap switch specifies whether to block modern authentication with IMAP in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthMapi
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthMapi switch specifies whether to block modern authentication with MAPI in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthOfflineAddressBook
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthOfflineAddressBook switch specifies whether to block modern authentication with Offline Address Books in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthPop
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthPop switch specifies whether to block modern authentication with POP in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthRpc
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthRpc switch specifies whether to block modern authentication with RPC in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockModernAuthWebServices
+This parameter is available only in on-premises Exchange.
+
+The BlockModernAuthWebServices switch specifies whether to block modern authentication with Exchange Web Services (EWS) in Exchange 2019 CU13 or later. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

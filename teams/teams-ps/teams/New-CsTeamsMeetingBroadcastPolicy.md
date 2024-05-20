@@ -42,7 +42,7 @@ Creates a new MeetingBroadcastPolicy with broadcast scheduling disabled, which c
 ## PARAMETERS
 
 ### -AllowBroadcastScheduling
-Specifies whether this user can create broadcast events in Teams.  This settng impacts broadcasts that use both self-service and external encoder production methods. 
+Specifies whether this user can create broadcast events in Teams.  This setting impacts broadcasts that use both self-service and external encoder production methods. 
 
 ```yaml
 Type: Boolean

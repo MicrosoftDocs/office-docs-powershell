@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Remove-AutodiscoverVirtualDirectory cmdlet to remove the an existing Autodiscover virtual directory from Internet Information Services (IIS).
+Use the Remove-AutodiscoverVirtualDirectory cmdlet to remove an existing Autodiscover virtual directory from Internet Information Services (IIS).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
