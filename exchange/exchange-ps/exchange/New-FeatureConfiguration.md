@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-FeatureConfiguration [-Name] <String> -Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode> -Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario> -ScenarioConfig <String>
+New-FeatureConfiguration [-Name] <String> -Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode> -FeatureScenario <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario> -ScenarioConfig <String>
  [-Comment <String>]
  [-Confirm]
  [-Locations <String>]
@@ -93,6 +93,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FeatureScenario
+The FeatureScenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Locations
 {{ Fill Locations Description }}
 
@@ -119,22 +135,6 @@ The Mode parameter specifies the action and notification level of the Discovery 
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Scenario
-The Scenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
-
-```yaml
-Type: icrosoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
