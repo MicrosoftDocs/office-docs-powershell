@@ -871,6 +871,7 @@
   "Import-JournalRuleCollection": "policy-and-compliance",
   "Import-TransportRuleCollection": "policy-and-compliance",
   "Install-UnifiedCompliancePrerequisite": "policy-and-compliance",
+  "Invoke-ComplianceSecurityFilterAction": "policy-and-compliance",
   "New-ActivityAlert": "policy-and-compliance",
   "New-AutoSensitivityLabelPolicy": "policy-and-compliance",
   "New-AutoSensitivityLabelRule": "policy-and-compliance",

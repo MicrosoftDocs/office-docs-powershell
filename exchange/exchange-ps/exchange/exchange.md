@@ -1777,6 +1777,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Install-UnifiedCompliancePrerequisite](Install-UnifiedCompliancePrerequisite.md)
 
+### [Invoke-ComplianceSecurityFilterAction](Invoke-ComplianceSecurityFilterAction.md)
+
 ### [New-ActivityAlert](New-ActivityAlert.md)
 
 ### [New-AutoSensitivityLabelPolicy](New-AutoSensitivityLabelPolicy.md)
