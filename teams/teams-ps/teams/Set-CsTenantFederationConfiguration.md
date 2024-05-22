@@ -24,7 +24,8 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
  [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -166,6 +167,14 @@ In this example, all users from contoso.com and fabrikam.com will be blocked.
 When the BlockAllSubdomains is enabled, all users from all subdomains of all domains in BlockedDomains list will also be blocked.
 So, users from subdomain.contoso.com and subdomain.fabrikam.com will be blocked.
 Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain of contoso.com.
+
+### -------------------------- Example 11 -------------------------
+```
+Set-CsTenantFederationConfiguration -ExternalAccessWithTrialTenants "Allowed"
+```
+
+Example 11 shows how the external access to be able to communicate with tenants that contain trial users can be allowed (default value is Blocked).
+
 
 ## PARAMETERS
 
@@ -431,6 +440,28 @@ Type: List
 Parameter Sets: (All)
 Aliases: 
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalAccessWithTrialTenants
+When set to 'Blocked' all federated communication with tenants that contain only trial users will be blocked.
+Block is enforced in both directions, user from trial tenant cannot reach to user that has block enabled and user with block enabled cannot reach to trial user. This will also trigger ejection of users from existing chats if the block gets enabled and the chats will exist prior to that.
+The default value is Blocked.
+
+Allowed - Communication with other tenants is allowed
+
+Blocked - Communication with users in tenants that contain only trial users will be blocked.
+
+```yaml
+Type: ExternalAccessWithTrialTenantsType
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
