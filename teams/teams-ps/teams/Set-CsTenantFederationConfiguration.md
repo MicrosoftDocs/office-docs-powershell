@@ -450,7 +450,7 @@ Accept wildcard characters: False
 
 ### -ExternalAccessWithTrialTenants
 When set to 'Blocked' all federated communication with tenants that contain only trial users will be blocked.
-Block is enforced in both directions, user from trial tenant cannot reach to user that has block enabled and user with block enabled cannot reach to trial user. This will also trigger ejection of users from existing chats if the block gets enabled and the chats will exist prior to that.
+Block is enforced in both directions, users from trial tenant cannot reach to users from tenant that has the block enabled and user with block enabled cannot reach users from trial tenant. This will also trigger ejection of users from existing chats if the block gets enabled and the chats will exist prior to that.
 The default value is Blocked.
 
 Allowed - Communication with other tenants is allowed
