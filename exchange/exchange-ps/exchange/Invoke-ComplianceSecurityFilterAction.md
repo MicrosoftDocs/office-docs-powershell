@@ -30,20 +30,29 @@ Invoke-ComplianceSecurityFilterAction [-Action] <String> [-PropertyName] <String
 ## DESCRIPTION
 This cmdlet is useful in scenarios where the OneDrive site has fallen out of the compliance boundary due to a departed user and a corresponding inactive mailbox.
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be a member of the Compliance Administrator role group. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Invoke-ComplianceSecurityFilterAction -Action GetStatus -PropertyName Department -SiteUrl https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
+PS C:\> Invoke-ComplianceSecurityFilterAction -Action GetStatus -PropertyName CustomAttribute1 -SiteUrl https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
+
+SiteUrl               : https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
+BoundaryType          : UserMailbox
+BoundaryInstruction   : Set via Set-Mailbox
+BoundaryObjectId      : SPO_f82ace6e-817e-4752-8917-67164dabde98@SPO_775ea11f-a2af-7821-b04c-9848e903ce47
+BoundaryStatus        : Success
+BoundaryProperty      : CustomAttribute1
+BoundaryPropertyValue :
+
 ```
 
-This example returns the status of a OneDrive site that's bound by the Department property on the user's mailbox.
+This example returns the status of a OneDrive site that's bound by the CustomAttribute1 property on the user's mailbox.
 
 ### Example 2
 ```powershell
-Invoke-ComplianceSecurityFilterAction -Action Set -PropertyName Department -PropertyValue "Research and Development" -SiteUrl https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
+Invoke-ComplianceSecurityFilterAction -Action Set -PropertyName CustomAttribute1 -PropertyValue "Research and Development" -SiteUrl https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
 ```
 
 This example sets the boundary of the specified OneDrive site for a user who left the company.
@@ -72,12 +81,7 @@ Accept wildcard characters: False
 ### -PropertyName
 The PropertyName parameter specifies the name of the property of the compliance boundary for the OneDrive site that you want to view or modify. Valid values are:
 
-- Alias
-- Company
-- CountryOrRegion
 - CustomAttribute1 to CustomAttribute15
-- Department
-- PostalCode
 
 Use the PropertyValue parameter to set the compliance boundary.
 
