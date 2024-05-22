@@ -45,7 +45,6 @@ BoundaryObjectId      : SPO_f82ace6e-817e-4752-8917-67164dabde98@SPO_775ea11f-a2
 BoundaryStatus        : Success
 BoundaryProperty      : CustomAttribute1
 BoundaryPropertyValue :
-
 ```
 
 This example returns the status of a OneDrive site that's bound by the CustomAttribute1 property on the user's mailbox.
