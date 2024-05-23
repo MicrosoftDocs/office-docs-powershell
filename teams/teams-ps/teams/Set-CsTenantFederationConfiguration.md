@@ -173,7 +173,7 @@ Note: Users from subcontoso.com will not be blocked because it's a completely di
 Set-CsTenantFederationConfiguration -ExternalAccessWithTrialTenants "Allowed"
 ```
 
-Example 11 shows how the external access to be able to communicate with tenants that contain trial users can be allowed (default value is Blocked).
+Example 11 shows how you can allow users to communicate with users in tenants that contain only trial licenses (default value is Blocked).
 
 
 ## PARAMETERS
@@ -449,12 +449,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalAccessWithTrialTenants
-When set to 'Blocked', all external access with Teams subscriptions that are all trial will be blocked. Users from trial tenants will not be able to reach to users from tenants that have enabled the Block and vice-versa. The setting will also remove trial tenant users from existing chats if the block gets enabled.
-The default value of the setting is Blocked.
+When set to 'Blocked', all external access with users from Teams subscriptions that contain only trial licenses will be blocked. This means users from these trial-only tenants will not be able to reach to your users via chats, Teams calls, and meetings (using the users authenticated identity) and your users will not be able to reach users in these trial-only tenants. If this setting is set to "Blocked", users from the trial-only tenant will also be removed from existing chats.
 
-Allowed - Communication with other tenants is allowed
+Allowed - Communication with other tenants is allowed based on other settings.
 
-Blocked - Communication with users in tenants that contain only trial users will be blocked.
+Blocked - Communication with users in tenants that contain only trial licenses will be blocked.
 
 ```yaml
 Type: ExternalAccessWithTrialTenantsType
