@@ -130,8 +130,6 @@ The Mode parameter specifies the action and notification level of the Discovery 
 
 - Enable: The policy is enabled for actions and notifications. This is the default value.
 - Disable: The policy is disabled.
-- TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
-- TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
