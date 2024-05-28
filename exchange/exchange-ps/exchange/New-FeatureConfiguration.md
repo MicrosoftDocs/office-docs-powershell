@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-FeatureConfiguration [-Name] <String> -Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode> -Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario> -ScenarioConfig <String>
+New-FeatureConfiguration [-Name] <String> -Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode> -FeatureScenario <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario> -ScenarioConfig <String>
  [-Comment <String>]
  [-Confirm]
  [-Locations <String>]
@@ -53,6 +53,57 @@ Applicable: Security & Compliance
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FeatureScenario
+The FeatureScenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Mode
+The Mode parameter specifies the action and notification level of the Discovery policy. Valid values are:
+
+- Enable: The policy is enabled for actions and notifications. This is the default value.
+- Disable: The policy is disabled.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScenarioConfig
+{{ Fill ScenarioConfig Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -103,59 +154,6 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Mode
-The Mode parameter specifies the action and notification level of the Discovery policy. Valid values are:
-
-- Enable: The policy is enabled for actions and notifications. This is the default value.
-- Disable: The policy is disabled.
-- TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
-- TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.
-
-```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Scenario
-The Scenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
-
-```yaml
-Type: icrosoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ScenarioConfig
-{{ Fill ScenarioConfig Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

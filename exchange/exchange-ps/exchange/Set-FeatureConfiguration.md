@@ -24,73 +24,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter> [-Locations <String>] [-Comment <String>]
  [-Confirm]
  [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
- [-Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### AdaptiveScopeLocation
-```
-Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter> [-Comment <String>]
- [-Confirm]
- [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
- [-Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### TeamLocation
-```
-Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter> [-Comment <String>]
- [-Confirm]
- [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
- [-Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### OrganizationSegmentsDefault
-```
-Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>
- [-Confirm]
- [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
- [-Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### InformationBarrierDefault
-```
-Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>
- [-Confirm]
- [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
- [-Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### DisableRestrictiveRetentionParameterSet
-```
-Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>
- [-Confirm]
- [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
- [-Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario>]
- [-ScenarioConfig <String>]
- [-WhatIf]
- [<CommonParameters>]
-```
-
-### RetryDistributionParameterSet
-```
-Set-FeatureConfiguration [-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>
- [-Confirm]
- [-Mode <Microsoft.Office.CompliancePolicy.Tasks.PolicyMode>]
- [-Scenario <Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario>]
  [-ScenarioConfig <String>]
  [-WhatIf]
  [<CommonParameters>]
@@ -186,27 +119,9 @@ The Mode parameter specifies the action and notification level of the Discovery 
 
 - Enable: The policy is enabled for actions and notifications. This is the default value.
 - Disable: The policy is disabled.
-- TestWithNotifications: Simulation mode where no actions are taken, but notifications **are** sent.
-- TestWithoutNotifications: Simulation mode where no actions are taken, and no notifications are sent.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.Tasks.PolicyMode
-Parameter Sets: (All)
-Aliases:
-Applicable: Security & Compliance
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Scenario
-The Scenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
-
-```yaml
-Type: Microsoft.Office.CompliancePolicy.Tasks.FeatureConfigurationScenario
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

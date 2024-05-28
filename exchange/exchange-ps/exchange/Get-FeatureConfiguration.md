@@ -20,7 +20,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Get-FeatureConfiguration [[-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>]
+Get-FeatureConfiguration [-FeatureScenario] <Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario>
+ [[-Identity] <Microsoft.Office.CompliancePolicy.Tasks.PolicyIdParameter>]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -33,14 +34,14 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-Get-FeatureConfiguration | Format-Table Name,Mode
+Get-FeatureConfiguration -FeatureScenario KnowYourData | Format-Table Name,Mode
 ```
 
 This example returns a summary list of all Discovery policies in the organization.
 
 ### Example 2
 ```powershell
-Get-FeatureConfiguration -Identity "Engineering Group"
+Get-FeatureConfiguration -FeatureScenario KnowYourData -Identity "Engineering Group"
 ```
 
 This example returns detailed information about the specified Discovery policy.
@@ -64,6 +65,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -FeatureScenario
+The FeatureScenario parameter identifies the type of Discovery policy that you want to view.
+
+```yaml
+Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
