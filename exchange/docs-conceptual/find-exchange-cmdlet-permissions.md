@@ -31,8 +31,8 @@ You can use PowerShell to find the permissions required to run any Exchange or E
   In cloud-based organizations, membership in the **Global Administrators** role in Microsoft Entra ID gives you the required permissions.
 
 - The procedures in this article don't work in Security & Compliance PowerShell. For more information about Security & Compliance permissions, see the following articles:
-  - [Permissions in the Microsoft Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions)
-  - [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions)
+  - [Permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions)
+  - [Permissions in the Microsoft Purview compliance portal](/purview/purview-compliance-portal-permissions)
 
 > [!TIP]
 > Having problems? Ask for help in the Exchange forums. Visit the forums at: [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) or [Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=267542).
