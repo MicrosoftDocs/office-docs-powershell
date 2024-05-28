@@ -389,7 +389,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientTag
-The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/user-tags-about).
+The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/defender-office-365/user-tags-about).
 
 You can specify multiple values separated by commas.
 

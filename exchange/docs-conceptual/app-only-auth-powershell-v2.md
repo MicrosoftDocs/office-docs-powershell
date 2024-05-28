@@ -2,7 +2,7 @@
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 12/12/2023
 ms.audience: Admin
 audience: Admin
@@ -481,7 +481,7 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 >
 >  This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
-For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
+For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
 To assign custom role groups to the application using service principals, do the following steps:
 
