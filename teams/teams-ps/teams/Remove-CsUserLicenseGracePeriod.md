@@ -1,103 +1,94 @@
 ---
-external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+online version: https://learn.microsoft.com/powershell/module/teams/clear-csonlinetelephonenumberorder
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/skype/remove-csuserlicensegraceperiod
+title: Clear-CsOnlineTelephoneNumberOrder
 schema: 2.0.0
+manager: mreddy
+author: TristanChen-msft
+ms.author: jiaych
+ms.reviewer: julienp
 ---
 
-# Remove-CsUserLicenseGracePeriod
+# Clear-CsOnlineTelephoneNumberOrder
 
 ## SYNOPSIS
-The \`CsUserLicenseGracePeriod\` cmdlet expedites the delicensing operation for the assigned plan(s) of a user/resource account by removing the grace period, permanently deleting the assigned plan(s).
-Note that this cmdlet is to be used only by tenants with license resiliency enabled. (License resiliency is currently under private preview and not available for everyone)
+
+Use the `Clear-CsOnlineTelephoneNumberOrder` cmdlet to cancel a specific telephone number search order and release the telephone numbers. The telephone numbers can then be available for search and acquire.
 
 ## SYNTAX
 
 ```
-Remove-CsUserLicenseGracePeriod [-Identity] <String> [-Capability <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Clear-CsOnlineTelephoneNumberOrder [-OrderId] <OrderId> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The command removes the grace period of the assigned plan(s) against the specified user(s)/resource account(s), permanently deleting the plan(s).
-Permanently deletes all/specified plans belonging to the user, which has a grace period assosciated with it.
-Assigned plans with no subsequent grace period will see no change.
 
-If you want to verify the grace period of any assigned plan against a user, you can return that information by using this command:
-
-\`Get-CsOnlineUser -Identity bf19b7db-6960-41e5-a139-2aa373474354\`
+Use the `Clear-CsOnlineTelephoneNumberOrder` cmdlet to cancel a specific telephone number search order and release the telephone numbers. The telephone numbers can then be available for search and acquire.
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-Remove-CsUserLicenseGracePeriod -Identity bf19b7db-6960-41e5-a139-2aa373474354
+PS C:\> Clear-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+PS C:\> Get-CsOnlineTelephoneNumberOrder -OrderId 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+
+AreaCode              :
+CivicAddressId        :
+CountryCode           : US
+CreatedAt             : 8/23/2021 5:43:44 PM
+Description           : test
+ErrorCode             : NoError
+Id                    : 1efd85ca-dd46-41b3-80a0-2e4c5f87c912
+InventoryType         : Subscriber
+IsManual              : False
+Name                  : test
+NumberPrefix          : 1718
+NumberType            : UserSubscriber
+Quantity              : 1
+ReservationExpiryDate : 8/23/2021 5:59:45 PM
+SearchType            : Prefix
+SendToServiceDesk     : False
+Status                : Cancelled
+TelephoneNumber       : {Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Models.TelephoneNumberSearchResult}
+
+PS C:\> $order.TelephoneNumber
+
+Location      TelephoneNumber
+--------      ---------------
+New York City +17182000004
 ```
 
-In the example shown above, the command will remove the grace period of all assigned plan(s) against the specified user ID, marking the subsequent assigned plan(s) as deleted. Assigned plans with no subsequent grace period will see no change.
+This example cancels the purchase of the telephone number order containing the phone number +17182000004. 
 
-### Example 2
-```
-Remove-CsUserLicenseGracePeriod -Identity bf19b7db-6960-41e5-a139-2aa373474354 -capability 'MCOEV,MCOMEETADD'
-```
-
-In Example 2 the capability specified refers to plans assigned to the user(s) under AssignedPlans. The command will remove the grace period of the specified assigned plans, marking the subsequent plan(s) as deleted.
 
 ## PARAMETERS
 
-### -Identity
-Specifies the Identity(GUID) of the user account whose assigned plan grace period needs to be removed, permanently deleting the subsequent plan.
+### OrderId
+Specifies the telephone number search order to look up. Use `New-CsOnlineTelephoneNumberOrder` to create a search order to obtain a search order Id.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName,ByValue)
-Accept wildcard characters: False
-```
-
-### -Capability
-Denotes the plan(s) assigned to the specified user, which are to be permanently deleted if they are currently serving their grace period. 
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName,ByValue)
-Accept wildcard characters: False
-```
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## INPUTS
 
 ## OUTPUTS
-System.Object
-
-## NOTES
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](teams\teams-ps\teams\Get-CsOnlineUser.md)
+[Get-CsOnlineTelephoneNumberCountry](Get-CsOnlineTelephoneNumberCountry.md)
+[Get-CsOnlineTelephoneNumberType](Get-CsOnlineTelephoneNumberType.md)
+
+[New-CsOnlineTelephoneNumberOrder](New-CsOnlineTelephoneNumberOrder.md)
+[Get-CsOnlineTelephoneNumberOrder](Get-CsOnlineTelephoneNumberOrder.md)
+[Complete-CsOnlineTelephoneNumberOrder](Complete-CsOnlineTelephoneNumberOrder.md)
+[Clear-CsOnlineTelephoneNumberOrder](Clear-CsOnlineTelephoneNumberOrder.md)
