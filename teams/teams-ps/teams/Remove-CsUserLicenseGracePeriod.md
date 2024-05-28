@@ -2,65 +2,50 @@
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/skype/remove-csuserlicensegraceperiod
-title: Remove-CsUserLicenseGracePeriod
-description: This cmdlet expedites the delicensing operation for an account’s assigned plans by removing the grace period, permanently deleting the assigned plans.
 schema: 2.0.0
-ms.date: 02/01/2024
-author: dShyam01
 ---
 
 # Remove-CsUserLicenseGracePeriod
 
 ## SYNOPSIS
-
-The `CsUserLicenseGracePeriod` cmdlet expedites the delicensing operation for the assigned plan(s) of a user/resource account by removing the grace period, permanently deleting the assigned plan(s).
-Note that this cmdlet is to be used only by tenants with license resiliency enabled. (License resiliency is currently under private preview and not available for everyone.)
+The \`CsUserLicenseGracePeriod\` cmdlet expedites the delicensing operation for the assigned plan(s) of a user/resource account by removing the grace period, permanently deleting the assigned plan(s).
+Note that this cmdlet is to be used only by tenants with license resiliency enabled. (License resiliency is currently under private preview and not available for everyone)
 
 ## SYNTAX
 
-```powershell
-Remove-CsUserLicenseGracePeriod 
-[-Identity] <String> 
-[-Capability <String>] 
-[-Force] 
-[-WhatIf] 
-[-Confirm] 
-[<CommonParameters>]
+```
+Remove-CsUserLicenseGracePeriod [-Identity] <String> [-Capability <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
 The command removes the grace period of the assigned plan(s) against the specified user(s)/resource account(s), permanently deleting the plan(s).
 Permanently deletes all/specified plans belonging to the user, which has a grace period assosciated with it.
 Assigned plans with no subsequent grace period will see no change.
 
 If you want to verify the grace period of any assigned plan against a user, you can return that information by using this command:
 
-`Get-CsOnlineUser -Identity bf19b7db-6960-41e5-a139-2aa373474354`
+\`Get-CsOnlineUser -Identity bf19b7db-6960-41e5-a139-2aa373474354\`
 
 ## EXAMPLES
 
 ### Example 1
-
-```powershell
+```
 Remove-CsUserLicenseGracePeriod -Identity bf19b7db-6960-41e5-a139-2aa373474354
 ```
 
-In Example 1, the command removes the grace period of all assigned plan(s) against the specified user ID, marking the subsequent assigned plan(s) as deleted. Assigned plans with no subsequent grace period will see no change.
+In the example shown above, the command will remove the grace period of all assigned plan(s) against the specified user ID, marking the subsequent assigned plan(s) as deleted. Assigned plans with no subsequent grace period will see no change.
 
 ### Example 2
-
-```powershell
-Remove-CsUserLicenseGracePeriod -Identity bf19b7db-6960-41e5-a139-2aa373474354 -Capability 'MCOEV,MCOMEETADD'
+```
+Remove-CsUserLicenseGracePeriod -Identity bf19b7db-6960-41e5-a139-2aa373474354 -capability 'MCOEV,MCOMEETADD'
 ```
 
-In Example 2, the capability specified refers to plans assigned to the user(s) under AssignedPlans. The command removes the grace period of the specified assigned plans, marking the subsequent plan(s) as deleted.
+In Example 2 the capability specified refers to plans assigned to the user(s) under AssignedPlans. The command will remove the grace period of the specified assigned plans, marking the subsequent plan(s) as deleted.
 
 ## PARAMETERS
 
 ### -Identity
-
-Specifies the Identity (GUID) of the user account whose assigned plan grace period needs to be removed, permanently deleting the subsequent plan.
+Specifies the Identity(GUID) of the user account whose assigned plan grace period needs to be removed, permanently deleting the subsequent plan.
 
 ```yaml
 Type: String
@@ -75,8 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Capability
-
-Denotes the plan(s) assigned to the specified user, which are to be permanently deleted if they are currently serving their grace period.
+Denotes the plan(s) assigned to the specified user, which are to be permanently deleted if they are currently serving their grace period. 
 
 ```yaml
 Type: String
@@ -89,9 +73,7 @@ Default value: None
 Accept pipeline input: True (ByPropertyName,ByValue)
 Accept wildcard characters: False
 ```
-
 ### -Confirm
-
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -107,13 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
-
 System.Object
 
 ## NOTES
