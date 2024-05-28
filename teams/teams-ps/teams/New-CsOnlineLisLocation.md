@@ -18,7 +18,7 @@ Use the New-CsOnlineLisLocation cmdlet to create a new emergency dispatch locati
 ## SYNTAX
 
 ```
-New-CsOnlineLisLocation -Location <string> -CivicAddressId <guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsOnlineLisLocation -Location <string> -CivicAddressId <guid> [-Elin <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
