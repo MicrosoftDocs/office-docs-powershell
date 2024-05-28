@@ -14,7 +14,9 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the New-QuarantinePermissions cmdlet to modify quarantine permissions objects to use with the EndUserQuarantinePermission parameter on the New-QuarantinePolicy or Set-QuarantinePolicy cmdlets. This cmdlet works only on a permission object that was created by the New-QuarantinePermissions cmdlet and stored in a variable that's currently available in the Windows PowerShell session.
+**Note**: Instead of using this cmdlet to set quarantine policy permissions, we recommend using the EndUserQuarantinePermissionsValue parameter on the New-QuarantinePolicy and Set-QuarantinePolicy cmdlets.
+
+Use the Set-QuarantinePermissions cmdlet to modify quarantine permissions objects that were created by the New-QuarantinePermissions and stored as a variable in the current PowerShell session. You use the variable as a value for the EndUserQuarantinePermission parameter on the New-QuarantinePolicy or Set-QuarantinePolicy cmdlets in the same PowerShell session.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -45,14 +47,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Set-QuarantinePermissions -QuarantinePermissionsObject $Perms -PermissionToRequestRelease $true -PermissionToRelease $false
 ```
 
-This example modifies the specified quarantine policy permissions in the exiting `$Perms` permissions object that was created previously in the same Windows PowerShell session (the `$Perms` variable is still available and populated).
+This example modifies the quarantine policy permissions in the exiting `$Perms` variable that was previously created using the New-QuarantinePermissions cmdlet in the same PowerShell session (the `$Perms` variable is still available and populated).
 
-In the same Windows PowerShell session, you can use `$Perms` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
+In the same PowerShell session, you can use `$Perms` for the _EndUserQuarantinePermissions_ parameter value in a New-QuarantinePolicy or Set-QuarantinePolicy command.
 
 ## PARAMETERS
 
 ### -QuarantinePermissionsObject
-The QuarantinePermissionsObject parameter specifies the variable that contains quarantine permissions object that you want to modify. For example if you ran the command `$Perms = New-QuarantinePermissions <permissions>`, use the value `$Perms` for this parameter.
+The QuarantinePermissionsObject parameter specifies the existing variable that contains quarantine permissions that you want to modify. For example if you previously ran the command `$Perms = New-QuarantinePermissions <permissions>`, use the value `$Perms` for this parameter.
 
 ```yaml
 Type: QuarantinePermissions
