@@ -1113,9 +1113,12 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 - Approve member depart or join requests (if available)
 - Approve messages sent to the group if moderation is enabled, but no moderators are specified.
 
-The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). Although Mail-Enabled Security Groups can be set on-premise these will not sync in the cloud object.
+The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned).
 
-**Note**: Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
+Considerations for mail-enabled security groups as group owners:
+
+- If you specify a mail-enabled security group as a group owner in on-premises Exchange, the mail-enabled security group doesn't sync to the cloud object.
+- Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
 
 You can use any value that uniquely identifies the owner. For example:
 
