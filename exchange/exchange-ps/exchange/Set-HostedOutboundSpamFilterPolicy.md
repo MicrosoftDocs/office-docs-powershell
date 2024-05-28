@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ### -AutoForwardingMode
 The AutoForwardingMode specifies how the policy controls automatic email forwarding to external recipients. Valid values are:
 
-- Automatic: This is the default value. This setting is now the same as Off. When this setting was originally introduced, this value was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/microsoft-365/security/office-365-security/secure-by-default), this value was gradually changed to the equivalent of Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+- Automatic: This is the default value. This setting is now the same as Off. When this setting was originally introduced, this value was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/defender-office-365/secure-by-default), this value was gradually changed to the equivalent of Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
 - On: Automatic external email forwarding is not restricted.
 - Off: Automatic external email forwarding is disabled and will result in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOutboundSpam
-**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam#verify-the-alert-settings-for-restricted-users).
+**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
 
 The NotifyOutboundSpam parameter specify whether to notify admins when outgoing spam is detected. Valid values are:
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOutboundSpamRecipients
-**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/microsoft-365/security/office-365-security/removing-user-from-restricted-users-portal-after-spam#verify-the-alert-settings-for-restricted-users).
+**Note**: This setting has been replaced by the default alert policy named **User restricted from sending email**, which sends notification messages to admins. We recommend that you use the alert policy rather than this setting to notify admins and other users. For instructions, see [Verify the alert settings for restricted users](https://learn.microsoft.com/defender-office-365/outbound-spam-restore-restricted-users#verify-the-alert-settings-for-restricted-users).
 
 The NotifyOutboundSpamRecipients parameter specifies the email addresses of admins to notify when an outgoing spam is detected. You can specify multiple email addresses separated by commas.
 
