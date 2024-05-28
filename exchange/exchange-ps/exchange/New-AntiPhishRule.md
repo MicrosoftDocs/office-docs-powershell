@@ -40,7 +40,7 @@ New-AntiPhishRule [-Name] <String> -AntiPhishPolicy <String>
 You need to add the antiphish rule to an existing policy by using the AntiPhishPolicy parameter. You create antiphish policies by using the New-AntiPhishPolicy cmdlet.
 
 > [!IMPORTANT]
-> Different types of recipient conditions or different types of recipient exceptions are not additive; they're inclusive. For more information, see [Common policy settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-phishing-policies-about#common-policy-settings).
+> Different types of recipient conditions use AND logic (the recipient must satisfy **all** specified conditions). Different types of recipient exceptions use OR logic (the recipient must satisfy **any** of the specified exceptions). For more information, see [Common policy settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/anti-phishing-policies-about#common-policy-settings).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

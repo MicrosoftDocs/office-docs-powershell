@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-CsPlatformServiceSettings
 
 ## SYNOPSIS
-Returns information about Skype for Business on Mac capabilites which have been enabled in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
+Returns information about Skype for Business on Mac capabilities which have been enabled in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
 
 ## SYNTAX
 

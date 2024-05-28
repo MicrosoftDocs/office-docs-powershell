@@ -2,7 +2,7 @@
 title: "Find the permissions required to run any Exchange cmdlet"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 9/7/2023
 ms.audience: ITPro
 audience: ITPro
@@ -87,7 +87,7 @@ Otherwise, no results are likely caused by one of the following conditions:
 To find the roles in your environment (if any) that contain the cmdlet or parameters, replace `<Cmdlet>` and optionally, `<Parameter1>,<Parameter2>,...` with the values that you want to use and run the following command:
 
 ```powershell
-Get-ManagementRoleEntry -Identity *\<Cmdlet>  [-Parameters <Parameter1>,<Parameter2>,...]
+Get-ManagementRoleEntry -Identity *\<Cmdlet> [-Parameters <Parameter1>,<Parameter2>,...]
 ```
 
 > [!TIP]
@@ -143,7 +143,7 @@ Get-ManagementRoleAssignment -Role "<Role name>" -GetEffectiveUsers -Delegating 
 For example:
 
 ```powershell
-Get-ManagementRoleAssignment -Role "Mailbox Import Export"  -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
+Get-ManagementRoleAssignment -Role "Mailbox Import Export" -GetEffectiveUsers -Delegating $false | Where-Object {$_.EffectiveUserName -ne "All Group Members"} | Format-Table -Auto EffectiveUserName,Role,RoleAssigneeName,AssignmentMethod
 ```
 
 ### Find the members of a role group

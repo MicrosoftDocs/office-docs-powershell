@@ -91,7 +91,7 @@ In on-premises Exchange, this example clears the disabled email address template
 Set-EmailAddressPolicy -Identity "Office 365 Groups" -EnabledEmailAddressTemplates "SMTP:@contoso.com","smtp:@contoso.onmicrosoft.com","smtp:@contoso.microsoftonline.com"
 ```
 
-In Exchange Online, this example modifies the existing email adress policy named "Office 365 Groups" and sets the enabled email address templates to use "@contoso.com" as the primary SMTP address and "@contoso.onmicrosoft.com" and "@contoso.microsoftonline.com" as proxy addresses.
+In Exchange Online, this example modifies the existing email address policy named "Office 365 Groups" and sets the enabled email address templates to use "@contoso.com" as the primary SMTP address and "@contoso.onmicrosoft.com" and "@contoso.microsoftonline.com" as proxy addresses.
 
 ## PARAMETERS
 

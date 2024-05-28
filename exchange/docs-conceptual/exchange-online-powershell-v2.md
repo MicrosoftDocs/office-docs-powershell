@@ -2,8 +2,8 @@
 title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
-manager: dansimp
-ms.date: 12/12/2023
+manager: deniseb
+ms.date: 05/17/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -571,7 +571,7 @@ For detailed syntax and parameter information, see [Uninstall-Module](/powershel
 
 ## Properties and property sets in the Exchange Online PowerShell module
 
-Traditional Exchange Online cmdlets return all possible object properties in their output, including many properties that are often blank or aren't interesting in many scenarios. This behavior causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
+Traditional Exchange Online cmdlets return all possible object properties in their output, including many properties that are often blank or aren't interested in many scenarios. This behavior causes degraded performance (more server computation and added network load). You rarely (if ever) need the full complement of properties in the cmdlet output.
 
 The **Get-EXO\*** cmdlets in the module have categorized output properties. Instead of giving all properties equal importance and returning them in all scenarios, we've categorized specific related properties into _property sets_. Simply put, these property sets are buckets of two or more related properties on the cmdlet.
 
@@ -615,12 +615,18 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.5.0
+
+- New **Get-VivaFeatureCategory** cmdlet.
+- Added support for policy operations at the category level in Viva Feature Access Management (VFAM).
+- New IsFeatureEnabledByDefault property in the output of **Get-VivaModuleFeaturePolicy**. The value of this property shows the default enablement state for users in the tenant when no tenant or user/group policies have been created.
+
+### Previous releases
+
 #### Version 3.4.0
 
 - Bug fixes in **Connect-ExchangeOnline**, **Get-EXORecipientPermission** and **Get-EXOMailboxFolderPermission**.
 - THe _SigningCertificate_ parameter in **Connect-ExchangeOnline** now supports [Constrained Language Mode (CLM)](/powershell/module/microsoft.powershell.core/about/about_language_modes#constrainedlanguage-mode).
-
-### Previous releases
 
 #### Version 3.3.0
 
