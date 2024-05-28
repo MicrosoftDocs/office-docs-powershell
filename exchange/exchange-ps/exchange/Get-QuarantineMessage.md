@@ -38,6 +38,7 @@ Get-QuarantineMessage
  [-EndExpiresDate <System.DateTime>]
  [-EndReceivedDate <System.DateTime>]
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-IncludeMessagesFromBlockedSenderAddress]
  [-MessageId <String>]
  [-MyItems]
  [-Page <Int32>]
@@ -204,6 +205,22 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
 Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeMessagesFromBlockedSenderAddress
+The IncludeMessagesFromBlockedSenderAddress switch specifies whether to include quarantined messages from blocked senders in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Summary
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
