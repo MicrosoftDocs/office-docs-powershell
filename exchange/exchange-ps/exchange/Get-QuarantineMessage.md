@@ -38,6 +38,7 @@ Get-QuarantineMessage
  [-EndExpiresDate <System.DateTime>]
  [-EndReceivedDate <System.DateTime>]
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-IncludeMessagesFromBlockedSenderAddress]
  [-MessageId <String>]
  [-MyItems]
  [-Page <Int32>]
@@ -214,6 +215,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeMessagesFromBlockedSenderAddress
+The IncludeMessagesFromBlockedSenderAddress switch specifies whether to include quarantined messages from blocked senders in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Summary
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageId
 The MessageId parameter filters the results by the Message-ID header field of the message. This value is also known as the Client ID. The format of the Message-ID depends on the messaging server that sent the message. The value should be unique for each message. However, not all messaging servers create values for the Message-ID in the same way. Be sure to include the full Message ID string (which may include angle brackets) and enclose the value in quotation marks (for example, `"<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@DM3NAM06BG401.Eop-nam06.prod.protection.outlook.com>"`).
 
@@ -372,7 +389,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientTag
-The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/user-tags-about).
+The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/defender-office-365/user-tags-about).
 
 You can specify multiple values separated by commas.
 

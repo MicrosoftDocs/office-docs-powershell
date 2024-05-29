@@ -47,7 +47,7 @@ Set-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType>
 ```
 
 ## DESCRIPTION
-In most cases, you can't modify the URL, file, or sender values of an existing entry. The only exception is allow URL entries for phishing simulations (Action = Allow, ListType = URL, and ListSubType = AdvancedDelivery). For more information about allowing URLs for phishing simulations, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+In most cases, you can't modify the URL, file, or sender values of an existing entry. The only exception is allow URL entries for phishing simulations (Action = Allow, ListType = URL, and ListSubType = AdvancedDelivery). For more information about allowing URLs for phishing simulations, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ### -ListSubType
 The ListSubType parameter further specifies the entry that you want to modify. Valid values are:
 
-- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 - Tenant: This is the default value.
 
 ```yaml
