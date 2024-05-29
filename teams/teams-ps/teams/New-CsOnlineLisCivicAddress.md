@@ -248,7 +248,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: False
+Required: True (Required for all countries except Australia and Japan where it's optional)
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -264,7 +264,7 @@ Parameter Sets: (All)
 Aliases:
 applicable: Microsoft Teams
 
-Required: False
+Required: True (Required for all countries except Australia and Japan where it's optional)
 Position: Named
 Default value: None
 Accept pipeline input: False
