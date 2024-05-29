@@ -120,4 +120,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](teams\teams-ps\teams\Get-CsOnlineUser.md)
+[Get-CsOnlineUser](Get-CsOnlineUser.md)
