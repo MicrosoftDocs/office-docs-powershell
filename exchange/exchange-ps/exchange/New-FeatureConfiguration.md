@@ -35,11 +35,10 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-New-FeatureConfiguration -Name "Discovery policy for Contoso executives" -FeatureScenario KnowYourData -Mode Enable -ScenarioConfig '{"Activities": ["UploadText", "UploadFile"], "EnforcementPlanes": ["Browser"], "SensitiveTypeIds": ["a44669fe-0d48-453d-a9b1-2cc83f2cba77","50842eb7-edc8-4019-85dd-5a5c1f2bb085"]}' –Locations '[{"Workload": "Applications","Location": "51622
-","Inclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]},{"Workload": "Applications","Location": "51399","Inclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]},{"Workload": "A
-pplications","Location": "51279","Inclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]}]'
+New-FeatureConfiguration -Name "Discovery policy for Contoso executives" -FeatureScenario KnowYourData -Mode Enable -ScenarioConfig '{"Activities": ["UploadText", "UploadFile"], "EnforcementPlanes": ["Browser"], "SensitiveTypeIds": ["a44669fe-0d48-453d-a9b1-2cc83f2cba77","50842eb7-edc8-4019-85dd-5a5c1f2bb085"]}' –Locations '[{"Workload": "Applications","Location": "51622","Inclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]},{"Workload": "Applications","Location": "51399","Inclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]},{"Workload": "Applications","Location": "51279","Inclusions": [{"Type": "Group","Identity": "executives@contoso.com"}]}]'
 ```
-This example displays a discovery policy that includes the group "Executives" and targets a specific set of sensitive information types. 
+
+This example displays a discovery policy that includes the group "Executives" and targets a specific set of sensitive information types.
 
 ## PARAMETERS
 
