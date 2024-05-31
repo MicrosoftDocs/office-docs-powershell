@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScenarioConfig
-{{ Fill ScenarioConfig Description }}
+The ScenarioConfig parameter specifies additional information about the policy configuration.
 
 ```yaml
 Type: String
