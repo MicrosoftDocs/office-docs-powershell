@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureScenario
-The FeatureScenario parameter identifies the type of Discovery policy that you want to view.
+The FeatureScenario parameter specifies the scenario for the Discovery policy. Currently, the only valid value is KnowYourData.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyConfiguration.PolicyScenario
