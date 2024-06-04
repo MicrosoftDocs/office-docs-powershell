@@ -2,7 +2,7 @@
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 12/12/2023
 ms.audience: Admin
 audience: Admin
@@ -216,15 +216,15 @@ Choose **one** of the following methods in this section to assign API permission
 
    ![Find and select Office 365 Exchange Online on the APIs my organization uses tab.](media/exo-app-only-auth-api-permissions-select-o365-exo.png)
 
-5. On the **What type of permissions does your application require?** flyout that appears, select **Application permissions**.
+4. On the **What type of permissions does your application require?** flyout that appears, select **Application permissions**.
 
-6. In the permissions list that appears, expand **Exchange**, select **Exchange.ManageAsApp**, and then select **Add permissions**.
+5. In the permissions list that appears, expand **Exchange**, select **Exchange.ManageAsApp**, and then select **Add permissions**.
 
    ![Find and select Exchange.ManageAsApp permissions from the Application permission tab.](media/exo-app-only-auth-api-permissions-select-exchange-manageasapp.png)
 
-7. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
+6. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
-   - **Admin consent required**: **Yes**. 
+   - **Admin consent required**: **Yes**.
 
    - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
 
@@ -236,11 +236,11 @@ Choose **one** of the following methods in this section to assign API permission
 
      ![Admin consent granted for Exchange.ManageAsApp permissions.](media/exo-app-only-auth-admin-consent-granted.png)
 
-8. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
+7. For the default **Microsoft Graph** \> **User.Read** entry, select **...** \> **Revoke admin consent**, and then select **Yes** in the confirmation dialog that opens to return **Status** back to the default blank value.
 
    ![Admin consent removed from default Microsoft Graph User.Read permissions.](media/exo-app-only-auth-admin-consent-removed-from-graph.png)
 
-9. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
+8. Close the current **API permissions** page (not the browser tab) to return to the **App registrations** page. You use the **App registrations** page in an upcoming step.
 
 #### Modify the app manifest to assign API permissions
 
@@ -310,7 +310,7 @@ Choose **one** of the following methods in this section to assign API permission
 
 4. On the **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
    - **Type**: **Application**.
-   - **Admin consent required**: **Yes**. 
+   - **Admin consent required**: **Yes**.
 
    - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
 
@@ -481,7 +481,7 @@ For general instructions about assigning roles in Microsoft Entra ID, see [Assig
 >
 >  This method is supported only when you connect to Exchange Online PowerShell or Security & Compliance PowerShell in [REST API mode](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module). Security & Compliance PowerShell supports REST API mode in v3.2.0 or later.
 
-For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
+For information about creating custom role groups, see [Create role groups in Exchange Online](/exchange/permissions-exo/role-groups#create-role-groups) and [Create Email & collaboration role groups in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal). The custom role group that you assign to the application can contain any combination of built-in and custom roles.
 
 To assign custom role groups to the application using service principals, do the following steps:
 

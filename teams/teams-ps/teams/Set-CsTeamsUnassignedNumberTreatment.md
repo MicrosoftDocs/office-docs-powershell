@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pattern
-A regular expression that the called number must match in order for the treatment to take effect. It is best pratice to start the regular expression with the hat character and end it with the dollar character.
+A regular expression that the called number must match in order for the treatment to take effect. It is best practice to start the regular expression with the hat character and end it with the dollar character.
 You can use various regular expression test sites on the Internet to validate the expression.
 
 ```yaml
@@ -155,7 +155,7 @@ the appropriate target and not routed to the specified unassigned number treatme
 a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
 
 ## RELATED LINKS
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/skype/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](Import-CsOnlineAudioFile.md)
 
 [Get-CsTeamsUnassignedNumberTreatment](Get-CsTeamsUnassignedNumberTreatment.md)
 

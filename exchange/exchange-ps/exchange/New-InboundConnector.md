@@ -16,6 +16,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-InboundConnector cmdlet to create a new Inbound connector in your cloud-based organization.
 
+**Note**: Creation of inbound connectors is restricted in [Microsoft 365 E5 developer subscriptions](https://learn.microsoft.com/office/developer-program/microsoft-365-developer-program-faq#does-the-microsoft-365-e5-developer-subscription-include-the-same-capabilities-that-the-regular-microsoft-365-e5-subscription-includes-). Opening a support ticket in affected organizations won't help.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX

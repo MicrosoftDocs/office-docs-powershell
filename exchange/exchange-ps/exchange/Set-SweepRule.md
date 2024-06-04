@@ -161,6 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfFlagged
+This parameter is available only in on-premises Exchange.
+
 The ExceptIfFlagged parameter specifies an exception for the Sweep rule that looks messages with a message flag applied. Valid values are:
 
 - $true: The rule action isn't applied to messages that have a message flag applied.
@@ -184,7 +186,7 @@ The typical message flag values are:
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named
@@ -194,6 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfPinned
+This parameter is available only in on-premises Exchange.
+
 The PinMessage parameter specifies an exception for the Sweep rule that looks for pinned messages. Valid values are:
 
 - $true: The rule action isn't applied to messages that are pinned to the top of the Inbox.
@@ -203,7 +207,7 @@ The PinMessage parameter specifies an exception for the Sweep rule that looks fo
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+Applicable: Exchange Server 2016, Exchange Server 2019
 
 Required: False
 Position: Named

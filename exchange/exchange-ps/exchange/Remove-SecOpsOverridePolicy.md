@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-SecOpsOverridePolicy cmdlet to remove SecOps mailbox override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+Use the Remove-SecOpsOverridePolicy cmdlet to remove SecOps mailbox override policies to bypass Exchange Online Protection filtering. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -24,7 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Remove-SecOpsOverridePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-DomainController <Fqdn>]
- [-Force]
+ [-ForceDeletion]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -99,10 +99,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
-
-You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate.
+### -ForceDeletion
+The ForceDeletion switch forces the removal of the SecOps override policy. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -1,7 +1,7 @@
 ---
 external help file: MicrosoftTeams-help.xml
 Module Name: MicrosoftTeams
-online version: https://learn.microsoft.com/powershell/module/skype/set-csteamsvoiceapplicationspolicy
+online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsvoiceapplicationspolicy
 schema: 2.0.0
 ---
 
@@ -491,7 +491,7 @@ When set to `Takeover`, users affected by the policy will be allowed to monitor 
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -512,7 +512,7 @@ When set to `Agent`, users affected by the policy will be allowed to monitor age
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -535,7 +535,7 @@ When set to `All`, users affected by the policy will receive real-time metrics f
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -558,7 +558,7 @@ When set to `All`, users affected by the policy will receive real-time metrics f
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -581,7 +581,7 @@ When set to `All`, users affected by the policy will receive real-time metrics f
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -604,7 +604,7 @@ When set to `All`, users affected by the policy will receive historical metrics 
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -627,7 +627,7 @@ When set to `All`, users affected by the policy will receive historical metrics 
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -650,7 +650,7 @@ When set to `All`, users affected by the policy will receive historical metrics 
 Type: Object
 Parameter Sets: Dual
 Aliases:
-Applicable: Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named

@@ -89,6 +89,8 @@ The KeySize parameter specifies the size in bits of the public key that's used i
 
 RSA keys are supported. Ed25519 keys aren't supported.
 
+**Note**: Upgrading the key size to 2048 only upgrades the selector that isn't currently active. After key rotation has taken place, you need to run the command again to upgrade the key size of the other selector.
+
 ```yaml
 Type: UInt16
 Parameter Sets: (All)

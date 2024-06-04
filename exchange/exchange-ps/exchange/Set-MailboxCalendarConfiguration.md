@@ -478,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultReminderTime
-The DefaultReminderTime parameter specifies the length of time before a meeting or appointment whenthe reminder is first displayed.
+The DefaultReminderTime parameter specifies the length of time before a meeting or appointment when the reminder is first displayed.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 

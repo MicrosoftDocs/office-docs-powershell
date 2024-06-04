@@ -94,6 +94,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -560,8 +561,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-This parameter is functional only in on-premises Exchange.
-
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
 - $true: The Calendar is available in Outlook Web App. This is the default value.
@@ -648,8 +647,8 @@ The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy fo
 Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
-- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser.
-- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
+- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser. This doesn't apply to in-line images.
+- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser. This doesn't apply to in-line images.
 
 ```yaml
 Type: PolicyEnum
@@ -1680,6 +1679,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OutlookNewslettersAccessLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersAccessLevel Description }}
+
+```yaml
+Type: OutlookNewslettersAccessLevel
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OWALightEnabled
 The OWALightEnabled parameter controls the availability of the light version of Outlook on the web. Valid values are:
 
@@ -1945,7 +1962,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
+**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 

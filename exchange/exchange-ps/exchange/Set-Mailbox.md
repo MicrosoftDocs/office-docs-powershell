@@ -2641,7 +2641,7 @@ The EndDateForRetentionHold parameter specifies the end date for retention hold 
 
 **Important**: Using this parameter does not change the _RetentionHoldEnabled_ value to $false after the specified date. The _RentionHoldEnabled_ will still be $true on the mailbox after the specified date, but MRM will start processing mailbox items as normal.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -3507,7 +3507,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxMessagesPerFolderCountReceiveQuota
-This parameter is a available only in on-premises Exchange.
+This parameter is an available only in on-premises Exchange.
 
 The MailboxMessagesPerFolderCountReceiveQuota parameter specifies the maximum number of messages for a mailbox folder. When this limit is reached, the folder can't receive new messages.
 
@@ -3529,7 +3529,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxMessagesPerFolderCountWarningQuota
-This parameter is a available only in on-premises Exchange.
+This parameter is an available only in on-premises Exchange.
 
 The MailboxMessagesPerFolderCountWarningQuota parameter specifies the number of messages that a mailbox folder can hold before Exchange sends a warning message to the mailbox owner and logs an event to the application event log. When this quota is reached, warning messages and logged events occur once a day.
 
@@ -5084,7 +5084,7 @@ This parameter is available only in on-premises Exchange.
 
 The SCLDeleteEnabled parameter specifies whether to silently delete messages that meet or exceed the spam confidence level (SCL) specified by the SCLDeleteThreshold parameter. Valid values are:
 
-- $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending an non-delivery report (NDR).
+- $true: Messages that meet or exceed the SCLDeleteThreshold value are silently deleted without sending a non-delivery report (NDR).
 - $false: Messages that meet or exceed the SCLDeleteThreshold value aren't deleted.
 - $null (blank): The value isn't configured. This is the default value.
 
@@ -5391,7 +5391,7 @@ Accept wildcard characters: False
 ### -StartDateForRetentionHold
 The StartDateForRetentionHold parameter specifies the start date for the retention hold that's placed on the mailbox.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 To use this parameter, you need to set the RetentionHoldEnabled parameter to value $true.
 

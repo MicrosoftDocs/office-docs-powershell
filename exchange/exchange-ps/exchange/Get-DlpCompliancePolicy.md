@@ -26,6 +26,7 @@ Get-DlpCompliancePolicy [[-Identity] <PolicyIdParameter>]
  [-ForceValidate <Boolean>]
  [-IncludeExtendedProperties <Boolean>]
  [-IncludeRulesMetadata <Boolean>]
+ [-IncludeSimulationResults <Boolean>]
  [-IRMUserRiskConfiguredAnyRule]
  [-Summary]
  [<CommonParameters>]
@@ -62,7 +63,7 @@ This example displays distribution details for a DLP policy.
 $dlp = Get-DlpCompliancePolicy; ForEach ($d in $dlp){Get-DlpCompliancePolicy -DistributionDetail $d.name | Format-List Name,DistributionStatus}
 ```
 
-This example gets all of the DLP policies in a environment and displays the distribution status for each.
+This example gets all of the DLP policies in an environment and displays the distribution status for each.
 
 ## PARAMETERS
 
@@ -156,6 +157,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeSimulationResults
+{{ Fill IncludeSimulationResults Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
