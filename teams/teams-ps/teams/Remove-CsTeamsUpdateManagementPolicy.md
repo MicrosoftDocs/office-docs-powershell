@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Rtc.Management.dll-help.xml
-online version: https://docs.microsoft.com/powershell/module/skype/grant-csteamsupdatemanagementPolicy
+online version: https://docs.microsoft.com/powershell/module/skype/remove-csteamsupdatemanagementPolicy
 applicable: Skype for Business Online
-title: Grant-CsTeamsUpdateManagementPolicy
+title: Remove-CsTeamsUpdateManagementPolicy
 schema: 2.0.0
 manager: gnamun
 ms.author: vargasj
@@ -10,7 +10,7 @@ author: vargasj
 ms.reviewer:
 ---
 
-# Grant-CsTeamsUpdateManagementPolicy
+# Remove-CsTeamsUpdateManagementPolicy
 
 ## SYNOPSIS
 
@@ -19,7 +19,7 @@ Use this cmdlet to remove a Teams Update Management policy from the tenant.
 ## SYNTAX
 
 ```
-Grant-CsTeamsUpdateManagementPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force]
+Remove-CsTeamsUpdateManagementPolicy [-WhatIf] [-Confirm] [[-Identity] <Object>] [-Tenant <Object>] [-Force]
 ```
 
 ## DESCRIPTION
@@ -29,7 +29,7 @@ Removes a Teams Update Management policy from the tenant.
 
 ### Example 1
 ```powershell
-PS C:\> Grant-CsTeamsUpdateManagementPolicy -Identity "Campaign Policy"
+PS C:\> Remove-CsTeamsUpdateManagementPolicy -Identity "Campaign Policy"
 ```
 
 In this example, the policy "Campaign Policy" is being removed.
