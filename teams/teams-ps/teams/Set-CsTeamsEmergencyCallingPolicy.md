@@ -86,9 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedNotifications
-
-**Note**: The use of extended notifications and this parameter is currently not supported.
-
 A list of one or more instances of TeamsEmergencyCallingExtendedNotification. Each TeamsEmergencyCallingExtendedNotification should use a unique EmergencyDialString.
 
 If an extended notification is found for an emergency phone number based on the EmergencyDialString parameter the extended notification will be controlling the notification. If no extended notification is found the notification settings on the policy instance itself will be used.
