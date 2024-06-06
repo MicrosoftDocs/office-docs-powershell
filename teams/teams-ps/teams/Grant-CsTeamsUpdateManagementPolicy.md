@@ -1,8 +1,13 @@
 ---
-external help file: MicrosoftTeams-help.xml
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Module Name: MicrosoftTeams
-online version:
+online version: https://learn.microsoft.com/powershell/module/teams/grant-csteamsupdatemanagementpolicy
+applicable: Microsoft Teams
+title: Grant-CsTeamsUpdateManagementPolicy
 schema: 2.0.0
+author: vargasj-ms
+ms.author: vargasj
+manager: gnamun
 ---
 
 # Grant-CsTeamsUpdateManagementPolicy
