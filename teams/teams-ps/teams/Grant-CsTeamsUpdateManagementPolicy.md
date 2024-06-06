@@ -38,7 +38,7 @@ Grant-CsTeamsUpdateManagementPolicy [-PassThru] [[-PolicyName] <String>] [-MsftI
 ```
 
 ## DESCRIPTION
-Grants a specific Teams Update Management policy to a user or to sets a specific Teams Update Management policy as the new effective global policy.
+Grants a specific Teams Update Management policy to a user or sets a specific Teams Update Management policy as the new effective global policy.
 
 ## EXAMPLES
 
