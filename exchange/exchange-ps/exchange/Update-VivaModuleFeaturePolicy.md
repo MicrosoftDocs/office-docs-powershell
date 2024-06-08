@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the email addresses or security group object ids (GUID) of groups that the updated policy applies to. Both [Mail-enabled and non-mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the email addresses or security group object IDs (GUIDs) of groups that the updated policy applies to. Both [Mail-enabled and non-mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 If you don't want to update who the policy applies to, don't use this parameter.
 
