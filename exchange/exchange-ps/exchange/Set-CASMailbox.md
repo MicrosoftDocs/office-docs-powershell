@@ -48,7 +48,7 @@ Set-CASMailbox [-Identity] <MailboxIdParameter>
  [-ImapForceICalForCalendarRetrievalOption <Boolean>]
  [-ImapSuppressReadReceipt <Boolean>]
  [-ImapUseProtocolDefaults <Boolean>]
- [-IsOptimizedForAccessibility <Boolean>]
+ [-IsOptimizedForAccessibility <Boolean>](deprecating)
  [-MacOutlookEnabled <Boolean>]
  [-MAPIBlockOutlookExternalConnectivity <Boolean>]
  [-MAPIBlockOutlookNonCachedMode <Boolean>]
@@ -699,25 +699,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IsOptimizedForAccessibility
-This parameter is functional only in on-premises Exchange.
+### -IsOptimizedForAccessibility(deprecating in later August 19th, 2024)
+This parameter will not be supported in later August 19th, 2024.
 
-The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
 
-- $true: The mailbox is configured to use the light version of Outlook on the web.
-- $false: The mailbox isn't configured to use the light version of Outlook on the web.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
 ```
 
 ### -MacOutlookEnabled
