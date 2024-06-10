@@ -15,6 +15,14 @@ ms.reviewer: williamlooney
 ## SYNOPSIS
 Replace the default toll or toll-free number for all users.
 
+> [!IMPORTANT]
+>This command is being deprecated and will not be available after July 7, 2024. If you are using this command to bulk update Audio conferencing Toll or Toll free phone numbers for users in your organization you can do that using the following alternative methods
+>	1. Use a custom Teams audio conferencing policy - [Audio Conferencing toll-free number policies - Microsoft Teams | Microsoft Learn](https://learn.microsoft.com/en-us/microsoftteams/audio-conferencing-toll-free-numbers-policy)
+>	2. Use Set-CsOnlineDialinConferencingUser - [Set-CsOnlineDialInConferencingUser (MicrosoftTeamsPowerShell) | Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/teams/set-csonlinedialinconferencinguser?view=teams-ps)
+>
+>If you need assistance in using any of the above methods to achieve what you previously did with the Set-CsOnlineDialInConferencingUserDefaultNumber command, please open a support case with our customer support team.
+
+
 ## SYNTAX
 
 ### BridgeNameParams
