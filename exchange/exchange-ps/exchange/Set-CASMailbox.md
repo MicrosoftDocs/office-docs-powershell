@@ -700,7 +700,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsOptimizedForAccessibility
-**Note**: This paramater will be deprecated from Exchange Online.
+This parameter is functional only in on-premises Exchange.
 
 The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
 
