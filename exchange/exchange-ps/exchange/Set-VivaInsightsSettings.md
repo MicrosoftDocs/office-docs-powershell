@@ -29,7 +29,9 @@ Set-VivaInsightsSettings -Identity <String> -Enabled <Boolean> -Feature <String>
 ```
 
 ## DESCRIPTION
-This cmdlet requires the .NET Framework 4.7.2 or later. To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
+This cmdlet requires the .NET Framework 4.7.2 or later.
+
+To run this cmdlet, you need to be a member of one of the following directory role groups in the destination organization:
 
 - Global Administrator
 - Exchange Administrator
