@@ -20,13 +20,9 @@ Set-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-DefaultFileUploadAppI
 ```
 
 ## DESCRIPTION
-Modifies an existing teams files policy.
-Teams files provides organizations with different files capabilities.
-
-Microsoft Teams uses OneDrive and SharePoint (ODSP) to store and share content, but some organizations and users might prefer to use third-party storage providers.  
-
-If your organization chooses a third-party for content storage, you need to turn off the ``NativeFileEntryPoints`` parameter in the Teams Files policy. This parameter is enabled by default, which shows the option to upload content from ODSP to Teams chats or channels. 
-Tenant admin would be able to create a customized teams files policy to match the organization's requirements.
+If your organization chooses a third-party for content storage, you can turn off the NativeFileEntryPoints parameter in the Teams Files policy. This parameter is enabled by default, which shows option to attach OneDrive / SharePoint content from Teams chats or channels. When this parameter is disabled, users won't see access points for OneDrive and SharePoint in Teams. Please note that OneDrive app in the left navigation pane in Teams isn't affected by this policy.
+Teams administrators can also choose which file service will be used by default when users upload files from their local devices by dragging and dropping them in a chat or channel. OneDrive and SharePoint are the existing defaults, but admins can now change it to a third-party app.
+Teams administrators would be able to create a customized teams files policy to match the organization's requirements.
 
 ## EXAMPLES
 
