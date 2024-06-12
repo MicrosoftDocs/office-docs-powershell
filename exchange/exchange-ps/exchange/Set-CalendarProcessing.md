@@ -412,6 +412,8 @@ The BookInPolicy parameter specifies users or groups who are allowed to submit i
 
 Query-based groups (for example, dynamic distribution groups) aren't supported.
 
+In delegate and principal scenarios, if the delegate or principal is specified by the BookInPolicy parameter, in-policy meeting requests to the resource mailbox are automatically approved.
+
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
 ```yaml

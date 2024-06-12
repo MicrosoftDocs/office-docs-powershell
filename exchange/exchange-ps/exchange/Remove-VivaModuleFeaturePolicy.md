@@ -50,7 +50,7 @@ You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role or the roles that have been assigned at the feature level to run this cmdlet.
+Currently, you need to be a member of the Global Administrators role or the roles that have been assigned at the feature level to run this cmdlet.
 
 To learn more about assigned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/viva/feature-access-management#features-available-for-feature-access-management).
 
