@@ -1,0 +1,11 @@
+{
+    "purviewinformationprotection-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/informationprotection/purviewinformationprotection-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/purviewinformationprotection-ps/toc.json",
+        "packageRoot": "purviewinformationprotection-ps",
+        "modules": {
+            "purviewinformationprotection": {}     
+        }
+    }
+}
