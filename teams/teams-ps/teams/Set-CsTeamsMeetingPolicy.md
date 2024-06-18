@@ -61,7 +61,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
- [-CaptchaVerificationForAnonymousUsers <String>]
  [-ChannelRecordingDownload <String>]
  [-Confirm]
  [-ConnectToMeetingControls <String>]
@@ -763,26 +762,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: Empty List
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CaptchaVerificationForAnonymousUsers
-Require a verification check for anonymous users
-
-Possible values are:
-
-- Enabled
-- Disabled
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
