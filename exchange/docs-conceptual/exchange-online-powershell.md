@@ -2,7 +2,7 @@
 title: "Exchange Online PowerShell"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 9/1/2023
 ms.audience: Admin
 audience: Admin

@@ -25,7 +25,7 @@ Get-ATPBuiltInProtectionRule [[-Identity] <DehydrateableRuleIdParameter>] [-Stat
 ```
 
 ## DESCRIPTION
-For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/preset-security-policies).
+For more information about preset security policies, see [Preset security policies in EOP and Microsoft Defender for Office 365](https://learn.microsoft.com/defender-office-365/preset-security-policies).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 

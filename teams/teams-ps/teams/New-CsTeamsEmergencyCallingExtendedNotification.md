@@ -22,9 +22,6 @@ New-CsTeamsEmergencyCallingExtendedNotification -EmergencyDialString <string> [-
 ```
 
 ## DESCRIPTION
-
-**Note**: The use of extended notifications for emergency calling and this cmdlet is currently not supported.
-
 This cmdlet supports creating specific emergency calling notification settings per emergency phone number. It is used with TeamsEmergencyCallingPolicy.
 
 ## EXAMPLES
@@ -54,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationGroup
-NotificationGroup is an email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 50 users can be notified.
+NotificationGroup is an email list of users and groups to be notified of an emergency call. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 entries consisting of users and/or groups can be added to the NotificationGroup. The total number of users notified cannot exceed 50.
 
 ```yaml
 Type: String

@@ -1,7 +1,7 @@
 ---
 title: Connect to Exchange Online Protection PowerShell
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 8/21/2023
 ms.audience: Admin
 audience: Admin

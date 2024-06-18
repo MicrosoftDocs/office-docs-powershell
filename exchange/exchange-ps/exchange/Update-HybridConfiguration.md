@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantCredentials
-The TenantCredentials parameter specifies the Microsoft 365 organization account and password that's used to configure the hybrid configuration object. This is often the administrator account that's assigned when the Microsoft 365 organization was created. This account must be a member of the Global admin role.
+The TenantCredentials parameter specifies the Microsoft 365 organization account and password that's used to configure the hybrid configuration object. This is often the administrator account that's assigned when the Microsoft 365 organization was created. This account must be a member of the Global Administrators role.
 
 A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 

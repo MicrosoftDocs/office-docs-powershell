@@ -2,7 +2,7 @@
 title: Workarounds for Invoke-Command scenarios in REST API connections
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 7/5/2023
 ms.audience: Admin
 audience: Admin
