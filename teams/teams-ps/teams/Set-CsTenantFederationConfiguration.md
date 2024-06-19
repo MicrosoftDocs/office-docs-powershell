@@ -24,7 +24,8 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomains <IAllowedDomainsChoice>] [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>]
  [-AllowFederatedUsers <Boolean>] [-AllowPublicUsers <Boolean>] [-AllowTeamsConsumer <Boolean>] [-AllowTeamsConsumerInbound <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>]
- [-AllowedDomainsAsAList <List>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
+ [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
@@ -166,6 +167,14 @@ In this example, all users from contoso.com and fabrikam.com will be blocked.
 When the BlockAllSubdomains is enabled, all users from all subdomains of all domains in BlockedDomains list will also be blocked.
 So, users from subdomain.contoso.com and subdomain.fabrikam.com will be blocked.
 Note: Users from subcontoso.com will not be blocked because it's a completely different domain rather than a subdomain of contoso.com.
+
+### -------------------------- Example 11 -------------------------
+```
+Set-CsTenantFederationConfiguration -ExternalAccessWithTrialTenants "Allowed"
+```
+
+Example 11 shows how you can allow users to communicate with users in tenants that contain only trial licenses (default value is Blocked).
+
 
 ## PARAMETERS
 
@@ -431,6 +440,26 @@ Type: List
 Parameter Sets: (All)
 Aliases: 
 applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalAccessWithTrialTenants
+When set to 'Blocked', all external access with users from Teams subscriptions that contain only trial licenses will be blocked. This means users from these trial-only tenants will not be able to reach to your users via chats, Teams calls, and meetings (using the users authenticated identity) and your users will not be able to reach users in these trial-only tenants. If this setting is set to "Blocked", users from the trial-only tenant will also be removed from existing chats.
+
+Allowed - Communication with other tenants is allowed based on other settings.
+
+Blocked - Communication with users in tenants that contain only trial licenses will be blocked.
+
+```yaml
+Type: ExternalAccessWithTrialTenantsType
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 
 Required: False
 Position: Named
