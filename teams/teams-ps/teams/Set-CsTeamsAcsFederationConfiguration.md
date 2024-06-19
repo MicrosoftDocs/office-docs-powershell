@@ -20,6 +20,7 @@ This cmdlet is used to manage the federation configuration between Teams and Azu
 
 ```powershell
 Set-CsTeamsAcsFederationConfiguration
+   [-Identity <String[]>]
    [-EnableAcsUsers <Boolean>]
    [-AllowedAcsResources <String[]>]
    [-WhatIf]
