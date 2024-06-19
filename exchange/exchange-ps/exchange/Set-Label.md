@@ -151,6 +151,8 @@ Some of the settings that you configure with this parameter are supported only b
 
 Supported settings for built-in labeling:
 
+- **BlockContentAnalysisServices**: Specifies a privacy setting to allow or prevent content in Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis. Available values are True, and False (the default). This setting impacts services such as data loss prevention policy tips, automatic and recommended labeling, and Microsoft Copilot for Microsoft 365. Example: `Set-Label -Identity Confidential -AdvancedSettings @{BlockContentAnalysisServices="True"}`. For more information, see [Prevent some connected experiences that analyze content](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#prevent-some-connected-experiences-that-analyze-content).
+
 - **Color**: Specifies a label color as a hex triplet code for the red, green, and blue (RGB) components of the color. Example: `Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{color="#40e0d0"}`. For more information, see [Configuring custom colors by using PowerShell](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#configuring-custom-colors-by-using-powershell).
 
 - **DefaultSharingScope**: Specifies the default sharing link type for a site when the label scope includes **Groups & sites**, and the default sharing link type for a document when the label scope includes **Files & emails**. Available values are SpecificPeople, Organization, and Anyone. Example: `Set-Label -Identity General -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}`. For more information, see [Use sensitivity labels to configure the default sharing link type for sites and documents in SharePoint and OneDrive](https://learn.microsoft.com/purview/sensitivity-labels-default-sharing-link).
@@ -595,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### -Conditions
-The Conditions parameter is used for automatic labeling of files and email for data in use. 
+The Conditions parameter is used for automatic labeling of files and email for data in use.
 
 ```yaml
 Type: MultiValuedProperty

@@ -561,8 +561,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-This parameter is functional only in on-premises Exchange.
-
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
 - $true: The Calendar is available in Outlook Web App. This is the default value.
@@ -1964,7 +1962,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
+**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
