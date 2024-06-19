@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a new teams files policy.
-teams files policies determine whether or not files entry points to sharepoint enabled for a user.
+ Teams files policies determine whether or not files entry points to SharePoint enabled for a user.
 The policies also specify third-party app ID to allow file storage (e.g., Box).
 
 ## SYNTAX
