@@ -20,6 +20,7 @@ This cmdlet is used to manage the federation configuration between Teams and Azu
 
 ```powershell
 Set-CsTeamsAcsFederationConfiguration
+   [-Identity <String[]>]
    [-EnableAcsUsers <Boolean>]
    [-AllowedAcsResources <String[]>]
    [-WhatIf]
@@ -76,6 +77,22 @@ The ACS resources are listed using their immutable resource id, which is a guid 
 Type: String[]
 Position: Named
 Default value: Empty/Null
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Specifies the collection of tenant federation configuration settings to be modified. Because each tenant is limited to a single, global collection of federation settings there is no need include this parameter when calling the Set-CsTenantFederationConfiguration cmdlet. If you do choose to use the Identity parameter, you must also include the Tenant parameter. For example:
+
+`Set-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Identity "global"`
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
