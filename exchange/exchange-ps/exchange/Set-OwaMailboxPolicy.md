@@ -273,6 +273,8 @@ Accept wildcard characters: False
 ```
 
 ### -AdditionalAccountsEnabled
+This parameter is available only in the cloud-based service.
+
 This parameter has been deprecated and is no longer used.
 
 To enable or disable personal accounts in the new Outlook for Windows, use the PersonalAccountsEnabled parameter.
@@ -388,7 +390,7 @@ Accept wildcard characters: False
 ### -AllowedOrganizationAccountDomains
 This parameter is available only in the cloud-based service.
 
-The AllowedOrganizationAccountDomains parameter specifies domains from which users can add work or school email accounts in the new Outlook for Windows. The default value is blank ($null) which allows work or school accounts from any domain to be added. Setting to an empty list ([]) won’t allow any work or school accounts to be added. 
+The AllowedOrganizationAccountDomains parameter specifies domains where users can add work or school email accounts in the new Outlook for Windows. The default value is blank ($null), which allows work or school accounts from any domain. Setting this parameter to an empty list ([]) prevents any work or school accounts from being added.
 
 ```yaml
 Type: String[]
@@ -603,12 +605,12 @@ Accept wildcard characters: False
 ### -ChangeSettingsAccountEnabled
 This parameter is available only in the cloud-based service.
 
-The ChangeSettingsAccountEnabled parameter specifies whether users can change the email account in which app-wide settings, such as theme and privacy settings, are associated with in the new Outlook for Windows. Valid values are:
+The ChangeSettingsAccountEnabled parameter specifies whether users can change the email account where app-wide settings (for example, theme and privacy settings) are associated in the new Outlook for Windows. Valid values are:
 
 - $true: Users can change their settings account in the new Outlook for Windows. This is the default value.
 - $false: Users can't change their settings account in the new Outlook for Windows.
 
-**Note**: The settings account is referred to as the primary account in Settings > Accounts > Email accounts > Manage.
+**Note**: The settings account is referred to as the primary account in the new Outlook for Windows setting at Settings \> Accounts \> Email accounts \> Manage.
 
 ```yaml
 Type: System.Boolean
@@ -1537,12 +1539,12 @@ Accept wildcard characters: False
 ### -OfflineEnabledWeb
 This parameter is available only in the cloud-based service.
 
-The OfflineEnabledWeb parameter specifies whether offline capabilities are available in Outlook on the web, including saving items to the user’s device so those items can be viewed when not connected to the internet. Valid values are:
+The OfflineEnabledWeb parameter specifies whether offline capabilities are available in Outlook on the web, including saving items to the local device (view items without an internet connection). Valid values are:
 
 - $true: Users can manage offline capabilities in Outlook on the web. This is the default value.
-- $false: Users can't manage offline capabilities in Outlook on the web. No items will be saved to the user’s device. Any existing items that were saved prior to disabling will be deleted.
+- $false: Users can't manage offline capabilities in Outlook on the web. No items are saved to the user's device. Previously save items are deleted.
 
-When offline capabilities are available, users can turn offline capabilities on or off themselves in Settings > General > Offline.
+When offline capabilities are available, users can turn offline capabilities on or off themselves in Outlook on the web at Settings \> General \> Offline.
 
 ```yaml
 Type: Boolean
@@ -1560,12 +1562,12 @@ Accept wildcard characters: False
 ### -OfflineEnabledWin
 This parameter is available only in the cloud-based service.
 
-The OfflineEnabledWin parameter specifies whether offline capabilities are available in the new Outlook for Windows, including saving items to the user’s device so those items can be viewed when not connected to the internet. Valid values are:
+The OfflineEnabledWin parameter specifies whether offline capabilities are available in the new Outlook for Windows, including saving items to the local device (view items without an internet connection). Valid values are:
 
 - $true: Users can manage offline capabilities in the new Outlook for Windows. This is the default value.
-- $false: Users can't manage offline capabilities in the new Outlook for Windows. No items will be saved to the user’s device. Any existing items that were saved prior to disabling the feature will be deleted.
+- $false: Users can't manage offline capabilities in the new Outlook for Windows. No items are saved to the user's device. Previously save items are deleted.
 
-When offline capabilities are available, users can turn offline capabilities on or off themselves in Settings > General > Offline. By default, offline capabilities will be turned on.
+When offline capabilities are available, users can turn offline capabilities on or off themselves in the New Outlook for Windows at Settings \> General \> Offline. By default, offline capabilities are turned on.
 
 ```yaml
 Type: Boolean
