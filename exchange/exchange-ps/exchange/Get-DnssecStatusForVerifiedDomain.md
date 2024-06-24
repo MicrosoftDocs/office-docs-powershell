@@ -41,7 +41,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-PS C:\> Get-Get-DnssecStatusForVerifiedDomain -DomainName contoso.com
+PS C:\> Get-DnssecStatusForVerifiedDomain -DomainName contoso.com
 
 DnssecFeatureStatus : Enabled
 ExpectedMxRecord    : Microsoft.Exchange.Management.ProvisioningTasks.ExpectedMxRecordInfo
