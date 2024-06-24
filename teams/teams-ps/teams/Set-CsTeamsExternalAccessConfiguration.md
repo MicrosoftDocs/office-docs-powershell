@@ -7,15 +7,13 @@ schema: 1.0.0
 # Set-CsTeamsExternalAccessConfiguration
 
 ## SYNOPSIS
-Allows admins to set values in the TeamsExternalAccessConfiguration
-, which specifies configs that can be used to improve entire org security.
 
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
-Set-CsTeamsExternalAccessConfiguration [-BlockedUsers <List>] [-BlockExternalUserAccess <Boolean>] [[-Identity] <XdsIdentity>]
+Set-CsTeamsExternalAccessConfiguration [-BlockedUsers <List>] [-BlockExternalUserAccess <Boolean>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
