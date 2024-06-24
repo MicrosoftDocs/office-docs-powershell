@@ -8,7 +8,7 @@ schema: 1.0.0
 # Get-CsTeamsExternalAccessConfiguration
 
 ## SYNOPSIS
-TeamsExternalAccessConfiguration has all configs that can be used to improve entire org security like the blocked users in this case. This cmdlet returns your organization's current settings.
+The TeamsExternalAccessConfiguration contains all configurations that can be used to enhance the security of the entire organization, such as managing blocked users. This cmdlet returns the current settings of your organization.
 
 ## SYNTAX
 
