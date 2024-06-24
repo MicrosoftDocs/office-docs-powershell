@@ -57,6 +57,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
+ [-CaptchaVerificationForMeetingJoin <String>]
  [-Confirm]
  [-ContentSharingInExternalMeetings <String>]
  [-Copilot <String>]
@@ -727,6 +728,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: Empty List
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CaptchaVerificationForMeetingJoin
+Check that everyone joining from outside the company is a real person. This will prevent unwanted guests.
+
+Possible values are:
+
+- **NotRequired**, Captcha not required
+- **AnonymousUsersAndUntrustedOrganizations**, Anonymous users and people from untrusted organizations
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: NotRequired
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
