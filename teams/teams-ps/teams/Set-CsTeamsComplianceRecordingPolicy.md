@@ -51,13 +51,13 @@ Existing calls and meetings are unaffected.
 
 ## EXAMPLES
 
-This will no longer work 
 ### Example 1
+This will no longer work 
 ```powershell
 PS C:\> Set-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy' -ComplianceRecordingApplications @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899')
 ```
-Instead, try
 ### Example 1 Alternative
+Instead, try
 ```powershell
 PS C:\> Get-CsTeamsComplianceRecordingApplication (Will not contain data with current applicationId)
 
@@ -74,14 +74,14 @@ This policy is re-assigned a single application instance of a policy-based recor
 
 Any Microsoft Teams users who are assigned this policy will have their calls and meetings recorded by that application instance. Existing calls and meetings are unaffected.
 
-This will no longer work 
 ### Example 2
+This will no longer work 
 ```powershell
 PS C:\> Set-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy' -ComplianceRecordingApplications @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899'), @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id '39dc3ede-c80e-4f19-9153-417a65a1f144')
 ```
 
-Instead, try
 ### Example 2 Alternative
+Instead, try
 ```powershell
 PS C:\> Get-CsTeamsComplianceRecordingApplication (Will not contain data with current applicationId)
 
