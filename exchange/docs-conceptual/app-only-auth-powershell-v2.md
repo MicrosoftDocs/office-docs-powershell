@@ -412,20 +412,22 @@ The supported Microsoft Entra roles are described in the following table:
 |Role|Exchange Online<br>PowerShell|Security & Compliance<br>PowerShell|
 |---|:---:|:---:|
 |[Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator)|✔|✔|
-|[Exchange Administrator](/entra/identity/role-based-access-control/permissions-reference#exchange-administrator)<sup>\*</sup>|✔||
+|[Exchange Administrator](/entra/identity/role-based-access-control/permissions-reference#exchange-administrator)¹|✔||
 |[Exchange Recipient Administrator](/entra/identity/role-based-access-control/permissions-reference#exchange-recipient-administrator)|✔||
-|[Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)<sup>\*</sup>|✔|✔|
+|[Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)¹ ²|✔|✔|
 |[Global Reader](/entra/identity/role-based-access-control/permissions-reference#global-reader)|✔|✔|
 |[Helpdesk Administrator](/entra/identity/role-based-access-control/permissions-reference#helpdesk-administrator)|✔||
-|[Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)<sup>\*</sup>|✔|✔|
+|[Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)¹|✔|✔|
 |[Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)|✔|✔|
 
-> <sup>\*</sup> The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
->
-> - Recipient management.
-> - Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
->
-> The Security Administrator role does not have the necessary permissions for those same tasks.
+¹ The Global Administrator and Exchange Administrator roles provide the required permissions for any task in Exchange Online PowerShell. For example:
+
+- Recipient management.
+- Security and protection features. For example, anti-spam, anti-malware, anti-phishing, and the associated reports.
+
+The Security Administrator role does not have the necessary permissions for those same tasks.
+
+² Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 For general instructions about assigning roles in Microsoft Entra ID, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal).
 
