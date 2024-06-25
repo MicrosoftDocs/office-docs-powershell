@@ -30,12 +30,14 @@ Admins can use the procedures in this article to disable or enable a user's abil
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Exchange Online RBAC](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Recipient Management** role groups.
-  - [Microsoft Entra RBAC](/microsoft-365/admin/add-users/about-admin-roles): Membership in the **Global Administrator** role gives users the required permissions *and* permissions for other features in Microsoft 365.
+  - [Microsoft Entra RBAC](/microsoft-365/admin/add-users/about-admin-roles): Membership in the **Exchange Administrator** or **Global Administrator**<sup>\*</sup> roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
   > [!IMPORTANT]
   > In your haste to quickly and globally disable PowerShell access in your cloud-based organization, beware of commands like `Get-User | Set-User -EXOModuleEnabled $false` without considering admin accounts. Use the procedures in this article to selectively remove PowerShell access, or preserve access for those who need it by using the following syntax in your global removal command: `Get-User | Where-Object {$_.UserPrincipalName -ne 'admin1@contoso.onmicrosoft.com' -and $_.UserPrincipalName -ne 'admin2@contoso.onmicrosoft.com'...} | Set-User -EXOModuleEnabled $false`.
   >
   > If you accidentally lock yourself out of PowerShell access, create a new admin account in the Microsoft 365 admin center, and then use that account to give yourself PowerShell access using the procedures in this article.
+  >
+  > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - For detailed information about OPATH filter syntax in Exchange Online, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
