@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
