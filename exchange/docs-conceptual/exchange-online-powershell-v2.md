@@ -43,7 +43,7 @@ Exchange Online PowerShell and Security & Compliance PowerShell now use REST API
 - **Exchange Online PowerShell**: EXO V3 module v3.0.0 or later.
 - **Security & Compliance PowerShell**: EXO V3 module v3.2.0 or later.
 
-REST API connections require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](#powershellget-for-rest-based-connections-in-windows).
+REST API connections require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](#powershellget-for-rest-api-connections-in-windows).
 
 Cmdlets in REST API connections have the following advantages over their historical counterparts:
 

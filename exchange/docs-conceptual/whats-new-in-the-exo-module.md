@@ -59,7 +59,7 @@ This article lists new features in the Exchange Online PowerShell module that's 
   > [!NOTE]
   > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is now the same as **Connect-ExchangeOnline**. To connect in REST API mode, don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
   >
-  > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+  > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
 ## April 2023
 
@@ -87,7 +87,7 @@ This article lists new features in the Exchange Online PowerShell module that's 
   - All Exchange Online PowerShell cmdlets are now backed by the REST API. Basic authentication in WinRM is not required in Exchange Online PowerShell for REST API cmdlets.
 
     > [!TIP]
-    > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+    > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
   - Certificate based authentication (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 
