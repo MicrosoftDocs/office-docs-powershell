@@ -103,9 +103,9 @@ The HighConfidencePhishQuarantineTag parameter specifies the quarantine policy t
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-If you don't use this parameter, the default quarantine policy that's used is named AdminOnlyAccessPolicy. For more information about this quarantine policy, see [Anatomy of a quarantine policy](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies#anatomy-of-a-quarantine-policy).
+If you don't use this parameter, the default quarantine policy that's used is named AdminOnlyAccessPolicy. For more information about this quarantine policy, see [Anatomy of a quarantine policy](https://learn.microsoft.com/defender-office-365/quarantine-policies#anatomy-of-a-quarantine-policy).
 
 ```yaml
 Type: String
@@ -127,9 +127,9 @@ The MalwareQuarantineTag parameter specifies the quarantine policy that's used f
 - Distinguished name (DN)
 - GUID
 
-Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies).
+Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information about quarantine policies, see [Quarantine policies](https://learn.microsoft.com/defender-office-365/quarantine-policies).
 
-If you don't use this parameter, the default quarantine policy that's used is named AdminOnlyAccessPolicy. For more information about this quarantine policy, see [Anatomy of a quarantine policy](https://learn.microsoft.com/microsoft-365/security/office-365-security/quarantine-policies#anatomy-of-a-quarantine-policy).
+If you don't use this parameter, the default quarantine policy that's used is named AdminOnlyAccessPolicy. For more information about this quarantine policy, see [Anatomy of a quarantine policy](https://learn.microsoft.com/defender-office-365/quarantine-policies#anatomy-of-a-quarantine-policy).
 
 ```yaml
 Type: String
