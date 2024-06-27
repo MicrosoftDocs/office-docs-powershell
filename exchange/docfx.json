@@ -86,6 +86,9 @@
         "https://authoring-docs-microsoft.poolparty.biz/devrel/0b654e73-5728-4af3-8c2e-17bfbf4c9f23",
         "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
       ],
+      "contributors_to_exclude": [ 
+        "beccarobins",
+      ]
       "ms.devlang": "powershell",
       "feedback_system": "Standard",
             "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
