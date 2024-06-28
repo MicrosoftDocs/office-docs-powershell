@@ -56,6 +56,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
  [-EnforcePortalAccess <Boolean>]
+ [-EvaluateRulePerComponent <Boolean>]
  [-ExceptIfAccessScope <Microsoft.Office.CompliancePolicy.Tasks.AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -982,6 +983,34 @@ The EnforcePortalAccess parameter specifies whether external recipients are requ
 
 - $true: External recipients are required to use the encrypted message portal to view encrypted messages.
 - $false: External recipients aren't required to use the encrypted message portal. Outlook can decrypt messages inline.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EvaluateRulePerComponent
+The EvaluateRulePerComponent parameter specifies whether a match for conditions and exceptions in the rule is contained within the same message component. Valid values are:
+
+- $true: A DLP rule match for conditions and exceptions must be in the same message component (for example, in the message body or in a single attachment).
+- $false: A DLP rule match for conditions and exceptions can be anywhere in the message.
+
+For example, say a DLP rule is configured to block messages that contain three or more Social Security numbers (SSNs). When the value of this parameter is $true, a message is blocked only if there are three or more SSNs in the message body, or there are three or more SSNs in a specific attachment. The DLP rule doesn't match and the message isn't blocked if there are two SSNs in the message body, one SSN in an attachment, and two SSNs in another attachment in the same email message.
+
+This parameter works with the following conditions or exceptions only:
+
+- Content contains
+- Attachment contains
+- Attachment is not labeled
+- File extension is
 
 ```yaml
 Type: Boolean
