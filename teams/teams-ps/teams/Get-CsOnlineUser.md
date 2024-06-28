@@ -120,8 +120,8 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `User` - to query for user accounts.
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
-- `SfBOnPremUser` - to query for users that are hosted on-premises (available from January 31, 2023, in the latest TPM versions at that time).
-- `IneligibleUser` - to query for a user type that is not known.
+- `SfBOnPremUser` - to query for users that are hosted on-premises
+- `IneligibleUser` - to query for a user that does not have valid Teams license (except Guest, ResourceAccount and SfbOnPremUser)
 
 ```yaml
 Type: UserIdParameter
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 ### -Sort
 
-Sorting will now be enabled in Teams PowerShell Module 5.9.0 and later by using the "-Sort" or "-OrderBy" parameters in GCC High and DoD environments. These updates will be applicable to older Teams PowerShell versions starting from 15th March 2024 in GCC High and DoD environments(note that this parameter is already rolled out in commercial environments). For example:
+Sorting is now enabled in Teams PowerShell Module by using the "-Sort" or "-OrderBy" parameters. For example:
 
 - Get-CsOnlineUser -Filter {LineURI -like *123*} -OrderBy "DisplayName asc"
 - Get-CsOnlineUser -Filter {DisplayName -like '*abc'} -OrderBy {DisplayName desc}
@@ -259,25 +259,6 @@ Type: String
 Parameter Sets: (All)
 Aliases: OrderBy
 Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UnassignedUser
-This parameter has been deprecated from the Teams PowerShell Modules version 3.0 or later due to limited usage.
-
-Enables you to return a collection of all the users who have been enabled for Skype for Business but are not currently assigned to a Registrar pool.
-Users are not allowed to log on to unless they are assigned to a Registrar pool.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-applicable: Microsoft Teams
 
 Required: False
 Position: Named
