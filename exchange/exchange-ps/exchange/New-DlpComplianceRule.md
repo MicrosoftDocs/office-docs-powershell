@@ -998,11 +998,14 @@ Accept wildcard characters: False
 ```
 
 ### -EvaluateRulePerComponent
-The EvaluateRulePerComponent parameter is a DLP rule level configuration that specifies whether DLP rule match (both conditions and exceptions) should happen in the "same" email component like email body or a specific attachment ($true) or against entire envelope ($false). 
+The EvaluateRulePerComponent parameter specifies whether a match for conditions and exceptions in the rule is contained within the same message component. Valid values are:
 
-For example - If your DLP rule has been configured to block email if content contains 3 or more SSN, with this parameter enabled, the email will be blocked ONLY IF the entire rule matches for the same email component, like if a) there are 3 or more SSN in email body, or b) there are 3 or more SSN in a specific attachment. The rule will not match if there are 2 SSN in email body, 1 SSN in one attachment & 2 SSN in another attachment.
+- $true: A DLP rule match for conditions and exceptions must be in the same message component (for example, in the message body or in a single attachment).
+- $false: A DLP rule match for conditions and exceptions can be anywhere in the message.
 
-Note that this setting is supported by below DLP predicates only:
+For example, the DLP rule is configured to block messages that contain three or more Social Security numbers (SSNs). When the value of this parameter is $true, a message is blocked only if there are three or more SSNs in the message body, or there are three or more SSNs in a specific attachment. The DLP rule doesn't match and the message isn't blocked if there are two SSNs in the message body, one SSN in an attachment, and two SSNs in another attachment in the same email message.
+
+This parameter works with the following conditions or exceptions only:
 
 - Content contains
 - Attachment contains
@@ -1011,12 +1014,15 @@ Note that this setting is supported by below DLP predicates only:
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
-Accept wildcard characters: No
-Applicable: Security & Compliance
+Accept wildcard characters: False
 ```
 
 ### -ExceptIfAccessScope
