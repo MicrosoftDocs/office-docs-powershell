@@ -20,6 +20,16 @@ This cmdlet is used to retrieve the organization-wide education configuration fo
 Get-CsTeamsEducationConfiguration
 ```
 
+### Identity (Default)
+```
+Get-CsTeamsEducationConfiguration [-Identity <String>] [<CommonParameters>]
+```
+
+### Filter
+```
+Get-CsTeamsEducationConfiguration [-Filter <String>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 This cmdlet is used to retrieve the organization-wide education configuration for Teams which contains settings that are applicable to education organizations.
@@ -43,6 +53,37 @@ UpdateParentInformation               : Enabled
 ```
 
 ## PARAMETERS
+
+### -Filter
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
