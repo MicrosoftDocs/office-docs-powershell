@@ -17,13 +17,13 @@ ms.reviewer: williamlooney
 
 The TeamsCallParkPolicy controls whether or not users are able to leverage the call park feature in Microsoft Teams.  Call park allows enterprise voice customers to place a call on hold and then perform a number of actions on that call: transfer to another department, retrieve via the same phone, or retrieve via a different Teams phone.  The New-CsTeamsCallParkPolicy cmdlet lets you create a new custom policy that can then be assigned to one or more specific users.
 
-NOTE: The call park feature currently available in desktop. mobile and web clients. Supported with TeamsOnly mode.
+NOTE: The call park feature is currently available in desktop, mobile, and web clients. Supported with TeamsOnly mode.
 
 ## SYNTAX
-
-### Identity (Default)
-```
-New-CsTeamsCallParkPolicy [-Tenant <System.Guid>] [-AllowCallPark <Boolean>] [[-Identity] <XdsIdentity>] [-PickupRangeStart <Integer>] [-PickupRangeEnd <Integer>] [-ParkTimeoutSeconds <Integer>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+New-CsTeamsCallParkPolicy [-Identity] <String> [-AllowCallPark <Boolean>] [-Description <String>]
+ [-ParkTimeoutSeconds <Int64>] [-PickupRangeEnd <Int64>] [-PickupRangeStart <Int64>]
+ [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -164,11 +164,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Internal Microsoft use only.
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: System.Guid
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+Description of the policy.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -179,14 +195,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -MsftInternalProcessingMode
+For internal use only.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
