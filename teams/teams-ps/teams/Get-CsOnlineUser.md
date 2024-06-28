@@ -172,6 +172,13 @@ Enables you to limit the returned data by filtering on specific attributes. For 
 
 The Filter parameter uses the same filtering syntax as the Where-Object cmdlet. For example, the following filter returns only users who have been enabled for Enterprise Voice: `-Filter 'EnterpriseVoiceEnabled -eq $True'` or ``-Filter "EnterpriseVoiceEnabled -eq `$True"``.
 
+Few examples for -Filter pararmeter: 
+
+- Get-CsOnlineUser -Filter {AssignedPlan -like "*MCO*"}
+- Get-CsOnlineUser -Filter {UserPrincipalName -like "test*" -and (AssignedPlans -eq "MCOEV" -or AssignedPlans -like "MCOPSTN*")}
+- Get-CsOnlineUser -Filter {OnPremHostingProvider -ne $null}
+- Get-CsOnlineUser -Filter {WhenChanged -gt "1/25/2022 11:59:59 PM"}
+
 ```yaml
 Type: String
 Parameter Sets: (All)
