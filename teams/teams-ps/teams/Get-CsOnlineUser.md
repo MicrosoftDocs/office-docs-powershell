@@ -289,29 +289,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-Commonly used FeatureTypes are shown below: 
+Commonly used FeatureTypes with the resepective definitions are shown below: 
 
-| Feature Types | Definition |
-|---------------|------------|
-| Teams | Enables Users to access Teams |
-| AudioConferencing | Enables users to call-in to Teams meetings from their phones |
-| PhoneSystem | Enables users to place, receive, transfer, mute, unmute calls in Teams with mobile device, PC, or IP Phones |
-| CallingPlan | Enables an All-in-the-cloud voice solution for Teams users that connects Teams Phone System to the PSTN to enable external calling. With this option, Microsoft acts as the PSTN carrier. |
-| TeamsMultiGeo | Enables Teams chat data to be stored at rest in a specified geo location |
-| VoiceApp | Enables to set up resource accounts to support voice applications like Auto Attendants and Call Queues |
-| Freemium | Enables access to Microsoft Teams (Free) |
-| M365CopilotTeams | Enables Copilot in Teams |
-| TeamsProMgmt | Enables enhanced meeting recap features like AI generated notes and tasks from meetings, view when a screen was shared etc |
-| TeamsProProtection | Enables additional ways to safeguard and monitor users' Teams experiences with features like Sensitivity labels, Watermarking, end-to-end encryption etc |
-| TeamsProWebinar | Enables advances webinar features like engagement reports, RTMP-In, Webinar Wait List, in Teams |
-| TeamsProCust | Enables meeting customization features like branded meetings, together mode, in Teams |
-| TeamsProVirtualAppt | Enables advances virtual appointment features like SMS notifications, custom waiting room, in Teams |
-| TeamsRoomPro | Enables premium in-room meeting experience like intelligent audio, large galleries in Teams |
-| TeamsRoomBasic | Enables core meeting experience with Teams Rooms Systems |
-| TeamsAdvComms | Enables advances communication management like custom communication policies in Teams |
-| TeamsMobileExperience | Enables users to use a single phone number in Teams across both sim-enabled mobile phone and desk lines. |
-| Conferencing_RequiresCommunicationCredits | Allows pay-per minute Audio Conferencing without monthly licenses |
-| CommunicationCredits | Enables users to pay Teams calling and conferencing through the credits |
+Teams: Enables Users to access Teams
+AudioConferencing: Enables users to call-in to Teams meetings from their phones
+PhoneSystem: Enables users to place, receive, transfer, mute, unmute calls in Teams with mobile device, PC, or IP Phones
+CallingPlan: Enables an All-in-the-cloud voice solution for Teams users that connects Teams Phone System to the PSTN to enable external calling. With this option, Microsoft acts as the PSTN carrier.
+TeamsMultiGeo: Enables Teams chat data to be stored at rest in a specified geo location
+VoiceApp: Enables to set up resource accounts to support voice applications like Auto Attendants and Call Queues
+Freemium: Enables access to Microsoft Teams (Free)
+M365CopilotTeams: Enables Copilot in Teams
+TeamsProMgmt: Enables enhanced meeting recap features like AI generated notes and tasks from meetings, view when a screen was shared etc
+TeamsProProtection: Enables additional ways to safeguard and monitor users' Teams experiences with features like Sensitivity labels, Watermarking, end-to-end encryption etc.
+TeamsProWebinar: Enables advances webinar features like engagement reports, RTMP-In, Webinar Wait List, in Teams.
+TeamsProCust: Enables meeting customization features like branded meetings, together mode, in Teams.
+TeamsProVirtualAppt: Enables advances virtual appointment features like SMS notifications, custom waiting room, in Teams.
+TeamsRoomPro: Enables premium in-room meeting experience like intelligent audio, large galleries in Teams.
+TeamsRoomBasic: Enables core meeting experience with Teams Rooms Systems.
+TeamsAdvComms: Enables advances communication management like custom communication policies in Teams.
+TeamsMobileExperience: Enables users to use a single phone number in Teams across both sim-enabled mobile phone and desk lines.
+Conferencing_RequiresCommunicationCredits: Allows pay-per minute Audio Conferencing without monthly licenses.
+CommunicationCredits: Enables users to pay Teams calling and conferencing through the credits.
 
 ### Notes
 
