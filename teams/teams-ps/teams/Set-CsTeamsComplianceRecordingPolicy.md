@@ -52,22 +52,9 @@ Existing calls and meetings are unaffected.
 ## EXAMPLES
 
 ### Example 1
-This will no longer work 
 ```powershell
 PS C:\> Set-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy' -ComplianceRecordingApplications @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899')
 ```
-### Example 1 Alternative
-Instead, try
-```powershell
-PS C:\> Get-CsTeamsComplianceRecordingApplication (Will not contain data with current applicationId)
-
-PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899'
-
-PS C:\> Get-CsTeamsComplianceRecordingApplication -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899'
-
-PS C:\> Get-CsTeamsComplianceRecordingPolicy
-```
-
 
 The command shown in Example 1 modifies an existing per-user Teams recording policy with the Identity ContosoPartnerComplianceRecordingPolicy.
 This policy is re-assigned a single application instance of a policy-based recording application: d93fefc7-93cc-4d44-9a5d-344b0fff2899, which is the ObjectId of the application instance as obtained from the Get-CsOnlineApplicationInstance cmdlet.
@@ -75,30 +62,9 @@ This policy is re-assigned a single application instance of a policy-based recor
 Any Microsoft Teams users who are assigned this policy will have their calls and meetings recorded by that application instance. Existing calls and meetings are unaffected.
 
 ### Example 2
-This will no longer work 
+
 ```powershell
 PS C:\> Set-CsTeamsComplianceRecordingPolicy -Identity 'ContosoPartnerComplianceRecordingPolicy' -ComplianceRecordingApplications @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899'), @(New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id '39dc3ede-c80e-4f19-9153-417a65a1f144')
-```
-
-### Example 2 Alternative
-Instead, try
-```powershell
-PS C:\> Get-CsTeamsComplianceRecordingApplication (Will not contain data with current applicationId)
-
-PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899'
-
-PS C:\> Get-CsTeamsComplianceRecordingApplication -Id 'd93fefc7-93cc-4d44-9a5d-344b0fff2899'
-PS C:\>
-PS C:\> 
-PS C:\> Get-CsTeamsComplianceRecordingPolicy
-
-PS C:\> Get-CsTeamsComplianceRecordingApplication (Will not contain data with current applicationId)
-
-PS C:\> New-CsTeamsComplianceRecordingApplication -Parent 'ContosoPartnerComplianceRecordingPolicy' -Id '39dc3ede-c80e-4f19-9153-417a65a1f144'
-
-PS C:\> Get-CsTeamsComplianceRecordingApplication -Id '39dc3ede-c80e-4f19-9153-417a65a1f144'
-
-PS C:\> Get-CsTeamsComplianceRecordingPolicy
 ```
 
 Example 2 is a variation of Example 1.
