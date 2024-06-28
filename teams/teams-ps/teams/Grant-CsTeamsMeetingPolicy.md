@@ -21,19 +21,19 @@ Assigns a teams meeting policy at the per-user scope. The CsTeamsMeetingPolicy c
 ### GrantToTenant (Default)
 ```
 Grant-CsTeamsMeetingPolicy [-Global] [-PassThru] [[-PolicyName] <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### GrantToGroup
 ```
 Grant-CsTeamsMeetingPolicy [-PassThru] [[-PolicyName] <String>]
- -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Group <String> [-Rank <Int32>] [-Confirm] [<CommonParameters>]
 ```
 
 ### Identity
 ```
 Grant-CsTeamsMeetingPolicy [-PassThru] [[-PolicyName] <String>]
- [[-Identity] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Identity] <String>] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -179,23 +179,6 @@ Accept wildcard characters: False
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 applicable: Microsoft Teams
 
 Required: False
