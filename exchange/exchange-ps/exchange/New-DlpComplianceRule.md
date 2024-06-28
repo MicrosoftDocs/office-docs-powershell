@@ -56,6 +56,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
  [-EnforcePortalAccess <Boolean>]
+ [-EvaluateRulePerComponent <Boolean>]
  [-ExceptIfAccessScope <Microsoft.Office.CompliancePolicy.Tasks.AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -994,6 +995,28 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -EvaluateRulePerComponent
+The EvaluateRulePerComponent parameter is a DLP rule level configuration that specifies whether DLP rule match (both conditions and exceptions) should happen in the "same" email component like email body or a specific attachment ($true) or against entire envelope ($false). 
+
+For example - If your DLP rule has been configured to block email if content contains 3 or more SSN, with this parameter enabled, the email will be blocked ONLY IF the entire rule matches for the same email component, like if a) there are 3 or more SSN in email body, or b) there are 3 or more SSN in a specific attachment. The rule will not match if there are 2 SSN in email body, 1 SSN in one attachment & 2 SSN in another attachment.
+
+Note that this setting is supported by below DLP predicates only:
+
+- Content contains
+- Attachment contains
+- Attachment is not labeled
+- File extension is
+
+```yaml
+Type: Boolean
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: No
+Applicable: Security & Compliance
 ```
 
 ### -ExceptIfAccessScope
