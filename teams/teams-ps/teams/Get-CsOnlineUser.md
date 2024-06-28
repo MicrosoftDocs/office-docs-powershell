@@ -20,25 +20,18 @@ Returns information about users who have accounts homed on Microsoft Teams or Sk
 ```
 Get-CsOnlineUser [[-Identity] <UserIdParameter>]
  [-AccountType <String>]
- [-Credential <PSCredential>]
- [-DomainController <Fqdn>]
  [-Filter <String>]
- [-LdapFilter <String>]
- [-OnModernServer]
- [-OnOfficeCommunicationServer]
- [-OU <OUIdParameter>]
  [-ResultSize <Unlimited>]
  [-SkipUserPolicies]
  [-SoftDeletedUser]
  [-Sort]
- [-UnassignedUser]
  [-UsePreferredDC]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsOnlineUser cmdlet returns information about users who have accounts homed on Microsoft Teams or Skype for Business Online.
-The returned information includes standard Active Directory account information (such as the department the user works in, his or her address and phone number, etc.) as well as Skype for Business Server 2015 specific information: the Get-CsOnlineUser cmdlet returns information about such things as whether or not the user has been enabled for Enterprise Voice and which per-user policies (if any) have been assigned to the user.
+The Get-CsOnlineUser cmdlet returns information about users who have accounts homed on Microsoft Teams
+The returned information includes standard Active Directory account information (such as the department the user works in, his or her address and phone number, etc.): the Get-CsOnlineUser cmdlet returns information about such things as whether or not the user has been enabled for Enterprise Voice and which per-user policies (if any) have been assigned to the user.
 
 Note that the Get-CsOnlineUser cmdlet does not have a TenantId parameter; that means you cannot use a command similar to this in order to limit the returned data to users who have accounts with a specific Microsoft Teams or Skype for Business Online tenant:
 
@@ -128,7 +121,7 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
 - `SfBOnPremUser` - to query for users that are hosted on-premises (available from January 31, 2023, in the latest TPM versions at that time).
-- `Unknown` - to query for a user type that is not known. (This AccountType is being renamed to IneligibleUser)
+- `IneligibleUser` - to query for a user type that is not known.
 
 ```yaml
 Type: UserIdParameter
