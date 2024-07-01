@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedTownhallTypesForRecordingPublish
-This setting describes how IT admins can control which types of Town Hall attendees can have their recordings published.
+This setting governs which types of town halls can have their recordings published.
 
 Possible values are: None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedWebinarTypesForRecordingPublish
-This setting describes how IT admins can control which types of webinar attendees can have their recordings published.
+This setting governs which types of webinars can have their recordings published.
 
 Possible values are: None, InviteOnly, EveryoneInCompanyIncludingGuests, Everyone.
 
