@@ -24,7 +24,7 @@ The code samples in this article use the [Exchange Online PowerShell V3 module](
 To install the Exchange Online PowerShell module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
 
 > [!TIP]
-> REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+> REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 >
 > If you get errors when you try to connect, use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet.
 
