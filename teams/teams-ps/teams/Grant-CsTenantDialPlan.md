@@ -19,17 +19,17 @@ Use the Grant-CsTenantDialPlan cmdlet to assign an existing tenant dial plan to 
 
 ### GrantToTenant (Default)
 ```
-Grant-CsTenantDialPlan [[-PolicyName] <string>] [-Global] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [[-PolicyName] <string>] [-Global] [-PassThru] [<CommonParameters>]
 ```
 
 ### GrantToGroup
 ```
-Grant-CsTenantDialPlan [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Grant-CsTenantDialPlan [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -160,38 +160,6 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

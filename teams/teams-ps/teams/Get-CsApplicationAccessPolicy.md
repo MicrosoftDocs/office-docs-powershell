@@ -18,10 +18,17 @@ Retrieves information about the application access policy configured for use in 
 
 ## SYNTAX
 
-### Identity
+### Identity (Default)
 
+```powershell
+Get-CsApplicationAccessPolicy [[-Identity] <String>] [-MsftInternalProcessingMode <String>]
+ [<CommonParameters>]
 ```
-Get-CsApplicationAccessPolicy [-Identity <XdsIdentity>] 
+
+### Filter
+
+```powershell
+Get-CsApplicationAccessPolicy [-MsftInternalProcessingMode <String>] [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +39,7 @@ This cmdlet retrieves information about the application access policy configured
 
 ### Retrieve all application access policies
 
-```
+```powershell
 PS C:\> Get-CsApplicationAccessPolicy
 ```
 
@@ -40,7 +47,7 @@ The command shown above returns information of all application access policies t
 
 ### Retrieve specific application access policy
 
-```
+```powershell
 PS C:\> Get-CsApplicationAccessPolicy -Identity "ASimplePolicy"
 ```
 
@@ -65,6 +72,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+
+A filter that is not expressed in the standard wildcard language.
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MsftInternalProcessingMode
+
+For internal use only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -73,7 +116,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
-[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
-[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
-[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
+[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)<br>
+[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)<br>
+[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)<br>
+[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)<br>
