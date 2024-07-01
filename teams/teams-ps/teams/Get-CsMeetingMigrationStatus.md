@@ -17,8 +17,7 @@ You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting
 
 ## SYNTAX
 ```
-Get-CsMeetingMigrationStatus [[-Identity] <UserIdParameter>] [-Confirm] [-EndTime <DateTime>] [-StartTime <DateTime>]
- [-SummaryOnly] [-Tenant <Guid>] [-WhatIf] [-State <StateType>] [<CommonParameters>]
+Get-CsMeetingMigrationStatus [[-Identity] <UserIdParameter>] [-EndTime <DateTime>] [-StartTime <DateTime>] [-SummaryOnly] [-State <StateType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +41,6 @@ Get-CsMeetingMigrationStatus -Identity "ashaw@contoso.com"
 
 This example gets the meeting migration status for user ashaw@contoso.com.
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -56,22 +54,6 @@ applicable: Microsoft Teams
 
 Required: False
 Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-The Confirm switch causes the command to pause processing and requires confirmation to proceed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -125,46 +107,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return your tenant ID by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter. Instead, the tenant ID will automatically be filled in for you based on your connection information. The Tenant parameter is primarily for use in a hybrid deployment.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -State
 With this parameter you can filter by migration state. Possible values are:
 * Pending
@@ -190,7 +132,30 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-## OUTPUTS
+### OUTPUTS
+CorrelationId     : 849d3e3b-3e1d-465f-8dde-785aa9e3f856
+CreateDate        : 2024-04-27T00:24:00.1442688Z
+FailedMeeting     : 0
+InvitesUpdate     : 0
+LastMessage       :
+MigrationType     : AllToTeams
+ModifiedDate      : 2024-04-27T00:24:00.1442688Z
+RetryCount        : 0
+State             : Pending
+SucceededMeeting  : 0
+TotalMeeting      : 0
+UserId            : 27c6ee67-c71d-4386-bf84-ebfdc7c3a171
+UserPrincipalName : syntest1-prod@TESTTESTMMSSYNTHETICUSWESTT.onmicrosoft.com
+
+where **MigrationType** can have possible values as below:
+
+ **SfbToTeams** (Skype for Business On-prem to Teams)
+ 
+ **TeamsToTeams** (Teams to Teams)
+ 
+ **ToSameType** (Same source and targer meeting types)
+ 
+ **AllToTeams** (All types to Teams)
 
 ## NOTES
 

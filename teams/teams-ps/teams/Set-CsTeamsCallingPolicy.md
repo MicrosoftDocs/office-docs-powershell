@@ -20,14 +20,32 @@ Use this cmdlet to update values in existing Teams Calling Policies.
 
 ### Identity (Default)
 ```
-Set-CsTeamsCallingPolicy [-Identity] <string> [-AllowPrivateCalling <boolean>] [-AllowWebPSTNCalling <boolean>]
- [-AllowSIPDevicesCalling <boolean>] [-AllowVoicemail <string>] [-AllowCallGroups <boolean>] [-AllowDelegation <boolean>]
- [-AllowCallForwardingToUser <boolean>] [-AllowCallForwardingToPhone <boolean>] [-PreventTollBypass <boolean>]
- [-BusyOnBusyEnabledType <string>] [-MusicOnHoldEnabledType <string>] [-AllowCloudRecordingForCalls <boolean>]
- [-AllowTranscriptionForCalling <boolean>] [-PopoutForIncomingPstnCalls <string>] [-PopoutAppPathForIncomingPstnCalls <string>]
- [-LiveCaptionsEnabledTypeForCalling <string>] [-AutoAnswerEnabledType <string>] [-SpamFilteringEnabledType <string>]
- [-CallRecordingExpirationDays <long>] [-AllowCallRedirect <string>]
- [-InboundPstnCallRoutingTreatment <string>] [-InboundFederatedCallRoutingTreatment <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsCallingPolicy [-Identity] <string>
+ [-AllowCallForwardingToPhone <boolean>]
+ [-AllowCallForwardingToUser <boolean>]
+ [-AllowCallGroups <boolean>]
+ [-AllowCallRedirect <string>]
+ [-AllowCloudRecordingForCalls <boolean>]
+ [-AllowDelegation <boolean>]
+ [-AllowPrivateCalling <boolean>]
+ [-AllowSIPDevicesCalling <boolean>]
+ [-AllowTranscriptionForCalling <boolean>]
+ [-AllowVoicemail <string>]
+ [-AllowWebPSTNCalling <boolean>]
+ [-BusyOnBusyEnabledType <string>]
+ [-CallRecordingExpirationDays <long>]
+ [-Confirm]
+ [-Force]
+ [-InboundFederatedCallRoutingTreatment <string>]
+ [-InboundPstnCallRoutingTreatment <string>]
+ [-LiveCaptionsEnabledTypeForCalling <string>]
+ [-MusicOnHoldEnabledType <string>]
+ [-PopoutAppPathForIncomingPstnCalls <string>]
+ [-PopoutForIncomingPstnCalls <string>]
+ [-PreventTollBypass <boolean>]
+ [-SpamFilteringEnabledType <string>]
+ [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -241,26 +259,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoAnswerEnabledType
-Setting this parameter allows you to enable or disable auto-answer for incoming meeting invites on Teams Phones. This setting applies only to incoming meeting invites and does not include support for other call types.
-
-Valid options are:
-- Enabled: Auto-answer is enabled.
-- Disabled: Auto-answer is disabled. This is the default setting.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: Disabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -BusyOnBusyEnabledType
 Setting this parameter lets you configure how incoming calls are handled when a user is already in a call or conference or has a call placed on hold.
 
@@ -360,7 +358,7 @@ Valid options are:
 - RegularIncoming: No changes are made to default inbound routing. This is the default setting.
 - Unanswered: The inbound PSTN call will be routed according to the called user's unanswered call settings and the call will not be presented to the called user. The called user will see a missed call notification. If the called user has not enabled unanswered call settings the call will be disconnected.
 - Voicemail: The inbound PSTN call will be routed directly to the called user's voicemail and the call will not be presented to the user. If the called user does not have voicemail enabled the call will be disconnected.
-- UserOverride: For now, setting the value to UserOverride is the same as RegularIncoming.
+- UserOverride: Users can determine their PSTN call routing choice from call settings in the Teams app.
 
 Setting this parameter to Unanswered or Voicemail will have precedence over other call forwarding settings like call forward/simultaneous ringing to delegate, call groups, or call forwarding.
 
@@ -382,7 +380,7 @@ Determines whether real-time captions are available for the user in Teams calls.
 
 Valid options are:
 - DisabledUserOverride: Allows the user to turn on live captions.
-- Disabled: Prohibts the user from turning on live captions.
+- Disabled: Prohibits the user from turning on live captions.
 
 ```yaml
 Type: String

@@ -399,7 +399,7 @@ Accept wildcard characters: False
 ### -UseRPSSession
 This parameter is available in version 3.2.0 or later of the module.
 
-**Note**: Remote PowerShell connections to Security & Compliance are deprecated. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432). 
+**Note**: Remote PowerShell connections to Security & Compliance are deprecated. For more information, see [Deprecation of Remote PowerShell in Security and Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
 
 The UseRPSSession switch allows you to connect to Security & Compliance PowerShell using traditional remote PowerShell access to all cmdlets. You don't need to specify a value with this switch.
 

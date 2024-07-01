@@ -31,7 +31,7 @@ Based on the CSV file, the following hierarchy is created:
 - Apogee
 - &nbsp;&nbsp;&nbsp;New Jersey
 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Basking Ridge
-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moutain Lakes
+- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mountain Lakes
 
 ## EXAMPLES
 

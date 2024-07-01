@@ -55,7 +55,7 @@ Q: I assigned CVI policy to a user, but I can't create a VTC meeting with that p
 
 A: The policy is cached for 6 hours. Changes to the policy are updated after the cache expires. Check for your changes after 6 hours.
 
-**Frequently used commands that can help idenfity the policy assignment**:
+**Frequently used commands that can help identify the policy assignment**:
 
 - Command to get full list of user along with their CVI policy: `Get-CsOnlineUser | Format-List UserPrincipalName,TeamsVideoInteropServicePolicy`
 

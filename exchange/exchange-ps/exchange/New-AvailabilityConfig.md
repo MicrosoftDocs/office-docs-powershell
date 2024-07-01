@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-New-AvailabilityConfig 
+New-AvailabilityConfig
  [-AllowedTenantIds <MultiValuedProperty>]
  [-Confirm]
  [-OrgWideAccount <SecurityPrincipalIdParameter>]

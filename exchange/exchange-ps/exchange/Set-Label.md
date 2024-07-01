@@ -147,9 +147,11 @@ The AdvancedSettings parameter enables specific features and capabilities for a 
 
 Specify this parameter with the identity (name or GUID) of the sensitivity label, with key/value pairs in a [hash table](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). To remove an advanced setting, use the same AdvancedSettings parameter syntax, but specify a null string value.
 
-Some of the settings that you configure with this parameter are supported only by the Azure Information Protection unified labeling client and not by Office apps and services that support built-in labeling. For a list of these and instructions, see [Custom configurations for the Azure Information Protection unified labeling client](https://learn.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations).
+Some of the settings that you configure with this parameter are supported only by the Microsoft Purview Information Protection client and not by Office apps and services that support built-in labeling. For a list of these, see [Advanced settings for Microsoft Purview Information Protection client](https://learn.microsoft.com/powershell/exchange/client-advanced-settings).
 
 Supported settings for built-in labeling:
+
+- **BlockContentAnalysisServices**: Specifies a privacy setting to allow or prevent content in Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis. Available values are True, and False (the default). This setting impacts services such as data loss prevention policy tips, automatic and recommended labeling, and Microsoft Copilot for Microsoft 365. Example: `Set-Label -Identity Confidential -AdvancedSettings @{BlockContentAnalysisServices="True"}`. For more information, see [Prevent some connected experiences that analyze content](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#prevent-some-connected-experiences-that-analyze-content).
 
 - **Color**: Specifies a label color as a hex triplet code for the red, green, and blue (RGB) components of the color. Example: `Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{color="#40e0d0"}`. For more information, see [Configuring custom colors by using PowerShell](https://learn.microsoft.com/purview/sensitivity-labels-office-apps#configuring-custom-colors-by-using-powershell).
 
@@ -595,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### -Conditions
-The Conditions parameter is used for automatic labeling of files and email for data in use. 
+The Conditions parameter is used for automatic labeling of files and email for data in use.
 
 ```yaml
 Type: MultiValuedProperty

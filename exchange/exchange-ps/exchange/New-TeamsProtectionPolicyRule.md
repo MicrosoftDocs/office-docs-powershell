@@ -41,6 +41,9 @@ You can use this cmdlet only if the following statements are true:
 - The Teams protection policy rule doesn't exist (the Get-TeamsProtectionPolicyRule cmdlet returns no output).
 - The Teams protection policy exists (the Get-TeamsProtectionPolicy cmdlet returns output).
 
+> [!IMPORTANT]
+> Different types of recipient exceptions use OR logic (the recipient must satisfy **any** of the specified exceptions). For more information, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](https://learn.microsoft.com/defender-office-365/mdo-support-teams-about#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
+
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES

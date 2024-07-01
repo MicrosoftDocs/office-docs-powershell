@@ -28,7 +28,7 @@ The Set-CsOnlineSchedule cmdlet lets you modify the properties of a schedule.
 ### -------------------------- Example 1 --------------------------
 ```powershell
 $schedule = Get-CsOnlineSchedule -Id "fa9081d6-b4f3-5c96-baec-0b00077709e5"
-$schedule.Name = "Chrismas Holiday"
+$schedule.Name = "Christmas Holiday"
 Set-CsOnlineSchedule -Instance $schedule
 ```
 
