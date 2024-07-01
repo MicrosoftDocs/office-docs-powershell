@@ -453,7 +453,14 @@ Accept wildcard characters: False
 ### -EXOModuleEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill EXOModuleEnabled Description }}
+The EXOModuleEnabled parameter specifies whether the user can connect to Exchange Online PowerShell in Microsoft 365 organizations using the Exchange Online PowerShell V3 module. Valid values are:
+
+- $true: The user can connect to Exchange Online PowerShell.
+- $false: The user can't connect to Exchange Online PowerShell.
+
+The default value depends on the management roles that are assigned to the user.
+
+ Access to Exchange Online PowerShell is also required for other features (for example, the ability to open the Exchange admin center (EAC)).
 
 ```yaml
 Type: Boolean
@@ -1010,6 +1017,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
+**Note**: This parameter is being deprecated in cloud-based environments. In cloud-based environments, use the EXOModuleEnabled parameter instead.
+
 The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Remote PowerShell access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. Valid values are:
 
 - $true: The user has access to remote PowerShell.
