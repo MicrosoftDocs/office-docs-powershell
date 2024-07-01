@@ -18,13 +18,13 @@ Returns information related to managing the upgrade to Teams from Skype for Busi
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Get-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [[-Identity] <XdsIdentity>] [-LocalStore]
  [<CommonParameters>]
 ```
 
 ### Filter
-```
+```powershell
 Get-CsTeamsUpgradeConfiguration [-Tenant <Guid>] [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ The SfBMeetingJoinUx property allows admins to specify which app is used to join
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> Get-CsTeamsUpgradeConfiguration
 ```
 
@@ -54,14 +54,14 @@ The above cmdlet lists the properties of TeamsUpgradeConfiguration.
 
 ## PARAMETERS
 
-
 ### -Identity
-{{Fill Identity Description}}
+
+Unique identifier of the configuration settings to be returned.
 
 ```yaml
-Type: XdsIdentity
-Parameter Sets: (All)
-Aliases: 
+Type: String
+Parameter Sets: Identity
+Aliases:
 
 Required: False
 Position: 1
@@ -70,28 +70,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocalStore
-Do not use
+### -Filter
+
+Enables you to use wildcard characters in order to return a collection of configuration settings.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-{{Fill Tenant Description}}
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
+Type: String
+Parameter Sets: Filter
+Aliases:
 
 Required: False
 Position: Named
