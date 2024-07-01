@@ -2,7 +2,7 @@
 title: "Filterable properties for the RecipientFilter parameter"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date:
 ms.audience: ITPro
 audience: ITPro
