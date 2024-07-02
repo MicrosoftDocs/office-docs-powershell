@@ -3,8 +3,8 @@ external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csgrouppolicyassignment
 schema: 2.0.0
-author: tomkau
-ms.author: tomkau
+author: 
+ms.author: 
 ms.reviewer: williamlooney
 ---
 
@@ -16,7 +16,7 @@ This cmdlet is used to return group policy assignments.
 
 ## SYNTAX
 
-```
+```powershell
 Get-CsGroupPolicyAssignment [-GroupId <String>] [-PolicyType <String>]
 ```
 
@@ -28,7 +28,7 @@ This cmdlets returns group policy assignments.  Optional parameters allow the re
 ### Example 1
 In this example, all group policy assignments are returned.
 
-```
+```powershell
 Get-CsGroupPolicyAssignment 
 
 GroupId                              PolicyType                  PolicyName         Rank CreatedTime            CreatedBy
@@ -45,7 +45,7 @@ e2a3ed24-97be-494d-8d3c-dbc04cbb878a TeamsCallingPolicy          AllowCalling   
 ### Example 2
 In this example, only the policies assigned to a specific group are returned.
 
-```
+```powershell
 Get-CsGroupPolicyAssignment -GroupId e050ce51-54bc-45b7-b3e6-c00343d31274
 
 GroupId                              PolicyType                  PolicyName         Rank CreatedTime            CreatedBy
@@ -60,7 +60,7 @@ In this example, only the policies of a specific type are returned.
 
 Get-CsGroupPolicyAssignment -PolicyType TeamsCallingPolicy
 
-```
+```powershell
 GroupId                              PolicyType         PolicyName   Rank CreatedTime           CreatedBy
 -------                              ----------         ----------   ---- -----------           ---------
 e2a3ed24-97be-494d-8d3c-dbc04cbb878a TeamsCallingPolicy AllowCalling 1    11/4/2019 12:54:27 AM aeb7c0e7-2f6d-43ef-bf33-bfbcb93fdc64
