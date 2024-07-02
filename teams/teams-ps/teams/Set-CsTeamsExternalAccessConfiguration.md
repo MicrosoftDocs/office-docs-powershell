@@ -1,8 +1,8 @@
 ---
+schema: 2.0.0
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
-Module Name: MicrosoftTeams
 online version:
-schema: 1.0.0
+Module Name: MicrosoftTeams
 ---
 # Set-CsTeamsExternalAccessConfiguration
 

@@ -22,22 +22,22 @@ This cmdlet was introduced in Lync Server 2010.
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Grant-CsExternalAccessPolicy [<CommonParameters>]
 ```
 
 ### GrantToUser
-```
+```powershell
 Grant-CsExternalAccessPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsExternalAccessPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32> [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
+```powershell
 Grant-CsExternalAccessPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
@@ -78,14 +78,14 @@ That's because the settings in the per-user policy take precedence.
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 -------------------------- 
-```
+```powershell
 Grant-CsExternalAccessPolicy -Identity "Ken Myer" -PolicyName RedmondAccessPolicy
 ```
 
 Example 1 assigns the external access policy RedmondAccessPolicy to the user with the Active Directory display name Ken Myer.
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
-```
+```powershell
 Get-CsUser -LdapFilter "l=Redmond" | Grant-CsExternalAccessPolicy -PolicyName RedmondAccessPolicy
 ```
 
@@ -94,7 +94,7 @@ To do this, the command first uses the Get-CsUser cmdlet and the LdapFilter para
 That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy RedmondAccessPolicy to each user in the collection.
 
 ### -------------------------- EXAMPLE 3 -------------------------- 
-```
+```powershell
 Get-CsUser -LdapFilter "Title=Sales Representative" | Grant-CsExternalAccessPolicy -PolicyName SalesAccessPolicy
 ```
 
@@ -103,7 +103,7 @@ To perform this task, the command first uses the Get-CsUser cmdlet and the LdapF
 This filtered collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy SalesAccessPolicy to each user in the collection.
 
 ### -------------------------- EXAMPLE 4 -------------------------- 
-```
+```powershell
 Get-CsUser -Filter {ExternalAccessPolicy -eq $Null} | Grant-CsExternalAccessPolicy -PolicyName BasicAccessPolicy
 ```
 
@@ -112,7 +112,7 @@ The command shown in Example 4 assigns the external access policy BasicAccessPol
 By definition, ExternalAccessPolicy will be null only if users have not been assigned a per-user policy.
 
 ### -------------------------- EXAMPLE 5 -------------------------- 
-```
+```powershell
 Get-CsUser -OU "ou=US,dc=litwareinc,dc=com" | Grant-CsExternalAccessPolicy -PolicyName USAccessPolicy
 ```
 
@@ -121,7 +121,7 @@ The command starts off by calling the Get-CsUser cmdlet and the OU parameter; th
 The returned collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy USAccessPolicy to each user in the collection.
 
 ### -------------------------- EXAMPLE 6 -------------------------- 
-```
+```powershell
 Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
 ```
 
@@ -197,38 +197,6 @@ By default, the Grant-CsExternalAccessPolicy cmdlet does not pass objects throug
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 Applicable: Microsoft Teams, Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015, Skype for Business Server 2019
 
 Required: False
