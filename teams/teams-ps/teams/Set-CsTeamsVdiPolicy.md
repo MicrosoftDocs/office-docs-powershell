@@ -12,7 +12,7 @@ The CsTeamsVdiPolicy cmdlets enable administrators to control the type of meetin
 
 ## SYNTAX
 
-```
+```powershell
 Set-CsTeamsVdiPolicy [-DisableCallsAndMeetings <Boolean>] [-DisableAudioVideoInCallsAndMeetings <Boolean>]
  [-VDI2Optimization <String>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

@@ -12,7 +12,7 @@ The CsTeamsVdiPolicy cmdlets enable administrators to control the type of meetin
 
 ## SYNTAX
 
-```
+```powershell
 New-CsTeamsVdiPolicy [-DisableCallsAndMeetings <Boolean>] [-DisableAudioVideoInCallsAndMeetings <Boolean>]
  [-VDI2Optimization <String>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -31,7 +31,7 @@ PS C:\> New-CsTeamsVdiPolicy -Identity RestrictedUserPolicy -VDI2Optimization "D
 
 The command shown in Example 1 uses the New-CsTeamsVdiPolicy cmdlet to create a new Vdi policy with the Identity RestrictedUserPolicy. This policy will use all the default values for a vdi policy except one: VDI2Optimization; in this example, users with this policy will not be able to be VDI 2.0 optimized.
 
-### Example 2 2 
+### Example 2
 ```powershell
 PS C:\> New-CsTeamsVdiPolicy -Identity OnlyOptimizedPolicy -DisableAudioVideoInCallsAndMeetings $True -DisableCallsAndMeetings $True
 ```

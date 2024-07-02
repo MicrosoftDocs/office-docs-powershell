@@ -13,12 +13,12 @@ The CsTeamsVdiPolicy cmdlets enable administrators to control the type of meetin
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Get-CsTeamsVdiPolicy [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ### Filter
-```
+```powershell
 Get-CsTeamsVdiPolicy [-Filter <String>] [<CommonParameters>]
 ```
 

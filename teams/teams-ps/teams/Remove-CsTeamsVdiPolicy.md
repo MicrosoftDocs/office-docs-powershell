@@ -12,7 +12,7 @@ This CsTeamsVdiPolicy cmdlets removes a previously created TeamsVdiPolicy.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-CsTeamsVdiPolicy [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

@@ -13,22 +13,22 @@ Assigns a teams Vdi policy at the per-user scope. The CsTeamsVdiPolicy cmdlets e
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Grant-CsTeamsVdiPolicy [<CommonParameters>]
 ```
 
 ### GrantToUser
-```
+```powershell
 Grant-CsTeamsVdiPolicy -Identity <String> [[-PolicyName] <String>] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsTeamsVdiPolicy [[-PolicyName] <String>] [-Group] <String> -Rank <Int32> [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
+```powershell
 Grant-CsTeamsVdiPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
