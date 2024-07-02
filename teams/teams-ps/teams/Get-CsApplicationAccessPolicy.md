@@ -116,7 +116,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)<br>
-[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)<br>
-[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)<br>
-[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)<br>
+[New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
+
+[Grant-CsApplicationAccessPolicy](Grant-CsApplicationAccessPolicy.md)
+
+[Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
+
+[Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
