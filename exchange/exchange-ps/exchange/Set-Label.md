@@ -455,12 +455,12 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyDynamicWatermarkingEnabled
-The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label. Valid values are:
+The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label that applies encryption. Valid values are:
 
 - $true: Enables dynamic watermarking for a specific label.
 - $false: Disables dynamic watermarking for a specific label.
 
-You set the watermark text with the DynamicWatermarkDisplay parameter.
+You set the watermark text with the DynamicWatermarkDisplay parameter. For more information about using dynamic watermarks for supported apps, see [Dynamic watermarks](https://learn.microsoft.com/purview/encryption-sensitivity-labels#dynamic-watermarks).
 
 ```yaml
 Type: System.Boolean
