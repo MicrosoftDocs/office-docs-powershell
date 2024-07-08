@@ -105,6 +105,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockLegacyAuthorization
+
+### -AllowManagedUpdates
+
+### -AllowPreview
+
+### -UpdateDayOfWeek
+
+### -UpdateTime
+
+### -UpdateTimeOfDay
+
+### -AllowPublicPreview
+
+### -UseNewTeamsClient
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
