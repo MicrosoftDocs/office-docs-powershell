@@ -274,7 +274,7 @@ You can specify a maximum of 20 total users or groups (20 users and no groups, 1
 
 To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
 
-**Note**: Starting from Exchange Online PowerShell module v3.5.1-Preview2, -GroupIds supports security group object IDs (GUIDs). Any version prior to v3.5.1-Preview2 can only accept email addresses for this parameter.
+**Note**: In v3.5.1-Preview2 or later of the module, this parameter supports security group object IDs (GUIDs). Previous versions of the module accept only email addresses for this parameter.
 
 ```yaml
 Type: String[]
