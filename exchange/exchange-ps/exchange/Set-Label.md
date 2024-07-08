@@ -37,6 +37,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-ApplyContentMarkingHeaderFontSize <System.Int32>]
  [-ApplyContentMarkingHeaderMargin <System.Int32>]
  [-ApplyContentMarkingHeaderText <String>]
+ [-ApplyDynamicWatermarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingFontColor <String>]
  [-ApplyWaterMarkingFontName <String>]
@@ -50,6 +51,7 @@ Set-Label [-Identity] <ComplianceRuleIdParameter>
  [-ContentType <MipLabelContentType>]
  [-DefaultContentLabel <String>]
  [-DisplayName <String>]
+ [-DynamicWatermarkDisplay <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <System.Boolean>]
  [-EncryptionDoubleKeyEncryptionUrl <String>]
@@ -452,6 +454,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplyDynamicWatermarkingEnabled
+The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label. This parameter works in conjunction with the DynamicWatermarkDisplay parameter. Valid values are:
+
+- $true: Enables dynamic watermarking for a specific label.
+- $false: Disables dynamic watermarking for a specific label.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplyWaterMarkingEnabled
 The ApplyWaterMarkingEnabled parameter enables or disables the Apply Watermarking Header action for the label. Valid values are:
 
@@ -675,6 +696,25 @@ Accept wildcard characters: False
 
 ### -DisplayName
 The DisplayName parameter specifies the display name for the sensitivity label. The display name appears in any client that supports sensitivity labels. This includes Word, Excel, PowerPoint, Outlook, SharePoint, Teams, and Power BI.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DynamicWatermarkDisplay
+The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label when the ApplyDynamicWatermarkingEnabled parameter is set to enabled. Besides free form text the following special tokens can be used to include user/device specific information in the watermark:
+
+- ${Consumer.PrincipalName} - this token is required in the watermark text specification, the token will be replaced by the users' UPN
+- ${Device.DateTime} - the token will be replaced with the current date/time of the device used to view the document 
 
 ```yaml
 Type: String
