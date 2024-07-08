@@ -455,10 +455,12 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyDynamicWatermarkingEnabled
-The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label. This parameter works in conjunction with the DynamicWatermarkDisplay parameter. Valid values are:
+The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label. Valid values are:
 
 - $true: Enables dynamic watermarking for a specific label.
 - $false: Disables dynamic watermarking for a specific label.
+
+You set the watermark text with the DynamicWatermarkDisplay parameter.
 
 ```yaml
 Type: System.Boolean
@@ -711,10 +713,12 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicWatermarkDisplay
-The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label when the ApplyDynamicWatermarkingEnabled parameter is set to enabled. Besides free form text the following special tokens can be used to include user/device specific information in the watermark:
+The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label. This parameter supports text and the following special tokens:
 
-- ${Consumer.PrincipalName} - this token is required in the watermark text specification, the token will be replaced by the users' UPN
-- ${Device.DateTime} - the token will be replaced with the current date/time of the device used to view the document 
+- `${Consumer.PrincipalName}`: Required. The value is the user principal name (UPN) of the user.
+- `${Device.DateTime}`: Optional. The value is current date/time of the device used to view the document.
+
+This parameter is meaningful only when the ApplyDynamicWatermarkingEnabled parameter value is $true.
 
 ```yaml
 Type: String
