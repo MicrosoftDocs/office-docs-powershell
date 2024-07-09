@@ -54,11 +54,11 @@ This example returns the status of a OneDrive site that's bound by the CustomAtt
 PS C:\> Invoke-ComplianceSecurityFi1terAction Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "nina@contoso.onmicrosoft.com"
 
 SiteUrlOrEmailAddress : nina@contoso.onmicrosoft.com
-BoundaryType          : Usermailbox
-Boundary Instruction  : Set via Set-Mailbox
+BoundaryType          : UserMailbox
+BoundaryInstruction   : Set via Set-Mailbox
 BoundaryObjectId      : nina@contoso.onmicrosoft.com
 BoundaryStatus        : Success
-Boundaryproperty      : CustomAttribute3
+BoundaryProperty      : CustomAttribute3
 BoundaryPropertyVa1ue :
 ```
 
@@ -68,9 +68,9 @@ This example ???.
 ```powershell
 PS C:\> Invoke-ComplianceSecurityFi1terAction -Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "zhexuan@contoso.onmicrosoft.com"
 
-SiteUrlOrEmai1Address : zhexuan@contoso.onmicrosoft.com
-BoundaryType          : InactiveMaiIbox
-Boundarylnstruction   : Set via Invoke-ComplianceSecurityFiIterAction -Set
+SiteUrlOrEmailAddress : zhexuan@contoso.onmicrosoft.com
+BoundaryType          : InactiveMailbox
+BoundaryInstruction   : Set via Invoke-ComplianceSecurityFiIterAction -Set
 BoundaryObjectId      : zhexuan@contoso.onmicrosoft.com
 BoundaryStatus        : Success
 BoundaryProperty      : CustomAttribute3
@@ -94,9 +94,9 @@ Set action succeeded, please use GetStatus to check the result.
 
 PS C:\> Invoke-ComplianceSecurityFiIterAction -Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "zhexuan@contoso.onmicrosoft.com"
 
-SiteUrlOrEmai1Address : zhexuan@contoso.onmicrosoft.com
-Boundary Type         : InactiveMaiIbox
-Boundarylnstruction   : Set via Invoke-ComplianceSecurityFiIterAction -Set
+SiteUrlOrEmailAddress : zhexuan@contoso.onmicrosoft.com
+BoundaryType          : InactiveMailbox
+BoundaryInstruction   : Set via Invoke-ComplianceSecurityFiIterAction -Set
 BoundaryObjectId      : zhexuan@contoso.onmicrosoft.com
 BoundaryStatus        : Success
 BoundaryProperty      : CustomAttribute3
