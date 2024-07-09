@@ -78,10 +78,14 @@ You need to use the Connect-ExchangeOnline cmdlet to authenticate.
 
 This cmdlet requires the .NET Framework 4.7.2 or later.
 
-Currently, you need to be a member of the Global administrators role or the roles that have been assigned at the feature level to run this cmdlet.
+Currently, you need to be a member of the Global Administrators role or the roles that have been assigned at the feature level to run this cmdlet.
+
 To learn more about assigned roles at the feature level, see [Features Available for Feature Access Management](https://learn.microsoft.com/viva/feature-access-management#features-available-for-feature-access-management).
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## EXAMPLES
 
@@ -108,7 +112,7 @@ This example updates who the specified policy applies to. The policy now applies
 
 ### Example 4
 ```powershell
-Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -Name NewPolicyName -IsFeatureEnabled $true -GroupIds group1@contoso.com -UserIds user1@contoso.com
+Update-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -Name NewPolicyName -IsFeatureEnabled $true -GroupIds group1@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3 -UserIds user1@contoso.com
 ```
 
 This example updates the name of the specified policy, makes it so the policy enables the feature, and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
@@ -122,7 +126,7 @@ This example updates the name of the specified policy and makes it so the policy
 
 ### Example 6
 ```powershell
-Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -GroupIds group1@contoso.com,group2@contoso.com
+Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3
 ```
 
 This example updates who the specified policy applies to. The policy now applies **only** to the specified groups, overwriting the users and groups the policy used to apply to.
@@ -136,7 +140,7 @@ This example updates who the specified policy applies to. The policy now applies
 
 ### Example 8
 ```powershell
-Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -Name NewPolicyName -IsCategoryEnabled $true -GroupIds group1@contoso.com -UserIds user1@contoso.com
+Update-VivaModuleFeaturePolicy -CategoryId <category_id> -PolicyId 3db38dfa-02a3-4039-b33a-42b0b3da029b -Name NewPolicyName -IsCategoryEnabled $true -GroupIds group1@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3 -UserIds user1@contoso.com
 ```
 
 This example updates the name of the specified policy, makes it so the policy enables the category (effectively all features under the category), and updates who the policy applies to. The policy now applies **only** to the specified users and groups, overwriting the users and groups the policy used to apply to.
@@ -260,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the email addresses of groups that the updated policy applies to. [Mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the email addresses or security group object IDs (GUIDs) of groups that the updated policy applies to. Both [Mail-enabled and non-mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 If you don't want to update who the policy applies to, don't use this parameter.
 
@@ -269,6 +273,8 @@ The values that you specify for this parameter or the UserIds parameter replace 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
 
 To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
+
+**Note**: In v3.5.1-Preview2 or later of the module, this parameter supports security group object IDs (GUIDs). Previous versions of the module accept only email addresses for this parameter.
 
 ```yaml
 Type: String[]

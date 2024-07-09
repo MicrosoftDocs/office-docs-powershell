@@ -38,6 +38,7 @@ Set-QuarantinePolicy [-Identity] <QuarantineTagIdParameter>
  [-EsnCustomSubject <MultiValuedProperty>]
  [-ESNEnabled <Boolean>]
  [-IgnoreDehydratedFlag]
+ [-IncludeMessagesFromBlockedSenderAddress <Boolean>]
  [-MultiLanguageCustomDisclaimer <MultiValuedProperty>]
  [-MultiLanguageSenderName <MultiValuedProperty>]
  [-MultiLanguageSetting <MultiValuedProperty>]
@@ -212,7 +213,11 @@ Accept wildcard characters: False
 ```
 
 ### -EndUserQuarantinePermissions
-This parameter is reserved for internal Microsoft use.
+**Note**: To set permissions in quarantine policies, we recommend using the EndUserQuarantinePermissionsValue parameter.
+
+The EndUserQuarantinePermissions specifies the end-user permissions for the quarantine policy by using a variable from the output of a New-QuarantinePermissions or Set-QuarantinePermissions command.
+
+For example, run the following command to store the required permissions in a variable: `$Perms = New-QuarantinePermissions <permissions>`. In the same PowerShell session, use the value `$Perms` for this parameter.
 
 ```yaml
 Type: QuarantinePermissions
@@ -234,7 +239,7 @@ This parameter uses a decimal value that's converted from a binary value. The bi
 
 - PermissionToViewHeader: The value 0 doesn't hide the **View message header** action in quarantine. If the message is visible in quarantine, the action is always available for the message.
 - PermissionToDownload: This permission is not used (the value 0 or 1 does nothing).
-- PermissionToAllowSender: This permission is not used (the value 0 or 1 does nothing).
+- PermissionToAllowSender
 - PermissionToBlockSender
 - PermissionToRequestRelease: Don't set this permission and PermissionToRelease to the value 1. Set one value to 1 and the other value to 0, or set both values to 0.
 - PermissionToRelease: Don't set this permission and PermissionToRequestRelease to value 1. Set one value to 1 and the other value to 0, or set both values to 0. This permission isn't honored for messages that were quarantined as malware or high confidence phishing. If the quarantine policy gives users this permission, users are allowed to request the release of their quarantined malware or high confidence phishing messages as if PermissionToRequestRelease was selected instead.
@@ -244,8 +249,8 @@ This parameter uses a decimal value that's converted from a binary value. The bi
 The values for the preset end-user permission groups are described in the following list:
 
 - No access: Binary = 0000000, so use the decimal value 0.
-- Limited access: Binary = 00011011, so use the decimal value 27.
-- Full access: Binary = 00010111, so use the decimal value 23.
+- Limited access: Binary = 00101011, so use the decimal value 43.
+- Full access: Binary = 00100111, so use the decimal value 39.
 
 For custom permissions, get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value to use. Don't use the binary value for this parameter.
 
@@ -388,6 +393,25 @@ Applicable: Exchange Online, Exchange Online Protection
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeMessagesFromBlockedSenderAddress
+The IncludeMessagesFromBlockedSenderAddress parameter specifies whether to send quarantine notifications for quarantined messages from blocked sender addresses. Valid values are:
+
+- $true: Recipients get quarantine notifications for affected messages from blocked senders.
+- $false: Recipients don't get quarantine notifications for affected messages from blocked senders. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

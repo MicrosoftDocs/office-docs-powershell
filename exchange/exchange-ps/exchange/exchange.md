@@ -1302,7 +1302,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## mail-flow Cmdlets
 ### [Add-ResubmitRequest](Add-ResubmitRequest.md)
 
+### [Disable-DnssecForVerifiedDomain](Disable-DnssecForVerifiedDomain.md)
+
+### [Disable-SmtpDaneInbound](Disable-SmtpDaneInbound.md)
+
 ### [Disable-TransportAgent](Disable-TransportAgent.md)
+
+### [Enable-DnssecForVerifiedDomain](Enable-DnssecForVerifiedDomain.md)
+
+### [Enable-SmtpDaneInbound](Enable-SmtpDaneInbound.md)
 
 ### [Enable-TransportAgent](Enable-TransportAgent.md)
 
@@ -1313,6 +1321,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-AddressRewriteEntry](Get-AddressRewriteEntry.md)
 
 ### [Get-DeliveryAgentConnector](Get-DeliveryAgentConnector.md)
+
+### [Get-DnssecStatusForVerifiedDomain](Get-DnssecStatusForVerifiedDomain.md)
 
 ### [Get-EdgeSubscription](Get-EdgeSubscription.md)
 
@@ -1353,6 +1363,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-RoutingGroupConnector](Get-RoutingGroupConnector.md)
 
 ### [Get-SendConnector](Get-SendConnector.md)
+
+### [Get-SmtpDaneInboundStatus](Get-SmtpDaneInboundStatus.md)
 
 ### [Get-SystemMessage](Get-SystemMessage.md)
 
