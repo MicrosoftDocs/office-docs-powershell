@@ -10,6 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
 
+> [!NOTE]
+> Webinar and town hall policies must be managed separately.
+
 ## SYNTAX
 
 ```
