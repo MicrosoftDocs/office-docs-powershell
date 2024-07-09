@@ -455,6 +455,8 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyDynamicWatermarkingEnabled
+**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+
 The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label that applies encryption. Valid values are:
 
 - $true: Enables dynamic watermarking for a specific label.
@@ -713,10 +715,11 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicWatermarkDisplay
+**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+
 The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label. This parameter supports text and the following special tokens:
 
 - `${Consumer.PrincipalName}`: Required. The value is the user principal name (UPN) of the user.
-- `${Device.DateTime}`: Optional. The value is current date/time of the device used to view the document.
 
 This parameter is meaningful only when the ApplyDynamicWatermarkingEnabled parameter value is $true.
 
