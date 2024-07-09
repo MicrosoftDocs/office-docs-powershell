@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMicrosoftECDN
-This setting governs whether the global admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
+This setting governs whether the admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
 
 ```yaml
 Type: Boolean
