@@ -38,7 +38,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be a member 
 ```powershell
 PS C:\> Invoke-ComplianceSecurityFilterAction -Action GetStatus -PropertyName CustomAttribute1 -SiteUrl https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
 
-SiteUrl               : https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
+SiteUrlOrEmailAddress : https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
 BoundaryType          : UserMailbox
 BoundaryInstruction   : Set via Set-Mailbox
 BoundaryObjectId      : SPO_f82ace6e-817e-4752-8917-67164dabde98@SPO_775ea11f-a2af-7821-b04c-9848e903ce47
@@ -51,10 +51,59 @@ This example returns the status of a OneDrive site that's bound by the CustomAtt
 
 ### Example 2
 ```powershell
+PS C:\> Invoke-ComplianceSecurityFi1terAction Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "nina@contoso.onmicrosoft.com"
+
+SiteUrlOrEmailAddress : nina@contoso.onmicrosoft.com
+BoundaryType          : Usermailbox
+Boundary Instruction  : Set via Set-Mailbox
+BoundaryObjectId      : nina@contoso.onmicrosoft.com
+BoundaryStatus        : Success
+Boundaryproperty      : CustomAttribute3
+BoundaryPropertyVa1ue :
+```
+
+This example ???.
+
+### Example 3
+```powershell
+PS C:\> Invoke-ComplianceSecurityFi1terAction -Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "zhexuan@contoso.onmicrosoft.com"
+
+SiteUrlOrEmai1Address : zhexuan@contoso.onmicrosoft.com
+BoundaryType          : InactiveMaiIbox
+Boundarylnstruction   : Set via Invoke-ComplianceSecurityFiIterAction -Set
+BoundaryObjectId      : zhexuan@contoso.onmicrosoft.com
+BoundaryStatus        : Success
+BoundaryProperty      : CustomAttribute3
+BoundaryPropertyVa1ue : test33
+```
+
+This example ???
+
+### Example 4
+```powershell
 Invoke-ComplianceSecurityFilterAction -Action Set -PropertyName CustomAttribute1 -PropertyValue "Research and Development" -SiteUrl https://contoso-my.sharepoint.com/personal/lila_contoso_onmicrosoft_com/_layouts/15/onedrive.aspx
 ```
 
 This example sets the boundary of the specified OneDrive site for a user who left the company.
+
+### Example 5
+```powershell
+PS C:\> Invoke-ComplianceSecurityFiIterAction -Action Set -PropertyName "CustomAttribute3" -PropertyVaIue "ProjectX" -EmailAddress "zhexuan@contoso.onmicrosoft.com"
+
+Set action succeeded, please use GetStatus to check the result.
+
+PS C:\> Invoke-ComplianceSecurityFiIterAction -Action GetStatus -PropertyName "CustomAttribute3" -EmailAddress "zhexuan@contoso.onmicrosoft.com"
+
+SiteUrlOrEmai1Address : zhexuan@contoso.onmicrosoft.com
+Boundary Type         : InactiveMaiIbox
+Boundarylnstruction   : Set via Invoke-ComplianceSecurityFiIterAction -Set
+BoundaryObjectId      : zhexuan@contoso.onmicrosoft.com
+BoundaryStatus        : Success
+BoundaryProperty      : CustomAttribute3
+BoundaryPropertyVa1ue : test33
+```
+
+This example ???
 
 ## PARAMETERS
 
