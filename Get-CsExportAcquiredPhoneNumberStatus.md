@@ -65,10 +65,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The output shows the status Pending when the request is created but processing has not been started. 
 
 ```yaml
-Id				        	: 0e923e2c-af0e-4b7a-be5a-906be8c
-CreatedAt	    	  	: 6/24/2024 9:26:44 PM
-CreatedBy	      		: admin1@contoso.com
-Status		      		: Pending
+Id			: 0e923e2c-af0e-4b7a-be5a-906be8c
+CreatedAt	    	: 6/24/2024 9:26:44 PM
+CreatedBy	      	: admin1@contoso.com
+Status		      	: Pending
 DownloadLinkExpiry	: null
 DownloadLink	    	: null
 ```
@@ -77,10 +77,10 @@ DownloadLink	    	: null
 The output shows the status InProgress when the request is being processed. 
 
 ```yaml
-Id				        	: 0e923e2c-af0e-4b7a-be5a-906be8c
-CreatedAt      			: 6/24/2024 9:26:44 PM
-CreatedBy	      		: admin1@contoso.com
-Status	      			: InProgress
+Id			: 0e923e2c-af0e-4b7a-be5a-906be8c
+CreatedAt      		: 6/24/2024 9:26:44 PM
+CreatedBy	      	: admin1@contoso.com
+Status	      		: InProgress
 DownloadLinkExpiry	: null
 DownloadLink	    	: null
 ```
@@ -89,23 +89,23 @@ DownloadLink	    	: null
 The output shows the status Success with download link and expiry date for the link when the request is completed successfully. 
 
 ```yaml
-Id					        : 0e923e2c-ab0e-4b7a-be5a-906be8c
+Id				: 0e923e2c-ab0e-4b7a-be5a-906be8c
 CreatedAt	      		: 6/24/2024 9:16:44 PM
 CreatedBy		      	: admin1@contoso.com
 Status		      		: Success
-DownloadLinkExpiry	: 6/24/2024 10:17:29 PM
-DownloadLink	    	: https://<downloadLink>
+DownloadLinkExpiry		: 6/24/2024 10:17:29 PM
+DownloadLink	 	   	: https://<downloadLink>
 ```
 
 ### Failure
 The output shows the status Success with download link and expiry date for the link when the request is completed successfully. 
 
 ```yaml
-Id				    	: 0e923d2c-ab0e-4b7a-bg5a-906be8c
-CreatedAt		  	: 6/24/2024 9:36:44 PM
-CreatedBy		  	: admin1@contoso.com
-Status			  	: Failure
-ErrorMessage		: <Error message related to failure>
+Id		: 0e923d2c-ab0e-4b7a-bg5a-906be8c
+CreatedAt 	: 6/24/2024 9:36:44 PM
+CreatedBy 	: admin1@contoso.com
+Status	 	: Failure
+ErrorMessage 	: <Error message related to failure>
 ```
 
 ## NOTES
