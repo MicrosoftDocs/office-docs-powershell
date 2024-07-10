@@ -97,16 +97,6 @@ DownloadLinkExpiry		: 6/24/2024 10:17:29 PM
 DownloadLink	 	   	: https://<downloadLink>
 ```
 
-### Failure
-The output shows the status Success with download link and expiry date for the link when the request is completed successfully. 
-
-```yaml
-Id		: 0e923d2c-ab0e-4b7a-bg5a-906be8c
-CreatedAt 	: 6/24/2024 9:36:44 PM
-CreatedBy 	: admin1@contoso.com
-Status	 	: Failure
-ErrorMessage 	: <Error message related to failure>
-```
 
 ## NOTES
 
