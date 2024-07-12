@@ -11,7 +11,7 @@ author: artemiykozlov
 # New-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPolicy.
+This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPolicy. Please note that there is no end user experience that leverages this policy at this time. We recommend not using this policy until an end user experience has rolled out.
 
 ## SYNTAX
 
