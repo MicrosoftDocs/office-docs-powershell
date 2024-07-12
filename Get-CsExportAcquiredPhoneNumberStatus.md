@@ -14,7 +14,7 @@ schema: 2.0.0
 # Get-CsExportAcquiredPhoneNumberStatus
 
 ## SYNOPSIS
-This cmdlet exports the list of phone numbers acquired by Teams Phone System tenant. 
+This cmdlet shows the status of the Export-CsAcquiredPhoneNumber cmdlet. 
 
 ## SYNTAX
 
