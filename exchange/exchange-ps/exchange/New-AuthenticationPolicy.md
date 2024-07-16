@@ -345,7 +345,7 @@ Legacy Exchange tokens (for example, Exchange user identity and callback tokens)
 - The Microsoft Report Message and Report Phishing add-ins require legacy Exchange tokens to work.
 - Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations.
 
-For more information on the Report Message and Report Phishing add-ins, see [Enable the Microsoft Report Message or the Report Phishing add-ins](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-users-report-message-add-in-configure).
+For more information about the Report Message and Report Phishing add-ins, see [Enable the Microsoft Report Message or the Report Phishing add-ins](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-users-report-message-add-in-configure).
 
 ```yaml
 Type: SwitchParameter
