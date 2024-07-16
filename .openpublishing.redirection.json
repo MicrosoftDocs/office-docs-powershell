@@ -5142,72 +5142,72 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-ConnectionByClientTypeDetailReport.md",
-      "redirect_url": "/powershell/module/exchange/get-connectionbyclienttypedetailreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-ConnectionByClientTypeReport.md",
-      "redirect_url": "/powershell/module/exchange/get-connectionbyclienttypereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsActiveUserReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csactiveuserreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsAVConferenceTimeReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csavconferencetimereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsClientDeviceDetailReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csclientdevicedetailreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsClientDeviceReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csclientdevicereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsConferenceReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csconferencereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsP2PAVTimeReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csp2pavtimereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsP2PSessionReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csp2psessionreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsPSTNConferenceTimeReport.md",
-      "redirect_url": "/powershell/module/exchange/get-cspstnconferencetimereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsPSTNUsageDetailReport.md",
-      "redirect_url": "/powershell/module/exchange/get-cspstnusagedetailreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsUserActivitiesReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csuseractivitiesreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-CsUsersBlockedReport.md",
-      "redirect_url": "/powershell/module/exchange/get-csusersblockedreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-GroupActivityReport.md",
-      "redirect_url": "/powershell/module/exchange/get-groupactivityreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
@@ -5217,7 +5217,7 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-LicenseVsUsageSummaryReport.md",
-      "redirect_url": "/powershell/module/exchange/get-licensevsusagesummaryreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
@@ -5227,17 +5227,17 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-MailboxActivityReport.md",
-      "redirect_url": "/powershell/module/exchange/get-mailboxactivityreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-MailboxUsageDetailReport.md",
-      "redirect_url": "/powershell/module/exchange/get-mailboxusagedetailreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-MailboxUsageReport.md",
-      "redirect_url": "/powershell/module/exchange/get-mailboxusagereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
@@ -5292,22 +5292,22 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-O365ClientBrowserDetailReport.md",
-      "redirect_url": "/powershell/module/exchange/get-o365clientbrowserdetailreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-O365ClientBrowserReport.md",
-      "redirect_url": "/powershell/module/exchange/get-o365clientbrowserreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-O365ClientOSDetailReport.md",
-      "redirect_url": "/powershell/module/exchange/get-o365clientosdetailreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-O365ClientOSReport.md",
-      "redirect_url": "/powershell/module/exchange/get-o365clientosreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
@@ -5337,42 +5337,42 @@
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-SPOActiveUserReport.md",
-      "redirect_url": "/powershell/module/exchange/get-spoactiveuserreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-SPOSkyDriveProDeployedReport.md",
-      "redirect_url": "/powershell/module/exchange/get-sposkydriveprodeployedreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-SPOSkyDriveProStorageReport.md",
-      "redirect_url": "/powershell/module/exchange/get-sposkydriveprostoragereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-SPOTeamSiteDeployedReport.md",
-      "redirect_url": "/powershell/module/exchange/get-spoteamsitedeployedreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-SPOTeamSiteStorageReport.md",
-      "redirect_url": "/powershell/module/exchange/get-spoteamsitestoragereport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-SPOTenantStorageMetricReport.md",
-      "redirect_url": "/powershell/module/exchange/get-spotenantstoragemetricreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-StaleMailboxDetailReport.md",
-      "redirect_url": "/powershell/module/exchange/get-stalemailboxdetailreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
       "source_path": "exchange/virtual-folder/exchange/reporting/Get-StaleMailboxReport.md",
-      "redirect_url": "/powershell/module/exchange/get-stalemailboxreport",
+      "redirect_url": "/graph/api/resources/report",
       "redirect_document_id": false
     },
     {
@@ -6975,6 +6975,7 @@
       "redirect_url": "/powershell/module/exchange/set-exophishsimoverriderule",
       "redirect_document_id": false
     },
+
     {
       "source_path": "skype/virtual-folder/skype/Disable-CsOnlineSipDomain.md",
       "redirect_url": "/powershell/module/teams/Disable-CsOnlineSipDomain",
