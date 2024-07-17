@@ -31,7 +31,7 @@ Set-CsConferenceServer [[-Identity] <XdsGlobalRelativeIdentity>] [-AppSharingSip
 ## DESCRIPTION
 Conference Servers (also known as A/V Conferencing Servers) are used to provide audio and video capabilities to conferences.
 In turn, the `Set-CsConferenceServer` cmdlet can be used to modify the properties of these servers; in particular, you can specify which ports are used for such things as audio traffic, video traffic and application sharing.
-You can also use the `Set-CsConferenceServer` cmdlet to associate a given server with a Edge Server or Archiving Server.
+You can also use the `Set-CsConferenceServer` cmdlet to associate a given server with an Edge Server or Archiving Server.
 
 
 ## EXAMPLES

@@ -2,14 +2,14 @@
 title: What's new in the Exchange Online PowerShell module
 ms.author: chrisda
 author: chrisda
-manager: dansimp
-ms.date: 11/7/2023
+manager: deniseb
+ms.date: 07/16/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
@@ -21,6 +21,18 @@ description: "Learn about the new features and functionality available in the la
 # What's new in the Exchange Online PowerShell module
 
 This article lists new features in the Exchange Online PowerShell module that's used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and standalone Exchange Online Protection (EOP) PowerShell. Features that are currently in preview are denoted with **(preview)**.
+
+## July 2024
+
+- [Version 3.5.1](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.5.1) has been released.
+
+  For information about what's in this release, see [Version 3.5.1](exchange-online-powershell-v2.md#version-351)
+
+## May 2024
+
+- [Version 3.5.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.5.0) has been released.
+
+  For information about what's in this release, see [Version 3.5.0](exchange-online-powershell-v2.md#version-350)
 
 ## October 2023
 
@@ -53,7 +65,7 @@ This article lists new features in the Exchange Online PowerShell module that's 
   > [!NOTE]
   > The default value of the _UseRPSSession_ switch in **Connect-IPSSession** is now the same as **Connect-ExchangeOnline**. To connect in REST API mode, don't use the _UseRPSSession_ switch in the **Connect-IPPSSession** command. To connect using remote PowerShell mode (which requires [Basic authentication in WinRM](exchange-online-powershell-v2.md#turn-on-basic-authentication-in-winrm)), use the _UseRPSSession_ switch in the **Connect-IPPSSession** command.
   >
-  > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+  > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
 ## April 2023
 
@@ -81,7 +93,7 @@ This article lists new features in the Exchange Online PowerShell module that's 
   - All Exchange Online PowerShell cmdlets are now backed by the REST API. Basic authentication in WinRM is not required in Exchange Online PowerShell for REST API cmdlets.
 
     > [!TIP]
-    > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+    > REST API connections in the EXO V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
   - Certificate based authentication (also known as CBA or app-only authentication) is available for Security & Compliance PowerShell.
 

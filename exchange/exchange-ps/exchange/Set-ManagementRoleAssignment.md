@@ -184,9 +184,9 @@ The RecipientGroupScope parameter specifies a group to consider for scoping the 
 
 ```yaml
 Type: GroupIdParameter
-Parameter Sets: RecipientGroupScope, Exchange Online Protection
+Parameter Sets: RecipientGroupScope
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: True
 Position: Named
@@ -267,7 +267,7 @@ The CustomResourceScope parameter specifies the custom management scope to assoc
 
 If the value contains spaces, enclose the value in quotation marks (").
 
-You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
 
 ```yaml
 Type: ManagementScopeIdParameter

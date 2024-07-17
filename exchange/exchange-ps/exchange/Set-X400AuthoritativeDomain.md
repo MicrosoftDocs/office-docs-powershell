@@ -83,7 +83,7 @@ This example makes the following changes to an existing X.400 authoritative doma
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the X.400 authoritative domain tht you want to modify. You can use any value that uniquely identifies the domain. For example:
+The Identity parameter specifies the X.400 authoritative domain that you want to modify. You can use any value that uniquely identifies the domain. For example:
 
 - Name
 - Distinguished name (DN)
