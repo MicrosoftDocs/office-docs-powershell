@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
-online version: https://learn.microsoft.com/powershell/module/teams/get-csexportacquiredphonenumberstatus
+online version: https://learn.microsoft.com/powershell/module/teams/get-cscallqueue
 applicable: Microsoft Teams
 title: Get-CsExportAcquiredPhoneNumberStatus
 author: pavellatif
