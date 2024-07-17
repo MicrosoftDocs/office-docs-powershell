@@ -18,6 +18,8 @@ This cmdlet is used to retrieve the federation configuration between Teams and A
 
 ```powershell
 Get-CsTeamsAcsFederationConfiguration
+   [-Identity <String[]>]
+   [-Filter <String>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +58,43 @@ EnableAcsUsers       : False
 
 ## PARAMETERS
 
+### -Filter
+Enables you to use wildcards when specifying the Teams and ACS federation configuration settings to be returned.
+Because you can only have a single, global instance of these settings there is little reason to use the Filter parameter.
+However, if you prefer, you can use syntax similar to this to retrieve the global settings: -Identity "g*".
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Specifies the collection of tenant federation configuration settings to be modified. Because each tenant is limited to a single, global collection of federation settings there is no need include this parameter when calling the Set-CsTenantFederationConfiguration cmdlet. If you do choose to use the Identity parameter you must also include the Tenant parameter. For example:
+
+`Set-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Identity "global"`
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ## OUTPUTS
@@ -66,8 +105,8 @@ EnableAcsUsers       : False
 
 [Set-CsTeamsAcsFederationConfiguration](Set-CsTeamsAcsFederationConfiguration.md)
 
-[New-CsExternalAccessPolicy](/powershell/module/skype/new-csexternalaccesspolicy?view=skype-ps)
+[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
 
-[Set-CsExternalAccessPolicy](/powershell/module/skype/set-csexternalaccesspolicy?view=skype-ps)
+[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
 
-[Grant-CsExternalAccessPolicy](/powershell/module/skype/grant-csexternalaccesspolicy?view=skype-ps)
+[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)

@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -IsUnansweredEnabled
 
-This parameter controls whether forwarding for unasnwered calls is enabled or not.
+This parameter controls whether forwarding for unanswered calls is enabled or not.
 
 ```yaml
 Type: System.Boolean

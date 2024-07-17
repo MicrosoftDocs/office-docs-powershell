@@ -39,6 +39,7 @@ Set-User [-Identity] <UserIdParameter>
  [-DesiredWorkloads <MailboxWorkloadFlags>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
+ [-EXOModuleEnabled <Boolean>]
  [-Fax <String>]
  [-FirstName <String>]
  [-Force]
@@ -441,6 +442,31 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EXOModuleEnabled
+This parameter is available only in the cloud-based service.
+
+The EXOModuleEnabled parameter specifies whether the user can connect to Exchange Online PowerShell in Microsoft 365 organizations using the Exchange Online PowerShell V3 module. Valid values are:
+
+- $true: The user can connect to Exchange Online PowerShell.
+- $false: The user can't connect to Exchange Online PowerShell.
+
+The default value depends on the management roles that are assigned to the user.
+
+ Access to Exchange Online PowerShell is also required for other features (for example, the ability to open the Exchange admin center (EAC)).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
@@ -991,6 +1017,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
+**Note**: This parameter is being deprecated in cloud-based environments. In cloud-based environments, use the EXOModuleEnabled parameter instead.
+
 The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Remote PowerShell access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. Valid values are:
 
 - $true: The user has access to remote PowerShell.
@@ -1159,7 +1187,7 @@ This parameter is available only in the cloud-based service.
 
 The StsRefreshTokensValidFrom specifies the date-time that the user's STS refresh tokens are valid from.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime

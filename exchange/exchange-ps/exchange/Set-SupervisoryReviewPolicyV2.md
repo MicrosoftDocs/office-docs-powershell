@@ -27,6 +27,8 @@ Set-SupervisoryReviewPolicyV2 [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-Enabled <Boolean>]
  [-Force]
+ [-PolicyRBACScopes <MultiValuedProperty>]
+ [-PolicyTemplate <String>]
  [-RemoveReviewers <String[]>]
  [-RetentionPeriodInDays <Int32>]
  [-Reviewers <String[]>]
@@ -143,6 +145,38 @@ You can use this switch to run tasks programmatically where prompting for admini
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyRBACScopes
+{{ Fill PolicyRBACScopes Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All))
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PolicyTemplate
+{{ Fill PolicyTemplate Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
