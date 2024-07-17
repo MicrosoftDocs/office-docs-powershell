@@ -19,21 +19,20 @@ Assigns a teams meeting policy at the per-user scope. The CsTeamsMeetingPolicy c
 ## SYNTAX
 
 ### GrantToTenant (Default)
-```
-Grant-CsTeamsMeetingPolicy [-Global] [-PassThru] [[-PolicyName] <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Grant-CsTeamsMeetingPolicy [-Global] [-PassThru] [[-PolicyName] <String>] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsTeamsMeetingPolicy [-PassThru] [[-PolicyName] <String>]
- -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Group] <String>] [-Rank <Int32>] [<CommonParameters>]
 ```
 
 ### Identity
-```
+```powershell
 Grant-CsTeamsMeetingPolicy [-PassThru] [[-PolicyName] <String>]
- [[-Identity] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-Identity] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,22 +48,6 @@ PS C:\> Grant-CsTeamsMeetingPolicy -identity "Ken Myer" -PolicyName StudentMeeti
 In this example, a user with identity "Ken Myer" is being assigned the StudentMeetingPolicy
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -DomainController
 
@@ -188,22 +171,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).`
