@@ -13,7 +13,7 @@ ms.reviewer:
 # Set-CsPlatformServiceSettings
 
 ## SYNOPSIS
-Modifies the Skype for Business on Mac capabilites in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
+Modifies the Skype for Business on Mac capabilities in your organization. This cmdlet was introduced in Skype for Business Server 2015 Cumulative Update 6 (December 2017).
 
 ## SYNTAX
 

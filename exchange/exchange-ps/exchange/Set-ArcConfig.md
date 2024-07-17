@@ -18,7 +18,6 @@ Use the Set-ArcConfig cmdlet to modify the list of trusted Authenticated Receive
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
-
 ## SYNTAX
 
 ```

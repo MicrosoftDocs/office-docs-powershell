@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-teamallchannel
 schema: 2.0.0
 author: zhongxlmicrosoft
-ms.author: zhongxl
+ms.author: serdars
 ms.reviewer: dedaniel, robharad
 ---
 

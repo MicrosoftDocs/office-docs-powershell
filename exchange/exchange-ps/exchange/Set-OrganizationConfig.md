@@ -149,7 +149,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
 
 ### AdfsAuthenticationParameter
 ```
-Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>]  [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
+Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCertificateThumbprint <String>] [-AdfsIssuer <Uri>] [-AdfsSignCertificateThumbprints <MultiValuedProperty>]
  [-ACLableSyncedObjectEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
@@ -206,6 +206,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-MitigationsEnabled <Boolean>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -290,6 +291,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
  [-MitigationsEnabled <Boolean>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OAuth2ClientProfileEnabled <Boolean>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -352,6 +354,7 @@ Set-OrganizationConfig
  [-MicrosoftExchangeRecipientEmailAddressPolicyEnabled <Boolean>]
  [-MicrosoftExchangeRecipientPrimarySmtpAddress <SmtpAddress>]
  [-MicrosoftExchangeRecipientReplyRecipient <RecipientIdParameter>]
+ [-OabShadowDistributionOldestFileAgeLimit <EnhancedTimeSpan>]
  [-OrganizationSummary <MultiValuedProperty>]
  [-PermanentlyDeleteDisabled <Boolean>]
  [-PreferredInternetCodePageForShiftJis <Int32>]
@@ -2853,6 +2856,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OabShadowDistributionOldestFileAgeLimit
+This parameter is available only in on-premises Exchange.
+
+{{ Fill OabShadowDistributionOldestFileAgeLimit Description }}
+
+```yaml
+Type: EnhancedTimeSpan
+Parameter Sets: AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration, Identity
+Aliases:
+Applicable: Exchange Server 2019
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OAuth2ClientProfileEnabled
 The OAuth2ClientProfileEnabled parameter enables or disables modern authentication in the Exchange organization. Valid values are:
 
@@ -3088,16 +3109,18 @@ Accept wildcard characters: False
 ### -PostponeRoamingSignaturesUntilLater
 This parameter is available only in the cloud-based service.
 
-**Note**: This parameter is in the process of being rolled out. The rollout is expected to be completed by mid-November 2023.
-
 The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signatures are enabled or disabled in Outlook on the web (formerly known as Outlook Web App or OWA) and the new Outlook for Windows. Valid values are:
 
-- $true: Roaming signatures are temporarily disabled for Outlook on the web and the new Outlook for Windows. For Windows, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15). When roaming signatures are disabled, admins can use the signature-related parameters on the Set-MailboxMessageConfiguration cmdlet (for example, AutoAddSignature, AutoAddSignatureOnReply, and SignatureHtml) to configure email signatures.
-- $false: This is the default value.
+- $true: Roaming signatures are disabled for Outlook on the web and the new Outlook for Windows. For Windows clients, the registry setting to disable roaming signatures still works. For more information, see [Outlook roaming signatures](https://support.microsoft.com/office/420c2995-1f57-4291-9004-8f6f97c54d15). When roaming signatures are disabled, admins can use the signature-related parameters on the Set-MailboxMessageConfiguration cmdlet (for example, AutoAddSignature, AutoAddSignatureOnReply, and SignatureHtml) to configure email signatures.
 
-We're working on API support so admins and ISVs can configure roaming signatures directly. When the new API is available (and after plenty of warning), this parameter will be deprecated. Admins will no longer need to disable roaming signatures or use the parameters on Set-MailboxMessageConfiguration to configure email signatures in Outlook on the web.
+  Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket. With the introduction of this parameter and value, admins can disable roaming signatures themselves.
 
-Previously, the only way to disable roaming signatures in Outlook on the web was to open a support ticket. With the introduction of this parameter, that process is discontinued as admins can now use this parameter to disable roaming signatures themselves.
+- $false: Roaming signatures are enabled for Outlook on the web and the new Outlook for Windows. This is the default value.
+
+We recommend that independent software vendors (ISVs) onboard to the [signature API](https:///javascript/api/outlook/office.body?view=outlook-js-preview#outlook-office-body-setsignatureasync-member(1) based on [event-based hooks
+](/office/dev/add-ins/outlook/autolaunch).
+
+We have no plans to support roaming signature management in the Microsoft Graph API.
 
 ```yaml
 Type: Boolean

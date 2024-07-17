@@ -2,7 +2,7 @@
 title: Values for the CustomPropertyNames parameter
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 9/7/2023
 ms.audience: Admin
 audience: Admin
