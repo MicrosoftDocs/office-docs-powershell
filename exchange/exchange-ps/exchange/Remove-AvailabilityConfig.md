@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Remove-AvailabilityConfig cmdlet to remove an availability configuration. An availability configuration specifies an existing account that's used to exchange free/busy information between organizations.
+Use the Remove-AvailabilityConfig cmdlet to remove the availability configuration that specifies the Microsoft 365 organizations to exchange free/busy information with.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -42,7 +42,7 @@ This example removes the existing availability configuration.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the availability configuration that you want to remove. The default name of the availability configuration you create by using the New-AvailabilityConfig is Availability Configuration.
+The Identity parameter specifies the availability configuration that you want to remove. You don't need to use this parameter, because there's only one availability configuration object named Availability Configuration in any organization.
 
 ```yaml
 Type: AvailabilityConfigIdParameter

@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -AadAccessToken (Removed from version 2.3.2-preview)
-Specifies a Azure Active Directory Graph access token.
+Specifies an Azure Active Directory Graph access token.
 > [!WARNING]
 >This parameter has been removed from version 2.3.2-preview.
 

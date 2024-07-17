@@ -6,7 +6,7 @@ title: Test-CsVoiceNormalizationRule
 schema: 2.0.0
 manager: bulenteg
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ---
 
 # Test-CsVoiceNormalizationRule
@@ -160,4 +160,3 @@ Returns an object of type Microsoft.Rtc.Management.Voice.NormalizationRuleTestRe
 
 [Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
 
-[Get-CsTenantDialPlan](Get-CsTenantDialPlan.md)

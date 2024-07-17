@@ -197,7 +197,7 @@ This parameter is available only in the cloud-based service.
 
 The App parameter specifies the service principal to assign the management role to. Specifically, the ObjectId GUID value from the output of the Get-ServicePrincipal cmdlet (for example, 6233fba6-0198-4277-892f-9275bf728bcc).
 
-For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
 
 You can't use this parameter with the SecurityGroup, Policy, or User cmdlets.
 
@@ -383,7 +383,7 @@ The CustomResourceScope parameter specifies the custom management scope to assoc
 
 If the value contains spaces, enclose the value in quotation marks (").
 
-You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals).
+You use this parameter with the App parameter to assign permissions to service principals. For more information, see For more information about service principals, see [Application and service principal objects in Microsoft Entra ID](https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals).
 
 ```yaml
 Type: ManagementScopeIdParameter

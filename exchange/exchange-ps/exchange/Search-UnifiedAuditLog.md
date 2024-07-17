@@ -181,7 +181,11 @@ Accept wildcard characters: False
 ```
 
 ### -HighCompleteness
-{{ Fill HighCompleteness Description }}
+**Note**: This parameter is currently in Preview, isn't available in all organizations, and is subject to change.
+
+The HighCompleteness switch specifies completeness instead performance in the results. You don't need to specify a value with this switch.
+
+When you use this switch, the query returns more complete search results but might take significantly longer to run. If you don't use this switch, the query runs faster but might have missing search results.
 
 ```yaml
 Type: SwitchParameter
@@ -346,7 +350,7 @@ Accept wildcard characters: False
 ### -SiteIds
 The SiteIds parameter filters the log entries by the SharePoint SiteId (GUID). You can enter multiple values separated by commas: `Value1, Value2,...ValueN`.
 
-To obtain the the SiteId for a SharePoint site, append `/_api/site/id` to the URL of the site collection you want to specify. For example, change the URL `https://contoso.sharepoint.com/sites/hr-project` to `https://contoso.sharepoint.com/sites/hr-project/_api/site/id`. An XML payload is returned and the SiteId for the site collection is displayed in the Edm.Guid property; for example: `<d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:type="Edm.Guid">14ab81b6-f23d-476a-8cac-ad5dbd2910f7</d:Id>`.
+To obtain the SiteId for a SharePoint site, append `/_api/site/id` to the URL of the site collection you want to specify. For example, change the URL `https://contoso.sharepoint.com/sites/hr-project` to `https://contoso.sharepoint.com/sites/hr-project/_api/site/id`. An XML payload is returned and the SiteId for the site collection is displayed in the Edm.Guid property; for example: `<d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml" m:type="Edm.Guid">14ab81b6-f23d-476a-8cac-ad5dbd2910f7</d:Id>`.
 
 ```yaml
 Type: String[]

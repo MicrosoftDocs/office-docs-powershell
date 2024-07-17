@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ### -ActivationDate
 The ActivationDate parameter specifies when the rule starts processing messages. The rule won't take any action on messages until the specified date/time.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -675,6 +675,8 @@ The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML
   If you want other rules to examine and act on the original message (which is now an attachment in the new message), make sure those rules are applied _before_ the disclaimer rule by using a lower priority for the disclaimer rule and higher priority for other rules.
 
   If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
+
+  In Microsoft 365, don't use this value in rules that affect incoming messages from external senders. Use the value Reject instead. The effects of the value Wrap interfere with Safe Attachments scanning of messages from external senders.
 
 - Ignore: The rule is ignored and the original message is delivered without the disclaimer.
 - Reject: The original message is returned to the sender in an NDR.
@@ -3088,7 +3090,7 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 The ExpiryDate parameter specifies when this rule will stop processing messages. The rule won't take any action on messages after the specified date/time.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -4028,8 +4030,8 @@ This parameter is available only in the cloud-based service.
 
 The RecipientAddressType parameter specifies how conditions and exceptions check recipient email addresses. Valid values are:
 
-- Original: The rule checks only the recipient's primary SMTP email address.
-- Resolved: The rule checks the recipient's primary SMTP email address and all proxy addresses. This is the default value
+- Original: The rule checks the original address in the To field of the message.
+- Resolved: The rule checks the recipient's primary SMTP email address without checking any proxy addresses. This is the default value.
 
 ```yaml
 Type: RecipientAddressType
@@ -4483,7 +4485,7 @@ Accept wildcard characters: False
 ### -SenderAddressLocation
 The SenderAddressLocation parameter specifies where to look for sender addresses in conditions and exceptions that examine sender email addresses. Valid values are:
 
-- Header: Only examine senders in the message headers. For example, in on-premises Exchange the the From, Sender, or Reply-To fields. In Exchange Online, the From field only. This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
+- Header: Only examine senders in the message headers. For example, in on-premises Exchange the From, Sender, or Reply-To fields. In Exchange Online, the From field only. This is the default value, and is the way rules worked before Exchange 2013 Cumulative Update 1 (CU1).
 - Envelope: Only examine senders from the message envelope (the MAIL FROM value that was used in the SMTP transmission, which is typically stored in the Return-Path field).
 - HeaderOrEnvelope: Examine senders in the message header and the message envelope.
 

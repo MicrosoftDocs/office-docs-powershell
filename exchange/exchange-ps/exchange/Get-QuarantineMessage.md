@@ -38,6 +38,7 @@ Get-QuarantineMessage
  [-EndExpiresDate <System.DateTime>]
  [-EndReceivedDate <System.DateTime>]
  [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
+ [-IncludeMessagesFromBlockedSenderAddress]
  [-MessageId <String>]
  [-MyItems]
  [-Page <Int32>]
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 ### -EndExpiresDate
 The EndExpiresDate parameter specifies the latest messages that will automatically be deleted from the quarantine. Use this parameter with the StartExpiresDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
 
@@ -178,7 +179,7 @@ Accept wildcard characters: False
 ### -EndReceivedDate
 The EndReceivedDate parameter specifies the latest messages to return in the results. Use this parameter with the StartReceivedDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 ```yaml
 Type: System.DateTime
@@ -199,10 +200,27 @@ The EntityType parameter filters the results by EntityType. Valid values are:
 - Email
 - SharePointOnline
 - Teams (currently in Preview)
+- DataLossPrevention
 
 ```yaml
 Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
 Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeMessagesFromBlockedSenderAddress
+The IncludeMessagesFromBlockedSenderAddress switch specifies whether to include quarantined messages from blocked senders in the results. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Summary
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
 
@@ -302,6 +320,7 @@ The PolicyTypes parameter filters the results by the type of protection policy t
 
 - AntiMalwarePolicy
 - AntiPhishPolicy
+- DataLossPreventionRule
 - ExchangeTransportRule (mail flow rule)
 - HostedContentFilterPolicy (anti-spam policy)
 - SafeAttachmentPolicy (Microsoft Defender for Office 365 only)
@@ -325,6 +344,7 @@ Accept wildcard characters: False
 The QuarantineTypes parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
+- DataLossPrevention
 - FileTypeBlock (common attachments filter in anti-malware policies in EOP)
 - HighConfPhish
 - Malware (anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365)
@@ -369,7 +389,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientTag
-The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/microsoft-365/security/office-365-security/user-tags-about).
+The RecipientTag parameter filters the results by the recipient's user tag value (for example, `Priority Account`). For more information about user tags, see [User tags in Defender for Office 365](https://learn.microsoft.com/defender-office-365/user-tags-about).
 
 You can specify multiple values separated by commas.
 
@@ -398,6 +418,8 @@ The ReleaseStatus parameter filters the results by the release status of the mes
 - Requested
 
 You can specify multiple values separated by commas.
+
+**Note**: Messages that were quarantined and released by Microsoft due to a service issue have the SystemReleased property value TRUE. To filter the results by system released messages, run the following command: `Get-QuarantineMessage | where {$_.systemreleased -like "True"}`.
 
 ```yaml
 Type: ReleaseStatus[]
@@ -450,7 +472,7 @@ Accept wildcard characters: False
 ### -StartExpiresDate
 The StartExpiresDate parameter specifies the earliest messages that will automatically be deleted from the quarantine. Use this parameter with the EndExpiresDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
 
@@ -470,7 +492,7 @@ Accept wildcard characters: False
 ### -StartReceivedDate
 The StartReceivedDate parameter specifies the earliest messages to return in the results. Use this parameter with the EndReceivedDate parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 By default, if you don't use the StartReceivedDate and EndReceivedDate parameters, the command will return data for the last 16 days. The maximum value for this parameter is 30 days. If you use a value that's older than 30 days, the value is ignored and only data for the last 30 days is returned.
 
@@ -530,6 +552,7 @@ Accept wildcard characters: False
 The Type parameter filters the results by what caused the message to be quarantined. Valid values are:
 
 - Bulk
+- DataLossPrevention
 - HighConfPhish
 - Malware
 - Phish

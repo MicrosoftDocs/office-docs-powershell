@@ -114,6 +114,7 @@ Don't use this parameter with the ModulePrefix parameter.
 Type: String[]
 Parameter Sets: ConnectionId
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named
@@ -133,6 +134,7 @@ Don't use this parameter with the ConnectionId parameter.
 Type: String[]
 Parameter Sets: ModulePrefix
 Aliases:
+Applicable: Exchange Online
 
 Required: True
 Position: Named

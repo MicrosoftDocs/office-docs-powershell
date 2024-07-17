@@ -51,7 +51,7 @@ New-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.mic
 ```
 
 Example 1 creates a new OAuth Server named "Office 365".
-The new server uses the metadata URL https://sts.office365.microsoft.com/metadata/json/1.
+The new server uses the metadata URL `https://sts.office365.microsoft.com/metadata/json/1`.
 
 
 ## PARAMETERS

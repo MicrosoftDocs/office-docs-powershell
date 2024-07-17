@@ -14,11 +14,10 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-AvailabilityConfig cmdlet to view information about the sharing of free/busy information in the organization.
+Use the Get-AvailabilityConfig cmdlet to view information about the sharing of free/busy information between organizations:
 
-In on-premises Exchange, the cmdlet returns the accounts that are trusted in the cross-forest sharing of free/busy information. 
-
-In Exchange Online, the cmdlet returns the tenant IDs of organizations that free/busy information is being shared with. 
+- In on-premises Exchange, the cmdlet returns the accounts that are trusted in the cross-forest sharing of free/busy information.
+- In Exchange Online, the cmdlet returns the tenant IDs of organizations that free/busy information is being shared with.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -31,8 +30,6 @@ Get-AvailabilityConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-The Get-AvailabilityConfig cmdlet lists the accounts or tenant IDs that have permissions to issue proxy availability service requests on an organizational or per-user basis.
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
@@ -44,12 +41,12 @@ Get-AvailabilityConfig
 
 In on-premises Exchange, this example returns the accounts that are trusted in the cross-forest shared of free/busy information.
 
-In Exchange Online, this examples returns the tenant IDs that free/busy information is being shared with. 
+In Exchange Online, this examples returns the tenant IDs that free/busy information is being shared with.
 
 ## PARAMETERS
 
 ### -Identity
-This parameter is unnecessary. Each organization has only one availability configuration object named Availability Configuration.
+The Identity parameter specifies the availability configuration that you want to view. You don't need to use this parameter, because there's only one availability configuration object named Availability Configuration in any organization.
 
 ```yaml
 Type: OrganizationIdParameter

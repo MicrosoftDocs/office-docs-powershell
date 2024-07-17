@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csphonenumberassignment
 applicable: Microsoft Teams
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer: 
 manager:
 schema: 2.0.0
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -CivicAddressId
-Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](/powershell/module/skype/get-csonlineliscivicaddress).
+Filters the returned results based on the CivicAddressId assigned to the phone number. You can get the CivicAddressId by using [Get-CsOnlineLisCivicAddress](Get-CsOnlineLisCivicAddress.md).
 
 ```yaml
 Type: System.String
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsoCountryCode
-Filters the returned results based on the ISO 3166-1 Alpha-2 contry code assigned to the phone number.
+Filters the returned results based on the ISO 3166-1 Alpha-2 country code assigned to the phone number.
 
 ```yaml
 Type: System.String
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationId
-Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](/powershell/module/skype/get-csonlinelislocation).
+Filters the returned results based on the LocationId assigned to the phone number. You can get the LocationId by using [Get-CsOnlineLisLocation](Get-CsOnlineLisLocation.md).
 
 ```yaml
 Type: System.String
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneNumber
-Filters the returned results to a specific phone number. It is optional to specify a prefixed "+". The phone number can not have "tel:" prefixed.
+Filters the returned results to a specific phone number. It is optional to specify a prefixed "+". The phone number can't have "tel:" prefixed.
 We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234.
 
 ```yaml

@@ -167,6 +167,29 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
  [<CommonParameters>]
 ```
 
+### ManagedGmailTeams
+```
+New-MigrationBatch -Name <String> -CSVData <Byte[]> [-ManagedGmailTeams]
+ [-AdoptPreexisting]
+ [-AllowUnknownColumnsInCSV <Boolean>]
+ [-AutoComplete]
+ [-AutoStart]
+ [-CompleteAfter <DateTime>]
+ [-Confirm]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-RemoveOnCopy]
+ [-ReportInterval <Timespan>]
+ [-SkipCalendar]
+ [-SkipContacts]
+ [-SkipReports]
+ [-SourceEndpoint <MigrationEndpointIdParameter>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ### Offboarding
 ```
 New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
@@ -264,14 +287,14 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
  [-AllowUnknownColumnsInCSV <Boolean>]
  [-AutoComplete]
  [-AutoStart]
- [-CompleteAfter <Object>]
+ [-CompleteAfter <DateTime>]
  [-Confirm]
- [-NotificationEmails <Object>]
- [-Partition <Object>]
- [-ReportInterval <Object>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
  [-SkipReports]
- [-StartAfter <Object>]
- [-TimeZone <Object>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -282,14 +305,14 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
  [-AllowUnknownColumnsInCSV <Boolean>]
  [-AutoComplete]
  [-AutoStart]
- [-CompleteAfter <Object>]
+ [-CompleteAfter <DateTime>]
  [-Confirm]
- [-NotificationEmails <Object>]
- [-Partition <Object>]
- [-ReportInterval <Object>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
  [-SkipReports]
- [-StartAfter <Object>]
- [-TimeZone <Object>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -343,19 +366,19 @@ New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
 
 ### PreexistingUsers
 ```
-New-MigrationBatch [-Users] <Object> -Name <String>
+New-MigrationBatch [-Users] MultiValuedProperty> -Name <String>
  [-AllowUnknownColumnsInCSV <Boolean>]
  [-AutoComplete]
  [-AutoStart]
- [-CompleteAfter <Object>]
+ [-CompleteAfter <DateTime>]
  [-Confirm]
  [-DisableOnCopy]
- [-NotificationEmails <Object>]
- [-Partition <Object>]
- [-ReportInterval <Object>]
+ [-NotificationEmails <MultiValuedProperty>]
+ [-Partition <MailboxIdParameter>]
+ [-ReportInterval <Timespan>]
  [-SkipReports]
- [-StartAfter <Object>]
- [-TimeZone <Object>]
+ [-StartAfter <DateTime>]
+ [-TimeZone <ExTimeZoneValue>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -588,7 +611,7 @@ To disable the migration of the users in the original migration batch, use the D
 
 ```yaml
 Type: MultiValuedProperty
-Parameter Sets:  Preexisting, PreexistingUsers
+Parameter Sets: Preexisting, PreexistingUsers
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -596,6 +619,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -ManagedGmailTeams
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManagedGmailTeams Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ManagedGmailTeams
+Aliases:
+Applicable: Exchange Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -624,7 +665,7 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 
 ```yaml
 Type: Byte[]
-Parameter Sets:  Abch, Analysis, FolderMove, Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery
+Parameter Sets: Abch, Analysis, FolderMove, Local, LocalPublicFolder, Offboarding, XO1, PublicFolderToUnifiedGroup, GoogleResourceOnboarding, PointInTimeRecoveryProvisionOnly, PointInTimeRecovery
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
 
@@ -883,7 +924,7 @@ This parameter is functional only in the cloud-based service.
 
 The CompleteAfter parameter specifies a delay before the batch is completed. Data migration for the batch will start, but completion won't start until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 
@@ -1400,7 +1441,7 @@ The SkipCalendar switch specifies that you want to skip calendar migration durin
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, ManagedGmailTeams
 Aliases:
 Applicable: Exchange Online
 
@@ -1418,7 +1459,7 @@ The SkipContacts switch specifies that you want to skip contact migration during
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: Onboarding
+Parameter Sets: Onboarding, ManagedGmailTeams
 Aliases:
 Applicable: Exchange Online
 
@@ -1616,7 +1657,7 @@ Accept wildcard characters: False
 ### -StartAfter
 The StartAfter parameter specifies a delay before the data migration for the users within the batch is started. The migration will be prepared, but the actual data migration for the user won't start until the date/time you specify with this parameter.
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2018 5:00 PM".
 
 In Exchange Online PowerShell, if you specify a date/time value without a time zone, the value is in Coordinated Universal Time (UTC). To specify a value, use either of the following options:
 

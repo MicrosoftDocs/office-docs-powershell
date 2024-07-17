@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Remove-DlpPolicyTemplate cmdlet to remove a data loss prevention (DLP) policy template from your organization.
+Use the Remove-DlpPolicyTemplate cmdlet to remove data loss prevention (DLP) policy templates that are based on transport rules (mail flow rules) from your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 

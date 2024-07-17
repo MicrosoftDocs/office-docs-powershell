@@ -448,4 +448,3 @@ The `Set-CsUser` cmdlet does not return any objects.
 
 [Move-CsUser](Move-CsUser.md)
 
-[Get-CsOnlineUser](Get-CsOnlineUser.md)

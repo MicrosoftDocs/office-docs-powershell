@@ -94,6 +94,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OrganizationEnabled <Boolean>]
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
+ [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -274,7 +275,9 @@ Accept wildcard characters: False
 ### -AdditionalAccountsEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill AdditionalAccountsEnabled Description }}
+This parameter has been deprecated and is no longer used.
+
+To enable or disable personal accounts in the new Outlook for Windows, use the PersonalAccountsEnabled parameter.
 
 ```yaml
 Type: System.Boolean
@@ -387,7 +390,7 @@ Accept wildcard characters: False
 ### -AllowedOrganizationAccountDomains
 This parameter is available only in the cloud-based service.
 
-{{ Fill AllowedOrganizationAccountDomains Description }}
+The AllowedOrganizationAccountDomains parameter specifies domains where users can add work or school email accounts in the new Outlook for Windows. The default value is blank ($null), which allows work or school accounts from any domain. Setting this parameter to an empty list ([]) prevents any work or school accounts from being added.
 
 ```yaml
 Type: String[]
@@ -560,8 +563,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarEnabled
-This parameter is functional only in on-premises Exchange.
-
 The CalendarEnabled parameter specifies whether to enable or disable the calendar in Outlook Web App. Valid values are:
 
 - $true: The Calendar is available in Outlook Web App. This is the default value.
@@ -602,9 +603,14 @@ Accept wildcard characters: False
 ```
 
 ### -ChangeSettingsAccountEnabled
-This parameter is functional only in the cloud-based service.
+This parameter is available only in the cloud-based service.
 
-{{ Fill ChangeSettingsAccountEnabled Description }}
+The ChangeSettingsAccountEnabled parameter specifies whether users can change the email account where app-wide settings (for example, theme and privacy settings) are associated in the new Outlook for Windows. Valid values are:
+
+- $true: Users can change their settings account in the new Outlook for Windows. This is the default value.
+- $false: Users can't change their settings account in the new Outlook for Windows.
+
+**Note**: The settings account is referred to as the primary account in the new Outlook for Windows setting at Settings \> Accounts \> Email accounts \> Manage.
 
 ```yaml
 Type: System.Boolean
@@ -648,8 +654,8 @@ The ConditionalAccessPolicy parameter specifies the Outlook on the Web Policy fo
 Valid values are:
 
 - Off: No conditional access policy is applied to Outlook on the web. This is the default value.
-- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser.
-- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser.
+- ReadOnly: Users can't download attachments to their local computer, and can't enable Offline Mode on non-compliant computers. They can still view attachments in the browser. This doesn't apply to in-line images.
+- ReadOnlyPlusAttachmentsBlocked: All restrictions from ReadOnly apply, but users can't view attachments in the browser. This doesn't apply to in-line images.
 
 ```yaml
 Type: PolicyEnum
@@ -1533,7 +1539,12 @@ Accept wildcard characters: False
 ### -OfflineEnabledWeb
 This parameter is available only in the cloud-based service.
 
-{{ Fill OfflineEnabledWeb Description }}
+The OfflineEnabledWeb parameter specifies whether offline capabilities are available in Outlook on the web, including saving items to the local device (view items without an internet connection). Valid values are:
+
+- $true: Users can manage offline capabilities in Outlook on the web. This is the default value.
+- $false: Users can't manage offline capabilities in Outlook on the web. No items are saved to the user's device. Previously save items are deleted.
+
+When offline capabilities are available, users can turn offline capabilities on or off themselves in Outlook on the web at Settings \> General \> Offline.
 
 ```yaml
 Type: Boolean
@@ -1551,7 +1562,12 @@ Accept wildcard characters: False
 ### -OfflineEnabledWin
 This parameter is available only in the cloud-based service.
 
-{{ Fill OfflineEnabledWin Description }}
+The OfflineEnabledWin parameter specifies whether offline capabilities are available in the new Outlook for Windows, including saving items to the local device (view items without an internet connection). Valid values are:
+
+- $true: Users can manage offline capabilities in the new Outlook for Windows. This is the default value.
+- $false: Users can't manage offline capabilities in the new Outlook for Windows. No items are saved to the user's device. Previously save items are deleted.
+
+When offline capabilities are available, users can turn offline capabilities on or off themselves in the New Outlook for Windows at Settings \> General \> Offline. By default, offline capabilities are turned on.
 
 ```yaml
 Type: Boolean
@@ -1669,6 +1685,24 @@ The OutlookBetaToggleEnabled parameter specifies whether to enable or disable th
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersAccessLevel
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersAccessLevel Description }}
+
+```yaml
+Type: OutlookNewslettersAccessLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1945,7 +1979,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportJunkEmailEnabled
-**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-user-reported-messages-files-custom-mailbox).
+**Note**: In Exchange Online, this parameter does not affect the ability of users to report messages. Whether a user is able to report messages and where is controlled in the Microsoft Defender portal as described in [User reported message settings](https://learn.microsoft.com/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
 The ReportJunkEmailEnabled parameter specifies whether users can report messages as junk or not junk to Microsoft in Outlook on the web. Valid values are:
 
