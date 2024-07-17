@@ -3117,8 +3117,8 @@ The PostponeRoamingSignaturesUntilLater parameter controls whether roaming signa
 
 - $false: Roaming signatures are enabled for Outlook on the web and the new Outlook for Windows. This is the default value.
 
-We recommend that independent software vendors (ISVs) onboard to the [signature API](https:///javascript/api/outlook/office.body?view=outlook-js-preview#outlook-office-body-setsignatureasync-member(1) based on [event-based hooks
-](/office/dev/add-ins/outlook/autolaunch).
+We recommend that independent software vendors (ISVs) onboard to the [signature API](https://learn.microsoft.com/javascript/api/outlook/office.body#outlook-office-body-setsignatureasync-member(1)) based on [event-based hooks
+](https://learn.microsoft.com/office/dev/add-ins/outlook/autolaunch).
 
 We have no plans to support roaming signature management in the Microsoft Graph API.
 
