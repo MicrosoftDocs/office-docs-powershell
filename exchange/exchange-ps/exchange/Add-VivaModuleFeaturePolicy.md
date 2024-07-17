@@ -70,6 +70,9 @@ To learn more about assigned roles at the feature level, see [Features Available
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## EXAMPLES
 
 ### Example 1
@@ -81,7 +84,7 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 
 ### Example 2
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name MultipleGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3
 ```
 
 This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for all users in the specified groups.
@@ -95,7 +98,7 @@ This example adds a policy for the Reflection feature in Viva Insights. The poli
 
 ### Example 4
 ```powershell
-Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
+Add-VivaModuleFeaturePolicy -ModuleId VivaInsights -FeatureId Reflection -Name UsersAndGroups -IsFeatureEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3 -UserIds user1@contoso.com,user2@contoso.com
 ```
 
 This example adds a policy for the Reflection feature in Viva Insights. The policy disables the feature for the specified users and group members.
@@ -109,7 +112,7 @@ This example adds a policy for the `<cateogry_id>` category in Viva. The policy 
 
 ### Example 6
 ```powershell
-Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name MultipleGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com
+Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name MultipleGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3
 ```
 
 This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for all users in the specified groups.
@@ -123,7 +126,7 @@ This example adds a policy for the `<cateogry_id>` category in Viva. The policy 
 
 ### Example 8
 ```powershell
-Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name UsersAndGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com -UserIds user1@contoso.com,user2@contoso.com
+Add-VivaModuleFeaturePolicy -CategoryId <category_id> -Name UsersAndGroups -IsCategoryEnabled $false -GroupIds group1@contoso.com,group2@contoso.com,57680382-61a5-4378-85ad-f72095d4e9c3 -UserIds user1@contoso.com,user2@contoso.com
 ```
 
 This example adds a policy for the `<cateogry_id>` category in Viva. The policy disables the category (effectively all features under the category) for the specified users and group members.
@@ -291,11 +294,13 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-The GroupIds parameter specifies the SMTP addresses (email addresses) of the groups that the policy applies to. [Mail-enabled Microsoft Entra groups]( https://learn.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
+The GroupIds parameter specifies the email addresses or security group object IDs (GUIDs) of groups that the updated policy applies to. Both [Mail-enabled and non-mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
 
 To have the policy apply to all users in the organization, use the Everyone switch.
+
+**Note**: In v3.5.1-Preview2 or later of the module, this parameter supports security group object IDs (GUIDs). Previous versions of the module accept only email addresses for this parameter.
 
 ```yaml
 Type: String[]

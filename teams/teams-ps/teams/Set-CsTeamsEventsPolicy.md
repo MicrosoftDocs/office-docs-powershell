@@ -10,6 +10,9 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
 
+> [!NOTE]
+> Webinar and town hall policies must be managed separately.
+
 ## SYNTAX
 
 ```
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMicrosoftECDN
-This setting governs whether the global admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
+This setting governs whether the admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
 
 ```yaml
 Type: Boolean

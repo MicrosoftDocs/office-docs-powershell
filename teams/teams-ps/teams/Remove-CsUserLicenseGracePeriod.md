@@ -114,10 +114,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-System.Object
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsOnlineUser](teams\teams-ps\teams\Get-CsOnlineUser.md)
+[Get-CsOnlineUser](Get-CsOnlineUser.md)
