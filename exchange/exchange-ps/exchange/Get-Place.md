@@ -62,7 +62,7 @@ This example returns detailed metadata for Conference Room 1.
 Get-Place -Type Room
 ```
 
-This example returns all room mailboxes. 
+This example returns all room mailboxes.
 
 ## PARAMETERS
 
@@ -128,7 +128,7 @@ The Type parameter filters the results by the type of room mailbox. Valid values
 
 - Room
 - RoomList
-- Space 
+- Space
 
 You can't use this parameter with the Identity parameter.
 

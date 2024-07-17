@@ -55,9 +55,12 @@ This collection is then piped to the `Remove-CsReportingConfiguration` cmdlet, w
 Get-CsReportingConfiguration | Where-Object {$_.ReportingUrl -eq "https://atl-sql-002.litwareinc.com/lync_reports" | Remove-CsReportingConfiguration
 ```
 
-The command shown in Example 3 deletes any reporting configuration settings where the reporting URL is set to https://atl-sql-002.litwareinc.com/lync_reports.
+The command shown in Example 3 deletes any reporting configuration settings where the reporting URL is set to `https://atl-sql-002.litwareinc.com/lync_reports`.
+
 To carry out this task, the command first uses the `Get-CsReportingConfiguration` cmdlet to return all the reporting configuration settings currently in use.
-This collection is then piped to the `Where-Object` cmdlet, which selects only those settings where the ReportingURL property is equal to https://atl-sql-002.litwareinc.com/lync_reports.
+
+This collection is then piped to the `Where-Object` cmdlet, which selects only those settings where the ReportingURL property is equal to `https://atl-sql-002.litwareinc.com/lync_reports`.
+
 That filtered collection is then piped to the `Remove-CsReportingConfiguration` cmdlet, which removes each item in the collection.
 
 

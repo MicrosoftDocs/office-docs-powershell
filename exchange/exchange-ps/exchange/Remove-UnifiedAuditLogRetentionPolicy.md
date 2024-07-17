@@ -32,7 +32,7 @@ Remove-UnifiedAuditLogRetentionPolicy [-Identity] <PolicyIdParameter>
 ## DESCRIPTION
 It might take up to 30 minutes for the policy to be completely removed. For more information, see [Manage audit log retention policies](https://learn.microsoft.com/purview/audit-log-retention-policies).
 
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Defender portal](https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Defender portal](https://learn.microsoft.com/defender-office-365/mdo-portal-permissions) or [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ This example deletes the audit log retention policy named "SearchQueryPerformed 
 The Identity parameter specifies the audit log retention policy that you want to delete. You can use any value that uniquely identifies the policy. For example:
 
 - Name
-- Distingished name (DN)
+- Distinguished name (DN)
 - GUID
 
 ```yaml

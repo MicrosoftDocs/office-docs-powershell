@@ -1,7 +1,7 @@
 ---
 title: Connect to Security & Compliance PowerShell
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 12/12/2023
 ms.audience: Admin
 audience: Admin
@@ -31,9 +31,9 @@ To connect to Security & Compliance PowerShell for automation, see [App-only aut
   > [!NOTE]
   > Remote PowerShell connections are deprecated in Security & Compliance PowerShell. For more information, see [Deprecation of Remote PowerShell (RPS) Protocol in Security & Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
   >
-  > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+  > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
-- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft Defender portal](/microsoft-365/security/office-365-security/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/microsoft-365/compliance/microsoft-365-compliance-center-permissions).
+- After you connect, the cmdlets and parameters that you have or don't have access to is controlled by role-based access control (RBAC). For more information, see [Permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions) and [Permissions in the Microsoft Purview compliance portal](/purview/purview-compliance-portal-permissions).
 
 ## Step 1: Load the Exchange Online PowerShell module
 
@@ -61,18 +61,19 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 
 - _\<UPN\>_ is your account in user principal name format (for example, `navin@contoso.onmicrosoft.com`).
 
-- The required _ConnectionUri_ and _AzureADAuthorizationEndpointUri_ values depend on the nature of your Microsoft 365 organization. Common values are described in the following table:
-
-  |Environment|_ConnectionUri_|_AzureADAuthorizationEndpointUri_|
-  |---|---|---|
-  |Microsoft 365 or Microsoft 365 GCC|n/a<sup>\*</sup>|n/a<sup>\*\*</sup>|
-  |Microsoft 365 GCC High|`https://ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
-  |Microsoft 365 DoD|`https://l5.ps.compliance.protection.office365.us/powershell-liveid/`|`https://login.microsoftonline.us/common`|
-  |Office 365 operated by 21Vianet|`https://ps.compliance.protection.partner.outlook.cn/powershell-liveid`|`https://login.chinacloudapi.cn/common`|
-
-  <sup>\*</sup> The required value `https://ps.compliance.protection.outlook.com/powershell-liveid/` is also the default value, so you don't need to use the _ConnectionUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
-
-  <sup>\*\*</sup> The required value `https://login.microsoftonline.com/common` is also the default value, so you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
+- The required _ConnectionUri_ and _AzureADAuthorizationEndpointUri_ values depend on the nature of your Microsoft 365 organization. Common values are described in the following list:
+  - **Microsoft 365 or Microsoft 365 GCC**:
+    - _ConnectionUri_: None. The required value `https://ps.compliance.protection.outlook.com/powershell-liveid/` is also the default value, so you don't need to use the _ConnectionUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
+    - _AzureADAuthorizationEndpointUri_: None. The required value `https://login.microsoftonline.com/common` is also the default value, so you don't need to use the _AzureADAuthorizationEndpointUri_ parameter in Microsoft 365 or Microsoft 365 GCC environments.
+  - **Microsoft 365 GCC High**:
+    - _ConnectionUri_: `https://ps.compliance.protection.office365.us/powershell-liveid/`
+    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/common`
+  - **Microsoft 365 DoD**:
+    - _ConnectionUri_: `https://l5.ps.compliance.protection.office365.us/powershell-liveid/`
+    - _AzureADAuthorizationEndpointUri_: `https://login.microsoftonline.us/common`
+  - **Office 365 operated by 21Vianet**:
+    - _ConnectionUri_: `https://ps.compliance.protection.partner.outlook.cn/powershell-liveid`
+    - _AzureADAuthorizationEndpointUri_: `https://login.chinacloudapi.cn/common`
 
 - If you're behind a proxy server, you can use the _PSSessionOption_ parameter in the connection command. First, run this command: `$ProxyOptions = New-PSSessionOption -ProxyAccessType <Value>`, where \<Value\> is `IEConfig`, `WinHttpConfig`, or `AutoDetect`. Then, use the value `$ProxyOptions` for the _PSSessionOption_ parameter. For more information, see [New-PSSessionOption](/powershell/module/microsoft.powershell.core/new-pssessionoption).
 
@@ -105,7 +106,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
    - **This example connects to Security & Compliance PowerShell in an Office 365 operated by 21Vianet organization**:
 
      ```powershell
-     Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid
+     Connect-IPPSSession -UserPrincipalName li@fabrikam.cn -ConnectionUri https://ps.compliance.protection.partner.outlook.cn/powershell-liveid -AzureADAuthorizationEndpointUri https://login.chinacloudapi.cn/common
      ```
 
 2. In the sign-in window that opens, enter your password, and then click **Sign in**.
@@ -179,7 +180,7 @@ If you receive errors, check the following requirements:
 
   > The term 'Update-ModuleManifest' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 
-  For more information about the PowerShellGet and PackageManagement module requirements, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-based-connections-in-windows).
+  For more information about the PowerShellGet and PackageManagement module requirements, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
 - You might fail to connect if your client IP address changes during the connection request. This can happen if your organization uses a source network address translation (SNAT) pool that contains multiple IP addresses. The connection error looks like this:
 

@@ -2,8 +2,8 @@
 title: "Filterable properties for the Filter parameter"
 ms.author: chrisda
 author: chrisda
-manager: dansimp
-ms.date: 8/8/2023
+manager: deniseb
+ms.date: 1/9/2024
 ms.audience: ITPro
 audience: ITPro
 ms.topic: article
@@ -105,7 +105,7 @@ After you have the device ID value, you can use it in a filter. For example, `Ge
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-CasMailbox -Filter 'ActiveSyncEnable -eq $false'`.
 
@@ -126,7 +126,7 @@ You can find the distinguished names of ActiveSync mailbox policies by running t
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-CasMailbox -Filter 'ActiveSyncSuppressReadReceipt -eq $true'`.
 
@@ -260,7 +260,7 @@ For example, `Get-Recipient -Filter 'ArchiveRelease -ne $null'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|`None` (0), `Local` (1), `HostedProvisioned` (2), `HostedPending` (3), or `OnPremise` (4).|
+|n/a|**Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|`None` (0), `Local` (1), `HostedProvisioned` (2), `HostedPending` (3), or `OnPremise` (4).|
 
 For example, `Get-Recipient -Filter "ArchiveState -eq 'HostedProvisioned'"`.
 
@@ -354,7 +354,7 @@ For example, `Get-Mailbox -Filter 'CalendarRepairDisabled -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
+|n/a|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
 
 The X509 certificate that's published for the user account (visible on the **Published Certificates** tab in Active Directory Users and Computers).
 
@@ -380,7 +380,7 @@ For example, `Get-User -Filter "Company -like 'Contoso*'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-MailUser**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox** <br/> **Get-MailUser**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'ComplianceTagHoldApplied -eq $true'`.
 
@@ -388,7 +388,7 @@ For example, `Get-Mailbox -Filter 'ComplianceTagHoldApplied -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
+|n/a|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
 
 For example, `Get-User -Filter 'ConsumerNetID -ne $null'`.
 
@@ -520,7 +520,7 @@ You can find the distinguished names of recipients by running this command: `Get
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-CASMailbox -Filter 'EcpEnabled -eq $false'`.
 
@@ -540,7 +540,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
+|n/a|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Recipient -Filter 'EmailAddressPolicyEnabled -eq $false'`.
 
@@ -714,7 +714,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_n/a_|**Get-UnifiedGroup**|Integer|
+|n/a|**Get-UnifiedGroup**|Integer|
 
 For example, `Get-UnifiedGroup -Filter "GroupMemberCount -gt 100"`.
 
@@ -722,7 +722,7 @@ For example, `Get-UnifiedGroup -Filter "GroupMemberCount -gt 100"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_n/a_|**Get-UnifiedGroup**|Integer|
+|n/a|**Get-UnifiedGroup**|Integer|
 
 For example, `Get-UnifiedGroup -Filter "GroupExternalMemberCount -gt 0"`.
 
@@ -752,7 +752,7 @@ Note that an object's GUID value is different than its Exchange GUID value.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox** <br/> **Get-Recipient**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox** <br/> **Get-Recipient**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Recipient -Filter 'HasActiveSyncDevicePartnership -eq $true'`.
 
@@ -794,7 +794,7 @@ To find the distinguished name of a recipient, replace _\<RecipientIdentity\>_ w
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-MailPublicFolder**|Boolean (`$true` or `$false`)|
+|n/a|**Get-MailPublicFolder**|Boolean (`$true` or `$false`)|
 
 For example, `Get-MailPublicFolder -Filter 'IgnoreMissingFolderLink -eq $true'`.
 
@@ -802,7 +802,7 @@ For example, `Get-MailPublicFolder -Filter 'IgnoreMissingFolderLink -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-CASMailbox -Filter 'ImapEnabled -eq $false'`.
 
@@ -818,7 +818,7 @@ For example, `Get-Mailbox -Filter 'ImmutableId -ne $null'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IncludeInGarbageCollection -eq $true'`.
 
@@ -846,7 +846,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-User**|String|
+|n/a|**Get-LinkedUser** <br/> **Get-User**|String|
 
 This filter requires the **InPlaceHoldIdentity** value of the mailbox search. For example, `Get-Mailbox -Filter "InPlaceHoldsRaw -eq '9d0f81154cc64c6b923ecc0be5ced0d7'"`.
 
@@ -866,7 +866,7 @@ For example, `Get-User -Filter 'IsDirSynced -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsExcludedFromServingHierarchy -eq $true'`.
 
@@ -874,7 +874,7 @@ For example, `Get-Mailbox -Filter 'IsExcludedFromServingHierarchy -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsHierarchyReady -eq $false'`.
 
@@ -882,7 +882,7 @@ For example, `Get-Mailbox -Filter 'IsHierarchyReady -eq $false'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsHierarchySyncEnabled -eq $false'`.
 
@@ -890,7 +890,7 @@ For example, `Get-Mailbox -Filter 'IsHierarchySyncEnabled -eq $false'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsInactiveMailbox -eq $false'`.
 
@@ -898,7 +898,7 @@ For example, `Get-Mailbox -Filter 'IsInactiveMailbox -eq $false'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
+|n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsLinked -eq $true'`.
 
@@ -906,7 +906,7 @@ For example, `Get-Mailbox -Filter 'IsLinked -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsMailboxEnabled -eq $false'`.
 
@@ -914,7 +914,7 @@ For example, `Get-Mailbox -Filter 'IsMailboxEnabled -eq $false'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsResource -eq $true'`.
 
@@ -922,7 +922,7 @@ For example, `Get-Mailbox -Filter 'IsResource -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-User**|Boolean (`$true` or `$false`)|
+|n/a|**Get-LinkedUser** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
 For example, `Get-User -Filter 'IsSecurityPrincipal -eq $false'`.
 
@@ -930,7 +930,7 @@ For example, `Get-User -Filter 'IsSecurityPrincipal -eq $false'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsShared -eq $true'`.
 
@@ -938,7 +938,7 @@ For example, `Get-Mailbox -Filter 'IsShared -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
+|n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsSoftDeletedByDisable -eq $true'`.
 
@@ -946,7 +946,7 @@ For example, `Get-Mailbox -Filter 'IsSoftDeletedByDisable -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
+|n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'IsSoftDeletedByRemove -eq $true'`.
 
@@ -964,7 +964,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String|
+|n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String|
 
 This property uses an SMTP email address. For example, `Get-Mailbox -Filter "JournalArchiveAddress -eq 'michelle@contoso.com'"`.
 
@@ -1010,7 +1010,7 @@ For example, `Get-Mailbox -Filter "LitigationHoldDate -gt '8/13/2017'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'LitigationHoldEnabled -eq $true'`.
 
@@ -1162,7 +1162,7 @@ To find the distinguished name of a manager, replace _\<RecipientIdentity\>_ wit
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-CASMailbox -Filter 'MAPIEnabled -eq $false'`.
 
@@ -1292,7 +1292,7 @@ For example, `Get-User -Filter "Name -like 'Laura*'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-User**|String or `$null`|
+|n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-User**|String or `$null`|
 
 This property is populated for Exchange Online mailboxes in hybrid environments. A sample value is `1003BFFD9A0CFA03`.
 
@@ -1352,7 +1352,7 @@ You can find the distinguished names of offline address books by running this co
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-MailPublicFolder**|String or `$null`|
+|n/a|**Get-MailPublicFolder**|String or `$null`|
 
 For example, `Get-MailPublicFolder -Filter 'OnPremisesObjectId -ne $null'`.
 
@@ -1392,7 +1392,7 @@ For example, `Get-User -Filter "OtherTelephone -like '206*'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
 The filter operates backwards. For example, `Get-CASMailbox -Filter 'OWAEnabled -eq $true'` returns mailboxes where the **OWAEnabled** property is `False`, and `Get-CASMailbox -Filter 'OWAEnabled -eq $false'` returns mailboxes where the **OWAEnabled** property is `True`
 
@@ -1426,7 +1426,7 @@ For example, `Get-User -Filter "Pager -like '206*'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
+|n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
 
 Typically, the value of this property something other than `$null` (blank) for Microsoft 365 accounts and mailboxes. For more information about the valid property values, see [Capability enumeration](/previous-versions/office/exchange-server-api/ff441134(v=exchg.150)).
 
@@ -1478,7 +1478,7 @@ For example, `Get-Recipient -Filter 'PoliciesIncluded -eq $null'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-CASMailbox -Filter 'POPEnabled -eq $false'`.
 
@@ -1512,7 +1512,7 @@ For example, `Get-User -Filter 'PreviousRecipientTypeDetails -ne $null'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
+|n/a|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
 Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property will also search values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address dario@contoso.com, and the additional proxy addresses dario2@contoso.com and dario3@contoso.com, all of the following filters will return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.
 
@@ -1592,7 +1592,7 @@ For example, `Get-Mailbox -Filter "RecipientLimits -ne 'Unlimited'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|`DynamicDistributionGroup`, `MailContact`, `MailNonUniversalGroup`, `MailUniversalDistributionGroup`, `MailUniversalSecurityGroup`, `MailUser`, `PublicFolder` or `UserMailbox`|
+|n/a|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|`DynamicDistributionGroup`, `MailContact`, `MailNonUniversalGroup`, `MailUniversalDistributionGroup`, `MailUniversalSecurityGroup`, `MailUser`, `PublicFolder` or `UserMailbox`|
 
 For example, `Get-Recipient -Filter "RecipientType -eq 'MailContact'"`.
 
@@ -1600,7 +1600,7 @@ For example, `Get-Recipient -Filter "RecipientType -eq 'MailContact'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
+|n/a|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
 
 For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchange/get-recipient#-recipienttypedetails).
 
@@ -1662,7 +1662,7 @@ This filter requires the distinguished name of the remote account policy. For ex
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-User**|Boolean (`$true` or `$false`)|
+|n/a|**Get-User**|Boolean (`$true` or `$false`)|
 
 For example, `Get-User -Filter 'RemotePowerShellEnabled -eq $false'`.
 
@@ -1702,7 +1702,7 @@ This property is displayed as **RequireSenderAuthenticationEnabled** in the resu
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-UnifiedGroup**|`AllowOnlyMembersToPost`, `CalendarMemberReadOnly`, `ConnectorsEnabled`, `HideGroupInOutlook`, `NotebookForLearningCommunitiesEnabled`, `ReportToOriginator`, `SharePointReadonlyForMembers`, `SubscriptionEnabled`, `SubscribeMembersToCalendarEvents`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers`, `WelcomeEmailDisabled`, `WelcomeEmailEnabled`,  or `$null`|
+|n/a|**Get-UnifiedGroup**|`AllowOnlyMembersToPost`, `CalendarMemberReadOnly`, `ConnectorsEnabled`, `HideGroupInOutlook`, `NotebookForLearningCommunitiesEnabled`, `ReportToOriginator`, `SharePointReadonlyForMembers`, `SubscriptionEnabled`, `SubscribeMembersToCalendarEvents`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers`, `WelcomeEmailDisabled`, `WelcomeEmailEnabled`, or `$null`|
 
 For example, `Get-UnifiedGroup -Filter "ResourceBehaviorOptions -eq 'CalendarMemberReadOnly'"`
 
@@ -1718,7 +1718,7 @@ For example, `Get-Mailbox -Filter "ResourceCapacity -gt 15"`
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|String or `$null`|
+|n/a|**Get-Mailbox**|String or `$null`|
 
 You create custom resource properties by using the Set-ResourceConfig cmdlet. For example, `Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van`. After you create the properties, you can assign them to room or equipment mailboxes. For example, `Set-Mailbox -Identity "Conference Room 1" -ResourceCustom Whiteboard`.
 
@@ -1728,7 +1728,7 @@ When you search for values, use the custom resource property that's assigned to 
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-UnifiedGroup**|`Team` or `$null`|
+|n/a|**Get-UnifiedGroup**|`Team` or `$null`|
 
 For example, `Get-UnifiedGroup -Filter "ResourceProvisioningOptions -eq 'Team'"`
 
@@ -1736,7 +1736,7 @@ For example, `Get-UnifiedGroup -Filter "ResourceProvisioningOptions -eq 'Team'"`
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-Recipient**|`Room` (0), `Equipment` (1), or `$null`|
+|n/a|**Get-Mailbox** <br/> **Get-Recipient**|`Room` (0), `Equipment` (1), or `$null`|
 
 For example, `Get-Mailbox -Filter "ResourceType -eq 'Equipment'"`
 
@@ -1760,7 +1760,7 @@ For example, `Get-Mailbox -Filter "RetentionComment -like '7 years*'"`
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-Recipient**|String or `$null`|
+|n/a|**Get-Mailbox** <br/> **Get-Recipient**|String or `$null`|
 
 This filter requires the distinguished name of the retention policy. For example, `Get-Mailbox -Filter "RetentionPolicy -eq 'CN=Default MRM Policy,CN=Retention Policies Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
 
@@ -1870,7 +1870,7 @@ This is an example of a complete **ServerLegacyDN** value: `/o=Contoso Corporati
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox** <br/> **Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|String or `$null`|
+|n/a|**Get-CASMailbox** <br/> **Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|String or `$null`|
 
 For example, `Get-Recipient -Filter "ServerName -eq 'Mailbox01'"`.
 
@@ -1915,7 +1915,7 @@ For example, `Get-User -Filter "SimpleDisplayName -like 'lila*'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'SingleItemRecoveryEnabled -eq $true'`.
 
@@ -1923,7 +1923,7 @@ For example, `Get-Mailbox -Filter 'SingleItemRecoveryEnabled -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-User**|Boolean (`$true` or `$false`) or `$null`.|
+|n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-User**|Boolean (`$true` or `$false`) or `$null`.|
 
 For example, `Get-User -Filter 'SKUAssigned -eq $true'`.
 
@@ -1931,7 +1931,7 @@ For example, `Get-User -Filter 'SKUAssigned -eq $true'`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox**|String (wildcards accepted) or `$null`|
+|n/a|**Get-Mailbox**|String (wildcards accepted) or `$null`|
 
 For example, `Get-Mailbox -Filter 'SourceAnchor -ne $null'`.
 
@@ -2017,7 +2017,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|Boolean (`$true` or `$false`)|
+|n/a|**Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|Boolean (`$true` or `$false`)|
 
 For example, `Get-Mailbox -Filter 'UMEnabled -eq $true'`.
 
@@ -2045,7 +2045,7 @@ To find the distinguished names of UM dial plans, run this command: `Get-UMDialP
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-User**|`None` (0), `TenantUpgrade` (1), `PrestageUpgrade` (2), `CancelPrestageUpgrade` (3), `PilotUpgrade` (4), or `TenantUpgradeDryRun` (5),|
+|n/a|**Get-User**|`None` (0), `TenantUpgrade` (1), `PrestageUpgrade` (2), `CancelPrestageUpgrade` (3), `PilotUpgrade` (4), or `TenantUpgradeDryRun` (5),|
 
 For example, `Get-User -Filter "UpgradeRequest -ne 'None'"`.
 
@@ -2053,7 +2053,7 @@ For example, `Get-User -Filter "UpgradeRequest -ne 'None'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-User**|`None` (0), `NotStarted` (1), `InProgress` (2), `Warning` (3), `Error` (4), `Cancelled` (5), `Complete` (6), or `ForceComplete` (7).|
+|n/a|**Get-User**|`None` (0), `NotStarted` (1), `InProgress` (2), `Warning` (3), `Error` (4), `Cancelled` (5), `Complete` (6), or `ForceComplete` (7).|
 
 For example, `Get-User -Filter "UpgradeStatus -ne 'None'"`.
 
@@ -2123,7 +2123,7 @@ For example, `Get-Recipient -Filter "WhenChanged -gt '8/1/2017 2:00:00 PM'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
+|n/a|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
 For example, `Get-Recipient -Filter "WhenChangedUTC -gt '8/1/2017 2:00:00 PM'"`.
 
@@ -2139,7 +2139,7 @@ For example, `Get-Recipient -Filter "WhenCreated -gt '8/1/2017 2:00:00 PM'"`.
 
 |LDAP display name|Available on cmdlets|Value|
 |---|---|---|
-|_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
+|n/a|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
 For example, `Get-Recipient -Filter "WhenCreatedUTC -gt '8/1/2017 2:00:00 PM'"`.
 

@@ -45,31 +45,31 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod OrgWideFB -Credentials (Get-Credential)
+Add-AvailabilityAddressSpace -ForestName contoso.com -AccessMethod OrgWideFB -Credentials (Get-Credential)
 ```
 
-This example is useful with an untrusted cross-forest Availability service, or if detailed cross-forest free/busy service isn't desired. Enter a username and password when you're prompted by the command. For an untrusted cross-forest configuration, make sure that the user doesn't have a mailbox.
+In on-premises Exchange, this example is useful with an untrusted cross-forest Availability service, or if detailed cross-forest free/busy service isn't desired. Enter a username and password when you're prompted by the command. For an untrusted cross-forest configuration, make sure that the user doesn't have a mailbox.
 
 ### Example 2
 ```powershell
-Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod PerUserFB -Credentials (Get-Credential)
+Add-AvailabilityAddressSpace -ForestName contoso.com -AccessMethod PerUserFB -Credentials (Get-Credential)
 ```
 
-This example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest, and the specified account connects to the contoso.com forest. The specified account must be an existing account in the contoso.com forest.
+In on-premises Exchange, this example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest, and the specified account connects to the contoso.com forest. The specified account must be an existing account in the contoso.com forest.
 
 ### Example 3
 ```powershell
-Add-AvailabilityAddressSpace -ForestName example.contoso.com -AccessMethod PerUserFB -UseServiceAccount $true
+Add-AvailabilityAddressSpace -ForestName contoso.com -AccessMethod PerUserFB -UseServiceAccount $true
 ```
 
-This example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest and uses the service account (typically the local system account or the computer account) to connect to the contoso.com forest. Because the service is trusted, there is no issue with authorization when the current forest tries to retrieve free/busy information from contoso.com.
+In on-premises Exchange, this example is useful with a trusted cross-forest Availability service. The contoso.com forest trusts the current forest and uses the service account (typically the local system account or the computer account) to connect to the contoso.com forest. Because the service is trusted, there is no issue with authorization when the current forest tries to retrieve free/busy information from contoso.com.
 
 ### Example 4
 ```powershell
-Add-AvailabilityAddressSpace -ForestName contoso.contoso.com -AccessMethod OrgWideFBToken -TargetTenantId "9d341953-da1f-41b0-8810-76d6ef905273" -TargetServiceEpr "outlook.office.com"
+Add-AvailabilityAddressSpace -ForestName contoso.onmicrosoft.com -AccessMethod OrgWideFBToken -TargetTenantId "9d341953-da1f-41b0-8810-76d6ef905273" -TargetServiceEpr "outlook.office.com"
 ```
 
-This example sets up the sharing of free/busy information in Exchange Online. You're requesting to read free/busy information of contoso.com (tenant ID value 9d341953-da1f-41b0-8810-76d6ef905273), and contoso.com is a regular Microsoft 365 organization.
+In Exchange Online, this example sets up the sharing of free/busy information with contoso.onmicrosoft.com (tenant ID value 9d341953-da1f-41b0-8810-76d6ef905273), which is a regular Microsoft 365 organization.
 
 ## PARAMETERS
 
@@ -79,7 +79,7 @@ The AccessMethod parameter specifies how the free/busy data is accessed. Valid v
 - PerUserFB: Per-user free/busy information can be requested. The free/busy data is accessed in the defined per-user free/busy proxy account or group, or in the All Exchange Servers group. This value requires a trust between the two forests, and requires you to use either the UseServiceAccount parameter or Credentials parameter.
 - OrgWideFB: Only default free/busy for each user can be requested. The free/busy data is accessed in the per-user free/busy proxy account or group in the target forest. This value requires you to use either the UseServiceAccount parameter or Credentials parameter.
 - OrgWideFBBasic: Free/busy sharing between tenants that are all in Exchange Online.
-- InternalProxy: The request is proxied to an Exchange in the site that has a later version of Exchange.
+- InternalProxy: The request is proxied to an Exchange server in the site that's running a later version of Exchange.
 - PublicFolder: This value was used to access free/busy data on Exchange Server 2003 servers.
 
 ```yaml
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForestName
-The ForestName parameter specifies the SMTP domain name of the target forest for users whose free/busy data must be retrieved. If your users are distributed among multiple SMTP domains in the target forest, run the Add-AvailabilityAddressSpace command once for each SMTP domain.
+The ForestName parameter specifies the SMTP domain name of the target forest that contains the users you're trying to read free/busy information from. If users are distributed among multiple SMTP domains in the target forest, run the Add-AvailabilityAddressSpace command once for each SMTP domain.
 
 ```yaml
 Type: String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ### -ProxyUrl
 This parameter is available only in on-premises Exchange.
 
-The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy its free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the value of the AccessMethod parameter to InternalProxy.
+The ProxyUrl parameter was used to specify the URL that directed an Exchange 2007 Client Access server to proxy free/busy requests through an Exchange 2010 or Exchange 2013 Client Access server when requesting federated free/busy data for a user in another organization. When you used this parameter, you needed to set the AccessMethod parameter value to InternalProxy.
 
 This parameter required that you created the proper trust relationships and sharing relationships between the Exchange organizations. For more information, see [New-FederationTrust](https://learn.microsoft.com/powershell/module/exchange/new-federationtrust).
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetAutodiscoverEpr
-The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
+The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization that you're trying to read free/busy information from. For example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
 
 ```yaml
 Type: Uri
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ### -TargetServiceEpr
 This parameter is available only in the cloud-based service.
 
-The TargetServiceEpr parameter specificies the Exchange Online Calendar Service URL of the external organization whose free/busy informaton you're trying to read. Valid values are:
+The TargetServiceEpr parameter specifies the Exchange Online Calendar Service URL of the external Microsoft 365 organization that you're trying to read free/busy information from. Valid values are:
 
 - Microsoft 365 or Microsoft 365 GCC: outlook.office.com
 - Office 365 operated by 21Vianet: partner.outlook.cn
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ### -TargetTenantId
 This parameter is available only in the cloud-based service.
 
-The TargetTenantID parameter specifies the tenant ID of the target tenant whose free/busy informaton you're trying to read.
+The TargetTenantID parameter specifies the tenant ID of the external Microsoft 365 organization that you're trying to read free/busy information from.
 
 ```yaml
 Type: String

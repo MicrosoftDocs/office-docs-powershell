@@ -26,6 +26,7 @@ Get-MailboxMessageConfiguration [-Identity] <MailboxIdParameter>
  [-DomainController <Fqdn>]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
+ [-SignatureName <String>]
  [-UseCustomRouting]
  [<CommonParameters>]
 ```
@@ -147,6 +148,24 @@ Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureName
+This parameter is available only in the cloud-based service.
+
+{{ Fill SignatureName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

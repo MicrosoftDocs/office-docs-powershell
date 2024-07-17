@@ -189,8 +189,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResetDelegateUserCollection
-This parameter is available only in the cloud-based service.
-
 The ResetDelegateUserCollection switch forces the removal of the LocalFreeBusy or the PR_FREEBUSY_ENTRYIDs files in case of corruption. You don't need to specify a value with this switch.
 
 Use this switch if you encounter problems trying add, change, or remove delegate permissions. Using this switch deletes those files and downgrades any existing delegates to Editor permissions. You'll need to grant delegate permissions again using `-SharingPermissionFlag Delegate`.
@@ -201,7 +199,7 @@ When you use this switch, the value of Identity should be the user's primary cal
 Type: SwitchParameter
 Parameter Sets: ResetDelegateUserCollection
 Aliases:
-Applicable: Exchange Online
+Applicable: Exchange Server 2019, Exchange Online
 
 Required: False
 Position: Named

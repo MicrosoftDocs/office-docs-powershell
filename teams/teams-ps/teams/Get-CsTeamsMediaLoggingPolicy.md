@@ -2,7 +2,7 @@
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-csteamsmedialoggingpolicy
-applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 title: Get-CsTeamsMediaLoggingPolicy
 author: LeoKuhorev
 ms.author: leokukharau
@@ -68,7 +68,7 @@ Use the "Global" Identity if you wish to retrieve the policy set for the entire 
 Type: String
 Parameter Sets: Identity
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: 2
@@ -85,7 +85,7 @@ Note that you cannot use both the Filter and the Identity parameters in the same
 Type: String
 Parameter Sets: Filter
 Aliases:
-Applicable: Microsoft Teams, Skype for Business Online
+applicable: Microsoft Teams
 
 Required: False
 Position: Named
@@ -108,4 +108,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsTeamsMediaLoggingPolicy](/powershell/module/teams/grant-csteamsmedialoggingpolicy)
+[Grant-CsTeamsMediaLoggingPolicy](Grant-CsTeamsMediaLoggingPolicy.md)
