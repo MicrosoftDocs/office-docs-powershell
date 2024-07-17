@@ -7,7 +7,7 @@ schema: 2.0.0
 manager: bulenteg
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # New-CsExternalUserCommunicationPolicy
@@ -35,7 +35,7 @@ This cmdlet allows you to block P2P file transfer with Federated partners only.
 PS C:\> New-CsExternalUserCommunicationPolicy -Identity BlockExternalP2PFileTransfer -EnableP2PFileTransfer $False
 ```
 
-This example creates a new policy to block external file transfer. Then you can use `Grant-CsExternalUserCommunicationPolicy` to assign it to an user account.
+This example creates a new policy to block external file transfer. Then you can use `Grant-CsExternalUserCommunicationPolicy` to assign it to a user account.
 
 ## PARAMETERS
 

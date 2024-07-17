@@ -81,7 +81,7 @@ Accept wildcard characters: False
 {{ Fill AutoApprovalPeriod Description }}
 
 ```yaml
-Type: Object
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

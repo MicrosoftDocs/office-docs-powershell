@@ -72,12 +72,12 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-New-CsPartnerApplication -Identity "MicrosoftExchange" -ApplicationTrustLevel "Full" -MetadataUrl"https://autodiscover.litwareinc.com/metadata/json/1"
+New-CsPartnerApplication -Identity "MicrosoftExchange" -ApplicationTrustLevel "Full" -MetadataUrl "https://autodiscover.litwareinc.com/metadata/json/1"
 
 ```
 
 The command shown in Example 1 creates a new partner application with the Identity "MicrosoftExchange".
-In this example, the new partner application uses the metadata URL https://autodiscover.litwareinc.com/metadata/json/1.
+In this example, the new partner application uses the metadata URL `https://autodiscover.litwareinc.com/metadata/json/1`.
 
 
 ### -------------------------- Example 2 -------------------------- 

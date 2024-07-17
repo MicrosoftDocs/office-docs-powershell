@@ -63,7 +63,7 @@ Protocols that support authentication type filters:
 - POP3: BasicAuthentication and OAuthAuthentication.
 - RemotePowerShell: BasicAuthentication and NonBasicAuthentication.
 
-Protcols that don't support authentication type filters:
+Protocols that don't support authentication type filters:
 
 - ExchangeWebServices
 - OfflineAddressBook

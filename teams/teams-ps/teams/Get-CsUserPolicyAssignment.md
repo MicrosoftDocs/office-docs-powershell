@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/teams/get-csuserpo
 schema: 2.0.0
 author: tomkau
 ms.author: tomkau
-ms.reviewer:
+ms.reviewer: williamlooney
 ---
 
 # Get-CsUserPolicyAssignment

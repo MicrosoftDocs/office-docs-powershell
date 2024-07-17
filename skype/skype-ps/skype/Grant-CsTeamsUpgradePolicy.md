@@ -118,7 +118,7 @@ The above cmdlet removes any policy changes made to user Mike@contoso.com and ef
 PS C:\> Grant-CsTeamsUpgradePolicy -PolicyName SfBOnly -Global
 ```
 
-To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global paramter, you will be prompted to confirm the operation.
+To grant a policy to all users in the org (except any that have an explicit policy assigned), omit the identity parameter. If you do not specify the -Global parameter, you will be prompted to confirm the operation.
 
 ### Example 4 Get a report on existing TeamsUpgradePolicy users (Screen Report)
 
