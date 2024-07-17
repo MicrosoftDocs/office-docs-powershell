@@ -82,9 +82,14 @@ Accept wildcard characters: False
 ```
 
 ### -KeySize
-The KeySize parameter specifies the size in bits of the public key that's used in the DKIM signing policy. Valid values are 1024 or 2048.
+The KeySize parameter specifies the size in bits of the public key that's used in the DKIM signing policy. Valid values are:
 
-RSA keys are supported; Ed25519 keys aren't supported.
+- 1024
+- 2048
+
+RSA keys are supported. Ed25519 keys aren't supported.
+
+**Note**: Upgrading the key size to 2048 only upgrades the selector that isn't currently active. After key rotation has taken place, you need to run the command again to upgrade the key size of the other selector.
 
 ```yaml
 Type: UInt16

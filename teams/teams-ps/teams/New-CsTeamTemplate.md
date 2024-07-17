@@ -677,7 +677,7 @@ BODY \<ITeamTemplate\>: The client input for a request to create a template.    
   - `[Description <String>]`: Gets or sets channel description as displayed to users.
   - `[DisplayName <String>]`: Gets or sets channel name as displayed to users.
   - `[Id <String>]`: Gets or sets identifier for the channel template.
-  - `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel,         pinning it for visibility in the UI and using resources to make switching to the channel faster.
+  - `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether new members of the team should automatically favorite the channel, pinning it for visibility in the UI and using resources to make switching to the channel faster.
   - `[Tab <IChannelTabTemplate[]>]`: Gets or sets collection of tabs that should be added to the channel.
     - `[Configuration <ITeamsTabConfiguration>]`: Represents the configuration of a tab.
       - `[ContentUrl <String>]`: Gets or sets the Url used for rendering tab contents in Teams.
@@ -731,7 +731,7 @@ CHANNEL <IChannelTemplate[]>: Gets or sets the set of channel templates included
 - `[Description <String>]`: Gets or sets channel description as displayed to users.
 - `[DisplayName <String>]`: Gets or sets channel name as displayed to users.
 - `[Id <String>]`: Gets or sets identifier for the channel template.
-- `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether whether new members of the team should automatically favorite the channel,         pinning it for visibility in the UI and using resources to make switching to the channel faster.
+- `[IsFavoriteByDefault <Boolean?>]`: Gets or sets a value indicating whether new members of the team should automatically favorite the channel, pinning it for visibility in the UI and using resources to make switching to the channel faster.
 - `[Tab <IChannelTabTemplate[]>]`: Gets or sets collection of tabs that should be added to the channel.
   - `[Configuration <ITeamsTabConfiguration>]`: Represents the configuration of a tab.
     - `[ContentUrl <String>]`: Gets or sets the Url used for rendering tab contents in Teams.
@@ -805,8 +805,8 @@ MESSAGINGSETTING \<ITeamMessagingSettings\>: Governs use of messaging features w
 
 ## RELATED LINKS
 
-- [Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
-- [Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
-- [New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
-- [Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
-- [Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+- [Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
+- [Get-CsTeamTemplate](Get-CsTeamTemplate.md)
+- [New-CsTeamTemplate](New-CsTeamTemplate.md)
+- [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
+- [Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)

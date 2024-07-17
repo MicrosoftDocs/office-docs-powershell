@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -Uri
 Unique Uniform Resource Identifier (URI) for the application.
-For example, the QoEAgent application has the URI http://www.microsoft.com/LCS/QoEAgent.
+For example, the QoEAgent application has the URI `http://www.microsoft.com/LCS/QoEAgent`.
 
 ```yaml
 Type: String

@@ -14,7 +14,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This cmdlet supports retrieving information of all team templates available to your tenant, including both first party Microsoft team templates as well as custom templates. The templates information retrieved includes includes OData Id, template name, short description, count of channels and count of applications.  
+This cmdlet supports retrieving information of all team templates available to your tenant, including both first party Microsoft team templates as well as custom templates. The templates information retrieved includes OData Id, template name, short description, count of channels and count of applications.  
 Note: All custom templates will be retrieved, regardless of the locale specification. If you have hidden templates in the admin center, you will still be able to see the hidden templates here.
 
 ## SYNTAX
@@ -136,12 +136,12 @@ Eventually UPN and SIP.
 
 ## RELATED LINKS
 
-[Get-CsTeamTemplateList](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplatelist)
+[Get-CsTeamTemplateList](Get-CsTeamTemplateList.md)
 
-[Get-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/get-csteamtemplate)
+[Get-CsTeamTemplate](Get-CsTeamTemplate.md)
 
-[New-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/new-csteamtemplate)
+[New-CsTeamTemplate](New-CsTeamTemplate.md)
 
-[Update-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/update-csteamtemplate)
+[Update-CsTeamTemplate](Update-CsTeamTemplate.md)
 
-[Remove-CsTeamTemplate](https://learn.microsoft.com/powershell/module/teams/remove-csteamtemplate)
+[Remove-CsTeamTemplate](Remove-CsTeamTemplate.md)

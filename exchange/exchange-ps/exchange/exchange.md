@@ -222,6 +222,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EOPProtectionPolicyRule](Get-EOPProtectionPolicyRule.md)
 
+### [Get-ExoPhishSimOverrideRule](Get-ExoPhishSimOverrideRule.md)
+
+### [Get-ExoSecOpsOverrideRule](Get-ExoSecOpsOverrideRule.md)
+
 ### [Get-HostedConnectionFilterPolicy](Get-HostedConnectionFilterPolicy.md)
 
 ### [Get-HostedContentFilterPolicy](Get-HostedContentFilterPolicy.md)
@@ -294,6 +298,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-EOPProtectionPolicyRule](New-EOPProtectionPolicyRule.md)
 
+### [New-ExoPhishSimOverrideRule](New-ExoPhishSimOverrideRule.md)
+
+### [New-ExoSecOpsOverrideRule](New-ExoSecOpsOverrideRule.md)
+
 ### [New-HostedContentFilterPolicy](New-HostedContentFilterPolicy.md)
 
 ### [New-HostedContentFilterRule](New-HostedContentFilterRule.md)
@@ -308,8 +316,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [New-PhishSimOverridePolicy](New-PhishSimOverridePolicy.md)
 
-### [New-PhishSimOverrideRule](New-PhishSimOverrideRule.md)
-
 ### [New-QuarantinePermissions](New-QuarantinePermissions.md)
 
 ### [New-QuarantinePolicy](New-QuarantinePolicy.md)
@@ -319,8 +325,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [New-ReportSubmissionRule](New-ReportSubmissionRule.md)
 
 ### [New-SecOpsOverridePolicy](New-SecOpsOverridePolicy.md)
-
-### [New-SecOpsOverrideRule](New-SecOpsOverrideRule.md)
 
 ### [New-TeamsProtectionPolicy](New-TeamsProtectionPolicy.md)
 
@@ -344,6 +348,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-EOPProtectionPolicyRule](Remove-EOPProtectionPolicyRule.md)
 
+### [Remove-ExoPhishSimOverrideRule](Remove-ExoPhishSimOverrideRule.md)
+
+### [Remove-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
+
 ### [Remove-HostedContentFilterPolicy](Remove-HostedContentFilterPolicy.md)
 
 ### [Remove-HostedContentFilterRule](Remove-HostedContentFilterRule.md)
@@ -366,8 +374,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Remove-PhishSimOverridePolicy](Remove-PhishSimOverridePolicy.md)
 
-### [Remove-PhishSimOverrideRule](Remove-PhishSimOverrideRule.md)
-
 ### [Remove-QuarantinePolicy](Remove-QuarantinePolicy.md)
 
 ### [Remove-ReportSubmissionPolicy](Remove-ReportSubmissionPolicy.md)
@@ -375,8 +381,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Remove-ReportSubmissionRule](Remove-ReportSubmissionRule.md)
 
 ### [Remove-SecOpsOverridePolicy](Remove-SecOpsOverridePolicy.md)
-
-### [Remove-SecOpsOverrideRule](Remove-SecOpsOverrideRule.md)
 
 ### [Remove-TenantAllowBlockListItems](Remove-TenantAllowBlockListItems.md)
 
@@ -393,6 +397,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-DkimSigningConfig](Set-DkimSigningConfig.md)
 
 ### [Set-EOPProtectionPolicyRule](Set-EOPProtectionPolicyRule.md)
+
+### [Set-ExoPhishSimOverrideRule](Set-ExoPhishSimOverrideRule.md)
+
+### [Set-ExoSecOpsOverrideRule](Remove-ExoSecOpsOverrideRule.md)
 
 ### [Set-HostedConnectionFilterPolicy](Set-HostedConnectionFilterPolicy.md)
 
@@ -426,8 +434,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Set-PhishSimOverridePolicy](Set-PhishSimOverridePolicy.md)
 
-### [Set-PhishSimOverrideRule](Set-PhishSimOverrideRule.md)
-
 ### [Set-QuarantinePermissions](Set-QuarantinePermissions.md)
 
 ### [Set-QuarantinePolicy](Set-QuarantinePolicy.md)
@@ -439,8 +445,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-ReportSubmissionRule](Set-ReportSubmissionRule.md)
 
 ### [Set-SecOpsOverridePolicy](Set-SecOpsOverridePolicy.md)
-
-### [Set-SecOpsOverrideRule](Set-SecOpsOverrideRule.md)
 
 ### [Set-SenderFilterConfig](Set-SenderFilterConfig.md)
 
@@ -1298,7 +1302,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## mail-flow Cmdlets
 ### [Add-ResubmitRequest](Add-ResubmitRequest.md)
 
+### [Disable-DnssecForVerifiedDomain](Disable-DnssecForVerifiedDomain.md)
+
+### [Disable-SmtpDaneInbound](Disable-SmtpDaneInbound.md)
+
 ### [Disable-TransportAgent](Disable-TransportAgent.md)
+
+### [Enable-DnssecForVerifiedDomain](Enable-DnssecForVerifiedDomain.md)
+
+### [Enable-SmtpDaneInbound](Enable-SmtpDaneInbound.md)
 
 ### [Enable-TransportAgent](Enable-TransportAgent.md)
 
@@ -1309,6 +1321,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-AddressRewriteEntry](Get-AddressRewriteEntry.md)
 
 ### [Get-DeliveryAgentConnector](Get-DeliveryAgentConnector.md)
+
+### [Get-DnssecStatusForVerifiedDomain](Get-DnssecStatusForVerifiedDomain.md)
 
 ### [Get-EdgeSubscription](Get-EdgeSubscription.md)
 
@@ -1349,6 +1363,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-RoutingGroupConnector](Get-RoutingGroupConnector.md)
 
 ### [Get-SendConnector](Get-SendConnector.md)
+
+### [Get-SmtpDaneInboundStatus](Get-SmtpDaneInboundStatus.md)
 
 ### [Get-SystemMessage](Get-SystemMessage.md)
 

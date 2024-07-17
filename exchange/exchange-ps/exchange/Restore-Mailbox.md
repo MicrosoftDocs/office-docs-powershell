@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-The EndDate parameter specifies the end date for filtering content that will be exported from the source mailbox. Only items in the mailbox whose date is prior to the end date are exported. When you enter a specific date, use the short date format defined in the Regional Options settings configured on the local computer. For example, if your computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
+The EndDate parameter specifies the end date for filtering content that will be exported from the source mailbox. Only items in the mailbox whose date is prior to the end date are exported. When you enter a specific date, use the short date format defined in the Regional Options settings configured on the local computer. For example, if your computer is configured to use the short date format MM/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
 
 ```yaml
 Type: DateTime

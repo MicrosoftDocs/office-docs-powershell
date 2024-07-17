@@ -1,15 +1,15 @@
 ---
-title: Workarounds for Invoke-Command scenarios in REST API connections 
+title: Workarounds for Invoke-Command scenarios in REST API connections
 ms.author: chrisda
 author: chrisda
-manager: dansimp
+manager: deniseb
 ms.date: 7/5/2023
 ms.audience: Admin
 audience: Admin
 ms.topic: article
 ms.service: exchange-powershell
 ms.reviewer:
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
@@ -69,15 +69,15 @@ This example finds all mailboxes where the GrantSendOnBehalfTo permission is set
 - **In a REST API session**: Run the following command:
 
   ```powershell
-  $mailboxes = Get-Mailbox -Filter "GrantSendOnBehalfTo -ne `$null" 
+  $mailboxes = Get-Mailbox -Filter "GrantSendOnBehalfTo -ne `$null"
 
-  foreach ($mailbox in $mailboxes) 
+  foreach ($mailbox in $mailboxes)
 
-  { 
-    $users = $mailbox | Select-Object GrantSendOnBehalfTo -ExpandProperty GrantSendOnBehalfTo | Get-User 
+  {
+    $users = $mailbox | Select-Object GrantSendOnBehalfTo -ExpandProperty GrantSendOnBehalfTo | Get-User
 
-    $users | Select-Object Name, Guid 
-  } 
+    $users | Select-Object Name, Guid
+  }
   ```
 
 ## Scenario 3: Run Exchange Online cmdlets in a specific PowerShell session when multiple sessions are present
@@ -113,7 +113,7 @@ This example shows how to create two PowerShell sessions in the same window and 
   5. Now you can run commands in either session. For example:
 
      ```powershell
-     $CommandStr1 = "Get-$($ConnectionInfo1.ModulePrefix)Mailbox -ResultSize 10" 
+     $CommandStr1 = "Get-$($ConnectionInfo1.ModulePrefix)Mailbox -ResultSize 10"
 
      Invoke-Expression $CommandStr1
      ```
@@ -121,7 +121,7 @@ This example shows how to create two PowerShell sessions in the same window and 
      Or
 
      ```powershell
-     $CommandStr2 = "Get-$($ConnectionInfo2.ModulePrefix)Mailbox -ResultSize 10" 
+     $CommandStr2 = "Get-$($ConnectionInfo2.ModulePrefix)Mailbox -ResultSize 10"
 
-     Invoke-Expression $CommandStr2 
+     Invoke-Expression $CommandStr2
      ```

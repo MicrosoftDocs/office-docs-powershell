@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 online version: https://learn.microsoft.com/powershell/module/teams/get-cshybridtelephonenumber
 applicable: Microsoft Teams
 author: jenstrier
-ms.author: jenstr
+ms.author: serdars
 ms.reviewer: 
 manager:
 schema: 2.0.0
@@ -55,7 +55,7 @@ This example displays information about all hybrid telephone numbers in the tena
 ## PARAMETERS
 
 ### -TelephoneNumber
-Filters the returned results to a specific phone number. The number should be specified without a prefixed "+". The phone number can not have "tel:" prefixed.
+Filters the returned results to a specific phone number. The number should be specified without a prefixed "+". The phone number can't have "tel:" prefixed.
 
 ```yaml
 Type: System.String
