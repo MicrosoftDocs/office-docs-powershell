@@ -250,7 +250,14 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it. ForceEnabled will enable attendee report generation and prohibit meeting organizer from disabling it. ForceDisabled will disable attendee report generation and prohibit meeting organizer from enabling it.
+
+Possible values:
+
+- Enabled
+- Disabled
+- ForceEnabled
+- ForceDisabled
 
 ```yaml
 Type: String
