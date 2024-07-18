@@ -30,6 +30,7 @@ Set-TenantAllowBlockListItems -Ids <String[]> -ListType <ListType>
  [-NoExpiration]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [<CommonParameters>]
 ```
 
@@ -43,6 +44,7 @@ Set-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType>
  [-NoExpiration]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [<CommonParameters>]
 ```
 
@@ -253,6 +255,22 @@ You use this switch to prevent the command from halting on the first entry that 
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAfter
+{{ Fill RemoveAfter Description }}
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection

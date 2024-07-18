@@ -29,6 +29,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
  [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [-SubmissionID <String>]
  [<CommonParameters>]
 ```
@@ -42,6 +43,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpir
  [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [-SubmissionID <String>]
  [<CommonParameters>]
 ```
@@ -250,6 +252,22 @@ The Notes parameters specifies additional information about the object. If the v
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAfter
+{{ Fill RemoveAfter Description }}
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
