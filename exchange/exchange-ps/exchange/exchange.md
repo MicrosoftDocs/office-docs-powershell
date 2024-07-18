@@ -959,8 +959,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-HybridConfiguration](Get-HybridConfiguration.md)
 
-### [Get-HybridMailflow](Get-HybridMailflow.md)
-
 ### [Get-HybridMailflowDatacenterIPs](Get-HybridMailflowDatacenterIPs.md)
 
 ### [Get-IntraOrganizationConfiguration](Get-IntraOrganizationConfiguration.md)
@@ -1000,8 +998,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-FederationTrust](Set-FederationTrust.md)
 
 ### [Set-HybridConfiguration](Set-HybridConfiguration.md)
-
-### [Set-HybridMailflow](Set-HybridMailflow.md)
 
 ### [Set-IntraOrganizationConnector](Set-IntraOrganizationConnector.md)
 
