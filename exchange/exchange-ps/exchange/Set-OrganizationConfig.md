@@ -112,7 +112,10 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-MaskClientIpInReceivedHeadersEnabled <Boolean>]
  [-MatchSenderOrganizerProperties <Boolean>]
  [-MessageHighlightsEnabled <Boolean>]
+ [-MessageRecallAlertRecipientsEnabled <Boolean>]
+ [-MessageRecallAlertRecipientsReadMessagesOnlyEnabled <Boolean>]
  [-MessageRecallEnabled <System.Boolean>]
+ [-MessageRecallMaxRecallableAge <Microsoft.Exchange.Data.EnhancedTimeSpan>]
  [-MessageRemindersEnabled <Boolean>]
  [-MobileAppEducationEnabled <Boolean>]
  [-OAuth2ClientProfileEnabled <Boolean>]
@@ -132,6 +135,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ReadTrackingEnabled <Boolean>]
  [-RecallReadMessagesEnabled <System.Boolean>]
  [-RefreshSessionEnabled <Boolean>]
+ [-RejectDirectSend <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
  [-SendFromAliasEnabled <Boolean>]
@@ -2684,6 +2688,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageRecallAlertRecipientsEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallAlertRecipientsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallAlertRecipientsReadMessagesOnlyEnabled
+This parameter is available only in the cloud-based service.
+
+{{ Fill MessageRecallAlertRecipientsReadMessagesOnlyEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageRecallEnabled
 This parameter is available only in the cloud-based service.
 
@@ -2691,6 +2731,22 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MessageRecallMaxRecallableAge
+{{ Fill MessageRecallMaxRecallableAge Description }}
+
+```yaml
+Type: Microsoft.Exchange.Data.EnhancedTimeSpan
 Parameter Sets: ShortenEventScopeParameter
 Aliases:
 Applicable: Exchange Online
@@ -3344,6 +3400,24 @@ Type: Boolean
 Parameter Sets: ShortenEventScopeParameter, AdfsAuthenticationParameter, AdfsAuthenticationRawConfiguration
 Aliases:
 Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RejectDirectSend
+This parameter is available only in the cloud-based service.
+
+{{ Fill RejectDirectSend Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
