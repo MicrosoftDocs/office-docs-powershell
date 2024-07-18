@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
+ [-AccountTransferEnabled <Boolean>]
  [-ActionForUnknownFileAndMIMETypes <AttachmentBlockingActions>]
  [-ActiveSyncIntegrationEnabled <Boolean>]
  [-AdditionalAccountsEnabled <System.Boolean>]
@@ -70,6 +71,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-GlobalAddressListEnabled <Boolean>]
  [-GoogleDriveAttachmentsEnabled <Boolean>]
  [-GroupCreationEnabled <Boolean>]
+ [-HideClassicOutlookToggleOut <Object>]
  [-InstantMessagingEnabled <Boolean>]
  [-InstantMessagingType <InstantMessagingTypeOptions>]
  [-InterestingCalendarsEnabled <Boolean>]
@@ -95,6 +97,8 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
  [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
+ [-OutlookNewslettersReactions <Object>]
+ [-OutlookNewslettersShowMore <Object>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -209,6 +213,24 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -AccountTransferEnabled
+This parameter is available only in the cloud-based service.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -1229,6 +1251,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HideClassicOutlookToggleOut
+This parameter is available only in the cloud-based service.
+
+{{ Fill HideClassicOutlookToggleOut Description }}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstantMessagingEnabled
 The InstantMessagingEnabled parameter specifies whether instant messaging is available in Outlook on the web. This does not affect chat capabilities provided by Skype for Business or Teams. Valid values are:
 
@@ -1703,6 +1743,42 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersReactions
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersReactions Description }}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutlookNewslettersShowMore
+This parameter is available only in the cloud-based service.
+
+{{ Fill OutlookNewslettersShowMore Description }}
+
+```yaml
+Type: Object
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
