@@ -107,14 +107,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExpirationDate
-The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
+The ExpirationDate parameter set the expiration date of the entry in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, `"2021-05-06 14:30:00z"`.
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
-You can't use this parameter with the NoExpiration switch.
+You can't use this parameter with the NoExpiration or RemoveAfter parameters.
 
 ```yaml
 Type: DateTime
@@ -157,7 +157,7 @@ This switch is available to use in the following scenarios:
 - With the Block switch.
 - With the Allow switch where the ListType parameter value is URL and the ListSubType parameter value is AdvancedDelivery.
 
-You can't use this switch with the ExpirationDate parameter.
+You can't use this switch with the ExpirationDate or RemoveAfter parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -264,7 +264,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAfter
-{{ Fill RemoveAfter Description }}
+The RemoveAfter parameter enables the **Remove on** \> **45 days after last used date** feature for an allow entry. The LastUsedDate property is populated when the bad entity in the allow entry is encountered by the filtering system during mail flow or time of click. The allow entry is kept for 45 days after the filtering system determines that the entity is clean.
+
+The only valid value for this parameter is 45.
+
+You can't use this parameter with the ExpirationDate or NoExpirationDate parameters.
 
 ```yaml
 Type: Int32
