@@ -31,6 +31,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ApplyBrandingTemplate <String>]
  [-ApplyHtmlDisclaimer <PswsHashtable>]
+ [-AttachmentIsNotLabeled <Boolean>]
  [-BlockAccess <Boolean>]
  [-BlockAccessScope <Microsoft.Office.CompliancePolicy.Tasks.BlockAccessScope>]
  [-Comment <String>]
@@ -113,8 +114,10 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-HeaderContainsWords <PswsHashtable>]
  [-HeaderMatchesPatterns <PswsHashtable>]
  [-IncidentReportContent <ReportContentOption[]>]
+ [-MessageIsNotLabeled <Boolean>]
  [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
+ [-MipRestrictAccess <PswsHashtable[]>]
  [-Moderate <PswsHashtable>]
  [-ModifySubject <PswsHashtable>]
  [-NonBifurcatingAccessScope <Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope>]
@@ -125,6 +128,7 @@ Set-DlpComplianceRule [-Identity] <ComplianceRuleIdParameter>
  [-NotifyEmailExchangeIncludeAttachment <Boolean>]
  [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
+ [-NotifyPolicyTipCustomDialog <String>]
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyPolicyTipDisplayOption <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyTipDisplayOption>]
@@ -436,6 +440,22 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: PswsHashtable
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttachmentIsNotLabeled
+{{ Fill AttachmentIsNotLabeled Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2213,6 +2233,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageIsNotLabeled
+{{ Fill MessageIsNotLabeled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageSizeOver
 The MessageSizeOver parameter specifies a condition for the DLP rule that looks for messages larger than the specified size. The size include the message and all attachments.
 
@@ -2257,6 +2293,22 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MipRestrictAccess
+{{ Fill MipRestrictAccess Description }}
+
+```yaml
+Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2451,6 +2503,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyPolicyTipCustomDialog
+{{ Fill NotifyPolicyTipCustomDialog Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
