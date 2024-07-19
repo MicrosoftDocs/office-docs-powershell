@@ -71,7 +71,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-GlobalAddressListEnabled <Boolean>]
  [-GoogleDriveAttachmentsEnabled <Boolean>]
  [-GroupCreationEnabled <Boolean>]
- [-HideClassicOutlookToggleOut <Object>]
+ [-HideClassicOutlookToggleOut <System.Boolean>]
  [-InstantMessagingEnabled <Boolean>]
  [-InstantMessagingType <InstantMessagingTypeOptions>]
  [-InterestingCalendarsEnabled <Boolean>]
@@ -97,8 +97,8 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OutboundCharset <OutboundCharsetOptions>]
  [-OutlookBetaToggleEnabled <Boolean>]
  [-OutlookNewslettersAccessLevel <OutlookNewslettersAccessLevel>]
- [-OutlookNewslettersReactions <Object>]
- [-OutlookNewslettersShowMore <Object>]
+ [-OutlookNewslettersReactions <OutlookNewslettersFeatureState>]
+ [-OutlookNewslettersShowMore <OutlookNewslettersFeatureState>]
  [-OWALightEnabled <Boolean>]
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
@@ -1257,7 +1257,7 @@ This parameter is available only in the cloud-based service.
 {{ Fill HideClassicOutlookToggleOut Description }}
 
 ```yaml
-Type: Object
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1760,7 +1760,7 @@ This parameter is available only in the cloud-based service.
 {{ Fill OutlookNewslettersReactions Description }}
 
 ```yaml
-Type: Object
+Type: OutlookNewslettersFeatureState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
@@ -1778,7 +1778,7 @@ This parameter is available only in the cloud-based service.
 {{ Fill OutlookNewslettersShowMore Description }}
 
 ```yaml
-Type: Object
+Type: OutlookNewslettersFeatureState
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
