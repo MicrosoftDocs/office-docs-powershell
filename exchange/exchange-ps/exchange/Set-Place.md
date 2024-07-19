@@ -32,7 +32,6 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-City <String>]
  [-Confirm]
  [-CountryOrRegion <CountryInfo>]
- [-Desks <RecipientIdParameter[]>]
  [-DisplayDeviceName <String>]
  [-Floor <System.Int32>]
  [-FloorLabel <String>]
@@ -187,22 +186,6 @@ The friendly name is returned in the CountryOrRegion property value by the Get-P
 
 ```yaml
 Type: CountryInfo
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Desks
-{{ Fill Desks Description }}
-
-```yaml
-Type: RecipientIdParameter[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online
