@@ -42,6 +42,7 @@ Returns a complete list of all Teams apps in an organization, their statuses, an
 ```powershell
 PS C:\> Get-AllM365TeamsApps | Select-Object -Property Id, IsBlocked, AvailableTo -ExpandProperty AvailableTo
 ```
+
 Returns a complete list of all Teams apps in an organization, their statuses, and their availability information in expanded format.
 
 ## PARAMETERS
