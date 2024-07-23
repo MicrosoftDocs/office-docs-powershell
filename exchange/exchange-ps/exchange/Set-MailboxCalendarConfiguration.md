@@ -52,6 +52,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
+ [-AutoDeclineWhenBusy <Boolean>]
  [-CalendarFeedsPreferredLanguage <String>]
  [-CalendarFeedsPreferredRegion <String>]
  [-CalendarFeedsRootPageId <String>]
@@ -64,6 +65,7 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter>
  [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
+ [-DeleteMeetingRequestOnRespond <Boolean>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-EntertainmentEventsFromEmailEnabled <Boolean>]
  [-EventsFromEmailEnabled <Boolean>]
@@ -104,6 +106,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-AgendaMailEnabled <Boolean>]
  [-AgendaMailIntroductionEnabled <Boolean>]
  [-AgendaPaneEnabled <Boolean>]
+ [-AutoDeclineWhenBusy <Boolean>]
  [-CalendarFeedsPreferredLanguage <String>]
  [-CalendarFeedsPreferredRegion <String>]
  [-CalendarFeedsRootPageId <String>]
@@ -116,6 +119,7 @@ Set-MailboxCalendarConfiguration [-MailboxLocation <MailboxLocationIdParameter>]
  [-DefaultMinutesToReduceShortEventsBy <Int32>]
  [-DefaultOnlineMeetingProvider <OnlineMeetingProviderType>]
  [-DefaultReminderTime <TimeSpan>]
+ [-DeleteMeetingRequestOnRespond <Boolean>]
  [-DiningEventsFromEmailEnabled <Boolean>]
  [-EntertainmentEventsFromEmailEnabled <Boolean>]
  [-EventsFromEmailEnabled <Boolean>]
@@ -245,6 +249,24 @@ Accept wildcard characters: False
 This parameter is available only in the cloud-based service.
 
 This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDeclineWhenBusy
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoDeclineWhenBusy Description }}
 
 ```yaml
 Type: Boolean
@@ -508,6 +530,24 @@ Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeleteMeetingRequestOnRespond
+This parameter is available only in the cloud-based service.
+
+{{ Fill DeleteMeetingRequestOnRespond Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity, MailboxLocation
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named

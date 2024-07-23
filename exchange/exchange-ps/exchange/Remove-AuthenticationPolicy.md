@@ -23,6 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Remove-AuthenticationPolicy [-Identity] <AuthPolicyIdParameter>
  [-Confirm]
+ [-AllowLegacyExchangeTokens]
+ [-TenantId <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -61,6 +63,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowLegacyExchangeTokens
+This parameter is available only in the cloud-based service.
+
+The AllowLegacyExchangeTokens switch specifies whether to allow legacy Exchange tokens. You don't need to specify a value with this switch.
+
+Legacy Exchange tokens (for example, Exchange user identity and callback tokens) are used by Outlook add-ins.
+
+**Important**:
+
+- The Microsoft Report Message and Report Phishing add-ins require legacy Exchange tokens to work.
+- Legacy Exchange tokens will eventually be blocked by default in all cloud-based organizations.
+
+For more information on the Report Message and Report Phishing add-ins, see [Enable the Microsoft Report Message or the Report Phishing add-ins](https://learn.microsoft.com/microsoft-365/security/office-365-security/submissions-users-report-message-add-in-configure).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -72,6 +101,24 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 Applicable: Exchange Server 2019, Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantId
+This parameter is available only in the cloud-based service.
+
+{{ Fill TenantId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named

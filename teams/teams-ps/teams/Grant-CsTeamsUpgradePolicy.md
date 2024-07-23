@@ -19,21 +19,21 @@ TeamsUpgradePolicy allows administrators to manage the transition from Skype for
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Grant-CsTeamsUpgradePolicy [[-Identity] <String>] [-MigrateMeetingsToTeams <Boolean>] [-PassThru]
- [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>] [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
+```powershell
 Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-Force] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MsftInternalProcessingMode <String>] [-Force] [-Global] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>] [-WhatIf] [-Confirm]
+ [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>]
  [<CommonParameters>]
 ```
 
@@ -213,22 +213,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
 
 Do not use.
@@ -316,22 +300,6 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 
 Required: False
 Position: Named

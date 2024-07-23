@@ -26,6 +26,7 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
  [-SegmentsAllowed <MultiValuedProperty>]
  [-Comment <String>]
  [-Confirm]
+ [-ModerationAllowed <Boolean>]
  [-Force]
  [-State <EopInformationBarrierPolicyState>]
  [-WhatIf]
@@ -39,6 +40,7 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Force]
+ [-ModerationAllowed <Boolean>]
  [-State <EopInformationBarrierPolicyState>]
  [-WhatIf]
  [<CommonParameters>]
@@ -51,6 +53,7 @@ Set-InformationBarrierPolicy -Identity <PolicyIdParameter>
  [-Comment <String>]
  [-Confirm]
  [-Force]
+ [-ModerationAllowed <Boolean>]
  [-State <EopInformationBarrierPolicyState>]
  [-WhatIf]
  [<CommonParameters>]
@@ -136,6 +139,22 @@ You can use this switch to run tasks programmatically where prompting for admini
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModerationAllowed
+{{ Fill ModerationAllowed Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance

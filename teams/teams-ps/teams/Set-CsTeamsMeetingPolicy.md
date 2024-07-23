@@ -69,7 +69,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-CopyRestriction <Boolean>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
- [EnableAnonymousUserCaptcha <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExternalMeetingJoin <String>]
  [-Force]
@@ -280,8 +279,9 @@ Determines whether meeting organizers are allowed to download the attendee engag
 
 - Enabled: allow the meeting organizer to download the report.
 - Disabled: disable attendee report generation and prohibit meeting organizer from downloading it.
+- ForceEnabled: enable attendee report generation and prohibit meeting organizer from disabling it.
 
-If set to enabled, only meeting organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
+If set to Enabled or ForceEnabled, only meeting organizers and co-organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
 
 ```yaml
 Type: String
@@ -905,21 +905,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableAnonymousUserCaptcha
-This setting enforce captcha for anonymous user while meeting join.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
