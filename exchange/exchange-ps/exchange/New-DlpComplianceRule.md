@@ -701,7 +701,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentIsShared
-{{ Fill ContentIsShared Description }}
+The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -774,7 +779,9 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentCreatedBy
-{{ Fill DocumentCreatedBy Description }}
+The DocumentCreatedBy parameter specifies a condition for the DLP rule that looks for documents that are created by the specificed identity. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: MultiValuedProperty
@@ -790,7 +797,9 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentCreatedByMemberOf
-{{ Fill DocumentCreatedByMemberOf Description }}
+The DocumentCreatedByMemberOf parameter specifies a condition for the DLP rule that looks for documents that are created by a member of the specificed group. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -1187,7 +1196,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentIsShared
-{{ Fill ExceptIfContentIsShared Description }}
+The ContentIsNotLabeled parameter specifies an exception for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -1241,7 +1255,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentCreatedBy
-{{ Fill ExceptIfDocumentCreatedBy Description }}
+The DocumentCreatedBy parameter specifies an exception for the DLP rule that looks for documents that are created by the specificed identity. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1257,7 +1273,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentCreatedByMemberOf
-{{ Fill ExceptIfDocumentCreatedByMemberOf Description }}
+The DocumentCreatedByMemberOf parameter specifies an exception for the DLP rule that looks for documents that are created by a member of the specificed group. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -3290,7 +3308,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharedByIRMUserRisk
-{{ Fill SharedByIRMUserRisk Description }}
+The SharedByIRMUserRisk paramter specifies the risk category of the user performing the violating action. Valid values are:
+
+- Elevated Risk Level
+- Moderate Risk Level
+- Minor Risk Level
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
