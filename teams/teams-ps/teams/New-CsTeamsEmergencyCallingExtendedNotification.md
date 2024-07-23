@@ -106,9 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-## NOTES
-
-The use of extended notifications for emergency calling and this cmdlet is currently not supported.
 
 ## RELATED LINKS
 

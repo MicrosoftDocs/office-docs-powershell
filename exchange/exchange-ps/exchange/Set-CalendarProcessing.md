@@ -42,6 +42,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-DeleteNonCalendarItems <Boolean>]
  [-DeleteSubject <Boolean>]
  [-DomainController <Fqdn>]
+ [-EnableAutoRelease <Boolean>]
  [-EnableResponseDetails <Boolean>]
  [-EnforceCapacity <Boolean>]
  [-EnforceSchedulingHorizon <Boolean>]
@@ -51,6 +52,7 @@ Set-CalendarProcessing [-Identity] <MailboxIdParameter>
  [-MaximumDurationInMinutes <Int32>]
  [-MinimumDurationInMinutes <Int32>]
  [-OrganizerInfo <Boolean>]
+ [-PostReservationMaxClaimTimeInMinutes <Int32>]
  [-ProcessExternalMeetingMessages <Boolean>]
  [-RemoveCanceledMeetings <Boolean>]
  [-RemoveForwardedMeetingNotifications <Boolean>]
@@ -566,6 +568,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableAutoRelease
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnableAutoRelease Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableResponseDetails
 The EnableResponseDetails parameter specifies whether to include the reasons for accepting or declining a meeting in the response email message. Valid values are:
 
@@ -734,6 +754,24 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostReservationMaxClaimTimeInMinutes
+This parameter is available only in the cloud-based service.
+
+{{ Fill PostReservationMaxClaimTimeInMinutes Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
 
 Required: False
 Position: Named
