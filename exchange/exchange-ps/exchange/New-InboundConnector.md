@@ -25,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-InboundConnector [-Name] <String> -SenderDomains <MultiValuedProperty>
  [-AssociatedAcceptedDomains <MultiValuedProperty>]
+ [-ClientHostNames <MultiValuedProperty>]
  [-CloudServicesMailEnabled <Boolean>]
  [-Comment <String>]
  [-Confirm]
@@ -112,6 +113,22 @@ Accept wildcard characters: False
 The AssociatedAcceptedDomains parameter restricts the source domains that use the connector to the specified accepted domains. A valid value is an SMTP domain that's configured as an accepted domain in your Microsoft 365 organization.
 
 You can specify multiple values separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClientHostNames
+{{ Fill ClientHostNames Description }}
 
 ```yaml
 Type: MultiValuedProperty

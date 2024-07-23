@@ -70,6 +70,9 @@ To learn more about assigned roles at the feature level, see [Features Available
 
 To learn more about administrator role permissions in Microsoft Entra ID, see [Role template IDs](https://learn.microsoft.com/entra/identity/role-based-access-control/permissions-reference#role-template-ids).
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## EXAMPLES
 
 ### Example 1
@@ -296,6 +299,8 @@ The GroupIds parameter specifies the email addresses or security group object ID
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
 
 To have the policy apply to all users in the organization, use the Everyone switch.
+
+**Note**: In v3.5.1-Preview2 or later of the module, this parameter supports security group object IDs (GUIDs). Previous versions of the module accept only email addresses for this parameter.
 
 ```yaml
 Type: String[]

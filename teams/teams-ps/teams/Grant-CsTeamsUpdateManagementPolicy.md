@@ -18,22 +18,22 @@ Use this cmdlet to grant a specific Teams Update Management policy to a user.
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Grant-CsTeamsUpdateManagementPolicy [[-Identity] <String>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+ [-MsftInternalProcessingMode <String>] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
+```powershell
 Grant-CsTeamsUpdateManagementPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Global] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Global] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsTeamsUpdateManagementPolicy [-PassThru] [[-PolicyName] <String>] [-MsftInternalProcessingMode <String>]
- [-Group] <String> [-Rank <Int32>] [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm]
+ [-Group] <String> [-Rank <Int32>] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
@@ -50,21 +50,6 @@ PS C:\> Grant-CsTeamsUpdateManagementPolicy -PolicyName "Campaign Policy" -Ident
 In this example, the policy "Campaign Policy" is granted to the user kenmyer@litwareinc.com.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Global
 Use this parameter to make the specified policy in -PolicyName the new effective global policy.
@@ -148,22 +133,6 @@ The rank of the policy assignment, relative to other group policy assignments fo
 Type: Int32
 Parameter Sets: GrantToGroup
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
 
 Required: False
 Position: Named
