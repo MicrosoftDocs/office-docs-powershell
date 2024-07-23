@@ -680,7 +680,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentIsNotLabeled
-{{ Fill ContentIsNotLabeled Description }}
+The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that are not labeled. In Exchange this condition is only matched if both the attachment and the message body are not labeled
 
 ```yaml
 Type: Boolean
