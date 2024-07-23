@@ -680,7 +680,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentIsNotLabeled
-The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that are not labeled. In Exchange this condition is only matched if both the attachment and the message body are not labeled
+The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
