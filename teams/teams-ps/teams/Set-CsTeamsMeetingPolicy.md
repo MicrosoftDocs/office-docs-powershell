@@ -1203,8 +1203,10 @@ Accept wildcard characters: False
 ### -SpeakerAttributionMode
 Possible values:
 
-- EnabledUserOverride
+- Enabled
 - Disabled
+- EnabledUserOverride
+- DisabledUserOverride
 
 ```yaml
 Type: String
