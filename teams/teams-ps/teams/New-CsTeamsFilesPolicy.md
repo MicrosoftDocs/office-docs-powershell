@@ -16,7 +16,7 @@ The policies also specify third party app id to allow file storage(eg. Box).
 
 ```
 New-CsTeamsFilesPolicy [-NativeFileEntryPoints <String>] [-DefaultFileUploadAppId <String>]
- [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Identity] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,36 +75,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
