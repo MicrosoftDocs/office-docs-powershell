@@ -13,7 +13,7 @@ Deletes an existing teams files policy or resets the Global policy instance to t
 ## SYNTAX
 
 ```
-Remove-CsTeamsFilesPolicy [-Identity] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CsTeamsFilesPolicy [-Identity] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,36 +42,6 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Describes what would happen if you executed the command without actually executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before executing the command.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
