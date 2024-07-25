@@ -544,8 +544,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-> [!IMPORTANT]
-> The `All` option is being removed. Please do not use the `All` option at this time.
+> [!CAUTION]
+> The All option is being removed. Please do not use the All option at this time.
  
 ### -RealTimeCallQueueMetricsPermission
 
@@ -570,8 +570,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-> [!IMPORTANT]
-> The `All` option is being removed. Please do not use the `All` option at this time.
+> [!CAUTION]
+> The All option is being removed. Please do not use the All option at this time.
 
 ### -RealTimeAgentMetricsPermission
 
@@ -596,8 +596,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-> [!IMPORTANT]
-> The `All` option is being removed. Please do not use the `All` option at this time.
+> [!CAUTION]
+> The All option is being removed. Please do not use the All option at this time.
 
 ### -HistoricalAutoAttendantMetricsPermission
 
