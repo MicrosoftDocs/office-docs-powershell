@@ -47,7 +47,7 @@ BoundaryProperty      : CustomAttribute1
 BoundaryPropertyValue :
 ```
 
-This example returns the status of a OneDrive site that's bound by the CustomAttribute1 property on the user's mailbox.
+This example returns the status of a OneDrive site to indicate it's associated to a UserMailbox and the CustomAttribute1 property isn't currently set.
 
 ### Example 2
 ```powershell
@@ -62,7 +62,7 @@ BoundaryProperty      : CustomAttribute3
 BoundaryPropertyVa1ue :
 ```
 
-This example ???.
+This example returns the status of a mailbox to indicate the mailbox is inactive, and the CustomAttribute3 property isn't currently set.
 
 ### Example 3
 ```powershell
@@ -77,7 +77,7 @@ BoundaryProperty      : CustomAttribute3
 BoundaryPropertyVa1ue : test33
 ```
 
-This example ???
+This example returns the status of a mailbox to indicate the mailbox is inactive, and the CustomAttribute3 property is currently set to test33.
 
 ### Example 4
 ```powershell
@@ -88,7 +88,7 @@ This example sets the boundary of the specified OneDrive site for a user who lef
 
 ### Example 5
 ```powershell
-PS C:\> Invoke-ComplianceSecurityFiIterAction -Action Set -PropertyName "CustomAttribute3" -PropertyVaIue "ProjectX" -EmailAddress "zhexuan@contoso.onmicrosoft.com"
+PS C:\> Invoke-ComplianceSecurityFiIterAction -Action Set -PropertyName "CustomAttribute3" -PropertyValue "ProjectX" -EmailAddress "zhexuan@contoso.onmicrosoft.com"
 
 Set action succeeded, please use GetStatus to check the result.
 
@@ -100,10 +100,10 @@ BoundaryInstruction   : Set via Invoke-ComplianceSecurityFiIterAction -Set
 BoundaryObjectId      : zhexuan@contoso.onmicrosoft.com
 BoundaryStatus        : Success
 BoundaryProperty      : CustomAttribute3
-BoundaryPropertyVa1ue : test33
+BoundaryPropertyVa1ue : ProjectX
 ```
 
-This example ???
+This example sets the boundary of the specified OneDrive site to the specified CustomAttribute3 property value, and runs another command to review the result.
 
 ## PARAMETERS
 
