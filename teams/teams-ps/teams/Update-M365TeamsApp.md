@@ -35,7 +35,7 @@ This cmdlet allows administrators to modify app state and availability by adding
 ```powershell
 PS C:\> Update-M365TeamsApp -Id 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b -AppAssignmentType Everyone
 ```
-Updates availablity assignment information of 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b app to Everyone.
+Updates the availability value for Bookings app (App ID 4c4ec2e8-4a2c-4bce-8d8f-00fc664a4e5b) to Everyone.
 
 ### Example 2
 
