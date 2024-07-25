@@ -167,7 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -RoomList
-The RoomList parameter specifies the name of the room address list.
+The RoomList parameter specifies a single address list that will be applied to mailbox users who are assigned this address book policy. When a user assigned to this address book policy uses location experiences, such as Room Finder or selecting a conference room when scheduling a meeting, they will only see resources which match the [RecipientFilter](https://learn.microsoft.com/powershell/module/exchange/new-addresslist?view=exchange-ps#-recipientfilter) from the specified address list.  However, when using experiences that are not location specific, such the To or Cc fields of a calendar event, the specified AddressLists from this address book policy are applied instead of the RoomList parameter.
+
+The RoomList parameter accepts only a single address list for each address book policy.
+
+> [!Warning]
+> While this parameter is named RoomList, there is not an automatic association with this parameter and [room list distribution groups](https://learn.microsoft.com/en-us/exchange/recipients/room-mailboxes?view=exchserver-2019#create-a-room-list).  You must still create the room list distribution groups and assign resources as members of those groups.  If a user has an address book policy assigned, location experiences will filter and show only rooms that match the address list in the RoomList property of the user's address book policy.
 
 ```yaml
 Type: AddressListIdParameter
