@@ -569,7 +569,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
- 
+
+> [!IMPORTANT]
+> The `All` option is being removed. Please do not use the `All` option at this time.
+
 ### -RealTimeCallQueueMetricsPermission
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
@@ -593,6 +596,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+> [!IMPORTANT]
+> The `All` option is being removed. Please do not use the `All` option at this time.
+
 ### -RealTimeAgentMetricsPermission
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
@@ -615,6 +621,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+> [!IMPORTANT]
+> The `All` option is being removed. Please do not use the `All` option at this time.
 
 ### -HistoricalAutoAttendantMetricsPermission
 
