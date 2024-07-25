@@ -167,12 +167,19 @@ Accept wildcard characters: False
 ```
 
 ### -RoomList
-The RoomList parameter specifies a single address list that will be applied to mailbox users who are assigned this address book policy. When a user assigned to this address book policy uses location experiences, such as Room Finder or selecting a conference room when scheduling a meeting, they will only see resources which match the [RecipientFilter](https://learn.microsoft.com/powershell/module/exchange/new-addresslist?view=exchange-ps#-recipientfilter) from the specified address list.  However, when using experiences that are not location specific, such the To or Cc fields of a calendar event, the specified AddressLists from this address book policy are applied instead of the RoomList parameter.
+The RoomList parameter specifies an address list that used for location experiences for mailbox users who have this address book policy assigned to them.
 
-The RoomList parameter accepts only a single address list for each address book policy.
+- When using location experiences (for example, Room Finder or selecting a conference room when scheduling a meeting), users see only resources that match the [RecipientFilter](https://learn.microsoft.com/powershell/module/exchange/new-addresslist#-recipientfilter) results from the address list that's specified by this parameter.
+- When using experiences that aren't location specific (for example, the To or Cc fields of a calendar event), the address lists specified by the AddressLists parameter in this address book policy are applied. The address list specified by this parameter isn't used.
 
-> [!Warning]
-> While this parameter is named RoomList, there is not an automatic association with this parameter and [room list distribution groups](https://learn.microsoft.com/en-us/exchange/recipients/room-mailboxes?view=exchserver-2019#create-a-room-list).  You must still create the room list distribution groups and assign resources as members of those groups.  If a user has an address book policy assigned, location experiences will filter and show only rooms that match the address list in the RoomList property of the user's address book policy.
+A valid value for this parameter is one address list. You can use any value that uniquely identifies the address list. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+> [!NOTE]
+> There's no automatic association between this parameter and [room list distribution groups](https://learn.microsoft.com/exchange/recipients/room-mailboxes#create-a-room-list), which also use a parameter named RoomList in the New-DistributionGroup and Set-DistributionGroup cmdlets. You still need to create room list distribution groups and assign resources as group members. Location experiences are filtered to show only rooms included in the address list that's specified by the RoomList property of the address book policy that's assigned to the user (if any).
 
 ```yaml
 Type: AddressListIdParameter
