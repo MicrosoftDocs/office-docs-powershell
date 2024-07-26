@@ -9,32 +9,32 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-This commandlet supports applying the TeamsShiftsPolicy to users in a tenant.
+This cmdlet supports applying the TeamsShiftsPolicy to users in a tenant.
 
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [<CommonParameters>]
 ```
 
 ### GrantToUser
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
 ```
 
 ### GrantToGroup
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32> [<CommonParameters>]
 ```
 
 ### GrantToTenant
-```
+```powershell
 Grant-CsTeamsShiftsPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This commandlet enables admins to grant Shifts specific policy settings to users in their tenant.
+This cmdlet enables admins to grant Shifts specific policy settings to users in their tenant.
 
 ## EXAMPLES
 
@@ -117,6 +117,21 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Suppresses the display of any non-fatal error message that might arise when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
