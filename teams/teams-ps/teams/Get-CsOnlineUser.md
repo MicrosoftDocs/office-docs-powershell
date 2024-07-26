@@ -121,7 +121,7 @@ This parameter is added to Get-CsOnlineUser starting from TPM 4.5.1 to indicate 
 - `ResourceAccount` - to query for app endpoints or resource accounts.
 - `Guest` - to query for guest accounts.
 - `SfBOnPremUser` - to query for users that are hosted on-premises
-- `IneligibleUser` - to query for a user that does not have valid Teams license (except Guest, ResourceAccount and SfbOnPremUser)
+- `IneligibleUser` - to query for a user that does not have valid Teams license (except Guest, ResourceAccount and SfbOnPremUser).
 
 ```yaml
 Type: UserIdParameter
@@ -300,7 +300,6 @@ A recent fix has addressed an issue where some Guest users were being omitted fr
 - 'CallingPlan': Enables an All-in-the-cloud voice solution for Teams users that connects Teams Phone System to the PSTN to enable external calling. With this option, Microsoft acts as the PSTN carrier.
 - 'TeamsMultiGeo': Enables Teams chat data to be stored at rest in a specified geo location
 - 'VoiceApp': Enables to set up resource accounts to support voice applications like Auto Attendants and Call Queues
-- 'Freemium': Enables access to Microsoft Teams (Free)
 - 'M365CopilotTeams': Enables Copilot in Teams
 - 'TeamsProMgmt': Enables enhanced meeting recap features like AI generated notes and tasks from meetings, view when a screen was shared etc
 - 'TeamsProProtection': Enables additional ways to safeguard and monitor users' Teams experiences with features like Sensitivity labels, Watermarking, end-to-end encryption etc.
