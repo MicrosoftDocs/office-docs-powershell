@@ -10,8 +10,8 @@ title: Microsoft Whiteboard
 
 The following cmdlet references are for Microsoft Whiteboard. See [Overview](https://learn.microsoft.com/powershell/whiteboard/overview) for details on installing the module. The module can only be run by users with Global Administrator or SharePoint Administrator roles. The module described here is for Whiteboard content stored in Azure. see [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
->[!IMPORTANT]
->Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization.
 Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role. To learn more, 
 
 ## Microsoft Whiteboard Admin cmdlets
