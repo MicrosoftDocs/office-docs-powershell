@@ -37,6 +37,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-ApplyContentMarkingHeaderFontSize <System.Int32>]
  [-ApplyContentMarkingHeaderMargin <System.Int32>]
  [-ApplyContentMarkingHeaderText <String>]
+ [-ApplyDynamicWatermarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingEnabled <System.Boolean>]
  [-ApplyWaterMarkingFontColor <String>]
  [-ApplyWaterMarkingFontName <String>]
@@ -49,6 +50,7 @@ New-Label [-Name] <String> -DisplayName <String> -Tooltip <String>
  [-Confirm]
  [-ContentType <MipLabelContentType>]
  [-DefaultContentLabel <String>]
+ [-DynamicWatermarkDisplay <String>]
  [-EncryptionAipTemplateScopes <String>]
  [-EncryptionContentExpiredOnDateInDaysOrNever <String>]
  [-EncryptionDoNotForward <System.Boolean>]
@@ -470,6 +472,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplyDynamicWatermarkingEnabled
+**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+
+The ApplyDynamicWatermarkingEnabled parameter enables dynamic watermarking for a specific label that applies encryption. Valid values are:
+
+- $true: Enables dynamic watermarking for a specific label.
+- $false: Disables dynamic watermarking for a specific label.
+
+You set the watermark text with the DynamicWatermarkDisplay parameter. For more information about using dynamic watermarks for supported apps, see [Dynamic watermarks](https://learn.microsoft.com/purview/encryption-sensitivity-labels#dynamic-watermarks).
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplyWaterMarkingEnabled
 The ApplyWaterMarkingEnabled parameter enables or disables the Apply Watermarking Header action for the label. Valid values are:
 
@@ -677,6 +702,28 @@ Accept wildcard characters: False
 
 ### -DefaultContentLabel
 The DefaultContentLabel specifies a label that can be automatically applied to meetings created in a labeled Teams channel.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DynamicWatermarkDisplay
+**Note**: This parameter is currently in Public Preview, isn't available in all organizations, and is subject to change.
+
+The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label. This parameter supports text and the following special tokens:
+
+- `${Consumer.PrincipalName}`: Required. The value is the user principal name (UPN) of the user.
+
+This parameter is meaningful only when the ApplyDynamicWatermarkingEnabled parameter value is $true.
 
 ```yaml
 Type: String

@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
 
+
 ## SYNTAX
 
 ```
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMicrosoftECDN
-This setting governs whether the global admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
+This setting governs whether the admin disables this property and prevents the organizers from creating town halls that use Microsoft eCDN even though they have been assigned a Teams Premium license.
 
 ```yaml
 Type: Boolean
@@ -171,6 +172,10 @@ Accept wildcard characters: False
 ```
 
 ### -EventAccessType
+
+> [!NOTE]
+> Currently, webinar and town hall event access is managed together via EventAccessType.
+
 This setting governs which users can access the event registration page or the event site to register. It also governs which user type is allowed to join the session/s in the event. 
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.

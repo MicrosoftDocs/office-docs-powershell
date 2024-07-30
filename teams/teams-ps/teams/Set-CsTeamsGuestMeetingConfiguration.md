@@ -5,10 +5,6 @@ online version: https://learn.microsoft.com/powershell/module/teams/set-csteamsg
 applicable: Microsoft Teams
 title: Set-CsTeamsGuestMeetingConfiguration
 schema: 2.0.0
-manager: bulenteg
-author: tomkau
-ms.author: tomkau
-ms.reviewer: williamlooney
 ---
 
 # Set-CsTeamsGuestMeetingConfiguration
@@ -20,16 +16,16 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-AllowTranscription <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
-```
+```powershell
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-LiveCaptionsEnabledType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-AllowTranscription <Boolean>] [-LiveCaptionsEnabledType <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -192,6 +188,21 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowTranscription
+Determines whether post-meeting captions and transcriptions are allowed in a user's meetings. Set this to TRUE to allow. Set this to FALSE to prohibit.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

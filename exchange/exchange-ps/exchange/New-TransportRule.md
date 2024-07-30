@@ -676,6 +676,8 @@ The ApplyHtmlDisclaimerFallbackAction parameter specifies what to do if the HTML
 
   If the process of inserting the original message as an attachment in the new message fails, the original message isn't delivered. The original message is returned to the sender in an NDR.
 
+  In Microsoft 365, don't use this value in rules that affect incoming messages from external senders. Use the value Reject instead. The effects of the value Wrap interfere with Safe Attachments scanning of messages from external senders.
+
 - Ignore: The rule is ignored and the original message is delivered without the disclaimer.
 - Reject: The original message is returned to the sender in an NDR.
 

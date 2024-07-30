@@ -31,6 +31,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-AnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
  [-ApplyBrandingTemplate <String>]
  [-ApplyHtmlDisclaimer <PswsHashtable>]
+ [-AttachmentIsNotLabeled <Boolean>]
  [-BlockAccess <Boolean>]
  [-BlockAccessScope <Microsoft.Office.CompliancePolicy.Tasks.BlockAccessScope>]
  [-Comment <String>]
@@ -56,6 +57,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-EndpointDlpBrowserRestrictions <PswsHashtable[]>]
  [-EndpointDlpRestrictions <PswsHashtable[]>]
  [-EnforcePortalAccess <Boolean>]
+ [-EvaluateRulePerComponent <Boolean>]
  [-ExceptIfAccessScope <Microsoft.Office.CompliancePolicy.Tasks.AccessScope>]
  [-ExceptIfAnyOfRecipientAddressContainsWords <MultiValuedProperty>]
  [-ExceptIfAnyOfRecipientAddressMatchesPatterns <MultiValuedProperty>]
@@ -113,8 +115,10 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-HeaderMatchesPatterns <PswsHashtable>]
  [-ImmutableId <System.Guid>]
  [-IncidentReportContent <ReportContentOption[]>]
+ [-MessageIsNotLabeled <Boolean>]
  [-MessageSizeOver <Microsoft.Exchange.Data.ByteQuantifiedSize>]
  [-MessageTypeMatches <Microsoft.Office.CompliancePolicy.PolicyEvaluation.MessageTypes>]
+ [-MipRestrictAccess <PswsHashtable[]>]
  [-Moderate <PswsHashtable>]
  [-ModifySubject <PswsHashtable>]
  [-NonBifurcatingAccessScope <Microsoft.Office.CompliancePolicy.Tasks.NonBifurcatingAccessScope>]
@@ -125,6 +129,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-NotifyEmailExchangeIncludeAttachment <Boolean>]
  [-NotifyEndpointUser <PswsHashtable>]
  [-NotifyOverrideRequirements <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements>]
+ [-NotifyPolicyTipCustomDialog <String>]
  [-NotifyPolicyTipCustomText <String>]
  [-NotifyPolicyTipCustomTextTranslations <MultiValuedProperty>]
  [-NotifyPolicyTipDisplayOption <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyTipDisplayOption>]
@@ -512,6 +517,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AttachmentIsNotLabeled
+{{ Fill AttachmentIsNotLabeled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -BlockAccess
 The BlockAccess parameter specifies an action for the DLP rule that blocks access to the source item when the conditions of the rule are met. Valid values are:
 
@@ -659,7 +680,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentIsNotLabeled
-{{ Fill ContentIsNotLabeled Description }}
+The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -675,7 +701,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentIsShared
-{{ Fill ContentIsShared Description }}
+The ContentIsNotLabeled parameter specifies a condition for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -748,7 +779,9 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentCreatedBy
-{{ Fill DocumentCreatedBy Description }}
+The DocumentCreatedBy parameter specifies a condition for the DLP rule that looks for documents that are created by the specificed identity. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: MultiValuedProperty
@@ -764,7 +797,9 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentCreatedByMemberOf
-{{ Fill DocumentCreatedByMemberOf Description }}
+The DocumentCreatedByMemberOf parameter specifies a condition for the DLP rule that looks for documents that are created by a member of the specificed group. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -996,6 +1031,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EvaluateRulePerComponent
+The EvaluateRulePerComponent parameter specifies whether a match for conditions and exceptions in the rule is contained within the same message component. Valid values are:
+
+- $true: A DLP rule match for conditions and exceptions must be in the same message component (for example, in the message body or in a single attachment).
+- $false: A DLP rule match for conditions and exceptions can be anywhere in the message.
+
+For example, say a DLP rule is configured to block messages that contain three or more Social Security numbers (SSNs). When the value of this parameter is $true, a message is blocked only if there are three or more SSNs in the message body, or there are three or more SSNs in a specific attachment. The DLP rule doesn't match and the message isn't blocked if there are two SSNs in the message body, one SSN in an attachment, and two SSNs in another attachment in the same email message.
+
+This parameter works with the following conditions or exceptions only:
+
+- Content contains
+- Attachment contains
+- Attachment is not labeled
+- File extension is
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExceptIfAccessScope
 The ExceptIfAccessScopeAccessScope parameter specifies an exception for the DLP rule that's based on the access scope of the content. The rule isn't applied to content that matches the specified access scope. Valid values are:
 
@@ -1133,7 +1196,12 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfContentIsShared
-{{ Fill ExceptIfContentIsShared Description }}
+The ContentIsNotLabeled parameter specifies an exception for the DLP rule that looks for attachments or documents that aren't labeled. Valid values are:
+
+- $true: Look for attachments or documents that aren't labeled.
+- $false: Don't look for unlabeled attachments or documents.
+
+In Exchange, this condition is matched only if both the attachment and the message body aren't labeled.
 
 ```yaml
 Type: Boolean
@@ -1187,7 +1255,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentCreatedBy
-{{ Fill ExceptIfDocumentCreatedBy Description }}
+The DocumentCreatedBy parameter specifies an exception for the DLP rule that looks for documents that are created by the specificed identity. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: MultiValuedProperty
@@ -1203,7 +1273,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExceptIfDocumentCreatedByMemberOf
-{{ Fill ExceptIfDocumentCreatedByMemberOf Description }}
+The DocumentCreatedByMemberOf parameter specifies an exception for the DLP rule that looks for documents that are created by a member of the specificed group. You can specify multiple values separated by commas.
+
+This parameter applies to Sharepoint and Onedrive workloads.
 
 ```yaml
 Type: RecipientIdParameter[]
@@ -2267,6 +2339,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MessageIsNotLabeled
+{{ Fill MessageIsNotLabeled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MessageSizeOver
 The MessageSizeOver parameter specifies a condition for the DLP rule that looks for messages larger than the specified size. The size include the message and all attachments.
 
@@ -2311,6 +2399,22 @@ You can use this condition in DLP policies that are scoped only to Exchange.
 
 ```yaml
 Type: MessageTypes
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MipRestrictAccess
+{{ Fill MipRestrictAccess Description }}
+
+```yaml
+Type: PswsHashtable[]
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -2505,6 +2609,22 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyOverrideRequirements
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyPolicyTipCustomDialog
+{{ Fill NotifyPolicyTipCustomDialog Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
@@ -3188,7 +3308,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharedByIRMUserRisk
-{{ Fill SharedByIRMUserRisk Description }}
+The SharedByIRMUserRisk paramter specifies the risk category of the user performing the violating action. Valid values are:
+
+- Elevated Risk Level
+- Moderate Risk Level
+- Minor Risk Level
+
+You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
