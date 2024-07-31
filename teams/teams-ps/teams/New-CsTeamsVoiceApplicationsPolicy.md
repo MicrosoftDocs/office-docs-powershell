@@ -557,8 +557,8 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
  
 When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
-> [!CAUTION]
-> The `All` option is being removed. Please do not use the `All` option at this time.
+> [!IMPORTANT]
+> The `All` option is no longer supported.
 
 ```yaml
 Type: Object
@@ -583,8 +583,8 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
  
 When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
 
-> [!CAUTION]
-> The `All` option is being removed. Please do not use the `All` option at this time.
+> [!IMPORTANT]
+> The `All` option is no longer supported.
 
 ```yaml
 Type: Object
@@ -609,8 +609,8 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
  
 When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
 
-> [!CAUTION]
-> The `All` option is being removed. Please do not use the `All` option at this time.
+> [!IMPORTANT]
+> The `All` option is no longer supported.
 
 ```yaml
 Type: Object
