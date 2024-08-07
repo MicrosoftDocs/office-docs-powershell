@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationGroup
-NotificationGroup is an email list of users and groups to be notified of an emergency call via Teams chat. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 e-mail addresses can be specified and a maximum of 50 users in total can be notified.
+NotificationGroup is an email list of users and groups to be notified of an emergency call via Teams chat. Individual users or groups are separated by ";", for instance, "group1@contoso.com;group2@contoso.com". A maximum of 10 e-mail addresses can be specified and a maximum of 50 users in total can be notified. Both UPN and SMTP address are accepted when adding users directly.
 
 ```yaml
 Type: String
