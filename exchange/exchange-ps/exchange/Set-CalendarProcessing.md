@@ -151,7 +151,7 @@ This example rejects meeting requests from any user who isn't a member of the "R
 Set-CalendarProcessing -Identity "Room 221" -ProcessExternalMeetingMessages $false
 ```
 
-This example rejects meeting requests from any user who isn't a member of the Exchange organization.\
+This example rejects meeting requests from any user who isn't a member of the Exchange organization.
 
 ## PARAMETERS
 
