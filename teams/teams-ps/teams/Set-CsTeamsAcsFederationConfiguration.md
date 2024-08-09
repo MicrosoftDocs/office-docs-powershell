@@ -34,7 +34,7 @@ Federation between Teams and Azure Communication Services (ACS) allows external 
 
 This cmdlet is used to enable or disable Teams and ACS federation for a Teams tenant, and to specify which ACS resources can connect to Teams. Only listed ACS resources can be allowed.
 
-You must be a Teams service admin, a Teams communication admin, or Global Administrator for your organization to run the cmdlet.
+You must be a Teams service admin or a Teams communication admin for your organization to run the cmdlet.
 
 ## EXAMPLES
 
