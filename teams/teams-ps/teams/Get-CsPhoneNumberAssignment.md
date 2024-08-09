@@ -174,7 +174,7 @@ PstnPartnerName         :
 NumberSource            : OnPremises
 ReverseNumberLookup		: {SkipInternalVoip}
 ```
-This example displays information when reverse number lookup (RNL) is set to SkipInternalVoip on a number.
+This example displays when SkipInternalVoip option is turned on for a number.
 
 ## PARAMETERS
 
