@@ -512,7 +512,7 @@ The phone number. The number is always displayed with prefixed "+", even if it w
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
 ### ReverseNumberLookup
-Status of Reverse Number Lookup (RNL). When it is set to SkipInternalVoip, the calls are handled through external PSTN connection instead of internal Voip lookup. 
+Status of Reverse Number Lookup (RNL). When it is set to SkipInternalVoip, the calls are handled through external PSTN connection instead of internal VoIP lookup. 
 
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0.
