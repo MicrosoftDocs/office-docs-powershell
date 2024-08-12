@@ -917,7 +917,7 @@ The PermanentlyClearPreviousMailboxInfo switch specifies whether to clear the Ex
 
 Clearing these attributes might be required in mailbox move and re-licensing scenarios between on-premises Exchange and Microsoft 365. For more information, see [Permanently Clear Previous Mailbox Info](https://techcommunity.microsoft.com/t5/exchange-team-blog/permanently-clear-previous-mailbox-info/ba-p/607619).
 
-**Caution**: This switch will prevent you from reconnecting to the mailbox, and prevents you from recovering content from the mailbox.
+**Caution**: This switch prevents you from reconnecting to the mailbox and prevents you from recovering content from the mailbox.
 
 ```yaml
 Type: SwitchParameter
