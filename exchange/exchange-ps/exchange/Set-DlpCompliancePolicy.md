@@ -42,6 +42,7 @@ Set-DlpCompliancePolicy [-Identity] <PolicyIdParameter>
  [-Confirm]
  [-EndpointDlpAdaptiveScopes <MultiValuedProperty>]
  [-EndpointDlpAdaptiveScopesException <MultiValuedProperty>]
+ [-EndpointDlpExtendedLocations <String>]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
  [-ExceptIfOneDriveSharedByMemberOf <RecipientIdParameter[]>]
  [-ExchangeAdaptiveScopes <MultiValuedProperty>]
@@ -542,6 +543,22 @@ Accept wildcard characters: False
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Identity
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EndpointDlpExtendedLocations
+{{ Fill EndpointDlpExtendedLocations Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
 Aliases:
 Applicable: Security & Compliance
 
