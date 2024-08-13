@@ -29,7 +29,7 @@ Set-CsTeamsEducationConfiguration
 
 This cmdlet is used to manage the organization-wide education configuration for Teams which contains settings that are applicable to education organizations.
 
-You must be a Teams Service Administrator or a Global Administrator for your organization to run the cmdlet.
+You must be a Teams Service Administrator for your organization to run the cmdlet.
 
 ## EXAMPLES
 
