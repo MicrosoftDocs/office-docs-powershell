@@ -22,7 +22,7 @@ Use the Update-VivaModuleFeaturePolicy cmdlet to update an access policy for a f
 - You can't update a policy for a particular user or group to include the entire tenant if a policy for the entire tenant already exists for the feature. Only one tenant-wide policy is supported.
 - Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature/category is enabled. If a user has multiple policies assigned for a feature/category (directly as a user or member of a group), the most restrictive policy applies.
 - You can only update user controls at the feature policy level, not the category policy level.
-- A policy can not be updated if the policy scope of the feature doesn't match with who has access to the policy being updated. To see allowed policy scopes for this feature, use [this commandlet](https://learn.microsoft.com/en-us/powershell/module/exchange/get-vivamodulefeature).
+- Some features only support policies that apply to the entire tenant, not specific users or groups. You can refer to supported policy scopes for a feature using the [Get-VivaModuleFeature](https://learn.microsoft.com/en-us/powershell/module/exchange/get-vivamodulefeature) cmdlet.
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
@@ -247,8 +247,6 @@ The Everyone parameter specifies that the updated policy applies to all users in
 - $true: The policy applies to all users. This is the only useful value for this parameter.
 - $false: Don't use this value.
 
-Only use this parameter if the feature has the Tenant policy scope.
-
 If you don't want to update who the policy applies to, don't use this parameter.
 
 Don't use this parameter with the GroupIds or UserIds parameters.
@@ -274,8 +272,6 @@ If you don't want to update who the policy applies to, don't use this parameter.
 The values that you specify for this parameter or the UserIds parameter replace any existing groups. To preserve the existing groups, include them along with any new users or groups that you specify.
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
-
-Only use this parameter if the feature has the Group policy scope.
 
 To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
 
@@ -409,8 +405,6 @@ If you don't want to update who the policy applies to, don't use this parameter.
 The values that you specify for this parameter or the GroupIds parameter replace any existing users. To preserve the existing users, include them along with any new users or groups that you specify.
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
-
-Only use this parameter if the feature has the User policy scope.
 
 To have the updated policy apply to all users in the organization, use the Everyone parameter with the value $true.
 
