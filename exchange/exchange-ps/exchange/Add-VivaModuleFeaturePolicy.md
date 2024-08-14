@@ -23,6 +23,7 @@ Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a spec
 - Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature/category is enabled. If a user has multiple policies assigned for a feature/category (directly as a user or member of a group), the most restrictive policy applies.
 - If a category is disabled by category policies, all features under the category are disabled regardless of the policies set at the feature level.
 - You can only update user controls at the feature policy level, not the category policy level.
+- A policy can not be added if the policy scope of the feature doesn't match with who has access to the policy being added. To see allowed policy scopes for this feature, use [this commandlet](https://learn.microsoft.com/en-us/powershell/module/exchange/get-vivamodulefeature).
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
@@ -278,6 +279,8 @@ Accept wildcard characters: False
 ### -Everyone
 The Everyone switch specifies that the policy applies to all users in the organization. You don't need to specify a value with this switch.
 
+Only use this parameter if the feature has the Tenant policy scope.
+
 Don't use this switch with the GroupIds or UserIds parameters.
 
 ```yaml
@@ -297,6 +300,8 @@ Accept wildcard characters: False
 The GroupIds parameter specifies the email addresses or security group object IDs (GUIDs) of groups that the updated policy applies to. Both [Mail-enabled and non-mail-enabled Microsoft Entra groups](https://docs.microsoft.com/graph/api/resources/groups-overview#group-types-in-azure-ad-and-microsoft-graph) are supported. You can enter multiple values separated by commas.
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+Only use this parameter if the feature has the Group policy scope.
 
 To have the policy apply to all users in the organization, use the Everyone switch.
 
@@ -358,6 +363,8 @@ Accept wildcard characters: False
 The UserIds parameter specifies the user principal names (UPNs) of the users that the policy applies to. You can enter multiple values separated by commas.
 
 You can specify a maximum of 20 total users or groups (20 users and no groups, 10 users and 10 groups, etc.).
+
+Only use this parameter if the feature has the User policy scope.
 
 To have the policy apply to all users in the organization, use the Everyone switch.
 
