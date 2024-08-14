@@ -23,7 +23,7 @@ Use the Add-VivaModuleFeaturePolicy cmdlet to add a new access policy for a spec
 - Policies assigned to a specific user or group take priority over the policy assigned to the entire tenant when determining whether a feature/category is enabled. If a user has multiple policies assigned for a feature/category (directly as a user or member of a group), the most restrictive policy applies.
 - If a category is disabled by category policies, all features under the category are disabled regardless of the policies set at the feature level.
 - You can only update user controls at the feature policy level, not the category policy level.
-- Some features only support policies that apply to the entire tenant, not specific users or groups. You can refer to supported policy scopes for a feature using the [Get-VivaModuleFeature](https://learn.microsoft.com/en-us/powershell/module/exchange/get-vivamodulefeature) cmdlet.
+- Some features only support policies that apply to the entire tenant, not specific users or groups. You can refer to supported policy scopes for a feature using the [Get-VivaModuleFeature](https://learn.microsoft.com/powershell/module/exchange/get-vivamodulefeature) cmdlet.
 
 Some features include the option for user controls (user opt out). Refer to the feature documentation to see if user controls are available for the feature that you intend to set a policy for.
 
