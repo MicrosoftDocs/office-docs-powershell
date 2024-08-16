@@ -38,6 +38,11 @@ Set-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumbe
 Set-CsPhoneNumberAssignment -Identity <String> -EnterpriseVoiceEnabled <Boolean> [<CommonParameters>]
 ```
 
+### ReverseNumberLookup
+```powershell
+Set-CsPhoneNumberAssignment -PhoneNumber <string> -ReverseNumberLookup <string> [<CommonParameters>]
+```
+
 ## DESCRIPTION
 This cmdlet assigns a phone number to a user or resource account. When you assign a phone number the EnterpriseVoiceEnabled flag is automatically set to True.
 
@@ -131,6 +136,12 @@ Write-Host (Get-CsPhoneNumberAssignment -LocationId $OldLocationId).Count number
 Write-Host (Get-CsPhoneNumberAssignment -LocationId $NewLocationId).Count numbers found in new location $NewLocationId
 ```
 This Example shows how to update the LocationID from an old location to a new location for a set of phone numbers.
+
+### Example 11
+```powershell
+Set-CsPhoneNumberAssignment -Identity user3@contoso.com -PhoneNumber +12065551226 -ReverseNumberLookup 'SkipInternalVoip'
+```
+This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. 
 
 
 ## PARAMETERS
