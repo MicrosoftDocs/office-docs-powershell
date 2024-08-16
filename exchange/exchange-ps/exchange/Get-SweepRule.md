@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/get-sweeprule
-applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online
+applicable: Exchange Server 2016, Exchange Server 2019, Exchange Online, Exchange Online Protection
 title: Get-SweepRule
 schema: 2.0.0
 author: chrisda

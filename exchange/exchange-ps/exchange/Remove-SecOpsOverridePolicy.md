@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 online version: https://learn.microsoft.com/powershell/module/exchange/remove-secopsoverridepolicy
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+applicable: Exchange Online
 title: Remove-SecOpsOverridePolicy
 schema: 2.0.0
 author: chrisda
@@ -55,7 +55,7 @@ The Identity parameter specifies the SecOps override policy that you want to rem
 Type: PolicyIdParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: True
 Position: 0
@@ -74,7 +74,7 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ This parameter is reserved for internal Microsoft use.
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ The ForceDeletion switch forces the removal of the SecOps override policy. You d
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Online, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ The WhatIf switch doesn't work in Security & Compliance PowerShell.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+Applicable: Exchange Online
 
 Required: False
 Position: Named

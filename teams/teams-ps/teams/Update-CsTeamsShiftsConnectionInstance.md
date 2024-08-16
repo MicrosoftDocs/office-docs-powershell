@@ -17,23 +17,37 @@ This cmdlet updates Shifts connection instance fields.
 ## SYNTAX
 
 ### Update (Default)
-```
-Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> -Body <IUpdateConnectorInstanceFieldsRequest> [-Break]
+[-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
+[-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateExpanded
-```
-Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-State <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>] [-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>] [-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Update-CsTeamsShiftsConnectionInstance -ConnectorInstanceId <string> -IfMatch <string> [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>]
+[-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-State <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>]
+ [-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>]
+ [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>] [-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>]
+ [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
-```
-Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string> [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-State <string>] [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>] [-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>] [-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>] [-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string>
+ [-ConnectionId <string>] [-ConnectorAdminEmail <string[]>] [-DesignatedActorId <string>] [-Etag <string>] [-Name <string>] [-State <string>]
+ [-SyncFrequencyInMin <int>] [-SyncScenarioOfferShiftRequest <string>] [-SyncScenarioOpenShift <string>] [-SyncScenarioOpenShiftRequest <string>]
+[-SyncScenarioShift <string>] [-SyncScenarioSwapRequest <string>] [-SyncScenarioTimeCard <string>] [-SyncScenarioTimeOff <string>]
+[-SyncScenarioTimeOffRequest <string>] [-SyncScenarioUserShiftPreference <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentity
-```
-Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string> -Body <IUpdateConnectorInstanceFieldsRequest> [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
+```powershell
+Update-CsTeamsShiftsConnectionInstance -InputObject <IConfigApiBasedCmdletsIdentity> -IfMatch <string> -Body <IUpdateConnectorInstanceFieldsRequest>
+ [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>]
+ [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -447,6 +461,37 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConnectionId
+The WFM connection ID for the instance.
+This can be retrieved by running Get-CsTeamsShiftsConnection (Get-CsTeamsShiftsConnection.md).
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Etag
+Used to manage concurrency control. It helps ensure that updates to a Shifts connection instance are only applied if the instance has not been modified since it was last retrieved. This is particularly useful in preventing conflicts when multiple administrators might be making changes simultaneously.
+
+```yaml
+Type: String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+
 Required: False
 Position: Named
 Default value: None

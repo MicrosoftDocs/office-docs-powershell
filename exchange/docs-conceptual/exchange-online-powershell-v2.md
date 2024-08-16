@@ -3,7 +3,7 @@ title: About the Exchange Online PowerShell V3 module
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 06/26/2024
+ms.date: 07/16/2024
 ms.audience: Admin
 audience: Admin
 ms.topic: article
@@ -610,13 +610,19 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.5.1
+
+- Bug fixes in **Get-EXOMailboxPermission** and **Get-EXOMailbox**.
+- The module has been upgraded to run on .NET 8, replacing the previous version based on .NET 6.
+- Enhancements in **Add-VivaModuleFeaturePolicy**.
+
+### Previous releases
+
 #### Version 3.5.0
 
 - New **Get-VivaFeatureCategory** cmdlet.
 - Added support for policy operations at the category level in Viva Feature Access Management (VFAM).
 - New IsFeatureEnabledByDefault property in the output of **Get-VivaModuleFeaturePolicy**. The value of this property shows the default enablement state for users in the tenant when no tenant or user/group policies were created.
-
-### Previous releases
 
 #### Version 3.4.0
 
