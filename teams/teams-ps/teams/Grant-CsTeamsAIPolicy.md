@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Grant-CsTeamsAIPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Grant-CsTeamsAIPolicy
 schema: 2.0.0
-author: andywang_microsoft
+author: Andy447
 ms.author: andywang
 ---
 

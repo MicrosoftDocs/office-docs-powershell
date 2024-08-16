@@ -5,7 +5,7 @@ applicable: Microsoft Teams
 title: Set-CsTeamsAIPolicy
 online version: https://learn.microsoft.com/powershell/module/teams/Set-CsTeamsAIPolicy
 schema: 2.0.0
-author: andywang_microsoft
+author: Andy447
 ms.author: andywang
 ---
 
