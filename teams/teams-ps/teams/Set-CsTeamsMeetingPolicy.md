@@ -61,6 +61,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AutoAdmittedUsers <String>]
  [-AutomaticallyStartCopilot <String>]
  [-BlockedAnonymousJoinClientTypes <List>]
+ [-CaptchaVerificationForMeetingJoin <String>]
  [-ChannelRecordingDownload <String>]
  [-Confirm]
  [-ConnectToMeetingControls <String>]
@@ -768,6 +769,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CaptchaVerificationForMeetingJoin
+Check that everyone joining from outside the company is a real person. This will prevent unwanted guests.
+
+Possible values:
+
+- **NotRequired**, Captcha not required
+- **AnonymousUsersAndUntrustedOrganizations**, Anonymous users and people from untrusted organizations
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: NotRequired
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ChannelRecordingDownload
 Controls how channel meeting recordings are saved, permissioned, and who can download them.
 
@@ -804,7 +825,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectToMeetingControls
-Allows external connections of thirdparty apps to teams
+Allows external connections of thirdparty apps to Microsoft Teams 
 
 Possible values are:
 - Enabled 
@@ -817,7 +838,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
