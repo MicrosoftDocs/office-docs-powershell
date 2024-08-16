@@ -825,7 +825,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectToMeetingControls
-Allows external connections of thirdparty apps to teams
+Allows external connections of thirdparty apps to Microsoft Teams 
 
 Possible values are:
 - Enabled 
@@ -838,7 +838,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
