@@ -534,7 +534,7 @@ Accept wildcard characters: False
 ### -SmtpDaneMandatoryModeEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill SmtpDaneMandatoryModeEnabled Description }}
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Boolean

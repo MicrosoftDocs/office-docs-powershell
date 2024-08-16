@@ -84,6 +84,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
+ [-RoomPeopleNameUserOverride <String>]
  [-ScreenSharingMode <String>]
  [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
@@ -1201,10 +1202,14 @@ Accept wildcard characters: False
 ```
 
 ### -SpeakerAttributionMode
+Determines if users are identified in transcriptions and if they can change the value of the _Automatically identify me in meeting captions and transcripts_ setting.
+
 Possible values:
 
-- EnabledUserOverride
-- Disabled
+- **Enabled**: Speakers are identified in transcription.
+- **EnabledUserOverride**: Speakers are identified in transcription. If enabled, users can override this setting and choose not to be identified in their Teams profile settings.
+- **DisabledUserOverride**: Speakers are not identified in transcription. If enabled, users can override this setting and choose to be identified in their Teams profile settings.
+- **Disabled**: Speakers are not identified in transcription.
 
 ```yaml
 Type: String
