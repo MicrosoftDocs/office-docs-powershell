@@ -304,7 +304,7 @@ The HiddenGroupMembershipEnabled switch specifies whether to hide the members of
 
 You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
 
-**Note**: You can't change this setting after you create the group. If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group, or vice-versa.
+**Note**: If you create the group with hidden membership, you can't edit the group later to reveal the membership to the group.
 
 ```yaml
 Type: SwitchParameter
@@ -346,7 +346,14 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 - Approve member depart or join requests (if available)
 - Approve messages sent to the group if moderation is enabled, but no moderators are specified.
 
-The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
+The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned).
+
+Considerations for mail-enabled security groups as group owners:
+
+- If you specify a mail-enabled security group as a group owner in on-premises Exchange, the mail-enabled security group doesn't sync to the cloud object.
+- Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
+
+You can use any value that uniquely identifies the owner. For example:
 
 - Name
 - Alias

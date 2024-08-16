@@ -16,6 +16,8 @@ This cmdlet is available only in the cloud-based service.
 
 Use the New-InboundConnector cmdlet to create a new Inbound connector in your cloud-based organization.
 
+**Note**: Creation of inbound connectors is restricted in [Microsoft 365 E5 developer subscriptions](https://learn.microsoft.com/office/developer-program/microsoft-365-developer-program-faq#does-the-microsoft-365-e5-developer-subscription-include-the-same-capabilities-that-the-regular-microsoft-365-e5-subscription-includes-). Opening a support ticket in affected organizations won't help.
+
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
@@ -23,6 +25,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-InboundConnector [-Name] <String> -SenderDomains <MultiValuedProperty>
  [-AssociatedAcceptedDomains <MultiValuedProperty>]
+ [-ClientHostNames <MultiValuedProperty>]
  [-CloudServicesMailEnabled <Boolean>]
  [-Comment <String>]
  [-Confirm]
@@ -89,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderDomains
-The SenderDomains parameter specifies the source domains that the connector accepts messages for. A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, \*.contoso.com), but you can't embed the wildcard character (for example, domain.\*.contoso.com is not valid).
+The SenderDomains parameter specifies the source domains that a Partner type connector accepts messages for (limits the scope of a Partner type connector). A valid value is an SMTP domain. Wildcards are supported to indicate a domain and all subdomains (for example, `*.contoso.com`). However, you can't embed the wildcard character (for example, `domain.*.contoso.com` isn't valid).
 
 You can specify multiple domains separated by commas.
 
@@ -110,6 +113,22 @@ Accept wildcard characters: False
 The AssociatedAcceptedDomains parameter restricts the source domains that use the connector to the specified accepted domains. A valid value is an SMTP domain that's configured as an accepted domain in your Microsoft 365 organization.
 
 You can specify multiple values separated by commas.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClientHostNames
+{{ Fill ClientHostNames Description }}
 
 ```yaml
 Type: MultiValuedProperty
@@ -208,7 +227,7 @@ Accept wildcard characters: False
 The ConnectorType parameter specifies the category for the source domains that the connector accepts messages for. Valid values are:
 
 - Partner: External partners or services.
-- OnPremises: Your on-premises email organization. Use this value for accepted domains in your cloud-based organization that are also specified by the SenderDomains parameter.
+- OnPremises: The connector services domains that are used by your on-premises organization. OnPremises connectors grant special rights to an email that matches the connector and additional requirements. For example: allowing relay through the tenant to internet destinations, promoting emails from on-premises or other environments as internal (in a hybrid configuration), or enabling other more complex mail flows.
 
 ```yaml
 Type: TenantConnectorType
@@ -334,10 +353,12 @@ Accept wildcard characters: False
 ```
 
 ### -RequireTls
-The RequireTLS parameter specifies whether to require TLS transmission for all messages that are received by the connector. Valid values are:
+The RequireTLS parameter specifies whether to require TLS transmission for all messages that are received by a Partner type connector. Valid values are:
 
 - $true: Reject messages if they aren't sent over TLS. This is the default value
 - $false: Allow messages if they aren't sent over TLS.
+
+**Note**: This parameter applies only to Partner type connectors.
 
 ```yaml
 Type: Boolean
@@ -353,10 +374,12 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToCertificate
-The RestrictDomainsToCertificate parameter specifies whether the Subject value of the TLS certificate is checked before messages can use the connector. Valid values are:
+The RestrictDomainsToCertificate parameter specifies whether the Subject value of the TLS certificate is checked before messages can use the Partner type connector. Valid values are:
 
 - $true: Mail is allowed to use the connector only if the Subject value of the TLS certificate that the source email server uses to authenticate matches the TlsSenderCertificateName parameter value.
 - $false: The Subject value of the TLS certificate that the source email server uses to authenticate doesn't control whether mail from that source uses the connector. This is the default value.
+
+**Note**: This parameter applies only to Partner type connectors.
 
 ```yaml
 Type: Boolean
@@ -372,10 +395,12 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictDomainsToIPAddresses
-The RestrictDomainsToIPAddresses parameter specifies whether to reject mail that comes from unknown source IP addresses. Valid values are:
+The RestrictDomainsToIPAddresses parameter specifies whether to reject mail that comes from unknown source IP addresses for Partner type connectors. Valid values are:
 
 - $true: Automatically reject mail from domains that are specified by the SenderDomains parameter if the source IP address isn't also specified by the SenderIPAddress parameter.
 - $false: Don't automatically reject mail from domains that are specified by the SenderDomains parameter based on the source IP address. This is the default value.
+
+**Note**: This parameter applies only to Partner type connectors.
 
 ```yaml
 Type: Boolean
@@ -407,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderIPAddresses
-The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the connector accepts messages from. Valid values are:
+The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the Partner type connector accepts messages from when the value of the RestrictDomainsToIPAddresses parameter is $true. Valid values are:
 
 - Single IP address: For example, 192.168.1.1.
 - Classless InterDomain Routing (CIDR) IP address range: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32.
@@ -415,6 +440,8 @@ The SenderIPAddresses parameter specifies the source IPV4 IP addresses that the 
 You can specify multiple IP addresses separated by commas.
 
 IPv6 addresses are not supported.
+
+**Note**: This parameter applies to Partner type connectors only if the value of the RestrictDomainsToIPAddresses parameter is $true.
 
 ```yaml
 Type: MultiValuedProperty
