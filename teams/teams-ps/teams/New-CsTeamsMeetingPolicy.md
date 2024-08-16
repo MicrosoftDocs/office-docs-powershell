@@ -79,6 +79,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
+ [-RoomPeopleNameUserOverride <String>]
  [-ScreenSharingMode <String>]
  [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
@@ -251,7 +252,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it. ForceEnabled will enable attendee report generation and prohibit meeting organizer from disabling it.
+
+Possible values:
+
+- Enabled
+- Disabled
+- ForceEnabled
 
 ```yaml
 Type: String

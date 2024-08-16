@@ -14,8 +14,13 @@ This cmdlet allows you to get properties of a TeamsShiftPolicy instance, includi
 ## SYNTAX
 
 ### Identity (Default)
-```
+```powershell
 Get-CsTeamsShiftsPolicy [[-Identity] <XdsIdentity>] [<CommonParameters>]
+```
+
+### Filter
+```powershell
+Get-CsTeamsShiftsPolicy [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,6 +56,21 @@ Aliases:
 Applicable: Microsoft Teams
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Filter
+Enables you to use wildcard characters when indicating the policy (or policies) to be returned. To return a collection of all the policies, use this syntax: -Filter "tag:*".
+
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

@@ -531,6 +531,9 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
  
 When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
+> [!IMPORTANT]
+> The `All` option is no longer supported.
+
 ```yaml
 Type: Object
 Parameter Sets: Dual
@@ -543,7 +546,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
- 
+
 ### -RealTimeCallQueueMetricsPermission
 
 PARAMVALUE: Disabled | AuthorizedOnly | All
@@ -553,6 +556,9 @@ When set to `Disabled` (the default value), users affected by the policy won't r
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for call queues they are authorized for.
  
 When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
+
+> [!IMPORTANT]
+> The `All` option is no longer supported.
 
 ```yaml
 Type: Object
@@ -576,6 +582,9 @@ When set to `Disabled` (the default value), users affected by the policy won't r
 When set to `AuthorizedOnly`, users affected by the policy will receive real-time metrics for agents who are members in the call queues they are authorized for.
  
 When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
+
+> [!IMPORTANT]
+> The `All` option is no longer supported.
 
 ```yaml
 Type: Object

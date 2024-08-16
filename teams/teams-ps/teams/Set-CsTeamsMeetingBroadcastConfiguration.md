@@ -180,6 +180,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SdnRuntimeConfiguration
+Specifies connection parameters used to connect with a 3rd party eCDN provider. These parameters should be obtained from the SDN provider to be used. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SupportURL
 Specifies a URL where broadcast event attendees can find support information or FAQs specific to that event. The URL will be displayed to the attendees during the broadcast. 
 
