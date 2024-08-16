@@ -37,7 +37,7 @@ This example shows how to read the batch status response into a new variable and
 ## PARAMETERS
 
 ### -Batchid
-Batch ID is the response returned by the New-CsSdgBulkSignInRequest cmdlet. It is used as input for querying the status of the batch through Get-CsSdgBulkSignInRequestStatus cmdlet.
+Batch ID is the response returned by the `New-CsSdgBulkSignInRequest` cmdlet. It is used as input for querying the status of the batch through `Get-CsSdgBulkSignInRequestStatus` cmdlet.
 
 ```yaml
 Type: String
