@@ -12,7 +12,7 @@ ms.author: andywang
 # Grant-CsTeamsAIPolicy
 
 ## SYNOPSIS
-This cmdlet applies an instance of the Teams media connectivity policy to users or groups in a tenant.
+This cmdlet applies an instance of the Teams AI policy to users or groups in a tenant.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Grant-CsTeamsAIPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParame
 
 ## DESCRIPTION
 
-This cmdlet applies an instance of the Teams media connectivity policy to users or groups in a tenant.
+This cmdlet applies an instance of the Teams AI policy to users or groups in a tenant.
 
 Passes in the `Identity` of the policy instance in the `PolicyName` parameter and the user identifier in the `Identity` parameter or the group name in the `Group` parameter. One of either `Identity` or `Group` needs to be passed.
 
