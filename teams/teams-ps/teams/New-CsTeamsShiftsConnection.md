@@ -17,12 +17,12 @@ This cmdlet creates a new workforce management (WFM) connection.
 ## SYNTAX
 
 ### New (Default)
-```
+```powershell
 New-CsTeamsShiftsConnection -Body <IWfmConnectionRequest> [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NewExpanded
-```
+```powershell
 New-CsTeamsShiftsConnection -ConnectorId <string> -ConnectorSpecificSettings <IWfmConnectionRequestConnectorSpecificSettings> -Name <string> -State <string> [-Authorization <string>] [-Break] [-HttpPipelineAppend <SendAsyncStep[]>] [-HttpPipelinePrepend <SendAsyncStep[]>] [-Proxy <uri>] [-ProxyCredential <pscredential>] [-ProxyUseDefaultCredentials] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -316,6 +316,21 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Authorization
+Used to provide the necessary credentials for authenticating and authorizing the connection to the workforce management (WFM) system. This parameter ensures that the connection has the appropriate permissions to access and manage the data within the WFM system.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
