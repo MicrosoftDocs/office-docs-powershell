@@ -532,7 +532,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The paramater will be accepted and saved however any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -558,7 +558,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The paramater will be accepted and saved however any user assigned a policy with *RealTimeCallQueueMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -584,7 +584,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The paramater will be accepted and saved however any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
