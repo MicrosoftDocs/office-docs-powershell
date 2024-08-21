@@ -11,7 +11,7 @@ author: artemiykozlov
 # New-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPolicy. The end user experience utilizing this policy is currently under development and has not been made generally available. You can see updates on when it will be generally available at [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2Cset%2Cwork%2Clocation"https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2cset%2cwork%2clocation").
+This cmdlet is used to create a new instance of the TeamsWorkLocationDetectionPolicy. The end user experience utilizing this policy is currently under development and has not been made generally available. You can see updates on when it will be generally available at [Microsoft 365 Roadmap | Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/roadmap?msockid=287ab43847c06d0008cca05b46076c18&filters=&searchterms=automatically%2Cset%2Cwork%2Clocation).
 
 ## SYNTAX
 
