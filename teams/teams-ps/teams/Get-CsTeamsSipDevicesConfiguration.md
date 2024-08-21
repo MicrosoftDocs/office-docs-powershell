@@ -24,7 +24,7 @@ Get-CsTeamsSipDevicesConfiguration
 
 This cmdlet is used to retrieve the organization-wide Teams SIP devices configuration which contains settings that are applicable to SIP devices connected to Teams using Teams Sip Gateway.
 
-To execute the cmdlet, you need to hold a role within your organization such as Global Administrator, Global Reader, Teams Administrator, or Teams Communication Administrator.
+To execute the cmdlet, you need to hold a role within your organization such as Global Reader, Teams Administrator, or Teams Communication Administrator.
 
 ## Examples
 

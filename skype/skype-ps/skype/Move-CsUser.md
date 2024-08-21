@@ -16,8 +16,11 @@ ms.reviewer:
 
 Moves one or more user accounts enabled for Skype for Business Server to TeamsOnly (or the reverse). This cmdlet also can be used to move on-premises users from one pool to another. 
 
+**PRE-REQUISITES steps for running Move-CsUser**
+- Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
+  
 **PRE-REQUISITES steps for** [Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/services-in-china?view=o365-21vianet) 
-- Install or update the Microsoft Teams PowerShell module to version 5.2.0 or later
+- Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
 - Run Set-TeamsEnvironmentConfig -TeamsEnvironmentName TeamsChina
 
 For more information, see [Set-TeamsEnvironmentConfig](/powershell/module/teams/set-teamsenvironmentconfig).
