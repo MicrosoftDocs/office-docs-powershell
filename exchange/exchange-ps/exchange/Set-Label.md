@@ -720,6 +720,7 @@ Accept wildcard characters: False
 The DynamicWatermarkDisplay parameter specifies the watermark text to display for a given label. This parameter supports text and the following special tokens:
 
 - **"\`${Consumer.PrincipalName}**": Required. The value is the user principal name (UPN) of the user.
+- **"\`${Device.DateTime}**": Optional. The value is current date/time of the device used to view the document.
 
 **Tip** The back quotation mark character ( \` ) is required as an escape character for the dollar sign character ( $ ) in PowerShell. For more information, see [Escape characters in Exchange PowerShell](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax#escape-characters-in-exchange-powershell).
 
