@@ -1254,7 +1254,10 @@ Accept wildcard characters: False
 ### -HideClassicOutlookToggleOut
 This parameter is available only in the cloud-based service.
 
-{{ Fill HideClassicOutlookToggleOut Description }}
+The HideClassicOutlookToggleOut parameter specifies whether to enable or disable hiding the toggle in new Outlook, for switching back to classic Outlook. Valid values are: 
+
+- $true: Toggle for switching back to classic Outlook is hidden in new Outlook for Windows.
+- $false: Toggle for switching back to classic Outlook is not hidden in new Outlook for Windows. This is the default value.
 
 ```yaml
 Type: System.Boolean
