@@ -759,12 +759,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocation
-The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are:
+The RemoveExchangeLocation parameter specifies the mailboxes to remove from the list of included mailboxes when you aren't using the value All for the ExchangeLocation parameter. Valid values are mailboxes.
 
-- A mailbox
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+To specify a mailbox, you can use any value that uniquely identifies it. For example:
 
 - Name
 - Distinguished name (DN)
@@ -787,12 +784,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExchangeLocationException
-The RemoveExchangeLocationException parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are:
+The RemoveExchangeLocationException parameter specifies the mailboxes to remove from the list of excluded mailboxes when you use the value All for the ExchangeLocation parameter. Valid values are mailboxes.
 
-- A mailbox
-- A distribution group or mail-enabled security group
-
-To specify a mailbox or distribution group, you can use any value that uniquely identifies it. For example:
+To specify a mailbox, you can use any value that uniquely identifies it. For example:
 
 - Name
 - Distinguished name (DN)
