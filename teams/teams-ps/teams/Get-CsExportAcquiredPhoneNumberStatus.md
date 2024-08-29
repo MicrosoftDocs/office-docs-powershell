@@ -35,9 +35,9 @@ By Default the download link will remain active for 1 hour.
 Get-CsExportAcquiredPhoneNumberStatus -OrderId 0e923e2c-ab0e-4b7a-be5a-906be8c
 ```
 ```output
-Id					: 0e923e2c-ab0e-4b7a-be5a-906be8c
-CreatedAt			: 2024-08-29 21:50:54Z
-status				: Success
+Id					        : 0e923e2c-ab0e-4b7a-be5a-906be8c
+CreatedAt		      	: 2024-08-29 21:50:54Z
+status		      		: Success
 DownloadLinkExpiry	: 2024-08-29 22:51:17Z
 DownloadLinkExpiry	:<link>
 ```
