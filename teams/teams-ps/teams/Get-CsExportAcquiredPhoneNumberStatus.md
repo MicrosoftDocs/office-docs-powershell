@@ -39,7 +39,7 @@ Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
 CreatedAt            : 2024-08-29 21:50:54Z
 status               : Success
 DownloadLinkExpiry   : 2024-08-29 22:51:17Z
-DownloadLinkExpiry   :<link>
+DownloadLinkExpiry   : <link>
 ```
 This example displays the status of the export acquired phone numbers operation. The OrderId is the output from [Export-CsAcquiredPhoneNumber] cmdlet. The status contains the download link for the file along with expiry date. 
 
@@ -52,7 +52,7 @@ Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
 CreatedAt            : 2024-08-29 21:50:54Z
 status               : Success
 DownloadLinkExpiry   : 2024-08-29 22:51:17Z
-DownloadLinkExpiry   :<link>
+DownloadLinkExpiry   : <link>
 ```
 This example displays the status of the export acquired phone numbers operation with the use of variable named "orderId". 
 
@@ -66,7 +66,7 @@ Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
 CreatedAt            : 2024-08-29 21:50:54Z
 status               : Success
 DownloadLinkExpiry   : 2024-08-29 22:51:17Z
-DownloadLinkExpiry   :<link>
+DownloadLinkExpiry   : <link>
 ```
 This example stores the [Get-CsExportAcquiredPhoneNumberStatus] cmdlet status for the "oderId" in variable "oder". This will allow quick view of the order status without typing the cmdlet again.  
 
