@@ -34,8 +34,20 @@ By Default the download link will remain active for 1 hour.
 ```powershell
 Get-CsExportAcquiredPhoneNumberStatus -OrderId 0e923e2c-ab0e-4b7a-be5a-906be8c
 ```
+This example displays the status of the export acquired phone numbers operation. The OrderId is the output from [Export-CsAcquiredPhoneNumber] cmdlet. The status contains the download link for the file along with expiry date. 
 
-This example displays the OrderId of the export acquired phone numbers operation. The OrderId can be used to get the download link for the file.
+### Example 2
+```powershell
+Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+```
+This example displays the status of the export acquired phone numbers operation with the use of variable named "orderId". 
+
+### Example 3
+```powershell
+$order = Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+```
+
+This example stores the [Get-CsExportAcquiredPhoneNumberStatus] cmdlet status for the "oderId" in variable "oder". This will allow quick view of the order status without typing the cmdlet again.  
 
 ## PARAMETERS
 

@@ -64,18 +64,33 @@ By default, this cmdlet returns all the phone numbers acquired by the tenant wit
 Export-CsAcquiredPhoneNumber
 ```
 ```output
-OrderId         : 0e923e2c-ab0e-4b7a-be5a-906be8c
+0e923e2c-ab0e-4b7a-be5a-906be8c
 ```
-This example displays the OrderId of the export acquired phone numbers operation. The OrderId can be used to get the download link for the file.
+This example displays the output of the export acquired phone numbers operation. The OrderId shown as the output string and can be used to get the download link for the file.
 
 ### Example 2
 ```powershell
 Export-CsAcquiredPhoneNumber -Property "TelephoneNumber, NumberType, AssignmentStatus"
 ```
 ```output
+0e923e2c-ab0e-6h8c-be5a-906be8c
+```
+This example displays the output of the export acquired phone numbers operation with filtered properties. This file will only contain the properties indicated. 
+
+### Example 3
+```powershell
+$orderId = Export-CsAcquiredPhoneNumber
+```
+This example displays the use of variable "orderId" for the export acquired phone numbers operation. The OrderId string will be stored in the variable named "oderId" and no output will be shown for the cmdlet.
+
+### Example 4
+```powershell
+Export-CsAcquiredPhoneNumber -Property "TelephoneNumber, NumberType, AssignmentStatus"
+```
+```output
 OrderId         : 0e923e2c-ab0e-6h8c-be5a-906be8c
 ```
-This example displays the OrderId of the export acquired phone numbers operation. This file will only contain the properties indicated. 
+This example displays the use of variable "orderId" for the export acquired phone numbers operation with filtered properties. The OrderId string will be stored in the variable named "oderId" and no output will be shown for the cmdlet.  
 
 ## PARAMETERS
 
