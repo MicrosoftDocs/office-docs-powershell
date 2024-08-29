@@ -1171,6 +1171,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RoomPeopleNameUserOverride
+
+Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
+**Note**: In some locations, people recognition can't be used due to local laws or regulations.
+Possible values:
+
+- Off
+- On
+
+On - Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
+Off – No People Recognition option on Microsoft Teams Room (Default).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ScreenSharingMode
 Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
 
