@@ -61,7 +61,7 @@ By default, this cmdlet returns all the phone numbers acquired by the tenant wit
 
 ### Example 1
 ```powershell
-Export-CsAcquiredPhoneNumber
+PS C:\> Export-CsAcquiredPhoneNumber
 ```
 ```output
 0e923e2c-ab0e-4b7a-be5a-906be8c
@@ -70,7 +70,7 @@ This example displays the output of the export acquired phone numbers operation.
 
 ### Example 2
 ```powershell
-Export-CsAcquiredPhoneNumber -Property "TelephoneNumber, NumberType, AssignmentStatus"
+PS C:\> Export-CsAcquiredPhoneNumber -Property "TelephoneNumber, NumberType, AssignmentStatus"
 ```
 ```output
 0e923e2c-ab0e-6h8c-be5a-906be8c
@@ -79,13 +79,13 @@ This example displays the output of the export acquired phone numbers operation 
 
 ### Example 3
 ```powershell
-$orderId = Export-CsAcquiredPhoneNumber
+PS C:\> $orderId = Export-CsAcquiredPhoneNumber
 ```
 This example displays the use of variable "orderId" for the export acquired phone numbers operation. The OrderId string will be stored in the variable named "oderId" and no output will be shown for the cmdlet.
 
 ### Example 4
 ```powershell
-Export-CsAcquiredPhoneNumber -Property "TelephoneNumber, NumberType, AssignmentStatus"
+PS C:\> Export-CsAcquiredPhoneNumber -Property "TelephoneNumber, NumberType, AssignmentStatus"
 ```
 ```output
 OrderId         : 0e923e2c-ab0e-6h8c-be5a-906be8c

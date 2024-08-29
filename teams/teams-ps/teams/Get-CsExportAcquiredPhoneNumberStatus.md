@@ -32,7 +32,7 @@ By Default the download link will remain active for 1 hour.
 
 ### Example 1
 ```powershell
-Get-CsExportAcquiredPhoneNumberStatus -OrderId 0e923e2c-ab0e-4b7a-be5a-906be8c
+PS C:\> Get-CsExportAcquiredPhoneNumberStatus -OrderId 0e923e2c-ab0e-4b7a-be5a-906be8c
 ```
 ```output
 Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
@@ -45,15 +45,29 @@ This example displays the status of the export acquired phone numbers operation.
 
 ### Example 2
 ```powershell
-Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+PS C:\> Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+```
+```output
+Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
+CreatedAt            : 2024-08-29 21:50:54Z
+status               : Success
+DownloadLinkExpiry   : 2024-08-29 22:51:17Z
+DownloadLinkExpiry   :<link>
 ```
 This example displays the status of the export acquired phone numbers operation with the use of variable named "orderId". 
 
 ### Example 3
 ```powershell
-$order = Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+PS C:\> $order = Get-CsExportAcquiredPhoneNumberStatus -OrderId $orderId
+PS C:\> $order
 ```
-
+```output
+Id                   : 0e923e2c-ab0e-4b7a-be5a-906be8c
+CreatedAt            : 2024-08-29 21:50:54Z
+status               : Success
+DownloadLinkExpiry   : 2024-08-29 22:51:17Z
+DownloadLinkExpiry   :<link>
+```
 This example stores the [Get-CsExportAcquiredPhoneNumberStatus] cmdlet status for the "oderId" in variable "oder". This will allow quick view of the order status without typing the cmdlet again.  
 
 ## PARAMETERS
