@@ -14,7 +14,7 @@ schema: 2.0.0
 # Get-CsExportAcquiredPhoneNumberStatus
 
 ## SYNOPSIS
-This cmdlet shows the status of the Get-CsExportAcquiredPhoneNumberStatus cmdlet. 
+This cmdlet shows the status of the [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) cmdlet.
 
 ## SYNTAX
 
