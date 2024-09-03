@@ -345,6 +345,8 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueLanguageChange
 
+_This setting is not currently available for authorized users._
+
 When set to `True`, users affected by the policy will be allowed to change the call queue's language. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's language.
 
 ```yaml
