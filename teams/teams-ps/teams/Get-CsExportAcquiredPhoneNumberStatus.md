@@ -24,7 +24,7 @@ Get-CsExportAcquiredPhoneNumberStatus -OrderId <String>
 ```
 
 ## DESCRIPTION
-This cmdlet returns the status of the [Get-CsExportAcquiredPhoneNumberStatus](Get-CsExportAcquiredPhoneNumberStatus.md) operation. The response will include the download link to the file if operation has been completed.
+This cmdlet returns the status of the [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) operation. The response will include the download link to the file if operation has been completed.
 
 By default, the download link will remain active for 1 hour. 
 
@@ -41,7 +41,7 @@ status               : Success
 DownloadLinkExpiry   : 2024-08-29 22:51:17Z
 DownloadLinkExpiry   : <link>
 ```
-This example displays the status of the export acquired phone numbers operation. The OrderId is the output from [Get-CsExportAcquiredPhoneNumberStatus] cmdlet. The status contains the download link for the file along with expiry date. 
+This example displays the status of the export acquired phone numbers operation. The OrderId is the output from [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) cmdlet. The status contains the download link for the file along with expiry date. 
 
 ### Example 2
 ```powershell
