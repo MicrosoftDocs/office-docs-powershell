@@ -81,7 +81,7 @@ This example displays the output of the export acquired phone numbers operation 
 ```powershell
 PS C:\> $orderId = Export-CsAcquiredPhoneNumber
 ```
-This example displays the use of variable "orderId" for the export acquired phone numbers operation. The OrderId string will be stored in the variable named "oderId" and no output will be shown for the cmdlet.
+This example displays the use of variable "orderId" for the export acquired phone numbers operation. The OrderId string will be stored in the variable named "orderId" and no output will be shown for the cmdlet.
 
 ### Example 4
 ```powershell
@@ -90,7 +90,7 @@ PS C:\> Export-CsAcquiredPhoneNumber -Property "TelephoneNumber, NumberType, Ass
 ```output
 OrderId         : 0e923e2c-ab0e-6h8c-be5a-906be8c
 ```
-This example displays the use of variable "orderId" for the export acquired phone numbers operation with filtered properties. The OrderId string will be stored in the variable named "oderId" and no output will be shown for the cmdlet.  
+This example displays the use of variable "orderId" for the export acquired phone numbers operation with filtered properties. The OrderId string will be stored in the variable named "orderId" and no output will be shown for the cmdlet.  
 
 ## PARAMETERS
 
