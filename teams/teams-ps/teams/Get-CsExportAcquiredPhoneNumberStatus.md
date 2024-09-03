@@ -14,7 +14,7 @@ schema: 2.0.0
 # Get-CsExportAcquiredPhoneNumberStatus
 
 ## SYNOPSIS
-This cmdlet shows the status of the Export-CsAcquiredPhoneNumber cmdlet. 
+This cmdlet shows the status of the Get-CsExportAcquiredPhoneNumberStatus cmdlet. 
 
 ## SYNTAX
 
@@ -24,9 +24,9 @@ Get-CsExportAcquiredPhoneNumberStatus -OrderId <String>
 ```
 
 ## DESCRIPTION
-This cmdlet returns the status of the [Export-CsAcquiredPhoneNumber](Export-CsAcquiredPhoneNumber.md) operation. The response will include the download link to the file if operation has been completed.
+This cmdlet returns the status of the [Get-CsExportAcquiredPhoneNumberStatus](Get-CsExportAcquiredPhoneNumberStatus.md) operation. The response will include the download link to the file if operation has been completed.
 
-By Default the download link will remain active for 1 hour. 
+By default, the download link will remain active for 1 hour. 
 
 ## EXAMPLES
 
@@ -41,7 +41,7 @@ status               : Success
 DownloadLinkExpiry   : 2024-08-29 22:51:17Z
 DownloadLinkExpiry   : <link>
 ```
-This example displays the status of the export acquired phone numbers operation. The OrderId is the output from [Export-CsAcquiredPhoneNumber] cmdlet. The status contains the download link for the file along with expiry date. 
+This example displays the status of the export acquired phone numbers operation. The OrderId is the output from [Get-CsExportAcquiredPhoneNumberStatus] cmdlet. The status contains the download link for the file along with expiry date. 
 
 ### Example 2
 ```powershell
@@ -54,7 +54,7 @@ status               : Success
 DownloadLinkExpiry   : 2024-08-29 22:51:17Z
 DownloadLinkExpiry   : <link>
 ```
-This example displays the status of the export acquired phone numbers operation with the use of variable named "orderId". 
+This example displays the status of the export acquired phone numbers operation with the use of a variable named "orderId". 
 
 ### Example 3
 ```powershell
@@ -68,7 +68,7 @@ status               : Success
 DownloadLinkExpiry   : 2024-08-29 22:51:17Z
 DownloadLinkExpiry   : <link>
 ```
-This example stores the [Get-CsExportAcquiredPhoneNumberStatus] cmdlet status for the "oderId" in variable "oder". This will allow quick view of the order status without typing the cmdlet again.  
+This example stores the [Get-CsExportAcquiredPhoneNumberStatus](Get-CsExportAcquiredPhoneNumberStatus.md) cmdlet status for the "orderId" in the variable "order". This will allow a quick view of the order status without typing the cmdlet again.  
 
 ## PARAMETERS
 
