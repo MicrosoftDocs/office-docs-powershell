@@ -730,7 +730,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticallyStartCopilot
-*Note: This feature has not been fully released yet, so the setting will have no effect.*
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 
 This setting gives admins the ability to auto-start Copilot.
 
@@ -1081,7 +1082,8 @@ Accept wildcard characters: False
 ### -MeetingInviteLanguages
 Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
 
-Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
+> [!NOTE]
+> All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
 
 The preliminary list of available languages is shown below:
 
@@ -1103,7 +1105,8 @@ Accept wildcard characters: False
 ### -NewMeetingRecordingExpirationDays
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days. Value can also be -1 to set meeting recordings to never expire.
 
-NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
+> [!NOTE]
+> You may opt to set Meeting Recordings to never expire by entering the value -1.
 
 ```yaml
 Type: Int32
@@ -1138,7 +1141,8 @@ This parameter can take two possible values:
 - Stream
 - OneDriveForBusiness
 
-Note: The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
+> [!NOTE]
+> The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
 
 ```yaml
 Type: String
