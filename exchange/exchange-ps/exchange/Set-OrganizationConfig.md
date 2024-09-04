@@ -2419,7 +2419,7 @@ Accept wildcard characters: False
 ### -IsGroupMemberAllowedToEditContent
 This parameter is available only in the cloud-based service.
 
-{{ Fill IsGroupMemberAllowedToEditContent Description }}
+The IsGroupMemberAllowedToEditContent parameter specifies whether group owner can grant permission to members for Folders and Rules feature content edit.
 
 ```yaml
 Type: Boolean
@@ -2429,7 +2429,7 @@ Applicable: Exchange Online, Exchange Online Protection
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
