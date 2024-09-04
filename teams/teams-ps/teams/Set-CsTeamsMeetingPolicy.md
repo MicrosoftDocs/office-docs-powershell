@@ -1174,14 +1174,16 @@ Accept wildcard characters: False
 ### -RoomPeopleNameUserOverride
 
 Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
-**Note**: In some locations, people recognition can't be used due to local laws or regulations.
+
+>[!NOTE]
+>In some locations, people recognition can't be used due to local laws or regulations.
 Possible values:
-
-- Off
-- On
-
-On - Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
-Off – No People Recognition option on Microsoft Teams Room (Default).
+>   - Off
+>   - On
+>     
+>On - Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
+>
+>Off – No People Recognition option on Microsoft Teams Room (Default).
 
 ```yaml
 Type: String
