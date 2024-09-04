@@ -772,7 +772,19 @@ Accept wildcard characters: False
 ### -BlockMoveMessagesForGroupFolders
 This parameter is available only in the cloud-based service.
 
-{{ Fill BlockMoveMessagesForGroupFolders Description }}
+The BlockMoveMessagesForGroupFolders parameter specifies whether to prevent group owners or group members from moving messages between folders in Microsoft 365 Groups. Valid values are:
+
+- $true: Group owners or group members can't move between folders in Microsoft 365 groups (manually or vial Inbox rules).
+- $false: Group owners or group members can move between folders in Microsoft 365 groups. This is the default value.
+
+The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
+
+Whether group members (not just group owners) are allowed to move messages between folders in Microsoft 365 Groups also depends on the following settings:
+
+- The value of the IsGroupMemberAllowedToEditContent parameter is $true.
+- The group owner selected **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** in the properties of the group in Outlook on the web.
+
+For more information, see [Manage Folders and Rules feature in Microsoft 365 Groups](https://learn.microsoft.com/microsoft-365/enterprise/manage-folders-and-rules-feature).
 
 ```yaml
 Type: Boolean
@@ -2401,7 +2413,14 @@ Accept wildcard characters: False
 ### -IsGroupFoldersAndRulesEnabled
 This parameter is available only in the cloud-based service.
 
-{{ Fill IsGroupFoldersAndRulesEnabled Description }}
+The IsGroupFoldersAndRulesEnabled specifies whether group owners (by default) can create folders and move messages (manually or by using Inbox rules) in Microsoft 365 Groups. Valid values are:
+
+- $true: Group owners can create folders and move messages between folders in Microsoft 365 Groups.
+- $false: Group owners can't create folders or move messages between folders in Microsoft 365 Groups. This is the default value.
+
+To allow group owners to allow group users to create folders and moved messages in Microsoft 365 Groups, use the IsGroupMemberAllowedToEditContent parameter.
+
+For more information, see [Manage Folders and Rules feature in Microsoft 365 Groups](https://learn.microsoft.com/microsoft-365/enterprise/manage-folders-and-rules-feature).
 
 ```yaml
 Type: Boolean
@@ -2419,7 +2438,19 @@ Accept wildcard characters: False
 ### -IsGroupMemberAllowedToEditContent
 This parameter is available only in the cloud-based service.
 
-The IsGroupMemberAllowedToEditContent parameter specifies whether group owner can grant permission to members for Folders and Rules feature content edit.
+The IsGroupMemberAllowedToEditContent parameter specifies whether group owners can allow group members to manage folders and messages in Microsoft 365 Groups. Valid values are:
+
+- $true: Group owners can use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to do the following tasks in Microsoft 365 Groups:
+  • Create, rename, move, copy, and delete folders.
+  • Move, copy, and delete messages manually or via Inbox rules.
+  • Create, edit, copy, and delete Inbox rules.
+- $false: Group owners can't use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to manage folders and messages in Microsoft 365 Groups. Only group owners can manage folders and messages in Microsoft 365 Groups. This is the default value.
+
+The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
+
+To prevent group owners or group members from moving messages between folders manually or vial Inbox rules in Microsoft 365 Groups, use the BlockMoveMessagesForGroupFolders parameter.
+
+For more information, see [Manage Folders and Rules feature in Microsoft 365 Groups](https://learn.microsoft.com/microsoft-365/enterprise/manage-folders-and-rules-feature).
 
 ```yaml
 Type: Boolean
