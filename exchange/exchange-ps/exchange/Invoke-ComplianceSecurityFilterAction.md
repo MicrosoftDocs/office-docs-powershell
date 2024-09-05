@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Invoke-ComplianceSecurityFilterAction [-Action] <String> [-PropertyName] <String> [[-PropertyValue] <String>] [-SiteUrl] <String>
+Invoke-ComplianceSecurityFilterAction [-Action] <String> [[-EmailAddress] <String>] [-PropertyName] <String> [[-PropertyValue] <String>] [-SiteUrl] <String>
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
@@ -47,7 +47,7 @@ BoundaryProperty      : CustomAttribute1
 BoundaryPropertyValue :
 ```
 
-This example returns the status of a OneDrive site to indicate it's associated to a UserMailbox and the CustomAttribute1 property isn't currently set.
+This example returns the status of a OneDrive site to indicate it's associated to a user mailbox and the CustomAttribute1 property isn't currently set.
 
 ### Example 2
 ```powershell
@@ -126,6 +126,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EmailAddress
+The EmailAddress parameter specifies the email address of the affected user mailbox.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Security & Compliance
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PropertyName
 The PropertyName parameter specifies the name of the property of the compliance boundary for the OneDrive site that you want to view or modify. Valid values are:
 
@@ -140,7 +156,7 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -156,7 +172,7 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: False
-Position: 3
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -172,7 +188,7 @@ Aliases:
 Applicable: Security & Compliance
 
 Required: True
-Position: 4
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
