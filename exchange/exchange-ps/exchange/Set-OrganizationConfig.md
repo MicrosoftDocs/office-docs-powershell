@@ -774,8 +774,8 @@ This parameter is available only in the cloud-based service.
 
 The BlockMoveMessagesForGroupFolders parameter specifies whether to prevent group owners or group members from moving messages between folders in Microsoft 365 Groups. Valid values are:
 
-- $true: Group owners or group members can't move between folders in Microsoft 365 groups (manually or vial Inbox rules).
-- $false: Group owners or group members can move between folders in Microsoft 365 groups. This is the default value.
+- $true: Group owners or group members can't move messages between folders in Microsoft 365 groups (manually or vial Inbox rules).
+- $false: Group owners or group members can move messages between folders in Microsoft 365 groups. This is the default value.
 
 The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
 
