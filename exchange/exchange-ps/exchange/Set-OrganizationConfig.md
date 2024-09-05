@@ -2441,9 +2441,13 @@ This parameter is available only in the cloud-based service.
 The IsGroupMemberAllowedToEditContent parameter specifies whether group owners can allow group members to manage folders and messages in Microsoft 365 Groups. Valid values are:
 
 - $true: Group owners can use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to do the following tasks in Microsoft 365 Groups:
+
   • Create, rename, move, copy, and delete folders.
+
   • Move, copy, and delete messages manually or via Inbox rules.
+
   • Create, edit, copy, and delete Inbox rules.
+
 - $false: Group owners can't use the **All members will be able to create, edit, move, copy, and delete mail folders and rules within the group** setting in the group properties in Outlook on the web to allow group members to manage folders and messages in Microsoft 365 Groups. Only group owners can manage folders and messages in Microsoft 365 Groups. This is the default value.
 
 The value of this parameter is meaningful only when the value of the IsGroupFoldersAndRulesEnabled parameter is $true.
