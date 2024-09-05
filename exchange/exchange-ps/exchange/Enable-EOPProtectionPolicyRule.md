@@ -48,7 +48,7 @@ In organizations without Defender for Office 365, this example turns off the Sta
 Enable-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy"; Enable-ATPProtectionPolicyRule -Identity "Standard Preset Security Policy"
 ```
 
-In organizations with Defender for Office 365, this example turns off the Standard preset security policy. The State property value of both rules is now Enabled.
+In organizations with Defender for Office 365, this example turns on the Standard preset security policy. The State property value of both rules is now Enabled.
 
 ## PARAMETERS
 
