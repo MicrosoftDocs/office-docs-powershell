@@ -14,7 +14,7 @@ ms.reviewer:
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Disable-IPv6ForAcceptedDomain cmdlet to disable support for mail delivery to accepted domains in Exchange Online using IPv6.
+Use the Disable-IPv6ForAcceptedDomain cmdlet to disable or opt-out of support for mail delivery to accepted domains in Exchange Online using IPv6.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
