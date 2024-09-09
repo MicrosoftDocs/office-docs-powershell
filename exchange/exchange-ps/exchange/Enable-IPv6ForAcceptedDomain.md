@@ -21,7 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Disable-IPv6ForAcceptedDomain [[-Domain] <String>]
+Enable-IPv6ForAcceptedDomain [[-Domain] <String>]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
