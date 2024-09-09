@@ -28,7 +28,7 @@ Disable-IPv6ForAcceptedDomain [[-Domain] <String>]
 ```
 
 ## DESCRIPTION
-Use the Get-AcceptedDomain cmdlet to return accepted domains in the Exchange Online organization.
+Use the Get-AcceptedDomain cmdlet to return accepted domains in the Exchange Online organization to use with this cmdlet.
 
 If IPv6 is enabled for an accepted domain in Exchange Online, IPv4 and IPv6 addresses are returned in DNS queries for mail flow records of the domain. If IPv6 is disabled, only IPv4 addresses are returned in DNS queries for mail flow records of the domain.
 
