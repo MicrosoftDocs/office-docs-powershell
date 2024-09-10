@@ -127,12 +127,12 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-The EmailAddress parameter specifies the the affected user mailbox. You can use any value that uniquely identifies the mailbox. For example:
+The EmailAddress parameter specifies the the affected user mailbox. You can use the following values to uniquely identify the mailbox:
 
 - Name
-- Distinguished name (DN)
 - Email address
-- GUID
+- Alias
+- ExchangeGUID
 
 If the value contains spaces, enclose the value in quotation marks.
 
