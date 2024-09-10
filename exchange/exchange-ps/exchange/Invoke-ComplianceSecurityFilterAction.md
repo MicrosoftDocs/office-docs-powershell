@@ -127,7 +127,14 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-The EmailAddress parameter specifies the email address of the affected user mailbox.
+The EmailAddress parameter specifies the the affected user mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Distinguished name (DN)
+- Email address
+- GUID
+
+If the value contains spaces, enclose the value in quotation marks.
 
 ```yaml
 Type: String
