@@ -1300,11 +1300,15 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Disable-DnssecForVerifiedDomain](Disable-DnssecForVerifiedDomain.md)
 
+### [Disable-IPv6ForAcceptedDomain](Disable-IPv6ForAcceptedDomain.md)
+
 ### [Disable-SmtpDaneInbound](Disable-SmtpDaneInbound.md)
 
 ### [Disable-TransportAgent](Disable-TransportAgent.md)
 
 ### [Enable-DnssecForVerifiedDomain](Enable-DnssecForVerifiedDomain.md)
+
+### [Enable-IPv6ForAcceptedDomain](Enable-IPv6ForAcceptedDomain.md)
 
 ### [Enable-SmtpDaneInbound](Enable-SmtpDaneInbound.md)
 
@@ -1329,6 +1333,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-FrontendTransportService](Get-FrontendTransportService.md)
 
 ### [Get-InboundConnector](Get-InboundConnector.md)
+
+### [Get-IPv6StatusForAcceptedDomain](Get-IPv6StatusForAcceptedDomain.md)
 
 ### [Get-MailboxTransportService](Get-MailboxTransportService.md)
 
