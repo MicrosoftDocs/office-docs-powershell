@@ -303,6 +303,8 @@ Accept wildcard characters: False
 
 ### -AllowCallQueueNoAgentSharedVoicemailGreetingChange
 
+_This option is not currently available in Queues app._
+
 When set to `True`, users affected by the policy will be allowed to change the call queue's no agent shared voicemail greeting. When set to `False` (the default value), users affected by the policy won't be allowed to change the call queue's no agent shared voicemail greeting.
 
 ```yaml
@@ -542,7 +544,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 When set to `All`, users affected by the policy will receive real-time metrics for all auto attendants in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAutoAttendantMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -568,7 +570,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 When set to `All`, users affected by the policy will receive real-time metrics for all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeCallQueueMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
@@ -594,7 +596,7 @@ When set to `AuthorizedOnly`, users affected by the policy will receive real-tim
 When set to `All`, users affected by the policy will receive real-time metrics for all agents in all call queues in the organization.
 
 > [!IMPORTANT]
-> The `All` option is no longer supported.
+> The `All` option is no longer supported. The parameter will be accepted and saved however any user assigned a policy with *RealTimeAgentMetricsPermission* set to `All` will not be able to access real-time metrics.
 
 ```yaml
 Type: Object
