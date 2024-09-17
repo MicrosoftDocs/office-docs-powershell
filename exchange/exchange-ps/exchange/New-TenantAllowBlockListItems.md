@@ -29,6 +29,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-Expirat
  [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [-SubmissionID <String>]
  [<CommonParameters>]
 ```
@@ -42,6 +43,7 @@ New-TenantAllowBlockListItems -Entries <String[]> -ListType <ListType> [-NoExpir
  [-LogExtraDetails]
  [-Notes <String>]
  [-OutputJson]
+ [-RemoveAfter <Int32>]
  [-SubmissionID <String>]
  [<CommonParameters>]
 ```
@@ -70,7 +72,7 @@ This example adds a file block entry for the specified files that never expires.
 New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
 ```
 
-This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ## PARAMETERS
 
@@ -79,7 +81,7 @@ The Entries parameter specifies the values that you want to add to the Tenant Al
 
 - FileHash: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 - Sender: A domain or email address value. For example, `contoso.com` or `michelle@contoso.com`.
-- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
+- URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
@@ -105,14 +107,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExpirationDate
-The ExpirationDate parameter filters the results by expiration date in Coordinated Universal Time (UTC).
+The ExpirationDate parameter set the expiration date of the entry in Coordinated Universal Time (UTC).
 
 To specify a date/time value for this parameter, use either of the following options:
 
 - Specify the date/time value in UTC: For example, `"2021-05-06 14:30:00z"`.
 - Specify the date/time value as a formula that converts the date/time in your local time zone to UTC: For example, `(Get-Date "5/6/2020 9:30 AM").ToUniversalTime()`. For more information, see [Get-Date](https://learn.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Get-Date).
 
-You can't use this parameter with the NoExpiration switch.
+You can't use this parameter with the NoExpiration or RemoveAfter parameters.
 
 ```yaml
 Type: DateTime
@@ -155,7 +157,7 @@ This switch is available to use in the following scenarios:
 - With the Block switch.
 - With the Allow switch where the ListType parameter value is URL and the ListSubType parameter value is AdvancedDelivery.
 
-You can't use this switch with the ExpirationDate parameter.
+You can't use this switch with the ExpirationDate or RemoveAfter parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -175,9 +177,9 @@ The Allow switch specifies that you're creating an allow entry. You don't need t
 
 You can't use this switch with the Block switch.
 
-**Note**: See [Allow entries in the Tenant Allow/Block List](https://learn.microsoft.com/microsoft-365/security/office-365-security/tenant-allow-block-list-about#allow-entries-in-the-tenant-allowblock-list), before you try to create an allow entry.
+**Note**: See [Allow entries in the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-about#allow-entries-in-the-tenant-allowblock-list), before you try to create an allow entry.
 
-You can also use allow entries for third-party phishing simulation URLs with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+You can also use allow entries for third-party phishing simulation URLs with no expiration. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 
 ```yaml
 Type: SwitchParameter
@@ -213,7 +215,7 @@ Accept wildcard characters: False
 ### -ListSubType
 The ListSubType parameter specifies the subtype for this entry. Valid values are:
 
-- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/microsoft-365/security/office-365-security/advanced-delivery-policy-configure).
+- AdvancedDelivery: Use this value for phishing simulation URLs. For more information, see [Configure the advanced delivery policy for third-party phishing simulations and email delivery to SecOps mailboxes](https://learn.microsoft.com/defender-office-365/advanced-delivery-policy-configure).
 - Tenant: This is the default value.
 
 ```yaml
@@ -250,6 +252,26 @@ The Notes parameters specifies additional information about the object. If the v
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveAfter
+The RemoveAfter parameter enables the **Remove on** \> **45 days after last used date** feature for an allow entry. The LastUsedDate property is populated when the bad entity in the allow entry is encountered by the filtering system during mail flow or time of click. The allow entry is kept for 45 days after the filtering system determines that the entity is clean.
+
+The only valid value for this parameter is 45.
+
+You can't use this parameter with the ExpirationDate or NoExpirationDate parameters.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Online, Security & Compliance, Exchange Online Protection

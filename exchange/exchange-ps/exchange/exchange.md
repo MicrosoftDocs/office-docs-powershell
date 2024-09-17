@@ -959,8 +959,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-HybridConfiguration](Get-HybridConfiguration.md)
 
-### [Get-HybridMailflow](Get-HybridMailflow.md)
-
 ### [Get-HybridMailflowDatacenterIPs](Get-HybridMailflowDatacenterIPs.md)
 
 ### [Get-IntraOrganizationConfiguration](Get-IntraOrganizationConfiguration.md)
@@ -1000,8 +998,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Set-FederationTrust](Set-FederationTrust.md)
 
 ### [Set-HybridConfiguration](Set-HybridConfiguration.md)
-
-### [Set-HybridMailflow](Set-HybridMailflow.md)
 
 ### [Set-IntraOrganizationConnector](Set-IntraOrganizationConnector.md)
 
@@ -1302,7 +1298,19 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ## mail-flow Cmdlets
 ### [Add-ResubmitRequest](Add-ResubmitRequest.md)
 
+### [Disable-DnssecForVerifiedDomain](Disable-DnssecForVerifiedDomain.md)
+
+### [Disable-IPv6ForAcceptedDomain](Disable-IPv6ForAcceptedDomain.md)
+
+### [Disable-SmtpDaneInbound](Disable-SmtpDaneInbound.md)
+
 ### [Disable-TransportAgent](Disable-TransportAgent.md)
+
+### [Enable-DnssecForVerifiedDomain](Enable-DnssecForVerifiedDomain.md)
+
+### [Enable-IPv6ForAcceptedDomain](Enable-IPv6ForAcceptedDomain.md)
+
+### [Enable-SmtpDaneInbound](Enable-SmtpDaneInbound.md)
 
 ### [Enable-TransportAgent](Enable-TransportAgent.md)
 
@@ -1314,6 +1322,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-DeliveryAgentConnector](Get-DeliveryAgentConnector.md)
 
+### [Get-DnssecStatusForVerifiedDomain](Get-DnssecStatusForVerifiedDomain.md)
+
 ### [Get-EdgeSubscription](Get-EdgeSubscription.md)
 
 ### [Get-EdgeSyncServiceConfig](Get-EdgeSyncServiceConfig.md)
@@ -1323,6 +1333,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-FrontendTransportService](Get-FrontendTransportService.md)
 
 ### [Get-InboundConnector](Get-InboundConnector.md)
+
+### [Get-IPv6StatusForAcceptedDomain](Get-IPv6StatusForAcceptedDomain.md)
 
 ### [Get-MailboxTransportService](Get-MailboxTransportService.md)
 
@@ -1353,6 +1365,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-RoutingGroupConnector](Get-RoutingGroupConnector.md)
 
 ### [Get-SendConnector](Get-SendConnector.md)
+
+### [Get-SmtpDaneInboundStatus](Get-SmtpDaneInboundStatus.md)
 
 ### [Get-SystemMessage](Get-SystemMessage.md)
 
@@ -1776,6 +1790,8 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Import-TransportRuleCollection](Import-TransportRuleCollection.md)
 
 ### [Install-UnifiedCompliancePrerequisite](Install-UnifiedCompliancePrerequisite.md)
+
+### [Invoke-ComplianceSecurityFilterAction](Invoke-ComplianceSecurityFilterAction.md)
 
 ### [New-ActivityAlert](New-ActivityAlert.md)
 
@@ -2378,45 +2394,9 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-CompromisedUserDetailReport](Get-CompromisedUserDetailReport.md)
 
-### [Get-ConnectionByClientTypeDetailReport](Get-ConnectionByClientTypeDetailReport.md)
-
-### [Get-ConnectionByClientTypeReport](Get-ConnectionByClientTypeReport.md)
-
-### [Get-CsActiveUserReport](Get-CsActiveUserReport.md)
-
-### [Get-CsAVConferenceTimeReport](Get-CsAVConferenceTimeReport.md)
-
-### [Get-CsClientDeviceDetailReport](Get-CsClientDeviceDetailReport.md)
-
-### [Get-CsClientDeviceReport](Get-CsClientDeviceReport.md)
-
-### [Get-CsConferenceReport](Get-CsConferenceReport.md)
-
-### [Get-CsP2PAVTimeReport](Get-CsP2PAVTimeReport.md)
-
-### [Get-CsP2PSessionReport](Get-CsP2PSessionReport.md)
-
-### [Get-CsPSTNConferenceTimeReport](Get-CsPSTNConferenceTimeReport.md)
-
-### [Get-CsPSTNUsageDetailReport](Get-CsPSTNUsageDetailReport.md)
-
-### [Get-CsUserActivitiesReport](Get-CsUserActivitiesReport.md)
-
-### [Get-CsUsersBlockedReport](Get-CsUsersBlockedReport.md)
-
-### [Get-GroupActivityReport](Get-GroupActivityReport.md)
-
 ### [Get-HistoricalSearch](Get-HistoricalSearch.md)
 
-### [Get-LicenseVsUsageSummaryReport](Get-LicenseVsUsageSummaryReport.md)
-
 ### [Get-LogonStatistics](Get-LogonStatistics.md)
-
-### [Get-MailboxActivityReport](Get-MailboxActivityReport.md)
-
-### [Get-MailboxUsageDetailReport](Get-MailboxUsageDetailReport.md)
-
-### [Get-MailboxUsageReport](Get-MailboxUsageReport.md)
 
 ### [Get-MailDetailDlpPolicyReport](Get-MailDetailDlpPolicyReport.md)
 
@@ -2436,14 +2416,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-MxRecordReport](Get-MxRecordReport.md)
 
-### [Get-O365ClientBrowserDetailReport](Get-O365ClientBrowserDetailReport.md)
-
-### [Get-O365ClientBrowserReport](Get-O365ClientBrowserReport.md)
-
-### [Get-O365ClientOSDetailReport](Get-O365ClientOSDetailReport.md)
-
-### [Get-O365ClientOSReport](Get-O365ClientOSReport.md)
-
 ### [Get-OutboundConnectorReport](Get-OutboundConnectorReport.md)
 
 ### [Get-RecipientStatisticsReport](Get-RecipientStatisticsReport.md)
@@ -2453,22 +2425,6 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 ### [Get-SCInsights](Get-SCInsights.md)
 
 ### [Get-ServiceDeliveryReport](Get-ServiceDeliveryReport.md)
-
-### [Get-SPOActiveUserReport](Get-SPOActiveUserReport.md)
-
-### [Get-SPOSkyDriveProDeployedReport](Get-SPOSkyDriveProDeployedReport.md)
-
-### [Get-SPOSkyDriveProStorageReport](Get-SPOSkyDriveProStorageReport.md)
-
-### [Get-SPOTeamSiteDeployedReport](Get-SPOTeamSiteDeployedReport.md)
-
-### [Get-SPOTeamSiteStorageReport](Get-SPOTeamSiteStorageReport.md)
-
-### [Get-SPOTenantStorageMetricReport](Get-SPOTenantStorageMetricReport.md)
-
-### [Get-StaleMailboxDetailReport](Get-StaleMailboxDetailReport.md)
-
-### [Get-StaleMailboxReport](Get-StaleMailboxReport.md)
 
 ### [Get-SupervisoryReviewActivity](Get-SupervisoryReviewActivity.md)
 

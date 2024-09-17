@@ -1003,7 +1003,11 @@ Accept wildcard characters: False
 ### -HiddenGroupMembershipEnabled
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The HiddenGroupMembershipEnabled switch specifies whether to hide the members of the distribution group from users who aren't members of the group. You don't need to specify a value with this switch.
+
+You can use this setting to help comply with regulations that require you to hide group membership from members or outsiders (for example, a distribution group that represents students enrolled in a class).
+
+**Note**: If you hide the membership of the group with this parameter, you can't edit the group later to reveal the membership to the group.
 
 ```yaml
 Type: SwitchParameter
@@ -1115,7 +1119,10 @@ The ManagedBy parameter specifies an owner for the group. A group must have at l
 
 The owner you specify for this parameter must be a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned).
 
-**Note**: Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
+Considerations for mail-enabled security groups as group owners:
+
+- If you specify a mail-enabled security group as a group owner in on-premises Exchange, the mail-enabled security group doesn't sync to the cloud object.
+- Group management in Outlook doesn't work if the owner is a mail-enabled security group. To manage the group in Outlook, the owner must be a mailbox or a mail user. If you specify a mail-enabled security group as the owner of the group, the group isn't visible in **Distribution groups I own** for the group owners (members of the mail-enabled security group).
 
 You can use any value that uniquely identifies the owner. For example:
 

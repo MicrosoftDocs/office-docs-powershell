@@ -63,7 +63,6 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-CopyRestriction <Boolean>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
- [EnableAnonymousUserCaptcha <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExternalMeetingJoin <String>]
  [-Force]
@@ -79,6 +78,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
+ [-RoomPeopleNameUserOverride <String>]
  [-ScreenSharingMode <String>]
  [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
@@ -251,7 +251,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEngagementReport
-Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it.
+Determines whether users are allowed to download the attendee engagement report. Set this to Enabled to allow the user to download the report. Set this to Disabled to prohibit the user to download it. ForceEnabled will enable attendee report generation and prohibit meeting organizer from disabling it.
+
+Possible values:
+
+- Enabled
+- Disabled
+- ForceEnabled
 
 ```yaml
 Type: String
@@ -835,21 +841,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableAnonymousUserCaptcha
-This setting enforce captcha for anonymous user while meeting join.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -EnrollUserOverride
 Possible values are:
 
@@ -1090,6 +1081,26 @@ Possible values:
 - Off
 - Distinguish
 - Attribute
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoomPeopleNameUserOverride
+Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings. 
+**Note**: In some locations, people recognition can't be used due to local laws or regulations.
+Possible values:
+
+- On
+- Off
 
 ```yaml
 Type: String

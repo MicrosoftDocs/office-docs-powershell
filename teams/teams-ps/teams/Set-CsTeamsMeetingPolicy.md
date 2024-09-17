@@ -69,7 +69,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-CopyRestriction <Boolean>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
- [EnableAnonymousUserCaptcha <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExternalMeetingJoin <String>]
  [-Force]
@@ -85,6 +84,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
+ [-RoomPeopleNameUserOverride <String>]
  [-ScreenSharingMode <String>]
  [-SmsNotifications <String>]
  [-SpeakerAttributionMode <String>]
@@ -280,8 +280,9 @@ Determines whether meeting organizers are allowed to download the attendee engag
 
 - Enabled: allow the meeting organizer to download the report.
 - Disabled: disable attendee report generation and prohibit meeting organizer from downloading it.
+- ForceEnabled: enable attendee report generation and prohibit meeting organizer from disabling it.
 
-If set to enabled, only meeting organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
+If set to Enabled or ForceEnabled, only meeting organizers and co-organizers will get a link to download the report in Teams. Regular attendees will have no access to it.
 
 ```yaml
 Type: String
@@ -729,7 +730,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticallyStartCopilot
-*Note: This feature has not been fully released yet, so the setting will have no effect.*
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 
 This setting gives admins the ability to auto-start Copilot.
 
@@ -803,7 +805,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectToMeetingControls
-Allows external connections of thirdparty apps to teams
+Allows external connections of thirdparty apps to Microsoft Teams 
 
 Possible values are:
 - Enabled 
@@ -816,7 +818,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -905,21 +907,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EnableAnonymousUserCaptcha
-This setting enforce captcha for anonymous user while meeting join.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1095,7 +1082,8 @@ Accept wildcard characters: False
 ### -MeetingInviteLanguages
 Controls how the join information in meeting invitations is displayed by enforcing a common language or enabling up to two languages to be displayed.
 
-Note: All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
+> [!NOTE]
+> All Teams supported languages can be specified using language codes. For more information about its delivery date, see the [roadmap (Feature ID: 81521)](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=81521).
 
 The preliminary list of available languages is shown below:
 
@@ -1117,7 +1105,8 @@ Accept wildcard characters: False
 ### -NewMeetingRecordingExpirationDays
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days. Value can also be -1 to set meeting recordings to never expire.
 
-NOTE: You may opt to set Meeting Recordings to never expire by entering the value -1.
+> [!NOTE]
+> You may opt to set Meeting Recordings to never expire by entering the value -1.
 
 ```yaml
 Type: Int32
@@ -1152,7 +1141,8 @@ This parameter can take two possible values:
 - Stream
 - OneDriveForBusiness
 
-Note: The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
+> [!NOTE]
+> The change of storing Teams meeting recordings from Classic Stream to OneDrive and SharePoint (ODSP) has been completed as of August 30th, 2021. All recordings are now stored in ODSP. This change overrides the RecordingStorageMode parameter, and modifying the setting in PowerShell no longer has any impact.
 
 ```yaml
 Type: String
@@ -1172,6 +1162,32 @@ Possible values:
 - Off
 - Distinguish
 - Attribute
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoomPeopleNameUserOverride
+
+Enabling people recognition requires the tenant CsTeamsMeetingPolicy roomPeopleNameUserOverride to be "On" and roomAttributeUserOverride to be Attribute for allowing individual voice and face profiles to be used for recognition in meetings.
+
+>[!NOTE]
+>In some locations, people recognition can't be used due to local laws or regulations.
+Possible values:
+>   - Off
+>   - On
+>     
+>On - Policy value allows People recognition option on Microsoft Teams Rooms under call control bar.
+>
+>Off – No People Recognition option on Microsoft Teams Room (Default).
 
 ```yaml
 Type: String
@@ -1216,10 +1232,14 @@ Accept wildcard characters: False
 ```
 
 ### -SpeakerAttributionMode
+Determines if users are identified in transcriptions and if they can change the value of the _Automatically identify me in meeting captions and transcripts_ setting.
+
 Possible values:
 
-- EnabledUserOverride
-- Disabled
+- **Enabled**: Speakers are identified in transcription.
+- **EnabledUserOverride**: Speakers are identified in transcription. If enabled, users can override this setting and choose not to be identified in their Teams profile settings.
+- **DisabledUserOverride**: Speakers are not identified in transcription. If enabled, users can override this setting and choose to be identified in their Teams profile settings.
+- **Disabled**: Speakers are not identified in transcription.
 
 ```yaml
 Type: String
