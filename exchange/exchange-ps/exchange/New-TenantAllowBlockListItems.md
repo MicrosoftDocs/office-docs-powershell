@@ -82,20 +82,27 @@ The Entries parameter specifies the values that you want to add to the Tenant Al
 - FileHash: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 - Sender: A domain or email address value. For example, `contoso.com` or `michelle@contoso.com`.
 - URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
-- IP: There is only support for IPv6 addresses only. You can add single IPv6 address in the form of Colon-Hexadecimal or Zero-compression Notation. CIDR IPv6 is supported (range from 1-128 is supported)
+- IP: IPv6 addresses only:
+
+  • Single IPv6 addresses in colon-hexadecimal format (for example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+  • Single IPv6 addresses in zero-compression format (for example, 2001:db8::1 for 2001:0db8:0000:0000:0000:0000:0000:0001).
+
+  • CIDR IPv6 ranges from 1 to 128 (for example, 2001:0db8::/32).
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-- Entry limits:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 for each list subtype (sender, URL, file or IP address).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 for each list subtype (sender, URL, file or IP address).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 for each list subtype (sender, URL, file or IP address).
+Entry limits for each list subtype (sender, URL, file, or IP address):
+
+- **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500.
+- **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000.
+- **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000.
 
 The maximum number of characters in a file entry is 64 and the maximum number of characters in a URL entry is 250.
 
-You can't mix value types (file, sender, IP address or URL) or allow and block actions in the same command.
+You can't mix value types (sender, URL, file, or IP address) or allow and block actions in the same command.
 
-In most cases, you can't modify the IP address, URL, file, or sender values after you create the entry. The only exception is allow URL entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
+In most cases, you can't modify the sender, URL, file, or IP address values after you create the entry. The only exception is URL allow entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
 
 ```yaml
 Type: String[]

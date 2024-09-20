@@ -63,11 +63,11 @@ The Entries parameter specifies the entries that you want to remove based on the
 - FileHash: The exact SHA256 file hash value.
 - Sender domains and email addresses: The exact domain or email address value.
 - Url: The exact URL value.
-- IP: There is only support for IPv6 addresses only. You can add single IPv6 address in the form of Colon-Hexadecimal or Zero-compression Notation. CIDR IPv6 is supported (range from 1-128 is supported)
+- IP: IPv6 addresses only. Single IPv6 addresses in colon-hexadecimal or zero-compression format or CIDR IPv6 ranges from 1 to 128.
 
 This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
-You can't mix value types (IP address, file, sender, or URL) or allow and block actions in the same command.
+You can't mix value types (sender, URL, file, or IP address) or allow and block actions in the same command.
 
 You can't use this parameter with the Ids parameter.
 
