@@ -81,7 +81,7 @@ The Entries parameter specifies the entries that you want to modify based on the
 
 This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
-You can't mix value types (IP address, file, sender, or URL) or allow and block actions in the same command.
+You can't mix value types (sender, URL, file, or IP address) or allow and block actions in the same command.
 
 You can't use this parameter with the Ids parameter.
 
@@ -143,7 +143,11 @@ Accept wildcard characters: False
 ### -NoExpiration
 The NoExpiration switch specifies that the entry should never expire. You don't need to specify a value with this switch.
 
-This switch is available to use with block entries or with url allow entries where the ListSubType parameter value is AdvancedDelivery or with IP address allow entries.
+This switch is available to use with the following types of entries:
+
+- Block entries.
+- URL allow entries where the ListSubType parameter value is AdvancedDelivery.
+- IP address allow entries.
 
 You can't use this switch with the ExpirationDate parameter.
 
