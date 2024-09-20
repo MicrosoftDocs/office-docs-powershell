@@ -76,6 +76,7 @@ The ListType parameter specifies the list to view. Valid values are:
 - FileHash
 - Sender
 - Url
+- IP
 
 ```yaml
 Type: ListType
@@ -96,6 +97,7 @@ The Entry parameter filters the results based on the ListType parameter value. V
 - FileHash: The exact SHA256 file hash value.
 - Sender: The exact domain or email address value.
 - Url: The exact URL value.
+- IP: There is only support for IPv6 addresses only. You can add single IPv6 address in the form of Colon-Hexadecimal or Zero-compression Notation. CIDR IPv6 is supported (range from 1-128 is supported)
 
 This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 

@@ -82,16 +82,20 @@ The Entries parameter specifies the values that you want to add to the Tenant Al
 - FileHash: Use the SHA256 hash value of the file. In Windows, you can find the SHA256 hash value by running the following command in a Command Prompt: `certutil.exe -hashfile "<Path>\<Filename>" SHA256`. An example value is `768a813668695ef2483b2bde7cf5d1b2db0423a0d3e63e498f3ab6f2eb13ea3`.
 - Sender: A domain or email address value. For example, `contoso.com` or `michelle@contoso.com`.
 - URL: Use IPv4 or IPv6 addresses or hostnames. Wildcards (* and ~) are supported in hostnames. Protocols, TCP/UDP ports, or user credentials are not supported. For details, see [URL syntax for the Tenant Allow/Block List](https://learn.microsoft.com/defender-office-365/tenant-allow-block-list-urls-configure#url-syntax-for-the-tenant-allowblock-list).
+- IP: There is only support for IPv6 addresses only. You can add single IPv6 address in the form of Colon-Hexadecimal or Zero-compression Notation. CIDR IPv6 is supported (range from 1-128 is supported)
 
 To enter multiple values, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-For senders, files, and URLs the maximum number of allow entries for each type is 500, and the maximum number of block entries for each type is 500 (1000 entries total for each type).
+- Entry limits:
+  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 for each list subtype (sender, URL, file or IP address).
+  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 for each list subtype (sender, URL, file or IP address).
+  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 for each list subtype (sender, URL, file or IP address).
 
 The maximum number of characters in a file entry is 64 and the maximum number of characters in a URL entry is 250.
 
-You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
+You can't mix value types (file, sender, IP address or URL) or allow and block actions in the same command.
 
-In most cases, you can't modify the URL, file, or sender values after you create the entry. The only exception is allow URL entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
+In most cases, you can't modify the IP address, URL, file, or sender values after you create the entry. The only exception is allow URL entries for phishing simulations (ListType = URL, ListSubType = AdvancedDelivery).
 
 ```yaml
 Type: String[]
@@ -135,6 +139,7 @@ The ListType parameter specifies the type of entry to add. Valid values are:
 - FileHash
 - Sender
 - Url
+- IP
 
 ```yaml
 Type: ListType
@@ -156,6 +161,7 @@ This switch is available to use in the following scenarios:
 
 - With the Block switch.
 - With the Allow switch where the ListType parameter value is URL and the ListSubType parameter value is AdvancedDelivery.
+- With the Allow switch where the ListType parameter value is IP.
 
 You can't use this switch with the ExpirationDate or RemoveAfter parameter.
 
