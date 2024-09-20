@@ -63,10 +63,11 @@ The Entries parameter specifies the entries that you want to remove based on the
 - FileHash: The exact SHA256 file hash value.
 - Sender domains and email addresses: The exact domain or email address value.
 - Url: The exact URL value.
+- IP: IPv6 addresses only. Single IPv6 addresses in colon-hexadecimal or zero-compression format or CIDR IPv6 ranges from 1 to 128.
 
 This value is shown in the Value property of the entry in the output of the Get-TenantAllowBlockListItems cmdlet.
 
-You can't mix value types (file, sender, or URL) or allow and block actions in the same command.
+You can't mix value types (sender, URL, file, or IP address) or allow and block actions in the same command.
 
 You can't use this parameter with the Ids parameter.
 
@@ -109,6 +110,7 @@ The ListType parameter specifies the type of entry that you want to remove. Vali
 - FileHash
 - Sender
 - Url
+- IP
 
 ```yaml
 Type: ListType
