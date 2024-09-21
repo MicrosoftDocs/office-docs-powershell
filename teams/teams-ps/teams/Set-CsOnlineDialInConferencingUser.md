@@ -14,9 +14,6 @@ ms.reviewer: williamlooney
 
 ## SYNOPSIS
 
-> [!NOTE]
-> The AllowPSTNOnlyMeetings, ResetConferenceId, and ConferenceId parameters will be deprecated on Jan 31, 2022. To allow Teams meeting participants joining via the PSTN to bypass the lobby, use the AllowPSTNUsersToBypassLobby of the [Set-CsTeamsMeetingPolicy cmdlet](Set-CsTeamsMeetingPolicy.md). The capabilities associated with the ResetConferenceId and ConferenceId parameters are no longer supported.
-
 Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of a user that has been enabled for Microsoft's audio conferencing service.
 
 ## SYNTAX
@@ -24,18 +21,9 @@ Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of 
 ### TenantIdParams (Default)
 ```
 Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] [-Tenant <Guid>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
- [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
- [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### TenantDomainParams
-```
-Set-CsOnlineDialInConferencingUser [-Identity] <UserIdParameter> [-BridgeId <Guid>]
- [-BridgeName <String>] [-TenantDomain <String>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-AllowPSTNOnlyMeetings <Boolean>] [-Force]
- [-ResetLeaderPin] [-AllowTollFreeDialIn <Boolean>] [-SendEmailToAddress <String>]
- [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail] [-DomainController <Fqdn>]
+ [-BridgeName <String>] [-ServiceNumber <String>] [-TollFreeServiceNumber <String>] [-Force]
+ [-ResetLeaderPin] [-SendEmailToAddress <String>]
+ [-SendEmailFromAddress <String>] [-SendEmailFromDisplayName <String>] [-SendEmail]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -66,8 +54,7 @@ This example sets a user's conference bridge assignment.
 
 ### -Identity
 Specifies the Identity of the user account to be to be modified.
-A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer).
-You can also reference a user account by using the user's Active Directory distinguished name.
+A user identity can be specified by using one of the formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's object id.
 
 ```yaml
 Type: UserIdParameter
@@ -77,43 +64,6 @@ applicable: Microsoft Teams
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TenantDomain
-Specifies the domain name for the tenant or organization.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowPSTNOnlyMeetings
-If true, non-authenticated users can start meetings.
-If false, non-authenticated callers wait in the lobby until an authenticated user joins, thereby starting the meeting.
-An authenticated user is a user who joins the meeting using a Skype for Business client, or the organizer that joined the meeting via dial-in conferencing and was authenticated by a PIN number.
-The default is false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -158,29 +108,6 @@ The Confirm switch causes the command to pause processing and requires confirmat
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-Specifies the domain controller that's used by the cmdlet to read or write the specified data.
-Valid inputs for this parameter include:
-
-Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com`
-
-Computer name: `-DomainController atl-cs-001`
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Fqdn
-Parameter Sets: (All)
-Aliases: DC
 applicable: Microsoft Teams
 
 Required: False
@@ -308,26 +235,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
-You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases: 
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TollFreeServiceNumber
 Specifies a toll-free phone number to be used by the user. This number is then used in meeting invitations. The toll-free number can be specified in the following formats: E.164 number, +\<E.164 number\> and tel:\<E.164 number\>.
 
@@ -351,22 +258,6 @@ The WhatIf parameter is not implemented for this cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowTollFreeDialIn
-If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. This setting can ONLY be managed using the TeamsAudioConferencingPolicy. By default, AllowTollFreeDialin is always set to True. 
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
 applicable: Microsoft Teams
 
 Required: False
