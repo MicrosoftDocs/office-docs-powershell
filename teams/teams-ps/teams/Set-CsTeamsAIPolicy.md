@@ -26,7 +26,7 @@ Set-CsTeamsAIPolicy
 
 ## DESCRIPTION
 
-This cmdlet sets the Teams AI policy EnrollFace and EnrollVoice value for the tenant. The values of EnrollFace and EnrollVoice can be set to "Enabled" or "Disabled"
+This cmdlet sets the Teams AI policy EnrollFace and EnrollVoice value for the tenant. The values of EnrollFace and EnrollVoice can be set to "Enabled" or "Disabled". EnrollFace and EnrollVoice controls user access to user face/voice enrollment in the Teams app settings.
 
 ## EXAMPLES
 
