@@ -43,7 +43,6 @@ PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollVoice Enabled
 
 Set Teams AI policy "EnrollVoice" value to "Enabled" for identity "Test".
 
-
 ### Example 2
 ```powershell
 PS C:\> Set-CsTeamsAIPolicy -Identity Test -EnrollFace Disabled
