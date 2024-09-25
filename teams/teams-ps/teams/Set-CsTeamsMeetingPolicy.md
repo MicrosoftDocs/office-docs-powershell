@@ -261,7 +261,10 @@ Accept wildcard characters: False
 ### -AllowCarbonSummary
 
 This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user.
-If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon. Note: Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown.
+If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon. 
+
+> [!NOTE]
+> Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown.
 If set to False then organizer location data will not be shown and no carbon summary screen will be displayed to the participants.
 
 ```yaml
@@ -874,9 +877,9 @@ Accept wildcard characters: False
 ### -AttendeeIdentityMasking
 
 This setting will allow admins to enable or disable Masked Attendee mode in Meetings.
-Masked Attendee meetings will hide attendees' identifying information (e.g., name, contact information, profile photo)
+Masked Attendee meetings will hide attendees' identifying information (e.g., name, contact information, profile photo).
 
-Possible Values: Enabled:  Hides attendees' identifying information in meetings. Disabled: Does not allow attendees'  to hide identifying information in meetings
+Possible Values: Enabled: Hides attendees' identifying information in meetings. Disabled: Does not allow attendees' to hide identifying information in meetings
 
 ```yaml
 Type: String
