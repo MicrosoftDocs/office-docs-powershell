@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recipients
-The Recipients parameter filters the message tracking log entries by the SMTP email address of the message recipients. Multiple recipients in a single message are logged in a single message tracking log entry. Unexpanded distribution group recipients are logged by using the group's SMTP email address. You can specify multiple recipient using an array of email addresses.
+The Recipients parameter filters the message tracking log entries by the SMTP email address of the message recipients. Multiple recipients in a single message are logged in a single message tracking log entry. Unexpanded distribution group recipients are logged by using the group's SMTP email address. You can specify multiple recipients using an array of email addresses.
 
 ```yaml
 Type: String[]
