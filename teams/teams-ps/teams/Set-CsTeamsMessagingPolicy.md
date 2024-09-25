@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCustomGroupChatAvatars
-These settings enables/disables updating/fetching custom group chat avatars for the users included in the messaging policy.
+These settings enables, disables updating or fetching custom group chat avatars for the users included in the messaging policy.
 Possible values: True, False
 
 ```yaml
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFluidCollaborate
-This field enables/disables Fluid Collaborate feature for users.
+This field enables or disables Fluid Collaborate feature for users.
 Possible values: True, False
 
 ```yaml
