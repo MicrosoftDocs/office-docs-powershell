@@ -1447,7 +1447,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportToManagerEnabled
-The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owner (first one is listed if more than one) of the group (defined by the ManagedBy property). Valid values are:
+The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owner (first one listed if more than one) of the group (defined by the ManagedBy property). Valid values are:
 
 - $true: Delivery status notifications are sent to the owner (first one listed if more than one) of the group.
 - $false: Delivery status notifications aren't sent to the owner (first one listed if more than one) of the group. This is the default value.
