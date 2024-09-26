@@ -17,8 +17,28 @@ The CsTeamsRecordingRollOutPolicy controls roll out of the change that governs t
 
 ## SYNTAX
 
+### Identity (Default)
+
+```powershell
+Grant-CsTeamsRecordingRollOutPolicy [<CommonParameters>]
 ```
-Grant-CsTeamsRecordingRollOutPolicy -Identity <String> -PolicyName <String> [<CommonParameters>]
+
+### GrantToUser
+
+```powershell
+Grant-CsTeamsRecordingRollOutPolicy -Identity <String> [-PolicyName <String>] [<CommonParameters>]
+```
+
+### GrantToGroup
+
+```powershell
+Grant-CsTeamsRecordingRollOutPolicy [-PolicyName <String>] -Group <String> -Rank <Int32> [<CommonParameters>]
+```
+
+### GrantToTenant
+
+```powershell
+Grant-CsTeamsRecordingRollOutPolicy [-PolicyName <String>] [-Global] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,6 +80,54 @@ The name of the custom policy that is being assigned to the user. To remove a sp
 ```yaml
 Type: String
 Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Global
+
+This parameter sets the tenant global policy instance. This is the policy that all users in the tenant will get unless they have a specific policy instance assigned.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Group
+
+This is the identifier of the group that the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: GrantToGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Rank
+
+The rank of the policy assignment, relative to other group policy assignments for the same policy type.
+
+```yaml
+Type: Int32
+Parameter Sets: GrantToGroup
 Aliases:
 
 Required: True
