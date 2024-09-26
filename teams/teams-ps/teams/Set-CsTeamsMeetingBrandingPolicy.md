@@ -18,10 +18,11 @@ The **CsTeamsMeetingBrandingPolicy** cmdlet enables administrators to control th
 
 ## SYNTAX
 
-```
+```powershell
 Set-CsTeamsMeetingBrandingPolicy
  [-MeetingBackgroundImages <PSListModifier>]
- [-MeetingBrandingThemes <PSListModifier>]
+ [-NdiAssuranceSlateImages <PSListModifier>]
+ [-MeetingBrandingThemes <PSListModifier>] [-RequireBackgroundEffect <Boolean>] [-EnableNdiAssuranceSlate <Boolean>]
  [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -183,6 +184,55 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -EnableNdiAssuranceSlate
+
+This policy enables meeting Network Device Interface Assurance Slate branding.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NdiAssuranceSlateImages
+
+This parameter is used to manage images associated with the NDI (Network Device Interface) assurance slate, which is a feature that ensures high-quality video streaming during Teams meetings.
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[Microsoft.Teams.Policy.Administration.Cmdlets.Core.NdiAssuranceSlate]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireBackgroundEffect
+
+This policy mandates a background effect for participants.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
